@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class ClearRecyclebinRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

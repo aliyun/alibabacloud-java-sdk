@@ -22,6 +22,12 @@ public class AccountLinkInfo extends TeaModel {
     @NameInMap("identity")
     public String identity;
 
+    @NameInMap("last_login_time")
+    public Long lastLoginTime;
+
+    @NameInMap("status")
+    public String status;
+
     @NameInMap("user_id")
     public String userId;
 
@@ -76,6 +82,22 @@ public class AccountLinkInfo extends TeaModel {
     }
     public String getIdentity() {
         return this.identity;
+    }
+
+    public AccountLinkInfo setLastLoginTime(Long lastLoginTime) {
+        this.lastLoginTime = lastLoginTime;
+        return this;
+    }
+    public Long getLastLoginTime() {
+        return this.lastLoginTime;
+    }
+
+    public AccountLinkInfo setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public AccountLinkInfo setUserId(String userId) {
