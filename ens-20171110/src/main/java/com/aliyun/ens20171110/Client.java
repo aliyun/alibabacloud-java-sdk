@@ -12507,6 +12507,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改snat规则</p>
+     * 
+     * @param request ModifySnatEntryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySnatEntryResponse
+     */
+    public ModifySnatEntryResponse modifySnatEntryWithOptions(ModifySnatEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ispAffinity)) {
+            query.put("IspAffinity", request.ispAffinity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snatEntryId)) {
+            query.put("SnatEntryId", request.snatEntryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snatEntryName)) {
+            query.put("SnatEntryName", request.snatEntryName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySnatEntry"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySnatEntryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改snat规则</p>
+     * 
+     * @param request ModifySnatEntryRequest
+     * @return ModifySnatEntryResponse
+     */
+    public ModifySnatEntryResponse modifySnatEntry(ModifySnatEntryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySnatEntryWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
