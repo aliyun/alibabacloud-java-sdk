@@ -7,6 +7,9 @@ public class ListGitRepositoriesRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("OrgId")
+    public String orgId;
+
     @NameInMap("OrgName")
     public String orgName;
 
@@ -42,6 +45,14 @@ public class ListGitRepositoriesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ListGitRepositoriesRequest setOrgId(String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+    public String getOrgId() {
+        return this.orgId;
     }
 
     public ListGitRepositoriesRequest setOrgName(String orgName) {

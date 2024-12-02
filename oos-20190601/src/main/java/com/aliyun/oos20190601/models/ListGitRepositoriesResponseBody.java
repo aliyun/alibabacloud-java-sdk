@@ -55,6 +55,9 @@ public class ListGitRepositoriesResponseBody extends TeaModel {
         @NameInMap("IsPrivate")
         public Boolean isPrivate;
 
+        @NameInMap("RepoId")
+        public Long repoId;
+
         public static ListGitRepositoriesResponseBodyGitRepos build(java.util.Map<String, ?> map) throws Exception {
             ListGitRepositoriesResponseBodyGitRepos self = new ListGitRepositoriesResponseBodyGitRepos();
             return TeaModel.build(map, self);
@@ -90,6 +93,14 @@ public class ListGitRepositoriesResponseBody extends TeaModel {
         }
         public Boolean getIsPrivate() {
             return this.isPrivate;
+        }
+
+        public ListGitRepositoriesResponseBodyGitRepos setRepoId(Long repoId) {
+            this.repoId = repoId;
+            return this;
+        }
+        public Long getRepoId() {
+            return this.repoId;
         }
 
     }

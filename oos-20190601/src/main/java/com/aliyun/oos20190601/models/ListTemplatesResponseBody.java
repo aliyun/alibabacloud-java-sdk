@@ -279,6 +279,9 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
+        @NameInMap("VersionName")
+        public String versionName;
+
         public static ListTemplatesResponseBodyTemplates build(java.util.Map<String, ?> map) throws Exception {
             ListTemplatesResponseBodyTemplates self = new ListTemplatesResponseBodyTemplates();
             return TeaModel.build(map, self);
@@ -450,6 +453,14 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
         public String getUpdatedDate() {
             return this.updatedDate;
+        }
+
+        public ListTemplatesResponseBodyTemplates setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
         }
 
     }
