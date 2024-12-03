@@ -41,6 +41,9 @@ public class CreateScalingGroupRequest extends TeaModel {
     @NameInMap("AzBalance")
     public Boolean azBalance;
 
+    @NameInMap("CapacityOptions")
+    public CreateScalingGroupRequestCapacityOptions capacityOptions;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
@@ -533,6 +536,14 @@ public class CreateScalingGroupRequest extends TeaModel {
         return this.azBalance;
     }
 
+    public CreateScalingGroupRequest setCapacityOptions(CreateScalingGroupRequestCapacityOptions capacityOptions) {
+        this.capacityOptions = capacityOptions;
+        return this;
+    }
+    public CreateScalingGroupRequestCapacityOptions getCapacityOptions() {
+        return this.capacityOptions;
+    }
+
     public CreateScalingGroupRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -933,6 +944,58 @@ public class CreateScalingGroupRequest extends TeaModel {
         }
         public Integer getWeight() {
             return this.weight;
+        }
+
+    }
+
+    public static class CreateScalingGroupRequestCapacityOptions extends TeaModel {
+        @NameInMap("CompensateWithOnDemand")
+        public Boolean compensateWithOnDemand;
+
+        @NameInMap("OnDemandBaseCapacity")
+        public Integer onDemandBaseCapacity;
+
+        @NameInMap("OnDemandPercentageAboveBaseCapacity")
+        public Integer onDemandPercentageAboveBaseCapacity;
+
+        @NameInMap("SpotAutoReplaceOnDemand")
+        public Boolean spotAutoReplaceOnDemand;
+
+        public static CreateScalingGroupRequestCapacityOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateScalingGroupRequestCapacityOptions self = new CreateScalingGroupRequestCapacityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScalingGroupRequestCapacityOptions setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
+            this.compensateWithOnDemand = compensateWithOnDemand;
+            return this;
+        }
+        public Boolean getCompensateWithOnDemand() {
+            return this.compensateWithOnDemand;
+        }
+
+        public CreateScalingGroupRequestCapacityOptions setOnDemandBaseCapacity(Integer onDemandBaseCapacity) {
+            this.onDemandBaseCapacity = onDemandBaseCapacity;
+            return this;
+        }
+        public Integer getOnDemandBaseCapacity() {
+            return this.onDemandBaseCapacity;
+        }
+
+        public CreateScalingGroupRequestCapacityOptions setOnDemandPercentageAboveBaseCapacity(Integer onDemandPercentageAboveBaseCapacity) {
+            this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
+            return this;
+        }
+        public Integer getOnDemandPercentageAboveBaseCapacity() {
+            return this.onDemandPercentageAboveBaseCapacity;
+        }
+
+        public CreateScalingGroupRequestCapacityOptions setSpotAutoReplaceOnDemand(Boolean spotAutoReplaceOnDemand) {
+            this.spotAutoReplaceOnDemand = spotAutoReplaceOnDemand;
+            return this;
+        }
+        public Boolean getSpotAutoReplaceOnDemand() {
+            return this.spotAutoReplaceOnDemand;
         }
 
     }

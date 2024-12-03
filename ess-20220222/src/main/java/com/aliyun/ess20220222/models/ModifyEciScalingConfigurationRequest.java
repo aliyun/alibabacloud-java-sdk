@@ -250,6 +250,9 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     @NameInMap("EphemeralStorage")
     public Integer ephemeralStorage;
 
+    @NameInMap("GpuDriverVersion")
+    public String gpuDriverVersion;
+
     /**
      * <p>The hosts.</p>
      */
@@ -664,6 +667,14 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
     public Integer getEphemeralStorage() {
         return this.ephemeralStorage;
+    }
+
+    public ModifyEciScalingConfigurationRequest setGpuDriverVersion(String gpuDriverVersion) {
+        this.gpuDriverVersion = gpuDriverVersion;
+        return this;
+    }
+    public String getGpuDriverVersion() {
+        return this.gpuDriverVersion;
     }
 
     public ModifyEciScalingConfigurationRequest setHostAliases(java.util.List<ModifyEciScalingConfigurationRequestHostAliases> hostAliases) {

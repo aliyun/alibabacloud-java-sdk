@@ -150,6 +150,58 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeScalingGroupsResponseBodyScalingGroupsCapacityOptions extends TeaModel {
+        @NameInMap("CompensateWithOnDemand")
+        public Boolean compensateWithOnDemand;
+
+        @NameInMap("OnDemandBaseCapacity")
+        public Integer onDemandBaseCapacity;
+
+        @NameInMap("OnDemandPercentageAboveBaseCapacity")
+        public Integer onDemandPercentageAboveBaseCapacity;
+
+        @NameInMap("SpotAutoReplaceOnDemand")
+        public Boolean spotAutoReplaceOnDemand;
+
+        public static DescribeScalingGroupsResponseBodyScalingGroupsCapacityOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingGroupsResponseBodyScalingGroupsCapacityOptions self = new DescribeScalingGroupsResponseBodyScalingGroupsCapacityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroupsCapacityOptions setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
+            this.compensateWithOnDemand = compensateWithOnDemand;
+            return this;
+        }
+        public Boolean getCompensateWithOnDemand() {
+            return this.compensateWithOnDemand;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroupsCapacityOptions setOnDemandBaseCapacity(Integer onDemandBaseCapacity) {
+            this.onDemandBaseCapacity = onDemandBaseCapacity;
+            return this;
+        }
+        public Integer getOnDemandBaseCapacity() {
+            return this.onDemandBaseCapacity;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroupsCapacityOptions setOnDemandPercentageAboveBaseCapacity(Integer onDemandPercentageAboveBaseCapacity) {
+            this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
+            return this;
+        }
+        public Integer getOnDemandPercentageAboveBaseCapacity() {
+            return this.onDemandPercentageAboveBaseCapacity;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroupsCapacityOptions setSpotAutoReplaceOnDemand(Boolean spotAutoReplaceOnDemand) {
+            this.spotAutoReplaceOnDemand = spotAutoReplaceOnDemand;
+            return this;
+        }
+        public Boolean getSpotAutoReplaceOnDemand() {
+            return this.spotAutoReplaceOnDemand;
+        }
+
+    }
+
     public static class DescribeScalingGroupsResponseBodyScalingGroupsDBInstances extends TeaModel {
         /**
          * <p>The ID of the database.</p>
@@ -607,6 +659,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
          */
         @NameInMap("AzBalance")
         public Boolean azBalance;
+
+        @NameInMap("CapacityOptions")
+        public DescribeScalingGroupsResponseBodyScalingGroupsCapacityOptions capacityOptions;
 
         /**
          * <p>Indicates whether Auto Scaling can create pay-as-you-go instances to supplement preemptible instances if preemptible instances cannot be created due to price-related factors or insufficient inventory when MultiAZPolicy is set to COST_OPTIMIZED. Valid values:</p>
@@ -1204,6 +1259,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         }
         public Boolean getAzBalance() {
             return this.azBalance;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroups setCapacityOptions(DescribeScalingGroupsResponseBodyScalingGroupsCapacityOptions capacityOptions) {
+            this.capacityOptions = capacityOptions;
+            return this;
+        }
+        public DescribeScalingGroupsResponseBodyScalingGroupsCapacityOptions getCapacityOptions() {
+            return this.capacityOptions;
         }
 
         public DescribeScalingGroupsResponseBodyScalingGroups setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
