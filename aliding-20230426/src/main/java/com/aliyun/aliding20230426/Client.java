@@ -2888,6 +2888,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ParticipantIds", request.participantIdsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.reminderTimeStamp)) {
+            body.put("ReminderTimeStamp", request.reminderTimeStamp);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.subject)) {
             body.put("Subject", request.subject);
         }
