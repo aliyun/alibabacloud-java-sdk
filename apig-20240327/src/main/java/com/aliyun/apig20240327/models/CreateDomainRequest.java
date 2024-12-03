@@ -67,6 +67,9 @@ public class CreateDomainRequest extends TeaModel {
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("tlsCipherSuitesConfig")
+    public TlsCipherSuitesConfig tlsCipherSuitesConfig;
+
     /**
      * <p>Maximum TLS protocol version, supports up to TLS 1.3.</p>
      * 
@@ -144,6 +147,14 @@ public class CreateDomainRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateDomainRequest setTlsCipherSuitesConfig(TlsCipherSuitesConfig tlsCipherSuitesConfig) {
+        this.tlsCipherSuitesConfig = tlsCipherSuitesConfig;
+        return this;
+    }
+    public TlsCipherSuitesConfig getTlsCipherSuitesConfig() {
+        return this.tlsCipherSuitesConfig;
     }
 
     public CreateDomainRequest setTlsMax(String tlsMax) {
