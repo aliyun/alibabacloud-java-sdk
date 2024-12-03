@@ -14237,6 +14237,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateGatewayServiceShrinkRequest request = new UpdateGatewayServiceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dnsServerList)) {
+            request.dnsServerListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dnsServerList, "DnsServerList", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.ipList)) {
             request.ipListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ipList, "IpList", "json");
         }
@@ -14244,6 +14248,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
             query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dnsServerListShrink)) {
+            query.put("DnsServerList", request.dnsServerListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {

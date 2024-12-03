@@ -537,6 +537,9 @@ public class GetPluginConfigResponseBody extends TeaModel {
         @NameInMap("Summary")
         public String summary;
 
+        @NameInMap("SummaryEn")
+        public String summaryEn;
+
         /**
          * <p>The type.</p>
          * 
@@ -727,6 +730,14 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public GetPluginConfigResponseBodyData setSummaryEn(String summaryEn) {
+            this.summaryEn = summaryEn;
+            return this;
+        }
+        public String getSummaryEn() {
+            return this.summaryEn;
         }
 
         public GetPluginConfigResponseBodyData setType(Integer type) {
