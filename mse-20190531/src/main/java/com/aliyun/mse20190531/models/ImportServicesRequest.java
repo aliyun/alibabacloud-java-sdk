@@ -150,6 +150,9 @@ public class ImportServicesRequest extends TeaModel {
     }
 
     public static class ImportServicesRequestServiceList extends TeaModel {
+        @NameInMap("DnsServerList")
+        public java.util.List<String> dnsServerList;
+
         /**
          * <p>The group.</p>
          * 
@@ -204,6 +207,14 @@ public class ImportServicesRequest extends TeaModel {
         public static ImportServicesRequestServiceList build(java.util.Map<String, ?> map) throws Exception {
             ImportServicesRequestServiceList self = new ImportServicesRequestServiceList();
             return TeaModel.build(map, self);
+        }
+
+        public ImportServicesRequestServiceList setDnsServerList(java.util.List<String> dnsServerList) {
+            this.dnsServerList = dnsServerList;
+            return this;
+        }
+        public java.util.List<String> getDnsServerList() {
+            return this.dnsServerList;
         }
 
         public ImportServicesRequestServiceList setGroupName(String groupName) {

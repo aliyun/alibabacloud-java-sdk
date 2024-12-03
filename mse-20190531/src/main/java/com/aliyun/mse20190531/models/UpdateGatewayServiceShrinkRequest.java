@@ -11,6 +11,9 @@ public class UpdateGatewayServiceShrinkRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("DnsServerList")
+    public String dnsServerListShrink;
+
     /**
      * <strong>example:</strong>
      * <p>501</p>
@@ -79,6 +82,14 @@ public class UpdateGatewayServiceShrinkRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public UpdateGatewayServiceShrinkRequest setDnsServerListShrink(String dnsServerListShrink) {
+        this.dnsServerListShrink = dnsServerListShrink;
+        return this;
+    }
+    public String getDnsServerListShrink() {
+        return this.dnsServerListShrink;
     }
 
     public UpdateGatewayServiceShrinkRequest setGatewayId(Long gatewayId) {

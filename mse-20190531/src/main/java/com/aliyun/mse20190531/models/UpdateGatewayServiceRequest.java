@@ -11,6 +11,9 @@ public class UpdateGatewayServiceRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("DnsServerList")
+    public java.util.List<String> dnsServerList;
+
     /**
      * <strong>example:</strong>
      * <p>501</p>
@@ -79,6 +82,14 @@ public class UpdateGatewayServiceRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public UpdateGatewayServiceRequest setDnsServerList(java.util.List<String> dnsServerList) {
+        this.dnsServerList = dnsServerList;
+        return this;
+    }
+    public java.util.List<String> getDnsServerList() {
+        return this.dnsServerList;
     }
 
     public UpdateGatewayServiceRequest setGatewayId(Long gatewayId) {

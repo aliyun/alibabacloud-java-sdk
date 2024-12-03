@@ -645,6 +645,9 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyDataResult extends TeaModel {
+        @NameInMap("DnsServerList")
+        public java.util.List<String> dnsServerList;
+
         /**
          * <p>The gateway ID.</p>
          * 
@@ -850,6 +853,14 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         public static ListGatewayServiceResponseBodyDataResult build(java.util.Map<String, ?> map) throws Exception {
             ListGatewayServiceResponseBodyDataResult self = new ListGatewayServiceResponseBodyDataResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListGatewayServiceResponseBodyDataResult setDnsServerList(java.util.List<String> dnsServerList) {
+            this.dnsServerList = dnsServerList;
+            return this;
+        }
+        public java.util.List<String> getDnsServerList() {
+            return this.dnsServerList;
         }
 
         public ListGatewayServiceResponseBodyDataResult setGatewayId(Long gatewayId) {

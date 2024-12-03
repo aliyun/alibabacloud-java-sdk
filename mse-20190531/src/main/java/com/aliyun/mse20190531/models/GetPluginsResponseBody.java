@@ -287,6 +287,9 @@ public class GetPluginsResponseBody extends TeaModel {
         @NameInMap("Summary")
         public String summary;
 
+        @NameInMap("SummaryEn")
+        public String summaryEn;
+
         /**
          * <p>The version of the plug-in.</p>
          * 
@@ -425,6 +428,14 @@ public class GetPluginsResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public GetPluginsResponseBodyData setSummaryEn(String summaryEn) {
+            this.summaryEn = summaryEn;
+            return this;
+        }
+        public String getSummaryEn() {
+            return this.summaryEn;
         }
 
         public GetPluginsResponseBodyData setVersion(String version) {
