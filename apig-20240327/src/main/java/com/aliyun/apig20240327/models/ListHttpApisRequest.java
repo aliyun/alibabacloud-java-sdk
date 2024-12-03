@@ -76,6 +76,9 @@ public class ListHttpApisRequest extends TeaModel {
     @NameInMap("withAuthPolicyInEnvironmentId")
     public String withAuthPolicyInEnvironmentId;
 
+    @NameInMap("withAuthPolicyList")
+    public Boolean withAuthPolicyList;
+
     /**
      * <p>Each API information in the response carries a list of authorization rules for the specified consumer ID.</p>
      * 
@@ -87,6 +90,12 @@ public class ListHttpApisRequest extends TeaModel {
 
     @NameInMap("withEnvironmentInfo")
     public Boolean withEnvironmentInfo;
+
+    @NameInMap("withEnvironmentInfoById")
+    public String withEnvironmentInfoById;
+
+    @NameInMap("withPluginAttachmentByPluginId")
+    public String withPluginAttachmentByPluginId;
 
     public static ListHttpApisRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHttpApisRequest self = new ListHttpApisRequest();
@@ -157,6 +166,14 @@ public class ListHttpApisRequest extends TeaModel {
         return this.withAuthPolicyInEnvironmentId;
     }
 
+    public ListHttpApisRequest setWithAuthPolicyList(Boolean withAuthPolicyList) {
+        this.withAuthPolicyList = withAuthPolicyList;
+        return this;
+    }
+    public Boolean getWithAuthPolicyList() {
+        return this.withAuthPolicyList;
+    }
+
     public ListHttpApisRequest setWithConsumerInfoById(String withConsumerInfoById) {
         this.withConsumerInfoById = withConsumerInfoById;
         return this;
@@ -171,6 +188,22 @@ public class ListHttpApisRequest extends TeaModel {
     }
     public Boolean getWithEnvironmentInfo() {
         return this.withEnvironmentInfo;
+    }
+
+    public ListHttpApisRequest setWithEnvironmentInfoById(String withEnvironmentInfoById) {
+        this.withEnvironmentInfoById = withEnvironmentInfoById;
+        return this;
+    }
+    public String getWithEnvironmentInfoById() {
+        return this.withEnvironmentInfoById;
+    }
+
+    public ListHttpApisRequest setWithPluginAttachmentByPluginId(String withPluginAttachmentByPluginId) {
+        this.withPluginAttachmentByPluginId = withPluginAttachmentByPluginId;
+        return this;
+    }
+    public String getWithPluginAttachmentByPluginId() {
+        return this.withPluginAttachmentByPluginId;
     }
 
 }

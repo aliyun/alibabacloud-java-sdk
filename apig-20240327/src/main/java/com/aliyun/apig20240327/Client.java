@@ -124,6 +124,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("resourceGroupId", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tlsCipherSuitesConfig)) {
+            body.put("tlsCipherSuitesConfig", request.tlsCipherSuitesConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tlsMax)) {
             body.put("tlsMax", request.tlsMax);
         }
@@ -1055,6 +1059,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("withConsumerInfoById", request.withConsumerInfoById);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.withPluginAttachmentByPluginId)) {
+            query.put("withPluginAttachmentByPluginId", request.withPluginAttachmentByPluginId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -1130,12 +1138,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("withAuthPolicyInEnvironmentId", request.withAuthPolicyInEnvironmentId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.withAuthPolicyList)) {
+            query.put("withAuthPolicyList", request.withAuthPolicyList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.withConsumerInfoById)) {
             query.put("withConsumerInfoById", request.withConsumerInfoById);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.withEnvironmentInfo)) {
             query.put("withEnvironmentInfo", request.withEnvironmentInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withEnvironmentInfoById)) {
+            query.put("withEnvironmentInfoById", request.withEnvironmentInfoById);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withPluginAttachmentByPluginId)) {
+            query.put("withPluginAttachmentByPluginId", request.withPluginAttachmentByPluginId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1199,6 +1219,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
             body.put("protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tlsCipherSuitesConfig)) {
+            body.put("tlsCipherSuitesConfig", request.tlsCipherSuitesConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tlsMax)) {

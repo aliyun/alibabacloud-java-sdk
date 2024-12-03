@@ -54,6 +54,9 @@ public class UpdateDomainRequest extends TeaModel {
     @NameInMap("protocol")
     public String protocol;
 
+    @NameInMap("tlsCipherSuitesConfig")
+    public TlsCipherSuitesConfig tlsCipherSuitesConfig;
+
     /**
      * <p>Maximum TLS protocol version, supports up to TLS 1.3.</p>
      * 
@@ -115,6 +118,14 @@ public class UpdateDomainRequest extends TeaModel {
     }
     public String getProtocol() {
         return this.protocol;
+    }
+
+    public UpdateDomainRequest setTlsCipherSuitesConfig(TlsCipherSuitesConfig tlsCipherSuitesConfig) {
+        this.tlsCipherSuitesConfig = tlsCipherSuitesConfig;
+        return this;
+    }
+    public TlsCipherSuitesConfig getTlsCipherSuitesConfig() {
+        return this.tlsCipherSuitesConfig;
     }
 
     public UpdateDomainRequest setTlsMax(String tlsMax) {

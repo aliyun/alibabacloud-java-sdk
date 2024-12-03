@@ -85,6 +85,9 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     @NameInMap("withConsumerInfoById")
     public String withConsumerInfoById;
 
+    @NameInMap("withPluginAttachmentByPluginId")
+    public String withPluginAttachmentByPluginId;
+
     public static ListHttpApiOperationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHttpApiOperationsRequest self = new ListHttpApiOperationsRequest();
         return TeaModel.build(map, self);
@@ -160,6 +163,14 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     }
     public String getWithConsumerInfoById() {
         return this.withConsumerInfoById;
+    }
+
+    public ListHttpApiOperationsRequest setWithPluginAttachmentByPluginId(String withPluginAttachmentByPluginId) {
+        this.withPluginAttachmentByPluginId = withPluginAttachmentByPluginId;
+        return this;
+    }
+    public String getWithPluginAttachmentByPluginId() {
+        return this.withPluginAttachmentByPluginId;
     }
 
 }

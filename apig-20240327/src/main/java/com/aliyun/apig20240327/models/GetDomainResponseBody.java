@@ -259,6 +259,9 @@ public class GetDomainResponseBody extends TeaModel {
         @NameInMap("statisticsInfo")
         public GetDomainResponseBodyDataStatisticsInfo statisticsInfo;
 
+        @NameInMap("tlsCipherSuitesConfig")
+        public TlsCipherSuitesConfig tlsCipherSuitesConfig;
+
         /**
          * <p>Maximum TLS protocol version, supports up to TLS 1.3.</p>
          * 
@@ -433,6 +436,14 @@ public class GetDomainResponseBody extends TeaModel {
         }
         public GetDomainResponseBodyDataStatisticsInfo getStatisticsInfo() {
             return this.statisticsInfo;
+        }
+
+        public GetDomainResponseBodyData setTlsCipherSuitesConfig(TlsCipherSuitesConfig tlsCipherSuitesConfig) {
+            this.tlsCipherSuitesConfig = tlsCipherSuitesConfig;
+            return this;
+        }
+        public TlsCipherSuitesConfig getTlsCipherSuitesConfig() {
+            return this.tlsCipherSuitesConfig;
         }
 
         public GetDomainResponseBodyData setTlsMax(String tlsMax) {
