@@ -142,6 +142,9 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         @NameInMap("ConnectionList")
         public OnsConsumerGetConnectionResponseBodyDataConnectionList connectionList;
 
+        @NameInMap("MessageModel")
+        public String messageModel;
+
         public static OnsConsumerGetConnectionResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             OnsConsumerGetConnectionResponseBodyData self = new OnsConsumerGetConnectionResponseBodyData();
             return TeaModel.build(map, self);
@@ -153,6 +156,14 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         }
         public OnsConsumerGetConnectionResponseBodyDataConnectionList getConnectionList() {
             return this.connectionList;
+        }
+
+        public OnsConsumerGetConnectionResponseBodyData setMessageModel(String messageModel) {
+            this.messageModel = messageModel;
+            return this;
+        }
+        public String getMessageModel() {
+            return this.messageModel;
         }
 
     }
