@@ -217,6 +217,9 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;
 
+    @NameInMap("OptimizedWrites")
+    public String optimizedWrites;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -472,6 +475,14 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     }
     public String getIoAccelerationEnabled() {
         return this.ioAccelerationEnabled;
+    }
+
+    public ModifyDBInstanceSpecRequest setOptimizedWrites(String optimizedWrites) {
+        this.optimizedWrites = optimizedWrites;
+        return this;
+    }
+    public String getOptimizedWrites() {
+        return this.optimizedWrites;
     }
 
     public ModifyDBInstanceSpecRequest setOwnerAccount(String ownerAccount) {

@@ -1118,6 +1118,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("MultipleTempUpgrade")
         public Boolean multipleTempUpgrade;
 
+        @NameInMap("OptimizedWritesInfo")
+        public String optimizedWritesInfo;
+
         /**
          * <p>Indicates whether PgBouncer is enabled.</p>
          * <blockquote>
@@ -1803,6 +1806,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Boolean getMultipleTempUpgrade() {
             return this.multipleTempUpgrade;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setOptimizedWritesInfo(String optimizedWritesInfo) {
+            this.optimizedWritesInfo = optimizedWritesInfo;
+            return this;
+        }
+        public String getOptimizedWritesInfo() {
+            return this.optimizedWritesInfo;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setPGBouncerEnabled(String PGBouncerEnabled) {
