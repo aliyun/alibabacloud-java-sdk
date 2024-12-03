@@ -38,6 +38,13 @@ public class CreatePersonalTodoTaskShrinkRequest extends TeaModel {
     public String participantIdsShrink;
 
     /**
+     * <strong>example:</strong>
+     * <p>1703750708595</p>
+     */
+    @NameInMap("ReminderTimeStamp")
+    public Long reminderTimeStamp;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,6 +99,14 @@ public class CreatePersonalTodoTaskShrinkRequest extends TeaModel {
     }
     public String getParticipantIdsShrink() {
         return this.participantIdsShrink;
+    }
+
+    public CreatePersonalTodoTaskShrinkRequest setReminderTimeStamp(Long reminderTimeStamp) {
+        this.reminderTimeStamp = reminderTimeStamp;
+        return this;
+    }
+    public Long getReminderTimeStamp() {
+        return this.reminderTimeStamp;
     }
 
     public CreatePersonalTodoTaskShrinkRequest setSubject(String subject) {

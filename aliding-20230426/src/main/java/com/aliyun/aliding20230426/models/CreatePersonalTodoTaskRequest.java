@@ -38,6 +38,13 @@ public class CreatePersonalTodoTaskRequest extends TeaModel {
     public java.util.List<String> participantIds;
 
     /**
+     * <strong>example:</strong>
+     * <p>1703750708595</p>
+     */
+    @NameInMap("ReminderTimeStamp")
+    public Long reminderTimeStamp;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,6 +99,14 @@ public class CreatePersonalTodoTaskRequest extends TeaModel {
     }
     public java.util.List<String> getParticipantIds() {
         return this.participantIds;
+    }
+
+    public CreatePersonalTodoTaskRequest setReminderTimeStamp(Long reminderTimeStamp) {
+        this.reminderTimeStamp = reminderTimeStamp;
+        return this;
+    }
+    public Long getReminderTimeStamp() {
+        return this.reminderTimeStamp;
     }
 
     public CreatePersonalTodoTaskRequest setSubject(String subject) {
