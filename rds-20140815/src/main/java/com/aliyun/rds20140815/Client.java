@@ -2599,6 +2599,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IoAccelerationEnabled", request.ioAccelerationEnabled);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.optimizedWrites)) {
+            query.put("OptimizedWrites", request.optimizedWrites);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
             query.put("PayType", request.payType);
         }
@@ -23455,6 +23459,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ioAccelerationEnabled)) {
             query.put("IoAccelerationEnabled", request.ioAccelerationEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.optimizedWrites)) {
+            query.put("OptimizedWrites", request.optimizedWrites);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {

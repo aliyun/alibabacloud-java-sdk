@@ -1,3 +1,9 @@
+2024-12-03 Version: 7.0.3
+- Update API CreateDBInstance: add param OptimizedWrites.
+- Update API DescribeDBInstanceAttribute: update response param.
+- Update API ModifyDBInstanceSpec: add param OptimizedWrites.
+
+
 2024-12-02 Version: 7.0.2
 - Update API CreateRCDisk: update param InstanceChargeType.
 - Update API DescribeRCClusters: add param VpcId.

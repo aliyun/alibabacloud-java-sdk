@@ -505,6 +505,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;
 
+    @NameInMap("OptimizedWrites")
+    public String optimizedWrites;
+
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
@@ -1117,6 +1120,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getIoAccelerationEnabled() {
         return this.ioAccelerationEnabled;
+    }
+
+    public CreateDBInstanceRequest setOptimizedWrites(String optimizedWrites) {
+        this.optimizedWrites = optimizedWrites;
+        return this;
+    }
+    public String getOptimizedWrites() {
+        return this.optimizedWrites;
     }
 
     public CreateDBInstanceRequest setPayType(String payType) {
