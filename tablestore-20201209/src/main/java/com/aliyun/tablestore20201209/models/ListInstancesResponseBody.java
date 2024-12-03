@@ -4,15 +4,36 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The instances.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
+    /**
+     * <p>The token that determines the start position of the next query. If this parameter is empty, all instances that you want to query are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CAESCG15aC1xxxxx</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID, which can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E734979F-5A44-5993-9CE5-C23103576923</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of instances returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -54,42 +75,135 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
+        /**
+         * <p>The instance alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-test</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-04-07T09:19:21Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description of the test instance.</p>
+         */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
+        /**
+         * <p>The name of the instance, which is used to uniquely identify the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-test</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The type of the instance.</p>
+         * <ul>
+         * <li>SSD: high-performance instance</li>
+         * <li>HYBRID: capacity instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HYBRID</p>
+         */
         @NameInMap("InstanceSpecification")
         public String instanceSpecification;
 
+        /**
+         * <p>The instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        @NameInMap("IsMultiAZ")
+        public Boolean isMultiAZ;
+
+        /**
+         * <p>The billing method.</p>
+         * <ul>
+         * <li>Subscription: subscription</li>
+         * <li>PayAsYouGo: pay as you go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Subscription</p>
+         */
         @NameInMap("PaymentType")
         public String paymentType;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxh4em5jnbcd</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ots_standard_public_cn-g4t3igqjj002</p>
+         */
         @NameInMap("SPInstanceId")
         public String SPInstanceId;
 
+        /**
+         * <p>The storage type.</p>
+         * <ul>
+         * <li>SSD: high-performance</li>
+         * <li>HYBRID: capacity</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HYBRID</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
+        /**
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13542356466</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The VCU quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("VCUQuota")
         public Integer VCUQuota;
 
@@ -144,6 +258,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getInstanceStatus() {
             return this.instanceStatus;
+        }
+
+        public ListInstancesResponseBodyInstances setIsMultiAZ(Boolean isMultiAZ) {
+            this.isMultiAZ = isMultiAZ;
+            return this;
+        }
+        public Boolean getIsMultiAZ() {
+            return this.isMultiAZ;
         }
 
         public ListInstancesResponseBodyInstances setPaymentType(String paymentType) {

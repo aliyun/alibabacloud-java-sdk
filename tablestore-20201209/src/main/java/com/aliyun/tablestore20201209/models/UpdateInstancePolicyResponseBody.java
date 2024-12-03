@@ -3,7 +3,7 @@ package com.aliyun.tablestore20201209.models;
 
 import com.aliyun.tea.*;
 
-public class CreateInstanceResponseBody extends TeaModel {
+public class UpdateInstancePolicyResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * 
@@ -26,17 +26,17 @@ public class CreateInstanceResponseBody extends TeaModel {
      * <p>The request ID, which can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
-     * <p>39871ED2-62C0-578F-A32E-B88072D5582F</p>
+     * <p>31D8120C-AC52-5CA9-BE4A-E4C6316E19AD</p>
      */
-    @NameInMap("RequestId")
+    @NameInMap("requestId")
     public String requestId;
 
-    public static CreateInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateInstanceResponseBody self = new CreateInstanceResponseBody();
+    public static UpdateInstancePolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateInstancePolicyResponseBody self = new UpdateInstancePolicyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateInstanceResponseBody setCode(String code) {
+    public UpdateInstancePolicyResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -44,7 +44,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateInstanceResponseBody setMessage(String message) {
+    public UpdateInstancePolicyResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -52,7 +52,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateInstanceResponseBody setRequestId(String requestId) {
+    public UpdateInstancePolicyResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -4,66 +4,243 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The alias of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance-test</p>
+     */
     @NameInMap("AliasName")
     public String aliasName;
 
+    /**
+     * <p>The time when the instance was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-23T07:24:33Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Description of the test instance.</p>
+     */
     @NameInMap("InstanceDescription")
     public String instanceDescription;
 
+    /**
+     * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance-test</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The type of the instance.</p>
+     * <ul>
+     * <li>SSD: high-performance instance</li>
+     * <li>HYBRID: capacity instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SSD</p>
+     */
     @NameInMap("InstanceSpecification")
     public String instanceSpecification;
 
+    /**
+     * <p>The status of the instance.</p>
+     * <ul>
+     * <li>normal: The instance works as expected.</li>
+     * <li>forbidden: The instance is disabled.</li>
+     * <li>Deleting: The instance is being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    @NameInMap("IsMultiAZ")
+    public Boolean isMultiAZ;
+
+    /**
+     * <p>The network type of the instance. Valid values:</p>
+     * <ul>
+     * <li>VPC: The instance can be accessed only over the bound virtual private clouds (VPCs).</li>
+     * <li>VPC_CONSOLE: The instance can be accessed from the Tablestore console or over the bound VPCs.</li>
+     * <li>NORMAL: The instance can be accessed from networks of the custom types.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
+     */
     @NameInMap("Network")
     public String network;
 
+    /**
+     * <p>The sources of the network from which access is allowed. Valid value:</p>
+     * <p>TRUST_PROXY: console</p>
+     */
     @NameInMap("NetworkSourceACL")
     public java.util.List<String> networkSourceACL;
 
+    /**
+     * <p>The types of the network from which access is allowed. Valid values:</p>
+     * <ul>
+     * <li>CLASSIC: the classic network</li>
+     * <li>INTERNET: the Internet</li>
+     * <li>VPC: VPCs</li>
+     * </ul>
+     */
     @NameInMap("NetworkTypeACL")
     public java.util.List<String> networkTypeACL;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li>Subscription: subscription</li>
+     * <li>PayAsYouGo: pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Subscription</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <p>The instance policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;Version&quot;: &quot;1&quot;,
+     *     &quot;Statement&quot;: [
+     *         {
+     *             &quot;Action&quot;: [
+     *                 &quot;ots:<em>&quot;
+     *             ],
+     *             &quot;Resource&quot;: [
+     *                 &quot;acs:ots:</em>:13791xxxxxxxxxxx:instance/myinstance*&quot;
+     *             ],
+     *             &quot;Principal&quot;: [
+     *                 &quot;*&quot;
+     *             ],
+     *             &quot;Effect&quot;: &quot;Allow&quot;,
+     *             &quot;Condition&quot;: {
+     *                 &quot;StringEquals&quot;: {
+     *                     &quot;ots:TLSVersion&quot;: [
+     *                         &quot;1.2&quot;
+     *                     ]
+     *                 },
+     *                 &quot;IpAddress&quot;: {
+     *                     &quot;acs:SourceIp&quot;: [
+     *                         &quot;192.168.0.1&quot;,
+     *                         &quot;198.51.100.1&quot;
+     *                     ]
+     *                 }
+     *             }
+     *         }
+     *     ]
+     * }</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
+    /**
+     * <p>The version of the instance policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PolicyVersion")
     public Long policyVersion;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The request ID, which can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>757E172A-F94B-5E78-8A23-D9068E42F2E9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxh4em5jncda</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ots_standard_public_cn-9lb34u7u5001</p>
+     */
     @NameInMap("SPInstanceId")
     public String SPInstanceId;
 
+    /**
+     * <p>The storage type.</p>
+     * <ul>
+     * <li>SSD: high-performance</li>
+     * <li>HYBRID: capacity</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>HYBRID</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <p>The total number of tables in the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TableQuota")
     public Integer tableQuota;
 
+    /**
+     * <p>The tags of the instance.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetInstanceResponseBodyTags> tags;
 
+    /**
+     * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16542312566</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The VCU quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("VCUQuota")
     public Integer VCUQuota;
 
@@ -118,6 +295,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getInstanceStatus() {
         return this.instanceStatus;
+    }
+
+    public GetInstanceResponseBody setIsMultiAZ(Boolean isMultiAZ) {
+        this.isMultiAZ = isMultiAZ;
+        return this;
+    }
+    public Boolean getIsMultiAZ() {
+        return this.isMultiAZ;
     }
 
     public GetInstanceResponseBody setNetwork(String network) {
@@ -241,15 +426,39 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>(Deprecated) The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>keyTestA</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>(Deprecated) The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00004a20240452b0</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>333</p>
+         */
         @NameInMap("Value")
         public String value;
 
