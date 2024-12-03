@@ -4,6 +4,12 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The request ID, which can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17827FB1-CC71-559D-BBDF-9D41534322E7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

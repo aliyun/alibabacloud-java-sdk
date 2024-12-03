@@ -4,15 +4,38 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all tags from the resources. Default value: false. Valid values:</p>
+     * <ul>
+     * <li>true: removes all tags from the resources.</li>
+     * <li>false: removes the tags that are specified by the TagKeys parameter from the resources.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>The resource IDs, which are instance names.</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
+    /**
+     * <p>The type of the resource. valid value:</p>
+     * <p>instance: instance</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag keys.</p>
+     */
     @NameInMap("TagKeys")
     public java.util.List<String> tagKeys;
 

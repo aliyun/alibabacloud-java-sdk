@@ -4,15 +4,36 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of tagged resources that are returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CAESCG15aC1xxxxx</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
+    /**
+     * <p>The request ID, which can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31D8120C-AC52-5CA9-BE4A-E4C6316E19AD</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -54,15 +75,39 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
+        /**
+         * <p>The resource ID, which is the instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-test</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::OTS::INSTANCE</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Owner</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tester</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

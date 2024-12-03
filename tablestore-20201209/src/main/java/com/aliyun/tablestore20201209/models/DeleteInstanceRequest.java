@@ -4,6 +4,13 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
+    /**
+     * <p>The name of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance-test</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 

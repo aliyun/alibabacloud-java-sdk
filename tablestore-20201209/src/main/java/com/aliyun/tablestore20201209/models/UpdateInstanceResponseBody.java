@@ -4,6 +4,12 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The request ID, which can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3104C83E-6E82-57FB-BB88-8C64CCFDEF89</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

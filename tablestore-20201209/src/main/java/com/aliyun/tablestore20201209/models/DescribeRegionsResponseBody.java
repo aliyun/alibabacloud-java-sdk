@@ -4,9 +4,18 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The regions.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
+    /**
+     * <p>The request ID, which can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B37BBA04-D827-55C8-B901-5264B904E8C6</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The key of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yunjiankong.cloud.region.cn-hangzhou</p>
+         */
         @NameInMap("I18nKey")
         public String i18nKey;
 
+        /**
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

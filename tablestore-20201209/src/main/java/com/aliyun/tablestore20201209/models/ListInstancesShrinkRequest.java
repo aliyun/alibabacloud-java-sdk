@@ -3,7 +3,7 @@ package com.aliyun.tablestore20201209.models;
 
 import com.aliyun.tea.*;
 
-public class ListInstancesRequest extends TeaModel {
+public class ListInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The name of the instance. Fuzzy search is supported.</p>
      * 
@@ -17,7 +17,7 @@ public class ListInstancesRequest extends TeaModel {
      * <p>The names of the instances. This parameter is used to specify multiple instances that you want to query at the same time.</p>
      */
     @NameInMap("InstanceNameList")
-    public java.util.List<String> instanceNameList;
+    public String instanceNameListShrink;
 
     /**
      * <p>The maximum number of instances that you want to return. Valid values: 0 to 200. If you do not configure this parameter or set this parameter to 0, the default value of 100 is used.</p>
@@ -60,12 +60,12 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListInstancesRequest self = new ListInstancesRequest();
+    public static ListInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListInstancesShrinkRequest self = new ListInstancesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListInstancesRequest setInstanceName(String instanceName) {
+    public ListInstancesShrinkRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
@@ -73,15 +73,15 @@ public class ListInstancesRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public ListInstancesRequest setInstanceNameList(java.util.List<String> instanceNameList) {
-        this.instanceNameList = instanceNameList;
+    public ListInstancesShrinkRequest setInstanceNameListShrink(String instanceNameListShrink) {
+        this.instanceNameListShrink = instanceNameListShrink;
         return this;
     }
-    public java.util.List<String> getInstanceNameList() {
-        return this.instanceNameList;
+    public String getInstanceNameListShrink() {
+        return this.instanceNameListShrink;
     }
 
-    public ListInstancesRequest setMaxResults(Integer maxResults) {
+    public ListInstancesShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -89,7 +89,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListInstancesRequest setNextToken(String nextToken) {
+    public ListInstancesShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -97,7 +97,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListInstancesRequest setResourceGroupId(String resourceGroupId) {
+    public ListInstancesShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -105,7 +105,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public ListInstancesRequest setStatus(String status) {
+    public ListInstancesShrinkRequest setStatus(String status) {
         this.status = status;
         return this;
     }

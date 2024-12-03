@@ -4,21 +4,58 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
+    /**
+     * <p>The alias of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance-test</p>
+     */
     @NameInMap("AliasName")
     public String aliasName;
 
+    /**
+     * <p>The description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>the test instance</p>
+     */
     @NameInMap("InstanceDescription")
     public String instanceDescription;
 
+    /**
+     * <p>The name of the instance whose information you want to update.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance-test</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>(Deprecated) The network type of the instance. Valid values: NORMAL and VPC_CONSOLE. Default value: NORMAL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
+     */
     @NameInMap("Network")
     public String network;
 
+    /**
+     * <p>The new sources of the network from which access is allowed. By default, all sources of networks are allowed. Valid value:</p>
+     * <p>TRUST_PROXY: the console</p>
+     */
     @NameInMap("NetworkSourceACL")
     public java.util.List<String> networkSourceACL;
 
+    /**
+     * <p>The new types of the network from which access is allowed. By default, all types of networks are allowed. Valid values:</p>
+     * <ul>
+     * <li>INTERNET: the Internet</li>
+     * <li>VPC: VPCs</li>
+     * <li>CLASSIC: the classic network</li>
+     * </ul>
+     */
     @NameInMap("NetworkTypeACL")
     public java.util.List<String> networkTypeACL;
 

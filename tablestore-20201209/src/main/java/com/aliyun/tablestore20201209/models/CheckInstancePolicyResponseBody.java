@@ -3,12 +3,12 @@ package com.aliyun.tablestore20201209.models;
 
 import com.aliyun.tea.*;
 
-public class CreateInstanceResponseBody extends TeaModel {
+public class CheckInstancePolicyResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,7 +17,7 @@ public class CreateInstanceResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>Verification passed.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -26,17 +26,17 @@ public class CreateInstanceResponseBody extends TeaModel {
      * <p>The request ID, which can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
-     * <p>39871ED2-62C0-578F-A32E-B88072D5582F</p>
+     * <p>757E172A-F94B-5E78-8A23-D9068E42F2E9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateInstanceResponseBody self = new CreateInstanceResponseBody();
+    public static CheckInstancePolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CheckInstancePolicyResponseBody self = new CheckInstancePolicyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateInstanceResponseBody setCode(String code) {
+    public CheckInstancePolicyResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -44,7 +44,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateInstanceResponseBody setMessage(String message) {
+    public CheckInstancePolicyResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -52,7 +52,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateInstanceResponseBody setRequestId(String requestId) {
+    public CheckInstancePolicyResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

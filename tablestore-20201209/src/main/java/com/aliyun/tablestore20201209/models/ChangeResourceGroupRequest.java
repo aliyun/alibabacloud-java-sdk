@@ -4,9 +4,23 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the new resource group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek3bgek3kxhyky</p>
+     */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
+    /**
+     * <p>The resource ID, which is the instance name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>first-ins</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
