@@ -41,6 +41,9 @@ public class ModifyScalingGroupRequest extends TeaModel {
     @NameInMap("AzBalance")
     public Boolean azBalance;
 
+    @NameInMap("CapacityOptions")
+    public ModifyScalingGroupRequestCapacityOptions capacityOptions;
+
     /**
      * <p>Specifies whether to automatically create pay-as-you-go instances to meet the requirements on the number of ECS instances in the scaling group when the number of preemptible instances cannot be reached due to reasons such as cost-related issues and insufficient resources. This parameter takes effect only if you set <code>MultiAZPolicy</code> in the <code>CreateScalingGroup</code> operation to <code>COST_OPTIMIZED</code>. Valid values:</p>
      * <ul>
@@ -392,6 +395,14 @@ public class ModifyScalingGroupRequest extends TeaModel {
         return this.azBalance;
     }
 
+    public ModifyScalingGroupRequest setCapacityOptions(ModifyScalingGroupRequestCapacityOptions capacityOptions) {
+        this.capacityOptions = capacityOptions;
+        return this;
+    }
+    public ModifyScalingGroupRequestCapacityOptions getCapacityOptions() {
+        return this.capacityOptions;
+    }
+
     public ModifyScalingGroupRequest setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
         this.compensateWithOnDemand = compensateWithOnDemand;
         return this;
@@ -630,6 +641,58 @@ public class ModifyScalingGroupRequest extends TeaModel {
     }
     public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
+    }
+
+    public static class ModifyScalingGroupRequestCapacityOptions extends TeaModel {
+        @NameInMap("CompensateWithOnDemand")
+        public Boolean compensateWithOnDemand;
+
+        @NameInMap("OnDemandBaseCapacity")
+        public Integer onDemandBaseCapacity;
+
+        @NameInMap("OnDemandPercentageAboveBaseCapacity")
+        public Integer onDemandPercentageAboveBaseCapacity;
+
+        @NameInMap("SpotAutoReplaceOnDemand")
+        public Boolean spotAutoReplaceOnDemand;
+
+        public static ModifyScalingGroupRequestCapacityOptions build(java.util.Map<String, ?> map) throws Exception {
+            ModifyScalingGroupRequestCapacityOptions self = new ModifyScalingGroupRequestCapacityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyScalingGroupRequestCapacityOptions setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
+            this.compensateWithOnDemand = compensateWithOnDemand;
+            return this;
+        }
+        public Boolean getCompensateWithOnDemand() {
+            return this.compensateWithOnDemand;
+        }
+
+        public ModifyScalingGroupRequestCapacityOptions setOnDemandBaseCapacity(Integer onDemandBaseCapacity) {
+            this.onDemandBaseCapacity = onDemandBaseCapacity;
+            return this;
+        }
+        public Integer getOnDemandBaseCapacity() {
+            return this.onDemandBaseCapacity;
+        }
+
+        public ModifyScalingGroupRequestCapacityOptions setOnDemandPercentageAboveBaseCapacity(Integer onDemandPercentageAboveBaseCapacity) {
+            this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
+            return this;
+        }
+        public Integer getOnDemandPercentageAboveBaseCapacity() {
+            return this.onDemandPercentageAboveBaseCapacity;
+        }
+
+        public ModifyScalingGroupRequestCapacityOptions setSpotAutoReplaceOnDemand(Boolean spotAutoReplaceOnDemand) {
+            this.spotAutoReplaceOnDemand = spotAutoReplaceOnDemand;
+            return this;
+        }
+        public Boolean getSpotAutoReplaceOnDemand() {
+            return this.spotAutoReplaceOnDemand;
+        }
+
     }
 
     public static class ModifyScalingGroupRequestLaunchTemplateOverrides extends TeaModel {

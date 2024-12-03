@@ -2519,6 +2519,9 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("EphemeralStorage")
         public Integer ephemeralStorage;
 
+        @NameInMap("GpuDriverVersion")
+        public String gpuDriverVersion;
+
         /**
          * <p>The hostnames and IP addresses for a container that are added to the hosts file of the elastic container instance.</p>
          */
@@ -2960,6 +2963,14 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         }
         public Integer getEphemeralStorage() {
             return this.ephemeralStorage;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurations setGpuDriverVersion(String gpuDriverVersion) {
+            this.gpuDriverVersion = gpuDriverVersion;
+            return this;
+        }
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
         }
 
         public DescribeEciScalingConfigurationsResponseBodyScalingConfigurations setHostAliases(java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsHostAliases> hostAliases) {

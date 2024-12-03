@@ -1533,6 +1533,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EphemeralStorage", request.ephemeralStorage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuDriverVersion)) {
+            query.put("GpuDriverVersion", request.gpuDriverVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.hostAliases)) {
             query.put("HostAliases", request.hostAliases);
         }
@@ -2209,6 +2213,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.azBalance)) {
             query.put("AzBalance", request.azBalance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.capacityOptions)) {
+            query.put("CapacityOptions", request.capacityOptions);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -6553,6 +6561,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EphemeralStorage", request.ephemeralStorage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuDriverVersion)) {
+            query.put("GpuDriverVersion", request.gpuDriverVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.hostAliases)) {
             query.put("HostAliases", request.hostAliases);
         }
@@ -7266,6 +7278,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.azBalance)) {
             query.put("AzBalance", request.azBalance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.capacityOptions)) {
+            query.put("CapacityOptions", request.capacityOptions);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.compensateWithOnDemand)) {
