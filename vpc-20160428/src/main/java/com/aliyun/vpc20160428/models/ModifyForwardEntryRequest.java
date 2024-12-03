@@ -17,6 +17,9 @@ public class ModifyForwardEntryRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <ul>
      * <li>When you modify DNAT entries of Internet NAT gateways, this parameter specifies the elastic IP addresses (EIPs) that are used to access the Internet.</li>
@@ -163,6 +166,14 @@ public class ModifyForwardEntryRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyForwardEntryRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyForwardEntryRequest setExternalIp(String externalIp) {

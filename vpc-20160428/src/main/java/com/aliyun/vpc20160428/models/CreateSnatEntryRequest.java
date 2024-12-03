@@ -16,6 +16,9 @@ public class CreateSnatEntryRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>Specifies whether to enable EIP affinity. Valid values:</p>
      * <ul>
@@ -151,6 +154,14 @@ public class CreateSnatEntryRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateSnatEntryRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateSnatEntryRequest setEipAffinity(Integer eipAffinity) {
