@@ -245,7 +245,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
          * <p>The configurations of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>CPU：12</p>
+         * <p>CPU:12</p>
          */
         @NameInMap("InstanceConfig")
         public String instanceConfig;

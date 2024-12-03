@@ -43,6 +43,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Period")
     public Integer period;
 
+    @NameInMap("PricingCycle")
+    public Long pricingCycle;
+
     /**
      * <p>The code of the service to which the instance belongs. You can query the service code by calling the <strong>QueryProductList</strong> operation or viewing <strong>Codes of Alibaba Cloud Services</strong>.</p>
      * <p>This parameter is required.</p>
@@ -145,6 +148,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public Integer getPeriod() {
         return this.period;
+    }
+
+    public CreateInstanceRequest setPricingCycle(Long pricingCycle) {
+        this.pricingCycle = pricingCycle;
+        return this;
+    }
+    public Long getPricingCycle() {
+        return this.pricingCycle;
     }
 
     public CreateInstanceRequest setProductCode(String productCode) {

@@ -108,7 +108,7 @@ public class AllocateCostUnitResourceRequest extends TeaModel {
         /**
          * <p>The split item of the shared instance. This parameter is required only for shared instances.</p>
          * <ul>
-         * <li>Eight cloud services support bill splitting. The commodity codes of the eight services are oss, dcdn, snapshot, vod, cdn, live, cbwp, and pcdn.</li>
+         * <li>Eight cloud services support bill splitting. The commodity codes of the eight services are oss, dcdn, snapshot, vod, cdn, live, and cbwp.</li>
          * <li>You can obtain the split item of a shared instance by calling QueryCostUnitResource operation to obtain all resource instances within a cost center.</li>
          * </ul>
          * 
