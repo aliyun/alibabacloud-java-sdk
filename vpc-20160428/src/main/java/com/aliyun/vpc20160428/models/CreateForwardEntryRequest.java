@@ -17,6 +17,9 @@ public class CreateForwardEntryRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <ul>
      * <li>The EIP that can be accessed over the Internet when you configure a DNAT entry for an Internet NAT gateway.</li>
@@ -167,6 +170,14 @@ public class CreateForwardEntryRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateForwardEntryRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateForwardEntryRequest setExternalIp(String externalIp) {

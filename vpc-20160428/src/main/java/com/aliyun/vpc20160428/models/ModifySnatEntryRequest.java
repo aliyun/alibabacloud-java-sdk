@@ -17,6 +17,9 @@ public class ModifySnatEntryRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("EipAffinity")
     public Integer eipAffinity;
 
@@ -102,6 +105,14 @@ public class ModifySnatEntryRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifySnatEntryRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifySnatEntryRequest setEipAffinity(Integer eipAffinity) {
