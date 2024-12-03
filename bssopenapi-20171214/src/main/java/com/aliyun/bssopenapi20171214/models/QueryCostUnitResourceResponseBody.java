@@ -331,6 +331,12 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         @NameInMap("CommodityName")
         public String commodityName;
 
+        /**
+         * <p>The code of the service. The code is the same as that in Cost Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
+         */
         @NameInMap("PipCode")
         public String pipCode;
 
@@ -370,6 +376,16 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         @NameInMap("ResourceNick")
         public String resourceNick;
 
+        /**
+         * <p>The source of the resource. Value:</p>
+         * <ul>
+         * <li>AUTO_ALLOCATE</li>
+         * <li>MANUAL_ALLOCATE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MANUAL_ALLOCATE</p>
+         */
         @NameInMap("ResourceSource")
         public String resourceSource;
 

@@ -88,7 +88,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about a financial relationship, see <a href="https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE">Financial relationships</a> or <a href="https://www.alibabacloud.com/help/en/doc-detail/116383.html">Financial relationships</a>. 
+     * <p>For more information about a financial relationship, see &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/doc-detail/116383.html">Usage notes on the trusteeship</a>. 
      * If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.</p>
      * 
      * <b>summary</b> : 
@@ -148,7 +148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about a financial relationship, see <a href="https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE">Financial relationships</a> or <a href="https://www.alibabacloud.com/help/en/doc-detail/116383.html">Financial relationships</a>. 
+     * <p>For more information about a financial relationship, see &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/doc-detail/116383.html">Usage notes on the trusteeship</a>. 
      * If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.</p>
      * 
      * <b>summary</b> : 
@@ -709,6 +709,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
             query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pricingCycle)) {
+            query.put("PricingCycle", request.pricingCycle);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
@@ -2325,7 +2329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>  The data that you query by calling this operation is the same as the data that is queried by billing cycles in the Split Bill module of Cost Allocation.</p>
      * <ul>
      * <li>You can query split bills that were generated within the last 12 months by calling this operation.</li>
-     * <li>You can query split bills only after you enable the <a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a> service in the User Center console.</li>
+     * <li>You can query split bills only after you enable the <a href="https://usercenter2-intl.aliyun.com/finance/split-bill">Split Bill</a> service in the User Center console.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2420,7 +2424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>  The data that you query by calling this operation is the same as the data that is queried by billing cycles in the Split Bill module of Cost Allocation.</p>
      * <ul>
      * <li>You can query split bills that were generated within the last 12 months by calling this operation.</li>
-     * <li>You can query split bills only after you enable the <a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a> service in the User Center console.</li>
+     * <li>You can query split bills only after you enable the <a href="https://usercenter2-intl.aliyun.com/finance/split-bill">Split Bill</a> service in the User Center console.</li>
      * </ul>
      * 
      * <b>summary</b> : 
