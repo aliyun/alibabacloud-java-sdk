@@ -1,3 +1,7 @@
+2024-12-04 Version: 5.4.11
+- Update API DescribeInstances: update response param.
+
+
 2024-11-29 Version: 5.4.10
 - Update API CreateAutoProvisioningGroup: update param LaunchTemplateConfig.
 - Update API CreateSavingsPlan: add param InstanceTypeFamilyGroup.

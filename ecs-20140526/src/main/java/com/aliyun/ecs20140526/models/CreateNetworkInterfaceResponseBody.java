@@ -124,6 +124,14 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SourceDestCheck")
     public Boolean sourceDestCheck;
 

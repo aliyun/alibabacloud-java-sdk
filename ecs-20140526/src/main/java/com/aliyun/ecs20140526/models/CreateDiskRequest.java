@@ -14,7 +14,9 @@ public class CreateDiskRequest extends TeaModel {
     public String advancedFeatures;
 
     /**
-     * <p>This parameter is not publicly available.</p>
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
      */
     @NameInMap("Arn")
     public java.util.List<CreateDiskRequestArn> arn;
@@ -26,7 +28,7 @@ public class CreateDiskRequest extends TeaModel {
      * <li>false</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+     * <p> This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,6 +65,7 @@ public class CreateDiskRequest extends TeaModel {
      * <li>cloud_essd: ESSD</li>
      * <li>cloud_auto: ESSD AutoPL disk</li>
      * <li>cloud_essd_entry: ESSD Entry disk</li>
+     * <li>cloud_regional_disk_auto: Regional ESSD</li>
      * <li>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</li>
      * <li>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</li>
      * </ul>
@@ -75,7 +78,7 @@ public class CreateDiskRequest extends TeaModel {
     public String diskCategory;
 
     /**
-     * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain letters and digits. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The name must start with a letter.</p>
      * <p>This parameter is left empty by default.</p>
      * 
      * <strong>example:</strong>
@@ -172,9 +175,9 @@ public class CreateDiskRequest extends TeaModel {
 
     /**
      * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
-     * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+     * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
      * <blockquote>
-     * <p> This parameter is available only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+     * <p> This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -209,7 +212,7 @@ public class CreateDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The size of the disk. Unit: GiB. This parameter is required. Valid values:</p>
+     * <p>The size of the data disk. Unit: GiB. This parameter is required. Valid values:</p>
      * <ul>
      * <li><p>Valid values when DiskCategory is set to cloud: 5 to 2000.</p>
      * </li>
@@ -229,12 +232,14 @@ public class CreateDiskRequest extends TeaModel {
      * </li>
      * <li><p>Valid values when DiskCategory is set to cloud_essd_entry: 10 to 32768.</p>
      * </li>
+     * <li><p>Valid values when DiskCategory is set to cloud_regional_disk_auto: 10 to 65536.</p>
+     * </li>
      * <li><p>Valid values when DiskCategory is set to elastic_ephemeral_disk_standard: 64 to 8192.</p>
      * </li>
      * <li><p>Valid values when DiskCategory is set to elastic_ephemeral_disk_premium: 64 to 8192.</p>
      * </li>
      * </ul>
-     * <p>If <code>SnapshotId</code> is specified, the following limits apply to <code>SnapshotId</code> and <code>Size</code>:</p>
+     * <p>If you specify <code>SnapshotId</code>, the following limits apply to <code>SnapshotId</code> and <code>Size</code>:</p>
      * <ul>
      * <li>If the size of the snapshot specified by <code>SnapshotId</code> is larger than the value of <code>Size</code>, the size of the created disk is equal to the size of the snapshot.</li>
      * <li>If the size of the snapshot specified by <code>SnapshotId</code> is smaller than the value of <code>Size</code>, the size of the created disk is equal to the value of <code>Size</code>.</li>
@@ -305,8 +310,11 @@ public class CreateDiskRequest extends TeaModel {
      * <p>The ID of the zone in which to create the pay-as-you-go disk.</p>
      * <ul>
      * <li>If you do not specify InstanceId, you must specify ZoneId.</li>
-     * <li>You cannot specify both ZoneId and InstanceId in a request.</li>
+     * <li>You cannot specify both ZoneId and InstanceId in the same request.</li>
      * </ul>
+     * <blockquote>
+     * <p> You do not need to specify this parameter if you set DiskCategory to <code>cloud_regional_disk_auto</code> to create a Regional ESSD.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-g</p>
@@ -537,7 +545,9 @@ public class CreateDiskRequest extends TeaModel {
 
     public static class CreateDiskRequestArn extends TeaModel {
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1000000000</p>
@@ -546,7 +556,9 @@ public class CreateDiskRequest extends TeaModel {
         public Long assumeRoleFor;
 
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>hide</p>
@@ -555,7 +567,9 @@ public class CreateDiskRequest extends TeaModel {
         public String roleType;
 
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>hide</p>

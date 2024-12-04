@@ -111,6 +111,25 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo extends TeaModel {
+        @NameInMap("EnableHighDensityMode")
+        public Boolean enableHighDensityMode;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo self = new DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo setEnableHighDensityMode(Boolean enableHighDensityMode) {
+            this.enableHighDensityMode = enableHighDensityMode;
+            return this;
+        }
+        public Boolean getEnableHighDensityMode() {
+            return this.enableHighDensityMode;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesInstanceCpuOptions extends TeaModel {
         /**
          * <p>The number of physical CPU cores.</p>
@@ -1360,6 +1379,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstance extends TeaModel {
         /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("AdditionalInfo")
+        public DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo additionalInfo;
+
+        /**
          * <p>The automatic release time of the pay-as-you-go instance.</p>
          * 
          * <strong>example:</strong>
@@ -1967,6 +1993,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static DescribeInstancesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstance self = new DescribeInstancesResponseBodyInstancesInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setAdditionalInfo(DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo additionalInfo) {
+            this.additionalInfo = additionalInfo;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo getAdditionalInfo() {
+            return this.additionalInfo;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setAutoReleaseTime(String autoReleaseTime) {

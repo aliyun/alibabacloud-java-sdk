@@ -8,7 +8,10 @@ public class DescribeDisksRequest extends TeaModel {
     public java.util.List<DescribeDisksRequestFilter> filter;
 
     /**
-     * <p>The attribute value. Set the value to IOPS, which indicates the maximum IOPS of the disk.</p>
+     * <p>The additional attributes. Set the value to <code>Placement</code>, which indicates the data storage locations of the disk.</p>
+     * <blockquote>
+     * <p> This attribute is valid only for Regional Enterprise SSDs (ESSDs).</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>IOPS</p>

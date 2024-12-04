@@ -14,12 +14,14 @@ public class ModifySecurityGroupPolicyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The internal access policy of the security group. Valid values:</p>
+     * <p>The internal access control policy of the security group. Valid values:</p>
      * <ul>
-     * <li>Accept: All instances in the security group can communicate with each other.</li>
-     * <li>Drop: All instances in the security group are isolated from each other.</li>
+     * <li>Accept: the internal interconnectivity policy</li>
+     * <li>Drop: the internal isolation policy</li>
      * </ul>
-     * <p>The value of this parameter is not case-sensitive.</p>
+     * <blockquote>
+     * <p> The value of this parameter is case-insensitive.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

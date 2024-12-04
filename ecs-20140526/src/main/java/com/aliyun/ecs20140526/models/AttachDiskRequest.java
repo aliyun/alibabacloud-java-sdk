@@ -56,7 +56,7 @@ public class AttachDiskRequest extends TeaModel {
     /**
      * <p>The ID of the disk. The disk specified by <code>DiskId</code> and the instance specified by <code>InstanceId</code> must reside in the same zone.</p>
      * <blockquote>
-     * <p> For more information about the limits on attaching a data disk and a system disk, see the &quot;Usage notes&quot; section of this topic.</p>
+     * <p> For information about the limits on attaching a data disk and a system disk, see the &quot;Usage notes&quot; section of this topic.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
