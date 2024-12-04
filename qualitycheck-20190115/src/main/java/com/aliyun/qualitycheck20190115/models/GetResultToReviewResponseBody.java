@@ -95,6 +95,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("BeginTime")
         public String beginTime;
 
+        @NameInMap("BeginTimeMs")
+        public Long beginTimeMs;
+
         /**
          * <strong>example:</strong>
          * <p>7</p>
@@ -158,6 +161,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
         public String getBeginTime() {
             return this.beginTime;
+        }
+
+        public GetResultToReviewResponseBodyDataDialoguesDialogue setBeginTimeMs(Long beginTimeMs) {
+            this.beginTimeMs = beginTimeMs;
+            return this;
+        }
+        public Long getBeginTimeMs() {
+            return this.beginTimeMs;
         }
 
         public GetResultToReviewResponseBodyDataDialoguesDialogue setEmotionValue(Integer emotionValue) {
