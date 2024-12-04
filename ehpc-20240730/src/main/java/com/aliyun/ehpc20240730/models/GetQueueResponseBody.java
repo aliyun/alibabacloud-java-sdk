@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQueueResponseBody extends TeaModel {
     /**
-     * <p>The information about the queue.</p>
+     * <p>The queue configurations.</p>
      */
     @NameInMap("Queue")
     public GetQueueResponseBodyQueue queue;

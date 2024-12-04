@@ -4,13 +4,21 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
+    /**
+     * <p>The list of software that you want to install in the cluster. Valid values of N: 0 to 10.</p>
+     */
     @NameInMap("AdditionalPackages")
     public java.util.List<CreateClusterRequestAdditionalPackages> additionalPackages;
 
+    /**
+     * <p>The configurations of the custom addons in the cluster. Only one addon is supported.</p>
+     */
     @NameInMap("Addons")
     public java.util.List<CreateClusterRequestAddons> addons;
 
     /**
+     * <p>The client version. By default, the latest version is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.1.0</p>
      */
@@ -18,19 +26,33 @@ public class CreateClusterRequest extends TeaModel {
     public String clientVersion;
 
     /**
+     * <p>The cluster type. Valid values:</p>
+     * <ul>
+     * <li>Standard</li>
+     * <li>Serverless</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Standard</p>
      */
     @NameInMap("ClusterCategory")
     public String clusterCategory;
 
+    /**
+     * <p>The access credentials of the cluster.</p>
+     */
     @NameInMap("ClusterCredentials")
     public CreateClusterRequestClusterCredentials clusterCredentials;
 
+    /**
+     * <p>The post-processing script of the cluster.</p>
+     */
     @NameInMap("ClusterCustomConfiguration")
     public CreateClusterRequestClusterCustomConfiguration clusterCustomConfiguration;
 
     /**
+     * <p>The cluster description. The description must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+     * 
      * <strong>example:</strong>
      * <p>slurm22.05.8-cluster-20240718</p>
      */
@@ -38,6 +60,13 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterDescription;
 
     /**
+     * <p>The deployment mode of the cluster. Valid values:</p>
+     * <ul>
+     * <li>Integrated</li>
+     * <li>Hybrid</li>
+     * <li>Custom</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Integrated</p>
      */
@@ -45,6 +74,8 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterMode;
 
     /**
+     * <p>The cluster name. The name must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+     * 
      * <strong>example:</strong>
      * <p>slurm22.05.8-cluster-20240718</p>
      */
@@ -52,6 +83,9 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>The ID of the vSwitch that you want the cluster to use. The vSwitch must reside in the VPC that is specified by the <code>ClusterVpcId</code> parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a> operation to query information about the created VPCs and vSwitches.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-f8za5p0mwzgdu3wgx****</p>
      */
@@ -59,6 +93,8 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterVSwitchId;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC) in which the cluster resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-m5efjevmclc0xdmys****</p>
      */
@@ -66,6 +102,13 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterVpcId;
 
     /**
+     * <p>Specifies whether to enable deletion protection for the cluster. Deletion protection decides whether the cluster can be deleted in the console or by calling the <a href="https://help.aliyun.com/document_detail/424406.html">DeleteCluster</a> operation. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -73,16 +116,28 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
+     * <p>Specifies whether to use an advanced security group. Valid values:</p>
+     * <ul>
+     * <li>true: automatically creates and uses an advanced security group.</li>
+     * <li>false: automatically creates and uses a basic security group.</li>
+     * </ul>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/605897.html">Basic security groups and advanced security groups</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("IsEnterpriseSecurityGroup")
     public Boolean isEnterpriseSecurityGroup;
 
+    /**
+     * <p>The configurations of the cluster management node.</p>
+     */
     @NameInMap("Manager")
     public CreateClusterRequestManager manager;
 
     /**
+     * <p>The maximum number of vCPUs that can be used by compute nodes in the cluster. Valid values: 0 to 100,000.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
@@ -90,16 +145,24 @@ public class CreateClusterRequest extends TeaModel {
     public Integer maxCoreCount;
 
     /**
+     * <p>The maximum number of compute nodes that the cluster can manage. Valid values: 0 to 5,000.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
     @NameInMap("MaxCount")
     public Integer maxCount;
 
+    /**
+     * <p>The configurations of the queues in the cluster. The number of queues can be 0 to 8.</p>
+     */
     @NameInMap("Queues")
     public java.util.List<QueueTemplate> queues;
 
     /**
+     * <p>The ID of the resource group to which the cluster belongs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the IDs of the resource groups.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4******</p>
      */
@@ -107,15 +170,24 @@ public class CreateClusterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The ID of the security group to which the cluster belongs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> operation to query available security groups in the current region.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-bp13n61xsydodfyg****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The configurations of shared storage in the cluster.</p>
+     */
     @NameInMap("SharedStorages")
     public java.util.List<SharedStorageTemplate> sharedStorages;
 
+    /**
+     * <p>The tags of the cluster.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateClusterRequestTags> tags;
 
@@ -294,6 +366,8 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestAdditionalPackages extends TeaModel {
         /**
+         * <p>The name of the software that you want to install in the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>mpich</p>
          */
@@ -301,6 +375,8 @@ public class CreateClusterRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The version of the software that you want to install in the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>4.0.3</p>
          */
@@ -332,6 +408,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestAddons extends TeaModel {
         /**
+         * <p>The addon name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -341,6 +418,8 @@ public class CreateClusterRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The resource configurations of the addon.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;{\\&quot;EipResource\\&quot;: {\\&quot;AutoCreate\\&quot;: true}, \\&quot;EcsResources\\&quot;: [{\\&quot;InstanceType\\&quot;: \\&quot;ecs.c7.xlarge\\&quot;, \\&quot;ImageId\\&quot;: \\&quot;centos_7_6_x64_20G_alibase_20211130.vhd\\&quot;, \\&quot;SystemDisk\\&quot;: {\\&quot;Category\\&quot;: \\&quot;cloud_essd\\&quot;, \\&quot;Size\\&quot;: 40, \\&quot;Level\\&quot;: \\&quot;PL0\\&quot;}, \\&quot;EnableHT\\&quot;: true, \\&quot;InstanceChargeType\\&quot;: \\&quot;PostPaid\\&quot;, \\&quot;SpotStrategy\\&quot;: \\&quot;NoSpot\\&quot;}]}&quot;</p>
          */
@@ -348,6 +427,8 @@ public class CreateClusterRequest extends TeaModel {
         public String resourcesSpec;
 
         /**
+         * <p>The service configurations of the addon.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;[{\\&quot;ServiceName\\&quot;: \\&quot;SSH\\&quot;, \\&quot;ServiceAccessType\\&quot;: null, \\&quot;ServiceAccessUrl\\&quot;: null, \\&quot;NetworkACL\\&quot;: [{\\&quot;IpProtocol\\&quot;: \\&quot;TCP\\&quot;, \\&quot;Port\\&quot;: 22, \\&quot;SourceCidrIp\\&quot;: \\&quot;0.0.0.0/0\\&quot;}]}, {\\&quot;ServiceName\\&quot;: \\&quot;VNC\\&quot;, \\&quot;ServiceAccessType\\&quot;: null, \\&quot;ServiceAccessUrl\\&quot;: null, \\&quot;NetworkACL\\&quot;: [{\\&quot;IpProtocol\\&quot;: \\&quot;TCP\\&quot;, \\&quot;Port\\&quot;: 12016, \\&quot;SourceCidrIp\\&quot;: \\&quot;0.0.0.0/0\\&quot;}]}, {\\&quot;ServiceName\\&quot;: \\&quot;CLIENT\\&quot;, \\&quot;ServiceAccessType\\&quot;: \\&quot;URL\\&quot;, \\&quot;ServiceAccessUrl\\&quot;: \\&quot;\\&quot;, \\&quot;NetworkACL\\&quot;: [{\\&quot;IpProtocol\\&quot;: \\&quot;TCP\\&quot;, \\&quot;Port\\&quot;: 12011, \\&quot;SourceCidrIp\\&quot;: \\&quot;0.0.0.0/0\\&quot;}]}]&quot;</p>
          */
@@ -355,6 +436,7 @@ public class CreateClusterRequest extends TeaModel {
         public String servicesSpec;
 
         /**
+         * <p>The addon version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -404,6 +486,11 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestClusterCredentials extends TeaModel {
         /**
+         * <p>The name of the key pair. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
+         * <blockquote>
+         * <p> For more information, see <a href="https://help.aliyun.com/document_detail/51793.html">Create a key pair</a>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>ali0824</p>
          */
@@ -411,6 +498,11 @@ public class CreateClusterRequest extends TeaModel {
         public String keyPairName;
 
         /**
+         * <p>The password for the root user to log on to the node. The password must be 8 to 20 characters in length, and must contain at least 3 of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported: <code>() ~ ! @ # $ % ^ &amp; * - = + { } [ ] : ; \\&quot; &lt; &gt; , . ? /</code></p>
+         * <blockquote>
+         * <p> We recommend that you use HTTPS to call the API operation to prevent password leakage.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -442,6 +534,8 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestClusterCustomConfiguration extends TeaModel {
         /**
+         * <p>The runtime parameters of the script after the cluster is created.</p>
+         * 
          * <strong>example:</strong>
          * <p>E-HPC cn-hangzhou</p>
          */
@@ -449,6 +543,8 @@ public class CreateClusterRequest extends TeaModel {
         public String args;
 
         /**
+         * <p>The URL that is used to download the post-processing script.</p>
+         * 
          * <strong>example:</strong>
          * <p>http://*****</p>
          */
@@ -480,6 +576,12 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestManagerDNS extends TeaModel {
         /**
+         * <p>The domain name resolution type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NIS: NIS.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NIS</p>
          */
@@ -487,6 +589,8 @@ public class CreateClusterRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The version of the domain name resolution service.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.31</p>
          */
@@ -518,6 +622,12 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestManagerDirectoryService extends TeaModel {
         /**
+         * <p>The type of the domain account.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NIS: NIS.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NIS</p>
          */
@@ -525,6 +635,8 @@ public class CreateClusterRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The version of the domain account service.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.31</p>
          */
@@ -556,6 +668,15 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestManagerScheduler extends TeaModel {
         /**
+         * <p>The scheduler type. Valid values:</p>
+         * <ul>
+         * <li>SLURM</li>
+         * <li>PBS</li>
+         * <li>OPENGRIDSCHEDULER</li>
+         * <li>LSF_PLUGIN</li>
+         * <li>PBS_PLUGIN</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SLURM</p>
          */
@@ -563,6 +684,8 @@ public class CreateClusterRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The scheduler version.</p>
+         * 
          * <strong>example:</strong>
          * <p>22.05.8</p>
          */
@@ -593,15 +716,27 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestManager extends TeaModel {
+        /**
+         * <p>The configurations of the domain name resolution service.</p>
+         */
         @NameInMap("DNS")
         public CreateClusterRequestManagerDNS DNS;
 
+        /**
+         * <p>The configurations of the directory service.</p>
+         */
         @NameInMap("DirectoryService")
         public CreateClusterRequestManagerDirectoryService directoryService;
 
+        /**
+         * <p>The hardware configurations of the management node.</p>
+         */
         @NameInMap("ManagerNode")
         public NodeTemplate managerNode;
 
+        /**
+         * <p>The configurations of the scheduler service.</p>
+         */
         @NameInMap("Scheduler")
         public CreateClusterRequestManagerScheduler scheduler;
 
@@ -646,6 +781,8 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestTags extends TeaModel {
         /**
+         * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>ClusterId</p>
          */
@@ -653,6 +790,8 @@ public class CreateClusterRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>ehpc-hz-******</p>
          */

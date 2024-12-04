@@ -160,6 +160,9 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("AddTime")
         public String addTime;
 
+        @NameInMap("DeploymentSetId")
+        public String deploymentSetId;
+
         /**
          * <p>The time when the node expires.</p>
          * 
@@ -339,6 +342,14 @@ public class ListNodesResponseBody extends TeaModel {
         }
         public String getAddTime() {
             return this.addTime;
+        }
+
+        public ListNodesResponseBodyNodes setDeploymentSetId(String deploymentSetId) {
+            this.deploymentSetId = deploymentSetId;
+            return this;
+        }
+        public String getDeploymentSetId() {
+            return this.deploymentSetId;
         }
 
         public ListNodesResponseBodyNodes setExpiredTime(String expiredTime) {

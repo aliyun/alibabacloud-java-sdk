@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the E-HPC cluster to be released.</p>
      * 
      * <strong>example:</strong>
      * <p>ehpc-hz-QKKVqO****</p>

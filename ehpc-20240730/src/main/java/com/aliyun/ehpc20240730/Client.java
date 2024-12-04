@@ -27,6 +27,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>The file system that you want to attach must be created in advance in the same virtual private cloud (VPC) as the destination cluster. For more information, see <a href="https://help.aliyun.com/document_detail/27530.html">Create a file system</a> and <a href="https://help.aliyun.com/document_detail/27531.html">Manage mount targets</a>.</li>
+     * <li>E-HPC clusters support Apsara File Storage NAS file systems.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Attaches shared storage to an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
@@ -69,6 +77,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>The file system that you want to attach must be created in advance in the same virtual private cloud (VPC) as the destination cluster. For more information, see <a href="https://help.aliyun.com/document_detail/27530.html">Create a file system</a> and <a href="https://help.aliyun.com/document_detail/27531.html">Manage mount targets</a>.</li>
+     * <li>E-HPC clusters support Apsara File Storage NAS file systems.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Attaches shared storage to an Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
@@ -81,8 +97,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Before you call this operation, make sure that you are familiar with the billing and pricing of E-HPC. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">Overview</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建一个按量付费或者预付费（包年包月） 集群	</p>
+     * <p>Creates a pay-as-you-go or subscription Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param tmpReq CreateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -227,8 +247,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Before you call this operation, make sure that you are familiar with the billing and pricing of E-HPC. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">Overview</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建一个按量付费或者预付费（包年包月） 集群	</p>
+     * <p>Creates a pay-as-you-go or subscription Elastic High Performance Computing (E-HPC) cluster.</p>
      * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
@@ -332,6 +356,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.count)) {
             query.put("Count", request.count);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentSetId)) {
+            query.put("DeploymentSetId", request.deploymentSetId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.HPCInterConnect)) {
@@ -503,6 +531,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Make sure that data of the cluster to be deleted is backed up before you call this operation.</p>
+     * <blockquote>
+     * <p>After a cluster is released, you cannot restore the data stored in the cluster. Exercise caution when you release a cluster.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Releases an Enterprise High Performance Computing (E-HPC) cluster.</p>
      * 
@@ -535,6 +570,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Make sure that data of the cluster to be deleted is backed up before you call this operation.</p>
+     * <blockquote>
+     * <p>After a cluster is released, you cannot restore the data stored in the cluster. Exercise caution when you release a cluster.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Releases an Enterprise High Performance Computing (E-HPC) cluster.</p>
      * 
@@ -984,7 +1026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取作业详情</p>
+     * <p>Obtains the details of a job.</p>
      * 
      * @param request GetJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1020,7 +1062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取作业详情</p>
+     * <p>Obtains the details of a job.</p>
      * 
      * @param request GetJobRequest
      * @return GetJobResponse
@@ -1147,6 +1189,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Take note of the following items when you call this operation:</p>
+     * <ul>
+     * <li>The cluster must be in the <code>Running</code> state.</li>
+     * <li>Clusters fall into two types:<ul>
+     * <li>Regular clusters on Alibaba Cloud Public Cloud</li>
+     * <li>Managed clusters on Alibaba Cloud Public Cloud</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Installs an addon.</p>
      * 
@@ -1195,6 +1249,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Take note of the following items when you call this operation:</p>
+     * <ul>
+     * <li>The cluster must be in the <code>Running</code> state.</li>
+     * <li>Clusters fall into two types:<ul>
+     * <li>Regular clusters on Alibaba Cloud Public Cloud</li>
+     * <li>Managed clusters on Alibaba Cloud Public Cloud</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Installs an addon.</p>
      * 
@@ -2069,6 +2135,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Take note of the following items when you call this operation:</p>
+     * <ul>
+     * <li>The cluster must be in the <code>Running</code> state.</li>
+     * <li>Clusters fall into the following types:<ul>
+     * <li>Regular clusters on Alibaba Cloud Public Cloud</li>
+     * <li>Managed clusters on Alibaba Cloud Public Cloud</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Uninstalls an addon.</p>
      * 
@@ -2105,6 +2183,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Take note of the following items when you call this operation:</p>
+     * <ul>
+     * <li>The cluster must be in the <code>Running</code> state.</li>
+     * <li>Clusters fall into the following types:<ul>
+     * <li>Regular clusters on Alibaba Cloud Public Cloud</li>
+     * <li>Managed clusters on Alibaba Cloud Public Cloud</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Uninstalls an addon.</p>
      * 

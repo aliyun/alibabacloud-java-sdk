@@ -1,3 +1,8 @@
+2024-12-04 Version: 2.0.1
+- Update API CreateNodes: add param DeploymentSetId.
+- Update API ListNodes: update response param.
+
+
 2024-10-18 Version: 2.0.0
 - Support API CreateJob.
 - Support API GetJob.

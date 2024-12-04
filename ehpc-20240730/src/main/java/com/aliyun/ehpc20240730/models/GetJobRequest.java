@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetJobRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The job ID. You can call the ListJobs operation to query the job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

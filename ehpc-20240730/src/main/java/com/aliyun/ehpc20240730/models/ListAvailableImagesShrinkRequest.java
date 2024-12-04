@@ -31,9 +31,9 @@ public class ListAvailableImagesShrinkRequest extends TeaModel {
     /**
      * <p>The image source. Valid values:</p>
      * <ul>
-     * <li>system: system images</li>
-     * <li>self: custom images</li>
-     * <li>others: shared images</li>
+     * <li>system: system image.</li>
+     * <li>self: custom image.</li>
+     * <li>others: shared image.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,10 @@ public class ListAvailableImagesShrinkRequest extends TeaModel {
     public String imageOwnerAlias;
 
     /**
-     * <p>The instance type for which you want to query available images. If you do not specify the instance type, all available images are returned, regardless of the supported instance types.</p>
+     * <p>The instance type.</p>
+     * <blockquote>
+     * <p> By default, if you do not specify an instance type, the list of images that are supported by all instance types are queried. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ecs.c7.large</p>
@@ -54,8 +57,8 @@ public class ListAvailableImagesShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to return published community images. Valid values:</p>
      * <ul>
-     * <li>true: returns published community images. If you set the value of this parameter to true, the ImageOwnerAlias parameter must be set to others.</li>
-     * <li>false: returns non-community images. The value of the ImageOwnerAlias parameter prevails.</li>
+     * <li>true: returns published community images. If you set the value of this parameter to <code>true</code>, the <code>ImageOwnerAlias</code> parameter must be set to <code>others</code>.</li>
+     * <li>false: returns non-community images. The value of the <code>ImageOwnerAlias</code> parameter prevails.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 

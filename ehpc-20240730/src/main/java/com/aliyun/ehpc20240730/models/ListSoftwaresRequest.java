@@ -38,7 +38,7 @@ public class ListSoftwaresRequest extends TeaModel {
     public java.util.List<ListSoftwaresRequestOsInfos> osInfos;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the page to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

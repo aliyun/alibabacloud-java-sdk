@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobsResponseBody extends TeaModel {
     /**
-     * <p>The returned jobs.</p>
+     * <p>The jobs.</p>
      */
     @NameInMap("Jobs")
     public java.util.List<ListJobsResponseBodyJobs> jobs;
@@ -190,7 +190,7 @@ public class ListJobsResponseBody extends TeaModel {
 
     public static class ListJobsResponseBodyJobsJobSpec extends TeaModel {
         /**
-         * <p>数组作业ID。</p>
+         * <p>The array job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -199,7 +199,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String arrayJobId;
 
         /**
-         * <p>数组子作业ID。</p>
+         * <p>The ID of the job in the array.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

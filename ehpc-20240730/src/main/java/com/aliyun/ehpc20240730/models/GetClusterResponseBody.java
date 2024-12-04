@@ -187,7 +187,7 @@ public class GetClusterResponseBody extends TeaModel {
     public Integer idleInterval;
 
     /**
-     * <p>The configurations of the cluster management node.</p>
+     * <p>The management node configurations.</p>
      */
     @NameInMap("Manager")
     public GetClusterResponseBodyManager manager;

@@ -4,10 +4,15 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class GetJobResponseBody extends TeaModel {
+    /**
+     * <p>The job details.</p>
+     */
     @NameInMap("JobInfo")
     public GetJobResponseBodyJobInfo jobInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0****-1335-<strong><strong>-A1D7-6C044FE7</strong></strong></p>
      */
@@ -15,6 +20,12 @@ public class GetJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The request result. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoResources extends TeaModel {
         /**
+         * <p>The number of vCPUs used by the job on each node.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -59,6 +72,8 @@ public class GetJobResponseBody extends TeaModel {
         public String cores;
 
         /**
+         * <p>The number of GPUs used by the job on each node.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -66,6 +81,8 @@ public class GetJobResponseBody extends TeaModel {
         public String gpus;
 
         /**
+         * <p>The memory size used by the job on each node.</p>
+         * 
          * <strong>example:</strong>
          * <p>1gb</p>
          */
@@ -73,6 +90,8 @@ public class GetJobResponseBody extends TeaModel {
         public String memory;
 
         /**
+         * <p>The number of nodes that are used to run the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -120,6 +139,8 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoResourcesUsed extends TeaModel {
         /**
+         * <p>The number of vCPUs used by the job on each node.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -127,6 +148,8 @@ public class GetJobResponseBody extends TeaModel {
         public String cores;
 
         /**
+         * <p>The memory size used by the job on each node.</p>
+         * 
          * <strong>example:</strong>
          * <p>512mb</p>
          */
@@ -134,6 +157,8 @@ public class GetJobResponseBody extends TeaModel {
         public String memory;
 
         /**
+         * <p>The number of nodes that are used to run the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -173,6 +198,8 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoVariables extends TeaModel {
         /**
+         * <p>The name of the environment variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>ProxyIP</p>
          */
@@ -180,6 +207,8 @@ public class GetJobResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the environment variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.x.x.x</p>
          */
@@ -211,6 +240,8 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfo extends TeaModel {
         /**
+         * <p>The parent job ID. If the return value is a non-empty string, the job is an array job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -218,6 +249,8 @@ public class GetJobResponseBody extends TeaModel {
         public String arrayJobId;
 
         /**
+         * <p>The sub-job ID. This parameter is valid when the ArrayJobId parameter is a non-empty string.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -225,6 +258,9 @@ public class GetJobResponseBody extends TeaModel {
         public String arrayJobSubId;
 
         /**
+         * <p>The job queue. If the job is not in a queue, the output is empty.</p>
+         * <p>The format is X-Y:Z. X indicates the first index, Y indicates the final index, and Z indicates the step size. For example, 2-7:2 indicates three sub-jobs numbered 2, 4, and 6.</p>
+         * 
          * <strong>example:</strong>
          * <p>1-5:2</p>
          */
@@ -232,6 +268,8 @@ public class GetJobResponseBody extends TeaModel {
         public String arrayRequest;
 
         /**
+         * <p>The command that is used to run the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>/home/huangsf/ehpc/job_meta.pbs</p>
          */
@@ -239,6 +277,8 @@ public class GetJobResponseBody extends TeaModel {
         public String commandLine;
 
         /**
+         * <p>The time when the job was submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-16T10:52:48</p>
          */
@@ -246,6 +286,8 @@ public class GetJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The error log file of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>/home/xxx/STDIN.e1</p>
          */
@@ -253,6 +295,8 @@ public class GetJobResponseBody extends TeaModel {
         public String errorLog;
 
         /**
+         * <p>Additional information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -260,6 +304,8 @@ public class GetJobResponseBody extends TeaModel {
         public String extraInfo;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.manager</p>
          */
@@ -267,6 +313,8 @@ public class GetJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The job name.</p>
+         * 
          * <strong>example:</strong>
          * <p>testJob</p>
          */
@@ -274,6 +322,8 @@ public class GetJobResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The queue to which the job belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>workq</p>
          */
@@ -281,6 +331,8 @@ public class GetJobResponseBody extends TeaModel {
         public String jobQueue;
 
         /**
+         * <p>The time when the job was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-16T10:52:48</p>
          */
@@ -288,6 +340,8 @@ public class GetJobResponseBody extends TeaModel {
         public String lastModifyTime;
 
         /**
+         * <p>The compute nodes that are used to run the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>compute000</p>
          */
@@ -295,6 +349,8 @@ public class GetJobResponseBody extends TeaModel {
         public String nodeList;
 
         /**
+         * <p>The standard output log file of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>/home/xxx/STDIN.o1</p>
          */
@@ -302,19 +358,29 @@ public class GetJobResponseBody extends TeaModel {
         public String outputLog;
 
         /**
+         * <p>The priority of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The resources that were requested when the job was submitted.</p>
+         */
         @NameInMap("Resources")
         public GetJobResponseBodyJobInfoResources resources;
 
+        /**
+         * <p>The resources that are actually used by the job.</p>
+         */
         @NameInMap("ResourcesUsed")
         public GetJobResponseBodyJobInfoResourcesUsed resourcesUsed;
 
         /**
+         * <p>The user to which the job belongs or that is used to submit the job. This user is a cluster-side user.</p>
+         * 
          * <strong>example:</strong>
          * <p>testuser</p>
          */
@@ -322,6 +388,8 @@ public class GetJobResponseBody extends TeaModel {
         public String runasUser;
 
         /**
+         * <p>The time when the job was started.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-16T10:52:48</p>
          */
@@ -329,12 +397,17 @@ public class GetJobResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The job state.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The variables of the job.</p>
+         */
         @NameInMap("Variables")
         public java.util.List<GetJobResponseBodyJobInfoVariables> variables;
 
