@@ -104,6 +104,9 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
         @NameInMap("Indebt")
         public Boolean indebt;
 
+        @NameInMap("Tag")
+        public String tag;
+
         public static GetUserBuyStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetUserBuyStatusResponseBodyData self = new GetUserBuyStatusResponseBodyData();
             return TeaModel.build(map, self);
@@ -131,6 +134,14 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
         }
         public Boolean getIndebt() {
             return this.indebt;
+        }
+
+        public GetUserBuyStatusResponseBodyData setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
     }

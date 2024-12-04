@@ -4,6 +4,9 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class GetServiceConfResponseBody extends TeaModel {
+    @NameInMap("Classify")
+    public String classify;
+
     /**
      * <strong>example:</strong>
      * <p>200</p>
@@ -79,6 +82,14 @@ public class GetServiceConfResponseBody extends TeaModel {
     public static GetServiceConfResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceConfResponseBody self = new GetServiceConfResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetServiceConfResponseBody setClassify(String classify) {
+        this.classify = classify;
+        return this;
+    }
+    public String getClassify() {
+        return this.classify;
     }
 
     public GetServiceConfResponseBody setCode(Integer code) {
