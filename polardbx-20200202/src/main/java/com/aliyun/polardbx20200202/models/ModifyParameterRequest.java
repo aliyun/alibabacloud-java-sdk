@@ -27,9 +27,10 @@ public class ModifyParameterRequest extends TeaModel {
     @NameInMap("ParamLevel")
     public String paramLevel;
 
+    @NameInMap("ParameterGroupId")
+    public String parameterGroupId;
+
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>{&quot;CONN_POOL_BLOCK_TIMEOUT&quot;:6000}</p>
      */
@@ -72,6 +73,14 @@ public class ModifyParameterRequest extends TeaModel {
     }
     public String getParamLevel() {
         return this.paramLevel;
+    }
+
+    public ModifyParameterRequest setParameterGroupId(String parameterGroupId) {
+        this.parameterGroupId = parameterGroupId;
+        return this;
+    }
+    public String getParameterGroupId() {
+        return this.parameterGroupId;
     }
 
     public ModifyParameterRequest setParameters(String parameters) {

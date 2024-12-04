@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>pxc-********</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("EngineVersion")
+    public String engineVersion;
 
     /**
      * <strong>example:</strong>
@@ -40,6 +41,14 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeParameterTemplatesRequest setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     public DescribeParameterTemplatesRequest setParamLevel(String paramLevel) {

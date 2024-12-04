@@ -3,7 +3,7 @@ package com.aliyun.polardbx20200202.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDBInstanceRequest extends TeaModel {
+public class CreateDBInstanceShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -57,7 +57,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String engineVersion;
 
     @NameInMap("ExtraParams")
-    public java.util.Map<String, String> extraParams;
+    public String extraParamsShrink;
 
     @NameInMap("IsColumnarReadDBInstance")
     public Boolean isColumnarReadDBInstance;
@@ -178,12 +178,12 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
-    public static CreateDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateDBInstanceRequest self = new CreateDBInstanceRequest();
+    public static CreateDBInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateDBInstanceShrinkRequest self = new CreateDBInstanceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDBInstanceRequest setAutoRenew(Boolean autoRenew) {
+    public CreateDBInstanceShrinkRequest setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
     }
@@ -191,7 +191,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.autoRenew;
     }
 
-    public CreateDBInstanceRequest setCNNodeCount(String CNNodeCount) {
+    public CreateDBInstanceShrinkRequest setCNNodeCount(String CNNodeCount) {
         this.CNNodeCount = CNNodeCount;
         return this;
     }
@@ -199,7 +199,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.CNNodeCount;
     }
 
-    public CreateDBInstanceRequest setClientToken(String clientToken) {
+    public CreateDBInstanceShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -207,7 +207,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateDBInstanceRequest setCnClass(String cnClass) {
+    public CreateDBInstanceShrinkRequest setCnClass(String cnClass) {
         this.cnClass = cnClass;
         return this;
     }
@@ -215,7 +215,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.cnClass;
     }
 
-    public CreateDBInstanceRequest setDBNodeClass(String DBNodeClass) {
+    public CreateDBInstanceShrinkRequest setDBNodeClass(String DBNodeClass) {
         this.DBNodeClass = DBNodeClass;
         return this;
     }
@@ -223,7 +223,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.DBNodeClass;
     }
 
-    public CreateDBInstanceRequest setDBNodeCount(Integer DBNodeCount) {
+    public CreateDBInstanceShrinkRequest setDBNodeCount(Integer DBNodeCount) {
         this.DBNodeCount = DBNodeCount;
         return this;
     }
@@ -231,7 +231,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.DBNodeCount;
     }
 
-    public CreateDBInstanceRequest setDNNodeCount(String DNNodeCount) {
+    public CreateDBInstanceShrinkRequest setDNNodeCount(String DNNodeCount) {
         this.DNNodeCount = DNNodeCount;
         return this;
     }
@@ -239,7 +239,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.DNNodeCount;
     }
 
-    public CreateDBInstanceRequest setDnClass(String dnClass) {
+    public CreateDBInstanceShrinkRequest setDnClass(String dnClass) {
         this.dnClass = dnClass;
         return this;
     }
@@ -247,7 +247,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.dnClass;
     }
 
-    public CreateDBInstanceRequest setDnStorageSpace(String dnStorageSpace) {
+    public CreateDBInstanceShrinkRequest setDnStorageSpace(String dnStorageSpace) {
         this.dnStorageSpace = dnStorageSpace;
         return this;
     }
@@ -255,7 +255,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.dnStorageSpace;
     }
 
-    public CreateDBInstanceRequest setEngineVersion(String engineVersion) {
+    public CreateDBInstanceShrinkRequest setEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
     }
@@ -263,15 +263,15 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.engineVersion;
     }
 
-    public CreateDBInstanceRequest setExtraParams(java.util.Map<String, String> extraParams) {
-        this.extraParams = extraParams;
+    public CreateDBInstanceShrinkRequest setExtraParamsShrink(String extraParamsShrink) {
+        this.extraParamsShrink = extraParamsShrink;
         return this;
     }
-    public java.util.Map<String, String> getExtraParams() {
-        return this.extraParams;
+    public String getExtraParamsShrink() {
+        return this.extraParamsShrink;
     }
 
-    public CreateDBInstanceRequest setIsColumnarReadDBInstance(Boolean isColumnarReadDBInstance) {
+    public CreateDBInstanceShrinkRequest setIsColumnarReadDBInstance(Boolean isColumnarReadDBInstance) {
         this.isColumnarReadDBInstance = isColumnarReadDBInstance;
         return this;
     }
@@ -279,7 +279,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.isColumnarReadDBInstance;
     }
 
-    public CreateDBInstanceRequest setIsReadDBInstance(Boolean isReadDBInstance) {
+    public CreateDBInstanceShrinkRequest setIsReadDBInstance(Boolean isReadDBInstance) {
         this.isReadDBInstance = isReadDBInstance;
         return this;
     }
@@ -287,7 +287,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.isReadDBInstance;
     }
 
-    public CreateDBInstanceRequest setNetworkType(String networkType) {
+    public CreateDBInstanceShrinkRequest setNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
     }
@@ -295,7 +295,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.networkType;
     }
 
-    public CreateDBInstanceRequest setPayType(String payType) {
+    public CreateDBInstanceShrinkRequest setPayType(String payType) {
         this.payType = payType;
         return this;
     }
@@ -303,7 +303,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.payType;
     }
 
-    public CreateDBInstanceRequest setPeriod(String period) {
+    public CreateDBInstanceShrinkRequest setPeriod(String period) {
         this.period = period;
         return this;
     }
@@ -311,7 +311,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.period;
     }
 
-    public CreateDBInstanceRequest setPrimaryDBInstanceName(String primaryDBInstanceName) {
+    public CreateDBInstanceShrinkRequest setPrimaryDBInstanceName(String primaryDBInstanceName) {
         this.primaryDBInstanceName = primaryDBInstanceName;
         return this;
     }
@@ -319,7 +319,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.primaryDBInstanceName;
     }
 
-    public CreateDBInstanceRequest setPrimaryZone(String primaryZone) {
+    public CreateDBInstanceShrinkRequest setPrimaryZone(String primaryZone) {
         this.primaryZone = primaryZone;
         return this;
     }
@@ -327,7 +327,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.primaryZone;
     }
 
-    public CreateDBInstanceRequest setRegionId(String regionId) {
+    public CreateDBInstanceShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -335,7 +335,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateDBInstanceRequest setResourceGroupId(String resourceGroupId) {
+    public CreateDBInstanceShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -343,7 +343,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateDBInstanceRequest setSecondaryZone(String secondaryZone) {
+    public CreateDBInstanceShrinkRequest setSecondaryZone(String secondaryZone) {
         this.secondaryZone = secondaryZone;
         return this;
     }
@@ -351,7 +351,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.secondaryZone;
     }
 
-    public CreateDBInstanceRequest setSeries(String series) {
+    public CreateDBInstanceShrinkRequest setSeries(String series) {
         this.series = series;
         return this;
     }
@@ -359,7 +359,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.series;
     }
 
-    public CreateDBInstanceRequest setTertiaryZone(String tertiaryZone) {
+    public CreateDBInstanceShrinkRequest setTertiaryZone(String tertiaryZone) {
         this.tertiaryZone = tertiaryZone;
         return this;
     }
@@ -367,7 +367,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.tertiaryZone;
     }
 
-    public CreateDBInstanceRequest setTopologyType(String topologyType) {
+    public CreateDBInstanceShrinkRequest setTopologyType(String topologyType) {
         this.topologyType = topologyType;
         return this;
     }
@@ -375,7 +375,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.topologyType;
     }
 
-    public CreateDBInstanceRequest setUsedTime(Integer usedTime) {
+    public CreateDBInstanceShrinkRequest setUsedTime(Integer usedTime) {
         this.usedTime = usedTime;
         return this;
     }
@@ -383,7 +383,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.usedTime;
     }
 
-    public CreateDBInstanceRequest setVPCId(String VPCId) {
+    public CreateDBInstanceShrinkRequest setVPCId(String VPCId) {
         this.VPCId = VPCId;
         return this;
     }
@@ -391,7 +391,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.VPCId;
     }
 
-    public CreateDBInstanceRequest setVSwitchId(String vSwitchId) {
+    public CreateDBInstanceShrinkRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
@@ -399,7 +399,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public CreateDBInstanceRequest setZoneId(String zoneId) {
+    public CreateDBInstanceShrinkRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }

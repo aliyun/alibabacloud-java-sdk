@@ -137,6 +137,9 @@ public class DescribeParametersResponseBody extends TeaModel {
         @NameInMap("ConfigParameters")
         public java.util.List<DescribeParametersResponseBodyDataConfigParameters> configParameters;
 
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
+
         /**
          * <strong>example:</strong>
          * <p>polarx</p>
@@ -165,6 +168,14 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
         public java.util.List<DescribeParametersResponseBodyDataConfigParameters> getConfigParameters() {
             return this.configParameters;
+        }
+
+        public DescribeParametersResponseBodyData setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
         }
 
         public DescribeParametersResponseBodyData setEngine(String engine) {
