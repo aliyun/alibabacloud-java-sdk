@@ -135,6 +135,9 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplates extends TeaModel {
+        @NameInMap("AdditionalInfo")
+        public java.util.Map<String, ?> additionalInfo;
+
         /**
          * <p>The time when the template was created.</p>
          * 
@@ -239,6 +242,14 @@ public class ListTemplatesResponseBody extends TeaModel {
         public static ListTemplatesResponseBodyTemplates build(java.util.Map<String, ?> map) throws Exception {
             ListTemplatesResponseBodyTemplates self = new ListTemplatesResponseBodyTemplates();
             return TeaModel.build(map, self);
+        }
+
+        public ListTemplatesResponseBodyTemplates setAdditionalInfo(java.util.Map<String, ?> additionalInfo) {
+            this.additionalInfo = additionalInfo;
+            return this;
+        }
+        public java.util.Map<String, ?> getAdditionalInfo() {
+            return this.additionalInfo;
         }
 
         public ListTemplatesResponseBodyTemplates setCreateTime(String createTime) {

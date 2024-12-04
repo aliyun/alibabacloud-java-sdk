@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
+    @NameInMap("Filters")
+    public java.util.List<ListTemplatesRequestFilters> filters;
+
     /**
      * <p>Specifies whether to query the tag information. Valid values:</p>
      * <ul>
@@ -84,6 +87,14 @@ public class ListTemplatesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListTemplatesRequest setFilters(java.util.List<ListTemplatesRequestFilters> filters) {
+        this.filters = filters;
+        return this;
+    }
+    public java.util.List<ListTemplatesRequestFilters> getFilters() {
+        return this.filters;
+    }
+
     public ListTemplatesRequest setIncludeTags(String includeTags) {
         this.includeTags = includeTags;
         return this;
@@ -138,6 +149,36 @@ public class ListTemplatesRequest extends TeaModel {
     }
     public String getTemplateName() {
         return this.templateName;
+    }
+
+    public static class ListTemplatesRequestFilters extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static ListTemplatesRequestFilters build(java.util.Map<String, ?> map) throws Exception {
+            ListTemplatesRequestFilters self = new ListTemplatesRequestFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTemplatesRequestFilters setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListTemplatesRequestFilters setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
     }
 
     public static class ListTemplatesRequestTag extends TeaModel {
