@@ -59,6 +59,9 @@ public class ModifyVpcPeerConnectionRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("LinkType")
+    public String linkType;
+
     /**
      * <p>The new name of the VPC peering connection.</p>
      * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
@@ -112,6 +115,14 @@ public class ModifyVpcPeerConnectionRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyVpcPeerConnectionRequest setLinkType(String linkType) {
+        this.linkType = linkType;
+        return this;
+    }
+    public String getLinkType() {
+        return this.linkType;
     }
 
     public ModifyVpcPeerConnectionRequest setName(String name) {

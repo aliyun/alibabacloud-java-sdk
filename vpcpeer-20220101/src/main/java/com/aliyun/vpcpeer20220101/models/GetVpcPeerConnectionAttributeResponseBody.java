@@ -104,6 +104,9 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("LinkType")
+    public String linkType;
+
     /**
      * <p>The name of the VPC peering connection.</p>
      * 
@@ -264,6 +267,14 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetVpcPeerConnectionAttributeResponseBody setLinkType(String linkType) {
+        this.linkType = linkType;
+        return this;
+    }
+    public String getLinkType() {
+        return this.linkType;
     }
 
     public GetVpcPeerConnectionAttributeResponseBody setName(String name) {
