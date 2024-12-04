@@ -90,6 +90,9 @@ public class CreateVpcPeerConnectionRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("LinkType")
+    public String linkType;
+
     /**
      * <p>The name of the VPC peering connection.</p>
      * <p>The name must be 2 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
@@ -190,6 +193,14 @@ public class CreateVpcPeerConnectionRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public CreateVpcPeerConnectionRequest setLinkType(String linkType) {
+        this.linkType = linkType;
+        return this;
+    }
+    public String getLinkType() {
+        return this.linkType;
     }
 
     public CreateVpcPeerConnectionRequest setName(String name) {
