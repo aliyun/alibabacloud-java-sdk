@@ -1626,6 +1626,9 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("SchemeVersion")
         public Long schemeVersion;
 
+        @NameInMap("Score")
+        public Integer score;
+
         @NameInMap("Type")
         public String type;
 
@@ -1688,6 +1691,14 @@ public class GetResultResponseBody extends TeaModel {
         }
         public Long getSchemeVersion() {
             return this.schemeVersion;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResult setScore(Integer score) {
+            this.score = score;
+            return this;
+        }
+        public Integer getScore() {
+            return this.score;
         }
 
         public GetResultResponseBodyDataResultInfoHitResultHitResult setType(String type) {
@@ -2690,6 +2701,9 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("TaskName")
         public String taskName;
 
+        @NameInMap("Vid")
+        public String vid;
+
         public static GetResultResponseBodyDataResultInfo build(java.util.Map<String, ?> map) throws Exception {
             GetResultResponseBodyDataResultInfo self = new GetResultResponseBodyDataResultInfo();
             return TeaModel.build(map, self);
@@ -2901,6 +2915,14 @@ public class GetResultResponseBody extends TeaModel {
         }
         public String getTaskName() {
             return this.taskName;
+        }
+
+        public GetResultResponseBodyDataResultInfo setVid(String vid) {
+            this.vid = vid;
+            return this;
+        }
+        public String getVid() {
+            return this.vid;
         }
 
     }
