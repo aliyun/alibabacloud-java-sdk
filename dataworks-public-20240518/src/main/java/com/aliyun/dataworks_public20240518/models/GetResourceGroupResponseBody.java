@@ -11,6 +11,9 @@ public class GetResourceGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details about the resource group.</p>
+     */
     @NameInMap("ResourceGroup")
     public GetResourceGroupResponseBodyResourceGroup resourceGroup;
 
@@ -52,6 +55,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
     public static class GetResourceGroupResponseBodyResourceGroupSpec extends TeaModel {
         /**
+         * <p>The number of resources in the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -153,16 +158,41 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <p>The type the resource group. Valid values:</p>
+         * <ul>
+         * <li>CommonV2: serverless resource group</li>
+         * <li>ExclusiveDataIntegration: exclusive resource group for Data Integration</li>
+         * <li>ExclusiveScheduler: exclusive resource group for scheduling</li>
+         * <li>ExclusiveDataService: exclusive resource group for DataService Studio</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CommonV2</p>
          */
         @NameInMap("ResourceGroupType")
         public String resourceGroupType;
 
+        /**
+         * <p>The specifications of the resource group.</p>
+         */
         @NameInMap("Spec")
         public GetResourceGroupResponseBodyResourceGroupSpec spec;
 
         /**
+         * <p>The status of the resource group. Valid values:</p>
+         * <ul>
+         * <li>Normal: The resource group is running or in use.</li>
+         * <li>Stop: The resource group is expired.</li>
+         * <li>Deleted: The resource group is released or destroyed.</li>
+         * <li>Creating: The resource group is being started.</li>
+         * <li>CreateFailed: The resource group fails to be started.</li>
+         * <li>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</li>
+         * <li>UpdateFailed: The resource group fails to be scaled out or upgraded.</li>
+         * <li>Deleting: The resource group is being released or destroyed.</li>
+         * <li>DeleteFailed: The resource group fails to be released or destroyed.</li>
+         * <li>Timeout: The operations that are performed on the resource group time out.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */

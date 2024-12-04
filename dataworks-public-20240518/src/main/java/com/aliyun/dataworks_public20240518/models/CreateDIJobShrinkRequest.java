@@ -4,16 +4,21 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class CreateDIJobShrinkRequest extends TeaModel {
+    /**
+     * <p>The description of the synchronization task.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The settings of the destination. Only a single destination is supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationDataSourceSettings")
     public String destinationDataSourceSettingsShrink;
 
     /**
+     * <p>The destination type. Valid values: Hologres and Hive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,7 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String destinationDataSourceType;
 
     /**
+     * <p>The name of the synchronization task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +37,21 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     @NameInMap("JobName")
     public String jobName;
 
+    /**
+     * <p>The settings for the dimension of the synchronization task. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.</p>
+     */
     @NameInMap("JobSettings")
     public String jobSettingsShrink;
 
     /**
+     * <p>The synchronization type. Valid values:</p>
+     * <ul>
+     * <li>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</li>
+     * <li>RealtimeIncremental: real-time incremental synchronization</li>
+     * <li>Full: full synchronization</li>
+     * <li>OfflineIncremental: batch incremental synchronization</li>
+     * <li>FullAndOfflineIncremental: one-time full synchronization and batch incremental synchronization</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +61,9 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String migrationType;
 
     /**
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
@@ -51,18 +71,21 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The resource settings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSettings")
     public String resourceSettingsShrink;
 
     /**
+     * <p>The settings of the source. Only a single source is supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceDataSourceSettings")
     public String sourceDataSourceSettingsShrink;
 
     /**
+     * <p>The source type. Set this parameter to MySQL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,11 +95,15 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String sourceDataSourceType;
 
     /**
+     * <p>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TableMappings")
     public String tableMappingsShrink;
 
+    /**
+     * <p>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</p>
+     */
     @NameInMap("TransformationRules")
     public String transformationRulesShrink;
 

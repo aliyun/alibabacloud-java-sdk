@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAlertRuleShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAlertRuleShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>105412</p>
      */
@@ -19,22 +23,32 @@ public class UpdateAlertRuleShrinkRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The name of the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>collection_name</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The configuration for the alert notification.</p>
+     */
     @NameInMap("Notification")
     public String notificationShrink;
 
     /**
+     * <p>The ID of the Alibaba Cloud account used by the owner of the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>193379****</p>
      */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>The alert triggering condition.</p>
+     */
     @NameInMap("TriggerCondition")
     public String triggerConditionShrink;
 

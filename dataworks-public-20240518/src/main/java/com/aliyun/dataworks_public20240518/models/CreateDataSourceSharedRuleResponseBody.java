@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataSourceSharedRuleResponseBody extends TeaModel {
     /**
+     * <p>The sharing rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>105412</p>
      */

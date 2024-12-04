@@ -629,6 +629,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleTarget target;
 
         /**
+         * <p>The code of the template that is referenced when you create a rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>system::user_defined</p>
          */

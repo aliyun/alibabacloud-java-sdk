@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDIAlarmRuleResponseBody extends TeaModel {
     /**
-     * <p>代表资源一级ID的资源属性字段</p>
+     * <p>The ID of the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,6 +14,8 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
     public String DIAlarmRuleId;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>C636A747-7E4E-594D-94CD-2B4F8A9A9A63</p>
      */

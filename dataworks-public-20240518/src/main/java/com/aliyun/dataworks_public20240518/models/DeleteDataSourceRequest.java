@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDataSourceRequest extends TeaModel {
     /**
+     * <p>The data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */

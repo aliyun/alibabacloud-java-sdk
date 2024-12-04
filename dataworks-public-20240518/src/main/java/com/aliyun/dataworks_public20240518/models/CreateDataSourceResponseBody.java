@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataSourceResponseBody extends TeaModel {
     /**
+     * <p>The data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>22130</p>
      */

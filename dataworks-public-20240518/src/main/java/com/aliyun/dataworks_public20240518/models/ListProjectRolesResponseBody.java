@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListProjectRolesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListProjectRolesResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>61649187-0BCF-5E75-8D4B-64FDBEBBB447</p>
      */
@@ -37,16 +42,23 @@ public class ListProjectRolesResponseBody extends TeaModel {
 
     public static class ListProjectRolesResponseBodyPagingInfoProjectRoles extends TeaModel {
         /**
+         * <p>The code of the role in the DataWorks workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>role_project_guest</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The name of the role in the DataWorks workspace.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The DataWorks workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>21229</p>
          */
@@ -54,6 +66,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The type of the role in the DataWorks workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>System</p>
          */
@@ -101,6 +115,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
 
     public static class ListProjectRolesResponseBodyPagingInfo extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -108,16 +124,23 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public String pageSize;
 
+        /**
+         * <p>The roles in the DataWorks workspace.</p>
+         */
         @NameInMap("ProjectRoles")
         public java.util.List<ListProjectRolesResponseBodyPagingInfoProjectRoles> projectRoles;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>42</p>
          */

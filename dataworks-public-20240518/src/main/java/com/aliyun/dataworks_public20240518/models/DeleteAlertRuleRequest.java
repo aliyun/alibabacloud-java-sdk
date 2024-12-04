@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertRuleRequest extends TeaModel {
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>105412</p>
      */

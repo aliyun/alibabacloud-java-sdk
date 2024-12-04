@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDIJobRunDetailsRequest extends TeaModel {
     /**
+     * <p>The ID of the synchronization task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListDIJobRunDetailsRequest extends TeaModel {
     public Long DIJobId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -21,6 +24,8 @@ public class ListDIJobRunDetailsRequest extends TeaModel {
     public Long instanceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,8 @@ public class ListDIJobRunDetailsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +42,8 @@ public class ListDIJobRunDetailsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The name of the source.</p>
+     * 
      * <strong>example:</strong>
      * <p>ds_name</p>
      */
@@ -42,6 +51,8 @@ public class ListDIJobRunDetailsRequest extends TeaModel {
     public String sourceDataSourceName;
 
     /**
+     * <p>The name of the database in the source.</p>
+     * 
      * <strong>example:</strong>
      * <p>db_name</p>
      */
@@ -49,6 +60,8 @@ public class ListDIJobRunDetailsRequest extends TeaModel {
     public String sourceDatabaseName;
 
     /**
+     * <p>The name of the schema of the source.</p>
+     * 
      * <strong>example:</strong>
      * <p>schema_name</p>
      */
@@ -56,6 +69,8 @@ public class ListDIJobRunDetailsRequest extends TeaModel {
     public String sourceSchemaName;
 
     /**
+     * <p>The name of the table in the source.</p>
+     * 
      * <strong>example:</strong>
      * <p>table_name</p>
      */

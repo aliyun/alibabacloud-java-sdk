@@ -4,13 +4,21 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListProjectRolesShrinkRequest extends TeaModel {
+    /**
+     * <p>The codes of roles in the DataWorks workspace.</p>
+     */
     @NameInMap("Codes")
     public String codesShrink;
 
+    /**
+     * <p>The names of roles in the DataWorks workspace.</p>
+     */
     @NameInMap("Names")
     public String namesShrink;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +26,8 @@ public class ListProjectRolesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -25,6 +35,8 @@ public class ListProjectRolesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +46,13 @@ public class ListProjectRolesShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The type of the role in the DataWorks workspace.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>UserCustom: user-defined role</li>
+     * <li>System: system role</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>System</p>
      */

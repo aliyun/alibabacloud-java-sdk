@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetDataSourceResponseBody extends TeaModel {
+    /**
+     * <p>The information about the data source.</p>
+     */
     @NameInMap("DataSource")
     public GetDataSourceResponseBodyDataSource dataSource;
 
@@ -39,7 +42,12 @@ public class GetDataSourceResponseBody extends TeaModel {
 
     public static class GetDataSourceResponseBodyDataSource extends TeaModel {
         /**
-         * <p>The connection properties of the data source.</p>
+         * <p>The connection configurations of the data source, including the connection address, access identity, and environment information. The envType parameter specifies the environment in which the data source is used. Valid values of the envType parameter:</p>
+         * <ul>
+         * <li>Dev: development environment</li>
+         * <li>Prod: production environment</li>
+         * </ul>
+         * <p>The parameters that you need to configure for the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/zh/dataworks/developer-reference/data-source-connection-information-connectionproperties/?spm=a2c4g.11186623.0.0.3fbb6fe7fo5AMK">Data source connection information (ConnectionProperties)</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -142,7 +150,7 @@ public class GetDataSourceResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The unique business key of the data source. For example, the unique business key of a Hologres data source is in the ${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database} format.</p>
+         * <p>The unique business key of the data source. For example, the unique business key of a Hologres data source is in the <code>${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database}</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>1107550004253538:cn-beijing:holo:hgprecn-cn-x0r3oun4k001:testdb</p>

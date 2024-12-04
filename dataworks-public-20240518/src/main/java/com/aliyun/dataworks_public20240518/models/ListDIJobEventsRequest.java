@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDIJobEventsRequest extends TeaModel {
     /**
+     * <p>The ID of the synchronization task.</p>
+     * 
      * <strong>example:</strong>
      * <p>11588</p>
      */
@@ -12,6 +14,7 @@ public class ListDIJobEventsRequest extends TeaModel {
     public Long DIJobId;
 
     /**
+     * <p>The end of the time range to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ListDIJobEventsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The type of event that you want to query. Valid values: Failover, Alarm, and DDL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ListDIJobEventsRequest extends TeaModel {
     public String eventType;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -37,6 +43,8 @@ public class ListDIJobEventsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -44,6 +52,7 @@ public class ListDIJobEventsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The beginning of the time range to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetDIJobRequest extends TeaModel {
     /**
+     * <p>The ID of the synchronization task.</p>
+     * 
      * <strong>example:</strong>
      * <p>11588</p>
      */
     @NameInMap("DIJobId")
     public Long DIJobId;
 
+    /**
+     * <p>DataWorks工作空间ID。您可以通过ListProjects接口获取工作空间ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
+     * <p>Specifies whether to return detailed configuration information, including TransformationRules, TableMappings, and JobSettings. Valid values: true and false. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

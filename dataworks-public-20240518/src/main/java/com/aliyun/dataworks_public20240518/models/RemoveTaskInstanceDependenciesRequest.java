@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveTaskInstanceDependenciesRequest extends TeaModel {
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
      */
@@ -12,6 +14,7 @@ public class RemoveTaskInstanceDependenciesRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +23,9 @@ public class RemoveTaskInstanceDependenciesRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The IDs of ancestor instances of the instance</p>
+     */
     @NameInMap("UpstreamTaskInstanceIds")
     public java.util.List<Long> upstreamTaskInstanceIds;
 

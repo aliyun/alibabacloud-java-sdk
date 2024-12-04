@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskInstancesRequest extends TeaModel {
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
      */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The instances.</p>
+     */
     @NameInMap("TaskInstances")
     public java.util.List<UpdateTaskInstancesRequestTaskInstances> taskInstances;
 
@@ -37,6 +42,8 @@ public class UpdateTaskInstancesRequest extends TeaModel {
 
     public static class UpdateTaskInstancesRequestTaskInstancesDataSource extends TeaModel {
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql_test</p>
          */
@@ -59,10 +66,14 @@ public class UpdateTaskInstancesRequest extends TeaModel {
     }
 
     public static class UpdateTaskInstancesRequestTaskInstances extends TeaModel {
+        /**
+         * <p>The information about the associated data source.</p>
+         */
         @NameInMap("DataSource")
         public UpdateTaskInstancesRequestTaskInstancesDataSource dataSource;
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -72,6 +83,9 @@ public class UpdateTaskInstancesRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p>The priority of the instance. Valid values: 1, 3, 5, 7, and 8.</p>
+         * <p>A larger value indicates a higher priority. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -79,6 +93,8 @@ public class UpdateTaskInstancesRequest extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The resource group information. Set this parameter to the ID of a resource group for scheduling.</p>
+         * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
          */

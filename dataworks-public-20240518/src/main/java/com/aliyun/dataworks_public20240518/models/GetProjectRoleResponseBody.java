@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetProjectRoleResponseBody extends TeaModel {
+    /**
+     * <p>The role in the DataWorks workspace.</p>
+     */
     @NameInMap("ProjectRole")
     public GetProjectRoleResponseBodyProjectRole projectRole;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>82F28E60-CF48-5EDF-AB25-D806847B97D1</p>
      */
@@ -37,16 +42,36 @@ public class GetProjectRoleResponseBody extends TeaModel {
 
     public static class GetProjectRoleResponseBodyProjectRole extends TeaModel {
         /**
+         * <p>The code of the role in the DataWorks workspace.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>role_project_admin: workspace administrator</li>
+         * <li>role_project_dev: developer</li>
+         * <li>role_project_dg_admin: data governance administrator</li>
+         * <li>role_project_guest: visitor</li>
+         * <li>role_project_security: security administrator</li>
+         * <li>role_project_deploy: deployer</li>
+         * <li>role_project_owner: workspace owner</li>
+         * <li>role_project_data_analyst: data analyst</li>
+         * <li>role_project_pe: O\&amp;M engineer</li>
+         * <li>role_project_erd: model designer</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>role_project_guest</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The name of the role in the DataWorks workspace.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The DataWorks workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10002</p>
          */
@@ -54,6 +79,13 @@ public class GetProjectRoleResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The type of the role in the DataWorks workspace.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>UserCustom: user-defined role</li>
+         * <li>System: system role</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>System</p>
          */

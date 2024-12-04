@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAlertRuleResponseBody extends TeaModel {
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123123</p>
      */
@@ -12,6 +14,8 @@ public class CreateAlertRuleResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A6C6B486-E3A2-5D52-9E76-D9380485D946</p>
      */

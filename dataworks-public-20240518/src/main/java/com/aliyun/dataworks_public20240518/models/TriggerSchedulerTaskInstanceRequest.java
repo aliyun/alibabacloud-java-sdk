@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TriggerSchedulerTaskInstanceRequest extends TeaModel {
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class TriggerSchedulerTaskInstanceRequest extends TeaModel {
     public Long taskId;
 
     /**
+     * <p>The time defined by the HTTP Trigger node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

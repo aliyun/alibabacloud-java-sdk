@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class ListProjectsShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the Alibaba Cloud resource group to which the workspaces belong. You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> and go to the Resource Group page to query the ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmzbn7pti3zff</p>
      */
     @NameInMap("AliyunResourceGroupId")
     public String aliyunResourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("AliyunResourceTags")
     public String aliyunResourceTagsShrink;
 
     /**
+     * <p>Specifies whether the development environment is enabled. Valid values:</p>
+     * <ul>
+     * <li>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in a workspace.</li>
+     * <li>false: The development environment is disabled. In this case, only the production environment is used in a workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,19 +33,33 @@ public class ListProjectsShrinkRequest extends TeaModel {
     public Boolean devEnvironmentEnabled;
 
     /**
+     * <p>Specifies whether the Develop role is disabled. Valid values:</p>
+     * <ul>
+     * <li>false (default)</li>
+     * <li>true</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("DevRoleDisabled")
     public Boolean devRoleDisabled;
 
+    /**
+     * <p>The IDs of the DataWorks workspaces.</p>
+     */
     @NameInMap("Ids")
     public String idsShrink;
 
+    /**
+     * <p>The names of the DataWorks workspaces.</p>
+     */
     @NameInMap("Names")
     public String namesShrink;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +67,8 @@ public class ListProjectsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -49,6 +76,12 @@ public class ListProjectsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Specifies whether scheduling of Platform for AI (PAI) tasks is enabled. Valid values:</p>
+     * <ul>
+     * <li>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
+     * <li>false: Scheduling of PAI tasks is disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -56,6 +89,32 @@ public class ListProjectsShrinkRequest extends TeaModel {
     public Boolean paiTaskEnabled;
 
     /**
+     * <p>The status of the workspaces. Valid values:</p>
+     * <ul>
+     * <li>Available</li>
+     * <li>Initializing</li>
+     * <li>InitFailed</li>
+     * <li>Forbidden</li>
+     * <li>Deleting</li>
+     * <li>DeleteFailed</li>
+     * <li>Frozen</li>
+     * <li>Updating</li>
+     * <li>UpdateFailed</li>
+     * </ul>
+     * <!---->
+     * 
+     * <ul>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Available</p>
      */

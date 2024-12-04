@@ -572,6 +572,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PeriodNumber")
         public Integer periodNumber;
 

@@ -11,6 +11,9 @@ public class ListRoutesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The routes.</p>
+     */
     @NameInMap("RouteList")
     public java.util.List<ListRoutesResponseBodyRouteList> routeList;
 
@@ -73,6 +76,8 @@ public class ListRoutesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The network ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */

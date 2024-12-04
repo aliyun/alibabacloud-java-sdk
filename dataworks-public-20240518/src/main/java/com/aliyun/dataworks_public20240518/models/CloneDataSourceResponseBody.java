@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CloneDataSourceResponseBody extends TeaModel {
     /**
+     * <p>The ID of the cloned data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>19715</p>
      */

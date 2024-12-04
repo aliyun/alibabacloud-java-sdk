@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTaskInstancesRequest extends TeaModel {
     /**
+     * <p>The data timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,16 +15,23 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Long bizdate;
 
     /**
+     * <p>The ID of the instance. The instance may be rerun. If the instance is rerun and you configure this parameter, the system returns the historical information of the instance, including the rerun information. You can use the RunNumber parameter to distinguish each entry in the historical information.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The IDs of the instances. You can query multiple instances at a time by instance ID.</p>
+     */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
 
     /**
+     * <p>The account ID of the task owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -31,6 +39,8 @@ public class ListTaskInstancesRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -38,6 +48,8 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -45,6 +57,13 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The environment of the workspace.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Prod: production environment</li>
+     * <li>Dev: development environment</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */
@@ -52,6 +71,7 @@ public class ListTaskInstancesRequest extends TeaModel {
     public String projectEnv;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,6 +81,8 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The information about the resource group. Set this parameter to the identifier of a resource group for scheduling.</p>
+     * 
      * <strong>example:</strong>
      * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
      */
@@ -68,6 +90,21 @@ public class ListTaskInstancesRequest extends TeaModel {
     public String runtimeResource;
 
     /**
+     * <p>The field used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+     * <ul>
+     * <li><p><code>TriggerTime (Desc/Asc)</code></p>
+     * </li>
+     * <li><p><code>StartedTime (Desc/Asc)</code></p>
+     * </li>
+     * <li><p><code>FinishedTime (Desc/Asc)</code></p>
+     * </li>
+     * <li><p><code>CreateTime (Desc/Asc)</code></p>
+     * </li>
+     * <li><p><code>Id (Desc/Asc)</code></p>
+     * <p>Default value: <code>Id Desc</code>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Id Desc</p>
      */
@@ -75,32 +112,52 @@ public class ListTaskInstancesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The ID of the task for which the instance is generated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
 
+    /**
+     * <p>The IDs of the tasks. You can query multiple instances at a time by task ID.</p>
+     */
     @NameInMap("TaskIds")
     public java.util.List<Long> taskIds;
 
+    /**
+     * <p>The name of the task. Fuzzy match is supported.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
+     * <p>The type of the task for which the instance is generated.</p>
+     * 
      * <strong>example:</strong>
      * <p>ODPS_SQL</p>
      */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("TriggerRecurrence")
     public String triggerRecurrence;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("TriggerType")
     public String triggerType;
 
     /**
+     * <p>The ID of the workflow to which the instance belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -108,6 +165,8 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Long workflowId;
 
     /**
+     * <p>The workflow instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -115,6 +174,16 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Long workflowInstanceId;
 
     /**
+     * <p>The type of the workflow instance.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>SmokeTest</li>
+     * <li>Manual</li>
+     * <li>SupplementData</li>
+     * <li>ManualWorkflow</li>
+     * <li>Normal</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */

@@ -5,19 +5,34 @@ import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
     /**
+     * <p>The ID of the Alibaba Cloud resource group to which the workspace belongs. You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> and go to the Resource Group page to query the ID.</p>
+     * <p>You can configure this parameter to specify an Alibaba Cloud resource group that you want to use to manage the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmzbn7pti3zff</p>
      */
     @NameInMap("AliyunResourceGroupId")
     public String aliyunResourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("AliyunResourceTags")
     public java.util.List<CreateProjectRequestAliyunResourceTags> aliyunResourceTags;
 
+    /**
+     * <p>The description of the workspace.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Specifies whether to enable the development environment. Valid values:</p>
+     * <ul>
+     * <li>true : enables the development environment. In this case, the development environment is isolated from the production environment in the workspace.</li>
+     * <li>false: disables the development environment. In this case, only the production environment is used in the workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -25,6 +40,12 @@ public class CreateProjectRequest extends TeaModel {
     public Boolean devEnvironmentEnabled;
 
     /**
+     * <p>Specifies whether to disable the Develop role. Valid values:</p>
+     * <ul>
+     * <li>false (default)</li>
+     * <li>true</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -32,12 +53,14 @@ public class CreateProjectRequest extends TeaModel {
     public Boolean devRoleDisabled;
 
     /**
+     * <p>The display name of the workspace.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>The name of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +70,12 @@ public class CreateProjectRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Specifies whether to enable scheduling of Platform for AI (PAI) tasks. Valid values:</p>
+     * <ul>
+     * <li>true: enables scheduling of PAI tasks. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
+     * <li>false: disables scheduling of PAI tasks.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -124,6 +153,8 @@ public class CreateProjectRequest extends TeaModel {
 
     public static class CreateProjectRequestAliyunResourceTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>batch</p>
          */
@@ -131,6 +162,8 @@ public class CreateProjectRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>blue</p>
          */

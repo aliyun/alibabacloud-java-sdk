@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDIJobRunDetailsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListDIJobRunDetailsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>691CA452-D37A-4ED0-9441</p>
      */
@@ -37,6 +42,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
 
     public static class ListDIJobRunDetailsResponseBodyPagingInfoJobRunInfos extends TeaModel {
         /**
+         * <p>The name of the database in the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>dst_db</p>
          */
@@ -44,6 +51,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String destinationDatabaseName;
 
         /**
+         * <p>The name of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>dst_name</p>
          */
@@ -51,6 +60,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String destinationDatasourceName;
 
         /**
+         * <p>The name of the schema of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>dst_schema</p>
          */
@@ -58,6 +69,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String destinationSchemaName;
 
         /**
+         * <p>The name of the table in the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>dst_name</p>
          */
@@ -65,6 +78,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String destinationTableName;
 
         /**
+         * <p>The error message that is returned if an error occurs during full batch synchronization. If no error occurs, no value is returned for this parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>sync table t1 fail.</p>
          */
@@ -72,6 +87,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String fullMigrationErrorMessage;
 
         /**
+         * <p>The status of full batch synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p>Finished</p>
          */
@@ -79,6 +96,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String fullMigrationStatus;
 
         /**
+         * <p>The total number of errors that occur during full synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -86,6 +105,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public Long offlineErrorRecords;
 
         /**
+         * <p>The total number of bytes that are synchronized during full synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -93,6 +114,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public Long offlineTotalBytes;
 
         /**
+         * <p>The total number of data records that are synchronized during full synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -100,6 +123,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public Long offlineTotalRecords;
 
         /**
+         * <p>The error message that is returned if an error occurs during real-time synchronization. If no error occurs, no value is returned for this parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>sync table t1 fail.</p>
          */
@@ -107,6 +132,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String realtimeMigrationErrorMessage;
 
         /**
+         * <p>The status of real-time synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -114,6 +141,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String realtimeMigrationStatus;
 
         /**
+         * <p>The name of the database in the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>db_name</p>
          */
@@ -121,6 +150,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String sourceDatabaseName;
 
         /**
+         * <p>The name of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds_name</p>
          */
@@ -128,6 +159,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String sourceDatasourceName;
 
         /**
+         * <p>The name of the schema of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>schema_name</p>
          */
@@ -135,6 +168,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String sourceSchemaName;
 
         /**
+         * <p>The name of the table in the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>table_name</p>
          */
@@ -142,6 +177,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String sourceTableName;
 
         /**
+         * <p>The error message that is returned if an error occurs during schema synchronization. If no error occurs, no value is returned for this parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>create table t1 fail.</p>
          */
@@ -149,6 +186,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String structureMigrationErrorMessage;
 
         /**
+         * <p>The synchronization status of the schema.</p>
+         * 
          * <strong>example:</strong>
          * <p>Finished</p>
          */
@@ -299,10 +338,15 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
     }
 
     public static class ListDIJobRunDetailsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The running information about the synchronization task.</p>
+         */
         @NameInMap("JobRunInfos")
         public java.util.List<ListDIJobRunDetailsResponseBodyPagingInfoJobRunInfos> jobRunInfos;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -310,6 +354,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -317,6 +363,8 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         public String pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>131</p>
          */

@@ -60,6 +60,8 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The specifications of the resource group. Unit: compute unit (CU). This parameter is required only when you set the PaymentType parameter to PrePaid.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

@@ -51,9 +51,9 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public String condition;
 
         /**
-         * <p>The type of the callback event.</p>
+         * <p>The type of the callback event. Valid values:</p>
          * <ul>
-         * <li>Valid values: BlockTaskInstance. The value indicates that an auto triggered node is blocked.</li>
+         * <li>BlockTaskInstance. The value indicates that an auto triggered node is blocked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -341,9 +341,9 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public java.util.List<Long> taskIds;
 
         /**
-         * <p>The trigger condition of the task.</p>
+         * <p>The trigger condition of the task. Valid values:</p>
          * <ul>
-         * <li>Valid values: ByScheduledTaskInstance. The value indicates that the task is triggered when the instance of an auto triggered node is successfully run.</li>
+         * <li>ByScheduledTaskInstance. The value indicates that the task is triggered when the instance of an auto triggered node is successfully run.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -432,7 +432,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public String regionId;
 
         /**
-         * <p>The configuration of the data source. The value of the queue field is default, and that of the sqlEngine field is SPARK-SQL. The value default indicates the YARN queue for E-MapReduce (EMR) tasks, and the value SPARK-SQL indicates the SQL engine that is used to collect EMR data.</p>
+         * <p>The configuration of the data source. The value of the queue field is default, and that of the sqlEngine field can be set to SPARK_SQL, KYUUBI, PRESTO_SQL, or HIVE_SQL. The value default indicates the YARN queue for E-MapReduce (EMR) tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK-SQL&quot; }</p>

@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
+    /**
+     * <p>The name of the task. Fuzzy match is supported.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The account ID of the task owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -15,6 +20,8 @@ public class ListTasksRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ListTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,13 @@ public class ListTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The environment of the workspace.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Prod: production environment</li>
+     * <li>Dev: development environment</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */
@@ -36,6 +52,7 @@ public class ListTasksRequest extends TeaModel {
     public String projectEnv;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +62,8 @@ public class ListTasksRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The information about the resource group. Set this parameter to the ID of a resource group for scheduling.</p>
+     * 
      * <strong>example:</strong>
      * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
      */
@@ -52,6 +71,17 @@ public class ListTasksRequest extends TeaModel {
     public String runtimeResource;
 
     /**
+     * <p>The field that is used to sort tasks. This parameter is configured in the format of &quot;Sorting field Sorting order&quot;. You can set the sorting order to Desc or Asc. If you do not specify the sorting order, Asc is used by default. Valid values:</p>
+     * <ul>
+     * <li><p><code>ModifyTime (Desc/Asc)</code></p>
+     * </li>
+     * <li><p><code>CreateTime (Desc/Asc)</code></p>
+     * </li>
+     * <li><p><code>Id (Desc/Asc)</code></p>
+     * <p>Default value: <code>Id Desc</code>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Id Desc</p>
      */
@@ -59,6 +89,8 @@ public class ListTasksRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The type of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ODPS_SQL</p>
      */
@@ -66,6 +98,14 @@ public class ListTasksRequest extends TeaModel {
     public String taskType;
 
     /**
+     * <p>The running mode of the task after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Pause</li>
+     * <li>Skip</li>
+     * <li>Normal</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
@@ -73,6 +113,13 @@ public class ListTasksRequest extends TeaModel {
     public String triggerRecurrence;
 
     /**
+     * <p>The trigger type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Scheduler: scheduling cycle-based trigger</li>
+     * <li>Manual: manual trigger</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Scheduler</p>
      */
@@ -80,6 +127,8 @@ public class ListTasksRequest extends TeaModel {
     public String triggerType;
 
     /**
+     * <p>The ID of the workflow to which the task belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */

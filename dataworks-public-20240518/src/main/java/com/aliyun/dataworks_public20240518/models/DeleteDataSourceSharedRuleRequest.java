@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDataSourceSharedRuleRequest extends TeaModel {
     /**
+     * <p>The sharing rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

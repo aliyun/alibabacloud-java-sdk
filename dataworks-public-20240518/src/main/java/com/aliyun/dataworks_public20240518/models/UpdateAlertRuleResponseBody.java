@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAlertRuleResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D85FEE2B-6174-5817-AF9E-FDD02FEDA5BC</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAlertRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
