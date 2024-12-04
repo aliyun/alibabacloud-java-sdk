@@ -16,6 +16,9 @@ public class DescribeDBInstanceTopologyRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("MinuteSimple")
+    public Boolean minuteSimple;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -47,6 +50,14 @@ public class DescribeDBInstanceTopologyRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDBInstanceTopologyRequest setMinuteSimple(Boolean minuteSimple) {
+        this.minuteSimple = minuteSimple;
+        return this;
+    }
+    public Boolean getMinuteSimple() {
+        return this.minuteSimple;
     }
 
     public DescribeDBInstanceTopologyRequest setRegionId(String regionId) {

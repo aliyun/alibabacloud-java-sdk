@@ -221,6 +221,47 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDBInstanceAttributeResponseBodyDBInstanceGdnMemberList extends TeaModel {
+        @NameInMap("MemberName")
+        public String memberName;
+
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDBInstanceAttributeResponseBodyDBInstanceGdnMemberList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyDBInstanceGdnMemberList self = new DescribeDBInstanceAttributeResponseBodyDBInstanceGdnMemberList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstanceGdnMemberList setMemberName(String memberName) {
+            this.memberName = memberName;
+            return this;
+        }
+        public String getMemberName() {
+            return this.memberName;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstanceGdnMemberList setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstanceGdnMemberList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -385,6 +426,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("Expired")
         public String expired;
+
+        @NameInMap("GdnInstanceName")
+        public String gdnInstanceName;
+
+        @NameInMap("GdnMemberList")
+        public java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstanceGdnMemberList> gdnMemberList;
+
+        @NameInMap("GdnRole")
+        public String gdnRole;
 
         /**
          * <strong>example:</strong>
@@ -755,6 +805,30 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getExpired() {
             return this.expired;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setGdnInstanceName(String gdnInstanceName) {
+            this.gdnInstanceName = gdnInstanceName;
+            return this;
+        }
+        public String getGdnInstanceName() {
+            return this.gdnInstanceName;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setGdnMemberList(java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstanceGdnMemberList> gdnMemberList) {
+            this.gdnMemberList = gdnMemberList;
+            return this;
+        }
+        public java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstanceGdnMemberList> getGdnMemberList() {
+            return this.gdnMemberList;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setGdnRole(String gdnRole) {
+            this.gdnRole = gdnRole;
+            return this;
+        }
+        public String getGdnRole() {
+            return this.gdnRole;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstance setId(String id) {

@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
+    @NameInMap("DbVersion")
+    public String dbVersion;
+
     /**
      * <strong>example:</strong>
      * <p>dinga93c84f4d***</p>
@@ -61,6 +64,14 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public static DescribeDBInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesRequest self = new DescribeDBInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBInstancesRequest setDbVersion(String dbVersion) {
+        this.dbVersion = dbVersion;
+        return this;
+    }
+    public String getDbVersion() {
+        return this.dbVersion;
     }
 
     public DescribeDBInstancesRequest setInstanceId(String instanceId) {
