@@ -405,6 +405,9 @@ public class GetDownloadJobResponseBody extends TeaModel {
         @NameInMap("logCount")
         public Long logCount;
 
+        @NameInMap("notice")
+        public String notice;
+
         /**
          * <p>下载进度</p>
          * 
@@ -465,6 +468,14 @@ public class GetDownloadJobResponseBody extends TeaModel {
         }
         public Long getLogCount() {
             return this.logCount;
+        }
+
+        public GetDownloadJobResponseBodyExecutionDetails setNotice(String notice) {
+            this.notice = notice;
+            return this;
+        }
+        public String getNotice() {
+            return this.notice;
         }
 
         public GetDownloadJobResponseBodyExecutionDetails setProgress(Long progress) {

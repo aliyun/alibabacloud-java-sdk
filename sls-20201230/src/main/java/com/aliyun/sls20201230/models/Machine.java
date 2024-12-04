@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class Machine extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>test</p>
+     */
+    @NameInMap("host-id")
+    public String hostId;
+
+    /**
+     * <strong>example:</strong>
      * <p>192.168.x.x</p>
      */
     @NameInMap("ip")
@@ -35,6 +42,14 @@ public class Machine extends TeaModel {
     public static Machine build(java.util.Map<String, ?> map) throws Exception {
         Machine self = new Machine();
         return TeaModel.build(map, self);
+    }
+
+    public Machine setHostId(String hostId) {
+        this.hostId = hostId;
+        return this;
+    }
+    public String getHostId() {
+        return this.hostId;
     }
 
     public Machine setIp(String ip) {
