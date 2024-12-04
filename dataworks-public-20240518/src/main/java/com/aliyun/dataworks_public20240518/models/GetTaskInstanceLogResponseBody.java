@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTaskInstanceLogResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
      */
@@ -12,6 +14,8 @@ public class GetTaskInstanceLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The run log of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is running log</p>
      */

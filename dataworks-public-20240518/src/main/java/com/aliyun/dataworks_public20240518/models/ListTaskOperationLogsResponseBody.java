@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListTaskOperationLogsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListTaskOperationLogsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
      */
@@ -37,16 +42,23 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
 
     public static class ListTaskOperationLogsResponseBodyPagingInfoOperationLogs extends TeaModel {
         /**
+         * <p>The time when the operation log was generated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The operation content.</p>
+         */
         @NameInMap("OperationContent")
         public String operationContent;
 
         /**
+         * <p>The serial number of the operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */
@@ -54,6 +66,8 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         public Long operationSeq;
 
         /**
+         * <p>The ID of the task on which the operation was performed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -61,6 +75,8 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         public Long taskId;
 
         /**
+         * <p>The account ID of the operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -115,10 +131,15 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
     }
 
     public static class ListTaskOperationLogsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The operation logs.</p>
+         */
         @NameInMap("OperationLogs")
         public java.util.List<ListTaskOperationLogsResponseBodyPagingInfoOperationLogs> operationLogs;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -126,6 +147,8 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -133,6 +156,8 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataSourceSharedRulesRequest extends TeaModel {
     /**
+     * <p>The data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListDataSourceSharedRulesRequest extends TeaModel {
     public Long dataSourceId;
 
     /**
+     * <p>The ID of the workspace to which the data source is shared. You cannot share the data source to the workspace with which the data source is associated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

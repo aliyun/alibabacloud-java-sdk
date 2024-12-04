@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourcesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListDataSourcesResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7BE1433F-6D55-5D86-9344-CA6F7DD19B13</p>
      */
@@ -37,6 +42,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
     public static class ListDataSourcesResponseBodyPagingInfoDataSourcesDataSource extends TeaModel {
         /**
+         * <p>The connection properties of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;envType&quot;: &quot;Prod&quot;,
@@ -52,6 +59,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public Object connectionProperties;
 
         /**
+         * <p>The mode in which the data source is added. The mode varies based on the data source type. Valid values: InstanceMode, UrlMode, and CdhMode. The value InstanceMode indicates the instance mode. The value UrlMode indicates the connection string mode. The value CdhMode indicates the CDH cluster mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>UrlMode</p>
          */
@@ -59,6 +68,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String connectionPropertiesMode;
 
         /**
+         * <p>The time when the data source was added. This value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1648711113000</p>
          */
@@ -66,6 +77,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the user who adds the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>1624387842781448</p>
          */
@@ -73,6 +86,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The description of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -80,6 +95,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>16035</p>
          */
@@ -87,6 +104,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The time when the data source was last modified. This value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1648711113000</p>
          */
@@ -94,6 +113,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The ID of the user who modifies the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>1624387842781448</p>
          */
@@ -101,6 +122,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
+         * <p>The unique business key of the data source. For example, the unique business key of a Hologres data source is in the ${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database} format.</p>
+         * 
          * <strong>example:</strong>
          * <p>1648711121000:cn-beijing:odps:yongxunQA_beijing_standard</p>
          */
@@ -191,6 +214,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public java.util.List<ListDataSourcesResponseBodyPagingInfoDataSourcesDataSource> dataSource;
 
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -198,6 +223,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql</p>
          */
@@ -240,6 +267,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public java.util.List<ListDataSourcesResponseBodyPagingInfoDataSources> dataSources;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -247,6 +276,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -254,6 +285,8 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>131</p>
          */

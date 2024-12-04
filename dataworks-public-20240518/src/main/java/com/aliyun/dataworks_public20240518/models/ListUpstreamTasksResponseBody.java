@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListUpstreamTasksResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListUpstreamTasksResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
      */
@@ -37,6 +42,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
     public static class ListUpstreamTasksResponseBodyPagingInfoTasksDataSource extends TeaModel {
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql_test</p>
          */
@@ -60,6 +67,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
     public static class ListUpstreamTasksResponseBodyPagingInfoTasksRuntimeResource extends TeaModel {
         /**
+         * <p>The default number of compute units (CUs) configured for task running.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -67,6 +76,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public String cu;
 
         /**
+         * <p>The ID of the image configured for task running.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
          */
@@ -74,6 +85,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public String image;
 
         /**
+         * <p>The ID of the resource group for scheduling configured for task running.</p>
+         * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
          */
@@ -113,6 +126,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
     public static class ListUpstreamTasksResponseBodyPagingInfoTasksTrigger extends TeaModel {
         /**
+         * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
          */
@@ -120,6 +135,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public String cron;
 
         /**
+         * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>9999-01-01 00:00:00</p>
          */
@@ -127,6 +144,14 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Pause</li>
+         * <li>Skip</li>
+         * <li>Normal</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -134,6 +159,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public String recurrence;
 
         /**
+         * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>
          */
@@ -141,6 +168,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
          */
@@ -148,6 +177,13 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public String timezone;
 
         /**
+         * <p>The trigger type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Scheduler: scheduling cycle-based trigger</li>
+         * <li>Manual: manual trigger</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
          */
@@ -211,6 +247,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
     public static class ListUpstreamTasksResponseBodyPagingInfoTasks extends TeaModel {
         /**
+         * <p>The baseline ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -218,6 +256,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public Long baselineId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -225,16 +265,23 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The account ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>The information about the associated data source.</p>
+         */
         @NameInMap("DataSource")
         public ListUpstreamTasksResponseBodyPagingInfoTasksDataSource dataSource;
 
         /**
+         * <p>The description of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -242,16 +289,24 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T+1</p>
+         */
         @NameInMap("InstanceMode")
         public String instanceMode;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -259,16 +314,23 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The account ID of the modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The account ID of the task owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -276,6 +338,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The priority of the task. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -283,6 +347,13 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The environment of the workspace.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Prod</p>
          */
@@ -290,6 +361,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public String projectEnv;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -297,6 +370,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The rerun interval. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -304,6 +379,14 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public Integer rerunInterval;
 
         /**
+         * <p>The rerun mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AllDenied: The task cannot be rerun regardless of whether it is successfully run or fails to run.</li>
+         * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
+         * <li>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AllAllowed</p>
          */
@@ -311,19 +394,30 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public String rerunMode;
 
         /**
+         * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("RerunTimes")
         public Integer rerunTimes;
 
+        /**
+         * <p>The configurations of the runtime environment, such as the resource group information.</p>
+         */
         @NameInMap("RuntimeResource")
         public ListUpstreamTasksResponseBodyPagingInfoTasksRuntimeResource runtimeResource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("StepType")
         public String stepType;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -331,16 +425,23 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public Long tenantId;
 
         /**
+         * <p>The timeout period of task running. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */
         @NameInMap("Timeout")
         public Integer timeout;
 
+        /**
+         * <p>The method to trigger task scheduling.</p>
+         */
         @NameInMap("Trigger")
         public ListUpstreamTasksResponseBodyPagingInfoTasksTrigger trigger;
 
         /**
+         * <p>The type of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>ODPS_SQL</p>
          */
@@ -348,6 +449,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The ID of the workflow to which the task belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -555,6 +658,8 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
     public static class ListUpstreamTasksResponseBodyPagingInfo extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -562,16 +667,23 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The tasks.</p>
+         */
         @NameInMap("Tasks")
         public java.util.List<ListUpstreamTasksResponseBodyPagingInfoTasks> tasks;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

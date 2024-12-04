@@ -176,6 +176,13 @@ public class DataQualityRule extends TeaModel {
     public static class DataQualityRuleCheckingConfigThresholdsCritical extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>波动率类型规则使用，通过表达式来表示波动阈值。如：波动上升大于0.01： $checkValue &gt; 0.01  波动下降大于0.01：$checkValue &lt; -0.01   波动率绝对值：abs($checkValue) &gt; 0.01</p>
+         */
+        @NameInMap("Expression")
+        public String expression;
+
+        /**
+         * <strong>example:</strong>
          * <blockquote>
          * </blockquote>
          */
@@ -192,6 +199,14 @@ public class DataQualityRule extends TeaModel {
         public static DataQualityRuleCheckingConfigThresholdsCritical build(java.util.Map<String, ?> map) throws Exception {
             DataQualityRuleCheckingConfigThresholdsCritical self = new DataQualityRuleCheckingConfigThresholdsCritical();
             return TeaModel.build(map, self);
+        }
+
+        public DataQualityRuleCheckingConfigThresholdsCritical setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
         }
 
         public DataQualityRuleCheckingConfigThresholdsCritical setOperator(String operator) {
@@ -215,6 +230,13 @@ public class DataQualityRule extends TeaModel {
     public static class DataQualityRuleCheckingConfigThresholdsExpected extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>波动率类型规则使用，通过表达式来表示波动阈值。如：波动上升大于0.01： $checkValue &gt; 0.01  波动下降大于0.01：$checkValue &lt; -0.01   波动率绝对值：abs($checkValue) &gt; 0.01</p>
+         */
+        @NameInMap("Expression")
+        public String expression;
+
+        /**
+         * <strong>example:</strong>
          * <blockquote>
          * </blockquote>
          */
@@ -231,6 +253,14 @@ public class DataQualityRule extends TeaModel {
         public static DataQualityRuleCheckingConfigThresholdsExpected build(java.util.Map<String, ?> map) throws Exception {
             DataQualityRuleCheckingConfigThresholdsExpected self = new DataQualityRuleCheckingConfigThresholdsExpected();
             return TeaModel.build(map, self);
+        }
+
+        public DataQualityRuleCheckingConfigThresholdsExpected setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
         }
 
         public DataQualityRuleCheckingConfigThresholdsExpected setOperator(String operator) {
@@ -254,6 +284,13 @@ public class DataQualityRule extends TeaModel {
     public static class DataQualityRuleCheckingConfigThresholdsWarned extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>波动率类型规则使用，通过表达式来表示波动阈值。如：波动上升大于0.01： $checkValue &gt; 0.01  波动下降大于0.01：$checkValue &lt; -0.01   波动率绝对值：abs($checkValue) &gt; 0.01</p>
+         */
+        @NameInMap("Expression")
+        public String expression;
+
+        /**
+         * <strong>example:</strong>
          * <blockquote>
          * </blockquote>
          */
@@ -270,6 +307,14 @@ public class DataQualityRule extends TeaModel {
         public static DataQualityRuleCheckingConfigThresholdsWarned build(java.util.Map<String, ?> map) throws Exception {
             DataQualityRuleCheckingConfigThresholdsWarned self = new DataQualityRuleCheckingConfigThresholdsWarned();
             return TeaModel.build(map, self);
+        }
+
+        public DataQualityRuleCheckingConfigThresholdsWarned setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
         }
 
         public DataQualityRuleCheckingConfigThresholdsWarned setOperator(String operator) {

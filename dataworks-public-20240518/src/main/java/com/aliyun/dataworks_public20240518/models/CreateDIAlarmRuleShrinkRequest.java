@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABFUOEUOTRTRJKE</p>
      */
@@ -12,7 +14,7 @@ public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>任务ID，是告警规则关联的任务ID。</p>
+     * <p>The ID of the synchronization task with which the alert rule is associated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,13 +24,13 @@ public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
     public Long DIJobId;
 
     /**
-     * <p>描述。</p>
+     * <p>The description of the alert rule.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>告警规则是否启用，默认不开启。</p>
+     * <p>Specifies whether to enable the alert rule. By default, the alert rule is disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -37,11 +39,13 @@ public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>告警指标类型，可选的枚举值：</p>
+     * <p>The metric type in the alert rule. Valid values:</p>
      * <ul>
-     * <li>Heartbeat（任务状态报警）</li>
-     * <li>FailoverCount（failover次数报警）</li>
-     * <li>Delay（任务延迟报警）</li>
+     * <li>Heartbeat</li>
+     * <li>FailoverCount</li>
+     * <li>Delay</li>
+     * <li>DdlReport</li>
+     * <li>ResourceUtilization</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -52,6 +56,7 @@ public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
     public String metricType;
 
     /**
+     * <p>The name of the alert rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,12 +66,14 @@ public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The alert notification settings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NotificationSettings")
     public String notificationSettingsShrink;
 
     /**
+     * <p>The conditions that can trigger the alert rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TriggerConditions")

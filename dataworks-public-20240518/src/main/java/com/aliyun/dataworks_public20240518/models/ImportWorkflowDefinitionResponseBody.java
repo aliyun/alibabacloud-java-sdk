@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ImportWorkflowDefinitionResponseBody extends TeaModel {
+    /**
+     * <p>The status information of the asynchronous task.</p>
+     */
     @NameInMap("AsyncJob")
     public ImportWorkflowDefinitionResponseBodyAsyncJob asyncJob;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C352CB7-CD88-50CF-9D0D-E81BDF020E7F</p>
      */
@@ -37,6 +42,8 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
 
     public static class ImportWorkflowDefinitionResponseBodyAsyncJob extends TeaModel {
         /**
+         * <p>Indicates whether the asynchronous task is complete.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -44,6 +51,8 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         public Boolean completed;
 
         /**
+         * <p>The time when the asynchronous task was created. This value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1706581425000</p>
          */
@@ -51,6 +60,8 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The error message returned if the asynchronous task fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>target folder already exists: XXXX</p>
          */
@@ -58,6 +69,8 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         public String error;
 
         /**
+         * <p>The ID of the asynchronous task.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567691239009XXXX</p>
          */
@@ -65,6 +78,8 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The progress of the asynchronous task. Valid values: 0 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -72,6 +87,11 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         public Integer progress;
 
         /**
+         * <p>The response.</p>
+         * <blockquote>
+         * <p> The workflow ID is returned.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>632647691239009XXXX</p>
          */
@@ -79,6 +99,15 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         public String response;
 
         /**
+         * <p>The status of the asynchronous task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Running: The asynchronous task is running.</li>
+         * <li>Success: The asynchronous task is complete.</li>
+         * <li>Fail: The asynchronous task fails.</li>
+         * <li>Cancel: The asynchronous task is canceled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -86,6 +115,13 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The type of the asynchronous task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Create: The asynchronous task is used to create an object.</li>
+         * <li>Cancel: The asynchronous task is used to cancel an operation.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Create</p>
          */

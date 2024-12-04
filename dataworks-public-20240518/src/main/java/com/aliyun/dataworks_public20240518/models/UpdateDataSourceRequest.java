@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateDataSourceRequest extends TeaModel {
     /**
+     * <p>The connection configurations of the data source, including the connection address, access identity, and environment information. The envType parameter specifies the environment in which the data source is used. Valid values of the envType parameter:</p>
+     * <ul>
+     * <li>Dev: development environment</li>
+     * <li>Prod: production environment</li>
+     * </ul>
+     * <p>The parameters that you need to configure to the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/zh/dataworks/developer-reference/data-source-connection-information-connectionproperties/?spm=a2c4g.11186623.0.0.3fbb6fe7fo5AMK">Data source connection information (ConnectionProperties)</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +28,13 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String connectionProperties;
 
     /**
+     * <p>The mode in which the data source is added. The mode varies based on the data source type. Valid values:</p>
+     * <ul>
+     * <li>InstanceMode: instance mode</li>
+     * <li>UrlMode: connection string mode</li>
+     * <li>CdhMode: CDH cluster mode</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>UrlMode</p>
      */
@@ -29,6 +42,8 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String connectionPropertiesMode;
 
     /**
+     * <p>The description of the data source. The description cannot exceed 3,000 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -36,6 +51,7 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +61,7 @@ public class UpdateDataSourceRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

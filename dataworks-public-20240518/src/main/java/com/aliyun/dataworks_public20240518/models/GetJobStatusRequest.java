@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobStatusRequest extends TeaModel {
     /**
+     * <p>The ID of the asynchronous task that is generated after you call an asynchronous operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

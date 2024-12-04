@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the alert rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,16 +15,23 @@ public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
     public Long DIAlarmRuleId;
 
     /**
+     * <p>The ID of the synchronization task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("DIJobId")
     public Long DIJobId;
 
+    /**
+     * <p>The description of the alert rule.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Specifies whether to enable the alert rule. By default, the alert rule is disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -31,6 +39,15 @@ public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>The metric type in the alert rule. Valid values:</p>
+     * <ul>
+     * <li>Heartbeat</li>
+     * <li>FailoverCount</li>
+     * <li>Delay</li>
+     * <li>DdlReport</li>
+     * <li>ResourceUtilization</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Heartbeat</p>
      */
@@ -38,15 +55,23 @@ public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
     public String metricType;
 
     /**
+     * <p>The name of the alert rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>alarm_rule_name</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The alert notification settings.</p>
+     */
     @NameInMap("NotificationSettings")
     public String notificationSettingsShrink;
 
+    /**
+     * <p>The conditions that can trigger the alert rule.</p>
+     */
     @NameInMap("TriggerConditions")
     public String triggerConditionsShrink;
 

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetTaskResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the task.</p>
+     */
     @NameInMap("Task")
     public GetTaskResponseBodyTask task;
 
@@ -37,6 +42,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskDataSource extends TeaModel {
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql_test</p>
          */
@@ -60,15 +67,36 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskDependencies extends TeaModel {
         /**
+         * <p>The dependency type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CrossCycleDependsOnChildren: cross-cycle dependency on the level-1 descendant nodes of a node</li>
+         * <li>CrossCycleDependsOnSelf: cross-cycle dependency on the current node</li>
+         * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</li>
+         * <li>Normal: same-cycle dependency</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>上游任务的输出标识符。（<code>同周期依赖</code>返回此字段）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pre.odps_sql_demo_0</p>
+         */
         @NameInMap("UpstreamOutput")
         public String upstreamOutput;
 
+        /**
+         * <p>上游任务的Id。（<code>跨周期依赖其他节点</code>依赖返回此字段，其他跨周期依赖类型不返回）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("UpstreamTaskId")
         public String upstreamTaskId;
 
@@ -105,6 +133,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskInputsVariables extends TeaModel {
         /**
+         * <p>The name of the variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -112,6 +142,15 @@ public class GetTaskResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Constant: constant</li>
+         * <li>PassThrough: parameter pass-through</li>
+         * <li>System: variable</li>
+         * <li>NodeOutput: script output</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Constant</p>
          */
@@ -119,6 +158,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The value of the variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>Value1</p>
          */
@@ -157,6 +198,9 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTaskInputs extends TeaModel {
+        /**
+         * <p>The variables.</p>
+         */
         @NameInMap("Variables")
         public java.util.List<GetTaskResponseBodyTaskInputsVariables> variables;
 
@@ -177,6 +221,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskOutputsTaskOutputs extends TeaModel {
         /**
+         * <p>The identifier of the output.</p>
+         * 
          * <strong>example:</strong>
          * <p>pre.odps_sql_demo_0</p>
          */
@@ -200,6 +246,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskOutputsVariables extends TeaModel {
         /**
+         * <p>The name of the variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -207,6 +255,15 @@ public class GetTaskResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Constant: constant</li>
+         * <li>PassThrough: parameter pass-through</li>
+         * <li>System: system variable</li>
+         * <li>NodeOutput: script output</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Constant</p>
          */
@@ -214,6 +271,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The value of the variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -252,9 +311,15 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTaskOutputs extends TeaModel {
+        /**
+         * <p>The task outputs.</p>
+         */
         @NameInMap("TaskOutputs")
         public java.util.List<GetTaskResponseBodyTaskOutputsTaskOutputs> taskOutputs;
 
+        /**
+         * <p>The variables.</p>
+         */
         @NameInMap("Variables")
         public java.util.List<GetTaskResponseBodyTaskOutputsVariables> variables;
 
@@ -283,6 +348,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskRuntimeResource extends TeaModel {
         /**
+         * <p>The default number of compute units (CUs) configured for task running.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -290,6 +357,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String cu;
 
         /**
+         * <p>The ID of the image configured for task running.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
          */
@@ -297,6 +366,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String image;
 
         /**
+         * <p>The ID of the resource group for scheduling configured for task running.</p>
+         * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
          */
@@ -336,6 +407,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskScript extends TeaModel {
         /**
+         * <p>The script content.</p>
+         * 
          * <strong>example:</strong>
          * <p>echo &quot;helloWorld&quot;</p>
          */
@@ -343,6 +416,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The script parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>para1=$bizdate</p>
          */
@@ -374,6 +449,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskSubTasksSubTasksDataSource extends TeaModel {
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql_test</p>
          */
@@ -397,6 +474,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskSubTasksSubTasksRuntimeResource extends TeaModel {
         /**
+         * <p>The default number of CUs configured for task running.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -404,6 +483,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String cu;
 
         /**
+         * <p>The ID of the image configured for task running.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
          */
@@ -411,6 +492,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String image;
 
         /**
+         * <p>The ID of the resource group for scheduling configured for task running.</p>
+         * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
          */
@@ -450,6 +533,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskSubTasksSubTasksTrigger extends TeaModel {
         /**
+         * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
          */
@@ -457,6 +542,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String cron;
 
         /**
+         * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>9999-01-01 00:00:00</p>
          */
@@ -464,6 +551,14 @@ public class GetTaskResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Pause</li>
+         * <li>Skip</li>
+         * <li>Normal</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -471,6 +566,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String recurrence;
 
         /**
+         * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>
          */
@@ -478,6 +575,13 @@ public class GetTaskResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The trigger type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Scheduler: scheduling cycle-based trigger</li>
+         * <li>Manual: manual trigger</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
          */
@@ -532,10 +636,15 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTaskSubTasksSubTasks extends TeaModel {
+        /**
+         * <p>The baseline ID.</p>
+         */
         @NameInMap("BaselineId")
         public Long baselineId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -543,16 +652,23 @@ public class GetTaskResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The account ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>The information about the associated data source.</p>
+         */
         @NameInMap("DataSource")
         public GetTaskResponseBodyTaskSubTasksSubTasksDataSource dataSource;
 
         /**
+         * <p>The description of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -560,6 +676,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -567,6 +685,8 @@ public class GetTaskResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -574,16 +694,23 @@ public class GetTaskResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The account ID of the modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The account ID of the task owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -591,6 +718,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The priority of the task. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -598,6 +727,13 @@ public class GetTaskResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The environment of the workspace.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Prod</p>
          */
@@ -605,6 +741,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String projectEnv;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -612,6 +750,8 @@ public class GetTaskResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The rerun interval. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>180</p>
          */
@@ -619,6 +759,14 @@ public class GetTaskResponseBody extends TeaModel {
         public Integer rerunInterval;
 
         /**
+         * <p>The rerun mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AllDenied: The task cannot be rerun regardless of whether it is successfully run or fails to run.</li>
+         * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
+         * <li>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AllAllowed</p>
          */
@@ -626,16 +774,23 @@ public class GetTaskResponseBody extends TeaModel {
         public String rerunMode;
 
         /**
+         * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("RerunTimes")
         public Integer rerunTimes;
 
+        /**
+         * <p>The runtime environment configuration of the task, such as the resource group.</p>
+         */
         @NameInMap("RuntimeResource")
         public GetTaskResponseBodyTaskSubTasksSubTasksRuntimeResource runtimeResource;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -643,16 +798,23 @@ public class GetTaskResponseBody extends TeaModel {
         public Long tenantId;
 
         /**
+         * <p>The timeout period of task running. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */
         @NameInMap("Timeout")
         public Integer timeout;
 
+        /**
+         * <p>The method to trigger task scheduling.</p>
+         */
         @NameInMap("Trigger")
         public GetTaskResponseBodyTaskSubTasksSubTasksTrigger trigger;
 
         /**
+         * <p>The type of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>ODPS_SQL</p>
          */
@@ -660,6 +822,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The ID of the workflow to which the task belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -850,10 +1014,21 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTaskSubTasks extends TeaModel {
+        /**
+         * <p>The subtasks.</p>
+         */
         @NameInMap("SubTasks")
         public java.util.List<GetTaskResponseBodyTaskSubTasksSubTasks> subTasks;
 
         /**
+         * <p>The type of the subtask.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DoWhile: do-while node</li>
+         * <li>Combined: node group</li>
+         * <li>ForEach: for-each node</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Combined</p>
          */
@@ -885,6 +1060,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -892,6 +1069,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -923,6 +1102,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskTrigger extends TeaModel {
         /**
+         * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
          */
@@ -930,6 +1111,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String cron;
 
         /**
+         * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>9999-01-01 00:00:00</p>
          */
@@ -937,6 +1120,14 @@ public class GetTaskResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Pause</li>
+         * <li>Skip</li>
+         * <li>Normal</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -944,6 +1135,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String recurrence;
 
         /**
+         * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>
          */
@@ -951,6 +1144,13 @@ public class GetTaskResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The trigger type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Scheduler: scheduling cycle-based trigger</li>
+         * <li>Manual: manual trigger</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
          */
@@ -1006,6 +1206,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTask extends TeaModel {
         /**
+         * <p>The baseline ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -1013,6 +1215,8 @@ public class GetTaskResponseBody extends TeaModel {
         public Long baselineId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -1020,19 +1224,29 @@ public class GetTaskResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The account ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>The information about the associated data source.</p>
+         */
         @NameInMap("DataSource")
         public GetTaskResponseBodyTaskDataSource dataSource;
 
+        /**
+         * <p>The dependency information.</p>
+         */
         @NameInMap("Dependencies")
         public java.util.List<GetTaskResponseBodyTaskDependencies> dependencies;
 
         /**
+         * <p>The description of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -1040,19 +1254,34 @@ public class GetTaskResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The input information.</p>
+         */
         @NameInMap("Inputs")
         public GetTaskResponseBodyTaskInputs inputs;
 
+        /**
+         * <p>实例生成模式。</p>
+         * <p>T+1（第二天生成）</p>
+         * <p>Immediately（立即生成）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T+1</p>
+         */
         @NameInMap("InstanceMode")
         public String instanceMode;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -1060,19 +1289,29 @@ public class GetTaskResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The account ID of the modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The output information.</p>
+         */
         @NameInMap("Outputs")
         public GetTaskResponseBodyTaskOutputs outputs;
 
         /**
+         * <p>The account ID of the task owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -1080,6 +1319,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The priority of the task. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1087,6 +1328,13 @@ public class GetTaskResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The environment of the workspace.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Prod</p>
          */
@@ -1094,6 +1342,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String projectEnv;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -1101,6 +1351,8 @@ public class GetTaskResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The rerun interval. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -1108,6 +1360,14 @@ public class GetTaskResponseBody extends TeaModel {
         public Integer rerunInterval;
 
         /**
+         * <p>The rerun mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
+         * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
+         * <li>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AllAllowed</p>
          */
@@ -1115,25 +1375,41 @@ public class GetTaskResponseBody extends TeaModel {
         public String rerunMode;
 
         /**
+         * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("RerunTimes")
         public Integer rerunTimes;
 
+        /**
+         * <p>The configurations of the runtime environment, such as the resource group information.</p>
+         */
         @NameInMap("RuntimeResource")
         public GetTaskResponseBodyTaskRuntimeResource runtimeResource;
 
+        /**
+         * <p>The script information.</p>
+         */
         @NameInMap("Script")
         public GetTaskResponseBodyTaskScript script;
 
+        /**
+         * <p>The configurations of the subtasks, such as a do-while node.</p>
+         */
         @NameInMap("SubTasks")
         public GetTaskResponseBodyTaskSubTasks subTasks;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetTaskResponseBodyTaskTags> tags;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1141,16 +1417,23 @@ public class GetTaskResponseBody extends TeaModel {
         public Long tenantId;
 
         /**
+         * <p>The timeout period of task running. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */
         @NameInMap("Timeout")
         public Integer timeout;
 
+        /**
+         * <p>The method to trigger task scheduling.</p>
+         */
         @NameInMap("Trigger")
         public GetTaskResponseBodyTaskTrigger trigger;
 
         /**
+         * <p>The type of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>ODPS_SQL</p>
          */
@@ -1158,6 +1441,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The workflow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */

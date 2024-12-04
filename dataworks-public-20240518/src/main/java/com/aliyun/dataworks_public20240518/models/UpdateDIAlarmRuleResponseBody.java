@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDIAlarmRuleResponseBody extends TeaModel {
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>A6C6B486-E3A2-5D52-9E76-D9380485D946</p>
      */
@@ -12,6 +14,12 @@ public class UpdateDIAlarmRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

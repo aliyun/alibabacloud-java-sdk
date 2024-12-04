@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDIJobShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the synchronization task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,21 +14,42 @@ public class UpdateDIJobShrinkRequest extends TeaModel {
     @NameInMap("DIJobId")
     public Long DIJobId;
 
+    /**
+     * <p>The description of the synchronization task.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The settings for the dimension of the synchronization task. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.</p>
+     */
     @NameInMap("JobSettings")
     public String jobSettingsShrink;
 
+    /**
+     * <p>DataWorks工作空间ID。您可以通过<a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a>接口获取工作空间ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The resource settings.</p>
+     */
     @NameInMap("ResourceSettings")
     public String resourceSettingsShrink;
 
+    /**
+     * <p>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</p>
+     */
     @NameInMap("TableMappings")
     public String tableMappingsShrink;
 
+    /**
+     * <p>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</p>
+     */
     @NameInMap("TransformationRules")
     public String transformationRulesShrink;
 

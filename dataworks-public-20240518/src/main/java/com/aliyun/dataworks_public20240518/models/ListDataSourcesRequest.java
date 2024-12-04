@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListDataSourcesRequest extends TeaModel {
     /**
+     * <p>The environment in which the data sources are used. Valid values:</p>
+     * <ul>
+     * <li>Dev: development environment</li>
+     * <li>Prod: production environment</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */
@@ -12,6 +18,8 @@ public class ListDataSourcesRequest extends TeaModel {
     public String envType;
 
     /**
+     * <p>The name of the data source. Fuzzy match by data source name is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +27,13 @@ public class ListDataSourcesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The order in which you want to sort the data sources. Valid values:</p>
+     * <ul>
+     * <li>Desc: descending order</li>
+     * <li>Asc: ascending order</li>
+     * </ul>
+     * <p>Default value: Asc</p>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -26,6 +41,8 @@ public class ListDataSourcesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +50,8 @@ public class ListDataSourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +59,8 @@ public class ListDataSourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +70,14 @@ public class ListDataSourcesRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The field that you want to use to sort the data sources. Valid values:</p>
+     * <ul>
+     * <li>CreateTime</li>
+     * <li>Id</li>
+     * <li>Name</li>
+     * </ul>
+     * <p>Default value: Id</p>
+     * 
      * <strong>example:</strong>
      * <p>Id</p>
      */
@@ -62,6 +91,9 @@ public class ListDataSourcesRequest extends TeaModel {
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <p>The data source types. This parameter specifies a filter condition. You can specify multiple data source types.</p>
+     */
     @NameInMap("Types")
     public java.util.List<String> types;
 

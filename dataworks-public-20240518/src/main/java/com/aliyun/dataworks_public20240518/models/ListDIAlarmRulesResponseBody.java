@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDIAlarmRulesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListDIAlarmRulesResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>74C2FECD-5B3A-554A-BCF5-351A36DE9815</p>
      */
@@ -36,10 +41,25 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
     }
 
     public static class ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesNotificationSettingsNotificationChannels extends TeaModel {
+        /**
+         * <p>The alert notification method. Valid values:</p>
+         * <ul>
+         * <li>Mail</li>
+         * <li>Phone</li>
+         * <li>Sms</li>
+         * <li>Ding</li>
+         * </ul>
+         */
         @NameInMap("Channels")
         public java.util.List<String> channels;
 
         /**
+         * <p>The severity level. Valid values:</p>
+         * <ul>
+         * <li>Warning</li>
+         * <li>Critical</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Critical</p>
          */
@@ -71,12 +91,21 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
 
     public static class ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesNotificationSettingsNotificationReceivers extends TeaModel {
         /**
+         * <p>The recipient type. Valid values: AliyunUid, DingToken, FeishuToken, and WebHookUrl.</p>
+         * 
          * <strong>example:</strong>
          * <p>DingToken</p>
          */
         @NameInMap("ReceiverType")
         public String receiverType;
 
+        /**
+         * <p>The recipient.</p>
+         * <ul>
+         * <li>If the value of the ReceiverType parameter is AliyunUid, the value of this parameter is the Alibaba Cloud account ID of a user.</li>
+         * <li>If the value of the ReceiverType parameter is DingToken, the value of this parameter is the token of a DingTalk chatbot.</li>
+         * </ul>
+         */
         @NameInMap("ReceiverValues")
         public java.util.List<String> receiverValues;
 
@@ -105,15 +134,23 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
 
     public static class ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesNotificationSettings extends TeaModel {
         /**
+         * <p>The duration of the alert suppression interval. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("InhibitionInterval")
         public Long inhibitionInterval;
 
+        /**
+         * <p>The alert notification methods.</p>
+         */
         @NameInMap("NotificationChannels")
         public java.util.List<ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesNotificationSettingsNotificationChannels> notificationChannels;
 
+        /**
+         * <p>The settings of alert notification recipients.</p>
+         */
         @NameInMap("NotificationReceivers")
         public java.util.List<ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesNotificationSettingsNotificationReceivers> notificationReceivers;
 
@@ -149,10 +186,15 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
     }
 
     public static class ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesTriggerConditions extends TeaModel {
+        /**
+         * <p>The types of DDL operations for which the alert rule takes effect.</p>
+         */
         @NameInMap("DdlReportTags")
         public java.util.List<String> ddlReportTags;
 
         /**
+         * <p>The time interval for alert calculation. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -160,6 +202,12 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The severity level. Valid values:</p>
+         * <ul>
+         * <li>Warning</li>
+         * <li>Critical</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Critical</p>
          */
@@ -167,6 +215,13 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public String severity;
 
         /**
+         * <p>The alert threshold.</p>
+         * <ul>
+         * <li>If the alert rule is for task status, no threshold is used.</li>
+         * <li>If the alert rule is for failovers, the threshold is the number of failovers.</li>
+         * <li>If the alert rule is for latency, the threshold is the latency duration, in seconds.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -214,6 +269,8 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
 
     public static class ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRules extends TeaModel {
         /**
+         * <p>The ID of the alert rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>72402</p>
          */
@@ -221,6 +278,8 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public Long DIAlarmRuleId;
 
         /**
+         * <p>The ID of the synchronization task.</p>
+         * 
          * <strong>example:</strong>
          * <p>32594</p>
          */
@@ -228,6 +287,8 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public Long DIJobId;
 
         /**
+         * <p>The description of the alert rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>rule descrition</p>
          */
@@ -235,6 +296,8 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether the alert rule is enabled. Valid values: True and False.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -242,6 +305,15 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The metric type in the alert rule. Valid values:</p>
+         * <ul>
+         * <li>Heartbeat</li>
+         * <li>FailoverCount</li>
+         * <li>Delay</li>
+         * <li>DdlReport</li>
+         * <li>ResourceUtilization</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Heartbeat</p>
          */
@@ -249,15 +321,23 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public String metricType;
 
         /**
+         * <p>The name of the alert rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>rule_name</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The alert notification settings.</p>
+         */
         @NameInMap("NotificationSettings")
         public ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesNotificationSettings notificationSettings;
 
+        /**
+         * <p>The conditions that are used to trigger the alert rule.</p>
+         */
         @NameInMap("TriggerConditions")
         public java.util.List<ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesTriggerConditions> triggerConditions;
 
@@ -333,10 +413,15 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
     }
 
     public static class ListDIAlarmRulesResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The alert rules returned.</p>
+         */
         @NameInMap("DIJobAlarmRules")
         public java.util.List<ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRules> DIJobAlarmRules;
 
         /**
+         * <p>The page number. Pages start from page 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -344,6 +429,8 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -351,6 +438,8 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */

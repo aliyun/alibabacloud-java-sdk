@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDIJobMetricsRequest extends TeaModel {
     /**
+     * <p>The ID of the synchronization task.</p>
+     * 
      * <strong>example:</strong>
      * <p>11265</p>
      */
@@ -12,6 +14,7 @@ public class ListDIJobMetricsRequest extends TeaModel {
     public Long DIJobId;
 
     /**
+     * <p>The end of the time range to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,12 +24,14 @@ public class ListDIJobMetricsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The metrics that you want to query.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MetricName")
     public java.util.List<String> metricName;
 
     /**
+     * <p>The beginning of the time range to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

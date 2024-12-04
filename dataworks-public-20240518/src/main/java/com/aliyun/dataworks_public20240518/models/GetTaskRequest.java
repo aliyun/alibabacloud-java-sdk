@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTaskRequest extends TeaModel {
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class GetTaskRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The environment of the workspace.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Prod: production environment</li>
+     * <li>Dev: development environment</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDIJobEventsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListDIJobEventsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>645F6D68-9C29-5961-80B1-BDD4B794C22D</p>
      */
@@ -37,6 +42,8 @@ public class ListDIJobEventsResponseBody extends TeaModel {
 
     public static class ListDIJobEventsResponseBodyPagingInfoDIJobEvent extends TeaModel {
         /**
+         * <p>The processing result of the DDL event. Valid values: Critical, Ignore, Normal, and Warning.</p>
+         * 
          * <strong>example:</strong>
          * <p>Ignore</p>
          */
@@ -44,6 +51,8 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The alert notification method. Valid values: Phone, Mail, Sms, Ding, and Webhook.</p>
+         * 
          * <strong>example:</strong>
          * <p>Phone</p>
          */
@@ -51,16 +60,23 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         public String channels;
 
         /**
+         * <p>The time when the event was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1663573162</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The alert details.</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
         /**
+         * <p>The DDL statement of the destination table.</p>
+         * 
          * <strong>example:</strong>
          * <p>alter table table2 ***</p>
          */
@@ -68,6 +84,8 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         public String dstSql;
 
         /**
+         * <p>The name of the destination table.</p>
+         * 
          * <strong>example:</strong>
          * <p>table2</p>
          */
@@ -75,6 +93,8 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         public String dstTable;
 
         /**
+         * <p>The error logs for failovers.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-29 15:11:31,377 [main] INFO com.<em>.<strong>.di.core.metrics.:21 []  {</strong></em><em>} 
          * 2024-05-29 15:11:31,384 [main] INFO <em>.aliyun.</em>.di.</em>.<em>.metrics.</em>:27 [] - Open MarioDiReporter 
@@ -84,6 +104,8 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         public String failoverMessage;
 
         /**
+         * <p>The event ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -91,6 +113,8 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The severity level of the alert. Valid values: Warning and Critical.</p>
+         * 
          * <strong>example:</strong>
          * <p>Warning</p>
          */
@@ -98,6 +122,8 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         public String severity;
 
         /**
+         * <p>The DDL statement of the source table.</p>
+         * 
          * <strong>example:</strong>
          * <p>alter table table1 ***</p>
          */
@@ -105,6 +131,8 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         public String srcSql;
 
         /**
+         * <p>The name of the source table.</p>
+         * 
          * <strong>example:</strong>
          * <p>table1</p>
          */
@@ -112,6 +140,8 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         public String srcTable;
 
         /**
+         * <p>The sending status of an alert notification. Valid values: Success, Fail, and Silence.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -119,6 +149,15 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The type of the alert event.</p>
+         * <ul>
+         * <li>Heartbeat</li>
+         * <li>Delay</li>
+         * <li>FailoverCount</li>
+         * <li>DdlReport</li>
+         * <li>ResourceUtilization</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Delay</p>
          */
@@ -237,10 +276,15 @@ public class ListDIJobEventsResponseBody extends TeaModel {
     }
 
     public static class ListDIJobEventsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The events returned. The value of this parameter is an array.</p>
+         */
         @NameInMap("DIJobEvent")
         public java.util.List<ListDIJobEventsResponseBodyPagingInfoDIJobEvent> DIJobEvent;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -248,6 +292,8 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -255,6 +301,8 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>2524</p>
          */

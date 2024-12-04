@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataSourceSharedRuleRequest extends TeaModel {
     /**
+     * <p>The data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +24,8 @@ public class CreateDataSourceSharedRuleRequest extends TeaModel {
     public String envType;
 
     /**
+     * <p>The user with which you want to share the data source. If you do not configure this parameter, the data source is shared to an entire workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>1107550004253538</p>
      */
@@ -30,6 +33,7 @@ public class CreateDataSourceSharedRuleRequest extends TeaModel {
     public String sharedUser;
 
     /**
+     * <p>The ID of the workspace to which you want to share the data source. You cannot share the data source to the workspace with which the data source is associated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

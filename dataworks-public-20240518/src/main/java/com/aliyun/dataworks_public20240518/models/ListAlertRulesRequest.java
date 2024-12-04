@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAlertRulesRequest extends TeaModel {
     /**
+     * <p>The name of the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>error_rule</p>
      */
@@ -12,6 +14,8 @@ public class ListAlertRulesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the Alibaba Cloud account used by the owner of the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>1933790683****</p>
      */
@@ -19,6 +23,7 @@ public class ListAlertRulesRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The page number. Pages start from page 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class ListAlertRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,15 +43,23 @@ public class ListAlertRulesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The ID of the Alibaba Cloud account used by the alert recipient.</p>
+     * 
      * <strong>example:</strong>
      * <p>1933790683****</p>
      */
     @NameInMap("Receiver")
     public String receiver;
 
+    /**
+     * <p>The IDs of the scheduling tasks.</p>
+     */
     @NameInMap("TaskIds")
     public java.util.List<Long> taskIds;
 
+    /**
+     * <p>The alert triggering condition.</p>
+     */
     @NameInMap("Types")
     public java.util.List<String> types;
 

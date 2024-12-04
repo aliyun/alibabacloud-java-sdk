@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDIAlarmRulesRequest extends TeaModel {
     /**
+     * <p>The ID of the alert rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>34988</p>
      */
@@ -12,6 +14,8 @@ public class ListDIAlarmRulesRequest extends TeaModel {
     public Long DIAlarmRuleId;
 
     /**
+     * <p>The ID of the synchronization task for which alert rules are configured.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000001</p>
      */
@@ -19,6 +23,8 @@ public class ListDIAlarmRulesRequest extends TeaModel {
     public Long jobId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListDIAlarmRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

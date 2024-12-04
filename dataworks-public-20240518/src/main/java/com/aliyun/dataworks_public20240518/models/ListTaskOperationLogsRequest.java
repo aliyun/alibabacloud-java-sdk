@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTaskOperationLogsRequest extends TeaModel {
     /**
+     * <p>The operation date, accurate to the day. The default value is the current day. You can query only the operation logs generated within the previous 31 days.</p>
+     * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
      */
@@ -12,6 +14,7 @@ public class ListTaskOperationLogsRequest extends TeaModel {
     public Long date;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListTaskOperationLogsRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,8 @@ public class ListTaskOperationLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +42,13 @@ public class ListTaskOperationLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The environment of the workspace.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Prod: production environment</li>
+     * <li>Dev: development environment</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */

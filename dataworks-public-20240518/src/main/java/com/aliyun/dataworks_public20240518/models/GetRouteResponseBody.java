@@ -11,6 +11,9 @@ public class GetRouteResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the route.</p>
+     */
     @NameInMap("Route")
     public GetRouteResponseBodyRoute route;
 
@@ -73,6 +76,8 @@ public class GetRouteResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The network ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */

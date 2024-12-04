@@ -101,6 +101,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
+     * <li>Your account must be assigned one of the following roles of the desired workspace:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Associates a resource group with a workspace.</p>
      * 
@@ -137,6 +146,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
+     * <li>Your account must be assigned one of the following roles of the desired workspace:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Associates a resource group with a workspace.</p>
      * 
@@ -150,7 +168,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>把数据质量规则关联到数据质量校验任务上</p>
+     * 
+     * @param tmpReq AttachDataQualityRulesToEvaluationTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachDataQualityRulesToEvaluationTaskResponse
+     */
+    public AttachDataQualityRulesToEvaluationTaskResponse attachDataQualityRulesToEvaluationTaskWithOptions(AttachDataQualityRulesToEvaluationTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AttachDataQualityRulesToEvaluationTaskShrinkRequest request = new AttachDataQualityRulesToEvaluationTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataQualityRuleIds)) {
+            request.dataQualityRuleIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataQualityRuleIds, "DataQualityRuleIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataQualityEvaluationTaskId)) {
+            body.put("DataQualityEvaluationTaskId", request.dataQualityEvaluationTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataQualityRuleIdsShrink)) {
+            body.put("DataQualityRuleIds", request.dataQualityRuleIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachDataQualityRulesToEvaluationTask"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachDataQualityRulesToEvaluationTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>把数据质量规则关联到数据质量校验任务上</p>
+     * 
+     * @param request AttachDataQualityRulesToEvaluationTaskRequest
+     * @return AttachDataQualityRulesToEvaluationTaskResponse
+     */
+    public AttachDataQualityRulesToEvaluationTaskResponse attachDataQualityRulesToEvaluationTask(AttachDataQualityRulesToEvaluationTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachDataQualityRulesToEvaluationTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Clones an existing data source.</p>
      * 
      * @param request CloneDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -185,8 +270,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Clones an existing data source.</p>
      * 
      * @param request CloneDataSourceRequest
      * @return CloneDataSourceResponse
@@ -198,7 +292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建自定义监控报警规则</p>
+     * <p>Creates a custom monitoring alert rule.</p>
      * 
      * @param tmpReq CreateAlertRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -256,7 +350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建自定义监控报警规则</p>
+     * <p>Creates a custom monitoring alert rule.</p>
      * 
      * @param request CreateAlertRuleRequest
      * @return CreateAlertRuleResponse
@@ -268,7 +362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据集成报警规则</p>
+     * <p>Creates an alert rule for a synchronization task.</p>
      * 
      * @param tmpReq CreateDIAlarmRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -306,7 +400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据集成报警规则</p>
+     * <p>Creates an alert rule for a synchronization task.</p>
      * 
      * @param request CreateDIAlarmRuleRequest
      * @return CreateDIAlarmRuleResponse
@@ -318,7 +412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据集成任务</p>
+     * <p>Creates a new-version synchronization task.</p>
      * 
      * @param tmpReq CreateDIJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -372,7 +466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据集成任务</p>
+     * <p>Creates a new-version synchronization task.</p>
      * 
      * @param request CreateDIJobRequest
      * @return CreateDIJobResponse
@@ -384,7 +478,352 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>创建DataWorks数据质量监控</p>
+     * 
+     * @param tmpReq CreateDataQualityEvaluationTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataQualityEvaluationTaskResponse
+     */
+    public CreateDataQualityEvaluationTaskResponse createDataQualityEvaluationTaskWithOptions(CreateDataQualityEvaluationTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDataQualityEvaluationTaskShrinkRequest request = new CreateDataQualityEvaluationTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataQualityRules)) {
+            request.dataQualityRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataQualityRules, "DataQualityRules", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hooks)) {
+            request.hooksShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hooks, "Hooks", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notifications)) {
+            request.notificationsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notifications, "Notifications", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.target)) {
+            request.targetShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.target, "Target", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.trigger)) {
+            request.triggerShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.trigger, "Trigger", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataQualityRulesShrink)) {
+            body.put("DataQualityRules", request.dataQualityRulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
+            body.put("DataSourceId", request.dataSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hooksShrink)) {
+            body.put("Hooks", request.hooksShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationsShrink)) {
+            body.put("Notifications", request.notificationsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runtimeConf)) {
+            body.put("RuntimeConf", request.runtimeConf);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetShrink)) {
+            body.put("Target", request.targetShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerShrink)) {
+            body.put("Trigger", request.triggerShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataQualityEvaluationTask"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataQualityEvaluationTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建DataWorks数据质量监控</p>
+     * 
+     * @param request CreateDataQualityEvaluationTaskRequest
+     * @return CreateDataQualityEvaluationTaskResponse
+     */
+    public CreateDataQualityEvaluationTaskResponse createDataQualityEvaluationTask(CreateDataQualityEvaluationTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataQualityEvaluationTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建数据质量校验任务实例</p>
+     * 
+     * @param tmpReq CreateDataQualityEvaluationTaskInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataQualityEvaluationTaskInstanceResponse
+     */
+    public CreateDataQualityEvaluationTaskInstanceResponse createDataQualityEvaluationTaskInstanceWithOptions(CreateDataQualityEvaluationTaskInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDataQualityEvaluationTaskInstanceShrinkRequest request = new CreateDataQualityEvaluationTaskInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.runtimeResource)) {
+            request.runtimeResourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.runtimeResource, "RuntimeResource", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataQualityEvaluationTaskId)) {
+            body.put("DataQualityEvaluationTaskId", request.dataQualityEvaluationTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            body.put("Parameters", request.parameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runtimeResourceShrink)) {
+            body.put("RuntimeResource", request.runtimeResourceShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataQualityEvaluationTaskInstance"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataQualityEvaluationTaskInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建数据质量校验任务实例</p>
+     * 
+     * @param request CreateDataQualityEvaluationTaskInstanceRequest
+     * @return CreateDataQualityEvaluationTaskInstanceResponse
+     */
+    public CreateDataQualityEvaluationTaskInstanceResponse createDataQualityEvaluationTaskInstance(CreateDataQualityEvaluationTaskInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataQualityEvaluationTaskInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a data quality monitoring rule.</p>
+     * 
+     * @param tmpReq CreateDataQualityRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataQualityRuleResponse
+     */
+    public CreateDataQualityRuleResponse createDataQualityRuleWithOptions(CreateDataQualityRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDataQualityRuleShrinkRequest request = new CreateDataQualityRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.checkingConfig)) {
+            request.checkingConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.checkingConfig, "CheckingConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.errorHandlers)) {
+            request.errorHandlersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.errorHandlers, "ErrorHandlers", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.samplingConfig)) {
+            request.samplingConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.samplingConfig, "SamplingConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.target)) {
+            request.targetShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.target, "Target", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkingConfigShrink)) {
+            body.put("CheckingConfig", request.checkingConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            body.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.errorHandlersShrink)) {
+            body.put("ErrorHandlers", request.errorHandlersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.samplingConfigShrink)) {
+            body.put("SamplingConfig", request.samplingConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.severity)) {
+            body.put("Severity", request.severity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetShrink)) {
+            body.put("Target", request.targetShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            body.put("TemplateCode", request.templateCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataQualityRule"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataQualityRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a data quality monitoring rule.</p>
+     * 
+     * @param request CreateDataQualityRuleRequest
+     * @return CreateDataQualityRuleResponse
+     */
+    public CreateDataQualityRuleResponse createDataQualityRule(CreateDataQualityRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataQualityRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a data quality monitoring rule template.</p>
+     * 
+     * @param tmpReq CreateDataQualityRuleTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataQualityRuleTemplateResponse
+     */
+    public CreateDataQualityRuleTemplateResponse createDataQualityRuleTemplateWithOptions(CreateDataQualityRuleTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDataQualityRuleTemplateShrinkRequest request = new CreateDataQualityRuleTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.checkingConfig)) {
+            request.checkingConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.checkingConfig, "CheckingConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.samplingConfig)) {
+            request.samplingConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.samplingConfig, "SamplingConfig", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkingConfigShrink)) {
+            body.put("CheckingConfig", request.checkingConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryPath)) {
+            body.put("DirectoryPath", request.directoryPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.samplingConfigShrink)) {
+            body.put("SamplingConfig", request.samplingConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.visibleScope)) {
+            body.put("VisibleScope", request.visibleScope);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataQualityRuleTemplate"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataQualityRuleTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a data quality monitoring rule template.</p>
+     * 
+     * @param request CreateDataQualityRuleTemplateRequest
+     * @return CreateDataQualityRuleTemplateResponse
+     */
+    public CreateDataQualityRuleTemplateResponse createDataQualityRuleTemplate(CreateDataQualityRuleTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataQualityRuleTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a data source to the development environment or production environment of a workspace.</p>
      * 
      * @param request CreateDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -435,8 +874,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Adds a data source to the development environment or production environment of a workspace.</p>
      * 
      * @param request CreateDataSourceRequest
      * @return CreateDataSourceResponse
@@ -447,8 +895,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>If you want to share a data source from Workspace A to Workspace B, you must have the permissions to share the data source in both workspaces. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Creates a rule for sharing a data source to other workspaces or RAM users.</p>
      * 
      * @param request CreateDataSourceSharedRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -491,8 +948,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>If you want to share a data source from Workspace A to Workspace B, you must have the permissions to share the data source in both workspaces. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Creates a rule for sharing a data source to other workspaces or RAM users.</p>
      * 
      * @param request CreateDataSourceSharedRuleRequest
      * @return CreateDataSourceSharedRuleResponse
@@ -633,8 +1099,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建并绑定通用资源组网络资源。</p>
+     * <p>Creates a network and associates the network with a general resource group.</p>
      * 
      * @param request CreateNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -677,8 +1146,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建并绑定通用资源组网络资源。</p>
+     * <p>Creates a network and associates the network with a general resource group.</p>
      * 
      * @param request CreateNetworkRequest
      * @return CreateNetworkResponse
@@ -756,7 +1228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作空间</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param tmpReq CreateProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -822,7 +1294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作空间</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param request CreateProjectRequest
      * @return CreateProjectResponse
@@ -834,7 +1306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加工作空间成员</p>
+     * <p>Adds a member to a workspace.</p>
      * 
      * @param tmpReq CreateProjectMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -880,7 +1352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加工作空间成员</p>
+     * <p>Adds a member to a workspace.</p>
      * 
      * @param request CreateProjectMemberRequest
      * @return CreateProjectMemberResponse
@@ -949,8 +1421,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
+     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/zh/dataworks/product-overview/new-resource-group-overview?spm=a2c4g.11186623.0.i1">pricing</a> of serverless resource groups.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>创建通用资源组。</p>
+     * <p>Creates a serverless resource group.</p>
      * 
      * @param request CreateResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1017,8 +1495,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
+     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/zh/dataworks/product-overview/new-resource-group-overview?spm=a2c4g.11186623.0.i1">pricing</a> of serverless resource groups.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>创建通用资源组。</p>
+     * <p>Creates a serverless resource group.</p>
      * 
      * @param request CreateResourceGroupRequest
      * @return CreateResourceGroupResponse
@@ -1029,8 +1513,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建网络资源的路由。</p>
+     * <p>Creates a route for a network.</p>
      * 
      * @param request CreateRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1065,8 +1552,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建网络资源的路由。</p>
+     * <p>Creates a route for a network.</p>
      * 
      * @param request CreateRouteRequest
      * @return CreateRouteResponse
@@ -1136,7 +1626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除自定义监控报警规则</p>
+     * <p>Deletes a custom alert monitoring rule.</p>
      * 
      * @param request DeleteAlertRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1168,7 +1658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除自定义监控报警规则</p>
+     * <p>Deletes a custom alert monitoring rule.</p>
      * 
      * @param request DeleteAlertRuleRequest
      * @return DeleteAlertRuleResponse
@@ -1220,7 +1710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据集成任务</p>
+     * <p>Deletes a new-version synchronization task.</p>
      * 
      * @param request DeleteDIJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1248,7 +1738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据集成任务</p>
+     * <p>Deletes a new-version synchronization task.</p>
      * 
      * @param request DeleteDIJobRequest
      * @return DeleteDIJobResponse
@@ -1260,7 +1750,160 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>删除数据质量校验任务</p>
+     * 
+     * @param request DeleteDataQualityEvaluationTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataQualityEvaluationTaskResponse
+     */
+    public DeleteDataQualityEvaluationTaskResponse deleteDataQualityEvaluationTaskWithOptions(DeleteDataQualityEvaluationTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataQualityEvaluationTask"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataQualityEvaluationTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除数据质量校验任务</p>
+     * 
+     * @param request DeleteDataQualityEvaluationTaskRequest
+     * @return DeleteDataQualityEvaluationTaskResponse
+     */
+    public DeleteDataQualityEvaluationTaskResponse deleteDataQualityEvaluationTask(DeleteDataQualityEvaluationTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataQualityEvaluationTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a data quality monitoring rule.</p>
+     * 
+     * @param request DeleteDataQualityRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataQualityRuleResponse
+     */
+    public DeleteDataQualityRuleResponse deleteDataQualityRuleWithOptions(DeleteDataQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataQualityRule"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataQualityRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a data quality monitoring rule.</p>
+     * 
+     * @param request DeleteDataQualityRuleRequest
+     * @return DeleteDataQualityRuleResponse
+     */
+    public DeleteDataQualityRuleResponse deleteDataQualityRule(DeleteDataQualityRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataQualityRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a data quality monitoring rule template.</p>
+     * 
+     * @param request DeleteDataQualityRuleTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataQualityRuleTemplateResponse
+     */
+    public DeleteDataQualityRuleTemplateResponse deleteDataQualityRuleTemplateWithOptions(DeleteDataQualityRuleTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            query.put("Code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataQualityRuleTemplate"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataQualityRuleTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a data quality monitoring rule template.</p>
+     * 
+     * @param request DeleteDataQualityRuleTemplateRequest
+     * @return DeleteDataQualityRuleTemplateResponse
+     */
+    public DeleteDataQualityRuleTemplateResponse deleteDataQualityRuleTemplate(DeleteDataQualityRuleTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataQualityRuleTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all Dataworks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a data source by ID.</p>
      * 
      * @param request DeleteDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1287,8 +1930,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all Dataworks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Removes a data source by ID.</p>
      * 
      * @param request DeleteDataSourceRequest
      * @return DeleteDataSourceResponse
@@ -1299,8 +1951,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>If you want to delete a sharing rule of a data source from Workspace A to Workspace B, you must have the permissions to share the data source in Workspace A or Workspace B. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Deletes a sharing rule of a data source by ID.</p>
      * 
      * @param request DeleteDataSourceSharedRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1331,8 +1992,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>If you want to delete a sharing rule of a data source from Workspace A to Workspace B, you must have the permissions to share the data source in Workspace A or Workspace B. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Deletes a sharing rule of a data source by ID.</p>
      * 
      * @param request DeleteDataSourceSharedRuleRequest
      * @return DeleteDataSourceSharedRuleResponse
@@ -1401,8 +2071,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>解绑并删除通用资源组网络资源。</p>
+     * <p>Disassociates and deletes a network from a general resource group.</p>
      * 
      * @param request DeleteNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1433,8 +2106,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>解绑并删除通用资源组网络资源。</p>
+     * <p>Disassociates and deletes a network from a general resource group.</p>
      * 
      * @param request DeleteNetworkRequest
      * @return DeleteNetworkResponse
@@ -1504,7 +2180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>销毁工作空间</p>
+     * <p>Deletes a DataWorks workspace.</p>
      * 
      * @param request DeleteProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1536,7 +2212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>销毁工作空间</p>
+     * <p>Deletes a DataWorks workspace.</p>
      * 
      * @param request DeleteProjectRequest
      * @return DeleteProjectResponse
@@ -1653,6 +2329,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
+     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/zh/dataworks/product-overview/new-resource-group-overview?spm=a2c4g.11186623.0.i1">pricing</a> of serverless resource groups.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a serverless resource group.</p>
      * 
@@ -1685,6 +2367,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
+     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/zh/dataworks/product-overview/new-resource-group-overview?spm=a2c4g.11186623.0.i1">pricing</a> of serverless resource groups.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a serverless resource group.</p>
      * 
@@ -1697,8 +2385,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除网络资源的路由。</p>
+     * <p>Deletes a route from a network resource.</p>
      * 
      * @param request DeleteRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1729,8 +2420,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除网络资源的路由。</p>
+     * <p>Deletes a route from a network resource.</p>
      * 
      * @param request DeleteRouteRequest
      * @return DeleteRouteResponse
@@ -1741,6 +2435,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a task.</p>
+     * 
      * @param request DeleteTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTaskResponse
@@ -1774,6 +2474,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a task.</p>
+     * 
      * @param request DeleteTaskRequest
      * @return DeleteTaskResponse
      */
@@ -1842,6 +2548,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>取消数据质量规则和数据质量校验任务的关联</p>
+     * 
+     * @param tmpReq DetachDataQualityRulesFromEvaluationTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachDataQualityRulesFromEvaluationTaskResponse
+     */
+    public DetachDataQualityRulesFromEvaluationTaskResponse detachDataQualityRulesFromEvaluationTaskWithOptions(DetachDataQualityRulesFromEvaluationTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DetachDataQualityRulesFromEvaluationTaskShrinkRequest request = new DetachDataQualityRulesFromEvaluationTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataQualityRuleIds)) {
+            request.dataQualityRuleIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataQualityRuleIds, "DataQualityRuleIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataQualityEvaluationTaskId)) {
+            body.put("DataQualityEvaluationTaskId", request.dataQualityEvaluationTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataQualityRuleIdsShrink)) {
+            body.put("DataQualityRuleIds", request.dataQualityRuleIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachDataQualityRulesFromEvaluationTask"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachDataQualityRulesFromEvaluationTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消数据质量规则和数据质量校验任务的关联</p>
+     * 
+     * @param request DetachDataQualityRulesFromEvaluationTaskRequest
+     * @return DetachDataQualityRulesFromEvaluationTaskResponse
+     */
+    public DetachDataQualityRulesFromEvaluationTaskResponse detachDataQualityRulesFromEvaluationTask(DetachDataQualityRulesFromEvaluationTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detachDataQualityRulesFromEvaluationTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
+     * <li>Your account must be assigned one of the following roles of the desired workspace:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
      * <p>Disassociates a resource group from a workspace.</p>
      * 
      * @param request DissociateProjectFromResourceGroupRequest
@@ -1877,6 +2650,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
+     * <li>Your account must be assigned one of the following roles of the desired workspace:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Disassociates a resource group from a workspace.</p>
      * 
@@ -1956,7 +2738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义监控报警规则</p>
+     * <p>Queries a list of custom alert monitoring rules.</p>
      * 
      * @param request GetAlertRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1984,7 +2766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义监控报警规则</p>
+     * <p>Queries a list of custom alert monitoring rules.</p>
      * 
      * @param request GetAlertRuleRequest
      * @return GetAlertRuleResponse
@@ -1996,7 +2778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据集成任务</p>
+     * <p>Queries the information about a synchronization task.</p>
      * 
      * @param request GetDIJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2024,7 +2806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据集成任务</p>
+     * <p>Queries the information about a synchronization task.</p>
      * 
      * @param request GetDIJobRequest
      * @return GetDIJobResponse
@@ -2075,8 +2857,183 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询数据质量校验任务详情</p>
+     * 
+     * @param request GetDataQualityEvaluationTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataQualityEvaluationTaskResponse
+     */
+    public GetDataQualityEvaluationTaskResponse getDataQualityEvaluationTaskWithOptions(GetDataQualityEvaluationTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataQualityEvaluationTask"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataQualityEvaluationTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询数据质量校验任务详情</p>
+     * 
+     * @param request GetDataQualityEvaluationTaskRequest
+     * @return GetDataQualityEvaluationTaskResponse
+     */
+    public GetDataQualityEvaluationTaskResponse getDataQualityEvaluationTask(GetDataQualityEvaluationTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataQualityEvaluationTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据质量校验任务实例详情</p>
+     * 
+     * @param request GetDataQualityEvaluationTaskInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataQualityEvaluationTaskInstanceResponse
+     */
+    public GetDataQualityEvaluationTaskInstanceResponse getDataQualityEvaluationTaskInstanceWithOptions(GetDataQualityEvaluationTaskInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataQualityEvaluationTaskInstance"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataQualityEvaluationTaskInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据质量校验任务实例详情</p>
+     * 
+     * @param request GetDataQualityEvaluationTaskInstanceRequest
+     * @return GetDataQualityEvaluationTaskInstanceResponse
+     */
+    public GetDataQualityEvaluationTaskInstanceResponse getDataQualityEvaluationTaskInstance(GetDataQualityEvaluationTaskInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataQualityEvaluationTaskInstanceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>You can call this operation only if you are assigned one of the following roles in DataWorks:</p>
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询质量规则详情</p>
+     * 
+     * @param request GetDataQualityRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataQualityRuleResponse
+     */
+    public GetDataQualityRuleResponse getDataQualityRuleWithOptions(GetDataQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataQualityRule"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataQualityRuleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询质量规则详情</p>
+     * 
+     * @param request GetDataQualityRuleRequest
+     * @return GetDataQualityRuleResponse
+     */
+    public GetDataQualityRuleResponse getDataQualityRule(GetDataQualityRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataQualityRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取质量规则模版详情</p>
+     * 
+     * @param request GetDataQualityRuleTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataQualityRuleTemplateResponse
+     */
+    public GetDataQualityRuleTemplateResponse getDataQualityRuleTemplateWithOptions(GetDataQualityRuleTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataQualityRuleTemplate"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataQualityRuleTemplateResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取质量规则模版详情</p>
+     * 
+     * @param request GetDataQualityRuleTemplateRequest
+     * @return GetDataQualityRuleTemplateResponse
+     */
+    public GetDataQualityRuleTemplateResponse getDataQualityRuleTemplate(GetDataQualityRuleTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataQualityRuleTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Deployment, Development, Project Owner, and O\&amp;M</li>
      * </ul>
@@ -2110,7 +3067,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation only if you are assigned one of the following roles in DataWorks:</p>
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Deployment, Development, Project Owner, and O\&amp;M</li>
      * </ul>
@@ -2208,7 +3168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>返回异步任务的状态信息</p>
+     * <p>Queries the status information of an asynchronous task. After you call an asynchronous operation, an asynchronous task is generated. You can call the GetJobStatus operation to query the status of the asynchronous task.</p>
      * 
      * @param request GetJobStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2236,7 +3196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>返回异步任务的状态信息</p>
+     * <p>Queries the status information of an asynchronous task. After you call an asynchronous operation, an asynchronous task is generated. You can call the GetJobStatus operation to query the status of the asynchronous task.</p>
      * 
      * @param request GetJobStatusRequest
      * @return GetJobStatusResponse
@@ -2247,8 +3207,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取某个网络资源详细信息。</p>
+     * <p>Queries the information about a network resource.</p>
      * 
      * @param request GetNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2275,8 +3238,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取某个网络资源详细信息。</p>
+     * <p>Queries the information about a network resource.</p>
      * 
      * @param request GetNetworkRequest
      * @return GetNetworkResponse
@@ -2416,7 +3382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询工作空间角色详情</p>
+     * <p>Queries the information about a role in a DataWorks workspace.</p>
      * 
      * @param request GetProjectRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2452,7 +3418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询工作空间角色详情</p>
+     * <p>Queries the information about a role in a DataWorks workspace.</p>
      * 
      * @param request GetProjectRoleRequest
      * @return GetProjectRoleResponse
@@ -2503,6 +3469,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</p>
+     * 
      * <b>summary</b> : 
      * <p>根据id获取指定资源组。</p>
      * 
@@ -2531,6 +3500,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</p>
+     * 
      * <b>summary</b> : 
      * <p>根据id获取指定资源组。</p>
      * 
@@ -2543,8 +3515,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>根据id获取指定路由。</p>
+     * <p>Queries the information about a route based on its ID.</p>
      * 
      * @param request GetRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2571,8 +3546,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>根据id获取指定路由。</p>
+     * <p>Queries the information about a route based on its ID.</p>
      * 
      * @param request GetRouteRequest
      * @return GetRouteResponse
@@ -2583,6 +3561,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a task.</p>
+     * 
      * @param request GetTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskResponse
@@ -2608,6 +3589,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a task.</p>
+     * 
      * @param request GetTaskRequest
      * @return GetTaskResponse
      */
@@ -2657,6 +3641,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the run log generated during a specific run of an instance.</p>
+     * 
      * @param request GetTaskInstanceLogRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskInstanceLogResponse
@@ -2682,6 +3672,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the run log generated during a specific run of an instance.</p>
+     * 
      * @param request GetTaskInstanceLogRequest
      * @return GetTaskInstanceLogResponse
      */
@@ -2789,8 +3785,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You cannot use this API operation to import multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system imports only the first specified workflow.
+     *  ImportWorkflowDefinition is an asynchronous operation. After you send a request, an asynchronous task is generated, and the system returns the ID of the asynchronous task. You can call the GetJobStatus operation to query the status of the asynchronous task.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>调用此接口，可以将通过FlowSpec定义的工作流节点和其内部的子节点都导入到数据开发中</p>
+     * <p>Imports a workflow and its child nodes that are specified by the FlowSpec field to DataStudio.</p>
      * 
      * @param request ImportWorkflowDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2825,8 +3827,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You cannot use this API operation to import multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system imports only the first specified workflow.
+     *  ImportWorkflowDefinition is an asynchronous operation. After you send a request, an asynchronous task is generated, and the system returns the ID of the asynchronous task. You can call the GetJobStatus operation to query the status of the asynchronous task.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>调用此接口，可以将通过FlowSpec定义的工作流节点和其内部的子节点都导入到数据开发中</p>
+     * <p>Imports a workflow and its child nodes that are specified by the FlowSpec field to DataStudio.</p>
      * 
      * @param request ImportWorkflowDefinitionRequest
      * @return ImportWorkflowDefinitionResponse
@@ -2838,7 +3846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页获取自定义监控报警规则</p>
+     * <p>Queries a list of custom monitoring alert rule by page.</p>
      * 
      * @param tmpReq ListAlertRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2904,7 +3912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页获取自定义监控报警规则</p>
+     * <p>Queries a list of custom monitoring alert rule by page.</p>
      * 
      * @param request ListAlertRulesRequest
      * @return ListAlertRulesResponse
@@ -2916,7 +3924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据集成报警规则</p>
+     * <p>Views alert rules configured for a synchronization task.</p>
      * 
      * @param request ListDIAlarmRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2944,7 +3952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据集成报警规则</p>
+     * <p>Views alert rules configured for a synchronization task.</p>
      * 
      * @param request ListDIAlarmRulesRequest
      * @return ListDIAlarmRulesResponse
@@ -2956,7 +3964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集成任务事件</p>
+     * <p>Queries events for a synchronization task.</p>
      * 
      * @param request ListDIJobEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2984,7 +3992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集成任务事件</p>
+     * <p>Queries events for a synchronization task.</p>
      * 
      * @param request ListDIJobEventsRequest
      * @return ListDIJobEventsResponse
@@ -2996,7 +4004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集成任务指标</p>
+     * <p>Queries metrics for a synchronization task.</p>
      * 
      * @param tmpReq ListDIJobMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3030,7 +4038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集成任务指标</p>
+     * <p>Queries metrics for a synchronization task.</p>
      * 
      * @param request ListDIJobMetricsRequest
      * @return ListDIJobMetricsResponse
@@ -3042,7 +4050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集成运行信息</p>
+     * <p>Queries the running information about a synchronization task.</p>
      * 
      * @param request ListDIJobRunDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3070,7 +4078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集成运行信息</p>
+     * <p>Queries the running information about a synchronization task.</p>
      * 
      * @param request ListDIJobRunDetailsRequest
      * @return ListDIJobRunDetailsResponse
@@ -3121,6 +4129,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of instances generated by a data quality monitoring task by page.</p>
      * 
@@ -3149,6 +4160,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of instances generated by a data quality monitoring task by page.</p>
      * 
@@ -3161,6 +4175,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of data quality monitoring tasks by page.</p>
      * 
@@ -3189,6 +4206,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of data quality monitoring tasks by page.</p>
      * 
@@ -3201,6 +4221,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request ListDataQualityResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataQualityResultsResponse
@@ -3226,6 +4249,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request ListDataQualityResultsRequest
      * @return ListDataQualityResultsResponse
      */
@@ -3235,6 +4261,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of data quality monitoring rule templates.</p>
+     * 
+     * @param request ListDataQualityRuleTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataQualityRuleTemplateResponse
+     */
+    public ListDataQualityRuleTemplateResponse listDataQualityRuleTemplateWithOptions(ListDataQualityRuleTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataQualityRuleTemplate"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataQualityRuleTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of data quality monitoring rule templates.</p>
+     * 
+     * @param request ListDataQualityRuleTemplateRequest
+     * @return ListDataQualityRuleTemplateResponse
+     */
+    public ListDataQualityRuleTemplateResponse listDataQualityRuleTemplate(ListDataQualityRuleTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataQualityRuleTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of data quality monitoring rules by page.</p>
      * 
@@ -3263,6 +4332,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of data quality monitoring rules by page.</p>
      * 
@@ -3275,8 +4347,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>If you want to query the sharing rules of a data source that is associated with Workspace A, you must have the permissions to share the data source in Workspace A. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Queries a list of sharing rules of a data source.</p>
      * 
      * @param request ListDataSourceSharedRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3303,8 +4384,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>If you want to query the sharing rules of a data source that is associated with Workspace A, you must have the permissions to share the data source in Workspace A. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Queries a list of sharing rules of a data source.</p>
      * 
      * @param request ListDataSourceSharedRulesRequest
      * @return ListDataSourceSharedRulesResponse
@@ -3315,8 +4405,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only if you are assigned one of the following roles in DataWorks:</p>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Queries a list of data sources based on the business information of data sources.</p>
      * 
      * @param tmpReq ListDataSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3349,8 +4445,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only if you are assigned one of the following roles in DataWorks:</p>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Queries a list of data sources based on the business information of data sources.</p>
      * 
      * @param request ListDataSourcesRequest
      * @return ListDataSourcesResponse
@@ -3401,6 +4503,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of descendant instances of an instance by page.</p>
+     * 
      * @param request ListDownstreamTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDownstreamTaskInstancesResponse
@@ -3426,6 +4531,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of descendant instances of an instance by page.</p>
+     * 
      * @param request ListDownstreamTaskInstancesRequest
      * @return ListDownstreamTaskInstancesResponse
      */
@@ -3435,6 +4543,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of descendant tasks of a task by page.</p>
+     * 
      * @param request ListDownstreamTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDownstreamTasksResponse
@@ -3460,6 +4571,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of descendant tasks of a task by page.</p>
+     * 
      * @param request ListDownstreamTasksRequest
      * @return ListDownstreamTasksResponse
      */
@@ -3509,8 +4623,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取通用资源组网络资源列表。</p>
+     * <p>Queries a list of network resources of a serverless resource group.</p>
      * 
      * @param request ListNetworksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3537,8 +4654,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取通用资源组网络资源列表。</p>
+     * <p>Queries a list of network resources of a serverless resource group.</p>
      * 
      * @param request ListNetworksRequest
      * @return ListNetworksResponse
@@ -3700,7 +4820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询工作空间角色详情</p>
+     * <p>Queries the information about roles in a DataWorks workspace by page.</p>
      * 
      * @param tmpReq ListProjectRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3762,7 +4882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询工作空间角色详情</p>
+     * <p>Queries the information about roles in a DataWorks workspace by page.</p>
      * 
      * @param request ListProjectRolesRequest
      * @return ListProjectRolesResponse
@@ -3774,7 +4894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询工作空间详情</p>
+     * <p>Queries a list of DataWorks workspaces of the tenant to which your account belongs.</p>
      * 
      * @param tmpReq ListProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3856,7 +4976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询工作空间详情</p>
+     * <p>Queries a list of DataWorks workspaces of the tenant to which your account belongs.</p>
      * 
      * @param request ListProjectsRequest
      * @return ListProjectsResponse
@@ -3868,7 +4988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源组列表。</p>
+     * <p>Queries a list of resource groups.</p>
      * 
      * @param tmpReq ListResourceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3906,7 +5026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源组列表。</p>
+     * <p>Queries a list of resource groups.</p>
      * 
      * @param request ListResourceGroupsRequest
      * @return ListResourceGroupsResponse
@@ -3957,6 +5077,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>获取网络资源的路由列表。</p>
      * 
@@ -3985,6 +5108,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>获取网络资源的路由列表。</p>
      * 
@@ -3997,6 +5123,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.
+     * You can call this operation to query only the operation logs generated within the previous 31 days.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of operation logs of an instance by page.</p>
+     * 
      * @param request ListTaskInstanceOperationLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTaskInstanceOperationLogsResponse
@@ -4022,6 +5155,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.
+     * You can call this operation to query only the operation logs generated within the previous 31 days.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of operation logs of an instance by page.</p>
+     * 
      * @param request ListTaskInstanceOperationLogsRequest
      * @return ListTaskInstanceOperationLogsResponse
      */
@@ -4031,6 +5171,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of instances. You can also specify filter conditions to query specific instances.</p>
+     * 
      * @param tmpReq ListTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTaskInstancesResponse
@@ -4142,6 +5285,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of instances. You can also specify filter conditions to query specific instances.</p>
+     * 
      * @param request ListTaskInstancesRequest
      * @return ListTaskInstancesResponse
      */
@@ -4151,6 +5297,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.
+     * You can call this operation to query only the operation logs generated within the previous 31 days.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of operation logs of a task by page.</p>
+     * 
      * @param request ListTaskOperationLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTaskOperationLogsResponse
@@ -4176,6 +5329,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.
+     * You can call this operation to query only the operation logs generated within the previous 31 days.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of operation logs of a task by page.</p>
+     * 
      * @param request ListTaskOperationLogsRequest
      * @return ListTaskOperationLogsResponse
      */
@@ -4185,6 +5345,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</p>
+     * 
      * @param request ListTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTasksResponse
@@ -4258,6 +5421,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</p>
+     * 
      * @param request ListTasksRequest
      * @return ListTasksResponse
      */
@@ -4267,6 +5433,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of ancestor instances of an instance by page.</p>
+     * 
      * @param request ListUpstreamTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUpstreamTaskInstancesResponse
@@ -4292,6 +5461,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of ancestor instances of an instance by page.</p>
+     * 
      * @param request ListUpstreamTaskInstancesRequest
      * @return ListUpstreamTaskInstancesResponse
      */
@@ -4301,6 +5473,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of ancestor tasks of a task by page.</p>
+     * 
      * @param request ListUpstreamTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUpstreamTasksResponse
@@ -4326,6 +5501,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of ancestor tasks of a task by page.</p>
+     * 
      * @param request ListUpstreamTasksRequest
      * @return ListUpstreamTasksResponse
      */
@@ -4583,6 +5761,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes multiple upstream dependencies of an instance at a time.</p>
+     * 
      * @param tmpReq RemoveTaskInstanceDependenciesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveTaskInstanceDependenciesResponse
@@ -4628,6 +5812,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes multiple upstream dependencies of an instance at a time.</p>
+     * 
      * @param request RemoveTaskInstanceDependenciesRequest
      * @return RemoveTaskInstanceDependenciesResponse
      */
@@ -4845,6 +6035,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param tmpReq RerunTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RerunTaskInstancesResponse
@@ -4884,6 +6077,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request RerunTaskInstancesRequest
      * @return RerunTaskInstancesResponse
      */
@@ -4893,6 +6089,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param tmpReq ResumeTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResumeTaskInstancesResponse
@@ -4932,6 +6131,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request ResumeTaskInstancesRequest
      * @return ResumeTaskInstancesResponse
      */
@@ -4999,6 +6201,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param tmpReq SetSuccessTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetSuccessTaskInstancesResponse
@@ -5038,6 +6243,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request SetSuccessTaskInstancesRequest
      * @return SetSuccessTaskInstancesResponse
      */
@@ -5048,7 +6256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动数据集成任务</p>
+     * <p>Starts a new-version synchronization task.</p>
      * 
      * @param tmpReq StartDIJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5082,7 +6290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动数据集成任务</p>
+     * <p>Starts a new-version synchronization task.</p>
      * 
      * @param request StartDIJobRequest
      * @return StartDIJobResponse
@@ -5133,6 +6341,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param tmpReq StopTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopTaskInstancesResponse
@@ -5172,6 +6383,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request StopTaskInstancesRequest
      * @return StopTaskInstancesResponse
      */
@@ -5181,6 +6395,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param tmpReq SuspendTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SuspendTaskInstancesResponse
@@ -5220,6 +6437,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request SuspendTaskInstancesRequest
      * @return SuspendTaskInstancesResponse
      */
@@ -5229,6 +6449,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Triggers a task to run by using an HTTP Trigger node at a specified time.</p>
+     * 
      * @param request TriggerSchedulerTaskInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TriggerSchedulerTaskInstanceResponse
@@ -5262,6 +6488,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Triggers a task to run by using an HTTP Trigger node at a specified time.</p>
+     * 
      * @param request TriggerSchedulerTaskInstanceRequest
      * @return TriggerSchedulerTaskInstanceResponse
      */
@@ -5272,7 +6504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建自定义监控报警规则</p>
+     * <p>Updates a custom alert monitoring rule.</p>
      * 
      * @param tmpReq UpdateAlertRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5334,7 +6566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建自定义监控报警规则</p>
+     * <p>Updates a custom alert monitoring rule.</p>
      * 
      * @param request UpdateAlertRuleRequest
      * @return UpdateAlertRuleResponse
@@ -5346,7 +6578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据集成报警规则</p>
+     * <p>Updates an alert rule configured for a synchronization task.</p>
      * 
      * @param tmpReq UpdateDIAlarmRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5384,7 +6616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据集成报警规则</p>
+     * <p>Updates an alert rule configured for a synchronization task.</p>
      * 
      * @param request UpdateDIAlarmRuleRequest
      * @return UpdateDIAlarmRuleResponse
@@ -5396,7 +6628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据集成任务</p>
+     * <p>Updates a synchronization task.</p>
      * 
      * @param tmpReq UpdateDIJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5442,7 +6674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据集成任务</p>
+     * <p>Updates a synchronization task.</p>
      * 
      * @param request UpdateDIJobRequest
      * @return UpdateDIJobResponse
@@ -5454,7 +6686,302 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>更新数据质量校验任务</p>
+     * 
+     * @param tmpReq UpdateDataQualityEvaluationTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDataQualityEvaluationTaskResponse
+     */
+    public UpdateDataQualityEvaluationTaskResponse updateDataQualityEvaluationTaskWithOptions(UpdateDataQualityEvaluationTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateDataQualityEvaluationTaskShrinkRequest request = new UpdateDataQualityEvaluationTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataQualityRules)) {
+            request.dataQualityRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataQualityRules, "DataQualityRules", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hooks)) {
+            request.hooksShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hooks, "Hooks", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notifications)) {
+            request.notificationsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notifications, "Notifications", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.target)) {
+            request.targetShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.target, "Target", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.trigger)) {
+            request.triggerShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.trigger, "Trigger", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataQualityRulesShrink)) {
+            body.put("DataQualityRules", request.dataQualityRulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
+            body.put("DataSourceId", request.dataSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hooksShrink)) {
+            body.put("Hooks", request.hooksShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationsShrink)) {
+            body.put("Notifications", request.notificationsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runtimeConf)) {
+            body.put("RuntimeConf", request.runtimeConf);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetShrink)) {
+            body.put("Target", request.targetShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerShrink)) {
+            body.put("Trigger", request.triggerShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDataQualityEvaluationTask"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDataQualityEvaluationTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新数据质量校验任务</p>
+     * 
+     * @param request UpdateDataQualityEvaluationTaskRequest
+     * @return UpdateDataQualityEvaluationTaskResponse
+     */
+    public UpdateDataQualityEvaluationTaskResponse updateDataQualityEvaluationTask(UpdateDataQualityEvaluationTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDataQualityEvaluationTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a data quality monitoring rule.</p>
+     * 
+     * @param tmpReq UpdateDataQualityRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDataQualityRuleResponse
+     */
+    public UpdateDataQualityRuleResponse updateDataQualityRuleWithOptions(UpdateDataQualityRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateDataQualityRuleShrinkRequest request = new UpdateDataQualityRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.checkingConfig)) {
+            request.checkingConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.checkingConfig, "CheckingConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.errorHandlers)) {
+            request.errorHandlersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.errorHandlers, "ErrorHandlers", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.samplingConfig)) {
+            request.samplingConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.samplingConfig, "SamplingConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.target)) {
+            request.targetShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.target, "Target", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkingConfigShrink)) {
+            body.put("CheckingConfig", request.checkingConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            body.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.errorHandlersShrink)) {
+            body.put("ErrorHandlers", request.errorHandlersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.samplingConfigShrink)) {
+            body.put("SamplingConfig", request.samplingConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.severity)) {
+            body.put("Severity", request.severity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetShrink)) {
+            body.put("Target", request.targetShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            body.put("TemplateCode", request.templateCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDataQualityRule"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDataQualityRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a data quality monitoring rule.</p>
+     * 
+     * @param request UpdateDataQualityRuleRequest
+     * @return UpdateDataQualityRuleResponse
+     */
+    public UpdateDataQualityRuleResponse updateDataQualityRule(UpdateDataQualityRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDataQualityRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a data quality monitoring rule template.</p>
+     * 
+     * @param tmpReq UpdateDataQualityRuleTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDataQualityRuleTemplateResponse
+     */
+    public UpdateDataQualityRuleTemplateResponse updateDataQualityRuleTemplateWithOptions(UpdateDataQualityRuleTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateDataQualityRuleTemplateShrinkRequest request = new UpdateDataQualityRuleTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.checkingConfig)) {
+            request.checkingConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.checkingConfig, "CheckingConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.samplingConfig)) {
+            request.samplingConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.samplingConfig, "SamplingConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkingConfigShrink)) {
+            body.put("CheckingConfig", request.checkingConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            body.put("Code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryPath)) {
+            body.put("DirectoryPath", request.directoryPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.samplingConfigShrink)) {
+            body.put("SamplingConfig", request.samplingConfigShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDataQualityRuleTemplate"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDataQualityRuleTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a data quality monitoring rule template.</p>
+     * 
+     * @param request UpdateDataQualityRuleTemplateRequest
+     * @return UpdateDataQualityRuleTemplateResponse
+     */
+    public UpdateDataQualityRuleTemplateResponse updateDataQualityRuleTemplate(UpdateDataQualityRuleTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDataQualityRuleTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a data source by ID.</p>
      * 
      * @param request UpdateDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5501,8 +7028,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Modifies a data source by ID.</p>
      * 
      * @param request UpdateDataSourceRequest
      * @return UpdateDataSourceResponse
@@ -5618,7 +7154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新工作空间</p>
+     * <p>Updates a DataWorks workspace.</p>
      * 
      * @param request UpdateProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5674,7 +7210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新工作空间</p>
+     * <p>Updates a DataWorks workspace.</p>
      * 
      * @param request UpdateProjectRequest
      * @return UpdateProjectResponse
@@ -5737,6 +7273,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates basic information about a resource group.</p>
      * 
@@ -5777,6 +7316,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates basic information about a resource group.</p>
      * 
@@ -5789,8 +7331,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新网络资源的路由。</p>
+     * <p>Updates the information about a route.</p>
      * 
      * @param request UpdateRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5825,8 +7370,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新网络资源的路由。</p>
+     * <p>Updates the information about a route.</p>
      * 
      * @param request UpdateRouteRequest
      * @return UpdateRouteResponse
@@ -5837,6 +7385,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies properties configured for multiple instances at a time. The properties include the priority, resource group for scheduling, and data source.</p>
+     * 
      * @param tmpReq UpdateTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskInstancesResponse
@@ -5876,6 +7430,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies properties configured for multiple instances at a time. The properties include the priority, resource group for scheduling, and data source.</p>
+     * 
      * @param request UpdateTaskInstancesRequest
      * @return UpdateTaskInstancesResponse
      */

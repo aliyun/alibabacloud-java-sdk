@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetDIJobResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public GetDIJobResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>代表创建时间的资源属性字段</p>
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>C99E2BE6-9DEA-5C2E-8F51-1DDCFEADE490</p>
@@ -39,6 +42,8 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoDestinationDataSourceSettings extends TeaModel {
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>dw_mysql</p>
          */
@@ -62,6 +67,8 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoJobSettingsColumnDataTypeSettings extends TeaModel {
         /**
+         * <p>The data type of the destination field.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -69,6 +76,8 @@ public class GetDIJobResponseBody extends TeaModel {
         public String destinationDataType;
 
         /**
+         * <p>The data type of the source field.</p>
+         * 
          * <strong>example:</strong>
          * <p>bigint</p>
          */
@@ -100,6 +109,12 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoJobSettingsCycleScheduleSettings extends TeaModel {
         /**
+         * <p>The synchronization type that requires periodic scheduling. Valid values:</p>
+         * <ul>
+         * <li>Full: full synchronization</li>
+         * <li>OfflineIncremental: batch incremental synchronization</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Full</p>
          */
@@ -107,6 +122,8 @@ public class GetDIJobResponseBody extends TeaModel {
         public String cycleMigrationType;
 
         /**
+         * <p>The scheduling parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>bizdate=$bizdate</p>
          */
@@ -138,6 +155,13 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoJobSettingsDdlHandlingSettings extends TeaModel {
         /**
+         * <p>The processing policy for a specific type of DDL message. Valid values:</p>
+         * <ul>
+         * <li>Ignore: ignores a DDL message.</li>
+         * <li>Critical: reports an error for a DDL message.</li>
+         * <li>Normal: normally processes a DDL message.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Ignore</p>
          */
@@ -145,6 +169,15 @@ public class GetDIJobResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The DDL operation type. Valid values:</p>
+         * <ul>
+         * <li>RenameColumn</li>
+         * <li>ModifyColumn</li>
+         * <li>CreateTable</li>
+         * <li>TruncateTable</li>
+         * <li>DropTable</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CreateTable</p>
          */
@@ -176,6 +209,18 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoJobSettingsRuntimeSettings extends TeaModel {
         /**
+         * <p>The name of the configuration item. Valid values:</p>
+         * <ul>
+         * <li>runtime.offline.speed.limit.mb: indicates the maximum transmission rate that is allowed for a batch synchronization task. This configuration item takes effect only when runtime.offline.speed.limit.enable is set to true.</li>
+         * <li>runtime.offline.speed.limit.enable: indicates whether throttling is enabled for a batch synchronization task.</li>
+         * <li>dst.offline.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a batch synchronization task.</li>
+         * <li>runtime.offline.concurrent: indicates the maximum number of parallel threads that are allowed for a batch synchronization task.</li>
+         * <li>dst.realtime.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a real-time synchronization task.</li>
+         * <li>runtime.enable.auto.create.schema: indicates whether schemas are automatically created in the destination of a synchronization task.</li>
+         * <li>src.offline.datasource.max.connection: indicates the maximum number of connections that are allowed for reading data from the source of a batch synchronization task.</li>
+         * <li>runtime.realtime.concurrent: indicates the maximum number of parallel threads that are allowed for a real-time synchronization task.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>runtime.offline.concurrent</p>
          */
@@ -183,6 +228,8 @@ public class GetDIJobResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -214,21 +261,44 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoJobSettings extends TeaModel {
         /**
+         * <p>The channel control settings for the synchronization task. The value of this parameter is a JSON string.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;structInfo&quot;:&quot;MANAGED&quot;,&quot;storageType&quot;:&quot;TEXTFILE&quot;,&quot;writeMode&quot;:&quot;APPEND&quot;,&quot;partitionColumns&quot;:[{&quot;columnName&quot;:&quot;pt&quot;,&quot;columnType&quot;:&quot;STRING&quot;,&quot;comment&quot;:&quot;&quot;}],&quot;fieldDelimiter&quot;:&quot;&quot;}</p>
          */
         @NameInMap("ChannelSettings")
         public String channelSettings;
 
+        /**
+         * <p>The data type mappings between source fields and destination fields.</p>
+         */
         @NameInMap("ColumnDataTypeSettings")
         public java.util.List<GetDIJobResponseBodyPagingInfoJobSettingsColumnDataTypeSettings> columnDataTypeSettings;
 
+        /**
+         * <p>The settings for periodic scheduling.</p>
+         */
         @NameInMap("CycleScheduleSettings")
         public GetDIJobResponseBodyPagingInfoJobSettingsCycleScheduleSettings cycleScheduleSettings;
 
+        /**
+         * <p>The DDL operation types. Valid values:</p>
+         * <ul>
+         * <li>RenameColumn</li>
+         * <li>ModifyColumn</li>
+         * <li>CreateTable</li>
+         * <li>TruncateTable</li>
+         * <li>DropTable</li>
+         * <li>DropColumn</li>
+         * <li>AddColumn</li>
+         * </ul>
+         */
         @NameInMap("DdlHandlingSettings")
         public java.util.List<GetDIJobResponseBodyPagingInfoJobSettingsDdlHandlingSettings> ddlHandlingSettings;
 
+        /**
+         * <p>The runtime settings.</p>
+         */
         @NameInMap("RuntimeSettings")
         public java.util.List<GetDIJobResponseBodyPagingInfoJobSettingsRuntimeSettings> runtimeSettings;
 
@@ -281,6 +351,8 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoResourceSettingsOfflineResourceSettings extends TeaModel {
         /**
+         * <p>The number of compute units (CUs) in the resource group for scheduling that are used for batch synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
@@ -288,6 +360,8 @@ public class GetDIJobResponseBody extends TeaModel {
         public Double requestedCu;
 
         /**
+         * <p>The identifier of the resource group for Data Integration used for batch synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p>S_res_group_7708_1667792816832</p>
          */
@@ -319,6 +393,8 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoResourceSettingsRealtimeResourceSettings extends TeaModel {
         /**
+         * <p>The number of CUs in the resource group for Data Integration that are used for real-time synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
@@ -326,6 +402,8 @@ public class GetDIJobResponseBody extends TeaModel {
         public Double requestedCu;
 
         /**
+         * <p>The identifier of the resource group for Data Integration used for real-time synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p>S_res_group_235454102432001_1579085295030</p>
          */
@@ -357,6 +435,8 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoResourceSettingsScheduleResourceSettings extends TeaModel {
         /**
+         * <p>The number of CUs in the resource group for Data Integration that are used for scheduling.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
@@ -364,6 +444,8 @@ public class GetDIJobResponseBody extends TeaModel {
         public Double requestedCu;
 
         /**
+         * <p>The identifier of the resource group for scheduling used by the synchronization task.</p>
+         * 
          * <strong>example:</strong>
          * <p>S_res_group_235454102432001_1718359176885</p>
          */
@@ -394,12 +476,21 @@ public class GetDIJobResponseBody extends TeaModel {
     }
 
     public static class GetDIJobResponseBodyPagingInfoResourceSettings extends TeaModel {
+        /**
+         * <p>The resource used for batch synchronization.</p>
+         */
         @NameInMap("OfflineResourceSettings")
         public GetDIJobResponseBodyPagingInfoResourceSettingsOfflineResourceSettings offlineResourceSettings;
 
+        /**
+         * <p>The resource used for real-time synchronization.</p>
+         */
         @NameInMap("RealtimeResourceSettings")
         public GetDIJobResponseBodyPagingInfoResourceSettingsRealtimeResourceSettings realtimeResourceSettings;
 
+        /**
+         * <p>The resource used for scheduling.</p>
+         */
         @NameInMap("ScheduleResourceSettings")
         public GetDIJobResponseBodyPagingInfoResourceSettingsScheduleResourceSettings scheduleResourceSettings;
 
@@ -436,6 +527,8 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoSourceDataSourceSettingsDataSourceProperties extends TeaModel {
         /**
+         * <p>The encoding format of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>UTF-8</p>
          */
@@ -443,6 +536,8 @@ public class GetDIJobResponseBody extends TeaModel {
         public String encoding;
 
         /**
+         * <p>The time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>GMT+8</p>
          */
@@ -474,12 +569,17 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoSourceDataSourceSettings extends TeaModel {
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>dw_mysql</p>
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
+        /**
+         * <p>The properties of the data source.</p>
+         */
         @NameInMap("DataSourceProperties")
         public GetDIJobResponseBodyPagingInfoSourceDataSourceSettingsDataSourceProperties dataSourceProperties;
 
@@ -508,6 +608,8 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoTableMappingsSourceObjectSelectionRules extends TeaModel {
         /**
+         * <p>The operation that is performed to select objects. Valid values: Include and Exclude.</p>
+         * 
          * <strong>example:</strong>
          * <p>Include</p>
          */
@@ -515,6 +617,8 @@ public class GetDIJobResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql_table_1</p>
          */
@@ -522,6 +626,8 @@ public class GetDIJobResponseBody extends TeaModel {
         public String expression;
 
         /**
+         * <p>The expression type. Valid values: Exact and Regex.</p>
+         * 
          * <strong>example:</strong>
          * <p>Exact</p>
          */
@@ -529,6 +635,12 @@ public class GetDIJobResponseBody extends TeaModel {
         public String expressionType;
 
         /**
+         * <p>The object type. Valid values:</p>
+         * <ul>
+         * <li>Table</li>
+         * <li>Database</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Table</p>
          */
@@ -576,6 +688,14 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoTableMappingsTransformationRules extends TeaModel {
         /**
+         * <p>The action type. Valid values:</p>
+         * <ul>
+         * <li>DefinePrimaryKey</li>
+         * <li>Rename</li>
+         * <li>AddColumn</li>
+         * <li>HandleDml</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AddColumn</p>
          */
@@ -583,6 +703,8 @@ public class GetDIJobResponseBody extends TeaModel {
         public String ruleActionType;
 
         /**
+         * <p>The name of the rule. If the values of the RuleActionType parameter and the RuleTargetType parameter are the same for multiple transformation rules, you must make sure that the transformation rule names are unique.</p>
+         * 
          * <strong>example:</strong>
          * <p>rename_rule_1</p>
          */
@@ -590,6 +712,12 @@ public class GetDIJobResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The type of the object on which the action is performed. Valid values:</p>
+         * <ul>
+         * <li>Table</li>
+         * <li>Schema</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Table</p>
          */
@@ -628,9 +756,15 @@ public class GetDIJobResponseBody extends TeaModel {
     }
 
     public static class GetDIJobResponseBodyPagingInfoTableMappings extends TeaModel {
+        /**
+         * <p>The list of rules used to select synchronization objects in the source. The objects can be databases or tables.</p>
+         */
         @NameInMap("SourceObjectSelectionRules")
         public java.util.List<GetDIJobResponseBodyPagingInfoTableMappingsSourceObjectSelectionRules> sourceObjectSelectionRules;
 
+        /**
+         * <p>The list of transformation rules that are applied to the synchronization objects selected from the source. Each entry in the list defines a transformation rule.</p>
+         */
         @NameInMap("TransformationRules")
         public java.util.List<GetDIJobResponseBodyPagingInfoTableMappingsTransformationRules> transformationRules;
 
@@ -659,6 +793,18 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfoTransformationRules extends TeaModel {
         /**
+         * <p>The action type. Valid values:</p>
+         * <ul>
+         * <li>DefinePrimaryKey</li>
+         * <li>Rename</li>
+         * <li>AddColumn</li>
+         * <li>HandleDml</li>
+         * <li>DefineIncrementalCondition</li>
+         * <li>DefineCycleScheduleSettings</li>
+         * <li>DefineRuntimeSettings</li>
+         * <li>DefinePartitionKey</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Rename</p>
          */
@@ -666,6 +812,13 @@ public class GetDIJobResponseBody extends TeaModel {
         public String ruleActionType;
 
         /**
+         * <p>The expression of the rule. The expression is a JSON string.</p>
+         * <p>Example of a renaming rule: {&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;,&quot;variables&quot;:[{&quot;variableName&quot;:&quot;srcDatabaseName&quot;,&quot;variableRules&quot;:[{&quot;from&quot;:&quot;fromdb&quot;,&quot;to&quot;:&quot;todb&quot;}]}]}.</p>
+         * <p>expression: the expression of the renaming rule. The expression may contain the following variables: ${srcDatasourceName}, ${srcDatabaseName}, and ${srcTableName}. ${srcDatasourceName} indicates the name of the source. ${srcDatabaseName} indicates the name of a source database. ${srcTableName} indicates the name of a source table. variables: the generation rule for a variable used in the expression of the renaming rule. The default value of the specified variable is the original value of the object indicated by the variable. You can define a group of string replacement rules to change the original values based on your business requirements. variableName: the name of the variable. The variable name is not enclosed in ${}. variableRules: the string replacement rules for variables. The system runs the string replacement rules in sequence. from indicates the original string. to indicates the new string. Example of a rule used to add a specific field to the destination and assign a value to the field: {&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}.</p>
+         * <p>If no rule of this type is configured, no fields are added to the destination and no values are assigned by default. columnName: the name of the field that is added. columnValueType: the value type of the field. Valid values: Constant and Variable. columnValue: the value of the field. If the value of the columnValueType parameter is Constant, the value of the columnValue parameter is a constant of the STRING data type. If the value of the columnValueType parameter is Variable, the value of the columnValue parameter is a built-in variable. The following built-in variables are supported: EXECUTE_TIME (LONG data type), DB_NAME_SRC (STRING data type), DATASOURCE_NAME_SRC (STRING data type), TABLE_NAME_SRC (STRING data type), DB_NAME_DEST (STRING data type), DATASOURCE_NAME_DEST (STRING data type), TABLE_NAME_DEST (STRING data type), and DB_NAME_SRC_TRANSED (STRING data type). EXECUTE_TIME indicates the execution time. DB_NAME_SRC indicates the name of a source database. DATASOURCE_NAME_SRC indicates the name of the source. TABLE_NAME_SRC indicates the name of a source table. DB_NAME_DEST indicates the name of a destination database. DATASOURCE_NAME_DEST indicates the name of the destination. TABLE_NAME_DEST indicates the name of a destination table. DB_NAME_SRC_TRANSED indicates the database name obtained after a transformation. Example of a rule used to specify primary key fields for a destination table: {&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}.</p>
+         * <p>If no rule of this type is configured, the primary key fields in the mapped source table are used for the destination table by default. If the destination table is an existing table, Data Integration does not modify the schema of the destination table. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run. If the destination table is automatically created by the system, Data Integration automatically creates the schema of the destination table. The schema contains the primary key fields that you specify. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run. Example of a rule used to process DML messages: {&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}.</p>
+         * <p>If no rule of this type is configured, the default processing policy for messages generated for insert, update, and delete operations is Normal. dmlType: the DML operation. Valid values: Insert, Update, and Delete. dmlAction: the processing policy for DML messages. Valid values: Normal, Ignore, Filter, and LogicalDelete. Filter indicates conditional processing. The value Filter is returned for the dmlAction parameter only when the value of the dmlType parameter is Update or Delete. filterCondition: the condition used to filter DML messages. This parameter is returned only when the value of the dmlAction parameter is Filter.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}</p>
          */
@@ -673,6 +826,8 @@ public class GetDIJobResponseBody extends TeaModel {
         public String ruleExpression;
 
         /**
+         * <p>The name of the rule. If the values of the RuleActionType parameter and the RuleTargetType parameter are the same for multiple transformation rules, you must make sure that the transformation rule names are unique.</p>
+         * 
          * <strong>example:</strong>
          * <p>rename_rule_1</p>
          */
@@ -680,6 +835,12 @@ public class GetDIJobResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The type of the object on which the action is performed. Valid values:</p>
+         * <ul>
+         * <li>Table</li>
+         * <li>Schema</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Table</p>
          */
@@ -727,6 +888,8 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfo extends TeaModel {
         /**
+         * <p>The ID of the synchronization task.</p>
+         * 
          * <strong>example:</strong>
          * <p>32601</p>
          */
@@ -734,16 +897,23 @@ public class GetDIJobResponseBody extends TeaModel {
         public String DIJobId;
 
         /**
+         * <p>The description of the synchronization task.</p>
+         * 
          * <strong>example:</strong>
          * <p>description</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The properties of the destination.</p>
+         */
         @NameInMap("DestinationDataSourceSettings")
         public java.util.List<GetDIJobResponseBodyPagingInfoDestinationDataSourceSettings> destinationDataSourceSettings;
 
         /**
+         * <p>The destination type. The value Hologres is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hologres</p>
          */
@@ -751,19 +921,48 @@ public class GetDIJobResponseBody extends TeaModel {
         public String destinationDataSourceType;
 
         /**
+         * <p>The name of the synchronization task.</p>
+         * 
          * <strong>example:</strong>
          * <p>imp_ods_dms_det_dealer_info_df</p>
          */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <p>The runtime settings.</p>
+         */
         @NameInMap("JobSettings")
         public GetDIJobResponseBodyPagingInfoJobSettings jobSettings;
 
+        /**
+         * <p>任务状态。
+         * 同步状态，取值范围：</p>
+         * <ul>
+         * <li>Finished：运行成功已结束</li>
+         * <li>Failed：运行失败</li>
+         * <li>Running：运行中</li>
+         * <li>Initialized：初始化完成(未启动）</li>
+         * <li>Stopping：停止中</li>
+         * <li>Stop：停止</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("JobStatus")
         public String jobStatus;
 
         /**
+         * <p>The synchronization type. Valid values:</p>
+         * <ul>
+         * <li>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</li>
+         * <li>RealtimeIncremental: real-time incremental synchronization</li>
+         * <li>Full: full synchronization</li>
+         * <li>OfflineIncremental: batch incremental synchronization</li>
+         * <li>FullAndOfflineIncremental: one-time full synchronization and batch incremental synchronization</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FullAndRealtimeIncremental</p>
          */
@@ -771,28 +970,45 @@ public class GetDIJobResponseBody extends TeaModel {
         public String migrationType;
 
         /**
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>This parameter indicates the DataWorks workspace to which the API operation is applied.</p>
+         * 
          * <strong>example:</strong>
          * <p>98330</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The resource settings.</p>
+         */
         @NameInMap("ResourceSettings")
         public GetDIJobResponseBodyPagingInfoResourceSettings resourceSettings;
 
+        /**
+         * <p>The settings of the source. Only a single source is supported.</p>
+         */
         @NameInMap("SourceDataSourceSettings")
         public java.util.List<GetDIJobResponseBodyPagingInfoSourceDataSourceSettings> sourceDataSourceSettings;
 
         /**
+         * <p>The source type. The value MySQL is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>Mysql</p>
          */
         @NameInMap("SourceDataSourceType")
         public String sourceDataSourceType;
 
+        /**
+         * <p>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</p>
+         */
         @NameInMap("TableMappings")
         public java.util.List<GetDIJobResponseBodyPagingInfoTableMappings> tableMappings;
 
+        /**
+         * <p>The list of transformation rules that are applied to the synchronization objects selected from the source. Each entry in the list defines a transformation rule.</p>
+         */
         @NameInMap("TransformationRules")
         public java.util.List<GetDIJobResponseBodyPagingInfoTransformationRules> transformationRules;
 
