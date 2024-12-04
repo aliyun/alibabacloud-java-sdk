@@ -285,9 +285,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</p>
+     * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</p>
      * <ul>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
+     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
      * <li>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</li>
      * </ul>
      * 
@@ -354,9 +354,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</p>
+     * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</p>
      * <ul>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
+     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
      * <li>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</li>
      * </ul>
      * 
@@ -4933,8 +4933,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</p>
      * <ul>
-     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</li>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
+     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</li>
+     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4976,8 +4976,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</p>
      * <ul>
-     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</li>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
+     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</li>
+     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 

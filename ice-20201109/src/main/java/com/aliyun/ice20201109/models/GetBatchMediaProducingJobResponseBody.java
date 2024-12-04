@@ -287,7 +287,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public java.util.List<GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList> subJobList;
 
         /**
-         * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html?spm=a2c4g.439285.0.i1#section-urj-v3f-0s1">UserData</a>.</p>
+         * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>

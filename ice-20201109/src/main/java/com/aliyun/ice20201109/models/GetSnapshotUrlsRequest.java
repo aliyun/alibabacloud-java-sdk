@@ -16,8 +16,10 @@ public class GetSnapshotUrlsRequest extends TeaModel {
     /**
      * <p>The order that you use to sort the query results. Valid values: Asc and Desc.</p>
      * <ul>
-     * <li></li>
-     * <li></li>
+     * <li><p>Asc</p>
+     * </li>
+     * <li><p>Desc</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -56,12 +56,6 @@ public class AddTemplateRequest extends TeaModel {
      * </ul>
      * <!---->
      * 
-     * <ul>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>OpenAPI</p>
      */
@@ -80,15 +74,6 @@ public class AddTemplateRequest extends TeaModel {
      * </ul>
      * <!---->
      * 
-     * <ul>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>Available</p>
      */
@@ -102,11 +87,6 @@ public class AddTemplateRequest extends TeaModel {
      * <li>VETemplate: an advanced template created using effects of Adobe After Effects (AE). It can be used to produce complex animations and advanced media effects.</li>
      * </ul>
      * <!---->
-     * 
-     * <ul>
-     * <li></li>
-     * <li></li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Timeline</p>

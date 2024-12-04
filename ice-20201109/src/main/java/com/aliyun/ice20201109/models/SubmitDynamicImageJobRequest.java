@@ -111,7 +111,7 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
          * </ol>
          * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
          * <blockquote>
-         * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/440592.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
+         * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -127,10 +127,6 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
          * <li>OSS: an Object Storage Service (OSS) object.</li>
          * <li>Media: a media asset.</li>
          * </ol>
-         * <ul>
-         * <li></li>
-         * <li></li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +167,7 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
          * </ul>
          * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
          * <blockquote>
-         * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/440592.html">Storage Management</a> page of the IMS console.</p>
+         * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the IMS console.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -187,10 +183,6 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
          * <li>OSS: an OSS object.</li>
          * <li>Media: a media asset.</li>
          * </ol>
-         * <ul>
-         * <li></li>
-         * <li></li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,6 +263,9 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
          * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
          * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>01:59:59.999 or 32000.23</p>
          */
         @NameInMap("Duration")
         public String duration;
@@ -281,6 +276,9 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
          * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
          * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>01:59:59.999 or 32000.23</p>
          */
         @NameInMap("End")
         public String end;
@@ -291,6 +289,9 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
          * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
          * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>01:59:59.999 or 32000.23</p>
          */
         @NameInMap("Seek")
         public String seek;

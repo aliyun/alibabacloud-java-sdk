@@ -28,6 +28,9 @@ public class ListSearchLibResponseBody extends TeaModel {
     @NameInMap("Success")
     public String success;
 
+    @NameInMap("Total")
+    public Long total;
+
     public static ListSearchLibResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSearchLibResponseBody self = new ListSearchLibResponseBody();
         return TeaModel.build(map, self);
@@ -63,6 +66,14 @@ public class ListSearchLibResponseBody extends TeaModel {
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public ListSearchLibResponseBody setTotal(Long total) {
+        this.total = total;
+        return this;
+    }
+    public Long getTotal() {
+        return this.total;
     }
 
     public static class ListSearchLibResponseBodySearchLibInfoList extends TeaModel {
