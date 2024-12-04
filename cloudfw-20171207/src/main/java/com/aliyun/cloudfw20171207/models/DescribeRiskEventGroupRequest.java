@@ -144,6 +144,9 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     @NameInMap("FirewallType")
     public String firewallType;
 
+    @NameInMap("IsOnlyPrivateAssoc")
+    public String isOnlyPrivateAssoc;
+
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <ul>
@@ -378,6 +381,14 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     }
     public String getFirewallType() {
         return this.firewallType;
+    }
+
+    public DescribeRiskEventGroupRequest setIsOnlyPrivateAssoc(String isOnlyPrivateAssoc) {
+        this.isOnlyPrivateAssoc = isOnlyPrivateAssoc;
+        return this;
+    }
+    public String getIsOnlyPrivateAssoc() {
+        return this.isOnlyPrivateAssoc;
     }
 
     public DescribeRiskEventGroupRequest setLang(String lang) {
