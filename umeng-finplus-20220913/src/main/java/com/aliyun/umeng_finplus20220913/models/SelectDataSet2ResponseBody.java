@@ -77,8 +77,14 @@ public class SelectDataSet2ResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("ossFileCount")
+        public Long ossFileCount;
+
         @NameInMap("status")
         public String status;
+
+        @NameInMap("statusMsg")
+        public String statusMsg;
 
         @NameInMap("type")
         public String type;
@@ -120,12 +126,28 @@ public class SelectDataSet2ResponseBody extends TeaModel {
             return this.name;
         }
 
+        public SelectDataSet2ResponseBodyData setOssFileCount(Long ossFileCount) {
+            this.ossFileCount = ossFileCount;
+            return this;
+        }
+        public Long getOssFileCount() {
+            return this.ossFileCount;
+        }
+
         public SelectDataSet2ResponseBodyData setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public SelectDataSet2ResponseBodyData setStatusMsg(String statusMsg) {
+            this.statusMsg = statusMsg;
+            return this;
+        }
+        public String getStatusMsg() {
+            return this.statusMsg;
         }
 
         public SelectDataSet2ResponseBodyData setType(String type) {
