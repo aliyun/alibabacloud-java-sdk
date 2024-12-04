@@ -710,11 +710,11 @@ public class RunInstancesRequest extends TeaModel {
     public String securityEnhancementStrategy;
 
     /**
-     * <p>The ID of the security group to which you want to assign the instance. Instances in the same security group can communicate with each other. The maximum number of instances allowed in a security group varies based on the type of the security group. For more information, see the &quot;Security group limits&quot; section in <a href="~~25412#SecurityGroupQuota~~">Limits</a>.</p>
+     * <p>The ID of the security group to which you want to assign the instance. Instances in the same security group can communicate with each other. The maximum number of instances allowed in a security group varies based on the type of the security group. For more information, see the &quot;Security group limits&quot; section in <a href="~~25412#SecurityGroupQuota~~">Limits and quotas</a>.</p>
      * <blockquote>
      * <p> The network type of the new instance is the same as the network type of the security group specified by <code>SecurityGroupId</code>. For example, if the specified security group is of the VPC type, the new instance is also of the VPC type and you must specify <code>VSwitchId</code>.</p>
      * </blockquote>
-     * <p>If you do not use <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template, you must specify a security group ID. Take note of the following items:</p>
+     * <p>If you do not use <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template, you must specify a security group ID. When you specify this parameter, take note of the following items:</p>
      * <ul>
      * <li>You can set <code>SecurityGroupId</code> to specify a single security group or set <code>SecurityGroupIds.N</code> to specify one or more security groups. However, you cannot specify both <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code> in the same request.</li>
      * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot specify <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code> but can specify <code>NetworkInterface.N.SecurityGroupId</code> or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
@@ -727,8 +727,8 @@ public class RunInstancesRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The ID of security group N to which to assign the instance. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="https://help.aliyun.com/document_detail/101348.html">Security group limits</a> section of the &quot;Limits&quot; topic.</p>
-     * <p>Take note of the following items:</p>
+     * <p>The IDs of security groups to which to assign the instance. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="https://help.aliyun.com/document_detail/101348.html">Security group limits</a> section of the &quot;Limits&quot; topic.</p>
+     * <p>When you specify this parameter, take note of the following items:</p>
      * <ul>
      * <li>You cannot specify both <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code> in the same request.</li>
      * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot specify <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code> but can specify <code>NetworkInterface.N.SecurityGroupId</code> or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
@@ -2489,10 +2489,10 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestNetworkInterface extends TeaModel {
         /**
-         * <p>Specifies whether to release ENI N when the associated instance is released. Valid values:</p>
+         * <p>Specifies whether to release ENI N when the instance is released. Valid values:</p>
          * <ul>
-         * <li>true: releases the ENI when the associated instance is released.</li>
-         * <li>false: retains the ENI when the associated instance is released.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * <p>Default value: true.</p>
          * <blockquote>
@@ -2524,8 +2524,8 @@ public class RunInstancesRequest extends TeaModel {
          * <p>The type of ENI N. The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Primary: the primary ENI</li>
-         * <li>Secondary: the secondary ENI</li>
+         * <li>Primary</li>
+         * <li>Secondary</li>
          * </ul>
          * <p>Default value: Secondary.</p>
          * 
@@ -2540,7 +2540,7 @@ public class RunInstancesRequest extends TeaModel {
          * <p>Example: <code>Ipv6Address.1=2001:db8:1234:1a00::***</code>.</p>
          * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>This parameter is valid only when <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>. If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</li>
+         * <li>This parameter takes effect only when <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>. If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</li>
          * <li>If you specify this parameter, you must set <code>Amount</code> to 1 and cannot specify <code>Ipv6AddressCount</code>, <code>Ipv6Address.N</code>, or <code>NetworkInterface.N.Ipv6AddressCount</code>.</li>
          * </ul>
          */
@@ -2551,7 +2551,7 @@ public class RunInstancesRequest extends TeaModel {
          * <p>The number of IPv6 addresses to randomly generate for the primary ENI. Valid values: 1 to 10.</p>
          * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>This parameter is valid only when <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>. If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</li>
+         * <li>This parameter takes effect only when <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>. If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</li>
          * <li>If you specify this parameter, you cannot specify <code>Ipv6AddressCount</code>, <code>Ipv6Address.N</code>, or <code>NetworkInterface.N.Ipv6Address.N</code>.</li>
          * </ul>
          * 
@@ -2565,9 +2565,9 @@ public class RunInstancesRequest extends TeaModel {
          * <p>The index of the network card for ENI N.</p>
          * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>You can specify NIC indexes only for instances of specific instance types.</li>
+         * <li>You can specify network card indexes only for instances of specific instance types.</li>
          * <li>If you set NetworkInterface.N.InstanceType to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</li>
-         * <li>If you set NetworkInterface.N.InstanceType to Secondary or leave NetworkInterface.N.InstanceType empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+         * <li>If you set NetworkInterface.N.InstanceType to Secondary or leave the parameter empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2690,7 +2690,7 @@ public class RunInstancesRequest extends TeaModel {
          * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
          * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
-         * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>SecurityGroupId</code> and you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
+         * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>SecurityGroupId</code>, and you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
          * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</li>
          * </ul>
          * 

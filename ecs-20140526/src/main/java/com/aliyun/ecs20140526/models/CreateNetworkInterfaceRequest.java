@@ -185,7 +185,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <p>The primary private IP address of the ENI.</p>
-     * <p>The specified IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. If this parameter is not specified, an idle IP address is assigned from within the vSwitch CIDR block at random.</p>
+     * <p>The specified IP address must be an idle IP address within the CIDR block of the vSwitch. If you do not specify this parameter, a random idle IP address within the vSwitch CIDR block is assigned to the ENI.</p>
      * 
      * <strong>example:</strong>
      * <p><code>172.17.**.**</code></p>
@@ -299,6 +299,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SourceDestCheck")
     public Boolean sourceDestCheck;
 
@@ -740,7 +748,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         public Integer queueNumber;
 
         /**
-         * <p>The number of queues supported by the ERI.</p>
+         * <p>The number of queues supported by the elastic RDMA interface (ERI).</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
