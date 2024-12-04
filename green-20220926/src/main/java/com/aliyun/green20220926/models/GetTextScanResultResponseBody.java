@@ -119,6 +119,9 @@ public class GetTextScanResultResponseBody extends TeaModel {
     }
 
     public static class GetTextScanResultResponseBodyDataItems extends TeaModel {
+        @NameInMap("BailianRequestId")
+        public String bailianRequestId;
+
         @NameInMap("Content")
         public String content;
 
@@ -205,6 +208,14 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public static GetTextScanResultResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             GetTextScanResultResponseBodyDataItems self = new GetTextScanResultResponseBodyDataItems();
             return TeaModel.build(map, self);
+        }
+
+        public GetTextScanResultResponseBodyDataItems setBailianRequestId(String bailianRequestId) {
+            this.bailianRequestId = bailianRequestId;
+            return this;
+        }
+        public String getBailianRequestId() {
+            return this.bailianRequestId;
         }
 
         public GetTextScanResultResponseBodyDataItems setContent(String content) {
