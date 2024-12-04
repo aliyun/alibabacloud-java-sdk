@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
+    @NameInMap("AdditionalInfo")
+    public java.util.Map<String, ?> additionalInfo;
+
     /**
      * <p>The ID of the change set. This parameter is returned only if you specify ChangeSetId.</p>
      * 
@@ -204,6 +207,14 @@ public class GetTemplateResponseBody extends TeaModel {
     public static GetTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTemplateResponseBody self = new GetTemplateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTemplateResponseBody setAdditionalInfo(java.util.Map<String, ?> additionalInfo) {
+        this.additionalInfo = additionalInfo;
+        return this;
+    }
+    public java.util.Map<String, ?> getAdditionalInfo() {
+        return this.additionalInfo;
     }
 
     public GetTemplateResponseBody setChangeSetId(String changeSetId) {

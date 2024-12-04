@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ImportStacksToStackGroupResponseBody extends TeaModel {
     /**
+     * <p>Operation ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6da106ca-1784-4a6f-a7e1-e723863d****</p>
      */
@@ -12,6 +14,8 @@ public class ImportStacksToStackGroupResponseBody extends TeaModel {
     public String operationId;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
      */

@@ -89,6 +89,12 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         @NameInMap("AllowedValues")
         public java.util.List<?> allowedValues;
 
+        @NameInMap("Behavior")
+        public String behavior;
+
+        @NameInMap("BehaviorReason")
+        public String behaviorReason;
+
         /**
          * <p>The name of the resource property.</p>
          * 
@@ -127,6 +133,22 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
         public java.util.List<?> getAllowedValues() {
             return this.allowedValues;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints setBehavior(String behavior) {
+            this.behavior = behavior;
+            return this;
+        }
+        public String getBehavior() {
+            return this.behavior;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints setBehaviorReason(String behaviorReason) {
+            this.behaviorReason = behaviorReason;
+            return this;
+        }
+        public String getBehaviorReason() {
+            return this.behaviorReason;
         }
 
         public GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints setPropertyName(String propertyName) {

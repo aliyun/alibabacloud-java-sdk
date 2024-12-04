@@ -3495,6 +3495,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Import stacks from multiple different accounts into a stack group.</p>
+     * 
      * @param tmpReq ImportStacksToStackGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImportStacksToStackGroupResponse
@@ -3562,6 +3565,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Import stacks from multiple different accounts into a stack group.</p>
+     * 
      * @param request ImportStacksToStackGroupRequest
      * @return ImportStacksToStackGroupResponse
      */
@@ -4953,6 +4959,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTemplatesResponse listTemplatesWithOptions(ListTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
+            query.put("Filters", request.filters);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.includeTags)) {
             query.put("IncludeTags", request.includeTags);
         }
