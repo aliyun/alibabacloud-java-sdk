@@ -3982,6 +3982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FirewallType", request.firewallType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isOnlyPrivateAssoc)) {
+            query.put("IsOnlyPrivateAssoc", request.isOnlyPrivateAssoc);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
