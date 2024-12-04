@@ -216,6 +216,9 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public Float endTime;
 
+        @NameInMap("Expression")
+        public String expression;
+
         /**
          * <p>The start time of the clip. Unit: seconds. The value is of the Float type.</p>
          * 
@@ -242,6 +245,14 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         }
         public Float getEndTime() {
             return this.endTime;
+        }
+
+        public SearchMediaClipByFaceResponseBodyMediaClipListOccurrencesInfos setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
         }
 
         public SearchMediaClipByFaceResponseBodyMediaClipListOccurrencesInfos setStartTime(Float startTime) {

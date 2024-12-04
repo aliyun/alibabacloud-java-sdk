@@ -110,7 +110,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
          * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</li>
          * </ol>
          * <blockquote>
-         * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/440592.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
+         * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -166,7 +166,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
          * </ol>
          * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS. If multiple static snapshots were captured, the object must contain the &quot;{Count}&quot; placeholder. In the case of a sprite, the object must contain the &quot;{TileCount}&quot; placeholder. The suffix of the WebVTT snapshot objects must be &quot;.vtt&quot;.</p>
          * <blockquote>
-         * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/440592.html">Storage Management</a> page of the IMS console.</p>
+         * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the IMS console.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

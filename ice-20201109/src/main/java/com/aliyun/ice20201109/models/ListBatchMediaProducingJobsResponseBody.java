@@ -193,7 +193,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The user-defined data in the JSON format, which can be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/zh/ims/use-cases/to-configure-a-callback-when-a-clip-completes">Configure a callback upon editing completion</a>.</p>
+         * <p>The user-defined data in the JSON format, which can be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</p>
          */
         @NameInMap("UserData")
         public String userData;

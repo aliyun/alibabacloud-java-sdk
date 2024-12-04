@@ -62,11 +62,6 @@ public class ListBatchMediaProducingJobsRequest extends TeaModel {
      * </ul>
      * <!---->
      * 
-     * <ul>
-     * <li></li>
-     * <li></li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
