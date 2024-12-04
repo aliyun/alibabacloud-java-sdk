@@ -14,7 +14,7 @@ public class ListInstalledSoftwaresRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the page to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

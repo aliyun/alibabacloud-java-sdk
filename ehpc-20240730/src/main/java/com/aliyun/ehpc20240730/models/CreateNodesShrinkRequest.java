@@ -34,6 +34,9 @@ public class CreateNodesShrinkRequest extends TeaModel {
     @NameInMap("Count")
     public Integer count;
 
+    @NameInMap("DeploymentSetId")
+    public String deploymentSetId;
+
     /**
      * <p>The type of the network between compute nodes. Valid values:</p>
      * <ul>
@@ -128,6 +131,14 @@ public class CreateNodesShrinkRequest extends TeaModel {
     }
     public Integer getCount() {
         return this.count;
+    }
+
+    public CreateNodesShrinkRequest setDeploymentSetId(String deploymentSetId) {
+        this.deploymentSetId = deploymentSetId;
+        return this;
+    }
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
     }
 
     public CreateNodesShrinkRequest setHPCInterConnect(String HPCInterConnect) {

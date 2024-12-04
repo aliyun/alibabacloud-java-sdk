@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCommonLogsResponseBody extends TeaModel {
     /**
-     * <p>The information about the returned logs.</p>
+     * <p>The brief information of operation logs.</p>
      */
     @NameInMap("Logs")
     public java.util.List<ListCommonLogsResponseBodyLogs> logs;
@@ -146,7 +146,7 @@ public class ListCommonLogsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The ID of the user who performed the action.</p>
+         * <p>The account ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>137***</p>

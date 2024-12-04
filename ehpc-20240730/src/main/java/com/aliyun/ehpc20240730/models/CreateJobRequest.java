@@ -147,8 +147,8 @@ public class CreateJobRequest extends TeaModel {
         public String arrayRequest;
 
         /**
-         * <p>The command or script to run the job. If you want to use a command, you must specify the full path of the command, for example, /bin/ping.</p>
-         * <p>If you want to use a script, you must make sure that you have the execution permissions on it. By default, the user root directory ~/ is used as the default script path on the cluster side. If your script is not in that directory, you must specify the full path in this parameter, such as /home/xxx/job.sh</p>
+         * <p>The command or script that is used to run the job. If you want to use a command, you must specify the full path of the command, for example, /bin/ping.</p>
+         * <p>If you want to use a script, you must make sure that you have the execution permissions on it. By default, the user root directory ~/ is used as the default script path on the cluster side. If your script is not in that directory, you must specify the full path in this parameter, such as /home/xxx/job.sh Note that in this mode, if requirements on resources such as CPU and memory are specified in the script, the job will be run based on the resource requirements specified in the script. In this case, do not specify resource requirements in the Resource parameter. Otherwise, the job may fail to run.</p>
          * <p>If you want to run the job directly by using the CLI, you must specify the absolute path of the command and add two hyphens and a space (-- ) before the path, such as -- /bin/ping -c 10 localhost.</p>
          * <p>This parameter is required.</p>
          * 

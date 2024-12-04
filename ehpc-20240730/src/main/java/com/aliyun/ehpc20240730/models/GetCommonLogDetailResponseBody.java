@@ -38,7 +38,7 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
     public String logType;
 
     /**
-     * <p>The ID of the user who performed the action.</p>
+     * <p>The account ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>239***</p>

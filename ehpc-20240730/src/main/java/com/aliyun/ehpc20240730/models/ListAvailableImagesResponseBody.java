@@ -11,7 +11,11 @@ public class ListAvailableImagesResponseBody extends TeaModel {
     public java.util.List<ListAvailableImagesResponseBodyImages> images;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The page number of the returned page.</p>
+     * <ul>
+     * <li>Pages start from page 1.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +24,7 @@ public class ListAvailableImagesResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -40,8 +44,8 @@ public class ListAvailableImagesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +55,7 @@ public class ListAvailableImagesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -129,8 +133,8 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         /**
          * <p>The boot mode of the image. Valid values:</p>
          * <ul>
-         * <li>BIOS: Basic Input/Output System (BIOS)</li>
-         * <li>UEFI: Unified Extensible Firmware Interface (UEFI)</li>
+         * <li>BIOS: Basic Input/Output System (BIOS).</li>
+         * <li>UEFI: Unified Extensible Firmware Interface (UEFI).</li>
          * </ul>
          * <blockquote>
          * <p> When you change the OS boot mode of an instance, you must make sure that the boot mode matches the boot mode of the associated image. Otherwise, the instance fails to be booted.</p>
@@ -172,9 +176,9 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         /**
          * <p>The image source. Valid values:</p>
          * <ul>
-         * <li>system: system images</li>
-         * <li>self: custom images</li>
-         * <li>others: shared images</li>
+         * <li>system: system image.</li>
+         * <li>self: custom image.</li>
+         * <li>others: shared image.</li>
          * </ul>
          * 
          * <strong>example:</strong>

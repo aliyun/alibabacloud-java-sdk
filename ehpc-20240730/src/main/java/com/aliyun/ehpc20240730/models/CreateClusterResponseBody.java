@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr******</p>
      */
@@ -12,6 +14,8 @@ public class CreateClusterResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F6757FA4-8FED-4602-B7F5-3550C0******</p>
      */
@@ -19,6 +23,12 @@ public class CreateClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The request result. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +36,8 @@ public class CreateClusterResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F6757FA4-8FED-4602-B7F5-3550C0******</p>
      */

@@ -50,7 +50,12 @@ public class ListNodesShrinkRequest extends TeaModel {
     public String queueNamesShrink;
 
     /**
-     * <p>Specifies whether the results are sorted in ascending or descending order. Valid values: forward (ascending) and backward (descending).</p>
+     * <p>Specifies whether the results are sorted in ascending or descending order. Valid values:</p>
+     * <ul>
+     * <li>Forward: ascending</li>
+     * <li>Backward: descending</li>
+     * </ul>
+     * <p>Default value: Forward.</p>
      * 
      * <strong>example:</strong>
      * <p>Forward</p>
@@ -59,7 +64,12 @@ public class ListNodesShrinkRequest extends TeaModel {
     public String sequence;
 
     /**
-     * <p>The sorting method of the node list. Valid values: addedtime: sorted by the time when the node was added. hostname: sorted by hostname. Default value: addedtime.</p>
+     * <p>The sorting method of the node list. Valid values:</p>
+     * <ul>
+     * <li>AddedTime: sorts the nodes by the time that they were added.</li>
+     * <li>HostName: sorts the nodes by their hostnames.</li>
+     * </ul>
+     * <p>Default value: addedtime.</p>
      * 
      * <strong>example:</strong>
      * <p>AddedTime</p>
