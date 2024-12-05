@@ -1,3 +1,8 @@
+2024-12-05 Version: 1.0.8
+- Update API DescribeInstances: update response param.
+- Update API DescribeNamespaces: update response param.
+
+
 2024-12-02 Version: 1.0.7
 - Update API CreateInstance: update param Storage.
 - Update API CreateInstance: update response param.

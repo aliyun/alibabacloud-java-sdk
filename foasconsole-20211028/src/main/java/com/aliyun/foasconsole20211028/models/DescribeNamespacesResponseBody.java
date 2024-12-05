@@ -110,6 +110,66 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         return this.totalPage;
     }
 
+    public static class DescribeNamespacesResponseBodyNamespacesElasticResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
+
+        public static DescribeNamespacesResponseBodyNamespacesElasticResourceSpec build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNamespacesResponseBodyNamespacesElasticResourceSpec self = new DescribeNamespacesResponseBodyNamespacesElasticResourceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespacesResponseBodyNamespacesElasticResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeNamespacesResponseBodyNamespacesElasticResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+    }
+
+    public static class DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
+
+        public static DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec self = new DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+    }
+
     public static class DescribeNamespacesResponseBodyNamespacesResourceSpec extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -236,6 +296,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespacesResponseBodyNamespaces extends TeaModel {
+        @NameInMap("ElasticResourceSpec")
+        public DescribeNamespacesResponseBodyNamespacesElasticResourceSpec elasticResourceSpec;
+
         /**
          * <strong>example:</strong>
          * <p>1629879567394</p>
@@ -249,6 +312,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
+
+        @NameInMap("GuaranteedResourceSpec")
+        public DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec guaranteedResourceSpec;
 
         @NameInMap("Ha")
         public Boolean ha;
@@ -281,6 +347,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeNamespacesResponseBodyNamespaces setElasticResourceSpec(DescribeNamespacesResponseBodyNamespacesElasticResourceSpec elasticResourceSpec) {
+            this.elasticResourceSpec = elasticResourceSpec;
+            return this;
+        }
+        public DescribeNamespacesResponseBodyNamespacesElasticResourceSpec getElasticResourceSpec() {
+            return this.elasticResourceSpec;
+        }
+
         public DescribeNamespacesResponseBodyNamespaces setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -295,6 +369,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeNamespacesResponseBodyNamespaces setGuaranteedResourceSpec(DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec guaranteedResourceSpec) {
+            this.guaranteedResourceSpec = guaranteedResourceSpec;
+            return this;
+        }
+        public DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec getGuaranteedResourceSpec() {
+            return this.guaranteedResourceSpec;
         }
 
         public DescribeNamespacesResponseBodyNamespaces setHa(Boolean ha) {

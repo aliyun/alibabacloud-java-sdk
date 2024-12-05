@@ -407,6 +407,24 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ClusterId")
         public String clusterId;
 
+        @NameInMap("ElasticUsedCpu")
+        public Float elasticUsedCpu;
+
+        @NameInMap("ElasticUsedMemory")
+        public String elasticUsedMemory;
+
+        @NameInMap("ElasticUsedResource")
+        public String elasticUsedResource;
+
+        @NameInMap("GuaranteedUsedCpu")
+        public Float guaranteedUsedCpu;
+
+        @NameInMap("GuaranteedUsedMemory")
+        public String guaranteedUsedMemory;
+
+        @NameInMap("GuaranteedUsedResource")
+        public Float guaranteedUsedResource;
+
         @NameInMap("Ha")
         public Boolean ha;
 
@@ -439,6 +457,54 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getClusterId() {
             return this.clusterId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesClusterUsedResources setElasticUsedCpu(Float elasticUsedCpu) {
+            this.elasticUsedCpu = elasticUsedCpu;
+            return this;
+        }
+        public Float getElasticUsedCpu() {
+            return this.elasticUsedCpu;
+        }
+
+        public DescribeInstancesResponseBodyInstancesClusterUsedResources setElasticUsedMemory(String elasticUsedMemory) {
+            this.elasticUsedMemory = elasticUsedMemory;
+            return this;
+        }
+        public String getElasticUsedMemory() {
+            return this.elasticUsedMemory;
+        }
+
+        public DescribeInstancesResponseBodyInstancesClusterUsedResources setElasticUsedResource(String elasticUsedResource) {
+            this.elasticUsedResource = elasticUsedResource;
+            return this;
+        }
+        public String getElasticUsedResource() {
+            return this.elasticUsedResource;
+        }
+
+        public DescribeInstancesResponseBodyInstancesClusterUsedResources setGuaranteedUsedCpu(Float guaranteedUsedCpu) {
+            this.guaranteedUsedCpu = guaranteedUsedCpu;
+            return this;
+        }
+        public Float getGuaranteedUsedCpu() {
+            return this.guaranteedUsedCpu;
+        }
+
+        public DescribeInstancesResponseBodyInstancesClusterUsedResources setGuaranteedUsedMemory(String guaranteedUsedMemory) {
+            this.guaranteedUsedMemory = guaranteedUsedMemory;
+            return this;
+        }
+        public String getGuaranteedUsedMemory() {
+            return this.guaranteedUsedMemory;
+        }
+
+        public DescribeInstancesResponseBodyInstancesClusterUsedResources setGuaranteedUsedResource(Float guaranteedUsedResource) {
+            this.guaranteedUsedResource = guaranteedUsedResource;
+            return this;
+        }
+        public Float getGuaranteedUsedResource() {
+            return this.guaranteedUsedResource;
         }
 
         public DescribeInstancesResponseBodyInstancesClusterUsedResources setHa(Boolean ha) {
@@ -525,6 +591,36 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Float getUsedStorage() {
             return this.usedStorage;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesElasticResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
+
+        public static DescribeInstancesResponseBodyInstancesElasticResourceSpec build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesElasticResourceSpec self = new DescribeInstancesResponseBodyInstancesElasticResourceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesElasticResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeInstancesResponseBodyInstancesElasticResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
         }
 
     }
@@ -1094,6 +1190,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ClusterUsedStorage")
         public DescribeInstancesResponseBodyInstancesClusterUsedStorage clusterUsedStorage;
 
+        @NameInMap("Elastic")
+        public Boolean elastic;
+
+        @NameInMap("ElasticOrderState")
+        public String elasticOrderState;
+
+        @NameInMap("ElasticResourceSpec")
+        public DescribeInstancesResponseBodyInstancesElasticResourceSpec elasticResourceSpec;
+
         @NameInMap("Ha")
         public Boolean ha;
 
@@ -1271,6 +1376,30 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesClusterUsedStorage getClusterUsedStorage() {
             return this.clusterUsedStorage;
+        }
+
+        public DescribeInstancesResponseBodyInstances setElastic(Boolean elastic) {
+            this.elastic = elastic;
+            return this;
+        }
+        public Boolean getElastic() {
+            return this.elastic;
+        }
+
+        public DescribeInstancesResponseBodyInstances setElasticOrderState(String elasticOrderState) {
+            this.elasticOrderState = elasticOrderState;
+            return this;
+        }
+        public String getElasticOrderState() {
+            return this.elasticOrderState;
+        }
+
+        public DescribeInstancesResponseBodyInstances setElasticResourceSpec(DescribeInstancesResponseBodyInstancesElasticResourceSpec elasticResourceSpec) {
+            this.elasticResourceSpec = elasticResourceSpec;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesElasticResourceSpec getElasticResourceSpec() {
+            return this.elasticResourceSpec;
         }
 
         public DescribeInstancesResponseBodyInstances setHa(Boolean ha) {
