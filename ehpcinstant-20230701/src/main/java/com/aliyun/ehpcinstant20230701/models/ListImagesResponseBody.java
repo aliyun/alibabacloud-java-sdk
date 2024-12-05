@@ -112,6 +112,9 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DocumentId")
+        public Integer documentId;
+
         /**
          * <p>This parameter is required.</p>
          * 
@@ -139,6 +142,9 @@ public class ListImagesResponseBody extends TeaModel {
 
         @NameInMap("OsTag")
         public String osTag;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
 
         /**
          * <strong>example:</strong>
@@ -176,6 +182,14 @@ public class ListImagesResponseBody extends TeaModel {
             return this.description;
         }
 
+        public ListImagesResponseBodyImages setDocumentId(Integer documentId) {
+            this.documentId = documentId;
+            return this;
+        }
+        public Integer getDocumentId() {
+            return this.documentId;
+        }
+
         public ListImagesResponseBodyImages setImageId(String imageId) {
             this.imageId = imageId;
             return this;
@@ -206,6 +220,14 @@ public class ListImagesResponseBody extends TeaModel {
         }
         public String getOsTag() {
             return this.osTag;
+        }
+
+        public ListImagesResponseBodyImages setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
         public ListImagesResponseBodyImages setVersion(String version) {

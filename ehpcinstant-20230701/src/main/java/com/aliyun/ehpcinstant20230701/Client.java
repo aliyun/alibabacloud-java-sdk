@@ -539,6 +539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ImageType", request.imageType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }

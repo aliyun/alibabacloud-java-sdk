@@ -1,3 +1,9 @@
+2024-12-05 Version: 1.1.3
+- Update API GetImage: update response param.
+- Update API ListImages: add param Mode.
+- Update API ListImages: update response param.
+
+
 2024-11-18 Version: 1.1.2
 - Update API ListImages: update response param.
 
