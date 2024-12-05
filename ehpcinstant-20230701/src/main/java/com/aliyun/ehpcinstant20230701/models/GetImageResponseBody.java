@@ -119,6 +119,9 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     public static class GetImageResponseBodyImageContainerImageSpec extends TeaModel {
+        @NameInMap("Architecture")
+        public String architecture;
+
         /**
          * <strong>example:</strong>
          * <p>True</p>
@@ -132,6 +135,12 @@ public class GetImageResponseBody extends TeaModel {
          */
         @NameInMap("IsACRRegistry")
         public Boolean isACRRegistry;
+
+        @NameInMap("OsTag")
+        public String osTag;
+
+        @NameInMap("Platform")
+        public String platform;
 
         @NameInMap("RegistryCredential")
         public GetImageResponseBodyImageContainerImageSpecRegistryCredential registryCredential;
@@ -155,6 +164,14 @@ public class GetImageResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetImageResponseBodyImageContainerImageSpec setArchitecture(String architecture) {
+            this.architecture = architecture;
+            return this;
+        }
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
         public GetImageResponseBodyImageContainerImageSpec setIsACREnterprise(Boolean isACREnterprise) {
             this.isACREnterprise = isACREnterprise;
             return this;
@@ -169,6 +186,22 @@ public class GetImageResponseBody extends TeaModel {
         }
         public Boolean getIsACRRegistry() {
             return this.isACRRegistry;
+        }
+
+        public GetImageResponseBodyImageContainerImageSpec setOsTag(String osTag) {
+            this.osTag = osTag;
+            return this;
+        }
+        public String getOsTag() {
+            return this.osTag;
+        }
+
+        public GetImageResponseBodyImageContainerImageSpec setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
         }
 
         public GetImageResponseBodyImageContainerImageSpec setRegistryCredential(GetImageResponseBodyImageContainerImageSpecRegistryCredential registryCredential) {
@@ -193,6 +226,47 @@ public class GetImageResponseBody extends TeaModel {
         }
         public String getRegistryUrl() {
             return this.registryUrl;
+        }
+
+    }
+
+    public static class GetImageResponseBodyImageDocumentInfo extends TeaModel {
+        @NameInMap("Document")
+        public String document;
+
+        @NameInMap("DocumentId")
+        public String documentId;
+
+        @NameInMap("EncodingMode")
+        public String encodingMode;
+
+        public static GetImageResponseBodyImageDocumentInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetImageResponseBodyImageDocumentInfo self = new GetImageResponseBodyImageDocumentInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetImageResponseBodyImageDocumentInfo setDocument(String document) {
+            this.document = document;
+            return this;
+        }
+        public String getDocument() {
+            return this.document;
+        }
+
+        public GetImageResponseBodyImageDocumentInfo setDocumentId(String documentId) {
+            this.documentId = documentId;
+            return this;
+        }
+        public String getDocumentId() {
+            return this.documentId;
+        }
+
+        public GetImageResponseBodyImageDocumentInfo setEncodingMode(String encodingMode) {
+            this.encodingMode = encodingMode;
+            return this;
+        }
+        public String getEncodingMode() {
+            return this.encodingMode;
         }
 
     }
@@ -282,6 +356,9 @@ public class GetImageResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DocumentInfo")
+        public GetImageResponseBodyImageDocumentInfo documentInfo;
+
         /**
          * <p>This parameter is required.</p>
          * 
@@ -353,6 +430,14 @@ public class GetImageResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetImageResponseBodyImage setDocumentInfo(GetImageResponseBodyImageDocumentInfo documentInfo) {
+            this.documentInfo = documentInfo;
+            return this;
+        }
+        public GetImageResponseBodyImageDocumentInfo getDocumentInfo() {
+            return this.documentInfo;
         }
 
         public GetImageResponseBodyImage setImageType(String imageType) {

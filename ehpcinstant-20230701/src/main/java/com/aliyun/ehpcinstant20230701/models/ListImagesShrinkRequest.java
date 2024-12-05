@@ -16,6 +16,9 @@ public class ListImagesShrinkRequest extends TeaModel {
     @NameInMap("ImageType")
     public String imageType;
 
+    @NameInMap("Mode")
+    public String mode;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,6 +68,14 @@ public class ListImagesShrinkRequest extends TeaModel {
     }
     public String getImageType() {
         return this.imageType;
+    }
+
+    public ListImagesShrinkRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
     }
 
     public ListImagesShrinkRequest setPageNumber(Long pageNumber) {
