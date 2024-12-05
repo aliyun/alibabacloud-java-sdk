@@ -3293,7 +3293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an automatic snapshot policy in a specific region. Automatic snapshot policies allow Elastic Compute Service (ECS) to create snapshots for a disk on a regular basis to back up data. The policies can be applied to both system disks and data disks. If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied to the destination region and snapshot copies are encrypted by using the default service customer master key (CMK) that was created by Key Management Service (KMS) in the destination region.</p>
+     * <p>Creates an automatic snapshot policy in a specific region. Automatic snapshot policies allow Elastic Compute Service (ECS) to create snapshots for cloud disks on a regular basis to back up data. The policies can be applied to both system disks and data disks. If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied to the destination region and snapshot copies are encrypted by using the service key of the destination region.</p>
      * 
      * @param request CreateAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3391,7 +3391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an automatic snapshot policy in a specific region. Automatic snapshot policies allow Elastic Compute Service (ECS) to create snapshots for a disk on a regular basis to back up data. The policies can be applied to both system disks and data disks. If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied to the destination region and snapshot copies are encrypted by using the default service customer master key (CMK) that was created by Key Management Service (KMS) in the destination region.</p>
+     * <p>Creates an automatic snapshot policy in a specific region. Automatic snapshot policies allow Elastic Compute Service (ECS) to create snapshots for cloud disks on a regular basis to back up data. The policies can be applied to both system disks and data disks. If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied to the destination region and snapshot copies are encrypted by using the service key of the destination region.</p>
      * 
      * @param request CreateAutoSnapshotPolicyRequest
      * @return CreateAutoSnapshotPolicyResponse
@@ -4710,6 +4710,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.diskDeviceMapping)) {
             query.put("DiskDeviceMapping", request.diskDeviceMapping);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.features)) {
+            query.put("Features", request.features);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageFamily)) {
@@ -6993,15 +6997,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
+     * <p>  By default, the internal access control policy (InnerAccessPolicy) of the basic security group that you create by calling this operation is internal interconnectivity (<strong>Accept</strong>). You can call the <a href="https://help.aliyun.com/document_detail/2679846.html">ModifySecurityGroupPolicy</a> operation to change the value of InnerAccessPolicy for the basic security group.</p>
      * <ul>
-     * <li>You can create up to 100 security groups in a single Alibaba Cloud region.</li>
+     * <li>By default, the internal access control policy (InnerAccessPolicy) of the advanced security group that you create by calling this operation is internal isolation (<strong>Drop</strong>). The InnerAccessPolicy value of the advanced security group cannot be changed.</li>
+     * <li>You can create a limited number of security groups per region. You can create at least 100 security groups per region. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section in the &quot;Limits&quot; topic.</li>
      * <li>To create a security group of the Virtual Private Cloud (VPC) type, you must specify VpcId.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a security group. By default, a security group allows only instances in the security group to access each other. Access requests from outside the security group are denied. If you want to allow requests over the Internet or from instances in other security groups, you can call the AuthorizeSecurityGroup operation.</p>
+     * <p>Creates a security group.</p>
      * 
      * @param request CreateSecurityGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7081,15 +7085,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
+     * <p>  By default, the internal access control policy (InnerAccessPolicy) of the basic security group that you create by calling this operation is internal interconnectivity (<strong>Accept</strong>). You can call the <a href="https://help.aliyun.com/document_detail/2679846.html">ModifySecurityGroupPolicy</a> operation to change the value of InnerAccessPolicy for the basic security group.</p>
      * <ul>
-     * <li>You can create up to 100 security groups in a single Alibaba Cloud region.</li>
+     * <li>By default, the internal access control policy (InnerAccessPolicy) of the advanced security group that you create by calling this operation is internal isolation (<strong>Drop</strong>). The InnerAccessPolicy value of the advanced security group cannot be changed.</li>
+     * <li>You can create a limited number of security groups per region. You can create at least 100 security groups per region. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section in the &quot;Limits&quot; topic.</li>
      * <li>To create a security group of the Virtual Private Cloud (VPC) type, you must specify VpcId.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a security group. By default, a security group allows only instances in the security group to access each other. Access requests from outside the security group are denied. If you want to allow requests over the Internet or from instances in other security groups, you can call the AuthorizeSecurityGroup operation.</p>
+     * <p>Creates a security group.</p>
      * 
      * @param request CreateSecurityGroupRequest
      * @return CreateSecurityGroupResponse
@@ -20211,7 +20215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of all snapshots of an Elastic Compute Service (ECS) instance or a cloud disk. The details include the status of the snapshots, amount of remaining time required to create the snapshots, and the retention period of the automatic snapshots in days.</p>
+     * <p>Queries the details of cloud disk snapshots. The details include the status of the snapshots, the amount of remaining time required to create the snapshots, and the retention period of the automatic snapshots in days.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20343,7 +20347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of all snapshots of an Elastic Compute Service (ECS) instance or a cloud disk. The details include the status of the snapshots, amount of remaining time required to create the snapshots, and the retention period of the automatic snapshots in days.</p>
+     * <p>Queries the details of cloud disk snapshots. The details include the status of the snapshots, the amount of remaining time required to create the snapshots, and the retention period of the automatic snapshots in days.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @return DescribeSnapshotsResponse
@@ -25941,23 +25945,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>Take note of the following items:</p>
+     * <p>To minimize impacts on your business, change the disk categories or performance levels of cloud disks during off-peak hours.
+     * Take note of the following items:</p>
      * <ul>
-     * <li>To modify the performance level of an ESSD, take note of the following items:<ul>
-     * <li>For a subscription ESSD, you can only upgrade its performance level.</li>
-     * <li>For a pay-as-you-go ESSD, you can upgrade or downgrade its performance level. However, you cannot downgrade the performance level to PL0.</li>
+     * <li>To change the performance level of an ESSD, take note of the following items:<ul>
+     * <li>If the ESSD is a subscription ESSD, you can only upgrade its performance level.</li>
+     * <li>If the ESSD is a pay-as-you-go ESSD, you can upgrade or downgrade its performance level. However, you cannot downgrade the performance level to PL0.</li>
      * <li>The ESSD must be in the <strong>In Use</strong> (In_Use) or <strong>Unattached</strong> (Available) state.</li>
      * <li>If the ESSD is attached to an Elastic Compute Service (ECS) instance, the instance must be in the <strong>Running</strong> (Running) or <strong>Stopped</strong> (Stopped) state. The instance cannot be in the Expired state or stopped due to an overdue payment.</li>
-     * <li>If you cannot upgrade the performance level of the ESSD due to the capacity limit, resize the ESSD by calling the <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> operation and then try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</li>
+     * <li>If you cannot upgrade the performance level of an ESSD due to the capacity limit, extend the ESSD by calling the <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> operation and then try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</li>
      * </ul>
      * </li>
-     * <li>For information about the limits on changing the category of a disk, see the &quot;Limits&quot; section of the <a href="https://help.aliyun.com/document_detail/161980.html">Change the category of a disk</a> topic.
-     * The new disk category or performance level takes effect immediately after this operation is performed. Alibaba Cloud calculates the bill based on the new disk category and performance level.</li>
+     * <li>For information about the limits on changing the disk category of a cloud disk, see <a href="~~161980#section_s4a_to0_1jx~~">Change the category of a disk</a>.</li>
+     * <li>For the disk categories to which cloud disks of each disk category can be changed, see <a href="~~161980#eb8bb54032nho~~">Change the category of a disk</a>.
+     * After the disk category of a cloud disk is changed, the billing of the cloud disk has the following changes:</li>
+     * <li>If the cloud disk is a pay-as-you-go disk, you are charged for the disk based on the new disk category.</li>
+     * <li>If the cloud disk is a subscription disk, you may be charged additionally based on the price difference between the old and new disk categories and the remaining days of the billing cycle, starting from 00:00 the next day until the end of the subscription period.
+     * For information about the billing of cloud disks, see <a href="https://help.aliyun.com/document_detail/179022.html">Block storage devices</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to change the category of a disk or modify the performance level of an enhanced SSD (ESSD).</p>
+     * <p>Changes the disk category of a cloud disk or the performance level of an Enterprise SSD (ESSD). You cannot change the disk categories of Regional ESSDs (in public preview), basic disks, elastic ephemeral disks, and local disks.</p>
      * 
      * @param request ModifyDiskSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26025,23 +26033,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>Take note of the following items:</p>
+     * <p>To minimize impacts on your business, change the disk categories or performance levels of cloud disks during off-peak hours.
+     * Take note of the following items:</p>
      * <ul>
-     * <li>To modify the performance level of an ESSD, take note of the following items:<ul>
-     * <li>For a subscription ESSD, you can only upgrade its performance level.</li>
-     * <li>For a pay-as-you-go ESSD, you can upgrade or downgrade its performance level. However, you cannot downgrade the performance level to PL0.</li>
+     * <li>To change the performance level of an ESSD, take note of the following items:<ul>
+     * <li>If the ESSD is a subscription ESSD, you can only upgrade its performance level.</li>
+     * <li>If the ESSD is a pay-as-you-go ESSD, you can upgrade or downgrade its performance level. However, you cannot downgrade the performance level to PL0.</li>
      * <li>The ESSD must be in the <strong>In Use</strong> (In_Use) or <strong>Unattached</strong> (Available) state.</li>
      * <li>If the ESSD is attached to an Elastic Compute Service (ECS) instance, the instance must be in the <strong>Running</strong> (Running) or <strong>Stopped</strong> (Stopped) state. The instance cannot be in the Expired state or stopped due to an overdue payment.</li>
-     * <li>If you cannot upgrade the performance level of the ESSD due to the capacity limit, resize the ESSD by calling the <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> operation and then try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</li>
+     * <li>If you cannot upgrade the performance level of an ESSD due to the capacity limit, extend the ESSD by calling the <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> operation and then try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</li>
      * </ul>
      * </li>
-     * <li>For information about the limits on changing the category of a disk, see the &quot;Limits&quot; section of the <a href="https://help.aliyun.com/document_detail/161980.html">Change the category of a disk</a> topic.
-     * The new disk category or performance level takes effect immediately after this operation is performed. Alibaba Cloud calculates the bill based on the new disk category and performance level.</li>
+     * <li>For information about the limits on changing the disk category of a cloud disk, see <a href="~~161980#section_s4a_to0_1jx~~">Change the category of a disk</a>.</li>
+     * <li>For the disk categories to which cloud disks of each disk category can be changed, see <a href="~~161980#eb8bb54032nho~~">Change the category of a disk</a>.
+     * After the disk category of a cloud disk is changed, the billing of the cloud disk has the following changes:</li>
+     * <li>If the cloud disk is a pay-as-you-go disk, you are charged for the disk based on the new disk category.</li>
+     * <li>If the cloud disk is a subscription disk, you may be charged additionally based on the price difference between the old and new disk categories and the remaining days of the billing cycle, starting from 00:00 the next day until the end of the subscription period.
+     * For information about the billing of cloud disks, see <a href="https://help.aliyun.com/document_detail/179022.html">Block storage devices</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to change the category of a disk or modify the performance level of an enhanced SSD (ESSD).</p>
+     * <p>Changes the disk category of a cloud disk or the performance level of an Enterprise SSD (ESSD). You cannot change the disk categories of Regional ESSDs (in public preview), basic disks, elastic ephemeral disks, and local disks.</p>
      * 
      * @param request ModifyDiskSpecRequest
      * @return ModifyDiskSpecResponse
@@ -29343,18 +29355,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>In security group-related API documents, inbound traffic refers to the traffic that is sent by the source device and received at the destination device.
-     * Take note of the following items:</p>
+     * <p>Take note of the following items:</p>
      * <ul>
-     * <li>An authorization object in a security group rule can be of one of the following types: IP address or CIDR block, security group, or prefix list. You cannot call this operation to change the type of an existing authorization object. For example, if an authorization object is an IP address, you can change the authorization object to another IP address or a CIDR block, but you cannot change the authorization object to a security group or prefix list.</li>
-     * <li>You cannot change the IP address family of an existing authorization object. For example, if an authorization object is an IPv4 CIDR block, you cannot change the authorization object to an IPv6 CIDR block. If an authorization object is a prefix list of the IPv4 address family, you cannot change the authorization object to a prefix list of the IPv6 address family.</li>
-     * <li>The modified security group rule cannot be the same as other existing rules.</li>
-     * <li>You cannot delete the value of a non-empty parameter. If you want to delete the values of non-empty parameters, we recommend that you create another rule and delete the original rule.</li>
+     * <li>An authorization object in a security group rule can be of one of the following types: IPv4 CIDR block or address, IPv6 CIDR block or address, security group, or prefix list. You cannot call this operation to change the type of an existing authorization object. For example, if an authorization object is an IPv4 CIDR block, you can change the authorization object to a different IPv4 CIDR block or an IPv4 address, but you cannot change the authorization object to an IPv6 CIDR block or address, a security group, or a prefix list.</li>
+     * <li>You cannot delete the value of a non-empty parameter. If you want to delete the values of non-empty parameters, we recommend that you create a security group rule and delete the original security group rule.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies outbound rules in a security group.</p>
+     * <p>Modifies an outbound security group rule in a security group.</p>
      * 
      * @param request ModifySecurityGroupEgressRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29478,18 +29486,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>In security group-related API documents, inbound traffic refers to the traffic that is sent by the source device and received at the destination device.
-     * Take note of the following items:</p>
+     * <p>Take note of the following items:</p>
      * <ul>
-     * <li>An authorization object in a security group rule can be of one of the following types: IP address or CIDR block, security group, or prefix list. You cannot call this operation to change the type of an existing authorization object. For example, if an authorization object is an IP address, you can change the authorization object to another IP address or a CIDR block, but you cannot change the authorization object to a security group or prefix list.</li>
-     * <li>You cannot change the IP address family of an existing authorization object. For example, if an authorization object is an IPv4 CIDR block, you cannot change the authorization object to an IPv6 CIDR block. If an authorization object is a prefix list of the IPv4 address family, you cannot change the authorization object to a prefix list of the IPv6 address family.</li>
-     * <li>The modified security group rule cannot be the same as other existing rules.</li>
-     * <li>You cannot delete the value of a non-empty parameter. If you want to delete the values of non-empty parameters, we recommend that you create another rule and delete the original rule.</li>
+     * <li>An authorization object in a security group rule can be of one of the following types: IPv4 CIDR block or address, IPv6 CIDR block or address, security group, or prefix list. You cannot call this operation to change the type of an existing authorization object. For example, if an authorization object is an IPv4 CIDR block, you can change the authorization object to a different IPv4 CIDR block or an IPv4 address, but you cannot change the authorization object to an IPv6 CIDR block or address, a security group, or a prefix list.</li>
+     * <li>You cannot delete the value of a non-empty parameter. If you want to delete the values of non-empty parameters, we recommend that you create a security group rule and delete the original security group rule.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies outbound rules in a security group.</p>
+     * <p>Modifies an outbound security group rule in a security group.</p>
      * 
      * @param request ModifySecurityGroupEgressRuleRequest
      * @return ModifySecurityGroupEgressRuleResponse
@@ -29589,18 +29593,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>In security group-related API documents, inbound traffic refers to the traffic that is sent by the source device and received at the destination device.
-     * Take note of the following items:</p>
+     * <p>Take note of the following items:</p>
      * <ul>
-     * <li>An authorization object in a security group rule can be one of the following types: IP address or CIDR block, security group, or prefix list. You cannot call this operation to change the type of an existing authorization object. For example, if an authorization object is an IP address, you can change the authorization object to another IP address or a CIDR block, but you cannot change the authorization object to a security group or prefix list.</li>
-     * <li>You cannot change the IP address family of an existing authorization object. For example, if an authorization object is an IPv4 CIDR block, you cannot change the authorization object to an IPv6 CIDR block. If an authorization object is a prefix list of the IPv4 address family, you cannot change the authorization object to a prefix list of the IPv6 address family.</li>
-     * <li>The new security group rule after modification cannot be the same as other existing rules.</li>
-     * <li>You cannot delete the value of a non-empty parameter. If you want to delete the values of non-empty parameters, we recommend that you create another rule and delete the original rule.</li>
+     * <li>An authorization object in a security group rule can be of one of the following types: IPv4 CIDR block or address, IPv6 CIDR block or address, security group, or prefix list. You cannot call this operation to change the type of an existing authorization object. For example, if an authorization object is an IPv4 CIDR block, you can change the authorization object to a different IPv4 CIDR block or an IPv4 address, but you cannot change the authorization object to an IPv6 CIDR block or address, a security group, or a prefix list.</li>
+     * <li>You cannot delete the value of a non-empty parameter. If you want to delete the values of non-empty parameters, we recommend that you create a security group rule and delete the original security group rule.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an inbound rule in a security group.</p>
+     * <p>Modifies an inbound security group rule in a security group.</p>
      * 
      * @param request ModifySecurityGroupRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29724,18 +29724,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>In security group-related API documents, inbound traffic refers to the traffic that is sent by the source device and received at the destination device.
-     * Take note of the following items:</p>
+     * <p>Take note of the following items:</p>
      * <ul>
-     * <li>An authorization object in a security group rule can be one of the following types: IP address or CIDR block, security group, or prefix list. You cannot call this operation to change the type of an existing authorization object. For example, if an authorization object is an IP address, you can change the authorization object to another IP address or a CIDR block, but you cannot change the authorization object to a security group or prefix list.</li>
-     * <li>You cannot change the IP address family of an existing authorization object. For example, if an authorization object is an IPv4 CIDR block, you cannot change the authorization object to an IPv6 CIDR block. If an authorization object is a prefix list of the IPv4 address family, you cannot change the authorization object to a prefix list of the IPv6 address family.</li>
-     * <li>The new security group rule after modification cannot be the same as other existing rules.</li>
-     * <li>You cannot delete the value of a non-empty parameter. If you want to delete the values of non-empty parameters, we recommend that you create another rule and delete the original rule.</li>
+     * <li>An authorization object in a security group rule can be of one of the following types: IPv4 CIDR block or address, IPv6 CIDR block or address, security group, or prefix list. You cannot call this operation to change the type of an existing authorization object. For example, if an authorization object is an IPv4 CIDR block, you can change the authorization object to a different IPv4 CIDR block or an IPv4 address, but you cannot change the authorization object to an IPv6 CIDR block or address, a security group, or a prefix list.</li>
+     * <li>You cannot delete the value of a non-empty parameter. If you want to delete the values of non-empty parameters, we recommend that you create a security group rule and delete the original security group rule.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an inbound rule in a security group.</p>
+     * <p>Modifies an inbound security group rule in a security group.</p>
      * 
      * @param request ModifySecurityGroupRuleRequest
      * @return ModifySecurityGroupRuleResponse
