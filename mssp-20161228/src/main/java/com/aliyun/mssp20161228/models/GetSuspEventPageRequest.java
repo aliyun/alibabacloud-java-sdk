@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSuspEventPageRequest extends TeaModel {
     /**
+     * <p>Alarm end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1732515522000</p>
      */
@@ -12,6 +14,8 @@ public class GetSuspEventPageRequest extends TeaModel {
     public Long alarmEndTime;
 
     /**
+     * <p>Alarm start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1722515522000</p>
      */
@@ -19,6 +23,7 @@ public class GetSuspEventPageRequest extends TeaModel {
     public Long alarmStartTime;
 
     /**
+     * <p>Current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class GetSuspEventPageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Number of items per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class GetSuspEventPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Alarm source.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUSP_EVENT</p>
      */
@@ -44,6 +52,8 @@ public class GetSuspEventPageRequest extends TeaModel {
     public String source;
 
     /**
+     * <p>Disposal status.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

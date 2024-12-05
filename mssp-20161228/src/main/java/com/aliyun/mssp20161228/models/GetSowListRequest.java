@@ -3,9 +3,9 @@ package com.aliyun.mssp20161228.models;
 
 import com.aliyun.tea.*;
 
-public class GetSafetyCoverRequest extends TeaModel {
+public class GetSowListRequest extends TeaModel {
     /**
-     * <p>Filter time type, supports filtering by the last 7 days, the last 30 days, the last half year, or custom time periods.</p>
+     * <p>Filter time type, supports filtering by the last 7 days, the last 30 days, the last half year, or custom time ranges.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class GetSafetyCoverRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1732268720000</p>
+     * <p>1732156885986</p>
      */
     @NameInMap("EndDate")
     public Long endDate;
@@ -29,7 +29,7 @@ public class GetSafetyCoverRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1732255620000</p>
+     * <p>1729478485000</p>
      */
     @NameInMap("StartDate")
     public Long startDate;
@@ -38,17 +38,17 @@ public class GetSafetyCoverRequest extends TeaModel {
      * <p>Alert event source.</p>
      * 
      * <strong>example:</strong>
-     * <p>该接口不用传</p>
+     * <p>该字段暂未使用，有问题请联系管理员</p>
      */
     @NameInMap("SuspEventSource")
     public String suspEventSource;
 
-    public static GetSafetyCoverRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetSafetyCoverRequest self = new GetSafetyCoverRequest();
+    public static GetSowListRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetSowListRequest self = new GetSowListRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetSafetyCoverRequest setDateType(String dateType) {
+    public GetSowListRequest setDateType(String dateType) {
         this.dateType = dateType;
         return this;
     }
@@ -56,7 +56,7 @@ public class GetSafetyCoverRequest extends TeaModel {
         return this.dateType;
     }
 
-    public GetSafetyCoverRequest setEndDate(Long endDate) {
+    public GetSowListRequest setEndDate(Long endDate) {
         this.endDate = endDate;
         return this;
     }
@@ -64,7 +64,7 @@ public class GetSafetyCoverRequest extends TeaModel {
         return this.endDate;
     }
 
-    public GetSafetyCoverRequest setStartDate(Long startDate) {
+    public GetSowListRequest setStartDate(Long startDate) {
         this.startDate = startDate;
         return this;
     }
@@ -72,7 +72,7 @@ public class GetSafetyCoverRequest extends TeaModel {
         return this.startDate;
     }
 
-    public GetSafetyCoverRequest setSuspEventSource(String suspEventSource) {
+    public GetSowListRequest setSuspEventSource(String suspEventSource) {
         this.suspEventSource = suspEventSource;
         return this;
     }

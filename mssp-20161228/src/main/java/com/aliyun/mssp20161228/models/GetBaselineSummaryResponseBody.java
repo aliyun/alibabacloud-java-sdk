@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetBaselineSummaryResponseBody extends TeaModel {
     /**
+     * <p>Interface response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data returned by the interface.</p>
+     */
     @NameInMap("Data")
     public GetBaselineSummaryResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetBaselineSummaryResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Prompt message for the returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,7 @@ public class GetBaselineSummaryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,8 @@ public class GetBaselineSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Values: true: success; false: failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,10 +110,18 @@ public class GetBaselineSummaryResponseBody extends TeaModel {
     }
 
     public static class GetBaselineSummaryResponseBodyDataTrendDTOList extends TeaModel {
+        /**
+         * <p>Date point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202408或者20240801</p>
+         */
         @NameInMap("Date")
         public String date;
 
         /**
+         * <p>Number of processed items.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -109,6 +129,8 @@ public class GetBaselineSummaryResponseBody extends TeaModel {
         public Long dealCount;
 
         /**
+         * <p>Number of discovered items.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -147,6 +169,9 @@ public class GetBaselineSummaryResponseBody extends TeaModel {
     }
 
     public static class GetBaselineSummaryResponseBodyData extends TeaModel {
+        /**
+         * <p>Collection of baseline statistical data.</p>
+         */
         @NameInMap("TrendDTOList")
         public java.util.List<GetBaselineSummaryResponseBodyDataTrendDTOList> trendDTOList;
 

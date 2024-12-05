@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisposeWorkTaskResponseBody extends TeaModel {
     /**
+     * <p>Interface response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DisposeWorkTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DisposeWorkTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Prompt message of the returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success.</p>
      */
@@ -26,6 +32,7 @@ public class DisposeWorkTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class DisposeWorkTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful. - <strong>true</strong>: The call was successful. - <strong>false</strong>: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

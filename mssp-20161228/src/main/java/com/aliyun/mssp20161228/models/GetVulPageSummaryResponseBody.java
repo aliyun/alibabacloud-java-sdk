@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetVulPageSummaryResponseBody extends TeaModel {
     /**
+     * <p>Interface return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data query result.</p>
+     */
     @NameInMap("Data")
     public GetVulPageSummaryResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetVulPageSummaryResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>operation success</p>
      */
@@ -29,6 +38,7 @@ public class GetVulPageSummaryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,8 @@ public class GetVulPageSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful. - <strong>true</strong>: The call was successful. - <strong>false</strong>: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +111,8 @@ public class GetVulPageSummaryResponseBody extends TeaModel {
 
     public static class GetVulPageSummaryResponseBodyData extends TeaModel {
         /**
+         * <p>Number of completed items.</p>
+         * 
          * <strong>example:</strong>
          * <p>1990</p>
          */
@@ -106,6 +120,8 @@ public class GetVulPageSummaryResponseBody extends TeaModel {
         public Long completedCount;
 
         /**
+         * <p>Number of items being handled.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -113,6 +129,8 @@ public class GetVulPageSummaryResponseBody extends TeaModel {
         public Long handingCount;
 
         /**
+         * <p>Number of high-risk items.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -120,6 +138,8 @@ public class GetVulPageSummaryResponseBody extends TeaModel {
         public Long highCount;
 
         /**
+         * <p>Number of low-risk items.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -127,6 +147,8 @@ public class GetVulPageSummaryResponseBody extends TeaModel {
         public Long lowCount;
 
         /**
+         * <p>Number of medium-risk items.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -134,6 +156,8 @@ public class GetVulPageSummaryResponseBody extends TeaModel {
         public Long mediumCount;
 
         /**
+         * <p>Total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -141,6 +165,8 @@ public class GetVulPageSummaryResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
+         * <p>Number of unhandled items.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */

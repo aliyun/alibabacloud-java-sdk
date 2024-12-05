@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDetailByIdResponseBody extends TeaModel {
     /**
+     * <p>Interface return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>404</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data query result.</p>
+     */
     @NameInMap("Data")
     public GetDetailByIdResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDetailByIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,7 @@ public class GetDetailByIdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,8 @@ public class GetDetailByIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Values: - <strong>true</strong>: indicates a successful call. - <strong>false</strong>: indicates a failed call.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +111,8 @@ public class GetDetailByIdResponseBody extends TeaModel {
 
     public static class GetDetailByIdResponseBodyDataVulDetails extends TeaModel {
         /**
+         * <p>CVE ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>CVE-2022-21291</p>
          */
@@ -106,6 +120,8 @@ public class GetDetailByIdResponseBody extends TeaModel {
         public String cveId;
 
         /**
+         * <p>The CVSS score of the vulnerability in the Alibaba Cloud vulnerability database.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0</p>
          */
@@ -113,6 +129,8 @@ public class GetDetailByIdResponseBody extends TeaModel {
         public String cvssScore;
 
         /**
+         * <p>Fix suggestion.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://avd.aliyun.com/detail/CVE-2022-21291">https://avd.aliyun.com/detail/CVE-2022-21291</a></p>
          */
@@ -120,6 +138,8 @@ public class GetDetailByIdResponseBody extends TeaModel {
         public String fixSuggestion;
 
         /**
+         * <p>Title of the vulnerability announcement.</p>
+         * 
          * <strong>example:</strong>
          * <p>Chanjet T-Plus SetupAccount/Upload. Aspx file upload vulnerability(CNVD-2022-60632)</p>
          */
@@ -166,6 +186,9 @@ public class GetDetailByIdResponseBody extends TeaModel {
     }
 
     public static class GetDetailByIdResponseBodyData extends TeaModel {
+        /**
+         * <p>Vulnerability details.</p>
+         */
         @NameInMap("VulDetails")
         public java.util.List<GetDetailByIdResponseBodyDataVulDetails> vulDetails;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetUserStatusResponseBody extends TeaModel {
     /**
+     * <p>Interface response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data returned by the interface.</p>
+     */
     @NameInMap("Data")
     public GetUserStatusResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetUserStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Prompt message of the returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -29,6 +38,7 @@ public class GetUserStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,8 @@ public class GetUserStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. - <strong>true</strong>: The call was successful. - <strong>false</strong>: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +111,8 @@ public class GetUserStatusResponseBody extends TeaModel {
 
     public static class GetUserStatusResponseBodyData extends TeaModel {
         /**
+         * <p>Customer type.</p>
+         * 
          * <strong>example:</strong>
          * <p>official</p>
          */
@@ -106,6 +120,8 @@ public class GetUserStatusResponseBody extends TeaModel {
         public String customerType;
 
         /**
+         * <p>End date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-09-28 00:00:00</p>
          */
@@ -113,6 +129,8 @@ public class GetUserStatusResponseBody extends TeaModel {
         public String endDate;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>726cec3c-4887-4354-8c21-c0ad12e10fc2</p>
          */
@@ -120,6 +138,8 @@ public class GetUserStatusResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Start date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-09-20 00:00:00</p>
          */
@@ -127,6 +147,8 @@ public class GetUserStatusResponseBody extends TeaModel {
         public String startDate;
 
         /**
+         * <p>Status.</p>
+         * 
          * <strong>example:</strong>
          * <p>FirstLogin</p>
          */
@@ -134,6 +156,8 @@ public class GetUserStatusResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Version.</p>
+         * 
          * <strong>example:</strong>
          * <p>mdrjichu</p>
          */

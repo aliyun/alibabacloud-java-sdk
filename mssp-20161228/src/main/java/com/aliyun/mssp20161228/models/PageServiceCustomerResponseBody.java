@@ -4,28 +4,65 @@ package com.aliyun.mssp20161228.models;
 import com.aliyun.tea.*;
 
 public class PageServiceCustomerResponseBody extends TeaModel {
+    /**
+     * <p>Interface return code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>System error or openapi error</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data query results.</p>
+     */
     @NameInMap("Data")
     public java.util.List<PageServiceCustomerResponseBodyData> data;
 
+    /**
+     * <p>HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Return message. When the request is successful, it returns a success message; when the request fails, it returns the reason for the failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public PageServiceCustomerResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>808A307F-9513-5099-AAA5-98D4EF199140</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Request return status.</p>
+     * <ul>
+     * <li>true: Success.</li>
+     * <li>false: Failure.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -91,36 +128,102 @@ public class PageServiceCustomerResponseBody extends TeaModel {
     }
 
     public static class PageServiceCustomerResponseBodyData extends TeaModel {
+        /**
+         * <p>Customer UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667751131382856</p>
+         */
         @NameInMap("Aliuid")
         public String aliuid;
 
+        /**
+         * <p>Authorization status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AuthStatus")
         public Integer authStatus;
 
+        /**
+         * <p>Cloud Monitoring - Alert authorization status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CmAuthStatus")
         public Integer cmAuthStatus;
 
+        /**
+         * <p>End time. The format is a Unix timestamp, which is the number of milliseconds since January 1, 1970.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710123149222</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>Customer level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GC1</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>Cloud Security - Alert authorization status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MonitorAuthStatus")
         public Integer monitorAuthStatus;
 
+        /**
+         * <p>Customer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国工程院</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Owner name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>常温</p>
+         */
         @NameInMap("OwnId")
         public String ownId;
 
+        /**
+         * <p>Start time. The format is a Unix timestamp, which is the number of milliseconds since January 1, 1970.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710123149000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>Customer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667751131382856</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>Version information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>企业版</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -220,12 +323,30 @@ public class PageServiceCustomerResponseBody extends TeaModel {
     }
 
     public static class PageServiceCustomerResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The current page number in pagination queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>Number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>Total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

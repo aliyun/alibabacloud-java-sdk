@@ -3,23 +3,19 @@ package com.aliyun.mssp20161228.models;
 
 import com.aliyun.tea.*;
 
-public class GetDetailByIdRequest extends TeaModel {
+public class GetAlarmDetailByIdRequest extends TeaModel {
     /**
-     * <p>Primary key ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>22</p>
      */
     @NameInMap("Id")
     public Long id;
 
-    public static GetDetailByIdRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetDetailByIdRequest self = new GetDetailByIdRequest();
+    public static GetAlarmDetailByIdRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetAlarmDetailByIdRequest self = new GetAlarmDetailByIdRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetDetailByIdRequest setId(Long id) {
+    public GetAlarmDetailByIdRequest setId(Long id) {
         this.id = id;
         return this;
     }

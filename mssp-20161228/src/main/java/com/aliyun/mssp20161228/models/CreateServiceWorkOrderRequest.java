@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceWorkOrderRequest extends TeaModel {
     /**
+     * <p>Creator.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     public String creator;
 
     /**
+     * <p>Customer ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     public String customerId;
 
     /**
+     * <p>Duration in days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     public String durationDay;
 
     /**
+     * <p>Attachment requirement.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     public String isAttachment;
 
     /**
+     * <p>Whether a reminder is needed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +55,8 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     public String isWorkOrderNotify;
 
     /**
+     * <p>Number of days for advance notification.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -57,6 +64,8 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     public String notifyDay;
 
     /**
+     * <p>Notification ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -64,12 +73,17 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     public Long notifyId;
 
     /**
+     * <p>Operation remarks.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>新建</p>
      */
     @NameInMap("OperateRemark")
     public String operateRemark;
 
     /**
+     * <p>Operation type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,6 +93,7 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     public String operateType;
 
     /**
+     * <p>Operator.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,6 +109,7 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>Start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -103,24 +119,37 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>Work order details.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;questionDetail&quot;:&quot;测试工单&quot;,&quot;answerDetail&quot;:&quot;&quot;}</p>
      */
     @NameInMap("WorkOrderDetail")
     public String workOrderDetail;
 
     /**
+     * <p>Work order name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>安全月报交付任务</p>
      */
     @NameInMap("WorkOrderName")
     public String workOrderName;
 
     /**
+     * <p>Work order source.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>工单迁移</p>
      */
     @NameInMap("WorkOrderSource")
     public String workOrderSource;
 
     /**
+     * <p>Work order status.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -130,6 +159,7 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     public String workOrderStatus;
 
     /**
+     * <p>Work order type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

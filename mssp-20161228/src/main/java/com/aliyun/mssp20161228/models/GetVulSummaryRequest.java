@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVulSummaryRequest extends TeaModel {
     /**
+     * <p>Filter time type. Supports filtering by the last 7 days, the last 30 days, the last half year, or a custom time range.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetVulSummaryRequest extends TeaModel {
     public String dateType;
 
     /**
+     * <p>End time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetVulSummaryRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>Start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +34,12 @@ public class GetVulSummaryRequest extends TeaModel {
     @NameInMap("StartDate")
     public Long startDate;
 
+    /**
+     * <p>Alert event source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>该字段暂未使用，有问题请联系管理员</p>
+     */
     @NameInMap("SuspEventSource")
     public String suspEventSource;
 

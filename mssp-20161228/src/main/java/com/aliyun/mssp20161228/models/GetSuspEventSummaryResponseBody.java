@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSuspEventSummaryResponseBody extends TeaModel {
     /**
+     * <p>API response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data returned by the interface.</p>
+     */
     @NameInMap("Data")
     public GetSuspEventSummaryResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Prompt message for the returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful!</p>
      */
@@ -29,6 +38,7 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,12 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful.</p>
+     * <ul>
+     * <li>true: Call succeeded.</li>
+     * <li>false: Call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,10 +114,18 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
     }
 
     public static class GetSuspEventSummaryResponseBodyDataNetworkAttackTrendDTOTrendList extends TeaModel {
+        /**
+         * <p>Date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202409或20240901</p>
+         */
         @NameInMap("Date")
         public String date;
 
         /**
+         * <p>DDoS count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -109,6 +133,8 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
         public Long ddosCount;
 
         /**
+         * <p>EIP count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -116,6 +142,8 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
         public Long eipCount;
 
         /**
+         * <p>WAF count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -162,6 +190,9 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
     }
 
     public static class GetSuspEventSummaryResponseBodyDataNetworkAttackTrendDTO extends TeaModel {
+        /**
+         * <p>Collection of trend nodes for each attack item.</p>
+         */
         @NameInMap("TrendList")
         public java.util.List<GetSuspEventSummaryResponseBodyDataNetworkAttackTrendDTOTrendList> trendList;
 
@@ -182,6 +213,8 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
 
     public static class GetSuspEventSummaryResponseBodyDataSuspEventDealSummaryDTO extends TeaModel {
         /**
+         * <p>Completed.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -189,6 +222,8 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
         public Long completedCount;
 
         /**
+         * <p>In progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -196,6 +231,8 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
         public Long handingCount;
 
         /**
+         * <p>Alert handling rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -203,6 +240,8 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
         public String handingRate;
 
         /**
+         * <p>Total number of alerts.</p>
+         * 
          * <strong>example:</strong>
          * <p>35</p>
          */
@@ -210,6 +249,8 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
+         * <p>Year-over-year comparison of alerts.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -217,6 +258,8 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
         public String totalGrowthRate;
 
         /**
+         * <p>Number of unhandled alerts.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -279,10 +322,18 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
     }
 
     public static class GetSuspEventSummaryResponseBodyDataSuspEventTopDTOSuspEventList extends TeaModel {
+        /**
+         * <p>Alert name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>主动外连风险 IP</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
         /**
+         * <p>Count.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -313,6 +364,9 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
     }
 
     public static class GetSuspEventSummaryResponseBodyDataSuspEventTopDTO extends TeaModel {
+        /**
+         * <p>Top 10 before handling alarms</p>
+         */
         @NameInMap("SuspEventList")
         public java.util.List<GetSuspEventSummaryResponseBodyDataSuspEventTopDTOSuspEventList> suspEventList;
 
@@ -332,10 +386,18 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
     }
 
     public static class GetSuspEventSummaryResponseBodyDataSuspEventTrendDTOTrendList extends TeaModel {
+        /**
+         * <p>Time point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202405或者20240501</p>
+         */
         @NameInMap("Date")
         public String date;
 
         /**
+         * <p>Number of handled alerts.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -343,6 +405,8 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
         public Long dealCount;
 
         /**
+         * <p>Number of discovered alerts.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -381,6 +445,9 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
     }
 
     public static class GetSuspEventSummaryResponseBodyDataSuspEventTrendDTO extends TeaModel {
+        /**
+         * <p>Trend of alerts.</p>
+         */
         @NameInMap("TrendList")
         public java.util.List<GetSuspEventSummaryResponseBodyDataSuspEventTrendDTOTrendList> trendList;
 
@@ -400,15 +467,27 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
     }
 
     public static class GetSuspEventSummaryResponseBodyData extends TeaModel {
+        /**
+         * <p>Network attack trend.</p>
+         */
         @NameInMap("NetworkAttackTrendDTO")
         public GetSuspEventSummaryResponseBodyDataNetworkAttackTrendDTO networkAttackTrendDTO;
 
+        /**
+         * <p>Overview of alert handling.</p>
+         */
         @NameInMap("SuspEventDealSummaryDTO")
         public GetSuspEventSummaryResponseBodyDataSuspEventDealSummaryDTO suspEventDealSummaryDTO;
 
+        /**
+         * <p>Top 10 alerts before handling.</p>
+         */
         @NameInMap("SuspEventTopDTO")
         public GetSuspEventSummaryResponseBodyDataSuspEventTopDTO suspEventTopDTO;
 
+        /**
+         * <p>Trend of alert responses.</p>
+         */
         @NameInMap("SuspEventTrendDTO")
         public GetSuspEventSummaryResponseBodyDataSuspEventTrendDTO suspEventTrendDTO;
 

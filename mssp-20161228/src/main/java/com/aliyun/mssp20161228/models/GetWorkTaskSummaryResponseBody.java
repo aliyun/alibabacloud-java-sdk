@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetWorkTaskSummaryResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data returned by the interface.</p>
+     */
     @NameInMap("Data")
     public GetWorkTaskSummaryResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Prompt message for the response result.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful!</p>
      */
@@ -29,6 +38,7 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,8 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful. - <strong>true</strong>: The call was successful. - <strong>false</strong>: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +111,8 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
 
     public static class GetWorkTaskSummaryResponseBodyData extends TeaModel {
         /**
+         * <p>Average response time (in minutes).</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -106,6 +120,8 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
         public Long dealAverageDuration;
 
         /**
+         * <p>Year-over-year growth rate of average response time.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -113,6 +129,8 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
         public String dealAverageDurationGrowthRate;
 
         /**
+         * <p>Number of work orders responded to.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -120,6 +138,8 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
         public Long dealWorkTaskCount;
 
         /**
+         * <p>Year-over-year growth rate of the number of work orders responded to.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -127,6 +147,8 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
         public String dealWorkTaskCountRate;
 
         /**
+         * <p>Number of service responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -134,6 +156,8 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
         public Long workTaskCount;
 
         /**
+         * <p>Problem closure rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -141,6 +165,8 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
         public String workTaskDealRate;
 
         /**
+         * <p>Year-over-year growth rate of problem closure rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -148,6 +174,8 @@ public class GetWorkTaskSummaryResponseBody extends TeaModel {
         public String workTaskDealRateGrowthRate;
 
         /**
+         * <p>Year-over-year growth rate of service responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

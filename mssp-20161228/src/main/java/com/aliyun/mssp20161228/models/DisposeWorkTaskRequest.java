@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisposeWorkTaskRequest extends TeaModel {
     /**
+     * <p>Operator.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,17 @@ public class DisposeWorkTaskRequest extends TeaModel {
     public String operator;
 
     /**
+     * <p>Operation remarks.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>处理完成</p>
      */
     @NameInMap("OptRemark")
     public String optRemark;
 
     /**
+     * <p>Work order status.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +35,7 @@ public class DisposeWorkTaskRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>Work order ID, multiple IDs separated by commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

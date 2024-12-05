@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetRecentDocumentResponseBody extends TeaModel {
     /**
+     * <p>Interface response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data returned by the interface.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetRecentDocumentResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetRecentDocumentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,7 @@ public class GetRecentDocumentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,8 @@ public class GetRecentDocumentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful. - <strong>true</strong>: The call was successful. - <strong>false</strong>: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,16 +111,26 @@ public class GetRecentDocumentResponseBody extends TeaModel {
 
     public static class GetRecentDocumentResponseBodyData extends TeaModel {
         /**
+         * <p>Primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>360491</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Document name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文档名称测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Upload time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-20 14:30:38</p>
          */

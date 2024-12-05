@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetVulItemPageRequest extends TeaModel {
     /**
+     * <p>Vulnerability alias.</p>
+     * 
      * <strong>example:</strong>
      * <p>RHSA-2018:3665-Important: NetworkManager security update</p>
      */
@@ -12,6 +14,7 @@ public class GetVulItemPageRequest extends TeaModel {
     public String aliasName;
 
     /**
+     * <p>Current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class GetVulItemPageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Processing status. y: processed; n: unprocessed; h: processing.</p>
+     * 
      * <strong>example:</strong>
      * <p>n</p>
      */
@@ -28,6 +33,8 @@ public class GetVulItemPageRequest extends TeaModel {
     public String dealed;
 
     /**
+     * <p>Risk level.</p>
+     * 
      * <strong>example:</strong>
      * <p>later</p>
      */
@@ -35,6 +42,8 @@ public class GetVulItemPageRequest extends TeaModel {
     public String level;
 
     /**
+     * <p>Vulnerability name.</p>
+     * 
      * <strong>example:</strong>
      * <p>oval:com.redhat.rhsa:def:20183665</p>
      */
@@ -42,6 +51,7 @@ public class GetVulItemPageRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Number of items to display per page in the returned data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +61,8 @@ public class GetVulItemPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Vulnerability type.</p>
+     * 
      * <strong>example:</strong>
      * <p>sca</p>
      */
