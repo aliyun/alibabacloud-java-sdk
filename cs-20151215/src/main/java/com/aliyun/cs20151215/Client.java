@@ -3011,6 +3011,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PrivateIpAddress", request.privateIpAddress);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.temporaryDurationMinutes)) {
+            query.put("TemporaryDurationMinutes", request.temporaryDurationMinutes);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
