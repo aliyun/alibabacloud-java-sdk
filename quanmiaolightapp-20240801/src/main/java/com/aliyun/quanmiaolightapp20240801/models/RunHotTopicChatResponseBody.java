@@ -275,6 +275,67 @@ public class RunHotTopicChatResponseBody extends TeaModel {
 
     }
 
+    public static class RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesImages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx">http://xxx</a></p>
+         */
+        @NameInMap("url")
+        public String url;
+
+        public static RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesImages build(java.util.Map<String, ?> map) throws Exception {
+            RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesImages self = new RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesImages();
+            return TeaModel.build(map, self);
+        }
+
+        public RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesImages setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesNews extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
+        @NameInMap("title")
+        public String title;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx">http://xxx</a></p>
+         */
+        @NameInMap("url")
+        public String url;
+
+        public static RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesNews build(java.util.Map<String, ?> map) throws Exception {
+            RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesNews self = new RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesNews();
+            return TeaModel.build(map, self);
+        }
+
+        public RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesNews setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesNews setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
     public static class RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -282,6 +343,13 @@ public class RunHotTopicChatResponseBody extends TeaModel {
          */
         @NameInMap("customHotValue")
         public Double customHotValue;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
+        @NameInMap("customTextSummary")
+        public String customTextSummary;
 
         /**
          * <strong>example:</strong>
@@ -304,6 +372,19 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         @NameInMap("hotValue")
         public Double hotValue;
 
+        @NameInMap("images")
+        public java.util.List<RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesImages> images;
+
+        @NameInMap("news")
+        public java.util.List<RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesNews> news;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
+        @NameInMap("textSummary")
+        public String textSummary;
+
         public static RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries build(java.util.Map<String, ?> map) throws Exception {
             RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries self = new RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries();
             return TeaModel.build(map, self);
@@ -315,6 +396,14 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         }
         public Double getCustomHotValue() {
             return this.customHotValue;
+        }
+
+        public RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries setCustomTextSummary(String customTextSummary) {
+            this.customTextSummary = customTextSummary;
+            return this;
+        }
+        public String getCustomTextSummary() {
+            return this.customTextSummary;
         }
 
         public RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries setHotTopic(String hotTopic) {
@@ -339,6 +428,30 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         }
         public Double getHotValue() {
             return this.hotValue;
+        }
+
+        public RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries setImages(java.util.List<RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesImages> images) {
+            this.images = images;
+            return this;
+        }
+        public java.util.List<RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesImages> getImages() {
+            return this.images;
+        }
+
+        public RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries setNews(java.util.List<RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesNews> news) {
+            this.news = news;
+            return this;
+        }
+        public java.util.List<RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesNews> getNews() {
+            return this.news;
+        }
+
+        public RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries setTextSummary(String textSummary) {
+            this.textSummary = textSummary;
+            return this;
+        }
+        public String getTextSummary() {
+            return this.textSummary;
         }
 
     }
