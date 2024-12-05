@@ -29,13 +29,15 @@ public class SmsConversionRequest extends TeaModel {
 
     /**
      * <p>The ID of the OTP message.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1008030300****</p>
      */
     @NameInMap("MessageId")
     public String messageId;
+
+    @NameInMap("To")
+    public String to;
 
     public static SmsConversionRequest build(java.util.Map<String, ?> map) throws Exception {
         SmsConversionRequest self = new SmsConversionRequest();
@@ -64,6 +66,14 @@ public class SmsConversionRequest extends TeaModel {
     }
     public String getMessageId() {
         return this.messageId;
+    }
+
+    public SmsConversionRequest setTo(String to) {
+        this.to = to;
+        return this;
+    }
+    public String getTo() {
+        return this.to;
     }
 
 }
