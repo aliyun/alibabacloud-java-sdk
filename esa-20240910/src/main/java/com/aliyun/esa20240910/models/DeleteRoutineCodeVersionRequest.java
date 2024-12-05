@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteRoutineCodeVersionRequest extends TeaModel {
     /**
      * <p>The code version.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1710120201067203242</p>
@@ -15,6 +16,7 @@ public class DeleteRoutineCodeVersionRequest extends TeaModel {
 
     /**
      * <p>The routine name.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test-routine1</p>

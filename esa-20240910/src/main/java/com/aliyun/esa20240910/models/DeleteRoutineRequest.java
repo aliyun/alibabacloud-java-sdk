@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteRoutineRequest extends TeaModel {
     /**
      * <p>The routine name.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test-routine1</p>

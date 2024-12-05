@@ -30,6 +30,7 @@ public class PublishRoutineCodeVersionShrinkRequest extends TeaModel {
 
     /**
      * <p>The environment name.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>production</p>
@@ -39,6 +40,7 @@ public class PublishRoutineCodeVersionShrinkRequest extends TeaModel {
 
     /**
      * <p>The routine name.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>PublishRoutineCodeVersion</p>

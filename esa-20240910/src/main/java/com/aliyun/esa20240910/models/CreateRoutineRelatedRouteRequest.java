@@ -4,8 +4,12 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class CreateRoutineRelatedRouteRequest extends TeaModel {
+    @NameInMap("ByPass")
+    public String byPass;
+
     /**
      * <p>The routine name.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateRoutineRelatedRoute</p>
@@ -15,6 +19,7 @@ public class CreateRoutineRelatedRouteRequest extends TeaModel {
 
     /**
      * <p>The route.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p><em>.example.com/path1</em></p>
@@ -24,6 +29,7 @@ public class CreateRoutineRelatedRouteRequest extends TeaModel {
 
     /**
      * <p>The website ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>54362329990032</p>
@@ -34,6 +40,14 @@ public class CreateRoutineRelatedRouteRequest extends TeaModel {
     public static CreateRoutineRelatedRouteRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRoutineRelatedRouteRequest self = new CreateRoutineRelatedRouteRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRoutineRelatedRouteRequest setByPass(String byPass) {
+        this.byPass = byPass;
+        return this;
+    }
+    public String getByPass() {
+        return this.byPass;
     }
 
     public CreateRoutineRelatedRouteRequest setName(String name) {
