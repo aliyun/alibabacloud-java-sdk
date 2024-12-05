@@ -14,6 +14,12 @@ public class JobStatus extends TeaModel {
     @NameInMap("failure")
     public JobFailure failure;
 
+    @NameInMap("healthScore")
+    public Integer healthScore;
+
+    @NameInMap("riskLevel")
+    public String riskLevel;
+
     @NameInMap("running")
     public JobStatusRunning running;
 
@@ -36,6 +42,22 @@ public class JobStatus extends TeaModel {
     }
     public JobFailure getFailure() {
         return this.failure;
+    }
+
+    public JobStatus setHealthScore(Integer healthScore) {
+        this.healthScore = healthScore;
+        return this;
+    }
+    public Integer getHealthScore() {
+        return this.healthScore;
+    }
+
+    public JobStatus setRiskLevel(String riskLevel) {
+        this.riskLevel = riskLevel;
+        return this;
+    }
+    public String getRiskLevel() {
+        return this.riskLevel;
     }
 
     public JobStatus setRunning(JobStatusRunning running) {
