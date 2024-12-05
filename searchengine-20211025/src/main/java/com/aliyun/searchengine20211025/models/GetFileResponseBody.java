@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFileResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
@@ -59,6 +59,9 @@ public class GetFileResponseBody extends TeaModel {
         @NameInMap("dataSource")
         public String dataSource;
 
+        /**
+         * <p>Extended information</p>
+         */
         @NameInMap("extend")
         public java.util.Map<String, java.util.List<String>> extend;
 

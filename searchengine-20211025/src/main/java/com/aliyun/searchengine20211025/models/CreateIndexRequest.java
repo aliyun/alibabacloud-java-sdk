@@ -234,6 +234,9 @@ public class CreateIndexRequest extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        @NameInMap("format")
+        public String format;
+
         /**
          * <p>The namespace name.</p>
          * 
@@ -342,6 +345,14 @@ public class CreateIndexRequest extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public CreateIndexRequestDataSourceInfoConfig setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
         }
 
         public CreateIndexRequestDataSourceInfoConfig setNamespace(String namespace) {

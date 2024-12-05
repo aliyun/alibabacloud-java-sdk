@@ -83,6 +83,9 @@ public class ListIndexesResponseBody extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        @NameInMap("format")
+        public String format;
+
         /**
          * <p>The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</p>
          * 
@@ -191,6 +194,14 @@ public class ListIndexesResponseBody extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public ListIndexesResponseBodyResultDataSourceInfoConfig setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
         }
 
         public ListIndexesResponseBodyResultDataSourceInfoConfig setNamespace(String namespace) {
@@ -616,6 +627,9 @@ public class ListIndexesResponseBody extends TeaModel {
         @NameInMap("content")
         public String content;
 
+        @NameInMap("createTime")
+        public String createTime;
+
         /**
          * <p>The name of the data source.</p>
          * 
@@ -712,6 +726,9 @@ public class ListIndexesResponseBody extends TeaModel {
         @NameInMap("partition")
         public Integer partition;
 
+        @NameInMap("updateTime")
+        public String updateTime;
+
         /**
          * <p>The index versions.</p>
          */
@@ -729,6 +746,14 @@ public class ListIndexesResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public ListIndexesResponseBodyResult setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListIndexesResponseBodyResult setDataSource(String dataSource) {
@@ -817,6 +842,14 @@ public class ListIndexesResponseBody extends TeaModel {
         }
         public Integer getPartition() {
             return this.partition;
+        }
+
+        public ListIndexesResponseBodyResult setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
         public ListIndexesResponseBodyResult setVersions(java.util.List<ListIndexesResponseBodyResultVersions> versions) {

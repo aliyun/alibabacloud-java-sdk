@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
@@ -14,7 +14,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The results returned.</p>
+     * <p>Response parameters</p>
      */
     @NameInMap("result")
     public GetInstanceResponseBodyResult result;
@@ -41,18 +41,48 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyResultNetwork extends TeaModel {
+        /**
+         * <p>The public domain name whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("allow")
         public String allow;
 
+        /**
+         * <p>The instance endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-35t3r****.ha.aliyuncs.com</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The public endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-35t3ni****.public.ha.aliyuncs.com</p>
+         */
         @NameInMap("publicEndpoint")
         public String publicEndpoint;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp11ldcf59q2n****</p>
+         */
         @NameInMap("vSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9axk41d9vff****</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 
@@ -104,18 +134,48 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyResultSpecQrsResource extends TeaModel {
+        /**
+         * <p>The category. Valid values: local_ssd, SSD, and cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
+         */
         @NameInMap("category")
         public String category;
 
+        /**
+         * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("cpu")
         public Integer cpu;
 
+        /**
+         * <p>The storage capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <p>The memory of the instance. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("mem")
         public Integer mem;
 
+        /**
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("nodeCount")
         public Integer nodeCount;
 
@@ -167,18 +227,48 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyResultSpecSearchResource extends TeaModel {
+        /**
+         * <p>The category. Valid values: local_ssd, SSD, and cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
+         */
         @NameInMap("category")
         public String category;
 
+        /**
+         * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("cpu")
         public Integer cpu;
 
+        /**
+         * <p>The storage capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <p>The memory of the instance. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("mem")
         public Integer mem;
 
+        /**
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("nodeCount")
         public Integer nodeCount;
 
@@ -230,9 +320,15 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyResultSpec extends TeaModel {
+        /**
+         * <p>The QRS worker specifications.</p>
+         */
         @NameInMap("qrsResource")
         public GetInstanceResponseBodyResultSpecQrsResource qrsResource;
 
+        /**
+         * <p>The searcher worker specifications.</p>
+         */
         @NameInMap("searchResource")
         public GetInstanceResponseBodyResultSpecSearchResource searchResource;
 
@@ -338,6 +434,12 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The edition of the instance. Valid values: vector and engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vector</p>
+         */
         @NameInMap("edition")
         public String edition;
 
@@ -377,12 +479,27 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("lockMode")
         public String lockMode;
 
+        /**
+         * <p>The network information of the instance.</p>
+         */
         @NameInMap("network")
         public GetInstanceResponseBodyResultNetwork network;
 
+        /**
+         * <p>Specifies whether the instance is of the new version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("newMode")
         public Boolean newMode;
 
+        /**
+         * <p>Specifies whether the instance has only one node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("noQrs")
         public Boolean noQrs;
 
@@ -395,6 +512,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The node specifications.</p>
+         */
         @NameInMap("spec")
         public GetInstanceResponseBodyResultSpec spec;
 
@@ -428,9 +548,21 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("updateTime")
         public String updateTime;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("userName")
         public String userName;
 
+        /**
+         * <p>The version of the engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3_3.10.0</p>
+         */
         @NameInMap("version")
         public String version;
 
