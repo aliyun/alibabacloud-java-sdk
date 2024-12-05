@@ -1,3 +1,7 @@
+2024-12-05 Version: 2.4.0
+- Support API InvalidateThirdPartyAppLoginState.
+
+
 2024-11-11 Version: 2.3.0
 - Support API GetJiangSuTelecomData.
 

@@ -2902,6 +2902,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>失效三方应用登录态</p>
+     * 
+     * @param tmpReq InvalidateThirdPartyAppLoginStateRequest
+     * @param headers InvalidateThirdPartyAppLoginStateHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InvalidateThirdPartyAppLoginStateResponse
+     */
+    public InvalidateThirdPartyAppLoginStateResponse invalidateThirdPartyAppLoginStateWithOptions(InvalidateThirdPartyAppLoginStateRequest tmpReq, InvalidateThirdPartyAppLoginStateHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        InvalidateThirdPartyAppLoginStateShrinkRequest request = new InvalidateThirdPartyAppLoginStateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceInfoShrink)) {
+            body.put("DeviceInfo", request.deviceInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartyAppId)) {
+            body.put("ThirdPartyAppId", request.thirdPartyAppId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InvalidateThirdPartyAppLoginState"),
+            new TeaPair("version", "ssp_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ssp/invalidateThirdPartyAppLoginState"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InvalidateThirdPartyAppLoginStateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>失效三方应用登录态</p>
+     * 
+     * @param request InvalidateThirdPartyAppLoginStateRequest
+     * @return InvalidateThirdPartyAppLoginStateResponse
+     */
+    public InvalidateThirdPartyAppLoginStateResponse invalidateThirdPartyAppLoginState(InvalidateThirdPartyAppLoginStateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        InvalidateThirdPartyAppLoginStateHeaders headers = new InvalidateThirdPartyAppLoginStateHeaders();
+        return this.invalidateThirdPartyAppLoginStateWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询闹钟列表</p>
      * 
      * @param tmpReq ListAlarmsRequest
