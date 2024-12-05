@@ -166,9 +166,17 @@ public class GetRumAppInfoResponseBody extends TeaModel {
     }
 
     public static class GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("samplingRate")
         public Integer samplingRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("samplingType")
         public Integer samplingType;
 
@@ -378,6 +386,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String appType;
 
         /**
+         * <p>The region where the backend is deployed.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -385,7 +395,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String backendServiceTraceRegion;
 
         /**
-         * <p>The mobile collection configurations.</p>
+         * <p>The collection configurations.</p>
          */
         @NameInMap("BonreeSDKConfig")
         public GetRumAppInfoResponseBodyDataBonreeSDKConfig bonreeSDKConfig;

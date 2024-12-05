@@ -425,6 +425,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        @NameInMap("Version")
+        public String version;
+
         /**
          * <p>The VPC ID. This parameter is returned only for Prometheus instances for ECS.</p>
          * 
@@ -709,6 +712,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
         public GetPrometheusInstanceResponseBodyData setVpcId(String vpcId) {

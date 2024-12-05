@@ -92,6 +92,10 @@ public class GetStackResponseBody extends TeaModel {
         @NameInMap("Api")
         public String api;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CallCount")
         public String callCount;
 

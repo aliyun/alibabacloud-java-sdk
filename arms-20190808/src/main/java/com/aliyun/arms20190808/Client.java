@@ -1691,12 +1691,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountNumber)) {
+            query.put("AccountNumber", request.accountNumber);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
             query.put("AliyunLang", request.aliyunLang);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customAccountNumber)) {
+            query.put("CustomAccountNumber", request.customAccountNumber);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
+            query.put("Duration", request.duration);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.grafanaVersion)) {
@@ -5214,7 +5230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Example Query metric details about an Addon.</p>
+     * <p>Queries the metric details of a component.</p>
      * 
      * @param request DescribeAddonMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5262,7 +5278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Example Query metric details about an Addon.</p>
+     * <p>Queries the metric details of a component.</p>
      * 
      * @param request DescribeAddonMetricsRequest
      * @return DescribeAddonMetricsResponse

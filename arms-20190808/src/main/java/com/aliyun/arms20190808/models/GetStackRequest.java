@@ -42,6 +42,10 @@ public class GetStackRequest extends TeaModel {
     @NameInMap("RpcID")
     public String rpcID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>88c32dfa4b******</p>
+     */
     @NameInMap("SpanID")
     public String spanID;
 

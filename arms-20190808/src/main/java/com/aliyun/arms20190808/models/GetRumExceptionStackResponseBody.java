@@ -14,7 +14,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Data")
     public GetRumExceptionStackResponseBodyData data;

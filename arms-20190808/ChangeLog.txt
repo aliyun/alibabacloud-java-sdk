@@ -1,3 +1,13 @@
+2024-12-05 Version: 9.2.2
+- Update API CreateGrafanaWorkspace: add param AccountNumber.
+- Update API CreateGrafanaWorkspace: add param AutoRenew.
+- Update API CreateGrafanaWorkspace: add param CustomAccountNumber.
+- Update API CreateGrafanaWorkspace: add param Duration.
+- Update API CreatePrometheusInstance: update param ArchiveDuration.
+- Update API GetPrometheusInstance: update response param.
+- Update API UpdatePrometheusInstance: update param ArchiveDuration.
+
+
 2024-11-27 Version: 9.2.1
 - Update API GetRumExceptionStack: update response param.
 

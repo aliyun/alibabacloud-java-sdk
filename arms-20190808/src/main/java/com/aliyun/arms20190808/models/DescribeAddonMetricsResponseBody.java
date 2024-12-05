@@ -14,13 +14,13 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Metric information list.</p>
+     * <p>The metric details.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeAddonMetricsResponseBodyData> data;
 
     /**
-     * <p>The error message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
 
     public static class DescribeAddonMetricsResponseBodyDataLabels extends TeaModel {
         /**
-         * <p>Metric label description.</p>
+         * <p>The description of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>The number of times a B-tree page of size PAGE_SIZE was successfully compressed.</p>
@@ -102,7 +102,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Metric label key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>page_size</p>
@@ -111,7 +111,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Metric label value.</p>
+         * <p>The source of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>db</p>
@@ -152,7 +152,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
 
     public static class DescribeAddonMetricsResponseBodyDataMetricsLabels extends TeaModel {
         /**
-         * <p>Label description.</p>
+         * <p>The description of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>PAGE_SIZE</p>
@@ -161,7 +161,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Label key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>page_size</p>
@@ -170,7 +170,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Metric source.</p>
+         * <p>The source of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>db</p>
@@ -211,7 +211,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
 
     public static class DescribeAddonMetricsResponseBodyDataMetrics extends TeaModel {
         /**
-         * <p>Metric description.</p>
+         * <p>The description of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>The number of times a B-tree page of size PAGE_SIZE was successfully compressed.</p>
@@ -220,13 +220,13 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Metric label collection.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Labels")
         public java.util.List<DescribeAddonMetricsResponseBodyDataMetricsLabels> labels;
 
         /**
-         * <p>Metric name.</p>
+         * <p>The metric name.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql_exporter_collector_duration_seconds</p>
@@ -235,7 +235,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         public String metric;
 
         /**
-         * <p>Metric type.</p>
+         * <p>The type of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>GAUGE</p>
@@ -244,7 +244,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Metric unit.</p>
+         * <p>The unit of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>bytes</p>
@@ -301,7 +301,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
 
     public static class DescribeAddonMetricsResponseBodyData extends TeaModel {
         /**
-         * <p>Metric Group.</p>
+         * <p>The metric group.</p>
          * 
          * <strong>example:</strong>
          * <p>Common</p>
@@ -310,13 +310,13 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         public String group;
 
         /**
-         * <p>Metric Labels.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Labels")
         public java.util.List<DescribeAddonMetricsResponseBodyDataLabels> labels;
 
         /**
-         * <p>Metric list.</p>
+         * <p>The metrics.</p>
          */
         @NameInMap("Metrics")
         public java.util.List<DescribeAddonMetricsResponseBodyDataMetrics> metrics;
