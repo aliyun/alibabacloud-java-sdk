@@ -1930,6 +1930,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询一键成片剪辑任务</p>
+     * 
+     * @param request GetSmartClipTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSmartClipTaskResponse
+     */
+    public GetSmartClipTaskResponse getSmartClipTaskWithOptions(GetSmartClipTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSmartClipTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSmartClipTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询一键成片剪辑任务</p>
+     * 
+     * @param request GetSmartClipTaskRequest
+     * @return GetSmartClipTaskResponse
+     */
+    public GetSmartClipTaskResponse getSmartClipTask(GetSmartClipTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSmartClipTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>根据ID获取热点事件信息</p>
      * 
      * @param request GetTopicByIdRequest
@@ -5366,6 +5414,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitEnterpriseVocAnalysisTaskResponse submitEnterpriseVocAnalysisTask(SubmitEnterpriseVocAnalysisTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitEnterpriseVocAnalysisTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交一键成片剪辑任务</p>
+     * 
+     * @param tmpReq SubmitSmartClipTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitSmartClipTaskResponse
+     */
+    public SubmitSmartClipTaskResponse submitSmartClipTaskWithOptions(SubmitSmartClipTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitSmartClipTaskShrinkRequest request = new SubmitSmartClipTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.editingConfig)) {
+            request.editingConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.editingConfig, "EditingConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.inputConfig)) {
+            request.inputConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.inputConfig, "InputConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outputConfig)) {
+            request.outputConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outputConfig, "OutputConfig", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.editingConfigShrink)) {
+            body.put("EditingConfig", request.editingConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputConfigShrink)) {
+            body.put("InputConfig", request.inputConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputConfigShrink)) {
+            body.put("OutputConfig", request.outputConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitSmartClipTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitSmartClipTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交一键成片剪辑任务</p>
+     * 
+     * @param request SubmitSmartClipTaskRequest
+     * @return SubmitSmartClipTaskResponse
+     */
+    public SubmitSmartClipTaskResponse submitSmartClipTask(SubmitSmartClipTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitSmartClipTaskWithOptions(request, runtime);
     }
 
     /**
