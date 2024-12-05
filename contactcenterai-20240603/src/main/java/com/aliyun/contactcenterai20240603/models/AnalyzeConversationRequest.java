@@ -38,6 +38,9 @@ public class AnalyzeConversationRequest extends TeaModel {
     @NameInMap("serviceInspection")
     public AnalyzeConversationRequestServiceInspection serviceInspection;
 
+    @NameInMap("sourceCallerUid")
+    public String sourceCallerUid;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -120,6 +123,14 @@ public class AnalyzeConversationRequest extends TeaModel {
     }
     public AnalyzeConversationRequestServiceInspection getServiceInspection() {
         return this.serviceInspection;
+    }
+
+    public AnalyzeConversationRequest setSourceCallerUid(String sourceCallerUid) {
+        this.sourceCallerUid = sourceCallerUid;
+        return this;
+    }
+    public String getSourceCallerUid() {
+        return this.sourceCallerUid;
     }
 
     public AnalyzeConversationRequest setStream(Boolean stream) {

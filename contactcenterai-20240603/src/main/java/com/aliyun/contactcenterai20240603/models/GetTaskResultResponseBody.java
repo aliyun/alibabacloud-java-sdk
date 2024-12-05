@@ -50,7 +50,87 @@ public class GetTaskResultResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetTaskResultResponseBodyDataAsrResult extends TeaModel {
+        @NameInMap("begin")
+        public Long begin;
+
+        @NameInMap("emotionValue")
+        public Integer emotionValue;
+
+        @NameInMap("end")
+        public Long end;
+
+        @NameInMap("role")
+        public String role;
+
+        @NameInMap("speechRate")
+        public Integer speechRate;
+
+        @NameInMap("words")
+        public String words;
+
+        public static GetTaskResultResponseBodyDataAsrResult build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskResultResponseBodyDataAsrResult self = new GetTaskResultResponseBodyDataAsrResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskResultResponseBodyDataAsrResult setBegin(Long begin) {
+            this.begin = begin;
+            return this;
+        }
+        public Long getBegin() {
+            return this.begin;
+        }
+
+        public GetTaskResultResponseBodyDataAsrResult setEmotionValue(Integer emotionValue) {
+            this.emotionValue = emotionValue;
+            return this;
+        }
+        public Integer getEmotionValue() {
+            return this.emotionValue;
+        }
+
+        public GetTaskResultResponseBodyDataAsrResult setEnd(Long end) {
+            this.end = end;
+            return this;
+        }
+        public Long getEnd() {
+            return this.end;
+        }
+
+        public GetTaskResultResponseBodyDataAsrResult setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public GetTaskResultResponseBodyDataAsrResult setSpeechRate(Integer speechRate) {
+            this.speechRate = speechRate;
+            return this;
+        }
+        public Integer getSpeechRate() {
+            return this.speechRate;
+        }
+
+        public GetTaskResultResponseBodyDataAsrResult setWords(String words) {
+            this.words = words;
+            return this;
+        }
+        public String getWords() {
+            return this.words;
+        }
+
+    }
+
     public static class GetTaskResultResponseBodyData extends TeaModel {
+        @NameInMap("asrResult")
+        public java.util.List<GetTaskResultResponseBodyDataAsrResult> asrResult;
+
+        @NameInMap("taskErrorMessage")
+        public String taskErrorMessage;
+
         /**
          * <strong>example:</strong>
          * <p>20240905-********-93E9-5D45-B4EF-045743A34071</p>
@@ -71,6 +151,22 @@ public class GetTaskResultResponseBody extends TeaModel {
         public static GetTaskResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTaskResultResponseBodyData self = new GetTaskResultResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetTaskResultResponseBodyData setAsrResult(java.util.List<GetTaskResultResponseBodyDataAsrResult> asrResult) {
+            this.asrResult = asrResult;
+            return this;
+        }
+        public java.util.List<GetTaskResultResponseBodyDataAsrResult> getAsrResult() {
+            return this.asrResult;
+        }
+
+        public GetTaskResultResponseBodyData setTaskErrorMessage(String taskErrorMessage) {
+            this.taskErrorMessage = taskErrorMessage;
+            return this;
+        }
+        public String getTaskErrorMessage() {
+            return this.taskErrorMessage;
         }
 
         public GetTaskResultResponseBodyData setTaskId(String taskId) {
