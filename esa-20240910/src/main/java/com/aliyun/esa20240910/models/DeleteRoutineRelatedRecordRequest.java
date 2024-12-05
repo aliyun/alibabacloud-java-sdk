@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteRoutineRelatedRecordRequest extends TeaModel {
     /**
      * <p>The routine name.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>DeleteRoutineRelatedRecord</p>
@@ -15,6 +16,7 @@ public class DeleteRoutineRelatedRecordRequest extends TeaModel {
 
     /**
      * <p>The record ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -24,6 +26,7 @@ public class DeleteRoutineRelatedRecordRequest extends TeaModel {
 
     /**
      * <p>The record name.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test-xxx.example.com</p>
@@ -33,6 +36,7 @@ public class DeleteRoutineRelatedRecordRequest extends TeaModel {
 
     /**
      * <p>The website ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>

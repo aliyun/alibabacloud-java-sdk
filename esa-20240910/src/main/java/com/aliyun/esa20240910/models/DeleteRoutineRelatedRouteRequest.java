@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteRoutineRelatedRouteRequest extends TeaModel {
     /**
      * <p>The routine name.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>DeleteRoutineRelatedRoute</p>
@@ -15,6 +16,7 @@ public class DeleteRoutineRelatedRouteRequest extends TeaModel {
 
     /**
      * <p>The route URL.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p><em>.example.com/path1</em></p>
@@ -24,6 +26,7 @@ public class DeleteRoutineRelatedRouteRequest extends TeaModel {
 
     /**
      * <p>The route ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>0c3b82a3d1524e9f750da11d0cc0be0a</p>
@@ -33,6 +36,7 @@ public class DeleteRoutineRelatedRouteRequest extends TeaModel {
 
     /**
      * <p>The website ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>54362329990032</p>

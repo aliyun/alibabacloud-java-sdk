@@ -15,6 +15,7 @@ public class GetRoutineStagingCodeUploadInfoRequest extends TeaModel {
 
     /**
      * <p>The routine name.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>GetRoutineStagingCodeUploadInfo</p>

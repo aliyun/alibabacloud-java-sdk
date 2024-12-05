@@ -359,6 +359,9 @@ public class GetRoutineResponseBody extends TeaModel {
     }
 
     public static class GetRoutineResponseBodyRelatedRoutes extends TeaModel {
+        @NameInMap("ByPass")
+        public String byPass;
+
         /**
          * <p>The route.</p>
          * 
@@ -398,6 +401,14 @@ public class GetRoutineResponseBody extends TeaModel {
         public static GetRoutineResponseBodyRelatedRoutes build(java.util.Map<String, ?> map) throws Exception {
             GetRoutineResponseBodyRelatedRoutes self = new GetRoutineResponseBodyRelatedRoutes();
             return TeaModel.build(map, self);
+        }
+
+        public GetRoutineResponseBodyRelatedRoutes setByPass(String byPass) {
+            this.byPass = byPass;
+            return this;
+        }
+        public String getByPass() {
+            return this.byPass;
         }
 
         public GetRoutineResponseBodyRelatedRoutes setRoute(String route) {

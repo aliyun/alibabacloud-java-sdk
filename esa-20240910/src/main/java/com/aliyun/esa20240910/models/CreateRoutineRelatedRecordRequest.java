@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class CreateRoutineRelatedRecordRequest extends TeaModel {
     /**
      * <p>The routine name.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateRoutineRelatedRecord</p>
@@ -15,6 +16,7 @@ public class CreateRoutineRelatedRecordRequest extends TeaModel {
 
     /**
      * <p>The record name.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test-record-1.example.com</p>
@@ -24,6 +26,7 @@ public class CreateRoutineRelatedRecordRequest extends TeaModel {
 
     /**
      * <p>The website ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>54362329990032</p>
