@@ -75,6 +75,9 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("DiskDeviceMapping")
     public java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping;
 
+    @NameInMap("Features")
+    public CreateImageRequestFeatures features;
+
     /**
      * <p>The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * 
@@ -252,6 +255,14 @@ public class CreateImageRequest extends TeaModel {
     }
     public java.util.List<CreateImageRequestDiskDeviceMapping> getDiskDeviceMapping() {
         return this.diskDeviceMapping;
+    }
+
+    public CreateImageRequest setFeatures(CreateImageRequestFeatures features) {
+        this.features = features;
+        return this;
+    }
+    public CreateImageRequestFeatures getFeatures() {
+        return this.features;
     }
 
     public CreateImageRequest setImageFamily(String imageFamily) {
@@ -448,6 +459,25 @@ public class CreateImageRequest extends TeaModel {
         }
         public String getSnapshotId() {
             return this.snapshotId;
+        }
+
+    }
+
+    public static class CreateImageRequestFeatures extends TeaModel {
+        @NameInMap("ImdsSupport")
+        public String imdsSupport;
+
+        public static CreateImageRequestFeatures build(java.util.Map<String, ?> map) throws Exception {
+            CreateImageRequestFeatures self = new CreateImageRequestFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImageRequestFeatures setImdsSupport(String imdsSupport) {
+            this.imdsSupport = imdsSupport;
+            return this;
+        }
+        public String getImdsSupport() {
+            return this.imdsSupport;
         }
 
     }

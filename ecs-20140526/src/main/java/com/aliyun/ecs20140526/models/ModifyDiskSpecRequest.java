@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskSpecRequest extends TeaModel {
     /**
-     * <p>The new category of the disk. Valid values:</p>
+     * <p>The new disk category of the cloud disk. Valid values:</p>
      * <ul>
-     * <li>cloud_essd: enhanced SSD (ESSD)</li>
+     * <li>cloud_essd: ESSD</li>
      * <li>cloud_auto: ESSD AutoPL disk</li>
      * <li>cloud_ssd: standard SSD</li>
-     * <li>cloud_efficiency: ultra disk</li>
+     * <li>cloud_efficiency: utra disk</li>
      * </ul>
      * <p>This parameter is empty by default, which indicates that the disk category is not changed.</p>
      * <blockquote>
@@ -183,8 +183,8 @@ public class ModifyDiskSpecRequest extends TeaModel {
 
     public static class ModifyDiskSpecRequestPerformanceControlOptions extends TeaModel {
         /**
-         * <p>The new IOPS rate of the disk. You can modify the IOPS rate of only disks in dedicated block storage clusters.</p>
-         * <p>Valid values: 900 to maximum IOPS per disk (with an increment of 100).</p>
+         * <p>The new IOPS rate of the cloud disk. You can modify the IOPS rate of only cloud disks in dedicated block storage clusters.</p>
+         * <p>Valid values: 900 to maximum IOPS per cloud disk (with an increment of 100).</p>
          * <p>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Block storage performance</a>.</p>
          * 
          * <strong>example:</strong>
@@ -194,9 +194,9 @@ public class ModifyDiskSpecRequest extends TeaModel {
         public Integer IOPS;
 
         /**
-         * <p>Specifies whether to reset the IOPS rate and throughput of the disk. This parameter takes effect only when the disk belongs to a dedicated block storage cluster.</p>
+         * <p>Specifies whether to reset the IOPS rate and throughput of the cloud disk. This parameter takes effect only when the cloud disk belongs to a dedicated block storage cluster.</p>
          * <p>After you specify this parameter, PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput do not take effect.</p>
-         * <p>Set the value to All, which indicates that the IOPS rate and throughput of the disk are reset to the initial values.</p>
+         * <p>Set the value to All, which indicates that the IOPS rate and throughput of the cloud disk are reset to the initial values.</p>
          * 
          * <strong>example:</strong>
          * <p>All</p>
@@ -205,7 +205,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
         public String recover;
 
         /**
-         * <p>The new throughput of the disk. You can modify the throughput of only disks in dedicated block storage clusters. Unit: MB/s.</p>
+         * <p>The new throughput of the cloud disk. You can change the throughput of only cloud disks in dedicated block storage clusters. Unit: MB/s.</p>
          * <p>Valid values: 60 to maximum throughput per disk.</p>
          * <p>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Block storage performance</a>.</p>
          * 

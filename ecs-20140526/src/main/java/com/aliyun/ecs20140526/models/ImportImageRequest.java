@@ -521,6 +521,9 @@ public class ImportImageRequest extends TeaModel {
     }
 
     public static class ImportImageRequestFeatures extends TeaModel {
+        @NameInMap("ImdsSupport")
+        public String imdsSupport;
+
         /**
          * <p>Specifies whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
          * <ul>
@@ -537,6 +540,14 @@ public class ImportImageRequest extends TeaModel {
         public static ImportImageRequestFeatures build(java.util.Map<String, ?> map) throws Exception {
             ImportImageRequestFeatures self = new ImportImageRequestFeatures();
             return TeaModel.build(map, self);
+        }
+
+        public ImportImageRequestFeatures setImdsSupport(String imdsSupport) {
+            this.imdsSupport = imdsSupport;
+            return this;
+        }
+        public String getImdsSupport() {
+            return this.imdsSupport;
         }
 
         public ImportImageRequestFeatures setNvmeSupport(String nvmeSupport) {

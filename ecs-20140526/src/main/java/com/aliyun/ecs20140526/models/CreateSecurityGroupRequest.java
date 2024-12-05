@@ -55,7 +55,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testSecurityGroupName</p>
@@ -66,9 +66,10 @@ public class CreateSecurityGroupRequest extends TeaModel {
     /**
      * <p>The type of the security group. Valid values:</p>
      * <ul>
-     * <li>normal: basic security group.</li>
-     * <li>enterprise: advanced security group. For more information, see <a href="https://help.aliyun.com/document_detail/120621.html">Advanced security groups</a>.</li>
+     * <li>normal: basic security group</li>
+     * <li>enterprise: advanced security group For more information, see <a href="https://help.aliyun.com/document_detail/120621.html">Advanced security groups</a>.</li>
      * </ul>
+     * <p>Default value: normal.</p>
      * 
      * <strong>example:</strong>
      * <p>enterprise</p>
@@ -86,7 +87,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Boolean serviceManaged;
 
     /**
-     * <p>The tags to add to the security group.</p>
+     * <p>The tags to add to the security group. You can add up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateSecurityGroupRequestTag> tag;
@@ -214,8 +215,8 @@ public class CreateSecurityGroupRequest extends TeaModel {
 
     public static class CreateSecurityGroupRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the security group.</p>
-         * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The key of the tag to add to the security group.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -224,8 +225,8 @@ public class CreateSecurityGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the security group.</p>
-         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of the tag to add to the security group.</p>
+         * <p>The tag value can be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

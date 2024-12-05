@@ -432,6 +432,9 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImagesImageFeatures extends TeaModel {
+        @NameInMap("ImdsSupport")
+        public String imdsSupport;
+
         /**
          * <p>Indicates whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
          * <ul>
@@ -448,6 +451,14 @@ public class DescribeImagesResponseBody extends TeaModel {
         public static DescribeImagesResponseBodyImagesImageFeatures build(java.util.Map<String, ?> map) throws Exception {
             DescribeImagesResponseBodyImagesImageFeatures self = new DescribeImagesResponseBodyImagesImageFeatures();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeImagesResponseBodyImagesImageFeatures setImdsSupport(String imdsSupport) {
+            this.imdsSupport = imdsSupport;
+            return this;
+        }
+        public String getImdsSupport() {
+            return this.imdsSupport;
         }
 
         public DescribeImagesResponseBodyImagesImageFeatures setNvmeSupport(String nvmeSupport) {
