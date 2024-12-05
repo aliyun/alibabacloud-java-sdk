@@ -1,3 +1,7 @@
+2024-12-05 Version: 1.25.0
+- Support API GetWebshellToken.
+
+
 2024-11-08 Version: 1.24.6
 - Update API CreateApplication: add param OidcRoleName.
 - Update API DeployApplication: add param OidcRoleName.

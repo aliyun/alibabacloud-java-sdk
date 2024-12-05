@@ -10,6 +10,16 @@ public class PriceEstimateOutput extends TeaModel {
     @NameInMap("Items")
     public java.util.List<PriceEstimateOutputItems> items;
 
+    @NameInMap("PostPayItems")
+    public java.util.List<PriceEstimateOutputPostPayItems> postPayItems;
+
+    /**
+     * <strong>example:</strong>
+     * <p>235.66</p>
+     */
+    @NameInMap("PostPayTotalPrice")
+    public Float postPayTotalPrice;
+
     /**
      * <strong>example:</strong>
      * <p>235.66</p>
@@ -36,6 +46,22 @@ public class PriceEstimateOutput extends TeaModel {
     }
     public java.util.List<PriceEstimateOutputItems> getItems() {
         return this.items;
+    }
+
+    public PriceEstimateOutput setPostPayItems(java.util.List<PriceEstimateOutputPostPayItems> postPayItems) {
+        this.postPayItems = postPayItems;
+        return this;
+    }
+    public java.util.List<PriceEstimateOutputPostPayItems> getPostPayItems() {
+        return this.postPayItems;
+    }
+
+    public PriceEstimateOutput setPostPayTotalPrice(Float postPayTotalPrice) {
+        this.postPayTotalPrice = postPayTotalPrice;
+        return this;
+    }
+    public Float getPostPayTotalPrice() {
+        return this.postPayTotalPrice;
     }
 
     public PriceEstimateOutput setTotalPrice(Float totalPrice) {
@@ -323,6 +349,194 @@ public class PriceEstimateOutput extends TeaModel {
         }
 
         public PriceEstimateOutputItems setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
+        }
+
+    }
+
+    public static class PriceEstimateOutputPostPayItemsSteps extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("Begin")
+        public Long begin;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("End")
+        public Long end;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.0001</p>
+         */
+        @NameInMap("Price")
+        public Float price;
+
+        @NameInMap("RegionIds")
+        public java.util.List<String> regionIds;
+
+        /**
+         * <strong>example:</strong>
+         * <p>核*秒</p>
+         */
+        @NameInMap("Unit")
+        public String unit;
+
+        public static PriceEstimateOutputPostPayItemsSteps build(java.util.Map<String, ?> map) throws Exception {
+            PriceEstimateOutputPostPayItemsSteps self = new PriceEstimateOutputPostPayItemsSteps();
+            return TeaModel.build(map, self);
+        }
+
+        public PriceEstimateOutputPostPayItemsSteps setBegin(Long begin) {
+            this.begin = begin;
+            return this;
+        }
+        public Long getBegin() {
+            return this.begin;
+        }
+
+        public PriceEstimateOutputPostPayItemsSteps setEnd(Long end) {
+            this.end = end;
+            return this;
+        }
+        public Long getEnd() {
+            return this.end;
+        }
+
+        public PriceEstimateOutputPostPayItemsSteps setPrice(Float price) {
+            this.price = price;
+            return this;
+        }
+        public Float getPrice() {
+            return this.price;
+        }
+
+        public PriceEstimateOutputPostPayItemsSteps setRegionIds(java.util.List<String> regionIds) {
+            this.regionIds = regionIds;
+            return this;
+        }
+        public java.util.List<String> getRegionIds() {
+            return this.regionIds;
+        }
+
+        public PriceEstimateOutputPostPayItemsSteps setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
+        }
+
+    }
+
+    public static class PriceEstimateOutputPostPayItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3600.00</p>
+         */
+        @NameInMap("Amount")
+        public Float amount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Count")
+        public Long count;
+
+        /**
+         * <strong>example:</strong>
+         * <p>p_micro_service_cpu</p>
+         */
+        @NameInMap("Id")
+        public String id;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1.00</p>
+         */
+        @NameInMap("Price")
+        public Float price;
+
+        @NameInMap("Steps")
+        public java.util.List<PriceEstimateOutputPostPayItemsSteps> steps;
+
+        /**
+         * <strong>example:</strong>
+         * <p>pack/post</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        /**
+         * <strong>example:</strong>
+         * <p>核*秒</p>
+         */
+        @NameInMap("Unit")
+        public String unit;
+
+        public static PriceEstimateOutputPostPayItems build(java.util.Map<String, ?> map) throws Exception {
+            PriceEstimateOutputPostPayItems self = new PriceEstimateOutputPostPayItems();
+            return TeaModel.build(map, self);
+        }
+
+        public PriceEstimateOutputPostPayItems setAmount(Float amount) {
+            this.amount = amount;
+            return this;
+        }
+        public Float getAmount() {
+            return this.amount;
+        }
+
+        public PriceEstimateOutputPostPayItems setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
+        }
+
+        public PriceEstimateOutputPostPayItems setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public PriceEstimateOutputPostPayItems setPrice(Float price) {
+            this.price = price;
+            return this;
+        }
+        public Float getPrice() {
+            return this.price;
+        }
+
+        public PriceEstimateOutputPostPayItems setSteps(java.util.List<PriceEstimateOutputPostPayItemsSteps> steps) {
+            this.steps = steps;
+            return this;
+        }
+        public java.util.List<PriceEstimateOutputPostPayItemsSteps> getSteps() {
+            return this.steps;
+        }
+
+        public PriceEstimateOutputPostPayItems setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public PriceEstimateOutputPostPayItems setUnit(String unit) {
             this.unit = unit;
             return this;
         }
