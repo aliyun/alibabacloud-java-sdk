@@ -70,6 +70,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("serviceInspection", request.serviceInspection);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCallerUid)) {
+            body.put("sourceCallerUid", request.sourceCallerUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.stream)) {
             body.put("stream", request.stream);
         }
@@ -251,14 +255,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>语音文件调用大模型获取结果</p>
      * 
-     * @param request GetTaskResultRequest
+     * @param tmpReq GetTaskResultRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskResultResponse
      */
-    public GetTaskResultResponse getTaskResultWithOptions(GetTaskResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetTaskResultResponse getTaskResultWithOptions(GetTaskResultRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetTaskResultShrinkRequest request = new GetTaskResultShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.requiredFieldList)) {
+            request.requiredFieldListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.requiredFieldList, "requiredFieldList", "simple");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.requiredFieldListShrink)) {
+            query.put("requiredFieldList", request.requiredFieldListShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             query.put("taskId", request.taskId);
         }
