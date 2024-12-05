@@ -34,6 +34,13 @@ public class EcsSpec extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>80</p>
+     */
+    @NameInMap("GpuMemory")
+    public Integer gpuMemory;
+
+    /**
+     * <strong>example:</strong>
      * <p>NVIDIA v100</p>
      */
     @NameInMap("GpuType")
@@ -122,6 +129,14 @@ public class EcsSpec extends TeaModel {
     }
     public Integer getGpu() {
         return this.gpu;
+    }
+
+    public EcsSpec setGpuMemory(Integer gpuMemory) {
+        this.gpuMemory = gpuMemory;
+        return this;
+    }
+    public Integer getGpuMemory() {
+        return this.gpuMemory;
     }
 
     public EcsSpec setGpuType(String gpuType) {
