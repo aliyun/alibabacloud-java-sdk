@@ -280,6 +280,9 @@ public class ModifyIndexRequest extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        @NameInMap("format")
+        public String format;
+
         /**
          * <p>The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</p>
          * 
@@ -388,6 +391,14 @@ public class ModifyIndexRequest extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public ModifyIndexRequestDataSourceInfoConfig setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
         }
 
         public ModifyIndexRequestDataSourceInfoConfig setNamespace(String namespace) {
@@ -551,6 +562,12 @@ public class ModifyIndexRequest extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("ossDataPath")
+        public String ossDataPath;
+
+        @NameInMap("partition")
+        public String partition;
+
         /**
          * <p>The maximum number of full indexes that can be concurrently processed.</p>
          * 
@@ -643,6 +660,22 @@ public class ModifyIndexRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ModifyIndexRequestDataSourceInfo setOssDataPath(String ossDataPath) {
+            this.ossDataPath = ossDataPath;
+            return this;
+        }
+        public String getOssDataPath() {
+            return this.ossDataPath;
+        }
+
+        public ModifyIndexRequestDataSourceInfo setPartition(String partition) {
+            this.partition = partition;
+            return this;
+        }
+        public String getPartition() {
+            return this.partition;
         }
 
         public ModifyIndexRequestDataSourceInfo setProcessParallelNum(Integer processParallelNum) {

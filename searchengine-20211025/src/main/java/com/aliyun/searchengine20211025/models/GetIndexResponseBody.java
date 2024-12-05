@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIndexResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4FB0325E-8C37-5525-96AC-0333523170A3</p>
@@ -82,6 +82,9 @@ public class GetIndexResponseBody extends TeaModel {
          */
         @NameInMap("endpoint")
         public String endpoint;
+
+        @NameInMap("format")
+        public String format;
 
         /**
          * <p>The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</p>
@@ -191,6 +194,14 @@ public class GetIndexResponseBody extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfoConfig setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
         }
 
         public GetIndexResponseBodyResultDataSourceInfoConfig setNamespace(String namespace) {
@@ -651,6 +662,9 @@ public class GetIndexResponseBody extends TeaModel {
         @NameInMap("content")
         public String content;
 
+        @NameInMap("createTime")
+        public String createTime;
+
         /**
          * <p>The name of the data source.</p>
          * 
@@ -684,6 +698,9 @@ public class GetIndexResponseBody extends TeaModel {
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <p>Extended information</p>
+         */
         @NameInMap("extend")
         public java.util.Map<String, java.util.List<String>> extend;
 
@@ -759,6 +776,9 @@ public class GetIndexResponseBody extends TeaModel {
         @NameInMap("partition")
         public Integer partition;
 
+        @NameInMap("updateTime")
+        public String updateTime;
+
         /**
          * <p>The information about the versions.</p>
          */
@@ -800,6 +820,14 @@ public class GetIndexResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public GetIndexResponseBodyResult setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public GetIndexResponseBodyResult setDataSource(String dataSource) {
@@ -896,6 +924,14 @@ public class GetIndexResponseBody extends TeaModel {
         }
         public Integer getPartition() {
             return this.partition;
+        }
+
+        public GetIndexResponseBodyResult setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
         public GetIndexResponseBodyResult setVersions(java.util.List<GetIndexResponseBodyResultVersions> versions) {

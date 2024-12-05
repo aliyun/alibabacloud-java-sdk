@@ -1989,11 +1989,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Method</h2>
+     * <h2><a href="#"></a>Method</h2>
      * <pre><code>GET
      * </code></pre>
-     * <h2>URI</h2>
-     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+     * <h2><a href="#uri"></a>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file
      * </code></pre>
      * 
      * <b>summary</b> : 
@@ -2031,11 +2031,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Method</h2>
+     * <h2><a href="#"></a>Method</h2>
      * <pre><code>GET
      * </code></pre>
-     * <h2>URI</h2>
-     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+     * <h2><a href="#uri"></a>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file
      * </code></pre>
      * 
      * <b>summary</b> : 
@@ -2051,6 +2051,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2><a href="#uri"></a>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about an index version.</p>
      * 
@@ -2077,6 +2085,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2><a href="#uri"></a>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}
+     * </code></pre>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about an index version.</p>
      * @return GetIndexResponse
@@ -2179,10 +2195,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Method</h3>
-     * <p><code>GET</code></p>
-     * <h3>URI</h3>
-     * <p><code>/openapi/ha3/instances/{instanceId}</code></p>
+     * <h3><a href="#"></a>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3><a href="#uri"></a>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}
+     * </code></pre>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an instance based on the instance ID.</p>
@@ -2211,10 +2229,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Method</h3>
-     * <p><code>GET</code></p>
-     * <h3>URI</h3>
-     * <p><code>/openapi/ha3/instances/{instanceId}</code></p>
+     * <h3><a href="#"></a>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3><a href="#uri"></a>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}
+     * </code></pre>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an instance based on the instance ID.</p>
