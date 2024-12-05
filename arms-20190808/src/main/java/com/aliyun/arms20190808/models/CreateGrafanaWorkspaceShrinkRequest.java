@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateGrafanaWorkspaceShrinkRequest extends TeaModel {
+    @NameInMap("AccountNumber")
+    public String accountNumber;
+
     /**
      * <p>The language. Default value: zh. Valid values:</p>
      * <ul>
@@ -17,6 +20,12 @@ public class CreateGrafanaWorkspaceShrinkRequest extends TeaModel {
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
+    @NameInMap("AutoRenew")
+    public String autoRenew;
+
+    @NameInMap("CustomAccountNumber")
+    public String customAccountNumber;
+
     /**
      * <p>The description of the workspace</p>
      * 
@@ -25,6 +34,9 @@ public class CreateGrafanaWorkspaceShrinkRequest extends TeaModel {
      */
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("Duration")
+    public String duration;
 
     /**
      * <p>This parameter is required.</p>
@@ -101,6 +113,14 @@ public class CreateGrafanaWorkspaceShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateGrafanaWorkspaceShrinkRequest setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+        return this;
+    }
+    public String getAccountNumber() {
+        return this.accountNumber;
+    }
+
     public CreateGrafanaWorkspaceShrinkRequest setAliyunLang(String aliyunLang) {
         this.aliyunLang = aliyunLang;
         return this;
@@ -109,12 +129,36 @@ public class CreateGrafanaWorkspaceShrinkRequest extends TeaModel {
         return this.aliyunLang;
     }
 
+    public CreateGrafanaWorkspaceShrinkRequest setAutoRenew(String autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public String getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public CreateGrafanaWorkspaceShrinkRequest setCustomAccountNumber(String customAccountNumber) {
+        this.customAccountNumber = customAccountNumber;
+        return this;
+    }
+    public String getCustomAccountNumber() {
+        return this.customAccountNumber;
+    }
+
     public CreateGrafanaWorkspaceShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateGrafanaWorkspaceShrinkRequest setDuration(String duration) {
+        this.duration = duration;
+        return this;
+    }
+    public String getDuration() {
+        return this.duration;
     }
 
     public CreateGrafanaWorkspaceShrinkRequest setGrafanaVersion(String grafanaVersion) {

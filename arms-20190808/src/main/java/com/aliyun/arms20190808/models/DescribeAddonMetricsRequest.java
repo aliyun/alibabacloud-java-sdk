@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAddonMetricsRequest extends TeaModel {
     /**
-     * <p>Version of Addon.</p>
+     * <p>The version of the component.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0.1</p>
@@ -23,7 +23,7 @@ public class DescribeAddonMetricsRequest extends TeaModel {
     public String aliyunLang;
 
     /**
-     * <p>The environment type. Valid values: CS, ECS, and Cloud.</p>
+     * <p>The environment.</p>
      * 
      * <strong>example:</strong>
      * <p>CS</p>
@@ -32,7 +32,7 @@ public class DescribeAddonMetricsRequest extends TeaModel {
     public String environmentType;
 
     /**
-     * <p>Name fo Addon.</p>
+     * <p>The name of the component.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeAddonMetricsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
