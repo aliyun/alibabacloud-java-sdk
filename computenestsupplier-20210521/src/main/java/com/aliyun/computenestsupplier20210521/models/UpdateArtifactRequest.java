@@ -27,6 +27,9 @@ public class UpdateArtifactRequest extends TeaModel {
     @NameInMap("ArtifactProperty")
     public UpdateArtifactRequestArtifactProperty artifactProperty;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The description of the deployment package.</p>
      * 
@@ -81,6 +84,14 @@ public class UpdateArtifactRequest extends TeaModel {
         return this.artifactProperty;
     }
 
+    public UpdateArtifactRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public UpdateArtifactRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -106,9 +117,21 @@ public class UpdateArtifactRequest extends TeaModel {
     }
 
     public static class UpdateArtifactRequestArtifactBuildPropertyBuildArgs extends TeaModel {
+        /**
+         * <p>The name of a specific build argument.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENV</p>
+         */
         @NameInMap("ArgumentName")
         public String argumentName;
 
+        /**
+         * <p>The value of a specific build argument.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx:latest</p>
+         */
         @NameInMap("ArgumentValue")
         public String argumentValue;
 
@@ -136,15 +159,42 @@ public class UpdateArtifactRequest extends TeaModel {
     }
 
     public static class UpdateArtifactRequestArtifactBuildPropertyCodeRepo extends TeaModel {
+        /**
+         * <p>The name of the branch in the code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
+         */
         @NameInMap("Branch")
         public String branch;
 
+        /**
+         * <p>The owner of the code repository.</p>
+         * <blockquote>
+         * <p> This parameter is available only if the git repository is private.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-computenest</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The platform where the code repository is hosted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>github</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <p>The name of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-computenest/quickstart-Lobexxx</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
@@ -188,9 +238,21 @@ public class UpdateArtifactRequest extends TeaModel {
     }
 
     public static class UpdateArtifactRequestArtifactBuildProperty extends TeaModel {
+        /**
+         * <p>The build arguments used during the image build process.</p>
+         * <blockquote>
+         * <p> This parameter is available only if the ArtifactBuildType is Dockerfile type.</p>
+         * </blockquote>
+         */
         @NameInMap("BuildArgs")
         public java.util.List<UpdateArtifactRequestArtifactBuildPropertyBuildArgs> buildArgs;
 
+        /**
+         * <p>The address of the code repository.</p>
+         * <blockquote>
+         * <p> This parameter is available only if the ArtifactBuildType is Dockerfile or Buildpacks type.</p>
+         * </blockquote>
+         */
         @NameInMap("CodeRepo")
         public UpdateArtifactRequestArtifactBuildPropertyCodeRepo codeRepo;
 
@@ -223,6 +285,15 @@ public class UpdateArtifactRequest extends TeaModel {
         @NameInMap("CommandType")
         public String commandType;
 
+        /**
+         * <p>The relative path to the Dockerfile within the code repository.</p>
+         * <blockquote>
+         * <p> This parameter is available only if the ArtifactBuildType is Dockerfile type.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>./file/Dockerfile</p>
+         */
         @NameInMap("DockerfilePath")
         public String dockerfilePath;
 
@@ -238,6 +309,15 @@ public class UpdateArtifactRequest extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The pull location of the source container image. This is used for the command docker pull ${SourceContainerImage}.</p>
+         * <blockquote>
+         * <p> This parameter is available only if the ArtifactBuildType is ContainerImage type.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pytorch/pytorch:2.5.1-cuda12.4-cudnn9-devel</p>
+         */
         @NameInMap("SourceContainerImage")
         public String sourceContainerImage;
 

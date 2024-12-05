@@ -13,6 +13,12 @@ public class UpdateArtifactResponseBody extends TeaModel {
     @NameInMap("ArtifactBuildProperty")
     public String artifactBuildProperty;
 
+    /**
+     * <p>The type of the deployment package to be built.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dockerfile</p>
+     */
     @NameInMap("ArtifactBuildType")
     public String artifactBuildType;
 
@@ -96,6 +102,12 @@ public class UpdateArtifactResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The status of the deployment package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;/usr/local/share/aliyun-assist/work/script/t-hz04zm90y6og0sg.sh: line 1: pip: command not found&quot;</p>
+     */
     @NameInMap("StatusDetail")
     public String statusDetail;
 

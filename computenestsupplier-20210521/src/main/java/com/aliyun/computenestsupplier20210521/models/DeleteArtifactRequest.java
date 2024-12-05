@@ -23,6 +23,9 @@ public class DeleteArtifactRequest extends TeaModel {
     @NameInMap("ArtifactVersion")
     public String artifactVersion;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     public static DeleteArtifactRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteArtifactRequest self = new DeleteArtifactRequest();
         return TeaModel.build(map, self);
@@ -42,6 +45,14 @@ public class DeleteArtifactRequest extends TeaModel {
     }
     public String getArtifactVersion() {
         return this.artifactVersion;
+    }
+
+    public DeleteArtifactRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
 }
