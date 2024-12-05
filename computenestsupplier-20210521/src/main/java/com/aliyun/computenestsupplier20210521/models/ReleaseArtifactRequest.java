@@ -14,6 +14,9 @@ public class ReleaseArtifactRequest extends TeaModel {
     @NameInMap("ArtifactId")
     public String artifactId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     public static ReleaseArtifactRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseArtifactRequest self = new ReleaseArtifactRequest();
         return TeaModel.build(map, self);
@@ -25,6 +28,14 @@ public class ReleaseArtifactRequest extends TeaModel {
     }
     public String getArtifactId() {
         return this.artifactId;
+    }
+
+    public ReleaseArtifactRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
 }

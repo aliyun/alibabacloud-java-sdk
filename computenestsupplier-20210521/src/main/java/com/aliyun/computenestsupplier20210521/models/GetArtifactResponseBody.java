@@ -13,6 +13,12 @@ public class GetArtifactResponseBody extends TeaModel {
     @NameInMap("ArtifactBuildProperty")
     public String artifactBuildProperty;
 
+    /**
+     * <p>The type of the deployment package to be built.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dockerfile</p>
+     */
     @NameInMap("ArtifactBuildType")
     public String artifactBuildType;
 

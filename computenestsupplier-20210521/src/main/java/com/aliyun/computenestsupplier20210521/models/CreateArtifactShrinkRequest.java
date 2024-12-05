@@ -10,6 +10,22 @@ public class CreateArtifactShrinkRequest extends TeaModel {
     @NameInMap("ArtifactBuildProperty")
     public String artifactBuildPropertyShrink;
 
+    /**
+     * <p>The type of the artifact build task. Valid values:</p>
+     * <ul>
+     * <li><p>EcsImage: Build ECS (Elastic Container Service) image.</p>
+     * </li>
+     * <li><p>Dockerfile: Build container image based on Dockerfile.</p>
+     * </li>
+     * <li><p>Buildpacks: Build container image based on Buildpacks.</p>
+     * </li>
+     * <li><p>ContainerImage: Rebuild container image by renaming an existing container image.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Dockerfile</p>
+     */
     @NameInMap("ArtifactBuildType")
     public String artifactBuildType;
 
@@ -43,6 +59,9 @@ public class CreateArtifactShrinkRequest extends TeaModel {
      */
     @NameInMap("ArtifactType")
     public String artifactType;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     /**
      * <p>The description of the deployment package.</p>
@@ -137,6 +156,14 @@ public class CreateArtifactShrinkRequest extends TeaModel {
     }
     public String getArtifactType() {
         return this.artifactType;
+    }
+
+    public CreateArtifactShrinkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateArtifactShrinkRequest setDescription(String description) {

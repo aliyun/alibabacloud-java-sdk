@@ -27,6 +27,9 @@ public class UpdateArtifactShrinkRequest extends TeaModel {
     @NameInMap("ArtifactProperty")
     public String artifactPropertyShrink;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The description of the deployment package.</p>
      * 
@@ -79,6 +82,14 @@ public class UpdateArtifactShrinkRequest extends TeaModel {
     }
     public String getArtifactPropertyShrink() {
         return this.artifactPropertyShrink;
+    }
+
+    public UpdateArtifactShrinkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateArtifactShrinkRequest setDescription(String description) {
