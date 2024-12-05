@@ -141,22 +141,52 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         @NameInMap("policy_action")
         public String policyAction;
 
+        /**
+         * <p>Creation time (deprecated, do not use).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-29T18:09:12+08:00</p>
+         */
         @NameInMap("Created")
         @Deprecated
         public String created;
 
+        /**
+         * <p>Update time (deprecated, do not use).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-29T18:09:12+08:00</p>
+         */
         @NameInMap("Updated")
         @Deprecated
         public String updated;
 
+        /**
+         * <p>Resource ID (deprecated, do not use).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456***</p>
+         */
         @NameInMap("resource_id")
         @Deprecated
         public String resourceId;
 
+        /**
+         * <p>Violation count processing in the cluster (deprecated, do not use).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("total_violations")
         @Deprecated
         public Long totalViolations;
 
+        /**
+         * <p>Deletion status (deprecated, do not use).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("is_deleted")
         @Deprecated
         public Long isDeleted;

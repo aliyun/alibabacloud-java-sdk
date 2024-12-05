@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeClustersForRegionRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c8155823d057948c69a****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeClustersForRegionRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The specification of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>ack.standard</p>
      */
@@ -19,6 +23,8 @@ public class DescribeClustersForRegionRequest extends TeaModel {
     public String clusterSpec;
 
     /**
+     * <p>The type of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>Kubernetes</p>
      */
@@ -26,6 +32,8 @@ public class DescribeClustersForRegionRequest extends TeaModel {
     public String clusterType;
 
     /**
+     * <p>Perform a fuzzy search by using the cluster name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-cluster</p>
      */
@@ -33,6 +41,8 @@ public class DescribeClustersForRegionRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +50,8 @@ public class DescribeClustersForRegionRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of records on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -47,6 +59,8 @@ public class DescribeClustersForRegionRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The identifier of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>Serverless</p>
      */

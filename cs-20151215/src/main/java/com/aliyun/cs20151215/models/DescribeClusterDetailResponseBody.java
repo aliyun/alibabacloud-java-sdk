@@ -57,6 +57,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("container_cidr")
     public String containerCidr;
 
+    @NameInMap("control_plane_config")
+    public DescribeClusterDetailResponseBodyControlPlaneConfig controlPlaneConfig;
+
     /**
      * <p>The time when the cluster was created.</p>
      * 
@@ -437,6 +440,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.containerCidr;
     }
 
+    public DescribeClusterDetailResponseBody setControlPlaneConfig(DescribeClusterDetailResponseBodyControlPlaneConfig controlPlaneConfig) {
+        this.controlPlaneConfig = controlPlaneConfig;
+        return this;
+    }
+    public DescribeClusterDetailResponseBodyControlPlaneConfig getControlPlaneConfig() {
+        return this.controlPlaneConfig;
+    }
+
     public DescribeClusterDetailResponseBody setCreated(String created) {
         this.created = created;
         return this;
@@ -707,6 +718,267 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class DescribeClusterDetailResponseBodyControlPlaneConfig extends TeaModel {
+        @NameInMap("auto_renew")
+        public Boolean autoRenew;
+
+        @NameInMap("auto_renew_period")
+        public Long autoRenewPeriod;
+
+        @NameInMap("charge_type")
+        public String chargeType;
+
+        @NameInMap("cloud_monitor_flags")
+        public Boolean cloudMonitorFlags;
+
+        @NameInMap("cpu_policy")
+        public String cpuPolicy;
+
+        @NameInMap("deploymentset_id")
+        public String deploymentsetId;
+
+        @NameInMap("image_id")
+        public String imageId;
+
+        @NameInMap("image_type")
+        public String imageType;
+
+        @NameInMap("instance_types")
+        public java.util.List<String> instanceTypes;
+
+        @NameInMap("key_pair")
+        public String keyPair;
+
+        @NameInMap("node_port_range")
+        public String nodePortRange;
+
+        @NameInMap("period")
+        public Long period;
+
+        @NameInMap("period_unit")
+        public String periodUnit;
+
+        @NameInMap("runtime")
+        public String runtime;
+
+        @NameInMap("security_hardening_os")
+        public Boolean securityHardeningOs;
+
+        @NameInMap("size")
+        public Long size;
+
+        @NameInMap("soc_enabled")
+        public Boolean socEnabled;
+
+        @NameInMap("system_disk_bursting_enabled")
+        public Boolean systemDiskBurstingEnabled;
+
+        @NameInMap("system_disk_category")
+        public String systemDiskCategory;
+
+        @NameInMap("system_disk_performance_level")
+        public String systemDiskPerformanceLevel;
+
+        @NameInMap("system_disk_provisioned_iops")
+        public Long systemDiskProvisionedIops;
+
+        @NameInMap("system_disk_size")
+        public Long systemDiskSize;
+
+        @NameInMap("system_disk_snapshot_policy_id")
+        public String systemDiskSnapshotPolicyId;
+
+        public static DescribeClusterDetailResponseBodyControlPlaneConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterDetailResponseBodyControlPlaneConfig self = new DescribeClusterDetailResponseBodyControlPlaneConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setAutoRenew(Boolean autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setAutoRenewPeriod(Long autoRenewPeriod) {
+            this.autoRenewPeriod = autoRenewPeriod;
+            return this;
+        }
+        public Long getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setCloudMonitorFlags(Boolean cloudMonitorFlags) {
+            this.cloudMonitorFlags = cloudMonitorFlags;
+            return this;
+        }
+        public Boolean getCloudMonitorFlags() {
+            return this.cloudMonitorFlags;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setCpuPolicy(String cpuPolicy) {
+            this.cpuPolicy = cpuPolicy;
+            return this;
+        }
+        public String getCpuPolicy() {
+            return this.cpuPolicy;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setDeploymentsetId(String deploymentsetId) {
+            this.deploymentsetId = deploymentsetId;
+            return this;
+        }
+        public String getDeploymentsetId() {
+            return this.deploymentsetId;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setImageType(String imageType) {
+            this.imageType = imageType;
+            return this;
+        }
+        public String getImageType() {
+            return this.imageType;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setInstanceTypes(java.util.List<String> instanceTypes) {
+            this.instanceTypes = instanceTypes;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypes() {
+            return this.instanceTypes;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setKeyPair(String keyPair) {
+            this.keyPair = keyPair;
+            return this;
+        }
+        public String getKeyPair() {
+            return this.keyPair;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setNodePortRange(String nodePortRange) {
+            this.nodePortRange = nodePortRange;
+            return this;
+        }
+        public String getNodePortRange() {
+            return this.nodePortRange;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setPeriod(Long period) {
+            this.period = period;
+            return this;
+        }
+        public Long getPeriod() {
+            return this.period;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setPeriodUnit(String periodUnit) {
+            this.periodUnit = periodUnit;
+            return this;
+        }
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setRuntime(String runtime) {
+            this.runtime = runtime;
+            return this;
+        }
+        public String getRuntime() {
+            return this.runtime;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setSecurityHardeningOs(Boolean securityHardeningOs) {
+            this.securityHardeningOs = securityHardeningOs;
+            return this;
+        }
+        public Boolean getSecurityHardeningOs() {
+            return this.securityHardeningOs;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setSocEnabled(Boolean socEnabled) {
+            this.socEnabled = socEnabled;
+            return this;
+        }
+        public Boolean getSocEnabled() {
+            return this.socEnabled;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setSystemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
+            this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
+            return this;
+        }
+        public Boolean getSystemDiskBurstingEnabled() {
+            return this.systemDiskBurstingEnabled;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setSystemDiskCategory(String systemDiskCategory) {
+            this.systemDiskCategory = systemDiskCategory;
+            return this;
+        }
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+            this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+            return this;
+        }
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setSystemDiskProvisionedIops(Long systemDiskProvisionedIops) {
+            this.systemDiskProvisionedIops = systemDiskProvisionedIops;
+            return this;
+        }
+        public Long getSystemDiskProvisionedIops() {
+            return this.systemDiskProvisionedIops;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setSystemDiskSize(Long systemDiskSize) {
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+        public Long getSystemDiskSize() {
+            return this.systemDiskSize;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setSystemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
+            this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;
+            return this;
+        }
+        public String getSystemDiskSnapshotPolicyId() {
+            return this.systemDiskSnapshotPolicyId;
+        }
+
     }
 
     public static class DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade extends TeaModel {

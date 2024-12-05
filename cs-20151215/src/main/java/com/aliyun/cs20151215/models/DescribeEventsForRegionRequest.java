@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeEventsForRegionRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cf62854ac2130470897be7a27ed1f****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeEventsForRegionRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeEventsForRegionRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of records on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */

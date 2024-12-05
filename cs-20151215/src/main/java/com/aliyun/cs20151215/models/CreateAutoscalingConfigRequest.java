@@ -108,6 +108,13 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public Boolean scaleUpFromZero;
 
     /**
+     * <strong>example:</strong>
+     * <p>cluster-autoscaler</p>
+     */
+    @NameInMap("scaler_type")
+    public String scalerType;
+
+    /**
      * <p>The interval at which the system scans for events that trigger scaling activities. Unit: seconds. Default value: 60.</p>
      * 
      * <strong>example:</strong>
@@ -236,6 +243,14 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     }
     public Boolean getScaleUpFromZero() {
         return this.scaleUpFromZero;
+    }
+
+    public CreateAutoscalingConfigRequest setScalerType(String scalerType) {
+        this.scalerType = scalerType;
+        return this;
+    }
+    public String getScalerType() {
+        return this.scalerType;
     }
 
     public CreateAutoscalingConfigRequest setScanInterval(String scanInterval) {

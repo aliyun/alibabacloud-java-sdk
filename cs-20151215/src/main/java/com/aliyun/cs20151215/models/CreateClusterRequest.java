@@ -59,6 +59,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("auto_renew")
+    @Deprecated
     public Boolean autoRenew;
 
     /**
@@ -70,6 +71,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("auto_renew_period")
+    @Deprecated
     public Long autoRenewPeriod;
 
     /**
@@ -85,6 +87,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("charge_type")
+    @Deprecated
     public String chargeType;
 
     /**
@@ -109,6 +112,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("cloud_monitor_flags")
+    @Deprecated
     public Boolean cloudMonitorFlags;
 
     /**
@@ -161,6 +165,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("container_cidr")
     public String containerCidr;
 
+    @NameInMap("control_plane_config")
+    public CreateClusterRequestControlPlaneConfig controlPlaneConfig;
+
     /**
      * <p>The control plane component for which you want to enable log collection.</p>
      * <p>By default, the log of kube-apiserver, kube-controller-manager, and kube-scheduler is collected.</p>
@@ -198,6 +205,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>none</p>
      */
     @NameInMap("cpu_policy")
+    @Deprecated
     public String cpuPolicy;
 
     /**
@@ -290,6 +298,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("format_disk")
+    @Deprecated
     public Boolean formatDisk;
 
     /**
@@ -299,6 +308,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>m-bp16z7xko3vvv8gt****</p>
      */
     @NameInMap("image_id")
+    @Deprecated
     public String imageId;
 
     /**
@@ -320,6 +330,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>AliyunLinux</p>
      */
     @NameInMap("image_type")
+    @Deprecated
     public String imageType;
 
     /**
@@ -329,6 +340,7 @@ public class CreateClusterRequest extends TeaModel {
      * </blockquote>
      */
     @NameInMap("instances")
+    @Deprecated
     public java.util.List<String> instances;
 
     /**
@@ -370,6 +382,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("keep_instance_name")
+    @Deprecated
     public Boolean keepInstanceName;
 
     /**
@@ -379,6 +392,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>secrity-key</p>
      */
     @NameInMap("key_pair")
+    @Deprecated
     public String keyPair;
 
     /**
@@ -416,6 +430,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>slb.s2.small</p>
      */
     @NameInMap("load_balancer_spec")
+    @Deprecated
     public String loadBalancerSpec;
 
     /**
@@ -434,6 +449,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>Hello@1234</p>
      */
     @NameInMap("login_password")
+    @Deprecated
     public String loginPassword;
 
     /**
@@ -454,6 +470,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("master_auto_renew")
+    @Deprecated
     public Boolean masterAutoRenew;
 
     /**
@@ -465,6 +482,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("master_auto_renew_period")
+    @Deprecated
     public Long masterAutoRenewPeriod;
 
     /**
@@ -475,6 +493,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>3</p>
      */
     @NameInMap("master_count")
+    @Deprecated
     public Long masterCount;
 
     /**
@@ -489,12 +508,14 @@ public class CreateClusterRequest extends TeaModel {
      * <p>PrePaid</p>
      */
     @NameInMap("master_instance_charge_type")
+    @Deprecated
     public String masterInstanceChargeType;
 
     /**
      * <p>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
      */
     @NameInMap("master_instance_types")
+    @Deprecated
     public java.util.List<String> masterInstanceTypes;
 
     /**
@@ -506,6 +527,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("master_period")
+    @Deprecated
     public Long masterPeriod;
 
     /**
@@ -516,6 +538,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>Month</p>
      */
     @NameInMap("master_period_unit")
+    @Deprecated
     public String masterPeriodUnit;
 
     /**
@@ -531,6 +554,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>cloud_ssd</p>
      */
     @NameInMap("master_system_disk_category")
+    @Deprecated
     public String masterSystemDiskCategory;
 
     /**
@@ -540,6 +564,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>PL1</p>
      */
     @NameInMap("master_system_disk_performance_level")
+    @Deprecated
     public String masterSystemDiskPerformanceLevel;
 
     /**
@@ -550,6 +575,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>120</p>
      */
     @NameInMap("master_system_disk_size")
+    @Deprecated
     public Long masterSystemDiskSize;
 
     /**
@@ -559,6 +585,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>sp-2zej1nogjvovnz4z****</p>
      */
     @NameInMap("master_system_disk_snapshot_policy_id")
+    @Deprecated
     public String masterSystemDiskSnapshotPolicyId;
 
     /**
@@ -566,6 +593,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>The number of vSwitches must be the same as that specified in <code>master_count</code> and the same as those specified in <code>master_vswitch_ids</code>.</p>
      */
     @NameInMap("master_vswitch_ids")
+    @Deprecated
     public java.util.List<String> masterVswitchIds;
 
     /**
@@ -611,6 +639,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>aliyun.com00055test</p>
      */
     @NameInMap("node_name_mode")
+    @Deprecated
     public String nodeNameMode;
 
     /**
@@ -657,6 +686,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>Linux</p>
      */
     @NameInMap("os_type")
+    @Deprecated
     public String osType;
 
     /**
@@ -669,6 +699,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>FY2023</p>
      */
     @NameInMap("period")
+    @Deprecated
     public Long period;
 
     /**
@@ -680,6 +711,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>Month</p>
      */
     @NameInMap("period_unit")
+    @Deprecated
     public String periodUnit;
 
     /**
@@ -698,6 +730,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>CentOS</p>
      */
     @NameInMap("platform")
+    @Deprecated
     public String platform;
 
     /**
@@ -742,6 +775,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>The ApsaraDB RDS instances. Select the ApsaraDB RDS instances that you want to add to the whitelist. We recommend that you add the pod CIDR block and node CIDR block to the ApsaraDB RDS instances in the ApsaraDB RDS console. When you configure the ApsaraDB RDS instances, you cannot scale out the number of nodes because the instances are not in the Running state.</p>
      */
     @NameInMap("rds_instances")
+    @Deprecated
     public java.util.List<String> rdsInstances;
 
     /**
@@ -791,6 +825,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("security_hardening_os")
+    @Deprecated
     public Boolean securityHardeningOs;
 
     /**
@@ -855,6 +890,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("soc_enabled")
+    @Deprecated
     public Boolean socEnabled;
 
     /**
@@ -885,6 +921,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>The taint. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
      */
     @NameInMap("taints")
+    @Deprecated
     public java.util.List<Taint> taints;
 
     /**
@@ -895,6 +932,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>60</p>
      */
     @NameInMap("timeout_mins")
+    @Deprecated
     public Long timeoutMins;
 
     /**
@@ -1199,6 +1237,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getContainerCidr() {
         return this.containerCidr;
+    }
+
+    public CreateClusterRequest setControlPlaneConfig(CreateClusterRequestControlPlaneConfig controlPlaneConfig) {
+        this.controlPlaneConfig = controlPlaneConfig;
+        return this;
+    }
+    public CreateClusterRequestControlPlaneConfig getControlPlaneConfig() {
+        return this.controlPlaneConfig;
     }
 
     public CreateClusterRequest setControlplaneLogComponents(java.util.List<String> controlplaneLogComponents) {
@@ -1879,6 +1925,278 @@ public class CreateClusterRequest extends TeaModel {
     }
     public java.util.List<String> getZoneIds() {
         return this.zoneIds;
+    }
+
+    public static class CreateClusterRequestControlPlaneConfig extends TeaModel {
+        @NameInMap("auto_renew")
+        public Boolean autoRenew;
+
+        @NameInMap("auto_renew_period")
+        public Long autoRenewPeriod;
+
+        @NameInMap("charge_type")
+        public String chargeType;
+
+        @NameInMap("cloud_monitor_flags")
+        public Boolean cloudMonitorFlags;
+
+        @NameInMap("cpu_policy")
+        public String cpuPolicy;
+
+        @NameInMap("deploymentset_id")
+        public String deploymentsetId;
+
+        @NameInMap("image_id")
+        public String imageId;
+
+        @NameInMap("image_type")
+        public String imageType;
+
+        @NameInMap("instance_types")
+        public java.util.List<String> instanceTypes;
+
+        @NameInMap("key_pair")
+        public String keyPair;
+
+        @NameInMap("login_password")
+        public String loginPassword;
+
+        @NameInMap("node_port_range")
+        public String nodePortRange;
+
+        @NameInMap("period")
+        public Long period;
+
+        @NameInMap("period_unit")
+        public String periodUnit;
+
+        @NameInMap("runtime")
+        public String runtime;
+
+        @NameInMap("security_hardening_os")
+        public Boolean securityHardeningOs;
+
+        @NameInMap("size")
+        public Long size;
+
+        @NameInMap("soc_enabled")
+        public Boolean socEnabled;
+
+        @NameInMap("system_disk_bursting_enabled")
+        public Boolean systemDiskBurstingEnabled;
+
+        @NameInMap("system_disk_category")
+        public String systemDiskCategory;
+
+        @NameInMap("system_disk_performance_level")
+        public String systemDiskPerformanceLevel;
+
+        @NameInMap("system_disk_provisioned_iops")
+        public Long systemDiskProvisionedIops;
+
+        @NameInMap("system_disk_size")
+        public Long systemDiskSize;
+
+        @NameInMap("system_disk_snapshot_policy_id")
+        public String systemDiskSnapshotPolicyId;
+
+        public static CreateClusterRequestControlPlaneConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestControlPlaneConfig self = new CreateClusterRequestControlPlaneConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestControlPlaneConfig setAutoRenew(Boolean autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setAutoRenewPeriod(Long autoRenewPeriod) {
+            this.autoRenewPeriod = autoRenewPeriod;
+            return this;
+        }
+        public Long getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setCloudMonitorFlags(Boolean cloudMonitorFlags) {
+            this.cloudMonitorFlags = cloudMonitorFlags;
+            return this;
+        }
+        public Boolean getCloudMonitorFlags() {
+            return this.cloudMonitorFlags;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setCpuPolicy(String cpuPolicy) {
+            this.cpuPolicy = cpuPolicy;
+            return this;
+        }
+        public String getCpuPolicy() {
+            return this.cpuPolicy;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setDeploymentsetId(String deploymentsetId) {
+            this.deploymentsetId = deploymentsetId;
+            return this;
+        }
+        public String getDeploymentsetId() {
+            return this.deploymentsetId;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setImageType(String imageType) {
+            this.imageType = imageType;
+            return this;
+        }
+        public String getImageType() {
+            return this.imageType;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setInstanceTypes(java.util.List<String> instanceTypes) {
+            this.instanceTypes = instanceTypes;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypes() {
+            return this.instanceTypes;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setKeyPair(String keyPair) {
+            this.keyPair = keyPair;
+            return this;
+        }
+        public String getKeyPair() {
+            return this.keyPair;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setLoginPassword(String loginPassword) {
+            this.loginPassword = loginPassword;
+            return this;
+        }
+        public String getLoginPassword() {
+            return this.loginPassword;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setNodePortRange(String nodePortRange) {
+            this.nodePortRange = nodePortRange;
+            return this;
+        }
+        public String getNodePortRange() {
+            return this.nodePortRange;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setPeriod(Long period) {
+            this.period = period;
+            return this;
+        }
+        public Long getPeriod() {
+            return this.period;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setPeriodUnit(String periodUnit) {
+            this.periodUnit = periodUnit;
+            return this;
+        }
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setRuntime(String runtime) {
+            this.runtime = runtime;
+            return this;
+        }
+        public String getRuntime() {
+            return this.runtime;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setSecurityHardeningOs(Boolean securityHardeningOs) {
+            this.securityHardeningOs = securityHardeningOs;
+            return this;
+        }
+        public Boolean getSecurityHardeningOs() {
+            return this.securityHardeningOs;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setSocEnabled(Boolean socEnabled) {
+            this.socEnabled = socEnabled;
+            return this;
+        }
+        public Boolean getSocEnabled() {
+            return this.socEnabled;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setSystemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
+            this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
+            return this;
+        }
+        public Boolean getSystemDiskBurstingEnabled() {
+            return this.systemDiskBurstingEnabled;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setSystemDiskCategory(String systemDiskCategory) {
+            this.systemDiskCategory = systemDiskCategory;
+            return this;
+        }
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+            this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+            return this;
+        }
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setSystemDiskProvisionedIops(Long systemDiskProvisionedIops) {
+            this.systemDiskProvisionedIops = systemDiskProvisionedIops;
+            return this;
+        }
+        public Long getSystemDiskProvisionedIops() {
+            return this.systemDiskProvisionedIops;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setSystemDiskSize(Long systemDiskSize) {
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+        public Long getSystemDiskSize() {
+            return this.systemDiskSize;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setSystemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
+            this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;
+            return this;
+        }
+        public String getSystemDiskSnapshotPolicyId() {
+            return this.systemDiskSnapshotPolicyId;
+        }
+
     }
 
     public static class CreateClusterRequestOperationPolicyClusterAutoUpgrade extends TeaModel {

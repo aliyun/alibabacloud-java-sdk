@@ -10,6 +10,12 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     @NameInMap("auto_scaling")
     public DescribeClusterNodePoolDetailResponseBodyAutoScaling autoScaling;
 
+    /**
+     * <p>Indicates whether the pods in the edge node pool can use the host network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("host_network")
     public Boolean hostNetwork;
 
@@ -28,11 +34,17 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     @NameInMap("interconnect_mode")
     public String interconnectMode;
 
+    /**
+     * <p>Indicates whether all nodes in the edge node pool can communicate with each other at Layer 3.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("intranet")
     public Boolean intranet;
 
     /**
-     * <p>The configurations of the cluster in which the node pool is deployed.</p>
+     * <p>The configurations of the cluster.</p>
      */
     @NameInMap("kubernetes_config")
     public DescribeClusterNodePoolDetailResponseBodyKubernetesConfig kubernetesConfig;
@@ -53,7 +65,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public Long maxNodes;
 
     /**
-     * <p>Node configuration.</p>
+     * <p>The node configurations.</p>
      */
     @NameInMap("node_config")
     public DescribeClusterNodePoolDetailResponseBodyNodeConfig nodeConfig;
@@ -65,7 +77,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public DescribeClusterNodePoolDetailResponseBodyNodepoolInfo nodepoolInfo;
 
     /**
-     * <p>The configurations of the scaling group.</p>
+     * <p>The configurations of the scaling group used by the node pool.</p>
      */
     @NameInMap("scaling_group")
     public DescribeClusterNodePoolDetailResponseBodyScalingGroup scalingGroup;
@@ -457,10 +469,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String cpuPolicy;
 
         /**
-         * <p>The labels of the nodes in the node pool. You can add labels to the nodes in the cluster. You must add labels based on the following rules:</p>
+         * <p>The labels that you want to add to the nodes in the cluster. You must add labels based on the following rules:</p>
          * <ul>
-         * <li>Each label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
-         * <li>A key must be unique and cannot exceed 64 characters in length. A value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+         * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
+         * <li>The key must be unique and cannot exceed 64 characters in length. The value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
          * </ul>
          */
         @NameInMap("labels")
@@ -482,6 +494,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
         /**
          * <p>The custom script to be executed before nodes in the node pool are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dGhpcyBpcyBhIGV4YW1wbGU</p>
          */
         @NameInMap("pre_user_data")
         public String preUserData;
@@ -505,7 +520,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String runtimeVersion;
 
         /**
-         * <p>The taints of the nodes in the node pool. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
+         * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to prevent pods from being scheduled to specific nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
          */
         @NameInMap("taints")
         public java.util.List<Taint> taints;
@@ -930,7 +945,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyNodeConfig extends TeaModel {
         /**
-         * <p>Kubelet parameter configuration.</p>
+         * <p>The configurations of the kubelet.</p>
          */
         @NameInMap("kubelet_configuration")
         public KubeletConfig kubeletConfiguration;
@@ -1233,7 +1248,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean compensateWithOnDemand;
 
         /**
-         * <p>The configurations of the data disks that are attached to the nodes in the node pool. The configurations include the disk type and disk size.</p>
+         * <p>The configurations of the data disks that are attached to the nodes in the node pool. The configurations include the disk category and disk size.</p>
          */
         @NameInMap("data_disks")
         public java.util.List<DataDisk> dataDisks;
@@ -1288,7 +1303,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String instanceChargeType;
 
         /**
-         * <p>Instance attributes</p>
+         * <p>The instance properties.</p>
          */
         @NameInMap("instance_patterns")
         public java.util.List<InstancePatterns> instancePatterns;
@@ -1561,14 +1576,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean systemDiskBurstingEnabled;
 
         /**
-         * <p>The system disk types. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: Valid values:</p>
+         * <p>The categories of the system disk for nodes. The system attempts to create system disks of a disk category with a lower priority if the disk category with a higher priority is unavailable. Valid values: Valid values:</p>
          * <ul>
-         * <li><code>cloud</code>: basic disk</li>
-         * <li><code>cloud_efficiency</code>: ultra disk</li>
-         * <li><code>cloud_ssd</code>: standard SSD</li>
-         * <li><code>cloud_essd</code>: ESSD</li>
-         * <li><code>cloud_auto</code>: ESSD AutoPL disk</li>
-         * <li><code>cloud_essd_entry</code>: ESSD Entry disk</li>
+         * <li><code>cloud</code>: basic disk.</li>
+         * <li><code>cloud_efficiency</code>: ultra disk.</li>
+         * <li><code>cloud_ssd</code>: standard SSD.</li>
+         * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
+         * <li><code>cloud_auto</code>: ESSD AutoPL disk.</li>
+         * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
          * </ul>
          * <p>Default value: <code>cloud_efficiency</code>.</p>
          */
@@ -1594,7 +1609,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>Encryption algorithm used for the system disk. Valid values: aes-256.</p>
+         * <p>The encryption algorithm that is used to encrypt the system disk. Set the value to aes-256.</p>
          * 
          * <strong>example:</strong>
          * <p>aes-256</p>
@@ -1653,8 +1668,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Long systemDiskSize;
 
         /**
-         * <p>The labels that you want to add to the ECS instances.</p>
-         * <p>A key must be unique and cannot exceed 128 characters in length. Neither keys nor values can start with aliyun or acs:. Neither keys nor values can contain https:// or http://.</p>
+         * <p>The labels that you want to add only to ECS instances.</p>
+         * <p>The label key must be unique and cannot exceed 128 characters in length. The label key and value cannot start with aliyun or acs: or contain https:// or http://.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;

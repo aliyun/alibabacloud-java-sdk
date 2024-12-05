@@ -649,6 +649,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("scale_up_from_zero", request.scaleUpFromZero);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scalerType)) {
+            body.put("scaler_type", request.scalerType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scanInterval)) {
             body.put("scan_interval", request.scanInterval);
         }
@@ -682,7 +686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAutoscalingConfigResponse());
     }
@@ -769,6 +773,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.containerCidr)) {
             body.put("container_cidr", request.containerCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.controlPlaneConfig)) {
+            body.put("control_plane_config", request.controlPlaneConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.controlplaneLogComponents)) {
@@ -3140,7 +3148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定地域内全部集群列表</p>
+     * <p>Queries all clusters in a specified region.</p>
      * 
      * @param request DescribeClustersForRegionRequest
      * @param headers map
@@ -3198,7 +3206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定地域内全部集群列表</p>
+     * <p>Queries all clusters in a specified region.</p>
      * 
      * @param request DescribeClustersForRegionRequest
      * @return DescribeClustersForRegionResponse
@@ -3523,7 +3531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定地域内全部事件列表</p>
+     * <p>Queries all events in a specified region.</p>
      * 
      * @param request DescribeEventsForRegionRequest
      * @param headers map
@@ -3565,7 +3573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定地域内全部事件列表</p>
+     * <p>Queries all events in a specified region.</p>
      * 
      * @param request DescribeEventsForRegionRequest
      * @return DescribeEventsForRegionResponse
@@ -5390,6 +5398,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("cluster_name", request.clusterName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.controlPlaneConfig)) {
+            body.put("control_plane_config", request.controlPlaneConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
             body.put("deletion_protection", request.deletionProtection);
         }
@@ -6082,11 +6094,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li></li>
-     * </ul>
-     * <hr>
-     * <ul>
-     * <li>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.</li>
+     * <li>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </li>
+     * <li>The operation may have unexpected risks. Back up the data before you perform this operation. </li>
+     * <li>When the system removes a node, it sets the status of the node to Unschedulable. </li>
+     * <li>The system removes only worker nodes. It does not remove master nodes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6151,11 +6162,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li></li>
-     * </ul>
-     * <hr>
-     * <ul>
-     * <li>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.</li>
+     * <li>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </li>
+     * <li>The operation may have unexpected risks. Back up the data before you perform this operation. </li>
+     * <li>When the system removes a node, it sets the status of the node to Unschedulable. </li>
+     * <li>The system removes only worker nodes. It does not remove master nodes.</li>
      * </ul>
      * 
      * <b>summary</b> : 

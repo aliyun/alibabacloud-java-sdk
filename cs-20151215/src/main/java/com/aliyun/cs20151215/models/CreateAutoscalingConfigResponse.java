@@ -10,6 +10,9 @@ public class CreateAutoscalingConfigResponse extends TeaModel {
     @NameInMap("statusCode")
     public Integer statusCode;
 
+    @NameInMap("body")
+    public CreateAutoscalingConfigResponseBody body;
+
     public static CreateAutoscalingConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateAutoscalingConfigResponse self = new CreateAutoscalingConfigResponse();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class CreateAutoscalingConfigResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    public CreateAutoscalingConfigResponse setBody(CreateAutoscalingConfigResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateAutoscalingConfigResponseBody getBody() {
+        return this.body;
     }
 
 }
