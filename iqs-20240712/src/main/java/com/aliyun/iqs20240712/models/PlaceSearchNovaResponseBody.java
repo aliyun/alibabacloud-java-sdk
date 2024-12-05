@@ -138,6 +138,9 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
         @NameInMap("phone")
         public String phone;
 
+        @NameInMap("score")
+        public String score;
+
         /**
          * <strong>example:</strong>
          * <p>[{\&quot;value\&quot;:\&quot;nttd\&quot;,\&quot;key\&quot;:\&quot;owner\&quot;}]</p>
@@ -191,6 +194,14 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public PlaceSearchNovaResponseBodyDataMetadata setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
         }
 
         public PlaceSearchNovaResponseBodyDataMetadata setTag(String tag) {
