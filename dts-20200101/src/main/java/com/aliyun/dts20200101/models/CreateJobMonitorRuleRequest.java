@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateJobMonitorRuleRequest extends TeaModel {
     /**
-     * <p>The threshold for triggering latency alerts.</p>
+     * <p>The threshold for triggering an alert.</p>
      * <ul>
-     * <li>If the <strong>Type</strong> parameter is set to <strong>delay</strong>, the threshold must be an integer. You can set the threshold based on your requirements. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds. Unit: seconds.</li>
-     * <li>If the <strong>Type</strong> parameter is set to <strong>full_timeout</strong>, the threshold must be an integer. Unit: hours.</li>
+     * <li>If <strong>Type</strong> is set to <strong>delay</strong>, the threshold must be an integer in units of seconds. You can specify the threshold based on your business requirements. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds.</li>
+     * <li>If <strong>Type</strong> is set to <strong>full_timeout</strong>, the threshold must be an integer in units of hours.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required if the <strong>Type</strong> parameter is set to <strong>delay</strong> or <strong>full_timeout</strong> and the <strong>State</strong> parameter is set to <strong>Y</strong>.</p>
+     * <p>This parameter is required if <strong>Type</strong> is set to <strong>delay</strong> or <strong>full_timeout</strong> and <strong>State</strong> is set to <strong>Y</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     /**
      * <p>The statistical period of the incremental data verification task. Unit: minutes.</p>
      * <blockquote>
-     * <p> Valid values: 1, 3, 5, and 30.</p>
+     * <p>Valid values: 1, 3, 5, and 30.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,8 +56,10 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li>This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</li>
-     * <li>Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in the CloudMonitor console</a>.</li>
+     * <li><p>This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</p>
+     * </li>
+     * <li><p>Users of the international site (alibabacloud.com) cannot receive notifications on alerts by using mobile numbers, but can configure alert rules for DTS tasks in the CloudMonitor console. For more information, see <a href="https://help.aliyun.com/document_detail/175876.html">Configure alert rules for DTS tasks in the CloudMonitor console</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +69,7 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     public String phone;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -75,6 +77,12 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

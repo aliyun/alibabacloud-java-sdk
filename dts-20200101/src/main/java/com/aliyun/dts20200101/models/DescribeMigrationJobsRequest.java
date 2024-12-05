@@ -18,6 +18,9 @@ public class DescribeMigrationJobsRequest extends TeaModel {
      * <blockquote>
      * <p> Fuzzy match is supported.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL迁移</p>
      */
     @NameInMap("MigrationJobName")
     public String migrationJobName;
@@ -52,9 +55,18 @@ public class DescribeMigrationJobsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tag of the data migration instance, used as a filter. When this is not empty, only the instance tasks with this tag will be returned.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeMigrationJobsRequestTag> tag;
 

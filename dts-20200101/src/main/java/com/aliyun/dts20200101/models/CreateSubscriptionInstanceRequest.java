@@ -67,9 +67,21 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The region ID of the change tracking instance. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

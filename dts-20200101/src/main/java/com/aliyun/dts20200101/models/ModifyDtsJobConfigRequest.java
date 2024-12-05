@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobConfigRequest extends TeaModel {
     /**
+     * <p>DTS job ID, which can be queried by calling <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>lxsn87r328d****</p>
      */
@@ -15,6 +17,8 @@ public class ModifyDtsJobConfigRequest extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The parameters that you want to modify. Specify a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/2536412.html">Parameters</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;module\&quot;:\&quot;07\&quot;,\&quot;name\&quot;:\&quot;sink.connection.idle.second\&quot;,\&quot;value\&quot;:60},{\&quot;module\&quot;:\&quot;07\&quot;,\&quot;name\&quot;:\&quot;sink.batch.size.maximum\&quot;,\&quot;value\&quot;:64}]</p>
      */
@@ -22,12 +26,20 @@ public class ModifyDtsJobConfigRequest extends TeaModel {
     public String parameters;
 
     /**
+     * <p>The region where the instance is located. For more details, see <a href="https://help.aliyun.com/document_detail/141033.html">List of Supported Regions</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

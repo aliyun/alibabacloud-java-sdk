@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     /**
+     * <p>The name of the source database to which the table that contains inconsistent data belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>db_dtstest</p>
      */
@@ -12,16 +14,26 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The number of data rows that contain inconsistent data.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("DiffCount")
     public Long diffCount;
 
+    /**
+     * <p>The information about the inconsistent data.</p>
+     */
     @NameInMap("DiffDetails")
     public java.util.List<DescribeDataCheckTableDiffDetailsResponseBodyDiffDetails> diffDetails;
 
     /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <blockquote>
+     * <p>For example, if the value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the value of the <strong>DynamicMessage</strong> parameter is <strong>Type</strong>, the specified <strong>Type</strong> parameter is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Type</p>
      */
@@ -29,6 +41,8 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The error code returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParameter</p>
      */
@@ -36,6 +50,8 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>The value of the parameter tbName is invalid.</p>
      */
@@ -43,6 +59,8 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -50,6 +68,8 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dtsog8q1z3tc9t****&quot;</p>
      */
@@ -57,6 +77,8 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
      */
@@ -64,6 +86,8 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -71,6 +95,8 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The name of the table that contains inconsistent data in the source database.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_person</p>
      */
@@ -172,6 +198,14 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
 
     public static class DescribeDataCheckTableDiffDetailsResponseBodyDiffDetails extends TeaModel {
         /**
+         * <p>The details of the inconsistent data, whose value is a JSON string. The JSON string contains the following parameters:</p>
+         * <ul>
+         * <li>column: the name of the field.</li>
+         * <li>source: the value of the field in the source database.</li>
+         * <li>dest: the value of the field in the destination database.</li>
+         * <li>isPrimary: indicates whether the field is a primary key.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>[     {         &quot;column&quot;: &quot;id&quot;,         &quot;source&quot;: &quot;9511&quot;,         &quot;dest&quot;: &quot;9511&quot;,         &quot;isPrimary&quot;: true     },     {         &quot;column&quot;: &quot;state&quot;,         &quot;source&quot;: &quot;3&quot;,         &quot;dest&quot;: &quot;2&quot;,         &quot;isPrimary&quot;: false     },     {         &quot;column&quot;: &quot;create_time&quot;,         &quot;source&quot;: &quot;2023-04-11 14:07:17.0&quot;,         &quot;dest&quot;: &quot;NULL&quot;,         &quot;isPrimary&quot;: false     },     {         &quot;column&quot;: &quot;update_time&quot;,         &quot;source&quot;: &quot;2023-04-11 06:07:17.0&quot;,         &quot;dest&quot;: &quot;2023-04-11 06:02:29.0&quot;,         &quot;isPrimary&quot;: false     } ]</p>
          */
@@ -179,6 +213,8 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         public String diff;
 
         /**
+         * <p>The time when the data verification was performed.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-23T10:36:05.000+00:00</p>
          */
@@ -186,6 +222,8 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The auto-increment primary key that is used to identify the data in a verification result.</p>
+         * 
          * <strong>example:</strong>
          * <p>13058****</p>
          */

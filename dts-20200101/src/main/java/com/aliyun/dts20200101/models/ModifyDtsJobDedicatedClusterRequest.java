@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobDedicatedClusterRequest extends TeaModel {
     /**
+     * <p>The dedicated cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dtsxxxx</p>
      */
@@ -12,6 +14,8 @@ public class ModifyDtsJobDedicatedClusterRequest extends TeaModel {
     public String dedicatedClusterId;
 
     /**
+     * <p>The DTS task IDs. The value can be a JSON array that consists of multiple DTS task IDs. Separate the IDs with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;dtsxxxx01&quot;, &quot;dtsxxx02&quot;]</p>
      */
@@ -22,12 +26,23 @@ public class ModifyDtsJobDedicatedClusterRequest extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The ID of the region where the DTS instance resides.</p>
+     * <blockquote>
+     * <p>For information about the regions that support dedicated clusters, see <a href="https://help.aliyun.com/document_detail/417481.html">DTS dedicated cluster</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

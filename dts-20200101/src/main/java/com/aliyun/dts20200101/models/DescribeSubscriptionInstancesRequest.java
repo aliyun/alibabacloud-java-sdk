@@ -52,6 +52,12 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz4us4iruleja</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -60,10 +66,16 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
      * <blockquote>
      * <p> If you specify this parameter, DTS returns all the change tracking instances that match the specified name.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL订阅</p>
      */
     @NameInMap("SubscriptionInstanceName")
     public String subscriptionInstanceName;
 
+    /**
+     * <p>Tags of the data migration instance, used as a filter. When this is not empty, only instances with this tag will be returned.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeSubscriptionInstancesRequestTag> tag;
 

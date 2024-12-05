@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     /**
+     * <p>The data verification method. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: full data verification.</li>
+     * <li><strong>2</strong>: incremental data verification.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     public Integer checkType;
 
     /**
+     * <p>The name of the database to which the table that contains inconsistent data belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The ID of the data migration or data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +39,8 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     public String dtsJobId;
 
     /**
+     * <p>The page number of the page to return. The value must be an integer greater than 0. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -39,16 +48,25 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>The name of the table that contains inconsistent data exists.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

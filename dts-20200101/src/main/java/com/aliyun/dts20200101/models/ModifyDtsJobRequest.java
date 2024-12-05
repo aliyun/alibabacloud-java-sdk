@@ -167,6 +167,12 @@ public class ModifyDtsJobRequest extends TeaModel {
     @NameInMap("Reserved")
     public String reserved;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -202,6 +208,15 @@ public class ModifyDtsJobRequest extends TeaModel {
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
+    /**
+     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <ul>
+     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ZeroEtlJob")
     public Boolean zeroEtlJob;
 

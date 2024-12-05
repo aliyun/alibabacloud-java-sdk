@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMigrationJobAlertResponseBody extends TeaModel {
     /**
-     * <p>The mobile phone numbers that receive latency-related alerts.</p>
+     * <p>Phone number of the contact for delay alarm.</p>
      * 
      * <strong>example:</strong>
      * <p>1361234****,1371234****</p>
@@ -14,10 +14,9 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
     public String delayAlertPhone;
 
     /**
-     * <p>Indicates whether task latency is monitored. Valid values:</p>
+     * <p>Whether to monitor the delay status, return values:</p>
      * <ul>
-     * <li><strong>enable</strong>: yes</li>
-     * <li><strong>disable</strong>: no</li>
+     * <li><strong>enable</strong>: Yes. - <strong>disable</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,16 +26,16 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
     public String delayAlertStatus;
 
     /**
-     * <p>The threshold for triggering latency alerts. Unit: seconds.</p>
+     * <p>The threshold for triggering a delayed alarm, in seconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>0</p>
      */
     @NameInMap("DelayOverSeconds")
     public String delayOverSeconds;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>Error code returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -45,7 +44,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -54,7 +53,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The mobile phone numbers that receive status-related alerts.</p>
+     * <p>Phone number of the contact for abnormal alarm notifications</p>
      * 
      * <strong>example:</strong>
      * <p>1361234****,1371234****</p>
@@ -63,10 +62,9 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
     public String errorAlertPhone;
 
     /**
-     * <p>Indicates whether task status is monitored. Valid values:</p>
+     * <p>Whether to monitor for abnormal status, return values:</p>
      * <ul>
-     * <li><strong>enable</strong>: yes</li>
-     * <li><strong>disable</strong>: no</li>
+     * <li><strong>enable</strong>: Yes. - <strong>disable</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,19 +74,19 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
     public String errorAlertStatus;
 
     /**
-     * <p>The ID of the data migration instance.</p>
+     * <p>Data migration instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>lb9113qq11n****</p>
+     * <p>dtslb9113qq11n****</p>
      */
     @NameInMap("MigrationJobId")
     public String migrationJobId;
 
     /**
-     * <p>The name of the data migration task.</p>
+     * <p>Name of the data migration task.</p>
      * 
      * <strong>example:</strong>
-     * <p>PolarDB MySQL_to_RDS MySQL</p>
+     * <p>zwy-test5</p>
      */
     @NameInMap("MigrationJobName")
     public String migrationJobName;
@@ -97,13 +95,13 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>210ec21916055187057342533d****</p>
+     * <p>CFB89C51-6F03-519C-A921-AAE28D50AEFB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

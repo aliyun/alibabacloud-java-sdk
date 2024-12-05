@@ -25,6 +25,17 @@ public class DeleteDtsJobRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The type of the Data Transmission Service (DTS) task. Valid values:</p>
+     * <ul>
+     * <li><strong>MIGRATION</strong>: data migration task</li>
+     * <li><strong>SYNC</strong>: data synchronization task</li>
+     * <li><strong>SUBSCRIBE</strong>: change tracking task</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MIGRATION</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
@@ -37,6 +48,12 @@ public class DeleteDtsJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek26lwshijfk3q</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -49,6 +66,15 @@ public class DeleteDtsJobRequest extends TeaModel {
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
+    /**
+     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <ul>
+     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ZeroEtlJob")
     public Boolean zeroEtlJob;
 

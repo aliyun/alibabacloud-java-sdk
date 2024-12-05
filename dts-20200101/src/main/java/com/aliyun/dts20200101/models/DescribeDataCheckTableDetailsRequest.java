@@ -46,6 +46,12 @@ public class DescribeDataCheckTableDetailsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz4us4iruleja</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

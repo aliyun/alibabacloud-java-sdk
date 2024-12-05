@@ -25,9 +25,21 @@ public class DescribeSynchronizationJobStatusListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The ID of the region where the data synchronization instances reside. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

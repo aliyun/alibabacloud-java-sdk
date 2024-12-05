@@ -75,6 +75,15 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     @NameInMap("DelayRuleTime")
     public Long delayRuleTime;
 
+    /**
+     * <p>Environment label of the DTS instance, with values:</p>
+     * <ul>
+     * <li><strong>normal</strong>: <strong>general</strong> - <strong>online</strong>: <strong>production</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("DtsBisLabel")
     public String dtsBisLabel;
 
@@ -102,6 +111,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
      * <p> We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>for_test</p>
      */
     @NameInMap("DtsJobName")
     public String dtsJobName;
@@ -134,9 +146,23 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     @NameInMap("ErrorPhone")
     public String errorPhone;
 
+    /**
+     * <p>The DU upper limit of the Serverless instance, with values being: 2, 4, 8, 16. 
+     * Currently, this feature is not supported, please do not pass in parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("MaxDu")
     public Double maxDu;
 
+    /**
+     * <p>The lower limit of DU for Serverless instances, with values being: 1, 2, 4, 8, 16. 
+     * This feature is currently not supported, please do not pass in parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinDu")
     public Double minDu;
 
@@ -159,11 +185,17 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     @NameInMap("Reserve")
     public String reserve;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The name of the source database.</p>
+     * <p>Name of the database to be subscribed.</p>
      * 
      * <strong>example:</strong>
      * <p>dtstestdata</p>
@@ -307,18 +339,63 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     @NameInMap("SourceEndpointUserName")
     public String sourceEndpointUserName;
 
+    /**
+     * <p>The path of the certificate authority (CA) certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+     * <blockquote>
+     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SrcCaCertificateOssUrl")
     public String srcCaCertificateOssUrl;
 
+    /**
+     * <p>The key of the CA certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+     * <blockquote>
+     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SrcCaCertificatePassword")
     public String srcCaCertificatePassword;
 
+    /**
+     * <p>The path to the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+     * <blockquote>
+     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SrcClientCertOssUrl")
     public String srcClientCertOssUrl;
 
+    /**
+     * <p>The path to the private key of the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+     * <blockquote>
+     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SrcClientKeyOssUrl")
     public String srcClientKeyOssUrl;
 
+    /**
+     * <p>The password of the private key of the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+     * <blockquote>
+     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SrcClientPassword")
     public String srcClientPassword;
 

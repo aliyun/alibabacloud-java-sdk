@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigureDtsJobResponseBody extends TeaModel {
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The ID of the data migration or synchronization instance.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsk2gm967v16f****</p>
@@ -14,7 +14,7 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The ID of the data migration or synchronization task.</p>
      * 
      * <strong>example:</strong>
      * <p>k2gm967v16f****</p>
@@ -23,7 +23,7 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The ID of the data migration or synchronization instance.</p>
+     * <p>The error code returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -32,6 +32,8 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
      */
@@ -39,7 +41,7 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The returned HTTP status codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -48,7 +50,7 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the data migration or synchronization task.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>224DB9F7-3100-4899-AB9C-C938BCCB****</p>
@@ -57,6 +59,8 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

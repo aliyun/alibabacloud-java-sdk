@@ -67,6 +67,12 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -113,6 +119,12 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     @NameInMap("SubJobType")
     public String subJobType;
 
+    /**
+     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be: - <strong>true</strong>: Yes. - <strong>false</strong>: No.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ZeroEtlJob")
     public Boolean zeroEtlJob;
 

@@ -194,15 +194,42 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         @NameInMap("DelayRuleTime")
         public Long delayRuleTime;
 
+        /**
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bi6e22ay243****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The task type of the DTS instance, with values: - <strong>normal</strong>: Migration or synchronization task. - <strong>full_check</strong>: Associated full check task. - <strong>etl_check</strong>: Associated incremental check task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("JobType")
         public String jobType;
 
+        /**
+         * <p>Alarm threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NoticeValue")
         public Integer noticeValue;
 
+        /**
+         * <p>The statistical period for incremental validation tasks, in minutes.</p>
+         * <blockquote>
+         * <p>Currently supported values are 1 minute, 5 minutes, 10 minutes, and 30 minutes.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Period")
         public Integer period;
 
@@ -228,6 +255,12 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The number of cycles for the incremental validation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Times")
         public Integer times;
 

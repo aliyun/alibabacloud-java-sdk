@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the data migration, data synchronization, or change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region ID of the Data Transmission Service (DTS) instances. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,10 +14,20 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>The IDs of the data migration, data synchronization, or change tracking instances. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance IDs.</p>
+     * <blockquote>
+     * <p>N specifies the serial number of the instance. For example, ResourceId.1 specifies the ID of the first instance and ResourceId.2 specifies the ID of the second instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +37,7 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Valid value: <strong>ALIYUN::DTS::INSTANCE</strong>.</p>
+     * <p>The resource type. Set the value to <strong>ALIYUN::DTS::INSTANCE</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>ALIYUN::DTS::INSTANCE</p>
@@ -36,6 +46,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The tags to be added to the instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -88,12 +99,14 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N.</p>
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag.</li>
-         * <li>This parameter cannot be an empty string.</li>
+         * <li><p>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag, and Tag.2.Key specifies the key of the second tag.</p>
+         * </li>
+         * <li><p>The tag key cannot be an empty string.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -104,12 +117,14 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N.</p>
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag.</li>
-         * <li>This parameter can be an empty string.</li>
+         * <li><p>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag.</p>
+         * </li>
+         * <li><p>The tag value can be an empty string.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

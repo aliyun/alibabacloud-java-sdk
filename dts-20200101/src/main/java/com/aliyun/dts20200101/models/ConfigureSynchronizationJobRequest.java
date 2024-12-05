@@ -66,6 +66,12 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>资源组ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -120,6 +126,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
      * <blockquote>
      * <p> We recommend that you specify an informative name for easy identification. You do not need to use a unique task name.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL同步</p>
      */
     @NameInMap("SynchronizationJobName")
     public String synchronizationJobName;

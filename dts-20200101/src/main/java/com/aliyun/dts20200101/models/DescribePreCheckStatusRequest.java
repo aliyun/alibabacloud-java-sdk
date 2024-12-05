@@ -17,10 +17,10 @@ public class DescribePreCheckStatusRequest extends TeaModel {
     /**
      * <p>The task code that specifies the type of the DTS subtask. Valid values:</p>
      * <ul>
-     * <li><strong>01</strong>: precheck</li>
-     * <li><strong>02</strong>: schema migration or initial schema synchronization</li>
-     * <li><strong>03</strong>: full data migration or initial full data synchronization</li>
-     * <li><strong>04</strong>: incremental data migration or synchronization</li>
+     * <li><strong>01</strong>: precheck.</li>
+     * <li><strong>02</strong>: schema migration or initial schema synchronization.</li>
+     * <li><strong>03</strong>: full data migration or initial full data synchronization.</li>
+     * <li><strong>04</strong>: incremental data migration or synchronization.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +40,7 @@ public class DescribePreCheckStatusRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,7 +49,7 @@ public class DescribePreCheckStatusRequest extends TeaModel {
     public String pageNo;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -58,7 +58,7 @@ public class DescribePreCheckStatusRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -66,6 +66,12 @@ public class DescribePreCheckStatusRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz4us4iruleja</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -81,8 +87,8 @@ public class DescribePreCheckStatusRequest extends TeaModel {
     /**
      * <p>The type of schema definition. Valid values:</p>
      * <ul>
-     * <li><strong>before</strong>: schema migration or initial schema synchronization</li>
-     * <li><strong>after</strong>: DDL operations performed during incremental data migration or synchronization</li>
+     * <li><strong>before</strong>: schema migration or initial schema synchronization.</li>
+     * <li><strong>after</strong>: DDL operations performed during incremental data migration or synchronization.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,6 +97,15 @@ public class DescribePreCheckStatusRequest extends TeaModel {
     @NameInMap("StructType")
     public String structType;
 
+    /**
+     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <ul>
+     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ZeroEtlJob")
     public Boolean zeroEtlJob;
 

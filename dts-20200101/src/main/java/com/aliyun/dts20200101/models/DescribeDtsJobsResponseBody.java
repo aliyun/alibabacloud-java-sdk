@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDtsJobsResponseBody extends TeaModel {
     /**
-     * <p>The list of DTS tasks and the details of each task.</p>
+     * <p>The Data Transmission Service (DTS) tasks and the details of each task.</p>
      */
     @NameInMap("DtsJobList")
     public java.util.List<DescribeDtsJobsResponseBodyDtsJobList> dtsJobList;
@@ -2919,6 +2919,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("IncDataCheckStatus")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus incDataCheckStatus;
 
+        /**
+         * <p>Upper limit of DU.</p>
+         * <blockquote>
+         * <p>Only supported by Serverless instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("MaxDu")
         public Double maxDu;
 
@@ -2937,6 +2946,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode migrationMode;
 
+        /**
+         * <p>Lower limit of DU.</p>
+         * <blockquote>
+         * <p>Only supported by Serverless instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinDu")
         public Double minDu;
 
@@ -3757,6 +3775,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
+        /**
+         * <p>The DTS Units (DUs) usage of a task in a DTS dedicated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.0%</p>
+         */
         @NameInMap("DuRealUsage")
         public String duRealUsage;
 
@@ -3840,6 +3864,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("JobType")
         public String jobType;
 
+        /**
+         * <p>Upper limit of DU.</p>
+         * <blockquote>
+         * <p>Only supported by Serverless instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("MaxDu")
         public Double maxDu;
 
@@ -3912,6 +3945,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyDtsJobListMigrationMode migrationMode;
 
+        /**
+         * <p>Lower limit of DU.</p>
+         * <blockquote>
+         * <p>Only supported by Serverless instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinDu")
         public Double minDu;
 

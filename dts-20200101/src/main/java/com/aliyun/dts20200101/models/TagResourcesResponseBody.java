@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -14,7 +14,7 @@ public class TagResourcesResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -23,7 +23,7 @@ public class TagResourcesResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>755D7B84-6813-42B0-BC9D-2699CFEA****</p>
@@ -32,7 +32,7 @@ public class TagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

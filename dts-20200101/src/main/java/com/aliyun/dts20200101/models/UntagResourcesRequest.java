@@ -33,10 +33,17 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>The ID of the data migration, synchronization, and subscription instances, which can be queried by calling the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> API. &gt; N indicates the Nth instance ID to be passed. For example, ResourceId.0 represents passing the first instance ID; ResourceId.1 represents passing the second instance ID. You can unbind tags for 1 to 50 instances simultaneously.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +62,8 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>Tag key. &gt; - N indicates the position of the tag key being passed. For example, TagKey.0 represents the first tag key; TagKey.1 represents the second tag key. Up to 20 tag keys can be unbound simultaneously. - Empty strings are not allowed. - At least one of <strong>All</strong> or this parameter must be provided. - If both <strong>All</strong> and this parameter are provided, only this parameter will take effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>testkey1</p>
      */

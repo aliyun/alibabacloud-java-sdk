@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateReverseDtsJobResponseBody extends TeaModel {
     /**
+     * <p>The ID of the instance corresponding to the generated reverse task.</p>
+     * 
      * <strong>example:</strong>
      * <p>dtsor1f9kr822l****</p>
      */
@@ -12,6 +14,8 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
     public String dtsInstanceId;
 
     /**
+     * <p>The ID of the generated reverse synchronization task.</p>
+     * 
      * <strong>example:</strong>
      * <p>n99m9jx822k****</p>
      */
@@ -19,6 +23,8 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
+     * <p>Error code returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>InternalError</p>
      */
@@ -26,6 +32,8 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
      */
@@ -33,6 +41,8 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +50,8 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
      */
@@ -47,6 +59,8 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -22,9 +22,21 @@ public class ResetDtsJobRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The region where the DTS instance is located. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of Supported Regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzn4iqlbsm7hy</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

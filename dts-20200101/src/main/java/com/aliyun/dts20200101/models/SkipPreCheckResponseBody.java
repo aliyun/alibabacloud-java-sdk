@@ -14,9 +14,9 @@ public class SkipPreCheckResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace %s in ErrMessage.</p>
      * <blockquote>
-     * <p> If the specified <strong>JobId</strong> parameter is invalid, <strong>The Value of Input Parameter %s is not valid</strong> is returned for <strong>ErrMessage</strong> and <strong>JobId</strong> is returned for <strong>DynamicMessage</strong>.</p>
+     * <p>If JobId is invalid, JobId is returned for DynamicMessage, and the following message is returned for ErrMessage: The Value of Input Parameter %s is not valid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
@@ -44,7 +44,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status codes returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -53,16 +53,16 @@ public class SkipPreCheckResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the DTS task on which the precheck is performed.</p>
+     * <p>The precheck task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>kyri3z9w29a****</p>
+     * <p>b4my3zg929a****</p>
      */
     @NameInMap("MigrationJobId")
     public String migrationJobId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8C498360-7892-433C-847A-BA71A850****</p>
@@ -71,7 +71,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the precheck task.</p>
+     * <p>The precheck task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b4my3zg929a****</p>
@@ -89,7 +89,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
     public String skipItems;
 
     /**
-     * <p>The name of the precheck item.</p>
+     * <p>The precheck item name.</p>
      * 
      * <strong>example:</strong>
      * <p>CHECK_SAME_OBJ_DETAIL</p>
@@ -98,7 +98,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
     public String skipNames;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

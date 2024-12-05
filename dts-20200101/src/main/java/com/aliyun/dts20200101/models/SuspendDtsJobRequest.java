@@ -14,7 +14,7 @@ public class SuspendDtsJobRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * <p>The ID of the Data Transmission Service (DTS) task. The DTS task can be a data migration, data synchronization, or change tracking task.</p>
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to obtain the task ID.</p>
      * </blockquote>
@@ -26,7 +26,7 @@ public class SuspendDtsJobRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -34,20 +34,28 @@ public class SuspendDtsJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <ul>
-     * <li><strong>Forward</strong>: Data is synchronized from the source database to the destination database.</li>
-     * <li><strong>Reverse</strong>: Data is synchronized from the destination database to the source database.</li>
+     * <li><strong>Forward</strong></li>
+     * <li><strong>Reverse</strong></li>
      * </ul>
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li>Default value: <strong>Forward</strong>.</li>
-     * <li>You can set this parameter to <strong>Reverse</strong> to pause the reverse synchronization task only if the topology is two-way synchronization.</li>
+     * <li><p>The default value is <strong>Forward</strong>.</p>
+     * </li>
+     * <li><p>You can set this parameter to <strong>Reverse</strong> only if the topology is two-way synchronization.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,6 +64,15 @@ public class SuspendDtsJobRequest extends TeaModel {
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
+    /**
+     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <ul>
+     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ZeroEtlJob")
     public Boolean zeroEtlJob;
 

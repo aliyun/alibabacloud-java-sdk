@@ -171,6 +171,9 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
 
         /**
          * <p>The name of the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumergrouptest</p>
          */
         @NameInMap("ConsumerGroupName")
         public String consumerGroupName;

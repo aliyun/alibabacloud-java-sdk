@@ -21,7 +21,7 @@ public class TransferInstanceClassRequest extends TeaModel {
      * <li>DTS supports the following instance classes for a data synchronization instance: <strong>large</strong>, <strong>medium</strong>, <strong>small</strong>, and <strong>micro</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p> For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</p>
+     * <p>For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization channels</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,11 +32,7 @@ public class TransferInstanceClassRequest extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>Specifies whether to upgrade or downgrade the DTS instance. Valid values:</p>
-     * <ul>
-     * <li><strong>UPGRADE</strong></li>
-     * <li><strong>DOWNGRADE</strong></li>
-     * </ul>
+     * <p>Set the value to <strong>UPGRADE</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +42,7 @@ public class TransferInstanceClassRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,6 +50,12 @@ public class TransferInstanceClassRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ShieldPrecheckResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>

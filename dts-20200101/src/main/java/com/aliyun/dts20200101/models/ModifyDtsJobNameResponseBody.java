@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobNameResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter will be removed in the future.</p>
+     * <p>The error code. This parameter is going to be removed in the future.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,9 +14,9 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The dynamic part in the error message. The value of this parameter is used to replace the <strong>%s</strong> variable in the value of the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the value of <strong>ErrMessage</strong>.</p>
      * <blockquote>
-     * <p> For example, if the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+     * <p> If the return value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the specified value of <strong>DtsJobId</strong> in the request is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -44,7 +44,7 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -53,7 +53,7 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8C498360-7892-433C-847A-BA71A850****</p>

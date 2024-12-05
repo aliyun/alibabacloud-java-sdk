@@ -29,6 +29,12 @@ public class StartMigrationJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz4us4iruleja</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

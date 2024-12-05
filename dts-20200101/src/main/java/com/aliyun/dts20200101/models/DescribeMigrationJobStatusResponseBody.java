@@ -60,6 +60,9 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     /**
      * <p>The name of the data migration task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL migration</p>
      */
     @NameInMap("MigrationJobName")
     public String migrationJobName;
@@ -401,6 +404,9 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned if incremental data migration failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The task has failed for too long and cannot be restored</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;

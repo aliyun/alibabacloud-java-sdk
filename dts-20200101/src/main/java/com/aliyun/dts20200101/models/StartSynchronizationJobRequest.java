@@ -19,6 +19,12 @@ public class StartSynchronizationJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -31,8 +37,10 @@ public class StartSynchronizationJobRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li>Default value: <strong>Forward</strong>.</li>
-     * <li>You can set this parameter to <strong>Reverse</strong> to start the reverse synchronization task only when the topology is two-way synchronization.</li>
+     * <li><p>The default value is <strong>Forward</strong>.</p>
+     * </li>
+     * <li><p>You can set this parameter to <strong>Reverse</strong> to start the reverse synchronization task only if the topology is two-way synchronization.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

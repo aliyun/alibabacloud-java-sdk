@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobConfigResponseBody extends TeaModel {
     /**
+     * <p>request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>068FA72F-4800-4A54-90BB-94806068****</p>
      */
