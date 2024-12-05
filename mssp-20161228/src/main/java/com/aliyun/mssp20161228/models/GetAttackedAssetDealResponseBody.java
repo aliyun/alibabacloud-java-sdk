@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAttackedAssetDealResponseBody extends TeaModel {
     /**
+     * <p>Interface return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data query result.</p>
+     */
     @NameInMap("Data")
     public GetAttackedAssetDealResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetAttackedAssetDealResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,7 @@ public class GetAttackedAssetDealResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,13 @@ public class GetAttackedAssetDealResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the query was successful.<br />
+     * <strong>Enum values:</strong></p>
+     * <ul>
+     * <li>true: Success.</li>
+     * <li>false: Failure.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,16 +115,30 @@ public class GetAttackedAssetDealResponseBody extends TeaModel {
     }
 
     public static class GetAttackedAssetDealResponseBodyDataEcsTrendList extends TeaModel {
+        /**
+         * <p>Date point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202312或20231205</p>
+         */
         @NameInMap("Date")
         public String date;
 
         /**
+         * <p>Number of processed items.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("DealCount")
         public Long dealCount;
 
+        /**
+         * <p>Number of discovered items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>暂时无值，有疑问请联系管理员</p>
+         */
         @NameInMap("FindCount")
         public Long findCount;
 
@@ -143,6 +174,9 @@ public class GetAttackedAssetDealResponseBody extends TeaModel {
     }
 
     public static class GetAttackedAssetDealResponseBodyData extends TeaModel {
+        /**
+         * <p>Collection of attacked asset convergence trends.</p>
+         */
         @NameInMap("EcsTrendList")
         public java.util.List<GetAttackedAssetDealResponseBodyDataEcsTrendList> ecsTrendList;
 

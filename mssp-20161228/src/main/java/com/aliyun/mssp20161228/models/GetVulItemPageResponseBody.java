@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetVulItemPageResponseBody extends TeaModel {
     /**
+     * <p>API response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data returned by the interface.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetVulItemPageResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,22 @@ public class GetVulItemPageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Prompt message for the returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public GetVulItemPageResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>Request response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +54,9 @@ public class GetVulItemPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful.
+     * true: Call succeeded. false: Call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -109,10 +125,18 @@ public class GetVulItemPageResponseBody extends TeaModel {
     }
 
     public static class GetVulItemPageResponseBodyData extends TeaModel {
+        /**
+         * <p>Vulnerability alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RHSA-2024:4620: libndp 安全更新</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
+         * <p>Number of high-priority vulnerabilities to be fixed.</p>
+         * 
          * <strong>example:</strong>
          * <p>74</p>
          */
@@ -120,6 +144,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public Integer asapCount;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1940494487193744</p>
          */
@@ -127,6 +153,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public String customerId;
 
         /**
+         * <p>Prefix for the CVE remediation advice URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://avd.aliyun.com/detail/">https://avd.aliyun.com/detail/</a></p>
          */
@@ -134,6 +162,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public String cveUrlPrefix;
 
         /**
+         * <p>Processing status.</p>
+         * 
          * <strong>example:</strong>
          * <p>y</p>
          */
@@ -141,6 +171,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public String dealed;
 
         /**
+         * <p>Timestamp of the last discovery of the vulnerability.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-23 14:47:34</p>
          */
@@ -148,6 +180,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public String findTime;
 
         /**
+         * <p>Number of processed vulnerabilities.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -155,6 +189,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public Integer handledCount;
 
         /**
+         * <p>Primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>353845</p>
          */
@@ -162,6 +198,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Number of medium-priority vulnerabilities to be fixed.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -169,6 +207,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public Integer laterCount;
 
         /**
+         * <p>Risk level</p>
+         * 
          * <strong>example:</strong>
          * <p>later</p>
          */
@@ -176,6 +216,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public String level;
 
         /**
+         * <p>Vulnerability name.</p>
+         * 
          * <strong>example:</strong>
          * <p>oval:com.redhat.rhsa:def:20205002</p>
          */
@@ -183,6 +225,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Number of low-priority vulnerabilities to be fixed.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -190,6 +234,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public Integer nntfCount;
 
         /**
+         * <p>CVE number.</p>
+         * 
          * <strong>example:</strong>
          * <p>CVE-2019-20907</p>
          */
@@ -197,6 +243,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public String related;
 
         /**
+         * <p>Number of related CVE numbers.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -204,6 +252,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public Integer relatedCveCount;
 
         /**
+         * <p>Vulnerability type.</p>
+         * 
          * <strong>example:</strong>
          * <p>sca</p>
          */
@@ -211,6 +261,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public String scanType;
 
         /**
+         * <p>Tags.</p>
+         * 
          * <strong>example:</strong>
          * <p>Elevation of Privilege</p>
          */
@@ -218,6 +270,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public String tags;
 
         /**
+         * <p>Total number of fixed vulnerabilities.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -369,6 +423,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
 
     public static class GetVulItemPageResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The current page number for pagination queries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -376,6 +432,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>Number of items to display per page in the returned data.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -383,6 +441,8 @@ public class GetVulItemPageResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of records in the query result.</p>
+         * 
          * <strong>example:</strong>
          * <p>163</p>
          */

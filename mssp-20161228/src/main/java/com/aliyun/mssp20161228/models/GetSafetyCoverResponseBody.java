@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSafetyCoverResponseBody extends TeaModel {
     /**
+     * <p>API return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>404</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data query result.</p>
+     */
     @NameInMap("Data")
     public GetSafetyCoverResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Message of the response result.</p>
+     * 
      * <strong>example:</strong>
      * <p>system error</p>
      */
@@ -29,6 +38,7 @@ public class GetSafetyCoverResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,12 @@ public class GetSafetyCoverResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful:</p>
+     * <ul>
+     * <li><strong>true</strong>: Call succeeded.</li>
+     * <li><strong>false</strong>: Call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -99,6 +115,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
 
     public static class GetSafetyCoverResponseBodyDataCfwProtection extends TeaModel {
         /**
+         * <p>Number of unprotected items.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -106,6 +124,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         public Long noProtectionCount;
 
         /**
+         * <p>Number of protected items.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -113,6 +133,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         public Long protectionCount;
 
         /**
+         * <p>Year-over-year protection rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>35.00</p>
          */
@@ -120,6 +142,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         public String protectionGrowthRate;
 
         /**
+         * <p>Protection rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>50.00</p>
          */
@@ -127,6 +151,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         public String protectionRate;
 
         /**
+         * <p>Total quantity.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -182,6 +208,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
 
     public static class GetSafetyCoverResponseBodyDataEcsProtection extends TeaModel {
         /**
+         * <p>Number of unprotected items.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -189,6 +217,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         public Long noProtectionCount;
 
         /**
+         * <p>Number of protected items.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -196,6 +226,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         public Long protectionCount;
 
         /**
+         * <p>Year-over-year growth in protection rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>35.00</p>
          */
@@ -203,6 +235,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         public String protectionGrowthRate;
 
         /**
+         * <p>Protection rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>50.00</p>
          */
@@ -210,6 +244,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         public String protectionRate;
 
         /**
+         * <p>Total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -265,6 +301,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
 
     public static class GetSafetyCoverResponseBodyDataWafProtection extends TeaModel {
         /**
+         * <p>Number of unprotected items.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -272,6 +310,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         public Long noProtectionCount;
 
         /**
+         * <p>Number of protected items.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -279,6 +319,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         public Long protectionCount;
 
         /**
+         * <p>Year-over-year growth in protection rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>35.00</p>
          */
@@ -286,6 +328,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         public String protectionGrowthRate;
 
         /**
+         * <p>Protection rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>50.00</p>
          */
@@ -293,6 +337,8 @@ public class GetSafetyCoverResponseBody extends TeaModel {
         public String protectionRate;
 
         /**
+         * <p>Total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -347,12 +393,21 @@ public class GetSafetyCoverResponseBody extends TeaModel {
     }
 
     public static class GetSafetyCoverResponseBodyData extends TeaModel {
+        /**
+         * <p>CFW protection coverage.</p>
+         */
         @NameInMap("CfwProtection")
         public GetSafetyCoverResponseBodyDataCfwProtection cfwProtection;
 
+        /**
+         * <p>ECS protection coverage.</p>
+         */
         @NameInMap("EcsProtection")
         public GetSafetyCoverResponseBodyDataEcsProtection ecsProtection;
 
+        /**
+         * <p>WAF protection coverage.</p>
+         */
         @NameInMap("WafProtection")
         public GetSafetyCoverResponseBodyDataWafProtection wafProtection;
 

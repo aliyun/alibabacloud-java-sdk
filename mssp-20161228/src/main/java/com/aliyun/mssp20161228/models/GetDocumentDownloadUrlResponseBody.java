@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDocumentDownloadUrlResponseBody extends TeaModel {
     /**
+     * <p>API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>OSS file access URL.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oos-cn.ctyunapi.cn/example-bucket/test/1.jpg">https://oos-cn.ctyunapi.cn/example-bucket/test/1.jpg</a></p>
      */
@@ -19,6 +23,8 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Message of the returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -33,6 +41,7 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +51,8 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful: - <strong>true</strong>: The call was successful. - <strong>false</strong>: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

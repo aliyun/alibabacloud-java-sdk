@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetVulSummaryResponseBody extends TeaModel {
     /**
+     * <p>Interface response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data returned by the interface.</p>
+     */
     @NameInMap("Data")
     public GetVulSummaryResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetVulSummaryResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Prompt message for the response result.</p>
+     * 
      * <strong>example:</strong>
      * <p>system error</p>
      */
@@ -29,6 +38,7 @@ public class GetVulSummaryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,8 @@ public class GetVulSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful. - <strong>true</strong>: The call was successful. - <strong>false</strong>: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,10 +110,18 @@ public class GetVulSummaryResponseBody extends TeaModel {
     }
 
     public static class GetVulSummaryResponseBodyDataTrendList extends TeaModel {
+        /**
+         * <p>Time point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202407或者20240701</p>
+         */
         @NameInMap("Date")
         public String date;
 
         /**
+         * <p>Number of handled items.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -109,6 +129,8 @@ public class GetVulSummaryResponseBody extends TeaModel {
         public Long dealCount;
 
         /**
+         * <p>Number of discovered items.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -148,6 +170,8 @@ public class GetVulSummaryResponseBody extends TeaModel {
 
     public static class GetVulSummaryResponseBodyData extends TeaModel {
         /**
+         * <p>Number of completed items.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -155,16 +179,23 @@ public class GetVulSummaryResponseBody extends TeaModel {
         public Long completedCount;
 
         /**
+         * <p>Risk convergence rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
         @NameInMap("DealRate")
         public String dealRate;
 
+        /**
+         * <p>Collection of vulnerability trend nodes.</p>
+         */
         @NameInMap("TrendList")
         public java.util.List<GetVulSummaryResponseBodyDataTrendList> trendList;
 
         /**
+         * <p>Number of unhandled items.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

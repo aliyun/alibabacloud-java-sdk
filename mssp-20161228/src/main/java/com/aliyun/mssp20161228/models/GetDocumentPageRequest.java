@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDocumentPageRequest extends TeaModel {
     /**
+     * <p>Current page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,13 +14,27 @@ public class GetDocumentPageRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Delivered by.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("DeliveredBy")
     public String deliveredBy;
 
+    /**
+     * <p>Document name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>季度报告</p>
+     */
     @NameInMap("DocumentName")
     public String documentName;
 
     /**
+     * <p>Document type.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -27,6 +42,7 @@ public class GetDocumentPageRequest extends TeaModel {
     public String documentType;
 
     /**
+     * <p>Page size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +52,7 @@ public class GetDocumentPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Report type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

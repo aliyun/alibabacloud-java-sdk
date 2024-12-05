@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建服务工单</p>
+     * <p>Create Service Work Order</p>
      * 
      * @param request CreateServiceWorkOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -124,7 +124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建服务工单</p>
+     * <p>Create Service Work Order</p>
      * 
      * @param request CreateServiceWorkOrderRequest
      * @return CreateServiceWorkOrderResponse
@@ -136,7 +136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>处理服务工单</p>
+     * <p>Process Service Work Order</p>
      * 
      * @param request DisposeServiceWorkOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -224,7 +224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>处理服务工单</p>
+     * <p>Process Service Work Order</p>
      * 
      * @param request DisposeServiceWorkOrderRequest
      * @return DisposeServiceWorkOrderResponse
@@ -236,7 +236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>处理告警工单</p>
+     * <p>Handle Alert Work Order</p>
      * 
      * @param request DisposeWorkTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -280,7 +280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>处理告警工单</p>
+     * <p>Handle Alert Work Order</p>
      * 
      * @param request DisposeWorkTaskRequest
      * @return DisposeWorkTaskResponse
@@ -292,7 +292,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>被攻击资产收敛趋势</p>
+     * <p>告警详情查询</p>
+     * 
+     * @param request GetAlarmDetailByIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAlarmDetailByIdResponse
+     */
+    public GetAlarmDetailByIdResponse getAlarmDetailByIdWithOptions(GetAlarmDetailByIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAlarmDetailById"),
+            new TeaPair("version", "2016-12-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAlarmDetailByIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>告警详情查询</p>
+     * 
+     * @param request GetAlarmDetailByIdRequest
+     * @return GetAlarmDetailByIdResponse
+     */
+    public GetAlarmDetailByIdResponse getAlarmDetailById(GetAlarmDetailByIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAlarmDetailByIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Trend of Attacked Asset Convergence</p>
      * 
      * @param request GetAttackedAssetDealRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -336,7 +380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>被攻击资产收敛趋势</p>
+     * <p>Trend of Attacked Asset Convergence</p>
      * 
      * @param request GetAttackedAssetDealRequest
      * @return GetAttackedAssetDealResponse
@@ -348,7 +392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>合规风险收敛趋势</p>
+     * <p>Compliance Risk Convergence Trend</p>
      * 
      * @param request GetBaselineSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -392,7 +436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>合规风险收敛趋势</p>
+     * <p>Compliance Risk Convergence Trend</p>
      * 
      * @param request GetBaselineSummaryRequest
      * @return GetBaselineSummaryResponse
@@ -404,7 +448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询风险详情</p>
+     * <p>Query Risk Details</p>
      * 
      * @param request GetDetailByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -436,7 +480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询风险详情</p>
+     * <p>Query Risk Details</p>
      * 
      * @param request GetDetailByIdRequest
      * @return GetDetailByIdResponse
@@ -448,7 +492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>服务报告单个下载</p>
+     * <p>Single Service Report Download</p>
      * 
      * @param request GetDocumentDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -480,7 +524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>服务报告单个下载</p>
+     * <p>Single Service Report Download</p>
      * 
      * @param request GetDocumentDownloadUrlRequest
      * @return GetDocumentDownloadUrlResponse
@@ -492,7 +536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>服务报告查询</p>
+     * <p>Service Report Query</p>
      * 
      * @param request GetDocumentPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -544,7 +588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>服务报告查询</p>
+     * <p>Service Report Query</p>
      * 
      * @param request GetDocumentPageRequest
      * @return GetDocumentPageResponse
@@ -556,7 +600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>服务报告首页统计项获取</p>
+     * <p>Service Report Home Page Statistics Acquisition</p>
      * 
      * @param request GetDocumentSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -588,7 +632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>服务报告首页统计项获取</p>
+     * <p>Service Report Home Page Statistics Acquisition</p>
      * 
      * @param request GetDocumentSummaryRequest
      * @return GetDocumentSummaryResponse
@@ -600,7 +644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>得到最近上传的服务报告</p>
+     * <p>Get Recently Uploaded Service Reports</p>
      * 
      * @param request GetRecentDocumentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -644,7 +688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>得到最近上传的服务报告</p>
+     * <p>Get Recently Uploaded Service Reports</p>
      * 
      * @param request GetRecentDocumentRequest
      * @return GetRecentDocumentResponse
@@ -656,7 +700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>得到安全防护覆盖度</p>
+     * <p>Get Safety Coverage</p>
      * 
      * @param request GetSafetyCoverRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -700,7 +744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>得到安全防护覆盖度</p>
+     * <p>Get Safety Coverage</p>
      * 
      * @param request GetSafetyCoverRequest
      * @return GetSafetyCoverResponse
@@ -712,7 +756,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>告警处置查询</p>
+     * <p>Get SOW List</p>
+     * 
+     * @param request GetSowListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSowListResponse
+     */
+    public GetSowListResponse getSowListWithOptions(GetSowListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dateType)) {
+            body.put("DateType", request.dateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.suspEventSource)) {
+            body.put("SuspEventSource", request.suspEventSource);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSowList"),
+            new TeaPair("version", "2016-12-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSowListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Get SOW List</p>
+     * 
+     * @param request GetSowListRequest
+     * @return GetSowListResponse
+     */
+    public GetSowListResponse getSowList(GetSowListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSowListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Alarm Disposal Query</p>
      * 
      * @param request GetSuspEventPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -764,7 +864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>告警处置查询</p>
+     * <p>Alarm Disposal Query</p>
      * 
      * @param request GetSuspEventPageRequest
      * @return GetSuspEventPageResponse
@@ -776,7 +876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>得到告警的统计项</p>
+     * <p>Get Alert Statistics</p>
      * 
      * @param request GetSuspEventSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -820,7 +920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>得到告警的统计项</p>
+     * <p>Get Alert Statistics</p>
      * 
      * @param request GetSuspEventSummaryRequest
      * @return GetSuspEventSummaryResponse
@@ -832,7 +932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>告警页统计</p>
+     * <p>Alarm Page Statistics</p>
      * 
      * @param request GetSuspPageSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -856,7 +956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>告警页统计</p>
+     * <p>Alarm Page Statistics</p>
      * @return GetSuspPageSummaryResponse
      */
     public GetSuspPageSummaryResponse getSuspPageSummary() throws Exception {
@@ -866,7 +966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户开通状态</p>
+     * <p>Query User Activation Status</p>
      * 
      * @param request GetUserStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -890,7 +990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户开通状态</p>
+     * <p>Query User Activation Status</p>
      * @return GetUserStatusResponse
      */
     public GetUserStatusResponse getUserStatus() throws Exception {
@@ -900,7 +1000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>风险查询</p>
+     * <p>Risk Query</p>
      * 
      * @param request GetVulItemPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -956,7 +1056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>风险查询</p>
+     * <p>Risk Query</p>
      * 
      * @param request GetVulItemPageRequest
      * @return GetVulItemPageResponse
@@ -968,7 +1068,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>风险页统计</p>
+     * <p>Query processed details</p>
+     * 
+     * @param request GetVulListByIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVulListByIdResponse
+     */
+    public GetVulListByIdResponse getVulListByIdWithOptions(GetVulListByIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            body.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dealed)) {
+            body.put("Dealed", request.dealed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.necessity)) {
+            body.put("Necessity", request.necessity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            body.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuids)) {
+            body.put("Uuids", request.uuids);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVulListById"),
+            new TeaPair("version", "2016-12-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVulListByIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query processed details</p>
+     * 
+     * @param request GetVulListByIdRequest
+     * @return GetVulListByIdResponse
+     */
+    public GetVulListByIdResponse getVulListById(GetVulListByIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVulListByIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Risk Page Statistics</p>
      * 
      * @param request GetVulPageSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -992,7 +1160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>风险页统计</p>
+     * <p>Risk Page Statistics</p>
      * @return GetVulPageSummaryResponse
      */
     public GetVulPageSummaryResponse getVulPageSummary() throws Exception {
@@ -1002,7 +1170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>得到风险的统计项</p>
+     * <p>Get Risk Statistics</p>
      * 
      * @param request GetVulSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1046,7 +1214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>得到风险的统计项</p>
+     * <p>Get Risk Statistics</p>
      * 
      * @param request GetVulSummaryRequest
      * @return GetVulSummaryResponse
@@ -1058,7 +1226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>得到首行工单的统计项</p>
+     * <p>Get the First Line Work Order Statistics</p>
      * 
      * @param request GetWorkTaskSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1102,7 +1270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>得到首行工单的统计项</p>
+     * <p>Get the First Line Work Order Statistics</p>
      * 
      * @param request GetWorkTaskSummaryRequest
      * @return GetWorkTaskSummaryResponse
@@ -1114,7 +1282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>服务客户信息查询</p>
+     * <p>Service Customer Information Query</p>
      * 
      * @param request PageServiceCustomerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1170,7 +1338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>服务客户信息查询</p>
+     * <p>Service Customer Information Query</p>
      * 
      * @param request PageServiceCustomerRequest
      * @return PageServiceCustomerResponse
@@ -1182,7 +1350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发送自定义告警事件</p>
+     * <p>Send Custom Alert Event</p>
      * 
      * @param request SendCustomEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1274,7 +1442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发送自定义告警事件</p>
+     * <p>Send Custom Alert Event</p>
      * 
      * @param request SendCustomEventRequest
      * @return SendCustomEventResponse

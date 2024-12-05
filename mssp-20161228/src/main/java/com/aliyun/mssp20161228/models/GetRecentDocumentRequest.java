@@ -5,23 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetRecentDocumentRequest extends TeaModel {
     /**
+     * <p>Filter time type, supports filtering by the last 7 days, the last 30 days, the last half year, or custom time ranges.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>该字段暂未使用，有问题请联系管理员</p>
      */
     @NameInMap("DateType")
     public String dateType;
 
     /**
+     * <p>End time.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>该字段暂未使用，有问题请联系管理员</p>
      */
     @NameInMap("EndDate")
     public Long endDate;
 
     /**
+     * <p>Start time.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>该字段暂未使用，有问题请联系管理员</p>
      */
     @NameInMap("StartDate")
     public Long startDate;
 
+    /**
+     * <p>Alert event source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>该字段暂未使用，有问题请联系管理员</p>
+     */
     @NameInMap("SuspEventSource")
     public String suspEventSource;
 

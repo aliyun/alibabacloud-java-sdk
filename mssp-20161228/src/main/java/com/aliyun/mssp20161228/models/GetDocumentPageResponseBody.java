@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDocumentPageResponseBody extends TeaModel {
     /**
+     * <p>Interface response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Response data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetDocumentPageResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,22 @@ public class GetDocumentPageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Prompt message for the response result.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public GetDocumentPageResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +54,8 @@ public class GetDocumentPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. - <strong>true</strong>: The call was successful. - <strong>false</strong>: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -109,13 +124,27 @@ public class GetDocumentPageResponseBody extends TeaModel {
     }
 
     public static class GetDocumentPageResponseBodyData extends TeaModel {
+        /**
+         * <p>Delivered by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("DeliveredBy")
         public String deliveredBy;
 
+        /**
+         * <p>Report name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>季度报告</p>
+         */
         @NameInMap("DocumentName")
         public String documentName;
 
         /**
+         * <p>Service report type.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -123,6 +152,8 @@ public class GetDocumentPageResponseBody extends TeaModel {
         public String documentType;
 
         /**
+         * <p>Document primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>346409</p>
          */
@@ -130,6 +161,8 @@ public class GetDocumentPageResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Report generation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-21 17:26:34</p>
          */
@@ -185,6 +218,8 @@ public class GetDocumentPageResponseBody extends TeaModel {
 
     public static class GetDocumentPageResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The current page number in pagination queries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -192,6 +227,8 @@ public class GetDocumentPageResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of data items displayed per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -199,6 +236,8 @@ public class GetDocumentPageResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of data items found.</p>
+         * 
          * <strong>example:</strong>
          * <p>3149</p>
          */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDocumentSummaryResponseBody extends TeaModel {
     /**
+     * <p>Interface return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data query result.</p>
+     */
     @NameInMap("Data")
     public GetDocumentSummaryResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDocumentSummaryResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Prompt message for the returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,7 @@ public class GetDocumentSummaryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,12 @@ public class GetDocumentSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful. Values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -99,6 +115,8 @@ public class GetDocumentSummaryResponseBody extends TeaModel {
 
     public static class GetDocumentSummaryResponseBodyData extends TeaModel {
         /**
+         * <p>Number of documents.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -106,6 +124,8 @@ public class GetDocumentSummaryResponseBody extends TeaModel {
         public Long documentCount;
 
         /**
+         * <p>Number of services or days.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

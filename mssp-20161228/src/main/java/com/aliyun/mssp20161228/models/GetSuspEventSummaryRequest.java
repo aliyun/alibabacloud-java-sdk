@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSuspEventSummaryRequest extends TeaModel {
     /**
+     * <p>Filter time type. Supports filtering by the last 7 days, the last 30 days, the last half year, or custom time ranges.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetSuspEventSummaryRequest extends TeaModel {
     public String dateType;
 
     /**
+     * <p>End time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetSuspEventSummaryRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>Start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class GetSuspEventSummaryRequest extends TeaModel {
     public Long startDate;
 
     /**
+     * <p>Alert event source.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUSP_EVENT</p>
      */

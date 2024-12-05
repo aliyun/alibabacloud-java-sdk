@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SendCustomEventResponseBody extends TeaModel {
     /**
+     * <p>Interface response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Interface return data.</p>
+     */
     @NameInMap("Data")
     public SendCustomEventResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class SendCustomEventResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Return message. When the request is successful, it returns a success message; when the request fails, it returns the reason for the failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,7 @@ public class SendCustomEventResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,14 @@ public class SendCustomEventResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful.</p>
+     * <ul>
+     * <li><p>true: Call succeeded.</p>
+     * </li>
+     * <li><p>false: Call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,16 +117,26 @@ public class SendCustomEventResponseBody extends TeaModel {
 
     public static class SendCustomEventResponseBodyData extends TeaModel {
         /**
+         * <p>Service UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1601097845544644</p>
          */
         @NameInMap("CustomerId")
         public String customerId;
 
+        /**
+         * <p>Customer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>天津瑞鹏昇科技发展有限公司</p>
+         */
         @NameInMap("CustomerName")
         public String customerName;
 
         /**
+         * <p>Alert ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c0dc71d1-8a1d-4043-9767-f6c420e34901-81bd</p>
          */
@@ -116,6 +144,8 @@ public class SendCustomEventResponseBody extends TeaModel {
         public String eventId;
 
         /**
+         * <p>Alert type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUSP_CUSTOM_WAF</p>
          */
@@ -123,6 +153,8 @@ public class SendCustomEventResponseBody extends TeaModel {
         public String eventType;
 
         /**
+         * <p>Work order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1914348</p>
          */
@@ -130,15 +162,29 @@ public class SendCustomEventResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Owner ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>352675</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>Owner name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>乐牙</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
+        /**
+         * <p>Work order name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22端口禁止任意IP访问</p>
+         */
         @NameInMap("WorkTaskName")
         public String workTaskName;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateServiceWorkOrderResponseBody extends TeaModel {
     /**
+     * <p>Interface status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data returned by the interface.</p>
+     */
     @NameInMap("Data")
     public CreateServiceWorkOrderResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The prompt message of the returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,7 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,11 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful. - <strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +114,8 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
 
     public static class CreateServiceWorkOrderResponseBodyData extends TeaModel {
         /**
+         * <p>Completion time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-07 16:45:01</p>
          */
@@ -106,6 +123,8 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
         public Long completeTime;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-04T02:19:55Z</p>
          */
@@ -113,6 +132,8 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>426556</p>
          */
@@ -120,6 +141,8 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>Customer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1477832102462645</p>
          */
@@ -127,6 +150,8 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
         public String customerId;
 
         /**
+         * <p>End time.</p>
+         * 
          * <strong>example:</strong>
          * <p>24-03-11 00:00:00</p>
          */
@@ -134,6 +159,8 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>Primary key.</p>
+         * 
          * <strong>example:</strong>
          * <p>1978941</p>
          */
@@ -141,6 +168,8 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>426556</p>
          */
@@ -148,22 +177,44 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
         public String ownerId;
 
         /**
+         * <p>Start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-21 15:25:25</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>Work order details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;questionDetail&quot;:&quot;测试工单&quot;,&quot;answerDetail&quot;:&quot;&quot;}</p>
+         */
         @NameInMap("WorkOrderDetail")
         public String workOrderDetail;
 
+        /**
+         * <p>Work order name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>安全月报交付任务</p>
+         */
         @NameInMap("WorkOrderName")
         public String workOrderName;
 
+        /**
+         * <p>Work order source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>工单迁移</p>
+         */
         @NameInMap("WorkOrderSource")
         public String workOrderSource;
 
         /**
+         * <p>Work order status.</p>
+         * 
          * <strong>example:</strong>
          * <p>UNPROCESSED</p>
          */
@@ -171,6 +222,8 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
         public String workOrderStatus;
 
         /**
+         * <p>Work order type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MONTH_REPORT</p>
          */

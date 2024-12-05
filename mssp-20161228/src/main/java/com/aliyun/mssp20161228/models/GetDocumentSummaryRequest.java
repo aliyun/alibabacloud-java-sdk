@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDocumentSummaryRequest extends TeaModel {
     /**
+     * <p>Type of service report.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

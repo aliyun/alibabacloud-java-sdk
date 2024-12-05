@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSuspEventPageResponseBody extends TeaModel {
     /**
+     * <p>API response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data returned by the interface.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetSuspEventPageResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,22 @@ public class GetSuspEventPageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Prompt message of the returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>system error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public GetSuspEventPageResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +54,11 @@ public class GetSuspEventPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful. - <strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -109,20 +127,36 @@ public class GetSuspEventPageResponseBody extends TeaModel {
     }
 
     public static class GetSuspEventPageResponseBodyData extends TeaModel {
+        /**
+         * <p>Alarm event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>精准防御</p>
+         */
         @NameInMap("AlarmEventType")
         public String alarmEventType;
 
         /**
+         * <p>Alarm ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>5b1eeebe4f22daa2b177298234214fa3</p>
          */
         @NameInMap("AlarmId")
         public Long alarmId;
 
+        /**
+         * <p>Alarm name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Web服务漏洞利用</p>
+         */
         @NameInMap("AlarmName")
         public String alarmName;
 
         /**
+         * <p>Alarm source.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUSP_EVENT</p>
          */
@@ -130,16 +164,26 @@ public class GetSuspEventPageResponseBody extends TeaModel {
         public String alarmSource;
 
         /**
+         * <p>Latest alarm time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1722515522000</p>
          */
         @NameInMap("AlarmTime")
         public String alarmTime;
 
+        /**
+         * <p>Analysis process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;value&quot;:&quot;服务器可能已被黑客攻击，存在恶意进程在运行。 分析过程：告警显示，服务端存在一个名为”dns.exe”的进程在访问”polling.burpcollaborator.net”，这是一个被黑名单列出的恶意域名。在正常情况下,”dns.exe”不应该单独存在于系统的路径下，并且也不应该访问这类恶意域名。因此，这个进程可能是黑客留下的恶意进程。&quot;,&quot;key&quot;:&quot;结论&quot;},{&quot;value&quot;:&quot;尽快对服务器进行全面扫描，清除恶意进程。同时，联系网络安全专家进行深入调查，以确定是否有其他潜在的安全威胁。&quot;,&quot;key&quot;:&quot;处置建议&quot;}]</p>
+         */
         @NameInMap("AnalysisResult")
         public String analysisResult;
 
         /**
+         * <p>Alarm handling time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1732515522000</p>
          */
@@ -147,6 +191,8 @@ public class GetSuspEventPageResponseBody extends TeaModel {
         public String dealTime;
 
         /**
+         * <p>Alarm level.</p>
+         * 
          * <strong>example:</strong>
          * <p>suspicious</p>
          */
@@ -154,6 +200,8 @@ public class GetSuspEventPageResponseBody extends TeaModel {
         public String eventLevel;
 
         /**
+         * <p>Ticket primary key id.</p>
+         * 
          * <strong>example:</strong>
          * <p>9947</p>
          */
@@ -161,6 +209,8 @@ public class GetSuspEventPageResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Affected asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>shells-azhou</p>
          */
@@ -168,6 +218,8 @@ public class GetSuspEventPageResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>Public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.99.188.31</p>
          */
@@ -175,21 +227,47 @@ public class GetSuspEventPageResponseBody extends TeaModel {
         public String internetIp;
 
         /**
+         * <p>Private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.109.130</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>First occurrence time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>该字段暂未使用，有问题请联系管理员</p>
+         */
         @NameInMap("OccurrenceTime")
         public String occurrenceTime;
 
+        /**
+         * <p>Owner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>Disposal method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>处理完成</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>Handling status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未处理</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -330,6 +408,8 @@ public class GetSuspEventPageResponseBody extends TeaModel {
 
     public static class GetSuspEventPageResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The current page number in pagination queries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -337,6 +417,8 @@ public class GetSuspEventPageResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of items displayed per page in the returned data.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -344,6 +426,8 @@ public class GetSuspEventPageResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of query results.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

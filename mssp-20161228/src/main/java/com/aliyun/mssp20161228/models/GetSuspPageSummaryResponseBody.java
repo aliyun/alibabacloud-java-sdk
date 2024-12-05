@@ -4,25 +4,59 @@ package com.aliyun.mssp20161228.models;
 import com.aliyun.tea.*;
 
 public class GetSuspPageSummaryResponseBody extends TeaModel {
+    /**
+     * <p>Interface response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data returned by the interface.</p>
+     */
     @NameInMap("Data")
     public GetSuspPageSummaryResponseBodyData data;
 
+    /**
+     * <p>HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Prompt message for the result returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF801DD1-D934-51B3-92D4-776CE17B184F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: Call succeeded.</li>
+     * <li><strong>false</strong>: Call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,24 +114,66 @@ public class GetSuspPageSummaryResponseBody extends TeaModel {
     }
 
     public static class GetSuspPageSummaryResponseBodyData extends TeaModel {
+        /**
+         * <p>Number of completed items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("CompletedCount")
         public Long completedCount;
 
+        /**
+         * <p>Number of items being processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("HandingCount")
         public Long handingCount;
 
+        /**
+         * <p>Number of high-risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("HighCount")
         public Long highCount;
 
+        /**
+         * <p>Number of low-risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("LowCount")
         public Long lowCount;
 
+        /**
+         * <p>Number of medium-risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MediumCount")
         public Long mediumCount;
 
+        /**
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <p>Number of unhandled items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("WaitHandleCount")
         public Long waitHandleCount;
 
