@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventsForRegionResponseBody extends TeaModel {
+    /**
+     * <p>The events.</p>
+     */
     @NameInMap("events")
     public java.util.List<DescribeEventsForRegionResponseBodyEvents> events;
 
+    /**
+     * <p>The pagination details.</p>
+     */
     @NameInMap("page_info")
     public DescribeEventsForRegionResponseBodyPageInfo pageInfo;
 
@@ -33,6 +39,8 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
 
     public static class DescribeEventsForRegionResponseBodyEventsData extends TeaModel {
         /**
+         * <p>The severity level of the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>info</p>
          */
@@ -40,6 +48,8 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public String level;
 
         /**
+         * <p>The details of the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>Start to upgrade NodePool nodePool/nodePool-A</p>
          */
@@ -47,6 +57,8 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The event status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Started</p>
          */
@@ -86,26 +98,38 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
 
     public static class DescribeEventsForRegionResponseBodyEvents extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cluster-id</p>
          */
         @NameInMap("cluster_id")
         public String clusterId;
 
+        /**
+         * <p>The description of the event.</p>
+         */
         @NameInMap("data")
         public DescribeEventsForRegionResponseBodyEventsData data;
 
         /**
+         * <p>The event ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>A234-1234-1234</p>
          */
         @NameInMap("event_id")
         public String eventId;
 
+        /**
+         * <p>The event source.</p>
+         */
         @NameInMap("source")
         public String source;
 
         /**
+         * <p>The object associated with the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>nodePool-id</p>
          */
@@ -113,6 +137,8 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public String subject;
 
         /**
+         * <p>The time when the event was generated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-01T17:31:00Z</p>
          */
@@ -120,6 +146,8 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public String time;
 
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>nodePool_upgrade</p>
          */
@@ -191,6 +219,8 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
 
     public static class DescribeEventsForRegionResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -198,6 +228,8 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of records on each page.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -205,6 +237,8 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

@@ -21,6 +21,16 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     @Deprecated
     public Long count;
 
+    /**
+     * <p>Specifies whether set the network type of the pod to host network.</p>
+     * <ul>
+     * <li><code>true</code>: sets to host network.</li>
+     * <li><code>false</code>: sets to container network.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("host_network")
     public Boolean hostNetwork;
 
@@ -35,8 +45,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     /**
      * <p>The network type of the edge node pool. This parameter takes effect only when the <code>type</code> of the node pool is set to <code>edge</code>. Valid values:</p>
      * <ul>
-     * <li><code>basic</code>: basic.</li>
-     * <li><code>private</code>: dedicated. Only clusters that run Kubernetes 1.22 and later support this value.</li>
+     * <li><code>basic</code>: Internet.</li>
+     * <li><code>private</code>: private network.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,6 +55,16 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     @NameInMap("interconnect_mode")
     public String interconnectMode;
 
+    /**
+     * <p>Specifies whether all nodes in the edge node pool can communicate with each other at Layer 3.</p>
+     * <ul>
+     * <li><code>true</code>: The nodes in the edge node pool can communicate with each other at Layer 3.</li>
+     * <li><code>false</code>: The nodes in the edge node pool cannot communicate with each other at Layer 3.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("intranet")
     public Boolean intranet;
 
@@ -61,11 +81,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     public CreateClusterNodePoolRequestManagement management;
 
     /**
-     * <p>The maximum number of nodes that can be contained in the edge node pool. The value of this parameter must be greater than or equal to 0. A value of 0 indicates that the number of nodes in the node pool is limited only by the quota of nodes in the cluster.</p>
-     * <ul>
-     * <li>In most cases, this parameter is set to a value greater than 0 for edge node pools.</li>
-     * <li>This parameter is set to 0 for node pools whose types are ess or default edge node pools.</li>
-     * </ul>
+     * <p>This parameter is deprecated.</p>
+     * <p>The maximum number of nodes that can be contained in the edge node pool.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -476,7 +493,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <li><code>true</code>: installs the CloudMonitor agent on ECS nodes.</li>
          * <li><code>false</code>: does not install the CloudMonitor agent on ECS nodes.</li>
          * </ul>
-         * <p>Default value: <code>false</code>.</p>
+         * <p>Default value: <code>false</code></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -552,7 +569,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String runtimeVersion;
 
         /**
-         * <p>The taints.</p>
+         * <p>The configuration of the taint.</p>
          */
         @NameInMap("taints")
         public java.util.List<Taint> taints;
@@ -831,7 +848,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
         /**
          * <p>The maximum number of nodes that can be in the Unavailable state. Valid values: 1 to 1000.</p>
-         * <p>Default value: 1.</p>
+         * <p>Default value: 1</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1227,7 +1244,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
     public static class CreateClusterNodePoolRequestScalingGroupTags extends TeaModel {
         /**
-         * <p>The label key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>node-k-1</p>
@@ -1236,7 +1253,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The label value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>node-v-1</p>
@@ -1274,7 +1291,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <li><code>true</code>: enables auto-renewal.</li>
          * <li><code>false</code>: disables auto-renewal.</li>
          * </ul>
-         * <p>Default value: <code>false</code>.</p>
+         * <p>Default value: <code>false</code></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1283,8 +1300,12 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>The auto-renewal duration of nodes in the node pool. This parameter is available and required only if you set instance_charge_type to PrePaid and auto_renew to true. If <code>PeriodUnit=Month</code> is configured, the valid values are 1, 2, 3, 6, and 12.</p>
-         * <p>Default value: 1.</p>
+         * <p>The auto-renewal period. Valid values:</p>
+         * <ul>
+         * <li>Valid values when PeriodUnit is set to Week: 1, 2, and 3</li>
+         * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60</li>
+         * </ul>
+         * <p>Default value: 1</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

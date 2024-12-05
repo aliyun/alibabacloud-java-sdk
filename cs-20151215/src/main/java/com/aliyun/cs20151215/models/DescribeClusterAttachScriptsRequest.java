@@ -42,7 +42,7 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
      * <li><code>true</code>: retains the instance name.</li>
      * <li><code>false</code>: does not retain the instance name.</li>
      * </ul>
-     * <p>Default value: <code>true</code></p>
+     * <p>Default value: <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -51,9 +51,9 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public Boolean keepInstanceName;
 
     /**
-     * <p>The ID of the node pool to which you want to add an existing node. This parameter allows you to add an existing node to a specified node pool.</p>
+     * <p>The ID of the node pool to which you want to add an existing node.</p>
      * <blockquote>
-     * <p> If you do not specify a node pool ID, the node is added to the default node pool.</p>
+     * <p> If you do not specify a node pool ID, the node is added to a default node pool.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public String options;
 
     /**
-     * <p>After you specify the list of RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the RDS instances.</p>
+     * <p>The ApsaraDB RDS instances. If you specify a list of ApsaraDB RDS instances, ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.</p>
      */
     @NameInMap("rds_instances")
     public java.util.List<String> rdsInstances;
