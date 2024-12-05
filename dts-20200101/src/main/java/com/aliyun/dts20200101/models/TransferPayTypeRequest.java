@@ -4,6 +4,16 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class TransferPayTypeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically renew the DTS instance when it expires. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong>: does not automatically renew the DTS instance when it expires. This is the default value.</li>
+     * <li><strong>true</strong>: automatically renews the DTS instance when it expires.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
@@ -24,16 +34,10 @@ public class TransferPayTypeRequest extends TeaModel {
     public String buyCount;
 
     /**
-     * <p>The billing method that you want to use. Valid values:</p>
+     * <p>The new billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: subscription</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
-     * </ul>
-     * <blockquote>
-     * </blockquote>
-     * <ul>
-     * <li>The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.</li>
-     * <li>If you do not need to change the billing method, specify the current billing method.</li>
+     * <li><strong>PrePaid</strong>: subscription.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -53,9 +57,30 @@ public class TransferPayTypeRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    @NameInMap("InstanceClass")
+    public String instanceClass;
+
+    /**
+     * <p>The maximum number of DUs in a serverless instance. Valid values: 2, 4, 8, and 16.</p>
+     * <blockquote>
+     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("MaxDu")
     public Integer maxDu;
 
+    /**
+     * <p>The minimum number of DTS Units (DUs) in a serverless instance. Valid values: 1, 2, 4, 8, and 16.</p>
+     * <blockquote>
+     * <p> This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinDu")
     public Integer minDu;
 
@@ -84,6 +109,12 @@ public class TransferPayTypeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -122,6 +153,14 @@ public class TransferPayTypeRequest extends TeaModel {
     }
     public String getDtsJobId() {
         return this.dtsJobId;
+    }
+
+    public TransferPayTypeRequest setInstanceClass(String instanceClass) {
+        this.instanceClass = instanceClass;
+        return this;
+    }
+    public String getInstanceClass() {
+        return this.instanceClass;
     }
 
     public TransferPayTypeRequest setMaxDu(Integer maxDu) {

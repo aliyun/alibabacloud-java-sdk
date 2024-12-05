@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobNameRequest extends TeaModel {
     /**
-     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * <p>The ID of the DTS task. The DTS task can be a data migration, data synchronization, or change tracking task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,12 +20,15 @@ public class ModifyDtsJobNameRequest extends TeaModel {
      * <p> We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtstest</p>
      */
     @NameInMap("DtsJobName")
     public String dtsJobName;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -33,9 +36,24 @@ public class ModifyDtsJobNameRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource GroupId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzfkjjb5gyy6i</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <ul>
+     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ZeroEtlJob")
     public Boolean zeroEtlJob;
 

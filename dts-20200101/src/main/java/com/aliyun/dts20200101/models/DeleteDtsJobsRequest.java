@@ -29,9 +29,21 @@ public class DeleteDtsJobsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz4us4iruleja</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Is it ZeroETL task</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ZeroEtlJob")
     public Boolean zeroEtlJob;
 

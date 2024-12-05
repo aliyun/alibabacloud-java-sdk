@@ -98,7 +98,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The details of the data verification result.</p>
+     * <p>The details of data verification results.</p>
      */
     @NameInMap("TableDetails")
     public java.util.List<DescribeDataCheckTableDetailsResponseBodyTableDetails> tableDetails;
@@ -233,12 +233,12 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public Long diffCount;
 
         /**
-         * <p>任务运行出错时，返回报错信息的错误编码。</p>
+         * <p>The error code returned if the data verification task failed. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>：无主键表数量超过限制。</li>
-         * <li><strong>2</strong>：差异数据超过300行。</li>
-         * <li><strong>3</strong>：待查询的表不存在。</li>
-         * <li><strong>4</strong>：查询数据的SQL语法错误。</li>
+         * <li><strong>1</strong>: The number of tables that do not contain primary keys exceeds the limit.</li>
+         * <li><strong>2</strong>: The number of data rows that contain inconsistent data exceeds 300.</li>
+         * <li><strong>3</strong>: One or more tables to be verified do not exist.</li>
+         * <li><strong>4</strong>: The SQL statements used for verifying data contain a syntax error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,7 +257,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public Long finishCount;
 
         /**
-         * <p>The auto-increment primary key that is used to identify a data record in a verification result.</p>
+         * <p>The auto-increment primary key that is used to identify the data in a verification result.</p>
          * 
          * <strong>example:</strong>
          * <p>167401241974****</p>
@@ -284,11 +284,11 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public String sourceTbName;
 
         /**
-         * <p>The status of the data verification result. Valid values:</p>
+         * <p>The status of data verification results. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: The data verification task was complete.</li>
-         * <li><strong>2</strong>: The data verification task was initialized.</li>
-         * <li><strong>3</strong>: The data verification task was running.</li>
+         * <li><strong>2</strong>: The data verification task was being initialized.</li>
+         * <li><strong>3</strong>: The data verification task was in progress.</li>
          * <li><strong>5</strong>: The data verification task failed.</li>
          * </ul>
          * 

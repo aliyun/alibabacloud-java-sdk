@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceResponseBody extends TeaModel {
     /**
-     * <p>The billing method of the DTS instance. <strong>PREPAY</strong> is returned, which indicates the subscription billing method.</p>
+     * <p>The billing method of the DTS instance. Only <strong>PREPAY</strong> may be returned, which indicates the subscription billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>PREPAY</p>
@@ -14,9 +14,9 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request failed.</p>
      * <blockquote>
-     * <p> This parameter will be removed in the future.</p>
+     * <p>This parameter will be removed in the future.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,9 +35,9 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the value of <strong>ErrMessage</strong>.</p>
      * <blockquote>
-     * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+     * <p>If the return value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the specified value of <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     /**
      * <p>The time when the DTS instance expires after renewal. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZZZ</em> format. The time is displayed in UTC.</p>
      * <blockquote>
-     * <p> <strong>ZZZ</strong> indicates the offset of the time zone, which is displayed in the format of a plus sign (+) or a minus sign (-) followed by hours and minutes, such as <strong>+00:00</strong>.</p>
+     * <p><strong>ZZZ</strong> indicates the offset of the time zone, which is displayed in the format of a plus sign (+) or a minus sign (-) followed by hours and minutes, such as <strong>+00:00</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the DTS instance.</p>
+     * <p>The ID of the instance</p>
      * 
      * <strong>example:</strong>
      * <p>dtsqi0r643lc31****</p>
@@ -95,7 +95,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1112E255-0C38-4970-8159-1D54AD92****</p>
@@ -106,8 +106,8 @@ public class RenewInstanceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

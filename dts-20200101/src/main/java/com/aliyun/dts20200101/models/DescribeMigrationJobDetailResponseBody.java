@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     /**
-     * <p>The details of full data migration.</p>
+     * <p>The maximum number of data migration instances that can be displayed on one page.</p>
      */
     @NameInMap("DataInitializationDetailList")
     public DescribeMigrationJobDetailResponseBodyDataInitializationDetailList dataInitializationDetailList;
 
     /**
-     * <p>The details of incremental data migration.</p>
+     * <p>The error message returned if full data migration failed.</p>
      */
     @NameInMap("DataSynchronizationDetailList")
     public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList dataSynchronizationDetailList;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>Specifies whether to query the details of incremental data migration. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: yes</p>
+     * </li>
+     * <li><p><strong>false</strong>: no</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>Default value: <strong>false</strong></p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -26,7 +35,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -35,7 +44,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The error code returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +53,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of data migration instances that can be displayed on one page.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -53,7 +62,16 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to query the details of full data migration. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: yes</p>
+     * </li>
+     * <li><p><strong>false</strong>: no</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>Default value: <strong>false</strong></p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0AE3CD0B-4148-426F-A90E-952467CC****</p>
@@ -62,13 +80,13 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of schema migration.</p>
+     * <p>The name of the database to which the migration object in the source instance belongs.</p>
      */
     @NameInMap("StructureInitializationDetailList")
     public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailList structureInitializationDetailList;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +95,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The total number of entries that are returned.</p>
+     * <p>Resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -172,51 +190,6 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
     public static class DescribeMigrationJobDetailResponseBodyDataInitializationDetailListDataInitializationDetail extends TeaModel {
         /**
-         * <p>The name of the database to which the migration object in the destination instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtstestdata</p>
-         */
-        @NameInMap("DestinationOwnerDBName")
-        public String destinationOwnerDBName;
-
-        /**
-         * <p>The error message returned if full data migration failed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
-         */
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        /**
-         * <p>The number of records that have been migrated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200001</p>
-         */
-        @NameInMap("FinishRowNum")
-        public String finishRowNum;
-
-        /**
-         * <p>The time taken by full data migration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.0</p>
-         */
-        @NameInMap("MigrationTime")
-        public String migrationTime;
-
-        /**
-         * <p>The name of the database to which the migration object in the source instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtstestdata</p>
-         */
-        @NameInMap("SourceOwnerDBName")
-        public String sourceOwnerDBName;
-
-        /**
          * <p>The status of full data migration. Valid values:</p>
          * <ul>
          * <li><strong>NotStarted</strong>: Full data migration is not started.</li>
@@ -226,13 +199,58 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
+         * <p>dtstestdata</p>
+         */
+        @NameInMap("DestinationOwnerDBName")
+        public String destinationOwnerDBName;
+
+        /**
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
+         */
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        /**
+         * <p>The details of full data migration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200001</p>
+         */
+        @NameInMap("FinishRowNum")
+        public String finishRowNum;
+
+        /**
+         * <p>The name of the database to which the migration object in the source instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
+        @NameInMap("MigrationTime")
+        public String migrationTime;
+
+        /**
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
+         */
+        @NameInMap("SourceOwnerDBName")
+        public String sourceOwnerDBName;
+
+        /**
+         * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
          * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The table name.</p>
+         * <p>The error message returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>customer</p>
@@ -241,7 +259,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The total number of records that are supposed to be migrated by the task.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>201477</p>
@@ -341,30 +359,6 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
     public static class DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail extends TeaModel {
         /**
-         * <p>The name of the database to which the migration object in the destination instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtstestdata</p>
-         */
-        @NameInMap("DestinationOwnerDBName")
-        public String destinationOwnerDBName;
-
-        /**
-         * <p>The error message returned if incremental data migration failed.</p>
-         */
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        /**
-         * <p>The name of the database to which the migration object in the source instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtstestdata</p>
-         */
-        @NameInMap("SourceOwnerDBName")
-        public String sourceOwnerDBName;
-
-        /**
          * <p>The status of incremental data migration. Valid values:</p>
          * <ul>
          * <li><strong>NotStarted</strong>: Incremental data migration is not started.</li>
@@ -374,13 +368,40 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
+         * <p>dtstestdata</p>
+         */
+        @NameInMap("DestinationOwnerDBName")
+        public String destinationOwnerDBName;
+
+        /**
+         * <p>The total number of records that are supposed to be migrated by the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The details of incremental data migration.</p>
+         */
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        /**
+         * <p>The time taken by full data migration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
+         */
+        @NameInMap("SourceOwnerDBName")
+        public String sourceOwnerDBName;
+
+        /**
+         * <p>The number of records that have been migrated.</p>
+         * 
+         * <strong>example:</strong>
          * <p>Migrating</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the database to which the migration object in the destination instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>customer</p>
@@ -456,7 +477,13 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
     public static class DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintListStructureInitializationDetail extends TeaModel {
         /**
-         * <p>The name of the database to which the migration object in the destination instance belongs.</p>
+         * <p>The status of constraint creation. Valid values:</p>
+         * <ul>
+         * <li><strong>NotStarted</strong></li>
+         * <li><strong>Migrating</strong></li>
+         * <li><strong>Failed</strong></li>
+         * <li><strong>Finished</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -465,7 +492,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         public String destinationOwnerDBName;
 
         /**
-         * <p>The error message returned if constraints failed to be created.</p>
+         * <p>The constraints of the migration object, such as indexes and foreign keys. </p>
+         * <blockquote>
+         * <p> This parameter is returned only if the <strong>ObjectType</strong> parameter is set to <strong>Table</strong> and the migration object has constraints.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist；</p>
@@ -474,7 +504,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The syntax to create constraints.</p>
+         * <p>The name of the database to which the migration object in the destination instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE SEQUENCE &quot;public&quot;.&quot;collections_id_seq&quot;   MINVALUE 1   MAXVALUE 9223372036854775807   START 249   INCREMENT BY 1 ;</p>
@@ -483,7 +513,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         public String objectDefinition;
 
         /**
-         * <p>The name of migration object.</p>
+         * <p>The name of the database to which the migration object in the source instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>customer</p>
@@ -492,7 +522,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         public String objectName;
 
         /**
-         * <p>The type of the migration object. The value is <strong>Table</strong>.</p>
+         * <p>The name of migration object.</p>
          * 
          * <strong>example:</strong>
          * <p>Table</p>
@@ -501,7 +531,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         public String objectType;
 
         /**
-         * <p>The name of the database to which the migration object in the source instance belongs.</p>
+         * <p>The error message returned if schema migration failed.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -510,13 +540,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         public String sourceOwnerDBName;
 
         /**
-         * <p>The status of constraint creation. Valid values:</p>
-         * <ul>
-         * <li><strong>NotStarted</strong></li>
-         * <li><strong>Migrating</strong></li>
-         * <li><strong>Failed</strong></li>
-         * <li><strong>Finished</strong></li>
-         * </ul>
+         * <p>The type of the migration object. Valid values: <strong>Table</strong>, <strong>Constraint</strong>, <strong>Index</strong>, <strong>View</strong>, <strong>Materialize View</strong>, <strong>Type</strong>, <strong>Synonym</strong>, <strong>Trigger</strong>, <strong>Function</strong>, <strong>Procedure</strong>, <strong>Package</strong>, <strong>Default</strong>, <strong>Rule</strong>, <strong>PlanGuide</strong>, and <strong>Sequence</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Finished</p>
@@ -608,67 +632,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
     public static class DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetail extends TeaModel {
         /**
-         * <p>The constraints of the migration object, such as indexes and foreign keys. </p>
-         * <blockquote>
-         * <p> This parameter is returned only if the <strong>ObjectType</strong> parameter is set to <strong>Table</strong> and the migration object has constraints.</p>
-         * </blockquote>
+         * <p>The schema of the migration object.</p>
          */
         @NameInMap("ConstraintList")
         public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintList constraintList;
-
-        /**
-         * <p>The name of the database to which the migration object in the destination instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtstestdata</p>
-         */
-        @NameInMap("DestinationOwnerDBName")
-        public String destinationOwnerDBName;
-
-        /**
-         * <p>The error message returned if schema migration failed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DTS-1020042 Execute sql error sql: DTS-1020042 Execute sql error sql: ERROR: column \&quot;id\&quot; named in key does not exist</p>
-         */
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        /**
-         * <p>The schema of the migration object.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CREATE TABLE <code>dtstestdata</code>.<code>customer</code> (\n<code>runoob_id</code>  int(10) unsigned   auto_increment  COMMENT \&quot;\&quot;   NOT NULL   , \n<code>runoob_title</code>  varchar(100)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NOT NULL   , \n<code>runoob_author1216</code>  varchar(40)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NOT NULL   , \n<code>submission_date1216</code>  date     COMMENT \&quot;\&quot;   NULL   \n, PRIMARY KEY (<code>runoob_id</code>)) engine=InnoDB AUTO_INCREMENT=200001 DEFAULT CHARSET=<code>utf8</code> DEFAULT COLLATE <code>utf8_general_ci</code> ROW_FORMAT= Dynamic comment = \&quot;\&quot; ;\n</p>
-         */
-        @NameInMap("ObjectDefinition")
-        public String objectDefinition;
-
-        /**
-         * <p>The name of migration object.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>customer</p>
-         */
-        @NameInMap("ObjectName")
-        public String objectName;
-
-        /**
-         * <p>The type of the migration object. Valid values: <strong>Table</strong>, <strong>Constraint</strong>, <strong>Index</strong>, <strong>View</strong>, <strong>Materialize View</strong>, <strong>Type</strong>, <strong>Synonym</strong>, <strong>Trigger</strong>, <strong>Function</strong>, <strong>Procedure</strong>, <strong>Package</strong>, <strong>Default</strong>, <strong>Rule</strong>, <strong>PlanGuide</strong>, and <strong>Sequence</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Table</p>
-         */
-        @NameInMap("ObjectType")
-        public String objectType;
-
-        /**
-         * <p>The name of the database to which the migration object in the source instance belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtstestdata</p>
-         */
-        @NameInMap("SourceOwnerDBName")
-        public String sourceOwnerDBName;
 
         /**
          * <p>The status of schema migration. Valid values:</p>
@@ -678,6 +645,60 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
          * <li><strong>Failed</strong>: Schema migration failed.</li>
          * <li><strong>Finished</strong>: Schema migration is completed.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
+         */
+        @NameInMap("DestinationOwnerDBName")
+        public String destinationOwnerDBName;
+
+        /**
+         * <p>The details of schema migration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-1020042 Execute sql error sql: DTS-1020042 Execute sql error sql: ERROR: column \&quot;id\&quot; named in key does not exist</p>
+         */
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        /**
+         * <p>The task has failed for too long and cannot be restored</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE TABLE <code>dtstestdata</code>.<code>customer</code> (\n<code>runoob_id</code>  int(10) unsigned   auto_increment  COMMENT \&quot;\&quot;   NOT NULL   , \n<code>runoob_title</code>  varchar(100)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NOT NULL   , \n<code>runoob_author1216</code>  varchar(40)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NOT NULL   , \n<code>submission_date1216</code>  date     COMMENT \&quot;\&quot;   NULL   \n, PRIMARY KEY (<code>runoob_id</code>)) engine=InnoDB AUTO_INCREMENT=200001 DEFAULT CHARSET=<code>utf8</code> DEFAULT COLLATE <code>utf8_general_ci</code> ROW_FORMAT= Dynamic comment = \&quot;\&quot; ;\n</p>
+         */
+        @NameInMap("ObjectDefinition")
+        public String objectDefinition;
+
+        /**
+         * <p>The name of the database to which the migration object in the source instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
+         */
+        @NameInMap("ObjectName")
+        public String objectName;
+
+        /**
+         * <p>The name of the database to which the migration object in the destination instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Table</p>
+         */
+        @NameInMap("ObjectType")
+        public String objectType;
+
+        /**
+         * <p>The error message returned if incremental data migration failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
+         */
+        @NameInMap("SourceOwnerDBName")
+        public String sourceOwnerDBName;
+
+        /**
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>Finished</p>

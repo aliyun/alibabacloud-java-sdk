@@ -7,8 +7,8 @@ public class RenewInstanceRequest extends TeaModel {
     /**
      * <p>The subscription duration of the DTS instance after renewal. Default value: 1.</p>
      * <ul>
-     * <li>If the <strong>Period</strong> parameter is set to <strong>Year</strong>, the valid values are <strong>1 to 5</strong>.</li>
-     * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the valid values are <strong>1 to 60</strong>.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values are <strong>1 to 5</strong>.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the valid values are <strong>1 to 60</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class RenewInstanceRequest extends TeaModel {
     public String buyCount;
 
     /**
-     * <p>The billing method of the DTS instance. Set the value to <strong>PREPAY</strong>, which indicates the subscription billing method.</p>
+     * <p>The billing method of the DTS instance. Set the value to <strong>PREPAY</strong>, which specifies the subscription billing method.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,8 +40,8 @@ public class RenewInstanceRequest extends TeaModel {
     /**
      * <p>The billing cycle of the DTS instance after renewal. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong>: annual subscription.</li>
-     * <li><strong>Month</strong>: monthly subscription. This is the default value.</li>
+     * <li><strong>Year</strong></li>
+     * <li><strong>Month</strong> (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class RenewInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -59,6 +59,12 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

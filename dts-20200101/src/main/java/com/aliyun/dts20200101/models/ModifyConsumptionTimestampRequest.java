@@ -29,11 +29,17 @@ public class ModifyConsumptionTimestampRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the <strong>DescribeSubscriptionInstances</strong> operation to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

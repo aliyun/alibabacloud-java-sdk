@@ -23,6 +23,12 @@ public class DescribeEtlJobLogsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource GroupId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

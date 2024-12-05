@@ -8,7 +8,7 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
     public DescribeMigrationJobDetailRequestMigrationMode migrationMode;
 
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * <p>The ID of the data migration instance. You can call the <strong>DescribeMigrationJobs</strong> operation to query the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -17,7 +17,7 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -48,7 +48,7 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: 30, 50, and 100. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -57,7 +57,7 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the data migration instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The ID of the region where the data migration instance resides. For more information, see List of supported regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -65,6 +65,21 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to query the details of schema migration. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: yes</p>
+     * </li>
+     * <li><p><strong>false</strong>: no</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>Default value: <strong>false</strong></p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -147,16 +162,7 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
 
     public static class DescribeMigrationJobDetailRequestMigrationMode extends TeaModel {
         /**
-         * <p>Specifies whether to query the details of full data migration. Valid values:</p>
-         * <ul>
-         * <li><p><strong>true</strong>: yes</p>
-         * </li>
-         * <li><p><strong>false</strong>: no</p>
-         * </li>
-         * </ul>
-         * <blockquote>
-         * <p>Default value: <strong>false</strong></p>
-         * </blockquote>
+         * <p>The ID of the region where the data migration instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -165,16 +171,7 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
         public Boolean dataInitialization;
 
         /**
-         * <p>Specifies whether to query the details of incremental data migration. Valid values:</p>
-         * <ul>
-         * <li><p><strong>true</strong>: yes</p>
-         * </li>
-         * <li><p><strong>false</strong>: no</p>
-         * </li>
-         * </ul>
-         * <blockquote>
-         * <p>Default value: <strong>false</strong></p>
-         * </blockquote>
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -183,16 +180,7 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
         public Boolean dataSynchronization;
 
         /**
-         * <p>Specifies whether to query the details of schema migration. Valid values:</p>
-         * <ul>
-         * <li><p><strong>true</strong>: yes</p>
-         * </li>
-         * <li><p><strong>false</strong>: no</p>
-         * </li>
-         * </ul>
-         * <blockquote>
-         * <p>Default value: <strong>false</strong></p>
-         * </blockquote>
+         * <p>When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -23,9 +23,9 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The dynamic part in the error message. The value of this parameter is used to replace the <strong>%s</strong> variable in the value of the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic part in the error message. The value of this parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the value of <strong>ErrMessage</strong>.</p>
      * <blockquote>
-     * <p> For example, if the specified <strong>DtsJobId</strong> parameter is invalid, <strong>The Value of Input Parameter %s is not valid</strong> is returned for <strong>ErrMessage</strong> and <strong>DtsJobId</strong> is returned for <strong>DynamicMessage</strong>.</p>
+     * <p>If the return value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the specified value of <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -62,7 +62,7 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8C498360-7892-433C-847A-BA71A850****</p>
@@ -73,8 +73,8 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

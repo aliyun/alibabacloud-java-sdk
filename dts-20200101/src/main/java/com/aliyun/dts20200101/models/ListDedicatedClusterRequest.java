@@ -72,6 +72,12 @@ public class ListDedicatedClusterRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfntftbiobqyky</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

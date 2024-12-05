@@ -4,16 +4,19 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePreCheckStatusResponseBody extends TeaModel {
+    /**
+     * <p>Display list of evaluation tasks</p>
+     */
     @NameInMap("AnalysisJobProgress")
     public java.util.List<DescribePreCheckStatusResponseBodyAnalysisJobProgress> analysisJobProgress;
 
     /**
-     * <p>The task code that indicates the subtask type. Valid values:</p>
+     * <p>The task code that indicates the type of the subtask. Valid values:</p>
      * <ul>
-     * <li><strong>01</strong>: precheck</li>
-     * <li><strong>02</strong>: schema migration or initial schema synchronization</li>
-     * <li><strong>03</strong>: full data migration or initial full data synchronization</li>
-     * <li><strong>04</strong>: incremental data migration or synchronization</li>
+     * <li><strong>01</strong>: precheck.</li>
+     * <li><strong>02</strong>: schema migration or initial schema synchronization.</li>
+     * <li><strong>03</strong>: full data migration or initial full data synchronization.</li>
+     * <li><strong>04</strong>: incremental data migration or synchronization.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,6 +25,12 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Number of failed evaluation items</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ErrorAnalysisItem")
     public Integer errorAnalysisItem;
 
@@ -34,11 +43,14 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     @NameInMap("ErrorItem")
     public Integer errorItem;
 
+    /**
+     * <p>Network-wide inspection results.</p>
+     */
     @NameInMap("FullNetCheckJobStatus")
     public java.util.List<DescribePreCheckStatusResponseBodyFullNetCheckJobStatus> fullNetCheckJobStatus;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code that is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -57,21 +69,27 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     /**
      * <p>The name of the subtask.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtstest</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
-     * <p>The list of subtasks and the progress of each subtask.</p>
+     * <p>The subtasks and the progress of each subtask.</p>
      */
     @NameInMap("JobProgress")
     public java.util.List<DescribePreCheckStatusResponseBodyJobProgress> jobProgress;
 
+    /**
+     * <p>Network diagnosis result</p>
+     */
     @NameInMap("NetworkDiagnosisResult")
     public DescribePreCheckStatusResponseBodyNetworkDiagnosisResult networkDiagnosisResult;
 
     /**
-     * <p>The number of the page returned. The value is an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -80,7 +98,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -89,7 +107,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public Long pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C096FA97-B6BA-4575-899D-61E12B59****</p>
@@ -116,13 +134,13 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The state of the distributed subtask.</p>
+     * <p>The information about the distributed subtasks.</p>
      */
     @NameInMap("SubDistributedJobStatus")
     public java.util.List<DescribePreCheckStatusResponseBodySubDistributedJobStatus> subDistributedJobStatus;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -140,7 +158,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public Integer total;
 
     /**
-     * <p>The total number of returned records.</p>
+     * <p>The total number of entries that are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -298,15 +316,39 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     }
 
     public static class DescribePreCheckStatusResponseBodyAnalysisJobProgressLogs extends TeaModel {
+        /**
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Please modify this object</p>
+         */
         @NameInMap("ErrData")
         public String errData;
 
+        /**
+         * <p>Error message from DTS when a specific project encounters an error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-1020042 Execute sql error sql: Table \&quot;customer\&quot; already exists</p>
+         */
         @NameInMap("ErrMsg")
         public String errMsg;
 
+        /**
+         * <p>Error type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ForeignKey</p>
+         */
         @NameInMap("ErrType")
         public String errType;
 
+        /**
+         * <p>The level of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR</p>
+         */
         @NameInMap("LogLevel")
         public String logLevel;
 
@@ -350,78 +392,228 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     }
 
     public static class DescribePreCheckStatusResponseBodyAnalysisJobProgress extends TeaModel {
+        /**
+         * <p>The specific project start time, formatted as <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-16T08:01:31.000+00:00</p>
+         */
         @NameInMap("BootTime")
         public String bootTime;
 
+        /**
+         * <p>Whether to support skipping this sub-item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanSkip")
         public Boolean canSkip;
 
+        /**
+         * <p>The number of currently running subtasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Current")
         public String current;
 
+        /**
+         * <p>The DDL operation to be executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE TABLE ****</p>
+         */
         @NameInMap("DdlSql")
         public String ddlSql;
 
+        /**
+         * <p>Task delay time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DelaySeconds")
         public Integer delaySeconds;
 
+        /**
+         * <p>Name of the database to which the migration objects in the target instance belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dest</p>
+         */
         @NameInMap("DestSchema")
         public String destSchema;
 
+        /**
+         * <p>This parameter will be deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DiffRow")
         public Long diffRow;
 
+        /**
+         * <p>Error details when the project encounters an error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANALYSIS_MYSQL</p>
+         */
         @NameInMap("ErrDetail")
         public String errDetail;
 
+        /**
+         * <p>Specific error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANALYSIS_</p>
+         */
         @NameInMap("ErrMsg")
         public String errMsg;
 
+        /**
+         * <p>The end time of the evaluation task, formatted as <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-16T08:01:31.000+00:00</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The ID of this evaluation item in the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Whether to directly ignore this specific item and move to the next one. Return values:</p>
+         * <ul>
+         * <li><strong>N</strong>: No. - <strong>Y</strong>: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("IgnoreFlag")
         public String ignoreFlag;
 
+        /**
+         * <p>Name of the evaluation item</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANALYSIS_MYSQL_4_ITEM</p>
+         */
         @NameInMap("Item")
         public String item;
 
+        /**
+         * <p>The ID of the evaluation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11234234xc</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>Sub-assessment item.</p>
+         */
         @NameInMap("Logs")
         public java.util.List<DescribePreCheckStatusResponseBodyAnalysisJobProgressLogs> logs;
 
+        /**
+         * <p>Name of the evaluation item</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANALYSIS_MYSQL_4_DETAIL</p>
+         */
         @NameInMap("Names")
         public String names;
 
+        /**
+         * <p>The number of the evaluation item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("OrderNum")
         public Integer orderNum;
 
+        /**
+         * <p>This parameter will be deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("ParentObj")
         public String parentObj;
 
+        /**
+         * <p>Remediation method for the evaluation item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANALYSIS_</p>
+         */
         @NameInMap("RepairMethod")
         public String repairMethod;
 
+        /**
+         * <p>If this evaluation item fails, whether you set to skip this item. Return values: * <strong>true</strong>: Yes * <strong>false</strong>: No</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Skip")
         public Boolean skip;
 
+        /**
+         * <p>Name of the database to which the migration objects in the source instance belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
+         */
         @NameInMap("SourceSchema")
         public String sourceSchema;
 
+        /**
+         * <p>The result of the evaluation, with return values being: - <strong>Failed</strong>: Failure. - <strong>Success</strong>: Success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>Progress of sub-projects under a specific project. &gt; If it returns <b>[]</b>, it indicates there are no sub-projects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("Sub")
         public String sub;
 
+        /**
+         * <p>Name of the target object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testTable</p>
+         */
         @NameInMap("TargetNames")
         public String targetNames;
 
+        /**
+         * <p>The total number of specific items in the sub-task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
@@ -633,15 +825,39 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     }
 
     public static class DescribePreCheckStatusResponseBodyFullNetCheckJobStatusJobProgressLogs extends TeaModel {
+        /**
+         * <p>Error record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE TABLE <code>dtstestdata</code>.<code>customer</code> ****</p>
+         */
         @NameInMap("ErrData")
         public String errData;
 
+        /**
+         * <p>Specific error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>get metric list fail</p>
+         */
         @NameInMap("ErrMsg")
         public String errMsg;
 
+        /**
+         * <p>Type of error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ForeignKey</p>
+         */
         @NameInMap("ErrType")
         public String errType;
 
+        /**
+         * <p>The level of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
+         */
         @NameInMap("LogLevel")
         public String logLevel;
 
@@ -685,78 +901,228 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     }
 
     public static class DescribePreCheckStatusResponseBodyFullNetCheckJobStatusJobProgress extends TeaModel {
+        /**
+         * <p>The specific project start time, formatted as <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-30T03:36:11.000+00:00</p>
+         */
         @NameInMap("BootTime")
         public String bootTime;
 
+        /**
+         * <p>Whether DTS supports skipping a project after it fails. Return values: * <strong>true</strong>: Yes * <strong>false</strong>: No</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CanSkip")
         public Boolean canSkip;
 
+        /**
+         * <p>The number of currently running tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Current")
         public String current;
 
+        /**
+         * <p>The DDL operation to be executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE TABLE ****</p>
+         */
         @NameInMap("DdlSql")
         public String ddlSql;
 
+        /**
+         * <p>Task delay time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DelaySeconds")
         public Integer delaySeconds;
 
+        /**
+         * <p>Name of the database to which the migration objects in the target instance belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dest</p>
+         */
         @NameInMap("DestSchema")
         public String destSchema;
 
+        /**
+         * <p>This parameter will be deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DiffRow")
         public Long diffRow;
 
+        /**
+         * <p>Details of the error when a specific project fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK__ERROR_SAME_OBJ_DETAIL</p>
+         */
         @NameInMap("ErrDetail")
         public String errDetail;
 
+        /**
+         * <p>Error message prompt when a specific project encounters an error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS project does not exist odps.`huijin</p>
+         */
         @NameInMap("ErrMsg")
         public String errMsg;
 
+        /**
+         * <p>Task completion time, formatted as yyyy-MM-ddTHH:mm:ssZ (UTC time).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-31T03:36:11.000+00:00</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The ID of the record in the metadata database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>922305811766881****</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Whether to directly ignore this specific item and move to the next one. Return values:</p>
+         * <ul>
+         * <li><strong>N</strong>: No. - <strong>Y</strong>: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("IgnoreFlag")
         public String ignoreFlag;
 
+        /**
+         * <p>Specific project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_SRC</p>
+         */
         @NameInMap("Item")
         public String item;
 
+        /**
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>l3m1213ye7l****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>Error execution log information.</p>
+         */
         @NameInMap("Logs")
         public java.util.List<DescribePreCheckStatusResponseBodyFullNetCheckJobStatusJobProgressLogs> logs;
 
+        /**
+         * <p>Specific project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_SRC_DETAIL</p>
+         */
         @NameInMap("Names")
         public String names;
 
+        /**
+         * <p>Project number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OrderNum")
         public Integer orderNum;
 
+        /**
+         * <p>This parameter will be deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("ParentObj")
         public String parentObj;
 
+        /**
+         * <p>The corresponding remediation method when the pre-check fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK__ERROR_SAME_OBJ_REPAIR</p>
+         */
         @NameInMap("RepairMethod")
         public String repairMethod;
 
+        /**
+         * <p>After this specific item fails, do you set to skip this item. Return values: * <strong>true</strong>: Yes * <strong>false</strong>: No</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Skip")
         public Boolean skip;
 
+        /**
+         * <p>Name of the database to which the migration objects in the source instance belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
+         */
         @NameInMap("SourceSchema")
         public String sourceSchema;
 
+        /**
+         * <p>Check result, the return value is: - <strong>Failed</strong>: Failure. - <strong>Success</strong>: Completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>Progress of sub-projects under a specific project. &gt; If it returns <b>[]</b>, it indicates there are no sub-projects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("Sub")
         public String sub;
 
+        /**
+         * <p>Name of the target object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order</p>
+         */
         @NameInMap("TargetNames")
         public String targetNames;
 
+        /**
+         * <p>The total number of projects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
@@ -968,45 +1334,126 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     }
 
     public static class DescribePreCheckStatusResponseBodyFullNetCheckJobStatus extends TeaModel {
+        /**
+         * <p>Task code, <strong>01</strong> represents pre-check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>ID of the region to which the target network segment belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("DestRegion")
         public String destRegion;
 
+        /**
+         * <p>Destination network segment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XX.XXX/XX</p>
+         */
         @NameInMap("DestRegionCidr")
         public String destRegionCidr;
 
+        /**
+         * <p>The access method of the target instance, with return values as follows: - <strong>ALIYUN</strong>: Access method is <strong>cloud instance</strong>. - <strong>OTHER</strong>: Access method is <strong>public IP</strong>. - <strong>ECS</strong>: Access method is <strong>ECS self-built database</strong>. - <strong>EXPRESS</strong>: Access method is <strong>Express Connect / VPN Gateway / Smart Gateway</strong>. - <strong>CEN</strong>: Access method is <strong>Cloud Enterprise Network (CEN)</strong>. - <strong>DG</strong>: Access method is <strong>Database Gateway (DG)</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEN</p>
+         */
         @NameInMap("DestinationEndpointType")
         public String destinationEndpointType;
 
+        /**
+         * <p>Number of pre-check failed items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ErrorItem")
         public Integer errorItem;
 
+        /**
+         * <p>The region ID of the instance\&quot;s running node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("HostRegion")
         public String hostRegion;
 
+        /**
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>l3m1213ye7l****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>Task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts.step.fullnetcheck</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <p>A list of specific items for the task and their execution progress.</p>
+         */
         @NameInMap("JobProgress")
         public java.util.List<DescribePreCheckStatusResponseBodyFullNetCheckJobStatusJobProgress> jobProgress;
 
+        /**
+         * <p>The access method of the source instance, with return values as follows: - <strong>ALIYUN</strong>: Access method is <strong>cloud instance</strong>. - <strong>OTHER</strong>: Access method is <strong>public IP</strong>. - <strong>ECS</strong>: Access method is <strong>ECS self-built database</strong>. - <strong>EXPRESS</strong>: Access method is <strong>dedicated line/VPN gateway/smart gateway</strong>. - <strong>CEN</strong>: Access method is <strong>Cloud Enterprise Network CEN</strong>. - <strong>DG</strong>: Access method is <strong>Database Gateway DG</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEN</p>
+         */
         @NameInMap("SourceEndpointType")
         public String sourceEndpointType;
 
+        /**
+         * <p>ID of the region to which the source network segment belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("SrcRegion")
         public String srcRegion;
 
+        /**
+         * <p>Source network segment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XX.XXX/XX</p>
+         */
         @NameInMap("SrcRegionCidr")
         public String srcRegionCidr;
 
+        /**
+         * <p>Check result, the return value is: - <strong>Failed</strong>: Failure. - <strong>Success</strong>: Completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>Total number of items in the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
@@ -1140,7 +1587,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String errData;
 
         /**
-         * <p>The error message returned when an error occurs on the subtask.</p>
+         * <p>The error message that is returned when an error occurs on the subtask.</p>
          * 
          * <strong>example:</strong>
          * <p>DTS-1020042 Execute sql error sql: Table \&quot;customer\&quot; already exists</p>
@@ -1245,7 +1692,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>The latency of incremental data migration or synchronization.</p>
          * <blockquote>
-         * <p> For data migration tasks, the unit of this parameter is milliseconds. For data synchronization tasks, the unit of this parameter is seconds.</p>
+         * <p>If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1300,7 +1747,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The ID recorded in the metadatabase.</p>
+         * <p>The ID of the entry in the metadatabase.</p>
          * 
          * <strong>example:</strong>
          * <p>5632</p>
@@ -1311,8 +1758,8 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>Indicates whether DTS ignores the subtask and proceeds with the next subtask. Valid values:</p>
          * <ul>
-         * <li><strong>N</strong>: no</li>
-         * <li><strong>Y</strong>: yes</li>
+         * <li><strong>N</strong>: no.</li>
+         * <li><strong>Y</strong>: yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1331,7 +1778,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String item;
 
         /**
-         * <p>The ID of the subtask.</p>
+         * <p>The subtask ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fj1c33ro168****</p>
@@ -1384,8 +1831,8 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the subtask is ignored if it fails. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1423,7 +1870,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>The sub-item progress of the subtask.</p>
          * <blockquote>
-         * <p> If <strong>[]</strong> is returned, the subtask has no sub-items.</p>
+         * <p>If \<em>\</em>[]\<em>\</em> is returned, the subtask has no sub-items.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1442,7 +1889,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String targetNames;
 
         /**
-         * <p>The total number of subtasks.</p>
+         * <p>The total number of sub-items of the subtask.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1658,18 +2105,48 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     }
 
     public static class DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis extends TeaModel {
+        /**
+         * <p>Document address for China region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://<em><strong>.ali</strong></em>.com/document_detail/470447.html</p>
+         */
         @NameInMap("CnDocUrl")
         public String cnDocUrl;
 
+        /**
+         * <p>Diagnostic code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts.kunlun.diagnosis.network.express_doc</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Access point, the return values are: - <strong>source</strong>: source end. - <strong>destination</strong>: destination end. - <strong>unknown</strong>: unknown.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>Overseas region document address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.ali***.com/help/en/data-transmission-service/latest/how-to-solve-an-error-when-accessing-a-database-instance-to-dts-using-vpn">https://www.ali***.com/help/en/data-transmission-service/latest/how-to-solve-an-error-when-accessing-a-database-instance-to-dts-using-vpn</a></p>
+         */
         @NameInMap("InternationalDocUrl")
         public String internationalDocUrl;
 
+        /**
+         * <p>Reserved field for diagnostic results, default is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("Result")
         public String result;
 
@@ -1721,9 +2198,18 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     }
 
     public static class DescribePreCheckStatusResponseBodyNetworkDiagnosisResult extends TeaModel {
+        /**
+         * <p>Network diagnostic report</p>
+         */
         @NameInMap("Diagnosis")
         public java.util.List<DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis> diagnosis;
 
+        /**
+         * <p>Diagnose model version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>network-v0.2</p>
+         */
         @NameInMap("ModelVersion")
         public String modelVersion;
 
@@ -1839,8 +2325,8 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the subtask can be ignored if it fails. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1913,7 +2399,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String errMsg;
 
         /**
-         * <p>The time when the instance was created. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
+         * <p>The time when the subtask was complete. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-31T03:36:11.000+00:00</p>
@@ -1933,8 +2419,8 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>Indicates whether DTS ignores the subtask and proceeds with the next subtask. Valid values:</p>
          * <ul>
-         * <li><strong>N</strong>: no</li>
-         * <li><strong>Y</strong>: yes</li>
+         * <li><strong>N</strong>: no.</li>
+         * <li><strong>Y</strong>: yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1953,7 +2439,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String item;
 
         /**
-         * <p>The ID of the subtask.</p>
+         * <p>The subtask ID.</p>
          * 
          * <strong>example:</strong>
          * <p>l3m1213ye7l****</p>
@@ -1995,7 +2481,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String parentObj;
 
         /**
-         * <p>The method used to fix a precheck failure.</p>
+         * <p>The method to fix a precheck failure.</p>
          * 
          * <strong>example:</strong>
          * <p>CHECK__ERROR_SAME_OBJ_REPAIR</p>
@@ -2004,10 +2490,10 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String repairMethod;
 
         /**
-         * <p>Indicates whether the subtask was skipped. Valid values:</p>
+         * <p>Indicates whether the subtask was ignored. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2046,7 +2532,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>The sub-item progress of the subtask.</p>
          * <blockquote>
-         * <p> If <strong>[]</strong> is returned, the subtask has no sub-items.</p>
+         * <p>If \<em>\</em>[]\<em>\</em> is returned, the subtask has no sub-item.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2282,12 +2768,12 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     public static class DescribePreCheckStatusResponseBodySubDistributedJobStatus extends TeaModel {
         /**
-         * <p>The task code that indicates the subtask type. Valid values:</p>
+         * <p>The task code that indicates the type of the subtask. Valid values:</p>
          * <ul>
-         * <li><strong>01</strong>: precheck</li>
-         * <li><strong>02</strong>: schema migration or initial schema synchronization</li>
-         * <li><strong>03</strong>: full data migration or initial full data synchronization</li>
-         * <li><strong>04</strong>: incremental data migration or synchronization</li>
+         * <li><strong>01</strong>: precheck.</li>
+         * <li><strong>02</strong>: schema migration or initial schema synchronization.</li>
+         * <li><strong>03</strong>: full data migration or initial full data synchronization.</li>
+         * <li><strong>04</strong>: incremental data migration or synchronization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2306,7 +2792,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Integer errorItem;
 
         /**
-         * <p>The ID of the subtask.</p>
+         * <p>The subtask ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n0gm1682j6563np</p>
@@ -2324,7 +2810,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>The list of subtasks and the progress of each subtask.</p>
+         * <p>The subtasks and the progress of each subtask.</p>
          */
         @NameInMap("JobProgress")
         public java.util.List<DescribePreCheckStatusResponseBodySubDistributedJobStatusJobProgress> jobProgress;
@@ -2348,7 +2834,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries that are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>

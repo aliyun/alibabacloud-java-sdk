@@ -16,6 +16,9 @@ public class CreateConsumerGroupRequest extends TeaModel {
     /**
      * <p>The name of the consumer group. The name cannot exceed 128 characters in length. We recommend that you use an informative name for easy identification.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试订阅组</p>
      */
     @NameInMap("ConsumerGroupName")
     public String consumerGroupName;
@@ -51,9 +54,21 @@ public class CreateConsumerGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

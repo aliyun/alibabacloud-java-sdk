@@ -147,6 +147,9 @@ public class DescribeSubscriptionInstanceStatusResponseBody extends TeaModel {
 
     /**
      * <p>The name of the change tracking instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtstest</p>
      */
     @NameInMap("SubscriptionInstanceName")
     public String subscriptionInstanceName;

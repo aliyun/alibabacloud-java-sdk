@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigureSubscriptionInstanceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -14,7 +14,7 @@ public class ConfigureSubscriptionInstanceResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>

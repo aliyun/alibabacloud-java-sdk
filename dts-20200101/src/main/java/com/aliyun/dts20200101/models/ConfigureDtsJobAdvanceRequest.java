@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     /**
-     * <p>The type of the task. Valid values:</p>
-     * <ul>
-     * <li><strong>MIGRATION</strong>: data migration task</li>
-     * <li><strong>SYNC</strong>: data synchronization task</li>
-     * </ul>
+     * <p>The start offset of incremental data migration or incremental data synchronization. The value is a UNIX timestamp. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1610540493</p>
@@ -18,16 +14,23 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String checkpoint;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The parameters for data verification, including the configurations for data verification and alerts. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/459023.html">DataCheckConfigure parameter description</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;fullCheckModel&quot;:1,&quot;fullCheckRatio&quot;:20,&quot;checkMaximumHourEnable&quot;:1,&quot;checkMaximumHour&quot;:1,&quot;fullCheckErrorNotice&quot;:true,&quot;fullCheckValidFailNotice&quot;:true,&quot;fullCheckNoticeValue&quot;:8,&quot;incrementalCheckErrorNotice&quot;:true,&quot;incrementalCheckValidFailNotice&quot;:true,&quot;incrementalCheckValidFailNoticeTimes&quot;:2,&quot;incrementalCheckValidFailNoticePeriod&quot;:1,&quot;incrementalCheckValidFailNoticeValue&quot;:1,&quot;incrementalCheckDelayNotice&quot;:true,&quot;incrementalCheckDelayNoticeTimes&quot;:2,&quot;incrementalCheckDelayNoticePeriod&quot;:1,&quot;incrementalCheckDelayNoticeValue&quot;:60,&quot;fullDataCheck&quot;:true,&quot;incrementalDataCheck&quot;:true,&quot;dataCheckNoticePhone&quot;:&quot;13126800****&quot;,&quot;dataCheckDbList&quot;:&quot;{&quot;dts&quot;:{&quot;name&quot;:&quot;dts&quot;,&quot;all&quot;:true}}&quot;}</p>
+     * <p>{&quot;fullCheckModel&quot;:1,&quot;fullCheckRatio&quot;:20,&quot;checkMaximumHourEnable&quot;:1,&quot;checkMaximumHour&quot;:1,&quot;fullCheckErrorNotice&quot;:true,&quot;fullCheckValidFailNotice&quot;:true,&quot;fullCheckNoticeValue&quot;:8,&quot;incrementalCheckErrorNotice&quot;:true,&quot;incrementalCheckValidFailNotice&quot;:true,&quot;incrementalCheckValidFailNoticeTimes&quot;:2,&quot;incrementalCheckValidFailNoticePeriod&quot;:1,&quot;incrementalCheckValidFailNoticeValue&quot;:1,&quot;incrementalCheckDelayNotice&quot;:true,&quot;incrementalCheckDelayNoticeTimes&quot;:2,&quot;incrementalCheckDelayNoticePeriod&quot;:1,&quot;incrementalCheckDelayNoticeValue&quot;:60,&quot;fullDataCheck&quot;:true,&quot;incrementalDataCheck&quot;:true,&quot;dataCheckNoticePhone&quot;:&quot;13126800****&quot;,&quot;dataCheckDbList&quot;:{&quot;dts&quot;:{&quot;name&quot;:&quot;dts&quot;,&quot;all&quot;:true}}}</p>
      */
     @NameInMap("DataCheckConfigure")
     public String dataCheckConfigure;
 
     /**
-     * <p>The objects that you want to migrate or synchronize. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
+     * <p>Specifies whether to perform full data migration or full data synchronization. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong> (default)</li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>If <strong>JobType</strong> is set to <strong>CHECK</strong>, set this parameter to <strong>false</strong>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +40,14 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public Boolean dataInitialization;
 
     /**
-     * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to add more configurations of the source or destination instance to the DTS task. For example, you can specify the data storage format of the destination Kafka database and the ID of the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve</a>.</p>
+     * <p>Specifies whether to perform incremental data migration or incremental data synchronization. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>If <strong>JobType</strong> is set to <strong>CHECK</strong>, set this parameter to <strong>false</strong>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +57,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public Boolean dataSynchronization;
 
     /**
-     * <p>The start offset of incremental data migration or synchronization. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The objects that you want to migrate or synchronize. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;dtstest&quot;:{&quot;name&quot;:&quot;dtstest&quot;,&quot;all&quot;:true}}</p>
@@ -56,7 +66,10 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String dbList;
 
     /**
-     * <p>The data verification task for a data migration or synchronization instance. The value is a JSON string that indicates parameter limits or alert configurations. For more information, see <a href="https://help.aliyun.com/document_detail/459023.html">DataCheckConfigure</a>.</p>
+     * <p>The ID of the DTS dedicated cluster on which the task runs.</p>
+     * <blockquote>
+     * <p>If this parameter is specified, the task is scheduled to the specified DTS dedicated cluster.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>dtscluster_atyl3b5214uk***</p>
@@ -65,10 +78,10 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String dedicatedClusterId;
 
     /**
-     * <p>Specifies whether to monitor the task status. Valid values:</p>
+     * <p>Specifies whether to monitor task latency. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: monitors the task status.</li>
-     * <li><strong>false</strong>: does not monitor the task status.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,10 +91,12 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public Boolean delayNotice;
 
     /**
-     * <p>Specifies whether to monitor the task latency. Valid values:</p>
+     * <p>The mobile phone numbers to which latency-related alerts are sent. Separate multiple mobile phone numbers with commas (,).</p>
+     * <blockquote>
+     * </blockquote>
      * <ul>
-     * <li><strong>true</strong>: monitors the task latency.</li>
-     * <li><strong>false</strong>: does not monitor the task latency.</li>
+     * <li>This parameter is available only for users of the China site (aliyun.com). Only mobile phone numbers in the Chinese mainland are supported. You can specify up to 10 mobile phone numbers.</li>
+     * <li>Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phone numbers, but can configure alert rules for DTS tasks in the CloudMonitor console. For more information, see <a href="https://help.aliyun.com/document_detail/175876.html">Configure alert rules for DTS tasks in the CloudMonitor console</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,13 +106,10 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String delayPhone;
 
     /**
-     * <p>The mobile numbers that receive status-related alerts. Separate multiple mobile numbers with commas (,).</p>
+     * <p>The threshold for latency alerts. Unit: seconds. The value must be an integer. You can set the threshold based on your business requirements. To prevent unstable latency caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds.</p>
      * <blockquote>
+     * <p>If <strong>DelayNotice</strong> is set to <strong>true</strong>, this parameter is required.</p>
      * </blockquote>
-     * <ul>
-     * <li>This parameter is available only for China site (aliyun.com) users. Only mobile numbers in the Chinese mainland are supported. Up to 10 mobile numbers can be specified.</li>
-     * <li>International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">set alert rules for DTS tasks in the CloudMonitor console</a>.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -105,26 +117,92 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("DelayRuleTime")
     public Long delayRuleTime;
 
+    /**
+     * <p>The path of the CA certificate that is used if the connection to the destination database is encrypted by using SSL.</p>
+     * <blockquote>
+     * <p>This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("DestCaCertificateOssUrl")
     public String destCaCertificateOssUrl;
 
+    /**
+     * <p>The key of the CA certificate that is used if the connection to the destination database is encrypted by using SSL.</p>
+     * <blockquote>
+     * <p>This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("DestCaCertificatePassword")
     public String destCaCertificatePassword;
 
+    /**
+     * <p>The path to the client certificate that is used if the connection to the destination database is encrypted by using SSL.</p>
+     * <blockquote>
+     * <p>This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("DestClientCertOssUrl")
     public String destClientCertOssUrl;
 
+    /**
+     * <p>The path to the private key of the client certificate that is used if the connection to the destination database is encrypted by using SSL.</p>
+     * <blockquote>
+     * <p>This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("DestClientKeyOssUrl")
     public String destClientKeyOssUrl;
 
+    /**
+     * <p>The password of the private key of the client certificate that is used if the connection to the destination database is encrypted by using SSL.</p>
+     * <blockquote>
+     * <p>This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("DestClientPassword")
     public String destClientPassword;
 
     /**
-     * <p>The password of the destination database account.</p>
+     * <p>VPCNAT destination main VSW</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
+    @NameInMap("DestPrimaryVswId")
+    public String destPrimaryVswId;
+
+    /**
+     * <p>VPCNAT destination backup VSW</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
+    @NameInMap("DestSecondaryVswId")
+    public String destSecondaryVswId;
+
+    /**
+     * <p>The name of the database to which the objects are migrated or synchronized in the destination instance.</p>
      * <blockquote>
-     * <p> If the destination database is a MaxCompute project, you must specify the AccessKey secret of your Alibaba Cloud account. For information about how to obtain your AccessKey pair, see <a href="https://help.aliyun.com/document_detail/116401.html">Create an AccessKey pair</a>.</p>
      * </blockquote>
+     * <ul>
+     * <li>This parameter is valid and required only if the destination database is a PolarDB for PostgreSQL (Compatible with Oracle) cluster, an AnalyticDB for PostgreSQL instance, a PostgreSQL database, a MaxCompute project, or a MongoDB database.</li>
+     * <li>If the destination instance is a MaxCompute project, you must specify the MaxCompute project ID.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>dtstestdata</p>
@@ -133,36 +211,66 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String destinationEndpointDataBaseName;
 
     /**
-     * <p>The IP address of the destination instance.</p>
+     * <p>The type of the destination database. Valid values:</p>
+     * <ul>
+     * <li><strong>MYSQL</strong>: ApsaraDB RDS for MySQL instance or self-managed MySQL database.</li>
+     * <li><strong>MARIADB</strong>: ApsaraDB RDS for MariaDB instance.</li>
+     * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster.</li>
+     * <li><strong>POLARDB_O</strong>: PolarDB for PostgreSQL (Compatible with Oracle) cluster.</li>
+     * <li><strong>POLARDBX10</strong>: PolarDB-X 1.0 instance (formerly DRDS).</li>
+     * <li><strong>POLARDBX20</strong>: PolarDB-X 2.0 instance.</li>
+     * <li><strong>ORACLE</strong>: self-managed Oracle database.</li>
+     * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL instance or self-managed PostgreSQL database.</li>
+     * <li><strong>MSSQL</strong>: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database.</li>
+     * <li><strong>ADS</strong>: AnalyticDB for MySQL V2.0 cluster.</li>
+     * <li><strong>ADB30</strong>: AnalyticDB for MySQL V3.0 cluster.</li>
+     * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB instance or self-managed MongoDB database.</li>
+     * <li><strong>GREENPLUM</strong>: AnalyticDB for PostgreSQL instance.</li>
+     * <li><strong>KAFKA</strong>: ApsaraMQ for Kafka instance or self-managed Kafka cluster.</li>
+     * <li><strong>DATAHUB</strong>: DataHub project.</li>
+     * <li><strong>DB2</strong>: self-managed Db2 for LUW database.</li>
+     * <li><strong>AS400</strong>: Db2 for i database.</li>
+     * <li><strong>ODPS</strong>: MaxCompute project.</li>
+     * <li><strong>Tablestore</strong>: Tablestore instance.</li>
+     * <li><strong>ELK</strong>: Elasticsearch cluster.</li>
+     * <li><strong>REDIS</strong>: ApsaraDB for Redis instance or self-managed Redis database.</li>
+     * </ul>
      * <blockquote>
-     * <p> If the <strong>DestinationEndpointInstanceType</strong> parameter is set to <strong>OTHER</strong>, <strong>EXPRESS</strong>, <strong>DG</strong>, or <strong>CEN</strong>, this parameter is available and required.</p>
      * </blockquote>
+     * <ul>
+     * <li>Default value: <strong>MYSQL</strong>.</li>
+     * <li>If this parameter is set to <strong>KAFKA</strong>, <strong>MONGODB</strong>, or <strong>PolarDB</strong>, you must also specify the database information in Reserve. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve parameter</a>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>MySQL</p>
+     * <p>MYSQL</p>
      */
     @NameInMap("DestinationEndpointEngineName")
     public String destinationEndpointEngineName;
 
     /**
-     * <p>The name of the database to which the objects migrated to the destination instance belong.</p>
+     * <p>The IP address of the destination instance.</p>
      * <blockquote>
+     * <p>This parameter is valid and required only if <strong>DestinationEndpointInstanceType</strong> is set to <strong>OTHER</strong>, <strong>EXPRESS</strong>, <strong>DG</strong>, or <strong>CEN</strong>.</p>
      * </blockquote>
-     * <ul>
-     * <li>If the destination instance is a PolarDB for Oracle cluster, an AnalyticDB for PostgreSQL instance, a PostgreSQL database, a MaxCompute project, or a MongoDB database, this parameter is available and required.</li>
-     * <li>If the destination instance is a MaxCompute project, you must specify the ID of the MaxCompute project.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>172.16.**.***</p>
+     * <p><code>172.16.**.**</code>*</p>
      */
     @NameInMap("DestinationEndpointIP")
     public String destinationEndpointIP;
 
     /**
-     * <p>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The destination instance ID.</p>
+     * <p>If the destination instance is an Alibaba Cloud database instance, you must specify the database instance ID. For example, if the destination instance is an ApsaraDB RDS for MySQL instance, you must specify the ID of the ApsaraDB RDS for MySQL instance.</p>
+     * <p>If the destination instance is a self-managed database, the value of this parameter varies with the value of <strong>DestinationEndpointInstanceType</strong>.****</p>
+     * <ul>
+     * <li>If DestinationEndpointInstanceType is set to <strong>ECS</strong>, you must specify the ECS instance ID.</li>
+     * <li>If DestinationEndpointInstanceType is set to <strong>DG</strong>, you must specify the database gateway ID.</li>
+     * <li>If DestinationEndpointInstanceType is set to <strong>EXPRESS</strong> or <strong>CEN</strong>, you must specify the ID of the VPC that is connected to the source instance.</li>
+     * </ul>
      * <blockquote>
-     * <p> If the destination instance is an Alibaba Cloud database instance, this parameter is required.</p>
+     * <p>If DestinationEndpointInstanceType is set to <strong>CEN</strong>, you must also specify the ID of the CEN instance in Reserve. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve parameter</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -172,35 +280,37 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String destinationEndpointInstanceID;
 
     /**
-     * <p>The database engine of the destination instance. Valid values:</p>
+     * <p>The type of the destination instance. Valid values:</p>
+     * <p><strong>Alibaba Cloud database instance</strong></p>
      * <ul>
-     * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</li>
-     * <li><strong>MARIADB</strong>: ApsaraDB RDS for MariaDB instance</li>
-     * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster</li>
-     * <li><strong>POLARDB_O</strong>: PolarDB for Oracle cluster</li>
-     * <li><strong>POLARDBX10</strong>: PolarDB-X 1.0 instance</li>
-     * <li><strong>POLARDBX20</strong>: PolarDB-X 2.0 instance</li>
-     * <li><strong>ORACLE</strong>: self-managed Oracle database</li>
-     * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL instance or self-managed PostgreSQL database</li>
-     * <li><strong>MSSQL</strong>: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database</li>
-     * <li><strong>ADS</strong>: AnalyticDB for MySQL V2.0 cluster</li>
-     * <li><strong>ADB30</strong>: AnalyticDB for MySQL V3.0 cluster</li>
-     * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB instance or self-managed MongoDB database</li>
-     * <li><strong>GREENPLUM</strong>: AnalyticDB for PostgreSQL instance</li>
-     * <li><strong>KAFKA</strong>: Message Queue for Apache Kafka instance or self-managed Kafka cluster</li>
-     * <li><strong>DATAHUB</strong>: DataHub project</li>
-     * <li><strong>DB2</strong>: self-managed Db2 for LUW database</li>
-     * <li><strong>AS400</strong>: self-managed Db2 for i database</li>
-     * <li><strong>ODPS</strong>: MaxCompute project</li>
-     * <li><strong>Tablestore</strong>: Tablestore instance</li>
-     * <li><strong>ELK</strong>: Elasticsearch cluster</li>
-     * <li><strong>REDIS</strong>: ApsaraDB for Redis instance or self-managed Redis database</li>
+     * <li><strong>RDS</strong>: ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, ApsaraDB RDS for PostgreSQL instance, or ApsaraDB RDS for MariaDB instance.</li>
+     * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster.</li>
+     * <li><strong>DISTRIBUTED_POLARDBX10</strong>: PolarDB-X 1.0 instance (formerly DRDS).</li>
+     * <li><strong>POLARDBX20</strong>: PolarDB-X 2.0 instance.</li>
+     * <li><strong>REDIS</strong>: ApsaraDB for Redis instance.</li>
+     * <li><strong>ADS</strong>: AnalyticDB for MySQL V2.0 cluster or AnalyticDB for MySQL V3.0 cluster.</li>
+     * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB instance.</li>
+     * <li><strong>GREENPLUM</strong>: AnalyticDB for PostgreSQL instance.</li>
+     * <li><strong>DATAHUB</strong>: DataHub project.</li>
+     * <li><strong>ELK</strong>: Elasticsearch cluster.</li>
+     * <li><strong>Tablestore</strong>: Tablestore instance.</li>
+     * <li><strong>ODPS</strong>: MaxCompute project.</li>
+     * </ul>
+     * <p><strong>Self-managed database</strong></p>
+     * <ul>
+     * <li><strong>OTHER</strong>: self-managed database with a public IP address.</li>
+     * <li><strong>ECS</strong>: self-managed database hosted on an ECS instance.</li>
+     * <li><strong>EXPRESS</strong>: self-managed database connected over Express Connect.</li>
+     * <li><strong>CEN</strong>: self-managed database connected over Cloud Enterprise Network (CEN).</li>
+     * <li><strong>DG</strong>: self-managed database connected over Database Gateway.</li>
      * </ul>
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li>Default value: <strong>MYSQL</strong>.</li>
-     * <li>If the DestinationEndpointEngineName parameter is set to <strong>KAFKA</strong>, <strong>MONGODB</strong>, or <strong>PolarDB</strong>, you must also specify the database information in the Reserve parameter. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve</a>.</li>
+     * <li>If the destination instance is a PolarDB for PostgreSQL (Compatible with Oracle) cluster, you must connect the cluster to DTS as a self-managed database by using a public IP address or Express Connect and set this parameter to <strong>OTHER</strong> or <strong>EXPRESS</strong>.</li>
+     * <li>If the destination instance is an ApsaraMQ for Kafka instance, you must connect the instance to DTS as a self-managed database by using ECS or Express Connect and set this parameter to <strong>ECS</strong> or <strong>EXPRESS</strong>.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/176064.html">Supported source and destination databases</a>.</li>
+     * <li>If the destination instance is a self-managed database, you must deploy the network environment for the database. For more information, see <a href="https://help.aliyun.com/document_detail/146958.html">Preparation overview</a>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -211,9 +321,9 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String destinationEndpointInstanceType;
 
     /**
-     * <p>The ID of the data migration or synchronization task.</p>
+     * <p>The SID of the Oracle database.</p>
      * <blockquote>
-     * <p> You must specify at least one of the DtsJobId and <strong>DtsInstanceId</strong> parameters. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+     * <p>This parameter is valid and required only if <strong>DestinationEndpointEngineName</strong> is set to <strong>ORACLE</strong> and the <strong>Oracle</strong> database is deployed in a non-RAC architecture.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -222,15 +332,26 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("DestinationEndpointOracleSID")
     public String destinationEndpointOracleSID;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the destination ApsaraDB RDS for MySQL instance belongs.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>This parameter is available only if the destination instance is an ApsaraDB RDS for MySQL instance.</li>
+     * <li>You can specify this parameter to migrate or synchronize data across different Alibaba Cloud accounts. In this case, you must specify <strong>DestinationEndpointRole</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>140692647406****</p>
+     */
     @NameInMap("DestinationEndpointOwnerID")
     public String destinationEndpointOwnerID;
 
     /**
-     * <p>Specifies whether to perform full data migration or synchronization. Default value: true. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: performs full data migration or synchronization.</li>
-     * <li><strong>false</strong>: does not perform full data migration or synchronization.</li>
-     * </ul>
+     * <p>The password of the account that is used to log on to the destination database.</p>
+     * <blockquote>
+     * <p>If the destination database is a MaxCompute project, you must specify the AccessKey secret of your Alibaba Cloud account. For information about how to obtain an AccessKey pair, see <a href="https://help.aliyun.com/document_detail/116401.html">Create an AccessKey pair</a>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Test123456</p>
@@ -239,14 +360,10 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String destinationEndpointPassword;
 
     /**
-     * <p>The database account of the destination database.</p>
+     * <p>The port number of the destination instance.</p>
      * <blockquote>
+     * <p>This parameter is valid and required only if the destination instance is a self-managed database.</p>
      * </blockquote>
-     * <ul>
-     * <li>In most cases, this parameter is required.</li>
-     * <li>The permissions that are required for the database account vary with the migration or synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/175878.html">Prepare the database accounts for data migration</a> or <a href="https://help.aliyun.com/document_detail/213152.html">Prepare the database accounts for data synchronization</a>.</li>
-     * <li>If the destination database is a MaxCompute project, you must specify the AccessKey ID of your Alibaba Cloud account. For information about how to obtain your AccessKey pair, see <a href="https://help.aliyun.com/document_detail/116401.html">Create an AccessKey pair</a>.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>3306</p>
@@ -255,9 +372,9 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String destinationEndpointPort;
 
     /**
-     * <p>The database service port of the destination instance.</p>
+     * <p>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <blockquote>
-     * <p> If the destination instance is a self-managed database, this parameter is available and required.</p>
+     * <p>If the destination instance is an Alibaba Cloud database instance, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -266,14 +383,26 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("DestinationEndpointRegion")
     public String destinationEndpointRegion;
 
+    /**
+     * <p>The name of the RAM role configured for the Alibaba Cloud account to which the destination instance belongs.</p>
+     * <blockquote>
+     * <p>This parameter is required if you migrate or synchronize data across Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account DTS tasks</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ram-for-dts</p>
+     */
     @NameInMap("DestinationEndpointRole")
     public String destinationEndpointRole;
 
     /**
-     * <p>Specifies whether to perform schema migration or synchronization. Default value: true. Valid values:</p>
+     * <p>The username of the account that is used to log on to the destination database.</p>
+     * <blockquote>
+     * </blockquote>
      * <ul>
-     * <li><strong>true</strong>: performs schema migration or synchronization.</li>
-     * <li><strong>false</strong>: does not perform schema migration or synchronization.</li>
+     * <li>In most cases, this parameter is required.</li>
+     * <li>The permissions that are required for the database account vary with the migration or synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/175878.html">Prepare the database accounts for data migration</a> or <a href="https://help.aliyun.com/document_detail/213152.html">Prepare the database accounts for data synchronization</a>.</li>
+     * <li>If the destination database is a MaxCompute project, you must specify the AccessKey ID of your Alibaba Cloud account. For information about how to obtain an AccessKey pair, see <a href="https://help.aliyun.com/document_detail/116401.html">Create an AccessKey pair</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -283,7 +412,11 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String destinationEndpointUserName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether the instance is a disaster recovery instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -291,13 +424,23 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("DisasterRecoveryJob")
     public Boolean disasterRecoveryJob;
 
+    /**
+     * <p>The environment tag of the DTS instance. Valid values:</p>
+     * <ul>
+     * <li><strong>normal</strong>****</li>
+     * <li><strong>online</strong>****</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("DtsBisLabel")
     public String dtsBisLabel;
 
     /**
-     * <p>The threshold for triggering latency-related alerts. Unit: seconds. The value must be an integer. You can set the threshold based on your business needs. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds.</p>
+     * <p>The ID of the data migration or synchronization instance.</p>
      * <blockquote>
-     * <p> If the <strong>DelayNotice</strong> parameter is set to <strong>true</strong>, this parameter is required.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -307,13 +450,10 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The mobile numbers that receive latency-related alerts. Separate multiple mobile numbers with commas (,).</p>
+     * <p>The ID of the data migration or synchronization task.</p>
      * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
      * </blockquote>
-     * <ul>
-     * <li>This parameter is available only for China site (aliyun.com) users. Only mobile numbers in the Chinese mainland are supported. Up to 10 mobile numbers can be specified.</li>
-     * <li>International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">set alert rules for DTS tasks in the CloudMonitor console</a>.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>k2gm967v16f****</p>
@@ -322,17 +462,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The ID of the source instance.</p>
-     * <p>If the source instance is an Alibaba Cloud database instance, you must specify the ID of the database instance. For example, if the source instance is an ApsaraDB RDS for MySQL instance, you must specify the ID of the ApsaraDB RDS for MySQL instance.</p>
-     * <p>If the source instance is a self-managed database, the value of this parameter varies with the value of the <strong>SourceEndpointInstanceType</strong> parameter.****</p>
-     * <ul>
-     * <li>If the SourceEndpointInstanceType parameter is set to <strong>ECS</strong>, you must specify the ID of the ECS instance.</li>
-     * <li>If the SourceEndpointInstanceType parameter is set to <strong>DG</strong>, you must specify the ID of the database gateway.</li>
-     * <li>If the SourceEndpointInstanceType parameter is set to <strong>EXPRESS</strong> or <strong>CEN</strong>, you must specify the ID of the VPC that is connected to the source instance.</li>
-     * </ul>
-     * <blockquote>
-     * <p> If the SourceEndpointInstanceType parameter is set to <strong>CEN</strong>, you must also specify the ID of the CEN instance in the Reserve parameter. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve</a>.</p>
-     * </blockquote>
+     * <p>The name of the DTS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -342,7 +472,11 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String dtsJobName;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>Specifies whether to monitor task status. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -351,16 +485,12 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public Boolean errorNotice;
 
     /**
-     * <p>The synchronization direction. Valid values:</p>
-     * <ul>
-     * <li><strong>Forward</strong>: Data is synchronized from the source database to the destination database.</li>
-     * <li><strong>Reverse</strong>: Data is synchronized from the destination database to the source database.</li>
-     * </ul>
+     * <p>The mobile phone numbers to which status-related alerts are sent. Separate multiple mobile phone numbers with commas (,).</p>
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li>Default value: <strong>Forward</strong>.</li>
-     * <li>The value <strong>Reverse</strong> takes effect only if the topology of the data synchronization task is two-way synchronization.</li>
+     * <li>This parameter is available only for users of the China site (aliyun.com). Only mobile phone numbers in the Chinese mainland are supported. You can specify up to 10 mobile phone numbers.</li>
+     * <li>Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phone numbers, but can configure alert rules for DTS tasks in the CloudMonitor console. For more information, see <a href="https://help.aliyun.com/document_detail/175876.html">Configure alert rules for DTS tasks in the CloudMonitor console</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -370,11 +500,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String errorPhone;
 
     /**
-     * <p>Specifies whether the instance is a disaster recovery instance.</p>
-     * <ul>
-     * <li><strong>true</strong>: The instance is a disaster recovery instance.</li>
-     * <li><strong>false</strong>: The instance is not a disaster recovery instance.</li>
-     * </ul>
+     * <p>The URL of the Object Storage Service (OSS) bucket that stores the files related to the DTS task.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://db-list-os-file.oss-cn-shanghai.aliyuncs.com/8e42_121852**********_79dd3aeabe2f43cdb">http://db-list-os-file.oss-cn-shanghai.aliyuncs.com/8e42_121852**********_79dd3aeabe2f43cdb</a>**************</p>
@@ -383,9 +509,14 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public java.io.InputStream fileOssUrlObject;
 
     /**
-     * <p>The ID of the data migration or synchronization instance.</p>
+     * <p>The type of the task. Valid values:</p>
+     * <ul>
+     * <li><strong>MIGRATION</strong>: data migration task.</li>
+     * <li><strong>SYNC</strong>: data synchronization task.</li>
+     * <li><strong>CHECK</strong>: data verification task. You must separately purchase a data verification instance.</li>
+     * </ul>
      * <blockquote>
-     * <p> You must specify at least one of the <strong>DtsJobId</strong> and DtsInstanceId parameters. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+     * <p>If you set this parameter to <strong>MIGRATION</strong> or <strong>SYNC</strong>, you can also enable data verification in the data migration or synchronization task.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -395,9 +526,27 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <p>The maximum number of DUs.</p>
+     * <blockquote>
+     * <p>This parameter is supported only for serverless instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("MaxDu")
     public Double maxDu;
 
+    /**
+     * <p>The minimum number of DTS Units (DUs).</p>
+     * <blockquote>
+     * <p>This parameter is supported only for serverless instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinDu")
     public Double minDu;
 
@@ -405,7 +554,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The URL of the Object Storage Service (OSS) bucket that stores the files related to the DTS task.</p>
+     * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -414,10 +563,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The SID of the Oracle database.</p>
-     * <blockquote>
-     * <p> If the <strong>DestinationEndpointEngineName</strong> parameter is set to <strong>ORACLE</strong> and the <strong>Oracle</strong> database is deployed in a non-RAC architecture, this parameter is available and required.</p>
-     * </blockquote>
+     * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to add more configurations of the source or destination instance to the DTS task. For example, you can specify the data storage format of the destination Kafka database and the CEN instance ID. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve parameter</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{      &quot;srcInstanceId&quot;: &quot;cen-9kqshqum*******&quot;  }</p>
@@ -425,11 +571,20 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("Reserve")
     public String reserve;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The password of the source database account.</p>
+     * <p>The name of the database from which the objects are migrated or synchronized in the source instance.</p>
+     * <blockquote>
+     * <p>This parameter is valid and required only if the source instance is a PolarDB for PostgreSQL (Compatible with Oracle) cluster, a PostgreSQL database, or a MongoDB database.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>dtstestdatabase</p>
@@ -438,10 +593,32 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String sourceEndpointDatabaseName;
 
     /**
-     * <p>The IP address of the source instance.</p>
+     * <p>The database type of the source instance.</p>
+     * <ul>
+     * <li><strong>MYSQL</strong>: ApsaraDB RDS for MySQL instance or self-managed MySQL database.</li>
+     * <li><strong>MARIADB</strong>: ApsaraDB RDS for MariaDB instance.</li>
+     * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster.</li>
+     * <li><strong>POLARDB_O</strong>: PolarDB for PostgreSQL (Compatible with Oracle) cluster.</li>
+     * <li><strong>POLARDBX10</strong>: PolarDB-X 1.0 instance (formerly DRDS).</li>
+     * <li><strong>POLARDBX20</strong>: PolarDB-X 2.0 instance.</li>
+     * <li><strong>ORACLE</strong>: self-managed Oracle database.</li>
+     * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL instance or self-managed PostgreSQL database.</li>
+     * <li><strong>MSSQL</strong>: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database.</li>
+     * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB instance or self-managed MongoDB database.</li>
+     * <li><strong>DB2</strong>: self-managed Db2 for LUW database.</li>
+     * <li><strong>AS400</strong>: self-managed Db2 for i database.</li>
+     * <li><strong>DMSPOLARDB</strong>: DMS logical database.</li>
+     * <li><strong>HBASE</strong>: self-managed HBase database.</li>
+     * <li><strong>TERADATA</strong>: Teradata database.</li>
+     * <li><strong>TiDB</strong>: TiDB database.</li>
+     * <li><strong>REDIS</strong>: ApsaraDB for Redis instance or self-managed Redis database.</li>
+     * </ul>
      * <blockquote>
-     * <p> If the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>OTHER</strong>, <strong>EXPRESS</strong>, <strong>DG</strong>, or <strong>CEN</strong>, this parameter is available and required.</p>
      * </blockquote>
+     * <ul>
+     * <li>Default value: <strong>MYSQL</strong>.</li>
+     * <li>If this parameter is set to <strong>MONGODB</strong>, you must also specify the architecture type of the MongoDB database in Reserve. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve parameter</a>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>MYSQL</p>
@@ -450,21 +627,28 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String sourceEndpointEngineName;
 
     /**
-     * <p>The system ID (SID) of the Oracle database.</p>
+     * <p>The IP address of the source instance.</p>
      * <blockquote>
-     * <p> If the <strong>SourceEndpointEngineName</strong> parameter is set to <strong>ORACLE</strong> and the <strong>Oracle</strong> database is deployed in an architecture that is not a Real Application Cluster (RAC), this parameter is available and required.</p>
+     * <p>This parameter is valid and required only if <strong>SourceEndpointInstanceType</strong> is set to <strong>OTHER</strong>, <strong>EXPRESS</strong>, <strong>DG</strong>, or <strong>CEN</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>172.16.**.***</p>
+     * <p><code>172.16.**.**</code>*</p>
      */
     @NameInMap("SourceEndpointIP")
     public String sourceEndpointIP;
 
     /**
-     * <p>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The source instance ID.</p>
+     * <p>If the source instance is an Alibaba Cloud database instance, you must specify the database instance ID. For example, if the source instance is an ApsaraDB RDS for MySQL instance, you must specify the ID of the ApsaraDB RDS for MySQL instance.</p>
+     * <p>If the source instance is a self-managed database, the value of this parameter varies with the value of <strong>SourceEndpointInstanceType</strong>.****</p>
+     * <ul>
+     * <li>If SourceEndpointInstanceType is set to <strong>ECS</strong>, you must specify the ECS instance ID.</li>
+     * <li>If SourceEndpointInstanceType is set to <strong>DG</strong>, you must specify the database gateway ID.</li>
+     * <li>If SourceEndpointInstanceType is set to <strong>EXPRESS</strong> or <strong>CEN</strong>, you must specify the ID of the virtual private cloud (VPC) that is connected to the source instance.</li>
+     * </ul>
      * <blockquote>
-     * <p> If the source instance is an Alibaba Cloud database instance, this parameter is required.</p>
+     * <p>If SourceEndpointInstanceType is set to <strong>CEN</strong>, you must also specify the ID of the CEN instance in Reserve. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve parameter</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -474,31 +658,31 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String sourceEndpointInstanceID;
 
     /**
-     * <p>The database engine of the source instance. Valid values:</p>
+     * <p>The type of the source instance. Valid values:</p>
+     * <p><strong>Alibaba Cloud database instance</strong></p>
      * <ul>
-     * <li><strong>MYSQL</strong>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</li>
-     * <li><strong>MARIADB</strong>: ApsaraDB RDS for MariaDB instance</li>
-     * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster</li>
-     * <li><strong>POLARDB_O</strong>: PolarDB for Oracle cluster</li>
-     * <li><strong>POLARDBX10</strong>: PolarDB-X 1.0 instance</li>
-     * <li><strong>POLARDBX20</strong>: PolarDB-X 2.0 instance</li>
-     * <li><strong>ORACLE</strong>: self-managed Oracle database</li>
-     * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL instance or self-managed PostgreSQL database</li>
-     * <li><strong>MSSQL</strong>: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database</li>
-     * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB instance or self-managed MongoDB database</li>
-     * <li><strong>DB2</strong>: self-managed Db2 for LUW database</li>
-     * <li><strong>AS400</strong>: self-managed Db2 for i database</li>
-     * <li><strong>DMSPOLARDB</strong>: DMS logical database</li>
-     * <li><strong>HBASE</strong>: self-managed HBase database</li>
-     * <li><strong>TERADATA</strong>: Teradata database</li>
-     * <li><strong>TiDB</strong>: TiDB database</li>
-     * <li><strong>REDIS</strong>: ApsaraDB for Redis instance or self-managed Redis database</li>
+     * <li><strong>RDS</strong>: ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, ApsaraDB RDS for PostgreSQL instance, or ApsaraDB RDS for MariaDB instance</li>
+     * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster.</li>
+     * <li><strong>REDIS</strong>: ApsaraDB for Redis instance.</li>
+     * <li><strong>DISTRIBUTED_POLARDBX10</strong>: PolarDB-X 1.0 instance (formerly DRDS).</li>
+     * <li><strong>POLARDBX20</strong>: PolarDB-X 2.0 instance.</li>
+     * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB instance.</li>
+     * <li><strong>DISTRIBUTED_DMSLOGICDB</strong>: Data Management (DMS) logical database</li>
+     * </ul>
+     * <p><strong>Self-managed database</strong></p>
+     * <ul>
+     * <li><strong>OTHER</strong>: self-managed database with a public IP address.</li>
+     * <li><strong>ECS</strong>: self-managed database hosted on an ECS instance.</li>
+     * <li><strong>EXPRESS</strong>: self-managed database connected over Express Connect.</li>
+     * <li><strong>CEN</strong>: self-managed database connected over Cloud Enterprise Network (CEN).</li>
+     * <li><strong>DG</strong>: self-managed database connected over Database Gateway.</li>
      * </ul>
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li>Default value: <strong>MYSQL</strong>.</li>
-     * <li>If the SourceEndpointEngineName parameter is set to <strong>MONGODB</strong>, you must also specify the architecture type of the MongoDB database in the Reserve parameter. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve</a>.</li>
+     * <li>If the source instance is a PolarDB for PostgreSQL (Compatible with Oracle) cluster, you must connect the cluster to DTS as a self-managed database by using a public IP address or Express Connect and set this parameter to <strong>OTHER</strong> or <strong>EXPRESS</strong>.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/176064.html">Supported sources and targets</a>.</li>
+     * <li>If the source instance is a self-managed database, you must deploy the network environment for the database. For more information, see <a href="https://help.aliyun.com/document_detail/146958.html">Preparation overview</a>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -509,13 +693,10 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String sourceEndpointInstanceType;
 
     /**
-     * <p>The database account of the source database.</p>
+     * <p>The SID of the Oracle database.</p>
      * <blockquote>
+     * <p>This parameter is valid and required only if <strong>SourceEndpointEngineName</strong> is set to <strong>ORACLE</strong> and the <strong>Oracle</strong> database is deployed in a non-Real Application Cluster (RAC) architecture.</p>
      * </blockquote>
-     * <ul>
-     * <li>In most cases, this parameter is required.</li>
-     * <li>The permissions that are required for the database account vary with the migration or synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/175878.html">Prepare the database accounts for data migration</a> or <a href="https://help.aliyun.com/document_detail/213152.html">Prepare the database accounts for data synchronization</a>.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>testsid</p>
@@ -524,38 +705,10 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String sourceEndpointOracleSID;
 
     /**
-     * <p>The type of the destination instance. Valid values:</p>
-     * <p><strong>Alibaba Cloud database instances</strong></p>
-     * <ul>
-     * <li><strong>RDS</strong>: ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, ApsaraDB RDS for PostgreSQL instance, or ApsaraDB RDS for MariaDB instance</li>
-     * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster</li>
-     * <li><strong>POLARDBX10</strong>: PolarDB-X 1.0 instance</li>
-     * <li><strong>POLARDBX20</strong>: PolarDB-X 2.0 instance</li>
-     * <li><strong>REDIS</strong>: ApsaraDB for Redis instance</li>
-     * <li><strong>ADS</strong>: AnalyticDB for MySQL V2.0 cluster or AnalyticDB for MySQL V3.0 cluster</li>
-     * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB instance</li>
-     * <li><strong>GREENPLUM</strong>: AnalyticDB for PostgreSQL instance</li>
-     * <li><strong>DATAHUB</strong>: DataHub project</li>
-     * <li><strong>ELK</strong>: Elasticsearch cluster</li>
-     * <li><strong>Tablestore</strong>: Tablestore instance</li>
-     * <li><strong>ODPS</strong>: MaxCompute project</li>
-     * </ul>
-     * <p><strong>Self-managed databases</strong></p>
-     * <ul>
-     * <li><strong>OTHER</strong>: self-managed database with a public IP address</li>
-     * <li><strong>ECS</strong>: self-managed database hosted on an ECS instance</li>
-     * <li><strong>EXPRESS</strong>: self-managed database connected over Express Connect</li>
-     * <li><strong>CEN</strong>: self-managed database connected over CEN</li>
-     * <li><strong>DG</strong>: self-managed database connected over Database Gateway</li>
-     * </ul>
+     * <p>The ID of the Alibaba Cloud account to which the source database belongs.</p>
      * <blockquote>
+     * <p>You can specify this parameter to migrate or synchronize data across different Alibaba Cloud accounts. In this case, you must specify <strong>SourceEndpointRole</strong>.</p>
      * </blockquote>
-     * <ul>
-     * <li>If the destination instance is a PolarDB for Oracle cluster, you must set this parameter to <strong>OTHER</strong> or <strong>EXPRESS</strong> because you can use a PolarDB for Oracle cluster only as a self-managed database connected over the Internet or Express Connect.</li>
-     * <li>If the destination instance is a Message Queue for Apache Kafka instance, you must set this parameter to <strong>ECS</strong> or <strong>EXPRESS</strong> because you can use a Message Queue for Apache Kafka instance only as a self-managed database connected over ECS or Express Connect.</li>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/176064.html">Supported databases</a>.</li>
-     * <li>If the destination instance is a self-managed database, you must deploy the network environment for the database. For more information, see <a href="https://help.aliyun.com/document_detail/146958.html">Preparation overview</a>.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>140692647406****</p>
@@ -564,10 +717,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String sourceEndpointOwnerID;
 
     /**
-     * <p>The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.</p>
-     * <blockquote>
-     * <p> This parameter is required when you migrate or synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</p>
-     * </blockquote>
+     * <p>The password of the account that is used to log on to the source database.</p>
      * 
      * <strong>example:</strong>
      * <p>Test123456</p>
@@ -576,9 +726,9 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String sourceEndpointPassword;
 
     /**
-     * <p>The name of the database to which the objects to be migrated in the source instance belong.</p>
+     * <p>The port number of the source instance.</p>
      * <blockquote>
-     * <p> If the source instance is a PolarDB for Oracle cluster, a PostgreSQL database, or a MongoDB database, this parameter is available and required.</p>
+     * <p>This parameter is required only if the source instance is a self-managed database.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -588,9 +738,9 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String sourceEndpointPort;
 
     /**
-     * <p>The database service port of the source instance.</p>
+     * <p>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <blockquote>
-     * <p> If the source instance is a self-managed database, this parameter is available and required.</p>
+     * <p>If the source instance is an Alibaba Cloud database instance, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -600,16 +750,9 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String sourceEndpointRegion;
 
     /**
-     * <p>The ID of the destination instance.</p>
-     * <p>If the destination instance is an Alibaba Cloud database instance, you must specify the ID of the database instance. For example, if the destination instance is an ApsaraDB RDS for MySQL instance, you must specify the ID of the ApsaraDB RDS for MySQL instance.</p>
-     * <p>If the destination instance is a self-managed database, the value of this parameter varies with the value of the <strong>DestinationEndpointInstanceType</strong> parameter.****</p>
-     * <ul>
-     * <li>If the DestinationEndpointInstanceType parameter is set to <strong>ECS</strong>, you must specify the ID of the ECS instance.</li>
-     * <li>If the DestinationEndpointInstanceType parameter is set to <strong>DG</strong>, you must specify the ID of the database gateway.</li>
-     * <li>If the DestinationEndpointInstanceType parameter is set to <strong>EXPRESS</strong> or <strong>CEN</strong>, you must specify the ID of the VPC that is connected to the source instance.</li>
-     * </ul>
+     * <p>The name of the Resource Access Management (RAM) role configured for the Alibaba Cloud account to which the source instance belongs.</p>
      * <blockquote>
-     * <p> If the DestinationEndpointInstanceType parameter is set to <strong>CEN</strong>, you must also specify the ID of the CEN instance in the Reserve parameter. For more information, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve</a>.</p>
+     * <p>This parameter is required if you migrate or synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account DTS tasks</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -619,10 +762,13 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String sourceEndpointRole;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the source instance belongs.</p>
+     * <p>The username of the account that is used to log on to the source database.</p>
      * <blockquote>
-     * <p> You can specify this parameter to migrate or synchronize data across different Alibaba Cloud accounts. In this case, you must specify the <strong>SourceEndpointRole</strong> parameter.</p>
      * </blockquote>
+     * <ul>
+     * <li>In most cases, this parameter is required.</li>
+     * <li>The permissions that are required for the database account vary with the migration or synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/175878.html">Prepare the database accounts for data migration</a> or <a href="https://help.aliyun.com/document_detail/213152.html">Prepare the database accounts for data synchronization</a>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>dtstest</p>
@@ -631,32 +777,101 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public String sourceEndpointUserName;
 
     /**
-     * <p>数据投递链路交换机实例id</p>
+     * <p>The ID of the vSwitch that is used for data shipping.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp10df3mxae6lpmku****</p>
      */
     @NameInMap("SourceEndpointVSwitchID")
     public String sourceEndpointVSwitchID;
 
+    /**
+     * <p>The path of the certificate authority (CA) certificate that is used if the connection to the source database is encrypted by using SSL.</p>
+     * <blockquote>
+     * <p>This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SrcCaCertificateOssUrl")
     public String srcCaCertificateOssUrl;
 
+    /**
+     * <p>The key of the CA certificate that is used if the connection to the source database is encrypted by using SSL.</p>
+     * <blockquote>
+     * <p>This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SrcCaCertificatePassword")
     public String srcCaCertificatePassword;
 
+    /**
+     * <p>The path to the client certificate that is used if the connection to the source database is encrypted by using SSL.</p>
+     * <blockquote>
+     * <p>This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SrcClientCertOssUrl")
     public String srcClientCertOssUrl;
 
+    /**
+     * <p>The path to the private key of the client certificate that is used if the connection to the source database is encrypted by using SSL.</p>
+     * <blockquote>
+     * <p>This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SrcClientKeyOssUrl")
     public String srcClientKeyOssUrl;
 
+    /**
+     * <p>The password of the private key of the client certificate that is used if the connection to the source database is encrypted by using SSL.</p>
+     * <blockquote>
+     * <p>This feature is not supported. Do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SrcClientPassword")
     public String srcClientPassword;
 
     /**
-     * <p>Specifies whether to perform incremental data migration or synchronization. Default value: false. Valid values:</p>
+     * <p>VPCNAT source end main VSW</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
+    @NameInMap("SrcPrimaryVswId")
+    public String srcPrimaryVswId;
+
+    /**
+     * <p>VPCNAT source backup VSW</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
+    @NameInMap("SrcSecondaryVswId")
+    public String srcSecondaryVswId;
+
+    /**
+     * <p>Specifies whether to perform schema migration or schema synchronization. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: does not perform incremental data migration or synchronization.</li>
-     * <li><strong>true</strong>: performs incremental data migration or synchronization.</li>
+     * <li><strong>true</strong> (default)</li>
+     * <li><strong>false</strong></li>
      * </ul>
+     * <blockquote>
+     * <p>If <strong>JobType</strong> is set to <strong>CHECK</strong>, set this parameter to <strong>false</strong>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -666,10 +881,17 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     public Boolean structureInitialization;
 
     /**
-     * <p>The ID of the DTS dedicated cluster on which the task runs.</p>
+     * <p>The synchronization direction. Valid values:</p>
+     * <ul>
+     * <li><strong>Forward</strong></li>
+     * <li><strong>Reverse</strong></li>
+     * </ul>
      * <blockquote>
-     * <p> If this parameter is specified, the task is scheduled to the specified DTS dedicated cluster.</p>
      * </blockquote>
+     * <ul>
+     * <li>The default value is <strong>Forward</strong>.</li>
+     * <li>The value <strong>Reverse</strong> takes effect only if the topology of the data synchronization task is two-way synchronization.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Forward</p>
@@ -792,6 +1014,22 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     }
     public String getDestClientPassword() {
         return this.destClientPassword;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setDestPrimaryVswId(String destPrimaryVswId) {
+        this.destPrimaryVswId = destPrimaryVswId;
+        return this;
+    }
+    public String getDestPrimaryVswId() {
+        return this.destPrimaryVswId;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setDestSecondaryVswId(String destSecondaryVswId) {
+        this.destSecondaryVswId = destSecondaryVswId;
+        return this;
+    }
+    public String getDestSecondaryVswId() {
+        return this.destSecondaryVswId;
     }
 
     public ConfigureDtsJobAdvanceRequest setDestinationEndpointDataBaseName(String destinationEndpointDataBaseName) {
@@ -1152,6 +1390,22 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     }
     public String getSrcClientPassword() {
         return this.srcClientPassword;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setSrcPrimaryVswId(String srcPrimaryVswId) {
+        this.srcPrimaryVswId = srcPrimaryVswId;
+        return this;
+    }
+    public String getSrcPrimaryVswId() {
+        return this.srcPrimaryVswId;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setSrcSecondaryVswId(String srcSecondaryVswId) {
+        this.srcSecondaryVswId = srcSecondaryVswId;
+        return this;
+    }
+    public String getSrcSecondaryVswId() {
+        return this.srcSecondaryVswId;
     }
 
     public ConfigureDtsJobAdvanceRequest setStructureInitialization(Boolean structureInitialization) {

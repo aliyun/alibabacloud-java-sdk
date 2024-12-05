@@ -20,9 +20,12 @@ public class CreateDtsInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically start the task after the DTS instance is purchased. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: does not automatically start the task after the DTS instance is purchased. This is the default value.</li>
-     * <li><strong>true</strong>: automatically starts the task after the DTS instance is purchased.</li>
+     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong></li>
      * </ul>
+     * <blockquote>
+     * <p> This parameter can be set to <strong>true</strong> and take effect only if you specify a valid value for <strong>JobId</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -31,7 +34,7 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public Boolean autoStart;
 
     /**
-     * <p>The specifications of the extract, transform, and load (ETL) instance. The unit is compute unit (CU). One CU is equal to 1 vCPU and 4 GB of memory. The value of this parameter must be an integer greater than or equal to 2.</p>
+     * <p>The specification of the extract, transform, and load (ETL) instance. The unit is compute unit (CU). One CU is equal to 1 vCPU and 4 GB of memory. The value of this parameter must be an integer greater than or equal to 2.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -40,9 +43,9 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public Integer computeUnit;
 
     /**
-     * <p>The number of private custom ApsaraDB RDS instances in a PolarDB-X instance. Default value: <strong>1</strong>.</p>
+     * <p>The number of custom ApsaraDB RDS instances in the PolarDB-X instance. Default value: <strong>1</strong>.</p>
      * <blockquote>
-     * <p> You must specify this parameter only if the <strong>SourceEndpointEngineName</strong> parameter is set to <strong>drds</strong>.</p>
+     * <p> This parameter is required only if <strong>SourceEndpointEngineName</strong> is set to <strong>drds</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -101,6 +104,12 @@ public class CreateDtsInstanceRequest extends TeaModel {
     @NameInMap("DestinationRegion")
     public String destinationRegion;
 
+    /**
+     * <p>The region ID of the DTS instance. Set this parameter to the value of <strong>RegionId</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("DtsRegion")
     public String dtsRegion;
 
@@ -155,9 +164,27 @@ public class CreateDtsInstanceRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>Upper limit of DU.</p>
+     * <blockquote>
+     * <p>Only supported by Serverless instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("MaxDu")
     public Double maxDu;
 
+    /**
+     * <p>Lower limit of DU.</p>
+     * <blockquote>
+     * <p>Only supported by Serverless instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinDu")
     public Double minDu;
 
@@ -192,7 +219,7 @@ public class CreateDtsInstanceRequest extends TeaModel {
     /**
      * <p>The number of DTS instances that you want to purchase.</p>
      * <blockquote>
-     * <p> Only a single instance can be purchased each time.</p>
+     * <p> You can purchase only one DTS instance each time you call this operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -305,18 +332,16 @@ public class CreateDtsInstanceRequest extends TeaModel {
     /**
      * <p>The subscription duration.</p>
      * <ul>
-     * <li><p>Valid values if the <strong>Period</strong> parameter is set to <strong>Month</strong>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
-     * </li>
-     * <li><p>Valid values if the <strong>Period</strong> parameter is set to <strong>Year</strong>: 1, 2, 3, and 5.</p>
-     * </li>
+     * <li>Valid values if <strong>Period</strong> is set to <strong>Month</strong>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+     * <li>Valid values if <strong>Period</strong> is set to <strong>Year</strong>: 1, 2, 3, and 5.</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>You must specify this parameter only if the <strong>PayType</strong> parameter is set to <strong>PrePaid</strong>.</li>
-     * </ul>
      * </blockquote>
      * <ul>
-     * <li>You can set the <strong>Period</strong> parameter to specify the unit of the subscription duration.</li>
+     * <li><p>This parameter is valid and required only if <strong>PayType</strong> is set to <strong>PrePaid</strong>.</p>
+     * </li>
+     * <li><p>You can configure <strong>Period</strong> to specify the unit of the subscription duration.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

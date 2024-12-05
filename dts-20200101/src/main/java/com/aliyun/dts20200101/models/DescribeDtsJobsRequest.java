@@ -13,6 +13,12 @@ public class DescribeDtsJobsRequest extends TeaModel {
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
+    /**
+     * <p>The type of the source database instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RDS</p>
+     */
     @NameInMap("DestProductType")
     public String destProductType;
 
@@ -59,9 +65,21 @@ public class DescribeDtsJobsRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the source or target database instance corresponding to the request parameter <strong>InstanceType</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1966yuut4w3****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the source or target database instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RDS</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -113,7 +131,7 @@ public class DescribeDtsJobsRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -122,7 +140,7 @@ public class DescribeDtsJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>20</strong>, <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -152,7 +170,46 @@ public class DescribeDtsJobsRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>This parameter is discontinued.</p>
+     * <p>This parameter is deprecated.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>cn-hangzhou</li>
+     * <li>cn-shanghai</li>
+     * <li>cn-beijing</li>
+     * <li>cn-guangzhou</li>
+     * <li>cn-shenzhen</li>
+     * <li>cn-chengdu</li>
+     * <li>cn-heyuan</li>
+     * <li>cn-hongkong</li>
+     * <li>cn-qingdao</li>
+     * <li>cn-zhangbei</li>
+     * <li>cn-zhangjiakou</li>
+     * <li>us-east-1</li>
+     * <li>us-west-1</li>
+     * <li>cn-hangzhou-finance</li>
+     * <li>cn-shanghai-finance</li>
+     * <li>cn-shanghai-finance-1</li>
+     * <li>cn-shenzhen-finance</li>
+     * <li>cn-shenzhen-finance-1</li>
+     * <li>cn-beijing-finance-1</li>
+     * <li>cn-huhehaote</li>
+     * <li>cn-north-2-gov-1</li>
+     * <li>eu-central-1</li>
+     * <li>eu-west-1</li>
+     * <li>me-central-1</li>
+     * <li>me-east-1</li>
+     * <li>ap-northeast-1</li>
+     * <li>ap-northeast-2</li>
+     * <li>ap-southeast-1</li>
+     * <li>ap-southeast-2</li>
+     * <li>ap-southeast-3</li>
+     * <li>ap-southeast-5</li>
+     * <li>ap-southeast-6</li>
+     * <li>ap-southeast-7</li>
+     * <li>cn-wulanchabu</li>
+     * <li>cn-zhengzhou-jva</li>
+     * <li>cn-wuhan-lr</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -169,6 +226,12 @@ public class DescribeDtsJobsRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The type of the destination database instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RDS</p>
+     */
     @NameInMap("SrcProductType")
     public String srcProductType;
 
@@ -274,6 +337,15 @@ public class DescribeDtsJobsRequest extends TeaModel {
     @NameInMap("WithoutDbList")
     public Boolean withoutDbList;
 
+    /**
+     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <ul>
+     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ZeroEtlJob")
     public Boolean zeroEtlJob;
 

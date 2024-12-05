@@ -26,10 +26,18 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>The instance ID for data migration, synchronization, and subscription, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a>.  &gt; - N indicates the Nth instance ID being passed. For example, ResourceId.0 represents the first instance ID; ResourceId.1 represents the second instance ID. Up to 50 instance IDs can be queried simultaneously. - At least one of this parameter and <strong>Tag.N.Key</strong> must be provided.</p>
+     * 
      * <strong>example:</strong>
      * <p>dtsntk10k6r12v****</p>
      */
@@ -46,6 +54,9 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The value corresponding to the tag key.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 

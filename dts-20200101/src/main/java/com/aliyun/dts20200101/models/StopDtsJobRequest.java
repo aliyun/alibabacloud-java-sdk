@@ -22,9 +22,21 @@ public class StopDtsJobRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The region ID of the Data Transmission Service (DTS) instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekznwnajjh4d3a</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -47,6 +59,15 @@ public class StopDtsJobRequest extends TeaModel {
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
+    /**
+     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <ul>
+     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ZeroEtlJob")
     public Boolean zeroEtlJob;
 

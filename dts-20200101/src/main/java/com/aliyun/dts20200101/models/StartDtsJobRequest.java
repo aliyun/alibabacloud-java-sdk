@@ -34,6 +34,12 @@ public class StartDtsJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2ilvoxlrdcby</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -55,6 +61,15 @@ public class StartDtsJobRequest extends TeaModel {
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
+    /**
+     * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+     * <ul>
+     * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ZeroEtlJob")
     public Boolean zeroEtlJob;
 

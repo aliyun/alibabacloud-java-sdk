@@ -290,6 +290,9 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned if incremental data synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The task has failed for too long and cannot be repaired</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;

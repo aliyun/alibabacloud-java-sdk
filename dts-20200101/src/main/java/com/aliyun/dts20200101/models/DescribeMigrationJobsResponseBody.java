@@ -236,6 +236,9 @@ public class DescribeMigrationJobsResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned if incremental data migration failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open: open \\\\?\\F:\\KINGDEE BACK\\AIS20221025151008_Data.mdf: The process cannot access the file because it is being used by another process.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -1007,6 +1010,9 @@ public class DescribeMigrationJobsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the data migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         @NameInMap("MigrationJobName")
         public String migrationJobName;

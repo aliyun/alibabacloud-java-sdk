@@ -102,6 +102,12 @@ public class DescribeMetricListRequest extends TeaModel {
     @NameInMap("Period")
     public Long period;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

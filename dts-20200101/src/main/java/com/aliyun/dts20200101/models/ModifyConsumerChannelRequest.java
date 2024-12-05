@@ -16,6 +16,9 @@ public class ModifyConsumerChannelRequest extends TeaModel {
 
     /**
      * <p>The name of the consumer group. The name cannot exceed 128 characters in length. We recommend that you use an informative name for easy identification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtstest</p>
      */
     @NameInMap("ConsumerGroupName")
     public String consumerGroupName;
@@ -80,6 +83,12 @@ public class ModifyConsumerChannelRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

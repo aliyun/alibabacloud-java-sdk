@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopMigrationJobRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * <p>The IDoftheAlibabaCloudaccount. Youdonotneed to specify this parameter because this parameter will be removed in the future.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -38,6 +38,12 @@ public class StopMigrationJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

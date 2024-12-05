@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobEndpointResponseBody extends TeaModel {
     /**
+     * <p>Error code returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>DTS.Msg.InvalidEndpoint</p>
      */
@@ -12,6 +14,8 @@ public class ModifyDtsJobEndpointResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>The endpoint is invalid.</p>
      */
@@ -19,6 +23,8 @@ public class ModifyDtsJobEndpointResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ModifyDtsJobEndpointResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>3FA98DF2-2F81-51FF-8A38-AA5112DD****</p>
      */
@@ -33,6 +41,8 @@ public class ModifyDtsJobEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

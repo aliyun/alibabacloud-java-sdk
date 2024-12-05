@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDtsJobDetailRequest extends TeaModel {
     /**
-     * <p>DescribeDtsJobDetail</p>
+     * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsta7w132u12h****</p>
@@ -14,27 +14,7 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
     public String dtsInstanceID;
 
     /**
-     * <p>The state of the data migration or data synchronization task.</p>
-     * <p>Valid values for a data migration task:</p>
-     * <ul>
-     * <li><strong>NotStarted</strong>: The migration is not started.</li>
-     * <li><strong>Migrating</strong>: The migration is in progress.</li>
-     * <li><strong>Failed</strong>: The migration failed.</li>
-     * <li><strong>Finished</strong>: The migration is complete.</li>
-     * </ul>
-     * <p>Valid values for a data synchronization task:</p>
-     * <ul>
-     * <li><strong>NotStarted</strong>: The task is not started.</li>
-     * <li><strong>Prechecking</strong>: The task is in precheck.</li>
-     * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
-     * <li><strong>Initializing</strong>: The task is performing initial synchronization.</li>
-     * <li><strong>InitializeFailed</strong>: Initial synchronization failed.</li>
-     * <li><strong>Synchronizing</strong>: The task is in progress.</li>
-     * <li><strong>Failed</strong>: The task failed to synchronize data.</li>
-     * <li><strong>Suspending</strong>: The task is paused.</li>
-     * <li><strong>Modifying</strong>: The objects in the task are being modified.</li>
-     * <li><strong>Finished</strong>: The task is complete.</li>
-     * </ul>
+     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
      * 
      * <strong>example:</strong>
      * <p>ta7w132u12h****</p>
@@ -43,7 +23,7 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -51,18 +31,36 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>Specifies whether to return the information about all data synchronization subtasks. Default value: <strong>false</strong>. A value of false indicates that the system returns only the information about a data synchronization subtask that is running or was most recently run.</p>
+     * 
      * <strong>example:</strong>
-     * <p>默认为false，返回最近的一个同步子任务</p>
+     * <p>false</p>
      */
     @NameInMap("SyncSubJobHistory")
     public Boolean syncSubJobHistory;
 
     /**
-     * <p>Queries the details of a data migration, data synchronization, or change tracking task.</p>
+     * <p>The synchronization direction. Valid values:</p>
+     * <ul>
+     * <li><strong>Forward</strong></li>
+     * <li><strong>Reverse</strong></li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>The default value is <strong>Forward</strong>.</li>
+     * <li>The value <strong>Reverse</strong> takes effect only if the topology of the data synchronization instance is two-way synchronization.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Forward</p>
@@ -70,6 +68,16 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
+    /**
+     * <p>Specifies whether to query only zero-extract, transform, load (ETL) integration tasks. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ZeroEtlJob")
     public Boolean zeroEtlJob;
 

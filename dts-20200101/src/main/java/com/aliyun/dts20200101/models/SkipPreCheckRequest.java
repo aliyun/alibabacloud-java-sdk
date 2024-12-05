@@ -15,7 +15,7 @@ public class SkipPreCheckRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The ID of the precheck task. You can call the <strong>DescribePreCheckStatus</strong> operation to query the task ID.</p>
+     * <p>The precheck task ID. You can call the <strong>DescribePreCheckStatus</strong> operation to query the task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b4my3zg929a****</p>
@@ -24,7 +24,7 @@ public class SkipPreCheckRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,18 +32,21 @@ public class SkipPreCheckRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>Specifies whether to skip the precheck item. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: skips the precheck item.</li>
-     * <li><strong>false</strong>: does not skip the precheck item.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
-     * <blockquote>
-     * <p> This parameter is required.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,55 +58,39 @@ public class SkipPreCheckRequest extends TeaModel {
     /**
      * <p>The shortened name of the precheck item. Valid values:</p>
      * <ul>
-     * <li><p><strong>CHECK_SAME_OBJ</strong>: object name conflict</p>
-     * </li>
-     * <li><p><strong>CHECK_SAME_USER</strong>: multiple usernames for one instance</p>
-     * </li>
-     * <li><p><strong>CHECK_SRC</strong>: source database version</p>
-     * </li>
-     * <li><p><strong>CHECK_TOPOLOGY</strong>: topology type</p>
-     * </li>
+     * <li><strong>[&quot;CHECK_SAME_OBJ&quot;]</strong>: object name conflict.</li>
+     * <li><strong>[&quot;CHECK_SAME_USER&quot;]</strong>: username conflict.</li>
+     * <li><strong>[&quot;CHECK_SRC&quot;]</strong>: source database version.</li>
+     * <li><strong>[&quot;CHECK_TOPOLOGY&quot;]</strong>: topology. For more information about the topologies supported by Data Transmission Service (DTS), see <a href="https://help.aliyun.com/document_detail/124115.html">Synchronization topologies</a>.</li>
+     * <li><strong>[&quot;CHECK_SERVER_ID&quot;]</strong>: the server ID of the source database.</li>
+     * <li><strong>[&quot;CHECK_DEST_TABLE_EMPTY&quot;]</strong>: existence of objects in the destination database.</li>
      * </ul>
      * <blockquote>
-     * <p>For more information about the topologies supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Synchronization topologies</a>.</p>
-     * </blockquote>
-     * <ul>
-     * <li><strong>CHECK_SERVER_ID</strong>: the server ID of the source database</li>
-     * </ul>
-     * <blockquote>
-     * <p> Separate multiple shortened names with commas (,).</p>
+     * <p>Separate multiple item names with commas (,). Example: <strong>[&quot;CHECK_SRC&quot;,&quot;CHECK_SAME_OBJ&quot;]</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>CHECK_SAME_OBJ</p>
+     * <p>[&quot;CHECK_SAME_OBJ&quot;]</p>
      */
     @NameInMap("SkipPreCheckItems")
     public String skipPreCheckItems;
 
     /**
-     * <p>The name of the precheck item. This parameter corresponds to the <strong>SkipPreCheckItems</strong> parameter. Valid values:</p>
+     * <p>The precheck item name. This parameter corresponds to <strong>SkipPreCheckItems</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>CHECK_SAME_OBJ_DETAIL</strong>: object name conflict</p>
-     * </li>
-     * <li><p><strong>CHECK_SAME_USER_DETAIL</strong>: multiple usernames for one instance</p>
-     * </li>
-     * <li><p><strong>CHECK_SRC_DETAIL</strong>: source database version</p>
-     * </li>
-     * <li><p><strong>CHECK_TOPOLOGY_DETAIL</strong>: topology type</p>
-     * </li>
+     * <li><strong>[&quot;CHECK_SAME_OBJ_DETAIL&quot;]</strong>: object name conflict.</li>
+     * <li><strong>[&quot;CHECK_SAME_USER_DETAIL&quot;]</strong>: username conflict.</li>
+     * <li><strong>[&quot;CHECK_SRC_DETAIL&quot;]</strong>: source database version.</li>
+     * <li><strong>[&quot;CHECK_TOPOLOGY_DETAIL&quot;]</strong>: topology. For more information about the topologies supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Synchronization topologies</a>.</li>
+     * <li><strong>[&quot;CHECK_SERVER_ID_DETAIL&quot;]</strong>: the server ID of the source database.</li>
+     * <li><strong>[&quot;CHECK_DEST_TABLE_EMPTY_DETAIL&quot;]</strong>: empty tables in the destination database.</li>
      * </ul>
      * <blockquote>
-     * <p>For more information about the topologies supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Synchronization topologies</a>.</p>
-     * </blockquote>
-     * <ul>
-     * <li><strong>CHECK_SERVER_ID_DETAIL</strong>: the server ID of the source database</li>
-     * </ul>
-     * <blockquote>
-     * <p> Separate multiple item names with commas (,).</p>
+     * <p>Separate multiple item names with commas (,). Example: <strong>[&quot;CHECK_SRC_DETAIL&quot;,&quot;CHECK_SAME_OBJ_DETAIL&quot;]</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>CHECK_SAME_OBJ_DETAIL</p>
+     * <p>[&quot;CHECK_SAME_OBJ_DETAIL&quot;]</p>
      */
     @NameInMap("SkipPreCheckNames")
     public String skipPreCheckNames;

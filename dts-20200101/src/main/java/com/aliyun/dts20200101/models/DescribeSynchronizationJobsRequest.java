@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSynchronizationJobsRequest extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -14,13 +14,7 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The tag value. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag value.</p>
-     * <blockquote>
-     * </blockquote>
-     * <ul>
-     * <li>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</li>
-     * <li>This parameter can be an empty string.</li>
-     * </ul>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -32,7 +26,7 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +35,7 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -50,10 +44,7 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the data synchronization task.</p>
-     * <blockquote>
-     * <p> Fuzzy matching is supported.</p>
-     * </blockquote>
+     * <p>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -61,8 +52,26 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    /**
+     * <p>The name of the data synchronization task.</p>
+     * <blockquote>
+     * <p> Fuzzy matching is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dtstest</p>
+     */
+    @NameInMap("SynchronizationJobName")
+    public String synchronizationJobName;
 
     /**
      * <p>The tag key. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag key.</p>
@@ -73,9 +82,6 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
      * <li>This parameter cannot be an empty string.</li>
      * </ul>
      */
-    @NameInMap("SynchronizationJobName")
-    public String synchronizationJobName;
-
     @NameInMap("Tag")
     public java.util.List<DescribeSynchronizationJobsRequestTag> tag;
 
@@ -158,7 +164,13 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
 
     public static class DescribeSynchronizationJobsRequestTag extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The tag key. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag key.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</li>
+         * <li>This parameter cannot be an empty string.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +180,13 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The maximum number of entries that can be displayed on the current page.</p>
+         * <p>The tag value. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag value.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</li>
+         * <li>This parameter can be an empty string.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>testvalue1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartMigrationJobResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -23,7 +23,7 @@ public class StartMigrationJobResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FDC111B1-ACBF-457D-9656-247FDEE9****</p>
@@ -32,7 +32,7 @@ public class StartMigrationJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
