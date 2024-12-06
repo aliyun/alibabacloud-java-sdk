@@ -183,6 +183,9 @@ public class ListJobRunsResponseBody extends TeaModel {
         @NameInMap("creator")
         public String creator;
 
+        @NameInMap("cuHours")
+        public Long cuHours;
+
         @NameInMap("displayReleaseVersion")
         public String displayReleaseVersion;
 
@@ -227,6 +230,9 @@ public class ListJobRunsResponseBody extends TeaModel {
          */
         @NameInMap("log")
         public RunLog log;
+
+        @NameInMap("mbSeconds")
+        public Long mbSeconds;
 
         /**
          * <p>The job name.</p>
@@ -276,6 +282,9 @@ public class ListJobRunsResponseBody extends TeaModel {
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
+        @NameInMap("vcoreSeconds")
+        public Long vcoreSeconds;
+
         /**
          * <p>The web UI of the job.</p>
          * 
@@ -321,6 +330,14 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
         public String getCreator() {
             return this.creator;
+        }
+
+        public ListJobRunsResponseBodyJobRuns setCuHours(Long cuHours) {
+            this.cuHours = cuHours;
+            return this;
+        }
+        public Long getCuHours() {
+            return this.cuHours;
         }
 
         public ListJobRunsResponseBodyJobRuns setDisplayReleaseVersion(String displayReleaseVersion) {
@@ -379,6 +396,14 @@ public class ListJobRunsResponseBody extends TeaModel {
             return this.log;
         }
 
+        public ListJobRunsResponseBodyJobRuns setMbSeconds(Long mbSeconds) {
+            this.mbSeconds = mbSeconds;
+            return this;
+        }
+        public Long getMbSeconds() {
+            return this.mbSeconds;
+        }
+
         public ListJobRunsResponseBodyJobRuns setName(String name) {
             this.name = name;
             return this;
@@ -425,6 +450,14 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
         public java.util.List<Tag> getTags() {
             return this.tags;
+        }
+
+        public ListJobRunsResponseBodyJobRuns setVcoreSeconds(Long vcoreSeconds) {
+            this.vcoreSeconds = vcoreSeconds;
+            return this;
+        }
+        public Long getVcoreSeconds() {
+            return this.vcoreSeconds;
         }
 
         public ListJobRunsResponseBodyJobRuns setWebUI(String webUI) {
