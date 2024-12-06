@@ -1,3 +1,7 @@
+2024-12-06 Version: 1.2.1
+- Update API GetUserBasicInfo: update response param.
+
+
 2024-09-12 Version: 1.2.0
 - Support API GetUserPhone.
 

@@ -32,6 +32,9 @@ public class GetUserBasicInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("UnionIds")
+    public java.util.List<GetUserBasicInfoResponseBodyUnionIds> unionIds;
+
     public static GetUserBasicInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUserBasicInfoResponseBody self = new GetUserBasicInfoResponseBody();
         return TeaModel.build(map, self);
@@ -67,6 +70,44 @@ public class GetUserBasicInfoResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetUserBasicInfoResponseBody setUnionIds(java.util.List<GetUserBasicInfoResponseBodyUnionIds> unionIds) {
+        this.unionIds = unionIds;
+        return this;
+    }
+    public java.util.List<GetUserBasicInfoResponseBodyUnionIds> getUnionIds() {
+        return this.unionIds;
+    }
+
+    public static class GetUserBasicInfoResponseBodyUnionIds extends TeaModel {
+        @NameInMap("OrganizationId")
+        public String organizationId;
+
+        @NameInMap("UnionId")
+        public String unionId;
+
+        public static GetUserBasicInfoResponseBodyUnionIds build(java.util.Map<String, ?> map) throws Exception {
+            GetUserBasicInfoResponseBodyUnionIds self = new GetUserBasicInfoResponseBodyUnionIds();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserBasicInfoResponseBodyUnionIds setOrganizationId(String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+        public String getOrganizationId() {
+            return this.organizationId;
+        }
+
+        public GetUserBasicInfoResponseBodyUnionIds setUnionId(String unionId) {
+            this.unionId = unionId;
+            return this;
+        }
+        public String getUnionId() {
+            return this.unionId;
+        }
+
     }
 
 }
