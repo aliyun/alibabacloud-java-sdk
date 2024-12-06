@@ -142,12 +142,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidInstanceIdList", request.androidInstanceIdList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.backupFileName)) {
+            query.put("BackupFileName", request.backupFileName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.backupFilePath)) {
             query.put("BackupFilePath", request.backupFilePath);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceAppList)) {
+            query.put("SourceAppList", request.sourceAppList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceFilePathList)) {
@@ -1111,6 +1119,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTime", request.startTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.statusList)) {
+            query.put("StatusList", request.statusList);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1307,8 +1319,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
      */
-    public DescribeRegionsResponse describeRegionsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeRegions"),
             new TeaPair("version", "2023-09-30"),
@@ -1326,11 +1346,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>查询地域</p>
+     * 
+     * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
-    public DescribeRegionsResponse describeRegions() throws Exception {
+    public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeRegionsWithOptions(runtime);
+        return this.describeRegionsWithOptions(request, runtime);
     }
 
     /**
@@ -1671,44 +1693,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public FetchFileResponse fetchFile(FetchFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.fetchFileWithOptions(request, runtime);
-    }
-
-    /**
-     * @param request GetAdbSecureRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetAdbSecureResponse
-     */
-    public GetAdbSecureResponse getAdbSecureWithOptions(GetAdbSecureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
-            query.put("InstanceIds", request.instanceIds);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetAdbSecure"),
-            new TeaPair("version", "2023-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAdbSecureResponse());
-    }
-
-    /**
-     * @param request GetAdbSecureRequest
-     * @return GetAdbSecureResponse
-     */
-    public GetAdbSecureResponse getAdbSecure(GetAdbSecureRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getAdbSecureWithOptions(request, runtime);
     }
 
     /**
@@ -2473,48 +2457,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendFileResponse sendFile(SendFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendFileWithOptions(request, runtime);
-    }
-
-    /**
-     * @param request SetAdbSecureRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return SetAdbSecureResponse
-     */
-    public SetAdbSecureResponse setAdbSecureWithOptions(SetAdbSecureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
-            query.put("InstanceIds", request.instanceIds);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
-            query.put("Status", request.status);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SetAdbSecure"),
-            new TeaPair("version", "2023-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SetAdbSecureResponse());
-    }
-
-    /**
-     * @param request SetAdbSecureRequest
-     * @return SetAdbSecureResponse
-     */
-    public SetAdbSecureResponse setAdbSecure(SetAdbSecureRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.setAdbSecureWithOptions(request, runtime);
     }
 
     /**

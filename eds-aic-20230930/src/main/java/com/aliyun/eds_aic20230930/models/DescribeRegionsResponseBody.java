@@ -43,6 +43,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("RegionName")
+        public String regionName;
+
         public static DescribeRegionsResponseBodyRegionModels build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionModels self = new DescribeRegionsResponseBodyRegionModels();
             return TeaModel.build(map, self);
@@ -54,6 +57,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeRegionsResponseBodyRegionModels setRegionName(String regionName) {
+            this.regionName = regionName;
+            return this;
+        }
+        public String getRegionName() {
+            return this.regionName;
         }
 
     }

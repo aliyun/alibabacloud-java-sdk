@@ -66,6 +66,12 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeTasksResponseBodyData extends TeaModel {
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        @NameInMap("ErrorMsg")
+        public String errorMsg;
+
         /**
          * <strong>example:</strong>
          * <p>2022-10-11T08:53:32Z</p>
@@ -128,6 +134,22 @@ public class DescribeTasksResponseBody extends TeaModel {
         public static DescribeTasksResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeTasksResponseBodyData self = new DescribeTasksResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeTasksResponseBodyData setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public DescribeTasksResponseBodyData setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         public DescribeTasksResponseBodyData setFinishTime(String finishTime) {

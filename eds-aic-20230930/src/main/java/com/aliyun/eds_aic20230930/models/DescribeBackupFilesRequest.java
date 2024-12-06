@@ -73,6 +73,9 @@ public class DescribeBackupFilesRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("StatusList")
+    public java.util.List<String> statusList;
+
     public static DescribeBackupFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupFilesRequest self = new DescribeBackupFilesRequest();
         return TeaModel.build(map, self);
@@ -164,6 +167,14 @@ public class DescribeBackupFilesRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeBackupFilesRequest setStatusList(java.util.List<String> statusList) {
+        this.statusList = statusList;
+        return this;
+    }
+    public java.util.List<String> getStatusList() {
+        return this.statusList;
     }
 
 }

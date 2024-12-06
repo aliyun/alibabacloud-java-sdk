@@ -4,9 +4,6 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateAppRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("AppName")
     public String appName;
 
