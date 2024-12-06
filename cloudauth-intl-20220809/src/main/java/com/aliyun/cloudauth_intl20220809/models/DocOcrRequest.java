@@ -4,6 +4,9 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DocOcrRequest extends TeaModel {
+    @NameInMap("CardSide")
+    public String cardSide;
+
     /**
      * <strong>example:</strong>
      * <p>00000006</p>
@@ -65,6 +68,14 @@ public class DocOcrRequest extends TeaModel {
     public static DocOcrRequest build(java.util.Map<String, ?> map) throws Exception {
         DocOcrRequest self = new DocOcrRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DocOcrRequest setCardSide(String cardSide) {
+        this.cardSide = cardSide;
+        return this;
+    }
+    public String getCardSide() {
+        return this.cardSide;
     }
 
     public DocOcrRequest setDocType(String docType) {
