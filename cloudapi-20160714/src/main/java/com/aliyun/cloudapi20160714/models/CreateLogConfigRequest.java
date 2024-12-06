@@ -5,6 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateLogConfigRequest extends TeaModel {
     /**
+     * <p>Specifies to create a service-linked role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("CreateSlr")
+    public Boolean createSlr;
+
+    /**
+     * <p>The log type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>PROVIDER</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROVIDER</p>
      */
@@ -25,6 +40,7 @@ public class CreateLogConfigRequest extends TeaModel {
     public String slsLogStore;
 
     /**
+     * <p>The name of the Log Service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +52,14 @@ public class CreateLogConfigRequest extends TeaModel {
     public static CreateLogConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLogConfigRequest self = new CreateLogConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLogConfigRequest setCreateSlr(Boolean createSlr) {
+        this.createSlr = createSlr;
+        return this;
+    }
+    public Boolean getCreateSlr() {
+        return this.createSlr;
     }
 
     public CreateLogConfigRequest setLogType(String logType) {

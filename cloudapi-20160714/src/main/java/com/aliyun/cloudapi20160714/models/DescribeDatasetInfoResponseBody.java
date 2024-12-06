@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatasetInfoResponseBody extends TeaModel {
+    /**
+     * <p>The dataset info.</p>
+     */
     @NameInMap("DatasetInfo")
     public DescribeDatasetInfoResponseBodyDatasetInfo datasetInfo;
 

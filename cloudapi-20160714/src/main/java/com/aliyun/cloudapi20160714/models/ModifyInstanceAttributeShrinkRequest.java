@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAttributeShrinkRequest extends TeaModel {
     /**
+     * <p>If delete VPC Ip block.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class ModifyInstanceAttributeShrinkRequest extends TeaModel {
     public String deleteVpcIpBlock;
 
     /**
+     * <p>If enable outbound IPv6 Traffic.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class ModifyInstanceAttributeShrinkRequest extends TeaModel {
     public String egressIpv6Enable;
 
     /**
+     * <p>The HTTPS policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>HTTPS2_TLS1_0</p>
      */
@@ -26,6 +32,8 @@ public class ModifyInstanceAttributeShrinkRequest extends TeaModel {
     public String httpsPolicy;
 
     /**
+     * <p>If enable inbound IPv6 Traffic.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,7 @@ public class ModifyInstanceAttributeShrinkRequest extends TeaModel {
     public String IPV6Enabled;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +51,8 @@ public class ModifyInstanceAttributeShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Instance Name</p>
+     * 
      * <strong>example:</strong>
      * <p>apigatewayInstance</p>
      */
@@ -49,6 +60,8 @@ public class ModifyInstanceAttributeShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>Custom private CIDR block.</p>
+     * 
      * <strong>example:</strong>
      * <p>172.0.0.1/24</p>
      */
@@ -56,6 +69,8 @@ public class ModifyInstanceAttributeShrinkRequest extends TeaModel {
     public String intranetSegments;
 
     /**
+     * <p>Maintainable end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>23:00Z</p>
      */
@@ -63,6 +78,8 @@ public class ModifyInstanceAttributeShrinkRequest extends TeaModel {
     public String maintainEndTime;
 
     /**
+     * <p>Maintainable start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>18:00Z</p>
      */
@@ -76,6 +93,8 @@ public class ModifyInstanceAttributeShrinkRequest extends TeaModel {
     public String toConnectVpcIpBlockShrink;
 
     /**
+     * <p>The token of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>c20d86c4-1eb3-4d0b-afe9-c586df1e2136</p>
      */
@@ -83,6 +102,8 @@ public class ModifyInstanceAttributeShrinkRequest extends TeaModel {
     public String token;
 
     /**
+     * <p>Specifies whether to enable the self-calling domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

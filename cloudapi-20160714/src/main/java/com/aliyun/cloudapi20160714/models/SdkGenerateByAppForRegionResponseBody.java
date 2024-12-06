@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SdkGenerateByAppForRegionResponseBody extends TeaModel {
     /**
+     * <p>The code of the SDK by using the Base64 scheme. You can obtain the file by using the Base64 decoding scheme.</p>
+     * 
      * <strong>example:</strong>
      * <p>UEsDBBQACAAIADdwnFQAAAAAAAAAAAAAAAA2AAAAQ0FTREtfSkFWQV8xMjI3NDY2NjY0MzM0MTMzXzE2NTExMjU3MD......</p>
      */
@@ -12,6 +14,8 @@ public class SdkGenerateByAppForRegionResponseBody extends TeaModel {
     public String downloadLink;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>CE5722A6-AE78-4741-A9B0-6C817D360510</p>
      */

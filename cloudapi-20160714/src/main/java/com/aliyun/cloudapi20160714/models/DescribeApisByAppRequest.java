@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApisByAppRequest extends TeaModel {
     /**
+     * <p>The name of the API. The name is used for fuzzy match.</p>
+     * 
      * <strong>example:</strong>
      * <p>getPersonInfo</p>
      */
@@ -12,6 +14,8 @@ public class DescribeApisByAppRequest extends TeaModel {
     public String apiName;
 
     /**
+     * <p>The API ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>b19240592b1b4e74961fb8438ed7550c</p>
      */
@@ -19,6 +23,7 @@ public class DescribeApisByAppRequest extends TeaModel {
     public String apiUid;
 
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class DescribeApisByAppRequest extends TeaModel {
     public Long appId;
 
     /**
+     * <p>The description of the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -35,6 +42,8 @@ public class DescribeApisByAppRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The request HTTP method of the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>POST</p>
      */
@@ -42,6 +51,8 @@ public class DescribeApisByAppRequest extends TeaModel {
     public String method;
 
     /**
+     * <p>The number of the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -49,6 +60,8 @@ public class DescribeApisByAppRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -56,6 +69,8 @@ public class DescribeApisByAppRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request path of the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>/tt</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApiGroupInstanceRequest extends TeaModel {
     /**
+     * <p>The ID of the API group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyApiGroupInstanceRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>migrate</p>
      */
@@ -23,10 +26,14 @@ public class ModifyApiGroupInstanceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ModifyApiGroupInstanceRequestTag> tag;
 
     /**
+     * <p>The ID of the instance to which you want to migrate the API group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,6 +89,7 @@ public class ModifyApiGroupInstanceRequest extends TeaModel {
 
     public static class ModifyApiGroupInstanceRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -91,6 +99,7 @@ public class ModifyApiGroupInstanceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -35,7 +35,7 @@ public class DescribeDatasetListRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>指定规则所适用的对象标签，可设置多个</p>
+     * <p>Specify the object labels to which the rule applies, and multiple labels can be set</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDatasetListRequestTag> tag;
@@ -87,7 +87,7 @@ public class DescribeDatasetListRequest extends TeaModel {
 
     public static class DescribeDatasetListRequestTag extends TeaModel {
         /**
-         * <p>标签键</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -96,7 +96,7 @@ public class DescribeDatasetListRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>标签值</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>

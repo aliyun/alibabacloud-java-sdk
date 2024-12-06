@@ -37,6 +37,12 @@ public class SetDomainWebSocketStatusRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>If enable WSS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("WSSEnable")
     public String WSSEnable;
 

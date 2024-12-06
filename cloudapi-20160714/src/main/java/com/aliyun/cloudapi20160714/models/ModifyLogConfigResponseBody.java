@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyLogConfigResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75A4ADCB-AA26-51FB-94D4-AB3240040974</p>
      */

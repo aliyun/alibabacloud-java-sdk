@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeLogConfigRequest extends TeaModel {
     /**
+     * <p>The log type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>PROVIDER</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROVIDER</p>
      */

@@ -130,6 +130,9 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
 
         /**
          * <p>The authorization description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test share with nsc qiming</p>
          */
         @NameInMap("Description")
         public String description;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetAppsAuthToApiProductRequest extends TeaModel {
     /**
+     * <p>The ID of the API product.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,18 +15,27 @@ public class SetAppsAuthToApiProductRequest extends TeaModel {
     public String apiProductId;
 
     /**
+     * <p>The IDs of the applications that you want to authorize.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AppIds")
     public java.util.List<Long> appIds;
 
     /**
+     * <p>The time (UTC) when the authorization expires. If this parameter is empty, the authorization does not expire.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-05-31T08:15:39Z</p>
      */
     @NameInMap("AuthValidTime")
     public String authValidTime;
 
+    /**
+     * <p>The description of the authorization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
+     */
     @NameInMap("Description")
     public String description;
 

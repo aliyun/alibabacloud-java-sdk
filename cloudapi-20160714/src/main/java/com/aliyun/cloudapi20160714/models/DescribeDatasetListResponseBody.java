@@ -93,7 +93,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
 
     public static class DescribeDatasetListResponseBodyDatasetInfoListTags extends TeaModel {
         /**
-         * <p>标签的键</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>ENV</p>
@@ -102,7 +102,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>标签值</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -184,9 +184,6 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>标签</p>
-         */
         @NameInMap("Tags")
         public java.util.List<DescribeDatasetListResponseBodyDatasetInfoListTags> tags;
 

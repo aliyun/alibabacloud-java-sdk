@@ -220,6 +220,8 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig extends TeaModel {
         /**
+         * <p>The connection URL of the ZooKeeper server.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://192.168.1.xxx:2181">http://192.168.1.xxx:2181</a></p>
          */
@@ -227,6 +229,8 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String connectString;
 
         /**
+         * <p>The namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>provider</p>
          */
@@ -234,6 +238,8 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>Service name</p>
+         * 
          * <strong>example:</strong>
          * <p>service</p>
          */
@@ -287,6 +293,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         @NameInMap("RcType")
         public String rcType;
 
+        /**
+         * <p>The ZooKeeper configuration.</p>
+         */
         @NameInMap("ZookeeperConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig zookeeperConfig;
 
@@ -323,6 +332,8 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig extends TeaModel {
         /**
+         * <p>The EDAS application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>6cd0c599-dxxx-496d-b3d5-6a71c657xxxxx</p>
          */
@@ -330,6 +341,8 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String edasAppId;
 
         /**
+         * <p>The ID of the microservices namespace in EDAS.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou:edasNacos</p>
          */
@@ -337,6 +350,8 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String microserviceNamespace;
 
         /**
+         * <p>The ID of the microservices namespace in EDAS.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou:edasNacos</p>
          */
@@ -344,6 +359,8 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String microserviceNamespaceId;
 
         /**
+         * <p>The name of the microservices namespace in EDAS.</p>
+         * 
          * <strong>example:</strong>
          * <p>Edas-Nacos</p>
          */
@@ -351,6 +368,8 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String microserviceNamespaceName;
 
         /**
+         * <p>The MSE instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mse-cn-jia3n1rxxxx</p>
          */
@@ -358,6 +377,8 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String mseInstanceId;
 
         /**
+         * <p>The registration type.</p>
+         * 
          * <strong>example:</strong>
          * <p>EDAS</p>
          */
@@ -365,6 +386,8 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String registryType;
 
         /**
+         * <p>The service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>service</p>
          */
@@ -656,7 +679,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders extends TeaModel {
         /**
-         * <p>The name of the header parameter.</p>
+         * <p>The header name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -665,7 +688,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String headerName;
 
         /**
-         * <p>The value of the header parameter.</p>
+         * <p>The header value.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -698,13 +721,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig extends TeaModel {
         /**
-         * <p>The header returned for service mocking.</p>
+         * <p>The header in the mocked response.</p>
          */
         @NameInMap("MockHeaders")
         public java.util.List<DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders> mockHeaders;
 
         /**
-         * <p>The result returned for service mocking.</p>
+         * <p>The mocked response.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -713,7 +736,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String mockResult;
 
         /**
-         * <p>The status code that is returned for service mocking.</p>
+         * <p>The status code in the mocked response.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -850,7 +873,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String vpcScheme;
 
         /**
-         * <p>The host of the backend service.</p>
+         * <p>The host of the VPC backend service.</p>
          * 
          * <strong>example:</strong>
          * <p>openapi.alipan.com</p>
@@ -923,11 +946,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig extends TeaModel {
         /**
-         * <p>The information about the backend service whose type is Service Discovery.</p>
+         * <p>The information about the backend service when the backend service is of the Service Discovery type.</p>
          */
         @NameInMap("DiscoveryConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig discoveryConfig;
 
+        /**
+         * <p>The EDAS configuration.</p>
+         */
         @NameInMap("EdasConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig edasConfig;
 
@@ -944,7 +970,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig functionComputeConfig;
 
         /**
-         * <p>The host of the backend service.</p>
+         * <p>The host of the HTTP backend service.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.host.com">www.host.com</a></p>
@@ -953,7 +979,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String httpTargetHostName;
 
         /**
-         * <p>The information about the backend service whose type is Mock.</p>
+         * <p>The information about the backend service when the backend service is of the Mock type.</p>
          */
         @NameInMap("MockConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig mockConfig;
@@ -974,6 +1000,8 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String serviceAddress;
 
         /**
+         * <p>The timeout period of the backend service, in millisecond.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -990,7 +1018,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The information about the virtual private cloud (VPC). This parameter is available only for backend services whose type is VPC.</p>
+         * <p>The information about the backend service when the backend service is of the VPC type.</p>
          */
         @NameInMap("VpcConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigVpcConfig vpcConfig;

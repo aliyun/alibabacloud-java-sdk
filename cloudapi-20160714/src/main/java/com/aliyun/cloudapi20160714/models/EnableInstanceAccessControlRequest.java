@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableInstanceAccessControlRequest extends TeaModel {
     /**
+     * <p>The ID of the access control policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class EnableInstanceAccessControlRequest extends TeaModel {
     public String aclId;
 
     /**
+     * <p>The ACL type. Valid values:</p>
+     * <ul>
+     * <li>black: blacklist</li>
+     * <li>white: whitelist</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +28,17 @@ public class EnableInstanceAccessControlRequest extends TeaModel {
     @NameInMap("AclType")
     public String aclType;
 
+    /**
+     * <p>The IP version. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
+     */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

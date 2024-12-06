@@ -359,8 +359,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An internal domain name resolution can be associated only with a dedicated instance, not with a shared instance or shared instance cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>专享实例关联内网域名解析记录</p>
+     * <p>Associates an internal domain name resolution with a dedicated instance.</p>
      * 
      * @param tmpReq AssociateInstanceWithPrivateDNSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -407,8 +410,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An internal domain name resolution can be associated only with a dedicated instance, not with a shared instance or shared instance cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>专享实例关联内网域名解析记录</p>
+     * <p>Associates an internal domain name resolution with a dedicated instance.</p>
      * 
      * @param request AssociateInstanceWithPrivateDNSRequest
      * @return AssociateInstanceWithPrivateDNSResponse
@@ -877,6 +883,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建API分组</p>
+     * 
      * @param request CreateApiGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateApiGroupResponse
@@ -926,6 +935,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建API分组</p>
+     * 
      * @param request CreateApiGroupRequest
      * @return CreateApiGroupResponse
      */
@@ -1545,6 +1557,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建内网域名</p>
+     * 
      * @param request CreateIntranetDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateIntranetDomainResponse
@@ -1578,6 +1593,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建内网域名</p>
+     * 
      * @param request CreateIntranetDomainRequest
      * @return CreateIntranetDomainResponse
      */
@@ -1663,6 +1681,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a Simple Log Service configuration for an API.</p>
+     * 
      * @param request CreateLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateLogConfigResponse
@@ -1670,6 +1691,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateLogConfigResponse createLogConfigWithOptions(CreateLogConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createSlr)) {
+            query.put("CreateSlr", request.createSlr);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.logType)) {
             query.put("LogType", request.logType);
         }
@@ -1704,6 +1729,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a Simple Log Service configuration for an API.</p>
+     * 
      * @param request CreateLogConfigRequest
      * @return CreateLogConfigResponse
      */
@@ -1921,8 +1949,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An internal domain name resolution of the virtual private cloud (VPC) type can be bound only to traditional dedicated instances. An internal domain name resolution of the A type can be bound only to VPC integration dedicated instances.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建内网域名解析</p>
+     * <p>Creates an internal domain name resolution and adds a resolution record.</p>
      * 
      * @param tmpReq CreatePrivateDNSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1973,8 +2004,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An internal domain name resolution of the virtual private cloud (VPC) type can be bound only to traditional dedicated instances. An internal domain name resolution of the A type can be bound only to VPC integration dedicated instances.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建内网域名解析</p>
+     * <p>Creates an internal domain name resolution and adds a resolution record.</p>
      * 
      * @param request CreatePrivateDNSRequest
      * @return CreatePrivateDNSResponse
@@ -3298,7 +3332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除内网域名解析</p>
+     * <p>Deletes an internal domain name resolution.</p>
      * 
      * @param request DeletePrivateDNSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3342,7 +3376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除内网域名解析</p>
+     * <p>Deletes an internal domain name resolution.</p>
      * 
      * @param request DeletePrivateDNSRequest
      * @return DeletePrivateDNSResponse
@@ -3621,6 +3655,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询批量下线API任务</p>
+     * 
      * @param request DescribeAbolishApiTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAbolishApiTaskResponse
@@ -3654,6 +3691,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询批量下线API任务</p>
+     * 
      * @param request DescribeAbolishApiTaskRequest
      * @return DescribeAbolishApiTaskResponse
      */
@@ -7727,6 +7767,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询日志配置</p>
+     * 
      * @param request DescribeLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLogConfigResponse
@@ -7760,6 +7803,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询日志配置</p>
+     * 
      * @param request DescribeLogConfigRequest
      * @return DescribeLogConfigResponse
      */
@@ -7967,6 +8013,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询插件列表</p>
+     * 
      * @param request DescribePluginSchemasRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePluginSchemasResponse
@@ -8000,6 +8049,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询插件列表</p>
+     * 
      * @param request DescribePluginSchemasRequest
      * @return DescribePluginSchemasResponse
      */
@@ -8009,6 +8061,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询插件模板</p>
+     * 
      * @param request DescribePluginTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePluginTemplatesResponse
@@ -8046,6 +8101,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询插件模板</p>
+     * 
      * @param request DescribePluginTemplatesRequest
      * @return DescribePluginTemplatesResponse
      */
@@ -8877,6 +8935,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询更新VPC授权的任务</p>
+     * 
      * @param request DescribeUpdateVpcInfoTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUpdateVpcInfoTaskResponse
@@ -8910,6 +8971,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询更新VPC授权的任务</p>
+     * 
      * @param request DescribeUpdateVpcInfoTaskRequest
      * @return DescribeUpdateVpcInfoTaskResponse
      */
@@ -9216,7 +9280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>专享实例解除的关联内网域名解析记录</p>
+     * <p>Disassociates an internal domain name resolution from a dedicated instance.</p>
      * 
      * @param tmpReq DissociateInstanceWithPrivateDNSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9264,7 +9328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>专享实例解除的关联内网域名解析记录</p>
+     * <p>Disassociates an internal domain name resolution from a dedicated instance.</p>
      * 
      * @param request DissociateInstanceWithPrivateDNSRequest
      * @return DissociateInstanceWithPrivateDNSResponse
@@ -9348,7 +9412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启实例的访问控制</p>
+     * <p>This feature provides instance-level access control capabilities for dedicated API Gateway instances. Specifies the access control policy of an instance.</p>
      * 
      * @param request EnableInstanceAccessControlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9396,7 +9460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启实例的访问控制</p>
+     * <p>This feature provides instance-level access control capabilities for dedicated API Gateway instances. Specifies the access control policy of an instance.</p>
      * 
      * @param request EnableInstanceAccessControlRequest
      * @return EnableInstanceAccessControlResponse
@@ -9656,7 +9720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询内网域名解析</p>
+     * <p>Queries internal domain name resolutions by domain name or resolution type.</p>
      * 
      * @param request ListPrivateDNSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9696,7 +9760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询内网域名解析</p>
+     * <p>Queries internal domain name resolutions by domain name or resolution type.</p>
      * 
      * @param request ListPrivateDNSRequest
      * @return ListPrivateDNSResponse
@@ -10169,6 +10233,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CompatibleFlags", request.compatibleFlags);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customAppCodeConfig)) {
+            query.put("CustomAppCodeConfig", request.customAppCodeConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.customTraceConfig)) {
             query.put("CustomTraceConfig", request.customTraceConfig);
         }
@@ -10257,6 +10325,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>变更分组实例</p>
+     * 
      * @param request ModifyApiGroupInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyApiGroupInstanceResponse
@@ -10302,6 +10373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>变更分组实例</p>
+     * 
      * @param request ModifyApiGroupInstanceRequest
      * @return ModifyApiGroupInstanceResponse
      */
@@ -10438,12 +10512,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>  This operation is intended for API callers.</p>
      * <ul>
-     * <li><strong>AppName</strong> or <strong>Description</strong> can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a success response.</li>
-     * <li>You can call this operation up to 50 times per second per account.</li>
+     * <li>AppName or Description can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a successful response.********</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a specified application.</p>
+     * <p>Modifies a specified app.</p>
      * 
      * @param request ModifyAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10497,12 +10571,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>  This operation is intended for API callers.</p>
      * <ul>
-     * <li><strong>AppName</strong> or <strong>Description</strong> can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a success response.</li>
-     * <li>You can call this operation up to 50 times per second per account.</li>
+     * <li>AppName or Description can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a successful response.********</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a specified application.</p>
+     * <p>Modifies a specified app.</p>
      * 
      * @param request ModifyAppRequest
      * @return ModifyAppResponse
@@ -10754,7 +10828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改API网关实例属性</p>
+     * <p>Modifies the properties of an API Gateway instance.</p>
      * 
      * @param tmpReq ModifyInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10836,7 +10910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改API网关实例属性</p>
+     * <p>Modifies the properties of an API Gateway instance.</p>
      * 
      * @param request ModifyInstanceAttributeRequest
      * @return ModifyInstanceAttributeResponse
@@ -11105,6 +11179,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改日志配置</p>
+     * 
      * @param request ModifyLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyLogConfigResponse
@@ -11146,6 +11223,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改日志配置</p>
+     * 
      * @param request ModifyLogConfigRequest
      * @return ModifyLogConfigResponse
      */
@@ -11529,6 +11609,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>开通API网关服务</p>
+     * 
      * @param request OpenApiGatewayServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OpenApiGatewayServiceResponse
@@ -11550,6 +11633,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>开通API网关服务</p>
      * @return OpenApiGatewayServiceResponse
      */
     public OpenApiGatewayServiceResponse openApiGatewayService() throws Exception {
@@ -12284,6 +12369,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除VPC授权并下线关联API</p>
+     * 
      * @param request RemoveVpcAccessAndAbolishApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveVpcAccessAndAbolishApisResponse
@@ -12329,6 +12417,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除VPC授权并下线关联API</p>
+     * 
      * @param request RemoveVpcAccessAndAbolishApisRequest
      * @return RemoveVpcAccessAndAbolishApisResponse
      */
@@ -12460,6 +12551,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>根据APP生成SDK</p>
+     * 
      * @param request SdkGenerateByAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SdkGenerateByAppResponse
@@ -12497,6 +12591,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>根据APP生成SDK</p>
+     * 
      * @param request SdkGenerateByAppRequest
      * @return SdkGenerateByAppResponse
      */
@@ -12558,6 +12655,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>根据分组生成SDK</p>
+     * 
      * @param request SdkGenerateByGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SdkGenerateByGroupResponse
@@ -12595,6 +12695,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>根据分组生成SDK</p>
+     * 
      * @param request SdkGenerateByGroupRequest
      * @return SdkGenerateByGroupResponse
      */
@@ -12657,7 +12760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>给多个API产品添加APP授权</p>
+     * <p>Grants permissions on API products to an application.</p>
      * 
      * @param tmpReq SetApiProductsAuthoritiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12711,7 +12814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>给多个API产品添加APP授权</p>
+     * <p>Grants permissions on API products to an application.</p>
      * 
      * @param request SetApiProductsAuthoritiesRequest
      * @return SetApiProductsAuthoritiesResponse
@@ -12805,7 +12908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将多个APP授权给API产品</p>
+     * <p>Authorizes multiple applications to call APIs in an API product.</p>
      * 
      * @param request SetAppsAuthToApiProductRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12853,7 +12956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将多个APP授权给API产品</p>
+     * <p>Authorizes multiple applications to call APIs in an API product.</p>
      * 
      * @param request SetAppsAuthToApiProductRequest
      * @return SetAppsAuthToApiProductResponse
@@ -13043,6 +13146,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CertificatePrivateKey", request.certificatePrivateKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientCertSDnPassThrough)) {
+            query.put("ClientCertSDnPassThrough", request.clientCertSDnPassThrough);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
             query.put("DomainName", request.domainName);
         }
@@ -13053,6 +13160,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
             query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sslOcspEnable)) {
+            query.put("SslOcspEnable", request.sslOcspEnable);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sslVerifyDepth)) {
@@ -13156,6 +13267,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>设置分组授权AppCode</p>
+     * 
      * @param request SetGroupAuthAppCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetGroupAuthAppCodeResponse
@@ -13193,6 +13307,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>设置分组授权AppCode</p>
+     * 
      * @param request SetGroupAuthAppCodeRequest
      * @return SetGroupAuthAppCodeResponse
      */
@@ -13763,7 +13880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新内网域名解析</p>
+     * <p>Modifies an internal domain name resolution.</p>
      * 
      * @param tmpReq UpdatePrivateDNSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13815,7 +13932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新内网域名解析</p>
+     * <p>Modifies an internal domain name resolution.</p>
      * 
      * @param request UpdatePrivateDNSRequest
      * @return UpdatePrivateDNSResponse

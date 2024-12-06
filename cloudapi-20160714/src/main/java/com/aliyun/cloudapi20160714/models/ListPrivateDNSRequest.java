@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPrivateDNSRequest extends TeaModel {
     /**
+     * <p>The internal domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>api.demo.com</p>
      */
@@ -15,6 +17,12 @@ public class ListPrivateDNSRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The internal domain name resolution type. Valid values:</p>
+     * <ul>
+     * <li>VPC: resolution for virtual private cloud (VPC) access authorizations. A resolution of this type can be bound only to traditional dedicated instances.</li>
+     * <li>A: resolution that supports A records. A resolution of this type can be bound only to VPC integration dedicated instances.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>A</p>
      */

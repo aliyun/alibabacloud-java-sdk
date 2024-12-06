@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyLogConfigRequest extends TeaModel {
     /**
+     * <p>The log type. Valid values:</p>
+     * <ul>
+     * <li><strong>log</strong>: other logs</li>
+     * <li><strong>survey</strong>: inspection logs</li>
+     * </ul>
+     * <p>Enumeration value:</p>
+     * <ul>
+     * <li>PROVIDER</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROVIDER</p>
      */
@@ -15,6 +25,7 @@ public class ModifyLogConfigRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The name of the Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +35,7 @@ public class ModifyLogConfigRequest extends TeaModel {
     public String slsLogStore;
 
     /**
+     * <p>The name of the Log Service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

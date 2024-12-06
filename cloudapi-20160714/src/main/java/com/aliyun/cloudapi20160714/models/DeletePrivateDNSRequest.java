@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeletePrivateDNSRequest extends TeaModel {
     /**
+     * <p>Specifies whether to force delete the resolution.</p>
+     * <ul>
+     * <li>true: force deletes the resolution if the resolution is associated with an instance.</li>
+     * <li>false: does not force delete the resolution if the resolution is associated with an instance.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +18,7 @@ public class DeletePrivateDNSRequest extends TeaModel {
     public Boolean force;
 
     /**
+     * <p>The internal domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +31,11 @@ public class DeletePrivateDNSRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The internal domain name resolution type. Valid values:</p>
+     * <ul>
+     * <li>VPC: resolution for virtual private cloud (VPC) access authorizations. A resolution of this type can be bound only to traditional dedicated instances.</li>
+     * <li>A: resolution that supports A records. A resolution of this type can be bound only to VPC integration dedicated instances.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

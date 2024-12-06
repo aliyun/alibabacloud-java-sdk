@@ -70,24 +70,36 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
         /**
          * <p>The time when API Gateway finished forwarding the request to the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731487224969</p>
          */
         @NameInMap("BackendRequestEnd")
         public Long backendRequestEnd;
 
         /**
          * <p>The time when API Gateway started to forward the request to the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731487224969</p>
          */
         @NameInMap("BackendRequestStart")
         public Long backendRequestStart;
 
         /**
          * <p>The time when API Gateway finished receiving the response from the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731487224989</p>
          */
         @NameInMap("BackendResponseEnd")
         public Long backendResponseEnd;
 
         /**
          * <p>The time when API Gateway started to receive the response from the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731487224989</p>
          */
         @NameInMap("BackendResponseStart")
         public Long backendResponseStart;
@@ -175,24 +187,36 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
         /**
          * <p>The time when API Gateway finished receiving the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731487224968</p>
          */
         @NameInMap("FrontRequestEnd")
         public Long frontRequestEnd;
 
         /**
          * <p>The time when API Gateway started to receive the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731487224968</p>
          */
         @NameInMap("FrontRequestStart")
         public Long frontRequestStart;
 
         /**
          * <p>The time when API Gateway finished forwarding the response to the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731487224989</p>
          */
         @NameInMap("FrontResponseEnd")
         public Long frontResponseEnd;
 
         /**
          * <p>The time when API Gateway started to forward the response to the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731487224989</p>
          */
         @NameInMap("FrontResponseStart")
         public Long frontResponseStart;
