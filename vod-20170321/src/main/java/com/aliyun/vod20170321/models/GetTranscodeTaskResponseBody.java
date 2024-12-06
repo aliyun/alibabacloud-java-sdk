@@ -4,6 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetTranscodeTaskResponseBody extends TeaModel {
+    @NameInMap("NonExistJobIds")
+    public java.util.List<String> nonExistJobIds;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -12,6 +15,9 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TranscodeJobInfoList")
+    public java.util.List<GetTranscodeTaskResponseBodyTranscodeJobInfoList> transcodeJobInfoList;
 
     /**
      * <p>Details about transcoding tasks.</p>
@@ -24,6 +30,14 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetTranscodeTaskResponseBody setNonExistJobIds(java.util.List<String> nonExistJobIds) {
+        this.nonExistJobIds = nonExistJobIds;
+        return this;
+    }
+    public java.util.List<String> getNonExistJobIds() {
+        return this.nonExistJobIds;
+    }
+
     public GetTranscodeTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -32,12 +46,311 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetTranscodeTaskResponseBody setTranscodeJobInfoList(java.util.List<GetTranscodeTaskResponseBodyTranscodeJobInfoList> transcodeJobInfoList) {
+        this.transcodeJobInfoList = transcodeJobInfoList;
+        return this;
+    }
+    public java.util.List<GetTranscodeTaskResponseBodyTranscodeJobInfoList> getTranscodeJobInfoList() {
+        return this.transcodeJobInfoList;
+    }
+
     public GetTranscodeTaskResponseBody setTranscodeTask(GetTranscodeTaskResponseBodyTranscodeTask transcodeTask) {
         this.transcodeTask = transcodeTask;
         return this;
     }
     public GetTranscodeTaskResponseBodyTranscodeTask getTranscodeTask() {
         return this.transcodeTask;
+    }
+
+    public static class GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile extends TeaModel {
+        @NameInMap("AudioStreamList")
+        public String audioStreamList;
+
+        @NameInMap("Bitrate")
+        public String bitrate;
+
+        @NameInMap("Duration")
+        public String duration;
+
+        @NameInMap("Encryption")
+        public String encryption;
+
+        @NameInMap("Filesize")
+        public Long filesize;
+
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("Fps")
+        public String fps;
+
+        @NameInMap("Height")
+        public String height;
+
+        @NameInMap("OutputFileUrl")
+        public String outputFileUrl;
+
+        @NameInMap("SubtitleStreamList")
+        public String subtitleStreamList;
+
+        @NameInMap("VideoStreamList")
+        public String videoStreamList;
+
+        @NameInMap("WatermarkIdList")
+        public java.util.List<String> watermarkIdList;
+
+        @NameInMap("Width")
+        public String width;
+
+        public static GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile build(java.util.Map<String, ?> map) throws Exception {
+            GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile self = new GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile setAudioStreamList(String audioStreamList) {
+            this.audioStreamList = audioStreamList;
+            return this;
+        }
+        public String getAudioStreamList() {
+            return this.audioStreamList;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile setBitrate(String bitrate) {
+            this.bitrate = bitrate;
+            return this;
+        }
+        public String getBitrate() {
+            return this.bitrate;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile setDuration(String duration) {
+            this.duration = duration;
+            return this;
+        }
+        public String getDuration() {
+            return this.duration;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile setEncryption(String encryption) {
+            this.encryption = encryption;
+            return this;
+        }
+        public String getEncryption() {
+            return this.encryption;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile setFilesize(Long filesize) {
+            this.filesize = filesize;
+            return this;
+        }
+        public Long getFilesize() {
+            return this.filesize;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile setFps(String fps) {
+            this.fps = fps;
+            return this;
+        }
+        public String getFps() {
+            return this.fps;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile setHeight(String height) {
+            this.height = height;
+            return this;
+        }
+        public String getHeight() {
+            return this.height;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile setOutputFileUrl(String outputFileUrl) {
+            this.outputFileUrl = outputFileUrl;
+            return this;
+        }
+        public String getOutputFileUrl() {
+            return this.outputFileUrl;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile setSubtitleStreamList(String subtitleStreamList) {
+            this.subtitleStreamList = subtitleStreamList;
+            return this;
+        }
+        public String getSubtitleStreamList() {
+            return this.subtitleStreamList;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile setVideoStreamList(String videoStreamList) {
+            this.videoStreamList = videoStreamList;
+            return this;
+        }
+        public String getVideoStreamList() {
+            return this.videoStreamList;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile setWatermarkIdList(java.util.List<String> watermarkIdList) {
+            this.watermarkIdList = watermarkIdList;
+            return this;
+        }
+        public java.util.List<String> getWatermarkIdList() {
+            return this.watermarkIdList;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile setWidth(String width) {
+            this.width = width;
+            return this;
+        }
+        public String getWidth() {
+            return this.width;
+        }
+
+    }
+
+    public static class GetTranscodeTaskResponseBodyTranscodeJobInfoList extends TeaModel {
+        @NameInMap("CompleteTime")
+        public String completeTime;
+
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        @NameInMap("Definition")
+        public String definition;
+
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("InputFileUrl")
+        public String inputFileUrl;
+
+        @NameInMap("OutputFile")
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile outputFile;
+
+        @NameInMap("Priority")
+        public String priority;
+
+        @NameInMap("TranscodeJobId")
+        public String transcodeJobId;
+
+        @NameInMap("TranscodeJobStatus")
+        public String transcodeJobStatus;
+
+        @NameInMap("TranscodeProgress")
+        public Long transcodeProgress;
+
+        @NameInMap("TranscodeTemplateId")
+        public String transcodeTemplateId;
+
+        public static GetTranscodeTaskResponseBodyTranscodeJobInfoList build(java.util.Map<String, ?> map) throws Exception {
+            GetTranscodeTaskResponseBodyTranscodeJobInfoList self = new GetTranscodeTaskResponseBodyTranscodeJobInfoList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoList setCompleteTime(String completeTime) {
+            this.completeTime = completeTime;
+            return this;
+        }
+        public String getCompleteTime() {
+            return this.completeTime;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoList setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoList setDefinition(String definition) {
+            this.definition = definition;
+            return this;
+        }
+        public String getDefinition() {
+            return this.definition;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoList setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoList setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoList setInputFileUrl(String inputFileUrl) {
+            this.inputFileUrl = inputFileUrl;
+            return this;
+        }
+        public String getInputFileUrl() {
+            return this.inputFileUrl;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoList setOutputFile(GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile outputFile) {
+            this.outputFile = outputFile;
+            return this;
+        }
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile getOutputFile() {
+            return this.outputFile;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoList setPriority(String priority) {
+            this.priority = priority;
+            return this;
+        }
+        public String getPriority() {
+            return this.priority;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoList setTranscodeJobId(String transcodeJobId) {
+            this.transcodeJobId = transcodeJobId;
+            return this;
+        }
+        public String getTranscodeJobId() {
+            return this.transcodeJobId;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoList setTranscodeJobStatus(String transcodeJobStatus) {
+            this.transcodeJobStatus = transcodeJobStatus;
+            return this;
+        }
+        public String getTranscodeJobStatus() {
+            return this.transcodeJobStatus;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoList setTranscodeProgress(Long transcodeProgress) {
+            this.transcodeProgress = transcodeProgress;
+            return this;
+        }
+        public Long getTranscodeProgress() {
+            return this.transcodeProgress;
+        }
+
+        public GetTranscodeTaskResponseBodyTranscodeJobInfoList setTranscodeTemplateId(String transcodeTemplateId) {
+            this.transcodeTemplateId = transcodeTemplateId;
+            return this;
+        }
+        public String getTranscodeTemplateId() {
+            return this.transcodeTemplateId;
+        }
+
     }
 
     public static class GetTranscodeTaskResponseBodyTranscodeTaskTranscodeJobInfoListOutputFile extends TeaModel {
