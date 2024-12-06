@@ -1,3 +1,7 @@
+2024-12-06 Version: 3.1.2
+- Update API DocOcr: add param CardSide.
+
+
 2024-11-29 Version: 3.1.1
 - Update API Initialize: add param AppQualityCheck.
 
