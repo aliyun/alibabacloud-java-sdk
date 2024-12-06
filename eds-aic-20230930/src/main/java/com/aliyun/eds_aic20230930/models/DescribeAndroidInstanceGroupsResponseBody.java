@@ -118,6 +118,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @NameInMap("ArchitectureType")
         public String architectureType;
 
+        @NameInMap("AvailableInstanceAmount")
+        public Integer availableInstanceAmount;
+
         /**
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -292,6 +295,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
         public String getArchitectureType() {
             return this.architectureType;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setAvailableInstanceAmount(Integer availableInstanceAmount) {
+            this.availableInstanceAmount = availableInstanceAmount;
+            return this;
+        }
+        public Integer getAvailableInstanceAmount() {
+            return this.availableInstanceAmount;
         }
 
         public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setChargeType(String chargeType) {

@@ -150,6 +150,12 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         @NameInMap("InstanceGroupId")
         public String instanceGroupId;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("SourceAppInfoList")
+        public java.util.List<String> sourceAppInfoList;
+
         @NameInMap("SourceFilePathList")
         public java.util.List<String> sourceFilePathList;
 
@@ -159,6 +165,9 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("TaskId")
+        public String taskId;
 
         /**
          * <strong>example:</strong>
@@ -267,6 +276,22 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             return this.instanceGroupId;
         }
 
+        public DescribeBackupFilesResponseBodyData setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeBackupFilesResponseBodyData setSourceAppInfoList(java.util.List<String> sourceAppInfoList) {
+            this.sourceAppInfoList = sourceAppInfoList;
+            return this;
+        }
+        public java.util.List<String> getSourceAppInfoList() {
+            return this.sourceAppInfoList;
+        }
+
         public DescribeBackupFilesResponseBodyData setSourceFilePathList(java.util.List<String> sourceFilePathList) {
             this.sourceFilePathList = sourceFilePathList;
             return this;
@@ -281,6 +306,14 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeBackupFilesResponseBodyData setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
         public DescribeBackupFilesResponseBodyData setUploadEndpoint(String uploadEndpoint) {

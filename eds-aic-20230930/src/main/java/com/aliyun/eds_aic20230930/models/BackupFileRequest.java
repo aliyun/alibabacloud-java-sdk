@@ -10,6 +10,9 @@ public class BackupFileRequest extends TeaModel {
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
+    @NameInMap("BackupFileName")
+    public String backupFileName;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -19,9 +22,9 @@ public class BackupFileRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
+    @NameInMap("SourceAppList")
+    public java.util.List<String> sourceAppList;
+
     @NameInMap("SourceFilePathList")
     public java.util.List<String> sourceFilePathList;
 
@@ -52,6 +55,14 @@ public class BackupFileRequest extends TeaModel {
         return this.androidInstanceIdList;
     }
 
+    public BackupFileRequest setBackupFileName(String backupFileName) {
+        this.backupFileName = backupFileName;
+        return this;
+    }
+    public String getBackupFileName() {
+        return this.backupFileName;
+    }
+
     public BackupFileRequest setBackupFilePath(String backupFilePath) {
         this.backupFilePath = backupFilePath;
         return this;
@@ -66,6 +77,14 @@ public class BackupFileRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public BackupFileRequest setSourceAppList(java.util.List<String> sourceAppList) {
+        this.sourceAppList = sourceAppList;
+        return this;
+    }
+    public java.util.List<String> getSourceAppList() {
+        return this.sourceAppList;
     }
 
     public BackupFileRequest setSourceFilePathList(java.util.List<String> sourceFilePathList) {

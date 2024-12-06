@@ -148,12 +148,46 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
 
     public static class ModifyPolicyGroupRequestNetRedirectPolicy extends TeaModel {
+        @NameInMap("CustomProxy")
+        public String customProxy;
+
+        @NameInMap("HostAddr")
+        public String hostAddr;
+
         @NameInMap("NetRedirect")
         public String netRedirect;
+
+        @NameInMap("Port")
+        public String port;
+
+        @NameInMap("ProxyPassword")
+        public String proxyPassword;
+
+        @NameInMap("ProxyType")
+        public String proxyType;
+
+        @NameInMap("ProxyUserName")
+        public String proxyUserName;
 
         public static ModifyPolicyGroupRequestNetRedirectPolicy build(java.util.Map<String, ?> map) throws Exception {
             ModifyPolicyGroupRequestNetRedirectPolicy self = new ModifyPolicyGroupRequestNetRedirectPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicy setCustomProxy(String customProxy) {
+            this.customProxy = customProxy;
+            return this;
+        }
+        public String getCustomProxy() {
+            return this.customProxy;
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicy setHostAddr(String hostAddr) {
+            this.hostAddr = hostAddr;
+            return this;
+        }
+        public String getHostAddr() {
+            return this.hostAddr;
         }
 
         public ModifyPolicyGroupRequestNetRedirectPolicy setNetRedirect(String netRedirect) {
@@ -162,6 +196,38 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         }
         public String getNetRedirect() {
             return this.netRedirect;
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicy setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicy setProxyPassword(String proxyPassword) {
+            this.proxyPassword = proxyPassword;
+            return this;
+        }
+        public String getProxyPassword() {
+            return this.proxyPassword;
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicy setProxyType(String proxyType) {
+            this.proxyType = proxyType;
+            return this;
+        }
+        public String getProxyType() {
+            return this.proxyType;
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicy setProxyUserName(String proxyUserName) {
+            this.proxyUserName = proxyUserName;
+            return this;
+        }
+        public String getProxyUserName() {
+            return this.proxyUserName;
         }
 
     }
