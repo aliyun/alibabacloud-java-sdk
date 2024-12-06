@@ -1053,6 +1053,9 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         @NameInMap("kibanaNodeProperties")
         public GetRegionConfigurationResponseBodyResultKibanaNodeProperties kibanaNodeProperties;
 
+        @NameInMap("logstashZones")
+        public java.util.List<String> logstashZones;
+
         @NameInMap("masterDiskList")
         public java.util.List<GetRegionConfigurationResponseBodyResultMasterDiskList> masterDiskList;
 
@@ -1180,6 +1183,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         }
         public GetRegionConfigurationResponseBodyResultKibanaNodeProperties getKibanaNodeProperties() {
             return this.kibanaNodeProperties;
+        }
+
+        public GetRegionConfigurationResponseBodyResult setLogstashZones(java.util.List<String> logstashZones) {
+            this.logstashZones = logstashZones;
+            return this;
+        }
+        public java.util.List<String> getLogstashZones() {
+            return this.logstashZones;
         }
 
         public GetRegionConfigurationResponseBodyResult setMasterDiskList(java.util.List<GetRegionConfigurationResponseBodyResultMasterDiskList> masterDiskList) {
