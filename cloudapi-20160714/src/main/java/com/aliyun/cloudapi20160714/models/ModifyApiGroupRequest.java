@@ -23,6 +23,15 @@ public class ModifyApiGroupRequest extends TeaModel {
     public String compatibleFlags;
 
     /**
+     * <p>The custom appcode configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;location&quot;:&quot;HEADER&quot;,&quot;name&quot;:&quot;myAppCodeHeader&quot;}</p>
+     */
+    @NameInMap("CustomAppCodeConfig")
+    public String customAppCodeConfig;
+
+    /**
      * <p>The custom trace configuration.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +67,12 @@ public class ModifyApiGroupRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>If filter AppCode for backend.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("FilterAppCodeForBackend")
     public String filterAppCodeForBackend;
 
@@ -91,6 +106,9 @@ public class ModifyApiGroupRequest extends TeaModel {
 
     /**
      * <p>The RPC mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("RpcPattern")
     public String rpcPattern;
@@ -99,6 +117,11 @@ public class ModifyApiGroupRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>If support SSE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -142,6 +165,14 @@ public class ModifyApiGroupRequest extends TeaModel {
     }
     public String getCompatibleFlags() {
         return this.compatibleFlags;
+    }
+
+    public ModifyApiGroupRequest setCustomAppCodeConfig(String customAppCodeConfig) {
+        this.customAppCodeConfig = customAppCodeConfig;
+        return this;
+    }
+    public String getCustomAppCodeConfig() {
+        return this.customAppCodeConfig;
     }
 
     public ModifyApiGroupRequest setCustomTraceConfig(String customTraceConfig) {

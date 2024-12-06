@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DissociateInstanceWithPrivateDNSResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6C87A26A-6A18-4B8E-8099-705278381A2C</p>
      */

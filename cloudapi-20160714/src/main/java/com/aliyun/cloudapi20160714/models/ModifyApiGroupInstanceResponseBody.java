@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyApiGroupInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E07AEFF0-9FB0-599E-8F12-B418D8AE1F3D</p>
      */

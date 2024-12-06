@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DissociateInstanceWithPrivateDNSRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DissociateInstanceWithPrivateDNSRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The internal domain names included in the resolution.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IntranetDomains")

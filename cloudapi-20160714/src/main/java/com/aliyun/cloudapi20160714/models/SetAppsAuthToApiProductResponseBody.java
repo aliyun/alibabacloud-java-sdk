@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetAppsAuthToApiProductResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</p>
      */

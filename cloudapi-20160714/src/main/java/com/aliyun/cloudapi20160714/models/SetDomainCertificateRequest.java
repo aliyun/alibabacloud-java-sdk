@@ -42,6 +42,15 @@ public class SetDomainCertificateRequest extends TeaModel {
     public String certificatePrivateKey;
 
     /**
+     * <p>If pass ssl_client_s_dn of the cert to backend header \&quot;X-Client-S-Dn\&quot;.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
+    @NameInMap("ClientCertSDnPassThrough")
+    public Boolean clientCertSDnPassThrough;
+
+    /**
      * <p>The custom domain name.</p>
      * <p>This parameter is required.</p>
      * 
@@ -63,6 +72,15 @@ public class SetDomainCertificateRequest extends TeaModel {
 
     @NameInMap("SecurityToken")
     public String securityToken;
+
+    /**
+     * <p>If enable ssl OCSP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
+    @NameInMap("SslOcspEnable")
+    public Boolean sslOcspEnable;
 
     /**
      * <p>The certificate verification depth.</p>
@@ -110,6 +128,14 @@ public class SetDomainCertificateRequest extends TeaModel {
         return this.certificatePrivateKey;
     }
 
+    public SetDomainCertificateRequest setClientCertSDnPassThrough(Boolean clientCertSDnPassThrough) {
+        this.clientCertSDnPassThrough = clientCertSDnPassThrough;
+        return this;
+    }
+    public Boolean getClientCertSDnPassThrough() {
+        return this.clientCertSDnPassThrough;
+    }
+
     public SetDomainCertificateRequest setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -132,6 +158,14 @@ public class SetDomainCertificateRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public SetDomainCertificateRequest setSslOcspEnable(Boolean sslOcspEnable) {
+        this.sslOcspEnable = sslOcspEnable;
+        return this;
+    }
+    public Boolean getSslOcspEnable() {
+        return this.sslOcspEnable;
     }
 
     public SetDomainCertificateRequest setSslVerifyDepth(String sslVerifyDepth) {

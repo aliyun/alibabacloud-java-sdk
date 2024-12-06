@@ -11,6 +11,8 @@ public class DescribeApisByAppResponseBody extends TeaModel {
     public DescribeApisByAppResponseBodyAppApiRelationInfos appApiRelationInfos;
 
     /**
+     * <p>The number of pages to return the results on.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +20,8 @@ public class DescribeApisByAppResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -25,6 +29,8 @@ public class DescribeApisByAppResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
      */
@@ -32,6 +38,8 @@ public class DescribeApisByAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of returned entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

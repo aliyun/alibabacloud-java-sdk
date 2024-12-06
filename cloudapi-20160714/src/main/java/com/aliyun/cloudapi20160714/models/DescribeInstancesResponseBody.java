@@ -94,6 +94,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public static class DescribeInstancesResponseBodyInstancesInstanceAttributeInstanceSpecAttributesSpecAttribute extends TeaModel {
         /**
          * <p>The variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLA</p>
          */
         @NameInMap("LocalName")
         public String localName;
@@ -102,7 +105,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The variable value.</p>
          * 
          * <strong>example:</strong>
-         * <p>2500</p>
+         * <p>99.95%</p>
          */
         @NameInMap("Value")
         public String value;
@@ -264,9 +267,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo extends TeaModel {
+        /**
+         * <p>The tag key of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cookie</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>240</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -609,6 +624,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("NetworkInterfaceAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes networkInterfaceAttributes;
 
+        /**
+         * <p>The new VPC egress CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.253.0/26</p>
+         */
+        @NameInMap("NewVpcEgressAddress")
+        public String newVpcEgressAddress;
+
+        /**
+         * <p>The private DNS list.</p>
+         */
         @NameInMap("PrivateDnsList")
         public DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList privateDnsList;
 
@@ -639,6 +666,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("SupportIpv6")
         public Boolean supportIpv6;
 
+        /**
+         * <p>The tags of the instance.</p>
+         */
         @NameInMap("Tags")
         public DescribeInstancesResponseBodyInstancesInstanceAttributeTags tags;
 
@@ -707,6 +737,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Multi-Availability Zone 3(b,c,a)</p>
          */
         @NameInMap("ZoneLocalName")
         public String zoneLocalName;
@@ -954,6 +987,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes getNetworkInterfaceAttributes() {
             return this.networkInterfaceAttributes;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setNewVpcEgressAddress(String newVpcEgressAddress) {
+            this.newVpcEgressAddress = newVpcEgressAddress;
+            return this;
+        }
+        public String getNewVpcEgressAddress() {
+            return this.newVpcEgressAddress;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setPrivateDnsList(DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList privateDnsList) {

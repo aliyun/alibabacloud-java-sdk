@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePrivateDNSRequest extends TeaModel {
     /**
+     * <p>The internal domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdatePrivateDNSRequest extends TeaModel {
     public String intranetDomain;
 
     /**
+     * <p>The resolution records. This parameter is valid only when Type is set to A.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Records")
@@ -23,6 +25,11 @@ public class UpdatePrivateDNSRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The internal domain name resolution type. Valid values:</p>
+     * <ul>
+     * <li>VPC: resolution for virtual private cloud (VPC) access authorizations. A resolution of this type can be bound only to traditional dedicated instances.</li>
+     * <li>A: resolution that supports A records. A resolution of this type can be bound only to VPC integration dedicated instances.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +77,8 @@ public class UpdatePrivateDNSRequest extends TeaModel {
 
     public static class UpdatePrivateDNSRequestRecords extends TeaModel {
         /**
+         * <p>The resolution record.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.0.2</p>
          */
@@ -77,6 +86,8 @@ public class UpdatePrivateDNSRequest extends TeaModel {
         public String record;
 
         /**
+         * <p>The weight of the record.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

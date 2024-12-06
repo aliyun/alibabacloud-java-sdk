@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class SetApiProductsAuthoritiesShrinkRequest extends TeaModel {
     /**
+     * <p>The API products.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApiProductIds")
     public String apiProductIdsShrink;
 
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,9 +21,21 @@ public class SetApiProductsAuthoritiesShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public Long appId;
 
+    /**
+     * <p>授权有效时间的截止时间，请设置格林尼治标准时间(GMT), 如果为空，即为授权永久有效。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-12T03:07:37Z</p>
+     */
     @NameInMap("AuthValidTime")
     public String authValidTime;
 
+    /**
+     * <p>The authorization description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 

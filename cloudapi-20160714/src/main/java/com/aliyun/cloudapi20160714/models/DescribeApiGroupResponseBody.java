@@ -63,6 +63,15 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     public String createdTime;
 
     /**
+     * <p>The custom appcode configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;location&quot;:&quot;HEADER&quot;,&quot;name&quot;:&quot;myAppCodeHeader&quot;}</p>
+     */
+    @NameInMap("CustomAppCodeConfig")
+    public String customAppCodeConfig;
+
+    /**
      * <p>The details about the custom domain name.</p>
      */
     @NameInMap("CustomDomains")
@@ -376,6 +385,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     }
     public String getCreatedTime() {
         return this.createdTime;
+    }
+
+    public DescribeApiGroupResponseBody setCustomAppCodeConfig(String customAppCodeConfig) {
+        this.customAppCodeConfig = customAppCodeConfig;
+        return this;
+    }
+    public String getCustomAppCodeConfig() {
+        return this.customAppCodeConfig;
     }
 
     public DescribeApiGroupResponseBody setCustomDomains(DescribeApiGroupResponseBodyCustomDomains customDomains) {

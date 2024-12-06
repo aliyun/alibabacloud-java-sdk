@@ -102,6 +102,8 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         public String apiId;
 
         /**
+         * <p>The HTTP method of the API request.</p>
+         * 
          * <strong>example:</strong>
          * <p>POST</p>
          */
@@ -118,6 +120,8 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         public String apiName;
 
         /**
+         * <p>The request path of the API.</p>
+         * 
          * <strong>example:</strong>
          * <p>/trademark/search</p>
          */
