@@ -230,6 +230,12 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @NameInMap("BrokerOffset")
         public Long brokerOffset;
 
+        @NameInMap("ClientId")
+        public String clientId;
+
+        @NameInMap("ClientIp")
+        public String clientIp;
+
         /**
          * <p>The consumer offset in the partition of the topic.</p>
          * 
@@ -247,6 +253,9 @@ public class GetConsumerProgressResponseBody extends TeaModel {
          */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
+
+        @NameInMap("MemberId")
+        public String memberId;
 
         /**
          * <p>The partition ID.</p>
@@ -270,6 +279,22 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             return this.brokerOffset;
         }
 
+        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList setClientId(String clientId) {
+            this.clientId = clientId;
+            return this;
+        }
+        public String getClientId() {
+            return this.clientId;
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList setClientIp(String clientIp) {
+            this.clientIp = clientIp;
+            return this;
+        }
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
         public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList setConsumerOffset(Long consumerOffset) {
             this.consumerOffset = consumerOffset;
             return this;
@@ -284,6 +309,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
         public Long getLastTimestamp() {
             return this.lastTimestamp;
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList setMemberId(String memberId) {
+            this.memberId = memberId;
+            return this;
+        }
+        public String getMemberId() {
+            return this.memberId;
         }
 
         public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList setPartition(Integer partition) {

@@ -768,6 +768,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("SaslDomainEndpoint")
         public String saslDomainEndpoint;
 
+        @NameInMap("SaslEndPoint")
+        public String saslEndPoint;
+
         /**
          * <p>The security group to which the instance belongs.</p>
          * <ul>
@@ -962,6 +965,12 @@ public class GetInstanceListResponseBody extends TeaModel {
          */
         @NameInMap("VpcId")
         public String vpcId;
+
+        @NameInMap("VpcSaslDomainEndpoint")
+        public String vpcSaslDomainEndpoint;
+
+        @NameInMap("VpcSaslEndPoint")
+        public String vpcSaslEndPoint;
 
         /**
          * <p>The zone ID.</p>
@@ -1201,6 +1210,14 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.saslDomainEndpoint;
         }
 
+        public GetInstanceListResponseBodyInstanceListInstanceVO setSaslEndPoint(String saslEndPoint) {
+            this.saslEndPoint = saslEndPoint;
+            return this;
+        }
+        public String getSaslEndPoint() {
+            return this.saslEndPoint;
+        }
+
         public GetInstanceListResponseBodyInstanceListInstanceVO setSecurityGroup(String securityGroup) {
             this.securityGroup = securityGroup;
             return this;
@@ -1335,6 +1352,22 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setVpcSaslDomainEndpoint(String vpcSaslDomainEndpoint) {
+            this.vpcSaslDomainEndpoint = vpcSaslDomainEndpoint;
+            return this;
+        }
+        public String getVpcSaslDomainEndpoint() {
+            return this.vpcSaslDomainEndpoint;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setVpcSaslEndPoint(String vpcSaslEndPoint) {
+            this.vpcSaslEndPoint = vpcSaslEndPoint;
+            return this;
+        }
+        public String getVpcSaslEndPoint() {
+            return this.vpcSaslEndPoint;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setZoneId(String zoneId) {

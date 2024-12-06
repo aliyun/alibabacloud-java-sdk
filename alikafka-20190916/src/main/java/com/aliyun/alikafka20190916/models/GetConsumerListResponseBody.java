@@ -219,6 +219,9 @@ public class GetConsumerListResponseBody extends TeaModel {
         @NameInMap("ConsumerId")
         public String consumerId;
 
+        @NameInMap("CreateTime")
+        public Long createTime;
+
         /**
          * <p>The instance ID.</p>
          * 
@@ -271,6 +274,14 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
         public String getConsumerId() {
             return this.consumerId;
+        }
+
+        public GetConsumerListResponseBodyConsumerListConsumerVO setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public GetConsumerListResponseBodyConsumerListConsumerVO setInstanceId(String instanceId) {
