@@ -1,3 +1,16 @@
+2024-12-06 Version: 4.4.0
+- Support API CancelActiveOperationTasks.
+- Support API CheckServiceLinkedRole.
+- Support API CreateServiceLinkedRole.
+- Support API DescribeActiveOperationMaintainConf.
+- Support API DescribeLoghubDetail.
+- Support API DescribeSyncAvailableDBClusterList.
+- Support API ModifyDBClusterVip.
+- Support API ModifyLogHubStatus.
+- Update API AttachUserENI: add param AccessKeyId-copy.
+- Update API AttachUserENI: update param AccessKeyId.
+
+
 2024-11-29 Version: 4.3.0
 - Support API DescribeKmsKeys.
 - Support API DescribeRegionsMixed.

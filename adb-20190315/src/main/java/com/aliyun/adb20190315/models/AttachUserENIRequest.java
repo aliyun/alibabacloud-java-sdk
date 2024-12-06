@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class AttachUserENIRequest extends TeaModel {
+    @NameInMap("AccessKeyId-copy")
+    public String accessKeyIdCopy;
+
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
      * <blockquote>
@@ -32,6 +35,14 @@ public class AttachUserENIRequest extends TeaModel {
     public static AttachUserENIRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachUserENIRequest self = new AttachUserENIRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AttachUserENIRequest setAccessKeyIdCopy(String accessKeyIdCopy) {
+        this.accessKeyIdCopy = accessKeyIdCopy;
+        return this;
+    }
+    public String getAccessKeyIdCopy() {
+        return this.accessKeyIdCopy;
     }
 
     public AttachUserENIRequest setDBClusterId(String DBClusterId) {
