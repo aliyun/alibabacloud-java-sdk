@@ -406,6 +406,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("CustomAccessPoint")
         public String customAccessPoint;
 
+        @NameInMap("CustomDnsAddress")
+        public java.util.List<String> customDnsAddress;
+
         /**
          * <p>The ID of the security group.</p>
          * 
@@ -914,6 +917,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getCustomAccessPoint() {
             return this.customAccessPoint;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setCustomDnsAddress(java.util.List<String> customDnsAddress) {
+            this.customDnsAddress = customDnsAddress;
+            return this;
+        }
+        public java.util.List<String> getCustomDnsAddress() {
+            return this.customDnsAddress;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setCustomSecurityGroupId(String customSecurityGroupId) {
