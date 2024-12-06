@@ -83,6 +83,9 @@ public class CreateGrafanaWorkspaceShrinkRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    @NameInMap("PricingCycle")
+    public String pricingCycle;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -191,6 +194,14 @@ public class CreateGrafanaWorkspaceShrinkRequest extends TeaModel {
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public CreateGrafanaWorkspaceShrinkRequest setPricingCycle(String pricingCycle) {
+        this.pricingCycle = pricingCycle;
+        return this;
+    }
+    public String getPricingCycle() {
+        return this.pricingCycle;
     }
 
     public CreateGrafanaWorkspaceShrinkRequest setRegionId(String regionId) {
