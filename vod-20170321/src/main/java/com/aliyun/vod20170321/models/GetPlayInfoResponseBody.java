@@ -73,6 +73,9 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("Bitrate")
         public String bitrate;
 
+        @NameInMap("CodecName")
+        public String codecName;
+
         /**
          * <p>The time when the audio or video stream was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
@@ -341,6 +344,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
         }
         public String getBitrate() {
             return this.bitrate;
+        }
+
+        public GetPlayInfoResponseBodyPlayInfoListPlayInfo setCodecName(String codecName) {
+            this.codecName = codecName;
+            return this;
+        }
+        public String getCodecName() {
+            return this.codecName;
         }
 
         public GetPlayInfoResponseBodyPlayInfoListPlayInfo setCreationTime(String creationTime) {
