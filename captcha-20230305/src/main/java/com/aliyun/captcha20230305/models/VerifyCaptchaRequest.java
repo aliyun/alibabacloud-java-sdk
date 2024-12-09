@@ -4,6 +4,10 @@ package com.aliyun.captcha20230305.models;
 import com.aliyun.tea.*;
 
 public class VerifyCaptchaRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dsjidsjidsjkds*djsjdiskds</p>
+     */
     @NameInMap("CaptchaVerifyParam")
     public String captchaVerifyParam;
 

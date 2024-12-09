@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>验证码验证</p>
+     * 
+     * @param request VerifyCaptchaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyCaptchaResponse
+     */
     public VerifyCaptchaResponse verifyCaptchaWithOptions(VerifyCaptchaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -50,11 +58,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyCaptchaResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>验证码验证</p>
+     * 
+     * @param request VerifyCaptchaRequest
+     * @return VerifyCaptchaResponse
+     */
     public VerifyCaptchaResponse verifyCaptcha(VerifyCaptchaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.verifyCaptchaWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>验证码验证</p>
+     * 
+     * @param request VerifyIntelligentCaptchaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyIntelligentCaptchaResponse
+     */
     public VerifyIntelligentCaptchaResponse verifyIntelligentCaptchaWithOptions(VerifyIntelligentCaptchaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -83,6 +106,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyIntelligentCaptchaResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>验证码验证</p>
+     * 
+     * @param request VerifyIntelligentCaptchaRequest
+     * @return VerifyIntelligentCaptchaResponse
+     */
     public VerifyIntelligentCaptchaResponse verifyIntelligentCaptcha(VerifyIntelligentCaptchaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.verifyIntelligentCaptchaWithOptions(request, runtime);
