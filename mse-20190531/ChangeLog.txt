@@ -1,3 +1,8 @@
+2024-12-09 Version: 7.16.0
+- Support API CreateNamespace.
+- Support API ListNamespaces.
+
+
 2024-12-03 Version: 7.15.2
 - Update API GetGatewayServiceDetail: update response param.
 - Update API GetPluginConfig: update response param.
