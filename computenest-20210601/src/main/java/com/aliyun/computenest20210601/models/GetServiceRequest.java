@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetServiceRequest extends TeaModel {
     /**
+     * <p>Region Id.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,25 +14,44 @@ public class GetServiceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>service-0e6fca6a51a544xxxxxx</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The service instance id.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>si-b58c874912fc4294****</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
+    /**
+     * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wordpress</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
+     * <p>The service version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0</p>
      */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    /**
+     * <p>Whether to disclose service details.</p>
+     */
     @NameInMap("ShowDetails")
     public java.util.List<String> showDetails;
 

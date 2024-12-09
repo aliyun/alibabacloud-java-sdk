@@ -4,10 +4,15 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class ListServicesRequest extends TeaModel {
+    /**
+     * <p>The filter.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<ListServicesRequestFilter> filter;
 
     /**
+     * <p>Keyword fuzzy query.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
@@ -15,6 +20,14 @@ public class ListServicesRequest extends TeaModel {
     public String fuzzyKeyword;
 
     /**
+     * <p>Whether it is used. Optional values:</p>
+     * <ul>
+     * <li><p>false: not being used.</p>
+     * </li>
+     * <li><p>true: already in use.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,6 +35,8 @@ public class ListServicesRequest extends TeaModel {
     public Boolean inUsed;
 
     /**
+     * <p>The number of entries page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,16 +44,25 @@ public class ListServicesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>Service ordering type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UpdateTime</p>
+     */
     @NameInMap("OrderByType")
     public String orderByType;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,9 +71,18 @@ public class ListServicesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Service access type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>All</p>
+     */
     @NameInMap("ServiceAccessType")
     public String serviceAccessType;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListServicesRequestTag> tag;
 
@@ -132,12 +165,23 @@ public class ListServicesRequest extends TeaModel {
 
     public static class ListServicesRequestFilter extends TeaModel {
         /**
+         * <p>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</p>
+         * <ul>
+         * <li>ServiceId: the ID of the service.</li>
+         * <li>Name: the name of the service.</li>
+         * <li>Status: the state of the service.</li>
+         * <li>SupplierName: the name of the service provider.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Status</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>A value of the filter condition.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 
@@ -166,6 +210,8 @@ public class ListServicesRequest extends TeaModel {
 
     public static class ListServicesRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -173,6 +219,8 @@ public class ListServicesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
