@@ -133,6 +133,9 @@ public class ListPlansResponseBody extends TeaModel {
         @NameInMap("PlanId")
         public String planId;
 
+        @NameInMap("PlanType")
+        public String planType;
+
         /**
          * <p>The operating system types supported by the plan.</p>
          * 
@@ -217,6 +220,14 @@ public class ListPlansResponseBody extends TeaModel {
         }
         public String getPlanId() {
             return this.planId;
+        }
+
+        public ListPlansResponseBodyPlans setPlanType(String planType) {
+            this.planType = planType;
+            return this;
+        }
+        public String getPlanType() {
+            return this.planType;
         }
 
         public ListPlansResponseBodyPlans setSupportPlatform(String supportPlatform) {
