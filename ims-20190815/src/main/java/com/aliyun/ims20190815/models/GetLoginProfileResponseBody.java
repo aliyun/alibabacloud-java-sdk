@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLoginProfileResponseBody extends TeaModel {
     /**
-     * <p>The logon information.</p>
+     * <p>The console logon configurations.</p>
      */
     @NameInMap("LoginProfile")
     public GetLoginProfileResponseBodyLoginProfile loginProfile;
@@ -42,7 +42,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
 
     public static class GetLoginProfileResponseBodyLoginProfile extends TeaModel {
         /**
-         * <p>The last time when the RAM user logged on to the console.</p>
+         * <p>The time of the most recent logon. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-14T07:25:25Z</p>
@@ -51,7 +51,11 @@ public class GetLoginProfileResponseBody extends TeaModel {
         public String lastLoginTime;
 
         /**
-         * <p>Indicates whether multi-factor authentication (MFA) must be enabled.</p>
+         * <p>Indicates whether multi-factor authentication (MFA) must be enabled. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -60,7 +64,11 @@ public class GetLoginProfileResponseBody extends TeaModel {
         public Boolean MFABindRequired;
 
         /**
-         * <p>Indicates whether the RAM user must reset the password at the next logon.</p>
+         * <p>Indicates whether the RAM user is required to reset the password upon the next logon. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -69,7 +77,11 @@ public class GetLoginProfileResponseBody extends TeaModel {
         public Boolean passwordResetRequired;
 
         /**
-         * <p>The status of password-based logon.</p>
+         * <p>Indicates whether console logon is enabled. Valid values:</p>
+         * <ul>
+         * <li>Active: enabled.</li>
+         * <li>Inactive: disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -78,7 +90,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time.</p>
+         * <p>The modification time. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-14T06:56:45Z</p>
