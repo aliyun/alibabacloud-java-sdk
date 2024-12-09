@@ -4,14 +4,25 @@ package com.aliyun.captcha20230305.models;
 import com.aliyun.tea.*;
 
 public class VerifyCaptchaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95784F***D39FDC5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -19,6 +30,10 @@ public class VerifyCaptchaResponseBody extends TeaModel {
     @NameInMap("Result")
     public VerifyCaptchaResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,6 +83,10 @@ public class VerifyCaptchaResponseBody extends TeaModel {
     }
 
     public static class VerifyCaptchaResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("VerifyResult")
         public Boolean verifyResult;
 
