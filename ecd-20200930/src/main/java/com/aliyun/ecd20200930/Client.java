@@ -5621,6 +5621,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndUserId", request.endUserId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserIdFilter)) {
+            query.put("EndUserIdFilter", request.endUserIdFilter);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
             query.put("OfficeSiteId", request.officeSiteId);
         }
