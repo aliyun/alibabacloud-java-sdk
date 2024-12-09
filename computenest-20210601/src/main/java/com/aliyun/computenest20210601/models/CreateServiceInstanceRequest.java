@@ -21,6 +21,9 @@ public class CreateServiceInstanceRequest extends TeaModel {
 
     /**
      * <p>The alert contact group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default Group</p>
      */
     @NameInMap("ContactGroup")
     public String contactGroup;
@@ -157,6 +160,9 @@ public class CreateServiceInstanceRequest extends TeaModel {
 
     /**
      * <p>The package name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default Ppackage</p>
      */
     @NameInMap("SpecificationName")
     public String specificationName;
@@ -169,6 +175,9 @@ public class CreateServiceInstanceRequest extends TeaModel {
 
     /**
      * <p>The name of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS Template</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

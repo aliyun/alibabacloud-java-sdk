@@ -194,7 +194,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
      * <p>The package name.</p>
      * 
      * <strong>example:</strong>
-     * <p>套餐一</p>
+     * <p>Package one</p>
      */
     @NameInMap("PredefinedParameterName")
     public String predefinedParameterName;
@@ -325,7 +325,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
      * <p>The template name.</p>
      * 
      * <strong>example:</strong>
-     * <p>模板1</p>
+     * <p>Template one</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
@@ -1002,7 +1002,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          * <p>The name of the service.</p>
          * 
          * <strong>example:</strong>
-         * <p>B数据库</p>
+         * <p>Docker Community Edition</p>
          */
         @NameInMap("Name")
         public String name;
@@ -1011,7 +1011,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          * <p>The description of the service.</p>
          * 
          * <strong>example:</strong>
-         * <p>B是A公司自主设计并研发的开源分布式的关系型数据库</p>
+         * <p>Docker Community Edition (CE) is a free version of the Docker project, aimed at developers, enthusiasts, and individuals and organizations who want to use container technology.</p>
          */
         @NameInMap("ShortDescription")
         public String shortDescription;
@@ -1056,9 +1056,21 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
 
     public static class GetServiceInstanceResponseBodyServiceUpgradableServiceInfos extends TeaModel {
+        /**
+         * <p>An upgradable service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>draft</p>
+         */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <p>The version name of an upgradable service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1.0</p>
+         */
         @NameInMap("VersionName")
         public String versionName;
 
@@ -1187,7 +1199,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          * <p>The name of the service provider.</p>
          * 
          * <strong>example:</strong>
-         * <p>A公司</p>
+         * <p>Alibaba Cloud</p>
          */
         @NameInMap("SupplierName")
         public String supplierName;
@@ -1201,6 +1213,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @NameInMap("SupplierUrl")
         public String supplierUrl;
 
+        /**
+         * <p>The upgradable service version.</p>
+         */
         @NameInMap("UpgradableServiceInfos")
         public java.util.List<GetServiceInstanceResponseBodyServiceUpgradableServiceInfos> upgradableServiceInfos;
 
@@ -1214,7 +1229,35 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          * <p>The metadata about the upgrade.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Description\&quot;:\&quot;开启服务升级\&quot;,\&quot;SupportRollback\&quot;:true,\&quot;SupportUpgradeFromVersions\&quot;:[],\&quot;UpgradeComponents\&quot;:[\&quot;Configuration\&quot;,\&quot;Resource\&quot;]}</p>
+         * <p>{
+         *   &quot;Type&quot;: &quot;OOS&quot;,
+         *   &quot;Description&quot;: &quot;Changelog or something description&quot;,
+         *   &quot;SupportUpgradeFromVersions&quot;: [1, 2],
+         *   &quot;UpgradeSteps&quot;: {
+         *     &quot;PreUpgradeStage&quot;: {
+         *       &quot;Description&quot;: &quot;初始化数据库&quot;,
+         *       &quot;Type&quot;: &quot;RunCommand&quot;,
+         *       &quot;ResourceName&quot;: &quot;EcsRole1&quot;,
+         *       &quot;CommandType&quot;: &quot;runShellScript&quot;,
+         *       &quot;CommandContent&quot;: &quot;echo hello&quot;
+         *     },
+         *     &quot;UpgradeStage&quot;: [{
+         *       &quot;Description&quot;: &quot;更新EcsRole1实例&quot;,
+         *       &quot;Type&quot;: &quot;RunCommand&quot;,
+         *       &quot;ResourceName&quot;: &quot;EcsRole1&quot;,
+         *       &quot;ArtifactsDownloadDirectory&quot;: &quot;/home/admin&quot;,
+         *       &quot;CommandType&quot;: &quot;runShellScript&quot;,
+         *       &quot;CommandContent&quot;: &quot;echo hello&quot;
+         *     }],
+         *     &quot;PostUpgradeStage&quot;: {
+         *       &quot;Description&quot;: &quot;部署后post check&quot;,
+         *       &quot;Type&quot;: &quot;None/RunCommand&quot;,
+         *       &quot;ResourceName&quot;: &quot;EcsRole1&quot;,
+         *       &quot;CommandType&quot;: &quot;runShellScript&quot;,
+         *       &quot;CommandContent&quot;: &quot;echo hello&quot;
+         *     }
+         *   }
+         * }</p>
          */
         @NameInMap("UpgradeMetadata")
         public String upgradeMetadata;
