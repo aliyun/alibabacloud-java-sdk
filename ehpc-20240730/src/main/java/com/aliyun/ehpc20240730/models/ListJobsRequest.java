@@ -84,6 +84,47 @@ public class ListJobsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public static class ListJobsRequestJobFilterDiagnosis extends TeaModel {
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("Option")
+        public String option;
+
+        @NameInMap("Threshold")
+        public String threshold;
+
+        public static ListJobsRequestJobFilterDiagnosis build(java.util.Map<String, ?> map) throws Exception {
+            ListJobsRequestJobFilterDiagnosis self = new ListJobsRequestJobFilterDiagnosis();
+            return TeaModel.build(map, self);
+        }
+
+        public ListJobsRequestJobFilterDiagnosis setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public ListJobsRequestJobFilterDiagnosis setOption(String option) {
+            this.option = option;
+            return this;
+        }
+        public String getOption() {
+            return this.option;
+        }
+
+        public ListJobsRequestJobFilterDiagnosis setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+    }
+
     public static class ListJobsRequestJobFilterSortBy extends TeaModel {
         /**
          * <p>The order in which jobs are sorted based on their execution time. Valid values:</p>
@@ -177,6 +218,9 @@ public class ListJobsRequest extends TeaModel {
         @NameInMap("CreateTimeStart")
         public String createTimeStart;
 
+        @NameInMap("Diagnosis")
+        public java.util.List<ListJobsRequestJobFilterDiagnosis> diagnosis;
+
         /**
          * <p>The job name. Fuzzy match is supported.</p>
          * 
@@ -244,6 +288,14 @@ public class ListJobsRequest extends TeaModel {
         }
         public String getCreateTimeStart() {
             return this.createTimeStart;
+        }
+
+        public ListJobsRequestJobFilter setDiagnosis(java.util.List<ListJobsRequestJobFilterDiagnosis> diagnosis) {
+            this.diagnosis = diagnosis;
+            return this;
+        }
+        public java.util.List<ListJobsRequestJobFilterDiagnosis> getDiagnosis() {
+            return this.diagnosis;
         }
 
         public ListJobsRequestJobFilter setJobName(String jobName) {

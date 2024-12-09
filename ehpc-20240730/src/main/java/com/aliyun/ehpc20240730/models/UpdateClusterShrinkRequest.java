@@ -123,6 +123,9 @@ public class UpdateClusterShrinkRequest extends TeaModel {
     @NameInMap("MaxCount")
     public Integer maxCount;
 
+    @NameInMap("MonitorSpec")
+    public String monitorSpecShrink;
+
     public static UpdateClusterShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateClusterShrinkRequest self = new UpdateClusterShrinkRequest();
         return TeaModel.build(map, self);
@@ -222,6 +225,14 @@ public class UpdateClusterShrinkRequest extends TeaModel {
     }
     public Integer getMaxCount() {
         return this.maxCount;
+    }
+
+    public UpdateClusterShrinkRequest setMonitorSpecShrink(String monitorSpecShrink) {
+        this.monitorSpecShrink = monitorSpecShrink;
+        return this;
+    }
+    public String getMonitorSpecShrink() {
+        return this.monitorSpecShrink;
     }
 
 }
