@@ -10,12 +10,16 @@ public class MaxComputeExport extends TeaModel {
     @NameInMap("configuration")
     public MaxComputeExportConfiguration configuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1714284115</p>
+     */
     @NameInMap("createTime")
     public Long createTime;
 
     /**
      * <strong>example:</strong>
-     * <p>MaxComputeExport</p>
+     * <p>odpsexport-demo</p>
      */
     @NameInMap("description")
     public String description;
@@ -24,11 +28,15 @@ public class MaxComputeExport extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>MaxComputeExport</p>
+     * <p>odpsexport-test</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1714284589</p>
+     */
     @NameInMap("lastModifiedTime")
     public Long lastModifiedTime;
 
@@ -36,10 +44,17 @@ public class MaxComputeExport extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>MaxComputeExport</p>
+     * <p>export-general-1714033191-584993-hcl</p>
      */
     @NameInMap("name")
     public String name;
+
+    /**
+     * <strong>example:</strong>
+     * <p>c7f01719d9feb105fc9d8df92af62010</p>
+     */
+    @NameInMap("scheduleId")
+    public String scheduleId;
 
     /**
      * <strong>example:</strong>
@@ -99,6 +114,14 @@ public class MaxComputeExport extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public MaxComputeExport setScheduleId(String scheduleId) {
+        this.scheduleId = scheduleId;
+        return this;
+    }
+    public String getScheduleId() {
+        return this.scheduleId;
     }
 
     public MaxComputeExport setStatus(String status) {

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class MaxComputeExportConfiguration extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("fromTime")
     public Long fromTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sls-logstore-demo</p>
      */
     @NameInMap("logstore")
     public String logstore;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::123456789:role/aliyunlogdefaultrole</p>
      */
     @NameInMap("roleArn")
     public String roleArn;
@@ -30,6 +39,9 @@ public class MaxComputeExportConfiguration extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("toTime")
     public Long toTime;

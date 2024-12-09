@@ -10,10 +10,18 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     @NameInMap("fields")
     public java.util.List<String> fields;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asdfghjk</p>
+     */
     @NameInMap("odpsAccessKeyId")
     @Deprecated
     public String odpsAccessKeyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>esasdfghjkl</p>
+     */
     @NameInMap("odpsAccessSecret")
     @Deprecated
     public String odpsAccessSecret;
@@ -22,7 +30,7 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="http://xxxxxxxx">http://xxxxxxxx</a></p>
+     * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
      */
     @NameInMap("odpsEndpoint")
     public String odpsEndpoint;
@@ -37,8 +45,10 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String odpsProject;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
-     * <p>acs:ram::xxxxxxx</p>
+     * <p>acs:ram::123456789:role/aliyunlogdefaultrole</p>
      */
     @NameInMap("odpsRolearn")
     public String odpsRolearn;
@@ -54,6 +64,9 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://dt.cn-hangzhou.maxcompute.aliyun-inc.com">http://dt.cn-hangzhou.maxcompute.aliyun-inc.com</a></p>
      */
     @NameInMap("odpsTunnelEndpoint")
     public String odpsTunnelEndpoint;
