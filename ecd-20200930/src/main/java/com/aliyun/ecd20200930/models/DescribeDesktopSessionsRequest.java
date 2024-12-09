@@ -40,6 +40,9 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     @NameInMap("EndUserId")
     public String endUserId;
 
+    @NameInMap("EndUserIdFilter")
+    public String endUserIdFilter;
+
     /**
      * <p>The ID of the office network.</p>
      * 
@@ -146,6 +149,14 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     }
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    public DescribeDesktopSessionsRequest setEndUserIdFilter(String endUserIdFilter) {
+        this.endUserIdFilter = endUserIdFilter;
+        return this;
+    }
+    public String getEndUserIdFilter() {
+        return this.endUserIdFilter;
     }
 
     public DescribeDesktopSessionsRequest setOfficeSiteId(String officeSiteId) {
