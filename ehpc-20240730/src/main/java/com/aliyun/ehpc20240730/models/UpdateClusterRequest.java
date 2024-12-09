@@ -123,6 +123,9 @@ public class UpdateClusterRequest extends TeaModel {
     @NameInMap("MaxCount")
     public Integer maxCount;
 
+    @NameInMap("MonitorSpec")
+    public UpdateClusterRequestMonitorSpec monitorSpec;
+
     public static UpdateClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateClusterRequest self = new UpdateClusterRequest();
         return TeaModel.build(map, self);
@@ -224,6 +227,14 @@ public class UpdateClusterRequest extends TeaModel {
         return this.maxCount;
     }
 
+    public UpdateClusterRequest setMonitorSpec(UpdateClusterRequestMonitorSpec monitorSpec) {
+        this.monitorSpec = monitorSpec;
+        return this;
+    }
+    public UpdateClusterRequestMonitorSpec getMonitorSpec() {
+        return this.monitorSpec;
+    }
+
     public static class UpdateClusterRequestClusterCustomConfiguration extends TeaModel {
         /**
          * <p>The arguments that are used to run the post-processing script.</p>
@@ -262,6 +273,25 @@ public class UpdateClusterRequest extends TeaModel {
         }
         public String getScript() {
             return this.script;
+        }
+
+    }
+
+    public static class UpdateClusterRequestMonitorSpec extends TeaModel {
+        @NameInMap("EnableComputeLoadMonitor")
+        public Boolean enableComputeLoadMonitor;
+
+        public static UpdateClusterRequestMonitorSpec build(java.util.Map<String, ?> map) throws Exception {
+            UpdateClusterRequestMonitorSpec self = new UpdateClusterRequestMonitorSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateClusterRequestMonitorSpec setEnableComputeLoadMonitor(Boolean enableComputeLoadMonitor) {
+            this.enableComputeLoadMonitor = enableComputeLoadMonitor;
+            return this;
+        }
+        public Boolean getEnableComputeLoadMonitor() {
+            return this.enableComputeLoadMonitor;
         }
 
     }

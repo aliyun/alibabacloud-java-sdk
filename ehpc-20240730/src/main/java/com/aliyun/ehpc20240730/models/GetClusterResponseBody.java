@@ -210,6 +210,9 @@ public class GetClusterResponseBody extends TeaModel {
     @NameInMap("MaxCount")
     public String maxCount;
 
+    @NameInMap("MonitorSpec")
+    public GetClusterResponseBodyMonitorSpec monitorSpec;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -400,6 +403,14 @@ public class GetClusterResponseBody extends TeaModel {
     }
     public String getMaxCount() {
         return this.maxCount;
+    }
+
+    public GetClusterResponseBody setMonitorSpec(GetClusterResponseBodyMonitorSpec monitorSpec) {
+        this.monitorSpec = monitorSpec;
+        return this;
+    }
+    public GetClusterResponseBodyMonitorSpec getMonitorSpec() {
+        return this.monitorSpec;
     }
 
     public GetClusterResponseBody setRequestId(String requestId) {
@@ -819,6 +830,25 @@ public class GetClusterResponseBody extends TeaModel {
         }
         public GetClusterResponseBodyManagerScheduler getScheduler() {
             return this.scheduler;
+        }
+
+    }
+
+    public static class GetClusterResponseBodyMonitorSpec extends TeaModel {
+        @NameInMap("EnableComputeLoadMonitor")
+        public Boolean enableComputeLoadMonitor;
+
+        public static GetClusterResponseBodyMonitorSpec build(java.util.Map<String, ?> map) throws Exception {
+            GetClusterResponseBodyMonitorSpec self = new GetClusterResponseBodyMonitorSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public GetClusterResponseBodyMonitorSpec setEnableComputeLoadMonitor(Boolean enableComputeLoadMonitor) {
+            this.enableComputeLoadMonitor = enableComputeLoadMonitor;
+            return this;
+        }
+        public Boolean getEnableComputeLoadMonitor() {
+            return this.enableComputeLoadMonitor;
         }
 
     }

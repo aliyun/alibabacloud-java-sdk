@@ -188,6 +188,58 @@ public class ListJobsResponseBody extends TeaModel {
 
     }
 
+    public static class ListJobsResponseBodyJobsJobSpecResourcesActualOccupied extends TeaModel {
+        @NameInMap("Cores")
+        public String cores;
+
+        @NameInMap("Gpus")
+        public String gpus;
+
+        @NameInMap("Memory")
+        public String memory;
+
+        @NameInMap("Nodes")
+        public String nodes;
+
+        public static ListJobsResponseBodyJobsJobSpecResourcesActualOccupied build(java.util.Map<String, ?> map) throws Exception {
+            ListJobsResponseBodyJobsJobSpecResourcesActualOccupied self = new ListJobsResponseBodyJobsJobSpecResourcesActualOccupied();
+            return TeaModel.build(map, self);
+        }
+
+        public ListJobsResponseBodyJobsJobSpecResourcesActualOccupied setCores(String cores) {
+            this.cores = cores;
+            return this;
+        }
+        public String getCores() {
+            return this.cores;
+        }
+
+        public ListJobsResponseBodyJobsJobSpecResourcesActualOccupied setGpus(String gpus) {
+            this.gpus = gpus;
+            return this;
+        }
+        public String getGpus() {
+            return this.gpus;
+        }
+
+        public ListJobsResponseBodyJobsJobSpecResourcesActualOccupied setMemory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+        public String getMemory() {
+            return this.memory;
+        }
+
+        public ListJobsResponseBodyJobsJobSpecResourcesActualOccupied setNodes(String nodes) {
+            this.nodes = nodes;
+            return this;
+        }
+        public String getNodes() {
+            return this.nodes;
+        }
+
+    }
+
     public static class ListJobsResponseBodyJobsJobSpec extends TeaModel {
         /**
          * <p>The array job ID.</p>
@@ -280,6 +332,9 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("Resources")
         public ListJobsResponseBodyJobsJobSpecResources resources;
 
+        @NameInMap("ResourcesActualOccupied")
+        public ListJobsResponseBodyJobsJobSpecResourcesActualOccupied resourcesActualOccupied;
+
         /**
          * <p>The user that ran the job.</p>
          * 
@@ -288,6 +343,9 @@ public class ListJobsResponseBody extends TeaModel {
          */
         @NameInMap("RunasUser")
         public String runasUser;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         /**
          * <p>The job state. Valid values: (PBS cluster and Slurm cluster)</p>
@@ -425,12 +483,28 @@ public class ListJobsResponseBody extends TeaModel {
             return this.resources;
         }
 
+        public ListJobsResponseBodyJobsJobSpec setResourcesActualOccupied(ListJobsResponseBodyJobsJobSpecResourcesActualOccupied resourcesActualOccupied) {
+            this.resourcesActualOccupied = resourcesActualOccupied;
+            return this;
+        }
+        public ListJobsResponseBodyJobsJobSpecResourcesActualOccupied getResourcesActualOccupied() {
+            return this.resourcesActualOccupied;
+        }
+
         public ListJobsResponseBodyJobsJobSpec setRunasUser(String runasUser) {
             this.runasUser = runasUser;
             return this;
         }
         public String getRunasUser() {
             return this.runasUser;
+        }
+
+        public ListJobsResponseBodyJobsJobSpec setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
         public ListJobsResponseBodyJobsJobSpec setState(String state) {
