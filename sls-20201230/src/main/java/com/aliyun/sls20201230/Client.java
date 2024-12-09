@@ -303,6 +303,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>CreateAgentInstanceConfig</p>
+     * 
+     * @param request CreateAgentInstanceConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgentInstanceConfigResponse
+     */
+    public CreateAgentInstanceConfigResponse createAgentInstanceConfigWithOptions(CreateAgentInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configMatcher)) {
+            body.put("configMatcher", request.configMatcher);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configName)) {
+            body.put("configName", request.configName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isGray)) {
+            body.put("isGray", request.isGray);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgentInstanceConfig"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentinstanceconfigs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateAgentInstanceConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>CreateAgentInstanceConfig</p>
+     * 
+     * @param request CreateAgentInstanceConfigRequest
+     * @return CreateAgentInstanceConfigResponse
+     */
+    public CreateAgentInstanceConfigResponse createAgentInstanceConfig(CreateAgentInstanceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAgentInstanceConfigWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>CreateAlert</p>
      * 
      * @param request CreateAlertRequest
@@ -2074,6 +2133,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>DeleteAgentInstanceConfig</p>
+     * 
+     * @param request DeleteAgentInstanceConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgentInstanceConfigResponse
+     */
+    public DeleteAgentInstanceConfigResponse deleteAgentInstanceConfigWithOptions(String configName, DeleteAgentInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isGray)) {
+            query.put("isGray", request.isGray);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgentInstanceConfig"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentinstanceconfigs/" + configName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAgentInstanceConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteAgentInstanceConfig</p>
+     * 
+     * @param request DeleteAgentInstanceConfigRequest
+     * @return DeleteAgentInstanceConfigResponse
+     */
+    public DeleteAgentInstanceConfigResponse deleteAgentInstanceConfig(String configName, DeleteAgentInstanceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAgentInstanceConfigWithOptions(configName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an alert rule.</p>
      * 
      * @param headers map
@@ -3603,6 +3709,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.enableScheduledSQLWithOptions(project, scheduledSQLName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetAgentInstanceConfig</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentInstanceConfigResponse
+     */
+    public GetAgentInstanceConfigResponse getAgentInstanceConfigWithOptions(String configName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentInstanceConfig"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentinstanceconfigs/" + configName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetAgentInstanceConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetAgentInstanceConfig</p>
+     * @return GetAgentInstanceConfigResponse
+     */
+    public GetAgentInstanceConfigResponse getAgentInstanceConfig(String configName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAgentInstanceConfigWithOptions(configName, headers, runtime);
     }
 
     /**
@@ -5849,6 +5992,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getStoreViewIndexWithOptions(project, name, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListAgentInstanceConfigs</p>
+     * 
+     * @param request ListAgentInstanceConfigsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgentInstanceConfigsResponse
+     */
+    public ListAgentInstanceConfigsResponse listAgentInstanceConfigsWithOptions(ListAgentInstanceConfigsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgentInstanceConfigs"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentinstanceconfigs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListAgentInstanceConfigsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListAgentInstanceConfigs</p>
+     * 
+     * @param request ListAgentInstanceConfigsRequest
+     * @return ListAgentInstanceConfigsResponse
+     */
+    public ListAgentInstanceConfigsResponse listAgentInstanceConfigs(ListAgentInstanceConfigsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAgentInstanceConfigsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -8689,6 +8883,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.untagResourcesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>UpdateAgentInstanceConfig</p>
+     * 
+     * @param request UpdateAgentInstanceConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgentInstanceConfigResponse
+     */
+    public UpdateAgentInstanceConfigResponse updateAgentInstanceConfigWithOptions(String configName, UpdateAgentInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configMatcher)) {
+            body.put("configMatcher", request.configMatcher);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isGray)) {
+            body.put("isGray", request.isGray);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAgentInstanceConfig"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentinstanceconfigs/" + configName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAgentInstanceConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>UpdateAgentInstanceConfig</p>
+     * 
+     * @param request UpdateAgentInstanceConfigRequest
+     * @return UpdateAgentInstanceConfigResponse
+     */
+    public UpdateAgentInstanceConfigResponse updateAgentInstanceConfig(String configName, UpdateAgentInstanceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAgentInstanceConfigWithOptions(configName, request, headers, runtime);
     }
 
     /**
