@@ -1702,7 +1702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the console logon settings of a RAM user.</p>
+     * <p>Queries the logon configurations of a Resource Access Management (RAM) user.</p>
      * 
      * @param request GetLoginProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1734,7 +1734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the console logon settings of a RAM user.</p>
+     * <p>Queries the logon configurations of a Resource Access Management (RAM) user.</p>
      * 
      * @param request GetLoginProfileRequest
      * @return GetLoginProfileResponse
@@ -3163,9 +3163,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>设置用户SSO身份提供商信息</p>
-     * 
      * @param request SetUserSsoSettingsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetUserSsoSettingsResponse
@@ -3183,6 +3180,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ssoEnabled)) {
             query.put("SsoEnabled", request.ssoEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ssoLoginWithDomain)) {
+            query.put("SsoLoginWithDomain", request.ssoLoginWithDomain);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3203,9 +3204,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>设置用户SSO身份提供商信息</p>
-     * 
      * @param request SetUserSsoSettingsRequest
      * @return SetUserSsoSettingsResponse
      */

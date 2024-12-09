@@ -68,6 +68,9 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
         @NameInMap("SsoEnabled")
         public Boolean ssoEnabled;
 
+        @NameInMap("SsoLoginWithDomain")
+        public Boolean ssoLoginWithDomain;
+
         public static GetUserSsoSettingsResponseBodyUserSsoSettings build(java.util.Map<String, ?> map) throws Exception {
             GetUserSsoSettingsResponseBodyUserSsoSettings self = new GetUserSsoSettingsResponseBodyUserSsoSettings();
             return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
         }
         public Boolean getSsoEnabled() {
             return this.ssoEnabled;
+        }
+
+        public GetUserSsoSettingsResponseBodyUserSsoSettings setSsoLoginWithDomain(Boolean ssoLoginWithDomain) {
+            this.ssoLoginWithDomain = ssoLoginWithDomain;
+            return this;
+        }
+        public Boolean getSsoLoginWithDomain() {
+            return this.ssoLoginWithDomain;
         }
 
     }
