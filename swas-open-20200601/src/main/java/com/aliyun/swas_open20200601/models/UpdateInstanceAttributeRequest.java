@@ -38,7 +38,7 @@ public class UpdateInstanceAttributeRequest extends TeaModel {
      * </code></pre>
      * <p>For Windows instances, the password cannot start with a forward slash (/).</p>
      * <blockquote>
-     * <p> For security reasons, we recommend that you use HTTPS to send requests if the <code>Password parameter</code> is specified.</p>
+     * <p> For security reasons, we recommend that you use HTTPS to send requests if <code>Password</code> is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

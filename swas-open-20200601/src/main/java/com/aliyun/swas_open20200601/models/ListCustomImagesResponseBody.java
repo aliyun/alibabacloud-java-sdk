@@ -135,7 +135,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
 
     public static class ListCustomImagesResponseBodyCustomImages extends TeaModel {
         /**
-         * <p>The Information about instances created using the image.</p>
+         * <p>The simple application servers created from the image.</p>
          */
         @NameInMap("CreateInstances")
         public java.util.List<String> createInstances;
@@ -195,7 +195,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         public Boolean inShare;
 
         /**
-         * <p>Whether the custom image is cross-account shared.</p>
+         * <p>Indicates whether the custom image is shared across accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -204,7 +204,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         public Boolean inShareUser;
 
         /**
-         * <p>The ID of the simple application server.</p>
+         * <p>The ID of the simple application server from which the image is derived.</p>
          * 
          * <strong>example:</strong>
          * <p>2d06ee0520b44de1ae88d4be****</p>
@@ -231,23 +231,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the operating system.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Linux</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Windows</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The operating system type of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>Linux</p>
@@ -264,9 +248,17 @@ public class ListCustomImagesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("RequiredDataDiskSize")
         public Integer requiredDataDiskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("RequiredSystemDiskSize")
         public Integer requiredSystemDiskSize;
 
@@ -279,14 +271,29 @@ public class ListCustomImagesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CentOS</p>
+         */
         @NameInMap("SourceImageName")
         public String sourceImageName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8.0</p>
+         */
         @NameInMap("SourceImageVersion")
         public String sourceImageVersion;
 
         /**
-         * <p>The status of the custom image.</p>
+         * <p>The status of the custom image. Valid values:</p>
+         * <ul>
+         * <li>0: copying</li>
+         * <li>1: available</li>
+         * <li>2: unavailable</li>
+         * <li>3: creation failed</li>
+         * <li>4: creating</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -319,7 +326,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         public java.util.List<ListCustomImagesResponseBodyCustomImagesTags> tags;
 
         /**
-         * <p>The Primary Alibaba Cloud account ID of the image owner.</p>
+         * <p>The ID of the Alibaba Cloud account to which the image belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>180185828710****</p>

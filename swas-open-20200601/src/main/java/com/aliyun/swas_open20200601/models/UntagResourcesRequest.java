@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags. This parameter takes effect only when TagKey.N is not specified. Valid values: true and false. Default value: false.</p>
+     * <p>Specifies whether to remove all tags from the specified one or more resources. This parameter takes effect only if the TagKey.N parameter is not set. Valid values:</p>
+     * <ul>
+     * <li>true: deletes all tags that are added to the specific lightweight resource. If no tags are added to the specific lightweight resource, the deletion operation is ignored.</li>
+     * <li>false: does not delete the tags that are added to the specific lightweight resource.</li>
+     * </ul>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

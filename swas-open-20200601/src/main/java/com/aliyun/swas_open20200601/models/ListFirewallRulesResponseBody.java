@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFirewallRulesResponseBody extends TeaModel {
     /**
-     * <p>The array of firewall rules.</p>
+     * <p>Details of the firewall rules.</p>
      */
     @NameInMap("FirewallRules")
     public java.util.List<ListFirewallRulesResponseBodyFirewallRules> firewallRules;
@@ -93,7 +93,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
 
     public static class ListFirewallRulesResponseBodyFirewallRulesTags extends TeaModel {
         /**
-         * <p>The key of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -102,7 +102,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

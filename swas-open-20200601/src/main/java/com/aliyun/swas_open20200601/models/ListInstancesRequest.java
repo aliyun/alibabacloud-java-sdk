@@ -27,7 +27,7 @@ public class ListInstancesRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The name of the simple application servers, which supports fuzzy search using wildcard *.</p>
+     * <p>The name of the simple application server. Fuzzy search with the asterisk (\*) wildcard is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -62,7 +62,7 @@ public class ListInstancesRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;42.1.**.<strong>&quot;, &quot;42.2.**.</strong>&quot;]</p>
+     * <p>[&quot;<code>42.1.**.**</code>&quot;, &quot;<code>42.2.**.**</code>&quot;]</p>
      */
     @NameInMap("PublicIpAddresses")
     public String publicIpAddresses;

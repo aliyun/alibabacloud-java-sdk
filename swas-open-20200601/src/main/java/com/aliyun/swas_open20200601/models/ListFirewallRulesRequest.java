@@ -116,7 +116,7 @@ public class ListFirewallRulesRequest extends TeaModel {
 
     public static class ListFirewallRulesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</p>
+         * <p>The tag key. A tag key must be 1 to 64 characters in length. You can add up to 20 tags.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -125,7 +125,7 @@ public class ListFirewallRulesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</p>
+         * <p>The tag value. A tag value must be 1 to 64 characters in length. You can add up to 20 tags.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
