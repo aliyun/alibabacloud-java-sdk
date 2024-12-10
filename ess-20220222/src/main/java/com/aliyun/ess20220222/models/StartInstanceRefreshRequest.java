@@ -74,6 +74,9 @@ public class StartInstanceRefreshRequest extends TeaModel {
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
+    @NameInMap("SkipMatching")
+    public Boolean skipMatching;
+
     public static StartInstanceRefreshRequest build(java.util.Map<String, ?> map) throws Exception {
         StartInstanceRefreshRequest self = new StartInstanceRefreshRequest();
         return TeaModel.build(map, self);
@@ -141,6 +144,14 @@ public class StartInstanceRefreshRequest extends TeaModel {
     }
     public String getScalingGroupId() {
         return this.scalingGroupId;
+    }
+
+    public StartInstanceRefreshRequest setSkipMatching(Boolean skipMatching) {
+        this.skipMatching = skipMatching;
+        return this;
+    }
+    public Boolean getSkipMatching() {
+        return this.skipMatching;
     }
 
     public static class StartInstanceRefreshRequestDesiredConfiguration extends TeaModel {

@@ -212,6 +212,9 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
+        @NameInMap("SkipMatching")
+        public Boolean skipMatching;
+
         /**
          * <p>The start time of the instance refresh task.</p>
          * 
@@ -326,6 +329,14 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         }
         public String getScalingGroupId() {
             return this.scalingGroupId;
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks setSkipMatching(Boolean skipMatching) {
+            this.skipMatching = skipMatching;
+            return this;
+        }
+        public Boolean getSkipMatching() {
+            return this.skipMatching;
         }
 
         public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks setStartTime(String startTime) {
