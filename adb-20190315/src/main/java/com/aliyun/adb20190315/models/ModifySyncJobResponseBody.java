@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifySyncJobResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5AD3D9DF-614F-5B97-9522-A2406A432012</p>
      */
