@@ -38,6 +38,9 @@ public class UpdateGatewayRequest extends TeaModel {
     @NameInMap("EnableIntranet")
     public Boolean enableIntranet;
 
+    @NameInMap("EnableSSLRedirection")
+    public Boolean enableSSLRedirection;
+
     /**
      * <p>The instance type used for the private gateway.</p>
      * 
@@ -93,6 +96,14 @@ public class UpdateGatewayRequest extends TeaModel {
     }
     public Boolean getEnableIntranet() {
         return this.enableIntranet;
+    }
+
+    public UpdateGatewayRequest setEnableSSLRedirection(Boolean enableSSLRedirection) {
+        this.enableSSLRedirection = enableSSLRedirection;
+        return this;
+    }
+    public Boolean getEnableSSLRedirection() {
+        return this.enableSSLRedirection;
     }
 
     public UpdateGatewayRequest setInstanceType(String instanceType) {

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
     /**
+     * <p>The ID of the private gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******</p>
      */
@@ -12,6 +14,8 @@ public class DeleteGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The message that is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successfully delete intranet linked vpc Peer for gateway</p>
      */
@@ -19,6 +23,8 @@ public class DeleteGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
      */

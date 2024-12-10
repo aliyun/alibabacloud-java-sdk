@@ -127,6 +127,9 @@ public class DescribeGatewayResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SSLRedirectionEnabled")
+    public Boolean SSLRedirectionEnabled;
+
     /**
      * <p>The status of the private gateway.</p>
      * <p>Valid values:</p>
@@ -254,6 +257,14 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeGatewayResponseBody setSSLRedirectionEnabled(Boolean SSLRedirectionEnabled) {
+        this.SSLRedirectionEnabled = SSLRedirectionEnabled;
+        return this;
+    }
+    public Boolean getSSLRedirectionEnabled() {
+        return this.SSLRedirectionEnabled;
     }
 
     public DescribeGatewayResponseBody setStatus(String status) {
