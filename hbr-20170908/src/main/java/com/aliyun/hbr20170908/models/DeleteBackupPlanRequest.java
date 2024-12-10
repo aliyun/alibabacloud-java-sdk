@@ -40,7 +40,7 @@ public class DeleteBackupPlanRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The ID of the backup vault.</p>
+     * <p>The ID of the backup vault. This parameter is required if the SourceType parameter is not set to UDM_ECS.</p>
      * 
      * <strong>example:</strong>
      * <p>v-*********************</p>

@@ -56,7 +56,7 @@ public class CreateVaultRequest extends TeaModel {
     public String vaultRegionId;
 
     /**
-     * <p>The storage type of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
+     * <p>The storage class of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
      * 
      * <strong>example:</strong>
      * <p>STANDARD</p>
@@ -65,7 +65,7 @@ public class CreateVaultRequest extends TeaModel {
     public String vaultStorageClass;
 
     /**
-     * <p>The type of the backup vault. Valid value</p>
+     * <p>The type of the backup vault. Valid values:</p>
      * <ul>
      * <li><strong>STANDARD</strong>: standard backup vault</li>
      * <li><strong>OTS_BACKUP</strong>: backup vault for Tablestore</li>

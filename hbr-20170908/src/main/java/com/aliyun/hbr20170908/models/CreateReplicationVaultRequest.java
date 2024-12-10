@@ -13,9 +13,17 @@ public class CreateReplicationVaultRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HBR_PRIVATE</p>
+     */
     @NameInMap("EncryptType")
     public String encryptType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>alias/test</p>
+     */
     @NameInMap("KmsKeyId")
     public String kmsKeyId;
 

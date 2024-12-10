@@ -146,6 +146,66 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag self = new DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTags extends TeaModel {
+        @NameInMap("HitTag")
+        public java.util.List<DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag> hitTag;
+
+        public static DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTags self = new DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTags setHitTag(java.util.List<DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag> hitTag) {
+            this.hitTag = hitTag;
+            return this;
+        }
+        public java.util.List<DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag> getHitTag() {
+            return this.hitTag;
+        }
+
+    }
+
     public static class DescribeBackupPlansResponseBodyBackupPlansBackupPlanOtsDetailTableNames extends TeaModel {
         @NameInMap("TableName")
         public java.util.List<String> tableName;
@@ -608,6 +668,9 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("CreatedByTag")
+        public Boolean createdByTag;
+
         /**
          * <p>The time when the backup plan was created. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
@@ -723,6 +786,9 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
+
+        @NameInMap("HitTags")
+        public DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTags hitTags;
 
         /**
          * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. This parameter indicates the paths to the files that are backed up.</p>
@@ -979,6 +1045,14 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public DescribeBackupPlansResponseBodyBackupPlansBackupPlan setCreatedByTag(Boolean createdByTag) {
+            this.createdByTag = createdByTag;
+            return this;
+        }
+        public Boolean getCreatedByTag() {
+            return this.createdByTag;
+        }
+
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlan setCreatedTime(Long createdTime) {
             this.createdTime = createdTime;
             return this;
@@ -1073,6 +1147,14 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         }
         public String getFileSystemId() {
             return this.fileSystemId;
+        }
+
+        public DescribeBackupPlansResponseBodyBackupPlansBackupPlan setHitTags(DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTags hitTags) {
+            this.hitTags = hitTags;
+            return this;
+        }
+        public DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTags getHitTags() {
+            return this.hitTags;
         }
 
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlan setInclude(String include) {

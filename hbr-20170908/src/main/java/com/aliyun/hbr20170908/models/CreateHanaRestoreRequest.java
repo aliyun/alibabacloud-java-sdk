@@ -141,7 +141,7 @@ public class CreateHanaRestoreRequest extends TeaModel {
     public Boolean systemCopy;
 
     /**
-     * <p>Specifies whether to use a catalog backup to restore the database. This parameter is valid only if you set the Mode parameter to <strong>RECOVERY_TO_SPECIFIC_BACKUP</strong>. If you do not use a catalog backup, you must specify the prefix of a backup file. Then, HBR finds the backup file based on the specified prefix and restores the backup file.</p>
+     * <p>Specifies whether to use a catalog backup to restore the database. This parameter is required only if you set the Mode parameter to <strong>RECOVERY_TO_SPECIFIC_BACKUP</strong>. If you turn off Use Catalog, you must specify the prefix of a backup file. Then, Cloud Backup finds the backup file based on the specified prefix and restores the backup file.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

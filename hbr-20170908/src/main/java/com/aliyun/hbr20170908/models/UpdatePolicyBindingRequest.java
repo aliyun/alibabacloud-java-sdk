@@ -217,6 +217,9 @@ public class UpdatePolicyBindingRequest extends TeaModel {
     }
 
     public static class UpdatePolicyBindingRequestAdvancedOptionsOssDetail extends TeaModel {
+        @NameInMap("IgnoreArchiveObject")
+        public Boolean ignoreArchiveObject;
+
         /**
          * <p>Specifies whether the system deletes the inventory lists after a backup is complete. This parameter is available only when OSS inventory lists are used. Valid values:</p>
          * <ul>
@@ -247,6 +250,14 @@ public class UpdatePolicyBindingRequest extends TeaModel {
         public static UpdatePolicyBindingRequestAdvancedOptionsOssDetail build(java.util.Map<String, ?> map) throws Exception {
             UpdatePolicyBindingRequestAdvancedOptionsOssDetail self = new UpdatePolicyBindingRequestAdvancedOptionsOssDetail();
             return TeaModel.build(map, self);
+        }
+
+        public UpdatePolicyBindingRequestAdvancedOptionsOssDetail setIgnoreArchiveObject(Boolean ignoreArchiveObject) {
+            this.ignoreArchiveObject = ignoreArchiveObject;
+            return this;
+        }
+        public Boolean getIgnoreArchiveObject() {
+            return this.ignoreArchiveObject;
         }
 
         public UpdatePolicyBindingRequestAdvancedOptionsOssDetail setInventoryCleanupPolicy(String inventoryCleanupPolicy) {

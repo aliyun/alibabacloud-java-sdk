@@ -11,6 +11,9 @@ public class DescribePolicyBindingsShrinkRequest extends TeaModel {
     public java.util.List<DescribePolicyBindingsShrinkRequestFilters> filters;
 
     /**
+     * <p>The number of results for each query.</p>
+     * <p>Valid values: 10 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -109,6 +109,8 @@ public class CreateBackupPlanShrinkRequest extends TeaModel {
     public String detailShrink;
 
     /**
+     * <p>Specifies whether to disable the plan by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

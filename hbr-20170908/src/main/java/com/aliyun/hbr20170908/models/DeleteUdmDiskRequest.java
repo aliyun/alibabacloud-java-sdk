@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteUdmDiskRequest extends TeaModel {
     /**
+     * <p>The disk ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>d-bp15************xy70</p>
      */

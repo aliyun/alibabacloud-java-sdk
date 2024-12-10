@@ -141,6 +141,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
         @NameInMap("Archive")
         public Integer archive;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CommonFileSystem")
         public Integer commonFileSystem;
 

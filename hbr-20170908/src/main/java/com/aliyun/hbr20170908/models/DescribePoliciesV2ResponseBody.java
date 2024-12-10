@@ -151,6 +151,10 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         @NameInMap("DataSourceIds")
         public java.util.List<String> dataSourceIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UDM_ECS</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -242,12 +246,24 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     }
 
     public static class DescribePoliciesV2ResponseBodyPoliciesRulesTagFilters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>prod</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -303,6 +319,9 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
 
         @NameInMap("DataSourceFilters")
         public java.util.List<DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters> dataSourceFilters;
+
+        @NameInMap("Immutable")
+        public Boolean immutable;
 
         /**
          * <p>Indicates whether the feature of keeping at least one backup version is enabled. Valid values:</p>
@@ -420,6 +439,14 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         }
         public java.util.List<DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters> getDataSourceFilters() {
             return this.dataSourceFilters;
+        }
+
+        public DescribePoliciesV2ResponseBodyPoliciesRules setImmutable(Boolean immutable) {
+            this.immutable = immutable;
+            return this;
+        }
+        public Boolean getImmutable() {
+            return this.immutable;
         }
 
         public DescribePoliciesV2ResponseBodyPoliciesRules setKeepLatestSnapshots(Long keepLatestSnapshots) {
@@ -542,6 +569,16 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The policy type. Valid values:</p>
+         * <ul>
+         * <li><strong>STANDARD</strong>: the general backup policy. This type of policy applies to backups other than Elastic Compute Service (ECS) instance backup.</li>
+         * <li><strong>UDM_ECS_ONLY</strong>: the ECS instance backup policy. This type of policy applies only to ECS instance backup.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 

@@ -40,7 +40,7 @@ public class UpdateClientSettingsRequest extends TeaModel {
     /**
      * <p>The proxy configuration on the data plane. Valid values:</p>
      * <ul>
-     * <li><strong>DISABLE</strong>: No proxy is used.</li>
+     * <li><strong>DISABLE</strong>: The proxy is not used.</li>
      * <li><strong>USE_CONTROL_PROXY</strong> (default): The configuration is the same as that on the control plane.</li>
      * <li><strong>CUSTOM</strong>: The configuration is customized (HTTP).</li>
      * </ul>

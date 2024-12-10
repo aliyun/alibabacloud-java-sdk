@@ -42,6 +42,8 @@ public class CreatePolicyBindingsRequest extends TeaModel {
 
     public static class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail extends TeaModel {
         /**
+         * <p>The size of backup shards (the number of files).</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -49,6 +51,12 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public Long fetchSliceSize;
 
         /**
+         * <p>Specifies whether the system performs full backup if incremental backup fails. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The system performs full backup if incremental backup fails.</li>
+         * <li><strong>false</strong>: The system does not perform full backup if incremental backup fails.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -145,8 +153,8 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         /**
          * <p>Specifies whether to use an advanced policy. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: uses the advanced policy.</li>
+         * <li><strong>false</strong>: does not use the advanced policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,8 +166,8 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the Volume Shadow Copy Service (VSS) feature. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: enables the feature.</li>
+         * <li><strong>false</strong>: disables the feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,12 +200,15 @@ public class CreatePolicyBindingsRequest extends TeaModel {
     }
 
     public static class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail extends TeaModel {
+        @NameInMap("IgnoreArchiveObject")
+        public Boolean ignoreArchiveObject;
+
         /**
          * <p>Specifies whether the system deletes the inventory lists when a backup is completed. This parameter is valid only when OSS inventories are used. Valid values:</p>
          * <ul>
-         * <li><strong>NO_CLEANUP</strong>: Inventory lists are not deleted.</li>
-         * <li><strong>DELETE_CURRENT</strong>: The current inventory list is deleted.</li>
-         * <li><strong>DELETE_CURRENT_AND_PREVIOUS</strong>: All inventory lists are deleted.</li>
+         * <li><strong>NO_CLEANUP</strong>: does not delete inventory lists.</li>
+         * <li><strong>DELETE_CURRENT</strong>: deletes the current inventory list.</li>
+         * <li><strong>DELETE_CURRENT_AND_PREVIOUS</strong>: deletes all inventory lists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,6 +233,14 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public static CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail build(java.util.Map<String, ?> map) throws Exception {
             CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail self = new CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail();
             return TeaModel.build(map, self);
+        }
+
+        public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail setIgnoreArchiveObject(Boolean ignoreArchiveObject) {
+            this.ignoreArchiveObject = ignoreArchiveObject;
+            return this;
+        }
+        public Boolean getIgnoreArchiveObject() {
+            return this.ignoreArchiveObject;
         }
 
         public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail setInventoryCleanupPolicy(String inventoryCleanupPolicy) {
@@ -253,7 +272,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public Boolean appConsistent;
 
         /**
-         * <p>The IDs of the disks that need to be protected. If all disks need to be protected, leave this parameter empty.</p>
+         * <p>The IDs of the disks that need to be protected. If all disks need to be protected, this parameter is empty.</p>
          */
         @NameInMap("DiskIdList")
         public java.util.List<String> diskIdList;
@@ -306,7 +325,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String preScriptPath;
 
         /**
-         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the name of the RAM role that is required to create application-consistent snapshots.</p>
+         * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the name of the Resource Access Management (RAM) role that is required to create application-consistent snapshots.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunECSInstanceForHbrRole</p>
@@ -315,7 +334,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String ramRoleName;
 
         /**
-         * <p>Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are enhanced SSDs (ESSDs).</p>
+         * <p>Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are Enterprise SSDs (ESSDs).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -420,6 +439,9 @@ public class CreatePolicyBindingsRequest extends TeaModel {
     }
 
     public static class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptions extends TeaModel {
+        /**
+         * <p>The advanced options for CPFS backup.</p>
+         */
         @NameInMap("CommonFileSystemDetail")
         public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail commonFileSystemDetail;
 
@@ -513,8 +535,8 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         /**
          * <p>Specifies whether to back up and restore data within the same Alibaba Cloud account or across Alibaba Cloud accounts. Default value: SELF_ACCOUNT. Valid values:</p>
          * <ul>
-         * <li><strong>SELF_ACCOUNT</strong>: Data is backed up within the same Alibaba Cloud account.</li>
-         * <li><strong>CROSS_ACCOUNT</strong>: Data is backed up across Alibaba Cloud accounts.</li>
+         * <li><strong>SELF_ACCOUNT</strong>: backs up data within the same Alibaba Cloud account.</li>
+         * <li><strong>CROSS_ACCOUNT</strong>: backs up data across Alibaba Cloud accounts.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -533,7 +555,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public Long crossAccountUserId;
 
         /**
-         * <p>The ID of the data source. The meaning of this parameter depends on the <strong>SourceType</strong> parameter.</p>
+         * <p>The ID of the data source. The meaning of this parameter depends on the <strong>SourceType</strong> parameter. Valid values:</p>
          * <ul>
          * <li><strong>UDM_ECS</strong>: the ID of the Elastic Compute Service (ECS) instance</li>
          * <li><strong>OSS</strong>: the name of the Object Storage Service (OSS) bucket</li>
@@ -541,6 +563,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
          * <li><strong>COMMON_NAS</strong>: the ID of the on-premises NAS file system</li>
          * <li><strong>ECS_FILE</strong>: the ID of the ECS instance</li>
          * <li><strong>File</strong>: the ID of the Cloud Backup client</li>
+         * <li><strong>COMMON_FILE_SYSTEM</strong>: the ID of the Cloud Parallel File Storage (CPFS) backup data source</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -550,10 +573,10 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>策略对该数据源是否暂停生效。</p>
+         * <p>Specifies whether to disable the backup policy for the data source. Valid values:</p>
          * <ul>
-         * <li>true：暂停</li>
-         * <li>false：未暂停</li>
+         * <li>true: disables the backup policy for the data source</li>
+         * <li>false: enables the backup policy for the data source</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -563,7 +586,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String disabled;
 
         /**
-         * <p>仅当<strong>SourceType</strong>取值为<strong>ECS_FILE</strong>或<strong>File</strong>时，需要配置该参数。表示不需要进行备份的文件类型，该类型的所有文件都不备份。最多支持255个字符。</p>
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
@@ -572,7 +595,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String exclude;
 
         /**
-         * <p>仅当<strong>SourceType</strong>取值为<strong>ECS_FILE</strong>或<strong>File</strong>时，需要配置该参数。表示要进行备份的文件类型，这些类型的所有文件都备份。最多支持255个字符。</p>
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
@@ -590,7 +613,10 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String policyBindingDescription;
 
         /**
-         * <p>The prefix of the path to the folder that you want to back up. By default, the entire OSS bucket is backed up. This parameter is required only if you set the SourceType parameter to <strong>OSS</strong>.</p>
+         * <ul>
+         * <li>If the SourceType parameter is set to <strong>OSS</strong>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</li>
+         * <li>If the SourceType parameter is set to <strong>ECS_FILE</strong> or <strong>File</strong>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths backed up.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>backup/</p>
@@ -603,10 +629,11 @@ public class CreatePolicyBindingsRequest extends TeaModel {
          * <ul>
          * <li><strong>UDM_ECS</strong>: ECS instance</li>
          * <li><strong>OSS</strong>: OSS bucket</li>
-         * <li><strong>NAS</strong>: Apsara File Storage NAS file system</li>
+         * <li><strong>NAS</strong>: NAS file system</li>
          * <li><strong>COMMON_NAS</strong>: on-premises NAS file system</li>
-         * <li><strong>ECS_FILE</strong>: ECS files</li>
-         * <li><strong>File</strong>: on-premises files</li>
+         * <li><strong>ECS_FILE</strong>: ECS file</li>
+         * <li><strong>File</strong>: on-premises file</li>
+         * <li><strong>COMMON_FILE_SYSTEM</strong>: CPFS file system</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -616,11 +643,11 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>仅当<strong>SourceType</strong>取值为<strong>ECS_FILE</strong>或<strong>File</strong>时，需要配置该参数。表示备份流量控制。格式为<code>{start}{end}{bandwidth}</code>。多个流量控制配置使用分隔，并且配置时间不允许有重叠。</p>
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the throttling rules. Format: <code>{start}{end}{bandwidth}</code>. Separate multiple throttling rules with vertical bars (|). The time ranges of the throttling rules cannot overlap.</p>
          * <ul>
-         * <li><strong>start</strong>：起始小时。</li>
-         * <li><strong>end</strong>：结束小时。</li>
-         * <li><strong>bandwidth</strong>：限制速率，单位KB/s。</li>
+         * <li><strong>start</strong>: the start hour.</li>
+         * <li><strong>end</strong>: the end hour.</li>
+         * <li><strong>bandwidth</strong>: the bandwidth. Unit: KB/s.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -236,7 +236,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         public String crossAccountRoleName;
 
         /**
-         * <p>The backup type. Valid values:</p>
+         * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
          * <ul>
          * <li><strong>SELF_ACCOUNT</strong>: Data is backed up within the same Alibaba Cloud account.</li>
          * <li><strong>CROSS_ACCOUNT</strong>: Data is backed up across Alibaba Cloud accounts.</li>
