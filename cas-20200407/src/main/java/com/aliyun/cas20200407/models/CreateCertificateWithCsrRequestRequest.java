@@ -57,6 +57,9 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateCertificateWithCsrRequestRequestTags> tags;
+
     /**
      * <p>The name of the applicant.</p>
      * <p>This parameter is required.</p>
@@ -119,6 +122,14 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
         return this.productCode;
     }
 
+    public CreateCertificateWithCsrRequestRequest setTags(java.util.List<CreateCertificateWithCsrRequestRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateCertificateWithCsrRequestRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateCertificateWithCsrRequestRequest setUsername(String username) {
         this.username = username;
         return this;
@@ -133,6 +144,36 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
     }
     public String getValidateType() {
         return this.validateType;
+    }
+
+    public static class CreateCertificateWithCsrRequestRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateCertificateWithCsrRequestRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateCertificateWithCsrRequestRequestTags self = new CreateCertificateWithCsrRequestRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCertificateWithCsrRequestRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateCertificateWithCsrRequestRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

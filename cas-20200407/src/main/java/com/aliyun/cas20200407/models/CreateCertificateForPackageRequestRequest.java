@@ -93,6 +93,9 @@ public class CreateCertificateForPackageRequestRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateCertificateForPackageRequestRequestTags> tags;
+
     /**
      * <p>The name of the applicant.</p>
      * <p>If you do not specify this parameter, the information about the most recent contact that is added to the <strong>Information Management</strong> module is used. For more information about how to add a contact to the <strong>Information Management</strong> module, see <a href="https://help.aliyun.com/document_detail/198262.html">Manage contacts</a>.</p>
@@ -170,6 +173,14 @@ public class CreateCertificateForPackageRequestRequest extends TeaModel {
         return this.productCode;
     }
 
+    public CreateCertificateForPackageRequestRequest setTags(java.util.List<CreateCertificateForPackageRequestRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateCertificateForPackageRequestRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateCertificateForPackageRequestRequest setUsername(String username) {
         this.username = username;
         return this;
@@ -184,6 +195,36 @@ public class CreateCertificateForPackageRequestRequest extends TeaModel {
     }
     public String getValidateType() {
         return this.validateType;
+    }
+
+    public static class CreateCertificateForPackageRequestRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateCertificateForPackageRequestRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateCertificateForPackageRequestRequestTags self = new CreateCertificateForPackageRequestRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCertificateForPackageRequestRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateCertificateForPackageRequestRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
