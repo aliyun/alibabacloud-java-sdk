@@ -319,4 +319,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OAuth2TokenEndpointHeaders headers = new OAuth2TokenEndpointHeaders();
         return this.oAuth2TokenEndpointWithOptions(request, headers, runtime);
     }
+
+    /**
+     * <b>summary</b> : 
+     * <p>推送设备通知</p>
+     * 
+     * @param tmpReq PushDeviceNotificationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PushDeviceNotificationResponse
+     */
+    public PushDeviceNotificationResponse pushDeviceNotificationWithOptions(PushDeviceNotificationRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PushDeviceNotificationShrinkRequest request = new PushDeviceNotificationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantInfo)) {
+            request.tenantInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantInfo, "TenantInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantInfoShrink)) {
+            body.put("TenantInfo", request.tenantInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PushDeviceNotification"),
+            new TeaPair("version", "oauth2_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/oauth2/device/notification/push"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PushDeviceNotificationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>推送设备通知</p>
+     * 
+     * @param request PushDeviceNotificationRequest
+     * @return PushDeviceNotificationResponse
+     */
+    public PushDeviceNotificationResponse pushDeviceNotification(PushDeviceNotificationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.pushDeviceNotificationWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询设备列表</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryDeviceListResponse
+     */
+    public QueryDeviceListResponse queryDeviceListWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryDeviceList"),
+            new TeaPair("version", "oauth2_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/oauth2/device/list"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询设备列表</p>
+     * @return QueryDeviceListResponse
+     */
+    public QueryDeviceListResponse queryDeviceList() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryDeviceListWithOptions(headers, runtime);
+    }
 }
