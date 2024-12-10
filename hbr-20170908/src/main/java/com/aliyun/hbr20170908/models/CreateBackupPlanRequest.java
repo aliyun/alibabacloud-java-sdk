@@ -109,6 +109,8 @@ public class CreateBackupPlanRequest extends TeaModel {
     public java.util.Map<String, ?> detail;
 
     /**
+     * <p>Specifies whether to disable the plan by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

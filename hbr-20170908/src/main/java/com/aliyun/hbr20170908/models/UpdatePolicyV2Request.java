@@ -78,6 +78,10 @@ public class UpdatePolicyV2Request extends TeaModel {
         @NameInMap("DataSourceIds")
         public java.util.List<String> dataSourceIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UDM_ECS</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -169,12 +173,24 @@ public class UpdatePolicyV2Request extends TeaModel {
     }
 
     public static class UpdatePolicyV2RequestRulesTagFilters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>prod</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -239,6 +255,9 @@ public class UpdatePolicyV2Request extends TeaModel {
 
         @NameInMap("DataSourceFilters")
         public java.util.List<UpdatePolicyV2RequestRulesDataSourceFilters> dataSourceFilters;
+
+        @NameInMap("Immutable")
+        public Boolean immutable;
 
         /**
          * <p>Specifies whether to enable the feature of keeping at least one backup version. Valid values:</p>
@@ -355,6 +374,14 @@ public class UpdatePolicyV2Request extends TeaModel {
         }
         public java.util.List<UpdatePolicyV2RequestRulesDataSourceFilters> getDataSourceFilters() {
             return this.dataSourceFilters;
+        }
+
+        public UpdatePolicyV2RequestRules setImmutable(Boolean immutable) {
+            this.immutable = immutable;
+            return this;
+        }
+        public Boolean getImmutable() {
+            return this.immutable;
         }
 
         public UpdatePolicyV2RequestRules setKeepLatestSnapshots(Long keepLatestSnapshots) {

@@ -12,7 +12,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-2-pop", "hbr.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "hbr.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-pop", "hbr.aliyuncs.com"),
             new TeaPair("cn-beijing-gov-1", "hbr.aliyuncs.com"),
             new TeaPair("cn-beijing-nu16-b01", "hbr.aliyuncs.com"),
@@ -36,7 +35,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-shenzhen-st4-d01", "hbr.aliyuncs.com"),
             new TeaPair("cn-shenzhen-su18-b01", "hbr.aliyuncs.com"),
             new TeaPair("cn-wuhan", "hbr.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "hbr.aliyuncs.com"),
             new TeaPair("cn-yushanfang", "hbr.aliyuncs.com"),
             new TeaPair("cn-zhangbei", "hbr.aliyuncs.com"),
             new TeaPair("cn-zhangbei-na61-b01", "hbr.aliyuncs.com"),
@@ -220,7 +218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  In Cloud Backup, you can use resource groups to manage resources such as backup vaults, backup clients, and SAP HANA instances.</p>
+     * <p>  In the Cloud Backup console, you can use resource groups to manage resources such as backup vaults, Cloud Backup clients, and SAP HANA instances.</p>
      * <ul>
      * <li>A resource is a cloud service entity that you create on Alibaba Cloud, such as an Elastic Compute Service (ECS) instance, a backup vault, or an SAP HANA instance.</li>
      * <li>You can sort resources owned by your Alibaba Cloud account into various resource groups. Resource groups facilitate resource management among multiple projects or applications within your Alibaba Cloud account and simplify permission management.</li>
@@ -267,7 +265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  In Cloud Backup, you can use resource groups to manage resources such as backup vaults, backup clients, and SAP HANA instances.</p>
+     * <p>  In the Cloud Backup console, you can use resource groups to manage resources such as backup vaults, Cloud Backup clients, and SAP HANA instances.</p>
      * <ul>
      * <li>A resource is a cloud service entity that you create on Alibaba Cloud, such as an Elastic Compute Service (ECS) instance, a backup vault, or an SAP HANA instance.</li>
      * <li>You can sort resources owned by your Alibaba Cloud account into various resource groups. Resource groups facilitate resource management among multiple projects or applications within your Alibaba Cloud account and simplify permission management.</li>
@@ -648,7 +646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Hybrid Backup Recovery (HBR). For more information, see <a href="https://help.aliyun.com/document_detail/89062.html">Billable items and billing methods</a>.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Cloud Backup. For more information, see <a href="https://help.aliyun.com/document_detail/89062.html">Billing methods and billable items</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Installs one or more HBR clients on specified instances.</p>
@@ -711,7 +709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Hybrid Backup Recovery (HBR). For more information, see <a href="https://help.aliyun.com/document_detail/89062.html">Billable items and billing methods</a>.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Cloud Backup. For more information, see <a href="https://help.aliyun.com/document_detail/89062.html">Billing methods and billable items</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Installs one or more HBR clients on specified instances.</p>
@@ -814,7 +812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To register an SAP HANA instance, you must configure the connection parameters of the SAP HANA instance. After the SAP HANA instance is registered, Cloud Backup installs a Cloud Backup client on the Elastic Compute Service (ECS) instance that hosts the SAP HANA instance.</p>
+     * <p>To register an SAP HANA instance, you must configure the SAP HANA connection information. After the SAP HANA instance is registered, Cloud Backup installs a backup client on the node of the SAP HANA instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Registers an SAP HANA instance.</p>
@@ -905,7 +903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To register an SAP HANA instance, you must configure the connection parameters of the SAP HANA instance. After the SAP HANA instance is registered, Cloud Backup installs a Cloud Backup client on the Elastic Compute Service (ECS) instance that hosts the SAP HANA instance.</p>
+     * <p>To register an SAP HANA instance, you must configure the SAP HANA connection information. After the SAP HANA instance is registered, Cloud Backup installs a backup client on the node of the SAP HANA instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Registers an SAP HANA instance.</p>
@@ -4377,7 +4375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Activates Hybrid Backup Recovery (HBR).</p>
+     * <p>Activates Cloud Backup.</p>
      * 
      * @param request OpenHbrServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4401,7 +4399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Activates Hybrid Backup Recovery (HBR).</p>
+     * <p>Activates Cloud Backup.</p>
      * @return OpenHbrServiceResponse
      */
     public OpenHbrServiceResponse openHbrService() throws Exception {

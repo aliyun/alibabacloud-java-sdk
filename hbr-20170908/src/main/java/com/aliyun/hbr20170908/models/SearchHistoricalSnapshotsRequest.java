@@ -55,7 +55,7 @@ public class SearchHistoricalSnapshotsRequest extends TeaModel {
      *   },
      *   {
      *     &quot;field&quot;: &quot;CompleteTime&quot;,
-     *     &quot;value&quot;: 1626769913,
+     *     &quot;value&quot;: &quot;1626769913&quot;,
      *     &quot;operation&quot;: &quot;GREATER_THAN_OR_EQUAL&quot;
      *   }
      * ]
@@ -64,9 +64,9 @@ public class SearchHistoricalSnapshotsRequest extends TeaModel {
      * <li><p>The following fields are supported:</p>
      * <ul>
      * <li>VaultId: specifies the ID of the backup vault. This field is required.</li>
-     * <li>InstanceId: specifies the ID of the ECS instance. If the SourceType parameter is set to ECS_FILE, this field is required.</li>
-     * <li>Bucket: specifies the ID of the OSS bucket. If the SourceType parameter is set to OSS, this field is required.</li>
-     * <li>FileSystemId: specifies the ID of the NAS file system. If the SourceType parameter is set to NAS, this field is required.</li>
+     * <li>InstanceId: specifies the ID of the Elastic Compute Service (ECS) instance. If the SourceType parameter is set to ECS_FILE, this field is required.</li>
+     * <li>Bucket: specifies the name of the Object Storage Service (OSS) bucket. If the SourceType parameter is set to OSS, this field is required.</li>
+     * <li>FileSystemId: specifies the ID of the Apsara File Storage NAS (NAS) file system. If the SourceType parameter is set to NAS, this field is required.</li>
      * <li>CreateTime: specifies the time when the NAS file system was created. If the SourceType parameter is set to NAS, this field is required.</li>
      * <li>CompleteTime: specifies the time when the backup snapshot was completed.</li>
      * <li>PlanId: the ID of a backup plan.</li>

@@ -130,6 +130,8 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonFileSystemDetail extends TeaModel {
         /**
+         * <p>The size of backup shards (the number of files).</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -137,6 +139,12 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Long fetchSliceSize;
 
         /**
+         * <p>Specifies whether the system performs full backup if incremental backup fails. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The system performs full backup if incremental backup fails.</li>
+         * <li><strong>false</strong>: The system does not perform full backup if incremental backup fails.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -177,6 +185,8 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String clientId;
 
         /**
+         * <p>The ID of the client group.</p>
+         * 
          * <strong>example:</strong>
          * <p>cl-000gkcofngi04j6k680a</p>
          */
@@ -296,6 +306,15 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail extends TeaModel {
         /**
+         * <p>不在任务统计和失败文件列表中提示归档型对象</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("IgnoreArchiveObject")
+        public Boolean ignoreArchiveObject;
+
+        /**
          * <p>Indicates whether the system deletes the inventory lists when a backup is completed. This parameter is valid only when OSS inventories are used. Valid values:</p>
          * <ul>
          * <li><strong>NO_CLEANUP</strong>: Inventory lists are not deleted.</li>
@@ -325,6 +344,14 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public static DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail self = new DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail setIgnoreArchiveObject(Boolean ignoreArchiveObject) {
+            this.ignoreArchiveObject = ignoreArchiveObject;
+            return this;
+        }
+        public Boolean getIgnoreArchiveObject() {
+            return this.ignoreArchiveObject;
         }
 
         public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail setInventoryCleanupPolicy(String inventoryCleanupPolicy) {
@@ -540,6 +567,9 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptions extends TeaModel {
+        /**
+         * <p>The advanced options for large-scale file system backup.</p>
+         */
         @NameInMap("CommonFileSystemDetail")
         public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonFileSystemDetail commonFileSystemDetail;
 
@@ -615,12 +645,34 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyBindingsResponseBodyPolicyBindingsHitTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag-based matching rule.</p>
+         * <ul>
+         * <li><strong>EQUAL</strong>: Both the tag key and tag value are matched.</li>
+         * <li><strong>NOT</strong>: The tag key is matched and the tag value is not matched.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -662,6 +714,12 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         @NameInMap("AdvancedOptions")
         public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptions advancedOptions;
 
+        /**
+         * <p>Indicates whether the resource is automatically associated with the related resource tag in the backup policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CreatedByTag")
         public Boolean createdByTag;
 
@@ -728,16 +786,23 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public Boolean disabled;
 
         /**
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
          */
         @NameInMap("Exclude")
         public String exclude;
 
+        /**
+         * <p>The matched tag rules.</p>
+         */
         @NameInMap("HitTags")
         public java.util.List<DescribePolicyBindingsResponseBodyPolicyBindingsHitTags> hitTags;
 
         /**
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
          */
@@ -772,6 +837,11 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String policyId;
 
         /**
+         * <ul>
+         * <li>If the SourceType parameter is set to <strong>OSS</strong>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</li>
+         * <li>If the SourceType parameter is set to <strong>ECS_FILE</strong> or <strong>File</strong>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths backed up.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>backup/</p>
          */
@@ -791,6 +861,13 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the throttling rules. Format: <code>{start}{end}{bandwidth}</code>. Separate multiple throttling rules with vertical bars (|). The time ranges of the throttling rules cannot overlap.</p>
+         * <ul>
+         * <li><strong>start</strong>: the start hour.</li>
+         * <li><strong>end</strong>: the end hour.</li>
+         * <li><strong>bandwidth</strong>: the bandwidth. Unit: KB/s.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0:24:10240</p>
          */

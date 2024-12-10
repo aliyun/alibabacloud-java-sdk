@@ -22,6 +22,21 @@ public class CreatePolicyV2Request extends TeaModel {
     @NameInMap("PolicyName")
     public String policyName;
 
+    /**
+     * <p>The policy type. Valid values:</p>
+     * <ul>
+     * <li><strong>STANDARD</strong>: the general backup policy. This type of policy applies to backups other than Elastic Compute Service (ECS) instance backup.</li>
+     * <li><strong>UDM_ECS_ONLY</strong>: This type of policy applies only to ECS instance backup.</li>
+     * </ul>
+     * <p>If the policy type is not specified, Cloud Backup automatically sets the policy type based on whether the backup vault is specified in the rules of the policy:</p>
+     * <ul>
+     * <li>If the backup vault is specified, Cloud Backup sets the policy type to <strong>STANDARD</strong>.</li>
+     * <li>If the backup vault is not specified, Cloud Backup sets the policy type to <strong>UDM_ECS_ONLY</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
+     */
     @NameInMap("PolicyType")
     public String policyType;
 
@@ -72,6 +87,10 @@ public class CreatePolicyV2Request extends TeaModel {
         @NameInMap("DataSourceIds")
         public java.util.List<String> dataSourceIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UDM_ECS</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -102,6 +121,7 @@ public class CreatePolicyV2Request extends TeaModel {
         /**
          * <p>The type of the special retention rule. Valid values:</p>
          * <ul>
+         * <li><strong>DAILY</strong>: retains daily backups</li>
          * <li><strong>WEEKLY</strong>: retains weekly backups</li>
          * <li><strong>MONTHLY</strong>: retains monthly backups</li>
          * <li><strong>YEARLY</strong>: retains yearly backups</li>
@@ -163,12 +183,24 @@ public class CreatePolicyV2Request extends TeaModel {
     }
 
     public static class CreatePolicyV2RequestRulesTagFilters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>prod</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -215,6 +247,9 @@ public class CreatePolicyV2Request extends TeaModel {
 
         @NameInMap("DataSourceFilters")
         public java.util.List<CreatePolicyV2RequestRulesDataSourceFilters> dataSourceFilters;
+
+        @NameInMap("Immutable")
+        public Boolean immutable;
 
         /**
          * <p>Specifies whether to enable the feature of keeping at least one backup version. Valid values:</p>
@@ -288,6 +323,10 @@ public class CreatePolicyV2Request extends TeaModel {
         @NameInMap("TagFilters")
         public java.util.List<CreatePolicyV2RequestRulesTagFilters> tagFilters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v-0001************aseg</p>
+         */
         @NameInMap("VaultId")
         public String vaultId;
 
@@ -310,6 +349,14 @@ public class CreatePolicyV2Request extends TeaModel {
         }
         public java.util.List<CreatePolicyV2RequestRulesDataSourceFilters> getDataSourceFilters() {
             return this.dataSourceFilters;
+        }
+
+        public CreatePolicyV2RequestRules setImmutable(Boolean immutable) {
+            this.immutable = immutable;
+            return this;
+        }
+        public Boolean getImmutable() {
+            return this.immutable;
         }
 
         public CreatePolicyV2RequestRules setKeepLatestSnapshots(Long keepLatestSnapshots) {
