@@ -4,6 +4,9 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribePatternPerformanceResponseBody extends TeaModel {
+    @NameInMap("AccessIp")
+    public String accessIp;
+
     /**
      * <p>The end time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</p>
      * 
@@ -13,11 +16,17 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("FailedCount")
+    public Long failedCount;
+
     /**
      * <p>The queried performance metrics.</p>
      */
     @NameInMap("Performances")
     public java.util.List<DescribePatternPerformanceResponseBodyPerformances> performances;
+
+    @NameInMap("QueryCount")
+    public Long queryCount;
 
     /**
      * <p>The request ID.</p>
@@ -28,6 +37,9 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SQLPattern")
+    public String SQLPattern;
+
     /**
      * <p>The start time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</p>
      * 
@@ -37,9 +49,23 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("Tables")
+    public String tables;
+
+    @NameInMap("User")
+    public String user;
+
     public static DescribePatternPerformanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePatternPerformanceResponseBody self = new DescribePatternPerformanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePatternPerformanceResponseBody setAccessIp(String accessIp) {
+        this.accessIp = accessIp;
+        return this;
+    }
+    public String getAccessIp() {
+        return this.accessIp;
     }
 
     public DescribePatternPerformanceResponseBody setEndTime(String endTime) {
@@ -50,12 +76,28 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         return this.endTime;
     }
 
+    public DescribePatternPerformanceResponseBody setFailedCount(Long failedCount) {
+        this.failedCount = failedCount;
+        return this;
+    }
+    public Long getFailedCount() {
+        return this.failedCount;
+    }
+
     public DescribePatternPerformanceResponseBody setPerformances(java.util.List<DescribePatternPerformanceResponseBodyPerformances> performances) {
         this.performances = performances;
         return this;
     }
     public java.util.List<DescribePatternPerformanceResponseBodyPerformances> getPerformances() {
         return this.performances;
+    }
+
+    public DescribePatternPerformanceResponseBody setQueryCount(Long queryCount) {
+        this.queryCount = queryCount;
+        return this;
+    }
+    public Long getQueryCount() {
+        return this.queryCount;
     }
 
     public DescribePatternPerformanceResponseBody setRequestId(String requestId) {
@@ -66,12 +108,36 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribePatternPerformanceResponseBody setSQLPattern(String SQLPattern) {
+        this.SQLPattern = SQLPattern;
+        return this;
+    }
+    public String getSQLPattern() {
+        return this.SQLPattern;
+    }
+
     public DescribePatternPerformanceResponseBody setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribePatternPerformanceResponseBody setTables(String tables) {
+        this.tables = tables;
+        return this;
+    }
+    public String getTables() {
+        return this.tables;
+    }
+
+    public DescribePatternPerformanceResponseBody setUser(String user) {
+        this.user = user;
+        return this;
+    }
+    public String getUser() {
+        return this.user;
     }
 
     public static class DescribePatternPerformanceResponseBodyPerformancesSeries extends TeaModel {

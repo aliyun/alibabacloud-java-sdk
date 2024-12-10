@@ -104,6 +104,151 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList extends TeaModel {
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("StepDesc")
+        public String stepDesc;
+
+        @NameInMap("StepName")
+        public String stepName;
+
+        @NameInMap("StepProgress")
+        public String stepProgress;
+
+        @NameInMap("StepStatus")
+        public String stepStatus;
+
+        public static DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList self = new DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList setStepDesc(String stepDesc) {
+            this.stepDesc = stepDesc;
+            return this;
+        }
+        public String getStepDesc() {
+            return this.stepDesc;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList setStepName(String stepName) {
+            this.stepName = stepName;
+            return this;
+        }
+        public String getStepName() {
+            return this.stepName;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList setStepProgress(String stepProgress) {
+            this.stepProgress = stepProgress;
+            return this;
+        }
+        public String getStepProgress() {
+            return this.stepProgress;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList setStepStatus(String stepStatus) {
+            this.stepStatus = stepStatus;
+            return this;
+        }
+        public String getStepStatus() {
+            return this.stepStatus;
+        }
+
+    }
+
+    public static class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepList extends TeaModel {
+        @NameInMap("StepList")
+        public java.util.List<DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList> stepList;
+
+        public static DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepList self = new DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepList setStepList(java.util.List<DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList> stepList) {
+            this.stepList = stepList;
+            return this;
+        }
+        public java.util.List<DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList> getStepList() {
+            return this.stepList;
+        }
+
+    }
+
+    public static class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Progress")
+        public String progress;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StepList")
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepList stepList;
+
+        public static DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo self = new DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo setStepList(DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepList stepList) {
+            this.stepList = stepList;
+            return this;
+        }
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepList getStepList() {
+            return this.stepList;
+        }
+
+    }
+
     public static class DescribeDBClusterAttributeResponseBodyItemsDBCluster extends TeaModel {
         /**
          * <p>The cache size of the ClickHouse wide table engine. Unit: GB. If a value of -1 is returned, the ClickHouse wide table engine is disabled. If a value other than -1 is returned, this parameter indicates the disk cache size.</p>
@@ -471,6 +616,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("Tags")
         public DescribeDBClusterAttributeResponseBodyItemsDBClusterTags tags;
 
+        @NameInMap("TaskInfo")
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo taskInfo;
+
         /**
          * <p>Indicates whether Elastic Network Interface (ENI) is enabled. Valid values:</p>
          * <ul>
@@ -794,6 +942,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public DescribeDBClusterAttributeResponseBodyItemsDBClusterTags getTags() {
             return this.tags;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setTaskInfo(DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo taskInfo) {
+            this.taskInfo = taskInfo;
+            return this;
+        }
+        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo getTaskInfo() {
+            return this.taskInfo;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setUserENIStatus(Boolean userENIStatus) {

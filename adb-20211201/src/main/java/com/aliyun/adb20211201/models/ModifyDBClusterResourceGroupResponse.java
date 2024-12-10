@@ -3,7 +3,7 @@ package com.aliyun.adb20211201.models;
 
 import com.aliyun.tea.*;
 
-public class RenameSparkTemplateFileResponse extends TeaModel {
+public class ModifyDBClusterResourceGroupResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class RenameSparkTemplateFileResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public RenameSparkTemplateFileResponseBody body;
+    public ModifyDBClusterResourceGroupResponseBody body;
 
-    public static RenameSparkTemplateFileResponse build(java.util.Map<String, ?> map) throws Exception {
-        RenameSparkTemplateFileResponse self = new RenameSparkTemplateFileResponse();
+    public static ModifyDBClusterResourceGroupResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyDBClusterResourceGroupResponse self = new ModifyDBClusterResourceGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public RenameSparkTemplateFileResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyDBClusterResourceGroupResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class RenameSparkTemplateFileResponse extends TeaModel {
         return this.headers;
     }
 
-    public RenameSparkTemplateFileResponse setStatusCode(Integer statusCode) {
+    public ModifyDBClusterResourceGroupResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class RenameSparkTemplateFileResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RenameSparkTemplateFileResponse setBody(RenameSparkTemplateFileResponseBody body) {
+    public ModifyDBClusterResourceGroupResponse setBody(ModifyDBClusterResourceGroupResponseBody body) {
         this.body = body;
         return this;
     }
-    public RenameSparkTemplateFileResponseBody getBody() {
+    public ModifyDBClusterResourceGroupResponseBody getBody() {
         return this.body;
     }
 

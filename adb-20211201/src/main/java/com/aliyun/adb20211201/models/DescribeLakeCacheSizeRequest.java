@@ -3,22 +3,22 @@ package com.aliyun.adb20211201.models;
 
 import com.aliyun.tea.*;
 
-public class GetSparkDefinitionsRequest extends TeaModel {
+public class DescribeLakeCacheSizeRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>amv-clusterxxx</p>
+     * <p>amv-bp10b6646l07akdt</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    public static GetSparkDefinitionsRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetSparkDefinitionsRequest self = new GetSparkDefinitionsRequest();
+    public static DescribeLakeCacheSizeRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeLakeCacheSizeRequest self = new DescribeLakeCacheSizeRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetSparkDefinitionsRequest setDBClusterId(String DBClusterId) {
+    public DescribeLakeCacheSizeRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }

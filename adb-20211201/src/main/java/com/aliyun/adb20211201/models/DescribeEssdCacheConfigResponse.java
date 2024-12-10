@@ -3,7 +3,7 @@ package com.aliyun.adb20211201.models;
 
 import com.aliyun.tea.*;
 
-public class GetSparkDefinitionsResponse extends TeaModel {
+public class DescribeEssdCacheConfigResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetSparkDefinitionsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetSparkDefinitionsResponseBody body;
+    public DescribeEssdCacheConfigResponseBody body;
 
-    public static GetSparkDefinitionsResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetSparkDefinitionsResponse self = new GetSparkDefinitionsResponse();
+    public static DescribeEssdCacheConfigResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeEssdCacheConfigResponse self = new DescribeEssdCacheConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetSparkDefinitionsResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeEssdCacheConfigResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetSparkDefinitionsResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetSparkDefinitionsResponse setStatusCode(Integer statusCode) {
+    public DescribeEssdCacheConfigResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetSparkDefinitionsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetSparkDefinitionsResponse setBody(GetSparkDefinitionsResponseBody body) {
+    public DescribeEssdCacheConfigResponse setBody(DescribeEssdCacheConfigResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetSparkDefinitionsResponseBody getBody() {
+    public DescribeEssdCacheConfigResponseBody getBody() {
         return this.body;
     }
 

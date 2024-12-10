@@ -193,6 +193,9 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         @NameInMap("OutputRows")
         public Long outputRows;
 
+        @NameInMap("PatternId")
+        public String patternId;
+
         /**
          * <p>The peak memory. Unit: bytes.</p>
          * 
@@ -414,6 +417,14 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
         public Long getOutputRows() {
             return this.outputRows;
+        }
+
+        public DescribeDiagnosisRecordsResponseBodyQuerys setPatternId(String patternId) {
+            this.patternId = patternId;
+            return this;
+        }
+        public String getPatternId() {
+            return this.patternId;
         }
 
         public DescribeDiagnosisRecordsResponseBodyQuerys setPeakMemory(Long peakMemory) {
