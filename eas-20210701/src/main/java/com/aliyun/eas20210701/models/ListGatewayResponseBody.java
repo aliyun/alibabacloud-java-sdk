@@ -187,6 +187,13 @@ public class ListGatewayResponseBody extends TeaModel {
         public Integer replicas;
 
         /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("SSLRedirectionEnabled")
+        public Boolean SSLRedirectionEnabled;
+
+        /**
          * <p>The state of the private gateway.</p>
          * <p>Valid values:</p>
          * <ul>
@@ -297,6 +304,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public Integer getReplicas() {
             return this.replicas;
+        }
+
+        public ListGatewayResponseBodyGateways setSSLRedirectionEnabled(Boolean SSLRedirectionEnabled) {
+            this.SSLRedirectionEnabled = SSLRedirectionEnabled;
+            return this;
+        }
+        public Boolean getSSLRedirectionEnabled() {
+            return this.SSLRedirectionEnabled;
         }
 
         public ListGatewayResponseBodyGateways setStatus(String status) {

@@ -493,7 +493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网关内网访问端点跨VPC连接</p>
+     * <p>Creates a VPC peering connection on an internal endpoint of a gateway.</p>
      * 
      * @param tmpReq CreateGatewayIntranetLinkedVpcPeerRequest
      * @param headers map
@@ -537,7 +537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网关内网访问端点跨VPC连接</p>
+     * <p>Creates a VPC peering connection on an internal endpoint of a gateway.</p>
      * 
      * @param request CreateGatewayIntranetLinkedVpcPeerRequest
      * @return CreateGatewayIntranetLinkedVpcPeerResponse
@@ -1215,7 +1215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网关内网访问端点跨VPC连接</p>
+     * <p>Deletes a VPC peering connection from an internal endpoint of a gateway.</p>
      * 
      * @param tmpReq DeleteGatewayIntranetLinkedVpcPeerRequest
      * @param headers map
@@ -1259,7 +1259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网关内网访问端点跨VPC连接</p>
+     * <p>Deletes a VPC peering connection from an internal endpoint of a gateway.</p>
      * 
      * @param request DeleteGatewayIntranetLinkedVpcPeerRequest
      * @return DeleteGatewayIntranetLinkedVpcPeerResponse
@@ -2795,7 +2795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取网关内网访问端点跨VPC连接列表</p>
+     * <p>Obtains a list of all VPC peering connections on internal endpoint of a gateway.</p>
      * 
      * @param request ListGatewayIntranetLinkedVpcPeerRequest
      * @param headers map
@@ -2829,7 +2829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取网关内网访问端点跨VPC连接列表</p>
+     * <p>Obtains a list of all VPC peering connections on internal endpoint of a gateway.</p>
      * 
      * @param request ListGatewayIntranetLinkedVpcPeerRequest
      * @return ListGatewayIntranetLinkedVpcPeerResponse
@@ -2838,6 +2838,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listGatewayIntranetLinkedVpcPeerWithOptions(ClusterId, GatewayId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取网关内网支持的可用区</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListGatewayIntranetSupportedZoneResponse
+     */
+    public ListGatewayIntranetSupportedZoneResponse listGatewayIntranetSupportedZoneWithOptions(String GatewayId, String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListGatewayIntranetSupportedZone"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(GatewayId) + "/intranet_supported_zone"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListGatewayIntranetSupportedZoneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取网关内网支持的可用区</p>
+     * @return ListGatewayIntranetSupportedZoneResponse
+     */
+    public ListGatewayIntranetSupportedZoneResponse listGatewayIntranetSupportedZone(String GatewayId, String ClusterId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listGatewayIntranetSupportedZoneWithOptions(GatewayId, ClusterId, headers, runtime);
     }
 
     /**
@@ -3957,6 +3994,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableIntranet)) {
             body.put("EnableIntranet", request.enableIntranet);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSSLRedirection)) {
+            body.put("EnableSSLRedirection", request.enableSSLRedirection);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {

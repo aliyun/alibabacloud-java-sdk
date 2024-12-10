@@ -22,6 +22,9 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
+    @NameInMap("CpuUsed")
+    public Integer cpuUsed;
+
     /**
      * <p>The time when the resource group was created.</p>
      * 
@@ -49,6 +52,9 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("GpuCount")
     public Integer gpuCount;
 
+    @NameInMap("GpuUsed")
+    public Float gpuUsed;
+
     /**
      * <p>The total number of instances in the resource group.</p>
      * 
@@ -57,6 +63,12 @@ public class DescribeResourceResponseBody extends TeaModel {
      */
     @NameInMap("InstanceCount")
     public Integer instanceCount;
+
+    @NameInMap("Memory")
+    public Integer memory;
+
+    @NameInMap("MemoryUsed")
+    public Integer memoryUsed;
 
     /**
      * <p>The returned message.</p>
@@ -173,6 +185,14 @@ public class DescribeResourceResponseBody extends TeaModel {
         return this.cpuCount;
     }
 
+    public DescribeResourceResponseBody setCpuUsed(Integer cpuUsed) {
+        this.cpuUsed = cpuUsed;
+        return this;
+    }
+    public Integer getCpuUsed() {
+        return this.cpuUsed;
+    }
+
     public DescribeResourceResponseBody setCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -197,12 +217,36 @@ public class DescribeResourceResponseBody extends TeaModel {
         return this.gpuCount;
     }
 
+    public DescribeResourceResponseBody setGpuUsed(Float gpuUsed) {
+        this.gpuUsed = gpuUsed;
+        return this;
+    }
+    public Float getGpuUsed() {
+        return this.gpuUsed;
+    }
+
     public DescribeResourceResponseBody setInstanceCount(Integer instanceCount) {
         this.instanceCount = instanceCount;
         return this;
     }
     public Integer getInstanceCount() {
         return this.instanceCount;
+    }
+
+    public DescribeResourceResponseBody setMemory(Integer memory) {
+        this.memory = memory;
+        return this;
+    }
+    public Integer getMemory() {
+        return this.memory;
+    }
+
+    public DescribeResourceResponseBody setMemoryUsed(Integer memoryUsed) {
+        this.memoryUsed = memoryUsed;
+        return this;
+    }
+    public Integer getMemoryUsed() {
+        return this.memoryUsed;
     }
 
     public DescribeResourceResponseBody setMessage(String message) {
