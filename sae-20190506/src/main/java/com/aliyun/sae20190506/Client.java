@@ -523,6 +523,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SaeVersion", request.saeVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.secretMountDesc)) {
+            query.put("SecretMountDesc", request.secretMountDesc);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
             query.put("SecurityGroupId", request.securityGroupId);
         }
@@ -2216,6 +2220,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.replicas)) {
             query.put("Replicas", request.replicas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secretMountDesc)) {
+            query.put("SecretMountDesc", request.secretMountDesc);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {

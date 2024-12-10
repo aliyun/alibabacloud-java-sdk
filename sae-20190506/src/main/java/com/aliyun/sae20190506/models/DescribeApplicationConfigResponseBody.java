@@ -334,6 +334,58 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApplicationConfigResponseBodyDataSecretMountDesc extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        @NameInMap("SecretId")
+        public Long secretId;
+
+        @NameInMap("SecretName")
+        public String secretName;
+
+        public static DescribeApplicationConfigResponseBodyDataSecretMountDesc build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationConfigResponseBodyDataSecretMountDesc self = new DescribeApplicationConfigResponseBodyDataSecretMountDesc();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSecretMountDesc setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSecretMountDesc setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSecretMountDesc setSecretId(Long secretId) {
+            this.secretId = secretId;
+            return this;
+        }
+        public Long getSecretId() {
+            return this.secretId;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSecretMountDesc setSecretName(String secretName) {
+            this.secretName = secretName;
+            return this;
+        }
+        public String getSecretName() {
+            return this.secretName;
+        }
+
+    }
+
     public static class DescribeApplicationConfigResponseBodyDataTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
@@ -995,6 +1047,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Replicas")
         public Integer replicas;
 
+        @NameInMap("SecretMountDesc")
+        public java.util.List<DescribeApplicationConfigResponseBodyDataSecretMountDesc> secretMountDesc;
+
         /**
          * <p>The ID of the security group.</p>
          * 
@@ -1621,6 +1676,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public Integer getReplicas() {
             return this.replicas;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setSecretMountDesc(java.util.List<DescribeApplicationConfigResponseBodyDataSecretMountDesc> secretMountDesc) {
+            this.secretMountDesc = secretMountDesc;
+            return this;
+        }
+        public java.util.List<DescribeApplicationConfigResponseBodyDataSecretMountDesc> getSecretMountDesc() {
+            return this.secretMountDesc;
         }
 
         public DescribeApplicationConfigResponseBodyData setSecurityGroupId(String securityGroupId) {

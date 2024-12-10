@@ -597,6 +597,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("Replicas")
     public Integer replicas;
 
+    @NameInMap("SecretMountDesc")
+    public String secretMountDesc;
+
     /**
      * <strong>example:</strong>
      * <p>sg-wz969ngg2e49q5i4****</p>
@@ -1163,6 +1166,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public Integer getReplicas() {
         return this.replicas;
+    }
+
+    public DeployApplicationRequest setSecretMountDesc(String secretMountDesc) {
+        this.secretMountDesc = secretMountDesc;
+        return this;
+    }
+    public String getSecretMountDesc() {
+        return this.secretMountDesc;
     }
 
     public DeployApplicationRequest setSecurityGroupId(String securityGroupId) {
