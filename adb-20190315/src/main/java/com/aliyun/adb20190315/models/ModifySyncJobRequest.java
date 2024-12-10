@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifySyncJobRequest extends TeaModel {
     /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +24,7 @@ public class ModifySyncJobRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +40,8 @@ public class ModifySyncJobRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The source instances or clusters.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -42,6 +49,8 @@ public class ModifySyncJobRequest extends TeaModel {
     public java.util.List<ModifySyncJobRequestSourceDBCluster> sourceDBCluster;
 
     /**
+     * <p>The synchronization platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>ADB-CDC</p>
      */
@@ -119,6 +128,7 @@ public class ModifySyncJobRequest extends TeaModel {
 
     public static class ModifySyncJobRequestSourceDBCluster extends TeaModel {
         /**
+         * <p>The ID of the source instance or cluster. Separate multiple IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +138,8 @@ public class ModifySyncJobRequest extends TeaModel {
         public String clusterIds;
 
         /**
+         * <p>The ID of the synchronization job.</p>
+         * 
          * <strong>example:</strong>
          * <p>dts-xxxxxx</p>
          */
@@ -135,6 +147,12 @@ public class ModifySyncJobRequest extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The operation type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Create</li>
+         * <li>Modify</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +162,7 @@ public class ModifySyncJobRequest extends TeaModel {
         public String operateType;
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +172,13 @@ public class ModifySyncJobRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The source database type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>rds: ApsaraDB RDS.</li>
+         * <li>sls: Simple Log Service.</li>
+         * <li>polardb: PolarDB.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
