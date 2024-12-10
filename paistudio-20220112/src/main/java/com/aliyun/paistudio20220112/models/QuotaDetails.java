@@ -7,11 +7,23 @@ public class QuotaDetails extends TeaModel {
     @NameInMap("ActualMinQuota")
     public ResourceAmount actualMinQuota;
 
+    @NameInMap("AllocatedQuota")
+    public ResourceAmount allocatedQuota;
+
+    @NameInMap("AncestorsAllocatedQuota")
+    public ResourceAmount ancestorsAllocatedQuota;
+
+    @NameInMap("DescendantsAllocatedQuota")
+    public ResourceAmount descendantsAllocatedQuota;
+
     @NameInMap("DesiredMinQuota")
     public ResourceAmount desiredMinQuota;
 
     @NameInMap("RequestedQuota")
     public ResourceAmount requestedQuota;
+
+    @NameInMap("SelfAllocatedQuota")
+    public ResourceAmount selfAllocatedQuota;
 
     @NameInMap("UsedQuota")
     public ResourceAmount usedQuota;
@@ -29,6 +41,30 @@ public class QuotaDetails extends TeaModel {
         return this.actualMinQuota;
     }
 
+    public QuotaDetails setAllocatedQuota(ResourceAmount allocatedQuota) {
+        this.allocatedQuota = allocatedQuota;
+        return this;
+    }
+    public ResourceAmount getAllocatedQuota() {
+        return this.allocatedQuota;
+    }
+
+    public QuotaDetails setAncestorsAllocatedQuota(ResourceAmount ancestorsAllocatedQuota) {
+        this.ancestorsAllocatedQuota = ancestorsAllocatedQuota;
+        return this;
+    }
+    public ResourceAmount getAncestorsAllocatedQuota() {
+        return this.ancestorsAllocatedQuota;
+    }
+
+    public QuotaDetails setDescendantsAllocatedQuota(ResourceAmount descendantsAllocatedQuota) {
+        this.descendantsAllocatedQuota = descendantsAllocatedQuota;
+        return this;
+    }
+    public ResourceAmount getDescendantsAllocatedQuota() {
+        return this.descendantsAllocatedQuota;
+    }
+
     public QuotaDetails setDesiredMinQuota(ResourceAmount desiredMinQuota) {
         this.desiredMinQuota = desiredMinQuota;
         return this;
@@ -43,6 +79,14 @@ public class QuotaDetails extends TeaModel {
     }
     public ResourceAmount getRequestedQuota() {
         return this.requestedQuota;
+    }
+
+    public QuotaDetails setSelfAllocatedQuota(ResourceAmount selfAllocatedQuota) {
+        this.selfAllocatedQuota = selfAllocatedQuota;
+        return this;
+    }
+    public ResourceAmount getSelfAllocatedQuota() {
+        return this.selfAllocatedQuota;
     }
 
     public QuotaDetails setUsedQuota(ResourceAmount usedQuota) {
