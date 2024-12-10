@@ -8553,6 +8553,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScalingGroupId", request.scalingGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.skipMatching)) {
+            query.put("SkipMatching", request.skipMatching);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
