@@ -1,3 +1,25 @@
+2024-12-10 Version: 3.0.0
+- Support API DeleteBackups.
+- Support API DescribeCompactionServiceSwitch.
+- Support API DescribeEssdCacheConfig.
+- Support API DescribeKernelVersion.
+- Support API DescribeLakeCacheSize.
+- Support API DescribeOperatorPermission.
+- Support API GrantOperatorPermission.
+- Support API ListTagResources.
+- Support API ModifyCompactionServiceSwitch.
+- Support API ModifyDBClusterResourceGroup.
+- Support API ModifyDBClusterVip.
+- Support API ModifyEssdCacheConfig.
+- Support API ModifyLakeCacheSize.
+- Support API RevokeOperatorPermission.
+- Delete API GetSparkDefinitions.
+- Delete API RenameSparkTemplateFile.
+- Update API DescribeDBClusterAttribute: update response param.
+- Update API DescribeDiagnosisRecords: update response param.
+- Update API DescribePatternPerformance: update response param.
+
+
 2024-10-16 Version: 2.0.7
 - Update API CreateDBResourceGroup: add param AutoStopInterval.
 - Update API DescribeDBResourceGroup: update response param.
