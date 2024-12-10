@@ -1,3 +1,7 @@
+2024-12-10 Version: 1.2.0
+- Support API GetConsoleScore.
+
+
 2024-12-05 Version: 1.1.0
 - Support API GetAlarmDetailById.
 - Support API GetSowList.

@@ -4,25 +4,55 @@ package com.aliyun.mssp20161228.models;
 import com.aliyun.tea.*;
 
 public class GetAlarmDetailByIdResponseBody extends TeaModel {
+    /**
+     * <p>API response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data returned by the interface.</p>
+     */
     @NameInMap("Data")
     public GetAlarmDetailByIdResponseBodyData data;
 
+    /**
+     * <p>HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Return message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5C1B0668-442C-57AE-9668-D894B0B012EB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Whether the operation was successful: - true: Success. - false: Failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,15 +110,39 @@ public class GetAlarmDetailByIdResponseBody extends TeaModel {
     }
 
     public static class GetAlarmDetailByIdResponseBodyDataEventDetails extends TeaModel {
+        /**
+         * <p>Alarm event display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Login with unusual location</p>
+         */
         @NameInMap("NameDisplay")
         public String nameDisplay;
 
+        /**
+         * <p>Alarm event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>Path where the alarm event occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/crontab</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>Path where the alarm event occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/crontab</p>
+         */
         @NameInMap("ValueDisplay")
         public String valueDisplay;
 
@@ -132,66 +186,200 @@ public class GetAlarmDetailByIdResponseBody extends TeaModel {
     }
 
     public static class GetAlarmDetailByIdResponseBodyData extends TeaModel {
+        /**
+         * <p>Alarm event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unusual Logon</p>
+         */
         @NameInMap("AlarmEventType")
         public String alarmEventType;
 
+        /**
+         * <p>Alarm event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Login with unusual location</p>
+         */
         @NameInMap("AlarmEventTypeDisplay")
         public String alarmEventTypeDisplay;
 
+        /**
+         * <p>Alarm ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202427220</p>
+         */
         @NameInMap("AlarmId")
         public Long alarmId;
 
+        /**
+         * <p>Alarm name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>负载均衡可挂载服务器数量告警</p>
+         */
         @NameInMap("AlarmName")
         public String alarmName;
 
+        /**
+         * <p>Alarm source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUSP_EVENT</p>
+         */
         @NameInMap("AlarmSource")
         public String alarmSource;
 
+        /**
+         * <p>Latest alarm time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-26 01:51:01</p>
+         */
         @NameInMap("AlarmTime")
         public String alarmTime;
 
+        /**
+         * <p>Analysis process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;value&quot;:&quot;服务器可能已被黑客攻击，存在恶意进程在运行。 分析过程：告警显示，服务端存在一个名为”dns.exe”的进程在访问”polling.burpcollaborator.net”，这是一个被黑名单列出的恶意域名。在正常情况下,”dns.exe”不应该单独存在于系统的路径下，并且也不应该访问这类恶意域名。因此，这个进程可能是黑客留下的恶意进程。&quot;,&quot;key&quot;:&quot;结论&quot;},{&quot;value&quot;:&quot;尽快对服务器进行全面扫描，清除恶意进程。同时，联系网络安全专家进行深入调查，以确定是否有其他潜在的安全威胁。&quot;,&quot;key&quot;:&quot;处置建议&quot;}]</p>
+         */
         @NameInMap("AnalysisResult")
         public String analysisResult;
 
+        /**
+         * <p>Whether high-protection mode is enabled. true means enabled, false means not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ContainHwMode")
         public Boolean containHwMode;
 
+        /**
+         * <p>Alarm handling time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-26 01:51:01</p>
+         */
         @NameInMap("DealTime")
         public String dealTime;
 
+        /**
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>webshell</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <p>Event details information.</p>
+         */
         @NameInMap("EventDetails")
         public java.util.List<GetAlarmDetailByIdResponseBodyDataEventDetails> eventDetails;
 
+        /**
+         * <p>Alarm level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>suspicious</p>
+         */
         @NameInMap("EventLevel")
         public String eventLevel;
 
+        /**
+         * <p>Primary key ID of the work order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9772</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Affected asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>Public IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.116.126.79</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>Private IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.19.195.176</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>First occurrence time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-26 01:51:01</p>
+         */
         @NameInMap("OccurrenceTime")
         public String occurrenceTime;
 
+        /**
+         * <p>Owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324546</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>Disposal method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>Handling status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>要查询的告警事件状态。取值：</p>
+         * <p>0：全部
+         * 1：待处理
+         * 2：已忽略
+         * 4：已确认
+         * 8：已标记为误报
+         * 16：处理中
+         * 32：处理完毕
+         * 64：已经过期
+         * 128：已经删除
+         * 512：自动拦截中
+         * 513：自动拦截完毕</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>ATT&amp;CK tactic name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Malicious scripts-Malicious script code execution</p>
+         */
         @NameInMap("TacticDisplayName")
         public String tacticDisplayName;
 
