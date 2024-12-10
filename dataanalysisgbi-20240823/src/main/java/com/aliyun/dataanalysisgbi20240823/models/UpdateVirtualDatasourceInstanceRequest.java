@@ -10,6 +10,9 @@ public class UpdateVirtualDatasourceInstanceRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("type")
+    public Integer type;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -45,6 +48,14 @@ public class UpdateVirtualDatasourceInstanceRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateVirtualDatasourceInstanceRequest setType(Integer type) {
+        this.type = type;
+        return this;
+    }
+    public Integer getType() {
+        return this.type;
     }
 
     public UpdateVirtualDatasourceInstanceRequest setVdbId(String vdbId) {
