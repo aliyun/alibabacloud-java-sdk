@@ -798,6 +798,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("domain")
+        public String domain;
+
         /**
          * <p>The configuration of Kibana nodes.</p>
          */
@@ -1003,6 +1006,14 @@ public class ListInstanceResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListInstanceResponseBodyResult setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
         public ListInstanceResponseBodyResult setElasticDataNodeConfiguration(ListInstanceResponseBodyResultElasticDataNodeConfiguration elasticDataNodeConfiguration) {
