@@ -430,6 +430,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("SaeVersion")
     public String saeVersion;
 
+    @NameInMap("SecretMountDesc")
+    public String secretMountDesc;
+
     /**
      * <p>sg-wz969ngg2e49q5i4\<em>\</em>\<em>\</em></p>
      * 
@@ -957,6 +960,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getSaeVersion() {
         return this.saeVersion;
+    }
+
+    public CreateApplicationRequest setSecretMountDesc(String secretMountDesc) {
+        this.secretMountDesc = secretMountDesc;
+        return this;
+    }
+    public String getSecretMountDesc() {
+        return this.secretMountDesc;
     }
 
     public CreateApplicationRequest setSecurityGroupId(String securityGroupId) {
