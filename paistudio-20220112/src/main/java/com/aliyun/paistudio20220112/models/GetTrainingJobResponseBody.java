@@ -96,6 +96,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("OutputModel")
     public GetTrainingJobResponseBodyOutputModel outputModel;
 
+    @NameInMap("Priority")
+    public Integer priority;
+
     @NameInMap("PythonRequirements")
     public java.util.List<String> pythonRequirements;
 
@@ -131,7 +134,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
     public GetTrainingJobResponseBodyScheduler scheduler;
 
     @NameInMap("Settings")
-    public GetTrainingJobResponseBodySettings settings;
+    public JobSettings settings;
 
     /**
      * <strong>example:</strong>
@@ -349,6 +352,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         return this.outputModel;
     }
 
+    public GetTrainingJobResponseBody setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
+    }
+
     public GetTrainingJobResponseBody setPythonRequirements(java.util.List<String> pythonRequirements) {
         this.pythonRequirements = pythonRequirements;
         return this;
@@ -397,11 +408,11 @@ public class GetTrainingJobResponseBody extends TeaModel {
         return this.scheduler;
     }
 
-    public GetTrainingJobResponseBody setSettings(GetTrainingJobResponseBodySettings settings) {
+    public GetTrainingJobResponseBody setSettings(JobSettings settings) {
         this.settings = settings;
         return this;
     }
-    public GetTrainingJobResponseBodySettings getSettings() {
+    public JobSettings getSettings() {
         return this.settings;
     }
 
@@ -815,6 +826,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
         @NameInMap("Options")
         public String options;
 
+        @NameInMap("VersionName")
+        public String versionName;
+
         public static GetTrainingJobResponseBodyInputChannels build(java.util.Map<String, ?> map) throws Exception {
             GetTrainingJobResponseBodyInputChannels self = new GetTrainingJobResponseBodyInputChannels();
             return TeaModel.build(map, self);
@@ -850,6 +864,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
         public String getOptions() {
             return this.options;
+        }
+
+        public GetTrainingJobResponseBodyInputChannels setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
         }
 
     }
@@ -1126,6 +1148,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
         @NameInMap("OutputUri")
         public String outputUri;
 
+        @NameInMap("VersionName")
+        public String versionName;
+
         public static GetTrainingJobResponseBodyOutputChannels build(java.util.Map<String, ?> map) throws Exception {
             GetTrainingJobResponseBodyOutputChannels self = new GetTrainingJobResponseBodyOutputChannels();
             return TeaModel.build(map, self);
@@ -1153,6 +1178,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
         public String getOutputUri() {
             return this.outputUri;
+        }
+
+        public GetTrainingJobResponseBodyOutputChannels setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
         }
 
     }
@@ -1196,92 +1229,35 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyScheduler extends TeaModel {
+        @NameInMap("MaxRunningTimeInMinutes")
+        public String maxRunningTimeInMinutes;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("MaxRunningTimeInSeconds")
-        public Long maxRunningTimeInSeconds;
+        public String maxRunningTimeInSeconds;
 
         public static GetTrainingJobResponseBodyScheduler build(java.util.Map<String, ?> map) throws Exception {
             GetTrainingJobResponseBodyScheduler self = new GetTrainingJobResponseBodyScheduler();
             return TeaModel.build(map, self);
         }
 
-        public GetTrainingJobResponseBodyScheduler setMaxRunningTimeInSeconds(Long maxRunningTimeInSeconds) {
+        public GetTrainingJobResponseBodyScheduler setMaxRunningTimeInMinutes(String maxRunningTimeInMinutes) {
+            this.maxRunningTimeInMinutes = maxRunningTimeInMinutes;
+            return this;
+        }
+        public String getMaxRunningTimeInMinutes() {
+            return this.maxRunningTimeInMinutes;
+        }
+
+        public GetTrainingJobResponseBodyScheduler setMaxRunningTimeInSeconds(String maxRunningTimeInSeconds) {
             this.maxRunningTimeInSeconds = maxRunningTimeInSeconds;
             return this;
         }
-        public Long getMaxRunningTimeInSeconds() {
+        public String getMaxRunningTimeInSeconds() {
             return this.maxRunningTimeInSeconds;
-        }
-
-    }
-
-    public static class GetTrainingJobResponseBodySettings extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ecs.c6.large</p>
-         */
-        @NameInMap("AIMasterType")
-        public String AIMasterType;
-
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        @NameInMap("EnableErrorMonitoringInAIMaster")
-        public Boolean enableErrorMonitoringInAIMaster;
-
-        /**
-         * <strong>example:</strong>
-         * <p>--enable-log-hang-detection true</p>
-         */
-        @NameInMap("ErrorMonitoringArgs")
-        public String errorMonitoringArgs;
-
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("Priority")
-        public Integer priority;
-
-        public static GetTrainingJobResponseBodySettings build(java.util.Map<String, ?> map) throws Exception {
-            GetTrainingJobResponseBodySettings self = new GetTrainingJobResponseBodySettings();
-            return TeaModel.build(map, self);
-        }
-
-        public GetTrainingJobResponseBodySettings setAIMasterType(String AIMasterType) {
-            this.AIMasterType = AIMasterType;
-            return this;
-        }
-        public String getAIMasterType() {
-            return this.AIMasterType;
-        }
-
-        public GetTrainingJobResponseBodySettings setEnableErrorMonitoringInAIMaster(Boolean enableErrorMonitoringInAIMaster) {
-            this.enableErrorMonitoringInAIMaster = enableErrorMonitoringInAIMaster;
-            return this;
-        }
-        public Boolean getEnableErrorMonitoringInAIMaster() {
-            return this.enableErrorMonitoringInAIMaster;
-        }
-
-        public GetTrainingJobResponseBodySettings setErrorMonitoringArgs(String errorMonitoringArgs) {
-            this.errorMonitoringArgs = errorMonitoringArgs;
-            return this;
-        }
-        public String getErrorMonitoringArgs() {
-            return this.errorMonitoringArgs;
-        }
-
-        public GetTrainingJobResponseBodySettings setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
         }
 
     }

@@ -321,6 +321,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("VersionName")
+        public String versionName;
+
         public static ListTrainingJobsResponseBodyTrainingJobsInputChannels build(java.util.Map<String, ?> map) throws Exception {
             ListTrainingJobsResponseBodyTrainingJobsInputChannels self = new ListTrainingJobsResponseBodyTrainingJobsInputChannels();
             return TeaModel.build(map, self);
@@ -348,6 +351,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsInputChannels setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
         }
 
     }
@@ -412,6 +423,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("OutputUri")
         public String outputUri;
 
+        @NameInMap("VersionName")
+        public String versionName;
+
         public static ListTrainingJobsResponseBodyTrainingJobsOutputChannels build(java.util.Map<String, ?> map) throws Exception {
             ListTrainingJobsResponseBodyTrainingJobsOutputChannels self = new ListTrainingJobsResponseBodyTrainingJobsOutputChannels();
             return TeaModel.build(map, self);
@@ -439,6 +453,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
         public String getOutputUri() {
             return this.outputUri;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsOutputChannels setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
         }
 
     }

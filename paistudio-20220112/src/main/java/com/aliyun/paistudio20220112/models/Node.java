@@ -19,6 +19,9 @@ public class Node extends TeaModel {
     @NameInMap("GPU")
     public String GPU;
 
+    @NameInMap("GPUMemory")
+    public String GPUMemory;
+
     @NameInMap("GPUType")
     public String GPUType;
 
@@ -134,6 +137,14 @@ public class Node extends TeaModel {
     }
     public String getGPU() {
         return this.GPU;
+    }
+
+    public Node setGPUMemory(String GPUMemory) {
+        this.GPUMemory = GPUMemory;
+        return this;
+    }
+    public String getGPUMemory() {
+        return this.GPUMemory;
     }
 
     public Node setGPUType(String GPUType) {

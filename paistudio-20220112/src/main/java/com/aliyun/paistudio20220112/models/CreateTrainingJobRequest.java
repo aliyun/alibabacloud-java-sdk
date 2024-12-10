@@ -52,6 +52,9 @@ public class CreateTrainingJobRequest extends TeaModel {
     @NameInMap("OutputChannels")
     public java.util.List<CreateTrainingJobRequestOutputChannels> outputChannels;
 
+    @NameInMap("Priority")
+    public Integer priority;
+
     @NameInMap("PythonRequirements")
     public java.util.List<String> pythonRequirements;
 
@@ -66,7 +69,7 @@ public class CreateTrainingJobRequest extends TeaModel {
     public CreateTrainingJobRequestScheduler scheduler;
 
     @NameInMap("Settings")
-    public CreateTrainingJobRequestSettings settings;
+    public JobSettings settings;
 
     /**
      * <strong>example:</strong>
@@ -197,6 +200,14 @@ public class CreateTrainingJobRequest extends TeaModel {
         return this.outputChannels;
     }
 
+    public CreateTrainingJobRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
+    }
+
     public CreateTrainingJobRequest setPythonRequirements(java.util.List<String> pythonRequirements) {
         this.pythonRequirements = pythonRequirements;
         return this;
@@ -221,11 +232,11 @@ public class CreateTrainingJobRequest extends TeaModel {
         return this.scheduler;
     }
 
-    public CreateTrainingJobRequest setSettings(CreateTrainingJobRequestSettings settings) {
+    public CreateTrainingJobRequest setSettings(JobSettings settings) {
         this.settings = settings;
         return this;
     }
-    public CreateTrainingJobRequestSettings getSettings() {
+    public JobSettings getSettings() {
         return this.settings;
     }
 
@@ -573,6 +584,9 @@ public class CreateTrainingJobRequest extends TeaModel {
         @NameInMap("Options")
         public String options;
 
+        @NameInMap("VersionName")
+        public String versionName;
+
         public static CreateTrainingJobRequestInputChannels build(java.util.Map<String, ?> map) throws Exception {
             CreateTrainingJobRequestInputChannels self = new CreateTrainingJobRequestInputChannels();
             return TeaModel.build(map, self);
@@ -608,6 +622,14 @@ public class CreateTrainingJobRequest extends TeaModel {
         }
         public String getOptions() {
             return this.options;
+        }
+
+        public CreateTrainingJobRequestInputChannels setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
         }
 
     }
@@ -672,6 +694,9 @@ public class CreateTrainingJobRequest extends TeaModel {
         @NameInMap("OutputUri")
         public String outputUri;
 
+        @NameInMap("VersionName")
+        public String versionName;
+
         public static CreateTrainingJobRequestOutputChannels build(java.util.Map<String, ?> map) throws Exception {
             CreateTrainingJobRequestOutputChannels self = new CreateTrainingJobRequestOutputChannels();
             return TeaModel.build(map, self);
@@ -701,9 +726,20 @@ public class CreateTrainingJobRequest extends TeaModel {
             return this.outputUri;
         }
 
+        public CreateTrainingJobRequestOutputChannels setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
+        }
+
     }
 
     public static class CreateTrainingJobRequestScheduler extends TeaModel {
+        @NameInMap("MaxRunningTimeInMinutes")
+        public Long maxRunningTimeInMinutes;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -716,80 +752,20 @@ public class CreateTrainingJobRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateTrainingJobRequestScheduler setMaxRunningTimeInMinutes(Long maxRunningTimeInMinutes) {
+            this.maxRunningTimeInMinutes = maxRunningTimeInMinutes;
+            return this;
+        }
+        public Long getMaxRunningTimeInMinutes() {
+            return this.maxRunningTimeInMinutes;
+        }
+
         public CreateTrainingJobRequestScheduler setMaxRunningTimeInSeconds(Long maxRunningTimeInSeconds) {
             this.maxRunningTimeInSeconds = maxRunningTimeInSeconds;
             return this;
         }
         public Long getMaxRunningTimeInSeconds() {
             return this.maxRunningTimeInSeconds;
-        }
-
-    }
-
-    public static class CreateTrainingJobRequestSettings extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ecs.c6.large</p>
-         */
-        @NameInMap("AIMasterType")
-        public String AIMasterType;
-
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        @NameInMap("EnableErrorMonitoringInAIMaster")
-        public Boolean enableErrorMonitoringInAIMaster;
-
-        /**
-         * <strong>example:</strong>
-         * <p>--enable-log-hang-detection true</p>
-         */
-        @NameInMap("ErrorMonitoringArgs")
-        public String errorMonitoringArgs;
-
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("Priority")
-        public Integer priority;
-
-        public static CreateTrainingJobRequestSettings build(java.util.Map<String, ?> map) throws Exception {
-            CreateTrainingJobRequestSettings self = new CreateTrainingJobRequestSettings();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateTrainingJobRequestSettings setAIMasterType(String AIMasterType) {
-            this.AIMasterType = AIMasterType;
-            return this;
-        }
-        public String getAIMasterType() {
-            return this.AIMasterType;
-        }
-
-        public CreateTrainingJobRequestSettings setEnableErrorMonitoringInAIMaster(Boolean enableErrorMonitoringInAIMaster) {
-            this.enableErrorMonitoringInAIMaster = enableErrorMonitoringInAIMaster;
-            return this;
-        }
-        public Boolean getEnableErrorMonitoringInAIMaster() {
-            return this.enableErrorMonitoringInAIMaster;
-        }
-
-        public CreateTrainingJobRequestSettings setErrorMonitoringArgs(String errorMonitoringArgs) {
-            this.errorMonitoringArgs = errorMonitoringArgs;
-            return this;
-        }
-        public String getErrorMonitoringArgs() {
-            return this.errorMonitoringArgs;
-        }
-
-        public CreateTrainingJobRequestSettings setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
         }
 
     }

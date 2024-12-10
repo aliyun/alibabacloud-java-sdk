@@ -450,6 +450,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("OutputChannels", request.outputChannels);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pythonRequirements)) {
             body.put("PythonRequirements", request.pythonRequirements);
         }
@@ -958,11 +962,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>get resource group node metrics</p>
      * 
+     * @deprecated OpenAPI GetNodeMetrics is deprecated
+     * 
      * @param request GetNodeMetricsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetNodeMetricsResponse
      */
+    @Deprecated
+    // Deprecated
     public GetNodeMetricsResponse getNodeMetricsWithOptions(String ResourceGroupID, String MetricType, GetNodeMetricsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1008,9 +1016,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>get resource group node metrics</p>
      * 
+     * @deprecated OpenAPI GetNodeMetrics is deprecated
+     * 
      * @param request GetNodeMetricsRequest
      * @return GetNodeMetricsResponse
      */
+    @Deprecated
+    // Deprecated
     public GetNodeMetricsResponse getNodeMetrics(String ResourceGroupID, String MetricType, GetNodeMetricsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1178,11 +1190,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>get resource group requested resource by resource group id</p>
      * 
+     * @deprecated OpenAPI GetResourceGroupRequest is deprecated
+     * 
      * @param request GetResourceGroupRequestRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResourceGroupRequestResponse
      */
+    @Deprecated
+    // Deprecated
     public GetResourceGroupRequestResponse getResourceGroupRequestWithOptions(GetResourceGroupRequestRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1216,9 +1232,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>get resource group requested resource by resource group id</p>
      * 
+     * @deprecated OpenAPI GetResourceGroupRequest is deprecated
+     * 
      * @param request GetResourceGroupRequestRequest
      * @return GetResourceGroupRequestResponse
      */
+    @Deprecated
+    // Deprecated
     public GetResourceGroupRequestResponse getResourceGroupRequest(GetResourceGroupRequestRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1448,11 +1468,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>get user view  metrics</p>
      * 
+     * @deprecated OpenAPI GetUserViewMetrics is deprecated
+     * 
      * @param request GetUserViewMetricsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserViewMetricsResponse
      */
+    @Deprecated
+    // Deprecated
     public GetUserViewMetricsResponse getUserViewMetricsWithOptions(String ResourceGroupID, GetUserViewMetricsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1506,9 +1530,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>get user view  metrics</p>
      * 
+     * @deprecated OpenAPI GetUserViewMetrics is deprecated
+     * 
      * @param request GetUserViewMetricsRequest
      * @return GetUserViewMetricsResponse
      */
+    @Deprecated
+    // Deprecated
     public GetUserViewMetricsResponse getUserViewMetrics(String ResourceGroupID, GetUserViewMetricsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1734,6 +1762,121 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listNodesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>您可以通过此API获取Quota上的任务信息列表</p>
+     * 
+     * @param request ListQuotaWorkloadsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListQuotaWorkloadsResponse
+     */
+    public ListQuotaWorkloadsResponse listQuotaWorkloadsWithOptions(String QuotaId, ListQuotaWorkloadsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.beforeWorkloadId)) {
+            query.put("BeforeWorkloadId", request.beforeWorkloadId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gmtDequeuedTimeRange)) {
+            query.put("GmtDequeuedTimeRange", request.gmtDequeuedTimeRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gmtEnqueuedTimeRange)) {
+            query.put("GmtEnqueuedTimeRange", request.gmtEnqueuedTimeRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gmtPositionModifiedTimeRange)) {
+            query.put("GmtPositionModifiedTimeRange", request.gmtPositionModifiedTimeRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeName)) {
+            query.put("NodeName", request.nodeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showOwn)) {
+            query.put("ShowOwn", request.showOwn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subQuotaIds)) {
+            query.put("SubQuotaIds", request.subQuotaIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIds)) {
+            query.put("UserIds", request.userIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workloadCreatedTimeRange)) {
+            query.put("WorkloadCreatedTimeRange", request.workloadCreatedTimeRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workloadIds)) {
+            query.put("WorkloadIds", request.workloadIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workloadStatuses)) {
+            query.put("WorkloadStatuses", request.workloadStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workloadType)) {
+            query.put("WorkloadType", request.workloadType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceIds)) {
+            query.put("WorkspaceIds", request.workspaceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListQuotaWorkloads"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/quotas/" + com.aliyun.openapiutil.Client.getEncodeParam(QuotaId) + "/workloads"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListQuotaWorkloadsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>您可以通过此API获取Quota上的任务信息列表</p>
+     * 
+     * @param request ListQuotaWorkloadsRequest
+     * @return ListQuotaWorkloadsResponse
+     */
+    public ListQuotaWorkloadsResponse listQuotaWorkloads(String QuotaId, ListQuotaWorkloadsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listQuotaWorkloadsWithOptions(QuotaId, request, headers, runtime);
     }
 
     /**

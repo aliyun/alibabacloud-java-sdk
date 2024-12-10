@@ -14,6 +14,9 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     public static ListTrainingJobMetricsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTrainingJobMetricsResponseBody self = new ListTrainingJobMetricsResponseBody();
         return TeaModel.build(map, self);
@@ -33,6 +36,14 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListTrainingJobMetricsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListTrainingJobMetricsResponseBodyMetrics extends TeaModel {

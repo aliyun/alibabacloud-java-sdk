@@ -50,7 +50,6 @@ public class AlgorithmSpec extends TeaModel {
     public java.util.List<ConditionExpression> resourceRequirements;
 
     @NameInMap("SupportedInstanceTypes")
-    @Deprecated
     public java.util.List<String> supportedInstanceTypes;
 
     @NameInMap("SupportsDistributedTraining")

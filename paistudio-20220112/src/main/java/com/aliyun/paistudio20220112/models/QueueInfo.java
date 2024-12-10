@@ -94,13 +94,6 @@ public class QueueInfo extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <strong>example:</strong>
-     * <p>PreAllocation</p>
-     */
-    @NameInMap("SubStatus")
-    public String subStatus;
-
     @NameInMap("UserId")
     public String userId;
 
@@ -116,6 +109,13 @@ public class QueueInfo extends TeaModel {
 
     @NameInMap("WorkloadName")
     public String workloadName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>PreAllocation</p>
+     */
+    @NameInMap("WorkloadStatus")
+    public String workloadStatus;
 
     /**
      * <strong>example:</strong>
@@ -248,14 +248,6 @@ public class QueueInfo extends TeaModel {
         return this.status;
     }
 
-    public QueueInfo setSubStatus(String subStatus) {
-        this.subStatus = subStatus;
-        return this;
-    }
-    public String getSubStatus() {
-        return this.subStatus;
-    }
-
     public QueueInfo setUserId(String userId) {
         this.userId = userId;
         return this;
@@ -286,6 +278,14 @@ public class QueueInfo extends TeaModel {
     }
     public String getWorkloadName() {
         return this.workloadName;
+    }
+
+    public QueueInfo setWorkloadStatus(String workloadStatus) {
+        this.workloadStatus = workloadStatus;
+        return this;
+    }
+    public String getWorkloadStatus() {
+        return this.workloadStatus;
     }
 
     public QueueInfo setWorkloadType(String workloadType) {
