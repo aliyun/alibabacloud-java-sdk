@@ -1,3 +1,7 @@
+2024-12-10 Version: 7.6.1
+- Update API GetBucketAcl: update param BucketName.
+
+
 2024-12-02 Version: 7.6.0
 - Support API ModifySnatEntry.
 
