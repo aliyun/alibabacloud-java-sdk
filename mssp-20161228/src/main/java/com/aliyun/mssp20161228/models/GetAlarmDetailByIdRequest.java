@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetAlarmDetailByIdRequest extends TeaModel {
     /**
+     * <p>Primary key ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20077761</p>
      */
     @NameInMap("Id")
     public Long id;
