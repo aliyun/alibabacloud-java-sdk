@@ -31,6 +31,9 @@ public class RenewCertificateOrderForPackageRequestRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    @NameInMap("Tags")
+    public java.util.List<RenewCertificateOrderForPackageRequestRequestTags> tags;
+
     public static RenewCertificateOrderForPackageRequestRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewCertificateOrderForPackageRequestRequest self = new RenewCertificateOrderForPackageRequestRequest();
         return TeaModel.build(map, self);
@@ -50,6 +53,44 @@ public class RenewCertificateOrderForPackageRequestRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public RenewCertificateOrderForPackageRequestRequest setTags(java.util.List<RenewCertificateOrderForPackageRequestRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<RenewCertificateOrderForPackageRequestRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class RenewCertificateOrderForPackageRequestRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static RenewCertificateOrderForPackageRequestRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            RenewCertificateOrderForPackageRequestRequestTags self = new RenewCertificateOrderForPackageRequestRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public RenewCertificateOrderForPackageRequestRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public RenewCertificateOrderForPackageRequestRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

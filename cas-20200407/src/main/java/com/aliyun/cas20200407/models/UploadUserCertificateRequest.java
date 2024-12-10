@@ -89,6 +89,9 @@ public class UploadUserCertificateRequest extends TeaModel {
     @NameInMap("SignPrivateKey")
     public String signPrivateKey;
 
+    @NameInMap("Tags")
+    public java.util.List<UploadUserCertificateRequestTags> tags;
+
     public static UploadUserCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadUserCertificateRequest self = new UploadUserCertificateRequest();
         return TeaModel.build(map, self);
@@ -156,6 +159,44 @@ public class UploadUserCertificateRequest extends TeaModel {
     }
     public String getSignPrivateKey() {
         return this.signPrivateKey;
+    }
+
+    public UploadUserCertificateRequest setTags(java.util.List<UploadUserCertificateRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<UploadUserCertificateRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class UploadUserCertificateRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UploadUserCertificateRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            UploadUserCertificateRequestTags self = new UploadUserCertificateRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public UploadUserCertificateRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public UploadUserCertificateRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
