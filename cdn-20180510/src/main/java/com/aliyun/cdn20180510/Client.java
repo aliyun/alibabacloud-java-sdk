@@ -10508,9 +10508,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>\<em>\</em> \<em>\</em></p>
-     * 
      * <b>summary</b> : 
      * <p>Queries all real-time log delivery tasks within your Alibaba Cloud account.</p>
      * 
@@ -10535,9 +10532,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>\<em>\</em> \<em>\</em></p>
-     * 
      * <b>summary</b> : 
      * <p>Queries all real-time log delivery tasks within your Alibaba Cloud account.</p>
      * @return ListRealtimeLogDeliveryResponse
