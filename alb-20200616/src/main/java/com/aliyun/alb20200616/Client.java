@@ -1176,12 +1176,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ListenerId", request.listenerId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.rules)) {
-            query.put("Rules", request.rules);
+            bodyFlat.put("Rules", request.rules);
         }
 
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateRules"),
@@ -1318,6 +1325,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.connectionDrainConfig)) {
             query.put("ConnectionDrainConfig", request.connectionDrainConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossZoneEnabled)) {
+            query.put("CrossZoneEnabled", request.crossZoneEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
@@ -5561,12 +5572,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DryRun", request.dryRun);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.rules)) {
-            query.put("Rules", request.rules);
+            bodyFlat.put("Rules", request.rules);
         }
 
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateRulesAttribute"),
@@ -5711,6 +5729,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.connectionDrainConfig)) {
             query.put("ConnectionDrainConfig", request.connectionDrainConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossZoneEnabled)) {
+            query.put("CrossZoneEnabled", request.crossZoneEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
