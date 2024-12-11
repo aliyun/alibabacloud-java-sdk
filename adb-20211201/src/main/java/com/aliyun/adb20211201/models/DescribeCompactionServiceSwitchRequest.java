@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCompactionServiceSwitchRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

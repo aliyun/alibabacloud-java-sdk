@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyCompactionServiceSwitchResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>21ABF219-10E0-571B-94B8-9C9AE5022BF8</p>
      */

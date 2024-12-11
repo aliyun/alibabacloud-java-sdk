@@ -1,3 +1,11 @@
+2024-12-11 Version: 3.1.0
+- Support API CancelSparkReplStatement.
+- Support API ExecuteSparkReplStatement.
+- Support API GetSparkReplSession.
+- Support API GetSparkReplStatement.
+- Support API StartSparkReplSession.
+
+
 2024-12-10 Version: 3.0.0
 - Support API DeleteBackups.
 - Support API DescribeCompactionServiceSwitch.
