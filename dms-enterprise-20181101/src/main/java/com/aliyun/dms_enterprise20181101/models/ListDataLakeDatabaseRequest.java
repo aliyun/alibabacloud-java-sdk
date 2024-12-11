@@ -28,6 +28,12 @@ public class ListDataLakeDatabaseRequest extends TeaModel {
     @NameInMap("DataRegion")
     public String dataRegion;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <strong>example:</strong>
      * <p>default</p>
@@ -64,6 +70,22 @@ public class ListDataLakeDatabaseRequest extends TeaModel {
     }
     public String getDataRegion() {
         return this.dataRegion;
+    }
+
+    public ListDataLakeDatabaseRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListDataLakeDatabaseRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListDataLakeDatabaseRequest setSearchKey(String searchKey) {
