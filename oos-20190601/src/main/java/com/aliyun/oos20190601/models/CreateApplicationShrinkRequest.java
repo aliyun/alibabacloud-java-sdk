@@ -10,6 +10,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("AlarmConfig")
     public String alarmConfigShrink;
 
+    @NameInMap("ApplicationSource")
+    public String applicationSource;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
@@ -85,6 +88,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getAlarmConfigShrink() {
         return this.alarmConfigShrink;
+    }
+
+    public CreateApplicationShrinkRequest setApplicationSource(String applicationSource) {
+        this.applicationSource = applicationSource;
+        return this;
+    }
+    public String getApplicationSource() {
+        return this.applicationSource;
     }
 
     public CreateApplicationShrinkRequest setClientToken(String clientToken) {

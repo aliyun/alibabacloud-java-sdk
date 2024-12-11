@@ -56,7 +56,7 @@ public class ListTemplatesShrinkRequest extends TeaModel {
     public Boolean hasTrigger;
 
     /**
-     * <p>Specifies whether the template is an example template</p>
+     * <p>Specifies whether the template is an example template.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

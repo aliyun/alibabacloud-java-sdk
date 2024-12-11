@@ -268,6 +268,12 @@ public class ListExecutionsResponseBody extends TeaModel {
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The next schedule time for timer trigger execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
+         */
         @NameInMap("NextScheduleTime")
         public String nextScheduleTime;
 

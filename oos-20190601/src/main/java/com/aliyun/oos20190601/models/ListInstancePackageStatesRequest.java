@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancePackageStatesRequest extends TeaModel {
     /**
+     * <p>ECS instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListInstancePackageStatesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -21,6 +24,8 @@ public class ListInstancePackageStatesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctzxxxxxxx</p>
      */
@@ -28,6 +33,8 @@ public class ListInstancePackageStatesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -35,6 +42,8 @@ public class ListInstancePackageStatesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>List of extension names</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;template1&quot;,&quot;template2&quot;]</p>
      */

@@ -10,6 +10,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("AlarmConfig")
     public CreateApplicationRequestAlarmConfig alarmConfig;
 
+    @NameInMap("ApplicationSource")
+    public String applicationSource;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
@@ -85,6 +88,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public CreateApplicationRequestAlarmConfig getAlarmConfig() {
         return this.alarmConfig;
+    }
+
+    public CreateApplicationRequest setApplicationSource(String applicationSource) {
+        this.applicationSource = applicationSource;
+        return this;
+    }
+    public String getApplicationSource() {
+        return this.applicationSource;
     }
 
     public CreateApplicationRequest setClientToken(String clientToken) {

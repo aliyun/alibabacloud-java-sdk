@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateInstancePackageStateShrinkRequest extends TeaModel {
     /**
+     * <p>The operation type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>uninstall</li>
+     * <li>install</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +20,7 @@ public class UpdateInstancePackageStateShrinkRequest extends TeaModel {
     public String configureAction;
 
     /**
+     * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +30,8 @@ public class UpdateInstancePackageStateShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The parameters for installing or uninstalling the extensions.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;username&quot;: &quot;xx&quot;}</p>
      */
@@ -30,6 +39,8 @@ public class UpdateInstancePackageStateShrinkRequest extends TeaModel {
     public String parametersShrink;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -37,6 +48,7 @@ public class UpdateInstancePackageStateShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +58,8 @@ public class UpdateInstancePackageStateShrinkRequest extends TeaModel {
     public String templateName;
 
     /**
+     * <p>The version of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */

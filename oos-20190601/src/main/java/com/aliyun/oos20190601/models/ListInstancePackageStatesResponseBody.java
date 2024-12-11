@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstancePackageStatesResponseBody extends TeaModel {
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -12,17 +14,22 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
     public String maxResults;
 
     /**
+     * <p>Token string for pagination.</p>
+     * 
      * <strong>example:</strong>
      * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctzxxxxxxx</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>List of extensions</p>
+     */
     @NameInMap("PackageStates")
     public java.util.List<ListInstancePackageStatesResponseBodyPackageStates> packageStates;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>1306108F-610C-40FD-AAD5-XXXXXX</p>
@@ -69,6 +76,8 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
 
     public static class ListInstancePackageStatesResponseBodyPackageStates extends TeaModel {
         /**
+         * <p>Description</p>
+         * 
          * <strong>example:</strong>
          * <p>template description</p>
          */
@@ -76,6 +85,8 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Parameters</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -83,6 +94,8 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         public String parameters;
 
         /**
+         * <p>Publisher</p>
+         * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud</p>
          */
@@ -90,6 +103,8 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         public String publisher;
 
         /**
+         * <p>Template type</p>
+         * 
          * <strong>example:</strong>
          * <p>Package</p>
          */
@@ -97,6 +112,8 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         public String templateCategory;
 
         /**
+         * <p>Template ID</p>
+         * 
          * <strong>example:</strong>
          * <p>087b1e11072a40259f6fxxxxxxxxx</p>
          */
@@ -104,6 +121,8 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>Template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACS-ECS-Docker</p>
          */
@@ -111,6 +130,8 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         public String templateName;
 
         /**
+         * <p>Template version number</p>
+         * 
          * <strong>example:</strong>
          * <p>v3</p>
          */
@@ -118,6 +139,8 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         public String templateVersion;
 
         /**
+         * <p>Template version name</p>
+         * 
          * <strong>example:</strong>
          * <p>fix bug</p>
          */
@@ -125,6 +148,8 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         public String templateVersionName;
 
         /**
+         * <p>Update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-04T11:17:28</p>
          */

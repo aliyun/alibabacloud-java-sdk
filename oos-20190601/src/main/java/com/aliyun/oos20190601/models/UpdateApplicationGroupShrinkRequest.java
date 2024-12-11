@@ -33,9 +33,21 @@ public class UpdateApplicationGroupShrinkRequest extends TeaModel {
     @NameInMap("NewName")
     public String newName;
 
+    /**
+     * <p>The name of the configuration update operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/business/v1/product/spus/{spu_id}</p>
+     */
     @NameInMap("OperationName")
     public String operationName;
 
+    /**
+     * <p>The JSON string that consists of a set of parameters. Default value: {}.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;username&quot;: &quot;xx&quot;}</p>
+     */
     @NameInMap("Parameters")
     public String parametersShrink;
 
