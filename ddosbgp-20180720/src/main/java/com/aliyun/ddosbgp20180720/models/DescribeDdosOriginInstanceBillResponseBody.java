@@ -84,6 +84,9 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     @NameInMap("IpInfo")
     public String ipInfo;
 
+    /**
+     * <p>The information about the monthly summary bills.</p>
+     */
     @NameInMap("MonthlySummaryList")
     public java.util.List<DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList> monthlySummaryList;
 
@@ -503,30 +506,90 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     }
 
     public static class DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList extends TeaModel {
+        /**
+         * <p>The number of days that the instance is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("EnableDays")
         public Integer enableDays;
 
+        /**
+         * <p>The total traffic of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("FlowCn")
         public Long flowCn;
 
+        /**
+         * <p>The total traffic of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("FlowIntl")
         public Long flowIntl;
 
+        /**
+         * <p>The total number of protected IP addresses in the Chinese mainland.</p>
+         * <blockquote>
+         * <p> The total number of protected IP addresses is the sum of the daily numbers of protected IP addresses in a month.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
+         */
         @NameInMap("IpCountCn")
         public Integer ipCountCn;
 
+        /**
+         * <p>The total number of protected IP addresses outside the Chinese mainland.</p>
+         * <blockquote>
+         * <p> The total number of protected IP addresses is the sum of the daily numbers of protected IP addresses in a month.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("IpCountIntl")
         public Integer ipCountIntl;
 
+        /**
+         * <p>The ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112873971277****</p>
+         */
         @NameInMap("MemberUid")
         public String memberUid;
 
+        /**
+         * <p>The total traffic of regular Alibaba Cloud services in the Chinese mainland. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("StandardAssetsFlowCn")
         public Long standardAssetsFlowCn;
 
+        /**
+         * <p>The total traffic of regular Alibaba Cloud services outside the Chinese mainland. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("StandardAssetsFlowIntl")
         public Long standardAssetsFlowIntl;
 
+        /**
+         * <p>The ID of the administrator account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102518028277****</p>
+         */
         @NameInMap("Uid")
         public String uid;
 
