@@ -27,6 +27,9 @@ public class RunHotTopicChatRequest extends TeaModel {
     @NameInMap("imageCount")
     public Integer imageCount;
 
+    @NameInMap("messages")
+    public java.util.List<RunHotTopicChatRequestMessages> messages;
+
     /**
      * <strong>example:</strong>
      * <p>xx</p>
@@ -106,6 +109,14 @@ public class RunHotTopicChatRequest extends TeaModel {
         return this.imageCount;
     }
 
+    public RunHotTopicChatRequest setMessages(java.util.List<RunHotTopicChatRequestMessages> messages) {
+        this.messages = messages;
+        return this;
+    }
+    public java.util.List<RunHotTopicChatRequestMessages> getMessages() {
+        return this.messages;
+    }
+
     public RunHotTopicChatRequest setModelCustomPromptTemplate(String modelCustomPromptTemplate) {
         this.modelCustomPromptTemplate = modelCustomPromptTemplate;
         return this;
@@ -152,6 +163,59 @@ public class RunHotTopicChatRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public static class RunHotTopicChatRequestMessages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
+        @NameInMap("content")
+        public String content;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2024-12-10 18:51:29</p>
+         */
+        @NameInMap("createTime")
+        public String createTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
+        @NameInMap("role")
+        public String role;
+
+        public static RunHotTopicChatRequestMessages build(java.util.Map<String, ?> map) throws Exception {
+            RunHotTopicChatRequestMessages self = new RunHotTopicChatRequestMessages();
+            return TeaModel.build(map, self);
+        }
+
+        public RunHotTopicChatRequestMessages setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public RunHotTopicChatRequestMessages setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public RunHotTopicChatRequestMessages setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
     }
 
     public static class RunHotTopicChatRequestStepForBroadcastContentConfigCustomHotValueWeights extends TeaModel {

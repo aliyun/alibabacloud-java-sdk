@@ -157,6 +157,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.hotTopicsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hotTopics, "hotTopics", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.messages)) {
+            request.messagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.messages, "messages", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.stepForBroadcastContentConfig)) {
             request.stepForBroadcastContentConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stepForBroadcastContentConfig, "stepForBroadcastContentConfig", "json");
         }
@@ -180,6 +184,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageCount)) {
             body.put("imageCount", request.imageCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messagesShrink)) {
+            body.put("messages", request.messagesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelCustomPromptTemplate)) {
