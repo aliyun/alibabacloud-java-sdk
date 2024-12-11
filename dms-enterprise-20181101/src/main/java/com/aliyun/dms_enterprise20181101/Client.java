@@ -8788,6 +8788,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DataRegion", request.dataRegion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
             query.put("SearchKey", request.searchKey);
         }

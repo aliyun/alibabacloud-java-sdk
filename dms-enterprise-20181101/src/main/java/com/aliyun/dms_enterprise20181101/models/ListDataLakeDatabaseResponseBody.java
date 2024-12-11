@@ -21,6 +21,12 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <strong>example:</strong>
      * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</p>
@@ -62,6 +68,22 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public ListDataLakeDatabaseResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListDataLakeDatabaseResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListDataLakeDatabaseResponseBody setRequestId(String requestId) {
