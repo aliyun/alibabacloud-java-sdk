@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class PushObjectCacheRequest extends TeaModel {
     /**
-     * <p>The accelerated region where content is to be prefetched. Valid values:</p>
+     * <p>The acceleration region where content is to be prefetched. Valid values:</p>
      * <ul>
      * <li><strong>domestic</strong><strong>: Chinese mainland</strong></li>
      * <li><strong>overseas</strong><strong>: regions outside the Chinese mainland</strong></li>
      * </ul>
-     * <p>If you do not set this parameter, content in the accelerated region of the domain name is prefetched.</p>
+     * <p>If you do not set this parameter, content in the service location (specified by parameter Coverage) that you configured for the domain is prefetched. Content is prefetched based on the following rules:</p>
      * <ul>
-     * <li>If the accelerated region is set to <strong>Mainland China Only</strong>, content in regions in the Chinese mainland is prefetched.</li>
-     * <li>If the accelerated region is set to <strong>Global</strong>, content in all regions is prefetched.</li>
-     * <li>If the accelerated region is set to <strong>Global (Excluding Mainland China)</strong>, content in regions outside the Chinese mainland is prefetched.</li>
+     * <li>If the acceleration region is set to <strong>Chinese Mainland Only</strong>, content in regions in the Chinese mainland is prefetched.</li>
+     * <li>If the acceleration region is set to <strong>Global</strong>, content in all regions is prefetched.</li>
+     * <li>If the acceleration region is set to <strong>Global (Excluding the Chinese Mainland)</strong>, content in regions outside the Chinese mainland is prefetched.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,9 +24,9 @@ public class PushObjectCacheRequest extends TeaModel {
     public String area;
 
     /**
-     * <p>Specifies whether to prefetch content to POPs. Valid values:</p>
+     * <p>Specifies whether to prefetch content to L2 points of presence (POPs). Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prefetches content to POPs.</li>
+     * <li><strong>true</strong>: prefetches content to L2 POPs.</li>
      * <li><strong>false</strong>: prefetches content to regular POPs. Regular POPs can be L2 POPs or L3 POPs. Default value: <strong>false</strong>.</li>
      * </ul>
      * 
@@ -52,6 +52,16 @@ public class PushObjectCacheRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter specifies whether to enable the hash key query mode when you run a prefetch task. Valid values:</p>
+     * <ul>
+     * <li>false: The default mode, in which the submitted URL is used as the hash key for the prefetch.</li>
+     * <li>true: In this mode, the actual hash key used for the prefetch is queried based on the configuration of the domain name.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("QueryHashkey")
     public Boolean queryHashkey;
 
