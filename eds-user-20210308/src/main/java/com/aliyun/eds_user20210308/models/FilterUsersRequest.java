@@ -69,6 +69,9 @@ public class FilterUsersRequest extends TeaModel {
     @NameInMap("IncludeDesktopGroupCount")
     public Boolean includeDesktopGroupCount;
 
+    @NameInMap("IsQueryAllSubOrgs")
+    public Boolean isQueryAllSubOrgs;
+
     /**
      * <p>The number of entries per page. If you set this parameter to a value greater than 100, the system resets the value to 100.</p>
      * 
@@ -161,6 +164,14 @@ public class FilterUsersRequest extends TeaModel {
     }
     public Boolean getIncludeDesktopGroupCount() {
         return this.includeDesktopGroupCount;
+    }
+
+    public FilterUsersRequest setIsQueryAllSubOrgs(Boolean isQueryAllSubOrgs) {
+        this.isQueryAllSubOrgs = isQueryAllSubOrgs;
+        return this;
+    }
+    public Boolean getIsQueryAllSubOrgs() {
+        return this.isQueryAllSubOrgs;
     }
 
     public FilterUsersRequest setMaxResults(Long maxResults) {

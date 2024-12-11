@@ -646,6 +646,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IncludeDesktopGroupCount", request.includeDesktopGroupCount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isQueryAllSubOrgs)) {
+            query.put("IsQueryAllSubOrgs", request.isQueryAllSubOrgs);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
