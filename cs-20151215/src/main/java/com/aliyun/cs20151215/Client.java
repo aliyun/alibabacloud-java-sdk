@@ -1366,11 +1366,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>You can call the CreateKubernetesTrigger operation to create a trigger for an application.</p>
      * 
+     * @deprecated OpenAPI CreateKubernetesTrigger is deprecated
+     * 
      * @param request CreateKubernetesTriggerRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateKubernetesTriggerResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateKubernetesTriggerResponse createKubernetesTriggerWithOptions(CreateKubernetesTriggerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1412,9 +1416,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>You can call the CreateKubernetesTrigger operation to create a trigger for an application.</p>
      * 
+     * @deprecated OpenAPI CreateKubernetesTrigger is deprecated
+     * 
      * @param request CreateKubernetesTriggerRequest
      * @return CreateKubernetesTriggerResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateKubernetesTriggerResponse createKubernetesTrigger(CreateKubernetesTriggerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1887,10 +1895,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>You can call the DeleteKubernetesTrigger operation to delete an application trigger by trigger ID</p>
      * 
+     * @deprecated OpenAPI DeleteKubernetesTrigger is deprecated
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteKubernetesTriggerResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteKubernetesTriggerResponse deleteKubernetesTriggerWithOptions(String Id, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1912,8 +1924,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>You can call the DeleteKubernetesTrigger operation to delete an application trigger by trigger ID</p>
+     * 
+     * @deprecated OpenAPI DeleteKubernetesTrigger is deprecated
      * @return DeleteKubernetesTriggerResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteKubernetesTriggerResponse deleteKubernetesTrigger(String Id) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3300,10 +3316,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>You can call the DescribeEdgeMachineActiveProcess operation to query the activation progress of a cloud-native box.</p>
      * 
+     * @deprecated OpenAPI DescribeEdgeMachineActiveProcess is deprecated
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeEdgeMachineActiveProcessResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeEdgeMachineActiveProcessResponse describeEdgeMachineActiveProcessWithOptions(String edgeMachineid, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3325,8 +3345,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>You can call the DescribeEdgeMachineActiveProcess operation to query the activation progress of a cloud-native box.</p>
+     * 
+     * @deprecated OpenAPI DescribeEdgeMachineActiveProcess is deprecated
      * @return DescribeEdgeMachineActiveProcessResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeEdgeMachineActiveProcessResponse describeEdgeMachineActiveProcess(String edgeMachineid) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3595,11 +3619,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the proxy configurations of a registered cluster based on the cluster ID.</p>
      * 
+     * @deprecated OpenAPI DescribeExternalAgent is deprecated
+     * 
      * @param request DescribeExternalAgentRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeExternalAgentResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeExternalAgentResponse describeExternalAgentWithOptions(String ClusterId, DescribeExternalAgentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3636,9 +3664,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the proxy configurations of a registered cluster based on the cluster ID.</p>
      * 
+     * @deprecated OpenAPI DescribeExternalAgent is deprecated
+     * 
      * @param request DescribeExternalAgentRequest
      * @return DescribeExternalAgentResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeExternalAgentResponse describeExternalAgent(String ClusterId, DescribeExternalAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4399,11 +4431,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>You can call the EdgeClusterAddEdgeMachine operation to add a cloud-native box to a Container Service for Kubernetes (ACK) Edge cluster.</p>
      * 
+     * @deprecated OpenAPI EdgeClusterAddEdgeMachine is deprecated
+     * 
      * @param request EdgeClusterAddEdgeMachineRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return EdgeClusterAddEdgeMachineResponse
      */
+    @Deprecated
+    // Deprecated
     public EdgeClusterAddEdgeMachineResponse edgeClusterAddEdgeMachineWithOptions(String clusterid, String edgeMachineid, EdgeClusterAddEdgeMachineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4441,9 +4477,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>You can call the EdgeClusterAddEdgeMachine operation to add a cloud-native box to a Container Service for Kubernetes (ACK) Edge cluster.</p>
      * 
+     * @deprecated OpenAPI EdgeClusterAddEdgeMachine is deprecated
+     * 
      * @param request EdgeClusterAddEdgeMachineRequest
      * @return EdgeClusterAddEdgeMachineResponse
      */
+    @Deprecated
+    // Deprecated
     public EdgeClusterAddEdgeMachineResponse edgeClusterAddEdgeMachine(String clusterid, String edgeMachineid, EdgeClusterAddEdgeMachineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4714,11 +4754,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>You can call the GetKubernetesTrigger operationto query the triggers of an application by application name.</p>
      * 
+     * @deprecated OpenAPI GetKubernetesTrigger is deprecated
+     * 
      * @param request GetKubernetesTriggerRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetKubernetesTriggerResponse
      */
+    @Deprecated
+    // Deprecated
     public GetKubernetesTriggerResponse getKubernetesTriggerWithOptions(String ClusterId, GetKubernetesTriggerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4760,9 +4804,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>You can call the GetKubernetesTrigger operationto query the triggers of an application by application name.</p>
      * 
+     * @deprecated OpenAPI GetKubernetesTrigger is deprecated
+     * 
      * @param request GetKubernetesTriggerRequest
      * @return GetKubernetesTriggerResponse
      */
+    @Deprecated
+    // Deprecated
     public GetKubernetesTriggerResponse getKubernetesTrigger(String ClusterId, GetKubernetesTriggerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -5544,11 +5592,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>This API operation applies only to Container Service for Kubernetes (ACK) managed clusters.</p>
      * 
+     * @deprecated OpenAPI ModifyClusterConfiguration is deprecated
+     * 
      * @param request ModifyClusterConfigurationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyClusterConfigurationResponse
      */
+    @Deprecated
+    // Deprecated
     public ModifyClusterConfigurationResponse modifyClusterConfigurationWithOptions(String ClusterId, ModifyClusterConfigurationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5578,9 +5630,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>This API operation applies only to Container Service for Kubernetes (ACK) managed clusters.</p>
      * 
+     * @deprecated OpenAPI ModifyClusterConfiguration is deprecated
+     * 
      * @param request ModifyClusterConfigurationRequest
      * @return ModifyClusterConfigurationResponse
      */
+    @Deprecated
+    // Deprecated
     public ModifyClusterConfigurationResponse modifyClusterConfiguration(String ClusterId, ModifyClusterConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

@@ -7,6 +7,9 @@ public class KubeletConfig extends TeaModel {
     @NameInMap("allowedUnsafeSysctls")
     public java.util.List<String> allowedUnsafeSysctls;
 
+    @NameInMap("clusterDNS")
+    public java.util.List<String> clusterDNS;
+
     /**
      * <strong>example:</strong>
      * <p>5</p>
@@ -20,6 +23,20 @@ public class KubeletConfig extends TeaModel {
      */
     @NameInMap("containerLogMaxSize")
     public String containerLogMaxSize;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("cpuCFSQuota")
+    public Boolean cpuCFSQuota;
+
+    /**
+     * <strong>example:</strong>
+     * <p>100ms</p>
+     */
+    @NameInMap("cpuCFSQuotaPeriod")
+    public String cpuCFSQuotaPeriod;
 
     /**
      * <strong>example:</strong>
@@ -56,6 +73,20 @@ public class KubeletConfig extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>85</p>
+     */
+    @NameInMap("imageGCHighThresholdPercent")
+    public Integer imageGCHighThresholdPercent;
+
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
+    @NameInMap("imageGCLowThresholdPercent")
+    public Integer imageGCLowThresholdPercent;
+
+    /**
+     * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("kubeAPIBurst")
@@ -80,6 +111,20 @@ public class KubeletConfig extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>none</p>
+     */
+    @NameInMap("memoryManagerPolicy")
+    public String memoryManagerPolicy;
+
+    /**
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
+    @NameInMap("podPidsLimit")
+    public Long podPidsLimit;
+
+    /**
+     * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("readOnlyPort")
@@ -99,6 +144,9 @@ public class KubeletConfig extends TeaModel {
     @NameInMap("registryPullQPS")
     public Long registryPullQPS;
 
+    @NameInMap("reservedMemory")
+    public java.util.List<KubeletConfigReservedMemory> reservedMemory;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -108,6 +156,16 @@ public class KubeletConfig extends TeaModel {
 
     @NameInMap("systemReserved")
     public java.util.Map<String, ?> systemReserved;
+
+    /**
+     * <strong>example:</strong>
+     * <p>restricted</p>
+     */
+    @NameInMap("topologyManagerPolicy")
+    public String topologyManagerPolicy;
+
+    @NameInMap("tracing")
+    public KubeletConfigTracing tracing;
 
     public static KubeletConfig build(java.util.Map<String, ?> map) throws Exception {
         KubeletConfig self = new KubeletConfig();
@@ -120,6 +178,14 @@ public class KubeletConfig extends TeaModel {
     }
     public java.util.List<String> getAllowedUnsafeSysctls() {
         return this.allowedUnsafeSysctls;
+    }
+
+    public KubeletConfig setClusterDNS(java.util.List<String> clusterDNS) {
+        this.clusterDNS = clusterDNS;
+        return this;
+    }
+    public java.util.List<String> getClusterDNS() {
+        return this.clusterDNS;
     }
 
     public KubeletConfig setContainerLogMaxFiles(Long containerLogMaxFiles) {
@@ -136,6 +202,22 @@ public class KubeletConfig extends TeaModel {
     }
     public String getContainerLogMaxSize() {
         return this.containerLogMaxSize;
+    }
+
+    public KubeletConfig setCpuCFSQuota(Boolean cpuCFSQuota) {
+        this.cpuCFSQuota = cpuCFSQuota;
+        return this;
+    }
+    public Boolean getCpuCFSQuota() {
+        return this.cpuCFSQuota;
+    }
+
+    public KubeletConfig setCpuCFSQuotaPeriod(String cpuCFSQuotaPeriod) {
+        this.cpuCFSQuotaPeriod = cpuCFSQuotaPeriod;
+        return this;
+    }
+    public String getCpuCFSQuotaPeriod() {
+        return this.cpuCFSQuotaPeriod;
     }
 
     public KubeletConfig setCpuManagerPolicy(String cpuManagerPolicy) {
@@ -194,6 +276,22 @@ public class KubeletConfig extends TeaModel {
         return this.featureGates;
     }
 
+    public KubeletConfig setImageGCHighThresholdPercent(Integer imageGCHighThresholdPercent) {
+        this.imageGCHighThresholdPercent = imageGCHighThresholdPercent;
+        return this;
+    }
+    public Integer getImageGCHighThresholdPercent() {
+        return this.imageGCHighThresholdPercent;
+    }
+
+    public KubeletConfig setImageGCLowThresholdPercent(Integer imageGCLowThresholdPercent) {
+        this.imageGCLowThresholdPercent = imageGCLowThresholdPercent;
+        return this;
+    }
+    public Integer getImageGCLowThresholdPercent() {
+        return this.imageGCLowThresholdPercent;
+    }
+
     public KubeletConfig setKubeAPIBurst(Long kubeAPIBurst) {
         this.kubeAPIBurst = kubeAPIBurst;
         return this;
@@ -226,6 +324,22 @@ public class KubeletConfig extends TeaModel {
         return this.maxPods;
     }
 
+    public KubeletConfig setMemoryManagerPolicy(String memoryManagerPolicy) {
+        this.memoryManagerPolicy = memoryManagerPolicy;
+        return this;
+    }
+    public String getMemoryManagerPolicy() {
+        return this.memoryManagerPolicy;
+    }
+
+    public KubeletConfig setPodPidsLimit(Long podPidsLimit) {
+        this.podPidsLimit = podPidsLimit;
+        return this;
+    }
+    public Long getPodPidsLimit() {
+        return this.podPidsLimit;
+    }
+
     public KubeletConfig setReadOnlyPort(Long readOnlyPort) {
         this.readOnlyPort = readOnlyPort;
         return this;
@@ -250,6 +364,14 @@ public class KubeletConfig extends TeaModel {
         return this.registryPullQPS;
     }
 
+    public KubeletConfig setReservedMemory(java.util.List<KubeletConfigReservedMemory> reservedMemory) {
+        this.reservedMemory = reservedMemory;
+        return this;
+    }
+    public java.util.List<KubeletConfigReservedMemory> getReservedMemory() {
+        return this.reservedMemory;
+    }
+
     public KubeletConfig setSerializeImagePulls(Boolean serializeImagePulls) {
         this.serializeImagePulls = serializeImagePulls;
         return this;
@@ -264,6 +386,86 @@ public class KubeletConfig extends TeaModel {
     }
     public java.util.Map<String, ?> getSystemReserved() {
         return this.systemReserved;
+    }
+
+    public KubeletConfig setTopologyManagerPolicy(String topologyManagerPolicy) {
+        this.topologyManagerPolicy = topologyManagerPolicy;
+        return this;
+    }
+    public String getTopologyManagerPolicy() {
+        return this.topologyManagerPolicy;
+    }
+
+    public KubeletConfig setTracing(KubeletConfigTracing tracing) {
+        this.tracing = tracing;
+        return this;
+    }
+    public KubeletConfigTracing getTracing() {
+        return this.tracing;
+    }
+
+    public static class KubeletConfigReservedMemory extends TeaModel {
+        @NameInMap("limits")
+        public java.util.Map<String, ?> limits;
+
+        @NameInMap("numaNode")
+        public Integer numaNode;
+
+        public static KubeletConfigReservedMemory build(java.util.Map<String, ?> map) throws Exception {
+            KubeletConfigReservedMemory self = new KubeletConfigReservedMemory();
+            return TeaModel.build(map, self);
+        }
+
+        public KubeletConfigReservedMemory setLimits(java.util.Map<String, ?> limits) {
+            this.limits = limits;
+            return this;
+        }
+        public java.util.Map<String, ?> getLimits() {
+            return this.limits;
+        }
+
+        public KubeletConfigReservedMemory setNumaNode(Integer numaNode) {
+            this.numaNode = numaNode;
+            return this;
+        }
+        public Integer getNumaNode() {
+            return this.numaNode;
+        }
+
+    }
+
+    public static class KubeletConfigTracing extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>localhost:4317</p>
+         */
+        @NameInMap("endpoint")
+        public String endpoint;
+
+        @NameInMap("samplingRatePerMillion")
+        public Integer samplingRatePerMillion;
+
+        public static KubeletConfigTracing build(java.util.Map<String, ?> map) throws Exception {
+            KubeletConfigTracing self = new KubeletConfigTracing();
+            return TeaModel.build(map, self);
+        }
+
+        public KubeletConfigTracing setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        public KubeletConfigTracing setSamplingRatePerMillion(Integer samplingRatePerMillion) {
+            this.samplingRatePerMillion = samplingRatePerMillion;
+            return this;
+        }
+        public Integer getSamplingRatePerMillion() {
+            return this.samplingRatePerMillion;
+        }
+
     }
 
 }
