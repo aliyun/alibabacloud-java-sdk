@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCompactionServiceSwitchRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class ModifyCompactionServiceSwitchRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>Specifies whether to enable the remote build feature.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

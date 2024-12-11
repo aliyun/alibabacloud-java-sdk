@@ -4,10 +4,15 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeCompactionServiceSwitchResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeCompactionServiceSwitchResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D761DA51-12F8-5457-AAA9-F52B9F436D2D</p>
      */
@@ -37,6 +42,13 @@ public class DescribeCompactionServiceSwitchResponseBody extends TeaModel {
 
     public static class DescribeCompactionServiceSwitchResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the remote build feature is enabled.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

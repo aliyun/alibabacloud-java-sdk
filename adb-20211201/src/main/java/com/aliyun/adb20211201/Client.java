@@ -297,6 +297,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>终止一段代码</p>
+     * 
+     * @param request CancelSparkReplStatementRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelSparkReplStatementResponse
+     */
+    public CancelSparkReplStatementResponse cancelSparkReplStatementWithOptions(CancelSparkReplStatementRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statementId)) {
+            body.put("StatementId", request.statementId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelSparkReplStatement"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelSparkReplStatementResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>终止一段代码</p>
+     * 
+     * @param request CancelSparkReplStatementRequest
+     * @return CancelSparkReplStatementResponse
+     */
+    public CancelSparkReplStatementResponse cancelSparkReplStatement(CancelSparkReplStatementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelSparkReplStatementWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -2882,7 +2934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询CompactionService开关</p>
+     * <p>Queries whether the remote build feature is enabled in the query acceleration configuration of an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeCompactionServiceSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2914,7 +2966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询CompactionService开关</p>
+     * <p>Queries whether the remote build feature is enabled in the query acceleration configuration of an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeCompactionServiceSwitchRequest
      * @return DescribeCompactionServiceSwitchResponse
@@ -5577,6 +5629,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>执行一段代码</p>
+     * 
+     * @param request ExecuteSparkReplStatementRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteSparkReplStatementResponse
+     */
+    public ExecuteSparkReplStatementResponse executeSparkReplStatementWithOptions(ExecuteSparkReplStatementRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            body.put("Code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.codeType)) {
+            body.put("CodeType", request.codeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteSparkReplStatement"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteSparkReplStatementResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>执行一段代码</p>
+     * 
+     * @param request ExecuteSparkReplStatementRequest
+     * @return ExecuteSparkReplStatementResponse
+     */
+    public ExecuteSparkReplStatementResponse executeSparkReplStatement(ExecuteSparkReplStatementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.executeSparkReplStatementWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
      * <ul>
@@ -6260,6 +6368,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSparkLogAnalyzeTaskResponse getSparkLogAnalyzeTask(GetSparkLogAnalyzeTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSparkLogAnalyzeTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一个可交互Session</p>
+     * 
+     * @param request GetSparkReplSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSparkReplSessionResponse
+     */
+    public GetSparkReplSessionResponse getSparkReplSessionWithOptions(GetSparkReplSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSparkReplSession"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSparkReplSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一个可交互Session</p>
+     * 
+     * @param request GetSparkReplSessionRequest
+     * @return GetSparkReplSessionResponse
+     */
+    public GetSparkReplSessionResponse getSparkReplSession(GetSparkReplSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSparkReplSessionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一段代码的执行结果</p>
+     * 
+     * @param request GetSparkReplStatementRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSparkReplStatementResponse
+     */
+    public GetSparkReplStatementResponse getSparkReplStatementWithOptions(GetSparkReplStatementRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statementId)) {
+            body.put("StatementId", request.statementId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSparkReplStatement"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSparkReplStatementResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一段代码的执行结果</p>
+     * 
+     * @param request GetSparkReplStatementRequest
+     * @return GetSparkReplStatementResponse
+     */
+    public GetSparkReplStatementResponse getSparkReplStatement(GetSparkReplStatementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSparkReplStatementWithOptions(request, runtime);
     }
 
     /**
@@ -8014,7 +8222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改CompactionService开关</p>
+     * <p>Modifies the status of the remote build feature in the query acceleration configuration of an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request ModifyCompactionServiceSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8050,7 +8258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改CompactionService开关</p>
+     * <p>Modifies the status of the remote build feature in the query acceleration configuration of an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request ModifyCompactionServiceSwitchRequest
      * @return ModifyCompactionServiceSwitchResponse
@@ -9088,6 +9296,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetSparkAppLogRootPathResponse setSparkAppLogRootPath(SetSparkAppLogRootPathRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setSparkAppLogRootPathWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动一个可交互Session</p>
+     * 
+     * @param request StartSparkReplSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartSparkReplSessionResponse
+     */
+    public StartSparkReplSessionResponse startSparkReplSessionWithOptions(StartSparkReplSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("Config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            body.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupName)) {
+            body.put("ResourceGroupName", request.resourceGroupName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartSparkReplSession"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartSparkReplSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动一个可交互Session</p>
+     * 
+     * @param request StartSparkReplSessionRequest
+     * @return StartSparkReplSessionResponse
+     */
+    public StartSparkReplSessionResponse startSparkReplSession(StartSparkReplSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startSparkReplSessionWithOptions(request, runtime);
     }
 
     /**
