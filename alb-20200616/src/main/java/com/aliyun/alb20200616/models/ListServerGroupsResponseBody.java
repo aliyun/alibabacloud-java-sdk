@@ -172,7 +172,11 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Boolean healthCheckEnabled;
 
         /**
-         * <p>The domain name that is used for health checks. The domain name meets the following requirements:</p>
+         * <p>The domain name that is used for health checks.</p>
+         * <ul>
+         * <li><p><strong>Backend Server Internal IP</strong> (default): Use the internal IP address of backend servers as the health check domain name.</p>
+         * </li>
+         * <li><p><strong>Custom Domain Name</strong>: Enter a domain name.</p>
          * <ul>
          * <li>The domain name is 1 to 80 characters in length.</li>
          * <li>The domain name contains lowercase letters, digits, hyphens (-), and periods (.).</li>
@@ -180,8 +184,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
          * <li>The rightmost domain label of the domain name contains only letters, and does not contain digits or hyphens (-).</li>
          * <li>The domain name does not start or end with a hyphen (-).</li>
          * </ul>
+         * </li>
+         * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+         * <p> This parameter takes effect only if HealthCheckProtocol is set to HTTP, HTTPS, or gRPC.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -640,6 +646,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>是否开启跨可用区转发。（默认开启）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("CrossZoneEnabled")
+        public Boolean crossZoneEnabled;
+
+        /**
          * <p>The health check configurations.</p>
          */
         @NameInMap("HealthCheckConfig")
@@ -846,6 +861,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListServerGroupsResponseBodyServerGroups setCrossZoneEnabled(Boolean crossZoneEnabled) {
+            this.crossZoneEnabled = crossZoneEnabled;
+            return this;
+        }
+        public Boolean getCrossZoneEnabled() {
+            return this.crossZoneEnabled;
         }
 
         public ListServerGroupsResponseBodyServerGroups setHealthCheckConfig(ListServerGroupsResponseBodyServerGroupsHealthCheckConfig healthCheckConfig) {

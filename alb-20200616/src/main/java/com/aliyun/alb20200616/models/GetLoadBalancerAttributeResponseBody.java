@@ -231,7 +231,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone and the vSwitch in the zone. A maximum of 10 zones is returned. If the current region supports two or more zones, at least two zones are returned.</p>
+     * <p>The mappings between zones and vSwitches. At most 10 zones are returned. If the current region supports two or more zones, at least two zones are returned.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappings> zoneMappings;
@@ -734,9 +734,25 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
+        /**
+         * <p>The health status of the private IPv4 address of the ALB instance. 
+         * This parameter is returned only when the Status of the zone is Active.Valid values:</p>
+         * <ul>
+         * <li><p><strong>Healthy</strong></p>
+         * </li>
+         * <li><p><strong>Unhealthy</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Healthy</p>
+         */
         @NameInMap("IntranetAddressHcStatus")
         public String intranetAddressHcStatus;
 
+        /**
+         * <p>The IPv4 link-local addresses. The IP addresses that the ALB instance uses to communicate with the backend servers.</p>
+         */
         @NameInMap("Ipv4LocalAddresses")
         public java.util.List<String> ipv4LocalAddresses;
 
@@ -750,9 +766,25 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
+        /**
+         * <p>The health status of the private IPv6 address of the ALB instance. 
+         * This parameter is returned only when the Status of the zone is Active.Valid values:</p>
+         * <ul>
+         * <li><p><strong>Healthy</strong></p>
+         * </li>
+         * <li><p><strong>Unhealthy</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Healthy</p>
+         */
         @NameInMap("Ipv6AddressHcStatus")
         public String ipv6AddressHcStatus;
 
+        /**
+         * <p>The IPv6 link-local addresses. The IP addresses that the ALB instance uses to communicate with the backend servers.</p>
+         */
         @NameInMap("Ipv6LocalAddresses")
         public java.util.List<String> ipv6LocalAddresses;
 
@@ -842,6 +874,24 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("LoadBalancerAddresses")
         public java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses> loadBalancerAddresses;
 
+        /**
+         * <p>The zone status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Active</strong>: The ALB instance is running.</p>
+         * </li>
+         * <li><p><strong>Stopped</strong>: The ALB instance is disabled. </p>
+         * </li>
+         * <li><p><strong>Shifted</strong>: The ALB instance is removed.</p>
+         * </li>
+         * <li><p><strong>Starting</strong>: The ALB instance is starting.</p>
+         * </li>
+         * <li><p><strong>Stopping</strong>: The ALB instance is stopping.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("Status")
         public String status;
 
