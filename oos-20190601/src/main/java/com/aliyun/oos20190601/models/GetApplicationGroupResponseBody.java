@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationGroupResponseBody extends TeaModel {
     /**
-     * <p>The details of the application group.</p>
+     * <p>The information about the application group.</p>
      */
     @NameInMap("ApplicationGroup")
     public GetApplicationGroupResponseBodyApplicationGroup applicationGroup;
@@ -49,6 +49,9 @@ public class GetApplicationGroupResponseBody extends TeaModel {
          */
         @NameInMap("ApplicationName")
         public String applicationName;
+
+        @NameInMap("ApplicationSource")
+        public String applicationSource;
 
         /**
          * <p>The ID of the application group in CloudMonitor.</p>
@@ -131,6 +134,12 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The operation metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;PrometheusConfigMap\&quot;:{\&quot;模板1\&quot;:{\&quot;EnablePrometheus\&quot;:false}}}</p>
+         */
         @NameInMap("OperationMetadata")
         public String operationMetadata;
 
@@ -181,6 +190,14 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         }
         public String getApplicationName() {
             return this.applicationName;
+        }
+
+        public GetApplicationGroupResponseBodyApplicationGroup setApplicationSource(String applicationSource) {
+            this.applicationSource = applicationSource;
+            return this;
+        }
+        public String getApplicationSource() {
+            return this.applicationSource;
         }
 
         public GetApplicationGroupResponseBodyApplicationGroup setCmsGroupId(String cmsGroupId) {

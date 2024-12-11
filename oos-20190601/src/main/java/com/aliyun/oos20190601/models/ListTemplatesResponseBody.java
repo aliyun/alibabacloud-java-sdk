@@ -279,6 +279,12 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
+        /**
+         * <p>The version name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2.1</p>
+         */
         @NameInMap("VersionName")
         public String versionName;
 
