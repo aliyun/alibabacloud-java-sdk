@@ -27,6 +27,9 @@ public class RunHotTopicChatShrinkRequest extends TeaModel {
     @NameInMap("imageCount")
     public Integer imageCount;
 
+    @NameInMap("messages")
+    public String messagesShrink;
+
     /**
      * <strong>example:</strong>
      * <p>xx</p>
@@ -104,6 +107,14 @@ public class RunHotTopicChatShrinkRequest extends TeaModel {
     }
     public Integer getImageCount() {
         return this.imageCount;
+    }
+
+    public RunHotTopicChatShrinkRequest setMessagesShrink(String messagesShrink) {
+        this.messagesShrink = messagesShrink;
+        return this;
+    }
+    public String getMessagesShrink() {
+        return this.messagesShrink;
     }
 
     public RunHotTopicChatShrinkRequest setModelCustomPromptTemplate(String modelCustomPromptTemplate) {
