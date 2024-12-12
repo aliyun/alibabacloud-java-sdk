@@ -1,3 +1,8 @@
+2024-12-12 Version: 3.2.0
+- Support API DescribeSparkAppDiagnosisInfo.
+- Support API DescribeSparkAppType.
+
+
 2024-12-11 Version: 3.1.0
 - Support API CancelSparkReplStatement.
 - Support API ExecuteSparkReplStatement.
