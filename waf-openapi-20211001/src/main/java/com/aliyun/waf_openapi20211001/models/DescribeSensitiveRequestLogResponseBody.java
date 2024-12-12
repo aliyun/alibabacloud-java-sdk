@@ -103,6 +103,12 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         @NameInMap("MatchedHost")
         public String matchedHost;
 
+        /**
+         * <p>IP region, formatted as a region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("RemoteCountryId")
         public String remoteCountryId;
 

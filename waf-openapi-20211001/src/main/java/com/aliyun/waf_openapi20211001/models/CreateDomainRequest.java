@@ -77,6 +77,9 @@ public class CreateDomainRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateDomainRequestTag> tag;
+
     public static CreateDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDomainRequest self = new CreateDomainRequest();
         return TeaModel.build(map, self);
@@ -136,6 +139,14 @@ public class CreateDomainRequest extends TeaModel {
     }
     public String getResourceManagerResourceGroupId() {
         return this.resourceManagerResourceGroupId;
+    }
+
+    public CreateDomainRequest setTag(java.util.List<CreateDomainRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateDomainRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class CreateDomainRequestListen extends TeaModel {
@@ -530,6 +541,9 @@ public class CreateDomainRequest extends TeaModel {
         @NameInMap("Backends")
         public java.util.List<String> backends;
 
+        @NameInMap("BackupBackends")
+        public java.util.List<String> backupBackends;
+
         /**
          * <p>Specifies whether to enable the public cloud disaster recovery feature. Valid values:</p>
          * <ul>
@@ -728,6 +742,14 @@ public class CreateDomainRequest extends TeaModel {
             return this.backends;
         }
 
+        public CreateDomainRequestRedirect setBackupBackends(java.util.List<String> backupBackends) {
+            this.backupBackends = backupBackends;
+            return this;
+        }
+        public java.util.List<String> getBackupBackends() {
+            return this.backupBackends;
+        }
+
         public CreateDomainRequestRedirect setCnameEnabled(Boolean cnameEnabled) {
             this.cnameEnabled = cnameEnabled;
             return this;
@@ -846,6 +868,36 @@ public class CreateDomainRequest extends TeaModel {
         }
         public Boolean getXffProto() {
             return this.xffProto;
+        }
+
+    }
+
+    public static class CreateDomainRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateDomainRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateDomainRequestTag self = new CreateDomainRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDomainRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateDomainRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

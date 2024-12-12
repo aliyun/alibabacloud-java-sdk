@@ -621,6 +621,25 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDomainDetailResponseBodyRedirectBackupBackends extends TeaModel {
+        @NameInMap("Backend")
+        public String backend;
+
+        public static DescribeDomainDetailResponseBodyRedirectBackupBackends build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDomainDetailResponseBodyRedirectBackupBackends self = new DescribeDomainDetailResponseBodyRedirectBackupBackends();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainDetailResponseBodyRedirectBackupBackends setBackend(String backend) {
+            this.backend = backend;
+            return this;
+        }
+        public String getBackend() {
+            return this.backend;
+        }
+
+    }
+
     public static class DescribeDomainDetailResponseBodyRedirectRequestHeaders extends TeaModel {
         /**
          * <p>The custom header field.</p>
@@ -669,6 +688,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
          */
         @NameInMap("Backends")
         public java.util.List<DescribeDomainDetailResponseBodyRedirectBackends> backends;
+
+        @NameInMap("BackupBackends")
+        public java.util.List<DescribeDomainDetailResponseBodyRedirectBackupBackends> backupBackends;
 
         /**
          * <p>The timeout period of the connection. Unit: seconds. Valid values: 5 to 120.</p>
@@ -826,6 +848,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDomainDetailResponseBodyRedirectBackends> getBackends() {
             return this.backends;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setBackupBackends(java.util.List<DescribeDomainDetailResponseBodyRedirectBackupBackends> backupBackends) {
+            this.backupBackends = backupBackends;
+            return this;
+        }
+        public java.util.List<DescribeDomainDetailResponseBodyRedirectBackupBackends> getBackupBackends() {
+            return this.backupBackends;
         }
 
         public DescribeDomainDetailResponseBodyRedirect setConnectTimeout(Integer connectTimeout) {

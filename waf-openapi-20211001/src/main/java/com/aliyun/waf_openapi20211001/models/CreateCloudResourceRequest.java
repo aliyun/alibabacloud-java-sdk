@@ -62,6 +62,9 @@ public class CreateCloudResourceRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateCloudResourceRequestTag> tag;
+
     public static CreateCloudResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCloudResourceRequest self = new CreateCloudResourceRequest();
         return TeaModel.build(map, self);
@@ -113,6 +116,14 @@ public class CreateCloudResourceRequest extends TeaModel {
     }
     public String getResourceManagerResourceGroupId() {
         return this.resourceManagerResourceGroupId;
+    }
+
+    public CreateCloudResourceRequest setTag(java.util.List<CreateCloudResourceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateCloudResourceRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class CreateCloudResourceRequestListenCertificates extends TeaModel {
@@ -588,6 +599,36 @@ public class CreateCloudResourceRequest extends TeaModel {
         }
         public Boolean getXffProto() {
             return this.xffProto;
+        }
+
+    }
+
+    public static class CreateCloudResourceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateCloudResourceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateCloudResourceRequestTag self = new CreateCloudResourceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCloudResourceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateCloudResourceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

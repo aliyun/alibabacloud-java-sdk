@@ -59,6 +59,9 @@ public class CreateDomainResponseBody extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
+        @NameInMap("DomainId")
+        public String domainId;
+
         public static CreateDomainResponseBodyDomainInfo build(java.util.Map<String, ?> map) throws Exception {
             CreateDomainResponseBodyDomainInfo self = new CreateDomainResponseBodyDomainInfo();
             return TeaModel.build(map, self);
@@ -78,6 +81,14 @@ public class CreateDomainResponseBody extends TeaModel {
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public CreateDomainResponseBodyDomainInfo setDomainId(String domainId) {
+            this.domainId = domainId;
+            return this;
+        }
+        public String getDomainId() {
+            return this.domainId;
         }
 
     }
