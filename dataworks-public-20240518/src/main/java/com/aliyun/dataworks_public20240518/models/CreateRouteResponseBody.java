@@ -19,6 +19,8 @@ public class CreateRouteResponseBody extends TeaModel {
     public Long routeId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

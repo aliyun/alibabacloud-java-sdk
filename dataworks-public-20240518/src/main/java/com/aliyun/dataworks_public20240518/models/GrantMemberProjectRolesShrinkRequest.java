@@ -23,7 +23,7 @@ public class GrantMemberProjectRolesShrinkRequest extends TeaModel {
     public String roleCodesShrink;
 
     /**
-     * <p>The IDs of the accounts used by the members in the workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console?spm=openapi-amp.newDocPublishment.0.0.51d7281fjgBRmo">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click Tenant Members and Roles. On the Tenant Members and Roles page, view the IDs of the accounts used by the members in the workspace.</p>
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click Tenant Members and Roles. On the Tenant Members and Roles page, view the IDs of the accounts used by the members in the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

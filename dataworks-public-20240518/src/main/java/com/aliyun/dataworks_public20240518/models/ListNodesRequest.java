@@ -41,6 +41,10 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("Recurrence")
     public String recurrence;
 

@@ -378,7 +378,7 @@ public class UpdateDIJobRequest extends TeaModel {
          * <p>2.0</p>
          */
         @NameInMap("RequestedCu")
-        public Long requestedCu;
+        public Double requestedCu;
 
         /**
          * <p>The identifier of the resource group for Data Integration used for batch synchronization.</p>
@@ -394,11 +394,11 @@ public class UpdateDIJobRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public UpdateDIJobRequestResourceSettingsOfflineResourceSettings setRequestedCu(Long requestedCu) {
+        public UpdateDIJobRequestResourceSettingsOfflineResourceSettings setRequestedCu(Double requestedCu) {
             this.requestedCu = requestedCu;
             return this;
         }
-        public Long getRequestedCu() {
+        public Double getRequestedCu() {
             return this.requestedCu;
         }
 
@@ -420,7 +420,7 @@ public class UpdateDIJobRequest extends TeaModel {
          * <p>2.0</p>
          */
         @NameInMap("RequestedCu")
-        public Long requestedCu;
+        public Double requestedCu;
 
         /**
          * <p>The identifier of the resource group for Data Integration used for real-time synchronization.</p>
@@ -436,11 +436,11 @@ public class UpdateDIJobRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public UpdateDIJobRequestResourceSettingsRealtimeResourceSettings setRequestedCu(Long requestedCu) {
+        public UpdateDIJobRequestResourceSettingsRealtimeResourceSettings setRequestedCu(Double requestedCu) {
             this.requestedCu = requestedCu;
             return this;
         }
-        public Long getRequestedCu() {
+        public Double getRequestedCu() {
             return this.requestedCu;
         }
 
@@ -462,7 +462,7 @@ public class UpdateDIJobRequest extends TeaModel {
          * <p>2.0</p>
          */
         @NameInMap("RequestedCu")
-        public Long requestedCu;
+        public Double requestedCu;
 
         /**
          * <p>The identifier of the resource group for scheduling used for batch synchronization.</p>
@@ -478,11 +478,11 @@ public class UpdateDIJobRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public UpdateDIJobRequestResourceSettingsScheduleResourceSettings setRequestedCu(Long requestedCu) {
+        public UpdateDIJobRequestResourceSettingsScheduleResourceSettings setRequestedCu(Double requestedCu) {
             this.requestedCu = requestedCu;
             return this;
         }
-        public Long getRequestedCu() {
+        public Double getRequestedCu() {
             return this.requestedCu;
         }
 

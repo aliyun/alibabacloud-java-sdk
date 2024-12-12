@@ -78,12 +78,12 @@ public class GetDeploymentResponseBody extends TeaModel {
          * <p>The status of the stage.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>INIT</li>
-         * <li>RUNNING</li>
-         * <li>SUCCESS</li>
-         * <li>FAIL</li>
-         * <li>TERMINATION</li>
-         * <li>CANCEL</li>
+         * <li>Init</li>
+         * <li>Running</li>
+         * <li>Success</li>
+         * <li>Fail</li>
+         * <li>Termination</li>
+         * <li>Cancel</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,11 +105,11 @@ public class GetDeploymentResponseBody extends TeaModel {
          * <p>The type of the stage.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>DELETE</li>
-         * <li>BUILD</li>
-         * <li>CHECK</li>
-         * <li>DEPLOY</li>
-         * <li>OFFLINE</li>
+         * <li>Deploy</li>
+         * <li>Check</li>
+         * <li>Offline</li>
+         * <li>Build</li>
+         * <li>Delete</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,12 +251,12 @@ public class GetDeploymentResponseBody extends TeaModel {
          * <p>The status of the process.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>INIT</li>
-         * <li>RUNNING</li>
-         * <li>SUCCESS</li>
-         * <li>FAIL</li>
-         * <li>TERMINATION</li>
-         * <li>CANCEL</li>
+         * <li>Init</li>
+         * <li>Running</li>
+         * <li>Success</li>
+         * <li>Fail</li>
+         * <li>Termination</li>
+         * <li>Cancel</li>
          * </ul>
          * 
          * <strong>example:</strong>
