@@ -37,6 +37,9 @@ public class WafRuleConfig extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Notes")
+    public String notes;
+
     @NameInMap("RateLimit")
     public WafRuleConfigRateLimit rateLimit;
 
@@ -51,6 +54,9 @@ public class WafRuleConfig extends TeaModel {
 
     @NameInMap("Type")
     public String type;
+
+    @NameInMap("Value")
+    public String value;
 
     public static WafRuleConfig build(java.util.Map<String, ?> map) throws Exception {
         WafRuleConfig self = new WafRuleConfig();
@@ -145,6 +151,14 @@ public class WafRuleConfig extends TeaModel {
         return this.name;
     }
 
+    public WafRuleConfig setNotes(String notes) {
+        this.notes = notes;
+        return this;
+    }
+    public String getNotes() {
+        return this.notes;
+    }
+
     public WafRuleConfig setRateLimit(WafRuleConfigRateLimit rateLimit) {
         this.rateLimit = rateLimit;
         return this;
@@ -183,6 +197,14 @@ public class WafRuleConfig extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public WafRuleConfig setValue(String value) {
+        this.value = value;
+        return this;
+    }
+    public String getValue() {
+        return this.value;
     }
 
     public static class WafRuleConfigActionsBypass extends TeaModel {

@@ -10,6 +10,9 @@ public class WafSiteSettings extends TeaModel {
     @NameInMap("AddSecurityHeaders")
     public WafSiteSettingsAddSecurityHeaders addSecurityHeaders;
 
+    @NameInMap("BotManagement")
+    public WafSiteSettingsBotManagement botManagement;
+
     @NameInMap("ClientIpIdentifier")
     public WafSiteSettingsClientIpIdentifier clientIpIdentifier;
 
@@ -35,6 +38,14 @@ public class WafSiteSettings extends TeaModel {
     }
     public WafSiteSettingsAddSecurityHeaders getAddSecurityHeaders() {
         return this.addSecurityHeaders;
+    }
+
+    public WafSiteSettings setBotManagement(WafSiteSettingsBotManagement botManagement) {
+        this.botManagement = botManagement;
+        return this;
+    }
+    public WafSiteSettingsBotManagement getBotManagement() {
+        return this.botManagement;
     }
 
     public WafSiteSettings setClientIpIdentifier(WafSiteSettingsClientIpIdentifier clientIpIdentifier) {
@@ -87,6 +98,197 @@ public class WafSiteSettings extends TeaModel {
         }
         public Boolean getEnable() {
             return this.enable;
+        }
+
+    }
+
+    public static class WafSiteSettingsBotManagementDefiniteBots extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
+        @NameInMap("Id")
+        public Long id;
+
+        public static WafSiteSettingsBotManagementDefiniteBots build(java.util.Map<String, ?> map) throws Exception {
+            WafSiteSettingsBotManagementDefiniteBots self = new WafSiteSettingsBotManagementDefiniteBots();
+            return TeaModel.build(map, self);
+        }
+
+        public WafSiteSettingsBotManagementDefiniteBots setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public WafSiteSettingsBotManagementDefiniteBots setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+    }
+
+    public static class WafSiteSettingsBotManagementEffectOnStatic extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        public static WafSiteSettingsBotManagementEffectOnStatic build(java.util.Map<String, ?> map) throws Exception {
+            WafSiteSettingsBotManagementEffectOnStatic self = new WafSiteSettingsBotManagementEffectOnStatic();
+            return TeaModel.build(map, self);
+        }
+
+        public WafSiteSettingsBotManagementEffectOnStatic setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+    }
+
+    public static class WafSiteSettingsBotManagementJSDetection extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        public static WafSiteSettingsBotManagementJSDetection build(java.util.Map<String, ?> map) throws Exception {
+            WafSiteSettingsBotManagementJSDetection self = new WafSiteSettingsBotManagementJSDetection();
+            return TeaModel.build(map, self);
+        }
+
+        public WafSiteSettingsBotManagementJSDetection setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+    }
+
+    public static class WafSiteSettingsBotManagementLikelyBots extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
+        @NameInMap("Id")
+        public Long id;
+
+        public static WafSiteSettingsBotManagementLikelyBots build(java.util.Map<String, ?> map) throws Exception {
+            WafSiteSettingsBotManagementLikelyBots self = new WafSiteSettingsBotManagementLikelyBots();
+            return TeaModel.build(map, self);
+        }
+
+        public WafSiteSettingsBotManagementLikelyBots setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public WafSiteSettingsBotManagementLikelyBots setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+    }
+
+    public static class WafSiteSettingsBotManagementVerifiedBots extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
+        @NameInMap("Id")
+        public Long id;
+
+        public static WafSiteSettingsBotManagementVerifiedBots build(java.util.Map<String, ?> map) throws Exception {
+            WafSiteSettingsBotManagementVerifiedBots self = new WafSiteSettingsBotManagementVerifiedBots();
+            return TeaModel.build(map, self);
+        }
+
+        public WafSiteSettingsBotManagementVerifiedBots setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public WafSiteSettingsBotManagementVerifiedBots setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+    }
+
+    public static class WafSiteSettingsBotManagement extends TeaModel {
+        @NameInMap("DefiniteBots")
+        public WafSiteSettingsBotManagementDefiniteBots definiteBots;
+
+        @NameInMap("EffectOnStatic")
+        public WafSiteSettingsBotManagementEffectOnStatic effectOnStatic;
+
+        @NameInMap("JSDetection")
+        public WafSiteSettingsBotManagementJSDetection JSDetection;
+
+        @NameInMap("LikelyBots")
+        public WafSiteSettingsBotManagementLikelyBots likelyBots;
+
+        @NameInMap("VerifiedBots")
+        public WafSiteSettingsBotManagementVerifiedBots verifiedBots;
+
+        public static WafSiteSettingsBotManagement build(java.util.Map<String, ?> map) throws Exception {
+            WafSiteSettingsBotManagement self = new WafSiteSettingsBotManagement();
+            return TeaModel.build(map, self);
+        }
+
+        public WafSiteSettingsBotManagement setDefiniteBots(WafSiteSettingsBotManagementDefiniteBots definiteBots) {
+            this.definiteBots = definiteBots;
+            return this;
+        }
+        public WafSiteSettingsBotManagementDefiniteBots getDefiniteBots() {
+            return this.definiteBots;
+        }
+
+        public WafSiteSettingsBotManagement setEffectOnStatic(WafSiteSettingsBotManagementEffectOnStatic effectOnStatic) {
+            this.effectOnStatic = effectOnStatic;
+            return this;
+        }
+        public WafSiteSettingsBotManagementEffectOnStatic getEffectOnStatic() {
+            return this.effectOnStatic;
+        }
+
+        public WafSiteSettingsBotManagement setJSDetection(WafSiteSettingsBotManagementJSDetection JSDetection) {
+            this.JSDetection = JSDetection;
+            return this;
+        }
+        public WafSiteSettingsBotManagementJSDetection getJSDetection() {
+            return this.JSDetection;
+        }
+
+        public WafSiteSettingsBotManagement setLikelyBots(WafSiteSettingsBotManagementLikelyBots likelyBots) {
+            this.likelyBots = likelyBots;
+            return this;
+        }
+        public WafSiteSettingsBotManagementLikelyBots getLikelyBots() {
+            return this.likelyBots;
+        }
+
+        public WafSiteSettingsBotManagement setVerifiedBots(WafSiteSettingsBotManagementVerifiedBots verifiedBots) {
+            this.verifiedBots = verifiedBots;
+            return this;
+        }
+        public WafSiteSettingsBotManagementVerifiedBots getVerifiedBots() {
+            return this.verifiedBots;
         }
 
     }

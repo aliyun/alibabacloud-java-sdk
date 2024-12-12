@@ -4,6 +4,9 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class GetSiteWafSettingsRequest extends TeaModel {
+    @NameInMap("Path")
+    public String path;
+
     /**
      * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * 
@@ -25,6 +28,14 @@ public class GetSiteWafSettingsRequest extends TeaModel {
     public static GetSiteWafSettingsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSiteWafSettingsRequest self = new GetSiteWafSettingsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetSiteWafSettingsRequest setPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String getPath() {
+        return this.path;
     }
 
     public GetSiteWafSettingsRequest setSiteId(Long siteId) {

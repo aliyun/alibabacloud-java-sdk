@@ -2822,7 +2822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除证书</p>
+     * <p>Deletes a certificate for a website.</p>
      * 
      * @param request DeleteCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2850,7 +2850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除证书</p>
+     * <p>Deletes a certificate for a website.</p>
      * 
      * @param request DeleteCertificateRequest
      * @return DeleteCertificateResponse
@@ -2862,7 +2862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除客户端CA证书</p>
+     * <p>Deletes a client CA certificate.</p>
      * 
      * @param request DeleteClientCaCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2890,7 +2890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除客户端CA证书</p>
+     * <p>Deletes a client CA certificate.</p>
      * 
      * @param request DeleteClientCaCertificateRequest
      * @return DeleteClientCaCertificateResponse
@@ -4716,7 +4716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端证书以及证书信息</p>
+     * <p>Queries information about a client certificate.</p>
      * 
      * @param request GetClientCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4744,7 +4744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端证书以及证书信息</p>
+     * <p>Queries information about a client certificate.</p>
      * 
      * @param request GetClientCertificateRequest
      * @return GetClientCertificateResponse
@@ -5951,6 +5951,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSiteWafSettingsResponse getSiteWafSettingsWithOptions(GetSiteWafSettingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
             query.put("SiteId", request.siteId);
         }
@@ -6444,7 +6448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点下客户端CA证书列表</p>
+     * <p>Queries a list of client certificate authority (CA) certificates for a website.</p>
      * 
      * @param request ListClientCaCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6472,7 +6476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点下客户端CA证书列表</p>
+     * <p>Queries a list of client certificate authority (CA) certificates for a website.</p>
      * 
      * @param request ListClientCaCertificatesRequest
      * @return ListClientCaCertificatesResponse
@@ -8735,7 +8739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>吊销客户端证书</p>
+     * <p>Revokes an activated client certificate.</p>
      * 
      * @param request RevokeClientCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8763,7 +8767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>吊销客户端证书</p>
+     * <p>Revokes an activated client certificate.</p>
      * 
      * @param request RevokeClientCertificateRequest
      * @return RevokeClientCertificateResponse

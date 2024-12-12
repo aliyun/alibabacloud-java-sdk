@@ -113,6 +113,9 @@ public class ListWafRulesRequest extends TeaModel {
     }
 
     public static class ListWafRulesRequestQueryArgs extends TeaModel {
+        @NameInMap("ConfigValueLike")
+        public String configValueLike;
+
         /**
          * <p>Specifies whether to sort the returned data in descending order.</p>
          * 
@@ -179,6 +182,14 @@ public class ListWafRulesRequest extends TeaModel {
         public static ListWafRulesRequestQueryArgs build(java.util.Map<String, ?> map) throws Exception {
             ListWafRulesRequestQueryArgs self = new ListWafRulesRequestQueryArgs();
             return TeaModel.build(map, self);
+        }
+
+        public ListWafRulesRequestQueryArgs setConfigValueLike(String configValueLike) {
+            this.configValueLike = configValueLike;
+            return this;
+        }
+        public String getConfigValueLike() {
+            return this.configValueLike;
         }
 
         public ListWafRulesRequestQueryArgs setDesc(Boolean desc) {
