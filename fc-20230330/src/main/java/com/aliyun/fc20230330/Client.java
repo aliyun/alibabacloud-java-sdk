@@ -1637,16 +1637,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of function instances.</p>
      * 
-     * @param request ListInstancesRequest
+     * @param tmpReq ListInstancesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListInstancesResponse
      */
-    public ListInstancesResponse listInstancesWithOptions(String functionName, ListInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListInstancesResponse listInstancesWithOptions(String functionName, ListInstancesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListInstancesShrinkRequest request = new ListInstancesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "instanceIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceStatus)) {
+            request.instanceStatusShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceStatus, "instanceStatus", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimeMs)) {
+            query.put("endTimeMs", request.endTimeMs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("instanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceStatusShrink)) {
+            query.put("instanceStatus", request.instanceStatusShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("limit", request.limit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startKey)) {
+            query.put("startKey", request.startKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimeMs)) {
+            query.put("startTimeMs", request.startTimeMs);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.withAllActive)) {

@@ -4,6 +4,12 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class InstanceInfo extends TeaModel {
+    @NameInMap("createdTimeMs")
+    public Long createdTimeMs;
+
+    @NameInMap("destroyedTimeMs")
+    public Long destroyedTimeMs;
+
     /**
      * <strong>example:</strong>
      * <p>1ef6b6ff-7f7b-485e-ab49-501ac681****</p>
@@ -11,10 +17,12 @@ public class InstanceInfo extends TeaModel {
     @NameInMap("instanceId")
     public String instanceId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>LATEST</p>
-     */
+    @NameInMap("qualifier")
+    public String qualifier;
+
+    @NameInMap("status")
+    public String status;
+
     @NameInMap("versionId")
     public String versionId;
 
@@ -23,12 +31,44 @@ public class InstanceInfo extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public InstanceInfo setCreatedTimeMs(Long createdTimeMs) {
+        this.createdTimeMs = createdTimeMs;
+        return this;
+    }
+    public Long getCreatedTimeMs() {
+        return this.createdTimeMs;
+    }
+
+    public InstanceInfo setDestroyedTimeMs(Long destroyedTimeMs) {
+        this.destroyedTimeMs = destroyedTimeMs;
+        return this;
+    }
+    public Long getDestroyedTimeMs() {
+        return this.destroyedTimeMs;
+    }
+
     public InstanceInfo setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public InstanceInfo setQualifier(String qualifier) {
+        this.qualifier = qualifier;
+        return this;
+    }
+    public String getQualifier() {
+        return this.qualifier;
+    }
+
+    public InstanceInfo setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public InstanceInfo setVersionId(String versionId) {
