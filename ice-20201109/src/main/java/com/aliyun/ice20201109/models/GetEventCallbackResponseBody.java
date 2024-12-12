@@ -58,7 +58,7 @@ public class GetEventCallbackResponseBody extends TeaModel {
     public String callbackURL;
 
     /**
-     * <p>The type of the callback event. Multiple values are separated with commas (,). For more information about callback event types, see <a href="https://help.aliyun.com/document_detail/441362.html">Event notification content</a>.</p>
+     * <p>The type of the callback event. Multiple values are separated with commas (,). For more information about callback event types, see <a href="https://help.aliyun.com/document_detail/610204.html">Event notification content</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ProduceMediaComplete,TranscodeComplete</p>
