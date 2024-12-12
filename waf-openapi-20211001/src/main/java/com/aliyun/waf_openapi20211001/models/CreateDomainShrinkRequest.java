@@ -77,6 +77,9 @@ public class CreateDomainShrinkRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateDomainShrinkRequestTag> tag;
+
     public static CreateDomainShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDomainShrinkRequest self = new CreateDomainShrinkRequest();
         return TeaModel.build(map, self);
@@ -136,6 +139,44 @@ public class CreateDomainShrinkRequest extends TeaModel {
     }
     public String getResourceManagerResourceGroupId() {
         return this.resourceManagerResourceGroupId;
+    }
+
+    public CreateDomainShrinkRequest setTag(java.util.List<CreateDomainShrinkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateDomainShrinkRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateDomainShrinkRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateDomainShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateDomainShrinkRequestTag self = new CreateDomainShrinkRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDomainShrinkRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateDomainShrinkRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

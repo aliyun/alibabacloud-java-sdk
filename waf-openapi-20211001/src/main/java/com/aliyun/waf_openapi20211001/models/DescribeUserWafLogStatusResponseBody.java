@@ -21,7 +21,6 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
      * <li><strong>us-west-1</strong>: US (Silicon Valley).</li>
      * <li><strong>ap-northeast-1</strong>: Japan (Tokyo).</li>
      * <li><strong>ap-northeast-2</strong>: South Korea (Seoul).</li>
-     * <li><strong>ap-south-1</strong>: India (Mumbai) Closing Down.</li>
      * <li><strong>eu-west-1</strong>: UK (London).</li>
      * <li><strong>cn-hangzhou-finance</strong>: China East 1 Finance.</li>
      * <li><strong>cn-shanghai-finance-1</strong>: China East 2 Finance.</li>

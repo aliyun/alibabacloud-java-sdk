@@ -508,6 +508,9 @@ public class ModifyDomainRequest extends TeaModel {
         @NameInMap("Backends")
         public java.util.List<String> backends;
 
+        @NameInMap("BackupBackends")
+        public java.util.List<String> backupBackends;
+
         /**
          * <p>Specifies whether to enable the public cloud disaster recovery feature. Valid values:</p>
          * <ul>
@@ -704,6 +707,14 @@ public class ModifyDomainRequest extends TeaModel {
         }
         public java.util.List<String> getBackends() {
             return this.backends;
+        }
+
+        public ModifyDomainRequestRedirect setBackupBackends(java.util.List<String> backupBackends) {
+            this.backupBackends = backupBackends;
+            return this;
+        }
+        public java.util.List<String> getBackupBackends() {
+            return this.backupBackends;
         }
 
         public ModifyDomainRequestRedirect setCnameEnabled(Boolean cnameEnabled) {

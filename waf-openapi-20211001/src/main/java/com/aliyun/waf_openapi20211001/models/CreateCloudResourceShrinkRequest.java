@@ -62,6 +62,9 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateCloudResourceShrinkRequestTag> tag;
+
     public static CreateCloudResourceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCloudResourceShrinkRequest self = new CreateCloudResourceShrinkRequest();
         return TeaModel.build(map, self);
@@ -113,6 +116,44 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     }
     public String getResourceManagerResourceGroupId() {
         return this.resourceManagerResourceGroupId;
+    }
+
+    public CreateCloudResourceShrinkRequest setTag(java.util.List<CreateCloudResourceShrinkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateCloudResourceShrinkRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateCloudResourceShrinkRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateCloudResourceShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateCloudResourceShrinkRequestTag self = new CreateCloudResourceShrinkRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCloudResourceShrinkRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateCloudResourceShrinkRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
