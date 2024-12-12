@@ -10,6 +10,9 @@ public class UnInstallClusterAddonsResponse extends TeaModel {
     @NameInMap("statusCode")
     public Integer statusCode;
 
+    @NameInMap("body")
+    public UnInstallClusterAddonsResponseBody body;
+
     public static UnInstallClusterAddonsResponse build(java.util.Map<String, ?> map) throws Exception {
         UnInstallClusterAddonsResponse self = new UnInstallClusterAddonsResponse();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class UnInstallClusterAddonsResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    public UnInstallClusterAddonsResponse setBody(UnInstallClusterAddonsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UnInstallClusterAddonsResponseBody getBody() {
+        return this.body;
     }
 
 }
