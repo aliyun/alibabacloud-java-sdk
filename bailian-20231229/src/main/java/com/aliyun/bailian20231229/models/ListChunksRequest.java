@@ -10,6 +10,9 @@ public class ListChunksRequest extends TeaModel {
     @NameInMap("Fields")
     public java.util.List<String> fields;
 
+    @NameInMap("FileId")
+    public String fileId;
+
     /**
      * <p>The primary key ID of the document. This parameter is not required for structured knowledge base, but is required for unstructured knowledge base. To view the ID, you can click the ID icon next to the file name on the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page. You can filter returned chunks by the document ID. This parameter is left empty by default.</p>
      * 
@@ -58,6 +61,14 @@ public class ListChunksRequest extends TeaModel {
     }
     public java.util.List<String> getFields() {
         return this.fields;
+    }
+
+    public ListChunksRequest setFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public String getFileId() {
+        return this.fileId;
     }
 
     public ListChunksRequest setFiled(String filed) {
