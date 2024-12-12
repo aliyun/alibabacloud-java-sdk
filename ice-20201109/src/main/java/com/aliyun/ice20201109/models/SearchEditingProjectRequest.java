@@ -5,6 +5,17 @@ import com.aliyun.tea.*;
 
 public class SearchEditingProjectRequest extends TeaModel {
     /**
+     * <p>The source of the project.</p>
+     * <p>\-OpenAPI</p>
+     * <p>\-AliyunConsole</p>
+     * <p>\-WebSDK</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>AliyunConsole: The project is created in the Alibaba Cloud console.</li>
+     * <li>WebSDK: The project is created by using the SDK for Web.</li>
+     * <li>OpenAPI: The project is created by calling API operations.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>WebSDK</p>
      */
@@ -12,6 +23,8 @@ public class SearchEditingProjectRequest extends TeaModel {
     public String createSource;
 
     /**
+     * <p>The end of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2017-01-11T12:00:00Z</p>
      */
@@ -19,6 +32,8 @@ public class SearchEditingProjectRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +41,8 @@ public class SearchEditingProjectRequest extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +50,12 @@ public class SearchEditingProjectRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The type of the editing project. Default value: EditingProject. Valid values:</p>
+     * <ul>
+     * <li>EditingProject: a regular editing project.</li>
+     * <li>LiveEditingProject: a live stream editing project.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>EditingProject</p>
      */
@@ -40,6 +63,10 @@ public class SearchEditingProjectRequest extends TeaModel {
     public String projectType;
 
     /**
+     * <p>The sorting rule of results. Valid values:</p>
+     * <p>\- CreationTime:Desc (default): The results are sorted in reverse chronological order based on the creation time.</p>
+     * <p>\- CreationTime:Asc: The results are sorted in chronological order based on the creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreationTime:Desc</p>
      */
@@ -47,6 +74,8 @@ public class SearchEditingProjectRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2017-01-11T12:00:00Z</p>
      */
@@ -54,6 +83,13 @@ public class SearchEditingProjectRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The status of the online editing project. Separate multiple values with commas (,). By default, all online editing projects are queried.</p>
+     * <p>Valid values:</p>
+     * <p>\-Draft</p>
+     * <p>\-Producing</p>
+     * <p>\-Produced</p>
+     * <p>\-ProduceFailed</p>
+     * 
      * <strong>example:</strong>
      * <p>Producing</p>
      */
@@ -61,6 +97,16 @@ public class SearchEditingProjectRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The template type. Valid values:</p>
+     * <p>\-Timeline</p>
+     * <p>\-VETemplate</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Timeline: regular template.</li>
+     * <li>VETemplate: advanced template.</li>
+     * <li>None: No template is used.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Timeline</p>
      */

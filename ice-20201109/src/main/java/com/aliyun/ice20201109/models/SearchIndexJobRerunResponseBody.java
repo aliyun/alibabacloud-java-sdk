@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SearchIndexJobRerunResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public SearchIndexJobRerunResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -22,6 +29,12 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -66,6 +79,9 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
     }
 
     public static class SearchIndexJobRerunResponseBodyData extends TeaModel {
+        /**
+         * <p>The media asset IDs that do not exist.</p>
+         */
         @NameInMap("MediaIdsNoExist")
         public java.util.List<String> mediaIdsNoExist;
 

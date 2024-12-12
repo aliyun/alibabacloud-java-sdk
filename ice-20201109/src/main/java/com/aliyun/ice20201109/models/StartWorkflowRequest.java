@@ -17,7 +17,7 @@ public class StartWorkflowRequest extends TeaModel {
     public String taskInput;
 
     /**
-     * <p>The user-defined data in the JSON format, which cannot be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.htm">Configure a callback upon editing completion</a>.</p>
+     * <p>The user-defined data in the JSON format, which cannot be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</p>
      */
     @NameInMap("UserData")
     public String userData;

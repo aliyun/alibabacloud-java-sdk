@@ -18,6 +18,12 @@ public class SubmitAvatarVideoJobRequest extends TeaModel {
     @NameInMap("EditingConfig")
     public String editingConfig;
 
+    /**
+     * <p>The input configurations of the video rendering job for an avatar. You can specify text, the Object Storage Service (OSS) URL of an audio file, or the ID of a media asset. The audio file must be in the MP3 or WAV format.</p>
+     * <blockquote>
+     * <p> The text must be at least five words in length.</p>
+     * </blockquote>
+     */
     @NameInMap("InputConfig")
     public String inputConfig;
 

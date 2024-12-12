@@ -20,7 +20,7 @@ public class SubmitAudioProduceJobRequest extends TeaModel {
     /**
      * <p>The audio editing configurations.</p>
      * <ul>
-     * <li>voice: the <a href="https://help.aliyun.com/document_detail/402424.html">voice type</a>.</li>
+     * <li>voice: the <a href="https://help.aliyun.com/document_detail/449563.html">voice type</a>.</li>
      * <li>customizedVoice: the ID of the personalized human voice.</li>
      * <li>format: the format of the output file. Valid values: PCM, WAV, and MP3.</li>
      * <li>volume: the volume. Default value: 50. Valid values: 0 to 100.</li>

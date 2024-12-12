@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSearchLibResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,22 +14,35 @@ public class ListSearchLibResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Information about search libraries.</p>
+     */
     @NameInMap("SearchLibInfoList")
     public java.util.List<ListSearchLibResponseBodySearchLibInfoList> searchLibInfoList;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>总数。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -78,6 +93,8 @@ public class ListSearchLibResponseBody extends TeaModel {
 
     public static class ListSearchLibResponseBodySearchLibInfoList extends TeaModel {
         /**
+         * <p>The search library.</p>
+         * 
          * <strong>example:</strong>
          * <p>faceSearchLib</p>
          */
@@ -85,6 +102,13 @@ public class ListSearchLibResponseBody extends TeaModel {
         public String searchLibName;
 
         /**
+         * <p>The status of the search library.</p>
+         * <ul>
+         * <li>normal</li>
+         * <li>deleting</li>
+         * <li>deleteFail</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */

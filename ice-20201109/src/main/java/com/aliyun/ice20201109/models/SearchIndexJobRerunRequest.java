@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchIndexJobRerunRequest extends TeaModel {
     /**
+     * <p>The ID of the media asset. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class SearchIndexJobRerunRequest extends TeaModel {
     public String mediaIds;
 
     /**
+     * <p>The search library.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-1</p>
      */
@@ -21,6 +24,13 @@ public class SearchIndexJobRerunRequest extends TeaModel {
     public String searchLibName;
 
     /**
+     * <p>The type of the job. Separate multiple types with commas (,).</p>
+     * <ul>
+     * <li>aiLabel: smart tagging.</li>
+     * <li>face: face recognition.</li>
+     * <li>mm: large visual model.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AiLabel,Face,Mm</p>
      */
