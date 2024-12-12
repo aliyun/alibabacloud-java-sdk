@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListClientCaCertificatesResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,16 +23,23 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried client CA certificates.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListClientCaCertificatesResponseBodyResult> result;
 
     /**
+     * <p>The website ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
      */
@@ -36,6 +47,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The website name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -43,6 +56,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
     public String siteName;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -112,6 +127,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
 
     public static class ListClientCaCertificatesResponseBodyResult extends TeaModel {
         /**
+         * <p>The Common Name of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
          */
@@ -119,6 +136,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         public String commonName;
 
         /**
+         * <p>The time when the certificate was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-24 07:48:51</p>
          */
@@ -126,6 +145,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The certificate ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>babab9db65ee5efcca9f3d41d4b5****</p>
          */
@@ -133,6 +154,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The CA that issued the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>GlobalSign nv-sa</p>
          */
@@ -140,6 +163,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         public String issuer;
 
         /**
+         * <p>The certificate name.</p>
+         * 
          * <strong>example:</strong>
          * <p>yourCertName</p>
          */
@@ -147,6 +172,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The time when the certificate expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-31 02:08:00</p>
          */
@@ -154,6 +181,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         public String notAfter;
 
         /**
+         * <p>The time when the certificate takes effect.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-31 02:08:00</p>
          */
@@ -161,6 +190,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         public String notBefore;
 
         /**
+         * <p>The public-key algorithm of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>RSA</p>
          */
@@ -168,6 +199,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         public String pubkeyAlgorithm;
 
         /**
+         * <p>The Subject Alternative Name (SAN) of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
          */
@@ -175,6 +208,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         public String SAN;
 
         /**
+         * <p>The signature algorithm of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>SHA256-RSA</p>
          */
@@ -182,6 +217,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         public String signatureAlgorithm;
 
         /**
+         * <p>The certificate status.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -189,6 +226,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The certificate type.</p>
+         * 
          * <strong>example:</strong>
          * <p>upload</p>
          */
@@ -196,6 +235,8 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The time when the certificate was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-20 06:18:42</p>
          */
