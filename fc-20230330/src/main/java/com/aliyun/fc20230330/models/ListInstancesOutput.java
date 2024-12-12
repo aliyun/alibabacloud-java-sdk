@@ -7,6 +7,9 @@ public class ListInstancesOutput extends TeaModel {
     @NameInMap("instances")
     public java.util.List<InstanceInfo> instances;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     public static ListInstancesOutput build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesOutput self = new ListInstancesOutput();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class ListInstancesOutput extends TeaModel {
     }
     public java.util.List<InstanceInfo> getInstances() {
         return this.instances;
+    }
+
+    public ListInstancesOutput setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
