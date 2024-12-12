@@ -66,6 +66,12 @@ public class UpdateProjectRequest extends TeaModel {
     public Boolean paiTaskEnabled;
 
     /**
+     * <p>Specifies whether to disable or enable the workspace. Valid values:</p>
+     * <ul>
+     * <li>Available: enables the workspace.</li>
+     * <li>Forbidden: disables the workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Forbidden</p>
      */

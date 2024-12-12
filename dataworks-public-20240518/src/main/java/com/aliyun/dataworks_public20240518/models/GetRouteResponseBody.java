@@ -18,6 +18,8 @@ public class GetRouteResponseBody extends TeaModel {
     public GetRouteResponseBodyRoute route;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

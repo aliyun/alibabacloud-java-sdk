@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetNetworkResponseBody extends TeaModel {
+    /**
+     * <p>The information about the network resource.</p>
+     */
     @NameInMap("Network")
     public GetNetworkResponseBodyNetwork network;
 
@@ -15,6 +18,8 @@ public class GetNetworkResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -87,6 +92,15 @@ public class GetNetworkResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The status of the network resource. Valid values:</p>
+         * <ul>
+         * <li>Pending: The network resource is waiting to be created.</li>
+         * <li>Creating: The network resource is being created.</li>
+         * <li>Running: The network resource is running as expected.</li>
+         * <li>Deleting: The network resource is being deleted.</li>
+         * <li>Deleted: The network resource is deleted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */

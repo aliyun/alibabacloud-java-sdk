@@ -85,6 +85,12 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The tag of the data source. This parameter specifies a filter condition.</p>
+     * <ul>
+     * <li>You can specify multiple tags, which are in the logical AND relation. For example, you can query the data sources that contain the following tags: <code>[&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]</code>.</li>
+     * <li>If you do not configure this parameter, tag-based filtering is not performed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDIAlarmRulesRequest extends TeaModel {
     /**
-     * <p>The ID of the alert rule.</p>
+     * <p>The ID of the alert rule. If you leave this parameter empty, all alert rules of the task are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>34988</p>
@@ -14,7 +14,7 @@ public class ListDIAlarmRulesRequest extends TeaModel {
     public Long DIAlarmRuleId;
 
     /**
-     * <p>The ID of the synchronization task for which alert rules are configured.</p>
+     * <p>The ID of the task for which alert rules are configured.</p>
      * 
      * <strong>example:</strong>
      * <p>1000001</p>

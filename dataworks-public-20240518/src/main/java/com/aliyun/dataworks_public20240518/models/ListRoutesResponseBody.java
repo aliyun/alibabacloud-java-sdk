@@ -18,6 +18,8 @@ public class ListRoutesResponseBody extends TeaModel {
     public java.util.List<ListRoutesResponseBodyRouteList> routeList;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

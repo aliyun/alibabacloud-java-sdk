@@ -368,12 +368,12 @@ public class ListFunctionsResponseBody extends TeaModel {
          * <p>The UDF type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>MATH: mathematical operation function</li>
-         * <li>AGGREGATE: aggregate function</li>
-         * <li>STRING: string processing function</li>
-         * <li>DATE: date function</li>
-         * <li>ANALYTIC: window function</li>
-         * <li>OTHER: others</li>
+         * <li>Math: mathematical operation function</li>
+         * <li>Aggregate: aggregate function</li>
+         * <li>String: string processing function</li>
+         * <li>Date: date function</li>
+         * <li>Analytic: window function</li>
+         * <li>Other: other functions</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -42,7 +42,12 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
     public static class ListDataSourcesResponseBodyPagingInfoDataSourcesDataSource extends TeaModel {
         /**
-         * <p>The connection properties of the data source.</p>
+         * <p>The connection configurations of the data source, including the connection address, access identity, and environment information. The envType parameter specifies the environment in which the data source is used. Valid values of the envType parameter:</p>
+         * <ul>
+         * <li>Dev: development environment</li>
+         * <li>Prod: production environment</li>
+         * </ul>
+         * <p>The parameters that you need to configure for the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/zh/dataworks/developer-reference/data-source-connection-information-connectionproperties/?spm=a2c4g.11186623.0.0.3fbb6fe7fo5AMK">Data source connection information (ConnectionProperties)</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -122,7 +127,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
-         * <p>The unique business key of the data source. For example, the unique business key of a Hologres data source is in the ${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database} format.</p>
+         * <p>The unique business key of the data source. For example, the unique business key of a Hologres data source is in the <code>${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database}</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>1648711121000:cn-beijing:odps:yongxunQA_beijing_standard</p>
@@ -210,6 +215,9 @@ public class ListDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ListDataSourcesResponseBodyPagingInfoDataSources extends TeaModel {
+        /**
+         * <p>The data sources. Each element is the information of a single data source with a unique data source ID.</p>
+         */
         @NameInMap("DataSource")
         public java.util.List<ListDataSourcesResponseBodyPagingInfoDataSourcesDataSource> dataSource;
 
@@ -263,6 +271,9 @@ public class ListDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ListDataSourcesResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The data source groups. Each element in the array indicates a data source group. Each data source group contains data sources in the development environment (if any) and the production environment.</p>
+         */
         @NameInMap("DataSources")
         public java.util.List<ListDataSourcesResponseBodyPagingInfoDataSources> dataSources;
 

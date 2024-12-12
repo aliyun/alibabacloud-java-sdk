@@ -42,13 +42,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
 
     public static class ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesNotificationSettingsNotificationChannels extends TeaModel {
         /**
-         * <p>The alert notification method. Valid values:</p>
-         * <ul>
-         * <li>Mail</li>
-         * <li>Phone</li>
-         * <li>Sms</li>
-         * <li>Ding</li>
-         * </ul>
+         * <p>The alert notification methods.</p>
          */
         @NameInMap("Channels")
         public java.util.List<String> channels;
@@ -187,7 +181,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
 
     public static class ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesTriggerConditions extends TeaModel {
         /**
-         * <p>The types of DDL operations for which the alert rule takes effect.</p>
+         * <p>The types of DDL operations for which the alert rule takes effect. This parameter is returned only if the MetricType parameter is set to DdlReport.</p>
          */
         @NameInMap("DdlReportTags")
         public java.util.List<String> ddlReportTags;
@@ -330,7 +324,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The alert notification settings.</p>
+         * <p>The alert notification method and recipient settings.</p>
          */
         @NameInMap("NotificationSettings")
         public ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesNotificationSettings notificationSettings;

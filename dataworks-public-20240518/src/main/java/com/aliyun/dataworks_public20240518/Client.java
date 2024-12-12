@@ -2987,7 +2987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取质量规则模版详情</p>
+     * <p>Queries the information about a data quality monitoring rule template.</p>
      * 
      * @param request GetDataQualityRuleTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3018,7 +3018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取质量规则模版详情</p>
+     * <p>Queries the information about a data quality monitoring rule template.</p>
      * 
      * @param request GetDataQualityRuleTemplateRequest
      * @return GetDataQualityRuleTemplateResponse
@@ -3333,6 +3333,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the details about a member in a workspace.</p>
      * 
@@ -3369,6 +3372,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the details about a member in a workspace.</p>
      * 
@@ -3381,6 +3387,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a role in a DataWorks workspace.</p>
      * 
@@ -3417,6 +3426,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a role in a DataWorks workspace.</p>
      * 
@@ -3688,7 +3700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the infomation about a workflow.</p>
+     * <p>Queries the information about a workflow.</p>
      * 
      * @param request GetWorkflowDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3716,7 +3728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the infomation about a workflow.</p>
+     * <p>Queries the information about a workflow.</p>
      * 
      * @param request GetWorkflowDefinitionRequest
      * @return GetWorkflowDefinitionResponse
@@ -3727,6 +3739,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Assigns roles to members in a workspace.</p>
      * 
@@ -3773,6 +3788,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Assigns roles to members in a workspace.</p>
      * 
@@ -4406,7 +4424,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation only if you are assigned one of the following roles in DataWorks:</p>
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</li>
      * </ul>
@@ -4446,7 +4467,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation only if you are assigned one of the following roles in DataWorks:</p>
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</li>
      * </ul>
@@ -4749,6 +4773,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries details about members in a workspace.</p>
      * 
@@ -4807,6 +4834,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries details about members in a workspace.</p>
      * 
@@ -4819,6 +4849,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about roles in a DataWorks workspace by page.</p>
      * 
@@ -4881,6 +4914,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about roles in a DataWorks workspace by page.</p>
      * 
