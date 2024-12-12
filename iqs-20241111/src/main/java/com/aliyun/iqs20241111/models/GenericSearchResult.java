@@ -14,6 +14,9 @@ public class GenericSearchResult extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("sceneItems")
+    public java.util.List<SceneItem> sceneItems;
+
     @NameInMap("searchInformation")
     public SearchInformation searchInformation;
 
@@ -39,6 +42,14 @@ public class GenericSearchResult extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GenericSearchResult setSceneItems(java.util.List<SceneItem> sceneItems) {
+        this.sceneItems = sceneItems;
+        return this;
+    }
+    public java.util.List<SceneItem> getSceneItems() {
+        return this.sceneItems;
     }
 
     public GenericSearchResult setSearchInformation(SearchInformation searchInformation) {

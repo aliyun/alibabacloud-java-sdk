@@ -23,6 +23,20 @@ public class ScorePageItem extends TeaModel {
     public String displayLink;
 
     /**
+     * <strong>example:</strong>
+     * <p><a href="https://s2.zimgs.cn/ims?kt=url&at=smstruct&key=aHR0cHM6Ly9ndy5hbGljZG4uY29tL0wxLzcyMy8xNTY1MjU2NjAwLzJhL2YwL2I0LzJhZjBiNDQxMGI5YmVlMDVjOGVlNGJmODk3MTNkNTFjLnBuZw==&sign=yx:CUlNNQVJQjFrk3Kxt2F3KWhTOFU=&tv=400_400">https://s2.zimgs.cn/ims?kt=url&amp;at=smstruct&amp;key=aHR0cHM6Ly9ndy5hbGljZG4uY29tL0wxLzcyMy8xNTY1MjU2NjAwLzJhL2YwL2I0LzJhZjBiNDQxMGI5YmVlMDVjOGVlNGJmODk3MTNkNTFjLnBuZw==&amp;sign=yx:CUlNNQVJQjFrk3Kxt2F3KWhTOFU=&amp;tv=400_400</a></p>
+     */
+    @NameInMap("hostLogo")
+    public String hostLogo;
+
+    /**
+     * <strong>example:</strong>
+     * <p>新华网</p>
+     */
+    @NameInMap("hostname")
+    public String hostname;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,6 +104,13 @@ public class ScorePageItem extends TeaModel {
     public Double score;
 
     /**
+     * <strong>example:</strong>
+     * <p>权威媒体</p>
+     */
+    @NameInMap("siteLabel")
+    public String siteLabel;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,6 +138,22 @@ public class ScorePageItem extends TeaModel {
     }
     public String getDisplayLink() {
         return this.displayLink;
+    }
+
+    public ScorePageItem setHostLogo(String hostLogo) {
+        this.hostLogo = hostLogo;
+        return this;
+    }
+    public String getHostLogo() {
+        return this.hostLogo;
+    }
+
+    public ScorePageItem setHostname(String hostname) {
+        this.hostname = hostname;
+        return this;
+    }
+    public String getHostname() {
+        return this.hostname;
     }
 
     public ScorePageItem setHtmlSnippet(String htmlSnippet) {
@@ -189,6 +226,14 @@ public class ScorePageItem extends TeaModel {
     }
     public Double getScore() {
         return this.score;
+    }
+
+    public ScorePageItem setSiteLabel(String siteLabel) {
+        this.siteLabel = siteLabel;
+        return this;
+    }
+    public String getSiteLabel() {
+        return this.siteLabel;
     }
 
     public ScorePageItem setTitle(String title) {
