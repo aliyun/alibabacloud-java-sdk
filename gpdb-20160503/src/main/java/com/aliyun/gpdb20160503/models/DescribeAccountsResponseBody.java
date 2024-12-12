@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
     /**
-     * <p>The name of the database account.</p>
+     * <p>The queried database accounts.</p>
      */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
@@ -73,6 +73,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        /**
+         * <p>The type of the database account. Valid values: Super and Normal. Super indicates a privileged account and Normal indicates a standard account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Super</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 
