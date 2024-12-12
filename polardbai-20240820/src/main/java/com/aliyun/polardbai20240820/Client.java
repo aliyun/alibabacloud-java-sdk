@@ -28,6 +28,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>模型预测</p>
+     * 
+     * @param request PredictRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PredictResponse
+     */
+    public PredictResponse predictWithOptions(PredictRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("dbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            body.put("instanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelClass)) {
+            body.put("modelClass", request.modelClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            body.put("parameters", request.parameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Predict"),
+            new TeaPair("version", "2024-08-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/openapi/models/predict"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PredictResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>模型预测</p>
+     * 
+     * @param request PredictRequest
+     * @return PredictResponse
+     */
+    public PredictResponse predict(PredictRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.predictWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>模型推理（在线，离线）</p>
      * 
      * @param request PredictSseRequest
