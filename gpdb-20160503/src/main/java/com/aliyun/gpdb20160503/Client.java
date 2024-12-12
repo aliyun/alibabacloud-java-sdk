@@ -692,6 +692,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Metadata", request.metadata);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.metadataIndices)) {
+            query.put("MetadataIndices", request.metadataIndices);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.metrics)) {
             query.put("Metrics", request.metrics);
         }
@@ -1158,6 +1162,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.metadata)) {
             query.put("Metadata", request.metadata);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadataIndices)) {
+            query.put("MetadataIndices", request.metadataIndices);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.metrics)) {
@@ -2979,7 +2987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除同构数据源</p>
+     * <p>Deletes a remote AnalyticDB data source.</p>
      * 
      * @param request DeleteRemoteADBDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3019,7 +3027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除同构数据源</p>
+     * <p>Deletes a remote AnalyticDB data source.</p>
      * 
      * @param request DeleteRemoteADBDataSourceRequest
      * @return DeleteRemoteADBDataSourceResponse
@@ -11918,6 +11926,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过模型对文本文档进行向量化</p>
+     * 
+     * @param tmpReq TextEmbeddingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TextEmbeddingResponse
+     */
+    public TextEmbeddingResponse textEmbeddingWithOptions(TextEmbeddingRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TextEmbeddingShrinkRequest request = new TextEmbeddingShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.input)) {
+            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.input, "Input", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inputShrink)) {
+            body.put("Input", request.inputShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            body.put("Model", request.model);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TextEmbedding"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TextEmbeddingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过模型对文本文档进行向量化</p>
+     * 
+     * @param request TextEmbeddingRequest
+     * @return TextEmbeddingResponse
+     */
+    public TextEmbeddingResponse textEmbedding(TextEmbeddingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.textEmbeddingWithOptions(request, runtime);
     }
 
     /**

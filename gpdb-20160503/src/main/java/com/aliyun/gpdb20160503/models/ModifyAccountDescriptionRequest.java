@@ -12,7 +12,6 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
      * <li>The description can contain letters, underscores (_), hyphens (-), and digits.</li>
      * <li>The description must be 2 to 256 characters in length.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>testAccoutdescribe</p>

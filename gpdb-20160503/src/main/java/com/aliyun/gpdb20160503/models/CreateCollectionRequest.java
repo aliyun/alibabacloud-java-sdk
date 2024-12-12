@@ -127,6 +127,9 @@ public class CreateCollectionRequest extends TeaModel {
     @NameInMap("Metadata")
     public String metadata;
 
+    @NameInMap("MetadataIndices")
+    public String metadataIndices;
+
     /**
      * <p>Method used when building the vector index.</p>
      * <p>Value description:</p>
@@ -273,6 +276,14 @@ public class CreateCollectionRequest extends TeaModel {
     }
     public String getMetadata() {
         return this.metadata;
+    }
+
+    public CreateCollectionRequest setMetadataIndices(String metadataIndices) {
+        this.metadataIndices = metadataIndices;
+        return this;
+    }
+    public String getMetadataIndices() {
+        return this.metadataIndices;
     }
 
     public CreateCollectionRequest setMetrics(String metrics) {
