@@ -2890,6 +2890,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DnClass", request.dnClass);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dnStorageSpace)) {
+            query.put("DnStorageSpace", request.dnStorageSpace);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }

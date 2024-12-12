@@ -26,6 +26,9 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     @NameInMap("DnClass")
     public String dnClass;
 
+    @NameInMap("DnStorageSpace")
+    public String dnStorageSpace;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -89,6 +92,14 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     }
     public String getDnClass() {
         return this.dnClass;
+    }
+
+    public ModifyDBInstanceClassRequest setDnStorageSpace(String dnStorageSpace) {
+        this.dnStorageSpace = dnStorageSpace;
+        return this;
+    }
+    public String getDnStorageSpace() {
+        return this.dnStorageSpace;
     }
 
     public ModifyDBInstanceClassRequest setRegionId(String regionId) {
