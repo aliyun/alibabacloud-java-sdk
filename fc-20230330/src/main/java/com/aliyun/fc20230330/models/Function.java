@@ -188,6 +188,9 @@ public class Function extends TeaModel {
     @NameInMap("stateReasonCode")
     public String stateReasonCode;
 
+    @NameInMap("tags")
+    public java.util.List<Tag> tags;
+
     /**
      * <strong>example:</strong>
      * <p>60</p>
@@ -460,6 +463,14 @@ public class Function extends TeaModel {
     }
     public String getStateReasonCode() {
         return this.stateReasonCode;
+    }
+
+    public Function setTags(java.util.List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<Tag> getTags() {
+        return this.tags;
     }
 
     public Function setTimeout(Integer timeout) {

@@ -34,6 +34,13 @@ public class ProvisionConfig extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>5</p>
+     */
+    @NameInMap("defaultTarget")
+    public Long defaultTarget;
+
+    /**
+     * <strong>example:</strong>
      * <p>acs:fc:cn-shanghai:124:functions/myFunction</p>
      */
     @NameInMap("functionArn")
@@ -87,6 +94,14 @@ public class ProvisionConfig extends TeaModel {
     }
     public String getCurrentError() {
         return this.currentError;
+    }
+
+    public ProvisionConfig setDefaultTarget(Long defaultTarget) {
+        this.defaultTarget = defaultTarget;
+        return this;
+    }
+    public Long getDefaultTarget() {
+        return this.defaultTarget;
     }
 
     public ProvisionConfig setFunctionArn(String functionArn) {

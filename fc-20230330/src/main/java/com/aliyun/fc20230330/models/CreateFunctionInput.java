@@ -113,6 +113,9 @@ public class CreateFunctionInput extends TeaModel {
     @NameInMap("runtime")
     public String runtime;
 
+    @NameInMap("tags")
+    public java.util.List<Tag> tags;
+
     /**
      * <strong>example:</strong>
      * <p>60</p>
@@ -297,6 +300,14 @@ public class CreateFunctionInput extends TeaModel {
     }
     public String getRuntime() {
         return this.runtime;
+    }
+
+    public CreateFunctionInput setTags(java.util.List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<Tag> getTags() {
+        return this.tags;
     }
 
     public CreateFunctionInput setTimeout(Integer timeout) {

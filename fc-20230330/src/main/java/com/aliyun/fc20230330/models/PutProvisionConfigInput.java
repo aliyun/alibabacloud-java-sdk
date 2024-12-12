@@ -18,6 +18,13 @@ public class PutProvisionConfigInput extends TeaModel {
     @NameInMap("alwaysAllocateGPU")
     public Boolean alwaysAllocateGPU;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("defaultTarget")
+    public Long defaultTarget;
+
     @NameInMap("scheduledActions")
     public java.util.List<ScheduledAction> scheduledActions;
 
@@ -26,8 +33,12 @@ public class PutProvisionConfigInput extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>1</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("target")
+    @Deprecated
     public Long target;
 
     @NameInMap("targetTrackingPolicies")
@@ -52,6 +63,14 @@ public class PutProvisionConfigInput extends TeaModel {
     }
     public Boolean getAlwaysAllocateGPU() {
         return this.alwaysAllocateGPU;
+    }
+
+    public PutProvisionConfigInput setDefaultTarget(Long defaultTarget) {
+        this.defaultTarget = defaultTarget;
+        return this;
+    }
+    public Long getDefaultTarget() {
+        return this.defaultTarget;
     }
 
     public PutProvisionConfigInput setScheduledActions(java.util.List<ScheduledAction> scheduledActions) {

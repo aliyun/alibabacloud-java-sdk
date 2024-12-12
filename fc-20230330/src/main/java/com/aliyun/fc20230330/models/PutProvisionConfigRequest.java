@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutProvisionConfigRequest extends TeaModel {
     /**
-     * <p>The information about the provisioned configuration.</p>
+     * <p>The provisioned instance configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
