@@ -158,7 +158,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about how to add an account to a DataWorks workspace as a member, see <a href="https://help.aliyun.com/document_detail/136941.html">Manage members and roles</a>.</p>
+     * <p>  For information about how to add an account to a DataWorks workspace as a member, see <a href="https://help.aliyun.com/document_detail/136941.html">Add workspace members and assign roles to them</a>.</p>
+     * <ul>
+     * <li>If you assign a built-in workspace-level role to a member of a DataWorks workspace, the member is automatically granted the permissions of the mapped role of the MaxCompute compute engine in the development environment. For more information, see <a href="https://help.aliyun.com/document_detail/449397.html">Appendix: Mappings between the built-in workspace-level roles of DataWorks and the roles of MaxCompute</a>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Assigns a role to a member of a DataWorks workspace. Before you call this operation, you must add your account to a DataWorks workspace as a member.</p>
@@ -205,7 +208,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about how to add an account to a DataWorks workspace as a member, see <a href="https://help.aliyun.com/document_detail/136941.html">Manage members and roles</a>.</p>
+     * <p>  For information about how to add an account to a DataWorks workspace as a member, see <a href="https://help.aliyun.com/document_detail/136941.html">Add workspace members and assign roles to them</a>.</p>
+     * <ul>
+     * <li>If you assign a built-in workspace-level role to a member of a DataWorks workspace, the member is automatically granted the permissions of the mapped role of the MaxCompute compute engine in the development environment. For more information, see <a href="https://help.aliyun.com/document_detail/449397.html">Appendix: Mappings between the built-in workspace-level roles of DataWorks and the roles of MaxCompute</a>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Assigns a role to a member of a DataWorks workspace. Before you call this operation, you must add your account to a DataWorks workspace as a member.</p>
@@ -1899,6 +1905,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.stop)) {
             body.put("Stop", request.stop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            body.put("Timeout", request.timeout);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4074,10 +4084,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is in the trial phase. Users who need to call this operation can apply for it. The users can call this operation after the administrator adds the users to the trial list.</p>
+     * <p>This API is currently in the trial phase. Users who wish to experience it can apply, and after the administrator adds them to the trial list, they can call this API.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the lineage between entities. You can call this operation to delete only custom lineages that are registered by users.</p>
+     * <p>Delete lineage, supports deleting user-defined lineage relationships</p>
      * 
      * @param request DeleteLineageRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4121,10 +4131,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is in the trial phase. Users who need to call this operation can apply for it. The users can call this operation after the administrator adds the users to the trial list.</p>
+     * <p>This API is currently in the trial phase. Users who wish to experience it can apply, and after the administrator adds them to the trial list, they can call this API.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the lineage between entities. You can call this operation to delete only custom lineages that are registered by users.</p>
+     * <p>Delete lineage, supports deleting user-defined lineage relationships</p>
      * 
      * @param request DeleteLineageRelationRequest
      * @return DeleteLineageRelationResponse
@@ -8492,7 +8502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the complete information about a metatable, including information about fields in the metatable.</p>
+     * <p>Invoke the GetMetaTableFullInfo interface to obtain the complete information of a table (including field information).</p>
      * 
      * @param request GetMetaTableFullInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8520,7 +8530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the complete information about a metatable, including information about fields in the metatable.</p>
+     * <p>Invoke the GetMetaTableFullInfo interface to obtain the complete information of a table (including field information).</p>
      * 
      * @param request GetMetaTableFullInfoRequest
      * @return GetMetaTableFullInfoResponse
@@ -8840,7 +8850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Table的产出任务列表</p>
+     * <p>Queries the output tasks of a metatable.</p>
      * 
      * @param request GetMetaTableProducingTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8892,7 +8902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Table的产出任务列表</p>
+     * <p>Queries the output tasks of a metatable.</p>
      * 
      * @param request GetMetaTableProducingTasksRequest
      * @return GetMetaTableProducingTasksResponse
@@ -17456,6 +17466,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.stop)) {
             body.put("Stop", request.stop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            body.put("Timeout", request.timeout);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

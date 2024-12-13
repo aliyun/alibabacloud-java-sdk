@@ -30,6 +30,9 @@ public class UpdateTableRequest extends TeaModel {
 
     /**
      * <p>The comment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>comment</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -356,6 +359,9 @@ public class UpdateTableRequest extends TeaModel {
 
         /**
          * <p>The display name of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>名称</p>
          */
         @NameInMap("ColumnNameCn")
         public String columnNameCn;
@@ -372,6 +378,9 @@ public class UpdateTableRequest extends TeaModel {
 
         /**
          * <p>The comment of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         @NameInMap("Comment")
         public String comment;

@@ -24,6 +24,9 @@ public class CreateTableRequest extends TeaModel {
 
     /**
      * <p>A reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>reserved</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -37,6 +40,9 @@ public class CreateTableRequest extends TeaModel {
 
     /**
      * <p>The comment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>comment</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -368,6 +374,9 @@ public class CreateTableRequest extends TeaModel {
 
         /**
          * <p>The display name of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>columnName in chinese</p>
          */
         @NameInMap("ColumnNameCn")
         public String columnNameCn;
@@ -384,6 +393,9 @@ public class CreateTableRequest extends TeaModel {
 
         /**
          * <p>The comment of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         @NameInMap("Comment")
         public String comment;

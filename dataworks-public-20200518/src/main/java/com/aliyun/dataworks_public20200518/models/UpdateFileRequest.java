@@ -336,6 +336,9 @@ public class UpdateFileRequest extends TeaModel {
     @NameInMap("Stop")
     public Boolean stop;
 
+    @NameInMap("Timeout")
+    public Integer timeout;
+
     public static UpdateFileRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFileRequest self = new UpdateFileRequest();
         return TeaModel.build(map, self);
@@ -587,6 +590,14 @@ public class UpdateFileRequest extends TeaModel {
     }
     public Boolean getStop() {
         return this.stop;
+    }
+
+    public UpdateFileRequest setTimeout(Integer timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Integer getTimeout() {
+        return this.timeout;
     }
 
 }

@@ -290,6 +290,10 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
@@ -302,6 +306,10 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("ParamValues")
         public String paramValues;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PeriodNumber")
         public Integer periodNumber;
 

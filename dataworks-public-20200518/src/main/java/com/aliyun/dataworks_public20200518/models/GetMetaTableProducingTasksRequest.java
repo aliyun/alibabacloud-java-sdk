@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableProducingTasksRequest extends TeaModel {
     /**
+     * <p>The ID of the EMR cluster. This parameter takes effect only if the DataSourceType parameter is set to emr.</p>
+     * 
      * <strong>example:</strong>
      * <p>C-A_SAMPLE_CLUSTER_ID</p>
      */
@@ -12,6 +14,8 @@ public class GetMetaTableProducingTasksRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The type of the metatable. Valid values: odps and emr. The value odps indicates that the metatable is a MaxCompute metatable. The value emr indicates that the metatable is an E-MapReduce (EMR) metatable.</p>
+     * 
      * <strong>example:</strong>
      * <p>odps</p>
      */
@@ -19,6 +23,8 @@ public class GetMetaTableProducingTasksRequest extends TeaModel {
     public String dataSourceType;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -26,6 +32,8 @@ public class GetMetaTableProducingTasksRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The name of the schema.</p>
+     * 
      * <strong>example:</strong>
      * <p>myschema</p>
      */
@@ -33,6 +41,7 @@ public class GetMetaTableProducingTasksRequest extends TeaModel {
     public String schemaName;
 
     /**
+     * <p>The GUID of the MaxCompute metatable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +51,8 @@ public class GetMetaTableProducingTasksRequest extends TeaModel {
     public String tableGuid;
 
     /**
+     * <p>The name of the metatable.</p>
+     * 
      * <strong>example:</strong>
      * <p>sample_table</p>
      */
