@@ -14,13 +14,13 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The material parameters of the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified. For more information, see <a href="https://help.aliyun.com/document_detail/328557.html">Create and use a regular template</a> and <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</p>
+     * <p>The material parameters of the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified. For more information, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a> and <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</p>
      */
     @NameInMap("ClipsParam")
     public String clipsParam;
 
     /**
-     * <p>The parameters for editing and production. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html#title-10z-t9u-n69">EditingProduceConfig</a>.</p>
+     * <p>The parameters for editing and production. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">EditingProduceConfig</a>.</p>
      * <blockquote>
      * <p> If no thumbnail is specified in EditingProduceConfig, the first frame of the video is used as the thumbnail.</p>
      * </blockquote>
@@ -41,7 +41,7 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     public String editingProduceConfig;
 
     /**
-     * <p>The metadata of the produced video, in the JSON format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/357745.html?spm=a2c4g.445712.0.0.49a716dbA8hgdz#97ff26d0e3c28">MediaMetadata</a>.</p>
+     * <p>The metadata of the produced video, in the JSON format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/357745.html">MediaMetadata</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -55,7 +55,7 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     /**
      * <p>The configurations of the output file, in the JSON format. You can specify an OSS URL or a storage location in a storage bucket of ApsaraVideo VOD.</p>
      * <p>To store the output file in OSS, you must specify MediaURL. To store the output file in ApsaraVideo VOD, you must specify StorageLocation and FileName.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/357745.html#title-4j6-ve7-g31">OutputMediaConfig</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">OutputMediaConfig</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The metadata of the editing project, in the JSON format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/357745.html#title-yvp-81k-wff">ProjectMetadata</a>.</p>
+     * <p>The metadata of the editing project, in the JSON format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/357745.html">ProjectMetadata</a>.</p>
      */
     @NameInMap("ProjectMetadata")
     public String projectMetadata;
