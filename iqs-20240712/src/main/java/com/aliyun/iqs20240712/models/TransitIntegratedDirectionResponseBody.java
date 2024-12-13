@@ -835,6 +835,9 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         @NameInMap("buslines")
         public java.util.List<TransitIntegratedDirectionResponseBodyDataPathsSegmentsBusBuslines> buslines;
 
+        @NameInMap("index")
+        public String index;
+
         public static TransitIntegratedDirectionResponseBodyDataPathsSegmentsBus build(java.util.Map<String, ?> map) throws Exception {
             TransitIntegratedDirectionResponseBodyDataPathsSegmentsBus self = new TransitIntegratedDirectionResponseBodyDataPathsSegmentsBus();
             return TeaModel.build(map, self);
@@ -846,6 +849,14 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         }
         public java.util.List<TransitIntegratedDirectionResponseBodyDataPathsSegmentsBusBuslines> getBuslines() {
             return this.buslines;
+        }
+
+        public TransitIntegratedDirectionResponseBodyDataPathsSegmentsBus setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
         }
 
     }
@@ -1095,6 +1106,9 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         @NameInMap("id")
         public String id;
 
+        @NameInMap("index")
+        public String index;
+
         @NameInMap("name")
         public String name;
 
@@ -1149,6 +1163,14 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public TransitIntegratedDirectionResponseBodyDataPathsSegmentsRailway setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
         }
 
         public TransitIntegratedDirectionResponseBodyDataPathsSegmentsRailway setName(String name) {
@@ -1222,6 +1244,9 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         @NameInMap("driveTimeSecond")
         public String driveTimeSecond;
 
+        @NameInMap("index")
+        public String index;
+
         @NameInMap("originName")
         public String originName;
 
@@ -1274,6 +1299,14 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         }
         public String getDriveTimeSecond() {
             return this.driveTimeSecond;
+        }
+
+        public TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxi setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
         }
 
         public TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxi setOriginName(String originName) {
@@ -1599,6 +1632,9 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         @NameInMap("distanceMeter")
         public String distanceMeter;
 
+        @NameInMap("index")
+        public String index;
+
         /**
          * <strong>example:</strong>
          * <p>116.466568,39.995552</p>
@@ -1636,6 +1672,14 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         }
         public String getDistanceMeter() {
             return this.distanceMeter;
+        }
+
+        public TransitIntegratedDirectionResponseBodyDataPathsSegmentsWalking setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
         }
 
         public TransitIntegratedDirectionResponseBodyDataPathsSegmentsWalking setOrigin(String origin) {
