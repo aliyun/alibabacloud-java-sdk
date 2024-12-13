@@ -472,7 +472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call the CleanClusterUserPermissions operation to delete kubeconfig files that may pose potential risks from a user and revoke Role-Based Access Control (RBAC) permissions on a cluster.</p>
+     * <p>Deletes kubeconfig files that may pose potential risks from a user and revokes Role-Based Access Control (RBAC) permissions on a cluster.</p>
      * 
      * @param request CleanClusterUserPermissionsRequest
      * @param headers map
@@ -515,7 +515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call the CleanClusterUserPermissions operation to delete kubeconfig files that may pose potential risks from a user and revoke Role-Based Access Control (RBAC) permissions on a cluster.</p>
+     * <p>Deletes kubeconfig files that may pose potential risks from a user and revokes Role-Based Access Control (RBAC) permissions on a cluster.</p>
      * 
      * @param request CleanClusterUserPermissionsRequest
      * @return CleanClusterUserPermissionsResponse
@@ -1163,7 +1163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发起集群诊断</p>
+     * <p>Starts a cluster diagnostic.</p>
      * 
      * @param request CreateClusterDiagnosisRequest
      * @param headers map
@@ -1201,7 +1201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发起集群诊断</p>
+     * <p>Starts a cluster diagnostic.</p>
      * 
      * @param request CreateClusterDiagnosisRequest
      * @return CreateClusterDiagnosisResponse
@@ -1553,7 +1553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除ACK报警联系人</p>
+     * <p>Deletes one or more ACK alert contacts.</p>
      * 
      * @param tmpReq DeleteAlertContactRequest
      * @param headers map
@@ -1593,7 +1593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除ACK报警联系人</p>
+     * <p>Deletes one or more ACK alert contacts.</p>
      * 
      * @param request DeleteAlertContactRequest
      * @return DeleteAlertContactResponse
@@ -1606,7 +1606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除ACK报警联系人分组</p>
+     * <p>Deletes an ACK alert contact group.</p>
      * 
      * @param tmpReq DeleteAlertContactGroupRequest
      * @param headers map
@@ -1646,7 +1646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除ACK报警联系人分组</p>
+     * <p>Deletes an ACK alert contact group.</p>
      * 
      * @param request DeleteAlertContactGroupRequest
      * @return DeleteAlertContactGroupResponse
@@ -4678,15 +4678,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群诊断检查项</p>
+     * <p>Queries cluster diagnostic items.</p>
      * 
+     * @param request GetClusterDiagnosisCheckItemsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetClusterDiagnosisCheckItemsResponse
      */
-    public GetClusterDiagnosisCheckItemsResponse getClusterDiagnosisCheckItemsWithOptions(String clusterId, String diagnosisId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetClusterDiagnosisCheckItemsResponse getClusterDiagnosisCheckItemsWithOptions(String clusterId, String diagnosisId, GetClusterDiagnosisCheckItemsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("language", request.language);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetClusterDiagnosisCheckItems"),
@@ -4704,26 +4712,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群诊断检查项</p>
+     * <p>Queries cluster diagnostic items.</p>
+     * 
+     * @param request GetClusterDiagnosisCheckItemsRequest
      * @return GetClusterDiagnosisCheckItemsResponse
      */
-    public GetClusterDiagnosisCheckItemsResponse getClusterDiagnosisCheckItems(String clusterId, String diagnosisId) throws Exception {
+    public GetClusterDiagnosisCheckItemsResponse getClusterDiagnosisCheckItems(String clusterId, String diagnosisId, GetClusterDiagnosisCheckItemsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getClusterDiagnosisCheckItemsWithOptions(clusterId, diagnosisId, headers, runtime);
+        return this.getClusterDiagnosisCheckItemsWithOptions(clusterId, diagnosisId, request, headers, runtime);
     }
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群诊断结果</p>
+     * <p>Queries cluster diagnostic results.</p>
      * 
+     * @param request GetClusterDiagnosisResultRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetClusterDiagnosisResultResponse
      */
-    public GetClusterDiagnosisResultResponse getClusterDiagnosisResultWithOptions(String clusterId, String diagnosisId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetClusterDiagnosisResultResponse getClusterDiagnosisResultWithOptions(String clusterId, String diagnosisId, GetClusterDiagnosisResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("language", request.language);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetClusterDiagnosisResult"),
@@ -4741,13 +4759,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群诊断结果</p>
+     * <p>Queries cluster diagnostic results.</p>
+     * 
+     * @param request GetClusterDiagnosisResultRequest
      * @return GetClusterDiagnosisResultResponse
      */
-    public GetClusterDiagnosisResultResponse getClusterDiagnosisResult(String clusterId, String diagnosisId) throws Exception {
+    public GetClusterDiagnosisResultResponse getClusterDiagnosisResult(String clusterId, String diagnosisId, GetClusterDiagnosisResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getClusterDiagnosisResultWithOptions(clusterId, diagnosisId, headers, runtime);
+        return this.getClusterDiagnosisResultWithOptions(clusterId, diagnosisId, request, headers, runtime);
     }
 
     /**
@@ -5125,7 +5145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>You can call the ListClusterKubeconfigStates operation to query the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</p>
+     * <p>Queries the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</p>
      * 
      * @param request ListClusterKubeconfigStatesRequest
      * @param headers map
@@ -5171,7 +5191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>You can call the ListClusterKubeconfigStates operation to query the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</p>
+     * <p>Queries the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</p>
      * 
      * @param request ListClusterKubeconfigStatesRequest
      * @return ListClusterKubeconfigStatesResponse
@@ -6153,11 +6173,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When you remove a node, the pods on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</p>
      * <ul>
-     * <li>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </li>
-     * <li>The operation may have unexpected risks. Back up the data before you perform this operation. </li>
-     * <li>When the system removes a node, it sets the status of the node to Unschedulable. </li>
+     * <li>The operation may have unexpected risks. Back up the data before you perform this operation.</li>
+     * <li>Nodes remain in the Unschedulable state when they are being removed.</li>
      * <li>The system removes only worker nodes. It does not remove master nodes.</li>
+     * <li>Even if you set the <code>release_node</code> parameter to <code>true</code>, subscription nodes are not released. You must release the subscription nodes in the <a href="https://ecs.console.aliyun.com/">ECS console</a> after you remove the nodes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6221,11 +6242,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When you remove a node, the pods on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</p>
      * <ul>
-     * <li>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </li>
-     * <li>The operation may have unexpected risks. Back up the data before you perform this operation. </li>
-     * <li>When the system removes a node, it sets the status of the node to Unschedulable. </li>
+     * <li>The operation may have unexpected risks. Back up the data before you perform this operation.</li>
+     * <li>Nodes remain in the Unschedulable state when they are being removed.</li>
      * <li>The system removes only worker nodes. It does not remove master nodes.</li>
+     * <li>Even if you set the <code>release_node</code> parameter to <code>true</code>, subscription nodes are not released. You must release the subscription nodes in the <a href="https://ecs.console.aliyun.com/">ECS console</a> after you remove the nodes.</li>
      * </ul>
      * 
      * <b>summary</b> : 

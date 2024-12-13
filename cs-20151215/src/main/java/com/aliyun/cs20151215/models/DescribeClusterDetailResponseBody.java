@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
-     * <p>The on-premises domain name of the cluster.</p>
+     * <p>The domain name of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>cluster.local</p>
@@ -49,7 +49,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The CIDR block of the pod.</p>
+     * <p>The CIDR block of the pod. The configuration of the Flannel network plug-in.</p>
      * 
      * <strong>example:</strong>
      * <p>172.20.0.0/16</p>
@@ -57,6 +57,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("container_cidr")
     public String containerCidr;
 
+    /**
+     * <p>The control plane configurations in an ACK dedicated cluster.</p>
+     */
     @NameInMap("control_plane_config")
     public DescribeClusterDetailResponseBodyControlPlaneConfig controlPlaneConfig;
 
@@ -184,7 +187,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String nextVersion;
 
     /**
-     * <p>The number of the IP addresses of the node.</p>
+     * <p>The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel network plug-in.</p>
      * 
      * <strong>example:</strong>
      * <p>26</p>
@@ -234,7 +237,11 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String profile;
 
     /**
-     * <p>The proxy mode. Valid values: ipvs and iptables.</p>
+     * <p>The kube-proxy mode. Valid values:</p>
+     * <ul>
+     * <li><code>iptables</code>: a mature and stable kube-proxy mode that uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</li>
+     * <li><code>ipvs</code>: provides high performance and uses IP Virtual Server (IPVS). This allows you to configure service discovery and load balancing. This mode is suitable for clusters that are required to run a large number of services. We recommend that you use this mode in scenarios that require high load balancing performance.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ipvs</p>
@@ -270,7 +277,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The CIDR block of the Service.</p>
+     * <p>The CIDR block of the service network.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -335,7 +342,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public java.util.List<Tag> tags;
 
     /**
-     * <p>The time zone.</p>
+     * <p>The time zone</p>
      * 
      * <strong>example:</strong>
      * <p>Asia/Shanghai</p>
@@ -362,7 +369,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.</p>
+     * <p>The ID of the vSwitche. This field is deprecated. Use vswitch_ids to query the vSwitches on the control plane and vswitch_ids to query the vSwitches on the data plane.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-2zete8s4qocqg0mf6****,vsw-2zete8s4qocqg0mf6****</p>
@@ -721,72 +728,207 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterDetailResponseBodyControlPlaneConfig extends TeaModel {
+        /**
+         * <p>Indicates whether auto-renewal is enabled for the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("auto_renew")
         public Boolean autoRenew;
 
+        /**
+         * <p>The auto-renewal duration for the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
+        /**
+         * <p>The billing method of the control plane node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
+         */
         @NameInMap("charge_type")
         public String chargeType;
 
+        /**
+         * <p>Indicates whether to install CloudMonitor for the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("cloud_monitor_flags")
         public Boolean cloudMonitorFlags;
 
+        /**
+         * <p>The CPU management policy of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("cpu_policy")
         public String cpuPolicy;
 
+        /**
+         * <p>The ID of the deployment set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp10b35imuam5amw****</p>
+         */
         @NameInMap("deploymentset_id")
         public String deploymentsetId;
 
+        /**
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_3_x64_20G_alibase_20240819.vhd</p>
+         */
         @NameInMap("image_id")
         public String imageId;
 
+        /**
+         * <p>The type of the OS image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunLinux3</p>
+         */
         @NameInMap("image_type")
         public String imageType;
 
+        /**
+         * <p>The instance type of the node.</p>
+         */
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
+        /**
+         * <p>The name of the key pair. You must set key_pair or login_password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack</p>
+         */
         @NameInMap("key_pair")
         public String keyPair;
 
+        /**
+         * <p>The node port range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000-32767</p>
+         */
         @NameInMap("node_port_range")
         public String nodePortRange;
 
+        /**
+         * <p>The subscription duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("period")
         public Long period;
 
+        /**
+         * <p>The unit of the subscription duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("period_unit")
         public String periodUnit;
 
+        /**
+         * <p>The runtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>containerd</p>
+         */
         @NameInMap("runtime")
         public String runtime;
 
+        /**
+         * <p>Indicates whether to enable Alibaba Cloud Linux Security Hardening.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("security_hardening_os")
         public Boolean securityHardeningOs;
 
+        /**
+         * <p>The number of control plane nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("size")
         public Long size;
 
+        /**
+         * <p>Indicates whether to enable Multi-Level Protection Scheme (MLPS) security hardening.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("soc_enabled")
         public Boolean socEnabled;
 
+        /**
+         * <p>Indicates whether to enable the burst feature for the system disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
 
+        /**
+         * <p>The category of the system disk for nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
+        /**
+         * <p>The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for ESSDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
 
+        /**
+         * <p>The preset read/write IOPS of the system disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("system_disk_provisioned_iops")
         public Long systemDiskProvisionedIops;
 
+        /**
+         * <p>The system disk size of the node. The value must be at least 40 GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
 
+        /**
+         * <p>The automatic snapshot policy of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-2zej1nogjvovnz4z****</p>
+         */
         @NameInMap("system_disk_snapshot_policy_id")
         public String systemDiskSnapshotPolicyId;
 

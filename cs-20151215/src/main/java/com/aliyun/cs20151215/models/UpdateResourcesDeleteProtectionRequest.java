@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateResourcesDeleteProtectionRequest extends TeaModel {
     /**
-     * <p>Specify whether to enable deletion protection. Set the value to true to enable deletion protection and set the value to false to disable deletion protection.</p>
+     * <p>Specifies whether to enable deletion protection. Set the value to true to enable deletion protection and set the value to false to disable deletion protection.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

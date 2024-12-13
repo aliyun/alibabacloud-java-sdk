@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterConfigurationRequest extends TeaModel {
     /**
-     * <p>The custom configuration.</p>
+     * <p>The custom configurations.</p>
      */
     @NameInMap("customize_config")
     public java.util.List<ModifyClusterConfigurationRequestCustomizeConfig> customizeConfig;
@@ -67,7 +67,7 @@ public class ModifyClusterConfigurationRequest extends TeaModel {
 
     public static class ModifyClusterConfigurationRequestCustomizeConfig extends TeaModel {
         /**
-         * <p>The custom configuration.</p>
+         * <p>The custom configurations.</p>
          */
         @NameInMap("configs")
         public java.util.List<ModifyClusterConfigurationRequestCustomizeConfigConfigs> configs;

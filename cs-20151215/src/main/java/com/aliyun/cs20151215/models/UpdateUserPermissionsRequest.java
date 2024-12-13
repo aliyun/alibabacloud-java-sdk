@@ -17,7 +17,7 @@ public class UpdateUserPermissionsRequest extends TeaModel {
      * <li><code>delete</code>: revokes the specified permissions from the RAM user or RAM role. If you use this method, only the permissions that you specify are revoked, other permissions of the RAM user or RAM role on the cluster are not affected.</li>
      * <li><code>patch</code>: grants the specified permissions to the RAM user or role. If you use this method, only the permissions that you specify are granted, other permissions of the RAM user or RAM role on the cluster are not affected.</li>
      * </ul>
-     * <p>Default value: <code>apply</code></p>
+     * <p>Default value: <code>apply</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>apply</p>

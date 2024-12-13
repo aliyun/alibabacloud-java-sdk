@@ -50,7 +50,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
      * <ul>
      * <li><code>true</code>: enables auto-renewal.</li>
-     * <li><code>false</code>: disables auto-renewal.</li>
+     * <li><code>false</code>: disables auto-renewal</li>
      * </ul>
      * <p>Default value: <code>false</code></p>
      * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
@@ -64,7 +64,7 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The auto-renewal duration. This parameter takes effect only if charge_type is set to PrePaid and auto_renew is set to true. If you set <code>period_unit</code> to Month, the valid values of auto_renew_period are 1, 2, 3, 6, and 12.</p>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
      * 
      * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <ul>
      * <li><code>Kubernetes</code>: an ACK dedicated cluster.</li>
-     * <li><code>ManagedKubernetes</code>: an ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).</li>
+     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
      * <li><code>ExternalKubernetes</code>: a registered cluster.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -453,7 +453,7 @@ public class CreateClusterRequest extends TeaModel {
     public String loginPassword;
 
     /**
-     * <p>Cluster maintenance window.</p>
+     * <p>The configurations of the cluster maintenance window.</p>
      */
     @NameInMap("maintenance_window")
     public MaintenanceWindow maintenanceWindow;
@@ -462,7 +462,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
      * <ul>
      * <li><code>true</code>: enables auto-renewal.</li>
-     * <li><code>false</code>: disables auto-renewal.</li>
+     * <li><code>false</code>: disables auto-renewal</li>
      * </ul>
      * <p>Default value: <code>true</code></p>
      * 
@@ -476,7 +476,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for master nodes.</p>
      * <p>Valid values: 1, 2, 3, 6, and 12.</p>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -500,7 +500,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>The billing method of master nodes. Valid values:</p>
      * <ul>
      * <li><code>PrePaid</code>: subscription.</li>
-     * <li><code>PostPaid</code>: pay-as-you-go.</li>
+     * <li><code>PostPaid</code>: the pay-as-you-go.</li>
      * </ul>
      * <p>Default value: <code>PostPaid</code></p>
      * 
@@ -512,7 +512,7 @@ public class CreateClusterRequest extends TeaModel {
     public String masterInstanceChargeType;
 
     /**
-     * <p>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+     * <p>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
      */
     @NameInMap("master_instance_types")
     @Deprecated
@@ -521,7 +521,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The subscription duration of master nodes. This parameter takes effect and is required only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
      * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -545,7 +545,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>The system disk type of master nodes. Valid values:</p>
      * <ul>
      * <li><code>cloud_efficiency</code>: ultra disk</li>
-     * <li><code>cloud_ssd</code>: standard SSD</li>
+     * <li><code>cloud_ssd</code>: standard SSD.</li>
      * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
      * </ul>
      * <p>Default value: <code>cloud_ssd</code>. The default value may vary in different zones.</p>
@@ -597,7 +597,7 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<String> masterVswitchIds;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The cluster name.</p>
      * <p>The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and underscores (_). The cluster name cannot start with a hyphen (-).</p>
      * <p>This parameter is required.</p>
      * 
@@ -669,7 +669,7 @@ public class CreateClusterRequest extends TeaModel {
     public Long numOfNodes;
 
     /**
-     * <p>Cluster auto operation and maintenance policy.</p>
+     * <p>The automatic O\&amp;M policy of the cluster.</p>
      */
     @NameInMap("operation_policy")
     public CreateClusterRequestOperationPolicy operationPolicy;
@@ -692,7 +692,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.</p>
      * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
      * 
      * <strong>example:</strong>
@@ -715,7 +715,7 @@ public class CreateClusterRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The operating system distribution. Valid values:</p>
+     * <p>The OS distribution that is used. Valid values:</p>
      * <ul>
      * <li>CentOS</li>
      * <li>AliyunLinux</li>
@@ -745,10 +745,10 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code>, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:</p>
      * <ul>
-     * <li><code>Default</code>. an ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
-     * <li><code>Edge</code>: an ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
-     * <li><code>Serverless</code>: an ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
-     * <li><code>Lingjun</code>: an ACK Lingjun Pro cluster.</li>
+     * <li><code>Default</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
+     * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
+     * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
+     * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -878,11 +878,11 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean snatEntry;
 
     /**
-     * <p>Specifies whether to enable security hardening based on Multi-Level Protection Scheme (MLPS). For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</p>
+     * <p>Specifies whether to enable Multi-Level Protection Scheme (MLPS) security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><code>true</code>: enables security hardening based on MLPS.</li>
-     * <li><code>false</code>: disables security hardening based on MLPS.</li>
+     * <li><code>true</code>: enables MLPS security hardening.</li>
+     * <li><code>false</code>: disables MLPS security hardening.</li>
      * </ul>
      * <p>Default value: <code>false</code></p>
      * 
@@ -908,9 +908,9 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean sshFlags;
 
     /**
-     * <p>The tags to be added to nodes. You must add labels based on the following rules:</p>
+     * <p>The tags to be added to nodes. When you add tags to a node, the following rules apply:</p>
      * <ul>
-     * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
+     * <li>A tag is a case-sensitive key-value pair. You can add up to 20 tags.</li>
      * <li>When you add a tag, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
      * </ul>
      */
@@ -918,7 +918,7 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<Tag> tags;
 
     /**
-     * <p>The taint. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
+     * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
      */
     @NameInMap("taints")
     @Deprecated
@@ -1014,7 +1014,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>The billing method of worker nodes. Valid values:</p>
      * <ul>
      * <li><code>PrePaid</code>: subscription.</li>
-     * <li><code>PostPaid</code>: pay-as-you-go.</li>
+     * <li><code>PostPaid</code>: the pay-as-you-go.</li>
      * </ul>
      * <p>Default value: PostPaid.</p>
      * 
@@ -1035,7 +1035,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The subscription duration of worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
      * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -1928,75 +1928,167 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestControlPlaneConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("auto_renew")
         public Boolean autoRenew;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
+         */
         @NameInMap("charge_type")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("cloud_monitor_flags")
         public Boolean cloudMonitorFlags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("cpu_policy")
         public String cpuPolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ds-bp10b35imuam5amw****</p>
+         */
         @NameInMap("deploymentset_id")
         public String deploymentsetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aliyun_3_x64_20G_alibase_20240819.vhd</p>
+         */
         @NameInMap("image_id")
         public String imageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AliyunLinux3</p>
+         */
         @NameInMap("image_type")
         public String imageType;
 
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ack</p>
+         */
         @NameInMap("key_pair")
         public String keyPair;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ack@Test</p>
+         */
         @NameInMap("login_password")
         public String loginPassword;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30000-32767</p>
+         */
         @NameInMap("node_port_range")
         public String nodePortRange;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("period")
         public Long period;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("period_unit")
         public String periodUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>containerd</p>
+         */
         @NameInMap("runtime")
         public String runtime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("security_hardening_os")
         public Boolean securityHardeningOs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("size")
         public Long size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("soc_enabled")
         public Boolean socEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("system_disk_provisioned_iops")
         public Long systemDiskProvisionedIops;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sp-2zej1nogjvovnz4z****</p>
+         */
         @NameInMap("system_disk_snapshot_policy_id")
         public String systemDiskSnapshotPolicyId;
 
@@ -2201,7 +2293,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestOperationPolicyClusterAutoUpgrade extends TeaModel {
         /**
-         * <p>Cluster auto-upgrade frequency. Possible values: </p>
+         * <p>The automatic update frequency. Valid values:</p>
          * <ul>
          * <li>patch</li>
          * <li>stable</li>
@@ -2215,7 +2307,7 @@ public class CreateClusterRequest extends TeaModel {
         public String channel;
 
         /**
-         * <p>Whether to enable automatic cluster upgrades.</p>
+         * <p>Specifies whether to enable auto cluster update.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -2248,7 +2340,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestOperationPolicy extends TeaModel {
         /**
-         * <p>Automatic cluster upgrade</p>
+         * <p>The configurations of auto cluster update.</p>
          */
         @NameInMap("cluster_auto_upgrade")
         public CreateClusterRequestOperationPolicyClusterAutoUpgrade clusterAutoUpgrade;
