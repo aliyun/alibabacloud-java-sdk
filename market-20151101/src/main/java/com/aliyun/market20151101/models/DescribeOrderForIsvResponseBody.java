@@ -19,7 +19,7 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
     public Long aliUid;
 
     @NameInMap("Components")
-    public java.util.Map<String, ?> components;
+    public Object components;
 
     /**
      * <strong>example:</strong>
@@ -156,11 +156,11 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         return this.aliUid;
     }
 
-    public DescribeOrderForIsvResponseBody setComponents(java.util.Map<String, ?> components) {
+    public DescribeOrderForIsvResponseBody setComponents(Object components) {
         this.components = components;
         return this;
     }
-    public java.util.Map<String, ?> getComponents() {
+    public Object getComponents() {
         return this.components;
     }
 
