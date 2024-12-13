@@ -348,6 +348,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("PayType")
         public String payType;
 
+        @NameInMap("PrimaryInstanceId")
+        public String primaryInstanceId;
+
         /**
          * <p>主可用区。</p>
          * <p>This parameter is required.</p>
@@ -674,6 +677,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getPayType() {
             return this.payType;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setPrimaryInstanceId(String primaryInstanceId) {
+            this.primaryInstanceId = primaryInstanceId;
+            return this;
+        }
+        public String getPrimaryInstanceId() {
+            return this.primaryInstanceId;
         }
 
         public DescribeDBInstancesResponseBodyDBInstances setPrimaryZone(String primaryZone) {

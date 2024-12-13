@@ -512,6 +512,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Port")
         public String port;
 
+        @NameInMap("PrimaryInstanceId")
+        public String primaryInstanceId;
+
         /**
          * <p>主可用区。</p>
          * <p>This parameter is required.</p>
@@ -917,6 +920,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getPort() {
             return this.port;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setPrimaryInstanceId(String primaryInstanceId) {
+            this.primaryInstanceId = primaryInstanceId;
+            return this;
+        }
+        public String getPrimaryInstanceId() {
+            return this.primaryInstanceId;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstance setPrimaryZone(String primaryZone) {
