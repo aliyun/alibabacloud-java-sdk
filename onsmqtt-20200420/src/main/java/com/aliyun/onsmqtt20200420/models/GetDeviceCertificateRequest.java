@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDeviceCertificateRequest extends TeaModel {
     /**
+     * <p>The SN serial number of the CA certificate to which the device certificate to be queried belongs, used to uniquely identify a CA certificate. Value range: no more than 128 bytes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetDeviceCertificateRequest extends TeaModel {
     public String caSn;
 
     /**
+     * <p>The SN serial number of the device certificate to be queried, used to uniquely identify a device certificate. Value range: no more than 128 bytes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetDeviceCertificateRequest extends TeaModel {
     public String deviceSn;
 
     /**
+     * <p>The instance ID to which the device certificate is bound, i.e., the instance ID of the Cloud Message Queue MQTT version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

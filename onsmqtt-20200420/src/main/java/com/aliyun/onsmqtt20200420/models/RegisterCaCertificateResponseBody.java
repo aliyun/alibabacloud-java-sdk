@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RegisterCaCertificateResponseBody extends TeaModel {
     /**
+     * <p>Public parameters, each request ID is unique and can be used for troubleshooting and problem localization.</p>
+     * 
      * <strong>example:</strong>
      * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
      */
@@ -12,6 +14,8 @@ public class RegisterCaCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The SN serial number of the registered CA certificate, used to uniquely identify a CA certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>007269004887******</p>
      */

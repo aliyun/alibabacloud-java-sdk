@@ -4,10 +4,15 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class ListCaCertificateResponseBody extends TeaModel {
+    /**
+     * <p>Query result.</p>
+     */
     @NameInMap("Data")
     public ListCaCertificateResponseBodyData data;
 
     /**
+     * <p>Public parameters, each request ID is unique and can be used for troubleshooting and problem localization.</p>
+     * 
      * <strong>example:</strong>
      * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
      */
@@ -37,6 +42,11 @@ public class ListCaCertificateResponseBody extends TeaModel {
 
     public static class ListCaCertificateResponseBodyDataCaCertificateVOS extends TeaModel {
         /**
+         * <p>Content of the CA certificate. </p>
+         * <blockquote>
+         * <p>\n represents a new line.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----\nMIIDuzCCAqdGVzdC5jbi1xaW5n******\n-----END CERTIFICATE-----</p>
          */
@@ -44,6 +54,8 @@ public class ListCaCertificateResponseBody extends TeaModel {
         public String caContent;
 
         /**
+         * <p>Name of the CA certificate</p>
+         * 
          * <strong>example:</strong>
          * <p>mqtt_ca</p>
          */
@@ -51,6 +63,8 @@ public class ListCaCertificateResponseBody extends TeaModel {
         public String caName;
 
         /**
+         * <p>Registration code of the CA certificate</p>
+         * 
          * <strong>example:</strong>
          * <p>13274673-8f90-4630-bea1-9cccb25756ad2089******</p>
          */
@@ -58,6 +72,8 @@ public class ListCaCertificateResponseBody extends TeaModel {
         public String registrationCode;
 
         /**
+         * <p>SN serial number of the CA certificate</p>
+         * 
          * <strong>example:</strong>
          * <p>007269004887******</p>
          */
@@ -65,6 +81,14 @@ public class ListCaCertificateResponseBody extends TeaModel {
         public String sn;
 
         /**
+         * <p>The status of the CA certificate. The values are as follows:</p>
+         * <ul>
+         * <li><strong>0</strong>: Indicates that the certificate is in an inactive state. - <strong>1</strong>: Indicates that the certificate is in an active state.<blockquote>
+         * <p>After the CA certificate is registered, it is in an active state by default.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -72,6 +96,8 @@ public class ListCaCertificateResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The start time when the CA certificate becomes effective. The format is a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1654137303000</p>
          */
@@ -79,6 +105,8 @@ public class ListCaCertificateResponseBody extends TeaModel {
         public String validBegin;
 
         /**
+         * <p>The end time when the CA certificate becomes effective. The format is a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1969497303000</p>
          */
@@ -86,6 +114,11 @@ public class ListCaCertificateResponseBody extends TeaModel {
         public String validEnd;
 
         /**
+         * <p>Verify the content of the certificate. </p>
+         * <blockquote>
+         * <p>\n represents a new line.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----\nMIID/DCCAu+Y5sRMpp9tnd+4s******\n-----END CERTIFICATE-----</p>
          */
@@ -164,10 +197,15 @@ public class ListCaCertificateResponseBody extends TeaModel {
     }
 
     public static class ListCaCertificateResponseBodyData extends TeaModel {
+        /**
+         * <p>Details of the CA certificate</p>
+         */
         @NameInMap("CaCertificateVOS")
         public java.util.List<ListCaCertificateResponseBodyDataCaCertificateVOS> caCertificateVOS;
 
         /**
+         * <p>The current page number of the returned query records.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -175,6 +213,8 @@ public class ListCaCertificateResponseBody extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The maximum number of results to display per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -182,6 +222,8 @@ public class ListCaCertificateResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Maximum number of pages in the query result.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

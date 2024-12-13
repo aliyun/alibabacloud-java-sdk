@@ -4,10 +4,15 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
+    /**
+     * <p>Returns the information list.</p>
+     */
     @NameInMap("DeviceCredentialClientIdList")
     public ListDeviceCredentialClientIdResponseBodyDeviceCredentialClientIdList deviceCredentialClientIdList;
 
     /**
+     * <p>Public parameters, each request ID is unique and can be used for troubleshooting and problem localization.</p>
+     * 
      * <strong>example:</strong>
      * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
      */
@@ -36,13 +41,28 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
     }
 
     public static class ListDeviceCredentialClientIdResponseBodyDeviceCredentialClientIdList extends TeaModel {
+        /**
+         * <p>Client list.</p>
+         */
         @NameInMap("ClientIdList")
         public java.util.List<String> clientIdList;
 
+        /**
+         * <p>Indicates whether there is a token (Token) for the next query. Values: </p>
+         * <ul>
+         * <li>For the first query and when there is no next query, this field does not need to be filled. </li>
+         * <li>If there is a next query, the value should be the NextToken returned from the previous API call.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>634dxxxxx75b5f</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
+         * <p>The current page number of the returned query records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -50,6 +70,8 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
         public String pageNo;
 
         /**
+         * <p>The maximum number of results to display per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -57,6 +79,8 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
         public String pageSize;
 
         /**
+         * <p>Total number of query results.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

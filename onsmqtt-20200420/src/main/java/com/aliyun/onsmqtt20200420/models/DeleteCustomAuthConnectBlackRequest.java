@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomAuthConnectBlackRequest extends TeaModel {
     /**
+     * <p>The ID of the ApsaraMQ for MQTT client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteCustomAuthConnectBlackRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The ID of the ApsaraMQ for MQTT instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

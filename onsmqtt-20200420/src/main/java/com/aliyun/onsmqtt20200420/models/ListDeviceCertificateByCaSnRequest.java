@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeviceCertificateByCaSnRequest extends TeaModel {
     /**
+     * <p>The SN serial number of the CA certificate to be queried, indicating which CA certificate\&quot;s registered device certificates are to be retrieved.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListDeviceCertificateByCaSnRequest extends TeaModel {
     public String caSn;
 
     /**
+     * <p>The instance ID bound to the CA certificate, which is the instance ID of the MQTT version of the cloud message queue.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListDeviceCertificateByCaSnRequest extends TeaModel {
     public String mqttInstanceId;
 
     /**
+     * <p>Indicates the page number of the returned results. The starting page is counted from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ListDeviceCertificateByCaSnRequest extends TeaModel {
     public String pageNo;
 
     /**
+     * <p>The maximum number of query records to display per page. Value range: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

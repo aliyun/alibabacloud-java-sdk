@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDeviceCertificateRequest extends TeaModel {
     /**
+     * <p>The serial number of the CA certificate to which the device certificate belongs. The serial number is the unique identifier of a CA certificate. CA certificates are used to validate device certificates.</p>
+     * <p>The serial number of a CA certificate cannot exceed 128 bytes in size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,8 @@ public class DeleteDeviceCertificateRequest extends TeaModel {
     public String caSn;
 
     /**
+     * <p>The serial number of the device certificate whose registration information you want to delete. The serial number is the unique identifier of a device.</p>
+     * <p>The serial number of a device certificate cannot exceed 128 bytes in size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +27,7 @@ public class DeleteDeviceCertificateRequest extends TeaModel {
     public String deviceSn;
 
     /**
+     * <p>The ID of the ApsaraMQ for MQTT instance to which the device certificate is bound.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

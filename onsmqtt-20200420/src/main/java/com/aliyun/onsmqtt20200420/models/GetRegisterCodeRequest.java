@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRegisterCodeRequest extends TeaModel {
     /**
+     * <p>The ID of the ApsaraMQ for MQTT instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

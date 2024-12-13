@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRegisterCodeResponseBody extends TeaModel {
     /**
+     * <p>The registration code of the CA certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>13274673-8f90-4630-bea1-9cccb25756ad2089******</p>
      */
@@ -12,6 +14,8 @@ public class GetRegisterCodeResponseBody extends TeaModel {
     public String registerCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
      */

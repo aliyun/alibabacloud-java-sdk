@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CloseConnectionResponseBody extends TeaModel {
     /**
+     * <p>Return code of the interface: 200 indicates success. Other values indicate error codes. For details about the error codes, see Error Codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CloseConnectionResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Call result information</p>
+     * 
      * <strong>example:</strong>
      * <p>operation success.</p>
      */
@@ -28,6 +32,8 @@ public class CloseConnectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. true means success, false means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

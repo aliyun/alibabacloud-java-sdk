@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAuthPermissionRequest extends TeaModel {
     /**
+     * <p>Specifies whether to allow or deny access.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateCustomAuthPermissionRequest extends TeaModel {
     public String effect;
 
     /**
+     * <p>Username or Client ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,11 @@ public class UpdateCustomAuthPermissionRequest extends TeaModel {
     public String identity;
 
     /**
+     * <p>The identity type. Valid values:</p>
+     * <ul>
+     * <li>USER</li>
+     * <li>CLIENT</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +39,7 @@ public class UpdateCustomAuthPermissionRequest extends TeaModel {
     public String identityType;
 
     /**
+     * <p>ID of the Cloud Message Queue MQTT version instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +49,7 @@ public class UpdateCustomAuthPermissionRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The permissions that you want to grant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +59,7 @@ public class UpdateCustomAuthPermissionRequest extends TeaModel {
     public String permitAction;
 
     /**
+     * <p>Authorized Topic, supporting multi-level MQTT topics and wildcards.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
