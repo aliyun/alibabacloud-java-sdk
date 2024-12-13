@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeviceCredentialClientIdRequest extends TeaModel {
     /**
+     * <p>Group ID of the MQTT version of the micro message queue.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListDeviceCredentialClientIdRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The ID of the Cloud Message Queue MQTT version instance, which must match the actual instance ID used by the client. You can obtain this ID from the <strong>Instance Details</strong> page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,18 @@ public class ListDeviceCredentialClientIdRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Token for starting the next page query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FFdXXXXXWa</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>Indicates the page number of the returned results. The starting page is counted from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +43,8 @@ public class ListDeviceCredentialClientIdRequest extends TeaModel {
     public String pageNo;
 
     /**
+     * <p>The maximum number of query records to display per page. 
+     * Value range: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCaCertificateRequest extends TeaModel {
     /**
+     * <p>The instance ID bound to the CA certificate, which is the instance ID of the MQTT version of the cloud message queue.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetCaCertificateRequest extends TeaModel {
     public String mqttInstanceId;
 
     /**
+     * <p>The SN serial number of the CA certificate to be queried, used to uniquely identify a CA certificate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

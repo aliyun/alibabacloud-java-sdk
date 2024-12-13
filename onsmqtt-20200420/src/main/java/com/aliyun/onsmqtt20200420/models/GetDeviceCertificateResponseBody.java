@@ -4,10 +4,15 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceCertificateResponseBody extends TeaModel {
+    /**
+     * <p>Certificate details.</p>
+     */
     @NameInMap("Data")
     public GetDeviceCertificateResponseBodyData data;
 
     /**
+     * <p>Public parameters, each request ID is unique and can be used for troubleshooting and problem localization.</p>
+     * 
      * <strong>example:</strong>
      * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
      */
@@ -37,6 +42,8 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
 
     public static class GetDeviceCertificateResponseBodyData extends TeaModel {
         /**
+         * <p>The SN serial number of the CA certificate to which the device certificate belongs, used to uniquely identify a CA certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>00f26900ba87******</p>
          */
@@ -44,6 +51,9 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
         public String caSn;
 
         /**
+         * <p>Content of the device certificate.</p>
+         * <p> represents a new line.</p>
+         * 
          * <strong>example:</strong>
          * <p>-----BEGIN DEVICECERTIFICATE-----\nMIIDuzCCAqdGVzdC5jbi1xaW5n******\n-----END DEVICECERTIFICATE-----</p>
          */
@@ -51,6 +61,8 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
         public String deviceContent;
 
         /**
+         * <p>Name of the device certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>mqtt_device</p>
          */
@@ -58,6 +70,8 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
         public String deviceName;
 
         /**
+         * <p>The SN serial number of the device certificate, used to uniquely identify a device certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>356217374433******</p>
          */
@@ -65,6 +79,14 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
         public String deviceSn;
 
         /**
+         * <p>The status of the device certificate. The values are as follows:</p>
+         * <ul>
+         * <li><strong>0</strong>: Indicates that the certificate is in an inactive state. - <strong>1</strong>: Indicates that the certificate is in an active state.<blockquote>
+         * <p>After the device certificate is registered, it is in an active state by default.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -72,6 +94,8 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The start time when the device certificate becomes effective. The format is a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1654137303000</p>
          */
@@ -79,6 +103,8 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
         public String validBegin;
 
         /**
+         * <p>The end time when the device certificate becomes effective. The format is a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1969497303000</p>
          */

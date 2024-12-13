@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCaCertificateRequest extends TeaModel {
     /**
+     * <p>The instance ID of the Cloud Message Queue MQTT version, indicating which instance\&quot;s CA certificates need to be viewed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListCaCertificateRequest extends TeaModel {
     public String mqttInstanceId;
 
     /**
+     * <p>Indicates the page number of the returned results. The starting page is counted from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListCaCertificateRequest extends TeaModel {
     public String pageNo;
 
     /**
+     * <p>The maximum number of query records to display per page. Value range: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

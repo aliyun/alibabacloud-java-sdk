@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
     /**
+     * <p>Error code returned upon failed invocation. For more information, see Error Codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Information</p>
+     * 
      * <strong>example:</strong>
      * <p>operation success.</p>
      */
@@ -28,6 +32,8 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. true: Call succeeded. false: Call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

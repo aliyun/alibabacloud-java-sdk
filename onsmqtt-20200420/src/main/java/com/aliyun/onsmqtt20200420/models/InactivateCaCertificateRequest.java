@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class InactivateCaCertificateRequest extends TeaModel {
     /**
+     * <p>The ID of the ApsaraMQ for MQTT instance to which the CA certificate is bound.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class InactivateCaCertificateRequest extends TeaModel {
     public String mqttInstanceId;
 
     /**
+     * <p>The serial number of the CA certificate that you want to deregister. The serial number is the unique identifier of a CA certificate.</p>
+     * <p>The serial number of a CA certificate cannot exceed 128 bytes in size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
