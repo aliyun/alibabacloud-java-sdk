@@ -833,6 +833,9 @@ public class GetFileResponseBody extends TeaModel {
         @NameInMap("EndEffectDate")
         public Long endEffectDate;
 
+        @NameInMap("IgnoreParentSkipRunningProperty")
+        public String ignoreParentSkipRunningProperty;
+
         /**
          * <p>The output names of the parent files on which the current file depends.</p>
          */
@@ -943,6 +946,9 @@ public class GetFileResponseBody extends TeaModel {
         @NameInMap("Stop")
         public Boolean stop;
 
+        @NameInMap("Timeout")
+        public Integer timeout;
+
         public static GetFileResponseBodyDataNodeConfiguration build(java.util.Map<String, ?> map) throws Exception {
             GetFileResponseBodyDataNodeConfiguration self = new GetFileResponseBodyDataNodeConfiguration();
             return TeaModel.build(map, self);
@@ -1010,6 +1016,14 @@ public class GetFileResponseBody extends TeaModel {
         }
         public Long getEndEffectDate() {
             return this.endEffectDate;
+        }
+
+        public GetFileResponseBodyDataNodeConfiguration setIgnoreParentSkipRunningProperty(String ignoreParentSkipRunningProperty) {
+            this.ignoreParentSkipRunningProperty = ignoreParentSkipRunningProperty;
+            return this;
+        }
+        public String getIgnoreParentSkipRunningProperty() {
+            return this.ignoreParentSkipRunningProperty;
         }
 
         public GetFileResponseBodyDataNodeConfiguration setInputList(java.util.List<GetFileResponseBodyDataNodeConfigurationInputList> inputList) {
@@ -1098,6 +1112,14 @@ public class GetFileResponseBody extends TeaModel {
         }
         public Boolean getStop() {
             return this.stop;
+        }
+
+        public GetFileResponseBodyDataNodeConfiguration setTimeout(Integer timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public Integer getTimeout() {
+            return this.timeout;
         }
 
     }

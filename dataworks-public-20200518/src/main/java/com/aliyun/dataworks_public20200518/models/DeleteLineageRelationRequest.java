@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLineageRelationRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the destination entity.</p>
+     * <p>Destination entity unique identifier</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteLineageRelationRequest extends TeaModel {
     public String destEntityQualifiedName;
 
     /**
-     * <p>The unique identifier of the lineage.</p>
+     * <p>Lineage relationship unique identifier</p>
      * 
      * <strong>example:</strong>
      * <p>dfazcdfdfccdedd</p>
@@ -23,11 +23,17 @@ public class DeleteLineageRelationRequest extends TeaModel {
     @NameInMap("RelationshipGuid")
     public String relationshipGuid;
 
+    /**
+     * <p>Relationship type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sql</p>
+     */
     @NameInMap("RelationshipType")
     public String relationshipType;
 
     /**
-     * <p>The unique identifier of the source entity.</p>
+     * <p>Source entity unique identifier</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

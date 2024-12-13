@@ -348,6 +348,9 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("Stop")
     public Boolean stop;
 
+    @NameInMap("Timeout")
+    public Integer timeout;
+
     public static CreateFileRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFileRequest self = new CreateFileRequest();
         return TeaModel.build(map, self);
@@ -607,6 +610,14 @@ public class CreateFileRequest extends TeaModel {
     }
     public Boolean getStop() {
         return this.stop;
+    }
+
+    public CreateFileRequest setTimeout(Integer timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Integer getTimeout() {
+        return this.timeout;
     }
 
 }
