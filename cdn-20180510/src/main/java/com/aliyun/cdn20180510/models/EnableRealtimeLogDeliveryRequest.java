@@ -14,6 +14,15 @@ public class EnableRealtimeLogDeliveryRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("Logstore")
+    public String logstore;
+
+    @NameInMap("Project")
+    public String project;
+
+    @NameInMap("Region")
+    public String region;
+
     public static EnableRealtimeLogDeliveryRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableRealtimeLogDeliveryRequest self = new EnableRealtimeLogDeliveryRequest();
         return TeaModel.build(map, self);
@@ -25,6 +34,30 @@ public class EnableRealtimeLogDeliveryRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public EnableRealtimeLogDeliveryRequest setLogstore(String logstore) {
+        this.logstore = logstore;
+        return this;
+    }
+    public String getLogstore() {
+        return this.logstore;
+    }
+
+    public EnableRealtimeLogDeliveryRequest setProject(String project) {
+        this.project = project;
+        return this;
+    }
+    public String getProject() {
+        return this.project;
+    }
+
+    public EnableRealtimeLogDeliveryRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
 }
