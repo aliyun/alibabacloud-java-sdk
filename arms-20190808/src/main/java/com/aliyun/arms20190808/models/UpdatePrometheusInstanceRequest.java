@@ -68,6 +68,9 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     @NameInMap("EnableAuthToken")
     public Boolean enableAuthToken;
 
+    @NameInMap("PaymentType")
+    public String paymentType;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -155,6 +158,14 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     }
     public Boolean getEnableAuthToken() {
         return this.enableAuthToken;
+    }
+
+    public UpdatePrometheusInstanceRequest setPaymentType(String paymentType) {
+        this.paymentType = paymentType;
+        return this;
+    }
+    public String getPaymentType() {
+        return this.paymentType;
     }
 
     public UpdatePrometheusInstanceRequest setRegionId(String regionId) {

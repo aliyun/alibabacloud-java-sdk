@@ -77,6 +77,9 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     @NameInMap("GrafanaInstanceId")
     public String grafanaInstanceId;
 
+    @NameInMap("PaymentType")
+    public String paymentType;
+
     /**
      * <p>The ID of the region. If you use a Prometheus instance to monitor an Alibaba Cloud service in China, this parameter must be set to cn-shanghai.</p>
      * <p>This parameter is required.</p>
@@ -252,6 +255,14 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     }
     public String getGrafanaInstanceId() {
         return this.grafanaInstanceId;
+    }
+
+    public CreatePrometheusInstanceRequest setPaymentType(String paymentType) {
+        this.paymentType = paymentType;
+        return this;
+    }
+    public String getPaymentType() {
+        return this.paymentType;
     }
 
     public CreatePrometheusInstanceRequest setRegionId(String regionId) {
