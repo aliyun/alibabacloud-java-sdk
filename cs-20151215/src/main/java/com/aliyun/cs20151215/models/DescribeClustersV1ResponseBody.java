@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClustersV1ResponseBody extends TeaModel {
     /**
-     * <p>The details of the clusters.</p>
+     * <p>Details of the clusters.</p>
      */
     @NameInMap("clusters")
     public java.util.List<DescribeClustersV1ResponseBodyClusters> clusters;
@@ -153,7 +153,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The pod CIDR block.</p>
+         * <p>The pod CIDR block and the configuration of the Flannel network plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>172.20.0.0/16</p>
@@ -327,7 +327,11 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String profile;
 
         /**
-         * <p>The kube-proxy mode. Valid values: ipvs and iptables.</p>
+         * <p>The Kube-proxy mode. Valid values:</p>
+         * <ul>
+         * <li><code>iptables</code>: a mature and stable kube-proxy mode that uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</li>
+         * <li><code>ipvs</code>: provides high performance and uses IP Virtual Server (IPVS). This allows you to configure service discovery and load balancing. This mode is suitable for clusters that are required to run a large number of services. We recommend that you use this mode in scenarios that require high load balancing performance.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ipvs</p>
@@ -403,7 +407,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:</p>
+         * <p>Tis parameter is deprecated. Use the container_cidr parameter to obtain the pod CIDR block. The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:</p>
          * <ul>
          * <li>10.0.0.0/8</li>
          * <li>172.16-31.0.0/12-16</li>
@@ -426,7 +430,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public java.util.List<Tag> tags;
 
         /**
-         * <p>The time zone.</p>
+         * <p>The time zone</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>

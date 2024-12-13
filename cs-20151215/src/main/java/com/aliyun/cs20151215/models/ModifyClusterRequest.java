@@ -52,12 +52,12 @@ public class ModifyClusterRequest extends TeaModel {
     public ModifyClusterRequestControlPlaneConfig controlPlaneConfig;
 
     /**
-     * <p>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
+     * <p>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
      * <ul>
      * <li><code>true</code>: enables cluster deletion protection.</li>
      * <li><code>false</code>: disables cluster deletion protection.</li>
      * </ul>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: <code>false</code></p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -84,7 +84,7 @@ public class ModifyClusterRequest extends TeaModel {
      * <li><code>true</code>: remaps the test domain name of the cluster.</li>
      * <li><code>false</code>: does not remap the test domain name of the cluster.</li>
      * </ul>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: <code>false</code></p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -107,7 +107,7 @@ public class ModifyClusterRequest extends TeaModel {
      * <li><code>true</code>: enables instance deletion protection.</li>
      * <li><code>false</code>: disables instance deletion protection.</li>
      * </ul>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: <code>false</code></p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -142,6 +142,15 @@ public class ModifyClusterRequest extends TeaModel {
     @NameInMap("system_events_logging")
     public ModifyClusterRequestSystemEventsLogging systemEventsLogging;
 
+    /**
+     * <p>The vSwitches of the control planes. This parameter can be used to change the vSwitches of the control planes in an ACK managed cluster. Take note of the following items:</p>
+     * <ul>
+     * <li>This parameter overwrites the existing configuration. You must specify all vSwitches of the control planes.</li>
+     * <li>The control planes restart during the update process. Exercise caution when you perform this operation.</li>
+     * <li>Make sure that all security groups of the cluster, including the security groups of the control planes, all node pools, and container network, are allowed to access the CIDR blocks of the new vSwitches. This ensures that the nodes and containers can connect to the API server.</li>
+     * <li>If the new vSwitches of the control planes are configured with an access control list (ACL), ensure that the ACL allows communication between the new vSwitches and the CIDR blocks of cluster nodes and container networks.</li>
+     * </ul>
+     */
     @NameInMap("vswitch_ids")
     public java.util.List<String> vswitchIds;
 
@@ -595,11 +604,12 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestOperationPolicyClusterAutoUpgrade extends TeaModel {
         /**
-         * <p>The frequency of auto cluster updates. Valid values:</p>
+         * <p>The automatic update frequency. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>patch</li>
-         * <li>stable</li>
-         * <li>rapid</li>
+         * <li>patch: specifies the latest patch version.</li>
+         * <li>stables: the second-latest minor version.</li>
+         * <li>rapid: the latest minor version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -609,7 +619,7 @@ public class ModifyClusterRequest extends TeaModel {
         public String channel;
 
         /**
-         * <p>Specifies whether to enable auto cluster update.</p>
+         * <p>Specifies whether to enable automatic update.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -642,7 +652,7 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestOperationPolicy extends TeaModel {
         /**
-         * <p>The configurations of auto cluster update.</p>
+         * <p>The configurations of automatic update.</p>
          */
         @NameInMap("cluster_auto_upgrade")
         public ModifyClusterRequestOperationPolicyClusterAutoUpgrade clusterAutoUpgrade;

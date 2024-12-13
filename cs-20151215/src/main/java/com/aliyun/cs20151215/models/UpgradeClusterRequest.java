@@ -37,7 +37,7 @@ public class UpgradeClusterRequest extends TeaModel {
     public String nextVersion;
 
     /**
-     * <p>Policy of rolling.</p>
+     * <p>The rotation configuration.</p>
      */
     @NameInMap("rolling_policy")
     public UpgradeClusterRequestRollingPolicy rollingPolicy;
@@ -99,7 +99,7 @@ public class UpgradeClusterRequest extends TeaModel {
 
     public static class UpgradeClusterRequestRollingPolicy extends TeaModel {
         /**
-         * <p>Maximum number of executions per batch.</p>
+         * <p>The maximum size of each batch.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

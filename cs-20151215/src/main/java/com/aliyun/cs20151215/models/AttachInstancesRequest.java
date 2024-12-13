@@ -8,9 +8,9 @@ public class AttachInstancesRequest extends TeaModel {
      * <p>The CPU management policy of the node. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
      * <ul>
      * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</li>
-     * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
+     * <li><code>none</code>: uses default CPU affinity.</li>
      * </ul>
-     * <p>Default value: <code>none</code>.</p>
+     * <p>Default value: <code>none</code></p>
      * <blockquote>
      * <p> This parameter is not supported if you specify <code>nodepool_id</code>.</p>
      * </blockquote>
@@ -22,7 +22,7 @@ public class AttachInstancesRequest extends TeaModel {
     public String cpuPolicy;
 
     /**
-     * <p>Specifies whether to store container data and images on data disks. Valid values:</p>
+     * <p>Specifies whether to store container data and images on data disks. Valid value:</p>
      * <ul>
      * <li><code>true</code>: stores container data and images on data disks.</li>
      * <li><code>false</code>: does not store container data or images on data disks.</li>
@@ -68,7 +68,7 @@ public class AttachInstancesRequest extends TeaModel {
     public java.util.List<String> instances;
 
     /**
-     * <p>Specifies whether the node that you want to add is an Edge Node Service (ENS) node. Valid values:</p>
+     * <p>Specifies whether the node that you want to add is an Edge Node Service (ENS) node. Valid value:</p>
      * <ul>
      * <li><code>true</code>: the node that you want to add is an ENS node.</li>
      * <li><code>false</code>: the node that you want to add is not an ENS node.</li>
@@ -85,7 +85,7 @@ public class AttachInstancesRequest extends TeaModel {
     public Boolean isEdgeWorker;
 
     /**
-     * <p>Specifies whether to retain the instance name. Valid values:</p>
+     * <p>Specifies whether to retain the instance name. Valid value:</p>
      * <ul>
      * <li><code>true</code>: retains the instance name.</li>
      * <li><code>false</code>: does not retain the instance name.</li>
@@ -158,7 +158,7 @@ public class AttachInstancesRequest extends TeaModel {
     public java.util.List<Tag> tags;
 
     /**
-     * <p>The user-defined data on the node. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
+     * <p>The user-defined data on the node. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Use instance user data to automatically run commands or scripts on instance startup</a>.</p>
      * <blockquote>
      * <p> This parameter is not supported if you specify <code>nodepool_id</code>.</p>
      * </blockquote>
