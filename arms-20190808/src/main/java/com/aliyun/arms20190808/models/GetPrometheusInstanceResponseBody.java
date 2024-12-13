@@ -278,6 +278,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("PaymentType")
         public String paymentType;
 
+        @NameInMap("PaymentTypeUpdateTime")
+        public String paymentTypeUpdateTime;
+
         /**
          * <p>The product to which the Prometheus instance belongs. Valid values: arms and cms.</p>
          * 
@@ -576,6 +579,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
         public String getPaymentType() {
             return this.paymentType;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setPaymentTypeUpdateTime(String paymentTypeUpdateTime) {
+            this.paymentTypeUpdateTime = paymentTypeUpdateTime;
+            return this;
+        }
+        public String getPaymentTypeUpdateTime() {
+            return this.paymentTypeUpdateTime;
         }
 
         public GetPrometheusInstanceResponseBodyData setProduct(String product) {
