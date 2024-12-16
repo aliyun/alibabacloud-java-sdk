@@ -42,6 +42,17 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
 
     public static class GetPasswordExpirationConfigurationResponseBodyPasswordExpirationConfiguration extends TeaModel {
         /**
+         * <p>The list of valid authentication IDs. The default is all [&quot;ia_all&quot;]</p>
+         * <p>ia_all: All. If you fill in this value, you cannot fill in other values</p>
+         * <p>ia_password: Account password login</p>
+         * <p>ia_otp_sms: SMS verification code login method</p>
+         * <p>ia_webauthn: WebAuthn authenticator login method</p>
+         * <p>idp_xxx: Specific identity provider authentication method</p>
+         */
+        @NameInMap("EffectiveAuthenticationSourceIds")
+        public java.util.List<String> effectiveAuthenticationSourceIds;
+
+        /**
          * <p>The action to take when a password expires. Valid values:</p>
          * <ul>
          * <li>forbid_login: Prohibit the user from using the password to log on to IDaaS.</li>
@@ -120,6 +131,14 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         public static GetPasswordExpirationConfigurationResponseBodyPasswordExpirationConfiguration build(java.util.Map<String, ?> map) throws Exception {
             GetPasswordExpirationConfigurationResponseBodyPasswordExpirationConfiguration self = new GetPasswordExpirationConfigurationResponseBodyPasswordExpirationConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public GetPasswordExpirationConfigurationResponseBodyPasswordExpirationConfiguration setEffectiveAuthenticationSourceIds(java.util.List<String> effectiveAuthenticationSourceIds) {
+            this.effectiveAuthenticationSourceIds = effectiveAuthenticationSourceIds;
+            return this;
+        }
+        public java.util.List<String> getEffectiveAuthenticationSourceIds() {
+            return this.effectiveAuthenticationSourceIds;
         }
 
         public GetPasswordExpirationConfigurationResponseBodyPasswordExpirationConfiguration setPasswordExpirationAction(String passwordExpirationAction) {

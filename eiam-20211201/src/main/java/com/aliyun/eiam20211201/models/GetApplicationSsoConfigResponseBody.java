@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationSsoConfigResponseBody extends TeaModel {
     /**
-     * <p>The SSO configuration information of the application.</p>
+     * <p>The single sign-on (SSO) configuration information of the application.</p>
      */
     @NameInMap("ApplicationSsoConfig")
     public GetApplicationSsoConfigResponseBodyApplicationSsoConfig applicationSsoConfig;
@@ -556,9 +556,53 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigOptionalRelayStates extends TeaModel {
+        /**
+         * <p>The display name of the RelayState</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ram Account SSO</p>
+         */
+        @NameInMap("DisplayName")
+        public String displayName;
+
+        /**
+         * <p>RelayState.The user will see the display names of multiple optional redirect addresses in the application card of the application portal. After the user clicks and completes SSO, they will automatically jump to the corresponding address. This field can only be filled in after the default redirect address is filled in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://home.console.aliyun.com">https://home.console.aliyun.com</a></p>
+         */
+        @NameInMap("RelayState")
+        public String relayState;
+
+        public static GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigOptionalRelayStates build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigOptionalRelayStates self = new GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigOptionalRelayStates();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigOptionalRelayStates setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigOptionalRelayStates setRelayState(String relayState) {
+            this.relayState = relayState;
+            return this;
+        }
+        public String getRelayState() {
+            return this.relayState;
+        }
+
+    }
+
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig extends TeaModel {
         /**
-         * <p>assertion是否签名</p>
+         * <p>Whether the Assertion needs a signature. ResponseSigned and AssertionSigned cannot be false at the same time.</p>
+         * <p>true: signature is required.
+         * false: signature is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -581,6 +625,12 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         @NameInMap("DefaultRelayState")
         public String defaultRelayState;
 
+        /**
+         * <p>The custom issuer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/">https://example.com/</a></p>
+         */
         @NameInMap("IdPEntityId")
         public String idPEntityId;
 
@@ -609,7 +659,15 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String nameIdValueExpression;
 
         /**
-         * <p>response是否签名</p>
+         * <p>Optional RelayState. The user will see the display names of multiple optional redirect addresses in the application card of the application portal. After the user clicks and completes SSO, they will automatically jump to the corresponding address. This field can only be filled in after the default redirect address is filled in.</p>
+         */
+        @NameInMap("OptionalRelayStates")
+        public java.util.List<GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigOptionalRelayStates> optionalRelayStates;
+
+        /**
+         * <p>Whether the response needs to be signed. ResponseSigned and AssertionSigned cannot be false at the same time.</p>
+         * <p>true: signature is required.
+         * false: signature is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -697,6 +755,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             return this.nameIdValueExpression;
         }
 
+        public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig setOptionalRelayStates(java.util.List<GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigOptionalRelayStates> optionalRelayStates) {
+            this.optionalRelayStates = optionalRelayStates;
+            return this;
+        }
+        public java.util.List<GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigOptionalRelayStates> getOptionalRelayStates() {
+            return this.optionalRelayStates;
+        }
+
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig setResponseSigned(Boolean responseSigned) {
             this.responseSigned = responseSigned;
             return this;
@@ -767,7 +833,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigProtocolEndpointDomain protocolEndpointDomain;
 
         /**
-         * <p>The Security Assertion Markup Language (SAML)-based SSO configuration attributes of the application. This parameter is returned only when the SSO protocol of the application is SAML 2.0.</p>
+         * <p>The Security Assertion Markup Language (SAML)-based SSO configuration attributes of the application. This parameter is returned only if the SSO protocol of the application is SAML 2.0.</p>
          */
         @NameInMap("SamlSsoConfig")
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig samlSsoConfig;
