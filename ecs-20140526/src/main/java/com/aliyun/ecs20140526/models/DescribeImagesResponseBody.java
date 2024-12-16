@@ -261,6 +261,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("Device")
         public String device;
 
+        @NameInMap("Encrypted")
+        public String encrypted;
+
         /**
          * <p>The format of the image.</p>
          * 
@@ -344,6 +347,14 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
         public String getDevice() {
             return this.device;
+        }
+
+        public DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping setEncrypted(String encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public String getEncrypted() {
+            return this.encrypted;
         }
 
         public DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping setFormat(String format) {

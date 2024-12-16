@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RenewReservedInstancesResponseBody extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023912123****</p>
      */
@@ -12,7 +14,7 @@ public class RenewReservedInstancesResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The IDs of the reserved instances.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8C314443-AF0D-4766-9562-C83B7F1****</p>
@@ -21,7 +23,7 @@ public class RenewReservedInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the reserved instance.</p>
+     * <p>The IDs of the reserved instances.</p>
      */
     @NameInMap("ReservedInstanceIdSets")
     public RenewReservedInstancesResponseBodyReservedInstanceIdSets reservedInstanceIdSets;

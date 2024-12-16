@@ -388,20 +388,16 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResources conditionSupportedResources;
 
         /**
-         * <p>The information about the resources.</p>
+         * <p>The information about the supported resources.</p>
          */
         @NameInMap("SupportedResources")
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources;
 
         /**
-         * <p>The type of the resources. Valid values:</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>Zone</li>
-         * <li>IoOptimized</li>
          * <li>InstanceType</li>
          * <li>SystemDisk</li>
-         * <li>DataDisk</li>
-         * <li>Network</li>
          * </ul>
          * 
          * <strong>example:</strong>

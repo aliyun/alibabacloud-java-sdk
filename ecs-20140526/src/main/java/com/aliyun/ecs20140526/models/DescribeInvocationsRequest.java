@@ -106,7 +106,7 @@ public class DescribeInvocationsRequest extends TeaModel {
      * <li><p>Failed:</p>
      * <ul>
      * <li>Scheduled task: The overall execution state can never be Failed.</li>
-     * <li>One-time task: The execution fails on all instances.</li>
+     * <li>One-time task: The execution failed on all instances.</li>
      * </ul>
      * </li>
      * <li><p>Stopped: The task is stopped.</p>
@@ -114,6 +114,10 @@ public class DescribeInvocationsRequest extends TeaModel {
      * <li><p>Stopping: The task is being stopped.</p>
      * </li>
      * <li><p>PartialFailed: The task fails on some instances. If you specify both this parameter and <code>InstanceId</code>, this parameter does not take effect.</p>
+     * </li>
+     * <li><p>Pending: The command is being verified or sent. If the execution state on at least one instance is Pending, the overall execution state is Pending.</p>
+     * </li>
+     * <li><p>Scheduled: The command that is set to run on a schedule is sent and waiting to be run. If the execution state on at least one instance is Scheduled, the overall execution state is Scheduled.</p>
      * </li>
      * </ul>
      * 
@@ -150,9 +154,9 @@ public class DescribeInvocationsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return.</p>
-     * <p>Page numbers start from 1.</p>
-     * <p>Default value: 1.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -161,9 +165,9 @@ public class DescribeInvocationsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
-     * <p>Maximum value: 50.</p>
-     * <p>Default value: 10.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10</p>

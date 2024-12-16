@@ -11,7 +11,8 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public java.util.List<String> conditions;
 
     /**
-     * <p>The number of vCPUs of the instance type. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. This parameter takes effect only when DestinationResource is set to InstanceType.</p>
+     * <p>The number of vCPUs of the instance type. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+     * <p>This parameter is valid only when the DestinationResource parameter is set to InstanceType.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -20,10 +21,13 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public Integer cores;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type that you want to change. Valid values:</p>
      * <ul>
-     * <li>InstanceType</li>
-     * <li>SystemDisk</li>
+     * <li><p>InstanceType</p>
+     * </li>
+     * <li><p>SystemDisk</p>
+     * <p>If you set this parameter to SystemDisk, you must specify the InstanceType parameter. In this case, this operation queries the system disk categories supported by the specified instance type.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +38,8 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public String destinationResource;
 
     /**
-     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list. This parameter must be specified when DestinationResource is set to SystemDisk.</p>
+     * <p>The instance type to which you want to change the instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
+     * <p>If you set the DestinationResource parameter to SystemDisk, you must specify the InstanceType parameter. In this case, this operation queries the system disk categories supported by the specified instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g5.large</p>
@@ -43,7 +48,8 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The memory size of the instance type. Unit: GiB. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. This parameter takes effect only when DestinationResource is set to InstanceType.</p>
+     * <p>The memory size of the instance type. Unit: GiB. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+     * <p>This parameter is valid only when the DestinationResource parameter is set to InstanceType.</p>
      * 
      * <strong>example:</strong>
      * <p>8.0</p>
@@ -105,7 +111,7 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance for which you want to change the instance type or system disk category. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -115,7 +121,7 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource. For example, when DestinationResource is set to InstanceType, this parameter can be interpreted as InstanceId.</p>
+     * <p>The ID of the instance for which you want to change the instance type or system disk category.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,7 +137,8 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The zone ID.</p>
+     * <p>The ID of the destination zone to which you want to migrate the instance.</p>
+     * <p>If you want to change the instance type across zones, you must specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-e</p>

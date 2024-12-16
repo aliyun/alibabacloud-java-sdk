@@ -900,7 +900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Assigns one or more secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that is connected to the ENI. Alternatively, you can specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.</p>
+     * <p>Assigns one or more secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch connected to the ENI. You can also specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.</p>
      * 
      * @param request AssignPrivateIpAddressesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -985,7 +985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Assigns one or more secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that is connected to the ENI. Alternatively, you can specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.</p>
+     * <p>Assigns one or more secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch connected to the ENI. You can also specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.</p>
      * 
      * @param request AssignPrivateIpAddressesRequest
      * @return AssignPrivateIpAddressesResponse
@@ -15007,8 +15007,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A private pool is generated after an elasticity assurance or a capacity reservation is created. The private pool is associated with information about the instances that are created by using the private pool. You can configure a private pool when you create an instance. This way, the instance matches the elasticity assurance or capacity reservation that is associated with the private pool.
-     * When a private pool expires, data about the association between instances and the private pool becomes invalid. If you call this operation to query the information about the private pool, empty values are returned.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>After an elasticity assurance or a capacity reservation is created, a private pool is generated and associated with information about the instances that are created by using the private pool. You can specify a private pool when you create an instance. This way, the instance matches the elasticity assurance or capacity reservation that is associated with the private pool.
+     * When a private pool expires, data related to the association between instances and the private pool becomes invalid. If you call this operation to query information about the private pool, empty values are returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about the private pools that Elastic Compute Service (ECS) instances match.</p>
@@ -15071,8 +15072,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A private pool is generated after an elasticity assurance or a capacity reservation is created. The private pool is associated with information about the instances that are created by using the private pool. You can configure a private pool when you create an instance. This way, the instance matches the elasticity assurance or capacity reservation that is associated with the private pool.
-     * When a private pool expires, data about the association between instances and the private pool becomes invalid. If you call this operation to query the information about the private pool, empty values are returned.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>After an elasticity assurance or a capacity reservation is created, a private pool is generated and associated with information about the instances that are created by using the private pool. You can specify a private pool when you create an instance. This way, the instance matches the elasticity assurance or capacity reservation that is associated with the private pool.
+     * When a private pool expires, data related to the association between instances and the private pool becomes invalid. If you call this operation to query information about the private pool, empty values are returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about the private pools that Elastic Compute Service (ECS) instances match.</p>
@@ -16833,17 +16835,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>  After you run a command, the command may fail to run or may return unexpected results. You can call this operation to query the execution results.</p>
      * <ul>
-     * <li>After you run a command, the command may fail to run or may return unexpected results. You can call this operation to query the execution results.</li>
      * <li>You can query information about command executions within the last four weeks. Up to 100,000 pieces of execution information can be retained.</li>
      * <li>You can <a href="https://help.aliyun.com/document_detail/2669130.html">subscribe to Cloud Assistant task status events</a> to obtain command execution results from the events. This helps you reduce the number of times to poll API operations and improve efficiency.</li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: During a paged query, when you call the DescribeInvocations operation to retrieve the first page of results, use <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the DescribeInvocations operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries per page, and then use <code>PageNumber</code> to specify the page number. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
-     * </li>
-     * <li>Comparison between the <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code> operations:<ul>
+     * <li>During a paged query, when you call the DescribeInvocations operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeInvocations operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
+     * <li>Differences between the <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code> operations:<ul>
      * <li>Scenario in which the <code>RunCommand</code> or <code>InvokeCommand</code> operation is called to run a Cloud Assistant command on multiple instances:<ul>
      * <li>The <code>DescribeInvocations</code> operation queries the execution status of the command on each instance and the overall execution status of the command on all instances.</li>
      * <li>The <code>DescribeInvocationResults</code> operation queries only the execution status of the command on each instance.</li>
@@ -16976,17 +16973,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>  After you run a command, the command may fail to run or may return unexpected results. You can call this operation to query the execution results.</p>
      * <ul>
-     * <li>After you run a command, the command may fail to run or may return unexpected results. You can call this operation to query the execution results.</li>
      * <li>You can query information about command executions within the last four weeks. Up to 100,000 pieces of execution information can be retained.</li>
      * <li>You can <a href="https://help.aliyun.com/document_detail/2669130.html">subscribe to Cloud Assistant task status events</a> to obtain command execution results from the events. This helps you reduce the number of times to poll API operations and improve efficiency.</li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: During a paged query, when you call the DescribeInvocations operation to retrieve the first page of results, use <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the DescribeInvocations operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries per page, and then use <code>PageNumber</code> to specify the page number. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
-     * </li>
-     * <li>Comparison between the <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code> operations:<ul>
+     * <li>During a paged query, when you call the DescribeInvocations operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeInvocations operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
+     * <li>Differences between the <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code> operations:<ul>
      * <li>Scenario in which the <code>RunCommand</code> or <code>InvokeCommand</code> operation is called to run a Cloud Assistant command on multiple instances:<ul>
      * <li>The <code>DescribeInvocations</code> operation queries the execution status of the command on each instance and the overall execution status of the command on all instances.</li>
      * <li>The <code>DescribeInvocationResults</code> operation queries only the execution status of the command on each instance.</li>
@@ -18757,7 +18749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the auto-renewal status of one or more subscription reserved instances.</p>
+     * <p>Queries the auto-renewal attributes of one or more reserved instances, including the auto-renewal duration and auto-renewal status.</p>
      * 
      * @param request DescribeReservedInstanceAutoRenewAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18809,7 +18801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the auto-renewal status of one or more subscription reserved instances.</p>
+     * <p>Queries the auto-renewal attributes of one or more reserved instances, including the auto-renewal duration and auto-renewal status.</p>
      * 
      * @param request DescribeReservedInstanceAutoRenewAttributeRequest
      * @return DescribeReservedInstanceAutoRenewAttributeResponse
@@ -19009,8 +19001,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=Ecs%5C&api=DescribeResourcesModification%5C&type=RPC%5C&version=2014-05-26">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
+     * <p>Examples of common scenarios in which this operation is used:</p>
+     * <h3><a href="#-1"></a>Example 1: Query the instance types to which you can change the instance type of an instance.</h3>
+     * <p>Query the instance types to which you can change the instance type of the i-bp67acfmxazb4p\<em>\</em>\<em>\</em> instance and the inventory of the queried instance types in the zone in which the instance resides.
+     *     http(s)://ecs.aliyuncs.com/?Action=DescribeResourcesModification
+     *     &amp;RegionId=cn-hangzhou
+     *     &amp;ResourceId=i-bp67acfmxazb4p****
+     *     &amp;DestinationResource=InstanceType
+     *     &amp;OperationType=Upgrade
+     *     &amp;<Common request parameters></p>
+     * <h3><a href="#-2"></a>Example 2: Query the instance types to which you can change the instance type of an instance after a system disk category change.</h3>
+     * <p>Query the instance types to which you can change the instance type of the i-bp67acfmxazb4p\<em>\</em>\<em>\</em> instance after a system disk category change and the inventory of the queried instance types in the zone in which the instance resides.
+     *     http(s)://ecs.aliyuncs.com/?Action=DescribeResourcesModification
+     *     &amp;RegionId=cn-hangzhou
+     *     &amp;ResourceId=i-bp67acfmxazb4p****
+     *     &amp;DestinationResource=InstanceType
+     *     &amp;OperationType=Upgrade
+     *     &amp;Conditions.0=DiskCategory
+     *     &amp;<Common request parameters></p>
+     * <h3><a href="#-3"></a>Example 3: Query the system disk categories supported by the instance type to which you want to change the instance type of an instance.</h3>
+     * <p>Query the system disk categories supported by the instance type to which you want to change the instance type of the i-bp67acfmxazb4p\<em>\</em>\<em>\</em> instance and the inventory of the disk categories in the zone in which the instance resides. In this example, the ecs.g7.large instance type is used. To change to the instance type, you must change the system disk category of the instance to a category supported by the instance type.</p>
+     * <blockquote>
+     * <p> You can call this operation as described in Example 2 to query the instance types to which you can change the instance type of an instance.
+     *     http(s)://ecs.aliyuncs.com/?Action=DescribeResourcesModification
+     *     &amp;RegionId=cn-hangzhou
+     *     &amp;ResourceId=i-bp67acfmxazb4p****
+     *     &amp;DestinationResource=SystemDisk
+     *     &amp;OperationType=Upgrade
+     *     &amp;InstanceType=ecs.g7.large
+     *     &amp;<Common request parameters></p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Queries available instance types or system disk categories in a specific zone before you change the instance type or system disk category of an Elastic Compute Service (ECS) instance.</p>
@@ -19097,8 +19117,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=Ecs%5C&api=DescribeResourcesModification%5C&type=RPC%5C&version=2014-05-26">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
+     * <p>Examples of common scenarios in which this operation is used:</p>
+     * <h3><a href="#-1"></a>Example 1: Query the instance types to which you can change the instance type of an instance.</h3>
+     * <p>Query the instance types to which you can change the instance type of the i-bp67acfmxazb4p\<em>\</em>\<em>\</em> instance and the inventory of the queried instance types in the zone in which the instance resides.
+     *     http(s)://ecs.aliyuncs.com/?Action=DescribeResourcesModification
+     *     &amp;RegionId=cn-hangzhou
+     *     &amp;ResourceId=i-bp67acfmxazb4p****
+     *     &amp;DestinationResource=InstanceType
+     *     &amp;OperationType=Upgrade
+     *     &amp;<Common request parameters></p>
+     * <h3><a href="#-2"></a>Example 2: Query the instance types to which you can change the instance type of an instance after a system disk category change.</h3>
+     * <p>Query the instance types to which you can change the instance type of the i-bp67acfmxazb4p\<em>\</em>\<em>\</em> instance after a system disk category change and the inventory of the queried instance types in the zone in which the instance resides.
+     *     http(s)://ecs.aliyuncs.com/?Action=DescribeResourcesModification
+     *     &amp;RegionId=cn-hangzhou
+     *     &amp;ResourceId=i-bp67acfmxazb4p****
+     *     &amp;DestinationResource=InstanceType
+     *     &amp;OperationType=Upgrade
+     *     &amp;Conditions.0=DiskCategory
+     *     &amp;<Common request parameters></p>
+     * <h3><a href="#-3"></a>Example 3: Query the system disk categories supported by the instance type to which you want to change the instance type of an instance.</h3>
+     * <p>Query the system disk categories supported by the instance type to which you want to change the instance type of the i-bp67acfmxazb4p\<em>\</em>\<em>\</em> instance and the inventory of the disk categories in the zone in which the instance resides. In this example, the ecs.g7.large instance type is used. To change to the instance type, you must change the system disk category of the instance to a category supported by the instance type.</p>
+     * <blockquote>
+     * <p> You can call this operation as described in Example 2 to query the instance types to which you can change the instance type of an instance.
+     *     http(s)://ecs.aliyuncs.com/?Action=DescribeResourcesModification
+     *     &amp;RegionId=cn-hangzhou
+     *     &amp;ResourceId=i-bp67acfmxazb4p****
+     *     &amp;DestinationResource=SystemDisk
+     *     &amp;OperationType=Upgrade
+     *     &amp;InstanceType=ecs.g7.large
+     *     &amp;<Common request parameters></p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Queries available instance types or system disk categories in a specific zone before you change the instance type or system disk category of an Elastic Compute Service (ECS) instance.</p>
@@ -20427,21 +20475,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>  This operation is applicable only to I/O optimized preemptible instances that reside in virtual private clouds (VPCs).</p>
      * <ul>
-     * <li>You can call this operation to query information about preemptible instances in the previous 30 days and select suitable instance types based on the query results. The information that you can query includes:<ul>
-     * <li>Average release rate of preemptible instances</li>
-     * <li>Percentage of the average preemptible instance price relative to the pay-as-you-go instance price</li>
-     * <li>Average preemptible instance price that is calculated based on the preceding percentage</li>
+     * <li>You can use one of the following methods to call this operation:<ul>
+     * <li>Specify <code>Cores</code> and <code>Memory</code> or <code>MinCores</code> and <code>MinMemory</code> to query information about the instance types that meet the specified vCPU and memory requirements.</li>
+     * <li>Specify <code>InstanceTypes.N</code> to query information about the specified instance types.</li>
+     * <li>Specify <code>Cores</code> and <code>Memory</code> or <code>MinCores</code> and <code>MinMemory</code>, and then specify <code>InstanceTypeFamily</code> or <code>InstanceFamilyLevel</code> to query information about the instance types that meet the specified vCPU and memory requirements within the specified instance family or at a specified instance family level.</li>
      * </ul>
      * </li>
-     * <li>This operation is applicable only to I/O optimized preemptible instances that reside in virtual private clouds (VPCs).</li>
-     * <li>You can use one of the following methods to query information about preemptible instances in the previous 30 days:<ul>
-     * <li>Configure the <code>Cores</code> and <code>Memory</code> parameters or the <code>MinCores</code> and <code>MinMemory</code> parameters to query information about instance types that meet the specified vCPU and memory requirements.</li>
-     * <li>Configure the <code>InstanceTypes.N</code> parameter to query information about specified instance types.</li>
-     * <li>Configure the <code>Cores</code> and <code>Memory</code> parameters or the <code>MinCores</code> and <code>MinMemory</code> parameters and then configure the <code>InstanceTypeFamily</code> or <code>InstanceFamilyLevel</code> parameter to query information about instance types that meet the specified vCPU and memory requirements within the specified instance family or at a specified instance family level.</li>
-     * </ul>
-     * </li>
+     * <li>You can calculate the average price of preemptible instances based on the percentage of the average preemptible instance price relative to the pay-as-you-go instance price and the pay-as-you-go instance price.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -20533,21 +20575,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>  This operation is applicable only to I/O optimized preemptible instances that reside in virtual private clouds (VPCs).</p>
      * <ul>
-     * <li>You can call this operation to query information about preemptible instances in the previous 30 days and select suitable instance types based on the query results. The information that you can query includes:<ul>
-     * <li>Average release rate of preemptible instances</li>
-     * <li>Percentage of the average preemptible instance price relative to the pay-as-you-go instance price</li>
-     * <li>Average preemptible instance price that is calculated based on the preceding percentage</li>
+     * <li>You can use one of the following methods to call this operation:<ul>
+     * <li>Specify <code>Cores</code> and <code>Memory</code> or <code>MinCores</code> and <code>MinMemory</code> to query information about the instance types that meet the specified vCPU and memory requirements.</li>
+     * <li>Specify <code>InstanceTypes.N</code> to query information about the specified instance types.</li>
+     * <li>Specify <code>Cores</code> and <code>Memory</code> or <code>MinCores</code> and <code>MinMemory</code>, and then specify <code>InstanceTypeFamily</code> or <code>InstanceFamilyLevel</code> to query information about the instance types that meet the specified vCPU and memory requirements within the specified instance family or at a specified instance family level.</li>
      * </ul>
      * </li>
-     * <li>This operation is applicable only to I/O optimized preemptible instances that reside in virtual private clouds (VPCs).</li>
-     * <li>You can use one of the following methods to query information about preemptible instances in the previous 30 days:<ul>
-     * <li>Configure the <code>Cores</code> and <code>Memory</code> parameters or the <code>MinCores</code> and <code>MinMemory</code> parameters to query information about instance types that meet the specified vCPU and memory requirements.</li>
-     * <li>Configure the <code>InstanceTypes.N</code> parameter to query information about specified instance types.</li>
-     * <li>Configure the <code>Cores</code> and <code>Memory</code> parameters or the <code>MinCores</code> and <code>MinMemory</code> parameters and then configure the <code>InstanceTypeFamily</code> or <code>InstanceFamilyLevel</code> parameter to query information about instance types that meet the specified vCPU and memory requirements within the specified instance family or at a specified instance family level.</li>
-     * </ul>
-     * </li>
+     * <li>You can calculate the average price of preemptible instances based on the percentage of the average preemptible instance price relative to the pay-as-you-go instance price and the pay-as-you-go instance price.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -31050,12 +31086,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This operation is an asynchronous operation. After you call this operation to restart an ECS instance, the operation sets the status of the ECS instance to <code>Starting</code> and begins the restart process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. When the status of the ECS instance changes to <code>Running</code>, the instance is restarted.</p>
+     * <h3><a href="#"></a>Limits</h3>
      * <ul>
-     * <li><strong>Precautions</strong><ul>
      * <li>You cannot call this operation to restart ECS instances that are locked due to security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
      * <li>The ECS instances that you want to restart must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
-     * </ul>
-     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -31124,12 +31158,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This operation is an asynchronous operation. After you call this operation to restart an ECS instance, the operation sets the status of the ECS instance to <code>Starting</code> and begins the restart process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. When the status of the ECS instance changes to <code>Running</code>, the instance is restarted.</p>
+     * <h3><a href="#"></a>Limits</h3>
      * <ul>
-     * <li><strong>Precautions</strong><ul>
      * <li>You cannot call this operation to restart ECS instances that are locked due to security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
      * <li>The ECS instances that you want to restart must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
-     * </ul>
-     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -32143,13 +32175,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The IDs of the reserved instances.</p>
+     * <p><em>Before you call this operation, make sure that you are familiar with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of reserved instances.</em>*</p>
+     * <ul>
+     * <li>You can manually renew reserved instances or enable auto-renewal for reserved instances. For more information, see the <a href="~~100371#53bfc50b78sta~~">Renewal</a> section of the &quot;Reserved instances&quot; topic.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/100065.html">DescribeReservedInstances</a> operation to query the reserved instances that you purchased.</li>
+     * <li>You can call this operation to enable auto-renewal for reserved instances but cannot call this operation to disable auto-renewal for reserved instances. To disable auto-renewal for a reserved instance, call the <a href="https://help.aliyun.com/document_detail/2679786.html">ModifyReservedInstanceAutoRenewAttribute</a> operation.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>  Before you call this operation, make sure that you are familiar with the billing method of reserved instances. For more information, see <a href="https://help.aliyun.com/document_detail/100371.html">Reserved instances</a>.</p>
-     * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/100065.html">DescribeReservedInstances</a> operation to query the reserved instances that you purchased.</li>
-     * </ul>
+     * <p>Renews one or more reserved instances. When you renew reserved instances, you can specify a validity period (renewal period) and whether to enable auto-renewal for the reserved instances.</p>
      * 
      * @param request RenewReservedInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32221,13 +32255,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The IDs of the reserved instances.</p>
+     * <p><em>Before you call this operation, make sure that you are familiar with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of reserved instances.</em>*</p>
+     * <ul>
+     * <li>You can manually renew reserved instances or enable auto-renewal for reserved instances. For more information, see the <a href="~~100371#53bfc50b78sta~~">Renewal</a> section of the &quot;Reserved instances&quot; topic.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/100065.html">DescribeReservedInstances</a> operation to query the reserved instances that you purchased.</li>
+     * <li>You can call this operation to enable auto-renewal for reserved instances but cannot call this operation to disable auto-renewal for reserved instances. To disable auto-renewal for a reserved instance, call the <a href="https://help.aliyun.com/document_detail/2679786.html">ModifyReservedInstanceAutoRenewAttribute</a> operation.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>  Before you call this operation, make sure that you are familiar with the billing method of reserved instances. For more information, see <a href="https://help.aliyun.com/document_detail/100371.html">Reserved instances</a>.</p>
-     * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/100065.html">DescribeReservedInstances</a> operation to query the reserved instances that you purchased.</li>
-     * </ul>
+     * <p>Renews one or more reserved instances. When you renew reserved instances, you can specify a validity period (renewal period) and whether to enable auto-renewal for the reserved instances.</p>
      * 
      * @param request RenewReservedInstancesRequest
      * @return RenewReservedInstancesResponse
