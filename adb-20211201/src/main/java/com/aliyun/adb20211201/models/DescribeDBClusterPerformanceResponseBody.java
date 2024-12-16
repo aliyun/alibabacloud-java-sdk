@@ -350,6 +350,9 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         @NameInMap("Tags")
         public String tags;
 
+        @NameInMap("TranslateKey")
+        public String translateKey;
+
         /**
          * <p>The values of the performance metric at different points in time.</p>
          */
@@ -375,6 +378,14 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
         public String getTags() {
             return this.tags;
+        }
+
+        public DescribeDBClusterPerformanceResponseBodyPerformancesSeries setTranslateKey(String translateKey) {
+            this.translateKey = translateKey;
+            return this;
+        }
+        public String getTranslateKey() {
+            return this.translateKey;
         }
 
         public DescribeDBClusterPerformanceResponseBodyPerformancesSeries setValues(java.util.List<String> values) {

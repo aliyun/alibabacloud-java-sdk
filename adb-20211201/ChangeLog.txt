@@ -1,3 +1,10 @@
+2024-12-16 Version: 3.3.0
+- Support API DescribeSparkAppDiagnosisInfo.
+- Support API DescribeSparkAppType.
+- Update API DescribeDBClusterPerformance: update param AccessKeyId.
+- Update API DescribeDBClusterPerformance: update response param.
+
+
 2024-12-12 Version: 3.2.0
 - Support API DescribeSparkAppDiagnosisInfo.
 - Support API DescribeSparkAppType.
