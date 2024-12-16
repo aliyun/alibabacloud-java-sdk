@@ -3,7 +3,7 @@ package com.aliyun.rtc20180111.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateCloudRecordRequest extends TeaModel {
+public class UpdateStreamingOutShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -14,7 +14,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
     public String appId;
 
     @NameInMap("Backgrounds")
-    public java.util.List<UpdateCloudRecordRequestBackgrounds> backgrounds;
+    public java.util.List<UpdateStreamingOutShrinkRequestBackgrounds> backgrounds;
 
     /**
      * <p>This parameter is required.</p>
@@ -26,16 +26,16 @@ public class UpdateCloudRecordRequest extends TeaModel {
     public String channelId;
 
     @NameInMap("ClockWidgets")
-    public java.util.List<UpdateCloudRecordRequestClockWidgets> clockWidgets;
+    public java.util.List<UpdateStreamingOutShrinkRequestClockWidgets> clockWidgets;
 
     @NameInMap("Images")
-    public java.util.List<UpdateCloudRecordRequestImages> images;
+    public java.util.List<UpdateStreamingOutShrinkRequestImages> images;
 
     @NameInMap("LayoutSpecifiedUsers")
-    public UpdateCloudRecordRequestLayoutSpecifiedUsers layoutSpecifiedUsers;
+    public String layoutSpecifiedUsersShrink;
 
     @NameInMap("Panes")
-    public java.util.List<UpdateCloudRecordRequestPanes> panes;
+    public java.util.List<UpdateStreamingOutShrinkRequestPanes> panes;
 
     /**
      * <p>This parameter is required.</p>
@@ -56,14 +56,14 @@ public class UpdateCloudRecordRequest extends TeaModel {
     public String templateId;
 
     @NameInMap("Texts")
-    public java.util.List<UpdateCloudRecordRequestTexts> texts;
+    public java.util.List<UpdateStreamingOutShrinkRequestTexts> texts;
 
-    public static UpdateCloudRecordRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateCloudRecordRequest self = new UpdateCloudRecordRequest();
+    public static UpdateStreamingOutShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateStreamingOutShrinkRequest self = new UpdateStreamingOutShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateCloudRecordRequest setAppId(String appId) {
+    public UpdateStreamingOutShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -71,15 +71,15 @@ public class UpdateCloudRecordRequest extends TeaModel {
         return this.appId;
     }
 
-    public UpdateCloudRecordRequest setBackgrounds(java.util.List<UpdateCloudRecordRequestBackgrounds> backgrounds) {
+    public UpdateStreamingOutShrinkRequest setBackgrounds(java.util.List<UpdateStreamingOutShrinkRequestBackgrounds> backgrounds) {
         this.backgrounds = backgrounds;
         return this;
     }
-    public java.util.List<UpdateCloudRecordRequestBackgrounds> getBackgrounds() {
+    public java.util.List<UpdateStreamingOutShrinkRequestBackgrounds> getBackgrounds() {
         return this.backgrounds;
     }
 
-    public UpdateCloudRecordRequest setChannelId(String channelId) {
+    public UpdateStreamingOutShrinkRequest setChannelId(String channelId) {
         this.channelId = channelId;
         return this;
     }
@@ -87,39 +87,39 @@ public class UpdateCloudRecordRequest extends TeaModel {
         return this.channelId;
     }
 
-    public UpdateCloudRecordRequest setClockWidgets(java.util.List<UpdateCloudRecordRequestClockWidgets> clockWidgets) {
+    public UpdateStreamingOutShrinkRequest setClockWidgets(java.util.List<UpdateStreamingOutShrinkRequestClockWidgets> clockWidgets) {
         this.clockWidgets = clockWidgets;
         return this;
     }
-    public java.util.List<UpdateCloudRecordRequestClockWidgets> getClockWidgets() {
+    public java.util.List<UpdateStreamingOutShrinkRequestClockWidgets> getClockWidgets() {
         return this.clockWidgets;
     }
 
-    public UpdateCloudRecordRequest setImages(java.util.List<UpdateCloudRecordRequestImages> images) {
+    public UpdateStreamingOutShrinkRequest setImages(java.util.List<UpdateStreamingOutShrinkRequestImages> images) {
         this.images = images;
         return this;
     }
-    public java.util.List<UpdateCloudRecordRequestImages> getImages() {
+    public java.util.List<UpdateStreamingOutShrinkRequestImages> getImages() {
         return this.images;
     }
 
-    public UpdateCloudRecordRequest setLayoutSpecifiedUsers(UpdateCloudRecordRequestLayoutSpecifiedUsers layoutSpecifiedUsers) {
-        this.layoutSpecifiedUsers = layoutSpecifiedUsers;
+    public UpdateStreamingOutShrinkRequest setLayoutSpecifiedUsersShrink(String layoutSpecifiedUsersShrink) {
+        this.layoutSpecifiedUsersShrink = layoutSpecifiedUsersShrink;
         return this;
     }
-    public UpdateCloudRecordRequestLayoutSpecifiedUsers getLayoutSpecifiedUsers() {
-        return this.layoutSpecifiedUsers;
+    public String getLayoutSpecifiedUsersShrink() {
+        return this.layoutSpecifiedUsersShrink;
     }
 
-    public UpdateCloudRecordRequest setPanes(java.util.List<UpdateCloudRecordRequestPanes> panes) {
+    public UpdateStreamingOutShrinkRequest setPanes(java.util.List<UpdateStreamingOutShrinkRequestPanes> panes) {
         this.panes = panes;
         return this;
     }
-    public java.util.List<UpdateCloudRecordRequestPanes> getPanes() {
+    public java.util.List<UpdateStreamingOutShrinkRequestPanes> getPanes() {
         return this.panes;
     }
 
-    public UpdateCloudRecordRequest setTaskId(String taskId) {
+    public UpdateStreamingOutShrinkRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
@@ -127,7 +127,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
         return this.taskId;
     }
 
-    public UpdateCloudRecordRequest setTemplateId(String templateId) {
+    public UpdateStreamingOutShrinkRequest setTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
@@ -135,15 +135,15 @@ public class UpdateCloudRecordRequest extends TeaModel {
         return this.templateId;
     }
 
-    public UpdateCloudRecordRequest setTexts(java.util.List<UpdateCloudRecordRequestTexts> texts) {
+    public UpdateStreamingOutShrinkRequest setTexts(java.util.List<UpdateStreamingOutShrinkRequestTexts> texts) {
         this.texts = texts;
         return this;
     }
-    public java.util.List<UpdateCloudRecordRequestTexts> getTexts() {
+    public java.util.List<UpdateStreamingOutShrinkRequestTexts> getTexts() {
         return this.texts;
     }
 
-    public static class UpdateCloudRecordRequestBackgrounds extends TeaModel {
+    public static class UpdateStreamingOutShrinkRequestBackgrounds extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -210,12 +210,12 @@ public class UpdateCloudRecordRequest extends TeaModel {
         @NameInMap("Y")
         public Double y;
 
-        public static UpdateCloudRecordRequestBackgrounds build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestBackgrounds self = new UpdateCloudRecordRequestBackgrounds();
+        public static UpdateStreamingOutShrinkRequestBackgrounds build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestBackgrounds self = new UpdateStreamingOutShrinkRequestBackgrounds();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCloudRecordRequestBackgrounds setAlpha(Double alpha) {
+        public UpdateStreamingOutShrinkRequestBackgrounds setAlpha(Double alpha) {
             this.alpha = alpha;
             return this;
         }
@@ -223,7 +223,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.alpha;
         }
 
-        public UpdateCloudRecordRequestBackgrounds setBackgroundCropMode(Integer backgroundCropMode) {
+        public UpdateStreamingOutShrinkRequestBackgrounds setBackgroundCropMode(Integer backgroundCropMode) {
             this.backgroundCropMode = backgroundCropMode;
             return this;
         }
@@ -231,7 +231,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.backgroundCropMode;
         }
 
-        public UpdateCloudRecordRequestBackgrounds setHeight(Double height) {
+        public UpdateStreamingOutShrinkRequestBackgrounds setHeight(Double height) {
             this.height = height;
             return this;
         }
@@ -239,7 +239,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.height;
         }
 
-        public UpdateCloudRecordRequestBackgrounds setLayer(Integer layer) {
+        public UpdateStreamingOutShrinkRequestBackgrounds setLayer(Integer layer) {
             this.layer = layer;
             return this;
         }
@@ -247,7 +247,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.layer;
         }
 
-        public UpdateCloudRecordRequestBackgrounds setUrl(String url) {
+        public UpdateStreamingOutShrinkRequestBackgrounds setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -255,7 +255,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.url;
         }
 
-        public UpdateCloudRecordRequestBackgrounds setWidth(Double width) {
+        public UpdateStreamingOutShrinkRequestBackgrounds setWidth(Double width) {
             this.width = width;
             return this;
         }
@@ -263,7 +263,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.width;
         }
 
-        public UpdateCloudRecordRequestBackgrounds setX(Double x) {
+        public UpdateStreamingOutShrinkRequestBackgrounds setX(Double x) {
             this.x = x;
             return this;
         }
@@ -271,7 +271,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.x;
         }
 
-        public UpdateCloudRecordRequestBackgrounds setY(Double y) {
+        public UpdateStreamingOutShrinkRequestBackgrounds setY(Double y) {
             this.y = y;
             return this;
         }
@@ -281,7 +281,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
     }
 
-    public static class UpdateCloudRecordRequestClockWidgetsBoxColor extends TeaModel {
+    public static class UpdateStreamingOutShrinkRequestClockWidgetsBoxColor extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>255</p>
@@ -303,12 +303,12 @@ public class UpdateCloudRecordRequest extends TeaModel {
         @NameInMap("R")
         public Integer r;
 
-        public static UpdateCloudRecordRequestClockWidgetsBoxColor build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestClockWidgetsBoxColor self = new UpdateCloudRecordRequestClockWidgetsBoxColor();
+        public static UpdateStreamingOutShrinkRequestClockWidgetsBoxColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestClockWidgetsBoxColor self = new UpdateStreamingOutShrinkRequestClockWidgetsBoxColor();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCloudRecordRequestClockWidgetsBoxColor setB(Integer b) {
+        public UpdateStreamingOutShrinkRequestClockWidgetsBoxColor setB(Integer b) {
             this.b = b;
             return this;
         }
@@ -316,7 +316,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.b;
         }
 
-        public UpdateCloudRecordRequestClockWidgetsBoxColor setG(Integer g) {
+        public UpdateStreamingOutShrinkRequestClockWidgetsBoxColor setG(Integer g) {
             this.g = g;
             return this;
         }
@@ -324,7 +324,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.g;
         }
 
-        public UpdateCloudRecordRequestClockWidgetsBoxColor setR(Integer r) {
+        public UpdateStreamingOutShrinkRequestClockWidgetsBoxColor setR(Integer r) {
             this.r = r;
             return this;
         }
@@ -334,7 +334,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
     }
 
-    public static class UpdateCloudRecordRequestClockWidgetsFontColor extends TeaModel {
+    public static class UpdateStreamingOutShrinkRequestClockWidgetsFontColor extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>255</p>
@@ -356,12 +356,12 @@ public class UpdateCloudRecordRequest extends TeaModel {
         @NameInMap("R")
         public Integer r;
 
-        public static UpdateCloudRecordRequestClockWidgetsFontColor build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestClockWidgetsFontColor self = new UpdateCloudRecordRequestClockWidgetsFontColor();
+        public static UpdateStreamingOutShrinkRequestClockWidgetsFontColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestClockWidgetsFontColor self = new UpdateStreamingOutShrinkRequestClockWidgetsFontColor();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCloudRecordRequestClockWidgetsFontColor setB(Integer b) {
+        public UpdateStreamingOutShrinkRequestClockWidgetsFontColor setB(Integer b) {
             this.b = b;
             return this;
         }
@@ -369,7 +369,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.b;
         }
 
-        public UpdateCloudRecordRequestClockWidgetsFontColor setG(Integer g) {
+        public UpdateStreamingOutShrinkRequestClockWidgetsFontColor setG(Integer g) {
             this.g = g;
             return this;
         }
@@ -377,7 +377,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.g;
         }
 
-        public UpdateCloudRecordRequestClockWidgetsFontColor setR(Integer r) {
+        public UpdateStreamingOutShrinkRequestClockWidgetsFontColor setR(Integer r) {
             this.r = r;
             return this;
         }
@@ -387,7 +387,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
     }
 
-    public static class UpdateCloudRecordRequestClockWidgets extends TeaModel {
+    public static class UpdateStreamingOutShrinkRequestClockWidgets extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -410,7 +410,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
         public Integer boxBorderw;
 
         @NameInMap("BoxColor")
-        public UpdateCloudRecordRequestClockWidgetsBoxColor boxColor;
+        public UpdateStreamingOutShrinkRequestClockWidgetsBoxColor boxColor;
 
         /**
          * <strong>example:</strong>
@@ -420,7 +420,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
         public Integer font;
 
         @NameInMap("FontColor")
-        public UpdateCloudRecordRequestClockWidgetsFontColor fontColor;
+        public UpdateStreamingOutShrinkRequestClockWidgetsFontColor fontColor;
 
         /**
          * <strong>example:</strong>
@@ -464,12 +464,12 @@ public class UpdateCloudRecordRequest extends TeaModel {
         @NameInMap("Zone")
         public Integer zone;
 
-        public static UpdateCloudRecordRequestClockWidgets build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestClockWidgets self = new UpdateCloudRecordRequestClockWidgets();
+        public static UpdateStreamingOutShrinkRequestClockWidgets build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestClockWidgets self = new UpdateStreamingOutShrinkRequestClockWidgets();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCloudRecordRequestClockWidgets setAlpha(Double alpha) {
+        public UpdateStreamingOutShrinkRequestClockWidgets setAlpha(Double alpha) {
             this.alpha = alpha;
             return this;
         }
@@ -477,7 +477,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.alpha;
         }
 
-        public UpdateCloudRecordRequestClockWidgets setBoxAlpha(Double boxAlpha) {
+        public UpdateStreamingOutShrinkRequestClockWidgets setBoxAlpha(Double boxAlpha) {
             this.boxAlpha = boxAlpha;
             return this;
         }
@@ -485,7 +485,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.boxAlpha;
         }
 
-        public UpdateCloudRecordRequestClockWidgets setBoxBorderw(Integer boxBorderw) {
+        public UpdateStreamingOutShrinkRequestClockWidgets setBoxBorderw(Integer boxBorderw) {
             this.boxBorderw = boxBorderw;
             return this;
         }
@@ -493,15 +493,15 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.boxBorderw;
         }
 
-        public UpdateCloudRecordRequestClockWidgets setBoxColor(UpdateCloudRecordRequestClockWidgetsBoxColor boxColor) {
+        public UpdateStreamingOutShrinkRequestClockWidgets setBoxColor(UpdateStreamingOutShrinkRequestClockWidgetsBoxColor boxColor) {
             this.boxColor = boxColor;
             return this;
         }
-        public UpdateCloudRecordRequestClockWidgetsBoxColor getBoxColor() {
+        public UpdateStreamingOutShrinkRequestClockWidgetsBoxColor getBoxColor() {
             return this.boxColor;
         }
 
-        public UpdateCloudRecordRequestClockWidgets setFont(Integer font) {
+        public UpdateStreamingOutShrinkRequestClockWidgets setFont(Integer font) {
             this.font = font;
             return this;
         }
@@ -509,15 +509,15 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.font;
         }
 
-        public UpdateCloudRecordRequestClockWidgets setFontColor(UpdateCloudRecordRequestClockWidgetsFontColor fontColor) {
+        public UpdateStreamingOutShrinkRequestClockWidgets setFontColor(UpdateStreamingOutShrinkRequestClockWidgetsFontColor fontColor) {
             this.fontColor = fontColor;
             return this;
         }
-        public UpdateCloudRecordRequestClockWidgetsFontColor getFontColor() {
+        public UpdateStreamingOutShrinkRequestClockWidgetsFontColor getFontColor() {
             return this.fontColor;
         }
 
-        public UpdateCloudRecordRequestClockWidgets setFontSize(Integer fontSize) {
+        public UpdateStreamingOutShrinkRequestClockWidgets setFontSize(Integer fontSize) {
             this.fontSize = fontSize;
             return this;
         }
@@ -525,7 +525,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.fontSize;
         }
 
-        public UpdateCloudRecordRequestClockWidgets setHasBox(Boolean hasBox) {
+        public UpdateStreamingOutShrinkRequestClockWidgets setHasBox(Boolean hasBox) {
             this.hasBox = hasBox;
             return this;
         }
@@ -533,7 +533,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.hasBox;
         }
 
-        public UpdateCloudRecordRequestClockWidgets setLayer(Integer layer) {
+        public UpdateStreamingOutShrinkRequestClockWidgets setLayer(Integer layer) {
             this.layer = layer;
             return this;
         }
@@ -541,7 +541,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.layer;
         }
 
-        public UpdateCloudRecordRequestClockWidgets setX(Double x) {
+        public UpdateStreamingOutShrinkRequestClockWidgets setX(Double x) {
             this.x = x;
             return this;
         }
@@ -549,7 +549,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.x;
         }
 
-        public UpdateCloudRecordRequestClockWidgets setY(Double y) {
+        public UpdateStreamingOutShrinkRequestClockWidgets setY(Double y) {
             this.y = y;
             return this;
         }
@@ -557,7 +557,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.y;
         }
 
-        public UpdateCloudRecordRequestClockWidgets setZone(Integer zone) {
+        public UpdateStreamingOutShrinkRequestClockWidgets setZone(Integer zone) {
             this.zone = zone;
             return this;
         }
@@ -567,7 +567,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
     }
 
-    public static class UpdateCloudRecordRequestImages extends TeaModel {
+    public static class UpdateStreamingOutShrinkRequestImages extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -634,12 +634,12 @@ public class UpdateCloudRecordRequest extends TeaModel {
         @NameInMap("Y")
         public Double y;
 
-        public static UpdateCloudRecordRequestImages build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestImages self = new UpdateCloudRecordRequestImages();
+        public static UpdateStreamingOutShrinkRequestImages build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestImages self = new UpdateStreamingOutShrinkRequestImages();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCloudRecordRequestImages setAlpha(Double alpha) {
+        public UpdateStreamingOutShrinkRequestImages setAlpha(Double alpha) {
             this.alpha = alpha;
             return this;
         }
@@ -647,7 +647,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.alpha;
         }
 
-        public UpdateCloudRecordRequestImages setHeight(Double height) {
+        public UpdateStreamingOutShrinkRequestImages setHeight(Double height) {
             this.height = height;
             return this;
         }
@@ -655,7 +655,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.height;
         }
 
-        public UpdateCloudRecordRequestImages setImageCropMode(Integer imageCropMode) {
+        public UpdateStreamingOutShrinkRequestImages setImageCropMode(Integer imageCropMode) {
             this.imageCropMode = imageCropMode;
             return this;
         }
@@ -663,7 +663,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.imageCropMode;
         }
 
-        public UpdateCloudRecordRequestImages setLayer(Integer layer) {
+        public UpdateStreamingOutShrinkRequestImages setLayer(Integer layer) {
             this.layer = layer;
             return this;
         }
@@ -671,7 +671,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.layer;
         }
 
-        public UpdateCloudRecordRequestImages setUrl(String url) {
+        public UpdateStreamingOutShrinkRequestImages setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -679,7 +679,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.url;
         }
 
-        public UpdateCloudRecordRequestImages setWidth(Double width) {
+        public UpdateStreamingOutShrinkRequestImages setWidth(Double width) {
             this.width = width;
             return this;
         }
@@ -687,7 +687,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.width;
         }
 
-        public UpdateCloudRecordRequestImages setX(Double x) {
+        public UpdateStreamingOutShrinkRequestImages setX(Double x) {
             this.x = x;
             return this;
         }
@@ -695,7 +695,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.x;
         }
 
-        public UpdateCloudRecordRequestImages setY(Double y) {
+        public UpdateStreamingOutShrinkRequestImages setY(Double y) {
             this.y = y;
             return this;
         }
@@ -705,43 +705,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
     }
 
-    public static class UpdateCloudRecordRequestLayoutSpecifiedUsers extends TeaModel {
-        /**
-         * <p>This parameter is required.</p>
-         */
-        @NameInMap("Ids")
-        public java.util.List<String> ids;
-
-        /**
-         * <p>This parameter is required.</p>
-         */
-        @NameInMap("Type")
-        public String type;
-
-        public static UpdateCloudRecordRequestLayoutSpecifiedUsers build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestLayoutSpecifiedUsers self = new UpdateCloudRecordRequestLayoutSpecifiedUsers();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateCloudRecordRequestLayoutSpecifiedUsers setIds(java.util.List<String> ids) {
-            this.ids = ids;
-            return this;
-        }
-        public java.util.List<String> getIds() {
-            return this.ids;
-        }
-
-        public UpdateCloudRecordRequestLayoutSpecifiedUsers setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
-    public static class UpdateCloudRecordRequestPanesImages extends TeaModel {
+    public static class UpdateStreamingOutShrinkRequestPanesImages extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -776,7 +740,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://aliyun.com/123xxx.jpg">https://aliyun.com/123xxx.jpg</a></p>
+         * <p><a href="https://aliyun.com/123.jpg">https://aliyun.com/123.jpg</a></p>
          */
         @NameInMap("Url")
         public String url;
@@ -808,12 +772,12 @@ public class UpdateCloudRecordRequest extends TeaModel {
         @NameInMap("Y")
         public Double y;
 
-        public static UpdateCloudRecordRequestPanesImages build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestPanesImages self = new UpdateCloudRecordRequestPanesImages();
+        public static UpdateStreamingOutShrinkRequestPanesImages build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestPanesImages self = new UpdateStreamingOutShrinkRequestPanesImages();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCloudRecordRequestPanesImages setAlpha(Double alpha) {
+        public UpdateStreamingOutShrinkRequestPanesImages setAlpha(Double alpha) {
             this.alpha = alpha;
             return this;
         }
@@ -821,7 +785,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.alpha;
         }
 
-        public UpdateCloudRecordRequestPanesImages setHeight(Double height) {
+        public UpdateStreamingOutShrinkRequestPanesImages setHeight(Double height) {
             this.height = height;
             return this;
         }
@@ -829,7 +793,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.height;
         }
 
-        public UpdateCloudRecordRequestPanesImages setLayer(Integer layer) {
+        public UpdateStreamingOutShrinkRequestPanesImages setLayer(Integer layer) {
             this.layer = layer;
             return this;
         }
@@ -837,7 +801,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.layer;
         }
 
-        public UpdateCloudRecordRequestPanesImages setPaneImageCropMode(Integer paneImageCropMode) {
+        public UpdateStreamingOutShrinkRequestPanesImages setPaneImageCropMode(Integer paneImageCropMode) {
             this.paneImageCropMode = paneImageCropMode;
             return this;
         }
@@ -845,7 +809,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.paneImageCropMode;
         }
 
-        public UpdateCloudRecordRequestPanesImages setUrl(String url) {
+        public UpdateStreamingOutShrinkRequestPanesImages setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -853,7 +817,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.url;
         }
 
-        public UpdateCloudRecordRequestPanesImages setWidth(Double width) {
+        public UpdateStreamingOutShrinkRequestPanesImages setWidth(Double width) {
             this.width = width;
             return this;
         }
@@ -861,7 +825,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.width;
         }
 
-        public UpdateCloudRecordRequestPanesImages setX(Double x) {
+        public UpdateStreamingOutShrinkRequestPanesImages setX(Double x) {
             this.x = x;
             return this;
         }
@@ -869,7 +833,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.x;
         }
 
-        public UpdateCloudRecordRequestPanesImages setY(Double y) {
+        public UpdateStreamingOutShrinkRequestPanesImages setY(Double y) {
             this.y = y;
             return this;
         }
@@ -879,7 +843,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
     }
 
-    public static class UpdateCloudRecordRequestPanesTextsBoxColor extends TeaModel {
+    public static class UpdateStreamingOutShrinkRequestPanesTextsBoxColor extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>255</p>
@@ -901,12 +865,12 @@ public class UpdateCloudRecordRequest extends TeaModel {
         @NameInMap("R")
         public Integer r;
 
-        public static UpdateCloudRecordRequestPanesTextsBoxColor build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestPanesTextsBoxColor self = new UpdateCloudRecordRequestPanesTextsBoxColor();
+        public static UpdateStreamingOutShrinkRequestPanesTextsBoxColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestPanesTextsBoxColor self = new UpdateStreamingOutShrinkRequestPanesTextsBoxColor();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCloudRecordRequestPanesTextsBoxColor setB(Integer b) {
+        public UpdateStreamingOutShrinkRequestPanesTextsBoxColor setB(Integer b) {
             this.b = b;
             return this;
         }
@@ -914,7 +878,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.b;
         }
 
-        public UpdateCloudRecordRequestPanesTextsBoxColor setG(Integer g) {
+        public UpdateStreamingOutShrinkRequestPanesTextsBoxColor setG(Integer g) {
             this.g = g;
             return this;
         }
@@ -922,7 +886,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.g;
         }
 
-        public UpdateCloudRecordRequestPanesTextsBoxColor setR(Integer r) {
+        public UpdateStreamingOutShrinkRequestPanesTextsBoxColor setR(Integer r) {
             this.r = r;
             return this;
         }
@@ -932,7 +896,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
     }
 
-    public static class UpdateCloudRecordRequestPanesTextsFontColor extends TeaModel {
+    public static class UpdateStreamingOutShrinkRequestPanesTextsFontColor extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>255</p>
@@ -954,12 +918,12 @@ public class UpdateCloudRecordRequest extends TeaModel {
         @NameInMap("R")
         public Integer r;
 
-        public static UpdateCloudRecordRequestPanesTextsFontColor build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestPanesTextsFontColor self = new UpdateCloudRecordRequestPanesTextsFontColor();
+        public static UpdateStreamingOutShrinkRequestPanesTextsFontColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestPanesTextsFontColor self = new UpdateStreamingOutShrinkRequestPanesTextsFontColor();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCloudRecordRequestPanesTextsFontColor setB(Integer b) {
+        public UpdateStreamingOutShrinkRequestPanesTextsFontColor setB(Integer b) {
             this.b = b;
             return this;
         }
@@ -967,7 +931,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.b;
         }
 
-        public UpdateCloudRecordRequestPanesTextsFontColor setG(Integer g) {
+        public UpdateStreamingOutShrinkRequestPanesTextsFontColor setG(Integer g) {
             this.g = g;
             return this;
         }
@@ -975,7 +939,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.g;
         }
 
-        public UpdateCloudRecordRequestPanesTextsFontColor setR(Integer r) {
+        public UpdateStreamingOutShrinkRequestPanesTextsFontColor setR(Integer r) {
             this.r = r;
             return this;
         }
@@ -985,7 +949,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
     }
 
-    public static class UpdateCloudRecordRequestPanesTexts extends TeaModel {
+    public static class UpdateStreamingOutShrinkRequestPanesTexts extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -1008,7 +972,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
         public Integer boxBorderw;
 
         @NameInMap("BoxColor")
-        public UpdateCloudRecordRequestPanesTextsBoxColor boxColor;
+        public UpdateStreamingOutShrinkRequestPanesTextsBoxColor boxColor;
 
         /**
          * <strong>example:</strong>
@@ -1018,7 +982,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
         public Integer font;
 
         @NameInMap("FontColor")
-        public UpdateCloudRecordRequestPanesTextsFontColor fontColor;
+        public UpdateStreamingOutShrinkRequestPanesTextsFontColor fontColor;
 
         /**
          * <strong>example:</strong>
@@ -1064,12 +1028,12 @@ public class UpdateCloudRecordRequest extends TeaModel {
         @NameInMap("Y")
         public Double y;
 
-        public static UpdateCloudRecordRequestPanesTexts build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestPanesTexts self = new UpdateCloudRecordRequestPanesTexts();
+        public static UpdateStreamingOutShrinkRequestPanesTexts build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestPanesTexts self = new UpdateStreamingOutShrinkRequestPanesTexts();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCloudRecordRequestPanesTexts setAlpha(Double alpha) {
+        public UpdateStreamingOutShrinkRequestPanesTexts setAlpha(Double alpha) {
             this.alpha = alpha;
             return this;
         }
@@ -1077,7 +1041,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.alpha;
         }
 
-        public UpdateCloudRecordRequestPanesTexts setBoxAlpha(Double boxAlpha) {
+        public UpdateStreamingOutShrinkRequestPanesTexts setBoxAlpha(Double boxAlpha) {
             this.boxAlpha = boxAlpha;
             return this;
         }
@@ -1085,7 +1049,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.boxAlpha;
         }
 
-        public UpdateCloudRecordRequestPanesTexts setBoxBorderw(Integer boxBorderw) {
+        public UpdateStreamingOutShrinkRequestPanesTexts setBoxBorderw(Integer boxBorderw) {
             this.boxBorderw = boxBorderw;
             return this;
         }
@@ -1093,15 +1057,15 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.boxBorderw;
         }
 
-        public UpdateCloudRecordRequestPanesTexts setBoxColor(UpdateCloudRecordRequestPanesTextsBoxColor boxColor) {
+        public UpdateStreamingOutShrinkRequestPanesTexts setBoxColor(UpdateStreamingOutShrinkRequestPanesTextsBoxColor boxColor) {
             this.boxColor = boxColor;
             return this;
         }
-        public UpdateCloudRecordRequestPanesTextsBoxColor getBoxColor() {
+        public UpdateStreamingOutShrinkRequestPanesTextsBoxColor getBoxColor() {
             return this.boxColor;
         }
 
-        public UpdateCloudRecordRequestPanesTexts setFont(Integer font) {
+        public UpdateStreamingOutShrinkRequestPanesTexts setFont(Integer font) {
             this.font = font;
             return this;
         }
@@ -1109,15 +1073,15 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.font;
         }
 
-        public UpdateCloudRecordRequestPanesTexts setFontColor(UpdateCloudRecordRequestPanesTextsFontColor fontColor) {
+        public UpdateStreamingOutShrinkRequestPanesTexts setFontColor(UpdateStreamingOutShrinkRequestPanesTextsFontColor fontColor) {
             this.fontColor = fontColor;
             return this;
         }
-        public UpdateCloudRecordRequestPanesTextsFontColor getFontColor() {
+        public UpdateStreamingOutShrinkRequestPanesTextsFontColor getFontColor() {
             return this.fontColor;
         }
 
-        public UpdateCloudRecordRequestPanesTexts setFontSize(Integer fontSize) {
+        public UpdateStreamingOutShrinkRequestPanesTexts setFontSize(Integer fontSize) {
             this.fontSize = fontSize;
             return this;
         }
@@ -1125,7 +1089,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.fontSize;
         }
 
-        public UpdateCloudRecordRequestPanesTexts setHasBox(Boolean hasBox) {
+        public UpdateStreamingOutShrinkRequestPanesTexts setHasBox(Boolean hasBox) {
             this.hasBox = hasBox;
             return this;
         }
@@ -1133,7 +1097,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.hasBox;
         }
 
-        public UpdateCloudRecordRequestPanesTexts setLayer(Integer layer) {
+        public UpdateStreamingOutShrinkRequestPanesTexts setLayer(Integer layer) {
             this.layer = layer;
             return this;
         }
@@ -1141,7 +1105,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.layer;
         }
 
-        public UpdateCloudRecordRequestPanesTexts setTexture(String texture) {
+        public UpdateStreamingOutShrinkRequestPanesTexts setTexture(String texture) {
             this.texture = texture;
             return this;
         }
@@ -1149,7 +1113,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.texture;
         }
 
-        public UpdateCloudRecordRequestPanesTexts setX(Double x) {
+        public UpdateStreamingOutShrinkRequestPanesTexts setX(Double x) {
             this.x = x;
             return this;
         }
@@ -1157,7 +1121,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.x;
         }
 
-        public UpdateCloudRecordRequestPanesTexts setY(Double y) {
+        public UpdateStreamingOutShrinkRequestPanesTexts setY(Double y) {
             this.y = y;
             return this;
         }
@@ -1167,9 +1131,9 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
     }
 
-    public static class UpdateCloudRecordRequestPanes extends TeaModel {
+    public static class UpdateStreamingOutShrinkRequestPanes extends TeaModel {
         @NameInMap("Images")
-        public java.util.List<UpdateCloudRecordRequestPanesImages> images;
+        public java.util.List<UpdateStreamingOutShrinkRequestPanesImages> images;
 
         /**
          * <strong>example:</strong>
@@ -1179,10 +1143,8 @@ public class UpdateCloudRecordRequest extends TeaModel {
         public Integer paneCropMode;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         @NameInMap("PaneId")
         public Integer paneId;
@@ -1202,22 +1164,22 @@ public class UpdateCloudRecordRequest extends TeaModel {
         public String sourceType;
 
         @NameInMap("Texts")
-        public java.util.List<UpdateCloudRecordRequestPanesTexts> texts;
+        public java.util.List<UpdateStreamingOutShrinkRequestPanesTexts> texts;
 
-        public static UpdateCloudRecordRequestPanes build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestPanes self = new UpdateCloudRecordRequestPanes();
+        public static UpdateStreamingOutShrinkRequestPanes build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestPanes self = new UpdateStreamingOutShrinkRequestPanes();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCloudRecordRequestPanes setImages(java.util.List<UpdateCloudRecordRequestPanesImages> images) {
+        public UpdateStreamingOutShrinkRequestPanes setImages(java.util.List<UpdateStreamingOutShrinkRequestPanesImages> images) {
             this.images = images;
             return this;
         }
-        public java.util.List<UpdateCloudRecordRequestPanesImages> getImages() {
+        public java.util.List<UpdateStreamingOutShrinkRequestPanesImages> getImages() {
             return this.images;
         }
 
-        public UpdateCloudRecordRequestPanes setPaneCropMode(Integer paneCropMode) {
+        public UpdateStreamingOutShrinkRequestPanes setPaneCropMode(Integer paneCropMode) {
             this.paneCropMode = paneCropMode;
             return this;
         }
@@ -1225,7 +1187,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.paneCropMode;
         }
 
-        public UpdateCloudRecordRequestPanes setPaneId(Integer paneId) {
+        public UpdateStreamingOutShrinkRequestPanes setPaneId(Integer paneId) {
             this.paneId = paneId;
             return this;
         }
@@ -1233,7 +1195,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.paneId;
         }
 
-        public UpdateCloudRecordRequestPanes setSource(String source) {
+        public UpdateStreamingOutShrinkRequestPanes setSource(String source) {
             this.source = source;
             return this;
         }
@@ -1241,7 +1203,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.source;
         }
 
-        public UpdateCloudRecordRequestPanes setSourceType(String sourceType) {
+        public UpdateStreamingOutShrinkRequestPanes setSourceType(String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
@@ -1249,17 +1211,17 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.sourceType;
         }
 
-        public UpdateCloudRecordRequestPanes setTexts(java.util.List<UpdateCloudRecordRequestPanesTexts> texts) {
+        public UpdateStreamingOutShrinkRequestPanes setTexts(java.util.List<UpdateStreamingOutShrinkRequestPanesTexts> texts) {
             this.texts = texts;
             return this;
         }
-        public java.util.List<UpdateCloudRecordRequestPanesTexts> getTexts() {
+        public java.util.List<UpdateStreamingOutShrinkRequestPanesTexts> getTexts() {
             return this.texts;
         }
 
     }
 
-    public static class UpdateCloudRecordRequestTextsBoxColor extends TeaModel {
+    public static class UpdateStreamingOutShrinkRequestTextsBoxColor extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>255</p>
@@ -1281,12 +1243,12 @@ public class UpdateCloudRecordRequest extends TeaModel {
         @NameInMap("R")
         public Integer r;
 
-        public static UpdateCloudRecordRequestTextsBoxColor build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestTextsBoxColor self = new UpdateCloudRecordRequestTextsBoxColor();
+        public static UpdateStreamingOutShrinkRequestTextsBoxColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestTextsBoxColor self = new UpdateStreamingOutShrinkRequestTextsBoxColor();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCloudRecordRequestTextsBoxColor setB(Integer b) {
+        public UpdateStreamingOutShrinkRequestTextsBoxColor setB(Integer b) {
             this.b = b;
             return this;
         }
@@ -1294,7 +1256,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.b;
         }
 
-        public UpdateCloudRecordRequestTextsBoxColor setG(Integer g) {
+        public UpdateStreamingOutShrinkRequestTextsBoxColor setG(Integer g) {
             this.g = g;
             return this;
         }
@@ -1302,7 +1264,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.g;
         }
 
-        public UpdateCloudRecordRequestTextsBoxColor setR(Integer r) {
+        public UpdateStreamingOutShrinkRequestTextsBoxColor setR(Integer r) {
             this.r = r;
             return this;
         }
@@ -1312,7 +1274,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
     }
 
-    public static class UpdateCloudRecordRequestTextsFontColor extends TeaModel {
+    public static class UpdateStreamingOutShrinkRequestTextsFontColor extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>255</p>
@@ -1334,12 +1296,12 @@ public class UpdateCloudRecordRequest extends TeaModel {
         @NameInMap("R")
         public Integer r;
 
-        public static UpdateCloudRecordRequestTextsFontColor build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestTextsFontColor self = new UpdateCloudRecordRequestTextsFontColor();
+        public static UpdateStreamingOutShrinkRequestTextsFontColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestTextsFontColor self = new UpdateStreamingOutShrinkRequestTextsFontColor();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCloudRecordRequestTextsFontColor setB(Integer b) {
+        public UpdateStreamingOutShrinkRequestTextsFontColor setB(Integer b) {
             this.b = b;
             return this;
         }
@@ -1347,7 +1309,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.b;
         }
 
-        public UpdateCloudRecordRequestTextsFontColor setG(Integer g) {
+        public UpdateStreamingOutShrinkRequestTextsFontColor setG(Integer g) {
             this.g = g;
             return this;
         }
@@ -1355,7 +1317,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.g;
         }
 
-        public UpdateCloudRecordRequestTextsFontColor setR(Integer r) {
+        public UpdateStreamingOutShrinkRequestTextsFontColor setR(Integer r) {
             this.r = r;
             return this;
         }
@@ -1365,7 +1327,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
     }
 
-    public static class UpdateCloudRecordRequestTexts extends TeaModel {
+    public static class UpdateStreamingOutShrinkRequestTexts extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>0.1</p>
@@ -1388,7 +1350,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
         public Integer boxBorderw;
 
         @NameInMap("BoxColor")
-        public UpdateCloudRecordRequestTextsBoxColor boxColor;
+        public UpdateStreamingOutShrinkRequestTextsBoxColor boxColor;
 
         /**
          * <strong>example:</strong>
@@ -1398,7 +1360,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
         public Integer font;
 
         @NameInMap("FontColor")
-        public UpdateCloudRecordRequestTextsFontColor fontColor;
+        public UpdateStreamingOutShrinkRequestTextsFontColor fontColor;
 
         /**
          * <strong>example:</strong>
@@ -1444,12 +1406,12 @@ public class UpdateCloudRecordRequest extends TeaModel {
         @NameInMap("Y")
         public Double y;
 
-        public static UpdateCloudRecordRequestTexts build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCloudRecordRequestTexts self = new UpdateCloudRecordRequestTexts();
+        public static UpdateStreamingOutShrinkRequestTexts build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestTexts self = new UpdateStreamingOutShrinkRequestTexts();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCloudRecordRequestTexts setAlpha(Double alpha) {
+        public UpdateStreamingOutShrinkRequestTexts setAlpha(Double alpha) {
             this.alpha = alpha;
             return this;
         }
@@ -1457,7 +1419,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.alpha;
         }
 
-        public UpdateCloudRecordRequestTexts setBoxAlpha(Double boxAlpha) {
+        public UpdateStreamingOutShrinkRequestTexts setBoxAlpha(Double boxAlpha) {
             this.boxAlpha = boxAlpha;
             return this;
         }
@@ -1465,7 +1427,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.boxAlpha;
         }
 
-        public UpdateCloudRecordRequestTexts setBoxBorderw(Integer boxBorderw) {
+        public UpdateStreamingOutShrinkRequestTexts setBoxBorderw(Integer boxBorderw) {
             this.boxBorderw = boxBorderw;
             return this;
         }
@@ -1473,15 +1435,15 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.boxBorderw;
         }
 
-        public UpdateCloudRecordRequestTexts setBoxColor(UpdateCloudRecordRequestTextsBoxColor boxColor) {
+        public UpdateStreamingOutShrinkRequestTexts setBoxColor(UpdateStreamingOutShrinkRequestTextsBoxColor boxColor) {
             this.boxColor = boxColor;
             return this;
         }
-        public UpdateCloudRecordRequestTextsBoxColor getBoxColor() {
+        public UpdateStreamingOutShrinkRequestTextsBoxColor getBoxColor() {
             return this.boxColor;
         }
 
-        public UpdateCloudRecordRequestTexts setFont(Integer font) {
+        public UpdateStreamingOutShrinkRequestTexts setFont(Integer font) {
             this.font = font;
             return this;
         }
@@ -1489,15 +1451,15 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.font;
         }
 
-        public UpdateCloudRecordRequestTexts setFontColor(UpdateCloudRecordRequestTextsFontColor fontColor) {
+        public UpdateStreamingOutShrinkRequestTexts setFontColor(UpdateStreamingOutShrinkRequestTextsFontColor fontColor) {
             this.fontColor = fontColor;
             return this;
         }
-        public UpdateCloudRecordRequestTextsFontColor getFontColor() {
+        public UpdateStreamingOutShrinkRequestTextsFontColor getFontColor() {
             return this.fontColor;
         }
 
-        public UpdateCloudRecordRequestTexts setFontSize(Integer fontSize) {
+        public UpdateStreamingOutShrinkRequestTexts setFontSize(Integer fontSize) {
             this.fontSize = fontSize;
             return this;
         }
@@ -1505,7 +1467,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.fontSize;
         }
 
-        public UpdateCloudRecordRequestTexts setHasBox(Boolean hasBox) {
+        public UpdateStreamingOutShrinkRequestTexts setHasBox(Boolean hasBox) {
             this.hasBox = hasBox;
             return this;
         }
@@ -1513,7 +1475,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.hasBox;
         }
 
-        public UpdateCloudRecordRequestTexts setLayer(Integer layer) {
+        public UpdateStreamingOutShrinkRequestTexts setLayer(Integer layer) {
             this.layer = layer;
             return this;
         }
@@ -1521,7 +1483,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.layer;
         }
 
-        public UpdateCloudRecordRequestTexts setTexture(String texture) {
+        public UpdateStreamingOutShrinkRequestTexts setTexture(String texture) {
             this.texture = texture;
             return this;
         }
@@ -1529,7 +1491,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.texture;
         }
 
-        public UpdateCloudRecordRequestTexts setX(Double x) {
+        public UpdateStreamingOutShrinkRequestTexts setX(Double x) {
             this.x = x;
             return this;
         }
@@ -1537,7 +1499,7 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.x;
         }
 
-        public UpdateCloudRecordRequestTexts setY(Double y) {
+        public UpdateStreamingOutShrinkRequestTexts setY(Double y) {
             this.y = y;
             return this;
         }

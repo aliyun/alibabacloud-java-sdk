@@ -38,6 +38,9 @@ public class StartStreamingOutRequest extends TeaModel {
     @NameInMap("Images")
     public java.util.List<StartStreamingOutRequestImages> images;
 
+    @NameInMap("LayoutSpecifiedUsers")
+    public StartStreamingOutRequestLayoutSpecifiedUsers layoutSpecifiedUsers;
+
     @NameInMap("Panes")
     public java.util.List<StartStreamingOutRequestPanes> panes;
 
@@ -123,6 +126,14 @@ public class StartStreamingOutRequest extends TeaModel {
     }
     public java.util.List<StartStreamingOutRequestImages> getImages() {
         return this.images;
+    }
+
+    public StartStreamingOutRequest setLayoutSpecifiedUsers(StartStreamingOutRequestLayoutSpecifiedUsers layoutSpecifiedUsers) {
+        this.layoutSpecifiedUsers = layoutSpecifiedUsers;
+        return this;
+    }
+    public StartStreamingOutRequestLayoutSpecifiedUsers getLayoutSpecifiedUsers() {
+        return this.layoutSpecifiedUsers;
     }
 
     public StartStreamingOutRequest setPanes(java.util.List<StartStreamingOutRequestPanes> panes) {
@@ -731,6 +742,42 @@ public class StartStreamingOutRequest extends TeaModel {
         }
         public Double getY() {
             return this.y;
+        }
+
+    }
+
+    public static class StartStreamingOutRequestLayoutSpecifiedUsers extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Ids")
+        public java.util.List<String> ids;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        public static StartStreamingOutRequestLayoutSpecifiedUsers build(java.util.Map<String, ?> map) throws Exception {
+            StartStreamingOutRequestLayoutSpecifiedUsers self = new StartStreamingOutRequestLayoutSpecifiedUsers();
+            return TeaModel.build(map, self);
+        }
+
+        public StartStreamingOutRequestLayoutSpecifiedUsers setIds(java.util.List<String> ids) {
+            this.ids = ids;
+            return this;
+        }
+        public java.util.List<String> getIds() {
+            return this.ids;
+        }
+
+        public StartStreamingOutRequestLayoutSpecifiedUsers setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

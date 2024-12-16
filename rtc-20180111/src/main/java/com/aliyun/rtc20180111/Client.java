@@ -2226,6 +2226,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>纪要列表</p>
+     * 
+     * @param tmpReq DescribeCloudNotesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudNotesResponse
+     */
+    public DescribeCloudNotesResponse describeCloudNotesWithOptions(DescribeCloudNotesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeCloudNotesShrinkRequest request = new DescribeCloudNotesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskIds)) {
+            request.taskIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskIds, "TaskIds", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudNotes"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudNotesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>纪要列表</p>
+     * 
+     * @param request DescribeCloudNotesRequest
+     * @return DescribeCloudNotesResponse
+     */
+    public DescribeCloudNotesResponse describeCloudNotes(DescribeCloudNotesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudNotesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>调用DescribeEndPointEventList获取端对端用户事件列表。</p>
      * 
      * @param request DescribeEndPointEventListRequest
@@ -4560,14 +4606,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>开启智能纪要</p>
+     * 
+     * @param tmpReq StartCloudNoteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartCloudNoteResponse
+     */
+    public StartCloudNoteResponse startCloudNoteWithOptions(StartCloudNoteRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StartCloudNoteShrinkRequest request = new StartCloudNoteShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.autoChapters)) {
+            request.autoChaptersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.autoChapters, "AutoChapters", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customPrompt)) {
+            request.customPromptShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customPrompt, "CustomPrompt", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.meetingAssistance)) {
+            request.meetingAssistanceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.meetingAssistance, "MeetingAssistance", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.serviceInspection)) {
+            request.serviceInspectionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serviceInspection, "ServiceInspection", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.summarization)) {
+            request.summarizationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.summarization, "Summarization", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.textPolish)) {
+            request.textPolishShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.textPolish, "TextPolish", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoChaptersShrink)) {
+            query.put("AutoChapters", request.autoChaptersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customPromptShrink)) {
+            query.put("CustomPrompt", request.customPromptShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.languageHints)) {
+            query.put("LanguageHints", request.languageHints);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.meetingAssistanceShrink)) {
+            query.put("MeetingAssistance", request.meetingAssistanceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInspectionShrink)) {
+            query.put("ServiceInspection", request.serviceInspectionShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLanguage)) {
+            query.put("SourceLanguage", request.sourceLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageConfig)) {
+            query.put("StorageConfig", request.storageConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.summarizationShrink)) {
+            query.put("Summarization", request.summarizationShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.textPolishShrink)) {
+            query.put("TextPolish", request.textPolishShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartCloudNote"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartCloudNoteResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开启智能纪要</p>
+     * 
+     * @param request StartCloudNoteRequest
+     * @return StartCloudNoteResponse
+     */
+    public StartCloudNoteResponse startCloudNote(StartCloudNoteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startCloudNoteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>StartCloudRecord</p>
      * 
-     * @param request StartCloudRecordRequest
+     * @param tmpReq StartCloudRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartCloudRecordResponse
      */
-    public StartCloudRecordResponse startCloudRecordWithOptions(StartCloudRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public StartCloudRecordResponse startCloudRecordWithOptions(StartCloudRecordRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StartCloudRecordShrinkRequest request = new StartCloudRecordShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.layoutSpecifiedUsers)) {
+            request.layoutSpecifiedUsersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.layoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
@@ -4591,6 +4757,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.images)) {
             query.put("Images", request.images);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layoutSpecifiedUsersShrink)) {
+            query.put("LayoutSpecifiedUsers", request.layoutSpecifiedUsersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.panes)) {
@@ -4925,12 +5095,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>StartStreamingOut</p>
      * 
-     * @param request StartStreamingOutRequest
+     * @param tmpReq StartStreamingOutRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartStreamingOutResponse
      */
-    public StartStreamingOutResponse startStreamingOutWithOptions(StartStreamingOutRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public StartStreamingOutResponse startStreamingOutWithOptions(StartStreamingOutRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StartStreamingOutShrinkRequest request = new StartStreamingOutShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.layoutSpecifiedUsers)) {
+            request.layoutSpecifiedUsersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.layoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
@@ -4954,6 +5130,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.images)) {
             query.put("Images", request.images);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layoutSpecifiedUsersShrink)) {
+            query.put("LayoutSpecifiedUsers", request.layoutSpecifiedUsersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.panes)) {
@@ -5109,6 +5289,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopChannelResponse stopChannel(StopChannelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopChannelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止智能纪要</p>
+     * 
+     * @param request StopCloudNoteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopCloudNoteResponse
+     */
+    public StopCloudNoteResponse stopCloudNoteWithOptions(StopCloudNoteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopCloudNote"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopCloudNoteResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止智能纪要</p>
+     * 
+     * @param request StopCloudNoteRequest
+     * @return StopCloudNoteResponse
+     */
+    public StopCloudNoteResponse stopCloudNote(StopCloudNoteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopCloudNoteWithOptions(request, runtime);
     }
 
     /**
@@ -5381,12 +5617,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>更新云端录制任务</p>
      * 
-     * @param request UpdateCloudRecordRequest
+     * @param tmpReq UpdateCloudRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateCloudRecordResponse
      */
-    public UpdateCloudRecordResponse updateCloudRecordWithOptions(UpdateCloudRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateCloudRecordResponse updateCloudRecordWithOptions(UpdateCloudRecordRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateCloudRecordShrinkRequest request = new UpdateCloudRecordShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.layoutSpecifiedUsers)) {
+            request.layoutSpecifiedUsersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.layoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
@@ -5406,6 +5648,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.images)) {
             query.put("Images", request.images);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layoutSpecifiedUsersShrink)) {
+            query.put("LayoutSpecifiedUsers", request.layoutSpecifiedUsersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.panes)) {
@@ -5791,12 +6037,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>更新旁路推流任务</p>
      * 
-     * @param request UpdateStreamingOutRequest
+     * @param tmpReq UpdateStreamingOutRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateStreamingOutResponse
      */
-    public UpdateStreamingOutResponse updateStreamingOutWithOptions(UpdateStreamingOutRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateStreamingOutResponse updateStreamingOutWithOptions(UpdateStreamingOutRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateStreamingOutShrinkRequest request = new UpdateStreamingOutShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.layoutSpecifiedUsers)) {
+            request.layoutSpecifiedUsersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.layoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
@@ -5816,6 +6068,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.images)) {
             query.put("Images", request.images);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layoutSpecifiedUsersShrink)) {
+            query.put("LayoutSpecifiedUsers", request.layoutSpecifiedUsersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.panes)) {
