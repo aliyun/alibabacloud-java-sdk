@@ -40,6 +40,9 @@ public class StartCloudRecordRequest extends TeaModel {
     @NameInMap("Images")
     public java.util.List<StartCloudRecordRequestImages> images;
 
+    @NameInMap("LayoutSpecifiedUsers")
+    public StartCloudRecordRequestLayoutSpecifiedUsers layoutSpecifiedUsers;
+
     /**
      * <p>panes</p>
      */
@@ -129,6 +132,14 @@ public class StartCloudRecordRequest extends TeaModel {
     }
     public java.util.List<StartCloudRecordRequestImages> getImages() {
         return this.images;
+    }
+
+    public StartCloudRecordRequest setLayoutSpecifiedUsers(StartCloudRecordRequestLayoutSpecifiedUsers layoutSpecifiedUsers) {
+        this.layoutSpecifiedUsers = layoutSpecifiedUsers;
+        return this;
+    }
+    public StartCloudRecordRequestLayoutSpecifiedUsers getLayoutSpecifiedUsers() {
+        return this.layoutSpecifiedUsers;
     }
 
     public StartCloudRecordRequest setPanes(java.util.List<StartCloudRecordRequestPanes> panes) {
@@ -737,6 +748,42 @@ public class StartCloudRecordRequest extends TeaModel {
         }
         public Double getY() {
             return this.y;
+        }
+
+    }
+
+    public static class StartCloudRecordRequestLayoutSpecifiedUsers extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Ids")
+        public java.util.List<String> ids;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        public static StartCloudRecordRequestLayoutSpecifiedUsers build(java.util.Map<String, ?> map) throws Exception {
+            StartCloudRecordRequestLayoutSpecifiedUsers self = new StartCloudRecordRequestLayoutSpecifiedUsers();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCloudRecordRequestLayoutSpecifiedUsers setIds(java.util.List<String> ids) {
+            this.ids = ids;
+            return this;
+        }
+        public java.util.List<String> getIds() {
+            return this.ids;
+        }
+
+        public StartCloudRecordRequestLayoutSpecifiedUsers setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

@@ -31,6 +31,9 @@ public class UpdateStreamingOutRequest extends TeaModel {
     @NameInMap("Images")
     public java.util.List<UpdateStreamingOutRequestImages> images;
 
+    @NameInMap("LayoutSpecifiedUsers")
+    public UpdateStreamingOutRequestLayoutSpecifiedUsers layoutSpecifiedUsers;
+
     @NameInMap("Panes")
     public java.util.List<UpdateStreamingOutRequestPanes> panes;
 
@@ -98,6 +101,14 @@ public class UpdateStreamingOutRequest extends TeaModel {
     }
     public java.util.List<UpdateStreamingOutRequestImages> getImages() {
         return this.images;
+    }
+
+    public UpdateStreamingOutRequest setLayoutSpecifiedUsers(UpdateStreamingOutRequestLayoutSpecifiedUsers layoutSpecifiedUsers) {
+        this.layoutSpecifiedUsers = layoutSpecifiedUsers;
+        return this;
+    }
+    public UpdateStreamingOutRequestLayoutSpecifiedUsers getLayoutSpecifiedUsers() {
+        return this.layoutSpecifiedUsers;
     }
 
     public UpdateStreamingOutRequest setPanes(java.util.List<UpdateStreamingOutRequestPanes> panes) {
@@ -690,6 +701,42 @@ public class UpdateStreamingOutRequest extends TeaModel {
         }
         public Double getY() {
             return this.y;
+        }
+
+    }
+
+    public static class UpdateStreamingOutRequestLayoutSpecifiedUsers extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Ids")
+        public java.util.List<String> ids;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        public static UpdateStreamingOutRequestLayoutSpecifiedUsers build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestLayoutSpecifiedUsers self = new UpdateStreamingOutRequestLayoutSpecifiedUsers();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStreamingOutRequestLayoutSpecifiedUsers setIds(java.util.List<String> ids) {
+            this.ids = ids;
+            return this;
+        }
+        public java.util.List<String> getIds() {
+            return this.ids;
+        }
+
+        public UpdateStreamingOutRequestLayoutSpecifiedUsers setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
