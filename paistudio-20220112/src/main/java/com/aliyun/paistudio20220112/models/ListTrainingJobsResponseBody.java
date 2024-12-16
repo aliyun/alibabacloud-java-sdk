@@ -677,6 +677,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("ComputeResource")
         public ListTrainingJobsResponseBodyTrainingJobsComputeResource computeResource;
 
+        @NameInMap("DlcJobId")
+        public String dlcJobId;
+
         @NameInMap("Environments")
         public java.util.Map<String, String> environments;
 
@@ -822,6 +825,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
         public ListTrainingJobsResponseBodyTrainingJobsComputeResource getComputeResource() {
             return this.computeResource;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobs setDlcJobId(String dlcJobId) {
+            this.dlcJobId = dlcJobId;
+            return this;
+        }
+        public String getDlcJobId() {
+            return this.dlcJobId;
         }
 
         public ListTrainingJobsResponseBodyTrainingJobs setEnvironments(java.util.Map<String, String> environments) {
