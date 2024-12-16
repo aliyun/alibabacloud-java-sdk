@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunWritingResponseBody extends TeaModel {
+    @NameInMap("End")
+    public Boolean end;
+
     @NameInMap("Header")
     public RunWritingResponseBodyHeader header;
 
@@ -20,6 +23,14 @@ public class RunWritingResponseBody extends TeaModel {
     public static RunWritingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RunWritingResponseBody self = new RunWritingResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RunWritingResponseBody setEnd(Boolean end) {
+        this.end = end;
+        return this;
+    }
+    public Boolean getEnd() {
+        return this.end;
     }
 
     public RunWritingResponseBody setHeader(RunWritingResponseBodyHeader header) {
