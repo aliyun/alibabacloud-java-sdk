@@ -14,6 +14,9 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The initial SSO method. Valid values:</p>
      * <ul>
@@ -69,6 +72,14 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     }
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    public SetApplicationSsoConfigRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public SetApplicationSsoConfigRequest setInitLoginType(String initLoginType) {
@@ -449,6 +460,36 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
 
     }
 
+    public static class SetApplicationSsoConfigRequestSamlSsoConfigOptionalRelayStates extends TeaModel {
+        @NameInMap("DisplayName")
+        public String displayName;
+
+        @NameInMap("RelayState")
+        public String relayState;
+
+        public static SetApplicationSsoConfigRequestSamlSsoConfigOptionalRelayStates build(java.util.Map<String, ?> map) throws Exception {
+            SetApplicationSsoConfigRequestSamlSsoConfigOptionalRelayStates self = new SetApplicationSsoConfigRequestSamlSsoConfigOptionalRelayStates();
+            return TeaModel.build(map, self);
+        }
+
+        public SetApplicationSsoConfigRequestSamlSsoConfigOptionalRelayStates setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public SetApplicationSsoConfigRequestSamlSsoConfigOptionalRelayStates setRelayState(String relayState) {
+            this.relayState = relayState;
+            return this;
+        }
+        public String getRelayState() {
+            return this.relayState;
+        }
+
+    }
+
     public static class SetApplicationSsoConfigRequestSamlSsoConfig extends TeaModel {
         /**
          * <p>Specifies whether to calculate the signature for the assertion. You cannot set ResponseSigned and AssertionSigned to false at the same time.</p>
@@ -504,6 +545,9 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
          */
         @NameInMap("NameIdValueExpression")
         public String nameIdValueExpression;
+
+        @NameInMap("OptionalRelayStates")
+        public java.util.List<SetApplicationSsoConfigRequestSamlSsoConfigOptionalRelayStates> optionalRelayStates;
 
         /**
          * <p>Specifies whether to calculate the signature for the response. You cannot set ResponseSigned and AssertionSigned to false at the same time.</p>
@@ -610,6 +654,14 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         }
         public String getNameIdValueExpression() {
             return this.nameIdValueExpression;
+        }
+
+        public SetApplicationSsoConfigRequestSamlSsoConfig setOptionalRelayStates(java.util.List<SetApplicationSsoConfigRequestSamlSsoConfigOptionalRelayStates> optionalRelayStates) {
+            this.optionalRelayStates = optionalRelayStates;
+            return this;
+        }
+        public java.util.List<SetApplicationSsoConfigRequestSamlSsoConfigOptionalRelayStates> getOptionalRelayStates() {
+            return this.optionalRelayStates;
         }
 
         public SetApplicationSsoConfigRequestSamlSsoConfig setResponseSigned(Boolean responseSigned) {

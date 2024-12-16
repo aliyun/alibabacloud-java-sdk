@@ -566,6 +566,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建身份提供方</p>
+     * 
+     * @param request CreateIdentityProviderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateIdentityProviderResponse
+     */
+    public CreateIdentityProviderResponse createIdentityProviderWithOptions(CreateIdentityProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authnConfig)) {
+            query.put("AuthnConfig", request.authnConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoCreateUserConfig)) {
+            query.put("AutoCreateUserConfig", request.autoCreateUserConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUpdateUserConfig)) {
+            query.put("AutoUpdateUserConfig", request.autoUpdateUserConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindingConfig)) {
+            query.put("BindingConfig", request.bindingConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dingtalkAppConfig)) {
+            query.put("DingtalkAppConfig", request.dingtalkAppConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identityProviderName)) {
+            query.put("IdentityProviderName", request.identityProviderName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identityProviderType)) {
+            query.put("IdentityProviderType", request.identityProviderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.larkConfig)) {
+            query.put("LarkConfig", request.larkConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ldapConfig)) {
+            query.put("LdapConfig", request.ldapConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkAccessEndpointId)) {
+            query.put("NetworkAccessEndpointId", request.networkAccessEndpointId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oidcConfig)) {
+            query.put("OidcConfig", request.oidcConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.udPullConfig)) {
+            query.put("UdPullConfig", request.udPullConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.udPushConfig)) {
+            query.put("UdPushConfig", request.udPushConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.weComConfig)) {
+            query.put("WeComConfig", request.weComConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateIdentityProvider"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIdentityProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建身份提供方</p>
+     * 
+     * @param request CreateIdentityProviderRequest
+     * @return CreateIdentityProviderResponse
+     */
+    public CreateIdentityProviderResponse createIdentityProvider(CreateIdentityProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createIdentityProviderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates an instance based on which all capabilities of Identity as a Service (IDaaS) Enterprise Identity and Access Management (EIAM) are provided.</p>
      * 
      * @param request CreateInstanceRequest
@@ -1084,6 +1184,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteGroupResponse deleteGroup(DeleteGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除身份提供方</p>
+     * 
+     * @param request DeleteIdentityProviderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteIdentityProviderResponse
+     */
+    public DeleteIdentityProviderResponse deleteIdentityProviderWithOptions(DeleteIdentityProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identityProviderId)) {
+            query.put("IdentityProviderId", request.identityProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteIdentityProvider"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIdentityProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除身份提供方</p>
+     * 
+     * @param request DeleteIdentityProviderRequest
+     * @return DeleteIdentityProviderResponse
+     */
+    public DeleteIdentityProviderResponse deleteIdentityProvider(DeleteIdentityProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteIdentityProviderWithOptions(request, runtime);
     }
 
     /**
@@ -1632,6 +1780,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>禁用同步入</p>
+     * 
+     * @param request DisableIdentityProviderUdPullRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableIdentityProviderUdPullResponse
+     */
+    public DisableIdentityProviderUdPullResponse disableIdentityProviderUdPullWithOptions(DisableIdentityProviderUdPullRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identityProviderId)) {
+            query.put("IdentityProviderId", request.identityProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableIdentityProviderUdPull"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableIdentityProviderUdPullResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>禁用同步入</p>
+     * 
+     * @param request DisableIdentityProviderUdPullRequest
+     * @return DisableIdentityProviderUdPullResponse
+     */
+    public DisableIdentityProviderUdPullResponse disableIdentityProviderUdPull(DisableIdentityProviderUdPullRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableIdentityProviderUdPullWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>关闭初始化域名自动跳转。</p>
      * 
      * @param request DisableInitDomainAutoRedirectRequest
@@ -2016,6 +2212,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EnableDomainProxyTokenResponse enableDomainProxyToken(EnableDomainProxyTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableDomainProxyTokenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用同步入</p>
+     * 
+     * @param request EnableIdentityProviderUdPullRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableIdentityProviderUdPullResponse
+     */
+    public EnableIdentityProviderUdPullResponse enableIdentityProviderUdPullWithOptions(EnableIdentityProviderUdPullRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identityProviderId)) {
+            query.put("IdentityProviderId", request.identityProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableIdentityProviderUdPull"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableIdentityProviderUdPullResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用同步入</p>
+     * 
+     * @param request EnableIdentityProviderUdPullRequest
+     * @return EnableIdentityProviderUdPullResponse
+     */
+    public EnableIdentityProviderUdPullResponse enableIdentityProviderUdPull(EnableIdentityProviderUdPullRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableIdentityProviderUdPullWithOptions(request, runtime);
     }
 
     /**
@@ -2536,6 +2780,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGroupResponse getGroup(GetGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取身份提供方</p>
+     * 
+     * @param request GetIdentityProviderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetIdentityProviderResponse
+     */
+    public GetIdentityProviderResponse getIdentityProviderWithOptions(GetIdentityProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identityProviderId)) {
+            query.put("IdentityProviderId", request.identityProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIdentityProvider"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIdentityProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取身份提供方</p>
+     * 
+     * @param request GetIdentityProviderRequest
+     * @return GetIdentityProviderResponse
+     */
+    public GetIdentityProviderResponse getIdentityProvider(GetIdentityProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getIdentityProviderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取IdP同步入配置</p>
+     * 
+     * @param request GetIdentityProviderUdPullConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetIdentityProviderUdPullConfigurationResponse
+     */
+    public GetIdentityProviderUdPullConfigurationResponse getIdentityProviderUdPullConfigurationWithOptions(GetIdentityProviderUdPullConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identityProviderId)) {
+            query.put("IdentityProviderId", request.identityProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIdentityProviderUdPullConfiguration"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIdentityProviderUdPullConfigurationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取IdP同步入配置</p>
+     * 
+     * @param request GetIdentityProviderUdPullConfigurationRequest
+     * @return GetIdentityProviderUdPullConfigurationResponse
+     */
+    public GetIdentityProviderUdPullConfigurationResponse getIdentityProviderUdPullConfiguration(GetIdentityProviderUdPullConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getIdentityProviderUdPullConfigurationWithOptions(request, runtime);
     }
 
     /**
@@ -3596,6 +3936,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListGroupsForUserResponse listGroupsForUser(ListGroupsForUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listGroupsForUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询身份提供方</p>
+     * 
+     * @param request ListIdentityProvidersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIdentityProvidersResponse
+     */
+    public ListIdentityProvidersResponse listIdentityProvidersWithOptions(ListIdentityProvidersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIdentityProviders"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIdentityProvidersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询身份提供方</p>
+     * 
+     * @param request ListIdentityProvidersRequest
+     * @return ListIdentityProvidersResponse
+     */
+    public ListIdentityProvidersResponse listIdentityProviders(ListIdentityProvidersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listIdentityProvidersWithOptions(request, runtime);
     }
 
     /**
@@ -4964,6 +5356,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationId", request.applicationId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.initLoginType)) {
             query.put("InitLoginType", request.initLoginType);
         }
@@ -5118,6 +5514,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改IdP同步入配置</p>
+     * 
+     * @param request SetIdentityProviderUdPullConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetIdentityProviderUdPullConfigurationResponse
+     */
+    public SetIdentityProviderUdPullConfigurationResponse setIdentityProviderUdPullConfigurationWithOptions(SetIdentityProviderUdPullConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupSyncStatus)) {
+            query.put("GroupSyncStatus", request.groupSyncStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identityProviderId)) {
+            query.put("IdentityProviderId", request.identityProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.incrementalCallbackStatus)) {
+            query.put("IncrementalCallbackStatus", request.incrementalCallbackStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ldapUdPullConfig)) {
+            query.put("LdapUdPullConfig", request.ldapUdPullConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodicSyncStatus)) {
+            query.put("PeriodicSyncStatus", request.periodicSyncStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pullProtectedRule)) {
+            query.put("PullProtectedRule", request.pullProtectedRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.udSyncScopeConfig)) {
+            query.put("UdSyncScopeConfig", request.udSyncScopeConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetIdentityProviderUdPullConfiguration"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetIdentityProviderUdPullConfigurationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改IdP同步入配置</p>
+     * 
+     * @param request SetIdentityProviderUdPullConfigurationRequest
+     * @return SetIdentityProviderUdPullConfigurationResponse
+     */
+    public SetIdentityProviderUdPullConfigurationResponse setIdentityProviderUdPullConfiguration(SetIdentityProviderUdPullConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setIdentityProviderUdPullConfigurationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Configures a password complexity policy for an Employee Identity and Access Management (EIAM) instance of Identity as a Service (IDaaS).</p>
      * 
      * @param request SetPasswordComplexityConfigurationRequest
@@ -5179,6 +5647,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetPasswordExpirationConfigurationResponse setPasswordExpirationConfigurationWithOptions(SetPasswordExpirationConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveAuthenticationSourceIds)) {
+            query.put("EffectiveAuthenticationSourceIds", request.effectiveAuthenticationSourceIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -5406,7 +5878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解锁账户</p>
+     * <p>Unlocks an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) that is locked.</p>
      * 
      * @param request UnlockUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5442,7 +5914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解锁账户</p>
+     * <p>Unlocks an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) that is locked.</p>
      * 
      * @param request UnlockUserRequest
      * @return UnlockUserResponse
@@ -5662,6 +6134,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateGroupDescriptionResponse updateGroupDescription(UpdateGroupDescriptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateGroupDescriptionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新idp基础配置</p>
+     * 
+     * @param request UpdateIdentityProviderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateIdentityProviderResponse
+     */
+    public UpdateIdentityProviderResponse updateIdentityProviderWithOptions(UpdateIdentityProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dingtalkAppConfig)) {
+            query.put("DingtalkAppConfig", request.dingtalkAppConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identityProviderId)) {
+            query.put("IdentityProviderId", request.identityProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identityProviderName)) {
+            query.put("IdentityProviderName", request.identityProviderName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.larkConfig)) {
+            query.put("LarkConfig", request.larkConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ldapConfig)) {
+            query.put("LdapConfig", request.ldapConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkAccessEndpointId)) {
+            query.put("NetworkAccessEndpointId", request.networkAccessEndpointId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oidcConfig)) {
+            query.put("OidcConfig", request.oidcConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.weComConfig)) {
+            query.put("WeComConfig", request.weComConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateIdentityProvider"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIdentityProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新idp基础配置</p>
+     * 
+     * @param request UpdateIdentityProviderRequest
+     * @return UpdateIdentityProviderResponse
+     */
+    public UpdateIdentityProviderResponse updateIdentityProvider(UpdateIdentityProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateIdentityProviderWithOptions(request, runtime);
     }
 
     /**

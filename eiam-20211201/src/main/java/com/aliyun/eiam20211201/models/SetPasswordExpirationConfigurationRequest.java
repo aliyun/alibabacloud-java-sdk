@@ -4,6 +4,9 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class SetPasswordExpirationConfigurationRequest extends TeaModel {
+    @NameInMap("EffectiveAuthenticationSourceIds")
+    public java.util.List<String> effectiveAuthenticationSourceIds;
+
     /**
      * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
@@ -94,6 +97,14 @@ public class SetPasswordExpirationConfigurationRequest extends TeaModel {
     public static SetPasswordExpirationConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         SetPasswordExpirationConfigurationRequest self = new SetPasswordExpirationConfigurationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetPasswordExpirationConfigurationRequest setEffectiveAuthenticationSourceIds(java.util.List<String> effectiveAuthenticationSourceIds) {
+        this.effectiveAuthenticationSourceIds = effectiveAuthenticationSourceIds;
+        return this;
+    }
+    public java.util.List<String> getEffectiveAuthenticationSourceIds() {
+        return this.effectiveAuthenticationSourceIds;
     }
 
     public SetPasswordExpirationConfigurationRequest setInstanceId(String instanceId) {

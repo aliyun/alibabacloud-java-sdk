@@ -1,3 +1,20 @@
+2024-12-16 Version: 1.8.0
+- Support API CreateIdentityProvider.
+- Support API DeleteIdentityProvider.
+- Support API DisableIdentityProviderUdPull.
+- Support API EnableIdentityProviderUdPull.
+- Support API GetIdentityProvider.
+- Support API GetIdentityProviderUdPullConfiguration.
+- Support API ListIdentityProviders.
+- Support API SetIdentityProviderUdPullConfiguration.
+- Support API UpdateIdentityProvider.
+- Update API GetApplicationSsoConfig: update response param.
+- Update API GetPasswordExpirationConfiguration: update response param.
+- Update API SetApplicationSsoConfig: add param ClientToken.
+- Update API SetApplicationSsoConfig: update param SamlSsoConfig.
+- Update API SetPasswordExpirationConfiguration: add param EffectiveAuthenticationSourceIds.
+
+
 2024-11-01 Version: 1.7.0
 - Support API DeleteOrganizationalUnitChildren.
 - Update API CreateOrganizationalUnit: update param OrganizationalUnitName.
