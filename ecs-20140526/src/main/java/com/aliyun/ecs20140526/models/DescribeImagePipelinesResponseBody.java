@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesResponseBody extends TeaModel {
     /**
-     * <p>The information about the image templates.</p>
+     * <p>Details of the image templates.</p>
      */
     @NameInMap("ImagePipeline")
     public DescribeImagePipelinesResponseBodyImagePipeline imagePipeline;

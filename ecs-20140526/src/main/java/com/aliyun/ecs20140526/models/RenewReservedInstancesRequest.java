@@ -5,8 +5,12 @@ import com.aliyun.tea.*;
 
 public class RenewReservedInstancesRequest extends TeaModel {
     /**
-     * <p>The auto-renewal duration. Unit: months. This parameter takes effect only when AutoRenew is set to true.</p>
-     * <p>Valid values: 12 and 36. Default value: 12.</p>
+     * <p>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -15,7 +19,8 @@ public class RenewReservedInstancesRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The auto-renewal duration. Unit: months. This parameter takes effect only when AutoRenew is set to true.</p>
+     * <p>Valid values: 12 and 36. Default value: 12.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,12 +29,7 @@ public class RenewReservedInstancesRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
-     * <p>Default value: false.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -44,8 +44,9 @@ public class RenewReservedInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The unit of the validity period of the reserved instance.</p>
-     * <p>Set the value to Year.</p>
+     * <p>The validity period of the reserved instance.</p>
+     * <p>Valid values: 1 and 3.</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -54,7 +55,8 @@ public class RenewReservedInstancesRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The unit of the validity period of the reserved instance.</p>
+     * <p>Set the value to Year.</p>
      * 
      * <strong>example:</strong>
      * <p>Year</p>
@@ -63,9 +65,7 @@ public class RenewReservedInstancesRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The validity period of the reserved instance.</p>
-     * <p>Valid values: 1 and 3.</p>
-     * <p>Default value: 1.</p>
+     * <p>The region ID of the reserved instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -74,8 +74,7 @@ public class RenewReservedInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the reserved instance. You can call the <a href="https://help.aliyun.com/document_detail/100065.html">DescribeReservedInstances</a> operation to query the IDs of reserved instances that you purchased.</p>
-     * <p>You can specify up to 10 IDs of reserved instances in a single request.</p>
+     * <p>The IDs of the reserved instances.</p>
      */
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;
