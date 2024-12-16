@@ -195,6 +195,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("Priority")
     public Long priority;
 
+    @NameInMap("ProxyPath")
+    public String proxyPath;
+
     /**
      * <strong>example:</strong>
      * <p>Internal Error</p>
@@ -559,6 +562,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public Long getPriority() {
         return this.priority;
+    }
+
+    public GetInstanceResponseBody setProxyPath(String proxyPath) {
+        this.proxyPath = proxyPath;
+        return this;
+    }
+    public String getProxyPath() {
+        return this.proxyPath;
     }
 
     public GetInstanceResponseBody setReasonCode(String reasonCode) {
