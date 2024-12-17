@@ -598,6 +598,9 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         @NameInMap("ruleType")
         public String ruleType;
 
+        @NameInMap("subNodeCol")
+        public java.util.List<?> subNodeCol;
+
         public static GetQualityCheckTaskResultResponseBodyDataQualityCheckList build(java.util.Map<String, ?> map) throws Exception {
             GetQualityCheckTaskResultResponseBodyDataQualityCheckList self = new GetQualityCheckTaskResultResponseBodyDataQualityCheckList();
             return TeaModel.build(map, self);
@@ -705,6 +708,14 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         }
         public String getRuleType() {
             return this.ruleType;
+        }
+
+        public GetQualityCheckTaskResultResponseBodyDataQualityCheckList setSubNodeCol(java.util.List<?> subNodeCol) {
+            this.subNodeCol = subNodeCol;
+            return this;
+        }
+        public java.util.List<?> getSubNodeCol() {
+            return this.subNodeCol;
         }
 
     }
