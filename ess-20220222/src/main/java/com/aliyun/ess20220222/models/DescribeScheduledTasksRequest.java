@@ -31,6 +31,14 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The interval at which scheduled task N is repeatedly executed. Valid values:</p>
+     * <ul>
+     * <li>Daily: Scheduled task N is executed once every specified number of days.</li>
+     * <li>Weekly: Scheduled task N is executed on each specified day of a week.</li>
+     * <li>Monthly: Scheduled task N is executed on each specified day of a month.</li>
+     * <li>Cron: Scheduled task N is executed based on the specified Cron expression.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Weekly</p>
      */
@@ -38,6 +46,9 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public String recurrenceType;
 
     /**
+     * <p>The number of times scheduled task N is repeatedly executed.</p>
+     * <p>You can specify this parameter only if you set RecurrenceType to Weekly. Separate multiple values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6.</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
      */
@@ -88,6 +99,12 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public java.util.List<String> scheduledTaskNames;
 
     /**
+     * <p>Specifies whether scheduled task N is enabled.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -95,6 +112,8 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public Boolean taskEnabled;
 
     /**
+     * <p>The name of scheduled task N. Fuzzy search based on keywords is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>scheduled****</p>
      */

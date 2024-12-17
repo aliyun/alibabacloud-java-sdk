@@ -22,7 +22,7 @@ public class DetachAlbServerGroupsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to remove the existing ECS instances from the ALB server group. Valid values:</p>
+     * <p>Specifies whether to remove the existing Elastic Compute Service (ECS) instances from the Application Load Balancer (ALB) server group marked for detachment. Valid values:</p>
      * <ul>
      * <li>true: removes the existing ECS instances from the ALB server group and returns the value of <code>ScalingActivityId</code>. You can query the value of ScalingActivityId to check whether the existing ECS instances are removed from the ALB server group.</li>
      * <li>false: does not remove the existing ECS instances from the ALB server group.</li>

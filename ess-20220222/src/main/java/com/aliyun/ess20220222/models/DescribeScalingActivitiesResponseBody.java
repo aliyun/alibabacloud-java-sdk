@@ -247,6 +247,8 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The ID of the instance refresh task.</p>
+         * 
          * <strong>example:</strong>
          * <p>ir-asdf12adsxg*****</p>
          */

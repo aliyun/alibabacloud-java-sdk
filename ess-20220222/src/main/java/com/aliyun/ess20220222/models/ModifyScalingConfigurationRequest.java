@@ -140,9 +140,37 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     @NameInMap("HpcClusterId")
     public String hpcClusterId;
 
+    /**
+     * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
+     * <ul>
+     * <li>enabled</li>
+     * <li>disabled</li>
+     * </ul>
+     * <p>Default value: enabled.</p>
+     * <blockquote>
+     * <p> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain instance metadata</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
+     */
     @NameInMap("HttpEndpoint")
     public String httpEndpoint;
 
+    /**
+     * <p>Specifies whether to forcibly use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</p>
+     * <ul>
+     * <li>optional: does not forcibly use the security hardening mode (IMDSv2).</li>
+     * <li>required: forcibly uses the security hardening mode (IMDSv2). If you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+     * </ul>
+     * <p>Default value: optional.</p>
+     * <blockquote>
+     * <p> For more information about instance metadata access modes, see <a href="https://help.aliyun.com/document_detail/108460.html">Access modes of instance metadata</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>optional</p>
+     */
     @NameInMap("HttpTokens")
     public String httpTokens;
 
@@ -196,7 +224,7 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The information about the intelligent configuration settings, which determine the available instance types.</p>
+     * <p>The intelligent configuration settings, which determine the available instance types.</p>
      */
     @NameInMap("InstancePatternInfos")
     public java.util.List<ModifyScalingConfigurationRequestInstancePatternInfos> instancePatternInfos;
@@ -227,15 +255,22 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    /**
+     * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
+     * <ul>
+     * <li>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10. The default value is 10.</li>
+     * <li>If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the value of <code>InternetMaxBandwidthOut</code>. The default value is the value of <code>InternetMaxBandwidthOut</code>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("InternetMaxBandwidthIn")
     public Integer internetMaxBandwidthIn;
 
     /**
-     * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values:</p>
-     * <ul>
-     * <li>If you set InternetChargeType to PayByBandwidth: 0 to 100. If you leave this parameter empty, this parameter is automatically set to 0.</li>
-     * <li>If you set InternetChargeType to PayByTraffic: 0 to 100. If you leave this parameter empty, an error is returned.</li>
-     * </ul>
+     * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
+     * <p>Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -307,7 +342,7 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     public java.util.List<ModifyScalingConfigurationRequestNetworkInterfaces> networkInterfaces;
 
     /**
-     * <p>Specifies whether to override existing data. Valid values:</p>
+     * <p>Specifies whether to overwrite existing data. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -1670,15 +1705,14 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyScalingConfigurationRequestInstancePatternInfos extends TeaModel {
         /**
-         * <p>The architectures of instance types. Valid values:</p>
+         * <p>The architecture types of the instance types. Valid values:</p>
          * <ul>
          * <li>X86: x86.</li>
          * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</li>
          * <li>BareMetal: ECS Bare Metal Instance.</li>
          * <li>Arm: Arm.</li>
-         * <li>SuperComputeCluster: Super Computing Cluster.</li>
          * </ul>
-         * <p>By default, all values are included.</p>
+         * <p>By default, all values are selected.</p>
          */
         @NameInMap("Architectures")
         public java.util.List<String> architectures;
@@ -1686,7 +1720,7 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
         /**
          * <p>Specifies whether to include burstable instance types. Valid values:</p>
          * <ul>
-         * <li>Exclude: does not include burstable instance types.</li>
+         * <li>Exclude: excludes burstable instance types.</li>
          * <li>Include: includes burstable instance types.</li>
          * <li>Required: includes only burstable instance types.</li>
          * </ul>
@@ -1714,7 +1748,7 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
         public Integer cores;
 
         /**
-         * <p>The CPU architectures of instance types. Valid values:</p>
+         * <p>The CPU architectures of the instance types. Valid values:</p>
          * <blockquote>
          * <p> You can specify up to two CPU architectures.</p>
          * </blockquote>
@@ -1727,7 +1761,7 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
         public java.util.List<String> cpuArchitectures;
 
         /**
-         * <p>The instance types that you want to exclude. You can use wildcard characters, such as an asterisk (\*), to exclude an instance type or an instance family. Examples:</p>
+         * <p>The instance types that you want to exclude. You can use an asterisk (\*) as a wildcard character to exclude an instance type or an instance family. Examples:</p>
          * <ul>
          * <li>ecs.c6.large: excludes the ecs.c6.large instance type.</li>
          * <li>ecs.c6.\*: excludes the c6 instance family.</li>
@@ -1743,35 +1777,34 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
         public java.util.List<String> gpuSpecs;
 
         /**
-         * <p>The categories of instance types. Valid values:</p>
+         * <p>The categories of the instance types. Valid values:</p>
          * <ul>
-         * <li>General-purpose</li>
-         * <li>Compute-optimized</li>
-         * <li>Memory-optimized</li>
-         * <li>Big data</li>
-         * <li>Local SSDs</li>
-         * <li>High Clock Speed</li>
-         * <li>Enhanced</li>
-         * <li>Shared</li>
-         * <li>Compute-optimized with GPU</li>
-         * <li>Visual Compute-optimized</li>
-         * <li>Heterogeneous Service</li>
-         * <li>Compute-optimized with FPGA</li>
-         * <li>Compute-optimized with NPU</li>
-         * <li>ECS Bare Metal</li>
-         * <li>Super Computing Cluster</li>
-         * <li>High Performance Compute</li>
+         * <li>General-purpose: general-purpose instance type.</li>
+         * <li>Compute-optimized: compute-optimized instance type.</li>
+         * <li>Memory-optimized: memory-optimized instance type.</li>
+         * <li>Big data: big data instance type.</li>
+         * <li>Local SSDs: instance type that uses local SSDs.</li>
+         * <li>High Clock Speed: instance type that has a high clock speed.</li>
+         * <li>Enhanced: enhanced instance type.</li>
+         * <li>Shared: shared instance type.</li>
+         * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</li>
+         * <li>Visual Compute-optimized: visual compute-optimized instance type.</li>
+         * <li>Heterogeneous Service: heterogeneous service instance type.</li>
+         * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</li>
+         * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</li>
+         * <li>ECS Bare Metal: ECS Bare Metal Instance type.</li>
+         * <li>High Performance Compute: HPC-optimized instance type.</li>
          * </ul>
          */
         @NameInMap("InstanceCategories")
         public java.util.List<String> instanceCategories;
 
         /**
-         * <p>The level of the instance family. You can specify this parameter to filter the available instance types. This parameter takes effect only if you set <code>CostOptimization</code> to true. Valid values:</p>
+         * <p>The level of the instance family. You can specify this parameter to obtain the available instance types. This parameter takes effect only if you set <code>CostOptimization</code> to true. Valid values:</p>
          * <ul>
-         * <li>EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
-         * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources, and are suitable for business scenarios in which high stability is required. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
-         * <li>CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * <li>EntryLevel: entry-level (shared instance types). Instance types of this level are the most cost-effective but may not ensure stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+         * <li>EnterpriseLevel: enterprise-level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+         * <li>CreditEntryLevel: credit entry-level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a> of burstable instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1787,7 +1820,7 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
         public java.util.List<String> instanceTypeFamilies;
 
         /**
-         * <p>The maximum hourly price of pay-as-you-go or preemptible instances in intelligent configuration mode. You can specify this parameter to filter the available instance types.</p>
+         * <p>The maximum hourly price of pay-as-you-go or preemptible instances in intelligent configuration mode. You can specify this parameter to obtain the available instance types.</p>
          * <blockquote>
          * <p> If you set SpotStrategy to SpotWithPriceLimit, you must specify this parameter. In other cases, this parameter is optional.</p>
          * </blockquote>
@@ -1838,7 +1871,7 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
         public Float memory;
 
         /**
-         * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
+         * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) of each t5 or t6 burstable instance.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -1892,7 +1925,7 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
         public Integer minimumGpuAmount;
 
         /**
-         * <p>The initial vCPU credits per t5 or t6 burstable instance.</p>
+         * <p>The initial vCPU credits of each t5 or t6 burstable instance.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -1910,7 +1943,7 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
         public Float minimumMemorySize;
 
         /**
-         * <p>The processor models of instance types. You can specify up to 10 processor models.</p>
+         * <p>The processor models of the instance types. You can specify up to 10 processor models.</p>
          */
         @NameInMap("PhysicalProcessorModels")
         public java.util.List<String> physicalProcessorModels;

@@ -33,7 +33,7 @@ public class AttachLoadBalancersRequest extends TeaModel {
      * <ul>
      * <li><p>true: If you set this parameter to <code>true</code>, the attachment of the load balancer entails the addition of the existing instances in the scaling group to the backend server groups of the load balancer.</p>
      * <p>**</p>
-     * <p><strong>Note</strong> If a load balancer is currently attached to your scaling group, and you want to add the instances in your scaling group to the backend server groups of the load balancer, you can call this operation again and set the ForceAttach request parameter to true.</p>
+     * <p><strong>Note</strong> If a load balancer is currently attached to your scaling group, and you want to add the instances in your scaling group to the backend server groups of the load balancer, you can call this operation again and set ForceAttach request to true.</p>
      * </li>
      * <li><p>false: If you set this parameter to false, the attachment of the load balancer does not entail the addition of the existing instances in the scaling group to the backend server groups of the load balancer.</p>
      * </li>

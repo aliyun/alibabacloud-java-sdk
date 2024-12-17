@@ -7,12 +7,24 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     @NameInMap("DataDiskCategories")
     public java.util.List<String> dataDiskCategories;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CentOS7</p>
+     */
     @NameInMap("ImageFamily")
     public String imageFamily;
 
+    /**
+     * <strong>example:</strong>
+     * <p>centos6u5_64_20G_aliaegis****.vhd</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ubuntu_18_04_x64_20G_alibase_20231225.vhd</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
@@ -22,6 +34,10 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Ipv6AddressCount")
     public Integer ipv6AddressCount;
 
@@ -65,6 +81,10 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     @NameInMap("ScalingGroupIds")
     public java.util.List<String> scalingGroupIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
+     */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 

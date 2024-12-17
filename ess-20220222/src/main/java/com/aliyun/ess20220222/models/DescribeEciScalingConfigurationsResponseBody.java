@@ -2519,6 +2519,12 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("EphemeralStorage")
         public Integer ephemeralStorage;
 
+        /**
+         * <p>The version of the GPU driver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tesla=470.82.01</p>
+         */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 

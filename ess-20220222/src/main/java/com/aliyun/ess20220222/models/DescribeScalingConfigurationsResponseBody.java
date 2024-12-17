@@ -418,13 +418,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos extends TeaModel {
         /**
-         * <p>The architecture types of the instance types. Valid values:</p>
+         * <p>The architectures of instance types. Valid values:</p>
          * <ul>
-         * <li>X86: x86</li>
-         * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated</li>
-         * <li>BareMetal: ECS Bare Metal Instance</li>
-         * <li>Arm: Arm</li>
-         * <li>SuperComputeCluster: Super Computing Cluster</li>
+         * <li>X86: x86.</li>
+         * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</li>
+         * <li>BareMetal: ECS Bare Metal Instance.</li>
+         * <li>Arm: Arm.</li>
          * </ul>
          */
         @NameInMap("Architectures")
@@ -483,27 +482,26 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public java.util.List<String> gpuSpecs;
 
         /**
-         * <p>The categories of the instance.families. Valid values:</p>
+         * <p>The categories of ECS instances. Valid values:</p>
          * <blockquote>
-         * <p> You can specify 1 to 10 categories.</p>
+         * <p> Up to 10 categories of ECS instances are supported.</p>
          * </blockquote>
          * <ul>
-         * <li>General-purpose</li>
-         * <li>Compute-optimized</li>
-         * <li>Memory-optimized</li>
-         * <li>Big data</li>
-         * <li>Local SSDs</li>
-         * <li>High Clock Speed</li>
-         * <li>Enhanced</li>
-         * <li>Shared</li>
-         * <li>Compute-optimized with GPU</li>
-         * <li>Visual Compute-optimized</li>
-         * <li>Heterogeneous Service</li>
-         * <li>Compute-optimized with FPGA</li>
-         * <li>Compute-optimized with NPU</li>
-         * <li>ECS Bare Metal</li>
-         * <li>Super Computing Cluster</li>
-         * <li>High Performance Compute</li>
+         * <li>General-purpose: general-purpose instance type.</li>
+         * <li>Compute-optimized: compute-optimized instance type.</li>
+         * <li>Memory-optimized: memory-optimized instance type.</li>
+         * <li>Big data: big data instance type.</li>
+         * <li>Local SSDs: instance type with local SSDs.</li>
+         * <li>High Clock Speed: instance type with high clock speeds.</li>
+         * <li>Enhanced: enhanced instance type.</li>
+         * <li>Shared: shared instance type.</li>
+         * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</li>
+         * <li>Visual Compute-optimized: visual compute-optimized instance type.</li>
+         * <li>Heterogeneous Service: heterogeneous service instance type.</li>
+         * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</li>
+         * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</li>
+         * <li>ECS Bare Metal: ECS Bare Metal Instance type.</li>
+         * <li>High Performance Compute: HPC-optimized instance type.</li>
          * </ul>
          */
         @NameInMap("InstanceCategories")
@@ -956,12 +954,6 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions extends TeaModel {
         /**
-         * <p>机密计算模式。可能值：</p>
-         * <ul>
-         * <li>Enclave：表示ECS实例使用Enclave构建机密计算环境。更多信息，请参见<a href="https://help.aliyun.com/document_detail/203433.html">使用Enclave构建机密计算环境</a>。</li>
-         * <li>TDX：表示构建TDX机密计算环境。更多信息，请参见<a href="https://help.aliyun.com/document_detail/479090.html">构建TDX机密计算环境</a>。</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>TDX</p>
          */
@@ -1202,9 +1194,29 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("HpcClusterId")
         public String hpcClusterId;
 
+        /**
+         * <p>Indicates whether the access channel is enabled for instance metadata. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
         @NameInMap("HttpEndpoint")
         public String httpEndpoint;
 
+        /**
+         * <p>Indicates whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values:</p>
+         * <ul>
+         * <li>optional: The security hardening mode IMDSv2 is not forcibly used.</li>
+         * <li>required: The security hardening mode (IMDSv2) is forcibly used. After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>optional</p>
+         */
         @NameInMap("HttpTokens")
         public String httpTokens;
 
@@ -1325,7 +1337,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public String internetChargeType;
 
         /**
-         * <p>The maximum inbound bandwidth. Unit: Mbit/s. Valid values: 1 to 200.</p>
+         * <p>The maximum inbound public bandwidth. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -1334,11 +1346,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public Integer internetMaxBandwidthIn;
 
         /**
-         * <p>The maximum outbound bandwidth. Unit: Mbit/s. Valid values:</p>
-         * <ul>
-         * <li>0 to 1024 if you set InternetChargeType to PayByBandwidth. If you leave this parameter empty, this parameter is automatically set to 0.</li>
-         * <li>0 to 1024 if you set InternetChargeType to PayByTraffic. If you leave this parameter empty, an error is returned.</li>
-         * </ul>
+         * <p>The maximum outbound public bandwidth. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1523,9 +1531,6 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
-        /**
-         * <p>安全选项。</p>
-         */
         @NameInMap("SecurityOptions")
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions securityOptions;
 

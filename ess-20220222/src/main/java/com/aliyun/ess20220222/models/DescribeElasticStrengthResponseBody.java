@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticStrengthResponseBody extends TeaModel {
     /**
-     * <p>The scaling strength models.</p>
+     * <p>The scaling strengths of scaling configurations that are queried at the same time.</p>
      */
     @NameInMap("ElasticStrengthModels")
     public java.util.List<DescribeElasticStrengthResponseBodyElasticStrengthModels> elasticStrengthModels;

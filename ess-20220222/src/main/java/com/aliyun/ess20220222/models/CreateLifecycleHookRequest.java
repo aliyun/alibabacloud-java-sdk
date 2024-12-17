@@ -55,18 +55,19 @@ public class CreateLifecycleHookRequest extends TeaModel {
     public String lifecycleTransition;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the notification method that is used by Auto Scaling to send notifications when the lifecycle hook takes effect. If you do not specify this parameter, no notification is sent when the lifecycle hook takes effect. If you specify this parameter, the following rules apply:</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. If you do not specify this parameter, no notification is sent when the lifecycle hook takes effect. If you specify this parameter, the value must be in one of the following formats:</p>
      * <ul>
-     * <li>If you use a Message Service (MNS) queue as the notification method, specify the value in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</li>
-     * <li>If you use an MNS topic as the notification method, specify the value in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</li>
-     * <li>If you use an OOS template as the notification method, specify the value in the acs:oos:{region-id}:{account-id}:template/{templatename} format.</li>
+     * <li>If you specify a Simple Message Queue (SMQ, formerly MNS) as the notification recipient, specify the value in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</li>
+     * <li>If you specify an SMQ topic as the notification recipient, specify the value in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</li>
+     * <li>If you specify a CloudOps Orchestration Service (OOS) template as the notification recipient, specify the value in the acs:oos:{region-id}:{account-id}:template/{templatename} format.</li>
+     * <li>If you specify an event bus as the notification recipient, specify the value in the acs:eventbridge:{region-id}:{account-id}:eventbus/default format.</li>
      * </ul>
-     * <p>The variables in the preceding parameter formats have the following meanings:</p>
+     * <p>The variables in the preceding value formats have the following meanings:</p>
      * <ul>
-     * <li>region-id: the region ID of the scaling group.</li>
-     * <li>account-id: the ID of the Alibaba Cloud account. The ID of the RAM user is not supported.</li>
-     * <li>queuename: the name of the MNS queue.</li>
-     * <li>topicname: the name of the MNS topic.</li>
+     * <li>region-id: the region ID of your scaling group.</li>
+     * <li>account-id: the ID of the Alibaba Cloud account. IDs of Resource Access Management (RAM) users are not supported.</li>
+     * <li>queuename: the name of the SMQ queue.</li>
+     * <li>topicname: the name of the SMQ topic.</li>
      * <li>templatename: the name of the OOS template.</li>
      * </ul>
      * 

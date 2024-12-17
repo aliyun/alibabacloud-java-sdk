@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class ModifyNotificationConfigurationRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The following list describes the value formats of this parameter:</p>
      * <ul>
-     * <li>If you use CloudMonitor as the notification method, specify the value in the <code>acs:ess:{region-id}:{account-id}:cloudmonitor</code> format.</li>
-     * <li>If you use an MNS queue as the notification method, specify the value in the <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code> format.</li>
-     * <li>If you use an MNS topic as the notification method, specify the value in the <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code> format.</li>
+     * <li>If you specify CloudMonitor as the notification recipient, specify the value in the <code>acs:ess:{region-id}:{account-id}:cloudmonitor</code> format.</li>
+     * <li>If you specify a Simple Message Queue (SMQ) queue as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code> format.</li>
+     * <li>If you specify an SMQ topic as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code> format.</li>
      * </ul>
-     * <p>The variables in the preceding formats have the following meanings:</p>
+     * <p>The variables in the preceding value formats have the following meanings:</p>
      * <ul>
      * <li>region-id: the region ID of your scaling group.</li>
-     * <li>account-id: the ID of your Alibaba Cloud.</li>
-     * <li>queuename: the name of the MNS queue.</li>
-     * <li>topicname: the name of the MNS topic.</li>
+     * <li>account-id: the ID of your Alibaba Cloud account.</li>
+     * <li>queuename: the name of the SMQ queue.</li>
+     * <li>topicname: the name of the SMQ topic.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class DeleteNotificationConfigurationRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. Specify the value in one of the following formats:</p>
      * <ul>
-     * <li>If you use CloudMonitor as the notification party, the value format of this parameter is acs:ess:{region-id}:{account-id}:cloudmonitor.</li>
-     * <li>If you use an MNS queue as the notification party, the value format of this parameter is acs:mns:{region-id}:{account-id}:queue/{queuename}.</li>
-     * <li>If you use an MNS topic as the notification party, the value format of this parameter is acs:mns:{region-id}:{account-id}:topic/{topicname}.</li>
+     * <li>If you specify CloudMonitor as the notification recipient, specify the value in the acs:ess:{region-id}:{account-id}:cloudmonitor format.</li>
+     * <li>If you specify a Simple Message Queue (SMQ, formerly MNS) queue as the notification recipient, specify the value in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</li>
+     * <li>If you specify an SMQ queue as the notification recipient, specify the value in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</li>
      * </ul>
-     * <p>The variables in the preceding formats have the following meanings:</p>
+     * <p>The variables in the preceding value formats have the following meanings:</p>
      * <ul>
      * <li>region-id: the region ID of the scaling group.</li>
-     * <li>account-id: the ID of the Alibaba Cloud account.</li>
-     * <li>queuename: the name of the MNS queue.</li>
-     * <li>topicname: the name of the MNS topic.</li>
+     * <li>account-id: the ID of your Alibaba Cloud cloud.</li>
+     * <li>queuename: the name of the SMQ queue.</li>
+     * <li>topicname: the name of the SMQ topic.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

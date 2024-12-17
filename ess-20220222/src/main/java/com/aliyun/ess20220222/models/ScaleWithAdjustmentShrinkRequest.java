@@ -92,11 +92,11 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to trigger the scaling activity in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid values:</p>
      * <ul>
-     * <li>true: triggers the scaling activity in a synchronous manner. The scaling activity is triggered at the time when the scaling rule is executed.</li>
-     * <li>false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number of instances and determines whether to trigger the scaling activity based on the check result.</li>
+     * <li>true: triggers the scaling activity in a synchronous manner. A scaling activity is triggered at the time when the scaling rule is executed.</li>
+     * <li>false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number and determines whether to trigger the scaling activity based on the check result.</li>
      * </ul>
      * <blockquote>
-     * <p>For more information about the Expected Number of Instances feature, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</p>
+     * <p> For more information about the expected number of instances feature, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</p>
      * </blockquote>
      * <p>Default value: false.</p>
      * 

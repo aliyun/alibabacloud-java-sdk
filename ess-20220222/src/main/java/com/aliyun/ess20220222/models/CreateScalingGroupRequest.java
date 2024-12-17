@@ -41,6 +41,9 @@ public class CreateScalingGroupRequest extends TeaModel {
     @NameInMap("AzBalance")
     public Boolean azBalance;
 
+    /**
+     * <p>The capacity options.</p>
+     */
     @NameInMap("CapacityOptions")
     public CreateScalingGroupRequestCapacityOptions capacityOptions;
 
@@ -949,15 +952,51 @@ public class CreateScalingGroupRequest extends TeaModel {
     }
 
     public static class CreateScalingGroupRequestCapacityOptions extends TeaModel {
+        /**
+         * <p>Specifies whether to automatically create pay-as-you-go ECS instances to reach the required number of ECS instances when preemptible ECS instances cannot be created due to high prices or insufficient inventory of resources. This parameter takes effect when you set <code>MultiAZPolicy</code> to <code>COST_OPTIMIZED</code>. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CompensateWithOnDemand")
         public Boolean compensateWithOnDemand;
 
+        /**
+         * <p>The minimum number of pay-as-you-go instances required in the scaling group. When the number of pay-as-you-go instances drops below the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</p>
+         * <p>If you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>, the default value is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("OnDemandBaseCapacity")
         public Integer onDemandBaseCapacity;
 
+        /**
+         * <p>The percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances is reached. <code>OnDemandBaseCapacity</code> specifies the minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 100.</p>
+         * <p>If you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>, the default value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("OnDemandPercentageAboveBaseCapacity")
         public Integer onDemandPercentageAboveBaseCapacity;
 
+        /**
+         * <p>Specifies whether to replace pay-as-you-go instances with preemptible instances. If you specify <code>CompensateWithOnDemand</code>, it may result in a higher percentage of pay-as-you-go instances compared to the value of <code>OnDemandPercentageAboveBaseCapacity</code>. In this scenario, Auto Scaling will try to deploy preemptible instances to replace the surplus pay-as-you-go instances. When <code>CompensateWithOnDemand</code> is specified, Auto Scaling creates pay-as-you-go instances if there are not enough preemptible instance types. To avoid keeping these pay-as-you-go ECS instances for long periods, Auto Scaling tries to replace them with preemptible instances as soon as enough of preemptible instance types become available. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SpotAutoReplaceOnDemand")
         public Boolean spotAutoReplaceOnDemand;
 
@@ -1408,7 +1447,7 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     public static class CreateScalingGroupRequestTags extends TeaModel {
         /**
-         * <p>The tag key that you want to add to the scaling group.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>Department</p>
@@ -1417,10 +1456,10 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Specifies whether to propagate the tag that you want to add to the scaling group. Valid values:</p>
+         * <p>Specifies whether to propagate the tag that you want to add. Valid values:</p>
          * <ul>
-         * <li>true: propagates the tag to only instances that are newly created.</li>
-         * <li>false: does not propagate the tag to any instances.</li>
+         * <li>true: propagates the tag to new instances.</li>
+         * <li>false: does not propagate the tag to any instance.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -1431,7 +1470,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public Boolean propagate;
 
         /**
-         * <p>The tag value that you want to add to the scaling group.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>Finance</p>

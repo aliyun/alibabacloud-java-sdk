@@ -250,6 +250,19 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     @NameInMap("EphemeralStorage")
     public Integer ephemeralStorage;
 
+    /**
+     * <p>The version of the GPU driver. Valid values:</p>
+     * <ul>
+     * <li>tesla=470.82.01 (default)</li>
+     * <li>tesla=525.85.12</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can switch the GPU driver version only for a few Elastic Compute Service (ECS) instance types. For more information, see <a href="https://help.aliyun.com/document_detail/2579486.html">Specify GPU-accelerated ECS instance types to create an elastic container instance</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>tesla=525.85.12</p>
+     */
     @NameInMap("GpuDriverVersion")
     public String gpuDriverVersion;
 

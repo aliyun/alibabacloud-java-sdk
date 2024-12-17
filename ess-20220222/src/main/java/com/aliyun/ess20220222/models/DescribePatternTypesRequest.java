@@ -5,13 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribePatternTypesRequest extends TeaModel {
     /**
-     * <p>The architectures of instance types. Valid values:</p>
+     * <p>The architecture types of the instance types. Valid values:</p>
      * <ul>
-     * <li>X86: x86</li>
-     * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated</li>
-     * <li>BareMetal: ECS Bare Metal Instance</li>
-     * <li>Arm: Arm</li>
-     * <li>SuperComputeCluster: Super Computing Cluster</li>
+     * <li>X86: x86 architecture.</li>
+     * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</li>
+     * <li>BareMetal: ECS Bare Metal Instance.</li>
+     * <li>Arm: Arm.</li>
      * </ul>
      * <p>By default, all values are selected.</p>
      */
@@ -80,24 +79,23 @@ public class DescribePatternTypesRequest extends TeaModel {
     public java.util.List<String> gpuSpecs;
 
     /**
-     * <p>The categories of the instance types. Valid values:</p>
+     * <p>The classifications of the instance types. Valid values:</p>
      * <ul>
-     * <li>General-purpose</li>
-     * <li>Compute-optimized</li>
-     * <li>Memory-optimized</li>
-     * <li>Big data</li>
-     * <li>Local SSDs</li>
-     * <li>High Clock Speed</li>
-     * <li>Enhanced</li>
-     * <li>Shared</li>
-     * <li>Compute-optimized with GPU</li>
-     * <li>Visual Compute-optimized</li>
-     * <li>Heterogeneous Service</li>
-     * <li>Compute-optimized with FPGA</li>
-     * <li>Compute-optimized with NPU</li>
-     * <li>ECS Bare Metal</li>
-     * <li>Super Computing Cluster</li>
-     * <li>High Performance Compute</li>
+     * <li>General-purpose: general-purpose instance type.</li>
+     * <li>Compute-optimized: compute-optimized instance type.</li>
+     * <li>Memory-optimized: memory-optimized instance type.</li>
+     * <li>Big data: big data instance type.</li>
+     * <li>Local SSDs: instance type with local SSDs.</li>
+     * <li>High Clock Speed: instance type with high clock speeds.</li>
+     * <li>Enhanced: enhanced instance type.</li>
+     * <li>Shared: shared instance type.</li>
+     * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</li>
+     * <li>Visual Compute-optimized: visual compute-optimized instance type.</li>
+     * <li>Heterogeneous Service: heterogeneous service instance type.</li>
+     * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</li>
+     * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</li>
+     * <li>ECS Bare Metal: ECS Bare Metal Instance type.</li>
+     * <li>High Performance Compute: HPC-optimized instance type.</li>
      * </ul>
      */
     @NameInMap("InstanceCategories")
@@ -283,6 +281,9 @@ public class DescribePatternTypesRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public java.util.List<String> vSwitchId;
 
+    /**
+     * <p>The zone IDs. If you pass vSwitch IDs to the system, this parameter does not take effect.</p>
+     */
     @NameInMap("ZoneId")
     public java.util.List<String> zoneId;
 

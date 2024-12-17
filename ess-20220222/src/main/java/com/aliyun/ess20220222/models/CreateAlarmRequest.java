@@ -11,12 +11,12 @@ public class CreateAlarmRequest extends TeaModel {
     public java.util.List<String> alarmActions;
 
     /**
-     * <p>The operator that is used to compare the metric value and the threshold. Valid values:</p>
+     * <p>The operator that you want to use to compare the metric value and the threshold. Valid values:</p>
      * <ul>
-     * <li>If the metric value is greater than or equal to the threshold, set the value to: &gt;=.</li>
-     * <li>If the metric value is less than or equal to the threshold, set the value to: &lt;=.</li>
-     * <li>If the metric value is greater than the threshold, set the value to: &gt;.</li>
-     * <li>If the metric value is less than the threshold, set the value to: &lt;.</li>
+     * <li>If the metric value is greater than or equal to the threshold, set the value to &gt;=.</li>
+     * <li>If the metric value is less than or equal to the metric threshold, set the value to &lt;=.</li>
+     * <li>If the metric value is greater than the metric threshold, set the value to &gt;.</li>
+     * <li>If the metric value is less than the metric threshold, set the value to &lt;.</li>
      * </ul>
      * <p>Default value: &gt;=.</p>
      * 
@@ -67,7 +67,7 @@ public class CreateAlarmRequest extends TeaModel {
     public String effective;
 
     /**
-     * <p>The number of times that the threshold must be reached before a scaling rule can be executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before a scaling rule is triggered.</p>
+     * <p>The number of consecutive times that the threshold must be reached before a scaling rule is executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before the scaling rule is executed.</p>
      * <p>Default value: 3.</p>
      * 
      * <strong>example:</strong>
@@ -149,10 +149,10 @@ public class CreateAlarmRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The type of the metric. Valid values:</p>
+     * <p>The metric type. Valid values:</p>
      * <ul>
-     * <li>system: system metrics of CloudMonitor</li>
-     * <li>custom: custom metrics that are reported to CloudMonitor</li>
+     * <li>system: system metrics of CloudMonitor.</li>
+     * <li>custom: custom metrics that are reported to CloudMonitor.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -217,11 +217,11 @@ public class CreateAlarmRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>The method that is used to aggregate statistics for the metric. Valid values:</p>
+     * <p>The method that you want to use to aggregate the metric data. Valid values:</p>
      * <ul>
-     * <li>Average</li>
-     * <li>Minimum</li>
-     * <li>Maximum</li>
+     * <li>Average: the average value.</li>
+     * <li>Minimum: the minimum value.</li>
+     * <li>Maximum: the maximum value.</li>
      * </ul>
      * <p>Default value: Average.</p>
      * 
