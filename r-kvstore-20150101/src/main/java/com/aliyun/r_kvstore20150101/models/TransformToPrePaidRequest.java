@@ -17,6 +17,12 @@ public class TransformToPrePaidRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("AutoRenew")
+    public String autoRenew;
+
+    @NameInMap("AutoRenewPeriod")
+    public Long autoRenewPeriod;
+
     /**
      * <p>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the ID of the instance.</p>
      * <p>This parameter is required.</p>
@@ -63,6 +69,22 @@ public class TransformToPrePaidRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public TransformToPrePaidRequest setAutoRenew(String autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public String getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public TransformToPrePaidRequest setAutoRenewPeriod(Long autoRenewPeriod) {
+        this.autoRenewPeriod = autoRenewPeriod;
+        return this;
+    }
+    public Long getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     public TransformToPrePaidRequest setInstanceId(String instanceId) {

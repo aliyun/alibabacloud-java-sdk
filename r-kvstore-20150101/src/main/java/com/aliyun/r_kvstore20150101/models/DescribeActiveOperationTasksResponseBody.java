@@ -4,10 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
+    /**
+     * <p>The list of details of O\&amp;M tasks.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTasksResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page. Default 25.</p>
+     * 
      * <strong>example:</strong>
      * <p>25</p>
      */
@@ -22,6 +29,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2D9F3768-EDA9-4811-943E-42C8006E****</p>
      */
@@ -29,6 +38,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of returned entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationTasksResponseBodyItems extends TeaModel {
         /**
+         * <p>Indicates whether the task can be canceled. The value 1 indicates that the task can be canceled. The value 0 indicates that the task cannot be canceled.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +102,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String allowCancel;
 
         /**
+         * <p>Indicates whether the switching time can be changed. The value 1 indicates that the switching time can be changed. The value 0 indicates that the switching time cannot be changed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -96,6 +111,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String allowChange;
 
         /**
+         * <p>The code of the task level. The value S1 indicates the system O\&amp;M level. The value S0 indicates the exception fixing level.</p>
+         * 
          * <strong>example:</strong>
          * <p>S1</p>
          */
@@ -103,16 +120,26 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String changeLevel;
 
         /**
+         * <p>The level of the task in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>System maintenance</p>
          */
         @NameInMap("ChangeLevelEn")
         public String changeLevelEn;
 
+        /**
+         * <p>The level of the task in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统运维</p>
+         */
         @NameInMap("ChangeLevelZh")
         public String changeLevelZh;
 
         /**
+         * <p>The time when the O\&amp;M task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-05-30T14:30:00Z</p>
          */
@@ -120,6 +147,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>The current zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing-h</p>
          */
@@ -127,6 +156,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String currentAVZ;
 
         /**
+         * <p>The database type of the instance. The return value is <strong>Redis</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>redis</p>
          */
@@ -134,6 +165,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String dbType;
 
         /**
+         * <p>The version of the database engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.0</p>
          */
@@ -141,6 +174,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String dbVersion;
 
         /**
+         * <p>The deadline before which the time to preform the O&amp;M task can be modified. The time in UTC is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-05-30T23:59:59Z</p>
          */
@@ -148,6 +183,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String deadline;
 
         /**
+         * <p>The ID of the O\&amp;M event.</p>
+         * 
          * <strong>example:</strong>
          * <p>11111</p>
          */
@@ -155,6 +192,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public Integer id;
 
         /**
+         * <p>The impact of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>TransientDisconnection</p>
          */
@@ -162,16 +201,26 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String impact;
 
         /**
+         * <p>The impact of the task in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Transient instance disconnection</p>
          */
         @NameInMap("ImpactEn")
         public String impactEn;
 
+        /**
+         * <p>The impact of the task in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>实例闪断</p>
+         */
         @NameInMap("ImpactZh")
         public String impactZh;
 
         /**
+         * <p>The alias and description of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -179,6 +228,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String insComment;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>r-bp1lgal1sdvxrz****</p>
          */
@@ -186,6 +237,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String insName;
 
         /**
+         * <p>The time when the O\&amp;M task was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-05-30T14:30:00Z</p>
          */
@@ -193,6 +246,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The required preparation period between the task start time and the switchover time. The time is displayed in the <em>HH:mm:ss</em> format.</p>
+         * 
          * <strong>example:</strong>
          * <p>04:00:00</p>
          */
@@ -200,6 +255,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String prepareInterval;
 
         /**
+         * <p>The region ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hanghzou</p>
          */
@@ -207,6 +264,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The information about the execution result.</p>
+         * 
          * <strong>example:</strong>
          * <p>userCancel</p>
          */
@@ -214,6 +273,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String resultInfo;
 
         /**
+         * <p>The time when the O\&amp;M task was preformed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-05-30T00:00:00Z</p>
          */
@@ -221,16 +282,30 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status of operation and maintenance events. Return values</p>
+         * <ul>
+         * <li><strong>3</strong>: Events awaiting processing.</li>
+         * <li><strong>4</strong>: Events being processed.</li>
+         * <li><strong>5</strong>: Events that have successfully ended.</li>
+         * <li><strong>6</strong>: Events that have ended in failure.</li>
+         * <li><strong>7</strong>: Events that have been canceled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The list of the subinstances.</p>
+         */
         @NameInMap("SubInsNames")
         public java.util.List<String> subInsNames;
 
         /**
+         * <p>The time when the system performs the switchover operation. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-05-30T14:30:00Z</p>
          */
@@ -238,6 +313,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String switchTime;
 
         /**
+         * <p>The parameters of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *       &quot;Action&quot;: &quot;UpgradeDBInstance&quot;
@@ -247,6 +324,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskParams;
 
         /**
+         * <p>The type of the O\&amp;M event.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds_apsaradb_transfer</p>
          */
@@ -254,12 +333,20 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
+         * <p>The reason for the task in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Minor version update</p>
          */
         @NameInMap("TaskTypeEn")
         public String taskTypeEn;
 
+        /**
+         * <p>The reason for the task in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>小版本升级</p>
+         */
         @NameInMap("TaskTypeZh")
         public String taskTypeZh;
 

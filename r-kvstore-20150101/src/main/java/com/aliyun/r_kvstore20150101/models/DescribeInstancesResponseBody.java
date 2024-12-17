@@ -474,6 +474,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("QPS")
         public Long QPS;
 
+        @NameInMap("ReadOnlyCount")
+        public String readOnlyCount;
+
         /**
          * <p>The region ID.</p>
          * 
@@ -491,6 +494,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         @NameInMap("ReplacateId")
         public String replacateId;
+
+        @NameInMap("ReplicaCount")
+        public Integer replicaCount;
 
         /**
          * <p>The ID of the resource group to which the instance belongs.</p>
@@ -536,6 +542,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         @NameInMap("ShardCount")
         public Integer shardCount;
+
+        @NameInMap("SlaveReadOnlyCount")
+        public Integer slaveReadOnlyCount;
+
+        @NameInMap("SlaveReplicaCount")
+        public Integer slaveReplicaCount;
 
         /**
          * <p>Details about the tags.</p>
@@ -816,6 +828,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.QPS;
         }
 
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setReadOnlyCount(String readOnlyCount) {
+            this.readOnlyCount = readOnlyCount;
+            return this;
+        }
+        public String getReadOnlyCount() {
+            return this.readOnlyCount;
+        }
+
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -830,6 +850,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getReplacateId() {
             return this.replacateId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setReplicaCount(Integer replicaCount) {
+            this.replicaCount = replicaCount;
+            return this;
+        }
+        public Integer getReplicaCount() {
+            return this.replicaCount;
         }
 
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setResourceGroupId(String resourceGroupId) {
@@ -862,6 +890,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Integer getShardCount() {
             return this.shardCount;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setSlaveReadOnlyCount(Integer slaveReadOnlyCount) {
+            this.slaveReadOnlyCount = slaveReadOnlyCount;
+            return this;
+        }
+        public Integer getSlaveReadOnlyCount() {
+            return this.slaveReadOnlyCount;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setSlaveReplicaCount(Integer slaveReplicaCount) {
+            this.slaveReplicaCount = slaveReplicaCount;
+            return this;
+        }
+        public Integer getSlaveReplicaCount() {
+            return this.slaveReplicaCount;
         }
 
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setTags(DescribeInstancesResponseBodyInstancesKVStoreInstanceTags tags) {

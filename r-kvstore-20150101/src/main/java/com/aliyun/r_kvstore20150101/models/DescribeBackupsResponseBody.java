@@ -438,6 +438,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("NodeInstanceId")
         public String nodeInstanceId;
 
+        /**
+         * <p>If the backup includes account information, kernel parameters and whitelist details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;whitelist&quot;:true,&quot;config&quot;:true,&quot;account&quot;:true}</p>
+         */
         @NameInMap("RecoverConfigMode")
         public String recoverConfigMode;
 

@@ -41,10 +41,16 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     /**
      * <p>The monitoring metrics. Separate the metrics with commas (,). Take CpuUsage as an example:</p>
      * <ul>
+     * <li><p>Cluster or read/write splitting instances</p>
+     * <ul>
      * <li>To query the overall CPU utilization of all data nodes, specify <strong>CpuUsage$db</strong>.</li>
      * <li>To query the CPU utilization of a single data node, specify <strong>CpuUsage</strong> and NodeId.</li>
      * </ul>
-     * <p>For more information about the monitoring metrics, see <strong>Additional description of MonitorKeys</strong>.</p>
+     * </li>
+     * <li><p>Standard master-replica instances: Specify only <strong>CpuUsage</strong>.</p>
+     * </li>
+     * </ul>
+     * <p>For more information about monitoring metrics and their descriptions, see <a href="https://www.alibabacloud.com/help/zh/redis/developer-reference/api-r-kvstore-2015-01-01-describehistorymonitorvalues-redis#monitorKeys-note">Additional description of MonitorKeys</a>.</p>
      * <blockquote>
      * </blockquote>
      * <ul>
@@ -53,7 +59,6 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
      * <li><p>To ensure query efficiency, we recommend that you specify no more than five metrics for a single node at a time, and specify only a single metric when you query aggregate metrics.</p>
      * </li>
      * </ul>
-     * <p><a href="https://help.aliyun.com/zh/redis/developer-reference/api-r-kvstore-2015-01-01-describehistorymonitorvalues-redis">Additional description of MonitorKeys</a></p>
      * 
      * <strong>example:</strong>
      * <p>memoryUsage</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceParameterResponseBody extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
      */
@@ -21,6 +23,8 @@ public class ModifyInstanceParameterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>578678678</p>
      */

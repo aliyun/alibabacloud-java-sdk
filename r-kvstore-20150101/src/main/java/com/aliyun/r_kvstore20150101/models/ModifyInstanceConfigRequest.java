@@ -8,7 +8,6 @@ public class ModifyInstanceConfigRequest extends TeaModel {
      * <p>The instance parameter settings that you want to modify. Specify this parameter in the JSON format. The new value of a parameter overwrites the original value.</p>
      * <p>**</p>
      * <p><strong>Description</strong> For more information, see <a href="https://help.aliyun.com/document_detail/259681.html">Supported parameters</a>.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;maxmemory-policy&quot;:&quot;volatile-lru&quot;,&quot;zset-max-ziplist-entries&quot;:128,&quot;zset-max-ziplist-value&quot;:64,&quot;hash-max-ziplist-entries&quot;:512,&quot;set-max-intset-entries&quot;:512}</p>
@@ -31,6 +30,24 @@ public class ModifyInstanceConfigRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ParamNoLooseSentinelEnabled")
+    public String paramNoLooseSentinelEnabled;
+
+    @NameInMap("ParamNoLooseSentinelPasswordFreeAccess")
+    public String paramNoLooseSentinelPasswordFreeAccess;
+
+    @NameInMap("ParamNoLooseSentinelPasswordFreeCommands")
+    public String paramNoLooseSentinelPasswordFreeCommands;
+
+    @NameInMap("ParamReplMode")
+    public String paramReplMode;
+
+    @NameInMap("ParamSemisyncReplTimeout")
+    public String paramSemisyncReplTimeout;
+
+    @NameInMap("ParamSentinelCompatEnable")
+    public String paramSentinelCompatEnable;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -76,6 +93,54 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyInstanceConfigRequest setParamNoLooseSentinelEnabled(String paramNoLooseSentinelEnabled) {
+        this.paramNoLooseSentinelEnabled = paramNoLooseSentinelEnabled;
+        return this;
+    }
+    public String getParamNoLooseSentinelEnabled() {
+        return this.paramNoLooseSentinelEnabled;
+    }
+
+    public ModifyInstanceConfigRequest setParamNoLooseSentinelPasswordFreeAccess(String paramNoLooseSentinelPasswordFreeAccess) {
+        this.paramNoLooseSentinelPasswordFreeAccess = paramNoLooseSentinelPasswordFreeAccess;
+        return this;
+    }
+    public String getParamNoLooseSentinelPasswordFreeAccess() {
+        return this.paramNoLooseSentinelPasswordFreeAccess;
+    }
+
+    public ModifyInstanceConfigRequest setParamNoLooseSentinelPasswordFreeCommands(String paramNoLooseSentinelPasswordFreeCommands) {
+        this.paramNoLooseSentinelPasswordFreeCommands = paramNoLooseSentinelPasswordFreeCommands;
+        return this;
+    }
+    public String getParamNoLooseSentinelPasswordFreeCommands() {
+        return this.paramNoLooseSentinelPasswordFreeCommands;
+    }
+
+    public ModifyInstanceConfigRequest setParamReplMode(String paramReplMode) {
+        this.paramReplMode = paramReplMode;
+        return this;
+    }
+    public String getParamReplMode() {
+        return this.paramReplMode;
+    }
+
+    public ModifyInstanceConfigRequest setParamSemisyncReplTimeout(String paramSemisyncReplTimeout) {
+        this.paramSemisyncReplTimeout = paramSemisyncReplTimeout;
+        return this;
+    }
+    public String getParamSemisyncReplTimeout() {
+        return this.paramSemisyncReplTimeout;
+    }
+
+    public ModifyInstanceConfigRequest setParamSentinelCompatEnable(String paramSentinelCompatEnable) {
+        this.paramSentinelCompatEnable = paramSentinelCompatEnable;
+        return this;
+    }
+    public String getParamSentinelCompatEnable() {
+        return this.paramSentinelCompatEnable;
     }
 
     public ModifyInstanceConfigRequest setResourceOwnerAccount(String resourceOwnerAccount) {

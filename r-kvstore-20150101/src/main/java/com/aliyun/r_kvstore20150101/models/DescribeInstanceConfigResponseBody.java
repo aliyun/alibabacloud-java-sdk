@@ -13,6 +13,24 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
     @NameInMap("Config")
     public String config;
 
+    @NameInMap("ParamNoLooseSentinelEnabled")
+    public String paramNoLooseSentinelEnabled;
+
+    @NameInMap("ParamNoLooseSentinelPasswordFreeAccess")
+    public String paramNoLooseSentinelPasswordFreeAccess;
+
+    @NameInMap("ParamNoLooseSentinelPasswordFreeCommands")
+    public String paramNoLooseSentinelPasswordFreeCommands;
+
+    @NameInMap("ParamReplMode")
+    public String paramReplMode;
+
+    @NameInMap("ParamReplTimeout")
+    public String paramReplTimeout;
+
+    @NameInMap("ParamSentinelCompatEnable")
+    public String paramSentinelCompatEnable;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -33,6 +51,54 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
     }
     public String getConfig() {
         return this.config;
+    }
+
+    public DescribeInstanceConfigResponseBody setParamNoLooseSentinelEnabled(String paramNoLooseSentinelEnabled) {
+        this.paramNoLooseSentinelEnabled = paramNoLooseSentinelEnabled;
+        return this;
+    }
+    public String getParamNoLooseSentinelEnabled() {
+        return this.paramNoLooseSentinelEnabled;
+    }
+
+    public DescribeInstanceConfigResponseBody setParamNoLooseSentinelPasswordFreeAccess(String paramNoLooseSentinelPasswordFreeAccess) {
+        this.paramNoLooseSentinelPasswordFreeAccess = paramNoLooseSentinelPasswordFreeAccess;
+        return this;
+    }
+    public String getParamNoLooseSentinelPasswordFreeAccess() {
+        return this.paramNoLooseSentinelPasswordFreeAccess;
+    }
+
+    public DescribeInstanceConfigResponseBody setParamNoLooseSentinelPasswordFreeCommands(String paramNoLooseSentinelPasswordFreeCommands) {
+        this.paramNoLooseSentinelPasswordFreeCommands = paramNoLooseSentinelPasswordFreeCommands;
+        return this;
+    }
+    public String getParamNoLooseSentinelPasswordFreeCommands() {
+        return this.paramNoLooseSentinelPasswordFreeCommands;
+    }
+
+    public DescribeInstanceConfigResponseBody setParamReplMode(String paramReplMode) {
+        this.paramReplMode = paramReplMode;
+        return this;
+    }
+    public String getParamReplMode() {
+        return this.paramReplMode;
+    }
+
+    public DescribeInstanceConfigResponseBody setParamReplTimeout(String paramReplTimeout) {
+        this.paramReplTimeout = paramReplTimeout;
+        return this;
+    }
+    public String getParamReplTimeout() {
+        return this.paramReplTimeout;
+    }
+
+    public DescribeInstanceConfigResponseBody setParamSentinelCompatEnable(String paramSentinelCompatEnable) {
+        this.paramSentinelCompatEnable = paramSentinelCompatEnable;
+        return this;
+    }
+    public String getParamSentinelCompatEnable() {
+        return this.paramSentinelCompatEnable;
     }
 
     public DescribeInstanceConfigResponseBody setRequestId(String requestId) {
