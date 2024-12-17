@@ -309,6 +309,91 @@ public class SyncQualityCheckResponseBody extends TeaModel {
 
     }
 
+    public static class SyncQualityCheckResponseBodyDataRulesRuleInfoBase extends TeaModel {
+        @NameInMap("Comments")
+        public String comments;
+
+        @NameInMap("Level")
+        public Integer level;
+
+        @NameInMap("RuleCategoryName")
+        public String ruleCategoryName;
+
+        @NameInMap("ScoreNum")
+        public Integer scoreNum;
+
+        @NameInMap("ScoreNumType")
+        public Integer scoreNumType;
+
+        @NameInMap("ScoreType")
+        public Integer scoreType;
+
+        @NameInMap("Type")
+        public Integer type;
+
+        public static SyncQualityCheckResponseBodyDataRulesRuleInfoBase build(java.util.Map<String, ?> map) throws Exception {
+            SyncQualityCheckResponseBodyDataRulesRuleInfoBase self = new SyncQualityCheckResponseBodyDataRulesRuleInfoBase();
+            return TeaModel.build(map, self);
+        }
+
+        public SyncQualityCheckResponseBodyDataRulesRuleInfoBase setComments(String comments) {
+            this.comments = comments;
+            return this;
+        }
+        public String getComments() {
+            return this.comments;
+        }
+
+        public SyncQualityCheckResponseBodyDataRulesRuleInfoBase setLevel(Integer level) {
+            this.level = level;
+            return this;
+        }
+        public Integer getLevel() {
+            return this.level;
+        }
+
+        public SyncQualityCheckResponseBodyDataRulesRuleInfoBase setRuleCategoryName(String ruleCategoryName) {
+            this.ruleCategoryName = ruleCategoryName;
+            return this;
+        }
+        public String getRuleCategoryName() {
+            return this.ruleCategoryName;
+        }
+
+        public SyncQualityCheckResponseBodyDataRulesRuleInfoBase setScoreNum(Integer scoreNum) {
+            this.scoreNum = scoreNum;
+            return this;
+        }
+        public Integer getScoreNum() {
+            return this.scoreNum;
+        }
+
+        public SyncQualityCheckResponseBodyDataRulesRuleInfoBase setScoreNumType(Integer scoreNumType) {
+            this.scoreNumType = scoreNumType;
+            return this;
+        }
+        public Integer getScoreNumType() {
+            return this.scoreNumType;
+        }
+
+        public SyncQualityCheckResponseBodyDataRulesRuleInfoBase setScoreType(Integer scoreType) {
+            this.scoreType = scoreType;
+            return this;
+        }
+        public Integer getScoreType() {
+            return this.scoreType;
+        }
+
+        public SyncQualityCheckResponseBodyDataRulesRuleInfoBase setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+    }
+
     public static class SyncQualityCheckResponseBodyDataRules extends TeaModel {
         @NameInMap("Hit")
         public java.util.List<SyncQualityCheckResponseBodyDataRulesHit> hit;
@@ -319,6 +404,9 @@ public class SyncQualityCheckResponseBody extends TeaModel {
          */
         @NameInMap("Rid")
         public String rid;
+
+        @NameInMap("RuleInfoBase")
+        public SyncQualityCheckResponseBodyDataRulesRuleInfoBase ruleInfoBase;
 
         @NameInMap("RuleName")
         public String ruleName;
@@ -342,6 +430,14 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         }
         public String getRid() {
             return this.rid;
+        }
+
+        public SyncQualityCheckResponseBodyDataRules setRuleInfoBase(SyncQualityCheckResponseBodyDataRulesRuleInfoBase ruleInfoBase) {
+            this.ruleInfoBase = ruleInfoBase;
+            return this;
+        }
+        public SyncQualityCheckResponseBodyDataRulesRuleInfoBase getRuleInfoBase() {
+            return this.ruleInfoBase;
         }
 
         public SyncQualityCheckResponseBodyDataRules setRuleName(String ruleName) {
