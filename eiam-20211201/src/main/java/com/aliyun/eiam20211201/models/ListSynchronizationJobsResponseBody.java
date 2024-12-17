@@ -1939,6 +1939,58 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     }
 
+    public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsExported extends TeaModel {
+        @NameInMap("Failed")
+        public Long failed;
+
+        @NameInMap("Skipped")
+        public Long skipped;
+
+        @NameInMap("Success")
+        public Long success;
+
+        @NameInMap("Total")
+        public Long total;
+
+        public static ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsExported build(java.util.Map<String, ?> map) throws Exception {
+            ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsExported self = new ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsExported();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsExported setFailed(Long failed) {
+            this.failed = failed;
+            return this;
+        }
+        public Long getFailed() {
+            return this.failed;
+        }
+
+        public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsExported setSkipped(Long skipped) {
+            this.skipped = skipped;
+            return this;
+        }
+        public Long getSkipped() {
+            return this.skipped;
+        }
+
+        public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsExported setSuccess(Long success) {
+            this.success = success;
+            return this;
+        }
+        public Long getSuccess() {
+            return this.success;
+        }
+
+        public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsExported setTotal(Long total) {
+            this.total = total;
+            return this;
+        }
+        public Long getTotal() {
+            return this.total;
+        }
+
+    }
+
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsPushed extends TeaModel {
         /**
          * <p>失败数目</p>
@@ -2186,6 +2238,9 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         @NameInMap("Deleted")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsDeleted deleted;
 
+        @NameInMap("Exported")
+        public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsExported exported;
+
         /**
          * <p>推送结果统计</p>
          */
@@ -2231,6 +2286,14 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         }
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsDeleted getDeleted() {
             return this.deleted;
+        }
+
+        public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatistics setExported(ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsExported exported) {
+            this.exported = exported;
+            return this;
+        }
+        public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsExported getExported() {
+            return this.exported;
         }
 
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatistics setPushed(ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsPushed pushed) {
@@ -2356,6 +2419,13 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobs extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
          * <p>同步任务方向</p>
          * 
          * <strong>example:</strong>
@@ -2436,6 +2506,14 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public static ListSynchronizationJobsResponseBodySynchronizationJobs build(java.util.Map<String, ?> map) throws Exception {
             ListSynchronizationJobsResponseBodySynchronizationJobs self = new ListSynchronizationJobsResponseBodySynchronizationJobs();
             return TeaModel.build(map, self);
+        }
+
+        public ListSynchronizationJobsResponseBodySynchronizationJobs setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListSynchronizationJobsResponseBodySynchronizationJobs setDirection(String direction) {

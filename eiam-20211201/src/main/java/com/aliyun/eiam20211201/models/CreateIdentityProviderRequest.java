@@ -76,6 +76,9 @@ public class CreateIdentityProviderRequest extends TeaModel {
     @NameInMap("LdapConfig")
     public CreateIdentityProviderRequestLdapConfig ldapConfig;
 
+    @NameInMap("LogoUrl")
+    public String logoUrl;
+
     /**
      * <p>网络端点ID</p>
      * 
@@ -192,6 +195,14 @@ public class CreateIdentityProviderRequest extends TeaModel {
     }
     public CreateIdentityProviderRequestLdapConfig getLdapConfig() {
         return this.ldapConfig;
+    }
+
+    public CreateIdentityProviderRequest setLogoUrl(String logoUrl) {
+        this.logoUrl = logoUrl;
+        return this;
+    }
+    public String getLogoUrl() {
+        return this.logoUrl;
     }
 
     public CreateIdentityProviderRequest setNetworkAccessEndpointId(String networkAccessEndpointId) {

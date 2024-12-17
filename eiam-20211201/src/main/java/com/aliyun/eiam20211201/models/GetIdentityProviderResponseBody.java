@@ -1127,6 +1127,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         @NameInMap("LockReason")
         public String lockReason;
 
+        @NameInMap("LogoUrl")
+        public String logoUrl;
+
         /**
          * <p>网络端点ID</p>
          * 
@@ -1326,6 +1329,14 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
         public String getLockReason() {
             return this.lockReason;
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetail setLogoUrl(String logoUrl) {
+            this.logoUrl = logoUrl;
+            return this;
+        }
+        public String getLogoUrl() {
+            return this.logoUrl;
         }
 
         public GetIdentityProviderResponseBodyIdentityProviderDetail setNetworkAccessEndpointId(String networkAccessEndpointId) {
