@@ -4,6 +4,15 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceForIsvResponseBody extends TeaModel {
+    @NameInMap("ActiveAddress")
+    public String activeAddress;
+
+    @NameInMap("AppJson")
+    public String appJson;
+
+    @NameInMap("AutoRenewal")
+    public String autoRenewal;
+
     /**
      * <strong>example:</strong>
      * <p>1570634021000</p>
@@ -35,6 +44,12 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
     @NameInMap("ExtendJson")
     public String extendJson;
 
+    @NameInMap("HostJson")
+    public String hostJson;
+
+    @NameInMap("ImageJson")
+    public String imageJson;
+
     /**
      * <strong>example:</strong>
      * <p>1551111111</p>
@@ -48,6 +63,9 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
      */
     @NameInMap("IsTrial")
     public Boolean isTrial;
+
+    @NameInMap("LicenseCode")
+    public String licenseCode;
 
     /**
      * <strong>example:</strong>
@@ -105,6 +123,30 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceForIsvResponseBody setActiveAddress(String activeAddress) {
+        this.activeAddress = activeAddress;
+        return this;
+    }
+    public String getActiveAddress() {
+        return this.activeAddress;
+    }
+
+    public DescribeInstanceForIsvResponseBody setAppJson(String appJson) {
+        this.appJson = appJson;
+        return this;
+    }
+    public String getAppJson() {
+        return this.appJson;
+    }
+
+    public DescribeInstanceForIsvResponseBody setAutoRenewal(String autoRenewal) {
+        this.autoRenewal = autoRenewal;
+        return this;
+    }
+    public String getAutoRenewal() {
+        return this.autoRenewal;
+    }
+
     public DescribeInstanceForIsvResponseBody setBeganOn(Long beganOn) {
         this.beganOn = beganOn;
         return this;
@@ -145,6 +187,22 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         return this.extendJson;
     }
 
+    public DescribeInstanceForIsvResponseBody setHostJson(String hostJson) {
+        this.hostJson = hostJson;
+        return this;
+    }
+    public String getHostJson() {
+        return this.hostJson;
+    }
+
+    public DescribeInstanceForIsvResponseBody setImageJson(String imageJson) {
+        this.imageJson = imageJson;
+        return this;
+    }
+    public String getImageJson() {
+        return this.imageJson;
+    }
+
     public DescribeInstanceForIsvResponseBody setInstanceId(Long instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -159,6 +217,14 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
     }
     public Boolean getIsTrial() {
         return this.isTrial;
+    }
+
+    public DescribeInstanceForIsvResponseBody setLicenseCode(String licenseCode) {
+        this.licenseCode = licenseCode;
+        return this;
+    }
+    public String getLicenseCode() {
+        return this.licenseCode;
     }
 
     public DescribeInstanceForIsvResponseBody setOrderId(Long orderId) {
