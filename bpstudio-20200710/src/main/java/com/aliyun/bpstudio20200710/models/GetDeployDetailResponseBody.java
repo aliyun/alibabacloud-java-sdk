@@ -199,6 +199,9 @@ public class GetDeployDetailResponseBody extends TeaModel {
         @NameInMap("ExecutionStrategy")
         public String executionStrategy;
 
+        @NameInMap("ExpiredTime")
+        public Long expiredTime;
+
         /**
          * <strong>example:</strong>
          * <p>1714031840000</p>
@@ -295,6 +298,14 @@ public class GetDeployDetailResponseBody extends TeaModel {
         }
         public String getExecutionStrategy() {
             return this.executionStrategy;
+        }
+
+        public GetDeployDetailResponseBodyDataResourceList setExpiredTime(Long expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public Long getExpiredTime() {
+            return this.expiredTime;
         }
 
         public GetDeployDetailResponseBodyDataResourceList setModifiedTime(Long modifiedTime) {
