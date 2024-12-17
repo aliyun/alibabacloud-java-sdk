@@ -105,6 +105,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("ClusterBackupId")
     public String clusterBackupId;
 
+    @NameInMap("ConnectionStringPrefix")
+    public String connectionStringPrefix;
+
     /**
      * <p>The coupon code.</p>
      * 
@@ -296,6 +299,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ReplicaCount")
+    public Integer replicaCount;
+
     /**
      * <p>The ID of the resource group to which you want to assign the instance.</p>
      * <blockquote>
@@ -383,6 +389,9 @@ public class CreateTairInstanceRequest extends TeaModel {
      */
     @NameInMap("SlaveReadOnlyCount")
     public Integer slaveReadOnlyCount;
+
+    @NameInMap("SlaveReplicaCount")
+    public Integer slaveReplicaCount;
 
     /**
      * <p>If you want to create an instance based on the backup set of an existing instance, set this parameter to the ID of the source instance.</p>
@@ -542,6 +551,14 @@ public class CreateTairInstanceRequest extends TeaModel {
         return this.clusterBackupId;
     }
 
+    public CreateTairInstanceRequest setConnectionStringPrefix(String connectionStringPrefix) {
+        this.connectionStringPrefix = connectionStringPrefix;
+        return this;
+    }
+    public String getConnectionStringPrefix() {
+        return this.connectionStringPrefix;
+    }
+
     public CreateTairInstanceRequest setCouponNo(String couponNo) {
         this.couponNo = couponNo;
         return this;
@@ -686,6 +703,14 @@ public class CreateTairInstanceRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateTairInstanceRequest setReplicaCount(Integer replicaCount) {
+        this.replicaCount = replicaCount;
+        return this;
+    }
+    public Integer getReplicaCount() {
+        return this.replicaCount;
+    }
+
     public CreateTairInstanceRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -756,6 +781,14 @@ public class CreateTairInstanceRequest extends TeaModel {
     }
     public Integer getSlaveReadOnlyCount() {
         return this.slaveReadOnlyCount;
+    }
+
+    public CreateTairInstanceRequest setSlaveReplicaCount(Integer slaveReplicaCount) {
+        this.slaveReplicaCount = slaveReplicaCount;
+        return this;
+    }
+    public Integer getSlaveReplicaCount() {
+        return this.slaveReplicaCount;
     }
 
     public CreateTairInstanceRequest setSrcDBInstanceId(String srcDBInstanceId) {

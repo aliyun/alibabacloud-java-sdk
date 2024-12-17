@@ -14,6 +14,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long backupId;
 
     /**
+     * <p>The backup task ID, returned by CreateBackup. If CreateBackup returns multiple BackupJobIds, you need to use this interface to query each of them separately.</p>
+     * 
      * <strong>example:</strong>
      * <p>10001</p>
      */
@@ -63,7 +65,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -72,7 +74,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 30, 50, 100, 200, and 300.</p>
+     * <p>The maximum number of entries per page. Valid values: 30, 50, 100, 200, and 300.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

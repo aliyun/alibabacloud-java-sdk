@@ -518,6 +518,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ReplicaCount")
+        public Integer replicaCount;
+
         /**
          * <p>The ID of the replica node.</p>
          * 
@@ -587,6 +590,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("SlaveReadOnlyCount")
         public Long slaveReadOnlyCount;
+
+        @NameInMap("SlaveReplicaCount")
+        public Integer slaveReplicaCount;
 
         /**
          * <p>The storage capacity of the cloud disk.</p>
@@ -975,6 +981,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setReplicaCount(Integer replicaCount) {
+            this.replicaCount = replicaCount;
+            return this;
+        }
+        public Integer getReplicaCount() {
+            return this.replicaCount;
+        }
+
         public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setReplicaId(String replicaId) {
             this.replicaId = replicaId;
             return this;
@@ -1029,6 +1043,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public Long getSlaveReadOnlyCount() {
             return this.slaveReadOnlyCount;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setSlaveReplicaCount(Integer slaveReplicaCount) {
+            this.slaveReplicaCount = slaveReplicaCount;
+            return this;
+        }
+        public Integer getSlaveReplicaCount() {
+            return this.slaveReplicaCount;
         }
 
         public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setStorage(String storage) {

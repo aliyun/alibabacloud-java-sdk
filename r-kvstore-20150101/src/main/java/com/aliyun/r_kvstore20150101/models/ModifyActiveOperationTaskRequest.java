@@ -7,7 +7,7 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
     /**
      * <p>The ID of the O\&amp;M task. Separate multiple IDs with commas (,).</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/197387.html">DescribeActiveOperationTask</a> operation to query the ID of an O\&amp;M task.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> operation to query the ID of an O\&amp;M task.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -35,7 +35,7 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
     /**
      * <p>The scheduled switchover time to be specified. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>The time cannot be later than the latest operation time. You can call the <a href="https://help.aliyun.com/document_detail/197387.html">DescribeActiveOperationTask</a> operation to obtain the latest operation time, which is the value of the <strong>Deadline</strong> parameter in the response.</p>
+     * <p>The time cannot be later than the latest operation time. You can call the <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> operation to obtain the latest operation time, which is the value of the <strong>Deadline</strong> parameter in the response.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

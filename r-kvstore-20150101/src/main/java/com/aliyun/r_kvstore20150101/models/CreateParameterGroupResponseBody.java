@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateParameterGroupResponseBody extends TeaModel {
     /**
+     * <p>The parameter template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>g-51ii2ienn0dg0xi8****</p>
      */
@@ -12,6 +14,8 @@ public class CreateParameterGroupResponseBody extends TeaModel {
     public String paramGroupId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>62DA5BE5-F9C9-527C-ACCB-4D783C297A3A</p>
      */

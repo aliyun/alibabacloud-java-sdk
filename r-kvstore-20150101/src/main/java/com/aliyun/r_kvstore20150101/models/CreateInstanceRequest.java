@@ -359,6 +359,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ReplicaCount")
+    public Integer replicaCount;
+
     /**
      * <p>The ID of the resource group.</p>
      * 
@@ -421,6 +424,9 @@ public class CreateInstanceRequest extends TeaModel {
      */
     @NameInMap("SlaveReadOnlyCount")
     public Integer slaveReadOnlyCount;
+
+    @NameInMap("SlaveReplicaCount")
+    public Integer slaveReplicaCount;
 
     /**
      * <p>If you want to create an instance based on the backup set of an existing instance, set this parameter to the ID of the source instance.</p>
@@ -737,6 +743,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateInstanceRequest setReplicaCount(Integer replicaCount) {
+        this.replicaCount = replicaCount;
+        return this;
+    }
+    public Integer getReplicaCount() {
+        return this.replicaCount;
+    }
+
     public CreateInstanceRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -799,6 +813,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public Integer getSlaveReadOnlyCount() {
         return this.slaveReadOnlyCount;
+    }
+
+    public CreateInstanceRequest setSlaveReplicaCount(Integer slaveReplicaCount) {
+        this.slaveReplicaCount = slaveReplicaCount;
+        return this;
+    }
+    public Integer getSlaveReplicaCount() {
+        return this.slaveReplicaCount;
     }
 
     public CreateInstanceRequest setSrcDBInstanceId(String srcDBInstanceId) {

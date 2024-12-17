@@ -181,6 +181,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ReplicaCount")
+    public Integer replicaCount;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -208,6 +211,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("SlaveReadOnlyCount")
     public Integer slaveReadOnlyCount;
 
+    @NameInMap("SlaveReplicaCount")
+    public Integer slaveReplicaCount;
+
     /**
      * <p>The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.</p>
      * 
@@ -216,6 +222,12 @@ public class ModifyInstanceSpecRequest extends TeaModel {
      */
     @NameInMap("SourceBiz")
     public String sourceBiz;
+
+    @NameInMap("Storage")
+    public Integer storage;
+
+    @NameInMap("StorageType")
+    public String storageType;
 
     public static ModifyInstanceSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceSpecRequest self = new ModifyInstanceSpecRequest();
@@ -350,6 +362,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ModifyInstanceSpecRequest setReplicaCount(Integer replicaCount) {
+        this.replicaCount = replicaCount;
+        return this;
+    }
+    public Integer getReplicaCount() {
+        return this.replicaCount;
+    }
+
     public ModifyInstanceSpecRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -390,12 +410,36 @@ public class ModifyInstanceSpecRequest extends TeaModel {
         return this.slaveReadOnlyCount;
     }
 
+    public ModifyInstanceSpecRequest setSlaveReplicaCount(Integer slaveReplicaCount) {
+        this.slaveReplicaCount = slaveReplicaCount;
+        return this;
+    }
+    public Integer getSlaveReplicaCount() {
+        return this.slaveReplicaCount;
+    }
+
     public ModifyInstanceSpecRequest setSourceBiz(String sourceBiz) {
         this.sourceBiz = sourceBiz;
         return this;
     }
     public String getSourceBiz() {
         return this.sourceBiz;
+    }
+
+    public ModifyInstanceSpecRequest setStorage(Integer storage) {
+        this.storage = storage;
+        return this;
+    }
+    public Integer getStorage() {
+        return this.storage;
+    }
+
+    public ModifyInstanceSpecRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
 }
