@@ -61,6 +61,8 @@ public class SetWorkflowExtraInfoRequest extends TeaModel {
     public Long tid;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>184****</p>
      */
