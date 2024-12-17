@@ -51,6 +51,9 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     @NameInMap("LdapConfig")
     public UpdateIdentityProviderRequestLdapConfig ldapConfig;
 
+    @NameInMap("LogoUrl")
+    public String logoUrl;
+
     /**
      * <p>网络端点ID</p>
      * 
@@ -123,6 +126,14 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     }
     public UpdateIdentityProviderRequestLdapConfig getLdapConfig() {
         return this.ldapConfig;
+    }
+
+    public UpdateIdentityProviderRequest setLogoUrl(String logoUrl) {
+        this.logoUrl = logoUrl;
+        return this;
+    }
+    public String getLogoUrl() {
+        return this.logoUrl;
     }
 
     public UpdateIdentityProviderRequest setNetworkAccessEndpointId(String networkAccessEndpointId) {

@@ -167,6 +167,9 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         @NameInMap("LockReason")
         public String lockReason;
 
+        @NameInMap("LogoUrl")
+        public String logoUrl;
+
         /**
          * <p>IDaaS EIAM 是否支持UD同步</p>
          * 
@@ -316,6 +319,14 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
         public String getLockReason() {
             return this.lockReason;
+        }
+
+        public ListIdentityProvidersResponseBodyIdentityProviders setLogoUrl(String logoUrl) {
+            this.logoUrl = logoUrl;
+            return this;
+        }
+        public String getLogoUrl() {
+            return this.logoUrl;
         }
 
         public ListIdentityProvidersResponseBodyIdentityProviders setUdPullStatus(String udPullStatus) {

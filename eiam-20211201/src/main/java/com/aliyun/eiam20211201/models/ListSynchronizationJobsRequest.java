@@ -22,6 +22,9 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    @NameInMap("Filters")
+    public java.util.List<ListSynchronizationJobsRequestFilters> filters;
+
     /**
      * <p>IDaaS EIAM实例的ID。</p>
      * <p>This parameter is required.</p>
@@ -125,6 +128,14 @@ public class ListSynchronizationJobsRequest extends TeaModel {
         return this.endTime;
     }
 
+    public ListSynchronizationJobsRequest setFilters(java.util.List<ListSynchronizationJobsRequestFilters> filters) {
+        this.filters = filters;
+        return this;
+    }
+    public java.util.List<ListSynchronizationJobsRequestFilters> getFilters() {
+        return this.filters;
+    }
+
     public ListSynchronizationJobsRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -195,6 +206,36 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     }
     public String getTargetType() {
         return this.targetType;
+    }
+
+    public static class ListSynchronizationJobsRequestFilters extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static ListSynchronizationJobsRequestFilters build(java.util.Map<String, ?> map) throws Exception {
+            ListSynchronizationJobsRequestFilters self = new ListSynchronizationJobsRequestFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSynchronizationJobsRequestFilters setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListSynchronizationJobsRequestFilters setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
     }
 
 }
