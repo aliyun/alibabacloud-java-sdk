@@ -41,6 +41,9 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    @NameInMap("total")
+    public Integer total;
+
     /**
      * <strong>example:</strong>
      * <p>1579404690269235</p>
@@ -109,6 +112,14 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         return this.status;
     }
 
+    public GetAICoachTaskSessionHistoryResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
+    }
+    public Integer getTotal() {
+        return this.total;
+    }
+
     public GetAICoachTaskSessionHistoryResponseBody setUid(String uid) {
         this.uid = uid;
         return this;
@@ -118,6 +129,9 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
     }
 
     public static class GetAICoachTaskSessionHistoryResponseBodyConversationList extends TeaModel {
+        @NameInMap("audioUrl")
+        public String audioUrl;
+
         /**
          * <strong>example:</strong>
          * <p>{}</p>
@@ -128,12 +142,23 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         @NameInMap("message")
         public String message;
 
+        @NameInMap("recordId")
+        public String recordId;
+
         @NameInMap("role")
         public String role;
 
         public static GetAICoachTaskSessionHistoryResponseBodyConversationList build(java.util.Map<String, ?> map) throws Exception {
             GetAICoachTaskSessionHistoryResponseBodyConversationList self = new GetAICoachTaskSessionHistoryResponseBodyConversationList();
             return TeaModel.build(map, self);
+        }
+
+        public GetAICoachTaskSessionHistoryResponseBodyConversationList setAudioUrl(String audioUrl) {
+            this.audioUrl = audioUrl;
+            return this;
+        }
+        public String getAudioUrl() {
+            return this.audioUrl;
         }
 
         public GetAICoachTaskSessionHistoryResponseBodyConversationList setEvaluationResult(String evaluationResult) {
@@ -150,6 +175,14 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public GetAICoachTaskSessionHistoryResponseBodyConversationList setRecordId(String recordId) {
+            this.recordId = recordId;
+            return this;
+        }
+        public String getRecordId() {
+            return this.recordId;
         }
 
         public GetAICoachTaskSessionHistoryResponseBodyConversationList setRole(String role) {

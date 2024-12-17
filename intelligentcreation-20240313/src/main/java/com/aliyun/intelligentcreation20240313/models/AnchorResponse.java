@@ -4,6 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class AnchorResponse extends TeaModel {
+    @NameInMap("anchorCategory")
+    public String anchorCategory;
+
     @NameInMap("anchorId")
     public String anchorId;
 
@@ -49,6 +52,14 @@ public class AnchorResponse extends TeaModel {
     public static AnchorResponse build(java.util.Map<String, ?> map) throws Exception {
         AnchorResponse self = new AnchorResponse();
         return TeaModel.build(map, self);
+    }
+
+    public AnchorResponse setAnchorCategory(String anchorCategory) {
+        this.anchorCategory = anchorCategory;
+        return this;
+    }
+    public String getAnchorCategory() {
+        return this.anchorCategory;
     }
 
     public AnchorResponse setAnchorId(String anchorId) {

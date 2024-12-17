@@ -25,6 +25,9 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
     @NameInMap("evaluationResult")
     public String evaluationResult;
 
+    @NameInMap("feedback")
+    public Boolean feedback;
+
     /**
      * <strong>example:</strong>
      * <p>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</p>
@@ -79,6 +82,14 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
     }
     public String getEvaluationResult() {
         return this.evaluationResult;
+    }
+
+    public GetAICoachTaskSessionReportResponseBody setFeedback(Boolean feedback) {
+        this.feedback = feedback;
+        return this;
+    }
+    public Boolean getFeedback() {
+        return this.feedback;
     }
 
     public GetAICoachTaskSessionReportResponseBody setRequestId(String requestId) {
