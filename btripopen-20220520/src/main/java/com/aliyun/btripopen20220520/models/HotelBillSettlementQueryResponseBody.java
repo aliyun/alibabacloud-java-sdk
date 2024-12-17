@@ -140,6 +140,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("billing_entity")
         public String billingEntity;
 
+        @NameInMap("book_mode")
+        public String bookMode;
+
         @NameInMap("book_reason")
         public String bookReason;
 
@@ -237,6 +240,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
+
+        @NameInMap("deductible_tax")
+        public Double deductibleTax;
 
         @NameInMap("department")
         public String department;
@@ -383,6 +389,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("promotion_fee")
         public Double promotionFee;
 
+        @NameInMap("recover_money_receipt_amt")
+        public Double recoverMoneyReceiptAmt;
+
         @NameInMap("remark")
         public String remark;
 
@@ -495,12 +504,18 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("traveler_name")
         public String travelerName;
 
+        @NameInMap("unbooked_lowest_price_reason")
+        public String unbookedLowestPriceReason;
+
         /**
          * <strong>example:</strong>
          * <p>11</p>
          */
         @NameInMap("voucher_type")
         public Integer voucherType;
+
+        @NameInMap("voucher_type_desc")
+        public String voucherTypeDesc;
 
         public static HotelBillSettlementQueryResponseBodyModuleDataList build(java.util.Map<String, ?> map) throws Exception {
             HotelBillSettlementQueryResponseBodyModuleDataList self = new HotelBillSettlementQueryResponseBodyModuleDataList();
@@ -593,6 +608,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getBillingEntity() {
             return this.billingEntity;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setBookMode(String bookMode) {
+            this.bookMode = bookMode;
+            return this;
+        }
+        public String getBookMode() {
+            return this.bookMode;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setBookReason(String bookReason) {
@@ -769,6 +792,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getCostCenterNumber() {
             return this.costCenterNumber;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setDeductibleTax(Double deductibleTax) {
+            this.deductibleTax = deductibleTax;
+            return this;
+        }
+        public Double getDeductibleTax() {
+            return this.deductibleTax;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setDepartment(String department) {
@@ -1019,6 +1050,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.promotionFee;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setRecoverMoneyReceiptAmt(Double recoverMoneyReceiptAmt) {
+            this.recoverMoneyReceiptAmt = recoverMoneyReceiptAmt;
+            return this;
+        }
+        public Double getRecoverMoneyReceiptAmt() {
+            return this.recoverMoneyReceiptAmt;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setRemark(String remark) {
             this.remark = remark;
             return this;
@@ -1195,12 +1234,28 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.travelerName;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setUnbookedLowestPriceReason(String unbookedLowestPriceReason) {
+            this.unbookedLowestPriceReason = unbookedLowestPriceReason;
+            return this;
+        }
+        public String getUnbookedLowestPriceReason() {
+            return this.unbookedLowestPriceReason;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setVoucherType(Integer voucherType) {
             this.voucherType = voucherType;
             return this;
         }
         public Integer getVoucherType() {
             return this.voucherType;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setVoucherTypeDesc(String voucherTypeDesc) {
+            this.voucherTypeDesc = voucherTypeDesc;
+            return this;
+        }
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
         }
 
     }

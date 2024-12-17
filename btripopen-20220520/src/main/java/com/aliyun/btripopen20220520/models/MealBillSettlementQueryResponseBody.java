@@ -387,6 +387,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("voucher_type")
         public Integer voucherType;
 
+        @NameInMap("voucher_type_desc")
+        public String voucherTypeDesc;
+
         public static MealBillSettlementQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             MealBillSettlementQueryResponseBodyModuleItems self = new MealBillSettlementQueryResponseBodyModuleItems();
             return TeaModel.build(map, self);
@@ -814,6 +817,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getVoucherType() {
             return this.voucherType;
+        }
+
+        public MealBillSettlementQueryResponseBodyModuleItems setVoucherTypeDesc(String voucherTypeDesc) {
+            this.voucherTypeDesc = voucherTypeDesc;
+            return this;
+        }
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
         }
 
     }

@@ -12,8 +12,6 @@ public class HotelOrderChangeDetailRequest extends TeaModel {
     public String btripUserId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>21351235134</p>
      */
@@ -21,8 +19,6 @@ public class HotelOrderChangeDetailRequest extends TeaModel {
     public String changeOrderId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>dis123</p>
      */
@@ -30,8 +26,6 @@ public class HotelOrderChangeDetailRequest extends TeaModel {
     public String disOrderId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>1402002197440511306</p>
      */

@@ -226,6 +226,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("coupon")
         public Double coupon;
 
+        @NameInMap("deductible_tax")
+        public Double deductibleTax;
+
         @NameInMap("dep_city_code")
         public String depCityCode;
 
@@ -278,6 +281,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("is_transfer_order")
         public String isTransferOrder;
 
+        @NameInMap("long_ticket_no")
+        public String longTicketNo;
+
         @NameInMap("max_cabin")
         public String maxCabin;
 
@@ -294,6 +300,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("order_price")
         public Double orderPrice;
+
+        @NameInMap("order_ticket_no")
+        public String orderTicketNo;
 
         /**
          * <strong>example:</strong>
@@ -477,6 +486,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("voucher_type")
         public Integer voucherType;
+
+        @NameInMap("voucher_type_desc")
+        public String voucherTypeDesc;
 
         public static TrainBillSettlementQueryResponseBodyModuleDataList build(java.util.Map<String, ?> map) throws Exception {
             TrainBillSettlementQueryResponseBodyModuleDataList self = new TrainBillSettlementQueryResponseBodyModuleDataList();
@@ -715,6 +727,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             return this.coupon;
         }
 
+        public TrainBillSettlementQueryResponseBodyModuleDataList setDeductibleTax(Double deductibleTax) {
+            this.deductibleTax = deductibleTax;
+            return this;
+        }
+        public Double getDeductibleTax() {
+            return this.deductibleTax;
+        }
+
         public TrainBillSettlementQueryResponseBodyModuleDataList setDepCityCode(String depCityCode) {
             this.depCityCode = depCityCode;
             return this;
@@ -811,6 +831,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             return this.isTransferOrder;
         }
 
+        public TrainBillSettlementQueryResponseBodyModuleDataList setLongTicketNo(String longTicketNo) {
+            this.longTicketNo = longTicketNo;
+            return this;
+        }
+        public String getLongTicketNo() {
+            return this.longTicketNo;
+        }
+
         public TrainBillSettlementQueryResponseBodyModuleDataList setMaxCabin(String maxCabin) {
             this.maxCabin = maxCabin;
             return this;
@@ -833,6 +861,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getOrderPrice() {
             return this.orderPrice;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setOrderTicketNo(String orderTicketNo) {
+            this.orderTicketNo = orderTicketNo;
+            return this;
+        }
+        public String getOrderTicketNo() {
+            return this.orderTicketNo;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setOverApplyId(String overApplyId) {
@@ -1145,6 +1181,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getVoucherType() {
             return this.voucherType;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setVoucherTypeDesc(String voucherTypeDesc) {
+            this.voucherTypeDesc = voucherTypeDesc;
+            return this;
+        }
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
         }
 
     }

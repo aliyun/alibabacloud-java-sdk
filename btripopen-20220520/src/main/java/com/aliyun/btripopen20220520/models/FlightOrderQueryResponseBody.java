@@ -195,6 +195,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("gmt_modify")
         public String gmtModify;
 
+        @NameInMap("journey_index")
+        public Integer journeyIndex;
+
         /**
          * <strong>example:</strong>
          * <p>00-123123</p>
@@ -204,6 +207,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("out_apply_id")
         public String outApplyId;
+
+        @NameInMap("segment_index")
+        public Integer segmentIndex;
 
         @NameInMap("stop_city")
         public String stopCity;
@@ -401,6 +407,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             return this.gmtModify;
         }
 
+        public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setJourneyIndex(Integer journeyIndex) {
+            this.journeyIndex = journeyIndex;
+            return this;
+        }
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
         public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setOriginTicketNo(String originTicketNo) {
             this.originTicketNo = originTicketNo;
             return this;
@@ -415,6 +429,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public String getOutApplyId() {
             return this.outApplyId;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setSegmentIndex(Integer segmentIndex) {
+            this.segmentIndex = segmentIndex;
+            return this;
+        }
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setStopCity(String stopCity) {
@@ -493,6 +515,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("arr_city_name")
         public String arrCityName;
 
+        @NameInMap("arr_terminal")
+        public String arrTerminal;
+
         /**
          * <strong>example:</strong>
          * <p>2022-07-20T10:40Z</p>
@@ -537,6 +562,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("dep_city_name")
         public String depCityName;
 
+        @NameInMap("dep_terminal")
+        public String depTerminal;
+
         /**
          * <strong>example:</strong>
          * <p>2022-07-20T10:40Z</p>
@@ -557,6 +585,15 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         @NameInMap("flight_no")
         public String flightNo;
+
+        @NameInMap("journey_index")
+        public Integer journeyIndex;
+
+        @NameInMap("segment_index")
+        public Integer segmentIndex;
+
+        @NameInMap("stop_city")
+        public java.util.List<String> stopCity;
 
         public static FlightOrderQueryResponseBodyModuleFlightInfoList build(java.util.Map<String, ?> map) throws Exception {
             FlightOrderQueryResponseBodyModuleFlightInfoList self = new FlightOrderQueryResponseBodyModuleFlightInfoList();
@@ -617,6 +654,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public String getArrCityName() {
             return this.arrCityName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoList setArrTerminal(String arrTerminal) {
+            this.arrTerminal = arrTerminal;
+            return this;
+        }
+        public String getArrTerminal() {
+            return this.arrTerminal;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightInfoList setArrTime(String arrTime) {
@@ -683,6 +728,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             return this.depCityName;
         }
 
+        public FlightOrderQueryResponseBodyModuleFlightInfoList setDepTerminal(String depTerminal) {
+            this.depTerminal = depTerminal;
+            return this;
+        }
+        public String getDepTerminal() {
+            return this.depTerminal;
+        }
+
         public FlightOrderQueryResponseBodyModuleFlightInfoList setDepTime(String depTime) {
             this.depTime = depTime;
             return this;
@@ -705,6 +758,30 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public String getFlightNo() {
             return this.flightNo;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoList setJourneyIndex(Integer journeyIndex) {
+            this.journeyIndex = journeyIndex;
+            return this;
+        }
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoList setSegmentIndex(Integer segmentIndex) {
+            this.segmentIndex = segmentIndex;
+            return this;
+        }
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoList setStopCity(java.util.List<String> stopCity) {
+            this.stopCity = stopCity;
+            return this;
+        }
+        public java.util.List<String> getStopCity() {
+            return this.stopCity;
         }
 
     }
@@ -757,6 +834,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("gmt_modify")
         public String gmtModify;
 
+        @NameInMap("journey_index")
+        public Integer journeyIndex;
+
         @NameInMap("out_apply_id")
         public String outApplyId;
 
@@ -786,6 +866,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         @NameInMap("refund_type")
         public Integer refundType;
+
+        @NameInMap("segment_index")
+        public Integer segmentIndex;
 
         /**
          * <strong>example:</strong>
@@ -903,6 +986,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             return this.gmtModify;
         }
 
+        public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setJourneyIndex(Integer journeyIndex) {
+            this.journeyIndex = journeyIndex;
+            return this;
+        }
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
         public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setOutApplyId(String outApplyId) {
             this.outApplyId = outApplyId;
             return this;
@@ -951,6 +1042,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             return this.refundType;
         }
 
+        public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setSegmentIndex(Integer segmentIndex) {
+            this.segmentIndex = segmentIndex;
+            return this;
+        }
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
+        }
+
         public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setTicketNo(String ticketNo) {
             this.ticketNo = ticketNo;
             return this;
@@ -967,6 +1066,12 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("arr_airport_code")
         public String arrAirportCode;
+
+        @NameInMap("arr_city")
+        public String arrCity;
+
+        @NameInMap("arr_city_code")
+        public String arrCityCode;
 
         /**
          * <strong>example:</strong>
@@ -987,6 +1092,12 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("dep_airport_code")
         public String depAirportCode;
+
+        @NameInMap("dep_city")
+        public String depCity;
+
+        @NameInMap("dep_city_code")
+        public String depCityCode;
 
         /**
          * <strong>example:</strong>
@@ -1012,6 +1123,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("gmt_modify")
         public String gmtModify;
 
+        @NameInMap("journey_index")
+        public Integer journeyIndex;
+
         /**
          * <strong>example:</strong>
          * <p>100</p>
@@ -1028,6 +1142,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("personal_price")
         public Double personalPrice;
+
+        @NameInMap("segment_index")
+        public Integer segmentIndex;
 
         /**
          * <strong>example:</strong>
@@ -1088,6 +1205,22 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             return this.arrAirportCode;
         }
 
+        public FlightOrderQueryResponseBodyModuleFlightTicketInfoList setArrCity(String arrCity) {
+            this.arrCity = arrCity;
+            return this;
+        }
+        public String getArrCity() {
+            return this.arrCity;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightTicketInfoList setArrCityCode(String arrCityCode) {
+            this.arrCityCode = arrCityCode;
+            return this;
+        }
+        public String getArrCityCode() {
+            return this.arrCityCode;
+        }
+
         public FlightOrderQueryResponseBodyModuleFlightTicketInfoList setBuildPrice(Double buildPrice) {
             this.buildPrice = buildPrice;
             return this;
@@ -1118,6 +1251,22 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public String getDepAirportCode() {
             return this.depAirportCode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightTicketInfoList setDepCity(String depCity) {
+            this.depCity = depCity;
+            return this;
+        }
+        public String getDepCity() {
+            return this.depCity;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightTicketInfoList setDepCityCode(String depCityCode) {
+            this.depCityCode = depCityCode;
+            return this;
+        }
+        public String getDepCityCode() {
+            return this.depCityCode;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightTicketInfoList setDiscount(Integer discount) {
@@ -1152,6 +1301,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             return this.gmtModify;
         }
 
+        public FlightOrderQueryResponseBodyModuleFlightTicketInfoList setJourneyIndex(Integer journeyIndex) {
+            this.journeyIndex = journeyIndex;
+            return this;
+        }
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
         public FlightOrderQueryResponseBodyModuleFlightTicketInfoList setOilPrice(Double oilPrice) {
             this.oilPrice = oilPrice;
             return this;
@@ -1174,6 +1331,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public Double getPersonalPrice() {
             return this.personalPrice;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightTicketInfoList setSegmentIndex(Integer segmentIndex) {
+            this.segmentIndex = segmentIndex;
+            return this;
+        }
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightTicketInfoList setSettlePrice(Double settlePrice) {
@@ -1241,6 +1406,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("insurance_no")
         public String insuranceNo;
 
+        @NameInMap("name")
+        public String name;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -1270,6 +1438,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public String getInsuranceNo() {
             return this.insuranceNo;
+        }
+
+        public FlightOrderQueryResponseBodyModuleInsuranceInfoList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public FlightOrderQueryResponseBodyModuleInsuranceInfoList setStatus(Integer status) {
@@ -1390,6 +1566,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         @NameInMap("order_status")
         public Integer orderStatus;
+
+        @NameInMap("supplier")
+        public String supplier;
 
         /**
          * <strong>example:</strong>
@@ -1536,6 +1715,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public Integer getOrderStatus() {
             return this.orderStatus;
+        }
+
+        public FlightOrderQueryResponseBodyModuleOrderBaseInfo setSupplier(String supplier) {
+            this.supplier = supplier;
+            return this;
+        }
+        public String getSupplier() {
+            return this.supplier;
         }
 
         public FlightOrderQueryResponseBodyModuleOrderBaseInfo setThirdpartApplyId(String thirdpartApplyId) {

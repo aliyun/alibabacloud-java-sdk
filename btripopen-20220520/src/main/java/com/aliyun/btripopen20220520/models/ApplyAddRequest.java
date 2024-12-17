@@ -72,6 +72,12 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("international_flight_cabins")
     public String internationalFlightCabins;
 
+    @NameInMap("intl_flight_budget")
+    public Long intlFlightBudget;
+
+    @NameInMap("intl_hotel_budget")
+    public Long intlHotelBudget;
+
     @NameInMap("itinerary_list")
     public java.util.List<ApplyAddRequestItineraryList> itineraryList;
 
@@ -314,6 +320,22 @@ public class ApplyAddRequest extends TeaModel {
     }
     public String getInternationalFlightCabins() {
         return this.internationalFlightCabins;
+    }
+
+    public ApplyAddRequest setIntlFlightBudget(Long intlFlightBudget) {
+        this.intlFlightBudget = intlFlightBudget;
+        return this;
+    }
+    public Long getIntlFlightBudget() {
+        return this.intlFlightBudget;
+    }
+
+    public ApplyAddRequest setIntlHotelBudget(Long intlHotelBudget) {
+        this.intlHotelBudget = intlHotelBudget;
+        return this;
+    }
+    public Long getIntlHotelBudget() {
+        return this.intlHotelBudget;
     }
 
     public ApplyAddRequest setItineraryList(java.util.List<ApplyAddRequestItineraryList> itineraryList) {

@@ -412,6 +412,9 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         @NameInMap("memo")
         public String memo;
 
+        @NameInMap("order_id")
+        public String orderId;
+
         @NameInMap("order_status")
         public Integer orderStatus;
 
@@ -754,6 +757,14 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         }
         public String getMemo() {
             return this.memo;
+        }
+
+        public CarOrderListQueryResponseBodyModule setOrderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public String getOrderId() {
+            return this.orderId;
         }
 
         public CarOrderListQueryResponseBodyModule setOrderStatus(Integer orderStatus) {

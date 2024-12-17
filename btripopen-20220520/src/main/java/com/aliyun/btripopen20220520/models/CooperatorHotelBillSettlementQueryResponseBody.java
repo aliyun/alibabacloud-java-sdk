@@ -544,6 +544,9 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("voucher_type")
         public Integer voucherType;
 
+        @NameInMap("voucher_type_desc")
+        public String voucherTypeDesc;
+
         public static CooperatorHotelBillSettlementQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             CooperatorHotelBillSettlementQueryResponseBodyModuleItems self = new CooperatorHotelBillSettlementQueryResponseBodyModuleItems();
             return TeaModel.build(map, self);
@@ -1219,6 +1222,14 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getVoucherType() {
             return this.voucherType;
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setVoucherTypeDesc(String voucherTypeDesc) {
+            this.voucherTypeDesc = voucherTypeDesc;
+            return this;
+        }
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
         }
 
     }

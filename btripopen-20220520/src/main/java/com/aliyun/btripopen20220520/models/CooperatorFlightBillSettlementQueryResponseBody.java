@@ -690,6 +690,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("voucher_type")
         public Integer voucherType;
 
+        @NameInMap("voucher_type_desc")
+        public String voucherTypeDesc;
+
         @NameInMap("voyage_name")
         public String voyageName;
 
@@ -1528,6 +1531,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getVoucherType() {
             return this.voucherType;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setVoucherTypeDesc(String voucherTypeDesc) {
+            this.voucherTypeDesc = voucherTypeDesc;
+            return this;
+        }
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setVoyageName(String voyageName) {

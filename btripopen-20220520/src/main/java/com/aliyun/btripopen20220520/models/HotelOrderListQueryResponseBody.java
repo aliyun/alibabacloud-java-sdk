@@ -212,6 +212,9 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderListQueryResponseBodyModulePriceInfoList extends TeaModel {
+        @NameInMap("category")
+        public String category;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -267,6 +270,14 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         public static HotelOrderListQueryResponseBodyModulePriceInfoList build(java.util.Map<String, ?> map) throws Exception {
             HotelOrderListQueryResponseBodyModulePriceInfoList self = new HotelOrderListQueryResponseBodyModulePriceInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public HotelOrderListQueryResponseBodyModulePriceInfoList setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public HotelOrderListQueryResponseBodyModulePriceInfoList setCategoryCode(Integer categoryCode) {
@@ -376,6 +387,9 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         @NameInMap("btrip_title")
         public String btripTitle;
 
+        @NameInMap("category")
+        public Integer category;
+
         /**
          * <strong>example:</strong>
          * <p>2022-05-15T22:27Z</p>
@@ -407,6 +421,12 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
 
         @NameInMap("cost_center")
         public HotelOrderListQueryResponseBodyModuleCostCenter costCenter;
+
+        @NameInMap("country_code")
+        public String countryCode;
+
+        @NameInMap("country_name")
+        public String countryName;
 
         @NameInMap("depart_id")
         public String departId;
@@ -511,6 +531,9 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         @NameInMap("room_type")
         public String roomType;
 
+        @NameInMap("supplier")
+        public String supplier;
+
         /**
          * <strong>example:</strong>
          * <p>CS-THIRDAPPLY</p>
@@ -563,6 +586,14 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         }
         public String getBtripTitle() {
             return this.btripTitle;
+        }
+
+        public HotelOrderListQueryResponseBodyModule setCategory(Integer category) {
+            this.category = category;
+            return this;
+        }
+        public Integer getCategory() {
+            return this.category;
         }
 
         public HotelOrderListQueryResponseBodyModule setCheckIn(String checkIn) {
@@ -627,6 +658,22 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         }
         public HotelOrderListQueryResponseBodyModuleCostCenter getCostCenter() {
             return this.costCenter;
+        }
+
+        public HotelOrderListQueryResponseBodyModule setCountryCode(String countryCode) {
+            this.countryCode = countryCode;
+            return this;
+        }
+        public String getCountryCode() {
+            return this.countryCode;
+        }
+
+        public HotelOrderListQueryResponseBodyModule setCountryName(String countryName) {
+            this.countryName = countryName;
+            return this;
+        }
+        public String getCountryName() {
+            return this.countryName;
         }
 
         public HotelOrderListQueryResponseBodyModule setDepartId(String departId) {
@@ -795,6 +842,14 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         }
         public String getRoomType() {
             return this.roomType;
+        }
+
+        public HotelOrderListQueryResponseBodyModule setSupplier(String supplier) {
+            this.supplier = supplier;
+            return this;
+        }
+        public String getSupplier() {
+            return this.supplier;
         }
 
         public HotelOrderListQueryResponseBodyModule setThirdpartApplyId(String thirdpartApplyId) {

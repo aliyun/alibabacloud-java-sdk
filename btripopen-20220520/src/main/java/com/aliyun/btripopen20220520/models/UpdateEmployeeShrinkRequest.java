@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class UpdateEmployeeShrinkRequest extends TeaModel {
+    @NameInMap("attribute")
+    public String attribute;
+
     /**
      * <strong>example:</strong>
      * <p><a href="https://static-legacy.dingtalk.com/media/lADPF8XMoxJeUkbNA2LNA5s_923_866.jpg">https://static-legacy.dingtalk.com/media/lADPF8XMoxJeUkbNA2LNA5s_923_866.jpg</a></p>
@@ -118,6 +121,14 @@ public class UpdateEmployeeShrinkRequest extends TeaModel {
     public static UpdateEmployeeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEmployeeShrinkRequest self = new UpdateEmployeeShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateEmployeeShrinkRequest setAttribute(String attribute) {
+        this.attribute = attribute;
+        return this;
+    }
+    public String getAttribute() {
+        return this.attribute;
     }
 
     public UpdateEmployeeShrinkRequest setAvatar(String avatar) {

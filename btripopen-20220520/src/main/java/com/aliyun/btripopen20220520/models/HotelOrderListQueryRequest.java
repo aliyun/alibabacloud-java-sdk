@@ -18,6 +18,9 @@ public class HotelOrderListQueryRequest extends TeaModel {
     @NameInMap("apply_id")
     public Long applyId;
 
+    @NameInMap("category")
+    public Integer category;
+
     @NameInMap("depart_id")
     public String departId;
 
@@ -92,6 +95,14 @@ public class HotelOrderListQueryRequest extends TeaModel {
     }
     public Long getApplyId() {
         return this.applyId;
+    }
+
+    public HotelOrderListQueryRequest setCategory(Integer category) {
+        this.category = category;
+        return this;
+    }
+    public Integer getCategory() {
+        return this.category;
     }
 
     public HotelOrderListQueryRequest setDepartId(String departId) {

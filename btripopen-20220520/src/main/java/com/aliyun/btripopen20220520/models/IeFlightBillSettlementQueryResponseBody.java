@@ -290,6 +290,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("coupon")
         public Double coupon;
 
+        @NameInMap("deductible_tax")
+        public Double deductibleTax;
+
         /**
          * <strong>example:</strong>
          * <p>KHN</p>
@@ -614,6 +617,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("voucher_type")
         public Integer voucherType;
 
+        @NameInMap("voucher_type_desc")
+        public String voucherTypeDesc;
+
         @NameInMap("voyage_name")
         public String voyageName;
 
@@ -908,6 +914,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getCoupon() {
             return this.coupon;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setDeductibleTax(Double deductibleTax) {
+            this.deductibleTax = deductibleTax;
+            return this;
+        }
+        public Double getDeductibleTax() {
+            return this.deductibleTax;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setDepAirportCode(String depAirportCode) {
@@ -1372,6 +1386,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getVoucherType() {
             return this.voucherType;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setVoucherTypeDesc(String voucherTypeDesc) {
+            this.voucherTypeDesc = voucherTypeDesc;
+            return this;
+        }
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setVoyageName(String voyageName) {
