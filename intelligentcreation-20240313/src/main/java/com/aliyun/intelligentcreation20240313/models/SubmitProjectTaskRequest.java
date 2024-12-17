@@ -65,6 +65,9 @@ public class SubmitProjectTaskRequest extends TeaModel {
     }
 
     public static class SubmitProjectTaskRequestFramesLayersMaterial extends TeaModel {
+        @NameInMap("anchorStyleLevel")
+        public String anchorStyleLevel;
+
         /**
          * <strong>example:</strong>
          * <p>video/mp4</p>
@@ -95,6 +98,14 @@ public class SubmitProjectTaskRequest extends TeaModel {
         public static SubmitProjectTaskRequestFramesLayersMaterial build(java.util.Map<String, ?> map) throws Exception {
             SubmitProjectTaskRequestFramesLayersMaterial self = new SubmitProjectTaskRequestFramesLayersMaterial();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitProjectTaskRequestFramesLayersMaterial setAnchorStyleLevel(String anchorStyleLevel) {
+            this.anchorStyleLevel = anchorStyleLevel;
+            return this;
+        }
+        public String getAnchorStyleLevel() {
+            return this.anchorStyleLevel;
         }
 
         public SubmitProjectTaskRequestFramesLayersMaterial setFormat(String format) {

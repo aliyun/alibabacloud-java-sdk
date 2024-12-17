@@ -4,6 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class ListAnchorRequest extends TeaModel {
+    @NameInMap("anchorCategory")
+    public String anchorCategory;
+
     /**
      * <strong>example:</strong>
      * <p>PUBLIC_MODEL</p>
@@ -52,6 +55,14 @@ public class ListAnchorRequest extends TeaModel {
     public static ListAnchorRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAnchorRequest self = new ListAnchorRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAnchorRequest setAnchorCategory(String anchorCategory) {
+        this.anchorCategory = anchorCategory;
+        return this;
+    }
+    public String getAnchorCategory() {
+        return this.anchorCategory;
     }
 
     public ListAnchorRequest setAnchorType(String anchorType) {

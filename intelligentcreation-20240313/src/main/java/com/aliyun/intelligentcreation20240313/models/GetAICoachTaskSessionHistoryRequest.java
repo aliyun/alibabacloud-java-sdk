@@ -4,6 +4,12 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class GetAICoachTaskSessionHistoryRequest extends TeaModel {
+    @NameInMap("pageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("pageSize")
+    public Integer pageSize;
+
     /**
      * <strong>example:</strong>
      * <p>111</p>
@@ -21,6 +27,22 @@ public class GetAICoachTaskSessionHistoryRequest extends TeaModel {
     public static GetAICoachTaskSessionHistoryRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAICoachTaskSessionHistoryRequest self = new GetAICoachTaskSessionHistoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetAICoachTaskSessionHistoryRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public GetAICoachTaskSessionHistoryRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public GetAICoachTaskSessionHistoryRequest setSessionId(String sessionId) {
