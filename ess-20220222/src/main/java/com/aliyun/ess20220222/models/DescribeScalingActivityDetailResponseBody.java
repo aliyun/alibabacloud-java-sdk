@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingActivityDetailResponseBody extends TeaModel {
     /**
-     * <p>The details of the scaling activity. If the status of the scaling activity is Rejected, no result is displayed.</p>
+     * <p>The details of the scaling activity. The result of a scaling activity is either successful or failed. If the scaling activity is rejected, no scaling activity details are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>new ECS instances \&quot;i-bp16t2cgmiiymeqv****\&quot; are created.</p>

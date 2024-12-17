@@ -38,7 +38,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>Details of the tags.</p>
+     * <p>The tags that you want to add to the Auto Scaling resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")
@@ -99,8 +99,8 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag that you want to add to the Auto Scaling resource.</p>
-         * <p>You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The tag key.</p>
+         * <p>You cannot specify an empty string as a tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -111,8 +111,8 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>Specifies whether to propagate the tag that you want to add. Valid values:</p>
          * <ul>
-         * <li>true: propagates the tag only to instances that are newly created and does not propagate the tag to instances that are already running in the scaling group.</li>
-         * <li>false: does not propagate the tag to any instances.</li>
+         * <li>true: propagates the tag to new instances.</li>
+         * <li>false: does not propagate the tag to any instance.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -123,8 +123,8 @@ public class TagResourcesRequest extends TeaModel {
         public Boolean propagate;
 
         /**
-         * <p>The value of the tag that you want to add to the Auto Scaling resource.</p>
-         * <p>You can specify empty strings as tag values. The tag value must be 0 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code>.</p>
+         * <p>The tag value.</p>
+         * <p>You can specify empty strings as tag values. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

@@ -42,18 +42,18 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The value is in one of the following formats:</p>
          * <ul>
-         * <li>If you use CloudMonitor as the notification method, the value format of this parameter is acs:ess:{region-id}:{account-id}:cloudmonitor.</li>
-         * <li>If you use a Message Service (MNS) queue as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:queue/{queuename}.</li>
-         * <li>If you use an MNS topic as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:topic/{topicname}.</li>
+         * <li>If you specify CloudMonitor as the notification recipient, the value is in the acs:ess:{region-id}:{account-id}:cloudmonitor format.</li>
+         * <li>If you specify a Simple Message Queue (SMQ, formerly MNS) as the notification recipient, the value is in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</li>
+         * <li>If you specify an SMQ topic as the notification recipient, the value is in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</li>
          * </ul>
-         * <p>The variables in the preceding formats have the following meanings:</p>
+         * <p>The variables in the preceding value formats have the following meanings:</p>
          * <ul>
-         * <li>region-id: the region ID of the scaling group.</li>
-         * <li>account-id: the ID of the Alibaba Cloud account.</li>
-         * <li>queuename: the name of the MNS queue.</li>
-         * <li>topicname: the name of the MNS topic.</li>
+         * <li>region-id: the region ID of your scaling group.</li>
+         * <li>account-id: the ID of your Alibaba Cloud account.</li>
+         * <li>queuename: the name of the SMQ queue.</li>
+         * <li>topicname: the name of the SMQ topic.</li>
          * </ul>
          * 
          * <strong>example:</strong>

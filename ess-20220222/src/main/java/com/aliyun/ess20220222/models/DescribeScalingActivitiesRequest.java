@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingActivitiesRequest extends TeaModel {
     /**
+     * <p>The ID of the instance refresh task. If you specify this parameter, this operation returns the list of scaling activities associated with the instance refresh task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ir-a12ds234fasd*****</p>
      */

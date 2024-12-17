@@ -8,15 +8,15 @@ public class CreateNotificationConfigurationRequest extends TeaModel {
      * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The following list describes the value formats of this parameter:</p>
      * <ul>
      * <li>If you specify CloudMonitor as the notification recipient, specify the value in the <code>acs:ess:{region-id}:{account-id}:cloudmonitor</code> format.</li>
-     * <li>If you specify an MNS queue as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code> format.</li>
-     * <li>If you specify an MNS topic as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code> format.</li>
+     * <li>If you specify an SMQ queue as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code> format.</li>
+     * <li>If you specify an SMQ topic as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code> format.</li>
      * </ul>
      * <p>The variables in the preceding formats have the following meanings:</p>
      * <ul>
      * <li><code>region-id</code>: the region ID of the scaling group.</li>
      * <li><code>account-id</code>: the ID of the Alibaba Cloud account.</li>
-     * <li><code>queuename</code>: the name of the MNS queue.</li>
-     * <li><code>topicname</code>: the name of the MNS topic.</li>
+     * <li><code>queuename</code>: the name of the SMQ queue.</li>
+     * <li><code>topicname</code>: the name of the SMQ topic.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

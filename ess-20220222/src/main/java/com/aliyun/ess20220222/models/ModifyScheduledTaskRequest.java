@@ -113,6 +113,9 @@ public class ModifyScheduledTaskRequest extends TeaModel {
     @NameInMap("RecurrenceValue")
     public String recurrenceValue;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -267,6 +270,14 @@ public class ModifyScheduledTaskRequest extends TeaModel {
     }
     public String getRecurrenceValue() {
         return this.recurrenceValue;
+    }
+
+    public ModifyScheduledTaskRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyScheduledTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {

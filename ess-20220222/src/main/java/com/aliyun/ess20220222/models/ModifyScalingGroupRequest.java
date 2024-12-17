@@ -41,6 +41,9 @@ public class ModifyScalingGroupRequest extends TeaModel {
     @NameInMap("AzBalance")
     public Boolean azBalance;
 
+    /**
+     * <p>The capacity options.</p>
+     */
     @NameInMap("CapacityOptions")
     public ModifyScalingGroupRequestCapacityOptions capacityOptions;
 
@@ -644,15 +647,50 @@ public class ModifyScalingGroupRequest extends TeaModel {
     }
 
     public static class ModifyScalingGroupRequestCapacityOptions extends TeaModel {
+        /**
+         * <p>Specifies whether to automatically create pay-as-you-go instances to meet the requirements on the number of ECS instances in the scaling group when the number of preemptible instances cannot be reached due to reasons such as cost-related issues and insufficient resources. This parameter takes effect only if you set <code>MultiAZPolicy</code> in the <code>CreateScalingGroup</code> operation to <code>COST_OPTIMIZED</code>. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CompensateWithOnDemand")
         public Boolean compensateWithOnDemand;
 
+        /**
+         * <p>The minimum number of pay-as-you-go instances that must be contained in the scaling group. When the actual number of pay-as-you-go instances in the scaling group drops below the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</p>
+         * <p>If you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>, the default value is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("OnDemandBaseCapacity")
         public Integer onDemandBaseCapacity;
 
+        /**
+         * <p>The percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances is reached. <code>OnDemandBaseCapacity</code> specifies the minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 100</p>
+         * <p>If you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>, the default value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("OnDemandPercentageAboveBaseCapacity")
         public Integer onDemandPercentageAboveBaseCapacity;
 
+        /**
+         * <p>Specifies whether to replace pay-as-you-go ECS instances with preemptible ECS instances. If you specify <code>CompensateWithOnDemand</code>, it may result in a higher percentage of pay-as-you-go instances compared to the value of <code>OnDemandPercentageAboveBaseCapacity</code>. In this scenario, Auto Scaling will try to deploy preemptible ECS instances to replace the surplus pay-as-you-go ECS instances. When <code>CompensateWithOnDemand</code> is specified, Auto Scaling creates pay-as-you-go ECS instances if there are not enough preemptible instance types. To avoid keeping these pay-as-you-go ECS instances for long periods, Auto Scaling tries to replace them with preemptible instances as soon as enough of preemptible instance types become available. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SpotAutoReplaceOnDemand")
         public Boolean spotAutoReplaceOnDemand;
 

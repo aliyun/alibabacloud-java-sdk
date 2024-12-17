@@ -17,13 +17,13 @@ public class SuspendProcessesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The types of the processes that you want to suspend. Valid values:</p>
+     * <p>The types of processes that you want to suspend. Valid values:</p>
      * <ul>
-     * <li>scalein: the scale-in process.</li>
-     * <li>scaleout: the scale-out process.</li>
-     * <li>healthcheck: the health check process.</li>
-     * <li>alarmnotification: the process of executing an event-triggered task.</li>
-     * <li>scheduledaction: the process of executing a scheduled task.</li>
+     * <li>ScaleIn: the scale-in process.</li>
+     * <li>ScaleOut: the scale-out process.</li>
+     * <li>HealthCheck: the health check process.</li>
+     * <li>AlarmNotification: the process of executing an event-triggered task.</li>
+     * <li>ScheduledAction: the process of executing a scheduled task.</li>
      * </ul>
      * <p>Presently, Auto Scaling supports suspending the five mentioned process types. In cases where more than five types are specified, Auto Scaling will automatically disregard duplicates and proceed with suspending the unique process types.</p>
      * <p>This parameter is required.</p>

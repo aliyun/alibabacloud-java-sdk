@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDiagnoseReportRequest extends TeaModel {
     /**
+     * <p>The region ID of the scaling group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateDiagnoseReportRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the scaling group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

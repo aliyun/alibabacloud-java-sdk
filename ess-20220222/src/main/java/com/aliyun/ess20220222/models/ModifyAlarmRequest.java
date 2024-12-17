@@ -152,10 +152,10 @@ public class ModifyAlarmRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The type of the metric. Valid values:</p>
+     * <p>The metric type. Valid values:</p>
      * <ul>
      * <li>system: system metrics of CloudMonitor</li>
-     * <li>custom: custom metrics that are reported to CloudMonitor</li>
+     * <li>custom: custom metrics that are reported to CloudMonitor.</li>
      * </ul>
      * 
      * <strong>example:</strong>

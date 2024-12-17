@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnoseReportsRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDiagnoseReportsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,7 @@ public class DescribeDiagnoseReportsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID of the scaling group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,10 +32,14 @@ public class DescribeDiagnoseReportsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the diagnostic reports. You can specify at most 20 IDs.</p>
+     */
     @NameInMap("ReportIds")
     public java.util.List<String> reportIds;
 
     /**
+     * <p>The ID of the scaling group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

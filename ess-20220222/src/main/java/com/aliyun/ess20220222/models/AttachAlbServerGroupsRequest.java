@@ -22,10 +22,10 @@ public class AttachAlbServerGroupsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the ALB server group. Valid values:</p>
+     * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the new ALB server group. Valid values:</p>
      * <ul>
-     * <li>true: adds the existing ECS instances or elastic container instances in the scaling group to the ALB server group. In this case, the system returns the value of <code>ScalingActivityId</code>.</li>
-     * <li>false: does not add the existing ECS instances or elastic container instances in the scaling group to the ALB server group.</li>
+     * <li>true: adds the existing ECS instances or elastic container instances in the scaling group to the new ALB server group. In this case, the system returns the value of <code>ScalingActivityId</code>.</li>
+     * <li>false: does not add the existing ECS instances or elastic container instances in the scaling group to the new ALB server group.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 

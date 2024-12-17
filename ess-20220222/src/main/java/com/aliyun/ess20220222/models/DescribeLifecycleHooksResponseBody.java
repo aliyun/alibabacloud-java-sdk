@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLifecycleHooksResponseBody extends TeaModel {
     /**
-     * <p>The details of the lifecycle hooks.</p>
+     * <p>Details about the lifecycle hooks.</p>
      */
     @NameInMap("LifecycleHooks")
     public java.util.List<DescribeLifecycleHooksResponseBodyLifecycleHooks> lifecycleHooks;
@@ -151,20 +151,20 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         public String lifecycleTransition;
 
         /**
-         * <p>The ARN of the notification recipient when the lifecycle hook takes effect. The value of this parameter is in one of the following formats:</p>
+         * <p>The ARN of the notification recipient when the lifecycle hook takes effect. The value of this parameter must be in one of the following formats:</p>
          * <ul>
-         * <li>If you did not specify this parameter, the return value is in the <code>acs:ess:{region-id}:{account-id}:null/null</code> format.</li>
-         * <li>If you specified a Message Service (MNS) queue as the notification recipient, the return value is in the <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code> format.</li>
-         * <li>If you specified an MNS topic as the notification recipient, the return value is in the <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code> format.</li>
-         * <li>If you specified a CloudOps Orchestration Service (OOS) template as the notification recipient, the return value is in the <code>acs:oos:{region-id}:{account-id}:template/{templatename}</code> format.</li>
-         * <li>If you specified an event bus as the notification recipient, the return value is in the <code>acs:eventbridge:{region-id}:{account-id}:eventbus/default</code> format.</li>
+         * <li>If you do not create a notification rule, specify the value in the <code>acs:ess:{region-id}:{account-id}:null/null</code> format.</li>
+         * <li>If you specify a Simple Message Queue (SMQ, formerly MNS) queue as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code> format.</li>
+         * <li>If you specify an SMQ as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code> format.</li>
+         * <li>If you specify a CloudOps Orchestration Service (OOS) template as the notification recipient, specify the value in the <code>acs:oos:{region-id}:{account-id}:template/{templatename}</code> format.</li>
+         * <li>If you specify an event bus as the notification recipient, specify the value in the <code>acs:eventbridge:{region-id}:{account-id}:eventbus/default</code> format.</li>
          * </ul>
-         * <p>The variables in the preceding formats have the following meanings:</p>
+         * <p>The variables in the preceding value formats have the following meanings:</p>
          * <ul>
          * <li>region-id: the region ID of your scaling group.</li>
-         * <li>account-id: the ID of your Alibaba Cloud.</li>
-         * <li>queuename: the name of the MNS queue.</li>
-         * <li>topicname: the name of the MNS topic.</li>
+         * <li>account-id: the ID of your Alibaba Cloud account.</li>
+         * <li>queuename: the name of the SMQ queue.</li>
+         * <li>topicname: the name of the SMQ topic.</li>
          * <li>templatename: the name of the OOS template.</li>
          * </ul>
          * 
