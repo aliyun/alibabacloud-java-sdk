@@ -26,6 +26,9 @@ public class DescribeRulesRequest extends TeaModel {
     @NameInMap("ContentCategory")
     public Integer contentCategory;
 
+    @NameInMap("CooperationChannel")
+    public String cooperationChannel;
+
     /**
      * <p>The page number of the page to return.</p>
      * 
@@ -175,6 +178,9 @@ public class DescribeRulesRequest extends TeaModel {
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    @NameInMap("Simplify")
+    public Boolean simplify;
+
     /**
      * <p>The status of the sensitive data detection rule. Valid values:</p>
      * <ul>
@@ -238,6 +244,14 @@ public class DescribeRulesRequest extends TeaModel {
     }
     public Integer getContentCategory() {
         return this.contentCategory;
+    }
+
+    public DescribeRulesRequest setCooperationChannel(String cooperationChannel) {
+        this.cooperationChannel = cooperationChannel;
+        return this;
+    }
+    public String getCooperationChannel() {
+        return this.cooperationChannel;
     }
 
     public DescribeRulesRequest setCurrentPage(Integer currentPage) {
@@ -342,6 +356,14 @@ public class DescribeRulesRequest extends TeaModel {
     }
     public Integer getRuleType() {
         return this.ruleType;
+    }
+
+    public DescribeRulesRequest setSimplify(Boolean simplify) {
+        this.simplify = simplify;
+        return this;
+    }
+    public Boolean getSimplify() {
+        return this.simplify;
     }
 
     public DescribeRulesRequest setStatus(Integer status) {
