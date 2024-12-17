@@ -1726,6 +1726,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("id")
         public Long id;
 
+        @NameInMap("intl_flight_budget")
+        public Long intlFlightBudget;
+
+        @NameInMap("intl_hotel_budget")
+        public Long intlHotelBudget;
+
         @NameInMap("itinerary_list")
         public java.util.List<ApplyQueryResponseBodyModuleItineraryList> itineraryList;
 
@@ -1976,6 +1982,22 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ApplyQueryResponseBodyModule setIntlFlightBudget(Long intlFlightBudget) {
+            this.intlFlightBudget = intlFlightBudget;
+            return this;
+        }
+        public Long getIntlFlightBudget() {
+            return this.intlFlightBudget;
+        }
+
+        public ApplyQueryResponseBodyModule setIntlHotelBudget(Long intlHotelBudget) {
+            this.intlHotelBudget = intlHotelBudget;
+            return this;
+        }
+        public Long getIntlHotelBudget() {
+            return this.intlHotelBudget;
         }
 
         public ApplyQueryResponseBodyModule setItineraryList(java.util.List<ApplyQueryResponseBodyModuleItineraryList> itineraryList) {

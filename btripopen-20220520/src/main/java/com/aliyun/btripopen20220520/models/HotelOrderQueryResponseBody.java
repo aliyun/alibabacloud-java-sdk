@@ -128,6 +128,12 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("city_ad_code")
         public String cityAdCode;
 
+        @NameInMap("country_code")
+        public String countryCode;
+
+        @NameInMap("country_name")
+        public String countryName;
+
         @NameInMap("hotel_address")
         public String hotelAddress;
 
@@ -220,6 +226,22 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
         public String getCityAdCode() {
             return this.cityAdCode;
+        }
+
+        public HotelOrderQueryResponseBodyModuleHotelInfo setCountryCode(String countryCode) {
+            this.countryCode = countryCode;
+            return this;
+        }
+        public String getCountryCode() {
+            return this.countryCode;
+        }
+
+        public HotelOrderQueryResponseBodyModuleHotelInfo setCountryName(String countryName) {
+            this.countryName = countryName;
+            return this;
+        }
+        public String getCountryName() {
+            return this.countryName;
         }
 
         public HotelOrderQueryResponseBodyModuleHotelInfo setHotelAddress(String hotelAddress) {
@@ -325,6 +347,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("btrip_title")
         public String btripTitle;
 
+        @NameInMap("category")
+        public Integer category;
+
         /**
          * <strong>example:</strong>
          * <p>iscorpId</p>
@@ -393,6 +418,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("order_type")
         public Integer orderType;
 
+        @NameInMap("supplier")
+        public String supplier;
+
         /**
          * <strong>example:</strong>
          * <p>12345678</p>
@@ -446,6 +474,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
         public String getBtripTitle() {
             return this.btripTitle;
+        }
+
+        public HotelOrderQueryResponseBodyModuleOrderBaseInfo setCategory(Integer category) {
+            this.category = category;
+            return this;
+        }
+        public Integer getCategory() {
+            return this.category;
         }
 
         public HotelOrderQueryResponseBodyModuleOrderBaseInfo setCorpId(String corpId) {
@@ -542,6 +578,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
         public Integer getOrderType() {
             return this.orderType;
+        }
+
+        public HotelOrderQueryResponseBodyModuleOrderBaseInfo setSupplier(String supplier) {
+            this.supplier = supplier;
+            return this;
+        }
+        public String getSupplier() {
+            return this.supplier;
         }
 
         public HotelOrderQueryResponseBodyModuleOrderBaseInfo setThirdpartApplyId(String thirdpartApplyId) {

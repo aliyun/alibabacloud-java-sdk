@@ -415,6 +415,12 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("cancel_policy_type")
         public Integer cancelPolicyType;
 
+        @NameInMap("content")
+        public String content;
+
+        @NameInMap("short_desc")
+        public String shortDesc;
+
         public static HotelOrderPreValidateResponseBodyModuleRatePlanInfoBtripHotelCancelPolicyDTO build(java.util.Map<String, ?> map) throws Exception {
             HotelOrderPreValidateResponseBodyModuleRatePlanInfoBtripHotelCancelPolicyDTO self = new HotelOrderPreValidateResponseBodyModuleRatePlanInfoBtripHotelCancelPolicyDTO();
             return TeaModel.build(map, self);
@@ -434,6 +440,22 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         }
         public Integer getCancelPolicyType() {
             return this.cancelPolicyType;
+        }
+
+        public HotelOrderPreValidateResponseBodyModuleRatePlanInfoBtripHotelCancelPolicyDTO setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public HotelOrderPreValidateResponseBodyModuleRatePlanInfoBtripHotelCancelPolicyDTO setShortDesc(String shortDesc) {
+            this.shortDesc = shortDesc;
+            return this;
+        }
+        public String getShortDesc() {
+            return this.shortDesc;
         }
 
     }

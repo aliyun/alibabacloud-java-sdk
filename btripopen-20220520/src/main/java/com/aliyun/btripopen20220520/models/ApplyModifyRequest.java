@@ -69,6 +69,12 @@ public class ApplyModifyRequest extends TeaModel {
     @NameInMap("hotel_share")
     public ApplyModifyRequestHotelShare hotelShare;
 
+    @NameInMap("intl_flight_budget")
+    public Long intlFlightBudget;
+
+    @NameInMap("intl_hotel_budget")
+    public Long intlHotelBudget;
+
     /**
      * <strong>example:</strong>
      * <p>0</p>
@@ -306,6 +312,22 @@ public class ApplyModifyRequest extends TeaModel {
     }
     public ApplyModifyRequestHotelShare getHotelShare() {
         return this.hotelShare;
+    }
+
+    public ApplyModifyRequest setIntlFlightBudget(Long intlFlightBudget) {
+        this.intlFlightBudget = intlFlightBudget;
+        return this;
+    }
+    public Long getIntlFlightBudget() {
+        return this.intlFlightBudget;
+    }
+
+    public ApplyModifyRequest setIntlHotelBudget(Long intlHotelBudget) {
+        this.intlHotelBudget = intlHotelBudget;
+        return this;
+    }
+    public Long getIntlHotelBudget() {
+        return this.intlHotelBudget;
     }
 
     public ApplyModifyRequest setItineraryList(java.util.List<ApplyModifyRequestItineraryList> itineraryList) {

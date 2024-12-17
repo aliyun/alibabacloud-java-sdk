@@ -216,6 +216,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("coupon_price")
         public Double couponPrice;
 
+        @NameInMap("deductible_tax")
+        public Double deductibleTax;
+
         @NameInMap("dep_city_code")
         public String depCityCode;
 
@@ -456,12 +459,21 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("user_confirm_desc")
         public String userConfirmDesc;
 
+        @NameInMap("vehicle_scene_id")
+        public String vehicleSceneId;
+
+        @NameInMap("vehicle_scene_name")
+        public String vehicleSceneName;
+
         /**
          * <strong>example:</strong>
          * <p>11</p>
          */
         @NameInMap("voucher_type")
         public Integer voucherType;
+
+        @NameInMap("voucher_type_desc")
+        public String voucherTypeDesc;
 
         public static CarBillSettlementQueryResponseBodyModuleDataList build(java.util.Map<String, ?> map) throws Exception {
             CarBillSettlementQueryResponseBodyModuleDataList self = new CarBillSettlementQueryResponseBodyModuleDataList();
@@ -682,6 +694,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getCouponPrice() {
             return this.couponPrice;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setDeductibleTax(Double deductibleTax) {
+            this.deductibleTax = deductibleTax;
+            return this;
+        }
+        public Double getDeductibleTax() {
+            return this.deductibleTax;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setDepCityCode(String depCityCode) {
@@ -1084,12 +1104,36 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             return this.userConfirmDesc;
         }
 
+        public CarBillSettlementQueryResponseBodyModuleDataList setVehicleSceneId(String vehicleSceneId) {
+            this.vehicleSceneId = vehicleSceneId;
+            return this;
+        }
+        public String getVehicleSceneId() {
+            return this.vehicleSceneId;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setVehicleSceneName(String vehicleSceneName) {
+            this.vehicleSceneName = vehicleSceneName;
+            return this;
+        }
+        public String getVehicleSceneName() {
+            return this.vehicleSceneName;
+        }
+
         public CarBillSettlementQueryResponseBodyModuleDataList setVoucherType(Integer voucherType) {
             this.voucherType = voucherType;
             return this;
         }
         public Integer getVoucherType() {
             return this.voucherType;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setVoucherTypeDesc(String voucherTypeDesc) {
+            this.voucherTypeDesc = voucherTypeDesc;
+            return this;
+        }
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
         }
 
     }

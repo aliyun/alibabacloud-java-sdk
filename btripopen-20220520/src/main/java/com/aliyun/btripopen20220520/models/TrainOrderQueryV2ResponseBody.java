@@ -186,6 +186,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
+        @NameInMap("short_ticket_no")
+        public String shortTicketNo;
+
         /**
          * <strong>example:</strong>
          * <p>2022-05-15T22:27Z</p>
@@ -373,6 +376,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
         public Integer getSegmentIndex() {
             return this.segmentIndex;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleChangeTicketInfoList setShortTicketNo(String shortTicketNo) {
+            this.shortTicketNo = shortTicketNo;
+            return this;
+        }
+        public String getShortTicketNo() {
+            return this.shortTicketNo;
         }
 
         public TrainOrderQueryV2ResponseBodyModuleChangeTicketInfoList setStartTime(String startTime) {
@@ -1197,6 +1208,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @NameInMap("service_fee")
         public Double serviceFee;
 
+        @NameInMap("short_ticket_no")
+        public String shortTicketNo;
+
         @NameInMap("start_time")
         public String startTime;
 
@@ -1348,6 +1362,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
         public Double getServiceFee() {
             return this.serviceFee;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainInfoListTrainTicketInfos setShortTicketNo(String shortTicketNo) {
+            this.shortTicketNo = shortTicketNo;
+            return this;
+        }
+        public String getShortTicketNo() {
+            return this.shortTicketNo;
         }
 
         public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainInfoListTrainTicketInfos setStartTime(String startTime) {

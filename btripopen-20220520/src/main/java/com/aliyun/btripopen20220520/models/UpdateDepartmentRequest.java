@@ -23,8 +23,6 @@ public class UpdateDepartmentRequest extends TeaModel {
     public String outDeptId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>dept456</p>
      */

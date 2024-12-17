@@ -69,6 +69,12 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     @NameInMap("hotel_share")
     public String hotelShareShrink;
 
+    @NameInMap("intl_flight_budget")
+    public Long intlFlightBudget;
+
+    @NameInMap("intl_hotel_budget")
+    public Long intlHotelBudget;
+
     /**
      * <strong>example:</strong>
      * <p>0</p>
@@ -306,6 +312,22 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     }
     public String getHotelShareShrink() {
         return this.hotelShareShrink;
+    }
+
+    public ApplyModifyShrinkRequest setIntlFlightBudget(Long intlFlightBudget) {
+        this.intlFlightBudget = intlFlightBudget;
+        return this;
+    }
+    public Long getIntlFlightBudget() {
+        return this.intlFlightBudget;
+    }
+
+    public ApplyModifyShrinkRequest setIntlHotelBudget(Long intlHotelBudget) {
+        this.intlHotelBudget = intlHotelBudget;
+        return this;
+    }
+    public Long getIntlHotelBudget() {
+        return this.intlHotelBudget;
     }
 
     public ApplyModifyShrinkRequest setItineraryListShrink(String itineraryListShrink) {

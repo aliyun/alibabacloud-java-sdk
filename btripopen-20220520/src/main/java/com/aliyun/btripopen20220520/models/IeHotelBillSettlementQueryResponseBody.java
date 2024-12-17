@@ -153,6 +153,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
+        @NameInMap("book_mode")
+        public String bookMode;
+
         @NameInMap("book_reason")
         public String bookReason;
 
@@ -267,6 +270,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("country_code")
         public String countryCode;
+
+        @NameInMap("deductible_tax")
+        public Double deductibleTax;
 
         @NameInMap("department")
         public String department;
@@ -574,6 +580,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("voucher_type")
         public Integer voucherType;
 
+        @NameInMap("voucher_type_desc")
+        public String voucherTypeDesc;
+
         public static IeHotelBillSettlementQueryResponseBodyModuleDataList build(java.util.Map<String, ?> map) throws Exception {
             IeHotelBillSettlementQueryResponseBodyModuleDataList self = new IeHotelBillSettlementQueryResponseBodyModuleDataList();
             return TeaModel.build(map, self);
@@ -657,6 +666,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getBillRecordTime() {
             return this.billRecordTime;
+        }
+
+        public IeHotelBillSettlementQueryResponseBodyModuleDataList setBookMode(String bookMode) {
+            this.bookMode = bookMode;
+            return this;
+        }
+        public String getBookMode() {
+            return this.bookMode;
         }
 
         public IeHotelBillSettlementQueryResponseBodyModuleDataList setBookReason(String bookReason) {
@@ -825,6 +842,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        public IeHotelBillSettlementQueryResponseBodyModuleDataList setDeductibleTax(Double deductibleTax) {
+            this.deductibleTax = deductibleTax;
+            return this;
+        }
+        public Double getDeductibleTax() {
+            return this.deductibleTax;
         }
 
         public IeHotelBillSettlementQueryResponseBodyModuleDataList setDepartment(String department) {
@@ -1257,6 +1282,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getVoucherType() {
             return this.voucherType;
+        }
+
+        public IeHotelBillSettlementQueryResponseBodyModuleDataList setVoucherTypeDesc(String voucherTypeDesc) {
+            this.voucherTypeDesc = voucherTypeDesc;
+            return this;
+        }
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
         }
 
     }

@@ -103,6 +103,9 @@ public class HotelOrderCreateResponseBody extends TeaModel {
         @NameInMap("btrip_order_id")
         public Long btripOrderId;
 
+        @NameInMap("payment_no")
+        public String paymentNo;
+
         /**
          * <strong>example:</strong>
          * <p>100</p>
@@ -121,6 +124,14 @@ public class HotelOrderCreateResponseBody extends TeaModel {
         }
         public Long getBtripOrderId() {
             return this.btripOrderId;
+        }
+
+        public HotelOrderCreateResponseBodyModule setPaymentNo(String paymentNo) {
+            this.paymentNo = paymentNo;
+            return this;
+        }
+        public String getPaymentNo() {
+            return this.paymentNo;
         }
 
         public HotelOrderCreateResponseBodyModule setTotalPrice(Long totalPrice) {

@@ -601,6 +601,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("itineraries")
         public java.util.List<QueryReimbursementOrderResponseBodyModuleItineraries> itineraries;
 
+        @NameInMap("payment_finish_time")
+        public String paymentFinishTime;
+
         @NameInMap("payment_infos")
         public java.util.List<QueryReimbursementOrderResponseBodyModulePaymentInfos> paymentInfos;
 
@@ -610,6 +613,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
          */
         @NameInMap("personal_amount")
         public String personalAmount;
+
+        @NameInMap("process_end_time")
+        public String processEndTime;
 
         @NameInMap("project_code")
         public String projectCode;
@@ -755,6 +761,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             return this.itineraries;
         }
 
+        public QueryReimbursementOrderResponseBodyModule setPaymentFinishTime(String paymentFinishTime) {
+            this.paymentFinishTime = paymentFinishTime;
+            return this;
+        }
+        public String getPaymentFinishTime() {
+            return this.paymentFinishTime;
+        }
+
         public QueryReimbursementOrderResponseBodyModule setPaymentInfos(java.util.List<QueryReimbursementOrderResponseBodyModulePaymentInfos> paymentInfos) {
             this.paymentInfos = paymentInfos;
             return this;
@@ -769,6 +783,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
         public String getPersonalAmount() {
             return this.personalAmount;
+        }
+
+        public QueryReimbursementOrderResponseBodyModule setProcessEndTime(String processEndTime) {
+            this.processEndTime = processEndTime;
+            return this;
+        }
+        public String getProcessEndTime() {
+            return this.processEndTime;
         }
 
         public QueryReimbursementOrderResponseBodyModule setProjectCode(String projectCode) {

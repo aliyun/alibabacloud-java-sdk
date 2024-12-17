@@ -181,6 +181,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
+        @NameInMap("book_mode")
+        public String bookMode;
+
         /**
          * <strong>example:</strong>
          * <p>2021-10-01 00:17:05</p>
@@ -245,6 +248,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("change_fee")
         public Double changeFee;
 
+        @NameInMap("change_reason_code")
+        public String changeReasonCode;
+
         @NameInMap("change_result")
         public String changeResult;
 
@@ -274,6 +280,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("coupon")
         public Double coupon;
+
+        @NameInMap("deductible_tax")
+        public Double deductibleTax;
 
         /**
          * <strong>example:</strong>
@@ -423,6 +432,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("negotiation_coupon_fee")
         public Double negotiationCouponFee;
 
+        @NameInMap("offline_status")
+        public String offlineStatus;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -485,6 +497,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("refund_fee")
         public Double refundFee;
+
+        @NameInMap("refund_reason_code")
+        public String refundReasonCode;
 
         @NameInMap("refund_result")
         public String refundResult;
@@ -608,6 +623,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("voucher_type")
         public Integer voucherType;
+
+        @NameInMap("voucher_type_desc")
+        public String voucherTypeDesc;
 
         @NameInMap("voyage_name")
         public String voyageName;
@@ -761,6 +779,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.billRecordTime;
         }
 
+        public FlightBillSettlementQueryResponseBodyModuleDataList setBookMode(String bookMode) {
+            this.bookMode = bookMode;
+            return this;
+        }
+        public String getBookMode() {
+            return this.bookMode;
+        }
+
         public FlightBillSettlementQueryResponseBodyModuleDataList setBookTime(String bookTime) {
             this.bookTime = bookTime;
             return this;
@@ -857,6 +883,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.changeFee;
         }
 
+        public FlightBillSettlementQueryResponseBodyModuleDataList setChangeReasonCode(String changeReasonCode) {
+            this.changeReasonCode = changeReasonCode;
+            return this;
+        }
+        public String getChangeReasonCode() {
+            return this.changeReasonCode;
+        }
+
         public FlightBillSettlementQueryResponseBodyModuleDataList setChangeResult(String changeResult) {
             this.changeResult = changeResult;
             return this;
@@ -903,6 +937,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getCoupon() {
             return this.coupon;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setDeductibleTax(Double deductibleTax) {
+            this.deductibleTax = deductibleTax;
+            return this;
+        }
+        public Double getDeductibleTax() {
+            return this.deductibleTax;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setDepAirportCode(String depAirportCode) {
@@ -1129,6 +1171,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.negotiationCouponFee;
         }
 
+        public FlightBillSettlementQueryResponseBodyModuleDataList setOfflineStatus(String offlineStatus) {
+            this.offlineStatus = offlineStatus;
+            return this;
+        }
+        public String getOfflineStatus() {
+            return this.offlineStatus;
+        }
+
         public FlightBillSettlementQueryResponseBodyModuleDataList setOilFee(Double oilFee) {
             this.oilFee = oilFee;
             return this;
@@ -1231,6 +1281,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getRefundFee() {
             return this.refundFee;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setRefundReasonCode(String refundReasonCode) {
+            this.refundReasonCode = refundReasonCode;
+            return this;
+        }
+        public String getRefundReasonCode() {
+            return this.refundReasonCode;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setRefundResult(String refundResult) {
@@ -1415,6 +1473,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getVoucherType() {
             return this.voucherType;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setVoucherTypeDesc(String voucherTypeDesc) {
+            this.voucherTypeDesc = voucherTypeDesc;
+            return this;
+        }
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setVoyageName(String voyageName) {

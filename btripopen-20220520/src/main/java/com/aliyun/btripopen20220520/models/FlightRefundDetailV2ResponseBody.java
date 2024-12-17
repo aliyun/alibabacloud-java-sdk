@@ -772,6 +772,12 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
         @NameInMap("flight_info_d_t_o_s")
         public java.util.List<FlightRefundDetailV2ResponseBodyModuleFlightInfoDTOS> flightInfoDTOS;
 
+        @NameInMap("non_refundable_change_service_price")
+        public Long nonRefundableChangeServicePrice;
+
+        @NameInMap("non_refundable_change_upgrade_price")
+        public Long nonRefundableChangeUpgradePrice;
+
         /**
          * <strong>example:</strong>
          * <p>1002039195025156700</p>
@@ -864,6 +870,22 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
         }
         public java.util.List<FlightRefundDetailV2ResponseBodyModuleFlightInfoDTOS> getFlightInfoDTOS() {
             return this.flightInfoDTOS;
+        }
+
+        public FlightRefundDetailV2ResponseBodyModule setNonRefundableChangeServicePrice(Long nonRefundableChangeServicePrice) {
+            this.nonRefundableChangeServicePrice = nonRefundableChangeServicePrice;
+            return this;
+        }
+        public Long getNonRefundableChangeServicePrice() {
+            return this.nonRefundableChangeServicePrice;
+        }
+
+        public FlightRefundDetailV2ResponseBodyModule setNonRefundableChangeUpgradePrice(Long nonRefundableChangeUpgradePrice) {
+            this.nonRefundableChangeUpgradePrice = nonRefundableChangeUpgradePrice;
+            return this;
+        }
+        public Long getNonRefundableChangeUpgradePrice() {
+            return this.nonRefundableChangeUpgradePrice;
         }
 
         public FlightRefundDetailV2ResponseBodyModule setOrderId(Long orderId) {

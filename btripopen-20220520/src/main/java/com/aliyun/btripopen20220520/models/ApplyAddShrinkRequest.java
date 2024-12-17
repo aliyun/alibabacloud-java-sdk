@@ -72,6 +72,12 @@ public class ApplyAddShrinkRequest extends TeaModel {
     @NameInMap("international_flight_cabins")
     public String internationalFlightCabins;
 
+    @NameInMap("intl_flight_budget")
+    public Long intlFlightBudget;
+
+    @NameInMap("intl_hotel_budget")
+    public Long intlHotelBudget;
+
     @NameInMap("itinerary_list")
     public String itineraryListShrink;
 
@@ -314,6 +320,22 @@ public class ApplyAddShrinkRequest extends TeaModel {
     }
     public String getInternationalFlightCabins() {
         return this.internationalFlightCabins;
+    }
+
+    public ApplyAddShrinkRequest setIntlFlightBudget(Long intlFlightBudget) {
+        this.intlFlightBudget = intlFlightBudget;
+        return this;
+    }
+    public Long getIntlFlightBudget() {
+        return this.intlFlightBudget;
+    }
+
+    public ApplyAddShrinkRequest setIntlHotelBudget(Long intlHotelBudget) {
+        this.intlHotelBudget = intlHotelBudget;
+        return this;
+    }
+    public Long getIntlHotelBudget() {
+        return this.intlHotelBudget;
     }
 
     public ApplyAddShrinkRequest setItineraryListShrink(String itineraryListShrink) {
