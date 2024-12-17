@@ -23,6 +23,13 @@ public class DeleteArtifactRequest extends TeaModel {
     @NameInMap("ArtifactVersion")
     public String artifactVersion;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>788E7CP0EN9D51P</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 

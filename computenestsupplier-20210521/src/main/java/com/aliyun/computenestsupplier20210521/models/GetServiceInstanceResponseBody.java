@@ -126,6 +126,12 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("OperationEndTime")
     public String operationEndTime;
 
+    /**
+     * <p>Operate extra info</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6cc5ce3590ed7f5529e85fec</p>
+     */
     @NameInMap("OperationExtraInfo")
     public String operationExtraInfo;
 
@@ -1047,9 +1053,21 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
 
     public static class GetServiceInstanceResponseBodyServiceUpgradableServiceInfos extends TeaModel {
+        /**
+         * <p>The upgradable service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <p>The version name of an upgradable service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Init version</p>
+         */
         @NameInMap("VersionName")
         public String versionName;
 
@@ -1189,6 +1207,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @NameInMap("SupplierUrl")
         public String supplierUrl;
 
+        /**
+         * <p>The upgradable service Info.</p>
+         */
         @NameInMap("UpgradableServiceInfos")
         public java.util.List<GetServiceInstanceResponseBodyServiceUpgradableServiceInfos> upgradableServiceInfos;
 

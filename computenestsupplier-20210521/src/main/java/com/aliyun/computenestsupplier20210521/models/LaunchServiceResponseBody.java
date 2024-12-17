@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LaunchServiceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4DB0F536-B3BE-4F0D-BD29-E83FB56D550C</p>
      */
@@ -12,6 +14,13 @@ public class LaunchServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The mode of the service online. Valid Type</p>
+     * <ul>
+     * <li>PublishNewVersion: Launch new version</li>
+     * <li>PublishOfflineVersion:  The offline version is online again.</li>
+     * <li>UpdateLatestVersion: Update the latest version online</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PublishNewVersion</p>
      */
@@ -19,6 +28,8 @@ public class LaunchServiceResponseBody extends TeaModel {
     public String serviceLaunchResultType;
 
     /**
+     * <p>The service version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0</p>
      */
