@@ -31,6 +31,9 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Service shared account information.</p>
+     */
     @NameInMap("ShareAccount")
     public java.util.List<ListServiceSharedAccountsResponseBodyShareAccount> shareAccount;
 
@@ -152,6 +155,8 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The user aliUid.</p>
+         * 
          * <strong>example:</strong>
          * <p>127383705xxxxxx</p>
          */

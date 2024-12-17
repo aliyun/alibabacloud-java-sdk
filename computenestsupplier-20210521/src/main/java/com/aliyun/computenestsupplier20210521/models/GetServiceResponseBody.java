@@ -66,6 +66,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("Commodity")
     public GetServiceResponseBodyCommodity commodity;
 
+    /**
+     * <p>Compliance check metadata.</p>
+     */
     @NameInMap("ComplianceMetadata")
     public GetServiceResponseBodyComplianceMetadata complianceMetadata;
 
@@ -290,6 +293,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("ServiceDiscoverable")
     public String serviceDiscoverable;
 
+    /**
+     * <p>Service document information.</p>
+     */
     @NameInMap("ServiceDocumentInfos")
     public java.util.List<GetServiceResponseBodyServiceDocumentInfos> serviceDocumentInfos;
 
@@ -1720,6 +1726,9 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     public static class GetServiceResponseBodyComplianceMetadata extends TeaModel {
+        /**
+         * <p>The compliance package is selected.</p>
+         */
         @NameInMap("CompliancePacks")
         public java.util.List<String> compliancePacks;
 
@@ -1739,12 +1748,30 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     public static class GetServiceResponseBodyServiceDocumentInfos extends TeaModel {
+        /**
+         * <p>The URL that is used to access the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://docurl">http://docurl</a></p>
+         */
         @NameInMap("DocumentUrl")
         public String documentUrl;
 
+        /**
+         * <p>The language of the return data. Valid values: zh-CN and en-US.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
+         */
         @NameInMap("Locale")
         public String locale;
 
+        /**
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default Template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
@@ -1822,9 +1849,21 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     public static class GetServiceResponseBodyServiceInfosSoftwares extends TeaModel {
+        /**
+         * <p>The name of the software</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The version of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.7</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -1907,6 +1946,9 @@ public class GetServiceResponseBody extends TeaModel {
         @NameInMap("ShortDescription")
         public String shortDescription;
 
+        /**
+         * <p>The list of the information about the software in the service.</p>
+         */
         @NameInMap("Softwares")
         public java.util.List<GetServiceResponseBodyServiceInfosSoftwares> softwares;
 

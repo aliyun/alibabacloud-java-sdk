@@ -438,18 +438,6 @@ public class UpdateArtifactRequest extends TeaModel {
         public String commodityVersion;
 
         /**
-         * <p>The metadata of the Object Storage Service (OSS) object.</p>
-         * <blockquote>
-         * <p> This parameter is available only if the deployment package is an OSS object.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;WorkDir\&quot;:\&quot;/root\&quot;,\&quot;CommandType\&quot;:\&quot;RunShellScript\&quot;,\&quot;Platform\&quot;:\&quot;Linux\&quot;,\&quot;Script\&quot;:\&quot;echo hello\&quot;}</p>
-         */
-        @NameInMap("FileScriptMetadata")
-        public String fileScriptMetadata;
-
-        /**
          * <p>The image ID.</p>
          * <blockquote>
          * <p> This parameter is available only if the deployment package is an image.</p>
@@ -481,18 +469,6 @@ public class UpdateArtifactRequest extends TeaModel {
 
         @NameInMap("RepoType")
         public String repoType;
-
-        /**
-         * <p>The script content of the deployment package.</p>
-         * <blockquote>
-         * <p> This parameter is available only if the deployment package is a script.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;ScriptMetadata&quot;:&quot;{\&quot;CommandType\&quot;:\&quot;RunShellScript\&quot;,\&quot;Platform\&quot;:\&quot;Linux\&quot;,\&quot;Script\&quot;:\&quot;ls\&quot;}&quot;}</p>
-         */
-        @NameInMap("ScriptMetadata")
-        public String scriptMetadata;
 
         @NameInMap("Tag")
         public String tag;
@@ -528,14 +504,6 @@ public class UpdateArtifactRequest extends TeaModel {
         }
         public String getCommodityVersion() {
             return this.commodityVersion;
-        }
-
-        public UpdateArtifactRequestArtifactProperty setFileScriptMetadata(String fileScriptMetadata) {
-            this.fileScriptMetadata = fileScriptMetadata;
-            return this;
-        }
-        public String getFileScriptMetadata() {
-            return this.fileScriptMetadata;
         }
 
         public UpdateArtifactRequestArtifactProperty setImageId(String imageId) {
@@ -576,14 +544,6 @@ public class UpdateArtifactRequest extends TeaModel {
         }
         public String getRepoType() {
             return this.repoType;
-        }
-
-        public UpdateArtifactRequestArtifactProperty setScriptMetadata(String scriptMetadata) {
-            this.scriptMetadata = scriptMetadata;
-            return this;
-        }
-        public String getScriptMetadata() {
-            return this.scriptMetadata;
         }
 
         public UpdateArtifactRequestArtifactProperty setTag(String tag) {

@@ -31,9 +31,21 @@ public class GetServiceRequest extends TeaModel {
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The Service Instance Id.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>si-85b1exxx</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
+    /**
+     * <p>The Service Name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wordpress社区版</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 

@@ -43,6 +43,9 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     @NameInMap("Commodity")
     public String commodityShrink;
 
+    /**
+     * <p>Compliance check metadata.</p>
+     */
     @NameInMap("ComplianceMetadata")
     public String complianceMetadataShrink;
 
@@ -64,6 +67,16 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     @NameInMap("DeployType")
     public String deployType;
 
+    /**
+     * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
+     * <ul>
+     * <li>true: performs a dry run for the request, but does not update a service.</li>
+     * <li>false: performs a dry run for the request, and update a service if the request passes the dry run.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 

@@ -20,6 +20,12 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
     @NameInMap("LicenseData")
     public UpdateServiceInstanceAttributeRequestLicenseData licenseData;
 
+    /**
+     * <p>Application reason, currently used for trial application extension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>\&quot;\&quot;</p>
+     */
     @NameInMap("Reason")
     public String reason;
 

@@ -20,6 +20,12 @@ public class UpdateServiceInstanceAttributeShrinkRequest extends TeaModel {
     @NameInMap("LicenseData")
     public String licenseDataShrink;
 
+    /**
+     * <p>Application reason, currently used for trial application extension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>\&quot;\&quot;</p>
+     */
     @NameInMap("Reason")
     public String reason;
 

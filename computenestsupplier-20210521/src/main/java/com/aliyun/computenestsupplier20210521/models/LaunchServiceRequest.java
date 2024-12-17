@@ -4,20 +4,29 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class LaunchServiceRequest extends TeaModel {
+    /**
+     * <p>The categories of the service.</p>
+     */
     @NameInMap("Categories")
     public java.util.List<String> categories;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>10CM943JP0EN9D51H</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Whether to set the recommended service publishing to the service directory.</p>
+     */
     @NameInMap("Recommend")
     public Boolean recommend;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +36,7 @@ public class LaunchServiceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +46,7 @@ public class LaunchServiceRequest extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The service version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

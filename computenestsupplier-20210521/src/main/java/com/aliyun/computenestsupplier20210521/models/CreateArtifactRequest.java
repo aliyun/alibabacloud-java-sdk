@@ -60,6 +60,12 @@ public class CreateArtifactRequest extends TeaModel {
     @NameInMap("ArtifactType")
     public String artifactType;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10CM943JP0EN9D51H</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -542,15 +548,6 @@ public class CreateArtifactRequest extends TeaModel {
         public String commodityVersion;
 
         /**
-         * <p>The script metadata.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;WorkDir\&quot;:\&quot;/root\&quot;,\&quot;CommandType\&quot;:\&quot;RunShellScript\&quot;,\&quot;Platform\&quot;:\&quot;Linux\&quot;,\&quot;Script\&quot;:\&quot;echo hello\&quot;}</p>
-         */
-        @NameInMap("FileScriptMetadata")
-        public String fileScriptMetadata;
-
-        /**
          * <p>The image ID.</p>
          * <blockquote>
          * <p> This parameter is available only if the deployment package is an image.</p>
@@ -598,20 +595,19 @@ public class CreateArtifactRequest extends TeaModel {
         @NameInMap("RepoName")
         public String repoName;
 
-        @NameInMap("RepoType")
-        public String repoType;
-
         /**
-         * <p>The script content.</p>
-         * <blockquote>
-         * <p> This parameter is available only if the deployment package is a script.</p>
-         * </blockquote>
+         * <p>The default repository type. Valid values:</p>
+         * <ul>
+         * <li><code>Public</code>: a public repository.</li>
+         * <li><code>Private</code>: a private repository.</li>
+         * </ul>
+         * <p>You can specify the RepoType or Summary parameter. The RepoType parameter is optional.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;ScriptMetadata&quot;:&quot;{\&quot;CommandType\&quot;:\&quot;RunShellScript\&quot;,\&quot;Platform\&quot;:\&quot;Linux\&quot;,\&quot;Script\&quot;:\&quot;ls\&quot;}&quot;}</p>
+         * <p>Public</p>
          */
-        @NameInMap("ScriptMetadata")
-        public String scriptMetadata;
+        @NameInMap("RepoType")
+        public String repoType;
 
         /**
          * <p>The version tag of the image repository.</p>
@@ -655,14 +651,6 @@ public class CreateArtifactRequest extends TeaModel {
             return this.commodityVersion;
         }
 
-        public CreateArtifactRequestArtifactProperty setFileScriptMetadata(String fileScriptMetadata) {
-            this.fileScriptMetadata = fileScriptMetadata;
-            return this;
-        }
-        public String getFileScriptMetadata() {
-            return this.fileScriptMetadata;
-        }
-
         public CreateArtifactRequestArtifactProperty setImageId(String imageId) {
             this.imageId = imageId;
             return this;
@@ -701,14 +689,6 @@ public class CreateArtifactRequest extends TeaModel {
         }
         public String getRepoType() {
             return this.repoType;
-        }
-
-        public CreateArtifactRequestArtifactProperty setScriptMetadata(String scriptMetadata) {
-            this.scriptMetadata = scriptMetadata;
-            return this;
-        }
-        public String getScriptMetadata() {
-            return this.scriptMetadata;
         }
 
         public CreateArtifactRequestArtifactProperty setTag(String tag) {

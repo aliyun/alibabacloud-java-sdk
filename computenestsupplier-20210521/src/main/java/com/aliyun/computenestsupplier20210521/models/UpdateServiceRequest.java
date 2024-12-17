@@ -43,6 +43,9 @@ public class UpdateServiceRequest extends TeaModel {
     @NameInMap("Commodity")
     public UpdateServiceRequestCommodity commodity;
 
+    /**
+     * <p>Compliance check metadata.</p>
+     */
     @NameInMap("ComplianceMetadata")
     public UpdateServiceRequestComplianceMetadata complianceMetadata;
 
@@ -64,6 +67,16 @@ public class UpdateServiceRequest extends TeaModel {
     @NameInMap("DeployType")
     public String deployType;
 
+    /**
+     * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
+     * <ul>
+     * <li>true: performs a dry run for the request, but does not update a service.</li>
+     * <li>false: performs a dry run for the request, and update a service if the request passes the dry run.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -710,6 +723,9 @@ public class UpdateServiceRequest extends TeaModel {
     }
 
     public static class UpdateServiceRequestComplianceMetadata extends TeaModel {
+        /**
+         * <p>The compliance package is selected.</p>
+         */
         @NameInMap("CompliancePacks")
         public java.util.List<String> compliancePacks;
 
