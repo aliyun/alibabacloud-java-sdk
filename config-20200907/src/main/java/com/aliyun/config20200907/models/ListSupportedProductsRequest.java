@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSupportedProductsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return for a single request.</p>
+     * <p>The maximum number of entries to return in a request.</p>
      * <p>Valid values: 1 to 500. Default value: 200.</p>
      * 
      * <strong>example:</strong>

@@ -1,3 +1,25 @@
+2024-12-18 Version: 3.0.5
+- Update API ActiveAggregateConfigRules: add param CompliancePackId.
+- Update API ActiveAggregateConfigRules: update param ConfigRuleIds.
+- Update API ActiveConfigRules: add param CompliancePackId.
+- Update API ActiveConfigRules: update param ConfigRuleIds.
+- Update API CreateAggregateConfigRule: add param ExtendContent.
+- Update API CreateConfigRule: add param ExtendContent.
+- Update API DeactiveAggregateConfigRules: add param CompliancePackId.
+- Update API DeactiveAggregateConfigRules: update param ConfigRuleIds.
+- Update API DeactiveConfigRules: add param CompliancePackId.
+- Update API DeactiveConfigRules: update param ConfigRuleIds.
+- Update API GetAggregateConfigRule: update response param.
+- Update API GetAggregator: update response param.
+- Update API GetConfigRule: update response param.
+- Update API GetIntegratedServiceStatus: update response param.
+- Update API ListAggregateConfigRules: add param CompliancePackId.
+- Update API ListConfigRules: add param CompliancePackId.
+- Update API ListIntegratedService: update response param.
+- Update API UpdateConfigRule: add param ExtendContent.
+- Update API UpdateIntegratedServiceStatus: add param AggregatorDeliveryDataType.
+
+
 2024-08-29 Version: 3.0.4
 - Update API CreateAggregateCompliancePack: add param ExcludeRegionIdsScope.
 - Update API CreateAggregateCompliancePack: add param ExcludeResourceGroupIdsScope.

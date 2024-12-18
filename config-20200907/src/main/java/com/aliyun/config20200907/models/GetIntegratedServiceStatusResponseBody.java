@@ -4,6 +4,9 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetIntegratedServiceStatusResponseBody extends TeaModel {
+    @NameInMap("AggregatorDeliveryDataType")
+    public String aggregatorDeliveryDataType;
+
     /**
      * <p>Indicates whether the product has been integrated. Valid values:</p>
      * <ul>
@@ -42,6 +45,14 @@ public class GetIntegratedServiceStatusResponseBody extends TeaModel {
     public static GetIntegratedServiceStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetIntegratedServiceStatusResponseBody self = new GetIntegratedServiceStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetIntegratedServiceStatusResponseBody setAggregatorDeliveryDataType(String aggregatorDeliveryDataType) {
+        this.aggregatorDeliveryDataType = aggregatorDeliveryDataType;
+        return this;
+    }
+    public String getAggregatorDeliveryDataType() {
+        return this.aggregatorDeliveryDataType;
     }
 
     public GetIntegratedServiceStatusResponseBody setData(Boolean data) {

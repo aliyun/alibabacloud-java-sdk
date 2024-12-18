@@ -4,6 +4,9 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListConfigRulesRequest extends TeaModel {
+    @NameInMap("CompliancePackId")
+    public String compliancePackId;
+
     /**
      * <p>The compliance evaluation result of the rule. Valid values:</p>
      * <ul>
@@ -99,6 +102,14 @@ public class ListConfigRulesRequest extends TeaModel {
     public static ListConfigRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConfigRulesRequest self = new ListConfigRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListConfigRulesRequest setCompliancePackId(String compliancePackId) {
+        this.compliancePackId = compliancePackId;
+        return this;
+    }
+    public String getCompliancePackId() {
+        return this.compliancePackId;
     }
 
     public ListConfigRulesRequest setComplianceType(String complianceType) {

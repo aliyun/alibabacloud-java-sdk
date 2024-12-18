@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListCompliancePacksRequest extends TeaModel {
     /**
      * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>Pages start from page 1. Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

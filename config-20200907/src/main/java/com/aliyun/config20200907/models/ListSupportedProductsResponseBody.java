@@ -95,6 +95,9 @@ public class ListSupportedProductsResponseBody extends TeaModel {
 
         /**
          * <p>The Chinese name of the resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS实例</p>
          */
         @NameInMap("TypeNameZh")
         public String typeNameZh;
@@ -159,6 +162,9 @@ public class ListSupportedProductsResponseBody extends TeaModel {
 
         /**
          * <p>The Chinese name of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云服务器ECS</p>
          */
         @NameInMap("ProductNameZh")
         public String productNameZh;

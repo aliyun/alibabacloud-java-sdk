@@ -115,6 +115,9 @@ public class ListAggregatorsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Example-description</p>
          */
         @NameInMap("Description")
         public String description;

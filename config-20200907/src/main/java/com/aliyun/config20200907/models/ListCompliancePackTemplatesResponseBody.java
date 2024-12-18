@@ -146,6 +146,9 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>If the expiration time of the SLB certificate is later than the specified number of days after the check time, the configuration is considered compliant. Default value: 90 days.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -161,6 +164,9 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slb-servercertificate-expired-check</p>
          */
         @NameInMap("ManagedRuleName")
         public String managedRuleName;
@@ -279,6 +285,9 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the compliance package template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BestPracticesForResourceStability</p>
          */
         @NameInMap("CompliancePackTemplateName")
         public String compliancePackTemplateName;
@@ -291,12 +300,18 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The tag of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagKey-1</p>
          */
         @NameInMap("Labels")
         public String labels;

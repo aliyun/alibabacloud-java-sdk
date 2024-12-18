@@ -51,6 +51,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AggregatorId", request.aggregatorId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackId)) {
+            query.put("CompliancePackId", request.compliancePackId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.configRuleIds)) {
             query.put("ConfigRuleIds", request.configRuleIds);
         }
@@ -105,6 +109,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ActiveConfigRulesResponse activeConfigRulesWithOptions(ActiveConfigRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackId)) {
+            query.put("CompliancePackId", request.compliancePackId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.configRuleIds)) {
             query.put("ConfigRuleIds", request.configRuleIds);
         }
@@ -763,6 +771,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             bodyFlat.put("ExcludeTagsScope", request.excludeTagsScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extendContent)) {
+            body.put("ExtendContent", request.extendContent);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.folderIdsScope)) {
             body.put("FolderIdsScope", request.folderIdsScope);
         }
@@ -1311,6 +1323,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             bodyFlat.put("ExcludeTagsScope", request.excludeTagsScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extendContent)) {
+            body.put("ExtendContent", request.extendContent);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inputParametersShrink)) {
             body.put("InputParameters", request.inputParametersShrink);
         }
@@ -1593,6 +1609,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AggregatorId", request.aggregatorId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackId)) {
+            query.put("CompliancePackId", request.compliancePackId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.configRuleIds)) {
             query.put("ConfigRuleIds", request.configRuleIds);
         }
@@ -1649,6 +1669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeactiveConfigRulesResponse deactiveConfigRulesWithOptions(DeactiveConfigRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackId)) {
+            query.put("CompliancePackId", request.compliancePackId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.configRuleIds)) {
             query.put("ConfigRuleIds", request.configRuleIds);
         }
@@ -5434,6 +5458,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AggregatorId", request.aggregatorId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackId)) {
+            query.put("CompliancePackId", request.compliancePackId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.complianceType)) {
             query.put("ComplianceType", request.complianceType);
         }
@@ -5878,7 +5906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you write a <code>SELECT</code> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema]</p>
+     * <p>When you write a <code>SELECT</code> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see<a href="https://github.com/aliyun/alibabacloud-config-resource-schema"> Alibaba Cloud Config Resource Schema</a></p>
      * <blockquote>
      * </blockquote>
      * <ul>
@@ -5924,7 +5952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you write a <code>SELECT</code> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema]</p>
+     * <p>When you write a <code>SELECT</code> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see<a href="https://github.com/aliyun/alibabacloud-config-resource-schema"> Alibaba Cloud Config Resource Schema</a></p>
      * <blockquote>
      * </blockquote>
      * <ul>
@@ -5949,7 +5977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The sample request in this topic shows you how to query account groups. A maximum of 10 entries can be returned for the request. As shown in the responses, the account group returned is named as <code>Test_Group</code>, its description is <code>Test account group</code>, and it is of the <code>CUSTOM</code> type, which indicates a custom account group. The account group contains two member accounts.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of account groups that the current account manages or to which the current account belongs.</p>
+     * <p>Queries all account groups within the current management account or delegated administrator account.</p>
      * 
      * @param request ListAggregatorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5988,7 +6016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The sample request in this topic shows you how to query account groups. A maximum of 10 entries can be returned for the request. As shown in the responses, the account group returned is named as <code>Test_Group</code>, its description is <code>Test account group</code>, and it is of the <code>CUSTOM</code> type, which indicates a custom account group. The account group contains two member accounts.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of account groups that the current account manages or to which the current account belongs.</p>
+     * <p>Queries all account groups within the current management account or delegated administrator account.</p>
      * 
      * @param request ListAggregatorsRequest
      * @return ListAggregatorsResponse
@@ -6000,7 +6028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the details of a compliance package template whose ID is <code>ct-d254ff4e06a300cf****</code>. The returned result indicates that the template name is <code>BestPracticesForNetwork</code>, the template ID is <code>ct-d254ff4e06a300cf****</code>, and the ID of the managed rule of the template is <code>slb-servercertificate-expired-check</code>.</p>
+     * <p>A compliance package template is a collection of rules that Cloud Config can create based on compliance scenarios.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries all compliance package templates provided by Cloud Config and the details of the compliance package templates.</p>
@@ -6047,7 +6075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the details of a compliance package template whose ID is <code>ct-d254ff4e06a300cf****</code>. The returned result indicates that the template name is <code>BestPracticesForNetwork</code>, the template ID is <code>ct-d254ff4e06a300cf****</code>, and the ID of the managed rule of the template is <code>slb-servercertificate-expired-check</code>.</p>
+     * <p>A compliance package template is a collection of rules that Cloud Config can create based on compliance scenarios.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries all compliance package templates provided by Cloud Config and the details of the compliance package templates.</p>
@@ -6256,6 +6284,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListConfigRulesResponse listConfigRulesWithOptions(ListConfigRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.compliancePackId)) {
+            query.put("CompliancePackId", request.compliancePackId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.complianceType)) {
             query.put("ComplianceType", request.complianceType);
         }
@@ -6912,7 +6944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you write a <code>SELECT</code> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema].</p>
+     * <p>When you write a <code>SELECT</code> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see <a href="https://github.com/aliyun/alibabacloud-config-resource-schema">Alibaba Cloud Config Resource Schema</a>.</p>
      * <blockquote>
      * </blockquote>
      * <ul>
@@ -6954,7 +6986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you write a <code>SELECT</code> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema].</p>
+     * <p>When you write a <code>SELECT</code> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see <a href="https://github.com/aliyun/alibabacloud-config-resource-schema">Alibaba Cloud Config Resource Schema</a>.</p>
      * <blockquote>
      * </blockquote>
      * <ul>
@@ -8388,7 +8420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>In this example, a delivery channel is disabled. The ID of the delivery channel is `cdc-8e45ff4e06a3a8****```. The Status parameter is set to 0. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops the delivery of resource data.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a delivery channel.</p>
+     * <p>Modifies a delivery channel by using the current account.</p>
      * 
      * @param request UpdateConfigDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8471,7 +8503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>In this example, a delivery channel is disabled. The ID of the delivery channel is `cdc-8e45ff4e06a3a8****```. The Status parameter is set to 0. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops the delivery of resource data.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a delivery channel.</p>
+     * <p>Modifies a delivery channel by using the current account.</p>
      * 
      * @param request UpdateConfigDeliveryChannelRequest
      * @return UpdateConfigDeliveryChannelResponse
@@ -8540,6 +8572,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.excludeTagsScope)) {
             bodyFlat.put("ExcludeTagsScope", request.excludeTagsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extendContent)) {
+            body.put("ExtendContent", request.extendContent);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputParametersShrink)) {
@@ -8785,6 +8821,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateIntegratedServiceStatusResponse updateIntegratedServiceStatusWithOptions(UpdateIntegratedServiceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorDeliveryDataType)) {
+            body.put("AggregatorDeliveryDataType", request.aggregatorDeliveryDataType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.integratedTypes)) {
             body.put("IntegratedTypes", request.integratedTypes);
         }

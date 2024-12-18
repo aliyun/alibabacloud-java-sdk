@@ -115,6 +115,9 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
         /**
          * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-bandwidth-limit</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -127,6 +130,9 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
         /**
          * <p>The rule description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -227,9 +233,21 @@ public class GetCompliancePackResponseBody extends TeaModel {
     }
 
     public static class GetCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-2</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-2</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -257,9 +275,21 @@ public class GetCompliancePackResponseBody extends TeaModel {
     }
 
     public static class GetCompliancePackResponseBodyCompliancePackScopeTagsScope extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -287,9 +317,21 @@ public class GetCompliancePackResponseBody extends TeaModel {
     }
 
     public static class GetCompliancePackResponseBodyCompliancePackScope extends TeaModel {
+        /**
+         * <p>Excluded region scope, multiple regions should be separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("ExcludeRegionIdsScope")
         public String excludeRegionIdsScope;
 
+        /**
+         * <p>Excluded resourceGroup scope, multiple resourceGroup should be separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzc7r7rhx****</p>
+         */
         @NameInMap("ExcludeResourceGroupIdsScope")
         public String excludeResourceGroupIdsScope;
 
@@ -303,6 +345,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String excludeResourceIdsScope;
 
         /**
+         * <p>Exclude tag scope.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ExcludeTagsScope")
@@ -326,6 +369,12 @@ public class GetCompliancePackResponseBody extends TeaModel {
         @NameInMap("ResourceGroupIdsScope")
         public String resourceGroupIdsScope;
 
+        /**
+         * <p>Include ResourceId scope, multiple resourceIds should be separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-8vbf3x310fn56ijfd****</p>
+         */
         @NameInMap("ResourceIdsScope")
         public String resourceIdsScope;
 
@@ -348,6 +397,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String tagValueScope;
 
         /**
+         * <p>Include tag scope.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("TagsScope")
@@ -461,6 +511,9 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
         /**
          * <p>The name of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-pack-name</p>
          */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
@@ -491,6 +544,9 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
         /**
          * <p>The description of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-name</p>
          */
         @NameInMap("Description")
         public String description;
@@ -530,6 +586,38 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
         /**
          * <p>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;configRuleTemplates&quot;: [
+         *         {
+         *           &quot;configRuleName&quot;: &quot;弹性IP实例带宽满足最低要求&quot;,
+         *           &quot;scope&quot;: {
+         *             &quot;complianceResourceTypes&quot;: [
+         *               &quot;ACS::EIP::EipAddress&quot;
+         *             ]
+         *           },
+         *           &quot;description&quot;: &quot;弹性IP实例可用带宽大于等于指定参数值，视为“合规”。默认值：10MB&quot;,
+         *           &quot;source&quot;: {
+         *             &quot;owner&quot;: &quot;ALIYUN&quot;,
+         *             &quot;identifier&quot;: &quot;eip-bandwidth-limit&quot;,
+         *             &quot;sourceDetails&quot;: [
+         *               {
+         *                 &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
+         *               }
+         *             ]
+         *           },
+         *           &quot;inputParameters&quot;: {
+         *             &quot;bandwidth&quot;: &quot;10&quot;
+         *           }
+         *         }
+         *       ],
+         *       &quot;compliancePackTemplate&quot;: {
+         *         &quot;riskLevel&quot;: 2,
+         *         &quot;compliancePackName&quot;: &quot;gy-test&quot;,
+         *         &quot;description&quot;: &quot;&quot;
+         *       }
+         *     }</p>
          */
         @NameInMap("TemplateContent")
         public String templateContent;

@@ -26,6 +26,15 @@ public class UpdateAggregateConfigDeliveryChannelRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Specifies whether to deliver scheduled compliant snapshots. Cloud Config delivers scheduled compliant snapshots at <code>04:00Z</code> and <code>16:00Z</code> to Log Service every day. The time is displayed in UTC. Valid values:</p>
+     * <ul>
+     * <li>true: Cloud Config delivers scheduled compliant snapshots.</li>
+     * <li>false (default): Cloud Config does not deliver scheduled compliant snapshots.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */

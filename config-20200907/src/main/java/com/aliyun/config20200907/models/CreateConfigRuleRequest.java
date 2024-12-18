@@ -16,6 +16,9 @@ public class CreateConfigRuleRequest extends TeaModel {
     /**
      * <p>The name of the rule.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>required-tags</p>
      */
     @NameInMap("ConfigRuleName")
     public String configRuleName;
@@ -39,13 +42,28 @@ public class CreateConfigRuleRequest extends TeaModel {
 
     /**
      * <p>The description of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-description</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>ExcludeRegionIdsScope</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("ExcludeRegionIdsScope")
     public String excludeRegionIdsScope;
 
+    /**
+     * <p>ExcludeResourceGroupIdsScope</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bnczc6r7rml****</p>
+     */
     @NameInMap("ExcludeResourceGroupIdsScope")
     public String excludeResourceGroupIdsScope;
 
@@ -61,8 +79,20 @@ public class CreateConfigRuleRequest extends TeaModel {
     @NameInMap("ExcludeResourceIdsScope")
     public String excludeResourceIdsScope;
 
+    /**
+     * <p>ExcludeTagsScope</p>
+     */
     @NameInMap("ExcludeTagsScope")
     public java.util.List<CreateConfigRuleRequestExcludeTagsScope> excludeTagsScope;
+
+    /**
+     * <p>Optional field, only used in conjunction with the 24-hour cycle execution to set the trigger time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;fixedHour&quot;:&quot;13&quot;}</p>
+     */
+    @NameInMap("ExtendContent")
+    public String extendContent;
 
     /**
      * <p>The input parameter of the rule.</p>
@@ -116,6 +146,12 @@ public class CreateConfigRuleRequest extends TeaModel {
     @NameInMap("ResourceGroupIdsScope")
     public String resourceGroupIdsScope;
 
+    /**
+     * <p>ResourceIdsScope</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5cmbowstbkss9ta03****</p>
+     */
     @NameInMap("ResourceIdsScope")
     public String resourceIdsScope;
 
@@ -210,6 +246,9 @@ public class CreateConfigRuleRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    /**
+     * <p>TagsScope</p>
+     */
     @NameInMap("TagsScope")
     public java.util.List<CreateConfigRuleRequestTagsScope> tagsScope;
 
@@ -280,6 +319,14 @@ public class CreateConfigRuleRequest extends TeaModel {
     }
     public java.util.List<CreateConfigRuleRequestExcludeTagsScope> getExcludeTagsScope() {
         return this.excludeTagsScope;
+    }
+
+    public CreateConfigRuleRequest setExtendContent(String extendContent) {
+        this.extendContent = extendContent;
+        return this;
+    }
+    public String getExtendContent() {
+        return this.extendContent;
     }
 
     public CreateConfigRuleRequest setInputParameters(java.util.Map<String, ?> inputParameters) {
@@ -387,9 +434,21 @@ public class CreateConfigRuleRequest extends TeaModel {
     }
 
     public static class CreateConfigRuleRequestExcludeTagsScope extends TeaModel {
+        /**
+         * <p>TagKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-2</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>TagValue</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-2</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -417,9 +476,21 @@ public class CreateConfigRuleRequest extends TeaModel {
     }
 
     public static class CreateConfigRuleRequestTagsScope extends TeaModel {
+        /**
+         * <p>TagKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>TagValue</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

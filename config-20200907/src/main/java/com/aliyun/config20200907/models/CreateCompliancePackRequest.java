@@ -64,9 +64,21 @@ public class CreateCompliancePackRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>ExcludeRegionIdsScope</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("ExcludeRegionIdsScope")
     public String excludeRegionIdsScope;
 
+    /**
+     * <p>ExcludeResourceGroupIdsScope. Separate multiple resource group IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bnczc6r7rml****</p>
+     */
     @NameInMap("ExcludeResourceGroupIdsScope")
     public String excludeResourceGroupIdsScope;
 
@@ -79,6 +91,9 @@ public class CreateCompliancePackRequest extends TeaModel {
     @NameInMap("ExcludeResourceIdsScope")
     public String excludeResourceIdsScope;
 
+    /**
+     * <p>ExcludeTagsScope</p>
+     */
     @NameInMap("ExcludeTagsScope")
     public java.util.List<CreateCompliancePackRequestExcludeTagsScope> excludeTagsScope;
 
@@ -100,6 +115,12 @@ public class CreateCompliancePackRequest extends TeaModel {
     @NameInMap("ResourceGroupIdsScope")
     public String resourceGroupIdsScope;
 
+    /**
+     * <p>ResourceIdsScope</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-8vbf3x310fn56ijfd****</p>
+     */
     @NameInMap("ResourceIdsScope")
     public String resourceIdsScope;
 
@@ -138,6 +159,9 @@ public class CreateCompliancePackRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    /**
+     * <p>TagsScope</p>
+     */
     @NameInMap("TagsScope")
     public java.util.List<CreateCompliancePackRequestTagsScope> tagsScope;
 
@@ -458,9 +482,21 @@ public class CreateCompliancePackRequest extends TeaModel {
     }
 
     public static class CreateCompliancePackRequestExcludeTagsScope extends TeaModel {
+        /**
+         * <p>TagKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-2</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>TagValue</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-2</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -488,9 +524,21 @@ public class CreateCompliancePackRequest extends TeaModel {
     }
 
     public static class CreateCompliancePackRequestTagsScope extends TeaModel {
+        /**
+         * <p>Tagkey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>TagValue</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
