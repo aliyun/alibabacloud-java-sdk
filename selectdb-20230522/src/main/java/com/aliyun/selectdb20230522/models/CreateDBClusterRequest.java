@@ -51,6 +51,8 @@ public class CreateDBClusterRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The database engine of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>selectdb</p>
      */
@@ -102,7 +104,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>VPC ID。</p>
+     * <p>VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -59,6 +59,8 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     public String DBInstanceDescription;
 
     /**
+     * <p>The database engine of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>SelectDB</p>
      */
