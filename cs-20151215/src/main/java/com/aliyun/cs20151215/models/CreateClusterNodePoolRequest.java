@@ -794,9 +794,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         /**
          * <p>The severity levels of CVEs that can be automatically patched. Separate multiple levels with commas (,). Example: <code>asap,later</code>. Valid values:</p>
          * <ul>
-         * <li><code>asap</code>: high severity.</li>
-         * <li><code>later</code>: medium severity.</li>
-         * <li><code>nntf</code>: low severity.</li>
+         * <li><code>asap</code>: high</li>
+         * <li><code>later</code>: medium</li>
+         * <li><code>nntf</code>: low</li>
          * </ul>
          * <p>If <code>auto_vul_fix</code> is set to true, the default value of this parameter is <code>asap</code>.</p>
          * 
@@ -1710,7 +1710,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <li><code>cloud</code>: basic disk.</li>
          * <li><code>cloud_efficiency</code>: ultra disk.</li>
          * <li><code>cloud_ssd</code>: standard SSD.</li>
-         * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
+         * <li><code>cloud_essd</code>: ESSD.</li>
          * <li><code>cloud_auto</code>: ESSD AutoPL disk.</li>
          * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
          * </ul>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAutoscalingConfigResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cc212d04dfe184547bffaa596********</p>
      */
@@ -12,6 +14,8 @@ public class CreateAutoscalingConfigResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AF8BE105-C32B-1269-9774-5510********</p>
      */
@@ -19,6 +23,8 @@ public class CreateAutoscalingConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>T-5fd211e924e1d007********</p>
      */
