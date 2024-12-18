@@ -179,6 +179,12 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The service dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reserve_3</p>
+         */
         @NameInMap("Service")
         public String service;
 

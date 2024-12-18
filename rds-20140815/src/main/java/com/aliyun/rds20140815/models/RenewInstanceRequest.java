@@ -43,6 +43,16 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    /**
+     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: uses a coupon.</li>
+     * <li><strong>false</strong> (default): does not use a coupon.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
@@ -86,6 +96,12 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The coupon code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>726702810223</p>
+     */
     @NameInMap("PromotionCode")
     public String promotionCode;
 

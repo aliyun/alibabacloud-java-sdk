@@ -143,6 +143,58 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeRCInstancesResponseBodyRCInstancesTags extends TeaModel {
+        @NameInMap("ResourceId")
+        public String resourceId;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeRCInstancesResponseBodyRCInstancesTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCInstancesResponseBodyRCInstancesTags self = new DescribeRCInstancesResponseBodyRCInstancesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstancesTags setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstancesTags setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstancesTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstancesTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class DescribeRCInstancesResponseBodyRCInstances extends TeaModel {
         /**
          * <p>The cluster name.</p>
@@ -246,6 +298,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
         @NameInMap("TagResources")
         public java.util.List<DescribeRCInstancesResponseBodyRCInstancesTagResources> tagResources;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeRCInstancesResponseBodyRCInstancesTags> tags;
 
         /**
          * <p>The VPC ID.</p>
@@ -366,6 +421,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeRCInstancesResponseBodyRCInstancesTagResources> getTagResources() {
             return this.tagResources;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setTags(java.util.List<DescribeRCInstancesResponseBodyRCInstancesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeRCInstancesResponseBodyRCInstancesTags> getTags() {
+            return this.tags;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setVpcId(String vpcId) {

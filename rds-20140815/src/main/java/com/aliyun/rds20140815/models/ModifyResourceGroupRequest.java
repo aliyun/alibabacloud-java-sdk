@@ -45,6 +45,15 @@ public class ModifyResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The resource type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance</p>
+     */
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     public static ModifyResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyResourceGroupRequest self = new ModifyResourceGroupRequest();
         return TeaModel.build(map, self);
@@ -104,6 +113,14 @@ public class ModifyResourceGroupRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyResourceGroupRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }

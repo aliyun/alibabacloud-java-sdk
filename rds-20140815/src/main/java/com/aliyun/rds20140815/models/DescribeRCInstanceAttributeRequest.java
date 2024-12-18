@@ -6,13 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeRCInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>rc-dh2jf9n6j4s14926****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
 
     /**
      * <p>The region ID.</p>
@@ -34,6 +36,14 @@ public class DescribeRCInstanceAttributeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeRCInstanceAttributeRequest setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
     }
 
     public DescribeRCInstanceAttributeRequest setRegionId(String regionId) {

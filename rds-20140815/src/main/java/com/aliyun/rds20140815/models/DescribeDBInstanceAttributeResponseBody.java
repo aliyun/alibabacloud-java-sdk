@@ -1118,6 +1118,18 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("MultipleTempUpgrade")
         public Boolean multipleTempUpgrade;
 
+        /**
+         * <p>OptimizedWritesInfo contains two fields:</p>
+         * <ul>
+         * <li><p>optimized_writes: Whether write optimization is enabled for the current instance.</p>
+         * </li>
+         * <li><p>init_optimized_writes: Whether write optimization can be enabled for the instance. Some instances do not display the write optimization switch in the console because init_optimized_writes is false.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;optimized_writes&quot;:true,&quot;init_optimized_writes&quot;:true}</p>
+         */
         @NameInMap("OptimizedWritesInfo")
         public String optimizedWritesInfo;
 
