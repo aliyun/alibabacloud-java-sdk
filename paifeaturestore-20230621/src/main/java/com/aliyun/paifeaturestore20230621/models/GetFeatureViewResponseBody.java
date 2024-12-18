@@ -75,6 +75,13 @@ public class GetFeatureViewResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>item_table_mock_1</p>
+     */
+    @NameInMap("MockTableName")
+    public String mockTableName;
+
+    /**
+     * <strong>example:</strong>
      * <p>featureView1</p>
      */
     @NameInMap("Name")
@@ -245,6 +252,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
     }
     public String getLastSyncConfig() {
         return this.lastSyncConfig;
+    }
+
+    public GetFeatureViewResponseBody setMockTableName(String mockTableName) {
+        this.mockTableName = mockTableName;
+        return this;
+    }
+    public String getMockTableName() {
+        return this.mockTableName;
     }
 
     public GetFeatureViewResponseBody setName(String name) {
