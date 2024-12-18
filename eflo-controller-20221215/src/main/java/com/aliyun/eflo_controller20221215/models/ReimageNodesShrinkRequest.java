@@ -4,9 +4,17 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ReimageNodesShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>i15dfa12e8f27c44f4a006c2c8bb</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 

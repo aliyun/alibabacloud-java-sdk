@@ -4,12 +4,20 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListClusterNodesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAXW/ZB9TBvH+0ZK0phtCibQgQmu1RbqplAI6Velo2OKR</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("Nodes")
     public java.util.List<ListClusterNodesResponseBodyNodes> nodes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2BA76272-6608-5AEC-BBA8-B6F0D3D14CDB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -95,42 +103,86 @@ public class ListClusterNodesResponseBody extends TeaModel {
     }
 
     public static class ListClusterNodesResponseBodyNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1642472468000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1762185600000</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>72432f80-273e-11ed-b57a-acde48001122</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
         @NameInMap("HpnZone")
         public String hpnZone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i190297201669099844192</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu-b11</p>
+         */
         @NameInMap("MachineType")
         public String machineType;
 
         @NameInMap("Networks")
         public java.util.List<ListClusterNodesResponseBodyNodesNetworks> networks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ng-e9b74f4d450cf18d</p>
+         */
         @NameInMap("NodeGroupId")
         public String nodeGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>emr_master</p>
+         */
         @NameInMap("NodeGroupName")
         public String nodeGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e01-cn-2r42tmj4z02</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Extending</p>
+         */
         @NameInMap("OperatingState")
         public String operatingState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sn_tOuUk</p>
+         */
         @NameInMap("Sn")
         public String sn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -4,6 +4,10 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DeleteClusterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0FC4A1C7-421C-5EAB-9361-4C0338EFA287</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

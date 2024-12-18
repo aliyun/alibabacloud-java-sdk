@@ -4,9 +4,17 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ReimageNodesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>15FBCD9B-C93F-54E8-A168-AADE7E66DAD2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i158782151663841517926</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

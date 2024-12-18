@@ -4,12 +4,24 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a3f2224a5ec7224116c4f5246120abe4</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aek2bg6wyoox6jq</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

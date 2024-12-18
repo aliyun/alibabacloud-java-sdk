@@ -4,6 +4,12 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class StopInvocationShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f-hz044748dzepds0</p>
+     */
     @NameInMap("InvokeId")
     public String invokeId;
 

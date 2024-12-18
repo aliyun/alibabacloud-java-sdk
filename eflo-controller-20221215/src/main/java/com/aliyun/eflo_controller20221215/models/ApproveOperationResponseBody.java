@@ -4,9 +4,17 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ApproveOperationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Resource not found</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8F065DDD-6996-5973-9691-9EC57BD0072E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

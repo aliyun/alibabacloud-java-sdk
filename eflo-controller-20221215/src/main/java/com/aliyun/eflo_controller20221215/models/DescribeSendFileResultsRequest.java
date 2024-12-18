@@ -4,9 +4,19 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DescribeSendFileResultsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-bj038i0d6r8zoqo</p>
+     */
     @NameInMap("InvokeId")
     public String invokeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e01-cn-zvp2tgykr08</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 

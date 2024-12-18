@@ -4,9 +4,17 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8F208B6D-4C42-5FD3-B6BE-E826E92A44DD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +51,31 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>i15azeddnvf7uhw2oij57o0</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Cluster</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dev</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

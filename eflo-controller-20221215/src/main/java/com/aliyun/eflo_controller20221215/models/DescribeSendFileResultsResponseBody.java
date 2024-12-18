@@ -9,10 +9,17 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -46,27 +53,59 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     }
 
     public static class DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeNodesInvokeNode extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-06T07:12:50Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AccountNotExists</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>the specified instance does not exists</p>
+         */
         @NameInMap("ErrorInfo")
         public String errorInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-10T10:53:46.156+08:00</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e01-cn-9lb3c15m81j</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-30T16:00:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-30T16:00:00Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -161,42 +200,86 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     }
 
     public static class DescribeSendFileResultsResponseBodyInvocationsInvocation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Base64</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PlainText</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-10T10:53:46.156+08:00</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("FileGroup")
         public String fileGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0644</p>
+         */
         @NameInMap("FileMode")
         public String fileMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("FileOwner")
         public String fileOwner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Pending</p>
+         */
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
         @NameInMap("InvokeNodes")
         public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeNodes invokeNodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("NodeCount")
         public Integer nodeCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Overwrite")
         public Boolean overwrite;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/home/user</p>
+         */
         @NameInMap("TargetDir")
         public String targetDir;
 

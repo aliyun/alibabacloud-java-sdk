@@ -7,9 +7,17 @@ public class CreateClusterShrinkRequest extends TeaModel {
     @NameInMap("ClusterDescription")
     public String clusterDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Standard_Cluster</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Lite</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
@@ -19,6 +27,10 @@ public class CreateClusterShrinkRequest extends TeaModel {
     @NameInMap("HpnZone")
     public String hpnZone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
@@ -31,6 +43,13 @@ public class CreateClusterShrinkRequest extends TeaModel {
     @NameInMap("NodeGroups")
     public String nodeGroupsShrink;
 
+    @NameInMap("OpenEniJumboFrame")
+    public Boolean openEniJumboFrame;
+
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aek2xdkc6icwfha</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -114,6 +133,14 @@ public class CreateClusterShrinkRequest extends TeaModel {
         return this.nodeGroupsShrink;
     }
 
+    public CreateClusterShrinkRequest setOpenEniJumboFrame(Boolean openEniJumboFrame) {
+        this.openEniJumboFrame = openEniJumboFrame;
+        return this;
+    }
+    public Boolean getOpenEniJumboFrame() {
+        return this.openEniJumboFrame;
+    }
+
     public CreateClusterShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -131,9 +158,17 @@ public class CreateClusterShrinkRequest extends TeaModel {
     }
 
     public static class CreateClusterShrinkRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>env-name</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dev</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,6 +4,10 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>81F648D0-5570-5351-AE98-6F501C7E957F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

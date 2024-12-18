@@ -4,36 +4,85 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class SendFileShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>#!/bin/bash echo &quot;Current User is :&quot; echo $(ps | grep &quot;$$&quot; | awk \&quot;{print $2}\&quot;) -------- oss://bucketName/objectName</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PlainText</p>
+     */
     @NameInMap("ContentType")
     public String contentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>This is a test file.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("FileGroup")
     public String fileGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0644</p>
+     */
     @NameInMap("FileMode")
     public String fileMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
     @NameInMap("FileOwner")
     public String fileOwner;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>file.txt</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NodeIdList")
     public String nodeIdListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/home</p>
+     */
     @NameInMap("TargetDir")
     public String targetDir;
 
+    /**
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 

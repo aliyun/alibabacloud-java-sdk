@@ -4,11 +4,18 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class SendFileResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>t-hz03la52z1zkvls</p>
+     */
     @NameInMap("InvokeId")
     public String invokeId;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C683243-7915-57FB-9570-A2932C1C0F78</p>
      */
     @NameInMap("RequestId")
     public String requestId;

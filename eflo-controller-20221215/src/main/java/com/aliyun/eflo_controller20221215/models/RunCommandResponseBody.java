@@ -4,11 +4,18 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class RunCommandResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>t-7d2a745b412b4601b2d47f6a768d*</p>
+     */
     @NameInMap("InvokeId")
     public String invokeId;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2FE2B22C-CF9D-59DE-BF63-DC9B9B33A9D1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

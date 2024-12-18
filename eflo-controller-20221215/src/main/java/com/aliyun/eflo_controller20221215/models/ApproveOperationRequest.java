@@ -4,9 +4,17 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ApproveOperationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>e01-cn-zvp2tgykr08</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RepairMachine</p>
+     */
     @NameInMap("OperationType")
     public String operationType;
 
