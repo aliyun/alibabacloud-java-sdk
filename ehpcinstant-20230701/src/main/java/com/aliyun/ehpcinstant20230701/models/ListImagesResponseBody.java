@@ -153,6 +153,9 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("Version")
         public String version;
 
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static ListImagesResponseBodyImages build(java.util.Map<String, ?> map) throws Exception {
             ListImagesResponseBodyImages self = new ListImagesResponseBodyImages();
             return TeaModel.build(map, self);
@@ -236,6 +239,14 @@ public class ListImagesResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public ListImagesResponseBodyImages setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }
