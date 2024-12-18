@@ -59,6 +59,16 @@ public class GetAggregateConfigDeliveryChannelResponseBody extends TeaModel {
         @NameInMap("AggregatorId")
         public String aggregatorId;
 
+        /**
+         * <p>Indicates whether the specified destination receives scheduled compliant snapshots. Cloud Config delivers scheduled compliant snapshots at <code>04:00Z</code> and <code>16:00Z</code> to Log Service every day. The time is displayed in UTC. Valid values:</p>
+         * <ul>
+         * <li>true: The specified destination receives scheduled compliant snapshots.</li>
+         * <li>false: The specified destination does not receive scheduled compliant snapshots.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CompliantSnapshot")
         public Boolean compliantSnapshot;
 

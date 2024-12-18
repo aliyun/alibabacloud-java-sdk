@@ -4,6 +4,9 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateIntegratedServiceStatusRequest extends TeaModel {
+    @NameInMap("AggregatorDeliveryDataType")
+    public String aggregatorDeliveryDataType;
+
     /**
      * <p>The types of the integrated events. Separate multiple event types with commas (,). Valid values:</p>
      * <ul>
@@ -49,6 +52,14 @@ public class UpdateIntegratedServiceStatusRequest extends TeaModel {
     public static UpdateIntegratedServiceStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateIntegratedServiceStatusRequest self = new UpdateIntegratedServiceStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateIntegratedServiceStatusRequest setAggregatorDeliveryDataType(String aggregatorDeliveryDataType) {
+        this.aggregatorDeliveryDataType = aggregatorDeliveryDataType;
+        return this;
+    }
+    public String getAggregatorDeliveryDataType() {
+        return this.aggregatorDeliveryDataType;
     }
 
     public UpdateIntegratedServiceStatusRequest setIntegratedTypes(String integratedTypes) {

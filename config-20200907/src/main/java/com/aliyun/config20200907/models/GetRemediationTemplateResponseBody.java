@@ -62,6 +62,9 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The parameters of the automatic remediation template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Parameters\&quot;:{\&quot;regionId\&quot;:{\&quot;AssociationProperty\&quot;:\&quot;RegionId\&quot;,\&quot;CreateDated\&quot;:\&quot;2023-09-08T16:36:15\&quot;,\&quot;Default\&quot;:\&quot;{regionId}\&quot;,\&quot;Description\&quot;:{\&quot;en\&quot;:\&quot;regionId\&quot;,\&quot;zh-cn\&quot;:\&quot;regionId\&quot;},\&quot;Id\&quot;:538,\&quot;MaxKeyLength\&quot;:\&quot;125\&quot;,\&quot;MaxValueLength\&quot;:\&quot;255\&quot;,\&quot;ModifiedDate\&quot;:\&quot;2023-09-08T16:36:15\&quot;,\&quot;Name\&quot;:\&quot;regionId\&quot;,\&quot;Optional\&quot;:1,\&quot;TemplateIdentifier\&quot;:\&quot;ACS-ALB-BulkyEnableDeletionProtection\&quot;,\&quot;Type\&quot;:\&quot;String\&quot;,\&quot;Version\&quot;:\&quot;LASTEST\&quot;},\&quot;loadBalancerIds\&quot;:{\&quot;CreateDated\&quot;:\&quot;2023-09-08T16:36:16\&quot;,\&quot;Default\&quot;:\&quot;[\\\&quot;{resourceId}\\\&quot;]\&quot;,\&quot;Description\&quot;:{\&quot;en\&quot;:\&quot;loadBalancerIds\&quot;,\&quot;zh-cn\&quot;:\&quot;loadBalancerIds\&quot;},\&quot;Id\&quot;:539,\&quot;MaxKeyLength\&quot;:\&quot;125\&quot;,\&quot;MaxValueLength\&quot;:\&quot;255\&quot;,\&quot;ModifiedDate\&quot;:\&quot;2023-09-08T16:36:16\&quot;,\&quot;Name\&quot;:\&quot;loadBalancerIds\&quot;,\&quot;Optional\&quot;:1,\&quot;TemplateIdentifier\&quot;:\&quot;ACS-ALB-BulkyEnableDeletionProtection\&quot;,\&quot;Type\&quot;:\&quot;ARRAY\&quot;,\&quot;Version\&quot;:\&quot;LASTEST\&quot;}}}</p>
          */
         @NameInMap("TemplateDefinition")
         public String templateDefinition;
@@ -69,6 +72,9 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
         /**
          * <p>The description of the automatic remediation template.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>调用接口EnableDeletionProtection，开启ALB实例删除保护，请您知晓风险谨慎操作。</p>
          */
         @NameInMap("TemplateDescription")
         public String templateDescription;
@@ -84,6 +90,9 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The name of the automatic remediation template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>开启ALB实例删除保护</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

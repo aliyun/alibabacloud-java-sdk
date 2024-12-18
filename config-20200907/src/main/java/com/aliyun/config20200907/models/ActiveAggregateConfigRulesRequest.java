@@ -15,10 +15,12 @@ public class ActiveAggregateConfigRulesRequest extends TeaModel {
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    @NameInMap("CompliancePackId")
+    public String compliancePackId;
+
     /**
      * <p>The rule ID. Separate multiple rule IDs with commas (,).</p>
      * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cr-5772ba41209e007b****</p>
@@ -37,6 +39,14 @@ public class ActiveAggregateConfigRulesRequest extends TeaModel {
     }
     public String getAggregatorId() {
         return this.aggregatorId;
+    }
+
+    public ActiveAggregateConfigRulesRequest setCompliancePackId(String compliancePackId) {
+        this.compliancePackId = compliancePackId;
+        return this;
+    }
+    public String getCompliancePackId() {
+        return this.compliancePackId;
     }
 
     public ActiveAggregateConfigRulesRequest setConfigRuleIds(String configRuleIds) {

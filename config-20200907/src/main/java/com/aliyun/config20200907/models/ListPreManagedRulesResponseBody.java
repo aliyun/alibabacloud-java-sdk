@@ -86,12 +86,18 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ram-user-ak-used-expired-check</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Example description</p>
          */
         @NameInMap("Description")
         public String description;

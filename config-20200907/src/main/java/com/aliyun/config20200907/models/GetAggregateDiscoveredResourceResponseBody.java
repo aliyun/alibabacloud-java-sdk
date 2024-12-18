@@ -59,6 +59,19 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
 
+        /**
+         * <p>The compliance evaluation result of the resource. Valid values:</p>
+         * <ul>
+         * <li>COMPLIANT: The resource is evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to the resource.</li>
+         * <li>INSUFFICIENT_DATA: No data is available.</li>
+         * <li>IGNORED: The resource is ignored during compliance evaluation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLIANT</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 

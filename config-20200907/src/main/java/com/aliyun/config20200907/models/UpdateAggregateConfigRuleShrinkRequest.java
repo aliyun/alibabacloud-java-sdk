@@ -4,6 +4,12 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
+    /**
+     * <p>The IDs of the member accounts to which the rule applies, which means that the resources within the member accounts are evaluated based on the rule. Separate multiple member account IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>115748125982****</p>
+     */
     @NameInMap("AccountIdsScope")
     public String accountIdsScope;
 
@@ -41,6 +47,9 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     /**
      * <p>The name of the rule.</p>
      * <p>For more information about how to query the name of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_rule</p>
      */
     @NameInMap("ConfigRuleName")
     public String configRuleName;
@@ -63,6 +72,9 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -96,9 +108,21 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("ExcludeFolderIdsScope")
     public String excludeFolderIdsScope;
 
+    /**
+     * <p>The IDs of the regions to which the rule not applies. Separate multiple region IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("ExcludeRegionIdsScope")
     public String excludeRegionIdsScope;
 
+    /**
+     * <p>The IDs of the resource groups to which the rule not applies. Separate multiple resource group IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bnczc6r7rml****</p>
+     */
     @NameInMap("ExcludeResourceGroupIdsScope")
     public String excludeResourceGroupIdsScope;
 
@@ -114,6 +138,9 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("ExcludeResourceIdsScope")
     public String excludeResourceIdsScope;
 
+    /**
+     * <p>Exclude the specific tag scope of resources .</p>
+     */
     @NameInMap("ExcludeTagsScope")
     public java.util.List<UpdateAggregateConfigRuleShrinkRequestExcludeTagsScope> excludeTagsScope;
 
@@ -186,6 +213,12 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("ResourceGroupIdsScope")
     public String resourceGroupIdsScope;
 
+    /**
+     * <p>The IDs of the resources included from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5cmbowstbkss9ta03****</p>
+     */
     @NameInMap("ResourceIdsScope")
     public String resourceIdsScope;
 
@@ -249,6 +282,9 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    /**
+     * <p>The valid tag scope of resources.</p>
+     */
     @NameInMap("TagsScope")
     public java.util.List<UpdateAggregateConfigRuleShrinkRequestTagsScope> tagsScope;
 
@@ -458,9 +494,21 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     }
 
     public static class UpdateAggregateConfigRuleShrinkRequestExcludeTagsScope extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-2</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-2</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -488,9 +536,21 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     }
 
     public static class UpdateAggregateConfigRuleShrinkRequestTagsScope extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

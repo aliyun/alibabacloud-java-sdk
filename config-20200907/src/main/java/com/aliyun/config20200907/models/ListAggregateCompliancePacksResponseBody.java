@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAggregateCompliancePacksResponseBody extends TeaModel {
     /**
-     * <p>The compliance packages returned.</p>
+     * <p>The information about the compliance packages.</p>
      */
     @NameInMap("CompliancePacksResult")
     public ListAggregateCompliancePacksResponseBodyCompliancePacksResult compliancePacksResult;
@@ -51,7 +51,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>The account group ID.</p>
+         * <p>The ID of the account group.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-f632626622af0079****</p>
@@ -60,7 +60,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         public String aggregatorId;
 
         /**
-         * <p>The compliance package ID.</p>
+         * <p>The ID of the compliance package.</p>
          * 
          * <strong>example:</strong>
          * <p>cp-fdc8626622af00f9****</p>
@@ -70,6 +70,9 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
 
         /**
          * <p>The name of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-name</p>
          */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
@@ -94,16 +97,19 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
 
         /**
          * <p>The description of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
+         * <p>The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:</p>
          * <ul>
-         * <li>1: high</li>
-         * <li>2: medium</li>
-         * <li>3: low</li>
+         * <li>1: high risk level.</li>
+         * <li>2: medium risk level.</li>
+         * <li>3: low risk level.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +121,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         /**
          * <p>The status of the compliance package. Valid values:</p>
          * <ul>
-         * <li>ACTIVE: The compliance package is normal.</li>
+         * <li>ACTIVE: The compliance package is available for use.</li>
          * <li>CREATING: The compliance package is being created.</li>
          * </ul>
          * 
@@ -206,7 +212,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
 
     public static class ListAggregateCompliancePacksResponseBodyCompliancePacksResult extends TeaModel {
         /**
-         * <p>The compliance packages.</p>
+         * <p>The details of the compliance package.</p>
          */
         @NameInMap("CompliancePacks")
         public java.util.List<ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks> compliancePacks;

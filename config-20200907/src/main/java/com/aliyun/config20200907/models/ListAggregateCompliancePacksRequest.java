@@ -16,7 +16,7 @@ public class ListAggregateCompliancePacksRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The number of the page to return.</p>
      * <p>Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -26,8 +26,8 @@ public class ListAggregateCompliancePacksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * <p>The number of entries to return on each page.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

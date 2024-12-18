@@ -49,6 +49,9 @@ public class UpdateAggregatorShrinkRequest extends TeaModel {
     /**
      * <p>The description of the account group.</p>
      * <p>For more information about how to obtain the description of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test_Aggregator_Description</p>
      */
     @NameInMap("Description")
     public String description;

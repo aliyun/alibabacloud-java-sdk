@@ -61,6 +61,9 @@ public class ListCompliancePacksResponseBody extends TeaModel {
 
         /**
          * <p>The name of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClassifiedProtectionPreCheck</p>
          */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
@@ -85,6 +88,9 @@ public class ListCompliancePacksResponseBody extends TeaModel {
 
         /**
          * <p>The description of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Based on the Level 3 standards Equal Protection 2.0, this template provides continuous compliance monitoring recommendations to help you perform self-inspections and fix issues in advance, ensuring a quick pass during the official inspection.</p>
          */
         @NameInMap("Description")
         public String description;

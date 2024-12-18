@@ -55,6 +55,9 @@ public class GetAggregatorResponseBody extends TeaModel {
          * 
          * <strong>example:</strong>
          * <p>Alice</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>false</p>
          */
         @NameInMap("AccountName")
         public String accountName;

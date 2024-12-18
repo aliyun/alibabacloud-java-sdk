@@ -248,6 +248,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The name of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-name</p>
          */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
@@ -310,9 +313,21 @@ public class GetConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetConfigRuleResponseBodyConfigRuleExcludeTagsScope extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -418,12 +433,18 @@ public class GetConfigRuleResponseBody extends TeaModel {
     public static class GetConfigRuleResponseBodyConfigRuleManagedRule extends TeaModel {
         /**
          * <p>The settings of the required input parameters for the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("CompulsoryInputParameterDetails")
         public java.util.Map<String, ?> compulsoryInputParameterDetails;
 
         /**
          * <p>The description of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -445,12 +466,18 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The name of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-name</p>
          */
         @NameInMap("ManagedRuleName")
         public String managedRuleName;
 
         /**
          * <p>The settings of the optional input parameters for the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("OptionalInputParameterDetails")
         public java.util.Map<String, ?> optionalInputParameterDetails;
@@ -687,9 +714,21 @@ public class GetConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetConfigRuleResponseBodyConfigRuleTagsScope extends TeaModel {
+        /**
+         * <p>TagKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>TagValue</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -758,6 +797,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs-disk-auto-snapshot-policy</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -807,13 +849,28 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The description of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-description</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>ExcludeRegionIdsScope</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("ExcludeRegionIdsScope")
         public String excludeRegionIdsScope;
 
+        /**
+         * <p>ExcludeResourceGroupIdsScope</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzdibsjjc****</p>
+         */
         @NameInMap("ExcludeResourceGroupIdsScope")
         public String excludeResourceGroupIdsScope;
 
@@ -826,11 +883,26 @@ public class GetConfigRuleResponseBody extends TeaModel {
         @NameInMap("ExcludeResourceIdsScope")
         public String excludeResourceIdsScope;
 
+        /**
+         * <p>ExcludeTagsScope</p>
+         */
         @NameInMap("ExcludeTagsScope")
         public java.util.List<GetConfigRuleResponseBodyConfigRuleExcludeTagsScope> excludeTagsScope;
 
         /**
+         * <p>Optional field, only used in conjunction with the 24-hour cycle execution to set the trigger time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;fixedHour&quot;:&quot;12&quot;}</p>
+         */
+        @NameInMap("ExtendContent")
+        public String extendContent;
+
+        /**
          * <p>The input parameters of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("InputParameters")
         public java.util.Map<String, ?> inputParameters;
@@ -887,6 +959,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
         @NameInMap("ResourceGroupIdsScope")
         public String resourceGroupIdsScope;
 
+        /**
+         * <p>ResourceIdsScope</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-8vbf3x310fn56ijfd****</p>
+         */
         @NameInMap("ResourceIdsScope")
         public String resourceIdsScope;
 
@@ -961,6 +1039,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
         @NameInMap("TagValueScope")
         public String tagValueScope;
 
+        /**
+         * <p>TagsScope</p>
+         */
         @NameInMap("TagsScope")
         public java.util.List<GetConfigRuleResponseBodyConfigRuleTagsScope> tagsScope;
 
@@ -1087,6 +1168,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
         }
         public java.util.List<GetConfigRuleResponseBodyConfigRuleExcludeTagsScope> getExcludeTagsScope() {
             return this.excludeTagsScope;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setExtendContent(String extendContent) {
+            this.extendContent = extendContent;
+            return this;
+        }
+        public String getExtendContent() {
+            return this.extendContent;
         }
 
         public GetConfigRuleResponseBodyConfigRule setInputParameters(java.util.Map<String, ?> inputParameters) {

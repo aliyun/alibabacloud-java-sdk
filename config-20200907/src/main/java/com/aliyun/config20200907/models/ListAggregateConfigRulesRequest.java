@@ -15,6 +15,9 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    @NameInMap("CompliancePackId")
+    public String compliancePackId;
+
     /**
      * <p>The compliance evaluation result. Valid values:</p>
      * <ul>
@@ -118,6 +121,14 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     }
     public String getAggregatorId() {
         return this.aggregatorId;
+    }
+
+    public ListAggregateConfigRulesRequest setCompliancePackId(String compliancePackId) {
+        this.compliancePackId = compliancePackId;
+        return this;
+    }
+    public String getCompliancePackId() {
+        return this.compliancePackId;
     }
 
     public ListAggregateConfigRulesRequest setComplianceType(String complianceType) {

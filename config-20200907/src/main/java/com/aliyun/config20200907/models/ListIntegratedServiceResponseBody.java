@@ -41,6 +41,9 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
     }
 
     public static class ListIntegratedServiceResponseBodyData extends TeaModel {
+        @NameInMap("AggregatorDeliveryDataType")
+        public String aggregatorDeliveryDataType;
+
         /**
          * <p>The types of the integrated events. Separate multiple event types with commas (,). Valid values:</p>
          * <ul>
@@ -93,6 +96,14 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
         public static ListIntegratedServiceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListIntegratedServiceResponseBodyData self = new ListIntegratedServiceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListIntegratedServiceResponseBodyData setAggregatorDeliveryDataType(String aggregatorDeliveryDataType) {
+            this.aggregatorDeliveryDataType = aggregatorDeliveryDataType;
+            return this;
+        }
+        public String getAggregatorDeliveryDataType() {
+            return this.aggregatorDeliveryDataType;
         }
 
         public ListIntegratedServiceResponseBodyData setIntegratedTypes(String integratedTypes) {

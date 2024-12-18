@@ -75,6 +75,13 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
     public java.util.List<UpdateConfigRuleShrinkRequestExcludeTagsScope> excludeTagsScope;
 
     /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("ExtendContent")
+    public String extendContent;
+
+    /**
      * <p>The input parameters of the rule.</p>
      * 
      * <strong>example:</strong>
@@ -267,6 +274,14 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
     }
     public java.util.List<UpdateConfigRuleShrinkRequestExcludeTagsScope> getExcludeTagsScope() {
         return this.excludeTagsScope;
+    }
+
+    public UpdateConfigRuleShrinkRequest setExtendContent(String extendContent) {
+        this.extendContent = extendContent;
+        return this;
+    }
+    public String getExtendContent() {
+        return this.extendContent;
     }
 
     public UpdateConfigRuleShrinkRequest setInputParametersShrink(String inputParametersShrink) {

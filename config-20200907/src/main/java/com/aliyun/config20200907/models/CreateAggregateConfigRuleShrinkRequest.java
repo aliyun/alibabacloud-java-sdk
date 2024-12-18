@@ -104,6 +104,9 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("ExcludeTagsScope")
     public java.util.List<CreateAggregateConfigRuleShrinkRequestExcludeTagsScope> excludeTagsScope;
 
+    @NameInMap("ExtendContent")
+    public String extendContent;
+
     /**
      * <p>The ID of the resource directory to which the rule applies, which means that the resources within member accounts in the resource directory are evaluated based on the rule.</p>
      * <blockquote>
@@ -369,6 +372,14 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     }
     public java.util.List<CreateAggregateConfigRuleShrinkRequestExcludeTagsScope> getExcludeTagsScope() {
         return this.excludeTagsScope;
+    }
+
+    public CreateAggregateConfigRuleShrinkRequest setExtendContent(String extendContent) {
+        this.extendContent = extendContent;
+        return this;
+    }
+    public String getExtendContent() {
+        return this.extendContent;
     }
 
     public CreateAggregateConfigRuleShrinkRequest setFolderIdsScope(String folderIdsScope) {
