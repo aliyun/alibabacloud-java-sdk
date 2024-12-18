@@ -523,6 +523,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>绑定弹性网卡到RDS Custom实例</p>
+     * 
+     * @param request AssociateEipAddressWithRCInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssociateEipAddressWithRCInstanceResponse
+     */
+    public AssociateEipAddressWithRCInstanceResponse associateEipAddressWithRCInstanceWithOptions(AssociateEipAddressWithRCInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allocationId)) {
+            query.put("AllocationId", request.allocationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AssociateEipAddressWithRCInstance"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateEipAddressWithRCInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>绑定弹性网卡到RDS Custom实例</p>
+     * 
+     * @param request AssociateEipAddressWithRCInstanceRequest
+     * @return AssociateEipAddressWithRCInstanceResponse
+     */
+    public AssociateEipAddressWithRCInstanceResponse associateEipAddressWithRCInstance(AssociateEipAddressWithRCInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.associateEipAddressWithRCInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>挂载RC云盘</p>
      * 
      * @param request AttachRCDiskRequest
@@ -16496,6 +16548,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {
+            query.put("PrivateIpAddress", request.privateIpAddress);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -21860,6 +21916,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.switchTime)) {
+            query.put("SwitchTime", request.switchTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.switchTimeMode)) {
+            query.put("SwitchTimeMode", request.switchTimeMode);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -26210,6 +26274,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -29804,6 +29872,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>同步RDS Custom的安全组</p>
+     * 
+     * @param request SyncRCSecurityGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SyncRCSecurityGroupResponse
+     */
+    public SyncRCSecurityGroupResponse syncRCSecurityGroupWithOptions(SyncRCSecurityGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            query.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SyncRCSecurityGroup"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SyncRCSecurityGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>同步RDS Custom的安全组</p>
+     * 
+     * @param request SyncRCSecurityGroupRequest
+     * @return SyncRCSecurityGroupResponse
+     */
+    public SyncRCSecurityGroupResponse syncRCSecurityGroup(SyncRCSecurityGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.syncRCSecurityGroupWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -30109,6 +30229,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TransformDBInstancePayTypeResponse transformDBInstancePayType(TransformDBInstancePayTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.transformDBInstancePayTypeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑RDS Custom实例的弹性公网</p>
+     * 
+     * @param request UnassociateEipAddressWithRCInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnassociateEipAddressWithRCInstanceResponse
+     */
+    public UnassociateEipAddressWithRCInstanceResponse unassociateEipAddressWithRCInstanceWithOptions(UnassociateEipAddressWithRCInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allocationId)) {
+            query.put("AllocationId", request.allocationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnassociateEipAddressWithRCInstance"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnassociateEipAddressWithRCInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑RDS Custom实例的弹性公网</p>
+     * 
+     * @param request UnassociateEipAddressWithRCInstanceRequest
+     * @return UnassociateEipAddressWithRCInstanceResponse
+     */
+    public UnassociateEipAddressWithRCInstanceResponse unassociateEipAddressWithRCInstance(UnassociateEipAddressWithRCInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.unassociateEipAddressWithRCInstanceWithOptions(request, runtime);
     }
 
     /**

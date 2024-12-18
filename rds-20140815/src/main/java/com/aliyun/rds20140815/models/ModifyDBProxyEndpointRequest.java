@@ -76,6 +76,12 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     @NameInMap("DbEndpointAliases")
     public String dbEndpointAliases;
 
+    /**
+     * <p>The minimum number of reserved instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("DbEndpointMinSlaveCount")
     public String dbEndpointMinSlaveCount;
 
@@ -168,10 +174,15 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String readOnlyInstanceDistributionType;
 
     /**
-     * <p>The latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the threshold that you specified, the system no longer forwards read requests to the read-only instance. Unit: seconds If you do not specify this parameter, the original value of this parameter is retained. Valid values: <strong>0</strong> to <strong>3600</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The maximum latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the threshold that you specified, the system no longer forwards read requests to the read-only instance. If you do not specify this parameter, the original value of this parameter is retained. Valid values: <strong>0</strong> to <strong>3600</strong>.</p>
      * <blockquote>
-     * <p>You must specify this parameter only when the read/write splitting feature is enabled.</p>
      * </blockquote>
+     * <ul>
+     * <li><p>You must specify this parameter only when read/write splitting is enabled.</p>
+     * </li>
+     * <li><p>If the database proxy endpoint has the read and write attributes, the default value of this parameter is <strong>30</strong> and read/write splitting is supported. If the database proxy endpoint has the read-only attribute, the default value of this parameter is <strong>-1</strong> and read/write splitting is not supported. Unit: seconds.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>30</p>

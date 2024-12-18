@@ -205,7 +205,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources extends TeaModel {
+    public static class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagsTag extends TeaModel {
         @NameInMap("ResourceId")
         public String resourceId;
 
@@ -218,12 +218,12 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         @NameInMap("TagValue")
         public String tagValue;
 
-        public static DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources self = new DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources();
+        public static DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagsTag self = new DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources setResourceId(String resourceId) {
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagsTag setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
@@ -231,7 +231,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             return this.resourceId;
         }
 
-        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources setResourceType(String resourceType) {
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagsTag setResourceType(String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
@@ -239,7 +239,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             return this.resourceType;
         }
 
-        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources setTagKey(String tagKey) {
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagsTag setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
@@ -247,7 +247,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             return this.tagKey;
         }
 
-        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources setTagValue(String tagValue) {
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagsTag setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
@@ -257,21 +257,21 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources extends TeaModel {
-        @NameInMap("TagResources")
-        public java.util.List<DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources> tagResources;
+    public static class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagsTag> tag;
 
-        public static DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources self = new DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources();
+        public static DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTags self = new DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTags();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources setTagResources(java.util.List<DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources> tagResources) {
-            this.tagResources = tagResources;
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTags setTag(java.util.List<DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagsTag> tag) {
+            this.tag = tag;
             return this;
         }
-        public java.util.List<DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources> getTagResources() {
-            return this.tagResources;
+        public java.util.List<DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagsTag> getTag() {
+            return this.tag;
         }
 
     }
@@ -382,8 +382,8 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         @NameInMap("Strategy")
         public String strategy;
 
-        @NameInMap("TagResources")
-        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources tagResources;
+        @NameInMap("Tags")
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTags tags;
 
         public static DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet self = new DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet();
@@ -486,12 +486,12 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             return this.strategy;
         }
 
-        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet setTagResources(DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources tagResources) {
-            this.tagResources = tagResources;
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSet setTags(DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTags tags) {
+            this.tags = tags;
             return this;
         }
-        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources getTagResources() {
-            return this.tagResources;
+        public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTags getTags() {
+            return this.tags;
         }
 
     }

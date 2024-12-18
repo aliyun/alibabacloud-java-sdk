@@ -52,6 +52,16 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    /**
+     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: uses a coupon.</li>
+     * <li><strong>false</strong> (default): does not use a coupon.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
@@ -299,6 +309,12 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
+    /**
+     * <p>The coupon code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>717446260784</p>
+     */
     @NameInMap("PromotionCode")
     public String promotionCode;
 

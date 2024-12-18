@@ -72,6 +72,29 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The update time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-05-06T09:24:00Z</p>
+     */
+    @NameInMap("SwitchTime")
+    public String switchTime;
+
+    /**
+     * <p>The time at which the modification takes effect. Valid values:</p>
+     * <ul>
+     * <li><strong>Immediate</strong>: immediately modifies the parameter. This is the default value.</li>
+     * <li><strong>MaintainTime</strong>: modifies the parameter during the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to change the maintenance window.</li>
+     * <li><strong>ScheduleTime</strong>: modifies the parameter at the point in time that you specify. If you specify this value, you must also specify <strong>SwitchTime</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediate</p>
+     */
+    @NameInMap("SwitchTimeMode")
+    public String switchTimeMode;
+
     public static ModifyDBInstanceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceConfigRequest self = new ModifyDBInstanceConfigRequest();
         return TeaModel.build(map, self);
@@ -147,6 +170,22 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyDBInstanceConfigRequest setSwitchTime(String switchTime) {
+        this.switchTime = switchTime;
+        return this;
+    }
+    public String getSwitchTime() {
+        return this.switchTime;
+    }
+
+    public ModifyDBInstanceConfigRequest setSwitchTimeMode(String switchTimeMode) {
+        this.switchTimeMode = switchTimeMode;
+        return this;
+    }
+    public String getSwitchTimeMode() {
+        return this.switchTimeMode;
     }
 
 }

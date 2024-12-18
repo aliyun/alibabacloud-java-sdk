@@ -505,6 +505,19 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;
 
+    /**
+     * <p>Specifies whether to enable the write optimization feature.</p>
+     * <ul>
+     * <li><strong>optimized</strong>: enables the feature.</li>
+     * <li><strong>none</strong>: disables the feature.</li>
+     * </ul>
+     * <blockquote>
+     * <p> For more information about the write optimization feature, see <a href="https://help.aliyun.com/document_detail/2858761.html">Write optimization</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>optimized</p>
+     */
     @NameInMap("OptimizedWrites")
     public String optimizedWrites;
 

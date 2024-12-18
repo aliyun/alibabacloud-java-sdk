@@ -36,6 +36,12 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
+    /**
+     * <p>Dimension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service</p>
+     */
     @NameInMap("Dimension")
     public String dimension;
 

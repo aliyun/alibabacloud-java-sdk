@@ -23,6 +23,16 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    /**
+     * <p>Specifies whether to use vouchers to offset fees. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
@@ -90,6 +100,12 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The coupon code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>726702810223</p>
+     */
     @NameInMap("PromotionCode")
     public String promotionCode;
 

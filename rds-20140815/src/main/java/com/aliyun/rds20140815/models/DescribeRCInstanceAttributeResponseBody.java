@@ -351,6 +351,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("StoppedMode")
     public String stoppedMode;
 
+    @NameInMap("Tags")
+    public DescribeRCInstanceAttributeResponseBodyTags tags;
+
     /**
      * <p>The virtual LAN (VLAN) ID of the instance.</p>
      * <blockquote>
@@ -696,6 +699,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
     public String getStoppedMode() {
         return this.stoppedMode;
+    }
+
+    public DescribeRCInstanceAttributeResponseBody setTags(DescribeRCInstanceAttributeResponseBodyTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public DescribeRCInstanceAttributeResponseBodyTags getTags() {
+        return this.tags;
     }
 
     public DescribeRCInstanceAttributeResponseBody setVlanId(String vlanId) {
@@ -1071,6 +1082,77 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
         public java.util.List<String> getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+    }
+
+    public static class DescribeRCInstanceAttributeResponseBodyTagsTag extends TeaModel {
+        @NameInMap("ResourceId")
+        public String resourceId;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeRCInstanceAttributeResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCInstanceAttributeResponseBodyTagsTag self = new DescribeRCInstanceAttributeResponseBodyTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRCInstanceAttributeResponseBodyTagsTag setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public DescribeRCInstanceAttributeResponseBodyTagsTag setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public DescribeRCInstanceAttributeResponseBodyTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeRCInstanceAttributeResponseBodyTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeRCInstanceAttributeResponseBodyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeRCInstanceAttributeResponseBodyTagsTag> tag;
+
+        public static DescribeRCInstanceAttributeResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCInstanceAttributeResponseBodyTags self = new DescribeRCInstanceAttributeResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRCInstanceAttributeResponseBodyTags setTag(java.util.List<DescribeRCInstanceAttributeResponseBodyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeRCInstanceAttributeResponseBodyTagsTag> getTag() {
+            return this.tag;
         }
 
     }
