@@ -10,9 +10,6 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
     @NameInMap("RawFeatures")
     public java.util.List<UpdateModelFeatureFGFeatureRequestRawFeatures> rawFeatures;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("Reserves")
     public java.util.List<String> reserves;
 

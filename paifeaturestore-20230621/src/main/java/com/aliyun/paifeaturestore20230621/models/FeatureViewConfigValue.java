@@ -13,6 +13,9 @@ public class FeatureViewConfigValue extends TeaModel {
     @NameInMap("Equal")
     public Boolean equal;
 
+    @NameInMap("UseMock")
+    public Boolean useMock;
+
     public static FeatureViewConfigValue build(java.util.Map<String, ?> map) throws Exception {
         FeatureViewConfigValue self = new FeatureViewConfigValue();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class FeatureViewConfigValue extends TeaModel {
     }
     public Boolean getEqual() {
         return this.equal;
+    }
+
+    public FeatureViewConfigValue setUseMock(Boolean useMock) {
+        this.useMock = useMock;
+        return this;
+    }
+    public Boolean getUseMock() {
+        return this.useMock;
     }
 
 }
