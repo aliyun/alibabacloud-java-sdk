@@ -9,6 +9,13 @@ public class UpdateModelFeatureRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("LabelPriorityLevel")
+    public Long labelPriorityLevel;
+
+    /**
+     * <strong>example:</strong>
      * <p>4</p>
      */
     @NameInMap("LabelTableId")
@@ -28,6 +35,14 @@ public class UpdateModelFeatureRequest extends TeaModel {
     }
     public java.util.List<UpdateModelFeatureRequestFeatures> getFeatures() {
         return this.features;
+    }
+
+    public UpdateModelFeatureRequest setLabelPriorityLevel(Long labelPriorityLevel) {
+        this.labelPriorityLevel = labelPriorityLevel;
+        return this;
+    }
+    public Long getLabelPriorityLevel() {
+        return this.labelPriorityLevel;
     }
 
     public UpdateModelFeatureRequest setLabelTableId(String labelTableId) {

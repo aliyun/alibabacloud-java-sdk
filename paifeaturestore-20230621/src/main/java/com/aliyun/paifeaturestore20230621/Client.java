@@ -469,43 +469,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建训练样本FG表。</p>
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateModelFeatureTrainingSetFGTableResponse
-     */
-    public CreateModelFeatureTrainingSetFGTableResponse createModelFeatureTrainingSetFGTableWithOptions(String InstanceId, String ModelFeatureId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateModelFeatureTrainingSetFGTable"),
-            new TeaPair("version", "2023-06-21"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/modelfeatures/" + com.aliyun.openapiutil.Client.getEncodeParam(ModelFeatureId) + "/trainingsetfgtable"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateModelFeatureTrainingSetFGTableResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>创建训练样本FG表。</p>
-     * @return CreateModelFeatureTrainingSetFGTableResponse
-     */
-    public CreateModelFeatureTrainingSetFGTableResponse createModelFeatureTrainingSetFGTable(String InstanceId, String ModelFeatureId) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createModelFeatureTrainingSetFGTableWithOptions(InstanceId, ModelFeatureId, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>创建FeatureStore项目</p>
      * 
      * @param request CreateProjectRequest
@@ -838,53 +801,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteProjectWithOptions(InstanceId, ProjectId, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>导出训练样本FG表。</p>
-     * 
-     * @param request ExportModelFeatureTrainingSetFGTableRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ExportModelFeatureTrainingSetFGTableResponse
-     */
-    public ExportModelFeatureTrainingSetFGTableResponse exportModelFeatureTrainingSetFGTableWithOptions(String InstanceId, String ModelFeatureId, ExportModelFeatureTrainingSetFGTableRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.trainingSetFgConfig)) {
-            body.put("TrainingSetFgConfig", request.trainingSetFgConfig);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ExportModelFeatureTrainingSetFGTable"),
-            new TeaPair("version", "2023-06-21"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/modelfeatures/" + com.aliyun.openapiutil.Client.getEncodeParam(ModelFeatureId) + "/action/exporttrainingsetfgtable"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportModelFeatureTrainingSetFGTableResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>导出训练样本FG表。</p>
-     * 
-     * @param request ExportModelFeatureTrainingSetFGTableRequest
-     * @return ExportModelFeatureTrainingSetFGTableResponse
-     */
-    public ExportModelFeatureTrainingSetFGTableResponse exportModelFeatureTrainingSetFGTable(String InstanceId, String ModelFeatureId, ExportModelFeatureTrainingSetFGTableRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.exportModelFeatureTrainingSetFGTableWithOptions(InstanceId, ModelFeatureId, request, headers, runtime);
     }
 
     /**
@@ -2561,6 +2477,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Features", request.features);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.labelPriorityLevel)) {
+            body.put("LabelPriorityLevel", request.labelPriorityLevel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.labelTableId)) {
             body.put("LabelTableId", request.labelTableId);
         }
@@ -2657,53 +2577,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateModelFeatureFGFeatureWithOptions(InstanceId, ModelFeatureId, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>更新模型特征的fg.json文件配置信息。</p>
-     * 
-     * @param request UpdateModelFeatureFGInfoRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UpdateModelFeatureFGInfoResponse
-     */
-    public UpdateModelFeatureFGInfoResponse updateModelFeatureFGInfoWithOptions(String InstanceId, String ModelFeatureId, UpdateModelFeatureFGInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
-            body.put("Content", request.content);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateModelFeatureFGInfo"),
-            new TeaPair("version", "2023-06-21"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/modelfeatures/" + com.aliyun.openapiutil.Client.getEncodeParam(ModelFeatureId) + "/fginfo"),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateModelFeatureFGInfoResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>更新模型特征的fg.json文件配置信息。</p>
-     * 
-     * @param request UpdateModelFeatureFGInfoRequest
-     * @return UpdateModelFeatureFGInfoResponse
-     */
-    public UpdateModelFeatureFGInfoResponse updateModelFeatureFGInfo(String InstanceId, String ModelFeatureId, UpdateModelFeatureFGInfoRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateModelFeatureFGInfoWithOptions(InstanceId, ModelFeatureId, request, headers, runtime);
     }
 
     /**
