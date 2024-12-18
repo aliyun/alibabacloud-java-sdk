@@ -4,6 +4,12 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i119982311660892626523</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

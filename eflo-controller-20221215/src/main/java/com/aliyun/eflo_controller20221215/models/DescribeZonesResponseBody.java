@@ -4,6 +4,10 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>E9116F2D-82F8-501E-9ADB-2BE0C02B6A84</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,6 +39,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

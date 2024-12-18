@@ -4,60 +4,115 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>i116913051662373010974</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Standard_Cluster</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-09-30T03:35:53Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-06-23T16:00:00Z</p>
+     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31d38530-241e-11ed-bc63-acde48001122</p>
+     */
     @NameInMap("Hostname")
     public String hostname;
 
     @NameInMap("HpnZone")
     public String hpnZone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i190297201634099844192</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>镜像名称</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Centos7.9_all_0811</p>
      */
     @NameInMap("ImageName")
     public String imageName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>efg1.nvga1</p>
+     */
     @NameInMap("MachineType")
     public String machineType;
 
     @NameInMap("Networks")
     public java.util.List<DescribeNodeResponseBodyNetworks> networks;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ng-ec3c96ff0aa4c60d</p>
+     */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>emr-default</p>
+     */
     @NameInMap("NodeGroupName")
     public String nodeGroupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e01-cn-zvp2tgykr08</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
     @NameInMap("OperatingState")
     public String operatingState;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AC4F0004-7BCE-52E0-891B-CAC7D64E3368</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sag42ckf4jx</p>
+     */
     @NameInMap("Sn")
     public String sn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -211,15 +266,31 @@ public class DescribeNodeResponseBody extends TeaModel {
     }
 
     public static class DescribeNodeResponseBodyNetworks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Bond0</p>
+         */
         @NameInMap("BondName")
         public String bondName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>47.254.235.44</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-uf68v51fldm5egmui5a6k</p>
+         */
         @NameInMap("SubnetId")
         public String subnetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpd-xcuhjyrj</p>
+         */
         @NameInMap("VpdId")
         public String vpdId;
 

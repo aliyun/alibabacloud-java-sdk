@@ -4,6 +4,12 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DeleteClusterRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i116913051662373010974</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

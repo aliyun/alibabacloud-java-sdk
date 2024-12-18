@@ -4,33 +4,65 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>i119982311660892626523</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Standard_Cluster</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-11-30T02:00:00.852Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Releasing [prod_main_mid_26e234cf] in region [cn-beijing] with weight [0]</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A7FD7411-9395-52E8-AF42-EB3A4A55446D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Steps")
     public java.util.List<DescribeTaskResponseBodySteps> steps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("TaskState")
     public String taskState;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cut_cluster</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-11-30T03:40:14.852Z</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
@@ -120,21 +152,45 @@ public class DescribeTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeTaskResponseBodyStepsSubTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-11-30T2:00:00.852Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Releasing [prod_main_mid_26e234cf] in region [cn-beijing] with weight [0]</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i158805051661047928377</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("TaskState")
         public String taskState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cut_node_sub_task</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-11-30T02:20:14.852Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -194,27 +250,51 @@ public class DescribeTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeTaskResponseBodySteps extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>get taskinfo failed</p>
+         */
         @NameInMap("Message")
         public String message;
 
         @NameInMap("StageTag")
         public String stageTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-11-30T2:00:00.852Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>create_vpd</p>
+         */
         @NameInMap("StepName")
         public String stepName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>execution_success</p>
+         */
         @NameInMap("StepState")
         public String stepState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("StepType")
         public String stepType;
 
         @NameInMap("SubTasks")
         public java.util.List<DescribeTaskResponseBodyStepsSubTasks> subTasks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-11-30T02:20:14.852Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

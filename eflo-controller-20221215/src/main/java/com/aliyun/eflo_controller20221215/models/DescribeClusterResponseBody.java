@@ -7,18 +7,37 @@ public class DescribeClusterResponseBody extends TeaModel {
     @NameInMap("ClusterDescription")
     public String clusterDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i116913051662373010974</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Eflo-YJ-Test-Cluster</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AckEdgPro</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
     @NameInMap("Components")
     public java.util.List<DescribeClusterResponseBodyComponents> components;
 
+    @NameInMap("ComputingIpVersion")
+    public String computingIpVersion;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2022-06-08T07:05:11Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -28,24 +47,55 @@ public class DescribeClusterResponseBody extends TeaModel {
     @NameInMap("Networks")
     public java.util.List<DescribeClusterResponseBodyNetworks> networks;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("NodeCount")
     public Long nodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("NodeGroupCount")
     public Long nodeGroupCount;
 
+    @NameInMap("OpenEniJumboFrame")
+    public String openEniJumboFrame;
+
+    /**
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("OperatingState")
     public String operatingState;
 
+    /**
+     * <strong>example:</strong>
+     * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aek2k3rqlvv6ytq</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i152609221670466904596</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-08-23T06:36:17.000Z</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
@@ -97,6 +147,14 @@ public class DescribeClusterResponseBody extends TeaModel {
         return this.components;
     }
 
+    public DescribeClusterResponseBody setComputingIpVersion(String computingIpVersion) {
+        this.computingIpVersion = computingIpVersion;
+        return this;
+    }
+    public String getComputingIpVersion() {
+        return this.computingIpVersion;
+    }
+
     public DescribeClusterResponseBody setCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -135,6 +193,14 @@ public class DescribeClusterResponseBody extends TeaModel {
     }
     public Long getNodeGroupCount() {
         return this.nodeGroupCount;
+    }
+
+    public DescribeClusterResponseBody setOpenEniJumboFrame(String openEniJumboFrame) {
+        this.openEniJumboFrame = openEniJumboFrame;
+        return this;
+    }
+    public String getOpenEniJumboFrame() {
+        return this.openEniJumboFrame;
     }
 
     public DescribeClusterResponseBody setOperatingState(String operatingState) {
@@ -186,9 +252,17 @@ public class DescribeClusterResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterResponseBodyComponents extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>i149549021660892626529</p>
+         */
         @NameInMap("ComponentId")
         public String componentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACKEdge</p>
+         */
         @NameInMap("ComponentType")
         public String componentType;
 
@@ -216,6 +290,10 @@ public class DescribeClusterResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterResponseBodyNetworks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>vpd-iqd7xunc</p>
+         */
         @NameInMap("VpdId")
         public String vpdId;
 

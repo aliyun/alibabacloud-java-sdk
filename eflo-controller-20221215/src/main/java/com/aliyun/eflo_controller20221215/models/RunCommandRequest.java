@@ -4,42 +4,88 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class RunCommandRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZWNobyAxMjM=</p>
+     */
     @NameInMap("CommandContent")
     public String commandContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Base64</p>
+     */
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testDescription</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableParameter")
     public Boolean enableParameter;
 
     @NameInMap("Frequency")
     public String frequency;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testName</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("NodeIdList")
     public java.util.List<String> nodeIdList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyvdIqaRY****&quot;}</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Once</p>
+     */
     @NameInMap("RepeatMode")
     public String repeatMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 
+    /**
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/home/user</p>
+     */
     @NameInMap("WorkingDir")
     public String workingDir;
 

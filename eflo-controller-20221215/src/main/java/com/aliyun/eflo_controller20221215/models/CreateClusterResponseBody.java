@@ -4,12 +4,24 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>i116913051663373010974</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3C683243-7915-57FB-9570-A2932C1C0F78</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i159809891662373011015</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

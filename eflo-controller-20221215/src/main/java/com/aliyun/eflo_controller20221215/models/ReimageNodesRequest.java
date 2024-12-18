@@ -4,9 +4,17 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ReimageNodesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>i15dfa12e8f27c44f4a006c2c8bb</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
@@ -54,15 +62,31 @@ public class ReimageNodesRequest extends TeaModel {
     }
 
     public static class ReimageNodesRequestNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>457db5ca-241d-11ed-9fd7-acde48001122</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
+        /**
+         * <strong>example:</strong>
+         * <p>m-8vbf8rpv2nn14y7oybjy</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("LoginPassword")
         public String loginPassword;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e01-cn-zvp2tgykr0b</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 

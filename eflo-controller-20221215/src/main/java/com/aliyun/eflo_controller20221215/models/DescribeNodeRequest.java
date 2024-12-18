@@ -4,6 +4,12 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mock-sn-2060</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 

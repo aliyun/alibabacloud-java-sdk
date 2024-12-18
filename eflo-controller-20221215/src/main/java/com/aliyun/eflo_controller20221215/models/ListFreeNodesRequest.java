@@ -7,12 +7,24 @@ public class ListFreeNodesRequest extends TeaModel {
     @NameInMap("HpnZone")
     public String hpnZone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mock-machine-type2</p>
+     */
     @NameInMap("MachineType")
     public String machineType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a3f2224a5ec7224116c4f5246120abe4</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

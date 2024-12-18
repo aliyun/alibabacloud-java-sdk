@@ -4,15 +4,33 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvocationsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PlainText</p>
+     */
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IncludeOutput")
     public Boolean includeOutput;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-cd03crwys0lrls0</p>
+     */
     @NameInMap("InvokeId")
     public String invokeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e01-cn-zvp2tgykr08</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 

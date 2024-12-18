@@ -7,9 +7,17 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("ClusterDescription")
     public String clusterDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Standard_Cluster</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Lite</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
@@ -19,6 +27,10 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("HpnZone")
     public String hpnZone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
@@ -31,6 +43,13 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("NodeGroups")
     public java.util.List<CreateClusterRequestNodeGroups> nodeGroups;
 
+    @NameInMap("OpenEniJumboFrame")
+    public Boolean openEniJumboFrame;
+
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aek2xdkc6icwfha</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -114,6 +133,14 @@ public class CreateClusterRequest extends TeaModel {
         return this.nodeGroups;
     }
 
+    public CreateClusterRequest setOpenEniJumboFrame(Boolean openEniJumboFrame) {
+        this.openEniJumboFrame = openEniJumboFrame;
+        return this;
+    }
+    public Boolean getOpenEniJumboFrame() {
+        return this.openEniJumboFrame;
+    }
+
     public CreateClusterRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -131,6 +158,38 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestComponentsComponentConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;EndpointPublicAccess&quot;: false,
+         *       &quot;ContainerCidr&quot;: &quot;10.4.0.0/24&quot;,
+         *       &quot;KeyPair&quot;: &quot;test&quot;,
+         *       &quot;NodeCidrMask&quot;: &quot;25&quot;,
+         *       &quot;ResourceGroupId&quot;: &quot;rg-axsadm3sdzsdvdsndstdisd&quot;,
+         *       &quot;WorkerSystemDiskCategory&quot;: &quot;da&quot;,
+         *       &quot;WorkerSystemDiskSize&quot;: 40,
+         *       &quot;DeletionProtection&quot;: false,
+         *       &quot;KubeProxy&quot;: &quot;iptables&quot;,
+         *       &quot;Name&quot;: &quot;da&quot;,
+         *       &quot;LoadBalancerSpec&quot;: &quot;slb.s1.small&quot;,
+         *       &quot;Runtime&quot;: {
+         *             &quot;Version&quot;: &quot;19.03.15&quot;,
+         *             &quot;Name&quot;: &quot;docker&quot;
+         *       },
+         *       &quot;IsEnterpriseSecurityGroup&quot;: true,
+         *       &quot;Vpcid&quot;: &quot;192.168.23.0/24&quot;,
+         *       &quot;NumOfNodes&quot;: 1,
+         *       &quot;VswitchIds&quot;: [
+         *             &quot;dad&quot;
+         *       ],
+         *       &quot;ServiceCidr&quot;: &quot;10.0.0.0/16&quot;,
+         *       &quot;SnatEntry&quot;: false,
+         *       &quot;kubernetesVersion&quot;: &quot;1.20.11-aliyunedge.1&quot;,
+         *       &quot;WorkerInstanceTypes&quot;: [
+         *             &quot;da&quot;
+         *       ]
+         * }</p>
+         */
         @NameInMap("BasicArgs")
         public Object basicArgs;
 
@@ -164,6 +223,10 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("ComponentConfig")
         public CreateClusterRequestComponentsComponentConfig componentConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACKEdge</p>
+         */
         @NameInMap("ComponentType")
         public String componentType;
 
@@ -453,21 +516,45 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestNetworksNewVpdInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cen-1gb1eftc5qp2ao75fo</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>172.16.0.0/24</p>
+         */
         @NameInMap("CloudLinkCidr")
         public String cloudLinkCidr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vcc-cn-c4dtycm5i08</p>
+         */
         @NameInMap("CloudLinkId")
         public String cloudLinkId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-0jl2x45apm6odc2c10h25</p>
+         */
         @NameInMap("MonitorVpcId")
         public String monitorVpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-0jl2w3ffbghkss0x2foff</p>
+         */
         @NameInMap("MonitorVswitchId")
         public String monitorVswitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
+         */
         @NameInMap("VpdCidr")
         public String vpdCidr;
 
@@ -540,6 +627,9 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestNetworksVpdInfo extends TeaModel {
         /**
          * <p>专有网络 id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-vfuz6ejv</p>
          */
         @NameInMap("VpdId")
         public String vpdId;
@@ -582,6 +672,9 @@ public class CreateClusterRequest extends TeaModel {
 
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
+
+        @NameInMap("TailIpVersion")
+        public String tailIpVersion;
 
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -627,6 +720,14 @@ public class CreateClusterRequest extends TeaModel {
             return this.securityGroupId;
         }
 
+        public CreateClusterRequestNetworks setTailIpVersion(String tailIpVersion) {
+            this.tailIpVersion = tailIpVersion;
+            return this;
+        }
+        public String getTailIpVersion() {
+            return this.tailIpVersion;
+        }
+
         public CreateClusterRequestNetworks setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
@@ -662,12 +763,24 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestNodeGroupsNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8d13b784-17a9-11ed-bc7b-acde48001122</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("LoginPassword")
         public String loginPassword;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e01poc-cn-i7m2wnivf0d</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
@@ -725,15 +838,27 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestNodeGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>i190297201634099844192</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>efg1.nvga1</p>
+         */
         @NameInMap("MachineType")
         public String machineType;
 
         @NameInMap("NodeGroupDescription")
         public String nodeGroupDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>emr-default</p>
+         */
         @NameInMap("NodeGroupName")
         public String nodeGroupName;
 
@@ -743,6 +868,10 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("UserData")
         public String userData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -810,9 +939,17 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>env-name</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dev</p>
+         */
         @NameInMap("Value")
         public String value;
 

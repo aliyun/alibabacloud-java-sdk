@@ -4,12 +4,20 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListFreeNodesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>a3f2224a5ec7224116c4f5246120abe4</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("Nodes")
     public java.util.List<ListFreeNodesResponseBodyNodes> nodes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AA14CB86-70C4-5CB7-9E7B-6CCA77F3512B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,27 +51,51 @@ public class ListFreeNodesResponseBody extends TeaModel {
     }
 
     public static class ListFreeNodesResponseBodyNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1652321554</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1673107200</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         @NameInMap("HpnZone")
         public String hpnZone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>efg1.nvga1</p>
+         */
         @NameInMap("MachineType")
         public String machineType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e01-cn-7pp2x193801</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sn_pozkHBgicd</p>
+         */
         @NameInMap("Sn")
         public String sn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

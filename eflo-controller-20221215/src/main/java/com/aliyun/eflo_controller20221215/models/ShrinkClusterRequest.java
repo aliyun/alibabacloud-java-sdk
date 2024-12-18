@@ -4,9 +4,17 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ShrinkClusterRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>i15dfa12e8f27c44f4a006c2c8bb</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
@@ -43,6 +51,10 @@ public class ShrinkClusterRequest extends TeaModel {
     }
 
     public static class ShrinkClusterRequestNodeGroupsNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>e01poc-cn-zmb2ypjdc01</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
@@ -62,6 +74,10 @@ public class ShrinkClusterRequest extends TeaModel {
     }
 
     public static class ShrinkClusterRequestNodeGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ng-3b6fbd24b1b845a0</p>
+         */
         @NameInMap("NodeGroupId")
         public String nodeGroupId;
 

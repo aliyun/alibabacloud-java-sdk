@@ -4,9 +4,17 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class RebootNodesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>i15b480fbd2fcdbc2869cd80</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 

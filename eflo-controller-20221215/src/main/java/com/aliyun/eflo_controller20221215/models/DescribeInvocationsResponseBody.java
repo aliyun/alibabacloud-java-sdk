@@ -7,6 +7,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     @NameInMap("Invocations")
     public DescribeInvocationsResponseBodyInvocations invocations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,48 +36,108 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     }
 
     public static class DescribeInvocationsResponseBodyInvocationsInvocationInvokeNodesInvokeNode extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-06T07:12:50Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Dropped")
         public Integer dropped;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NodeNotExists：</p>
+         */
         @NameInMap("ErrorCode")
         public Boolean errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>the specified node does not exists</p>
+         */
         @NameInMap("ErrorInfo")
         public String errorInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ExitCode")
         public Integer exitCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-06T07:12:50Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Pending</p>
+         */
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e01-cn-lbj36wkp70b</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Finished</p>
+         */
         @NameInMap("NodeInvokeStatus")
         public String nodeInvokeStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OutPutTestmsg</p>
+         */
         @NameInMap("Output")
         public String output;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Repeats")
         public Integer repeats;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-12-20T06:15:55Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-12-20T06:15:55Z</p>
+         */
         @NameInMap("StopTime")
         public String stopTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Timed")
         public String timed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-06T07:12:50Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -224,45 +288,93 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     }
 
     public static class DescribeInvocationsResponseBodyInvocationsInvocation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cnBtIC1xYSB8IGdyZXAgdnNm****</p>
+         */
         @NameInMap("CommandContent")
         public String commandContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testDescription</p>
+         */
         @NameInMap("CommandDescription")
         public String commandDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CommandTestName</p>
+         */
         @NameInMap("CommandName")
         public String commandName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-19T09:15:46Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("Frequency")
         public String frequency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>t-ind3k9ytvvduoe8</p>
+         */
         @NameInMap("InvokeId")
         public String invokeId;
 
         @NameInMap("InvokeNodes")
         public DescribeInvocationsResponseBodyInvocationsInvocationInvokeNodes invokeNodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("InvokeStatus")
         public String invokeStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Parameters")
         public String parameters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Once</p>
+         */
         @NameInMap("RepeatMode")
         public String repeatMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Timeout")
         public Integer timeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("Username")
         public String username;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/home</p>
+         */
         @NameInMap("WorkingDir")
         public String workingDir;
 
