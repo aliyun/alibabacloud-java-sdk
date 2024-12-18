@@ -35,6 +35,36 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class UpdateUserDevicesStatusResponseBodyDevicesNetInterfaceInfo extends TeaModel {
+        @NameInMap("Mac")
+        public String mac;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static UpdateUserDevicesStatusResponseBodyDevicesNetInterfaceInfo build(java.util.Map<String, ?> map) throws Exception {
+            UpdateUserDevicesStatusResponseBodyDevicesNetInterfaceInfo self = new UpdateUserDevicesStatusResponseBodyDevicesNetInterfaceInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateUserDevicesStatusResponseBodyDevicesNetInterfaceInfo setMac(String mac) {
+            this.mac = mac;
+            return this;
+        }
+        public String getMac() {
+            return this.mac;
+        }
+
+        public UpdateUserDevicesStatusResponseBodyDevicesNetInterfaceInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class UpdateUserDevicesStatusResponseBodyDevices extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -164,6 +194,9 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
          */
         @NameInMap("NacStatus")
         public String nacStatus;
+
+        @NameInMap("NetInterfaceInfo")
+        public java.util.List<UpdateUserDevicesStatusResponseBodyDevicesNetInterfaceInfo> netInterfaceInfo;
 
         /**
          * <strong>example:</strong>
@@ -358,6 +391,14 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
         }
         public String getNacStatus() {
             return this.nacStatus;
+        }
+
+        public UpdateUserDevicesStatusResponseBodyDevices setNetInterfaceInfo(java.util.List<UpdateUserDevicesStatusResponseBodyDevicesNetInterfaceInfo> netInterfaceInfo) {
+            this.netInterfaceInfo = netInterfaceInfo;
+            return this;
+        }
+        public java.util.List<UpdateUserDevicesStatusResponseBodyDevicesNetInterfaceInfo> getNetInterfaceInfo() {
+            return this.netInterfaceInfo;
         }
 
         public UpdateUserDevicesStatusResponseBodyDevices setPaStatus(String paStatus) {

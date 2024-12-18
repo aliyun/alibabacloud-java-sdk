@@ -35,6 +35,36 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class UpdateUserDevicesSharingStatusResponseBodyDevicesNetInterfaceInfo extends TeaModel {
+        @NameInMap("Mac")
+        public String mac;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static UpdateUserDevicesSharingStatusResponseBodyDevicesNetInterfaceInfo build(java.util.Map<String, ?> map) throws Exception {
+            UpdateUserDevicesSharingStatusResponseBodyDevicesNetInterfaceInfo self = new UpdateUserDevicesSharingStatusResponseBodyDevicesNetInterfaceInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateUserDevicesSharingStatusResponseBodyDevicesNetInterfaceInfo setMac(String mac) {
+            this.mac = mac;
+            return this;
+        }
+        public String getMac() {
+            return this.mac;
+        }
+
+        public UpdateUserDevicesSharingStatusResponseBodyDevicesNetInterfaceInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class UpdateUserDevicesSharingStatusResponseBodyDevices extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -164,6 +194,9 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
          */
         @NameInMap("NacStatus")
         public String nacStatus;
+
+        @NameInMap("NetInterfaceInfo")
+        public java.util.List<UpdateUserDevicesSharingStatusResponseBodyDevicesNetInterfaceInfo> netInterfaceInfo;
 
         /**
          * <strong>example:</strong>
@@ -358,6 +391,14 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         }
         public String getNacStatus() {
             return this.nacStatus;
+        }
+
+        public UpdateUserDevicesSharingStatusResponseBodyDevices setNetInterfaceInfo(java.util.List<UpdateUserDevicesSharingStatusResponseBodyDevicesNetInterfaceInfo> netInterfaceInfo) {
+            this.netInterfaceInfo = netInterfaceInfo;
+            return this;
+        }
+        public java.util.List<UpdateUserDevicesSharingStatusResponseBodyDevicesNetInterfaceInfo> getNetInterfaceInfo() {
+            return this.netInterfaceInfo;
         }
 
         public UpdateUserDevicesSharingStatusResponseBodyDevices setPaStatus(String paStatus) {
