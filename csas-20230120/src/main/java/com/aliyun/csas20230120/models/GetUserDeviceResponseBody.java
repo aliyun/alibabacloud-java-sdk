@@ -69,6 +69,36 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
     }
 
+    public static class GetUserDeviceResponseBodyDeviceNetInterfaceInfo extends TeaModel {
+        @NameInMap("Mac")
+        public String mac;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static GetUserDeviceResponseBodyDeviceNetInterfaceInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetUserDeviceResponseBodyDeviceNetInterfaceInfo self = new GetUserDeviceResponseBodyDeviceNetInterfaceInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserDeviceResponseBodyDeviceNetInterfaceInfo setMac(String mac) {
+            this.mac = mac;
+            return this;
+        }
+        public String getMac() {
+            return this.mac;
+        }
+
+        public GetUserDeviceResponseBodyDeviceNetInterfaceInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class GetUserDeviceResponseBodyDevice extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -201,6 +231,9 @@ public class GetUserDeviceResponseBody extends TeaModel {
          */
         @NameInMap("NacStatus")
         public String nacStatus;
+
+        @NameInMap("NetInterfaceInfo")
+        public java.util.List<GetUserDeviceResponseBodyDeviceNetInterfaceInfo> netInterfaceInfo;
 
         /**
          * <strong>example:</strong>
@@ -403,6 +436,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
         }
         public String getNacStatus() {
             return this.nacStatus;
+        }
+
+        public GetUserDeviceResponseBodyDevice setNetInterfaceInfo(java.util.List<GetUserDeviceResponseBodyDeviceNetInterfaceInfo> netInterfaceInfo) {
+            this.netInterfaceInfo = netInterfaceInfo;
+            return this;
+        }
+        public java.util.List<GetUserDeviceResponseBodyDeviceNetInterfaceInfo> getNetInterfaceInfo() {
+            return this.netInterfaceInfo;
         }
 
         public GetUserDeviceResponseBodyDevice setPaStatus(String paStatus) {

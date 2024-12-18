@@ -1,3 +1,10 @@
+2024-12-18 Version: 1.10.1
+- Update API GetUserDevice: update response param.
+- Update API ListUserDevices: update response param.
+- Update API UpdateUserDevicesSharingStatus: update response param.
+- Update API UpdateUserDevicesStatus: update response param.
+
+
 2024-11-13 Version: 1.10.0
 - Support API ListUserApplications.
 - Support API ListUserPrivateAccessPolicies.
