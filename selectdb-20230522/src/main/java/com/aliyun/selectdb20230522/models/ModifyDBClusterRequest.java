@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterRequest extends TeaModel {
     /**
+     * <p>The size of the reserved cache.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */

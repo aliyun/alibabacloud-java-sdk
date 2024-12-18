@@ -25,7 +25,7 @@ public class RestartDBClusterRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region in which the ApsaraDB for SelectDB instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

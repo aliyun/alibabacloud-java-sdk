@@ -243,8 +243,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>: For an instance that uses the pay-as-you-go billing method, you can create only pay-as-you-go clusters. For an instance that uses the subscription billing method, you can create pay-as-you-go or subscription clusters.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a cluster in an ApsaraDB for SelectDB instance. Note: You can create only pay-as-you-go clusters in a pay-as-you-go instance.</p>
+     * <p>Creates a cluster in an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request CreateDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -329,8 +334,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>: For an instance that uses the pay-as-you-go billing method, you can create only pay-as-you-go clusters. For an instance that uses the subscription billing method, you can create pay-as-you-go or subscription clusters.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a cluster in an ApsaraDB for SelectDB instance. Note: You can create only pay-as-you-go clusters in a pay-as-you-go instance.</p>
+     * <p>Creates a cluster in an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request CreateDBClusterRequest
      * @return CreateDBClusterResponse
@@ -458,6 +468,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDBInstanceResponse createDBInstance(CreateDBInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDBInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建分时弹性规则</p>
+     * 
+     * @param request CreateElasticRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateElasticRuleResponse
+     */
+    public CreateElasticRuleResponse createElasticRuleWithOptions(CreateElasticRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterClass)) {
+            query.put("ClusterClass", request.clusterClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbInstanceId)) {
+            query.put("DbInstanceId", request.dbInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.elasticRuleStartTime)) {
+            query.put("ElasticRuleStartTime", request.elasticRuleStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executionPeriod)) {
+            query.put("ExecutionPeriod", request.executionPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateElasticRule"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateElasticRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建分时弹性规则</p>
+     * 
+     * @param request CreateElasticRuleRequest
+     * @return CreateElasticRuleResponse
+     */
+    public CreateElasticRuleResponse createElasticRule(CreateElasticRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createElasticRuleWithOptions(request, runtime);
     }
 
     /**
@@ -626,7 +704,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取所有实例规格信息</p>
+     * <p>删除分时弹性规则</p>
+     * 
+     * @param request DeleteElasticRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteElasticRuleResponse
+     */
+    public DeleteElasticRuleResponse deleteElasticRuleWithOptions(DeleteElasticRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbInstanceId)) {
+            query.put("DbInstanceId", request.dbInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.product)) {
+            query.put("Product", request.product);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteElasticRule"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteElasticRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除分时弹性规则</p>
+     * 
+     * @param request DeleteElasticRuleRequest
+     * @return DeleteElasticRuleResponse
+     */
+    public DeleteElasticRuleResponse deleteElasticRule(DeleteElasticRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteElasticRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about all instance specifications.</p>
      * 
      * @param request DescribeAllDBInstanceClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -662,7 +804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取所有实例规格信息</p>
+     * <p>Queries the information about all instance specifications.</p>
      * 
      * @param request DescribeAllDBInstanceClassRequest
      * @return DescribeAllDBInstanceClassResponse
@@ -980,6 +1122,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询分时弹性规则</p>
+     * 
+     * @param request DescribeElasticRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeElasticRulesResponse
+     */
+    public DescribeElasticRulesResponse describeElasticRulesWithOptions(DescribeElasticRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeElasticRules"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeElasticRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询分时弹性规则</p>
+     * 
+     * @param request DescribeElasticRulesRequest
+     * @return DescribeElasticRulesResponse
+     */
+    public DescribeElasticRulesResponse describeElasticRules(DescribeElasticRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeElasticRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the IP addresses in the whitelists of an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request DescribeSecurityIPListRequest
@@ -1028,6 +1210,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSecurityIPListResponse describeSecurityIPList(DescribeSecurityIPListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSecurityIPListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开关分时弹性策略</p>
+     * 
+     * @param request EnDisableScalingRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnDisableScalingRulesResponse
+     */
+    public EnDisableScalingRulesResponse enDisableScalingRulesWithOptions(EnDisableScalingRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbInstanceId)) {
+            query.put("DbInstanceId", request.dbInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.product)) {
+            query.put("Product", request.product);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingRulesEnable)) {
+            query.put("ScalingRulesEnable", request.scalingRulesEnable);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnDisableScalingRules"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnDisableScalingRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开关分时弹性策略</p>
+     * 
+     * @param request EnDisableScalingRulesRequest
+     * @return EnDisableScalingRulesResponse
+     */
+    public EnDisableScalingRulesResponse enDisableScalingRules(EnDisableScalingRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enDisableScalingRulesWithOptions(request, runtime);
     }
 
     /**
@@ -1112,7 +1358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改BE集群名称、属性、设置</p>
+     * <p>Modifies the name of a cluster in an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request ModifyBEClusterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1164,7 +1410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改BE集群名称、属性、设置</p>
+     * <p>Modifies the name of a cluster in an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request ModifyBEClusterAttributeRequest
      * @return ModifyBEClusterAttributeResponse
@@ -1364,6 +1610,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDBInstanceAttributeResponse modifyDBInstanceAttribute(ModifyDBInstanceAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBInstanceAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改分时弹性规则</p>
+     * 
+     * @param request ModifyElasticRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyElasticRuleResponse
+     */
+    public ModifyElasticRuleResponse modifyElasticRuleWithOptions(ModifyElasticRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterClass)) {
+            query.put("ClusterClass", request.clusterClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbInstanceId)) {
+            query.put("DbInstanceId", request.dbInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.elasticRuleStartTime)) {
+            query.put("ElasticRuleStartTime", request.elasticRuleStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executionPeriod)) {
+            query.put("ExecutionPeriod", request.executionPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.product)) {
+            query.put("Product", request.product);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyElasticRule"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyElasticRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改分时弹性规则</p>
+     * 
+     * @param request ModifyElasticRuleRequest
+     * @return ModifyElasticRuleResponse
+     */
+    public ModifyElasticRuleResponse modifyElasticRule(ModifyElasticRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyElasticRuleWithOptions(request, runtime);
     }
 
     /**
