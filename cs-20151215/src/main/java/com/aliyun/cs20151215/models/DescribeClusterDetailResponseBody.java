@@ -336,7 +336,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String subnetCidr;
 
     /**
-     * <p>The resource tags of the cluster.</p>
+     * <p>The resource labels of the cluster.</p>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
@@ -729,7 +729,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyControlPlaneConfig extends TeaModel {
         /**
-         * <p>Indicates whether auto-renewal is enabled for the node.</p>
+         * <p>Indicates whether auto-renewal is enabled for the nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -738,7 +738,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>The auto-renewal duration for the node.</p>
+         * <p>The auto-renewal duration for the nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -801,7 +801,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The instance type of the node.</p>
+         * <p>The instance types of the nodes.</p>
          */
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
