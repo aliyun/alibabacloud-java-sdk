@@ -14,6 +14,9 @@ public class GetDocumentDownloadUrlRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("ReportType")
+    public String reportType;
+
     public static GetDocumentDownloadUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDocumentDownloadUrlRequest self = new GetDocumentDownloadUrlRequest();
         return TeaModel.build(map, self);
@@ -25,6 +28,14 @@ public class GetDocumentDownloadUrlRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public GetDocumentDownloadUrlRequest setReportType(String reportType) {
+        this.reportType = reportType;
+        return this;
+    }
+    public String getReportType() {
+        return this.reportType;
     }
 
 }

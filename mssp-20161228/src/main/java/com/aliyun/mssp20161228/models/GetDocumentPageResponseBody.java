@@ -160,6 +160,9 @@ public class GetDocumentPageResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("ReportStatus")
+        public String reportStatus;
+
         /**
          * <p>Report generation time.</p>
          * 
@@ -204,6 +207,14 @@ public class GetDocumentPageResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public GetDocumentPageResponseBodyData setReportStatus(String reportStatus) {
+            this.reportStatus = reportStatus;
+            return this;
+        }
+        public String getReportStatus() {
+            return this.reportStatus;
         }
 
         public GetDocumentPageResponseBodyData setUploadTime(String uploadTime) {
