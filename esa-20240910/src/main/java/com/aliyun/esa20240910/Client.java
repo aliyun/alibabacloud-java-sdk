@@ -130,78 +130,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates multiple rules of a specific Web Application Firewall (WAF) rule category at a time. You can also configure shared settings for the rules.</p>
-     * 
-     * @param tmpReq BatchCreateWafRulesRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return BatchCreateWafRulesResponse
-     */
-    public BatchCreateWafRulesResponse batchCreateWafRulesWithOptions(BatchCreateWafRulesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        BatchCreateWafRulesShrinkRequest request = new BatchCreateWafRulesShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.configs)) {
-            request.configsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configs, "Configs", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.shared)) {
-            request.sharedShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.shared, "Shared", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
-            query.put("SiteVersion", request.siteVersion);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.configsShrink)) {
-            body.put("Configs", request.configsShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.phase)) {
-            body.put("Phase", request.phase);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sharedShrink)) {
-            body.put("Shared", request.sharedShrink);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "BatchCreateWafRules"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCreateWafRulesResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Creates multiple rules of a specific Web Application Firewall (WAF) rule category at a time. You can also configure shared settings for the rules.</p>
-     * 
-     * @param request BatchCreateWafRulesRequest
-     * @return BatchCreateWafRulesResponse
-     */
-    public BatchCreateWafRulesResponse batchCreateWafRules(BatchCreateWafRulesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.batchCreateWafRulesWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Deletes key-value pairs from a namespace at a time based on keys.</p>
      * 
      * @param tmpReq BatchDeleteKvRequest
@@ -780,82 +708,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         BatchPutKvWithHighCapacityResponse batchPutKvWithHighCapacityResp = this.batchPutKvWithHighCapacityWithOptions(batchPutKvWithHighCapacityReq, runtime);
         return batchPutKvWithHighCapacityResp;
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Modifies multiple rules in a specific Web Application Firewall (WAF) ruleset at a time.</p>
-     * 
-     * @param tmpReq BatchUpdateWafRulesRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return BatchUpdateWafRulesResponse
-     */
-    public BatchUpdateWafRulesResponse batchUpdateWafRulesWithOptions(BatchUpdateWafRulesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        BatchUpdateWafRulesShrinkRequest request = new BatchUpdateWafRulesShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.configs)) {
-            request.configsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configs, "Configs", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.shared)) {
-            request.sharedShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.shared, "Shared", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
-            query.put("SiteVersion", request.siteVersion);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.configsShrink)) {
-            body.put("Configs", request.configsShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.phase)) {
-            body.put("Phase", request.phase);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.rulesetId)) {
-            body.put("RulesetId", request.rulesetId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sharedShrink)) {
-            body.put("Shared", request.sharedShrink);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "BatchUpdateWafRules"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchUpdateWafRulesResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Modifies multiple rules in a specific Web Application Firewall (WAF) ruleset at a time.</p>
-     * 
-     * @param request BatchUpdateWafRulesRequest
-     * @return BatchUpdateWafRulesResponse
-     */
-    public BatchUpdateWafRulesResponse batchUpdateWafRules(BatchUpdateWafRulesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.batchUpdateWafRulesWithOptions(request, runtime);
     }
 
     /**
@@ -2464,70 +2316,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Web Application Firewall (WAF) rule. This allows you to configure fine-grained WAF settings to improve the security of your website or application.</p>
-     * 
-     * @param tmpReq CreateWafRuleRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateWafRuleResponse
-     */
-    public CreateWafRuleResponse createWafRuleWithOptions(CreateWafRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        CreateWafRuleShrinkRequest request = new CreateWafRuleShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.config)) {
-            request.configShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.config, "Config", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
-            query.put("SiteVersion", request.siteVersion);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.configShrink)) {
-            body.put("Config", request.configShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.phase)) {
-            body.put("Phase", request.phase);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateWafRule"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWafRuleResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Creates a Web Application Firewall (WAF) rule. This allows you to configure fine-grained WAF settings to improve the security of your website or application.</p>
-     * 
-     * @param request CreateWafRuleRequest
-     * @return CreateWafRuleResponse
-     */
-    public CreateWafRuleResponse createWafRule(CreateWafRuleRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createWafRuleWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Creates a waiting room for a website.</p>
      * 
      * @param tmpReq CreateWaitingRoomRequest
@@ -3844,114 +3632,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a Web Application Firewall (WAF) rule, including its configurations and match conditions.</p>
-     * 
-     * @param request DeleteWafRuleRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteWafRuleResponse
-     */
-    public DeleteWafRuleResponse deleteWafRuleWithOptions(DeleteWafRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
-            query.put("SiteVersion", request.siteVersion);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            body.put("Id", request.id);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteWafRule"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWafRuleResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Deletes a Web Application Firewall (WAF) rule, including its configurations and match conditions.</p>
-     * 
-     * @param request DeleteWafRuleRequest
-     * @return DeleteWafRuleResponse
-     */
-    public DeleteWafRuleResponse deleteWafRule(DeleteWafRuleRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteWafRuleWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Deletes a Web Application Firewall (WAF) ruleset that is no longer needed.</p>
-     * 
-     * @param request DeleteWafRulesetRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteWafRulesetResponse
-     */
-    public DeleteWafRulesetResponse deleteWafRulesetWithOptions(DeleteWafRulesetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
-            query.put("SiteVersion", request.siteVersion);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            body.put("Id", request.id);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteWafRuleset"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWafRulesetResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Deletes a Web Application Firewall (WAF) ruleset that is no longer needed.</p>
-     * 
-     * @param request DeleteWafRulesetRequest
-     * @return DeleteWafRulesetResponse
-     */
-    public DeleteWafRulesetResponse deleteWafRuleset(DeleteWafRulesetRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteWafRulesetWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Deletes a waiting room.</p>
      * 
      * @param request DeleteWaitingRoomRequest
@@ -4756,7 +4436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端证书绑定的域名列表</p>
+     * <p>Queries domain names associated with a client CA certificate. If no certificate is specified, domain names associated with an Edge Security Acceleration(ESA)-managed CA certificate are returned.</p>
      * 
      * @param request GetClientCertificateHostnamesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4784,7 +4464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端证书绑定的域名列表</p>
+     * <p>Queries domain names associated with a client CA certificate. If no certificate is specified, domain names associated with an Edge Security Acceleration(ESA)-managed CA certificate are returned.</p>
      * 
      * @param request GetClientCertificateHostnamesRequest
      * @return GetClientCertificateHostnamesResponse
@@ -6268,106 +5948,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a Web Application Firewall (WAF) rule, such as its configuration and status.</p>
-     * 
-     * @param request GetWafRuleRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetWafRuleResponse
-     */
-    public GetWafRuleResponse getWafRuleWithOptions(GetWafRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            query.put("Id", request.id);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetWafRule"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWafRuleResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the details of a Web Application Firewall (WAF) rule, such as its configuration and status.</p>
-     * 
-     * @param request GetWafRuleRequest
-     * @return GetWafRuleResponse
-     */
-    public GetWafRuleResponse getWafRule(GetWafRuleRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getWafRuleWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the details of a Web Application Firewall (WAF) ruleset, such as the configuration and status.</p>
-     * 
-     * @param request GetWafRulesetRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetWafRulesetResponse
-     */
-    public GetWafRulesetResponse getWafRulesetWithOptions(GetWafRulesetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            query.put("Id", request.id);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.phase)) {
-            query.put("Phase", request.phase);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetWafRuleset"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWafRulesetResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the details of a Web Application Firewall (WAF) ruleset, such as the configuration and status.</p>
-     * 
-     * @param request GetWafRulesetRequest
-     * @return GetWafRulesetResponse
-     */
-    public GetWafRulesetResponse getWafRuleset(GetWafRulesetRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getWafRulesetWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Queries the cache reserve instances in your Alibaba Cloud account.</p>
      * 
      * @param request ListCacheReserveInstancesRequest
@@ -7720,146 +7300,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all Web Application Firewall (WAF) rules or some of them based on specific conditions. You can call this operation to query the details of WAF rules by page.</p>
-     * 
-     * @param tmpReq ListWafRulesRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ListWafRulesResponse
-     */
-    public ListWafRulesResponse listWafRulesWithOptions(ListWafRulesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        ListWafRulesShrinkRequest request = new ListWafRulesShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.queryArgs)) {
-            request.queryArgsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queryArgs, "QueryArgs", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            query.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.phase)) {
-            query.put("Phase", request.phase);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.queryArgsShrink)) {
-            query.put("QueryArgs", request.queryArgsShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
-            query.put("SiteVersion", request.siteVersion);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListWafRules"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWafRulesResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Lists all Web Application Firewall (WAF) rules or some of them based on specific conditions. You can call this operation to query the details of WAF rules by page.</p>
-     * 
-     * @param request ListWafRulesRequest
-     * @return ListWafRulesResponse
-     */
-    public ListWafRulesResponse listWafRules(ListWafRulesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listWafRulesWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Lists the rulesets in a Web Application Firewall (WAF) rule category. You can call this operation to query the basic information about and status of rulesets by page.</p>
-     * 
-     * @param tmpReq ListWafRulesetsRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ListWafRulesetsResponse
-     */
-    public ListWafRulesetsResponse listWafRulesetsWithOptions(ListWafRulesetsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        ListWafRulesetsShrinkRequest request = new ListWafRulesetsShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.queryArgs)) {
-            request.queryArgsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queryArgs, "QueryArgs", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            query.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.phase)) {
-            query.put("Phase", request.phase);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.queryArgsShrink)) {
-            query.put("QueryArgs", request.queryArgsShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
-            query.put("SiteVersion", request.siteVersion);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListWafRulesets"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWafRulesetsResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Lists the rulesets in a Web Application Firewall (WAF) rule category. You can call this operation to query the basic information about and status of rulesets by page.</p>
-     * 
-     * @param request ListWafRulesetsRequest
-     * @return ListWafRulesetsResponse
-     */
-    public ListWafRulesetsResponse listWafRulesets(ListWafRulesetsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listWafRulesetsWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Queries template rules in Web Application Firewall (WAF). In most cases, these rules are pre-defined rulesets that are used to quickly enable protection against common types of attacks.</p>
      * 
      * @param tmpReq ListWafTemplateRulesRequest
@@ -8919,7 +8359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为客户端证书绑定域名</p>
+     * <p>Associates domain names with a client CA certificate. If no certificate is specified, domain names are associated with an Edge Security Acceleration (ESA)-managed CA certificate.</p>
      * 
      * @param tmpReq SetClientCertificateHostnamesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8967,7 +8407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为客户端证书绑定域名</p>
+     * <p>Associates domain names with a client CA certificate. If no certificate is specified, domain names are associated with an Edge Security Acceleration (ESA)-managed CA certificate.</p>
      * 
      * @param request SetClientCertificateHostnamesRequest
      * @return SetClientCertificateHostnamesResponse
@@ -10159,136 +9599,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateUserDeliveryTaskStatusResponse updateUserDeliveryTaskStatus(UpdateUserDeliveryTaskStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateUserDeliveryTaskStatusWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Modifies the configuration or status of a Web Application Firewall (WAF) rule.</p>
-     * 
-     * @param tmpReq UpdateWafRuleRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UpdateWafRuleResponse
-     */
-    public UpdateWafRuleResponse updateWafRuleWithOptions(UpdateWafRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        UpdateWafRuleShrinkRequest request = new UpdateWafRuleShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.config)) {
-            request.configShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.config, "Config", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
-            query.put("SiteVersion", request.siteVersion);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.configShrink)) {
-            body.put("Config", request.configShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            body.put("Id", request.id);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.position)) {
-            body.put("Position", request.position);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
-            body.put("Status", request.status);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateWafRule"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWafRuleResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Modifies the configuration or status of a Web Application Firewall (WAF) rule.</p>
-     * 
-     * @param request UpdateWafRuleRequest
-     * @return UpdateWafRuleResponse
-     */
-    public UpdateWafRuleResponse updateWafRule(UpdateWafRuleRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateWafRuleWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Updates a WAF ruleset based on its ID.</p>
-     * 
-     * @param request UpdateWafRulesetRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UpdateWafRulesetResponse
-     */
-    public UpdateWafRulesetResponse updateWafRulesetWithOptions(UpdateWafRulesetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
-            query.put("SiteVersion", request.siteVersion);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            body.put("Id", request.id);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
-            body.put("Status", request.status);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateWafRuleset"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWafRulesetResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Updates a WAF ruleset based on its ID.</p>
-     * 
-     * @param request UpdateWafRulesetRequest
-     * @return UpdateWafRulesetResponse
-     */
-    public UpdateWafRulesetResponse updateWafRuleset(UpdateWafRulesetRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateWafRulesetWithOptions(request, runtime);
     }
 
     /**

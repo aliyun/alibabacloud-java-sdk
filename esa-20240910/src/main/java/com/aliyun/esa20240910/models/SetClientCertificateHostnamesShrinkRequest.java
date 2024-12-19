@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class SetClientCertificateHostnamesShrinkRequest extends TeaModel {
     /**
+     * <p>The domain names to associate.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Hostnames")
     public String hostnamesShrink;
 
     /**
+     * <p>The ID of the client CA certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>babab9db65ee5efcca9f3d41d4b50d66</p>
      */
@@ -18,6 +21,7 @@ public class SetClientCertificateHostnamesShrinkRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The website ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -31,9 +31,6 @@ public class WafRuleConfig extends TeaModel {
     @NameInMap("ManagedRulesets")
     public java.util.List<WafRuleConfigManagedRulesets> managedRulesets;
 
-    @NameInMap("Match")
-    public WafRuleMatch match;
-
     @NameInMap("Name")
     public String name;
 
@@ -133,14 +130,6 @@ public class WafRuleConfig extends TeaModel {
     }
     public java.util.List<WafRuleConfigManagedRulesets> getManagedRulesets() {
         return this.managedRulesets;
-    }
-
-    public WafRuleConfig setMatch(WafRuleMatch match) {
-        this.match = match;
-        return this;
-    }
-    public WafRuleMatch getMatch() {
-        return this.match;
     }
 
     public WafRuleConfig setName(String name) {
