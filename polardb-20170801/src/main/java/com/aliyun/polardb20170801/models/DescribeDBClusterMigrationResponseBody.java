@@ -87,7 +87,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     public String migrationStatus;
 
     /**
-     * <p>The port number.</p>
+     * <p>The endpoints of the ApsaraDB RDS instance.</p>
      */
     @NameInMap("RdsEndpointList")
     public java.util.List<DescribeDBClusterMigrationResponseBodyRdsEndpointList> rdsEndpointList;
@@ -120,6 +120,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     public String sourceRDSDBInstanceId;
 
     /**
+     * <p>The type of the source database. Valid values:</p>
+     * <ul>
+     * <li><strong>PolarDBMySQL</strong>: The source database is a PolarDB for MySQL database when the major version of your PolarDB cluster is upgraded.</li>
+     * <li><strong>RDS</strong>: The source database is an ApsaraDB RDS database when data is migrated from ApsaraDB RDS to PolarDB for MySQL.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PolarDBMySQL</p>
      */
@@ -528,6 +534,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         public String port;
 
         /**
+         * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -623,6 +635,8 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         public java.util.List<DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems> addressItems;
 
         /**
+         * <p>The instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ReadOnly
          * Maxscale
@@ -632,6 +646,8 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         public String custinsType;
 
         /**
+         * <p>The ID of the endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-************-normal</p>
          */
@@ -639,6 +655,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         public String DBEndpointId;
 
         /**
+         * <p>The type of the endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: the standard endpoint</li>
+         * <li><strong>ReadWriteSplitting</strong>: the read/write splitting endpoint</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
