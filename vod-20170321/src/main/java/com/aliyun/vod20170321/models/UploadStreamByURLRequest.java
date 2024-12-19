@@ -75,6 +75,9 @@ public class UploadStreamByURLRequest extends TeaModel {
     @NameInMap("StreamURL")
     public String streamURL;
 
+    @NameInMap("UploadMetadata")
+    public String uploadMetadata;
+
     /**
      * <p>The user-defined parameter. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</p>
      * <blockquote>
@@ -130,6 +133,14 @@ public class UploadStreamByURLRequest extends TeaModel {
     }
     public String getStreamURL() {
         return this.streamURL;
+    }
+
+    public UploadStreamByURLRequest setUploadMetadata(String uploadMetadata) {
+        this.uploadMetadata = uploadMetadata;
+        return this;
+    }
+    public String getUploadMetadata() {
+        return this.uploadMetadata;
     }
 
     public UploadStreamByURLRequest setUserData(String userData) {
