@@ -184,6 +184,9 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeDatasetListResponseBodyDatasetInfoListTags> tags;
 

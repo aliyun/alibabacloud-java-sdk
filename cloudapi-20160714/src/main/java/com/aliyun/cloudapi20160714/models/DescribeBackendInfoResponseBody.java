@@ -606,6 +606,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        @NameInMap("TriggerName")
+        public String triggerName;
+
         public static DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig self = new DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig();
             return TeaModel.build(map, self);
@@ -673,6 +676,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig setTriggerName(String triggerName) {
+            this.triggerName = triggerName;
+            return this;
+        }
+        public String getTriggerName() {
+            return this.triggerName;
         }
 
     }

@@ -1796,6 +1796,9 @@ public class DescribeApiResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        @NameInMap("TriggerName")
+        public String triggerName;
+
         public static DescribeApiResponseBodyServiceConfigFunctionComputeConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeApiResponseBodyServiceConfigFunctionComputeConfig self = new DescribeApiResponseBodyServiceConfigFunctionComputeConfig();
             return TeaModel.build(map, self);
@@ -1895,6 +1898,14 @@ public class DescribeApiResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public DescribeApiResponseBodyServiceConfigFunctionComputeConfig setTriggerName(String triggerName) {
+            this.triggerName = triggerName;
+            return this;
+        }
+        public String getTriggerName() {
+            return this.triggerName;
         }
 
     }
