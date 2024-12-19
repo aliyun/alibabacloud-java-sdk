@@ -916,6 +916,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>导出企业VOC分析任务明细列表</p>
+     * 
+     * @param tmpReq ExportAnalysisTagDetailByTaskIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExportAnalysisTagDetailByTaskIdResponse
+     */
+    public ExportAnalysisTagDetailByTaskIdResponse exportAnalysisTagDetailByTaskIdWithOptions(ExportAnalysisTagDetailByTaskIdRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ExportAnalysisTagDetailByTaskIdShrinkRequest request = new ExportAnalysisTagDetailByTaskIdShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.categories)) {
+            request.categoriesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.categories, "Categories", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoriesShrink)) {
+            body.put("Categories", request.categoriesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExportAnalysisTagDetailByTaskId"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportAnalysisTagDetailByTaskIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出企业VOC分析任务明细列表</p>
+     * 
+     * @param request ExportAnalysisTagDetailByTaskIdRequest
+     * @return ExportAnalysisTagDetailByTaskIdResponse
+     */
+    public ExportAnalysisTagDetailByTaskIdResponse exportAnalysisTagDetailByTaskId(ExportAnalysisTagDetailByTaskIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportAnalysisTagDetailByTaskIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>文档管理-导出。</p>
      * 
      * @param request ExportGeneratedContentRequest

@@ -1,3 +1,7 @@
+2024-12-19 Version: 1.14.0
+- Support API ExportAnalysisTagDetailByTaskId.
+
+
 2024-12-18 Version: 1.13.0
 - Support API AddDatasetDocument.
 - Support API CreateDataset.
