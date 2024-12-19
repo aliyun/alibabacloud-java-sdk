@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyReservedInstancesRequest extends TeaModel {
     /**
-     * <p>The configurations of reserved instances.</p>
+     * <p>The configurations of the new reserved instances. You can specify up to 100 new reserved instances.</p>
      */
     @NameInMap("Configuration")
     public java.util.List<ModifyReservedInstancesRequestConfiguration> configuration;
@@ -27,7 +27,7 @@ public class ModifyReservedInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of reserved instance N. Valid values of N: 1 to 20.</p>
+     * <p>The IDs of reserved instances that you want to modify. You can specify up to 20 reserved instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class ModifyReservedInstancesRequest extends TeaModel {
 
     public static class ModifyReservedInstancesRequestConfiguration extends TeaModel {
         /**
-         * <p>The number of pay-as-you-go instances of the same instance type that reserved instance N can match. The value of this parameter must be greater than or equal to 1. Valid values of N: 1 to 100.</p>
+         * <p>The number of pay-as-you-go instances of the specified instance type that the new reserved instance can match. The value of this parameter must be greater than or equal to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -114,9 +114,9 @@ public class ModifyReservedInstancesRequest extends TeaModel {
         public Integer instanceAmount;
 
         /**
-         * <p>The instance type that reserved instance N can match. Valid values of N: 1 to 100.</p>
+         * <p>The instance types that the new reserved instance can match.</p>
          * <blockquote>
-         * <p> The applicable instance types are continuously updated. For more information, see the &quot;Attributes&quot; section in <a href="https://help.aliyun.com/document_detail/100370.html">Overview of reserved instances</a>.</p>
+         * <p> The supported instance types are continuously updated. For information about the instance types supported by reserved instances, see <a href="~~100370#3c1b682051vt4~~">Overview of reserved instances</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -126,8 +126,8 @@ public class ModifyReservedInstancesRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The name of reserved instance N. Valid values of N: 1 to 100.</p>
-         * <p>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the new reserved instance.</p>
+         * <p>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testReservedInstanceName</p>
@@ -136,12 +136,11 @@ public class ModifyReservedInstancesRequest extends TeaModel {
         public String reservedInstanceName;
 
         /**
-         * <p>The scope of reserved instance N. Valid values:</p>
+         * <p>The scope level of the new reserved instance. Valid values:</p>
          * <ul>
-         * <li>Region: regional</li>
-         * <li>Zone: zonal</li>
+         * <li>Region</li>
+         * <li>Zone</li>
          * </ul>
-         * <p>Valid values of N: 1 to 100.</p>
          * <p>Default value: Region.</p>
          * 
          * <strong>example:</strong>
@@ -151,8 +150,8 @@ public class ModifyReservedInstancesRequest extends TeaModel {
         public String scope;
 
         /**
-         * <p>The zone ID of reserved instance N. Valid values of N: 1 to 100.</p>
-         * <p>This parameter is required when <code>Scope</code> is set to <code>Zone</code>.</p>
+         * <p>The zone ID of the new reserved instance.</p>
+         * <p>This parameter is required when you set <code>Scope</code> to <code>Zone</code>.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeZones</a> operation to query the most recent zone list.</p>
          * 
          * <strong>example:</strong>

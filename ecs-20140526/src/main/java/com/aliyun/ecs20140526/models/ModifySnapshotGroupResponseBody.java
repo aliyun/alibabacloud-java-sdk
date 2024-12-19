@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySnapshotGroupResponseBody extends TeaModel {
     /**
-     * <p>The new description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A00B5E55-76B7-42C8-8A80-AF10E980DCC7</p>

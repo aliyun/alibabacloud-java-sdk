@@ -40,6 +40,137 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("RuleId")
+        public Long ruleId;
+
+        public static DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule self = new DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule setRuleId(Long ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public Long getRuleId() {
+            return this.ruleId;
+        }
+
+    }
+
+    public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules extends TeaModel {
+        @NameInMap("Rule")
+        public java.util.List<DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule> rule;
+
+        public static DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules self = new DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules setRule(java.util.List<DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule> rule) {
+            this.rule = rule;
+            return this;
+        }
+        public java.util.List<DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule> getRule() {
+            return this.rule;
+        }
+
+    }
+
+    public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo extends TeaModel {
+        @NameInMap("DiscountPrice")
+        public Float discountPrice;
+
+        @NameInMap("OriginalPrice")
+        public Float originalPrice;
+
+        @NameInMap("Resource")
+        public String resource;
+
+        @NameInMap("SubRules")
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules subRules;
+
+        @NameInMap("TradePrice")
+        public Float tradePrice;
+
+        public static DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo self = new DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setDiscountPrice(Float discountPrice) {
+            this.discountPrice = discountPrice;
+            return this;
+        }
+        public Float getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setOriginalPrice(Float originalPrice) {
+            this.originalPrice = originalPrice;
+            return this;
+        }
+        public Float getOriginalPrice() {
+            return this.originalPrice;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setResource(String resource) {
+            this.resource = resource;
+            return this;
+        }
+        public String getResource() {
+            return this.resource;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setSubRules(DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules subRules) {
+            this.subRules = subRules;
+            return this;
+        }
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules getSubRules() {
+            return this.subRules;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setTradePrice(Float tradePrice) {
+            this.tradePrice = tradePrice;
+            return this;
+        }
+        public Float getTradePrice() {
+            return this.tradePrice;
+        }
+
+    }
+
+    public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfos extends TeaModel {
+        @NameInMap("DetailInfo")
+        public java.util.List<DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo> detailInfo;
+
+        public static DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfos build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfos self = new DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfos setDetailInfo(java.util.List<DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo> detailInfo) {
+            this.detailInfo = detailInfo;
+            return this;
+        }
+        public java.util.List<DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo> getDetailInfo() {
+            return this.detailInfo;
+        }
+
+    }
+
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
          * <p>The currency unit.</p>
@@ -51,6 +182,9 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
          */
         @NameInMap("Currency")
         public String currency;
+
+        @NameInMap("DetailInfos")
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
 
         /**
          * <p>The discount.</p>
@@ -90,6 +224,14 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         }
         public String getCurrency() {
             return this.currency;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice setDetailInfos(DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfos detailInfos) {
+            this.detailInfos = detailInfos;
+            return this;
+        }
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfos getDetailInfos() {
+            return this.detailInfos;
         }
 
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice setDiscountPrice(Float discountPrice) {

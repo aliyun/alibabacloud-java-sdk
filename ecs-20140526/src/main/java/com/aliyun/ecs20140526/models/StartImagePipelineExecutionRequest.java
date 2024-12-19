@@ -45,12 +45,16 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<StartImagePipelineExecutionRequestTag> tag;
+
     /**
      * <blockquote>
      * <p>This parameter is deprecated.</p>
      * </blockquote>
      */
     @NameInMap("TemplateTag")
+    @Deprecated
     public java.util.List<StartImagePipelineExecutionRequestTemplateTag> templateTag;
 
     public static StartImagePipelineExecutionRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -114,12 +118,50 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public StartImagePipelineExecutionRequest setTag(java.util.List<StartImagePipelineExecutionRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<StartImagePipelineExecutionRequestTag> getTag() {
+        return this.tag;
+    }
+
     public StartImagePipelineExecutionRequest setTemplateTag(java.util.List<StartImagePipelineExecutionRequestTemplateTag> templateTag) {
         this.templateTag = templateTag;
         return this;
     }
     public java.util.List<StartImagePipelineExecutionRequestTemplateTag> getTemplateTag() {
         return this.templateTag;
+    }
+
+    public static class StartImagePipelineExecutionRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static StartImagePipelineExecutionRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            StartImagePipelineExecutionRequestTag self = new StartImagePipelineExecutionRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public StartImagePipelineExecutionRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public StartImagePipelineExecutionRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class StartImagePipelineExecutionRequestTemplateTag extends TeaModel {
