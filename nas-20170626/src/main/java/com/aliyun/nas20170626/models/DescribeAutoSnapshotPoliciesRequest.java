@@ -15,7 +15,7 @@ public class DescribeAutoSnapshotPoliciesRequest extends TeaModel {
 
     /**
      * <p>The type of the file system.</p>
-     * <p>Valid value: extreme, which indicates Extreme Apsara File Storage NAS (NAS) file systems.</p>
+     * <p>Valid value: extreme, which indicates Extreme File Storage NAS (NAS) file systems.</p>
      * 
      * <strong>example:</strong>
      * <p>extreme</p>

@@ -157,7 +157,7 @@ public class CreateDataFlowRequest extends TeaModel {
      * <ul>
      * <li><p>storage type: Only OSS is supported.</p>
      * </li>
-     * <li><p>account id (optional): the UID of the account of the source storage.</p>
+     * <li><p>account id (optional): the UID of the account of the source storage. This parameter is required when you use OSS buckets across accounts.</p>
      * </li>
      * <li><p>path: the name of the OSS bucket. Limits:</p>
      * <ul>
@@ -168,15 +168,11 @@ public class CreateDataFlowRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The OSS bucket must be an existing bucket in the region.</p>
-     * </li>
-     * <li><p>Only CPFS for LINGJUN V2.6.0 and later support the account id parameter.</p>
-     * </li>
-     * <li><p>The account id parameter is optional. This parameter is required when you use OSS buckets across accounts.</p>
-     * </li>
+     * <li>The OSS bucket must be an existing bucket in the region.</li>
+     * <li>Only CPFS for LINGJUN V2.6.0 and later support the account id parameter.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

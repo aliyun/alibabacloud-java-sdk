@@ -18,7 +18,7 @@ public class ModifyFilesetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation.</p>
+     * <p>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2838077.html">DeleteFileset</a> operation.</p>
      * <ul>
      * <li>true: enables release protection.</li>
      * <li>false: disables release protection.</li>
@@ -62,10 +62,17 @@ public class ModifyFilesetRequest extends TeaModel {
 
     /**
      * <p>The ID of the file system.</p>
+     * <ul>
+     * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</li>
+     * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</li>
+     * </ul>
+     * <blockquote>
+     * <p> CPFS is not supported on the international site.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cpfs-099394bd928c****</p>
+     * <p>bmcpfs-290w65p03ok64ya****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

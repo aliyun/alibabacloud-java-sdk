@@ -114,7 +114,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
          * <p>The type of the file system.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>standard: General-purpose Apsara File Storage NAS (NAS) file system</li>
+         * <li>standard: General-purpose File Storage NAS (NAS) file system</li>
          * <li>extreme: Extreme NAS file system</li>
          * </ul>
          * 

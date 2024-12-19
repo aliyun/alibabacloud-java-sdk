@@ -92,6 +92,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotsResponseBodySnapshotsSnapshot extends TeaModel {
+        @NameInMap("CompletedTime")
+        public String completedTime;
+
         /**
          * <p>The time when the snapshot was created.</p>
          * <p>The time follows the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> standard in UTC. The time is displayed in the <code>yyyy-MM-ddThh:mmZ</code> format.</p>
@@ -247,6 +250,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public static DescribeSnapshotsResponseBodySnapshotsSnapshot build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnapshotsResponseBodySnapshotsSnapshot self = new DescribeSnapshotsResponseBodySnapshotsSnapshot();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setCompletedTime(String completedTime) {
+            this.completedTime = completedTime;
+            return this;
+        }
+        public String getCompletedTime() {
+            return this.completedTime;
         }
 
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setCreateTime(String createTime) {

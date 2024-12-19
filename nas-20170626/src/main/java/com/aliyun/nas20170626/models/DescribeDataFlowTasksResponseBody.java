@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDataFlowTasksResponseBody extends TeaModel {
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
      */
@@ -12,12 +14,17 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2D69A58F-345C-4FDE-88E4-BF518948****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about data flow tasks.</p>
+     */
     @NameInMap("TaskInfo")
     public DescribeDataFlowTasksResponseBodyTaskInfo taskInfo;
 
@@ -51,27 +58,75 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeDataFlowTasksResponseBodyTaskInfoTaskProgressStats extends TeaModel {
+        /**
+         * <p>The actual amount of data for which the data flow task is complete. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131092971520</p>
+         */
         @NameInMap("ActualBytes")
         public Long actualBytes;
 
+        /**
+         * <p>The actual number of files for which the data flow task is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ActualFiles")
         public Long actualFiles;
 
+        /**
+         * <p>The average flow velocity. Unit: bytes/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>342279299</p>
+         */
         @NameInMap("AverageSpeed")
         public Long averageSpeed;
 
+        /**
+         * <p>The amount of data (including skipped data) for which the data flow task is complete. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131092971520</p>
+         */
         @NameInMap("BytesDone")
         public Long bytesDone;
 
+        /**
+         * <p>The amount of data scanned on the source. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131092971520</p>
+         */
         @NameInMap("BytesTotal")
         public Long bytesTotal;
 
+        /**
+         * <p>The number of files (including skipped files) for which the data flow task is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("FilesDone")
         public Long filesDone;
 
+        /**
+         * <p>The number of files scanned on the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("FilesTotal")
         public Long filesTotal;
 
+        /**
+         * <p>The estimated remaining execution time. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>437</p>
+         */
         @NameInMap("RemainTime")
         public Long remainTime;
 
@@ -147,9 +202,30 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeDataFlowTasksResponseBodyTaskInfoTaskReportsReport extends TeaModel {
+        /**
+         * <p>The name of the report.</p>
+         * <ul>
+         * <li><p>CPFS:</p>
+         * <p>TotalFilesReport: task reports.</p>
+         * </li>
+         * <li><p>CPFS for LINGJUN:</p>
+         * <ul>
+         * <li>FailedFilesReport: failed file reports.</li>
+         * <li>SkippedFilesReport: skipped file reports.</li>
+         * <li>SuccessFilesReport: successful file reports.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TotalFilesReport</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The report URL.</p>
+         */
         @NameInMap("Path")
         public String path;
 
@@ -197,6 +273,13 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
 
     public static class DescribeDataFlowTasksResponseBodyTaskInfoTask extends TeaModel {
         /**
+         * <p>The conflict policy for files with the same name. Valid values:</p>
+         * <ul>
+         * <li>SKIP_THE_FILE: skips files with the same name.</li>
+         * <li>KEEP_LATEST: compares the update time and keeps the latest version.</li>
+         * <li>OVERWRITE_EXISTING: forcibly overwrites the existing file.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>KEEP_LATEST</p>
          */
@@ -213,6 +296,8 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the data flow.</p>
+         * 
          * <strong>example:</strong>
          * <p>dfid-194433a5be3****</p>
          */
@@ -220,12 +305,15 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         public String dataFlowId;
 
         /**
-         * <p>null Valid values:</p>
+         * <p>The type of data on which operations are performed by the data flow task. Valid values:</p>
          * <ul>
-         * <li>null null</li>
-         * <li>null</li>
-         * <li>null</li>
+         * <li>Metadata: the metadata of a file, including the timestamp, ownership, and permission information of the file. If you select Metadata, only the metadata of the file is imported. You can only query the file. When you access the file data, the file is loaded from the source storage as required.</li>
+         * <li>Data: the data blocks of the file.</li>
+         * <li>MetaAndData: the metadata and data blocks of the file.</li>
          * </ul>
+         * <blockquote>
+         * <p> CPFS for LINGJUN supports only the MetaAndData type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Metadata</p>
@@ -233,9 +321,21 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The directory in which the data flow task is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path_in_cpfs/</p>
+         */
         @NameInMap("Directory")
         public String directory;
 
+        /**
+         * <p>The directory mapped to the data flow task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path_in_cpfs/</p>
+         */
         @NameInMap("DstDirectory")
         public String dstDirectory;
 
@@ -248,16 +348,27 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The cause of the task exception.</p>
+         * <blockquote>
+         * <p> If this parameter is not returned or the return value is empty, no error occurs.</p>
+         * </blockquote>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
+         * <p>The directory of the fileset in the CPFS file system.</p>
+         * <p>Limits:</p>
          * <ul>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li>null</li>
+         * <li>The directory must be 2 to 1024 characters in length.</li>
+         * <li>The directory must be encoded in UTF-8.</li>
+         * <li>The directory must start and end with a forward slash (/).</li>
+         * <li>The directory must be a fileset directory in the CPFS file system.</li>
          * </ul>
+         * <blockquote>
+         * <p> Only CPFS supports this parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>/a/b/c/</p>
@@ -266,6 +377,8 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         public String fileSystemPath;
 
         /**
+         * <p>The ID of the file system.</p>
+         * 
          * <strong>example:</strong>
          * <p>cpfs-099394bd928c****</p>
          */
@@ -273,7 +386,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         public String filesystemId;
 
         /**
-         * <p>null</p>
+         * <p>The path of the smart directory.</p>
          * 
          * <strong>example:</strong>
          * <p>/aa/</p>
@@ -282,11 +395,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         public String fsPath;
 
         /**
-         * <p>null Valid values:</p>
+         * <p>The initiator of the data flow task. Valid values:</p>
          * <ul>
-         * <li>null</li>
-         * <li>null</li>
+         * <li>User: The task is initiated by a user.</li>
+         * <li>System: The task is automatically initiated by CPFS based on the automatic update interval.</li>
          * </ul>
+         * <blockquote>
+         * <p> Only CPFS supports this parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>User</p>
@@ -295,7 +411,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         public String originator;
 
         /**
-         * <p>null null</p>
+         * <p>The progress of the data flow task. The number of operations that have been performed by the data flow task.</p>
          * 
          * <strong>example:</strong>
          * <p>240</p>
@@ -303,16 +419,17 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         @NameInMap("Progress")
         public Long progress;
 
+        /**
+         * <p>The progress of the data flow task.</p>
+         */
         @NameInMap("ProgressStats")
         public DescribeDataFlowTasksResponseBodyTaskInfoTaskProgressStats progressStats;
 
         /**
-         * <p>null</p>
-         * <p>null``</p>
-         * <p>Limits:</p>
+         * <p>The save path of data flow task reports in the CPFS file system.</p>
          * <ul>
-         * <li>null</li>
-         * <li>The name must be encoded in UTF-8.</li>
+         * <li>The task reports for a CPFS file system are generated in the <code>.dataflow_report</code> directory of the CPFS file system.</li>
+         * <li>CPFS for LINGJUN returns an OSS download link for you to download the task reports.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,23 +439,39 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         @Deprecated
         public String reportPath;
 
+        /**
+         * <p>The reports.</p>
+         * <blockquote>
+         * <p> Streaming tasks do not support reports.</p>
+         * </blockquote>
+         */
         @NameInMap("Reports")
         public DescribeDataFlowTasksResponseBodyTaskInfoTaskReports reports;
 
         /**
-         * <p>://</p>
+         * <p>The access path of the source storage. Format: <code>&lt;storage type&gt;://[&lt;account id&gt;:]&lt;path&gt;</code>.</p>
+         * <p>Parameters:</p>
          * <ul>
-         * <li></li>
-         * <li><ul>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li><a href="http://https://%E3%80%82"></a></li>
+         * <li><p>storage type: Only Object Storage Service (OSS) is supported.</p>
+         * </li>
+         * <li><p>account id: the UID of the account of the source storage.</p>
+         * </li>
+         * <li><p>path: the name of the OSS bucket. Limits:</p>
+         * <ul>
+         * <li>The name can contain only lowercase letters, digits, and hyphens (-). The name must start and end with a lowercase letter or digit.</li>
+         * <li>The name can be up to 128 characters in length.</li>
+         * <li>The name must be encoded in UTF-8.</li>
          * </ul>
          * </li>
          * </ul>
-         * <p>**</p>
-         * <hr>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The OSS bucket must be an existing bucket in the region.</p>
+         * </li>
+         * <li><p>Only CPFS for LINGJUN V2.6.0 and later support the account id parameter.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket1</p>
@@ -347,7 +480,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         public String sourceStorage;
 
         /**
-         * <p>null</p>
+         * <p>The time when the task started.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-04 18:27:35</p>
@@ -356,14 +489,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>null Valid values:</p>
+         * <p>The status of the data flow task. Valid values:</p>
          * <ul>
-         * <li>null</li>
-         * <li>null</li>
-         * <li>null</li>
-         * <li>null</li>
-         * <li>null</li>
-         * <li>null</li>
+         * <li>Pending: The data flow task has been created and has not started.</li>
+         * <li>Executing: The data flow task is being executed.</li>
+         * <li>Failed: The data flow task failed to be executed. You can view the cause of the failure in the data flow task report.</li>
+         * <li>Completed: The data flow task is completed. You can check that all the files have been correctly transferred in the data flow task report.</li>
+         * <li>Canceled: The data flow task is canceled and is not completed.</li>
+         * <li>Canceling: The data flow task is being canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,13 +506,18 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>null Valid values:</p>
+         * <p>The type of the data flow task. Valid values:</p>
          * <ul>
-         * <li>null</li>
-         * <li>null</li>
-         * <li>null null</li>
-         * <li>null</li>
+         * <li>Import: imports data stored in the source storage to a CPFS file system.</li>
+         * <li>Export: exports specified data from a CPFS file system to the source storage.</li>
+         * <li>StreamImport: imports the specified data from the source storage to a CPFS file system in streaming mode.</li>
+         * <li>StreamExport: exports specified data from a CPFS file system to the source storage in streaming mode.</li>
+         * <li>Evict: releases the data blocks of a file in a CPFS file system. After the eviction, only the metadata of the file is retained in the CPFS file system. You can still query the file. However, the data blocks of the file are cleared and do not occupy the storage space in the CPFS file system. When you access the file data, the file is loaded from the source storage as required.</li>
+         * <li>Inventory: obtains the inventory list managed by a data flow from the CPFS file system, providing the cache status of inventories in the data flow.</li>
          * </ul>
+         * <blockquote>
+         * <p> Only CPFS for LINGJUN V2.6.0 and later support StreamImport and StreamExport.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Import</p>
@@ -388,6 +526,8 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         public String taskAction;
 
         /**
+         * <p>The ID of the data flow task.</p>
+         * 
          * <strong>example:</strong>
          * <p>taskId-12345678</p>
          */

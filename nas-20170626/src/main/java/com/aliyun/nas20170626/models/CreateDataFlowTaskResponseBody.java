@@ -17,7 +17,7 @@ public class CreateDataFlowTaskResponseBody extends TeaModel {
      * <p>The ID of the dataflow task.</p>
      * 
      * <strong>example:</strong>
-     * <p>taskId-12345678</p>
+     * <p>task-38aa8e890f45****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

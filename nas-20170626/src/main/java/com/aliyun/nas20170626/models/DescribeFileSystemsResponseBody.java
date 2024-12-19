@@ -734,6 +734,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("AccessPointCount")
         public String accessPointCount;
 
+        /**
+         * <p>The ID of the automatic snapshot policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-extreme-233e6****</p>
+         */
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
 
@@ -923,6 +929,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2ze37k6jh8ums2fw2****</p>
+         */
         @NameInMap("QuorumVswId")
         public String quorumVswId;
 
@@ -1002,9 +1014,18 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1cbv1ljve4j5hlw****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>A collection of vSwitch IDs.</p>
+         */
         @NameInMap("VswIds")
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemVswIds vswIds;
 
