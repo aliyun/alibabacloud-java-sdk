@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetFilesetQuotaResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2D69A58F-345C-4FDE-88E4-BF518948****</p>
      */

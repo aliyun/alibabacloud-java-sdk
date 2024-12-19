@@ -22,7 +22,7 @@ public class CancelDataFlowAutoRefreshRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dfid-123456</p>
+     * <p>df-194433a5be31****</p>
      */
     @NameInMap("DataFlowId")
     public String dataFlowId;
@@ -47,7 +47,7 @@ public class CancelDataFlowAutoRefreshRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cpfs-12345678</p>
+     * <p>cpfs-099394bd928c****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

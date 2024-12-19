@@ -22,7 +22,7 @@ public class ModifyDataFlowRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dfid-194433a5be31****</p>
+     * <p>df-194433a5be31****</p>
      */
     @NameInMap("DataFlowId")
     public String dataFlowId;
@@ -59,6 +59,13 @@ public class ModifyDataFlowRequest extends TeaModel {
 
     /**
      * <p>The ID of the file system.</p>
+     * <ul>
+     * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</li>
+     * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</li>
+     * </ul>
+     * <blockquote>
+     * <p> CPFS is not supported on the international site.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +82,7 @@ public class ModifyDataFlowRequest extends TeaModel {
      * <li>1500</li>
      * </ul>
      * <blockquote>
-     * <p> The data flow throughput must be less than the I/O throughput of the file system.</p>
+     * <p> The data flow throughput must be less than the I/O throughput of the file system. This parameter is required for CPFS file systems.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

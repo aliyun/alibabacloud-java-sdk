@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyAccessPointRequest extends TeaModel {
     /**
      * <p>The name of the permission group.</p>
-     * <p>This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.</p>
+     * <p>This parameter is required for a General-purpose File Storage NAS (NAS) file system.</p>
      * <p>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</p>
      * 
      * <strong>example:</strong>

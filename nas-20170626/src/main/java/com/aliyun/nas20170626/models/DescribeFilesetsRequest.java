@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class DescribeFilesetsRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
+     * <ul>
+     * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</li>
+     * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</li>
+     * </ul>
+     * <blockquote>
+     * <p> CPFS is not supported on the international site.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cpfs-099394bd928c****</p>
+     * <p>bmcpfs-290w65p03ok64ya****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
@@ -83,7 +90,11 @@ public class DescribeFilesetsRequest extends TeaModel {
          * <li>FsetIds: filters filesets by fileset ID.</li>
          * <li>FileSystemPath: filters filesets based on the path of a fileset in a CPFS file system.</li>
          * <li>Description: filters filesets based on the fileset description.</li>
+         * <li>QuotaExists: filters filesets based on whether quotas exist.</li>
          * </ul>
+         * <blockquote>
+         * <p> Only CPFS for LINGJUN V2.7.0 and later support the QuotaExists parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>FsetIds</p>
@@ -94,9 +105,10 @@ public class DescribeFilesetsRequest extends TeaModel {
         /**
          * <p>The filter value. This parameter does not support wildcards.</p>
          * <ul>
-         * <li>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. Example: <code>fset-12345678</code> or <code>fset-12345678,fset-12345679</code>.</li>
-         * <li>If Key is set to FileSystemPath, set Value to the path or a part of the path of a fileset in a CPFS file system. The value must be 2 to 1,024 characters in length. The value must be encoded in UTF-8.</li>
+         * <li>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. Example: <code>fset-1902718ea0ae****</code> or <code>fset-1902718ea0ae****,fset-3212718ea0ae****</code>.</li>
+         * <li>If Key is set to FileSystemPath, set Value to the path or a part of the path of a fileset in a CPFS file system. The value must be 2 to 1024 characters in length. The value must be encoded in UTF-8.</li>
          * <li>If Key is set to Description, set Value to a fileset description or a part of the fileset description.</li>
+         * <li>If Key is set to QuotaExists, set Value to true or false. If you do not specify the parameter, all filesets are returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>

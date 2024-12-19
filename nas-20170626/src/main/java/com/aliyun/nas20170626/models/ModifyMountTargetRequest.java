@@ -56,7 +56,7 @@ public class ModifyMountTargetRequest extends TeaModel {
      * <li>Inactive: The mount target is unavailable.</li>
      * </ul>
      * <blockquote>
-     * <p> Only General-purpose Apsara File Storage NAS (NAS) file systems support changing the mount target status.</p>
+     * <p> Only General-purpose File Storage NAS (NAS) file systems support changing the mount target status.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -163,7 +163,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
          * <p>The dataflow ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>dfid-123456</p>
+         * <p>df-194433a5be31****</p>
          */
         @NameInMap("DataFlowId")
         public String dataFlowId;
@@ -201,7 +201,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
          * <p>The ID of the file system.</p>
          * 
          * <strong>example:</strong>
-         * <p>cpfs-12345678</p>
+         * <p>cpfs-099394bd928c****</p>
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
@@ -241,7 +241,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
          * <p>The fileset ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>fset-123456</p>
+         * <p>fset-1902718ea0ae****</p>
          */
         @NameInMap("FsetId")
         public String fsetId;
