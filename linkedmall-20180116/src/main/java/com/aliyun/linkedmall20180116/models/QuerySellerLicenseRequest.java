@@ -4,12 +4,24 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QuerySellerLicenseRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>LMALL20***001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>220680193****</p>
+     */
     @NameInMap("SellerId")
     public String sellerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7521****8332932</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

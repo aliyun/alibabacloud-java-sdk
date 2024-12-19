@@ -4,6 +4,10 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class EnableOrderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 

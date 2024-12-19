@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryWithholdTradeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("QueryWithholdTradeResponse")
     public QueryWithholdTradeResponseBodyQueryWithholdTradeResponse queryWithholdTradeResponse;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0825B1A4-0870-50BD-8AA3-9618587BEBC2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +66,41 @@ public class QueryWithholdTradeResponseBody extends TeaModel {
     }
 
     public static class QueryWithholdTradeResponseBodyQueryWithholdTradeResponse extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("OutTradeNo")
         public String outTradeNo;
 
         @NameInMap("PaymentDate")
         public String paymentDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("SettleStatus")
         public String settleStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("TotalAmount")
         public String totalAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("TradeNo")
         public String tradeNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("TradeStatus")
         public String tradeStatus;
 

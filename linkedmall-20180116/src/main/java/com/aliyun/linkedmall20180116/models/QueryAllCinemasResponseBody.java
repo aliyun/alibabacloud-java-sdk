@@ -7,27 +7,59 @@ public class QueryAllCinemasResponseBody extends TeaModel {
     @NameInMap("Cinemas")
     public QueryAllCinemasResponseBodyCinemas cinemas;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6103AD7B-21C2-523B-89D0-579DA58D08E8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>205</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,33 +141,69 @@ public class QueryAllCinemasResponseBody extends TeaModel {
     }
 
     public static class QueryAllCinemasResponseBodyCinemasCinema extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("CinemaName")
         public String cinemaName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330100</p>
+         */
         @NameInMap("CityId")
         public Long cityId;
 
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>153</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Latitude")
         public String latitude;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Longitude")
         public String longitude;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("ScheduleCloseTime")
         public Long scheduleCloseTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>42112601</p>
+         */
         @NameInMap("StandardId")
         public String standardId;
 

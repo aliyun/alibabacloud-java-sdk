@@ -4,30 +4,54 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaSettleInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public QueryMediaSettleInfoResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FAED4911-3F7D-56C0-880F-C4755D4F26D8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,12 +133,24 @@ public class QueryMediaSettleInfoResponseBody extends TeaModel {
     }
 
     public static class QueryMediaSettleInfoResponseBodyModelMediaSettleInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>63839******79044</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-01 00:00:00</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-01 01:00:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
@@ -130,15 +166,31 @@ public class QueryMediaSettleInfoResponseBody extends TeaModel {
         @NameInMap("MediaSettleDetailId")
         public String mediaSettleDetailId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-01 01:00:00</p>
+         */
         @NameInMap("ModifiedDate")
         public String modifiedDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TEST000000</p>
+         */
         @NameInMap("SettleNo")
         public String settleNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>waitPayerConfirm</p>
+         */
         @NameInMap("SettleStatus")
         public String settleStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-01 00:00:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -241,12 +293,24 @@ public class QueryMediaSettleInfoResponseBody extends TeaModel {
         @NameInMap("MediaSettleInfoList")
         public java.util.List<QueryMediaSettleInfoResponseBodyModelMediaSettleInfoList> mediaSettleInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

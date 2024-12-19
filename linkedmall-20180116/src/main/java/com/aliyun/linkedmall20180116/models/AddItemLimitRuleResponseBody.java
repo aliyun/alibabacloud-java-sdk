@@ -4,18 +4,38 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class AddItemLimitRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Model")
     public Long model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7BAC5B75-8208-5788-829D-AD7640085D38</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>109</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

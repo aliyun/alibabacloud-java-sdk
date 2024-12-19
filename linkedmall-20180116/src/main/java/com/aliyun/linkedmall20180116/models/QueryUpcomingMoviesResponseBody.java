@@ -4,30 +4,62 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryUpcomingMoviesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Movies")
     public QueryUpcomingMoviesResponseBodyMovies movies;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9681B75A-1BE4-57D2-8C03-5B6BEF29378D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>208</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -112,6 +144,10 @@ public class QueryUpcomingMoviesResponseBody extends TeaModel {
         @NameInMap("BackgroundPicture")
         public String backgroundPicture;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Country")
         public String country;
 
@@ -121,24 +157,52 @@ public class QueryUpcomingMoviesResponseBody extends TeaModel {
         @NameInMap("Director")
         public String director;
 
+        /**
+         * <strong>example:</strong>
+         * <p>190</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Highlight")
         public String highlight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1159177</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("LeadingRole")
         public String leadingRole;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("MovieName")
         public String movieName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("MovieNameEn")
         public String movieNameEn;
 
@@ -151,15 +215,31 @@ public class QueryUpcomingMoviesResponseBody extends TeaModel {
         @NameInMap("OpenDay")
         public String openDay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-01 12:00:00</p>
+         */
         @NameInMap("OpenTime")
         public String openTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Poster")
         public String poster;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9.6</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("TrailerList")
         public String trailerList;
 

@@ -7,24 +7,48 @@ public class QueryMessagesResponseBody extends TeaModel {
     @NameInMap("BizMessages")
     public QueryMessagesResponseBodyBizMessages bizMessages;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>79C01D47-3C44-57D9-BC99-1B33F7ED14B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -107,6 +131,10 @@ public class QueryMessagesResponseBody extends TeaModel {
         @NameInMap("PubTime")
         public String pubTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Topic_******_api</p>
+         */
         @NameInMap("Topic")
         public String topic;
 

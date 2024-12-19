@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderInfoAfterSaleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public QueryOrderInfoAfterSaleResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A107756D-18BF-56BC-9F33-8DFAA2279F17</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +66,27 @@ public class QueryOrderInfoAfterSaleResponseBody extends TeaModel {
     }
 
     public static class QueryOrderInfoAfterSaleResponseBodyModelLogisticsListLogistics extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SF</p>
+         */
         @NameInMap("LogisticsCompanyCode")
         public String logisticsCompanyCode;
 
         @NameInMap("LogisticsCompanyName")
         public String logisticsCompanyName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>731******8882</p>
+         */
         @NameInMap("LogisticsNo")
         public String logisticsNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("LogisticsStatus")
         public String logisticsStatus;
 
@@ -125,39 +149,79 @@ public class QueryOrderInfoAfterSaleResponseBody extends TeaModel {
     }
 
     public static class QueryOrderInfoAfterSaleResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("CashAmount")
         public String cashAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-29</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ExtJson")
         public String extJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>45******66</p>
+         */
         @NameInMap("LmOrderId")
         public Long lmOrderId;
 
         @NameInMap("LogisticsList")
         public QueryOrderInfoAfterSaleResponseBodyModelLogisticsList logisticsList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("OrderStatus")
         public String orderStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>69</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("RefundAmount")
         public Long refundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("RefundPoints")
         public Long refundPoints;
 
         @NameInMap("RefundRate")
         public String refundRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RefundStatus")
         public String refundStatus;
 
@@ -167,9 +231,17 @@ public class QueryOrderInfoAfterSaleResponseBody extends TeaModel {
         @NameInMap("ShopServiceTelephone")
         public String shopServiceTelephone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12******964113</p>
+         */
         @NameInMap("TbOrderId")
         public Long tbOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("XiaomiCode")
         public String xiaomiCode;
 

@@ -4,24 +4,48 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryActivityItemsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("LmActivityItemModelList")
     public QueryActivityItemsResponseBodyLmActivityItemModelList lmActivityItemModelList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>539E5C68-D8B5-57EC-9D9B-58AFD9E0****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -87,29 +111,56 @@ public class QueryActivityItemsResponseBody extends TeaModel {
     }
 
     public static class QueryActivityItemsResponseBodyLmActivityItemModelListLmActivityItemModelSkuModelListLmActivityItemSkuModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1990</p>
+         */
         @NameInMap("ActivityPrice")
         public Long activityPrice;
 
         @NameInMap("ActivityStatus")
         public String activityStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LMALL20211013****</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64092072****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>679</p>
+         */
         @NameInMap("LmActivityId")
         public Long lmActivityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000035-63064613****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("ReservedPrice")
         public Long reservedPrice;
 
         /**
          * <p>skuID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478531731****</p>
          */
         @NameInMap("SkuId")
         public Long skuId;
@@ -238,42 +289,78 @@ public class QueryActivityItemsResponseBody extends TeaModel {
     }
 
     public static class QueryActivityItemsResponseBodyLmActivityItemModelListLmActivityItemModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanSell")
         public Boolean canSell;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("ItemActivityQuantity")
         public Integer itemActivityQuantity;
 
         @NameInMap("ItemActivityStatus")
         public String itemActivityStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>65332479****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
         @NameInMap("ItemTitle")
         public String itemTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>679</p>
+         */
         @NameInMap("LmActivityId")
         public Long lmActivityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10006138-63786616****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1002****</p>
+         */
         @NameInMap("LmShopId")
         public String lmShopId;
 
         @NameInMap("MainPicUrl")
         public String mainPicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("SellableQuantity")
         public Integer sellableQuantity;
 
         @NameInMap("SkuModelList")
         public QueryActivityItemsResponseBodyLmActivityItemModelListLmActivityItemModelSkuModelList skuModelList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>285278****</p>
+         */
         @NameInMap("TbSellerId")
         public Long tbSellerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13089****</p>
+         */
         @NameInMap("TbShopId")
         public Long tbShopId;
 

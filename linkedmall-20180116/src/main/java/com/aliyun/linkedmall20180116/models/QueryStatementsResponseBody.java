@@ -4,30 +4,62 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryStatementsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public QueryStatementsResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>85729953-3123-5565-B3CA-493CCF25457B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>205</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -112,24 +144,44 @@ public class QueryStatementsResponseBody extends TeaModel {
         @NameInMap("Attributes")
         public String attributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-01 00:00:00</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-01 00:00:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ExtInfo")
         public String extInfo;
 
         @NameInMap("KpNoGenerateTime")
         public String kpNoGenerateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-01 00:00:00</p>
+         */
         @NameInMap("ModifiedDate")
         public String modifiedDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("PayeeAccountId")
         public String payeeAccountId;
 
@@ -142,24 +194,52 @@ public class QueryStatementsResponseBody extends TeaModel {
         @NameInMap("PayeeId")
         public String payeeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("PayeeName")
         public String payeeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("SettleAmount")
         public String settleAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TEST000000</p>
+         */
         @NameInMap("SettleNo")
         public String settleNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("SettleStatus")
         public String settleStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-01 00:00:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18******263</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
@@ -315,15 +395,27 @@ public class QueryStatementsResponseBody extends TeaModel {
     }
 
     public static class QueryStatementsResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("StatementList")
         public java.util.List<QueryStatementsResponseBodyModelStatementList> statementList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

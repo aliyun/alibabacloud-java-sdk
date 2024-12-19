@@ -4,39 +4,78 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public java.util.List<QueryOrderLogisticsWithDesignatedTbUidResponseBodyModel> model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>pageSize</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>24D184B6-9***B-AC1B8ACED261</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -140,12 +179,24 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>189***12</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24D184B6-91***B-AC1B8ACED261</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>450000</p>
+         */
         @NameInMap("ZipCode")
         public String zipCode;
 
@@ -197,12 +248,24 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
     }
 
     public static class QueryOrderLogisticsWithDesignatedTbUidResponseBodyModelLogisticsDetailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-21 08:23:21</p>
+         */
         @NameInMap("OcurrTimeStr")
         public String ocurrTimeStr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24D184B6-913***2AB-AC1B8ACED261</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("StanderdDesc")
         public String standerdDesc;
 
@@ -249,15 +312,27 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
     }
 
     public static class QueryOrderLogisticsWithDesignatedTbUidResponseBodyModelPackageGoodItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>650***2703</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100<em><strong>39-6046</strong></em>9180</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
@@ -307,12 +382,24 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18***00</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24D184B6-91***2AB-AC1B8ACED261</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>516000</p>
+         */
         @NameInMap("ZipCode")
         public String zipCode;
 
@@ -373,6 +460,10 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         @NameInMap("Fetcher")
         public QueryOrderLogisticsWithDesignatedTbUidResponseBodyModelFetcher fetcher;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SF</p>
+         */
         @NameInMap("LogisticsCompanyCode")
         public String logisticsCompanyCode;
 
@@ -382,6 +473,10 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         @NameInMap("LogisticsDetailList")
         public java.util.List<QueryOrderLogisticsWithDesignatedTbUidResponseBodyModelLogisticsDetailList> logisticsDetailList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21321***2123</p>
+         */
         @NameInMap("MailNo")
         public String mailNo;
 
@@ -391,6 +486,10 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         @NameInMap("Receiver")
         public QueryOrderLogisticsWithDesignatedTbUidResponseBodyModelReceiver receiver;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24D184B6-91***B-AC1B8ACED261</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 

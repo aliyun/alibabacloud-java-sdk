@@ -4,30 +4,62 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateOrderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RESULT_STATUS_UNKOWN</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public CreateOrderResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA2554FD-F21F-536F-A7B7-B96C3E5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,6 +141,10 @@ public class CreateOrderResponseBody extends TeaModel {
     }
 
     public static class CreateOrderResponseBodyModelLmOrderListLmOrderList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>39435****</p>
+         */
         @NameInMap("LmOrderId")
         public String lmOrderId;
 
@@ -194,6 +230,10 @@ public class CreateOrderResponseBody extends TeaModel {
         @NameInMap("PayTradeIds")
         public CreateOrderResponseBodyModelPayTradeIds payTradeIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;<a href="http://www.taoba**.com">www.taoba**.com</a>&quot;</p>
+         */
         @NameInMap("RedirectUrl")
         public String redirectUrl;
 

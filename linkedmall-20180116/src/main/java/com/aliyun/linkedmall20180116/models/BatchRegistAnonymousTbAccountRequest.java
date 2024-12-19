@@ -4,9 +4,21 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class BatchRegistAnonymousTbAccountRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20210802****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idJsonList&quot;: &quot;[\&quot;id1\&quot;, \&quot;id2\&quot;]</p>
+     */
     @NameInMap("IdJsonList")
     public String idJsonList;
 

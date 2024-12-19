@@ -4,36 +4,80 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateWithholdTradeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021******59220</p>
+     */
     @NameInMap("AgreementNo")
     public String agreementNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("Body")
     public String body;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12******209</p>
+     */
     @NameInMap("BuyerId")
     public String buyerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+     */
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("GoodsDetail")
     public String goodsDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>64******721</p>
+     */
     @NameInMap("MerchantId")
     public String merchantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>94A30BED-4321-4A94-B948-EB896493B4BF</p>
+     */
     @NameInMap("OutRequestNo")
     public String outRequestNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23******274</p>
+     */
     @NameInMap("OutTradeNo")
     public String outTradeNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("SettleMode")
     public String settleMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("Subject")
     public String subject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6900</p>
+     */
     @NameInMap("TotalAmount")
     public String totalAmount;
 

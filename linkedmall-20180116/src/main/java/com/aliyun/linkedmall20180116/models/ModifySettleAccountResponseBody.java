@@ -4,9 +4,17 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ModifySettleAccountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
@@ -16,15 +24,27 @@ public class ModifySettleAccountResponseBody extends TeaModel {
     @NameInMap("Model")
     public ModifySettleAccountResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5127621C-****-5DCA-9745-2936B31DFD12</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>205</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,12 +118,24 @@ public class ModifySettleAccountResponseBody extends TeaModel {
     }
 
     public static class ModifySettleAccountResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>69******45</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15******65</p>
+         */
         @NameInMap("AccountNo")
         public String accountNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F-7805***B4A4A2762</p>
+         */
         @NameInMap("Id")
         public String id;
 

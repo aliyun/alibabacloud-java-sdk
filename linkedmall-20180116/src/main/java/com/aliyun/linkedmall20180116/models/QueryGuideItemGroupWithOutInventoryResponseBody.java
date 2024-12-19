@@ -4,24 +4,48 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryGuideItemGroupWithOutInventoryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ItemList")
     public java.util.List<QueryGuideItemGroupWithOutInventoryResponseBodyItemList> itemList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A7BE4356-7F92-533E-A31B-2EBF2D67****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -90,33 +114,65 @@ public class QueryGuideItemGroupWithOutInventoryResponseBody extends TeaModel {
         @NameInMap("CustomizedAttributeMap")
         public java.util.Map<String, ?> customizedAttributeMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62785263****</p>
+         */
         @NameInMap("ItemId")
         public String itemId;
 
         @NameInMap("ItemTitle")
         public String itemTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://detail.tmall.com/item.htm?id=670600584601&spm=a21y2.8291224.2879496.9.c6e23569FJRVmu&skuId=500049906">https://detail.tmall.com/item.htm?id=670600584601&amp;spm=a21y2.8291224.2879496.9.c6e23569FJRVmu&amp;skuId=500049906</a>****</p>
+         */
         @NameInMap("ItemUrl")
         public String itemUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10006515-64348848****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
         @NameInMap("MainPicUrl")
         public String mainPicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4990</p>
+         */
         @NameInMap("PointPrice")
         public Long pointPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4990</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5990</p>
+         */
         @NameInMap("ReservePrice")
         public String reservePrice;
 

@@ -4,24 +4,48 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ListUserPointRecordsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public java.util.List<ListUserPointRecordsResponseBodyModel> model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>199DFDCB-2225-5748-8D1A-528DD6C76563</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -90,36 +114,68 @@ public class ListUserPointRecordsResponseBody extends TeaModel {
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Amount")
         public Long amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1638451941000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+         */
         @NameInMap("ExtInfo")
         public java.util.Map<String, ?> extInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20211215******8117-1200</p>
+         */
         @NameInMap("IdempotentId")
         public String idempotentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1648451941000</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5******4</p>
+         */
         @NameInMap("RecordId")
         public String recordId;
 
         @NameInMap("Rest")
         public Long rest;
 
+        /**
+         * <strong>example:</strong>
+         * <p>710</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Status")
         public String status;
 

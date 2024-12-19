@@ -4,21 +4,43 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RefundPointRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20191223****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>44453****</p>
+     */
     @NameInMap("LmOrderId")
     public String lmOrderId;
 
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10718491****</p>
+     */
     @NameInMap("SellerId")
     public String sellerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>susan*****</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 

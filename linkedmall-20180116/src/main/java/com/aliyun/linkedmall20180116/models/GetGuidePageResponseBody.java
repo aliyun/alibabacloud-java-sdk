@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetGuidePageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("MiniShopInfo")
     public java.util.List<GetGuidePageResponseBodyMiniShopInfo> miniShopInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BA157565-3358-5D80-9330-************</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,17 @@ public class GetGuidePageResponseBody extends TeaModel {
     }
 
     public static class GetGuidePageResponseBodyMiniShopInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>LMALL20211012****</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000001</p>
+         */
         @NameInMap("LiteShopId")
         public String liteShopId;
 

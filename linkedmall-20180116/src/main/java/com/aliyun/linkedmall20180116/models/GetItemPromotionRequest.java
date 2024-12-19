@@ -4,12 +4,28 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetItemPromotionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20******003</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66262416****</p>
+     */
     @NameInMap("ItemId")
     public Long itemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000035-6193664*****</p>
+     */
     @NameInMap("LmItemId")
     public String lmItemId;
 

@@ -4,30 +4,70 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class AddItemLimitRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1638958044395</p>
+     */
     @NameInMap("BeginTime")
     public Long beginTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20******001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1647446400000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>59******0266</p>
+     */
     @NameInMap("ItemId")
     public Long itemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>679</p>
+     */
     @NameInMap("LmActivityId")
     public Long lmActivityId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000055-******09769</p>
+     */
     @NameInMap("LmItemId")
     public String lmItemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eaab4******59205ec608b2144ba</p>
+     */
     @NameInMap("SubBizCode")
     public String subBizCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UpperNum")
     public Integer upperNum;
 

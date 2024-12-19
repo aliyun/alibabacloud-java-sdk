@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ConfirmDisburseWithDesignatedTbUidResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public ConfirmDisburseWithDesignatedTbUidResponseBody body;
 
     public static ConfirmDisburseWithDesignatedTbUidResponse build(java.util.Map<String, ?> map) throws Exception {

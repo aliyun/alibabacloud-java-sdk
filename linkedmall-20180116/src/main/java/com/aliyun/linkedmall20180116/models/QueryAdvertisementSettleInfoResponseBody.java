@@ -4,30 +4,58 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryAdvertisementSettleInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public QueryAdvertisementSettleInfoResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D94987AE-2290-5084-AA34-53C50A245AFA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>206</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,39 +137,87 @@ public class QueryAdvertisementSettleInfoResponseBody extends TeaModel {
     }
 
     public static class QueryAdvertisementSettleInfoResponseBodyModelAdvertiseSettleInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("AdvertiseName")
         public String advertiseName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("AdvertiseSettleAmount")
         public String advertiseSettleAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("AdvertiseSettleDetailId")
         public String advertiseSettleDetailId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5781******561</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-11 10:00:00</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-11 10:01:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ExtInfo")
         public String extInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("MediaSettleDetailId")
         public String mediaSettleDetailId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-11 10:01:00</p>
+         */
         @NameInMap("ModifiedDate")
         public String modifiedDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TEST000000</p>
+         */
         @NameInMap("SettleNo")
         public String settleNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("SettleStatus")
         public String settleStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-11 10:00:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -252,12 +328,24 @@ public class QueryAdvertisementSettleInfoResponseBody extends TeaModel {
         @NameInMap("AdvertiseSettleInfoList")
         public java.util.List<QueryAdvertisementSettleInfoResponseBodyModelAdvertiseSettleInfoList> advertiseSettleInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

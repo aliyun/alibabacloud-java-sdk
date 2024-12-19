@@ -4,6 +4,12 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class OpenRealTbAccountSupportRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20***002</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 

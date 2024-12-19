@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryItemDetailInnerResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Item")
     public QueryItemDetailInnerResponseBodyItem item;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BA157565-3358-5D80-9330-************</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -125,38 +137,81 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
     }
 
     public static class QueryItemDetailInnerResponseBodyItemSkus extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+         */
         @NameInMap("ExtJson")
         public String extJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62887962****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000102-64426301****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("PointPrice")
         public Long pointPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1990</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2890</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4100</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1990</p>
+         */
         @NameInMap("ReservePrice")
         public Long reservePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("SkuDesc")
         public String skuDesc;
 
         /**
          * <p>skuid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>465309897****</p>
          */
         @NameInMap("SkuId")
         public Long skuId;
@@ -170,6 +225,10 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         @NameInMap("SkuTitle")
         public String skuTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -301,21 +360,37 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
     }
 
     public static class QueryItemDetailInnerResponseBodyItem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanSell")
         public Boolean canSell;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20177****</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
         @NameInMap("CategoryIds")
         public java.util.List<Long> categoryIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CenterInventory")
         public Boolean centerInventory;
 
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;<p>&lt;img align=\&quot;absmiddle\&quot; src=\&quot;<a href="https://img.alicdn.com/imgextra/i1/1742262291/O1CN01j0oO3L1SnK7EwwXP4_!!1742262291.jpg%5C%5C">https://img.alicdn.com/imgextra/i1/1742262291/O1CN01j0oO3L1SnK7EwwXP4_!!1742262291.jpg\\</a>&quot; style=\&quot;max-width: none;width: 750.0px;\&quot;&gt;&quot;</p>
+         */
         @NameInMap("DescOption")
         public String descOption;
 
@@ -328,12 +403,24 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         @NameInMap("IforestProps")
         public java.util.List<java.util.Map<String, ?>> iforestProps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsCanSell")
         public Boolean isCanSell;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsSellerPayPostfee")
         public Boolean isSellerPayPostfee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60646253****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
@@ -343,39 +430,75 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         @NameInMap("ItemTitle")
         public String itemTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>entity</p>
+         */
         @NameInMap("LmItemCategory")
         public String lmItemCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1002****</p>
+         */
         @NameInMap("LmShopId")
         public Long lmShopId;
 
         @NameInMap("MainPicUrl")
         public String mainPicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("MinPoints")
         public Long minPoints;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1990</p>
+         */
         @NameInMap("MinPrice")
         public Long minPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Properties")
         public java.util.Map<String, ?> properties;
 
         @NameInMap("Province")
         public String province;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("ReservePrice")
         public Long reservePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>329488****</p>
+         */
         @NameInMap("SellerId")
         public Long sellerId;
 
         @NameInMap("SellerNick")
         public String sellerNick;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SellerPayPostfee")
         public Boolean sellerPayPostfee;
 
@@ -388,6 +511,10 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         @NameInMap("TbShopName")
         public String tbShopName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1999</p>
+         */
         @NameInMap("TotalSoldQuantity")
         public Integer totalSoldQuantity;
 

@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CancelRealTbAccountSupportRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 

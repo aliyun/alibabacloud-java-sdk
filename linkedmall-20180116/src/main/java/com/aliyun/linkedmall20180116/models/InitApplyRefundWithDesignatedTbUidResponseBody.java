@@ -4,39 +4,78 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class InitApplyRefundWithDesignatedTbUidResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public InitApplyRefundWithDesignatedTbUidResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>pageSize</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5BE45C12-C37***81-A8E9C61401AB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>201</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -134,9 +173,17 @@ public class InitApplyRefundWithDesignatedTbUidResponseBody extends TeaModel {
     }
 
     public static class InitApplyRefundWithDesignatedTbUidResponseBodyModelMaxRefundFeeData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaxRefundFee")
         public Long maxRefundFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MinRefundFee")
         public Long minRefundFee;
 
@@ -164,15 +211,27 @@ public class InitApplyRefundWithDesignatedTbUidResponseBody extends TeaModel {
     }
 
     public static class InitApplyRefundWithDesignatedTbUidResponseBodyModelRefundReasonList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ProofRequired")
         public Boolean proofRequired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12323</p>
+         */
         @NameInMap("ReasonTextId")
         public Long reasonTextId;
 
         @NameInMap("ReasonTips")
         public String reasonTips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("RefundDescRequired")
         public Boolean refundDescRequired;
 
@@ -216,12 +275,24 @@ public class InitApplyRefundWithDesignatedTbUidResponseBody extends TeaModel {
     }
 
     public static class InitApplyRefundWithDesignatedTbUidResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BizClaimType")
         public Integer bizClaimType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>711***981</p>
+         */
         @NameInMap("LmOrderId")
         public String lmOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("MainOrderRefund")
         public Boolean mainOrderRefund;
 

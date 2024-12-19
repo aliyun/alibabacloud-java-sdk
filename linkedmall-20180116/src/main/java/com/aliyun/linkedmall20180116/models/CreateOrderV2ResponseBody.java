@@ -4,30 +4,58 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateOrderV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public CreateOrderV2ResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>978A8742-1A38-54B5-98D9-F8713ACBC385</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,6 +137,10 @@ public class CreateOrderV2ResponseBody extends TeaModel {
     }
 
     public static class CreateOrderV2ResponseBodyModelLmOrderListLmOrderList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[5748****,5647****]</p>
+         */
         @NameInMap("LmOrderId")
         public String lmOrderId;
 
@@ -194,6 +226,10 @@ public class CreateOrderV2ResponseBody extends TeaModel {
         @NameInMap("PayTradeIds")
         public CreateOrderV2ResponseBodyModelPayTradeIds payTradeIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("RedirectUrl")
         public String redirectUrl;
 

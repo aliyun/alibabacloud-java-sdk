@@ -7,12 +7,24 @@ public class QueryAddressListResponseBody extends TeaModel {
     @NameInMap("AddressList")
     public java.util.List<QueryAddressListResponseBodyAddressList> addressList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>79C01D47-3C44-57D9-BC99-1B33F7ED14B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,36 +66,68 @@ public class QueryAddressListResponseBody extends TeaModel {
     }
 
     public static class QueryAddressListResponseBodyAddressList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("AddressDetail")
         public String addressDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>314304607</p>
+         */
         @NameInMap("AddressId")
         public Long addressId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xianggang</p>
+         */
         @NameInMap("Area")
         public String area;
 
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("Country")
         public String country;
 
+        /**
+         * <strong>example:</strong>
+         * <p>230921</p>
+         */
         @NameInMap("DivisionCode")
         public String divisionCode;
 
         @NameInMap("FullName")
         public String fullName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18611921898</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>323050</p>
+         */
         @NameInMap("PostCode")
         public String postCode;
 
         @NameInMap("Province")
         public String province;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

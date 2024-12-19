@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryBestSession4ItemsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("LmItemActivitySessionModelList")
     public QueryBestSession4ItemsResponseBodyLmItemActivitySessionModelList lmItemActivitySessionModelList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA2554FD-F21F-536F-A7B7-B96C3E5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,33 +66,69 @@ public class QueryBestSession4ItemsResponseBody extends TeaModel {
     }
 
     public static class QueryBestSession4ItemsResponseBodyLmItemActivitySessionModelListLmItemActivitySessionModelLmActivitySessionModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>LMALL20190325****</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-09 18:59:59</p>
+         */
         @NameInMap("DisplayDate")
         public String displayDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-09 18:59:59</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+         */
         @NameInMap("ExtInfo")
         public java.util.Map<String, ?> extInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>679</p>
+         */
         @NameInMap("LmActivityId")
         public Long lmActivityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>679</p>
+         */
         @NameInMap("LmSessionId")
         public Long lmSessionId;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-25 09:07:00</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cf5eddd467ca4d4a8105378a3ea****</p>
+         */
         @NameInMap("SubBizCode")
         public String subBizCode;
 
@@ -172,12 +220,20 @@ public class QueryBestSession4ItemsResponseBody extends TeaModel {
     }
 
     public static class QueryBestSession4ItemsResponseBodyLmItemActivitySessionModelListLmItemActivitySessionModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>66440412****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
         @NameInMap("LmActivitySessionModel")
         public QueryBestSession4ItemsResponseBodyLmItemActivitySessionModelListLmItemActivitySessionModelLmActivitySessionModel lmActivitySessionModel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000102-65875550****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 

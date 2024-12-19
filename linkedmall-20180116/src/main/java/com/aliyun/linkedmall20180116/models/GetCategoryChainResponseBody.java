@@ -7,9 +7,17 @@ public class GetCategoryChainResponseBody extends TeaModel {
     @NameInMap("CategoryList")
     public java.util.List<GetCategoryChainResponseBodyCategoryList> categoryList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -54,6 +62,10 @@ public class GetCategoryChainResponseBody extends TeaModel {
     }
 
     public static class GetCategoryChainResponseBodyCategoryList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12123</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 

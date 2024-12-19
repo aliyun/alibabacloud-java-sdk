@@ -4,15 +4,29 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RefuseMerchantSyncTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20190325****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
     @NameInMap("SellerNick")
     public String sellerNick;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1***1</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1641708010</p>
+     */
     @NameInMap("TimeStamp")
     public Long timeStamp;
 

@@ -4,9 +4,17 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QuerySellerLicenseResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -15,6 +23,9 @@ public class QuerySellerLicenseResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5F0A38D5-F981-529A-911E-1B6D55D***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -60,6 +71,10 @@ public class QuerySellerLicenseResponseBody extends TeaModel {
         @NameInMap("LicenseUrl")
         public String licenseUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>221410922****</p>
+         */
         @NameInMap("SellerId")
         public String sellerId;
 

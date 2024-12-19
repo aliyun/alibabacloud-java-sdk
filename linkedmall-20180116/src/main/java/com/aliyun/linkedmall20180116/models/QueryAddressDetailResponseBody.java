@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryAddressDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("DeliveryAddress")
     public QueryAddressDetailResponseBodyDeliveryAddress deliveryAddress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6103AD7B-21C2-523B-89D0-579DA58D08E8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,36 +66,68 @@ public class QueryAddressDetailResponseBody extends TeaModel {
     }
 
     public static class QueryAddressDetailResponseBodyDeliveryAddress extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("AddressDetail")
         public String addressDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>313312207</p>
+         */
         @NameInMap("AddressId")
         public Long addressId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fujian</p>
+         */
         @NameInMap("Area")
         public String area;
 
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("Country")
         public String country;
 
+        /**
+         * <strong>example:</strong>
+         * <p>321112104</p>
+         */
         @NameInMap("DivisionCode")
         public String divisionCode;
 
         @NameInMap("FullName")
         public String fullName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18941288583</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>518055</p>
+         */
         @NameInMap("PostCode")
         public String postCode;
 
         @NameInMap("Province")
         public String province;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

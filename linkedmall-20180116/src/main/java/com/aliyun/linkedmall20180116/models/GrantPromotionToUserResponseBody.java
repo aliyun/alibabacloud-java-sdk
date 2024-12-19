@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GrantPromotionToUserResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public GrantPromotionToUserResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>79C01D47-3C44-57D9-BC99-1B33F7ED14B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +66,38 @@ public class GrantPromotionToUserResponseBody extends TeaModel {
     }
 
     public static class GrantPromotionToUserResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12322333232</p>
+         */
         @NameInMap("EffectiveEndTime")
         public Long effectiveEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123243444</p>
+         */
         @NameInMap("EffectiveStartTime")
         public Long effectiveStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("PromotionInstanceId")
         public String promotionInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ef2b8********f824830b7e55a0dc5</p>
+         */
         @NameInMap("SubBizCode")
         public String subBizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

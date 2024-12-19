@@ -4,6 +4,12 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class SyncMerchantInfoRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20******002</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
@@ -13,9 +19,17 @@ public class SyncMerchantInfoRequest extends TeaModel {
     @NameInMap("SellerNick")
     public String sellerNick;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1****3</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1639540484044</p>
+     */
     @NameInMap("TimeStamp")
     public Long timeStamp;
 

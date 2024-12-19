@@ -4,30 +4,58 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RenderOrderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SKU_IS_MISSING</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public RenderOrderResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DAAA6391-3339-5333-9E4D-C71CD26A231F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -189,36 +217,68 @@ public class RenderOrderResponseBody extends TeaModel {
         @NameInMap("Cash")
         public Long cash;
 
+        /**
+         * <strong>example:</strong>
+         * <p>658057729548</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iphone12</p>
+         */
         @NameInMap("ItemName")
         public String itemName;
 
         @NameInMap("ItemPicUrl")
         public String itemPicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10001036-254415474010492928</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>39</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>107184918</p>
+         */
         @NameInMap("SellerId")
         public Long sellerId;
 
         @NameInMap("SellerNick")
         public String sellerNick;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4931861303981</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>liu_12</p>
+         */
         @NameInMap("SkuName")
         public String skuName;
 

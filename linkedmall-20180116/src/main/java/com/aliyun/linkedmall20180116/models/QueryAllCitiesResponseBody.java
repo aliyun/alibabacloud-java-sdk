@@ -7,24 +7,52 @@ public class QueryAllCitiesResponseBody extends TeaModel {
     @NameInMap("Cities")
     public QueryAllCitiesResponseBodyCities cities;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>79C01D47-3C44-57D9-BC99-1B33F7ED14B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,18 +126,34 @@ public class QueryAllCitiesResponseBody extends TeaModel {
     }
 
     public static class QueryAllCitiesResponseBodyCitiesCity extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>110100</p>
+         */
         @NameInMap("CityCode")
         public Long cityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>424</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>110000</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>beijing</p>
+         */
         @NameInMap("PinYin")
         public String pinYin;
 

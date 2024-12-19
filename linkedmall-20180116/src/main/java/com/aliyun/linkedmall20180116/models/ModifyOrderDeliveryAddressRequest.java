@@ -4,15 +4,34 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ModifyOrderDeliveryAddressRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20190325****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeliveryAddress")
     public String deliveryAddress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;mobileNo\&quot;:\&quot;123****8965\&quot;}</p>
+     */
     @NameInMap("ExtJson")
     public String extJson;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53396****</p>
+     */
     @NameInMap("LmOrderId")
     public Long lmOrderId;
 

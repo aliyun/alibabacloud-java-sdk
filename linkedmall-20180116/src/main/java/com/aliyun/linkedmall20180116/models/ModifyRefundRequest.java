@@ -4,30 +4,74 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ModifyRefundRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>500325</p>
+     */
     @NameInMap("ApplyReasonTextId")
     public Long applyReasonTextId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ApplyRefundCount")
     public Integer applyRefundCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>790</p>
+     */
     @NameInMap("ApplyRefundFee")
     public Long applyRefundFee;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BizClaimType")
     public Integer bizClaimType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20******001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>220635******232</p>
+     */
     @NameInMap("BizUid")
     public String bizUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14244******33071</p>
+     */
     @NameInMap("DisputeId")
     public Long disputeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("GoodsStatus")
     public Integer goodsStatus;
 
@@ -37,12 +81,26 @@ public class ModifyRefundRequest extends TeaModel {
     @NameInMap("LeavePictureList")
     public java.util.List<ModifyRefundRequestLeavePictureList> leavePictureList;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>38******75</p>
+     */
     @NameInMap("SubLmOrderId")
     public String subLmOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>220635******232</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 
@@ -167,6 +225,10 @@ public class ModifyRefundRequest extends TeaModel {
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://lm-dk.oss-cn-hangzhou.aliyuncs.com/1635738731345.png">https://lm-dk.oss-cn-hangzhou.aliyuncs.com/1635738731345.png</a></p>
+         */
         @NameInMap("Picture")
         public String picture;
 

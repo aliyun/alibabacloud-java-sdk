@@ -4,33 +4,65 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryChannelItemBillDownloadUrlRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BILL-10000007371****</p>
+     */
     @NameInMap("BillId")
     public String billId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-11</p>
+     */
     @NameInMap("BillPeriod")
     public String billPeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>billGenerated</p>
+     */
     @NameInMap("BillStatus")
     public String billStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LMALL20******001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
     @NameInMap("BizName")
     public String bizName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1002****</p>
+     */
     @NameInMap("LmShopId")
     public Long lmShopId;
 
     @NameInMap("LmShopName")
     public String lmShopName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12***29</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

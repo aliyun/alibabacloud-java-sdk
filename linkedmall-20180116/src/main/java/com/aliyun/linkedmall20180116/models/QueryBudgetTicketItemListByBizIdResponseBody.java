@@ -4,27 +4,55 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryBudgetTicketItemListByBizIdResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public java.util.List<QueryBudgetTicketItemListByBizIdResponseBodyModel> model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>26F4B2C7-931F-5AC5-8FCC-AE76C9B00D2F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -98,30 +126,66 @@ public class QueryBudgetTicketItemListByBizIdResponseBody extends TeaModel {
     }
 
     public static class QueryBudgetTicketItemListByBizIdResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Invalid")
         public Boolean invalid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>65******0310</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("PoCode")
         public String poCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>68442******012</p>
+         */
         @NameInMap("PromotionId")
         public String promotionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("RemnantAmount")
         public Long remnantAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c26be******86e5a61cc710cdb</p>
+         */
         @NameInMap("SecurityCode")
         public String securityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SettlementPrice")
         public Long settlementPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>47******76529</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("SubsidyAmount")
         public Long subsidyAmount;
 

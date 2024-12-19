@@ -4,21 +4,41 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RegisterSettleAccountRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>bank</p>
+     */
     @NameInMap("AccountChannel")
     public String accountChannel;
 
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15******65</p>
+     */
     @NameInMap("AccountNo")
     public String accountNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>transferIn</p>
+     */
     @NameInMap("AccountPayType")
     public String accountPayType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LMALL20******007</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
@@ -28,6 +48,10 @@ public class RegisterSettleAccountRequest extends TeaModel {
     @NameInMap("Currency")
     public String currency;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ExtInfo")
     public String extInfo;
 

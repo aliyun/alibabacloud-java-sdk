@@ -4,27 +4,55 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RefreshSettlementOrderAccountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0000</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public java.util.List<RefreshSettlementOrderAccountResponseBodyModel> model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>719E8348-72BD-581E-971F-467***6C908</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,15 +126,27 @@ public class RefreshSettlementOrderAccountResponseBody extends TeaModel {
     }
 
     public static class RefreshSettlementOrderAccountResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>15******65</p>
+         */
         @NameInMap("AccountNo")
         public String accountNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Message")
         public String message;
 
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TEST000000</p>
+         */
         @NameInMap("SettleNo")
         public String settleNo;
 

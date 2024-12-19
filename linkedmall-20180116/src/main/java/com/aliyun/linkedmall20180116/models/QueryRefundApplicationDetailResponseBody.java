@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryRefundApplicationDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RefundApplicationDetail")
     public QueryRefundApplicationDetailResponseBodyRefundApplicationDetail refundApplicationDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DAAA6391-3339-5333-9E4D-C71CD26A231F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,10 @@ public class QueryRefundApplicationDetailResponseBody extends TeaModel {
     }
 
     public static class QueryRefundApplicationDetailResponseBodyRefundApplicationDetailApplyReasonText extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100005</p>
+         */
         @NameInMap("ReasonTextId")
         public Long reasonTextId;
 
@@ -84,9 +100,17 @@ public class QueryRefundApplicationDetailResponseBody extends TeaModel {
     }
 
     public static class QueryRefundApplicationDetailResponseBodyRefundApplicationDetailMaxRefundFeeData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaxRefundFee")
         public Integer maxRefundFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MinRefundFee")
         public Integer minRefundFee;
 
@@ -120,18 +144,34 @@ public class QueryRefundApplicationDetailResponseBody extends TeaModel {
         @NameInMap("ApplyReasonText")
         public QueryRefundApplicationDetailResponseBodyRefundApplicationDetailApplyReasonText applyReasonText;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BizClaimType")
         public Integer bizClaimType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-02 10:16:10</p>
+         */
         @NameInMap("DisputeCreateTime")
         public String disputeCreateTime;
 
         @NameInMap("DisputeDesc")
         public String disputeDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-02 10:16:12</p>
+         */
         @NameInMap("DisputeEndTime")
         public String disputeEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>141******33</p>
+         */
         @NameInMap("DisputeId")
         public Long disputeId;
 
@@ -141,18 +181,34 @@ public class QueryRefundApplicationDetailResponseBody extends TeaModel {
         @NameInMap("DisputeType")
         public Integer disputeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>46******11</p>
+         */
         @NameInMap("LmOrderId")
         public String lmOrderId;
 
         @NameInMap("MaxRefundFeeData")
         public QueryRefundApplicationDetailResponseBodyRefundApplicationDetailMaxRefundFeeData maxRefundFeeData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OrderLogisticsStatus")
         public Integer orderLogisticsStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("RealRefundFee")
         public Long realRefundFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("RefundFee")
         public Long refundFee;
 
@@ -162,12 +218,20 @@ public class QueryRefundApplicationDetailResponseBody extends TeaModel {
         @NameInMap("RefunderName")
         public String refunderName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>158****1234</p>
+         */
         @NameInMap("RefunderTel")
         public String refunderTel;
 
         @NameInMap("RefunderZipCode")
         public String refunderZipCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ReturnGoodCount")
         public Integer returnGoodCount;
 
@@ -183,6 +247,10 @@ public class QueryRefundApplicationDetailResponseBody extends TeaModel {
         @NameInMap("SellerRefuseReason")
         public String sellerRefuseReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44******62</p>
+         */
         @NameInMap("SubLmOrderId")
         public String subLmOrderId;
 

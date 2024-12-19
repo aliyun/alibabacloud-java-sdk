@@ -4,15 +4,33 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RefreshSettlementOrderAccountRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>709447***856069</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20210125****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+     */
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7521****8332932</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

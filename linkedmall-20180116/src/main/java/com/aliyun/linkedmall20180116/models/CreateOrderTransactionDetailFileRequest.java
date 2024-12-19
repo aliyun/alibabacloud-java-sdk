@@ -4,48 +4,104 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateOrderTransactionDetailFileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>LMALL20211102****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>click_page</p>
+     */
     @NameInMap("BizName")
     public String bizName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tcp_v</p>
+     */
     @NameInMap("ChannelName")
     public String channelName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-31 14:03:28</p>
+     */
     @NameInMap("CreateEndTime")
     public String createEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-02-26 04:55:31</p>
+     */
     @NameInMap("CreateStartTime")
     public String createStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>655******148</p>
+     */
     @NameInMap("ItemId")
     public String itemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10026953</p>
+     */
     @NameInMap("LmShopId")
     public String lmShopId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("OrderStatus")
     public String orderStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PayStatus")
     public String payStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-31 14:03:28</p>
+     */
     @NameInMap("PaymentEndTime")
     public String paymentEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-31 14:03:28</p>
+     */
     @NameInMap("PaymentStartTime")
     public String paymentStartTime;
 
     @NameInMap("PoCode")
     public String poCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-31 14:05:21</p>
+     */
     @NameInMap("RefundEndTime")
     public String refundEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-31 14:03:28</p>
+     */
     @NameInMap("RefundStartTime")
     public String refundStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>220680193****</p>
+     */
     @NameInMap("SellerId")
     public String sellerId;
 
@@ -55,15 +111,31 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
     @NameInMap("SettlementNode")
     public String settlementNode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hyq-1</p>
+     */
     @NameInMap("ShopName")
     public String shopName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>201312321321312</p>
+     */
     @NameInMap("TbMainOrderId")
     public String tbMainOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18******263</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NYBQJYWZ</p>
+     */
     @NameInMap("TenantName")
     public String tenantName;
 

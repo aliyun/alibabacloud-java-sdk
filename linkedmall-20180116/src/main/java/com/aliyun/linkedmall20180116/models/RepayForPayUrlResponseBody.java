@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RepayForPayUrlResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public RepayForPayUrlResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1AF23E47-D8FB-576A-B069-CA98B4DE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,10 @@ public class RepayForPayUrlResponseBody extends TeaModel {
     }
 
     public static class RepayForPayUrlResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("FrontUrl")
         public String frontUrl;
 

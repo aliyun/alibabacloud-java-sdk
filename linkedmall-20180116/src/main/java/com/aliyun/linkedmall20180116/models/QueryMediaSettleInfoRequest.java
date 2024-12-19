@@ -4,12 +4,20 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaSettleInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>LMALL20******005</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-08-01 01:00:00</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -19,15 +27,27 @@ public class QueryMediaSettleInfoRequest extends TeaModel {
     @NameInMap("MediaName")
     public String mediaName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SettleNo")
     public String settleNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-08-01 00:00:00</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

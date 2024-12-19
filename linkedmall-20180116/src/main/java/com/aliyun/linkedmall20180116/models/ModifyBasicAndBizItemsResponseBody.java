@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ModifyBasicAndBizItemsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("FailedItemList")
     public ModifyBasicAndBizItemsResponseBodyFailedItemList failedItemList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F957A835-87CE-5E5F-B0A9-A66B081E****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -73,9 +85,17 @@ public class ModifyBasicAndBizItemsResponseBody extends TeaModel {
     }
 
     public static class ModifyBasicAndBizItemsResponseBodyFailedItemListItem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>65305223****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000102-65305223****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 

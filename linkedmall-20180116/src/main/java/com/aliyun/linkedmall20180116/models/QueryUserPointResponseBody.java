@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryUserPointResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public QueryUserPointResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1718921E-C8D4-55E1-B8D4-114AE537C1B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,33 +66,73 @@ public class QueryUserPointResponseBody extends TeaModel {
     }
 
     public static class QueryUserPointResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>11******466</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LMALL20******008</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22******3646</p>
+         */
         @NameInMap("BizUid")
         public String bizUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1639037068811</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("CurrentAmount")
         public Long currentAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4000</p>
+         */
         @NameInMap("FrozenAmount")
         public Long frozenAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("HistoryAmount")
         public Long historyAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1642662319000</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Status")
         public String status;
 

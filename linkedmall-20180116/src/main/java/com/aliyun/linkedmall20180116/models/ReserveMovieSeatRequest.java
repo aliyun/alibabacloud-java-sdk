@@ -4,24 +4,58 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ReserveMovieSeatRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20******003</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22******85759</p>
+     */
     @NameInMap("BizUid")
     public String bizUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ExtJson")
     public String extJson;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>186******71</p>
+     */
     @NameInMap("Mobile")
     public String mobile;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9******15</p>
+     */
     @NameInMap("ScheduleId")
     public Long scheduleId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SeatIds")
     public String seatIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SeatNames")
     public String seatNames;
 

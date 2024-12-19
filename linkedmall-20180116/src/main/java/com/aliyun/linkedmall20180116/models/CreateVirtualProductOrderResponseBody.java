@@ -4,30 +4,62 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateVirtualProductOrderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public CreateVirtualProductOrderResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3B55509D-20AC-5BD5-9A81-D6B7382E****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,6 +141,10 @@ public class CreateVirtualProductOrderResponseBody extends TeaModel {
     }
 
     public static class CreateVirtualProductOrderResponseBodyModelLmOrderListLmOrderList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>39435****</p>
+         */
         @NameInMap("LmOrderId")
         public String lmOrderId;
 
@@ -194,6 +230,10 @@ public class CreateVirtualProductOrderResponseBody extends TeaModel {
         @NameInMap("PayTradeIds")
         public CreateVirtualProductOrderResponseBodyModelPayTradeIds payTradeIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://console.authing.cn/console/g">https://console.authing.cn/console/g</a>*********</p>
+         */
         @NameInMap("RedirectUrl")
         public String redirectUrl;
 

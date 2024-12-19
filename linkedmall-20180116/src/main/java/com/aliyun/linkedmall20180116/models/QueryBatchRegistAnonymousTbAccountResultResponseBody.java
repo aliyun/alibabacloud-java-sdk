@@ -4,21 +4,41 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryBatchRegistAnonymousTbAccountResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10418*******</p>
+     */
     @NameInMap("BatchId")
     public String batchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("FailIds")
     public QueryBatchRegistAnonymousTbAccountResultResponseBodyFailIds failIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5E2D59BA-4EB0-45C4-A0D7-D98C1A4B****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Status")
     public String status;
 

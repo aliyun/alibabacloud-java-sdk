@@ -4,15 +4,31 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class DeleteItemLimitRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Model")
     public Boolean model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A7BE4356-7F92-533E-A31B-2EBF2D67****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
