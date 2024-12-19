@@ -40,6 +40,10 @@ public class ListSitesShrinkRequest extends TeaModel {
     @NameInMap("OnlyEnterprise")
     public Boolean onlyEnterprise;
 
+    /**
+     * <strong>example:</strong>
+     * <p>visitTime</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 

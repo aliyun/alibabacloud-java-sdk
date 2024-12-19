@@ -242,6 +242,10 @@ public class ListSitesResponseBody extends TeaModel {
         @NameInMap("VerifyCode")
         public String verifyCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-12-24T02:01:11Z</p>
+         */
         @NameInMap("VisitTime")
         public String visitTime;
 

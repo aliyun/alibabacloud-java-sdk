@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetClientCertificateHostnamesResponseBody extends TeaModel {
     /**
+     * <p>The ID of the client CA certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>babab9db65ee5efcca9f3d41d4b50d66</p>
      */
@@ -12,6 +14,8 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ET5BF670-09D5-4D0B-BEBY-D96A2A528000</p>
      */
@@ -19,6 +23,8 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The website ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
      */
@@ -26,6 +32,8 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The website name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */

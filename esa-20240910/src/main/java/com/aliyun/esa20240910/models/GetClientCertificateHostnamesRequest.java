@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetClientCertificateHostnamesRequest extends TeaModel {
     /**
+     * <p>The certificate ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>baba39055622c008b90285a8838ed09a</p>
      */
@@ -12,6 +14,7 @@ public class GetClientCertificateHostnamesRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The website ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
