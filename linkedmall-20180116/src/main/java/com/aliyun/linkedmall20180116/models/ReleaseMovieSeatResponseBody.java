@@ -7,24 +7,52 @@ public class ReleaseMovieSeatResponseBody extends TeaModel {
     @NameInMap("ActionResult")
     public ReleaseMovieSeatResponseBodyActionResult actionResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3F43129B-020F-5F8A-88B0-9CBDE2AD6F52</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>205</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,12 +126,24 @@ public class ReleaseMovieSeatResponseBody extends TeaModel {
     }
 
     public static class ReleaseMovieSeatResponseBodyActionResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ReturnCode")
         public String returnCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("ReturnMessage")
         public String returnMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ReturnValue")
         public String returnValue;
 

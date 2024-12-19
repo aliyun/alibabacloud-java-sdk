@@ -4,9 +4,15 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryUserAccountRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 

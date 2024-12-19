@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetUserInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("LoginResult")
     public GetUserInfoResponseBodyLoginResult loginResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9054694D-E3AF-5A07-9647-0537026A45E1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +66,45 @@ public class GetUserInfoResponseBody extends TeaModel {
     }
 
     public static class GetUserInfoResponseBodyLoginResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>LMALL20******001</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18******60</p>
+         */
         @NameInMap("BizUid")
         public String bizUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("BizUserName")
         public String bizUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ExtInfo")
         public java.util.Map<String, ?> extInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10******3</p>
+         */
         @NameInMap("LmUserId")
         public Long lmUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("ReturnUrl")
         public String returnUrl;
 

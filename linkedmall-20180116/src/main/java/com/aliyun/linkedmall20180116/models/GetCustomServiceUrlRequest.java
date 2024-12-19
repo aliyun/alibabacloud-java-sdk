@@ -4,27 +4,63 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetCustomServiceUrlRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20210315****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>220077837****</p>
+     */
     @NameInMap("BizUid")
     public String bizUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5512876</p>
+     */
     @NameInMap("Cuid")
     public String cuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123213***1212</p>
+     */
     @NameInMap("Nick")
     public String nick;
 
+    /**
+     * <strong>example:</strong>
+     * <p>220680193****</p>
+     */
     @NameInMap("SellerId")
     public String sellerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>220077837****</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 

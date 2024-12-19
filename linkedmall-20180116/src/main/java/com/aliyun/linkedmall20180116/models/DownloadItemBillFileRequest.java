@@ -4,9 +4,17 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class DownloadItemBillFileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FC10000008458****</p>
+     */
     @NameInMap("BillId")
     public String billId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LMALL20191223****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 

@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class SyncMerchantInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public SyncMerchantInfoResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>79C01D47-3C44-57D9-BC99-1B33F7ED14B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,6 +69,10 @@ public class SyncMerchantInfoResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1****1</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

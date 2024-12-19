@@ -4,12 +4,24 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetWithholdSignPageUrlResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6103AD7B-21C2-523B-89D0-579DA58D08E8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,10 @@ public class GetWithholdSignPageUrlResponseBody extends TeaModel {
     }
 
     public static class GetWithholdSignPageUrlResponseBodyWithholdSignResponse extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0AF7F437-C869-477D-A21A-CF402493FFFE</p>
+         */
         @NameInMap("OutRequestNo")
         public String outRequestNo;
 

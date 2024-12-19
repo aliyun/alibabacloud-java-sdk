@@ -4,21 +4,45 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ModifySupplierPriceAndPriceCentRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>LMALL20220713****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10026780-55789045****</p>
+     */
     @NameInMap("LmItemId")
     public String lmItemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1002****</p>
+     */
     @NameInMap("LmShopId")
     public String lmShopId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4880</p>
+     */
     @NameInMap("PriceCent")
     public String priceCent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>490073602****</p>
+     */
     @NameInMap("SkuId")
     public String skuId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("SupplierPrice")
     public String supplierPrice;
 

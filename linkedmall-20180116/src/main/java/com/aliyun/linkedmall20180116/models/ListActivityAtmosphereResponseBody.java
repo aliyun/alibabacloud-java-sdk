@@ -4,24 +4,50 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ListActivityAtmosphereResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public java.util.List<ListActivityAtmosphereResponseBodyModel> model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E090F1A0-7454-5F36-933C-E6332CE2****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -87,12 +113,24 @@ public class ListActivityAtmosphereResponseBody extends TeaModel {
     }
 
     public static class ListActivityAtmosphereResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>22******37</p>
+         */
         @NameInMap("BizUid")
         public String bizUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Status")
         public String status;
 

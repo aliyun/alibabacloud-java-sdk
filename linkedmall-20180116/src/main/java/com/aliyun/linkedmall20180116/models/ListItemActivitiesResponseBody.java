@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ListItemActivitiesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("LmItemActivityModelList")
     public ListItemActivitiesResponseBodyLmItemActivityModelList lmItemActivityModelList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1718921E-C8D4-55E1-B8D4-114AE537C1B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,24 +66,48 @@ public class ListItemActivitiesResponseBody extends TeaModel {
     }
 
     public static class ListItemActivitiesResponseBodyLmItemActivityModelListLmItemActivityModelLmActivityPopModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>LMALL20******001</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-31 14:25:00</p>
+         */
         @NameInMap("DisplayDate")
         public String displayDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-04 00:00:00</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
         @NameInMap("ExtInfo")
         public java.util.Map<String, ?> extInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>666</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-01 00:00:00</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4309074a******9d626669eaa7f7c</p>
+         */
         @NameInMap("SubBizCode")
         public String subBizCode;
 
@@ -150,12 +186,20 @@ public class ListItemActivitiesResponseBody extends TeaModel {
     }
 
     public static class ListItemActivitiesResponseBodyLmItemActivityModelListLmItemActivityModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>599520******</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
         @NameInMap("LmActivityPopModel")
         public ListItemActivitiesResponseBodyLmItemActivityModelListLmItemActivityModelLmActivityPopModel lmActivityPopModel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000055-599520******</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 

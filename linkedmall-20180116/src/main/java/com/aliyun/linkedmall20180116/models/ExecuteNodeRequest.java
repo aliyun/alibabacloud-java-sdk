@@ -4,21 +4,49 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ExecuteNodeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>LMALL20******001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("NodeInstanceId")
     public String nodeInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ProcessId")
     public String processId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ProcessInstanceId")
     public String processInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("RequestData")
     public String requestData;
 

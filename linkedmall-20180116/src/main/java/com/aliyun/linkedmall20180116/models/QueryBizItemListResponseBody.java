@@ -4,24 +4,48 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryBizItemListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ItemList")
     public QueryBizItemListResponseBodyItemList itemList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5B9B6D8D-A78D-521D-B6B6-08CDC182****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -127,9 +151,17 @@ public class QueryBizItemListResponseBody extends TeaModel {
         @NameInMap("PointPrice")
         public Long pointPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
@@ -306,27 +338,55 @@ public class QueryBizItemListResponseBody extends TeaModel {
     }
 
     public static class QueryBizItemListResponseBodyItemListItemSkuListSku extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>202109240050220000008822****</p>
+         */
         @NameInMap("BenefitId")
         public String benefitId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanSell")
         public Boolean canSell;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("CustomizedAttributeMap")
         public java.util.Map<String, ?> customizedAttributeMap;
 
         @NameInMap("GradePriceModels")
         public QueryBizItemListResponseBodyItemListItemSkuListSkuGradePriceModels gradePriceModels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1990</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>482694857****</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
@@ -336,6 +396,10 @@ public class QueryBizItemListResponseBody extends TeaModel {
         @NameInMap("SkuTitle")
         public String skuTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4990</p>
+         */
         @NameInMap("TaoBaoCurrentPrice")
         public Long taoBaoCurrentPrice;
 
@@ -465,33 +529,61 @@ public class QueryBizItemListResponseBody extends TeaModel {
     }
 
     public static class QueryBizItemListResponseBodyItemListItem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanSell")
         public Boolean canSell;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50050579</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
         @NameInMap("CustomizedItemName")
         public String customizedItemName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("ExtJson")
         public String extJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64944233****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
         @NameInMap("ItemTitle")
         public String itemTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000102-65931326****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
         @NameInMap("MainPicUrl")
         public String mainPicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("ReservePrice")
         public Long reservePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>284324****</p>
+         */
         @NameInMap("SellerId")
         public Long sellerId;
 

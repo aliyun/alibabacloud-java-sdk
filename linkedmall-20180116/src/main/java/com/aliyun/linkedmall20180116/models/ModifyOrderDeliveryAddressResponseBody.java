@@ -4,30 +4,62 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ModifyOrderDeliveryAddressResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public ModifyOrderDeliveryAddressResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5E2D59BA-4EB0-45C4-A0D7-D98C1A4B****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

@@ -4,21 +4,51 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderLogisticsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20210825****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22378277****</p>
+     */
     @NameInMap("BizUid")
     public String bizUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42535****</p>
+     */
     @NameInMap("LmOrderId")
     public Long lmOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22378277****</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 

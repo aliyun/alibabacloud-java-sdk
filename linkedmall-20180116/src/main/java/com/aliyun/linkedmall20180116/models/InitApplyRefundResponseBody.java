@@ -4,18 +4,34 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class InitApplyRefundResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("InitApplyRefundData")
     public InitApplyRefundResponseBodyInitApplyRefundData initApplyRefundData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B7E4EF89-DBC3-5CD0-9993-02D8C13E7177</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>38******75</p>
+     */
     @NameInMap("SubLmOrderId")
     public String subLmOrderId;
 
@@ -65,9 +81,17 @@ public class InitApplyRefundResponseBody extends TeaModel {
     }
 
     public static class InitApplyRefundResponseBodyInitApplyRefundDataMaxRefundFeeData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxRefundFee")
         public Integer maxRefundFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MinRefundFee")
         public Integer minRefundFee;
 
@@ -95,15 +119,27 @@ public class InitApplyRefundResponseBody extends TeaModel {
     }
 
     public static class InitApplyRefundResponseBodyInitApplyRefundDataRefundReasonListRefundReasonList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ProofRequired")
         public Boolean proofRequired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500003</p>
+         */
         @NameInMap("ReasonTextId")
         public Long reasonTextId;
 
         @NameInMap("ReasonTips")
         public String reasonTips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("RefundDescRequired")
         public Boolean refundDescRequired;
 
@@ -166,6 +202,10 @@ public class InitApplyRefundResponseBody extends TeaModel {
     }
 
     public static class InitApplyRefundResponseBodyInitApplyRefundData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BizClaimType")
         public Integer bizClaimType;
 

@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderDetailInnerResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public QueryOrderDetailInnerResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6103AD7B-21C2-523B-89D0-579DA58D****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +66,38 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
     }
 
     public static class QueryOrderDetailInnerResponseBodyModelOrderFundStructureModelsFundStructure extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("FundAmount")
         public Long fundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("FundAmountMoney")
         public Long fundAmountMoney;
 
+        /**
+         * <strong>example:</strong>
+         * <p>POINT_PAY</p>
+         */
         @NameInMap("FundType")
         public String fundType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>51855****</p>
+         */
         @NameInMap("LmOrderId")
         public Long lmOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2874823748****</p>
+         */
         @NameInMap("TbSubOrderId")
         public Long tbSubOrderId;
 
@@ -136,18 +168,38 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
     }
 
     public static class QueryOrderDetailInnerResponseBodyModelOrderPostFee extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("FundAmount")
         public Long fundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("FundAmountMoney")
         public Long fundAmountMoney;
 
+        /**
+         * <strong>example:</strong>
+         * <p>POINT_PAY</p>
+         */
         @NameInMap("FundType")
         public String fundType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>52312****</p>
+         */
         @NameInMap("LmOrderId")
         public Long lmOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2874823748****</p>
+         */
         @NameInMap("TbSubOrderId")
         public Long tbSubOrderId;
 
@@ -199,18 +251,38 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
     }
 
     public static class QueryOrderDetailInnerResponseBodyModelOrderSubItemOrderListSubItemOrderItemPriceListItemPrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("FundAmount")
         public Long fundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("FundAmountMoney")
         public Long fundAmountMoney;
 
+        /**
+         * <strong>example:</strong>
+         * <p>POINT_PAY</p>
+         */
         @NameInMap("FundType")
         public String fundType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2547326482****</p>
+         */
         @NameInMap("TbOrderId")
         public Long tbOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2547326482****</p>
+         */
         @NameInMap("TbSubOrderId")
         public Long tbSubOrderId;
 
@@ -281,15 +353,27 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
     }
 
     public static class QueryOrderDetailInnerResponseBodyModelOrderSubItemOrderListSubItemOrder extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ChannelCode")
         public String channelCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>63194403****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
         @NameInMap("ItemPic")
         public String itemPic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("ItemPriceInfo")
         public String itemPriceInfo;
 
@@ -299,24 +383,48 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         @NameInMap("ItemTitle")
         public String itemTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000102-61638587****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>45609****</p>
+         */
         @NameInMap("LmOrderId")
         public Long lmOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Number")
         public Integer number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("PayStatus")
         public Integer payStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>473246257****</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
         @NameInMap("SkuName")
         public String skuName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2487583728****</p>
+         */
         @NameInMap("TbSubOrderId")
         public Long tbSubOrderId;
 
@@ -465,30 +573,58 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         @NameInMap("ChannelBizType")
         public String channelBizType;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ChannelCode")
         public String channelCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>182378172837****</p>
+         */
         @NameInMap("ChannelOrderId")
         public String channelOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-01 16:33:23</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EnableStatus")
         public Integer enableStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-01 17:21:23</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
         @NameInMap("Eticket")
         public Boolean eticket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;key\&quot;:\&quot;value\&quot;}</p>
+         */
         @NameInMap("ExtInfo")
         public java.util.Map<String, ?> extInfo;
 
         @NameInMap("FundStructureModels")
         public QueryOrderDetailInnerResponseBodyModelOrderFundStructureModels fundStructureModels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>45609****</p>
+         */
         @NameInMap("LmOrderId")
         public Long lmOrderId;
 
@@ -498,12 +634,24 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         @NameInMap("LogisticsCompName")
         public String logisticsCompName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>185****4801</p>
+         */
         @NameInMap("LogisticsMobilePhone")
         public String logisticsMobilePhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>YT217467555****</p>
+         */
         @NameInMap("LogisticsNo")
         public String logisticsNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("LogisticsStatus")
         public Integer logisticsStatus;
 
@@ -513,12 +661,24 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         @NameInMap("LogisticsUserName")
         public String logisticsUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("OrderAmount")
         public Long orderAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("OrderPayInfo")
         public String orderPayInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("PayStatus")
         public Integer payStatus;
 
@@ -528,12 +688,24 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         @NameInMap("PostFee")
         public QueryOrderDetailInnerResponseBodyModelOrderPostFee postFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("RefundStatus")
         public Integer refundStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("ResExtInfo")
         public String resExtInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>220941058****</p>
+         */
         @NameInMap("SellerId")
         public Long sellerId;
 
@@ -549,6 +721,10 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         @NameInMap("SubItemOrderList")
         public QueryOrderDetailInnerResponseBodyModelOrderSubItemOrderList subItemOrderList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25343894898952***</p>
+         */
         @NameInMap("TbOrderId")
         public String tbOrderId;
 

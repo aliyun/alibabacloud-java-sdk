@@ -4,39 +4,78 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateOutDiscountOrderWithDesignatedTbUidResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public CreateOutDiscountOrderWithDesignatedTbUidResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>pageSize</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3CDA6C55-18F1-53A6-B721-F5E26CBC95BE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -137,6 +176,10 @@ public class CreateOutDiscountOrderWithDesignatedTbUidResponseBody extends TeaMo
         @NameInMap("AllIdsMap")
         public java.util.Map<String, java.util.Map<String, ?>> allIdsMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>lin***app</p>
+         */
         @NameInMap("App")
         public String app;
 
@@ -149,6 +192,10 @@ public class CreateOutDiscountOrderWithDesignatedTbUidResponseBody extends TeaMo
         @NameInMap("PayTradeIds")
         public java.util.List<String> payTradeIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
+         */
         @NameInMap("RedirectUrl")
         public String redirectUrl;
 

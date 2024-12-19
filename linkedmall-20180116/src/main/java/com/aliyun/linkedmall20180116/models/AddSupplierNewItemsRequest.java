@@ -4,6 +4,12 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class AddSupplierNewItemsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL2000***12</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
@@ -32,14 +38,22 @@ public class AddSupplierNewItemsRequest extends TeaModel {
     }
 
     public static class AddSupplierNewItemsRequestItemList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>61936646****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000035-61936646****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
         @NameInMap("SkuList")
-        public java.util.List<Integer> skuList;
+        public java.util.List<Long> skuList;
 
         public static AddSupplierNewItemsRequestItemList build(java.util.Map<String, ?> map) throws Exception {
             AddSupplierNewItemsRequestItemList self = new AddSupplierNewItemsRequestItemList();
@@ -62,11 +76,11 @@ public class AddSupplierNewItemsRequest extends TeaModel {
             return this.lmItemId;
         }
 
-        public AddSupplierNewItemsRequestItemList setSkuList(java.util.List<Integer> skuList) {
+        public AddSupplierNewItemsRequestItemList setSkuList(java.util.List<Long> skuList) {
             this.skuList = skuList;
             return this;
         }
-        public java.util.List<Integer> getSkuList() {
+        public java.util.List<Long> getSkuList() {
             return this.skuList;
         }
 

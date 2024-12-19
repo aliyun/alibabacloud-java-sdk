@@ -4,30 +4,66 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ModifyItemLimitRuleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1639539460838</p>
+     */
     @NameInMap("BeginTime")
     public Long beginTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20******001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1648483200000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>655******148</p>
+     */
     @NameInMap("ItemId")
     public Long itemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>679</p>
+     */
     @NameInMap("LmActivityId")
     public Long lmActivityId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000055-******09839</p>
+     */
     @NameInMap("LmItemId")
     public String lmItemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>136</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5ab43d1******41abdd23629bed001a0</p>
+     */
     @NameInMap("SubBizCode")
     public String subBizCode;
 

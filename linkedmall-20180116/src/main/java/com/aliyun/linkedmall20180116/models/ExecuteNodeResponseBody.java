@@ -4,30 +4,62 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ExecuteNodeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public ExecuteNodeResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>75F3A591-B1A6-5EFF-8ABF-35AB8804DFA0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>205</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,6 +141,10 @@ public class ExecuteNodeResponseBody extends TeaModel {
     }
 
     public static class ExecuteNodeResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("ProcessInstanceId")
         public String processInstanceId;
 

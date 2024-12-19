@@ -4,9 +4,21 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RegistAnonymousTbAccountRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20190729****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>238837487****</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 

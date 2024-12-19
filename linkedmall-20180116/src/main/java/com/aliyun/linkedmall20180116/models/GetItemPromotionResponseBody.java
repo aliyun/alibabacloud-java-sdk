@@ -4,24 +4,48 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetItemPromotionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ItemPromotionModel")
     public GetItemPromotionResponseBodyItemPromotionModel itemPromotionModel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7152F15C-7298-5531-9A76-2ED2C331****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,33 +111,69 @@ public class GetItemPromotionResponseBody extends TeaModel {
     }
 
     public static class GetItemPromotionResponseBodyItemPromotionModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-06 10:01:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+         */
         @NameInMap("ExtInfo")
         public java.util.Map<String, ?> extInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>66440412****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000035-63064613****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("PromotionFlag")
         public Boolean promotionFlag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>68476201884251****</p>
+         */
         @NameInMap("PromotionId")
         public String promotionId;
 
         @NameInMap("PromotionName")
         public String promotionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("SkuPromotion")
         public java.util.Map<String, ?> skuPromotion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-01 00:00:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

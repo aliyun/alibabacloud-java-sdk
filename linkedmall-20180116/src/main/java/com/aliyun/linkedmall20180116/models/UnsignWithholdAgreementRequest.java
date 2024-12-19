@@ -4,15 +4,31 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class UnsignWithholdAgreementRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20******8006</p>
+     */
     @NameInMap("AgreementNo")
     public String agreementNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>234******3626</p>
+     */
     @NameInMap("ExternalAgreementNo")
     public String externalAgreementNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>64******721</p>
+     */
     @NameInMap("MerchantId")
     public String merchantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("OutRequestNo")
     public String outRequestNo;
 

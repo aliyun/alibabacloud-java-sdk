@@ -4,21 +4,51 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ConfirmDisburseRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20******01</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9f99f38030254728***</p>
+     */
     @NameInMap("BizUid")
     public String bizUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>449975059**</p>
+     */
     @NameInMap("LmOrderId")
     public String lmOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 

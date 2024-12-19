@@ -4,39 +4,78 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RegisterUserAccountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dsfdsfs***dsfdsfds</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public RegisterUserAccountResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>pageSize</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>03B94457-8FD***93-06CCB1345BC3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -134,24 +173,52 @@ public class RegisterUserAccountResponseBody extends TeaModel {
     }
 
     public static class RegisterUserAccountResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>LMALL20***002</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user***121</p>
+         */
         @NameInMap("CUserId")
         public String CUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;gmtCreate\&quot;:\&quot;2021-11-01 00:00:00\&quot;}</p>
+         */
         @NameInMap("ExtInfo")
         public String extInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2313***1231</p>
+         */
         @NameInMap("LmUid")
         public Long lmUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>03B94457-8***93-06CCB1345BC3</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ANONY</p>
+         */
         @NameInMap("TbAccountType")
         public String tbAccountType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3435***1231</p>
+         */
         @NameInMap("TbUserId")
         public Long tbUserId;
 

@@ -4,12 +4,18 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ModifyRefundWithDesignatedTbUidShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
     @NameInMap("DisputeId")
     public Long disputeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GoodsStatus")
     public Integer goodsStatus;
 
@@ -19,27 +25,45 @@ public class ModifyRefundWithDesignatedTbUidShrinkRequest extends TeaModel {
     @NameInMap("Proofs")
     public String proofsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReasonId")
     public Long reasonId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RefundCode")
     public Integer refundCode;
 
     @NameInMap("RefundCount")
     public Integer refundCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RefundFee")
     public Long refundFee;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SubLmOrderId")
     public String subLmOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TbAccountType")
     public String tbAccountType;
 
     @NameInMap("TbUserId")
     public Long tbUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 

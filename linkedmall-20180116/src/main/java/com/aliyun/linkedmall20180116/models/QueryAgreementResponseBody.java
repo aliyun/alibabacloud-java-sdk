@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryAgreementResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("QueryAgreementResponse")
     public QueryAgreementResponseBodyQueryAgreementResponse queryAgreementResponse;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DAAA6391-3339-5333-9E4D-C71CD26A231F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +66,45 @@ public class QueryAgreementResponseBody extends TeaModel {
     }
 
     public static class QueryAgreementResponseBodyQueryAgreementResponse extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20******8006</p>
+         */
         @NameInMap("AgreementNo")
         public String agreementNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("ExternalAgreementNo")
         public String externalAgreementNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-01 00:00:00</p>
+         */
         @NameInMap("InvalidTime")
         public String invalidTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-01 00:00:00</p>
+         */
         @NameInMap("SignTime")
         public String signTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-01 00:00:00</p>
+         */
         @NameInMap("ValidTime")
         public String validTime;
 

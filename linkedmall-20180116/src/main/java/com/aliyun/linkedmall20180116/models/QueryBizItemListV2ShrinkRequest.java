@@ -4,9 +4,19 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryBizItemListV2ShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20210802****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5001****</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 
@@ -16,15 +26,35 @@ public class QueryBizItemListV2ShrinkRequest extends TeaModel {
     @NameInMap("LmItemIds")
     public String lmItemIdsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>db18296d3e56417c8817acf43bfd****</p>
+     */
     @NameInMap("SubBizId")
     public String subBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>214123553****</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

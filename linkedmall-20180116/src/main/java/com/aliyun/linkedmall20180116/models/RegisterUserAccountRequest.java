@@ -4,15 +4,37 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RegisterUserAccountRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL2022***0001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("TbAccountType")
     public String tbAccountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3435***1231</p>
+     */
     @NameInMap("TbUserId")
     public Long tbUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user***121</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 

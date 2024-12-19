@@ -4,24 +4,60 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderListWithDesignatedTbUidRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL2022***001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;lmOrderList\&quot;:[\&quot;718***37\&quot;]}</p>
+     */
     @NameInMap("FilterOption")
     public String filterOption;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("TbAccountType")
     public String tbAccountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>333***21</p>
+     */
     @NameInMap("TbUserId")
     public Long tbUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>R333***21</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 

@@ -4,12 +4,24 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RegistAnonymousTbAccountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FC994CBE-F97C-5C58-ACF3-86F0292C****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

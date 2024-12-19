@@ -4,27 +4,63 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderAndPaymentListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20******001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22******6718</p>
+     */
     @NameInMap("BizUid")
     public String bizUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;lmOrderList\&quot;:[32******46],\&quot;enableStatus\&quot;:-1}</p>
+     */
     @NameInMap("FilterOption")
     public String filterOption;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 

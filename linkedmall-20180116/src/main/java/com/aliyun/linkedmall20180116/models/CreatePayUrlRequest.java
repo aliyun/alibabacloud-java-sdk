@@ -4,18 +4,41 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreatePayUrlRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20*****0001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9f99f38030254728***</p>
+     */
     @NameInMap("BizUid")
     public String bizUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BuyInfo")
     public String buyInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 

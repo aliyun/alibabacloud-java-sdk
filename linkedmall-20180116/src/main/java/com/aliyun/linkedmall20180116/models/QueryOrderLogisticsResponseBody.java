@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderLogisticsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("OrderLogistics")
     public QueryOrderLogisticsResponseBodyOrderLogistics orderLogistics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1718921E-C8D4-55E1-B8D4-114AE537****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -60,9 +72,17 @@ public class QueryOrderLogisticsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>185****4801</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>457001</p>
+         */
         @NameInMap("ZipCode")
         public String zipCode;
 
@@ -106,12 +126,20 @@ public class QueryOrderLogisticsResponseBody extends TeaModel {
     }
 
     public static class QueryOrderLogisticsResponseBodyOrderLogisticsLogisticsDetailListLogisticsDetailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-01 16:33:23</p>
+         */
         @NameInMap("OcurrTimeStr")
         public String ocurrTimeStr;
 
         @NameInMap("StanderdDesc")
         public String standerdDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("StatusIcon")
         public String statusIcon;
 
@@ -172,9 +200,17 @@ public class QueryOrderLogisticsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>185****4801</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>457001</p>
+         */
         @NameInMap("ZipCode")
         public String zipCode;
 
@@ -227,6 +263,10 @@ public class QueryOrderLogisticsResponseBody extends TeaModel {
         @NameInMap("Fetcher")
         public QueryOrderLogisticsResponseBodyOrderLogisticsFetcher fetcher;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZTO</p>
+         */
         @NameInMap("LogisticsCompanyCode")
         public String logisticsCompanyCode;
 

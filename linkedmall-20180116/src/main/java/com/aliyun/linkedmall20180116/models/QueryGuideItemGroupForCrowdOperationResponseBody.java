@@ -4,39 +4,78 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public java.util.List<QueryGuideItemGroupForCrowdOperationResponseBodyModel> model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>pageSize</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>45B9EF4E-4D18-59B2-85E6-9B568F73C79D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>206</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -137,21 +176,37 @@ public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
         @NameInMap("AtmospherePicUrl")
         public String atmospherePicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanSell")
         public Boolean canSell;
 
         @NameInMap("CustomizedAttributeMap")
         public java.util.Map<String, String> customizedAttributeMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>65******0310</p>
+         */
         @NameInMap("ItemId")
         public String itemId;
 
         @NameInMap("ItemTitle")
         public String itemTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>https://******.aliyun-inc.com/#/assistant?targetTab=TAB_GM_FAIL&amp;regionId=9&amp;startTime=2022-08-22%2000:00:00&amp;endTime=2022-08-22%2018:06:01&amp;appIds=408</p>
+         */
         @NameInMap("ItemUrl")
         public String itemUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000102-630292778855</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
@@ -161,15 +216,31 @@ public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
         @NameInMap("PointPrice")
         public Long pointPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3980</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8000</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>780</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1035</p>
+         */
         @NameInMap("ReservePrice")
         public String reservePrice;
 

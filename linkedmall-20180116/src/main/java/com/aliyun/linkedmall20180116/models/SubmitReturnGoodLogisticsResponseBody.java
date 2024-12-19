@@ -4,12 +4,20 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class SubmitReturnGoodLogisticsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C27A9456-5FC3-529D-9FDF-B21323E93B63</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

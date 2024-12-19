@@ -4,18 +4,46 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CancelOrderWithDesignatedTbUidRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20***001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>449***059</p>
+     */
     @NameInMap("LmOrderId")
     public Long lmOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("TbAccountType")
     public String tbAccountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>232***124</p>
+     */
     @NameInMap("TbUserId")
     public Long tbUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>u***001</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 

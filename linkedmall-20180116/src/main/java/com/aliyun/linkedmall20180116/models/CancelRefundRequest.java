@@ -4,24 +4,56 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CancelRefundRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20******002</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22******2303</p>
+     */
     @NameInMap("BizUid")
     public String bizUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14244******33071</p>
+     */
     @NameInMap("DisputeId")
     public Long disputeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52******93</p>
+     */
     @NameInMap("SubLmOrderId")
     public String subLmOrderId;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 

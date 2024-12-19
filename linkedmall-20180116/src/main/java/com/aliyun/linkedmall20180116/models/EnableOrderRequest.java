@@ -4,12 +4,25 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class EnableOrderRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL201912040001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizUid")
     public String bizUid;
 
@@ -19,6 +32,9 @@ public class EnableOrderRequest extends TeaModel {
     @NameInMap("LmOrderId")
     public String lmOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OutTradeId")
     public String outTradeId;
 

@@ -4,24 +4,50 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ListUserGameProcessResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public java.util.List<ListUserGameProcessResponseBodyModel> model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>07127DEC-D093-54B5-884A-29D49CBE95A5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -87,45 +113,101 @@ public class ListUserGameProcessResponseBody extends TeaModel {
     }
 
     public static class ListUserGameProcessResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>673</p>
+         */
         @NameInMap("ActivityId")
         public String activityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1638451941000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("CurrentShowContent")
         public String currentShowContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("CurrentStepId")
         public String currentStepId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("CurrentStepStatus")
         public String currentStepStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+         */
         @NameInMap("ExtInfo")
         public String extInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>67347******4689</p>
+         */
         @NameInMap("GameId")
         public String gameId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1642662319000</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1916</p>
+         */
         @NameInMap("ProcessId")
         public String processId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>619</p>
+         */
         @NameInMap("RouteId")
         public String routeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Type")
         public String type;
 

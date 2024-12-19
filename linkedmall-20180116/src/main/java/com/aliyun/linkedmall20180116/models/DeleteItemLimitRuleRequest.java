@@ -4,21 +4,46 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class DeleteItemLimitRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL2021083****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>57835029****</p>
+     */
     @NameInMap("ItemId")
     public Long itemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>679</p>
+     */
     @NameInMap("LmActivityId")
     public Long lmActivityId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000035-6193664*****</p>
+     */
     @NameInMap("LmItemId")
     public String lmItemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7ddaba53d5be4173808f2335eac0****</p>
+     */
     @NameInMap("SubBizCode")
     public String subBizCode;
 

@@ -4,18 +4,34 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreatePayUrlResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public CreatePayUrlResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1718921E-C8D4-55E1-B8D4-114AE537C1B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -74,6 +90,10 @@ public class CreatePayUrlResponseBody extends TeaModel {
         @NameInMap("PayTradeIds")
         public java.util.List<String> payTradeIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;<a href="http://www.taobao.com">www.taobao.com</a>&quot;</p>
+         */
         @NameInMap("RedirectUrl")
         public String redirectUrl;
 

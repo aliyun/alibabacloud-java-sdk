@@ -4,27 +4,55 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryMovieSchedulesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1718921E-C8D4-55E1-B8D4-114AE537C1B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Schedules")
     public QueryMovieSchedulesResponseBodySchedules schedules;
 
+    /**
+     * <strong>example:</strong>
+     * <p>207</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -107,9 +135,17 @@ public class QueryMovieSchedulesResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsExpired")
         public Boolean isExpired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MaxCanBuy")
         public Long maxCanBuy;
 
@@ -119,6 +155,10 @@ public class QueryMovieSchedulesResponseBody extends TeaModel {
         @NameInMap("MovieVersion")
         public String movieVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("Price")
         public Long price;
 
@@ -134,9 +174,17 @@ public class QueryMovieSchedulesResponseBody extends TeaModel {
         @NameInMap("ServiceFee")
         public Long serviceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-01 12:00:00</p>
+         */
         @NameInMap("SessionEndingTime")
         public String sessionEndingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-01 10:00:00</p>
+         */
         @NameInMap("SessionStartingTime")
         public String sessionStartingTime;
 

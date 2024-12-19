@@ -4,18 +4,38 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RefundOrderRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>64******721</p>
+     */
     @NameInMap("MerchantId")
     public String merchantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4111584A-44D8-49B6-80BD-FACD0726054C</p>
+     */
     @NameInMap("OutRequestNo")
     public String outRequestNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23******32727</p>
+     */
     @NameInMap("OutTradeNo")
     public String outTradeNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("RefundAmount")
     public String refundAmount;
 
@@ -25,6 +45,10 @@ public class RefundOrderRequest extends TeaModel {
     @NameInMap("RefundRoyaltyParameters")
     public String refundRoyaltyParameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WH******27</p>
+     */
     @NameInMap("TradeNo")
     public String tradeNo;
 

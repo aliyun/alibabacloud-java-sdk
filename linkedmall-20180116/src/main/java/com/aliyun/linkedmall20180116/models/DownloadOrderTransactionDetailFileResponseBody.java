@@ -7,39 +7,82 @@ public class DownloadOrderTransactionDetailFileResponseBody extends TeaModel {
     @NameInMap("BizViewData")
     public java.util.Map<String, ?> bizViewData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://linkedmall-console.oss-cn-shanghai.aliyuncs.com/1245321481945549/linkedmall.json">https://linkedmall-console.oss-cn-shanghai.aliyuncs.com/1245321481945549/linkedmall.json</a></p>
+     */
     @NameInMap("OssUrl")
     public String ossUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>pageSize</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>204F5C60-0B34-5718-AF93-9BD26B37****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

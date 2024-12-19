@@ -4,24 +4,44 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryGuideItemGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("GuideItemGroup")
     public QueryGuideItemGroupResponseBodyGuideItemGroup guideItemGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B82570B-7167-5D41-A74F-CD8DC2C54A49</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>205</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,6 +107,10 @@ public class QueryGuideItemGroupResponseBody extends TeaModel {
     }
 
     public static class QueryGuideItemGroupResponseBodyGuideItemGroupItemInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>66******1055</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
@@ -96,24 +120,48 @@ public class QueryGuideItemGroupResponseBody extends TeaModel {
         @NameInMap("ItemUrl")
         public String itemUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10001036-******0492928</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
         @NameInMap("MainPicUrl")
         public String mainPicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>990</p>
+         */
         @NameInMap("PointPrice")
         public Long pointPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>69</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>990</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20.0</p>
+         */
         @NameInMap("ReservePrice")
         public String reservePrice;
 

@@ -4,21 +4,34 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateSettleConfirmRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>LMALL20******05</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MerchantId")
     public String merchantId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OutRequestNo")
     public String outRequestNo;
 
     @NameInMap("OutTradeNo")
     public String outTradeNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SettleInfo")
     public String settleInfo;
 

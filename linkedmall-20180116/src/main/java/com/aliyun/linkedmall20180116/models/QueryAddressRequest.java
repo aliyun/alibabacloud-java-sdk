@@ -4,12 +4,26 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryAddressRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL202106040001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>510132</p>
+     */
     @NameInMap("DivisionCode")
     public String divisionCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>113.77.105.73</p>
+     */
     @NameInMap("Ip")
     public String ip;
 

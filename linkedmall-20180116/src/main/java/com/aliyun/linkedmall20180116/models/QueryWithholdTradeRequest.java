@@ -4,12 +4,24 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryWithholdTradeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>64******721</p>
+     */
     @NameInMap("MerchantId")
     public String merchantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("OutTradeNo")
     public String outTradeNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("TradeNo")
     public String tradeNo;
 

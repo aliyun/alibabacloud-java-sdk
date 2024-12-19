@@ -4,18 +4,34 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateOrderPayUrlForOutDiscountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public CreateOrderPayUrlForOutDiscountResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6103AD7B-21C2-523B-89D0-579DA58D08E8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -77,6 +93,10 @@ public class CreateOrderPayUrlForOutDiscountResponseBody extends TeaModel {
         @NameInMap("PayTradeIds")
         public java.util.List<String> payTradeIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("RedirectUrl")
         public String redirectUrl;
 

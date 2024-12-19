@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("LmOrderList")
     public QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBodyLmOrderList lmOrderList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA2554FD-F21F-536F-A7B7-B96C3E5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +66,34 @@ public class QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBody extends TeaMo
     }
 
     public static class QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBodyLmOrderListLmOrderList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>599******711</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
         @NameInMap("ItemName")
         public String itemName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000035-******31758</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>42******18</p>
+         */
         @NameInMap("LmOrderId")
         public Long lmOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>433******8350</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 

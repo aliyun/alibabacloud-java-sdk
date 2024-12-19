@@ -4,36 +4,87 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateOrderWithDesignatedTbUidRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20******05</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("BuyerMessages")
     public String buyerMessages;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeliveryAddress")
     public String deliveryAddress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{ \&quot;serviceType\&quot;: -4,\&quot;id\&quot;: \&quot;20\&quot;, \&quot;postFee\&quot;: 0}</p>
+     */
     @NameInMap("DeliveryInfo")
     public String deliveryInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("OrderExpireTime")
     public Long orderExpireTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;lmItemId\&quot;:\&quot;10028102-655199865844\&quot;,\&quot;number\&quot;:1,\&quot;skuId\&quot;: 4900752886354}]</p>
+     */
     @NameInMap("OrderItems")
     public String orderItems;
 
+    /**
+     * <strong>example:</strong>
+     * <p>146******54</p>
+     */
     @NameInMap("OutTradeId")
     public String outTradeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("TbAccountType")
     public String tbAccountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>677******211</p>
+     */
     @NameInMap("TbUserId")
     public Long tbUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>321******211</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 

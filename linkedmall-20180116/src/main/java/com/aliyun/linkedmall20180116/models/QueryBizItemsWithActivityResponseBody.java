@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryBizItemsWithActivityResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ItemList")
     public QueryBizItemsWithActivityResponseBodyItemList itemList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1A0D9B6B-EBEA-5B7C-B10D-C4455F842637</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,11 +66,18 @@ public class QueryBizItemsWithActivityResponseBody extends TeaModel {
     }
 
     public static class QueryBizItemsWithActivityResponseBodyItemListItemActivitiesActivityActivityItemActivityItemSkuListActivityItemSku extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>990</p>
+         */
         @NameInMap("ActivityPrice")
         public Long activityPrice;
 
         /**
          * <p>skuId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>471******57</p>
          */
         @NameInMap("SkuId")
         public Long skuId;
@@ -109,9 +128,17 @@ public class QueryBizItemsWithActivityResponseBody extends TeaModel {
         @NameInMap("ActivityItemSkuList")
         public QueryBizItemsWithActivityResponseBodyItemListItemActivitiesActivityActivityItemActivityItemSkuList activityItemSkuList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("ActivityQuantity")
         public Long activityQuantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LimitQuantityForPerson")
         public Long limitQuantityForPerson;
 
@@ -147,17 +174,32 @@ public class QueryBizItemsWithActivityResponseBody extends TeaModel {
     }
 
     public static class QueryBizItemsWithActivityResponseBodyItemListItemActivitiesActivityActivitySessionsActivitySessionActivitySessionItemActivitySessionItemSkuList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>159</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
         /**
          * <p>skuId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>471******57</p>
          */
         @NameInMap("SkuId")
         public Long skuId;
@@ -205,12 +247,24 @@ public class QueryBizItemsWithActivityResponseBody extends TeaModel {
         @NameInMap("ActivitySessionItemSkuList")
         public QueryBizItemsWithActivityResponseBodyItemListItemActivitiesActivityActivitySessionsActivitySessionActivitySessionItemActivitySessionItemSkuList activitySessionItemSkuList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("LimitQuantityForPerson")
         public Long limitQuantityForPerson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>888</p>
+         */
         @NameInMap("SaleableQuantity")
         public Long saleableQuantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>888</p>
+         */
         @NameInMap("SessionQuantity")
         public Long sessionQuantity;
 
@@ -257,21 +311,45 @@ public class QueryBizItemsWithActivityResponseBody extends TeaModel {
         @NameInMap("ActivitySessionItem")
         public QueryBizItemsWithActivityResponseBodyItemListItemActivitiesActivityActivitySessionsActivitySessionActivitySessionItem activitySessionItem;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1633412800000</p>
+         */
         @NameInMap("DisplayDate")
         public Long displayDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1639412800000</p>
+         */
         @NameInMap("EndDate")
         public Long endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>329</p>
+         */
         @NameInMap("LmSessionId")
         public Long lmSessionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1634412800000</p>
+         */
         @NameInMap("StartDate")
         public Long startDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5fbbd94******4345f6c37166fb</p>
+         */
         @NameInMap("SubBizCode")
         public String subBizCode;
 
@@ -378,12 +456,24 @@ public class QueryBizItemsWithActivityResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1642412800000</p>
+         */
         @NameInMap("EndDate")
         public Long endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>679</p>
+         */
         @NameInMap("LmActivityId")
         public Long lmActivityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1632412800000</p>
+         */
         @NameInMap("StartDate")
         public Long startDate;
 
@@ -473,12 +563,24 @@ public class QueryBizItemsWithActivityResponseBody extends TeaModel {
     }
 
     public static class QueryBizItemsWithActivityResponseBodyItemListItemSkuListSku extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("MaxAllowedCount")
         public Integer maxAllowedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>69</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
@@ -488,18 +590,33 @@ public class QueryBizItemsWithActivityResponseBody extends TeaModel {
         @NameInMap("PointsKey")
         public String pointsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2790</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("Quantity")
         public Long quantity;
 
         /**
          * <p>skuId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>472266643****</p>
          */
         @NameInMap("SkuId")
         public Long skuId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Long status;
 
@@ -605,30 +722,62 @@ public class QueryBizItemsWithActivityResponseBody extends TeaModel {
         @NameInMap("Activities")
         public QueryBizItemsWithActivityResponseBodyItemListItemActivities activities;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50018977</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60716881****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
         @NameInMap("ItemTitle")
         public String itemTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000230-60716881****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("MaxAllowedCount")
         public Integer maxAllowedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/******.jpg">https://img.alicdn.com/******.jpg</a></p>
+         */
         @NameInMap("PicUrl")
         public String picUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Quantity")
         public Long quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("ReservePrice")
         public Long reservePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>284324****</p>
+         */
         @NameInMap("SellerId")
         public Long sellerId;
 
@@ -638,6 +787,10 @@ public class QueryBizItemsWithActivityResponseBody extends TeaModel {
         @NameInMap("TaobaoShopName")
         public String taobaoShopName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>900</p>
+         */
         @NameInMap("TotalSoldQuantity")
         public Integer totalSoldQuantity;
 

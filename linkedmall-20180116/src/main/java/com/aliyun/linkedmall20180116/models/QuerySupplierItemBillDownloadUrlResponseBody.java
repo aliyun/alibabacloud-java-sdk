@@ -4,18 +4,34 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QuerySupplierItemBillDownloadUrlResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The  BillPeriod is mandatory for this action.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public QuerySupplierItemBillDownloadUrlResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3B55509D-20AC-5BD5-9A81-D6B7382E****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,9 +81,17 @@ public class QuerySupplierItemBillDownloadUrlResponseBody extends TeaModel {
     }
 
     public static class QuerySupplierItemBillDownloadUrlResponseBodyModelData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>BILL-1000*****00139120150</p>
+         */
         @NameInMap("BillId")
         public String billId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://linkedmall-product.oss-cn-hangzhou.aliyuncs.com/LMALL2*****60001/2619709162">http://linkedmall-product.oss-cn-hangzhou.aliyuncs.com/LMALL2*****60001/2619709162</a>****</p>
+         */
         @NameInMap("FileDownloadUrl")
         public String fileDownloadUrl;
 
@@ -109,12 +133,24 @@ public class QuerySupplierItemBillDownloadUrlResponseBody extends TeaModel {
         @NameInMap("Data")
         public java.util.List<QuerySupplierItemBillDownloadUrlResponseBodyModelData> data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>685</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

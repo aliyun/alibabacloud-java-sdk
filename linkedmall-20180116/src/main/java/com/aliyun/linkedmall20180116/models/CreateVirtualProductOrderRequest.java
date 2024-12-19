@@ -4,45 +4,99 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateVirtualProductOrderRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20210508****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>221122411****</p>
+     */
     @NameInMap("BizUid")
     public String bizUid;
 
     @NameInMap("DeliveryAddress")
     public String deliveryAddress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;chargeAccount\&quot;:\&quot;1510380****\&quot;,\&quot;mobileNo\&quot;:\&quot;186****3931\&quot;}</p>
+     */
     @NameInMap("ExtJson")
     public String extJson;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66985559****</p>
+     */
     @NameInMap("ItemId")
     public Long itemId;
 
     @NameInMap("ItemList")
     public java.util.List<CreateVirtualProductOrderRequestItemList> itemList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10001036-66644894****</p>
+     */
     @NameInMap("LmItemId")
     public String lmItemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>900</p>
+     */
     @NameInMap("OrderExpireTime")
     public Long orderExpireTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>963****</p>
+     */
     @NameInMap("OutTradeId")
     public String outTradeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Quantity")
     public Long quantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>221122411****</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4990</p>
+     */
     @NameInMap("TotalAmount")
     public Long totalAmount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 
@@ -164,15 +218,31 @@ public class CreateVirtualProductOrderRequest extends TeaModel {
     }
 
     public static class CreateVirtualProductOrderRequestItemList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>66985559****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10001036-66644894****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>456458315****</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 

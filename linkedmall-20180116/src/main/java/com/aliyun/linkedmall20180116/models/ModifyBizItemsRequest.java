@@ -4,12 +4,25 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ModifyBizItemsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20211119****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ItemList")
     public java.util.List<ModifyBizItemsRequestItemList> itemList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12c6b6e98bb34475bcd38df73****</p>
+     */
     @NameInMap("SubBizId")
     public String subBizId;
 
@@ -43,24 +56,52 @@ public class ModifyBizItemsRequest extends TeaModel {
     }
 
     public static class ModifyBizItemsRequestItemListSkuList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>202108181714875327</p>
+         */
         @NameInMap("BenefitId")
         public String benefitId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1999</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1290</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2790</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>472266643****</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StatusAction")
         public Long statusAction;
 
@@ -128,9 +169,17 @@ public class ModifyBizItemsRequest extends TeaModel {
     }
 
     public static class ModifyBizItemsRequestItemList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>62553137****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000035-61936646****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 

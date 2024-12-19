@@ -4,9 +4,18 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class DeleteBizItemsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL2*****001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ItemIdList")
     public java.util.List<Long> itemIdList;
 

@@ -4,27 +4,63 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryItemDetailInnerRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL2021081*****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9f99f38030254728***</p>
+     */
     @NameInMap("BizUid")
     public String bizUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>510132</p>
+     */
     @NameInMap("DivisionCode")
     public String divisionCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>49.93.0.222</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61358168****</p>
+     */
     @NameInMap("ItemId")
     public Long itemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000055-58233812****</p>
+     */
     @NameInMap("LmItemId")
     public String lmItemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9f99f38030254728***</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 

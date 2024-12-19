@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetUserTokenPageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public GetUserTokenPageResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B7E4EF89-DBC3-5CD0-9993-02D8C13E7177</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,10 @@ public class GetUserTokenPageResponseBody extends TeaModel {
     }
 
     public static class GetUserTokenPageResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Url")
         public String url;
 

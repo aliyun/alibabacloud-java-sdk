@@ -4,27 +4,55 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RegisterSettleAccountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public RegisterSettleAccountResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>26F4B2C7-931F-5AC5-8FCC-AE76C9B00D2F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>207</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,12 +126,24 @@ public class RegisterSettleAccountResponseBody extends TeaModel {
     }
 
     public static class RegisterSettleAccountResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>180173763600****</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15******65</p>
+         */
         @NameInMap("AccountNo")
         public String accountNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>252</p>
+         */
         @NameInMap("Id")
         public String id;
 

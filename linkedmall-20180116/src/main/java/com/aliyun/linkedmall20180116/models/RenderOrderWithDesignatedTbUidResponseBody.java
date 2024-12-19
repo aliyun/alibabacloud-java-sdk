@@ -4,39 +4,78 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public RenderOrderWithDesignatedTbUidResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>pageSize</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>978A8742-1A***9-F8713ACBC385</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>205</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -137,21 +176,41 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("AddressDetail")
         public String addressDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31***40</p>
+         */
         @NameInMap("AddressId")
         public Long addressId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>43***03</p>
+         */
         @NameInMap("DivisionCode")
         public String divisionCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         @NameInMap("Receiver")
         public String receiver;
 
+        /**
+         * <strong>example:</strong>
+         * <p>137***343</p>
+         */
         @NameInMap("ReceiverPhone")
         public String receiverPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>430***008</p>
+         */
         @NameInMap("TownDivisionCode")
         public String townDivisionCode;
 
@@ -224,13 +283,24 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
 
         /**
          * <p>id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PostFee")
         public Long postFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-4</p>
+         */
         @NameInMap("ServiceType")
         public Long serviceType;
 
@@ -274,6 +344,10 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
     }
 
     public static class RenderOrderWithDesignatedTbUidResponseBodyModelRenderOrderInfosInvoiceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
@@ -304,39 +378,82 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
     }
 
     public static class RenderOrderWithDesignatedTbUidResponseBodyModelRenderOrderInfosLmItemInfosItemPromInstVOSAvailableItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>668***630</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100<em><strong>35-630</strong></em>809</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100***35</p>
+         */
         @NameInMap("LmShopId")
         public Long lmShopId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Number")
         public Integer number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Removed")
         public Boolean removed;
 
         /**
          * <p>skuid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>457***764</p>
          */
         @NameInMap("SkuId")
         public Long skuId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32***42</p>
+         */
         @NameInMap("TbSellerId")
         public Long tbSellerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("UserPayFee")
         public Long userPayFee;
 
@@ -439,21 +556,45 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("AvailableItems")
         public java.util.List<RenderOrderWithDesignatedTbUidResponseBodyModelRenderOrderInfosLmItemInfosItemPromInstVOSAvailableItems> availableItems;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CanUse")
         public Boolean canUse;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DiscountPrice")
         public Long discountPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1659612158</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>324***234</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100<em><strong>35-582</strong></em>661</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
@@ -466,24 +607,48 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Selected")
         public Boolean selected;
 
         @NameInMap("SkuIds")
         public java.util.List<Long> skuIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SpecialPrice")
         public Long specialPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0eae4fd***e23145</p>
+         */
         @NameInMap("SubBizCode")
         public String subBizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32***24</p>
+         */
         @NameInMap("TbSellerId")
         public Long tbSellerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ThresholdPrice")
         public Long thresholdPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1659612158</p>
+         */
         @NameInMap("UseStartTime")
         public Long useStartTime;
 
@@ -631,54 +796,114 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
     }
 
     public static class RenderOrderWithDesignatedTbUidResponseBodyModelRenderOrderInfosLmItemInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>50000</p>
+         */
         @NameInMap("ActualPrice")
         public Long actualPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanSell")
         public Boolean canSell;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16000</p>
+         */
         @NameInMap("Cash")
         public Long cash;
 
         @NameInMap("Features")
         public java.util.Map<String, String> features;
 
+        /**
+         * <strong>example:</strong>
+         * <p>661***740</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iphone12</p>
+         */
         @NameInMap("ItemName")
         public String itemName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
+         */
         @NameInMap("ItemPicUrl")
         public String itemPicUrl;
 
         @NameInMap("ItemPromInstVOS")
         public java.util.List<RenderOrderWithDesignatedTbUidResponseBodyModelRenderOrderInfosLmItemInfosItemPromInstVOS> itemPromInstVOS;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
+         */
         @NameInMap("ItemUrl")
         public String itemUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100<em><strong>02-661</strong></em>740</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
         @NameInMap("PointPrice")
         public Long pointPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100000</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6000</p>
+         */
         @NameInMap("PromotionFee")
         public Long promotionFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("ReservePrice")
         public Long reservePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>107***918</p>
+         */
         @NameInMap("SellerId")
         public Long sellerId;
 
@@ -687,16 +912,27 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
 
         /**
          * <p>skuid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>493***981</p>
          */
         @NameInMap("SkuId")
         public Long skuId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64GB</p>
+         */
         @NameInMap("SkuName")
         public String skuName;
 
         @NameInMap("TbShopName")
         public String tbShopName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("VirtualItemType")
         public String virtualItemType;
 
@@ -884,36 +1120,80 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
     }
 
     public static class RenderOrderWithDesignatedTbUidResponseBodyModelRenderOrderInfosShopPromInstVOSAvailableItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>668***630</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100<em><strong>88-52</strong></em>337</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10***40</p>
+         */
         @NameInMap("LmShopId")
         public Long lmShopId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Number")
         public Integer number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1490</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Removed")
         public Boolean removed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>502***91</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32***32</p>
+         */
         @NameInMap("TbSellerId")
         public Long tbSellerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("UserPayFee")
         public Long userPayFee;
 
@@ -1016,21 +1296,45 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("AvailableItems")
         public java.util.List<RenderOrderWithDesignatedTbUidResponseBodyModelRenderOrderInfosShopPromInstVOSAvailableItems> availableItems;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CanUse")
         public Boolean canUse;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("DiscountPrice")
         public Long discountPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1659612158</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>324***242</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100<em><strong>42-568</strong></em>99</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
@@ -1040,27 +1344,55 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("PromotionType")
         public String promotionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Selected")
         public Boolean selected;
 
         @NameInMap("SkuIds")
         public java.util.List<Long> skuIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>88</p>
+         */
         @NameInMap("SpecialPrice")
         public Long specialPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40b8362***20760d</p>
+         */
         @NameInMap("SubBizCode")
         public String subBizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>343***242</p>
+         */
         @NameInMap("TbSellerId")
         public Long tbSellerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("ThresholdPrice")
         public Long thresholdPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1659612158</p>
+         */
         @NameInMap("UseStartTime")
         public Long useStartTime;
 
@@ -1208,6 +1540,10 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
     }
 
     public static class RenderOrderWithDesignatedTbUidResponseBodyModelRenderOrderInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanSell")
         public Boolean canSell;
 
@@ -1223,9 +1559,17 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("LmItemInfos")
         public java.util.List<RenderOrderWithDesignatedTbUidResponseBodyModelRenderOrderInfosLmItemInfos> lmItemInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>218***608</p>
+         */
         @NameInMap("SellerId")
         public Long sellerId;
 
@@ -1320,13 +1664,24 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
 
         /**
          * <p>id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PostFee")
         public Long postFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-4</p>
+         */
         @NameInMap("ServiceType")
         public Long serviceType;
 
@@ -1400,39 +1755,82 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
     }
 
     public static class RenderOrderWithDesignatedTbUidResponseBodyModelUnsellableRenderOrderInfosLmItemInfosItemPromInstVOSAvailableItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>413***546</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100<em><strong>03-680</strong></em>926</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100***92</p>
+         */
         @NameInMap("LmShopId")
         public Long lmShopId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Number")
         public Integer number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2950</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Removed")
         public Boolean removed;
 
         /**
          * <p>skuid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>504***414</p>
          */
         @NameInMap("SkuId")
         public Long skuId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21***31</p>
+         */
         @NameInMap("TbSellerId")
         public Long tbSellerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2950</p>
+         */
         @NameInMap("UserPayFee")
         public Long userPayFee;
 
@@ -1535,21 +1933,45 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("AvailableItems")
         public java.util.List<RenderOrderWithDesignatedTbUidResponseBodyModelUnsellableRenderOrderInfosLmItemInfosItemPromInstVOSAvailableItems> availableItems;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CanUse")
         public Boolean canUse;
 
+        /**
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
         @NameInMap("DiscountPrice")
         public Long discountPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1659612158</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>324***253</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100<em><strong>17-6511</strong></em>700</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
@@ -1559,9 +1981,17 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("PromotionType")
         public String promotionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Selected")
         public Boolean selected;
 
@@ -1571,18 +2001,38 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("SkuIds")
         public java.util.List<Long> skuIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("SpecialPrice")
         public Long specialPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9b1f9bd***b774c0</p>
+         */
         @NameInMap("SubBizCode")
         public String subBizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>324***242</p>
+         */
         @NameInMap("TbSellerId")
         public Long tbSellerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("ThresholdPrice")
         public Long thresholdPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1659612158</p>
+         */
         @NameInMap("UseStartTime")
         public Long useStartTime;
 
@@ -1730,54 +2180,110 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
     }
 
     public static class RenderOrderWithDesignatedTbUidResponseBodyModelUnsellableRenderOrderInfosLmItemInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("ActualPrice")
         public Long actualPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanSell")
         public Boolean canSell;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Cash")
         public Long cash;
 
         @NameInMap("Features")
         public java.util.Map<String, String> features;
 
+        /**
+         * <strong>example:</strong>
+         * <p>651***245</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
         @NameInMap("ItemName")
         public String itemName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
+         */
         @NameInMap("ItemPicUrl")
         public String itemPicUrl;
 
         @NameInMap("ItemPromInstVOS")
         public java.util.List<RenderOrderWithDesignatedTbUidResponseBodyModelUnsellableRenderOrderInfosLmItemInfosItemPromInstVOS> itemPromInstVOS;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
+         */
         @NameInMap("ItemUrl")
         public String itemUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100<em><strong>87-644</strong></em>2078</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PointPrice")
         public Long pointPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PromotionFee")
         public Long promotionFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>999</p>
+         */
         @NameInMap("ReservePrice")
         public Long reservePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>218***608</p>
+         */
         @NameInMap("SellerId")
         public Long sellerId;
 
@@ -1786,10 +2292,17 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
 
         /**
          * <p>skuid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("SkuId")
         public Long skuId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500g</p>
+         */
         @NameInMap("SkuName")
         public String skuName;
 
@@ -1983,36 +2496,80 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
     }
 
     public static class RenderOrderWithDesignatedTbUidResponseBodyModelUnsellableRenderOrderInfosShopPromInstVOSAvailableItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>661***792</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100<em><strong>66-633</strong></em>108</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100***92</p>
+         */
         @NameInMap("LmShopId")
         public Long lmShopId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Number")
         public Integer number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Removed")
         public Boolean removed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>502***2291</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3432***42</p>
+         */
         @NameInMap("TbSellerId")
         public Long tbSellerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("UserPayFee")
         public Long userPayFee;
 
@@ -2115,21 +2672,45 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("AvailableItems")
         public java.util.List<RenderOrderWithDesignatedTbUidResponseBodyModelUnsellableRenderOrderInfosShopPromInstVOSAvailableItems> availableItems;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CanUse")
         public Boolean canUse;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DiscountPrice")
         public Long discountPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1659612158</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>232***777</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100<em><strong>95-625</strong></em>772</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
@@ -2139,27 +2720,55 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("PromotionType")
         public String promotionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Selected")
         public Boolean selected;
 
         @NameInMap("SkuIds")
         public java.util.List<Long> skuIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SpecialPrice")
         public Long specialPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fa7a31***7787b2</p>
+         */
         @NameInMap("SubBizCode")
         public String subBizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44***53</p>
+         */
         @NameInMap("TbSellerId")
         public Long tbSellerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ThresholdPrice")
         public Long thresholdPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1659612158</p>
+         */
         @NameInMap("UseStartTime")
         public Long useStartTime;
 
@@ -2307,6 +2916,10 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
     }
 
     public static class RenderOrderWithDesignatedTbUidResponseBodyModelUnsellableRenderOrderInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CanSell")
         public Boolean canSell;
 
@@ -2325,6 +2938,10 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2204***416</p>
+         */
         @NameInMap("SellerId")
         public Long sellerId;
 
@@ -2417,15 +3034,27 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("AddressInfos")
         public java.util.List<RenderOrderWithDesignatedTbUidResponseBodyModelAddressInfos> addressInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("BuyerCurrentPoints")
         public Long buyerCurrentPoints;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanSell")
         public Boolean canSell;
 
         @NameInMap("ExtInfo")
         public java.util.Map<String, String> extInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("Message")
         public String message;
 

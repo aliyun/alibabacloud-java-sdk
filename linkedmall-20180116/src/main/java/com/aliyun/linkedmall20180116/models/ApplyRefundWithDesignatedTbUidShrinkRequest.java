@@ -4,12 +4,28 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ApplyRefundWithDesignatedTbUidShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20***001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>142***071</p>
+     */
     @NameInMap("DisputeId")
     public Long disputeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("GoodsStatus")
     public Integer goodsStatus;
 
@@ -19,27 +35,71 @@ public class ApplyRefundWithDesignatedTbUidShrinkRequest extends TeaModel {
     @NameInMap("Proofs")
     public String proofsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150013</p>
+     */
     @NameInMap("ReasonId")
     public Long reasonId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("RefundCode")
     public Integer refundCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RefundCount")
     public Integer refundCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>990</p>
+     */
     @NameInMap("RefundFee")
     public Long refundFee;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>702091003</p>
+     */
     @NameInMap("SubLmOrderId")
     public String subLmOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("TbAccountType")
     public String tbAccountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>333***21</p>
+     */
     @NameInMap("TbUserId")
     public Long tbUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>U333***21</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 

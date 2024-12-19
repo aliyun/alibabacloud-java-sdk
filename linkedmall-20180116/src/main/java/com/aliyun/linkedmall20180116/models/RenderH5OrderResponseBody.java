@@ -4,30 +4,58 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RenderH5OrderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public RenderH5OrderResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>96B4141C-A3CD-5162-B435-4780A75E3D97</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>205</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -115,15 +143,27 @@ public class RenderH5OrderResponseBody extends TeaModel {
         @NameInMap("AddressId")
         public Long addressId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Default")
         public Boolean _default;
 
+        /**
+         * <strong>example:</strong>
+         * <p>410223</p>
+         */
         @NameInMap("DivisionCode")
         public String divisionCode;
 
         @NameInMap("Receiver")
         public String receiver;
 
+        /**
+         * <strong>example:</strong>
+         * <p>158****3627</p>
+         */
         @NameInMap("ReceiverPhone")
         public String receiverPhone;
 
@@ -265,9 +305,17 @@ public class RenderH5OrderResponseBody extends TeaModel {
     }
 
     public static class RenderH5OrderResponseBodyModelLmItemInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ActualPrice")
         public Long actualPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanSell")
         public Boolean canSell;
 
@@ -277,6 +325,10 @@ public class RenderH5OrderResponseBody extends TeaModel {
         @NameInMap("Features")
         public java.util.Map<String, ?> features;
 
+        /**
+         * <strong>example:</strong>
+         * <p>65******461</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
@@ -289,24 +341,44 @@ public class RenderH5OrderResponseBody extends TeaModel {
         @NameInMap("ItemUrl")
         public String itemUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000102-******94679</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>69</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>42******044</p>
+         */
         @NameInMap("SellerId")
         public Long sellerId;
 
         @NameInMap("SellerNick")
         public String sellerNick;
 
+        /**
+         * <strong>example:</strong>
+         * <p>46******9302</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
@@ -474,6 +546,10 @@ public class RenderH5OrderResponseBody extends TeaModel {
         @NameInMap("AddressInfoList")
         public java.util.List<RenderH5OrderResponseBodyModelAddressInfoList> addressInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("BuyerCurrentPoints")
         public Long buyerCurrentPoints;
 

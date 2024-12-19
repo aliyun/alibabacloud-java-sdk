@@ -4,24 +4,48 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryItemDetailTeaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Item")
     public QueryItemDetailTeaResponseBodyItem item;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified parameter lmItemId or itemId value is not valid.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BA157565-3358-5D80-9330-************</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -125,51 +149,117 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
     }
 
     public static class QueryItemDetailTeaResponseBodyItemSkusSku extends TeaModel {
+        @NameInMap("CanNotBeSoldCode")
+        public String canNotBeSoldCode;
+
+        @NameInMap("CanNotBeSoldMassage")
+        public String canNotBeSoldMassage;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanSell")
         public Boolean canSell;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("CustomizedAttributeMap")
         public java.util.Map<String, ?> customizedAttributeMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;delivery_version\&quot;:\&quot;1\&quot;}</p>
+         */
         @NameInMap("ExtJson")
         public String extJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasQuantity")
         public Boolean hasQuantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62887962****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000102-64426301****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("PointPrice")
         public Long pointPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1990</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2890</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1990</p>
+         */
         @NameInMap("ReservePrice")
         public Long reservePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("SimpleQuantity")
         public String simpleQuantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>465309897****</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
         @NameInMap("SkuPicUrl")
         public String skuPicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("SkuProperties")
         public java.util.Map<String, ?> skuProperties;
 
@@ -179,6 +269,22 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         public static QueryItemDetailTeaResponseBodyItemSkusSku build(java.util.Map<String, ?> map) throws Exception {
             QueryItemDetailTeaResponseBodyItemSkusSku self = new QueryItemDetailTeaResponseBodyItemSkusSku();
             return TeaModel.build(map, self);
+        }
+
+        public QueryItemDetailTeaResponseBodyItemSkusSku setCanNotBeSoldCode(String canNotBeSoldCode) {
+            this.canNotBeSoldCode = canNotBeSoldCode;
+            return this;
+        }
+        public String getCanNotBeSoldCode() {
+            return this.canNotBeSoldCode;
+        }
+
+        public QueryItemDetailTeaResponseBodyItemSkusSku setCanNotBeSoldMassage(String canNotBeSoldMassage) {
+            this.canNotBeSoldMassage = canNotBeSoldMassage;
+            return this;
+        }
+        public String getCanNotBeSoldMassage() {
+            return this.canNotBeSoldMassage;
         }
 
         public QueryItemDetailTeaResponseBodyItemSkusSku setCanSell(Boolean canSell) {
@@ -339,24 +445,54 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
     }
 
     public static class QueryItemDetailTeaResponseBodyItem extends TeaModel {
+        @NameInMap("CanNotBeSoldCode")
+        public String canNotBeSoldCode;
+
+        @NameInMap("CanNotBeSoldMassage")
+        public String canNotBeSoldMassage;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanSell")
         public Boolean canSell;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20177****</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CenterInventory")
         public Boolean centerInventory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("CustomizedAttributeMap")
         public java.util.Map<String, ?> customizedAttributeMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;<p>&lt;img align=\&quot;absmiddle\&quot; src=\&quot;<a href="https://img.alicdn.com/imgextra/i1/1742262291/O1CN01j0oO3L1SnK7EwwXP4_!!1742262291.jpg%5C%5C">https://img.alicdn.com/imgextra/i1/1742262291/O1CN01j0oO3L1SnK7EwwXP4_!!1742262291.jpg\\</a>&quot; style=\&quot;max-width: none;width: 750.0px;\&quot;&gt;&quot;</p>
+         */
         @NameInMap("DescOption")
         public String descOption;
 
         @NameInMap("DescPath")
         public String descPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;delivery_version\&quot;:\&quot;1\&quot;}</p>
+         */
         @NameInMap("ExtJson")
         public String extJson;
 
@@ -369,12 +505,24 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         @NameInMap("IforestProps")
         public QueryItemDetailTeaResponseBodyItemIforestProps iforestProps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsCanSell")
         public Boolean isCanSell;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsSellerPayPostfee")
         public Boolean isSellerPayPostfee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60646253****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
@@ -387,36 +535,76 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         @NameInMap("ItemTotalSimpleValue")
         public String itemTotalSimpleValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>entity</p>
+         */
         @NameInMap("LmItemCategory")
         public String lmItemCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000035-61936646****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
         @NameInMap("MainPicUrl")
         public String mainPicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("MinPoints")
         public Long minPoints;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1990</p>
+         */
         @NameInMap("MinPrice")
         public Long minPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Properties")
         public java.util.Map<String, ?> properties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2990</p>
+         */
         @NameInMap("ReservePrice")
         public Long reservePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>329488****</p>
+         */
         @NameInMap("SellerId")
         public Long sellerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SellerPayPostfee")
         public Boolean sellerPayPostfee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SellerType")
         public Integer sellerType;
 
@@ -429,6 +617,10 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         @NameInMap("TbShopName")
         public String tbShopName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1999</p>
+         */
         @NameInMap("TotalSoldQuantity")
         public Integer totalSoldQuantity;
 
@@ -444,6 +636,22 @@ public class QueryItemDetailTeaResponseBody extends TeaModel {
         public static QueryItemDetailTeaResponseBodyItem build(java.util.Map<String, ?> map) throws Exception {
             QueryItemDetailTeaResponseBodyItem self = new QueryItemDetailTeaResponseBodyItem();
             return TeaModel.build(map, self);
+        }
+
+        public QueryItemDetailTeaResponseBodyItem setCanNotBeSoldCode(String canNotBeSoldCode) {
+            this.canNotBeSoldCode = canNotBeSoldCode;
+            return this;
+        }
+        public String getCanNotBeSoldCode() {
+            return this.canNotBeSoldCode;
+        }
+
+        public QueryItemDetailTeaResponseBodyItem setCanNotBeSoldMassage(String canNotBeSoldMassage) {
+            this.canNotBeSoldMassage = canNotBeSoldMassage;
+            return this;
+        }
+        public String getCanNotBeSoldMassage() {
+            return this.canNotBeSoldMassage;
         }
 
         public QueryItemDetailTeaResponseBodyItem setCanSell(Boolean canSell) {

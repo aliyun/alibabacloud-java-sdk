@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryLogisticsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QueryLogisticsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E090F1A0-7454-5F36-933C-E6332CE2****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +66,24 @@ public class QueryLogisticsResponseBody extends TeaModel {
     }
 
     public static class QueryLogisticsResponseBodyDataDataGoodsGoods extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("GoodName")
         public String goodName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62250669****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
@@ -114,6 +138,10 @@ public class QueryLogisticsResponseBody extends TeaModel {
     }
 
     public static class QueryLogisticsResponseBodyDataDataLogisticsDetailListLogisticsDetailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-01</p>
+         */
         @NameInMap("OcurrTimeStr")
         public String ocurrTimeStr;
 
@@ -172,6 +200,10 @@ public class QueryLogisticsResponseBody extends TeaModel {
         @NameInMap("Goods")
         public QueryLogisticsResponseBodyDataDataGoods goods;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZTO</p>
+         */
         @NameInMap("LogisticsCompanyCode")
         public String logisticsCompanyCode;
 
@@ -181,6 +213,10 @@ public class QueryLogisticsResponseBody extends TeaModel {
         @NameInMap("LogisticsDetailList")
         public QueryLogisticsResponseBodyDataDataLogisticsDetailList logisticsDetailList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32178478218****</p>
+         */
         @NameInMap("MailNo")
         public String mailNo;
 

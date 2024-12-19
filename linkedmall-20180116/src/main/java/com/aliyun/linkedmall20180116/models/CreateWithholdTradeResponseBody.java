@@ -4,12 +4,20 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateWithholdTradeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6103AD7B-21C2-523B-89D0-579DA58D08E8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +62,31 @@ public class CreateWithholdTradeResponseBody extends TeaModel {
     }
 
     public static class CreateWithholdTradeResponseBodyWithholdTradeResponse extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>57E4FE52-0750-4456-AA8F-ECC9FA0F8DF0</p>
+         */
         @NameInMap("OutRequestNo")
         public String outRequestNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23******274</p>
+         */
         @NameInMap("OutTradeNo")
         public String outTradeNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-01 12:00:00</p>
+         */
         @NameInMap("PaymentDate")
         public String paymentDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32******372</p>
+         */
         @NameInMap("TradeNo")
         public String tradeNo;
 

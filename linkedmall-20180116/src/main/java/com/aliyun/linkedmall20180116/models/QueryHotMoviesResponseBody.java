@@ -4,27 +4,55 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryHotMoviesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Movies")
     public QueryHotMoviesResponseBodyMovies movies;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1AF23E47-D8FB-576A-B069-CA98B4DE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>205</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -136,54 +164,118 @@ public class QueryHotMoviesResponseBody extends TeaModel {
     }
 
     public static class QueryHotMoviesResponseBodyMoviesMovie extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("BackgroundPicture")
         public String backgroundPicture;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Country")
         public String country;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Director")
         public String director;
 
+        /**
+         * <strong>example:</strong>
+         * <p>190</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Highlight")
         public String highlight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5790</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("LeadingRole")
         public String leadingRole;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("MovieName")
         public String movieName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("MovieNameEn")
         public String movieNameEn;
 
         @NameInMap("MovieTypeList")
         public QueryHotMoviesResponseBodyMoviesMovieMovieTypeList movieTypeList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("MovieVersion")
         public String movieVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-01 12:00:00</p>
+         */
         @NameInMap("OpenDay")
         public String openDay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-01 12:00:00</p>
+         */
         @NameInMap("OpenTime")
         public String openTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Poster")
         public String poster;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9.7</p>
+         */
         @NameInMap("Remark")
         public String remark;
 

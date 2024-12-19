@@ -7,12 +7,22 @@ public class QueryAddressDetailRequest extends TeaModel {
     @NameInMap("AddressInfo")
     public String addressInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL2******01</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 

@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class UnFreezeUserPointResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public UnFreezeUserPointResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6103AD7B-21C2-523B-89D0-579DA58D08E8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,42 +66,86 @@ public class UnFreezeUserPointResponseBody extends TeaModel {
     }
 
     public static class UnFreezeUserPointResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>17******31</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Amount")
         public Long amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LMALL20******001</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22******37</p>
+         */
         @NameInMap("BizUid")
         public String bizUid;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+         */
         @NameInMap("ExtInfo")
         public java.util.Map<String, ?> extInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20211212******31746-1202</p>
+         */
         @NameInMap("IdempotentId")
         public String idempotentId;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("RecordId")
         public String recordId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("Rest")
         public Long rest;
 
+        /**
+         * <strong>example:</strong>
+         * <p>136</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Status")
         public String status;
 

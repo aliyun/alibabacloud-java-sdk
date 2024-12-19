@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GrantUserPointResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public GrantUserPointResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1718921E-C8D4-55E1-B8D4-114AE537C1B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,39 +66,75 @@ public class GrantUserPointResponseBody extends TeaModel {
     }
 
     public static class GrantUserPointResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>69******45</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Amount")
         public Long amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LMALL20******002</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22******3527</p>
+         */
         @NameInMap("BizUid")
         public String bizUid;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+         */
         @NameInMap("ExtInfo")
         public java.util.Map<String, ?> extInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>202112******31746-1202</p>
+         */
         @NameInMap("IdempotentId")
         public String idempotentId;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6529</p>
+         */
         @NameInMap("RecordId")
         public String recordId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("Rest")
         public Long rest;
 
+        /**
+         * <strong>example:</strong>
+         * <p>136</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 

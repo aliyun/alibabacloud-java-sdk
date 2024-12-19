@@ -4,21 +4,49 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RenderOrderWithDesignatedTbUidRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL202***001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeliveryAddress")
     public String deliveryAddress;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ItemList")
     public java.util.List<RenderOrderWithDesignatedTbUidRequestItemList> itemList;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("TbAccountType")
     public String tbAccountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123***23</p>
+     */
     @NameInMap("TbUserId")
     public Long tbUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>U123***23</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
@@ -76,15 +104,31 @@ public class RenderOrderWithDesignatedTbUidRequest extends TeaModel {
     }
 
     public static class RenderOrderWithDesignatedTbUidRequestItemList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>661***740</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100<em><strong>02-661</strong></em>740</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>458***257</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 

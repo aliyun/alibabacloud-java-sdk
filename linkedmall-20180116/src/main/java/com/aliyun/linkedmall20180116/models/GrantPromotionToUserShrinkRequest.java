@@ -4,27 +4,64 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GrantPromotionToUserShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20211118****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2554265</p>
+     */
     @NameInMap("ExpireSeconds")
     public Long expireSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("GrantMode")
     public String grantMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>latour2</p>
+     */
     @NameInMap("GrantWay")
     public String grantWay;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20211212211381431746-1202</p>
+     */
     @NameInMap("IdempotentId")
     public String idempotentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66482394364783****</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6aa6ea6af00b453eafc3128d41858bf6</p>
+     */
     @NameInMap("SecurityCode")
     public String securityCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 

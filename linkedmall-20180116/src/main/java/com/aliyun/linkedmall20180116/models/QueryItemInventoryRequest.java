@@ -4,15 +4,34 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryItemInventoryRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL2******002</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>410503006</p>
+     */
     @NameInMap("DivisionCode")
     public String divisionCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>113.77.105.73</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ItemList")
     public java.util.List<QueryItemInventoryRequestItemList> itemList;
 
@@ -54,14 +73,22 @@ public class QueryItemInventoryRequest extends TeaModel {
     }
 
     public static class QueryItemInventoryRequestItemList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>630730743485</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000710-635764300767</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
         @NameInMap("SkuIdList")
-        public java.util.List<Integer> skuIdList;
+        public java.util.List<Long> skuIdList;
 
         public static QueryItemInventoryRequestItemList build(java.util.Map<String, ?> map) throws Exception {
             QueryItemInventoryRequestItemList self = new QueryItemInventoryRequestItemList();
@@ -84,11 +111,11 @@ public class QueryItemInventoryRequest extends TeaModel {
             return this.lmItemId;
         }
 
-        public QueryItemInventoryRequestItemList setSkuIdList(java.util.List<Integer> skuIdList) {
+        public QueryItemInventoryRequestItemList setSkuIdList(java.util.List<Long> skuIdList) {
             this.skuIdList = skuIdList;
             return this;
         }
-        public java.util.List<Integer> getSkuIdList() {
+        public java.util.List<Long> getSkuIdList() {
             return this.skuIdList;
         }
 

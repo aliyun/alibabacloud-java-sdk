@@ -4,30 +4,76 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class InitModifyRefundRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BizClaimType")
     public Integer bizClaimType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL202****11224</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22112****2411</p>
+     */
     @NameInMap("BizUid")
     public String bizUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14244******33071</p>
+     */
     @NameInMap("DisputeId")
     public Long disputeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("GoodsStatus")
     public Integer goodsStatus;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23******85</p>
+     */
     @NameInMap("SubLmOrderId")
     public String subLmOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>221122411****231</p>
+     */
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 

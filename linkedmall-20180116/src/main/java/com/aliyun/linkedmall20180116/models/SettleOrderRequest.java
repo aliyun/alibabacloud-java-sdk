@@ -4,21 +4,45 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class SettleOrderRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+     */
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>64******721</p>
+     */
     @NameInMap("MerchantId")
     public String merchantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("OutRequestNo")
     public String outRequestNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("OutTradeNo")
     public String outTradeNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("RoyaltyParameters")
     public String royaltyParameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("TradeNo")
     public String tradeNo;
 

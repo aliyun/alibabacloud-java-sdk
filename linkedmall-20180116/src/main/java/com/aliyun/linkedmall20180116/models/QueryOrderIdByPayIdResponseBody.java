@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderIdByPayIdResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("LmOrderIds")
     public QueryOrderIdByPayIdResponseBodyLmOrderIds lmOrderIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>79C01D47-3C44-57D9-BC99-1B33F7ED14B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,10 @@ public class QueryOrderIdByPayIdResponseBody extends TeaModel {
     }
 
     public static class QueryOrderIdByPayIdResponseBodyLmOrderIdsLmOrderIds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>45******89</p>
+         */
         @NameInMap("LmOrderId")
         public Long lmOrderId;
 

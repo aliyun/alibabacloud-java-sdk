@@ -4,27 +4,67 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ApplyRefundRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ANONY</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>500325</p>
+     */
     @NameInMap("ApplyReasonTextId")
     public Long applyReasonTextId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ApplyRefundCount")
     public Integer applyRefundCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>790</p>
+     */
     @NameInMap("ApplyRefundFee")
     public Long applyRefundFee;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BizClaimType")
     public Integer bizClaimType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL201912230007</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>186******89</p>
+     */
     @NameInMap("BizUid")
     public String bizUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("GoodsStatus")
     public Integer goodsStatus;
 
@@ -34,12 +74,22 @@ public class ApplyRefundRequest extends TeaModel {
     @NameInMap("LeavePictureList")
     public java.util.List<ApplyRefundRequestLeavePictureList> leavePictureList;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42******33</p>
+     */
     @NameInMap("SubLmOrderId")
     public String subLmOrderId;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 
@@ -156,6 +206,10 @@ public class ApplyRefundRequest extends TeaModel {
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://lm-dk.oss-cn-hangzhou.aliyuncs.com/******06661.png">https://lm-dk.oss-cn-hangzhou.aliyuncs.com/******06661.png</a></p>
+         */
         @NameInMap("Picture")
         public String picture;
 

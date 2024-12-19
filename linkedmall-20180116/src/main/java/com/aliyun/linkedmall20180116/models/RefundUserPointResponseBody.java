@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RefundUserPointResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public RefundUserPointResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>79C01D47-3C44-57D9-BC99-1B33F7ED****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,42 +66,86 @@ public class RefundUserPointResponseBody extends TeaModel {
     }
 
     public static class RefundUserPointResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>180173763600****</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Amount")
         public Long amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LMALL20211206****</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4851826221****</p>
+         */
         @NameInMap("BizUid")
         public String bizUid;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+         */
         @NameInMap("ExtInfo")
         public java.util.Map<String, ?> extInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>202112******31746-1202</p>
+         */
         @NameInMap("IdempotentId")
         public String idempotentId;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>414915628598****</p>
+         */
         @NameInMap("RecordId")
         public String recordId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("Rest")
         public Long rest;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33046</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Status")
         public String status;
 

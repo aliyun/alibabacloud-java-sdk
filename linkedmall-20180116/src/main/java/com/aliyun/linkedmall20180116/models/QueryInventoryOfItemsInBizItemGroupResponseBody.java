@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ItemList")
     public java.util.List<QueryInventoryOfItemsInBizItemGroupResponseBodyItemList> itemList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0F380CB1-BE49-5DF7-B128-63CADB3A12A3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,17 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
     }
 
     public static class QueryInventoryOfItemsInBizItemGroupResponseBodyItemListSkuList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4100</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>467******9928</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
@@ -84,21 +104,41 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
     }
 
     public static class QueryInventoryOfItemsInBizItemGroupResponseBodyItemList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>******058233</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10016572-******058233</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
         @NameInMap("SkuList")
         public java.util.List<QueryInventoryOfItemsInBizItemGroupResponseBodyItemListSkuList> skuList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("TotalQuantity")
         public Long totalQuantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>900</p>
+         */
         @NameInMap("TotalSoldQuantity")
         public Long totalSoldQuantity;
 

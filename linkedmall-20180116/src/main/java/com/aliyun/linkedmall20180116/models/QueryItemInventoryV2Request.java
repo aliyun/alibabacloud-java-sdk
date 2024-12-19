@@ -4,15 +4,34 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryItemInventoryV2Request extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20******01</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>520300</p>
+     */
     @NameInMap("DivisionCode")
     public String divisionCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>113.77.105.73</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ItemList")
     public java.util.List<QueryItemInventoryV2RequestItemList> itemList;
 
@@ -54,9 +73,17 @@ public class QueryItemInventoryV2Request extends TeaModel {
     }
 
     public static class QueryItemInventoryV2RequestItemList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>60843842****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000035-61936646****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 

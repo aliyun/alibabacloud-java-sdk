@@ -4,15 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderCommissionRateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("CommissionModels")
     public java.util.List<QueryOrderCommissionRateResponseBodyCommissionModels> commissionModels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A7BE4356-7F92-533E-A31B-2EBF2D67****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,17 @@ public class QueryOrderCommissionRateResponseBody extends TeaModel {
     }
 
     public static class QueryOrderCommissionRateResponseBodyCommissionModelsCommissionInfoRateConfigConfigs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Value")
         public Long value;
 
+        /**
+         * <strong>example:</strong>
+         * <p>%%</p>
+         */
         @NameInMap("ValueUnit")
         public String valueUnit;
 
@@ -106,6 +126,10 @@ public class QueryOrderCommissionRateResponseBody extends TeaModel {
         @NameInMap("RateConfig")
         public QueryOrderCommissionRateResponseBodyCommissionModelsCommissionInfoRateConfig rateConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT_RATE</p>
+         */
         @NameInMap("RateType")
         public String rateType;
 
@@ -136,6 +160,10 @@ public class QueryOrderCommissionRateResponseBody extends TeaModel {
         @NameInMap("CommissionInfo")
         public QueryOrderCommissionRateResponseBodyCommissionModelsCommissionInfo commissionInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>45******23</p>
+         */
         @NameInMap("LmOrderId")
         public Long lmOrderId;
 

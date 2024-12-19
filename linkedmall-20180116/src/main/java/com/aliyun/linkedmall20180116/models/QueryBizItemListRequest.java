@@ -4,27 +4,65 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryBizItemListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL20211202****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50003449</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[63524643****]</p>
+     */
     @NameInMap("ItemIds")
     public java.util.Map<String, ?> itemIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[\&quot;10000791-65975997****\&quot;]</p>
+     */
     @NameInMap("LmItemIds")
     public java.util.Map<String, ?> lmItemIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sQuuSHY*************</p>
+     */
     @NameInMap("SubBizId")
     public String subBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2114255235****</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

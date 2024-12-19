@@ -4,12 +4,25 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ModifyBasicAndBizItemsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL2***100001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ItemList")
     public java.util.List<ModifyBasicAndBizItemsRequestItemList> itemList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f4279b7cbdfc46d4b7566****</p>
+     */
     @NameInMap("SubBizId")
     public String subBizId;
 
@@ -43,27 +56,59 @@ public class ModifyBasicAndBizItemsRequest extends TeaModel {
     }
 
     public static class ModifyBasicAndBizItemsRequestItemListSkuList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021090800502200000086****</p>
+         */
         @NameInMap("BenefitId")
         public String benefitId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1999</p>
+         */
         @NameInMap("Points")
         public Long points;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2790</p>
+         */
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>472461998****</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StatusAction")
         public Long statusAction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2790</p>
+         */
         @NameInMap("SupplierPrice")
         public Long supplierPrice;
 
@@ -139,9 +184,17 @@ public class ModifyBasicAndBizItemsRequest extends TeaModel {
     }
 
     public static class ModifyBasicAndBizItemsRequestItemList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>65671280****</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000035-61936646****</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 

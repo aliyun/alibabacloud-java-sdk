@@ -4,15 +4,31 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class BatchRegistAnonymousTbAccountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[\&quot;id1\&quot;, \&quot;id2\&quot;]</p>
+     */
     @NameInMap("BatchId")
     public String batchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>37899973-5963-5028-BA54-180A5B107****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

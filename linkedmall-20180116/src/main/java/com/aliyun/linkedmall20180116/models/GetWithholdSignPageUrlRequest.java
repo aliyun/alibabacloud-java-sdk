@@ -4,18 +4,38 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetWithholdSignPageUrlRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("DeviceType")
     public String deviceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>223******2637</p>
+     */
     @NameInMap("ExternalAgreementNo")
     public String externalAgreementNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("IdentityParameters")
     public String identityParameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>64******721</p>
+     */
     @NameInMap("MerchantId")
     public String merchantId;
 
@@ -25,12 +45,24 @@ public class GetWithholdSignPageUrlRequest extends TeaModel {
     @NameInMap("MerchantServiceName")
     public String merchantServiceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("NotifyUrl")
     public String notifyUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0AF7F437-C869-477D-A21A-CF402493FFFE</p>
+     */
     @NameInMap("OutRequestNo")
     public String outRequestNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ReturnUrl")
     public String returnUrl;
 

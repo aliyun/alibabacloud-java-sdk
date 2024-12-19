@@ -4,36 +4,72 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ModifySettleAccountRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>bank</p>
+     */
     @NameInMap("AccountChannel")
     public String accountChannel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1766******9951934</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123******000</p>
+     */
     @NameInMap("AccountNo")
     public String accountNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>transferIn</p>
+     */
     @NameInMap("AccountPayType")
     public String accountPayType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>company</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LMALL20******001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HK</p>
+     */
     @NameInMap("CountryOrAreaCode")
     public String countryOrAreaCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CNY</p>
+     */
     @NameInMap("Currency")
     public String currency;
 
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>202112******31746-1202</p>
+     */
     @NameInMap("IdempotentId")
     public String idempotentId;
 

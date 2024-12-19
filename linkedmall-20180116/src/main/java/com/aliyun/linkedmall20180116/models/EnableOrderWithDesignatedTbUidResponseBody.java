@@ -4,39 +4,78 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public EnableOrderWithDesignatedTbUidResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>pageSize</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>26F4B2C7-93***CC-AE76C9B00D2F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -137,6 +176,10 @@ public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("ExtJson")
         public java.util.Map<String, String> extJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>45***23</p>
+         */
         @NameInMap("LmOrderId")
         public String lmOrderId;
 
@@ -184,6 +227,10 @@ public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("PayTradeIds")
         public java.util.List<String> payTradeIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
+         */
         @NameInMap("RedirectUrl")
         public String redirectUrl;
 

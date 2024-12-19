@@ -4,12 +4,24 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryMessagesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LMALL2******001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
     @NameInMap("ExtJson")
     public String extJson;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Topic_******_api</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

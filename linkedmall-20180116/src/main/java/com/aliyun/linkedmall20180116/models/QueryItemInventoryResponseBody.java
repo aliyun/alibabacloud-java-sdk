@@ -4,24 +4,48 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryItemInventoryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ItemList")
     public QueryItemInventoryResponseBodyItemList itemList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1F2E68C6-FD20-5121-89FF-65F555EE1F15</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,6 +111,10 @@ public class QueryItemInventoryResponseBody extends TeaModel {
     }
 
     public static class QueryItemInventoryResponseBodyItemListItemSkuListSkuInventory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Quantity")
         public Long quantity;
 
@@ -111,6 +139,9 @@ public class QueryItemInventoryResponseBody extends TeaModel {
 
         /**
          * <p>skuId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4901251235576</p>
          */
         @NameInMap("SkuId")
         public Long skuId;
@@ -158,9 +189,17 @@ public class QueryItemInventoryResponseBody extends TeaModel {
     }
 
     public static class QueryItemInventoryResponseBodyItemListItem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>631145057663</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000710-635764300767</p>
+         */
         @NameInMap("LmItemId")
         public String lmItemId;
 

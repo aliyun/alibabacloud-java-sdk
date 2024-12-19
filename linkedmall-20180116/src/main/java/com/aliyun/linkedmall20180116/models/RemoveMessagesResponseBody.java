@@ -7,24 +7,48 @@ public class RemoveMessagesResponseBody extends TeaModel {
     @NameInMap("ActionResult")
     public RemoveMessagesResponseBodyActionResult actionResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1718921E-C8D4-55E1-B8D4-114AE537C1B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,12 +122,24 @@ public class RemoveMessagesResponseBody extends TeaModel {
     }
 
     public static class RemoveMessagesResponseBodyActionResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ReturnCode")
         public String returnCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("ReturnMessage")
         public String returnMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{\&quot;uuid\&quot;: \&quot;dim-a0bf795*******8e86d4d464dc3a\&quot;, \&quot;code\&quot;: \&quot;itm\&quot;, \&quot;extendName\&quot;: \&quot;item\&quot;, \&quot;name\&quot;: u\&quot;\u5541\&quot;, \&quot;description\&quot;: u\&quot;\u5546\u4e49\&quot;}]</p>
+         */
         @NameInMap("ReturnValue")
         public String returnValue;
 

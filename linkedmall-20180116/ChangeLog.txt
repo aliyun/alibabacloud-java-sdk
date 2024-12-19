@@ -1,3 +1,22 @@
+2024-12-19 Version: 2.0.0
+- Delete API CreateMovieTicketOrder.
+- Delete API NotifyPayOrderStatus.
+- Delete API NotifyWithholdFund.
+- Update API AddSupplierNewItems: update param ItemList.
+- Update API ModifyBasicItemSupplierPrice: update response param.
+- Update API QueryChannelItemBillDownloadUrl: update response param.
+- Update API QueryItemDetailTea: add param BizUid.
+- Update API QueryItemDetailTea: add param DivisionCode.
+- Update API QueryItemDetailTea: add param Ip.
+- Update API QueryItemDetailTea: add param ThirdPartyUserId.
+- Update API QueryItemDetailTea: add param UseAnonymousTbAccount.
+- Update API QueryItemDetailTea: add param UserFlag.
+- Update API QueryItemDetailTea: update response param.
+- Update API QueryItemInventory: update param ItemList.
+- Update API QuerySellerLicense: update response param.
+- Update API QuerySupplierItemBillDownloadUrl: update response param.
+
+
 2024-01-22 Version: 1.2.0
 - Generated java 2018-01-16 for linkedmall.
 

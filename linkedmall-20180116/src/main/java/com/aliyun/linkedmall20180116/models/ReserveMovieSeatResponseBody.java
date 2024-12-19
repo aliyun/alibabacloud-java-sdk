@@ -4,27 +4,51 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ReserveMovieSeatResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LogsId")
     public String logsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5E2D59BA-4EB0-45C4-A0D7-D98C1A4B320B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ReservedSeat")
     public ReserveMovieSeatResponseBodyReservedSeat reservedSeat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>207</p>
+     */
     @NameInMap("SubCode")
     public String subCode;
 
     @NameInMap("SubMessage")
     public String subMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,15 +122,31 @@ public class ReserveMovieSeatResponseBody extends TeaModel {
     }
 
     public static class ReserveMovieSeatResponseBodyReservedSeat extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("ApplyKey")
         public String applyKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>900</p>
+         */
         @NameInMap("DefaultLockSecond")
         public Long defaultLockSecond;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1649302236658</p>
+         */
         @NameInMap("ReservedTime")
         public Long reservedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LOCKSUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 
