@@ -792,6 +792,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量获取媒资信息</p>
+     * 
+     * @param request BatchGetMediaInfosRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchGetMediaInfosResponse
+     */
+    public BatchGetMediaInfosResponse batchGetMediaInfosWithOptions(BatchGetMediaInfosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaIds)) {
+            query.put("MediaIds", request.mediaIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchGetMediaInfos"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchGetMediaInfosResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量获取媒资信息</p>
+     * 
+     * @param request BatchGetMediaInfosRequest
+     * @return BatchGetMediaInfosResponse
+     */
+    public BatchGetMediaInfosResponse batchGetMediaInfos(BatchGetMediaInfosRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchGetMediaInfosWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
@@ -2715,6 +2759,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteWatermarkResponse deleteWatermark(DeleteWatermarkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteWatermarkWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询媒资数据分布</p>
+     * 
+     * @param request DescribeMediaDistributionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMediaDistributionResponse
+     */
+    public DescribeMediaDistributionResponse describeMediaDistributionWithOptions(DescribeMediaDistributionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageClass)) {
+            query.put("StorageClass", request.storageClass);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMediaDistribution"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMediaDistributionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询媒资数据分布</p>
+     * 
+     * @param request DescribeMediaDistributionRequest
+     * @return DescribeMediaDistributionResponse
+     */
+    public DescribeMediaDistributionResponse describeMediaDistribution(DescribeMediaDistributionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMediaDistributionWithOptions(request, runtime);
     }
 
     /**
@@ -12538,6 +12638,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.streamURL)) {
             query.put("StreamURL", request.streamURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadMetadata)) {
+            query.put("UploadMetadata", request.uploadMetadata);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
