@@ -41,6 +41,9 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
     }
 
     public static class UpdateLoginProfileResponseBodyLoginProfile extends TeaModel {
+        @NameInMap("AutoDisableLoginStatus")
+        public String autoDisableLoginStatus;
+
         /**
          * <p>Indicates whether MFA must be enabled.</p>
          * 
@@ -89,6 +92,14 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         public static UpdateLoginProfileResponseBodyLoginProfile build(java.util.Map<String, ?> map) throws Exception {
             UpdateLoginProfileResponseBodyLoginProfile self = new UpdateLoginProfileResponseBodyLoginProfile();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateLoginProfileResponseBodyLoginProfile setAutoDisableLoginStatus(String autoDisableLoginStatus) {
+            this.autoDisableLoginStatus = autoDisableLoginStatus;
+            return this;
+        }
+        public String getAutoDisableLoginStatus() {
+            return this.autoDisableLoginStatus;
         }
 
         public UpdateLoginProfileResponseBodyLoginProfile setMFABindRequired(Boolean MFABindRequired) {

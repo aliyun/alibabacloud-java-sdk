@@ -104,6 +104,9 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         @NameInMap("AttachedSystemPoliciesPerUserQuota")
         public Integer attachedSystemPoliciesPerUserQuota;
 
+        @NameInMap("ConditionsPerAKPolicyQuota")
+        public Integer conditionsPerAKPolicyQuota;
+
         /**
          * <p>The number of RAM user groups.</p>
          * 
@@ -130,6 +133,9 @@ public class GetAccountSummaryResponseBody extends TeaModel {
          */
         @NameInMap("GroupsQuota")
         public Integer groupsQuota;
+
+        @NameInMap("IPItemsPerAKPolicyQuota")
+        public Integer IPItemsPerAKPolicyQuota;
 
         /**
          * <p>The number of virtual multi-factor authentication (MFA) devices.</p>
@@ -291,6 +297,14 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             return this.attachedSystemPoliciesPerUserQuota;
         }
 
+        public GetAccountSummaryResponseBodySummaryMap setConditionsPerAKPolicyQuota(Integer conditionsPerAKPolicyQuota) {
+            this.conditionsPerAKPolicyQuota = conditionsPerAKPolicyQuota;
+            return this;
+        }
+        public Integer getConditionsPerAKPolicyQuota() {
+            return this.conditionsPerAKPolicyQuota;
+        }
+
         public GetAccountSummaryResponseBodySummaryMap setGroups(Integer groups) {
             this.groups = groups;
             return this;
@@ -313,6 +327,14 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         }
         public Integer getGroupsQuota() {
             return this.groupsQuota;
+        }
+
+        public GetAccountSummaryResponseBodySummaryMap setIPItemsPerAKPolicyQuota(Integer IPItemsPerAKPolicyQuota) {
+            this.IPItemsPerAKPolicyQuota = IPItemsPerAKPolicyQuota;
+            return this;
+        }
+        public Integer getIPItemsPerAKPolicyQuota() {
+            return this.IPItemsPerAKPolicyQuota;
         }
 
         public GetAccountSummaryResponseBodySummaryMap setMFADevices(Integer MFADevices) {

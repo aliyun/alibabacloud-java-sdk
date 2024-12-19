@@ -200,6 +200,36 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
     }
 
+    public static class SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays extends TeaModel {
+        @NameInMap("MaxIdleDaysForAccessKeys")
+        public Integer maxIdleDaysForAccessKeys;
+
+        @NameInMap("MaxIdleDaysForUsers")
+        public Integer maxIdleDaysForUsers;
+
+        public static SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays build(java.util.Map<String, ?> map) throws Exception {
+            SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays self = new SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays();
+            return TeaModel.build(map, self);
+        }
+
+        public SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays setMaxIdleDaysForAccessKeys(Integer maxIdleDaysForAccessKeys) {
+            this.maxIdleDaysForAccessKeys = maxIdleDaysForAccessKeys;
+            return this;
+        }
+        public Integer getMaxIdleDaysForAccessKeys() {
+            return this.maxIdleDaysForAccessKeys;
+        }
+
+        public SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays setMaxIdleDaysForUsers(Integer maxIdleDaysForUsers) {
+            this.maxIdleDaysForUsers = maxIdleDaysForUsers;
+            return this;
+        }
+        public Integer getMaxIdleDaysForUsers() {
+            return this.maxIdleDaysForUsers;
+        }
+
+    }
+
     public static class SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference extends TeaModel {
         /**
          * <p>Indicates whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts.</p>
@@ -266,6 +296,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         @NameInMap("MFAPreference")
         public SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference;
 
+        @NameInMap("MaxIdleDays")
+        public SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays maxIdleDays;
+
         /**
          * <p>The personal information preference.</p>
          */
@@ -305,6 +338,14 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         }
         public SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference getMFAPreference() {
             return this.MFAPreference;
+        }
+
+        public SetSecurityPreferenceResponseBodySecurityPreference setMaxIdleDays(SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays maxIdleDays) {
+            this.maxIdleDays = maxIdleDays;
+            return this;
+        }
+        public SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays getMaxIdleDays() {
+            return this.maxIdleDays;
         }
 
         public SetSecurityPreferenceResponseBodySecurityPreference setPersonalInfoPreference(SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference personalInfoPreference) {
