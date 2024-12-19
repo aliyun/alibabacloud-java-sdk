@@ -36,8 +36,8 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The password of the account. The password must meet the following requirements:</p>
      * <ul>
-     * <li>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-     * <li>It must be 8 to 32 characters in length.</li>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>The password must be 8 to 32 characters in length.</li>
      * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -78,16 +78,16 @@ public class CreateAccountRequest extends TeaModel {
      * <p>The type of the account. Valid values:</p>
      * <ul>
      * <li><strong>Normal</strong>: standard account</li>
-     * <li><strong>Super</strong>: privileged account</li>
+     * <li><strong>Super</strong>: privileged account.</li>
      * </ul>
      * <blockquote>
      * </blockquote>
      * <ul>
      * <li><p>If you leave this parameter empty, the default value <strong>Super</strong> is used.</p>
      * </li>
-     * <li><p>You can create multiple privileged accounts for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</p>
+     * <li><p>You can create multiple privileged accounts for a PolarDB for PostgreSQL (Compatible with Oracle) cluster or a PolarDB for PostgreSQL cluster. A privileged account has more permissions than a standard account. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</p>
      * </li>
-     * <li><p>You can create only one privileged account for a PolarDB for MySQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</p>
+     * <li><p>You can create only one privileged account for a PolarDB for MySQL cluster. A privileged account has more permissions than a standard account. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</p>
      * </li>
      * </ul>
      * 
@@ -134,24 +134,6 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>Specifies whether to grant the specified account required permissions on all existing databases in the current cluster and databases that will be further created for the current cluster. Valid values:</p>
-     * <ul>
-     * <li><strong>0 or unspecified</strong>: does not grant required permissions.</li>
-     * <li><strong>1</strong>: grants required permissions.</li>
-     * </ul>
-     * <blockquote>
-     * </blockquote>
-     * <ul>
-     * <li><p>The parameter is valid only after you configure the <code>AccountPrivilege</code> parameter.</p>
-     * </li>
-     * <li><p>If you set the parameter to <code>1</code>, the current account is granted to the required permissions on all databases in the current cluster that are specified by the <code>AccountPrivilege</code> parameter.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("PrivForAllDB")
     public String privForAllDB;
 

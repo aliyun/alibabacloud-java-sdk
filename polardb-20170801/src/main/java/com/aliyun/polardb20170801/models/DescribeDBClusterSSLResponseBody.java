@@ -74,6 +74,9 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         @NameInMap("DBEndpointId")
         public String DBEndpointId;
 
+        @NameInMap("SSLAutoRotate")
+        public String SSLAutoRotate;
+
         /**
          * <p>The SSL connection string.</p>
          * 
@@ -116,6 +119,14 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         }
         public String getDBEndpointId() {
             return this.DBEndpointId;
+        }
+
+        public DescribeDBClusterSSLResponseBodyItems setSSLAutoRotate(String SSLAutoRotate) {
+            this.SSLAutoRotate = SSLAutoRotate;
+            return this;
+        }
+        public String getSSLAutoRotate() {
+            return this.SSLAutoRotate;
         }
 
         public DescribeDBClusterSSLResponseBodyItems setSSLConnectionString(String SSLConnectionString) {

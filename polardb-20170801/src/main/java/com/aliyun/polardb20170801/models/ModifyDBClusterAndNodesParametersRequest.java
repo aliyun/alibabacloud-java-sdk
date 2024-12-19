@@ -103,6 +103,9 @@ public class ModifyDBClusterAndNodesParametersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("StandbyClusterIdListNeedToSync")
+    public String standbyClusterIdListNeedToSync;
+
     public static ModifyDBClusterAndNodesParametersRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterAndNodesParametersRequest self = new ModifyDBClusterAndNodesParametersRequest();
         return TeaModel.build(map, self);
@@ -194,6 +197,14 @@ public class ModifyDBClusterAndNodesParametersRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyDBClusterAndNodesParametersRequest setStandbyClusterIdListNeedToSync(String standbyClusterIdListNeedToSync) {
+        this.standbyClusterIdListNeedToSync = standbyClusterIdListNeedToSync;
+        return this;
+    }
+    public String getStandbyClusterIdListNeedToSync() {
+        return this.standbyClusterIdListNeedToSync;
     }
 
 }

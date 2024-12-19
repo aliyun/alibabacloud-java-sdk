@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterServerlessConfRequest extends TeaModel {
     /**
-     * <p>The ID of the serverless cluster.</p>
+     * <p>Serverless cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

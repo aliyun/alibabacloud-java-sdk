@@ -8,10 +8,12 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String agileScaleMax;
 
     /**
-     * <p>Indicates whether the no-activity suspension feature is enabled. Default value: false. Valid values:</p>
+     * <p>Whether to enable idle shutdown. Values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Enable</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disable (default)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String allowShutDown;
 
     /**
-     * <p>The ID of the serverless cluster.</p>
+     * <p>Serverless cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-bp10gr51qasnl****</p>
@@ -30,7 +32,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5E71541A-6007-4DCC-A38A-F872C31FEB45</p>
@@ -38,14 +40,26 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Maximum limit for the number of read-only column storage nodes. Range: 0~7.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ScaleApRoNumMax")
     public String scaleApRoNumMax;
 
+    /**
+     * <p>Minimum limit for the number of read-only column storage nodes. Range: 0~7.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ScaleApRoNumMin")
     public String scaleApRoNumMin;
 
     /**
-     * <p>The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.</p>
+     * <p>Maximum scaling limit for a single node. Range: 1 PCU~32 PCU.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -54,7 +68,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String scaleMax;
 
     /**
-     * <p>The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.</p>
+     * <p>Minimum scaling limit for a single node. Range: 1 PCU~31 PCU.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -63,7 +77,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String scaleMin;
 
     /**
-     * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+     * <p>Maximum scaling limit for the number of read-only nodes. Range: 0~15.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -72,7 +86,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String scaleRoNumMax;
 
     /**
-     * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+     * <p>Minimum scaling limit for the number of read-only nodes. Range: 0~15.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -81,7 +95,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String scaleRoNumMin;
 
     /**
-     * <p>The detection period for no-activity suspension. Valid values: 300 to 86400. Unit: seconds. The value must be a multiple of 300.</p>
+     * <p>Detection duration for idle shutdown. Range: 300~86,400. Unit: seconds. The detection duration must be a multiple of 300 seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -89,15 +103,47 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     @NameInMap("SecondsUntilAutoPause")
     public String secondsUntilAutoPause;
 
+    /**
+     * <p>CPU upscale threshold.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("ServerlessRuleCpuEnlargeThreshold")
     public String serverlessRuleCpuEnlargeThreshold;
 
+    /**
+     * <p>CPU downscale threshold.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("ServerlessRuleCpuShrinkThreshold")
     public String serverlessRuleCpuShrinkThreshold;
 
+    /**
+     * <p>Elasticity sensitivity. Values:</p>
+     * <ul>
+     * <li><p>normal: Standard</p>
+     * </li>
+     * <li><p>flexible: Sensitive</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("ServerlessRuleMode")
     public String serverlessRuleMode;
 
+    /**
+     * <p>Whether steady state is enabled. Values:</p>
+     * <p>1: Enabled</p>
+     * <p>0: Disabled</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Switchs")
     public String switchs;
 

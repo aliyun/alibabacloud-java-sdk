@@ -70,6 +70,9 @@ public class DescribeLicenseOrdersRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to query only virtual orders.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("VirtualOrder")
     public Boolean virtualOrder;
