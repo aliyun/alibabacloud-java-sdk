@@ -148,6 +148,9 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         @NameInMap("MediaId")
         public String mediaId;
 
+        @NameInMap("MediaUrl")
+        public String mediaUrl;
+
         /**
          * <p>The token usage. This parameter is returned only for keyword-based text generation jobs.</p>
          * 
@@ -176,6 +179,14 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
         public String getMediaId() {
             return this.mediaId;
+        }
+
+        public GetSmartHandleJobResponseBodyJobResult setMediaUrl(String mediaUrl) {
+            this.mediaUrl = mediaUrl;
+            return this;
+        }
+        public String getMediaUrl() {
+            return this.mediaUrl;
         }
 
         public GetSmartHandleJobResponseBodyJobResult setUsage(String usage) {
