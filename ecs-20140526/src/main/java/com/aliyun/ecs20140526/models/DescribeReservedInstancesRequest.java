@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeReservedInstancesRequest extends TeaModel {
     /**
-     * <p>The allocation type. Valid values:</p>
+     * <p>The allocation type of the reserved instances. Valid values:</p>
      * <ul>
      * <li>Normal: queries all reserved instances that belong to the current account.</li>
-     * <li>Shared: queries reserved instances that are shared between the main account and linked accounts.</li>
+     * <li>Shared: queries the reserved instances that are shared between the current main account and linked accounts.</li>
      * </ul>
      * <p>Default value: Normal.</p>
      * 
@@ -37,10 +37,10 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String instanceTypeFamily;
 
     /**
-     * <p>The reason why the instance is locked. Valid values:</p>
+     * <p>The reason why the reserved instance is locked. Valid values:</p>
      * <ul>
-     * <li>financial: You have an overdue payment in your account, or the reserved instance has expired.</li>
-     * <li>security: The reserved instance is locked for security reasons.</li>
+     * <li>financial: The reserved instance is locked because the account has overdue payments or the service expires.</li>
+     * <li>security: The reserved instance is locked due to security reasons.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String lockReason;
 
     /**
-     * <p>The payment option of the reserved instances. Valid values:</p>
+     * <p>The payment option of the reserved instance. Valid values:</p>
      * <ul>
      * <li>No Upfront</li>
      * <li>Partial Upfront</li>
@@ -80,7 +80,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of reserved instance N. Valid values of N: 1 to 100.</p>
+     * <p>The IDs of reserved instances. You can specify up to 100 IDs of reserved instances.</p>
      * 
      * <strong>example:</strong>
      * <p>ri-bpzhex2ulpzf53****</p>
@@ -124,10 +124,10 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scope of the reserved instances. Valid values:</p>
+     * <p>The scope of the reserved instance. Valid values:</p>
      * <ul>
-     * <li>Region</li>
-     * <li>Zone</li>
+     * <li>Region: regional</li>
+     * <li>Zone: zonal</li>
      * </ul>
      * <p>Default value: Region.</p>
      * 
@@ -138,13 +138,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The status of reserved instance N. Valid values of N: 1 to 100. Valid values:</p>
-     * <ul>
-     * <li>Creating</li>
-     * <li>Active</li>
-     * <li>Expired</li>
-     * <li>Updating</li>
-     * </ul>
+     * <p>The statuses of the reserved instances.</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -153,7 +147,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public java.util.List<String> status;
 
     /**
-     * <p>The tags to add to the instances.</p>
+     * <p>The tags of the reserved instance. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeReservedInstancesRequestTag> tag;
@@ -318,8 +312,10 @@ public class DescribeReservedInstancesRequest extends TeaModel {
 
     public static class DescribeReservedInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag key cannot start with acs: or aliyun.</p>
-         * <p>Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>The key of tag N of the reserved instance. The tag key cannot be empty and can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+         * <blockquote>
+         * <p> If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -328,7 +324,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag value cannot start with acs:.</p>
+         * <p>The value of tag N of the reserved instance. The tag value cannot be empty and can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

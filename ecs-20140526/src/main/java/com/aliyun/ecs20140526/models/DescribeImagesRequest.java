@@ -46,7 +46,7 @@ public class DescribeImagesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The list of filter conditions used to query resources.</p>
+     * <p>The filter conditions used to query resources.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeImagesRequestFilter> filter;
@@ -506,10 +506,11 @@ public class DescribeImagesRequest extends TeaModel {
 
     public static class DescribeImagesRequestFilter extends TeaModel {
         /**
-         * <p>The key of the filter condition used to query resources. Valid values:</p>
+         * <p>The key of filter N used to query resources. Valid values:</p>
          * <ul>
-         * <li>If you set this parameter to <code>CreationStartTime</code>, you can query the resources that were created after the point in time specified by the <code>Filter.N.Value</code> value.</li>
-         * <li>If you set this parameter to <code>CreationEndTime</code>, you can query the resources that were created before the point in time as specified by the <code>Filter.N.Value</code> value.</li>
+         * <li>If you set this parameter to <code>CreationStartTime</code>, you can query the resources that were created after the point in time specified by <code>Filter.N.Value</code>.</li>
+         * <li>If you set this parameter to <code>CreationEndTime</code>, you can query the resources that were created before the point in time specified by <code>Filter.N.Value</code>.</li>
+         * <li>If you set this parameter to <code>NetworkType</code>, you can query resources of the specified network type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -519,7 +520,11 @@ public class DescribeImagesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of filter N used to query resources. When you specify this parameter, you must also specify <code>Filter.N.Key</code>. Make sure the time is in the <code>yyyy-MM-ddTHH:mmZ</code> format and in UTC.</p>
+         * <p>The value of filter N used to query resources. Valid values:</p>
+         * <ul>
+         * <li>When <code>Filter.N.Key</code> is set to <code>CreationStartTime</code> or <code>CreationEndTime</code>, the format is <code>yyyy-MM-ddTHH:mmZ</code> in the UTC+0 time zone.</li>
+         * <li>When <code>Filter.N.Key</code> is set to <code>NetworkType</code>, the valid values can be <code>vpc</code> or <code>classic</code>.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2017-12-05T22:40Z</p>

@@ -644,6 +644,9 @@ public class DescribePriceRequest extends TeaModel {
         @NameInMap("Size")
         public Long size;
 
+        @NameInMap("ProvisionedIops")
+        public Long provisionedIops;
+
         public static DescribePriceRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceRequestDataDisk self = new DescribePriceRequestDataDisk();
             return TeaModel.build(map, self);
@@ -671,6 +674,14 @@ public class DescribePriceRequest extends TeaModel {
         }
         public Long getSize() {
             return this.size;
+        }
+
+        public DescribePriceRequestDataDisk setProvisionedIops(Long provisionedIops) {
+            this.provisionedIops = provisionedIops;
+            return this;
+        }
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
         }
 
     }

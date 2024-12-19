@@ -48,8 +48,8 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The number of pay-as-you-go instances of the same instance type that the reserved instance can match at the same time. Valid values: 1 to 50.</p>
-     * <p>For example, if you set the InstanceAmount parameter to 3 and the InstanceType parameter to ecs.g5.large, the reserved instance can be matched three ecs.g5.large pay-as-you-go instances at the same time.</p>
+     * <p>The number of pay-as-you-go instances of the same instance type that the reserved instance can match. Valid values: 1 to 50.</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -58,7 +58,10 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public Integer instanceAmount;
 
     /**
-     * <p>The type of the reserved instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</p>
+     * <p>The instance type that the reserved instance can match.</p>
+     * <blockquote>
+     * <p> The instance types that support reserved instances are subject to updates. For more information, see <a href="~~100370#3c1b682051vt4~~">Reserved instance overview</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,7 +138,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the reserved instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testReservedInstanceName</p>
@@ -174,6 +177,9 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
 
     /**
      * <p>The time when the reserved instance takes effect. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <code>yyyy-MM-ddTHHZ</code> format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the reserved instance takes effect starting on the hour when the reserved instance is purchased. For example, if you purchased a reserved instance at 13:45:35 on November 1, 2024, the instance took effect starting 13:00:00 on November 1, 2024.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2024-07-04T15Z</p>
@@ -182,13 +188,13 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags to add to the reserved instance. You can add up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<PurchaseReservedInstancesOfferingRequestTag> tag;
 
     /**
-     * <p>The zone ID of the instance. This parameter is required when <code>Scope</code> is set to <code>Zone</code>. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>The ID of the zone in which to purchase the reserved instance. This parameter is required when <code>Scope</code> is set to <code>Zone</code>. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-g</p>
@@ -371,7 +377,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
 
     public static class PurchaseReservedInstancesOfferingRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The tag key to add to the reserved instance. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -380,7 +386,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the reserved instance. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The tag value to add to the reserved instance. The tag value cannot be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

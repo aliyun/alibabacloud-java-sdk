@@ -347,7 +347,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Details about the tags of the reserved instance.</p>
+         * <p>The tags of the reserved instance.</p>
          */
         @NameInMap("Tags")
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags tags;

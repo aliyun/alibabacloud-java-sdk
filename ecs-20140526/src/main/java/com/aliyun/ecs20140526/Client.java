@@ -3293,7 +3293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an automatic snapshot policy in a specific region. Automatic snapshot policies allow Elastic Compute Service (ECS) to create snapshots for cloud disks on a regular basis to back up data. The policies can be applied to both system disks and data disks. If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied to the destination region and snapshot copies are encrypted by using the service key of the destination region.</p>
+     * <p>Creates an automatic snapshot policy in a specific region. Automatic snapshot policies allow Elastic Compute Service (ECS) to create snapshots for system disks or data disks on a regular basis to back up disk data. If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied to the destination region and snapshot copies are encrypted by using the service key of the destination region.</p>
      * 
      * @param request CreateAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3391,7 +3391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an automatic snapshot policy in a specific region. Automatic snapshot policies allow Elastic Compute Service (ECS) to create snapshots for cloud disks on a regular basis to back up data. The policies can be applied to both system disks and data disks. If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied to the destination region and snapshot copies are encrypted by using the service key of the destination region.</p>
+     * <p>Creates an automatic snapshot policy in a specific region. Automatic snapshot policies allow Elastic Compute Service (ECS) to create snapshots for system disks or data disks on a regular basis to back up disk data. If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied to the destination region and snapshot copies are encrypted by using the service key of the destination region.</p>
      * 
      * @param request CreateAutoSnapshotPolicyRequest
      * @return CreateAutoSnapshotPolicyResponse
@@ -8824,6 +8824,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除hpc集群</p>
+     * 
      * @param request DeleteHpcClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteHpcClusterResponse
@@ -8881,6 +8884,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除hpc集群</p>
+     * 
      * @param request DeleteHpcClusterRequest
      * @return DeleteHpcClusterResponse
      */
@@ -9732,6 +9738,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除操作弹性网卡的权限</p>
+     * 
      * @deprecated OpenAPI DeleteNetworkInterfacePermission is deprecated, please use Ecs::2014-05-26::DeleteNetworkInterface instead.
      * 
      * @param request DeleteNetworkInterfacePermissionRequest
@@ -9793,6 +9802,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除操作弹性网卡的权限</p>
+     * 
      * @deprecated OpenAPI DeleteNetworkInterfacePermission is deprecated, please use Ecs::2014-05-26::DeleteNetworkInterface instead.
      * 
      * @param request DeleteNetworkInterfacePermissionRequest
@@ -10263,7 +10275,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you have custom images that were created from a disk snapshot contained in a snapshot-consistent group, the disk snapshot is retained when the snapshot-consistent group is deleted. Before you can delete the disk snapshot, you must call the <a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a> operation to delete the custom images. After the custom images are deleted, you can call the <a href="https://help.aliyun.com/document_detail/25525.html">DeleteSnapshot</a> operation to delete the disk snapshot.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>If a disk snapshot that is contained in a snapshot-consistent group has been used to create a custom image, the disk snapshot is retained after the snapshot-consistent group is deleted. Before you can delete the disk snapshot, you must call the <a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a> operation to delete the custom image. Then, you can call the <a href="https://help.aliyun.com/document_detail/25525.html">DeleteSnapshot</a> operation to delete the disk snapshot.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a snapshot-consistent group.</p>
@@ -10318,7 +10331,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you have custom images that were created from a disk snapshot contained in a snapshot-consistent group, the disk snapshot is retained when the snapshot-consistent group is deleted. Before you can delete the disk snapshot, you must call the <a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a> operation to delete the custom images. After the custom images are deleted, you can call the <a href="https://help.aliyun.com/document_detail/25525.html">DeleteSnapshot</a> operation to delete the disk snapshot.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>If a disk snapshot that is contained in a snapshot-consistent group has been used to create a custom image, the disk snapshot is retained after the snapshot-consistent group is deleted. Before you can delete the disk snapshot, you must call the <a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a> operation to delete the custom image. Then, you can call the <a href="https://help.aliyun.com/document_detail/25525.html">DeleteSnapshot</a> operation to delete the disk snapshot.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a snapshot-consistent group.</p>
@@ -14433,6 +14447,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>If no available custom images exist in the specified image family, the response is empty.</li>
      * </ul>
      * 
+     * <b>summary</b> : 
+     * <p>查询镜像族系内可用镜像</p>
+     * 
      * @param request DescribeImageFromFamilyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeImageFromFamilyResponse
@@ -14488,6 +14505,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>This API operation only returns the available custom images that are newly created in the specified image family. Public images, Alibaba Cloud Marketplace images, community images, or shared images are not queried.</li>
      * <li>If no available custom images exist in the specified image family, the response is empty.</li>
      * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查询镜像族系内可用镜像</p>
      * 
      * @param request DescribeImageFromFamilyRequest
      * @return DescribeImageFromFamilyResponse
@@ -16309,22 +16329,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Instructions</strong>
-     *     *   When you call the API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.
-     *     *   If you use a Resource Access Management (RAM) user or RAM role that does not have the permissions to call this operation, an empty list is returned.</p>
+     * <h3><a href="#"></a>Limits</h3>
      * <ul>
-     * <li><strong>Suggestions</strong><ul>
+     * <li>When you call the API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</li>
+     * <li>If you use a Resource Access Management (RAM) user or RAM role that does not have the permissions to call this operation, an empty list is returned.</li>
+     * </ul>
+     * <h3><a href="#"></a>Suggestions</h3>
+     * <ul>
      * <li>Specify DryRun in the request to perform a dry run. In the dry run, the system checks the validity and authorization status of the parameters.</li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: During a paged query, when you call the DescribeInstances operation to retrieve the first page of results, use <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the DescribeInstances operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries per page, and then use <code>PageNumber</code> to specify the page number.
-     * You can use only one of the preceding methods. If a large number of entries are returned, we recommend that you use Method 1.
-     * **
-     * <strong>Note</strong> If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * </li>
+     * <li>During a paged query, when you call the DescribeInstances operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeInstances operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -16524,22 +16537,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Instructions</strong>
-     *     *   When you call the API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.
-     *     *   If you use a Resource Access Management (RAM) user or RAM role that does not have the permissions to call this operation, an empty list is returned.</p>
+     * <h3><a href="#"></a>Limits</h3>
      * <ul>
-     * <li><strong>Suggestions</strong><ul>
+     * <li>When you call the API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</li>
+     * <li>If you use a Resource Access Management (RAM) user or RAM role that does not have the permissions to call this operation, an empty list is returned.</li>
+     * </ul>
+     * <h3><a href="#"></a>Suggestions</h3>
+     * <ul>
      * <li>Specify DryRun in the request to perform a dry run. In the dry run, the system checks the validity and authorization status of the parameters.</li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: During a paged query, when you call the DescribeInstances operation to retrieve the first page of results, use <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the DescribeInstances operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries per page, and then use <code>PageNumber</code> to specify the page number.
-     * You can use only one of the preceding methods. If a large number of entries are returned, we recommend that you use Method 1.
-     * **
-     * <strong>Note</strong> If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * </li>
+     * <li>During a paged query, when you call the DescribeInstances operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeInstances operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -18813,7 +18819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries purchased reserved instances.</p>
+     * <p>Queries the details of reserved instances that you have purchased. You can query the details of reserved instances based on parameters, such as tags and reserved instance attributes.</p>
      * 
      * @param request DescribeReservedInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18917,7 +18923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries purchased reserved instances.</p>
+     * <p>Queries the details of reserved instances that you have purchased. You can query the details of reserved instances based on parameters, such as tags and reserved instance attributes.</p>
      * 
      * @param request DescribeReservedInstancesRequest
      * @return DescribeReservedInstancesResponse
@@ -26410,6 +26416,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改hpc集群属性</p>
+     * 
      * @param request ModifyHpcClusterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyHpcClusterAttributeResponse
@@ -26475,6 +26484,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改hpc集群属性</p>
+     * 
      * @param request ModifyHpcClusterAttributeRequest
      * @return ModifyHpcClusterAttributeResponse
      */
@@ -26576,7 +26588,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyImageShareGroupPermission is deprecated
+     * <b>summary</b> : 
+     * <p>修改镜像共享组权限</p>
+     * 
+     * @deprecated OpenAPI ModifyImageShareGroupPermission is deprecated, please use Ecs::2014-05-26::ModifyImageSharePermission instead.
      * 
      * @param request ModifyImageShareGroupPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26637,7 +26652,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyImageShareGroupPermission is deprecated
+     * <b>summary</b> : 
+     * <p>修改镜像共享组权限</p>
+     * 
+     * @deprecated OpenAPI ModifyImageShareGroupPermission is deprecated, please use Ecs::2014-05-26::ModifyImageSharePermission instead.
      * 
      * @param request ModifyImageShareGroupPermissionRequest
      * @return ModifyImageShareGroupPermissionResponse
@@ -27633,14 +27651,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>Starting November 27, 2020, the maximum bandwidth value that is available for you to create ECS instances or change ECS instance configurations is subject to the throttling policies of your account. To increase the bandwidth limit, submit a ticket. The following throttling policies apply:<ul>
-     * <li>In each region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s.</li>
-     * <li>In each region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.</li>
-     * </ul>
-     * </li>
      * <li>If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a subscription (PrePaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, a public IP address is automatically assigned to the instance.</li>
      * <li>If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a pay-as-you-go (PostPaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, no public IP address is automatically assigned to the instance. In this case, you can set <code>AllocatePublicIp</code> to <code>true</code> or call the <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> operation to assign a public IP address to the instance.</li>
-     * <li>You can upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of an instance in the classic network from 0 Mbit/s only if the instance is in the Stopped state.</li>
+     * <li>You can upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of an instance in the classic network from 0 Mbit/s only if the instance is in the Stopped state.<blockquote>
+     * <p> For the limits on the sum of maximum public bandwidths of ECS instances that use the pay-by-bandwidth billing method for network usage per region per Alibaba Cloud account, see the <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a> section of the &quot;Limits&quot; topic.</p>
+     * </blockquote>
+     * </li>
      * <li>Billing:<ul>
      * <li>After the bandwidth is upgraded, AutoPay is set to true by default and the payment is automatically made. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set AutoPay to false. In this case, when you call the ModifyInstanceNetworkSpec operation, an unpaid order is generated. Then, you can log on to the ECS console to pay for the order.</li>
      * <li>After the bandwidth is downgraded, the price difference is refunded to the payment account that you used. Vouchers or coupons that have been redeemed are not refundable.</li>
@@ -27735,14 +27751,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>Starting November 27, 2020, the maximum bandwidth value that is available for you to create ECS instances or change ECS instance configurations is subject to the throttling policies of your account. To increase the bandwidth limit, submit a ticket. The following throttling policies apply:<ul>
-     * <li>In each region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s.</li>
-     * <li>In each region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.</li>
-     * </ul>
-     * </li>
      * <li>If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a subscription (PrePaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, a public IP address is automatically assigned to the instance.</li>
      * <li>If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a pay-as-you-go (PostPaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, no public IP address is automatically assigned to the instance. In this case, you can set <code>AllocatePublicIp</code> to <code>true</code> or call the <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> operation to assign a public IP address to the instance.</li>
-     * <li>You can upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of an instance in the classic network from 0 Mbit/s only if the instance is in the Stopped state.</li>
+     * <li>You can upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of an instance in the classic network from 0 Mbit/s only if the instance is in the Stopped state.<blockquote>
+     * <p> For the limits on the sum of maximum public bandwidths of ECS instances that use the pay-by-bandwidth billing method for network usage per region per Alibaba Cloud account, see the <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a> section of the &quot;Limits&quot; topic.</p>
+     * </blockquote>
+     * </li>
      * <li>Billing:<ul>
      * <li>After the bandwidth is upgraded, AutoPay is set to true by default and the payment is automatically made. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set AutoPay to false. In this case, when you call the ModifyInstanceNetworkSpec operation, an unpaid order is generated. Then, you can log on to the ECS console to pay for the order.</li>
      * <li>After the bandwidth is downgraded, the price difference is refunded to the payment account that you used. Vouchers or coupons that have been redeemed are not refundable.</li>
@@ -28923,7 +28937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes of a reserved instance, such as its name and description.</p>
+     * <p>Modifies the attributes of a reserved instance, such as the name and description of the instance.</p>
      * 
      * @param request ModifyReservedInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28983,7 +28997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes of a reserved instance, such as its name and description.</p>
+     * <p>Modifies the attributes of a reserved instance, such as the name and description of the instance.</p>
      * 
      * @param request ModifyReservedInstanceAttributeRequest
      * @return ModifyReservedInstanceAttributeResponse
@@ -28995,7 +29009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables auto-renewal for one or more reserved instances.</p>
+     * <p>Modifies the auto-renewal attributes of reserved instances. You can disable the auto-renewal feature for reserved instances.</p>
      * 
      * @param request ModifyReservedInstanceAutoRenewAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29059,7 +29073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables auto-renewal for one or more reserved instances.</p>
+     * <p>Modifies the auto-renewal attributes of reserved instances. You can disable the auto-renewal feature for reserved instances.</p>
      * 
      * @param request ModifyReservedInstanceAutoRenewAttributeRequest
      * @return ModifyReservedInstanceAutoRenewAttributeResponse
@@ -29071,8 +29085,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The region ID of the reserved instance.
-     * You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to modify a reserved instance, the operation starts the modification process and returns the ID of the resulting new reserved instance. The original reserved instance enters the Updating state and then the Inactive state. At the same time, the resulting new reserved instance is generated and enters the Creating state and then the Active state. You can call the <a href="https://help.aliyun.com/document_detail/2679781.html">DescribeReservedInstances</a> operation to query the states of the reserved instance.</p>
+     * <ul>
+     * <li>You can modify the configurations of a reserved instance only when the reserved instance is in the <strong>Active</strong> state.</li>
+     * <li>Make sure that the <a href="~~140660#2742f3844abzz~~">computing power</a> of the reserved instance remains unchanged before and after the modification. Otherwise, the modification fails.</li>
+     * <li>You cannot split, merge, or change the scope of a reserved instance at the same time.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/100375.html">Split, merge, or modify reserved instances</a>.</li>
+     * </ul>
+     * <h2><a href="#"></a>Sample requests</h2>
+     * <ul>
+     * <li><strong>Sample request to split a reserved instance</strong>: Split a regional reserved instance that is scoped to the China (Hangzhou) region and can match two pay-as-you-go instances of the ecs.g5.xlarge instance type into two regional reserved instances that are scoped to the China (Hangzhou) region and each can match one pay-as-you-go instance of the ecs.g5.large instance type:<!---->
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The ID of the region.
+     * &quot;ReservedInstanceId&quot;:[&quot;ecsri-bp1hd03e9uv19e75****&quot;], //The ID of the reserved instance that you want to split.
+     * &quot;Configuration&quot;:[
+     *   {
+     * &quot;ReservedInstanceName&quot;:&quot;testReservedInstanceName1&quot;, //The name of the new reserved instance.
+     * &quot;InstanceType&quot;:&quot;ecs.g5.large&quot;, //The instance type that the new reserved instance can match.
+     * &quot;Scope&quot;:&quot;Region&quot;, //The scope level of the new reserved instance, which must be the same as the scope level of the original reserved instance.
+     * &quot;InstanceAmount&quot;:1 //The number of pay-as-you-go instances of the specified instance type that each new reserved instance can match.
+     *   },
+     *   {
+     * &quot;ReservedInstanceName&quot;:&quot;testReservedInstanceName2&quot;,
+     * &quot;InstanceType&quot;:&quot;ecs.g5.large&quot;,
+     * &quot;Scope&quot;:&quot;Region&quot;,
+     * &quot;InstanceAmount&quot;:1
+     *   }
+     * ]</li>
+     * <li><strong>Sample request to merge reserved instance:</strong>: Merge two zonal reserved instances that are scoped to Hangzhou Zone H and can match four pay-as-you-go instances of the ecs.g5.xlarge instance type into one zonal reserved instance that is scoped to Hangzhou Zone H and can match two pay-as-you-go instance of the ecs.g5.4xlarge instance type:<!---->
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The ID of the region.
+     * &quot;ReservedInstanceId&quot;:[&quot;ecsri-bp1hd03e9uv16b75****&quot;,&quot;&quot;ecsri-bp1hd03e9uv16b76****&quot;&quot;], //The IDs of the reserved instances that you want to merge.
+     * &quot;Configuration&quot;:[
+     *   {
+     * &quot;ReservedInstanceName&quot;:&quot;testReservedInstanceName&quot;, //The name of the new reserved instance.
+     * &quot;InstanceType&quot;:&quot;ecs.g5.4xlarge&quot;, //The instance type that the new reserved instance can match.
+     * &quot;Scope&quot;:&quot;Zone&quot;, //The scope level of the new reserved instance, which must be the same as the scope level of the original reserved instances.
+     * &quot;ZoneId&quot;:&quot;cn-hangzhou-h&quot;, //
+     * &quot;InstanceAmount&quot;:2 //The number of pay-as-you-go instances of the specified instance type that the new reserved instance can match.
+     *   }
+     * ]</li>
+     * <li><strong>Sample request to change the scope of a reserved instance</strong>: Change a regional reserved instance that is scoped to Hangzhou Zone H and can match six pay-as-you-go instances of the ecs.g5.xlarge instance type to a regional reserved instance that is scoped to the China (Hangzhou) region and can match three pay-as-you-go instances of the ecs.g5.2xlarge instance type.<!---->
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The ID of the region.
+     * &quot;ReservedInstanceId&quot;:[&quot;ecsri-bp1hd03e9uv16b77****&quot;], //The ID of the reserved instance whose scope you want to change.
+     * &quot;Configuration&quot;:[
+     *   {
+     * &quot;ReservedInstanceName&quot;:&quot;testReservedInstanceName&quot;, //The name of the new reserved instance.
+     * &quot;InstanceType&quot;:&quot;ecs.g5.2xlarge&quot;, //The instance type that the new reserved instance can match.
+     * &quot;Scope&quot;:&quot;Region&quot;, //The scope level of the new reserved instance.
+     * &quot;InstanceAmount&quot;:3 //The number of pay-as-you-go instances of the specified instance type that the new reserved instance can match.
+     *   }
+     * ]</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Modifies the configurations of a reserved instance, such as the instance type, quantity, and zone, to split, merge, or change the scope of the reserved instance.</p>
@@ -29131,8 +29193,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The region ID of the reserved instance.
-     * You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to modify a reserved instance, the operation starts the modification process and returns the ID of the resulting new reserved instance. The original reserved instance enters the Updating state and then the Inactive state. At the same time, the resulting new reserved instance is generated and enters the Creating state and then the Active state. You can call the <a href="https://help.aliyun.com/document_detail/2679781.html">DescribeReservedInstances</a> operation to query the states of the reserved instance.</p>
+     * <ul>
+     * <li>You can modify the configurations of a reserved instance only when the reserved instance is in the <strong>Active</strong> state.</li>
+     * <li>Make sure that the <a href="~~140660#2742f3844abzz~~">computing power</a> of the reserved instance remains unchanged before and after the modification. Otherwise, the modification fails.</li>
+     * <li>You cannot split, merge, or change the scope of a reserved instance at the same time.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/100375.html">Split, merge, or modify reserved instances</a>.</li>
+     * </ul>
+     * <h2><a href="#"></a>Sample requests</h2>
+     * <ul>
+     * <li><strong>Sample request to split a reserved instance</strong>: Split a regional reserved instance that is scoped to the China (Hangzhou) region and can match two pay-as-you-go instances of the ecs.g5.xlarge instance type into two regional reserved instances that are scoped to the China (Hangzhou) region and each can match one pay-as-you-go instance of the ecs.g5.large instance type:<!---->
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The ID of the region.
+     * &quot;ReservedInstanceId&quot;:[&quot;ecsri-bp1hd03e9uv19e75****&quot;], //The ID of the reserved instance that you want to split.
+     * &quot;Configuration&quot;:[
+     *   {
+     * &quot;ReservedInstanceName&quot;:&quot;testReservedInstanceName1&quot;, //The name of the new reserved instance.
+     * &quot;InstanceType&quot;:&quot;ecs.g5.large&quot;, //The instance type that the new reserved instance can match.
+     * &quot;Scope&quot;:&quot;Region&quot;, //The scope level of the new reserved instance, which must be the same as the scope level of the original reserved instance.
+     * &quot;InstanceAmount&quot;:1 //The number of pay-as-you-go instances of the specified instance type that each new reserved instance can match.
+     *   },
+     *   {
+     * &quot;ReservedInstanceName&quot;:&quot;testReservedInstanceName2&quot;,
+     * &quot;InstanceType&quot;:&quot;ecs.g5.large&quot;,
+     * &quot;Scope&quot;:&quot;Region&quot;,
+     * &quot;InstanceAmount&quot;:1
+     *   }
+     * ]</li>
+     * <li><strong>Sample request to merge reserved instance:</strong>: Merge two zonal reserved instances that are scoped to Hangzhou Zone H and can match four pay-as-you-go instances of the ecs.g5.xlarge instance type into one zonal reserved instance that is scoped to Hangzhou Zone H and can match two pay-as-you-go instance of the ecs.g5.4xlarge instance type:<!---->
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The ID of the region.
+     * &quot;ReservedInstanceId&quot;:[&quot;ecsri-bp1hd03e9uv16b75****&quot;,&quot;&quot;ecsri-bp1hd03e9uv16b76****&quot;&quot;], //The IDs of the reserved instances that you want to merge.
+     * &quot;Configuration&quot;:[
+     *   {
+     * &quot;ReservedInstanceName&quot;:&quot;testReservedInstanceName&quot;, //The name of the new reserved instance.
+     * &quot;InstanceType&quot;:&quot;ecs.g5.4xlarge&quot;, //The instance type that the new reserved instance can match.
+     * &quot;Scope&quot;:&quot;Zone&quot;, //The scope level of the new reserved instance, which must be the same as the scope level of the original reserved instances.
+     * &quot;ZoneId&quot;:&quot;cn-hangzhou-h&quot;, //
+     * &quot;InstanceAmount&quot;:2 //The number of pay-as-you-go instances of the specified instance type that the new reserved instance can match.
+     *   }
+     * ]</li>
+     * <li><strong>Sample request to change the scope of a reserved instance</strong>: Change a regional reserved instance that is scoped to Hangzhou Zone H and can match six pay-as-you-go instances of the ecs.g5.xlarge instance type to a regional reserved instance that is scoped to the China (Hangzhou) region and can match three pay-as-you-go instances of the ecs.g5.2xlarge instance type.<!---->
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The ID of the region.
+     * &quot;ReservedInstanceId&quot;:[&quot;ecsri-bp1hd03e9uv16b77****&quot;], //The ID of the reserved instance whose scope you want to change.
+     * &quot;Configuration&quot;:[
+     *   {
+     * &quot;ReservedInstanceName&quot;:&quot;testReservedInstanceName&quot;, //The name of the new reserved instance.
+     * &quot;InstanceType&quot;:&quot;ecs.g5.2xlarge&quot;, //The instance type that the new reserved instance can match.
+     * &quot;Scope&quot;:&quot;Region&quot;, //The scope level of the new reserved instance.
+     * &quot;InstanceAmount&quot;:3 //The number of pay-as-you-go instances of the specified instance type that the new reserved instance can match.
+     *   }
+     * ]</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Modifies the configurations of a reserved instance, such as the instance type, quantity, and zone, to split, merge, or change the scope of the reserved instance.</p>
@@ -29855,7 +29965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改快照分组</p>
+     * <p>Modifies the name and description of a snapshot-consistent group.</p>
      * 
      * @param request ModifySnapshotGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29915,7 +30025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改快照分组</p>
+     * <p>Modifies the name and description of a snapshot-consistent group.</p>
      * 
      * @param request ModifySnapshotGroupRequest
      * @return ModifySnapshotGroupResponse
@@ -30565,14 +30675,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <p><em>Before you call this operation, make sure that you are familiar with the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of reserved instances.</em>*</p>
      * <ul>
-     * <li>Before you call this operation, make sure that you fully understand the billing method of reserved instances. For more information, see <a href="https://help.aliyun.com/document_detail/100371.html">Reserved instances</a>.</li>
-     * <li>Before you purchase a reserved instance, you can call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query available instance resources.</li>
+     * <li>Before you call this operation, make sure that you are familiar with the billing rules of reserved instances. For more information, see <a href="https://help.aliyun.com/document_detail/100371.html">Reserved instances</a>.</li>
+     * <li>You can retain up to 20 regional reserved instances in all regions per Alibaba Cloud account.</li>
+     * <li>You can retain up to 20 zonal reserved instances per zone per Alibaba Cloud account.</li>
+     * </ul>
+     * <h2><a href="#"></a>Sample requests</h2>
+     * <ul>
+     * <li>Purchase a one-year regional reserved instance in the China (Hangzhou) region to offset the bills of three ecs.g5.large Linux pay-as-you-go instances.<!---->
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, // Specify the China (Hangzhou) region.&quot;InstanceType&quot;:&quot;ecs.g5.large&quot;, // Specify the instance type.&quot;Scope&quot;:&quot;Region&quot;, // Set the scope of the reserved instance to regional.&quot;InstanceAmount&quot;:3, // Specify the reserved instance to match three pay-as-you-go instances of the same instance type.&quot;OfferingType&quot;:&quot;All Upfront&quot;, // Specify the payment option. In this example, the default value is used, which is All Upfront.&quot;Platform&quot;:&quot;Linux&quot;, // Specify the operating system platform of the ECS instances eligible for the reserved instance. In this example, the Linux or Unix-like operating system is used.&quot;Period&quot;:1, // Specify the term of the reserved instance. In this example, the one-year duration is used.&quot;PeriodUnit&quot;:&quot;Year&quot;, // Set the unit of the term to year.</li>
+     * <li>Purchase a two-year zonal reserved instance in Hangzhou Zone H to offset the bills of five ecs.g5.large Windows pay-as-you-go instances.<!---->
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,
+     * &quot;ZoneId&quot;:&quot;cn-hangzhou-h&quot;, // Specify Hangzhou Zone H.&quot;InstanceType&quot;:&quot;ecs.g5.large&quot;,
+     * &quot;Scope&quot;:&quot;Zone&quot;, // Set the scope of the reserved instance to zonal.&quot;InstanceAmount&quot;:5, // Specify the reserved instance to match five pay-as-you-go instances of the same instance type.&quot;OfferingType&quot;:&quot;All Upfront&quot;,
+     * &quot;Platform&quot;:&quot;Windows&quot;, // Specify the operating system platform of the ECS instances eligible for the reserved instance. In this example, the Windows operating system is used.&quot;Period&quot;:2, // Specify the term of the reserved instance. In this example, the two-year duration is used.&quot;PeriodUnit&quot;:&quot;Year&quot;, // Set the unit of the term to year.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a reserved instance. When you call this operation, you can specify parameters, such as InstanceType and Scope, in the request. Reserved instances can be applied to automatically offset fees for pay-as-you-go Elastic Compute Service (ECS) instances.</p>
+     * <p>Purchases a regional or zonal reserved instance to offset the bills of pay-as-you-go Elastic Compute Service (ECS) instances.</p>
      * 
      * @param request PurchaseReservedInstancesOfferingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30684,14 +30805,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <p><em>Before you call this operation, make sure that you are familiar with the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of reserved instances.</em>*</p>
      * <ul>
-     * <li>Before you call this operation, make sure that you fully understand the billing method of reserved instances. For more information, see <a href="https://help.aliyun.com/document_detail/100371.html">Reserved instances</a>.</li>
-     * <li>Before you purchase a reserved instance, you can call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query available instance resources.</li>
+     * <li>Before you call this operation, make sure that you are familiar with the billing rules of reserved instances. For more information, see <a href="https://help.aliyun.com/document_detail/100371.html">Reserved instances</a>.</li>
+     * <li>You can retain up to 20 regional reserved instances in all regions per Alibaba Cloud account.</li>
+     * <li>You can retain up to 20 zonal reserved instances per zone per Alibaba Cloud account.</li>
+     * </ul>
+     * <h2><a href="#"></a>Sample requests</h2>
+     * <ul>
+     * <li>Purchase a one-year regional reserved instance in the China (Hangzhou) region to offset the bills of three ecs.g5.large Linux pay-as-you-go instances.<!---->
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, // Specify the China (Hangzhou) region.&quot;InstanceType&quot;:&quot;ecs.g5.large&quot;, // Specify the instance type.&quot;Scope&quot;:&quot;Region&quot;, // Set the scope of the reserved instance to regional.&quot;InstanceAmount&quot;:3, // Specify the reserved instance to match three pay-as-you-go instances of the same instance type.&quot;OfferingType&quot;:&quot;All Upfront&quot;, // Specify the payment option. In this example, the default value is used, which is All Upfront.&quot;Platform&quot;:&quot;Linux&quot;, // Specify the operating system platform of the ECS instances eligible for the reserved instance. In this example, the Linux or Unix-like operating system is used.&quot;Period&quot;:1, // Specify the term of the reserved instance. In this example, the one-year duration is used.&quot;PeriodUnit&quot;:&quot;Year&quot;, // Set the unit of the term to year.</li>
+     * <li>Purchase a two-year zonal reserved instance in Hangzhou Zone H to offset the bills of five ecs.g5.large Windows pay-as-you-go instances.<!---->
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,
+     * &quot;ZoneId&quot;:&quot;cn-hangzhou-h&quot;, // Specify Hangzhou Zone H.&quot;InstanceType&quot;:&quot;ecs.g5.large&quot;,
+     * &quot;Scope&quot;:&quot;Zone&quot;, // Set the scope of the reserved instance to zonal.&quot;InstanceAmount&quot;:5, // Specify the reserved instance to match five pay-as-you-go instances of the same instance type.&quot;OfferingType&quot;:&quot;All Upfront&quot;,
+     * &quot;Platform&quot;:&quot;Windows&quot;, // Specify the operating system platform of the ECS instances eligible for the reserved instance. In this example, the Windows operating system is used.&quot;Period&quot;:2, // Specify the term of the reserved instance. In this example, the two-year duration is used.&quot;PeriodUnit&quot;:&quot;Year&quot;, // Set the unit of the term to year.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a reserved instance. When you call this operation, you can specify parameters, such as InstanceType and Scope, in the request. Reserved instances can be applied to automatically offset fees for pay-as-you-go Elastic Compute Service (ECS) instances.</p>
+     * <p>Purchases a regional or zonal reserved instance to offset the bills of pay-as-you-go Elastic Compute Service (ECS) instances.</p>
      * 
      * @param request PurchaseReservedInstancesOfferingRequest
      * @return PurchaseReservedInstancesOfferingResponse
@@ -34228,6 +34360,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateTag)) {
