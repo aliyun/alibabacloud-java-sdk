@@ -57,6 +57,36 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups extends TeaModel {
+        @NameInMap("AppInstanceGroupId")
+        public String appInstanceGroupId;
+
+        @NameInMap("AppInstanceGroupName")
+        public String appInstanceGroupName;
+
+        public static DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups self = new DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups setAppInstanceGroupId(String appInstanceGroupId) {
+            this.appInstanceGroupId = appInstanceGroupId;
+            return this;
+        }
+        public String getAppInstanceGroupId() {
+            return this.appInstanceGroupId;
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups setAppInstanceGroupName(String appInstanceGroupName) {
+            this.appInstanceGroupName = appInstanceGroupName;
+            return this;
+        }
+        public String getAppInstanceGroupName() {
+            return this.appInstanceGroupName;
+        }
+
+    }
+
     public static class DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups extends TeaModel {
         /**
          * <p>The ID of the desktop group.</p>
@@ -99,7 +129,43 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites extends TeaModel {
+        @NameInMap("OfficeSiteId")
+        public String officeSiteId;
+
+        @NameInMap("OfficeSiteName")
+        public String officeSiteName;
+
+        public static DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites self = new DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites setOfficeSiteId(String officeSiteId) {
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites setOfficeSiteName(String officeSiteName) {
+            this.officeSiteName = officeSiteName;
+            return this;
+        }
+        public String getOfficeSiteName() {
+            return this.officeSiteName;
+        }
+
+    }
+
     public static class DescribeNASFileSystemsResponseBodyFileSystems extends TeaModel {
+        @NameInMap("AllowOperateUserDrive")
+        public Boolean allowOperateUserDrive;
+
+        @NameInMap("AppInstanceGroups")
+        public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups> appInstanceGroups;
+
         /**
          * <p>The total capacity of the NAS file system. Unit: GiB.</p>
          * <ul>
@@ -242,6 +308,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
+        @NameInMap("OfficeSites")
+        public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites> officeSites;
+
         /**
          * <p>Indicates whether the User Profile Management (UPM) feature is supported.</p>
          * 
@@ -259,6 +328,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("Scene")
+        public String scene;
 
         /**
          * <p>The storage type of the NAS file system. Valid values:</p>
@@ -294,6 +366,22 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public static DescribeNASFileSystemsResponseBodyFileSystems build(java.util.Map<String, ?> map) throws Exception {
             DescribeNASFileSystemsResponseBodyFileSystems self = new DescribeNASFileSystemsResponseBodyFileSystems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystems setAllowOperateUserDrive(Boolean allowOperateUserDrive) {
+            this.allowOperateUserDrive = allowOperateUserDrive;
+            return this;
+        }
+        public Boolean getAllowOperateUserDrive() {
+            return this.allowOperateUserDrive;
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystems setAppInstanceGroups(java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups> appInstanceGroups) {
+            this.appInstanceGroups = appInstanceGroups;
+            return this;
+        }
+        public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups> getAppInstanceGroups() {
+            return this.appInstanceGroups;
         }
 
         public DescribeNASFileSystemsResponseBodyFileSystems setCapacity(Long capacity) {
@@ -408,6 +496,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             return this.officeSiteName;
         }
 
+        public DescribeNASFileSystemsResponseBodyFileSystems setOfficeSites(java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites> officeSites) {
+            this.officeSites = officeSites;
+            return this;
+        }
+        public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites> getOfficeSites() {
+            return this.officeSites;
+        }
+
         public DescribeNASFileSystemsResponseBodyFileSystems setProfileCompatible(Boolean profileCompatible) {
             this.profileCompatible = profileCompatible;
             return this;
@@ -422,6 +518,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystems setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
         }
 
         public DescribeNASFileSystemsResponseBodyFileSystems setStorageType(String storageType) {

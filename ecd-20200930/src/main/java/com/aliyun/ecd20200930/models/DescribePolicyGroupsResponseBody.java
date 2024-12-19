@@ -801,6 +801,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("CpuSingleRateLimit")
         public Integer cpuSingleRateLimit;
 
+        @NameInMap("DesktopCount")
+        public Integer desktopCount;
+
+        @NameInMap("DesktopGroupCount")
+        public Integer desktopGroupCount;
+
         @NameInMap("DeviceRedirects")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects> deviceRedirects;
 
@@ -997,6 +1003,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("MemorySingleRateLimit")
         public Integer memorySingleRateLimit;
+
+        @NameInMap("MobileRestart")
+        public String mobileRestart;
+
+        @NameInMap("MobileShutdown")
+        public String mobileShutdown;
 
         /**
          * <p>The policy name.</p>
@@ -1236,6 +1248,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("RemoteCoordinate")
         public String remoteCoordinate;
 
+        @NameInMap("ResourceGroupCount")
+        public Integer resourceGroupCount;
+
         @NameInMap("ResourceRegionId")
         public String resourceRegionId;
 
@@ -1260,6 +1275,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @NameInMap("SmoothEnhancement")
         public String smoothEnhancement;
+
+        @NameInMap("StatusMonitor")
+        public String statusMonitor;
 
         @NameInMap("StreamingMode")
         public String streamingMode;
@@ -1586,6 +1604,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.cpuSingleRateLimit;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setDesktopCount(Integer desktopCount) {
+            this.desktopCount = desktopCount;
+            return this;
+        }
+        public Integer getDesktopCount() {
+            return this.desktopCount;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setDesktopGroupCount(Integer desktopGroupCount) {
+            this.desktopGroupCount = desktopGroupCount;
+            return this;
+        }
+        public Integer getDesktopGroupCount() {
+            return this.desktopGroupCount;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setDeviceRedirects(java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects> deviceRedirects) {
             this.deviceRedirects = deviceRedirects;
             return this;
@@ -1752,6 +1786,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public Integer getMemorySingleRateLimit() {
             return this.memorySingleRateLimit;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMobileRestart(String mobileRestart) {
+            this.mobileRestart = mobileRestart;
+            return this;
+        }
+        public String getMobileRestart() {
+            return this.mobileRestart;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMobileShutdown(String mobileShutdown) {
+            this.mobileShutdown = mobileShutdown;
+            return this;
+        }
+        public String getMobileShutdown() {
+            return this.mobileShutdown;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setName(String name) {
@@ -1930,6 +1980,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.remoteCoordinate;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setResourceGroupCount(Integer resourceGroupCount) {
+            this.resourceGroupCount = resourceGroupCount;
+            return this;
+        }
+        public Integer getResourceGroupCount() {
+            return this.resourceGroupCount;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setResourceRegionId(String resourceRegionId) {
             this.resourceRegionId = resourceRegionId;
             return this;
@@ -1960,6 +2018,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getSmoothEnhancement() {
             return this.smoothEnhancement;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setStatusMonitor(String statusMonitor) {
+            this.statusMonitor = statusMonitor;
+            return this;
+        }
+        public String getStatusMonitor() {
+            return this.statusMonitor;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setStreamingMode(String streamingMode) {
