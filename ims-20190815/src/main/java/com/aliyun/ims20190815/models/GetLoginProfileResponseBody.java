@@ -41,6 +41,9 @@ public class GetLoginProfileResponseBody extends TeaModel {
     }
 
     public static class GetLoginProfileResponseBodyLoginProfile extends TeaModel {
+        @NameInMap("AutoDisableLoginStatus")
+        public String autoDisableLoginStatus;
+
         /**
          * <p>The time of the most recent logon. The time is displayed in UTC.</p>
          * 
@@ -110,6 +113,14 @@ public class GetLoginProfileResponseBody extends TeaModel {
         public static GetLoginProfileResponseBodyLoginProfile build(java.util.Map<String, ?> map) throws Exception {
             GetLoginProfileResponseBodyLoginProfile self = new GetLoginProfileResponseBodyLoginProfile();
             return TeaModel.build(map, self);
+        }
+
+        public GetLoginProfileResponseBodyLoginProfile setAutoDisableLoginStatus(String autoDisableLoginStatus) {
+            this.autoDisableLoginStatus = autoDisableLoginStatus;
+            return this;
+        }
+        public String getAutoDisableLoginStatus() {
+            return this.autoDisableLoginStatus;
         }
 
         public GetLoginProfileResponseBodyLoginProfile setLastLoginTime(String lastLoginTime) {
