@@ -107,22 +107,11 @@ public class CreateClusterRequest extends TeaModel {
     public String diskType;
 
     /**
-     * <p>Specifies whether to enable Internet access (Elastic IP Address) if ConnectionType is set to <code>single_eni</code>.</p>
+     * <p>Specifies whether to enable elastic IP addresses. This parameter is valid only if the ConnectionType parameter is set to <code>single_eni</code>.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>if can be null:</strong>
@@ -254,11 +243,6 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The type of the security group to which the instance belongs. This parameter is valid only if the ConnectionType parameter is set to <code>single_eni</code>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>enterprise</li>
-     * <li>normal</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>enterprise</p>

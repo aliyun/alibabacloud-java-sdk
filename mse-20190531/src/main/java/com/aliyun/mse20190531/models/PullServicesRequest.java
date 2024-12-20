@@ -36,6 +36,13 @@ public class PullServicesRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("SourceId")
+    public Long sourceId;
+
+    /**
      * <p>The type of the service source.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +78,14 @@ public class PullServicesRequest extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public PullServicesRequest setSourceId(Long sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    public Long getSourceId() {
+        return this.sourceId;
     }
 
     public PullServicesRequest setSourceType(String sourceType) {
