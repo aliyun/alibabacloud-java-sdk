@@ -7,6 +7,9 @@ public class GenericSearchResult extends TeaModel {
     @NameInMap("pageItems")
     public java.util.List<ScorePageItem> pageItems;
 
+    @NameInMap("queryContext")
+    public QueryContext queryContext;
+
     /**
      * <strong>example:</strong>
      * <p>123456</p>
@@ -34,6 +37,14 @@ public class GenericSearchResult extends TeaModel {
     }
     public java.util.List<ScorePageItem> getPageItems() {
         return this.pageItems;
+    }
+
+    public GenericSearchResult setQueryContext(QueryContext queryContext) {
+        this.queryContext = queryContext;
+        return this;
+    }
+    public QueryContext getQueryContext() {
+        return this.queryContext;
     }
 
     public GenericSearchResult setRequestId(String requestId) {

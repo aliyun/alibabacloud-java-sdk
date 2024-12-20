@@ -52,6 +52,118 @@ public class AiSearchResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class AiSearchResponseBodyHeaderQueryContextOriginalQuery extends TeaModel {
+        @NameInMap("industry")
+        public String industry;
+
+        @NameInMap("page")
+        public Integer page;
+
+        @NameInMap("query")
+        public String query;
+
+        @NameInMap("timeRange")
+        public String timeRange;
+
+        public static AiSearchResponseBodyHeaderQueryContextOriginalQuery build(java.util.Map<String, ?> map) throws Exception {
+            AiSearchResponseBodyHeaderQueryContextOriginalQuery self = new AiSearchResponseBodyHeaderQueryContextOriginalQuery();
+            return TeaModel.build(map, self);
+        }
+
+        public AiSearchResponseBodyHeaderQueryContextOriginalQuery setIndustry(String industry) {
+            this.industry = industry;
+            return this;
+        }
+        public String getIndustry() {
+            return this.industry;
+        }
+
+        public AiSearchResponseBodyHeaderQueryContextOriginalQuery setPage(Integer page) {
+            this.page = page;
+            return this;
+        }
+        public Integer getPage() {
+            return this.page;
+        }
+
+        public AiSearchResponseBodyHeaderQueryContextOriginalQuery setQuery(String query) {
+            this.query = query;
+            return this;
+        }
+        public String getQuery() {
+            return this.query;
+        }
+
+        public AiSearchResponseBodyHeaderQueryContextOriginalQuery setTimeRange(String timeRange) {
+            this.timeRange = timeRange;
+            return this;
+        }
+        public String getTimeRange() {
+            return this.timeRange;
+        }
+
+    }
+
+    public static class AiSearchResponseBodyHeaderQueryContextRewrite extends TeaModel {
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        @NameInMap("timeRange")
+        public String timeRange;
+
+        public static AiSearchResponseBodyHeaderQueryContextRewrite build(java.util.Map<String, ?> map) throws Exception {
+            AiSearchResponseBodyHeaderQueryContextRewrite self = new AiSearchResponseBodyHeaderQueryContextRewrite();
+            return TeaModel.build(map, self);
+        }
+
+        public AiSearchResponseBodyHeaderQueryContextRewrite setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public AiSearchResponseBodyHeaderQueryContextRewrite setTimeRange(String timeRange) {
+            this.timeRange = timeRange;
+            return this;
+        }
+        public String getTimeRange() {
+            return this.timeRange;
+        }
+
+    }
+
+    public static class AiSearchResponseBodyHeaderQueryContext extends TeaModel {
+        @NameInMap("originalQuery")
+        public AiSearchResponseBodyHeaderQueryContextOriginalQuery originalQuery;
+
+        @NameInMap("rewrite")
+        public AiSearchResponseBodyHeaderQueryContextRewrite rewrite;
+
+        public static AiSearchResponseBodyHeaderQueryContext build(java.util.Map<String, ?> map) throws Exception {
+            AiSearchResponseBodyHeaderQueryContext self = new AiSearchResponseBodyHeaderQueryContext();
+            return TeaModel.build(map, self);
+        }
+
+        public AiSearchResponseBodyHeaderQueryContext setOriginalQuery(AiSearchResponseBodyHeaderQueryContextOriginalQuery originalQuery) {
+            this.originalQuery = originalQuery;
+            return this;
+        }
+        public AiSearchResponseBodyHeaderQueryContextOriginalQuery getOriginalQuery() {
+            return this.originalQuery;
+        }
+
+        public AiSearchResponseBodyHeaderQueryContext setRewrite(AiSearchResponseBodyHeaderQueryContextRewrite rewrite) {
+            this.rewrite = rewrite;
+            return this;
+        }
+        public AiSearchResponseBodyHeaderQueryContextRewrite getRewrite() {
+            return this.rewrite;
+        }
+
+    }
+
     public static class AiSearchResponseBodyHeader extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -66,6 +178,9 @@ public class AiSearchResponseBody extends TeaModel {
          */
         @NameInMap("eventId")
         public String eventId;
+
+        @NameInMap("queryContext")
+        public AiSearchResponseBodyHeaderQueryContext queryContext;
 
         /**
          * <strong>example:</strong>
@@ -93,6 +208,14 @@ public class AiSearchResponseBody extends TeaModel {
         }
         public String getEventId() {
             return this.eventId;
+        }
+
+        public AiSearchResponseBodyHeader setQueryContext(AiSearchResponseBodyHeaderQueryContext queryContext) {
+            this.queryContext = queryContext;
+            return this;
+        }
+        public AiSearchResponseBodyHeaderQueryContext getQueryContext() {
+            return this.queryContext;
         }
 
         public AiSearchResponseBodyHeader setResponseTime(Long responseTime) {
