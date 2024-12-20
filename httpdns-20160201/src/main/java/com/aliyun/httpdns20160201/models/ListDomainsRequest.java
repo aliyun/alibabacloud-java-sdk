@@ -21,6 +21,9 @@ public class ListDomainsRequest extends TeaModel {
     @NameInMap("Search")
     public String search;
 
+    @NameInMap("WithoutMeteringData")
+    public Boolean withoutMeteringData;
+
     public static ListDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDomainsRequest self = new ListDomainsRequest();
         return TeaModel.build(map, self);
@@ -48,6 +51,14 @@ public class ListDomainsRequest extends TeaModel {
     }
     public String getSearch() {
         return this.search;
+    }
+
+    public ListDomainsRequest setWithoutMeteringData(Boolean withoutMeteringData) {
+        this.withoutMeteringData = withoutMeteringData;
+        return this;
+    }
+    public Boolean getWithoutMeteringData() {
+        return this.withoutMeteringData;
     }
 
 }

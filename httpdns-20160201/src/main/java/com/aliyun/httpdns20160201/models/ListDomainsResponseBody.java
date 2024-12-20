@@ -102,6 +102,9 @@ public class ListDomainsResponseBody extends TeaModel {
         @NameInMap("Resolved6")
         public Long resolved6;
 
+        @NameInMap("ResolvedDoh")
+        public Long resolvedDoh;
+
         /**
          * <strong>example:</strong>
          * <p>10</p>
@@ -146,6 +149,14 @@ public class ListDomainsResponseBody extends TeaModel {
         }
         public Long getResolved6() {
             return this.resolved6;
+        }
+
+        public ListDomainsResponseBodyDomainInfosDomainInfo setResolvedDoh(Long resolvedDoh) {
+            this.resolvedDoh = resolvedDoh;
+            return this;
+        }
+        public Long getResolvedDoh() {
+            return this.resolvedDoh;
         }
 
         public ListDomainsResponseBodyDomainInfosDomainInfo setResolvedHttps(Long resolvedHttps) {
