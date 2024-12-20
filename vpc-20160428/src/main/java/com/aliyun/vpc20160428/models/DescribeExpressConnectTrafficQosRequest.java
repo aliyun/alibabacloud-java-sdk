@@ -46,8 +46,14 @@ public class DescribeExpressConnectTrafficQosRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
+
+    @NameInMap("Tags")
+    public java.util.List<DescribeExpressConnectTrafficQosRequestTags> tags;
 
     public static DescribeExpressConnectTrafficQosRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExpressConnectTrafficQosRequest self = new DescribeExpressConnectTrafficQosRequest();
@@ -118,12 +124,58 @@ public class DescribeExpressConnectTrafficQosRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeExpressConnectTrafficQosRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeExpressConnectTrafficQosRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
     public String getResourceOwnerAccount() {
         return this.resourceOwnerAccount;
+    }
+
+    public DescribeExpressConnectTrafficQosRequest setTags(java.util.List<DescribeExpressConnectTrafficQosRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeExpressConnectTrafficQosRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class DescribeExpressConnectTrafficQosRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeExpressConnectTrafficQosRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeExpressConnectTrafficQosRequestTags self = new DescribeExpressConnectTrafficQosRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeExpressConnectTrafficQosRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeExpressConnectTrafficQosRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

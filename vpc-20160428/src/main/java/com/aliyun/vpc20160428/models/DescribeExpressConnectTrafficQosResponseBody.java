@@ -272,6 +272,36 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeExpressConnectTrafficQosResponseBodyQosListTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeExpressConnectTrafficQosResponseBodyQosListTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeExpressConnectTrafficQosResponseBodyQosListTags self = new DescribeExpressConnectTrafficQosResponseBodyQosListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeExpressConnectTrafficQosResponseBodyQosListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeExpressConnectTrafficQosResponseBodyQosListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeExpressConnectTrafficQosResponseBodyQosList extends TeaModel {
         @NameInMap("AssociatedInstanceList")
         public java.util.List<DescribeExpressConnectTrafficQosResponseBodyQosListAssociatedInstanceList> associatedInstanceList;
@@ -307,12 +337,18 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         @NameInMap("QueueList")
         public java.util.List<DescribeExpressConnectTrafficQosResponseBodyQosListQueueList> queueList;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <strong>example:</strong>
          * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeExpressConnectTrafficQosResponseBodyQosListTags> tags;
 
         public static DescribeExpressConnectTrafficQosResponseBodyQosList build(java.util.Map<String, ?> map) throws Exception {
             DescribeExpressConnectTrafficQosResponseBodyQosList self = new DescribeExpressConnectTrafficQosResponseBodyQosList();
@@ -367,12 +403,28 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             return this.queueList;
         }
 
+        public DescribeExpressConnectTrafficQosResponseBodyQosList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public DescribeExpressConnectTrafficQosResponseBodyQosList setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeExpressConnectTrafficQosResponseBodyQosList setTags(java.util.List<DescribeExpressConnectTrafficQosResponseBodyQosListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeExpressConnectTrafficQosResponseBodyQosListTags> getTags() {
+            return this.tags;
         }
 
     }

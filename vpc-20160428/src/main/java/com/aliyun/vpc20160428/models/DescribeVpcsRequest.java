@@ -27,6 +27,17 @@ public class DescribeVpcsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>Query for VPCs in the specified region that have enabled IPv6 CIDR blocks. The value is empty by default, which means no filtering based on IPv6 availability is conducted. Valid values:</p>
+     * <ul>
+     * <li><p>false: disabled</p>
+     * </li>
+     * <li><p>true: enabled</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -53,7 +64,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

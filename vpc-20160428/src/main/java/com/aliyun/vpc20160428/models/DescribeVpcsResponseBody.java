@@ -41,7 +41,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The details about the VPC.</p>
+     * <p>The details of the VPC.</p>
      */
     @NameInMap("Vpcs")
     public DescribeVpcsResponseBodyVpcs vpcs;
@@ -378,9 +378,28 @@ public class DescribeVpcsResponseBody extends TeaModel {
         @NameInMap("DhcpOptionsSetStatus")
         public String dhcpOptionsSetStatus;
 
+        /**
+         * <p>Indicates whether the Domain Name System (DNS) feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DISABLED</p>
+         */
         @NameInMap("DnsHostnameStatus")
         public String dnsHostnameStatus;
 
+        /**
+         * <p>Indicates whether the IPv6 is enabled.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>false: false</p>
+         * </li>
+         * <li><p>true: true</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnabledIpv6")
         public Boolean enabledIpv6;
 
