@@ -42,6 +42,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("categoryTags", request.categoryTags);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrompt)) {
+            body.put("customPrompt", request.customPrompt);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dialogue)) {
             body.put("dialogue", request.dialogue);
         }

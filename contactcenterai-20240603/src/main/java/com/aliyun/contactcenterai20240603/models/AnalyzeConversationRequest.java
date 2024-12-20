@@ -7,9 +7,9 @@ public class AnalyzeConversationRequest extends TeaModel {
     @NameInMap("categoryTags")
     public java.util.List<AnalyzeConversationRequestCategoryTags> categoryTags;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
+    @NameInMap("customPrompt")
+    public String customPrompt;
+
     @NameInMap("dialogue")
     public AnalyzeConversationRequestDialogue dialogue;
 
@@ -67,6 +67,14 @@ public class AnalyzeConversationRequest extends TeaModel {
     }
     public java.util.List<AnalyzeConversationRequestCategoryTags> getCategoryTags() {
         return this.categoryTags;
+    }
+
+    public AnalyzeConversationRequest setCustomPrompt(String customPrompt) {
+        this.customPrompt = customPrompt;
+        return this;
+    }
+    public String getCustomPrompt() {
+        return this.customPrompt;
     }
 
     public AnalyzeConversationRequest setDialogue(AnalyzeConversationRequestDialogue dialogue) {
