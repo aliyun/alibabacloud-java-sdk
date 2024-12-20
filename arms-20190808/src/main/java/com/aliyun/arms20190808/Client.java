@@ -7654,6 +7654,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ExceptionThreadId", request.exceptionThreadId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
+            query.put("ExtraInfo", request.extraInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pid)) {
             query.put("Pid", request.pid);
         }
