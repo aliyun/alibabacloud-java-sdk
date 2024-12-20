@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceLogRequest extends TeaModel {
+    @NameInMap("ContainerId")
+    public String containerId;
+
     /**
      * <p>The ID of the request.</p>
      * <p>This parameter is required.</p>
@@ -17,6 +20,14 @@ public class DescribeInstanceLogRequest extends TeaModel {
     public static DescribeInstanceLogRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceLogRequest self = new DescribeInstanceLogRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceLogRequest setContainerId(String containerId) {
+        this.containerId = containerId;
+        return this;
+    }
+    public String getContainerId() {
+        return this.containerId;
     }
 
     public DescribeInstanceLogRequest setInstanceId(String instanceId) {

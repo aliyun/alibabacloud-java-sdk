@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class SidecarContainerConfig extends TeaModel {
+    @NameInMap("AcrInstanceId")
+    public String acrInstanceId;
+
     @NameInMap("Command")
     public String command;
 
@@ -34,6 +37,14 @@ public class SidecarContainerConfig extends TeaModel {
     public static SidecarContainerConfig build(java.util.Map<String, ?> map) throws Exception {
         SidecarContainerConfig self = new SidecarContainerConfig();
         return TeaModel.build(map, self);
+    }
+
+    public SidecarContainerConfig setAcrInstanceId(String acrInstanceId) {
+        this.acrInstanceId = acrInstanceId;
+        return this;
+    }
+    public String getAcrInstanceId() {
+        return this.acrInstanceId;
     }
 
     public SidecarContainerConfig setCommand(String command) {
