@@ -7,12 +7,24 @@ public class GetRecordUrlResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetRecordUrlResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,9 +66,17 @@ public class GetRecordUrlResponseBody extends TeaModel {
     }
 
     public static class GetRecordUrlResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1001067****</p>
+         */
         @NameInMap("Acid")
         public String acid;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com/accrec_tmp/10010679716-12-01-56.wav">http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com/accrec_tmp/10010679716-12-01-56.wav</a>?***</p>
+         */
         @NameInMap("OssLink")
         public String ossLink;
 

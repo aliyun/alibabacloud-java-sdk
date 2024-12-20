@@ -4,30 +4,62 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class UpdateOuterAccountRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>http://****</p>
+     */
     @NameInMap("Avatar")
     public String avatar;
 
     @NameInMap("Ext")
     public String ext;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("OuterAccountId")
     public String outerAccountId;
 
     @NameInMap("OuterAccountName")
     public String outerAccountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alipay</p>
+     */
     @NameInMap("OuterAccountType")
     public String outerAccountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("OuterDepartmentId")
     public String outerDepartmentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>type_invalid</p>
+     */
     @NameInMap("OuterDepartmentType")
     public String outerDepartmentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;222&quot;,&quot;333&quot;,&quot;444&quot;]</p>
+     */
     @NameInMap("OuterGroupIds")
     public String outerGroupIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mybank</p>
+     */
     @NameInMap("OuterGroupType")
     public String outerGroupType;
 

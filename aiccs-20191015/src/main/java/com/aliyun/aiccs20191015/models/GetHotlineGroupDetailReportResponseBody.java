@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetHotlineGroupDetailReportResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Public</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,6 +81,10 @@ public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
     }
 
     public static class GetHotlineGroupDetailReportResponseBodyDataColumns extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>skillGroupName</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -98,15 +118,27 @@ public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
         @NameInMap("Columns")
         public java.util.List<GetHotlineGroupDetailReportResponseBodyDataColumns> columns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Page")
         public Integer page;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("Rows")
         public java.util.List<java.util.Map<String, ?>> rows;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

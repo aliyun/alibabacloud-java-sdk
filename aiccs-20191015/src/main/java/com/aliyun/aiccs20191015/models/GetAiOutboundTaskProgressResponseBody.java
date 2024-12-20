@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetAiOutboundTaskProgressResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,30 +81,66 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskProgressResponseBodyDataCalloutProgress extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CallLossCount")
         public Integer callLossCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.01</p>
+         */
         @NameInMap("CallLossRate")
         public Float callLossRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("CallOutConnectCount")
         public Integer callOutConnectCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("CallOutConnectRate")
         public Float callOutConnectRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("CallOutCount")
         public Integer callOutCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("CallOutServicerPickupCount")
         public Integer callOutServicerPickupCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.4</p>
+         */
         @NameInMap("CallOutServicerPickupRate")
         public Float callOutServicerPickupRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("CallOutUserPickupCount")
         public Integer callOutUserPickupCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("CallOutUserPickupRate")
         public Float callOutUserPickupRate;
 
@@ -172,42 +224,94 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskProgressResponseBodyDataTaskProgress extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CallingCount")
         public Integer callingCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ConnectCount")
         public Integer connectCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
         @NameInMap("ConnectRate")
         public Float connectRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("FinishCount")
         public Integer finishCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.20</p>
+         */
         @NameInMap("FinishRate")
         public Float finishRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ServicerPickupCount")
         public Integer servicerPickupCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
         @NameInMap("ServicerPickupRate")
         public Float servicerPickupRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TerminateCount")
         public Integer terminateCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("UserPickupCount")
         public Integer userPickupCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
         @NameInMap("UserPickupRate")
         public Float userPickupRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("WaitingCallCount")
         public Integer waitingCallCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("WaitingRecallCount")
         public Integer waitingRecallCount;
 
@@ -326,12 +430,20 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         @NameInMap("CalloutProgress")
         public GetAiOutboundTaskProgressResponseBodyDataCalloutProgress calloutProgress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
         @NameInMap("TaskProgress")
         public GetAiOutboundTaskProgressResponseBodyDataTaskProgress taskProgress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Type")
         public Integer type;
 

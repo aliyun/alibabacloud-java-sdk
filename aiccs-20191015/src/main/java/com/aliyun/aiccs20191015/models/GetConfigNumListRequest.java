@@ -4,12 +4,26 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetConfigNumListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:123@123.com">123@123.com</a></p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("DepartmentId")
     public Long departmentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre-cn-***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

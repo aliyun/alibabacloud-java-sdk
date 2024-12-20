@@ -4,24 +4,50 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetSeatInformationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre-cn-***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
     @NameInMap("depIds")
     public java.util.List<Long> depIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1617761765000</p>
+     */
     @NameInMap("endDate")
     public Long endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("existDepartmentGrouping")
     public Boolean existDepartmentGrouping;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1615083365000</p>
+     */
     @NameInMap("startDate")
     public Long startDate;
 

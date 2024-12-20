@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetCustomerInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetCustomerInfoResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DF6A3FB7-A5AA-43BE-A65B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -71,15 +87,27 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         @NameInMap("Nick")
         public String nick;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6666666</p>
+         */
         @NameInMap("OuterId")
         public String outerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLSW7XPFlJDwVunXP8pr84TvltwtLlNqTlOVSFeM3bCgn57mAB4JuZZmvMW0qicqW0PyzyUdZpxiaFQ">https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLSW7XPFlJDwVunXP8pr84TvltwtLlNqTlOVSFeM3bCgn57mAB4JuZZmvMW0qicqW0PyzyUdZpxiaFQ</a></p>
+         */
         @NameInMap("Photo")
         public String photo;
 
         @NameInMap("RealName")
         public String realName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>823456789023</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 

@@ -4,9 +4,21 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class DeleteDepartmentRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("DepartmentId")
     public Long departmentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre-cn-***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

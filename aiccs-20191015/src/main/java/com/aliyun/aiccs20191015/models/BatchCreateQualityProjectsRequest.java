@@ -4,18 +4,30 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateQualityProjectsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AnalysisIds")
     public java.util.List<Long> analysisIds;
 
     @NameInMap("ChannelTouchType")
     public java.util.List<Integer> channelTouchType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CheckFreqType")
     public Integer checkFreqType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceList")
     public java.util.List<String> instanceList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

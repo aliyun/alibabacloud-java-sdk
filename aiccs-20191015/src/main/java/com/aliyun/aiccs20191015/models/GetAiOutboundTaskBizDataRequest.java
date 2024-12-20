@@ -4,9 +4,21 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskBizDataRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent_***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

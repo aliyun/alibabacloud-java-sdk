@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAgentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetAgentResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class GetAgentResponseBody extends TeaModel {
     }
 
     public static class GetAgentResponseBodyDataGroupList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ChannelType")
         public Integer channelType;
 
@@ -77,6 +97,10 @@ public class GetAgentResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("SkillGroupId")
         public Long skillGroupId;
 
@@ -128,9 +152,17 @@ public class GetAgentResponseBody extends TeaModel {
     }
 
     public static class GetAgentResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@123.com">123@123.com</a></p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>222222</p>
+         */
         @NameInMap("AgentId")
         public Long agentId;
 
@@ -140,9 +172,17 @@ public class GetAgentResponseBody extends TeaModel {
         @NameInMap("GroupList")
         public java.util.List<GetAgentResponseBodyDataGroupList> groupList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TenantId")
         public Long tenantId;
 

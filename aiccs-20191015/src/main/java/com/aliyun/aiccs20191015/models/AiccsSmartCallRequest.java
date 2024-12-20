@@ -4,66 +4,150 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class AiccsSmartCallRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ActionCodeBreak")
     public Boolean actionCodeBreak;
 
+    /**
+     * <strong>example:</strong>
+     * <p>120</p>
+     */
     @NameInMap("ActionCodeTimeBreak")
     public Integer actionCodeTimeBreak;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23387****</p>
+     */
     @NameInMap("AsrAlsAmId")
     public String asrAlsAmId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>customer_service_8k</p>
+     */
     @NameInMap("AsrBaseId")
     public String asrBaseId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bf71664d30d2478fb8cb8c39c6b6****</p>
+     */
     @NameInMap("AsrModelId")
     public String asrModelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6689****</p>
+     */
     @NameInMap("AsrVocabularyId")
     public String asrVocabularyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2d4c-4e78-8d2a-afbb06cf****.wav</p>
+     */
     @NameInMap("BackgroundFileCode")
     public String backgroundFileCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BackgroundSpeed")
     public Integer backgroundSpeed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BackgroundVolume")
     public Integer backgroundVolume;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1862222****</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0571000****</p>
+     */
     @NameInMap("CalledShowNumber")
     public String calledShowNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2234****</p>
+     */
     @NameInMap("DynamicId")
     public String dynamicId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fasle</p>
+     */
     @NameInMap("EarlyMediaAsr")
     public Boolean earlyMediaAsr;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableITN")
     public Boolean enableITN;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("MuteTime")
     public Integer muteTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>222356****</p>
+     */
     @NameInMap("OutId")
     public String outId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>800</p>
+     */
     @NameInMap("PauseTime")
     public Integer pauseTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PlayTimes")
     public Integer playTimes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aiccs</p>
+     */
     @NameInMap("ProdCode")
     public String prodCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("RecordFlag")
     public Boolean recordFlag;
 
@@ -73,30 +157,64 @@ public class AiccsSmartCallRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>120</p>
+     */
     @NameInMap("SessionTimeout")
     public Integer sessionTimeout;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Speed")
     public Integer speed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("TtsConf")
     public Boolean ttsConf;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TtsSpeed")
     public Integer ttsSpeed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xiaoyun</p>
+     */
     @NameInMap("TtsStyle")
     public String ttsStyle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TtsVolume")
     public Integer ttsVolume;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2d4c-4e78-8d2a-afbb06cf****.wav,$name$</p>
+     */
     @NameInMap("VoiceCode")
     public String voiceCode;
 
     @NameInMap("VoiceCodeParam")
     public String voiceCodeParam;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Volume")
     public Integer volume;
 

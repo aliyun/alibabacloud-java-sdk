@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetOnlineServiceVolumeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetOnlineServiceVolumeResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,15 +81,31 @@ public class GetOnlineServiceVolumeResponseBody extends TeaModel {
     }
 
     public static class GetOnlineServiceVolumeResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;tenant_id&quot;:&quot;905&quot;,&quot;online_40s_transfer_ready_cnt&quot;:109,&quot;minute_id&quot;:&quot;-1&quot;,&quot;wait_time_len&quot;:1215,&quot;pickup_rate&quot;:&quot;63.09%&quot;,&quot;thirty_seconds_to_pickUp&quot;:&quot;2560&quot;,&quot;date_id&quot;:&quot;-1&quot;,&quot;online_over_out_cnt&quot;:0,&quot;online_20s_transfer_ready_cnt&quot;:109,&quot;thirty_seconds_response_rate&quot;:&quot;63.09%&quot;,&quot;abandonment_rate&quot;:&quot;63.09%&quot;,&quot;service_time_len&quot;:68378,&quot;service_pickup&quot;:&quot;2560&quot;,&quot;hour_id&quot;:&quot;-1&quot;,&quot;online_10s_transfer_ready_cnt&quot;:109}</p>
+         */
         @NameInMap("Rows")
         public String rows;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("TotalNum")
         public Integer totalNum;
 

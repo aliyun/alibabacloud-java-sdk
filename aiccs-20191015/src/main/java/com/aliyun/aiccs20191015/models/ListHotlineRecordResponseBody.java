@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListHotlineRecordResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListHotlineRecordResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +81,38 @@ public class ListHotlineRecordResponseBody extends TeaModel {
     }
 
     public static class ListHotlineRecordResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100365558</p>
+         */
         @NameInMap("CallId")
         public String callId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100365548</p>
+         */
         @NameInMap("ConnectionId")
         public String connectionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16128694810</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16128694110</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com">http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

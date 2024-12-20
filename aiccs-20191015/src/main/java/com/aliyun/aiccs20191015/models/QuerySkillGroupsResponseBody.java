@@ -4,21 +4,41 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QuerySkillGroupsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("Data")
     public java.util.List<QuerySkillGroupsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("OnePageSize")
     public Integer onePageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>76</p>
+     */
     @NameInMap("TotalResults")
     public Integer totalResults;
 
@@ -76,6 +96,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
     }
 
     public static class QuerySkillGroupsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ChannelType")
         public Integer channelType;
 
@@ -85,6 +109,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("SkillGroupId")
         public Long skillGroupId;
 

@@ -4,12 +4,27 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class RemoveAgentFromSkillGroupShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AgentIds")
     public String agentIdsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent_***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1146****</p>
+     */
     @NameInMap("SkillGroupId")
     public Long skillGroupId;
 

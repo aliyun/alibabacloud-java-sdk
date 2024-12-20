@@ -4,15 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class InsertAiOutboundPhoneNumsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("BatchVersion")
     public Integer batchVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Details")
     public java.util.List<InsertAiOutboundPhoneNumsRequestDetails> details;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent_***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 
@@ -54,9 +73,17 @@ public class InsertAiOutboundPhoneNumsRequest extends TeaModel {
     }
 
     public static class InsertAiOutboundPhoneNumsRequestDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("BizData")
         public String bizData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>150****0000</p>
+         */
         @NameInMap("PhoneNum")
         public String phoneNum;
 

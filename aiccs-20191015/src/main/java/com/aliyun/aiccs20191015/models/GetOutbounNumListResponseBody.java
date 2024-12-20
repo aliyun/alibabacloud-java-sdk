@@ -4,21 +4,41 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetOutbounNumListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetOutbounNumListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -79,9 +99,17 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>07512234****</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -117,12 +145,24 @@ public class GetOutbounNumListResponseBody extends TeaModel {
     }
 
     public static class GetOutbounNumListResponseBodyDataNumGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Jella</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7688****</p>
+         */
         @NameInMap("Value")
         public String value;
 

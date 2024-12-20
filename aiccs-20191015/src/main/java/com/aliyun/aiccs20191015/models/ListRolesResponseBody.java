@@ -7,15 +7,31 @@ public class ListRolesResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListRolesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +81,48 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BuId")
         public Long buId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-03T20:25:33Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Admin</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RoleGroupId")
         public Long roleGroupId;
 
         @NameInMap("RoleGroupName")
         public String roleGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RoleId")
         public Long roleId;
 

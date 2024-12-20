@@ -4,12 +4,21 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ChangeQualityProjectStatusRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

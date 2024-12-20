@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class HotlineSessionQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public HotlineSessionQueryResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE339D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,90 +81,194 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
     }
 
     public static class HotlineSessionQueryResponseBodyDataCallDetailRecord extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7719786</p>
+         */
         @NameInMap("Acid")
         public String acid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("ActiveTransferId")
         public String activeTransferId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>37</p>
+         */
         @NameInMap("CallContinueTime")
         public Integer callContinueTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("CallResult")
         public String callResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CallType")
         public Integer callType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>135615*****</p>
+         */
         @NameInMap("CalledNumber")
         public String calledNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0571773</p>
+         */
         @NameInMap("CallingNumber")
         public String callingNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-02 22:32:55</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("EvaluationLevel")
         public Integer evaluationLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("EvaluationScore")
         public Integer evaluationScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("HangUpRole")
         public String hangUpRole;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-02 22:33:46</p>
+         */
         @NameInMap("HangUpTime")
         public String hangUpTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acc1c58dab4a4dd280e3813c66</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-02 22:32:55</p>
+         */
         @NameInMap("InQueueTime")
         public String inQueueTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7856876</p>
+         */
         @NameInMap("MemberId")
         public String memberId;
 
         @NameInMap("MemberName")
         public String memberName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-02 22:32:59</p>
+         */
         @NameInMap("OutQueueTime")
         public String outQueueTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("PassiveTransferId")
         public String passiveTransferId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PassiveTransferIdType")
         public String passiveTransferIdType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-02 22:33:09</p>
+         */
         @NameInMap("PickUpTime")
         public String pickUpTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("QueueUpContinueTime")
         public Integer queueUpContinueTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("RingContinueTime")
         public Integer ringContinueTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-02 22:33:09</p>
+         */
         @NameInMap("RingEndTime")
         public String ringEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-02 22:32:59</p>
+         */
         @NameInMap("RingStartTime")
         public String ringStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>555555</p>
+         */
         @NameInMap("ServicerId")
         public String servicerId;
 
         @NameInMap("ServicerName")
         public String servicerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1861111****</p>
+         */
         @NameInMap("TrunkCall")
         public String trunkCall;
 
@@ -395,12 +515,24 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         @NameInMap("CallDetailRecord")
         public java.util.List<HotlineSessionQueryResponseBodyDataCallDetailRecord> callDetailRecord;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

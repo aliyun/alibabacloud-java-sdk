@@ -13,6 +13,9 @@ public class GetQualityResultRequest extends TeaModel {
     @NameInMap("HitStatus")
     public Integer hitStatus;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -28,9 +31,15 @@ public class GetQualityResultRequest extends TeaModel {
     @NameInMap("QualityRuleIds")
     public java.util.List<Long> qualityRuleIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TouchEndTime")
     public String touchEndTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TouchStartTime")
     public String touchStartTime;
 

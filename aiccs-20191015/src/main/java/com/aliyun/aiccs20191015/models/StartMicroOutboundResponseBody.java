@@ -4,21 +4,45 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class StartMicroOutboundResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;caseId\&quot;:2323****}</p>
+     */
     @NameInMap("CustomerInfo")
     public String customerInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8883f165-4a0d-4da2-a2d2</p>
+     */
     @NameInMap("InvokeCmdId")
     public String invokeCmdId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-05-23 17:30:32.525</p>
+     */
     @NameInMap("InvokeCreateTime")
     public String invokeCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

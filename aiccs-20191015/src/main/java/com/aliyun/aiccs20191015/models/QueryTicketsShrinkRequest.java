@@ -4,42 +4,92 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QueryTicketsShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>223468****</p>
+     */
     @NameInMap("CaseId")
     public Long caseId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CaseStatus")
     public Integer caseStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1223</p>
+     */
     @NameInMap("CaseType")
     public Integer caseType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>02acfefd3fa14049826ac1a89e1xxxxx</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ChannelType")
     public Integer channelType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("DealId")
     public Long dealId;
 
     @NameInMap("Extra")
     public String extraShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre-cn-***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>29506</p>
+     */
     @NameInMap("SrType")
     public Long srType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TaskStatus")
     public Integer taskStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15030609</p>
+     */
     @NameInMap("TouchId")
     public Long touchId;
 

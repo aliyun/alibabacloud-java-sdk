@@ -4,6 +4,9 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class CreateOutboundTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Ani")
     public String ani;
 
@@ -16,9 +19,15 @@ public class CreateOutboundTaskRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -28,6 +37,9 @@ public class CreateOutboundTaskRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -40,18 +52,33 @@ public class CreateOutboundTaskRequest extends TeaModel {
     @NameInMap("RetryTime")
     public Integer retryTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SkillGroup")
     public Long skillGroup;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskType")
     public Integer taskType;
 

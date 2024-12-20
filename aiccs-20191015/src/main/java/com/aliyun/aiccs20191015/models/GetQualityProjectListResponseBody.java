@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetQualityProjectListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetQualityProjectListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class GetQualityProjectListResponseBody extends TeaModel {
     }
 
     public static class GetQualityProjectListResponseBodyDataQualityProjectList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CheckFreqType")
         public Integer checkFreqType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-04-07 18:07:18</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -77,9 +101,17 @@ public class GetQualityProjectListResponseBody extends TeaModel {
         @NameInMap("GroupList")
         public java.util.List<Long> groupList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15977801</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-04-07 18:07:19</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
@@ -89,15 +121,27 @@ public class GetQualityProjectListResponseBody extends TeaModel {
         @NameInMap("QualityRuleIds")
         public java.util.List<Long> qualityRuleIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("QualityType")
         public Integer qualityType;
 
         @NameInMap("ServicerList")
         public java.util.List<Long> servicerList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Version")
         public Integer version;
 
@@ -205,15 +249,27 @@ public class GetQualityProjectListResponseBody extends TeaModel {
     }
 
     public static class GetQualityProjectListResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("QualityProjectList")
         public java.util.List<GetQualityProjectListResponseBodyDataQualityProjectList> qualityProjectList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35</p>
+         */
         @NameInMap("Total")
         public Long total;
 

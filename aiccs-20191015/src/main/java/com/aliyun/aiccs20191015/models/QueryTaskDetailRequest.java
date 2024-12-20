@@ -19,6 +19,9 @@ public class QueryTaskDetailRequest extends TeaModel {
     @NameInMap("EndReasonList")
     public String endReasonList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

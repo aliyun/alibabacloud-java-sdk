@@ -4,21 +4,53 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class MakeDoubleCallRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;bizId&quot;: 123456}</p>
+     */
     @NameInMap("BizData")
     public String bizData;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent_***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1502123****</p>
+     */
     @NameInMap("MemberPhone")
     public String memberPhone;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0571000****</p>
+     */
     @NameInMap("OutboundCallNumber")
     public String outboundCallNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>150****1234</p>
+     */
     @NameInMap("ServicerPhone")
     public String servicerPhone;
 

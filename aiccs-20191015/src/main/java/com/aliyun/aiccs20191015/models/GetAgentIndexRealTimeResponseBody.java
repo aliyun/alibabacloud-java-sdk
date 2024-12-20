@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAgentIndexRealTimeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetAgentIndexRealTimeResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,6 +84,10 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>servicerId</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -98,15 +118,27 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
         @NameInMap("Columns")
         public java.util.List<GetAgentIndexRealTimeResponseBodyDataColumns> columns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Page")
         public Integer page;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("Rows")
         public java.util.List<java.util.Map<String, ?>> rows;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

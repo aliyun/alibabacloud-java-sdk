@@ -4,12 +4,24 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetIndexCurrentValueRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2332****,2334****</p>
+     */
     @NameInMap("DepIds")
     public String depIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2323****,2324****</p>
+     */
     @NameInMap("GroupIds")
     public String groupIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre-cn-***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

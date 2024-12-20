@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListTaskDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListTaskDetailResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ok</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,36 +81,76 @@ public class ListTaskDetailResponseBody extends TeaModel {
     }
 
     public static class ListTaskDetailResponseBodyDataRecord extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>186****0000</p>
+         */
         @NameInMap("Called")
         public String called;
 
+        /**
+         * <strong>example:</strong>
+         * <p>136****0000</p>
+         */
         @NameInMap("Caller")
         public String caller;
 
         @NameInMap("Direction")
         public String direction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-20 00:03:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RetryCurTimes")
         public Integer retryCurTimes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RetryTimes")
         public Integer retryTimes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-20 00:00:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00001</p>
+         */
         @NameInMap("StatusCode")
         public String statusCode;
 
@@ -216,15 +272,27 @@ public class ListTaskDetailResponseBody extends TeaModel {
     }
 
     public static class ListTaskDetailResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageNo")
         public Long pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
         @NameInMap("Record")
         public java.util.List<ListTaskDetailResponseBodyDataRecord> record;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Total")
         public Long total;
 

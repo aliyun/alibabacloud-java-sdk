@@ -4,30 +4,60 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetSkillGroupServiceCapabilityRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("DepIds")
     public java.util.List<Long> depIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1617761765000</p>
+     */
     @NameInMap("EndDate")
     public Long endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ExistDepartmentGrouping")
     public Boolean existDepartmentGrouping;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ExistSkillGroupGrouping")
     public Boolean existSkillGroupGrouping;
 
     @NameInMap("GroupIds")
     public java.util.List<Long> groupIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre-cn-***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1615083365000</p>
+     */
     @NameInMap("StartDate")
     public Long startDate;
 

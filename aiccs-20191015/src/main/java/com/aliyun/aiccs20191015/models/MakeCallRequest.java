@@ -4,21 +4,55 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class MakeCallRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>130****0000</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0571456****</p>
+     */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>outBound_Call</p>
+     */
     @NameInMap("CommandCode")
     public String commandCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;bizId&quot;: 23323}</p>
+     */
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("OuterAccountId")
     public String outerAccountId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIPAY</p>
+     */
     @NameInMap("OuterAccountType")
     public String outerAccountType;
 

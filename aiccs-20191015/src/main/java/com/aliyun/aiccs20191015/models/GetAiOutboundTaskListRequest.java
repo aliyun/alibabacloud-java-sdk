@@ -4,27 +4,67 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1617761765000</p>
+     */
     @NameInMap("CreateTimeEnd")
     public Long createTimeEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1615083365000</p>
+     */
     @NameInMap("CreateTimeStart")
     public Long createTimeStart;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent_****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1763****</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Type")
     public Integer type;
 
