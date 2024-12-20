@@ -36,6 +36,9 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
     }
 
     public static class GetResolveCountSummaryResponseBodyResolveSummary extends TeaModel {
+        @NameInMap("Doh")
+        public Long doh;
+
         /**
          * <strong>example:</strong>
          * <p>123</p>
@@ -67,6 +70,14 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
         public static GetResolveCountSummaryResponseBodyResolveSummary build(java.util.Map<String, ?> map) throws Exception {
             GetResolveCountSummaryResponseBodyResolveSummary self = new GetResolveCountSummaryResponseBodyResolveSummary();
             return TeaModel.build(map, self);
+        }
+
+        public GetResolveCountSummaryResponseBodyResolveSummary setDoh(Long doh) {
+            this.doh = doh;
+            return this;
+        }
+        public Long getDoh() {
+            return this.doh;
         }
 
         public GetResolveCountSummaryResponseBodyResolveSummary setHttp(Long http) {

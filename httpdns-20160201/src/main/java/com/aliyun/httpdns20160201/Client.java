@@ -27,6 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>添加域名</p>
+     * 
      * @param request AddDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddDomainResponse
@@ -60,6 +63,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>添加域名</p>
+     * 
      * @param request AddDomainRequest
      * @return AddDomainResponse
      */
@@ -69,6 +75,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除域名</p>
+     * 
      * @param request DeleteDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDomainResponse
@@ -102,6 +111,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除域名</p>
+     * 
      * @param request DeleteDomainRequest
      * @return DeleteDomainResponse
      */
@@ -157,6 +169,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取用户信息包含配置项</p>
+     * 
      * @param request GetAccountInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAccountInfoResponse
@@ -178,6 +193,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取用户信息包含配置项</p>
      * @return GetAccountInfoResponse
      */
     public GetAccountInfoResponse getAccountInfo() throws Exception {
@@ -186,6 +203,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>解析次数概览</p>
+     * 
      * @param request GetResolveCountSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResolveCountSummaryResponse
@@ -219,6 +239,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>解析次数概览</p>
+     * 
      * @param request GetResolveCountSummaryRequest
      * @return GetResolveCountSummaryResponse
      */
@@ -278,6 +301,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>列举域名以及解析统计信息</p>
+     * 
      * @param request ListDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDomainsResponse
@@ -295,6 +321,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.search)) {
             query.put("Search", request.search);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withoutMeteringData)) {
+            query.put("WithoutMeteringData", request.withoutMeteringData);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -315,6 +345,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>列举域名以及解析统计信息</p>
+     * 
      * @param request ListDomainsRequest
      * @return ListDomainsResponse
      */

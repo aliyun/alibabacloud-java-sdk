@@ -43,6 +43,15 @@ public class GetAccountInfoResponseBody extends TeaModel {
         @NameInMap("AccountId")
         public String accountId;
 
+        @NameInMap("DohEnabled")
+        public Boolean dohEnabled;
+
+        @NameInMap("DohResolveAllEnabled")
+        public Boolean dohResolveAllEnabled;
+
+        @NameInMap("MonthDohResolveCount")
+        public Long monthDohResolveCount;
+
         /**
          * <strong>example:</strong>
          * <p>1500000</p>
@@ -117,6 +126,30 @@ public class GetAccountInfoResponseBody extends TeaModel {
         }
         public String getAccountId() {
             return this.accountId;
+        }
+
+        public GetAccountInfoResponseBodyAccountInfo setDohEnabled(Boolean dohEnabled) {
+            this.dohEnabled = dohEnabled;
+            return this;
+        }
+        public Boolean getDohEnabled() {
+            return this.dohEnabled;
+        }
+
+        public GetAccountInfoResponseBodyAccountInfo setDohResolveAllEnabled(Boolean dohResolveAllEnabled) {
+            this.dohResolveAllEnabled = dohResolveAllEnabled;
+            return this;
+        }
+        public Boolean getDohResolveAllEnabled() {
+            return this.dohResolveAllEnabled;
+        }
+
+        public GetAccountInfoResponseBodyAccountInfo setMonthDohResolveCount(Long monthDohResolveCount) {
+            this.monthDohResolveCount = monthDohResolveCount;
+            return this;
+        }
+        public Long getMonthDohResolveCount() {
+            return this.monthDohResolveCount;
         }
 
         public GetAccountInfoResponseBodyAccountInfo setMonthFreeCount(Integer monthFreeCount) {
