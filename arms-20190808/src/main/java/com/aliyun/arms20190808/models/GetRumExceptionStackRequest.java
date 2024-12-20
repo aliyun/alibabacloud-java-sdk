@@ -37,6 +37,9 @@ public class GetRumExceptionStackRequest extends TeaModel {
     @NameInMap("ExceptionThreadId")
     public String exceptionThreadId;
 
+    @NameInMap("ExtraInfo")
+    public String extraInfo;
+
     /**
      * <p>The application ID.</p>
      * <p>This parameter is required.</p>
@@ -97,6 +100,14 @@ public class GetRumExceptionStackRequest extends TeaModel {
     }
     public String getExceptionThreadId() {
         return this.exceptionThreadId;
+    }
+
+    public GetRumExceptionStackRequest setExtraInfo(String extraInfo) {
+        this.extraInfo = extraInfo;
+        return this;
+    }
+    public String getExtraInfo() {
+        return this.extraInfo;
     }
 
     public GetRumExceptionStackRequest setPid(String pid) {
