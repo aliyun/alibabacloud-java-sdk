@@ -3,7 +3,7 @@ package com.aliyun.sae20190506.models;
 
 import com.aliyun.tea.*;
 
-public class CreateApplicationRequest extends TeaModel {
+public class CreateApplicationShrinkRequest extends TeaModel {
     /**
      * <p>acs:ram::123456789012\<em>\</em>\<em>\</em>:role/adminrole</p>
      * 
@@ -449,7 +449,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String serviceTags;
 
     @NameInMap("SidecarContainersConfig")
-    public java.util.List<SidecarContainerConfig> sidecarContainersConfig;
+    public String sidecarContainersConfigShrink;
 
     /**
      * <p>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</p>
@@ -523,12 +523,12 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("WebContainer")
     public String webContainer;
 
-    public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateApplicationRequest self = new CreateApplicationRequest();
+    public static CreateApplicationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateApplicationShrinkRequest self = new CreateApplicationShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateApplicationRequest setAcrAssumeRoleArn(String acrAssumeRoleArn) {
+    public CreateApplicationShrinkRequest setAcrAssumeRoleArn(String acrAssumeRoleArn) {
         this.acrAssumeRoleArn = acrAssumeRoleArn;
         return this;
     }
@@ -536,7 +536,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.acrAssumeRoleArn;
     }
 
-    public CreateApplicationRequest setAcrInstanceId(String acrInstanceId) {
+    public CreateApplicationShrinkRequest setAcrInstanceId(String acrInstanceId) {
         this.acrInstanceId = acrInstanceId;
         return this;
     }
@@ -544,7 +544,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.acrInstanceId;
     }
 
-    public CreateApplicationRequest setAppDescription(String appDescription) {
+    public CreateApplicationShrinkRequest setAppDescription(String appDescription) {
         this.appDescription = appDescription;
         return this;
     }
@@ -552,7 +552,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.appDescription;
     }
 
-    public CreateApplicationRequest setAppName(String appName) {
+    public CreateApplicationShrinkRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -560,7 +560,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.appName;
     }
 
-    public CreateApplicationRequest setAppSource(String appSource) {
+    public CreateApplicationShrinkRequest setAppSource(String appSource) {
         this.appSource = appSource;
         return this;
     }
@@ -568,7 +568,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.appSource;
     }
 
-    public CreateApplicationRequest setAssociateEip(Boolean associateEip) {
+    public CreateApplicationShrinkRequest setAssociateEip(Boolean associateEip) {
         this.associateEip = associateEip;
         return this;
     }
@@ -576,7 +576,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.associateEip;
     }
 
-    public CreateApplicationRequest setAutoConfig(Boolean autoConfig) {
+    public CreateApplicationShrinkRequest setAutoConfig(Boolean autoConfig) {
         this.autoConfig = autoConfig;
         return this;
     }
@@ -584,7 +584,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.autoConfig;
     }
 
-    public CreateApplicationRequest setBaseAppId(String baseAppId) {
+    public CreateApplicationShrinkRequest setBaseAppId(String baseAppId) {
         this.baseAppId = baseAppId;
         return this;
     }
@@ -592,7 +592,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.baseAppId;
     }
 
-    public CreateApplicationRequest setCommand(String command) {
+    public CreateApplicationShrinkRequest setCommand(String command) {
         this.command = command;
         return this;
     }
@@ -600,7 +600,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.command;
     }
 
-    public CreateApplicationRequest setCommandArgs(String commandArgs) {
+    public CreateApplicationShrinkRequest setCommandArgs(String commandArgs) {
         this.commandArgs = commandArgs;
         return this;
     }
@@ -608,7 +608,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.commandArgs;
     }
 
-    public CreateApplicationRequest setConfigMapMountDesc(String configMapMountDesc) {
+    public CreateApplicationShrinkRequest setConfigMapMountDesc(String configMapMountDesc) {
         this.configMapMountDesc = configMapMountDesc;
         return this;
     }
@@ -616,7 +616,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.configMapMountDesc;
     }
 
-    public CreateApplicationRequest setCpu(Integer cpu) {
+    public CreateApplicationShrinkRequest setCpu(Integer cpu) {
         this.cpu = cpu;
         return this;
     }
@@ -624,7 +624,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.cpu;
     }
 
-    public CreateApplicationRequest setCustomHostAlias(String customHostAlias) {
+    public CreateApplicationShrinkRequest setCustomHostAlias(String customHostAlias) {
         this.customHostAlias = customHostAlias;
         return this;
     }
@@ -632,7 +632,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.customHostAlias;
     }
 
-    public CreateApplicationRequest setDeploy(Boolean deploy) {
+    public CreateApplicationShrinkRequest setDeploy(Boolean deploy) {
         this.deploy = deploy;
         return this;
     }
@@ -640,7 +640,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.deploy;
     }
 
-    public CreateApplicationRequest setDotnet(String dotnet) {
+    public CreateApplicationShrinkRequest setDotnet(String dotnet) {
         this.dotnet = dotnet;
         return this;
     }
@@ -648,7 +648,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.dotnet;
     }
 
-    public CreateApplicationRequest setEdasContainerVersion(String edasContainerVersion) {
+    public CreateApplicationShrinkRequest setEdasContainerVersion(String edasContainerVersion) {
         this.edasContainerVersion = edasContainerVersion;
         return this;
     }
@@ -656,7 +656,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.edasContainerVersion;
     }
 
-    public CreateApplicationRequest setEnableCpuBurst(Boolean enableCpuBurst) {
+    public CreateApplicationShrinkRequest setEnableCpuBurst(Boolean enableCpuBurst) {
         this.enableCpuBurst = enableCpuBurst;
         return this;
     }
@@ -664,7 +664,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.enableCpuBurst;
     }
 
-    public CreateApplicationRequest setEnableEbpf(String enableEbpf) {
+    public CreateApplicationShrinkRequest setEnableEbpf(String enableEbpf) {
         this.enableEbpf = enableEbpf;
         return this;
     }
@@ -672,7 +672,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.enableEbpf;
     }
 
-    public CreateApplicationRequest setEnableNewArms(Boolean enableNewArms) {
+    public CreateApplicationShrinkRequest setEnableNewArms(Boolean enableNewArms) {
         this.enableNewArms = enableNewArms;
         return this;
     }
@@ -680,7 +680,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.enableNewArms;
     }
 
-    public CreateApplicationRequest setEnableSidecarResourceIsolated(Boolean enableSidecarResourceIsolated) {
+    public CreateApplicationShrinkRequest setEnableSidecarResourceIsolated(Boolean enableSidecarResourceIsolated) {
         this.enableSidecarResourceIsolated = enableSidecarResourceIsolated;
         return this;
     }
@@ -688,7 +688,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.enableSidecarResourceIsolated;
     }
 
-    public CreateApplicationRequest setEnvs(String envs) {
+    public CreateApplicationShrinkRequest setEnvs(String envs) {
         this.envs = envs;
         return this;
     }
@@ -696,7 +696,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.envs;
     }
 
-    public CreateApplicationRequest setImagePullSecrets(String imagePullSecrets) {
+    public CreateApplicationShrinkRequest setImagePullSecrets(String imagePullSecrets) {
         this.imagePullSecrets = imagePullSecrets;
         return this;
     }
@@ -704,7 +704,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.imagePullSecrets;
     }
 
-    public CreateApplicationRequest setImageUrl(String imageUrl) {
+    public CreateApplicationShrinkRequest setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
@@ -712,7 +712,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.imageUrl;
     }
 
-    public CreateApplicationRequest setJarStartArgs(String jarStartArgs) {
+    public CreateApplicationShrinkRequest setJarStartArgs(String jarStartArgs) {
         this.jarStartArgs = jarStartArgs;
         return this;
     }
@@ -720,7 +720,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.jarStartArgs;
     }
 
-    public CreateApplicationRequest setJarStartOptions(String jarStartOptions) {
+    public CreateApplicationShrinkRequest setJarStartOptions(String jarStartOptions) {
         this.jarStartOptions = jarStartOptions;
         return this;
     }
@@ -728,7 +728,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.jarStartOptions;
     }
 
-    public CreateApplicationRequest setJdk(String jdk) {
+    public CreateApplicationShrinkRequest setJdk(String jdk) {
         this.jdk = jdk;
         return this;
     }
@@ -736,7 +736,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.jdk;
     }
 
-    public CreateApplicationRequest setKafkaConfigs(String kafkaConfigs) {
+    public CreateApplicationShrinkRequest setKafkaConfigs(String kafkaConfigs) {
         this.kafkaConfigs = kafkaConfigs;
         return this;
     }
@@ -744,7 +744,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.kafkaConfigs;
     }
 
-    public CreateApplicationRequest setLiveness(String liveness) {
+    public CreateApplicationShrinkRequest setLiveness(String liveness) {
         this.liveness = liveness;
         return this;
     }
@@ -752,7 +752,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.liveness;
     }
 
-    public CreateApplicationRequest setMemory(Integer memory) {
+    public CreateApplicationShrinkRequest setMemory(Integer memory) {
         this.memory = memory;
         return this;
     }
@@ -760,7 +760,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.memory;
     }
 
-    public CreateApplicationRequest setMicroRegistration(String microRegistration) {
+    public CreateApplicationShrinkRequest setMicroRegistration(String microRegistration) {
         this.microRegistration = microRegistration;
         return this;
     }
@@ -768,7 +768,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.microRegistration;
     }
 
-    public CreateApplicationRequest setMicroRegistrationConfig(String microRegistrationConfig) {
+    public CreateApplicationShrinkRequest setMicroRegistrationConfig(String microRegistrationConfig) {
         this.microRegistrationConfig = microRegistrationConfig;
         return this;
     }
@@ -776,7 +776,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.microRegistrationConfig;
     }
 
-    public CreateApplicationRequest setMountDesc(String mountDesc) {
+    public CreateApplicationShrinkRequest setMountDesc(String mountDesc) {
         this.mountDesc = mountDesc;
         return this;
     }
@@ -784,7 +784,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.mountDesc;
     }
 
-    public CreateApplicationRequest setMountHost(String mountHost) {
+    public CreateApplicationShrinkRequest setMountHost(String mountHost) {
         this.mountHost = mountHost;
         return this;
     }
@@ -792,7 +792,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.mountHost;
     }
 
-    public CreateApplicationRequest setNamespaceId(String namespaceId) {
+    public CreateApplicationShrinkRequest setNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
     }
@@ -800,7 +800,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.namespaceId;
     }
 
-    public CreateApplicationRequest setNasConfigs(String nasConfigs) {
+    public CreateApplicationShrinkRequest setNasConfigs(String nasConfigs) {
         this.nasConfigs = nasConfigs;
         return this;
     }
@@ -808,7 +808,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.nasConfigs;
     }
 
-    public CreateApplicationRequest setNasId(String nasId) {
+    public CreateApplicationShrinkRequest setNasId(String nasId) {
         this.nasId = nasId;
         return this;
     }
@@ -816,7 +816,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.nasId;
     }
 
-    public CreateApplicationRequest setOidcRoleName(String oidcRoleName) {
+    public CreateApplicationShrinkRequest setOidcRoleName(String oidcRoleName) {
         this.oidcRoleName = oidcRoleName;
         return this;
     }
@@ -824,7 +824,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.oidcRoleName;
     }
 
-    public CreateApplicationRequest setOssAkId(String ossAkId) {
+    public CreateApplicationShrinkRequest setOssAkId(String ossAkId) {
         this.ossAkId = ossAkId;
         return this;
     }
@@ -832,7 +832,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.ossAkId;
     }
 
-    public CreateApplicationRequest setOssAkSecret(String ossAkSecret) {
+    public CreateApplicationShrinkRequest setOssAkSecret(String ossAkSecret) {
         this.ossAkSecret = ossAkSecret;
         return this;
     }
@@ -840,7 +840,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.ossAkSecret;
     }
 
-    public CreateApplicationRequest setOssMountDescs(String ossMountDescs) {
+    public CreateApplicationShrinkRequest setOssMountDescs(String ossMountDescs) {
         this.ossMountDescs = ossMountDescs;
         return this;
     }
@@ -848,7 +848,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.ossMountDescs;
     }
 
-    public CreateApplicationRequest setPackageType(String packageType) {
+    public CreateApplicationShrinkRequest setPackageType(String packageType) {
         this.packageType = packageType;
         return this;
     }
@@ -856,7 +856,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.packageType;
     }
 
-    public CreateApplicationRequest setPackageUrl(String packageUrl) {
+    public CreateApplicationShrinkRequest setPackageUrl(String packageUrl) {
         this.packageUrl = packageUrl;
         return this;
     }
@@ -864,7 +864,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.packageUrl;
     }
 
-    public CreateApplicationRequest setPackageVersion(String packageVersion) {
+    public CreateApplicationShrinkRequest setPackageVersion(String packageVersion) {
         this.packageVersion = packageVersion;
         return this;
     }
@@ -872,7 +872,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.packageVersion;
     }
 
-    public CreateApplicationRequest setPhp(String php) {
+    public CreateApplicationShrinkRequest setPhp(String php) {
         this.php = php;
         return this;
     }
@@ -880,7 +880,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.php;
     }
 
-    public CreateApplicationRequest setPhpArmsConfigLocation(String phpArmsConfigLocation) {
+    public CreateApplicationShrinkRequest setPhpArmsConfigLocation(String phpArmsConfigLocation) {
         this.phpArmsConfigLocation = phpArmsConfigLocation;
         return this;
     }
@@ -888,7 +888,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.phpArmsConfigLocation;
     }
 
-    public CreateApplicationRequest setPhpConfig(String phpConfig) {
+    public CreateApplicationShrinkRequest setPhpConfig(String phpConfig) {
         this.phpConfig = phpConfig;
         return this;
     }
@@ -896,7 +896,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.phpConfig;
     }
 
-    public CreateApplicationRequest setPhpConfigLocation(String phpConfigLocation) {
+    public CreateApplicationShrinkRequest setPhpConfigLocation(String phpConfigLocation) {
         this.phpConfigLocation = phpConfigLocation;
         return this;
     }
@@ -904,7 +904,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.phpConfigLocation;
     }
 
-    public CreateApplicationRequest setPostStart(String postStart) {
+    public CreateApplicationShrinkRequest setPostStart(String postStart) {
         this.postStart = postStart;
         return this;
     }
@@ -912,7 +912,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.postStart;
     }
 
-    public CreateApplicationRequest setPreStop(String preStop) {
+    public CreateApplicationShrinkRequest setPreStop(String preStop) {
         this.preStop = preStop;
         return this;
     }
@@ -920,7 +920,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.preStop;
     }
 
-    public CreateApplicationRequest setProgrammingLanguage(String programmingLanguage) {
+    public CreateApplicationShrinkRequest setProgrammingLanguage(String programmingLanguage) {
         this.programmingLanguage = programmingLanguage;
         return this;
     }
@@ -928,7 +928,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.programmingLanguage;
     }
 
-    public CreateApplicationRequest setPvtzDiscoverySvc(String pvtzDiscoverySvc) {
+    public CreateApplicationShrinkRequest setPvtzDiscoverySvc(String pvtzDiscoverySvc) {
         this.pvtzDiscoverySvc = pvtzDiscoverySvc;
         return this;
     }
@@ -936,7 +936,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.pvtzDiscoverySvc;
     }
 
-    public CreateApplicationRequest setPython(String python) {
+    public CreateApplicationShrinkRequest setPython(String python) {
         this.python = python;
         return this;
     }
@@ -944,7 +944,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.python;
     }
 
-    public CreateApplicationRequest setPythonModules(String pythonModules) {
+    public CreateApplicationShrinkRequest setPythonModules(String pythonModules) {
         this.pythonModules = pythonModules;
         return this;
     }
@@ -952,7 +952,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.pythonModules;
     }
 
-    public CreateApplicationRequest setReadiness(String readiness) {
+    public CreateApplicationShrinkRequest setReadiness(String readiness) {
         this.readiness = readiness;
         return this;
     }
@@ -960,7 +960,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.readiness;
     }
 
-    public CreateApplicationRequest setReplicas(Integer replicas) {
+    public CreateApplicationShrinkRequest setReplicas(Integer replicas) {
         this.replicas = replicas;
         return this;
     }
@@ -968,7 +968,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.replicas;
     }
 
-    public CreateApplicationRequest setSaeVersion(String saeVersion) {
+    public CreateApplicationShrinkRequest setSaeVersion(String saeVersion) {
         this.saeVersion = saeVersion;
         return this;
     }
@@ -976,7 +976,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.saeVersion;
     }
 
-    public CreateApplicationRequest setSecretMountDesc(String secretMountDesc) {
+    public CreateApplicationShrinkRequest setSecretMountDesc(String secretMountDesc) {
         this.secretMountDesc = secretMountDesc;
         return this;
     }
@@ -984,7 +984,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.secretMountDesc;
     }
 
-    public CreateApplicationRequest setSecurityGroupId(String securityGroupId) {
+    public CreateApplicationShrinkRequest setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
@@ -992,7 +992,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.securityGroupId;
     }
 
-    public CreateApplicationRequest setServiceTags(String serviceTags) {
+    public CreateApplicationShrinkRequest setServiceTags(String serviceTags) {
         this.serviceTags = serviceTags;
         return this;
     }
@@ -1000,15 +1000,15 @@ public class CreateApplicationRequest extends TeaModel {
         return this.serviceTags;
     }
 
-    public CreateApplicationRequest setSidecarContainersConfig(java.util.List<SidecarContainerConfig> sidecarContainersConfig) {
-        this.sidecarContainersConfig = sidecarContainersConfig;
+    public CreateApplicationShrinkRequest setSidecarContainersConfigShrink(String sidecarContainersConfigShrink) {
+        this.sidecarContainersConfigShrink = sidecarContainersConfigShrink;
         return this;
     }
-    public java.util.List<SidecarContainerConfig> getSidecarContainersConfig() {
-        return this.sidecarContainersConfig;
+    public String getSidecarContainersConfigShrink() {
+        return this.sidecarContainersConfigShrink;
     }
 
-    public CreateApplicationRequest setSlsConfigs(String slsConfigs) {
+    public CreateApplicationShrinkRequest setSlsConfigs(String slsConfigs) {
         this.slsConfigs = slsConfigs;
         return this;
     }
@@ -1016,7 +1016,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.slsConfigs;
     }
 
-    public CreateApplicationRequest setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
+    public CreateApplicationShrinkRequest setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
         this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
         return this;
     }
@@ -1024,7 +1024,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.terminationGracePeriodSeconds;
     }
 
-    public CreateApplicationRequest setTimezone(String timezone) {
+    public CreateApplicationShrinkRequest setTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
@@ -1032,7 +1032,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.timezone;
     }
 
-    public CreateApplicationRequest setTomcatConfig(String tomcatConfig) {
+    public CreateApplicationShrinkRequest setTomcatConfig(String tomcatConfig) {
         this.tomcatConfig = tomcatConfig;
         return this;
     }
@@ -1040,7 +1040,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.tomcatConfig;
     }
 
-    public CreateApplicationRequest setVSwitchId(String vSwitchId) {
+    public CreateApplicationShrinkRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
@@ -1048,7 +1048,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public CreateApplicationRequest setVpcId(String vpcId) {
+    public CreateApplicationShrinkRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
@@ -1056,7 +1056,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.vpcId;
     }
 
-    public CreateApplicationRequest setWarStartOptions(String warStartOptions) {
+    public CreateApplicationShrinkRequest setWarStartOptions(String warStartOptions) {
         this.warStartOptions = warStartOptions;
         return this;
     }
@@ -1064,7 +1064,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.warStartOptions;
     }
 
-    public CreateApplicationRequest setWebContainer(String webContainer) {
+    public CreateApplicationShrinkRequest setWebContainer(String webContainer) {
         this.webContainer = webContainer;
         return this;
     }

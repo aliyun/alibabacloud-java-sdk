@@ -136,6 +136,47 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus extends TeaModel {
+        @NameInMap("ContainerId")
+        public String containerId;
+
+        @NameInMap("ContainerStatus")
+        public String containerStatus;
+
+        @NameInMap("ImageUrl")
+        public String imageUrl;
+
+        public static DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus self = new DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus setContainerId(String containerId) {
+            this.containerId = containerId;
+            return this;
+        }
+        public String getContainerId() {
+            return this.containerId;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus setContainerStatus(String containerStatus) {
+            this.containerStatus = containerStatus;
+            return this;
+        }
+        public String getContainerStatus() {
+            return this.containerStatus;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+    }
+
     public static class DescribeApplicationInstancesResponseBodyDataInstances extends TeaModel {
         /**
          * <p>The start time of the instance creation process. Unit: milliseconds.</p>
@@ -265,6 +306,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @NameInMap("PackageVersion")
         public String packageVersion;
 
+        @NameInMap("SidecarContainersStatus")
+        public java.util.List<DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus> sidecarContainersStatus;
+
         /**
          * <p>The ID of the zone where the instance is deployed.</p>
          * 
@@ -373,6 +417,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
         public String getPackageVersion() {
             return this.packageVersion;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setSidecarContainersStatus(java.util.List<DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus> sidecarContainersStatus) {
+            this.sidecarContainersStatus = sidecarContainersStatus;
+            return this;
+        }
+        public java.util.List<DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus> getSidecarContainersStatus() {
+            return this.sidecarContainersStatus;
         }
 
         public DescribeApplicationInstancesResponseBodyDataInstances setVSwitchId(String vSwitchId) {

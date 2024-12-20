@@ -386,6 +386,206 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc extends TeaModel {
+        @NameInMap("ConfigMapId")
+        public Long configMapId;
+
+        @NameInMap("ConfigMapName")
+        public String configMapName;
+
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        public static DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc self = new DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc setConfigMapId(Long configMapId) {
+            this.configMapId = configMapId;
+            return this;
+        }
+        public Long getConfigMapId() {
+            return this.configMapId;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc setConfigMapName(String configMapName) {
+            this.configMapName = configMapName;
+            return this;
+        }
+        public String getConfigMapName() {
+            return this.configMapName;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+    }
+
+    public static class DescribeApplicationConfigResponseBodyDataSidecarContainersConfigEmptyDirDesc extends TeaModel {
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static DescribeApplicationConfigResponseBodyDataSidecarContainersConfigEmptyDirDesc build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationConfigResponseBodyDataSidecarContainersConfigEmptyDirDesc self = new DescribeApplicationConfigResponseBodyDataSidecarContainersConfigEmptyDirDesc();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfigEmptyDirDesc setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfigEmptyDirDesc setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class DescribeApplicationConfigResponseBodyDataSidecarContainersConfig extends TeaModel {
+        @NameInMap("AcrInstanceId")
+        public String acrInstanceId;
+
+        @NameInMap("Command")
+        public String command;
+
+        @NameInMap("CommandArgs")
+        public String commandArgs;
+
+        @NameInMap("ConfigMapMountDesc")
+        public java.util.List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc> configMapMountDesc;
+
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("EmptyDirDesc")
+        public java.util.List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigEmptyDirDesc> emptyDirDesc;
+
+        @NameInMap("Envs")
+        public String envs;
+
+        @NameInMap("ImageUrl")
+        public String imageUrl;
+
+        @NameInMap("Memory")
+        public Integer memory;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static DescribeApplicationConfigResponseBodyDataSidecarContainersConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationConfigResponseBodyDataSidecarContainersConfig self = new DescribeApplicationConfigResponseBodyDataSidecarContainersConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setAcrInstanceId(String acrInstanceId) {
+            this.acrInstanceId = acrInstanceId;
+            return this;
+        }
+        public String getAcrInstanceId() {
+            return this.acrInstanceId;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setCommand(String command) {
+            this.command = command;
+            return this;
+        }
+        public String getCommand() {
+            return this.command;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setCommandArgs(String commandArgs) {
+            this.commandArgs = commandArgs;
+            return this;
+        }
+        public String getCommandArgs() {
+            return this.commandArgs;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setConfigMapMountDesc(java.util.List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc> configMapMountDesc) {
+            this.configMapMountDesc = configMapMountDesc;
+            return this;
+        }
+        public java.util.List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc> getConfigMapMountDesc() {
+            return this.configMapMountDesc;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setEmptyDirDesc(java.util.List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigEmptyDirDesc> emptyDirDesc) {
+            this.emptyDirDesc = emptyDirDesc;
+            return this;
+        }
+        public java.util.List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigEmptyDirDesc> getEmptyDirDesc() {
+            return this.emptyDirDesc;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setEnvs(String envs) {
+            this.envs = envs;
+            return this;
+        }
+        public String getEnvs() {
+            return this.envs;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setMemory(Integer memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Integer getMemory() {
+            return this.memory;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class DescribeApplicationConfigResponseBodyDataTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
@@ -1062,6 +1262,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("ServiceTags")
         public java.util.Map<String, String> serviceTags;
 
+        @NameInMap("SidecarContainersConfig")
+        public java.util.List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfig> sidecarContainersConfig;
+
         /**
          * <p>The logging configurations of Log Service.</p>
          * <ul>
@@ -1700,6 +1903,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public java.util.Map<String, String> getServiceTags() {
             return this.serviceTags;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setSidecarContainersConfig(java.util.List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfig> sidecarContainersConfig) {
+            this.sidecarContainersConfig = sidecarContainersConfig;
+            return this;
+        }
+        public java.util.List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfig> getSidecarContainersConfig() {
+            return this.sidecarContainersConfig;
         }
 
         public DescribeApplicationConfigResponseBodyData setSlsConfigs(String slsConfigs) {

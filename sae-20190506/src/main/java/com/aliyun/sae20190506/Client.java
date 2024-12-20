@@ -335,13 +335,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request CreateApplicationRequest
+     * @param tmpReq CreateApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateApplicationResponse
      */
-    public CreateApplicationResponse createApplicationWithOptions(CreateApplicationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateApplicationResponse createApplicationWithOptions(CreateApplicationRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateApplicationShrinkRequest request = new CreateApplicationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sidecarContainersConfig)) {
+            request.sidecarContainersConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sidecarContainersConfig, "SidecarContainersConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acrAssumeRoleArn)) {
             query.put("AcrAssumeRoleArn", request.acrAssumeRoleArn);
@@ -580,6 +586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ConfigMapMountDesc", request.configMapMountDesc);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSidecarResourceIsolated)) {
+            body.put("EnableSidecarResourceIsolated", request.enableSidecarResourceIsolated);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.microRegistrationConfig)) {
             body.put("MicroRegistrationConfig", request.microRegistrationConfig);
         }
@@ -606,6 +616,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceTags)) {
             body.put("ServiceTags", request.serviceTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sidecarContainersConfigShrink)) {
+            body.put("SidecarContainersConfig", request.sidecarContainersConfigShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2034,13 +2048,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deploys an application.</p>
      * 
-     * @param request DeployApplicationRequest
+     * @param tmpReq DeployApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeployApplicationResponse
      */
-    public DeployApplicationResponse deployApplicationWithOptions(DeployApplicationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DeployApplicationResponse deployApplicationWithOptions(DeployApplicationRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeployApplicationShrinkRequest request = new DeployApplicationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sidecarContainersConfig)) {
+            request.sidecarContainersConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sidecarContainersConfig, "SidecarContainersConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acrAssumeRoleArn)) {
             query.put("AcrAssumeRoleArn", request.acrAssumeRoleArn);
@@ -2275,6 +2295,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ConfigMapMountDesc", request.configMapMountDesc);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSidecarResourceIsolated)) {
+            body.put("EnableSidecarResourceIsolated", request.enableSidecarResourceIsolated);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.microRegistrationConfig)) {
             body.put("MicroRegistrationConfig", request.microRegistrationConfig);
         }
@@ -2301,6 +2325,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceTags)) {
             body.put("ServiceTags", request.serviceTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sidecarContainersConfigShrink)) {
+            body.put("SidecarContainersConfig", request.sidecarContainersConfigShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3111,6 +3139,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeInstanceLogResponse describeInstanceLogWithOptions(DescribeInstanceLogRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.containerId)) {
+            query.put("ContainerId", request.containerId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }

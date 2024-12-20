@@ -3,7 +3,7 @@ package com.aliyun.sae20190506.models;
 
 import com.aliyun.tea.*;
 
-public class DeployApplicationRequest extends TeaModel {
+public class DeployApplicationShrinkRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud Resource Name (ARN) required for a RAM role to obtain images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</p>
      * 
@@ -618,7 +618,7 @@ public class DeployApplicationRequest extends TeaModel {
     public String serviceTags;
 
     @NameInMap("SidecarContainersConfig")
-    public java.util.List<SidecarContainerConfig> sidecarContainersConfig;
+    public String sidecarContainersConfigShrink;
 
     /**
      * <p>The logging configurations of Log Service.</p>
@@ -737,12 +737,12 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("WebContainer")
     public String webContainer;
 
-    public static DeployApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeployApplicationRequest self = new DeployApplicationRequest();
+    public static DeployApplicationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeployApplicationShrinkRequest self = new DeployApplicationShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeployApplicationRequest setAcrAssumeRoleArn(String acrAssumeRoleArn) {
+    public DeployApplicationShrinkRequest setAcrAssumeRoleArn(String acrAssumeRoleArn) {
         this.acrAssumeRoleArn = acrAssumeRoleArn;
         return this;
     }
@@ -750,7 +750,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.acrAssumeRoleArn;
     }
 
-    public DeployApplicationRequest setAcrInstanceId(String acrInstanceId) {
+    public DeployApplicationShrinkRequest setAcrInstanceId(String acrInstanceId) {
         this.acrInstanceId = acrInstanceId;
         return this;
     }
@@ -758,7 +758,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.acrInstanceId;
     }
 
-    public DeployApplicationRequest setAppId(String appId) {
+    public DeployApplicationShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -766,7 +766,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.appId;
     }
 
-    public DeployApplicationRequest setAssociateEip(Boolean associateEip) {
+    public DeployApplicationShrinkRequest setAssociateEip(Boolean associateEip) {
         this.associateEip = associateEip;
         return this;
     }
@@ -774,7 +774,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.associateEip;
     }
 
-    public DeployApplicationRequest setAutoEnableApplicationScalingRule(Boolean autoEnableApplicationScalingRule) {
+    public DeployApplicationShrinkRequest setAutoEnableApplicationScalingRule(Boolean autoEnableApplicationScalingRule) {
         this.autoEnableApplicationScalingRule = autoEnableApplicationScalingRule;
         return this;
     }
@@ -782,7 +782,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.autoEnableApplicationScalingRule;
     }
 
-    public DeployApplicationRequest setBatchWaitTime(Integer batchWaitTime) {
+    public DeployApplicationShrinkRequest setBatchWaitTime(Integer batchWaitTime) {
         this.batchWaitTime = batchWaitTime;
         return this;
     }
@@ -790,7 +790,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.batchWaitTime;
     }
 
-    public DeployApplicationRequest setChangeOrderDesc(String changeOrderDesc) {
+    public DeployApplicationShrinkRequest setChangeOrderDesc(String changeOrderDesc) {
         this.changeOrderDesc = changeOrderDesc;
         return this;
     }
@@ -798,7 +798,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.changeOrderDesc;
     }
 
-    public DeployApplicationRequest setCommand(String command) {
+    public DeployApplicationShrinkRequest setCommand(String command) {
         this.command = command;
         return this;
     }
@@ -806,7 +806,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.command;
     }
 
-    public DeployApplicationRequest setCommandArgs(String commandArgs) {
+    public DeployApplicationShrinkRequest setCommandArgs(String commandArgs) {
         this.commandArgs = commandArgs;
         return this;
     }
@@ -814,7 +814,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.commandArgs;
     }
 
-    public DeployApplicationRequest setConfigMapMountDesc(String configMapMountDesc) {
+    public DeployApplicationShrinkRequest setConfigMapMountDesc(String configMapMountDesc) {
         this.configMapMountDesc = configMapMountDesc;
         return this;
     }
@@ -822,7 +822,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.configMapMountDesc;
     }
 
-    public DeployApplicationRequest setCpu(Integer cpu) {
+    public DeployApplicationShrinkRequest setCpu(Integer cpu) {
         this.cpu = cpu;
         return this;
     }
@@ -830,7 +830,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.cpu;
     }
 
-    public DeployApplicationRequest setCustomHostAlias(String customHostAlias) {
+    public DeployApplicationShrinkRequest setCustomHostAlias(String customHostAlias) {
         this.customHostAlias = customHostAlias;
         return this;
     }
@@ -838,7 +838,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.customHostAlias;
     }
 
-    public DeployApplicationRequest setDeploy(String deploy) {
+    public DeployApplicationShrinkRequest setDeploy(String deploy) {
         this.deploy = deploy;
         return this;
     }
@@ -846,7 +846,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.deploy;
     }
 
-    public DeployApplicationRequest setDotnet(String dotnet) {
+    public DeployApplicationShrinkRequest setDotnet(String dotnet) {
         this.dotnet = dotnet;
         return this;
     }
@@ -854,7 +854,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.dotnet;
     }
 
-    public DeployApplicationRequest setEdasContainerVersion(String edasContainerVersion) {
+    public DeployApplicationShrinkRequest setEdasContainerVersion(String edasContainerVersion) {
         this.edasContainerVersion = edasContainerVersion;
         return this;
     }
@@ -862,7 +862,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.edasContainerVersion;
     }
 
-    public DeployApplicationRequest setEnableAhas(String enableAhas) {
+    public DeployApplicationShrinkRequest setEnableAhas(String enableAhas) {
         this.enableAhas = enableAhas;
         return this;
     }
@@ -870,7 +870,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.enableAhas;
     }
 
-    public DeployApplicationRequest setEnableCpuBurst(Boolean enableCpuBurst) {
+    public DeployApplicationShrinkRequest setEnableCpuBurst(Boolean enableCpuBurst) {
         this.enableCpuBurst = enableCpuBurst;
         return this;
     }
@@ -878,7 +878,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.enableCpuBurst;
     }
 
-    public DeployApplicationRequest setEnableGreyTagRoute(Boolean enableGreyTagRoute) {
+    public DeployApplicationShrinkRequest setEnableGreyTagRoute(Boolean enableGreyTagRoute) {
         this.enableGreyTagRoute = enableGreyTagRoute;
         return this;
     }
@@ -886,7 +886,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.enableGreyTagRoute;
     }
 
-    public DeployApplicationRequest setEnableNewArms(Boolean enableNewArms) {
+    public DeployApplicationShrinkRequest setEnableNewArms(Boolean enableNewArms) {
         this.enableNewArms = enableNewArms;
         return this;
     }
@@ -894,7 +894,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.enableNewArms;
     }
 
-    public DeployApplicationRequest setEnableSidecarResourceIsolated(Boolean enableSidecarResourceIsolated) {
+    public DeployApplicationShrinkRequest setEnableSidecarResourceIsolated(Boolean enableSidecarResourceIsolated) {
         this.enableSidecarResourceIsolated = enableSidecarResourceIsolated;
         return this;
     }
@@ -902,7 +902,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.enableSidecarResourceIsolated;
     }
 
-    public DeployApplicationRequest setEnvs(String envs) {
+    public DeployApplicationShrinkRequest setEnvs(String envs) {
         this.envs = envs;
         return this;
     }
@@ -910,7 +910,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.envs;
     }
 
-    public DeployApplicationRequest setImagePullSecrets(String imagePullSecrets) {
+    public DeployApplicationShrinkRequest setImagePullSecrets(String imagePullSecrets) {
         this.imagePullSecrets = imagePullSecrets;
         return this;
     }
@@ -918,7 +918,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.imagePullSecrets;
     }
 
-    public DeployApplicationRequest setImageUrl(String imageUrl) {
+    public DeployApplicationShrinkRequest setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
@@ -926,7 +926,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.imageUrl;
     }
 
-    public DeployApplicationRequest setJarStartArgs(String jarStartArgs) {
+    public DeployApplicationShrinkRequest setJarStartArgs(String jarStartArgs) {
         this.jarStartArgs = jarStartArgs;
         return this;
     }
@@ -934,7 +934,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.jarStartArgs;
     }
 
-    public DeployApplicationRequest setJarStartOptions(String jarStartOptions) {
+    public DeployApplicationShrinkRequest setJarStartOptions(String jarStartOptions) {
         this.jarStartOptions = jarStartOptions;
         return this;
     }
@@ -942,7 +942,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.jarStartOptions;
     }
 
-    public DeployApplicationRequest setJdk(String jdk) {
+    public DeployApplicationShrinkRequest setJdk(String jdk) {
         this.jdk = jdk;
         return this;
     }
@@ -950,7 +950,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.jdk;
     }
 
-    public DeployApplicationRequest setKafkaConfigs(String kafkaConfigs) {
+    public DeployApplicationShrinkRequest setKafkaConfigs(String kafkaConfigs) {
         this.kafkaConfigs = kafkaConfigs;
         return this;
     }
@@ -958,7 +958,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.kafkaConfigs;
     }
 
-    public DeployApplicationRequest setLiveness(String liveness) {
+    public DeployApplicationShrinkRequest setLiveness(String liveness) {
         this.liveness = liveness;
         return this;
     }
@@ -966,7 +966,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.liveness;
     }
 
-    public DeployApplicationRequest setMemory(Integer memory) {
+    public DeployApplicationShrinkRequest setMemory(Integer memory) {
         this.memory = memory;
         return this;
     }
@@ -974,7 +974,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.memory;
     }
 
-    public DeployApplicationRequest setMicroRegistration(String microRegistration) {
+    public DeployApplicationShrinkRequest setMicroRegistration(String microRegistration) {
         this.microRegistration = microRegistration;
         return this;
     }
@@ -982,7 +982,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.microRegistration;
     }
 
-    public DeployApplicationRequest setMicroRegistrationConfig(String microRegistrationConfig) {
+    public DeployApplicationShrinkRequest setMicroRegistrationConfig(String microRegistrationConfig) {
         this.microRegistrationConfig = microRegistrationConfig;
         return this;
     }
@@ -990,7 +990,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.microRegistrationConfig;
     }
 
-    public DeployApplicationRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
+    public DeployApplicationShrinkRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
         this.minReadyInstanceRatio = minReadyInstanceRatio;
         return this;
     }
@@ -998,7 +998,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.minReadyInstanceRatio;
     }
 
-    public DeployApplicationRequest setMinReadyInstances(Integer minReadyInstances) {
+    public DeployApplicationShrinkRequest setMinReadyInstances(Integer minReadyInstances) {
         this.minReadyInstances = minReadyInstances;
         return this;
     }
@@ -1006,7 +1006,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.minReadyInstances;
     }
 
-    public DeployApplicationRequest setMountDesc(String mountDesc) {
+    public DeployApplicationShrinkRequest setMountDesc(String mountDesc) {
         this.mountDesc = mountDesc;
         return this;
     }
@@ -1014,7 +1014,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.mountDesc;
     }
 
-    public DeployApplicationRequest setMountHost(String mountHost) {
+    public DeployApplicationShrinkRequest setMountHost(String mountHost) {
         this.mountHost = mountHost;
         return this;
     }
@@ -1022,7 +1022,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.mountHost;
     }
 
-    public DeployApplicationRequest setNasConfigs(String nasConfigs) {
+    public DeployApplicationShrinkRequest setNasConfigs(String nasConfigs) {
         this.nasConfigs = nasConfigs;
         return this;
     }
@@ -1030,7 +1030,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.nasConfigs;
     }
 
-    public DeployApplicationRequest setNasId(String nasId) {
+    public DeployApplicationShrinkRequest setNasId(String nasId) {
         this.nasId = nasId;
         return this;
     }
@@ -1038,7 +1038,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.nasId;
     }
 
-    public DeployApplicationRequest setOidcRoleName(String oidcRoleName) {
+    public DeployApplicationShrinkRequest setOidcRoleName(String oidcRoleName) {
         this.oidcRoleName = oidcRoleName;
         return this;
     }
@@ -1046,7 +1046,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.oidcRoleName;
     }
 
-    public DeployApplicationRequest setOssAkId(String ossAkId) {
+    public DeployApplicationShrinkRequest setOssAkId(String ossAkId) {
         this.ossAkId = ossAkId;
         return this;
     }
@@ -1054,7 +1054,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.ossAkId;
     }
 
-    public DeployApplicationRequest setOssAkSecret(String ossAkSecret) {
+    public DeployApplicationShrinkRequest setOssAkSecret(String ossAkSecret) {
         this.ossAkSecret = ossAkSecret;
         return this;
     }
@@ -1062,7 +1062,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.ossAkSecret;
     }
 
-    public DeployApplicationRequest setOssMountDescs(String ossMountDescs) {
+    public DeployApplicationShrinkRequest setOssMountDescs(String ossMountDescs) {
         this.ossMountDescs = ossMountDescs;
         return this;
     }
@@ -1070,7 +1070,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.ossMountDescs;
     }
 
-    public DeployApplicationRequest setPackageType(String packageType) {
+    public DeployApplicationShrinkRequest setPackageType(String packageType) {
         this.packageType = packageType;
         return this;
     }
@@ -1078,7 +1078,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.packageType;
     }
 
-    public DeployApplicationRequest setPackageUrl(String packageUrl) {
+    public DeployApplicationShrinkRequest setPackageUrl(String packageUrl) {
         this.packageUrl = packageUrl;
         return this;
     }
@@ -1086,7 +1086,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.packageUrl;
     }
 
-    public DeployApplicationRequest setPackageVersion(String packageVersion) {
+    public DeployApplicationShrinkRequest setPackageVersion(String packageVersion) {
         this.packageVersion = packageVersion;
         return this;
     }
@@ -1094,7 +1094,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.packageVersion;
     }
 
-    public DeployApplicationRequest setPhp(String php) {
+    public DeployApplicationShrinkRequest setPhp(String php) {
         this.php = php;
         return this;
     }
@@ -1102,7 +1102,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.php;
     }
 
-    public DeployApplicationRequest setPhpArmsConfigLocation(String phpArmsConfigLocation) {
+    public DeployApplicationShrinkRequest setPhpArmsConfigLocation(String phpArmsConfigLocation) {
         this.phpArmsConfigLocation = phpArmsConfigLocation;
         return this;
     }
@@ -1110,7 +1110,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.phpArmsConfigLocation;
     }
 
-    public DeployApplicationRequest setPhpConfig(String phpConfig) {
+    public DeployApplicationShrinkRequest setPhpConfig(String phpConfig) {
         this.phpConfig = phpConfig;
         return this;
     }
@@ -1118,7 +1118,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.phpConfig;
     }
 
-    public DeployApplicationRequest setPhpConfigLocation(String phpConfigLocation) {
+    public DeployApplicationShrinkRequest setPhpConfigLocation(String phpConfigLocation) {
         this.phpConfigLocation = phpConfigLocation;
         return this;
     }
@@ -1126,7 +1126,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.phpConfigLocation;
     }
 
-    public DeployApplicationRequest setPostStart(String postStart) {
+    public DeployApplicationShrinkRequest setPostStart(String postStart) {
         this.postStart = postStart;
         return this;
     }
@@ -1134,7 +1134,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.postStart;
     }
 
-    public DeployApplicationRequest setPreStop(String preStop) {
+    public DeployApplicationShrinkRequest setPreStop(String preStop) {
         this.preStop = preStop;
         return this;
     }
@@ -1142,7 +1142,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.preStop;
     }
 
-    public DeployApplicationRequest setPvtzDiscoverySvc(String pvtzDiscoverySvc) {
+    public DeployApplicationShrinkRequest setPvtzDiscoverySvc(String pvtzDiscoverySvc) {
         this.pvtzDiscoverySvc = pvtzDiscoverySvc;
         return this;
     }
@@ -1150,7 +1150,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.pvtzDiscoverySvc;
     }
 
-    public DeployApplicationRequest setPython(String python) {
+    public DeployApplicationShrinkRequest setPython(String python) {
         this.python = python;
         return this;
     }
@@ -1158,7 +1158,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.python;
     }
 
-    public DeployApplicationRequest setPythonModules(String pythonModules) {
+    public DeployApplicationShrinkRequest setPythonModules(String pythonModules) {
         this.pythonModules = pythonModules;
         return this;
     }
@@ -1166,7 +1166,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.pythonModules;
     }
 
-    public DeployApplicationRequest setReadiness(String readiness) {
+    public DeployApplicationShrinkRequest setReadiness(String readiness) {
         this.readiness = readiness;
         return this;
     }
@@ -1174,7 +1174,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.readiness;
     }
 
-    public DeployApplicationRequest setReplicas(Integer replicas) {
+    public DeployApplicationShrinkRequest setReplicas(Integer replicas) {
         this.replicas = replicas;
         return this;
     }
@@ -1182,7 +1182,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.replicas;
     }
 
-    public DeployApplicationRequest setSecretMountDesc(String secretMountDesc) {
+    public DeployApplicationShrinkRequest setSecretMountDesc(String secretMountDesc) {
         this.secretMountDesc = secretMountDesc;
         return this;
     }
@@ -1190,7 +1190,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.secretMountDesc;
     }
 
-    public DeployApplicationRequest setSecurityGroupId(String securityGroupId) {
+    public DeployApplicationShrinkRequest setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
@@ -1198,7 +1198,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.securityGroupId;
     }
 
-    public DeployApplicationRequest setServiceTags(String serviceTags) {
+    public DeployApplicationShrinkRequest setServiceTags(String serviceTags) {
         this.serviceTags = serviceTags;
         return this;
     }
@@ -1206,15 +1206,15 @@ public class DeployApplicationRequest extends TeaModel {
         return this.serviceTags;
     }
 
-    public DeployApplicationRequest setSidecarContainersConfig(java.util.List<SidecarContainerConfig> sidecarContainersConfig) {
-        this.sidecarContainersConfig = sidecarContainersConfig;
+    public DeployApplicationShrinkRequest setSidecarContainersConfigShrink(String sidecarContainersConfigShrink) {
+        this.sidecarContainersConfigShrink = sidecarContainersConfigShrink;
         return this;
     }
-    public java.util.List<SidecarContainerConfig> getSidecarContainersConfig() {
-        return this.sidecarContainersConfig;
+    public String getSidecarContainersConfigShrink() {
+        return this.sidecarContainersConfigShrink;
     }
 
-    public DeployApplicationRequest setSlsConfigs(String slsConfigs) {
+    public DeployApplicationShrinkRequest setSlsConfigs(String slsConfigs) {
         this.slsConfigs = slsConfigs;
         return this;
     }
@@ -1222,7 +1222,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.slsConfigs;
     }
 
-    public DeployApplicationRequest setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
+    public DeployApplicationShrinkRequest setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
         this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
         return this;
     }
@@ -1230,7 +1230,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.terminationGracePeriodSeconds;
     }
 
-    public DeployApplicationRequest setTimezone(String timezone) {
+    public DeployApplicationShrinkRequest setTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
@@ -1238,7 +1238,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.timezone;
     }
 
-    public DeployApplicationRequest setTomcatConfig(String tomcatConfig) {
+    public DeployApplicationShrinkRequest setTomcatConfig(String tomcatConfig) {
         this.tomcatConfig = tomcatConfig;
         return this;
     }
@@ -1246,7 +1246,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.tomcatConfig;
     }
 
-    public DeployApplicationRequest setUpdateStrategy(String updateStrategy) {
+    public DeployApplicationShrinkRequest setUpdateStrategy(String updateStrategy) {
         this.updateStrategy = updateStrategy;
         return this;
     }
@@ -1254,7 +1254,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.updateStrategy;
     }
 
-    public DeployApplicationRequest setVSwitchId(String vSwitchId) {
+    public DeployApplicationShrinkRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
@@ -1262,7 +1262,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public DeployApplicationRequest setWarStartOptions(String warStartOptions) {
+    public DeployApplicationShrinkRequest setWarStartOptions(String warStartOptions) {
         this.warStartOptions = warStartOptions;
         return this;
     }
@@ -1270,7 +1270,7 @@ public class DeployApplicationRequest extends TeaModel {
         return this.warStartOptions;
     }
 
-    public DeployApplicationRequest setWebContainer(String webContainer) {
+    public DeployApplicationShrinkRequest setWebContainer(String webContainer) {
         this.webContainer = webContainer;
         return this;
     }
