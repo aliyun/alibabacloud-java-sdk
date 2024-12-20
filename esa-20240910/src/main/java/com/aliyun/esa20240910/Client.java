@@ -8787,68 +8787,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a custom list.</p>
-     * 
-     * @param tmpReq UpdateListRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UpdateListResponse
-     */
-    public UpdateListResponse updateListWithOptions(UpdateListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        UpdateListShrinkRequest request = new UpdateListShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.items)) {
-            request.itemsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.items, "Items", "json");
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
-            body.put("Description", request.description);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            body.put("Id", request.id);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.itemsShrink)) {
-            body.put("Items", request.itemsShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            body.put("Name", request.name);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateList"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateListResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Updates a custom list.</p>
-     * 
-     * @param request UpdateListRequest
-     * @return UpdateListResponse
-     */
-    public UpdateListResponse updateList(UpdateListRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateListWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Enables or disables IP convergence.</p>
      * 
      * @param request UpdateOriginProtectionRequest
