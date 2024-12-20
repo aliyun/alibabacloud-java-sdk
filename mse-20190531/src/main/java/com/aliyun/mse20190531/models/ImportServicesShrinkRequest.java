@@ -45,6 +45,13 @@ public class ImportServicesShrinkRequest extends TeaModel {
     public String serviceListShrink;
 
     /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("SourceId")
+    public Long sourceId;
+
+    /**
      * <p>The service source. Valid values:</p>
      * <ul>
      * <li>MSE: MSE Nacos instance</li>
@@ -131,6 +138,14 @@ public class ImportServicesShrinkRequest extends TeaModel {
     }
     public String getServiceListShrink() {
         return this.serviceListShrink;
+    }
+
+    public ImportServicesShrinkRequest setSourceId(Long sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    public Long getSourceId() {
+        return this.sourceId;
     }
 
     public ImportServicesShrinkRequest setSourceType(String sourceType) {

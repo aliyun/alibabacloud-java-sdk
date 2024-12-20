@@ -7412,6 +7412,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServiceList", request.serviceListShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
             query.put("SourceType", request.sourceType);
         }
@@ -10918,6 +10922,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
             query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {

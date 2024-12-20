@@ -149,6 +149,9 @@ public class PullServicesResponseBody extends TeaModel {
         @NameInMap("SourceId")
         public String sourceId;
 
+        @NameInMap("SourceIdList")
+        public java.util.List<Long> sourceIdList;
+
         /**
          * <p>The type of the service source.</p>
          * 
@@ -193,6 +196,14 @@ public class PullServicesResponseBody extends TeaModel {
         }
         public String getSourceId() {
             return this.sourceId;
+        }
+
+        public PullServicesResponseBodyDataServices setSourceIdList(java.util.List<Long> sourceIdList) {
+            this.sourceIdList = sourceIdList;
+            return this;
+        }
+        public java.util.List<Long> getSourceIdList() {
+            return this.sourceIdList;
         }
 
         public PullServicesResponseBodyDataServices setSourceType(String sourceType) {

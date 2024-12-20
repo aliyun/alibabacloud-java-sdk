@@ -45,6 +45,13 @@ public class ImportServicesRequest extends TeaModel {
     public java.util.List<ImportServicesRequestServiceList> serviceList;
 
     /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("SourceId")
+    public Long sourceId;
+
+    /**
      * <p>The service source. Valid values:</p>
      * <ul>
      * <li>MSE: MSE Nacos instance</li>
@@ -131,6 +138,14 @@ public class ImportServicesRequest extends TeaModel {
     }
     public java.util.List<ImportServicesRequestServiceList> getServiceList() {
         return this.serviceList;
+    }
+
+    public ImportServicesRequest setSourceId(Long sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    public Long getSourceId() {
+        return this.sourceId;
     }
 
     public ImportServicesRequest setSourceType(String sourceType) {
