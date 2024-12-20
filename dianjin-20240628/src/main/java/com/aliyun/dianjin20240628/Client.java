@@ -91,6 +91,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建外呼会话</p>
+     * 
+     * @param request CreateDialogRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDialogResponse
+     */
+    public CreateDialogResponse createDialogWithOptions(String workspaceId, CreateDialogRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
+            body.put("channel", request.channel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metaData)) {
+            body.put("metaData", request.metaData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playCode)) {
+            body.put("playCode", request.playCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qaLibraryList)) {
+            body.put("qaLibraryList", request.qaLibraryList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("requestId", request.requestId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDialog"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/virtualHuman/dialog/create"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDialogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建外呼会话</p>
+     * 
+     * @param request CreateDialogRequest
+     * @return CreateDialogResponse
+     */
+    public CreateDialogResponse createDialog(String workspaceId, CreateDialogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createDialogWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建财报总结任务</p>
      * 
      * @param request CreateDocsSummaryTaskRequest
@@ -614,6 +677,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>根据文档解析问答QA</p>
+     * 
+     * @param request GenDocQaResultRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenDocQaResultResponse
+     */
+    public GenDocQaResultResponse genDocQaResultWithOptions(String workspaceId, GenDocQaResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.docId)) {
+            body.put("docId", request.docId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.libraryId)) {
+            body.put("libraryId", request.libraryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("requestId", request.requestId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenDocQaResult"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/virtualHuman/qa/parse"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenDocQaResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据文档解析问答QA</p>
+     * 
+     * @param request GenDocQaResultRequest
+     * @return GenDocQaResultResponse
+     */
+    public GenDocQaResultResponse genDocQaResult(String workspaceId, GenDocQaResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.genDocQaResultWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取app配置</p>
      * 
      * @param headers map
@@ -647,6 +765,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getAppConfigWithOptions(workspaceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取问答结果</p>
+     * 
+     * @param request GetChatQuestionRespRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetChatQuestionRespResponse
+     */
+    public GetChatQuestionRespResponse getChatQuestionRespWithOptions(String workspaceId, GetChatQuestionRespRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchId)) {
+            body.put("batchId", request.batchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("sessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetChatQuestionResp"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/virtualHuman/chat/query"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetChatQuestionRespResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取问答结果</p>
+     * 
+     * @param request GetChatQuestionRespRequest
+     * @return GetChatQuestionRespResponse
+     */
+    public GetChatQuestionRespResponse getChatQuestionResp(String workspaceId, GetChatQuestionRespRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getChatQuestionRespWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -1819,6 +1988,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>提交问题列表</p>
+     * 
+     * @param request SubmitChatQuestionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitChatQuestionResponse
+     */
+    public SubmitChatQuestionResponse submitChatQuestionWithOptions(String workspaceId, SubmitChatQuestionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gmtService)) {
+            body.put("gmtService", request.gmtService);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.liveScriptContent)) {
+            body.put("liveScriptContent", request.liveScriptContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.openSmallTalk)) {
+            body.put("openSmallTalk", request.openSmallTalk);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.questionList)) {
+            body.put("questionList", request.questionList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("requestId", request.requestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("sessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitChatQuestion"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/virtualHuman/chat/submit"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitChatQuestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交问题列表</p>
+     * 
+     * @param request SubmitChatQuestionRequest
+     * @return SubmitChatQuestionResponse
+     */
+    public SubmitChatQuestionResponse submitChatQuestion(String workspaceId, SubmitChatQuestionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitChatQuestionWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>更新文档</p>
      * 
      * @param request UpdateDocumentRequest
@@ -1933,6 +2169,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateLibraryWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新QA问答库</p>
+     * 
+     * @param request UpdateQaLibraryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateQaLibraryResponse
+     */
+    public UpdateQaLibraryResponse updateQaLibraryWithOptions(String workspaceId, UpdateQaLibraryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.parseQaResults)) {
+            body.put("parseQaResults", request.parseQaResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qaLibraryId)) {
+            body.put("qaLibraryId", request.qaLibraryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("requestId", request.requestId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateQaLibrary"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/virtualHuman/qa/upload"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateQaLibraryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新QA问答库</p>
+     * 
+     * @param request UpdateQaLibraryRequest
+     * @return UpdateQaLibraryResponse
+     */
+    public UpdateQaLibraryResponse updateQaLibrary(String workspaceId, UpdateQaLibraryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateQaLibraryWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
