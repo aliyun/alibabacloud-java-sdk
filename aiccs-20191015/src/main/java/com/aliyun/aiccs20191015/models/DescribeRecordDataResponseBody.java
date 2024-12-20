@@ -4,21 +4,45 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1004849****</p>
+     */
     @NameInMap("Acid")
     public String acid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1212****</p>
+     */
     @NameInMap("AgentId")
     public String agentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https://****</p>
+     */
     @NameInMap("OssLink")
     public String ossLink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

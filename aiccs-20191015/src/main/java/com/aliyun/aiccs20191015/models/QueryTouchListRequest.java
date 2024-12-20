@@ -10,12 +10,24 @@ public class QueryTouchListRequest extends TeaModel {
     @NameInMap("ChannelType")
     public java.util.List<Integer> channelType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1614600500000</p>
+     */
     @NameInMap("CloseTimeEnd")
     public Long closeTimeEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1614600400000</p>
+     */
     @NameInMap("CloseTimeStart")
     public Long closeTimeStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -28,12 +40,26 @@ public class QueryTouchListRequest extends TeaModel {
     @NameInMap("EvaluationStatus")
     public java.util.List<Integer> evaluationStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1614599400000</p>
+     */
     @NameInMap("FirstTimeEnd")
     public Long firstTimeEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1614596400000</p>
+     */
     @NameInMap("FirstTimeStart")
     public Long firstTimeStart;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre-cn-***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -43,6 +69,10 @@ public class QueryTouchListRequest extends TeaModel {
     @NameInMap("MemberName")
     public java.util.List<String> memberName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

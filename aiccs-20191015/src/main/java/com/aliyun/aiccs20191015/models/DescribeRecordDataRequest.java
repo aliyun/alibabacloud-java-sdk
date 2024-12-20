@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordDataRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2235****</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BUC_TYPE</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1004849****</p>
+     */
     @NameInMap("Acid")
     public String acid;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aiccs</p>
+     */
     @NameInMap("ProdCode")
     public String prodCode;
 
@@ -25,6 +41,10 @@ public class DescribeRecordDataRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("SecLevel")
     public Integer secLevel;
 

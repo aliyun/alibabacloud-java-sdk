@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QueryTouchListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>865658FD-80DE-5D49-ABEB-F3CC9863F4F1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ResultData")
     public QueryTouchListResponseBodyResultData resultData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,30 +81,66 @@ public class QueryTouchListResponseBody extends TeaModel {
     }
 
     public static class QueryTouchListResponseBodyResultDataDataExtAttrs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>187****0000</p>
+         */
         @NameInMap("Ani")
         public String ani;
 
+        /**
+         * <strong>example:</strong>
+         * <p>05712688****</p>
+         */
         @NameInMap("Dnis")
         public String dnis;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("EvaluationLevel")
         public Integer evaluationLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EvaluationScore")
         public Integer evaluationScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("EvaluationSolution")
         public Integer evaluationSolution;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EvaluationStatus")
         public Integer evaluationStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OnlineJoinRespInterval")
         public Integer onlineJoinRespInterval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OnlineSessionSource")
         public Integer onlineSessionSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>05712688****</p>
+         */
         @NameInMap("OutCallRouteNumber")
         public String outCallRouteNumber;
 
@@ -172,21 +224,41 @@ public class QueryTouchListResponseBody extends TeaModel {
     }
 
     public static class QueryTouchListResponseBodyResultDataData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>905</p>
+         */
         @NameInMap("BuId")
         public Long buId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4f8807a9de024507a3090b5b66a8****</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ChannelType")
         public Integer channelType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1611207976000</p>
+         */
         @NameInMap("CloseTime")
         public Long closeTime;
 
         @NameInMap("CommonQueueName")
         public String commonQueueName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("DepId")
         public Long depId;
 
@@ -196,63 +268,139 @@ public class QueryTouchListResponseBody extends TeaModel {
         @NameInMap("ExtAttrsString")
         public java.util.Map<String, ?> extAttrsString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("Feedback")
         public String feedback;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1611209971000</p>
+         */
         @NameInMap("FirstTime")
         public Long firstTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6400665****</p>
+         */
         @NameInMap("FromId")
         public Long fromId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1611209971000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1611207979000</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6400665****</p>
+         */
         @NameInMap("MemberId")
         public Long memberId;
 
         @NameInMap("MemberName")
         public String memberName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ParentTouchId")
         public Long parentTouchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("QueueId")
         public Long queueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>67****</p>
+         */
         @NameInMap("ServicerId")
         public Long servicerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13900001234</p>
+         */
         @NameInMap("ServicerName")
         public String servicerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("SwitchUser")
         public String switchUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>678026</p>
+         */
         @NameInMap("ToId")
         public Long toId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TouchContent")
         public String touchContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TouchEndReason")
         public Integer touchEndReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1386****</p>
+         */
         @NameInMap("TouchId")
         public String touchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("TouchTime")
         public String touchTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TouchType")
         public Integer touchType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1386****</p>
+         */
         @NameInMap("UserTouchId")
         public Long userTouchId;
 
@@ -488,27 +636,55 @@ public class QueryTouchListResponseBody extends TeaModel {
     }
 
     public static class QueryTouchListResponseBodyResultData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         @NameInMap("Data")
         public java.util.List<QueryTouchListResponseBodyResultDataData> data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Empty")
         public Boolean empty;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NextPage")
         public Integer nextPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("OnePageSize")
         public Integer onePageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("PreviousPage")
         public Integer previousPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("TotalPage")
         public Integer totalPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalResults")
         public Integer totalResults;
 

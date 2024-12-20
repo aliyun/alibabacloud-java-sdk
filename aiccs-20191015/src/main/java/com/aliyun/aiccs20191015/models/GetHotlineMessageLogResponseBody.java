@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineMessageLogResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<GetHotlineMessageLogResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,41 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
     }
 
     public static class GetHotlineMessageLogResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100****2077</p>
+         */
         @NameInMap("Acid")
         public String acid;
 
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1623738027480</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11deca999****</p>
+         */
         @NameInMap("Mid")
         public String mid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SenderType")
         public Integer senderType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1623738026460</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

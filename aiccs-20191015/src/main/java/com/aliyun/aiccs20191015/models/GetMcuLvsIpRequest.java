@@ -4,6 +4,12 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetMcuLvsIpRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

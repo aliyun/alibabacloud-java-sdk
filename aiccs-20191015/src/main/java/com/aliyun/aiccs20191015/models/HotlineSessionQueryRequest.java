@@ -4,36 +4,60 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class HotlineSessionQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>7719786****</p>
+     */
     @NameInMap("Acid")
     public String acid;
 
     @NameInMap("AcidList")
     public java.util.List<String> acidList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("CallResult")
     public String callResult;
 
     @NameInMap("CallResultList")
     public java.util.List<String> callResultList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CallType")
     public Integer callType;
 
     @NameInMap("CallTypeList")
     public java.util.List<Integer> callTypeList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>135615****</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
     @NameInMap("CalledNumberList")
     public java.util.List<String> calledNumberList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>057177****</p>
+     */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
     @NameInMap("CallingNumberList")
     public java.util.List<String> callingNumberList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
@@ -43,12 +67,26 @@ public class HotlineSessionQueryRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acc1c58dab4a4dd280e3813c66</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre-cn-***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7856****</p>
+     */
     @NameInMap("MemberId")
     public String memberId;
 
@@ -58,24 +96,52 @@ public class HotlineSessionQueryRequest extends TeaModel {
     @NameInMap("MemberName")
     public String memberName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("Params")
     public String params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>161482972</p>
+     */
     @NameInMap("QueryEndTime")
     public Long queryEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>161482872</p>
+     */
     @NameInMap("QueryStartTime")
     public Long queryStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>555555</p>
+     */
     @NameInMap("ServicerId")
     public String servicerId;
 

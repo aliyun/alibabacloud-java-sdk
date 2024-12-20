@@ -4,30 +4,62 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class StartMicroOutboundRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>223457****</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BUC_TYPE</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aliyun</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0571456****</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1367123****</p>
+     */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>outBound_Call</p>
+     */
     @NameInMap("CommandCode")
     public String commandCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;caseId&quot;:23232****}</p>
+     */
     @NameInMap("ExtInfo")
     public String extInfo;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aiccs</p>
+     */
     @NameInMap("ProdCode")
     public String prodCode;
 

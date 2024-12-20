@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineCallActionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetHotlineCallActionResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE339D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,54 +81,110 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
     }
 
     public static class GetHotlineCallActionResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8999****</p>
+         */
         @NameInMap("ActionId")
         public Long actionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2367****</p>
+         */
         @NameInMap("BuId")
         public Long buId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1122****</p>
+         */
         @NameInMap("CalloutId")
         public Long calloutId;
 
         @NameInMap("CalloutName")
         public String calloutName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1138902****</p>
+         */
         @NameInMap("CaseId")
         public Long caseId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2377****</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ChannelType")
         public Long channelType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1223****</p>
+         */
         @NameInMap("DepId")
         public Long depId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsTransfer")
         public String isTransfer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7856876****</p>
+         */
         @NameInMap("MemberId")
         public Long memberId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8900****</p>
+         */
         @NameInMap("MemberList")
         public String memberList;
 
         @NameInMap("MemberName")
         public String memberName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1332****</p>
+         */
         @NameInMap("ServicerId")
         public Long servicerId;
 
         @NameInMap("ServicerName")
         public String servicerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3423****</p>
+         */
         @NameInMap("SubTouchId")
         public Long subTouchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345****</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2235****</p>
+         */
         @NameInMap("TouchId")
         public Long touchId;
 

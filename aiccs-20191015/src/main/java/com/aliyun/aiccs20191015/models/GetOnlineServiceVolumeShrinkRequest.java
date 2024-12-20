@@ -7,36 +7,74 @@ public class GetOnlineServiceVolumeShrinkRequest extends TeaModel {
     @NameInMap("AgentIds")
     public String agentIdsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("DepIds")
     public String depIdsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1617761765000</p>
+     */
     @NameInMap("EndDate")
     public Long endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ExistAgentGrouping")
     public Boolean existAgentGrouping;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ExistDepartmentGrouping")
     public Boolean existDepartmentGrouping;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ExistSkillGroupGrouping")
     public Boolean existSkillGroupGrouping;
 
     @NameInMap("GroupIds")
     public String groupIdsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre-cn-***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1615083365000</p>
+     */
     @NameInMap("StartDate")
     public Long startDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>minute</p>
+     */
     @NameInMap("TimeLatitudeType")
     public String timeLatitudeType;
 

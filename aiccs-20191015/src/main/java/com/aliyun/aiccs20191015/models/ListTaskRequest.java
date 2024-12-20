@@ -7,9 +7,17 @@ public class ListTaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -22,6 +30,10 @@ public class ListTaskRequest extends TeaModel {
     @NameInMap("RobotName")
     public String robotName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>STOP</p>
+     */
     @NameInMap("Status")
     public String status;
 

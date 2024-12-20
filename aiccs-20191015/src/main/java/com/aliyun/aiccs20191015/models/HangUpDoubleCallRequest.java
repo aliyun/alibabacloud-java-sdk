@@ -4,9 +4,17 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class HangUpDoubleCallRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>68255155****</p>
+     */
     @NameInMap("Acid")
     public String acid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre-cn-***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

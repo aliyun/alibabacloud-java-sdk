@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListAiccsRobotResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListAiccsRobotResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -71,12 +87,20 @@ public class ListAiccsRobotResponseBody extends TeaModel {
         @NameInMap("AtSence")
         public String atSence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("RobotName")
         public String robotName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
+         */
         @NameInMap("RobotType")
         public String robotType;
 

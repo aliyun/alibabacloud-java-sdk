@@ -4,12 +4,21 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class EditQualityProjectRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AnalysisIds")
     public java.util.List<Long> analysisIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChannelTouchType")
     public java.util.List<Integer> channelTouchType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CheckFreqType")
     public Integer checkFreqType;
 
@@ -19,18 +28,33 @@ public class EditQualityProjectRequest extends TeaModel {
     @NameInMap("GroupList")
     public java.util.List<Long> groupList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectVersion")
     public Integer projectVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScopeType")
     public Integer scopeType;
 

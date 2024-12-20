@@ -4,24 +4,54 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineCallActionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;time&quot;:1}</p>
+     */
     @NameInMap("Acc")
     public String acc;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Act")
     public Integer act;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;name&quot;:123}</p>
+     */
     @NameInMap("Biz")
     public String biz;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46c1341e-2648-447a-9b11-70b6a298d9****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hotlinebs_out</p>
+     */
     @NameInMap("FromSource")
     public String fromSource;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre-cn-***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

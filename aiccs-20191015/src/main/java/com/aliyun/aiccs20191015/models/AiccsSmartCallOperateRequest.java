@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class AiccsSmartCallOperateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>116012854210^102814279****</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>parallelBridge</p>
+     */
     @NameInMap("Command")
     public String command;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Param</p>
+     */
     @NameInMap("Param")
     public String param;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aiccs</p>
+     */
     @NameInMap("ProdCode")
     public String prodCode;
 

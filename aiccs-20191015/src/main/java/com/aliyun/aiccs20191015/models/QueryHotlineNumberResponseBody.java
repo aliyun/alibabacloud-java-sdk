@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QueryHotlineNumberResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QueryHotlineNumberResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE339D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
     }
 
     public static class QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeListGroupDOList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6083****</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
@@ -95,6 +115,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
     }
 
     public static class QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2256****</p>
+         */
         @NameInMap("DepartmentId")
         public Long departmentId;
 
@@ -136,36 +160,76 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
     }
 
     public static class QueryHotlineNumberResponseBodyDataHotlineNumList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CalloutAllDepartment")
         public Boolean calloutAllDepartment;
 
         @NameInMap("CalloutRangeList")
         public java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeList> calloutRangeList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("EvaluationStatus")
         public Integer evaluationStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("FlowId")
         public Long flowId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试流程</p>
+         */
         @NameInMap("FlowName")
         public String flowName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0571****2211</p>
+         */
         @NameInMap("HotlineNumber")
         public String hotlineNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("InBoundEnabled")
         public Boolean inBoundEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>浙江杭州</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("OutboundEnabled")
         public Boolean outboundEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>电信</p>
+         */
         @NameInMap("Sp")
         public String sp;
 
@@ -265,15 +329,27 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
     }
 
     public static class QueryHotlineNumberResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Long currentPage;
 
         @NameInMap("HotlineNumList")
         public java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumList> hotlineNumList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

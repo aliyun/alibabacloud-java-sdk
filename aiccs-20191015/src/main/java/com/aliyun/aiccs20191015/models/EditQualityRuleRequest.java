@@ -4,21 +4,39 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class EditQualityRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("KeyWords")
     public java.util.List<String> keyWords;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MatchType")
     public Integer matchType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QualityRuleId")
     public Long qualityRuleId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RuleTag")
     public Integer ruleTag;
 

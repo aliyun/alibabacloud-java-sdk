@@ -4,21 +4,41 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListHotlineRecordDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ResultData")
     public ListHotlineRecordDetailResponseBodyResultData resultData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +96,31 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
     }
 
     public static class ListHotlineRecordDetailResponseBodyResultDataData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1614578410000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx.xxxxx/xx.wav">http://xxx.xxxxx/xx.wav</a></p>
+         */
         @NameInMap("OssUrl")
         public String ossUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@123.com">123@123.com</a></p>
+         */
         @NameInMap("ServicerName")
         public String servicerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614578400000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -128,18 +164,34 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
     }
 
     public static class ListHotlineRecordDetailResponseBodyResultData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Long currentPage;
 
         @NameInMap("Data")
         public java.util.List<ListHotlineRecordDetailResponseBodyResultDataData> data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("OnePageSize")
         public Long onePageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalPage")
         public Long totalPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>945</p>
+         */
         @NameInMap("TotalResults")
         public Long totalResults;
 

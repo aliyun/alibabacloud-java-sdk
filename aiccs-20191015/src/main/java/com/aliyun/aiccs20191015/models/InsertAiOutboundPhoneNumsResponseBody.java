@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public InsertAiOutboundPhoneNumsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
     }
 
     public static class InsertAiOutboundPhoneNumsResponseBodyDataFailInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("BizData")
         public String bizData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>号码格式异常</p>
+         */
         @NameInMap("Msg")
         public String msg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>150****0000</p>
+         */
         @NameInMap("PhoneNum")
         public String phoneNum;
 
@@ -109,9 +137,17 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
         @NameInMap("FailInfo")
         public java.util.List<InsertAiOutboundPhoneNumsResponseBodyDataFailInfo> failInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("SuccessCount")
         public Integer successCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

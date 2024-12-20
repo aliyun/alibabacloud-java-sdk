@@ -13,6 +13,12 @@ public class ListRobotNodeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100002674****</p>
+     */
     @NameInMap("RobotId")
     public Long robotId;
 

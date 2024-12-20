@@ -4,21 +4,55 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class StartCallV2Request extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:123@123.com">123@123.com</a></p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>136****1111</p>
+     */
     @NameInMap("Callee")
     public String callee;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9065****</p>
+     */
     @NameInMap("Caller")
     public String caller;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CallerType")
     public Integer callerType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre-cn-***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

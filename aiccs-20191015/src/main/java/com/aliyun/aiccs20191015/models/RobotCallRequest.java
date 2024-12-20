@@ -4,15 +4,35 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class RobotCallRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>131****2204</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0571****5678</p>
+     */
     @NameInMap("CalledShowNumber")
     public String calledShowNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EarlyMediaAsr")
     public Boolean earlyMediaAsr;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abcdefgh</p>
+     */
     @NameInMap("OutId")
     public String outId;
 
@@ -22,6 +42,10 @@ public class RobotCallRequest extends TeaModel {
     @NameInMap("Params")
     public String params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("RecordFlag")
     public Boolean recordFlag;
 
@@ -31,6 +55,12 @@ public class RobotCallRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>350000****</p>
+     */
     @NameInMap("RobotId")
     public Long robotId;
 

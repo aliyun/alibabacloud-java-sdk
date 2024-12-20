@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListTaskResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,30 +81,58 @@ public class ListTaskResponseBody extends TeaModel {
     }
 
     public static class ListTaskResponseBodyDataRecord extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CompleteCount")
         public Integer completeCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1618477232000</p>
+         */
         @NameInMap("FireTime")
         public String fireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1618477232000</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("RobotId")
         public Long robotId;
 
         @NameInMap("RobotName")
         public String robotName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -172,15 +216,27 @@ public class ListTaskResponseBody extends TeaModel {
     }
 
     public static class ListTaskResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public Long pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
         @NameInMap("Record")
         public java.util.List<ListTaskResponseBodyDataRecord> record;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Total")
         public Long total;
 

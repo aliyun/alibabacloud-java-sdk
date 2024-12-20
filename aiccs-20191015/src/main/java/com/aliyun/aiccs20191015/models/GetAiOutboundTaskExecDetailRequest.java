@@ -4,33 +4,81 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskExecDetailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BatchVersion")
     public Integer batchVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("CaseId")
     public Long caseId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CaseStatus")
     public Integer caseStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1632290119000</p>
+     */
     @NameInMap("CreateTimeEnd")
     public Long createTimeEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1632289999000</p>
+     */
     @NameInMap("CreateTimeStart")
     public Long createTimeStart;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent_***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>150****000</p>
+     */
     @NameInMap("PhoneNum")
     public String phoneNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

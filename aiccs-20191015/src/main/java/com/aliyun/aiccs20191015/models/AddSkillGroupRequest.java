@@ -4,18 +4,41 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class AddSkillGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("OuterDepartmentId")
     public String outerDepartmentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>type_invalid</p>
+     */
     @NameInMap("OuterDepartmentType")
     public String outerDepartmentType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("OuterGroupId")
     public String outerGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OuterGroupName")
     public String outerGroupName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mybank</p>
+     */
     @NameInMap("OuterGroupType")
     public String outerGroupType;
 

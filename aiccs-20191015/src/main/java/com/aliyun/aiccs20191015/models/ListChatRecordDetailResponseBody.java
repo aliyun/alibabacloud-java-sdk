@@ -4,21 +4,41 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListChatRecordDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ResultData")
     public ListChatRecordDetailResponseBodyResultData resultData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -79,15 +99,31 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614578400000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MSG</p>
+         */
         @NameInMap("MsgType")
         public String msgType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>account1</p>
+         */
         @NameInMap("SenderName")
         public String senderName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("SenderType")
         public Long senderType;
 
@@ -139,15 +175,27 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
     }
 
     public static class ListChatRecordDetailResponseBodyResultDataData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1614578410000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
         @NameInMap("MessageList")
         public java.util.List<ListChatRecordDetailResponseBodyResultDataDataMessageList> messageList;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@123.com">123@123.com</a></p>
+         */
         @NameInMap("ServicerName")
         public String servicerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614578400000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -191,18 +239,34 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
     }
 
     public static class ListChatRecordDetailResponseBodyResultData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Long currentPage;
 
         @NameInMap("Data")
         public java.util.List<ListChatRecordDetailResponseBodyResultDataData> data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("OnePageSize")
         public Long onePageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalPage")
         public Long totalPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalResults")
         public Long totalResults;
 

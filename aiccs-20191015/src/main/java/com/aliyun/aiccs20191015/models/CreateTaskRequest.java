@@ -7,9 +7,21 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("CallString")
     public String callString;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>JSON</p>
+     */
     @NameInMap("CallStringType")
     public String callStringType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0571<strong><strong>5678,0571</strong></strong>5679</p>
+     */
     @NameInMap("Caller")
     public String caller;
 
@@ -22,33 +34,76 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("RetryCount")
     public Integer retryCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RetryFlag")
     public Integer retryFlag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("RetryInterval")
     public Integer retryInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200010,200011</p>
+     */
     @NameInMap("RetryStatusCode")
     public String retryStatusCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("RobotId")
     public String robotId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("SeatCount")
     public String seatCount;
 
     @NameInMap("StartNow")
     public Boolean startNow;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("WorkDay")
     public String workDay;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10:00-12:00,13:00-14:00</p>
+     */
     @NameInMap("WorkTimeList")
     public String workTimeList;
 

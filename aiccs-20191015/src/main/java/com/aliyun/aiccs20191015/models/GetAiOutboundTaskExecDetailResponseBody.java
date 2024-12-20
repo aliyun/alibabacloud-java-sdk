@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetAiOutboundTaskExecDetailResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,30 +81,66 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskExecDetailResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BatchVersion")
         public Integer batchVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("BizData")
         public String bizData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CallCount")
         public Integer callCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("CaseId")
         public Long caseId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1632289999000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>未接通</p>
+         */
         @NameInMap("LastCallResult")
         public String lastCallResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>150****0000</p>
+         */
         @NameInMap("PhoneNum")
         public String phoneNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>待呼叫</p>
+         */
         @NameInMap("StatusDesc")
         public Integer statusDesc;
 
@@ -172,18 +224,34 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskExecDetailResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasNextPage")
         public Boolean hasNextPage;
 
         @NameInMap("List")
         public java.util.List<GetAiOutboundTaskExecDetailResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>199</p>
+         */
         @NameInMap("TotalResults")
         public Integer totalResults;
 

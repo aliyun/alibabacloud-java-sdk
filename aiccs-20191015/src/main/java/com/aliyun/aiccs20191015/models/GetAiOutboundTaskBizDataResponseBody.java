@@ -4,18 +4,34 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetAiOutboundTaskBizDataResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +81,31 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskBizDataResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;customer&quot;:123}</p>
+         */
         @NameInMap("BizData")
         public String bizData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("CaseId")
         public Long caseId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>158****0000</p>
+         */
         @NameInMap("PhoneNum")
         public String phoneNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
