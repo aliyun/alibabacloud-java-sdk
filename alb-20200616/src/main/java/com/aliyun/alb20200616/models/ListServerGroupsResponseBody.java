@@ -646,7 +646,11 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>是否开启跨可用区转发。（默认开启）</p>
+         * <p>Indicates whether cross-zone load balancing is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
