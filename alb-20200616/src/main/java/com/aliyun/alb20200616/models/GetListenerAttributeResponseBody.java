@@ -1021,6 +1021,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         @NameInMap("XForwardedForEnabled")
         public Boolean XForwardedForEnabled;
 
+        @NameInMap("XForwardedForHostEnabled")
+        public Boolean XForwardedForHostEnabled;
+
+        @NameInMap("XForwardedForProcessingMode")
+        public String XForwardedForProcessingMode;
+
         /**
          * <p>Indicates whether the <code>X-Forwarded-Proto</code> header is used to retrieve the listening protocol. Valid values:</p>
          * <ul>
@@ -1168,6 +1174,22 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
         public Boolean getXForwardedForEnabled() {
             return this.XForwardedForEnabled;
+        }
+
+        public GetListenerAttributeResponseBodyXForwardedForConfig setXForwardedForHostEnabled(Boolean XForwardedForHostEnabled) {
+            this.XForwardedForHostEnabled = XForwardedForHostEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForHostEnabled() {
+            return this.XForwardedForHostEnabled;
+        }
+
+        public GetListenerAttributeResponseBodyXForwardedForConfig setXForwardedForProcessingMode(String XForwardedForProcessingMode) {
+            this.XForwardedForProcessingMode = XForwardedForProcessingMode;
+            return this;
+        }
+        public String getXForwardedForProcessingMode() {
+            return this.XForwardedForProcessingMode;
         }
 
         public GetListenerAttributeResponseBodyXForwardedForConfig setXForwardedForProtoEnabled(Boolean XForwardedForProtoEnabled) {

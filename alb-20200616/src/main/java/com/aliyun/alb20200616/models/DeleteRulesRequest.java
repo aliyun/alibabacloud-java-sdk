@@ -31,7 +31,7 @@ public class DeleteRulesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the forwarding rule. Valid values of N: <strong>1</strong> to <strong>5</strong>.</p>
+     * <p>The forwarding rules.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RuleIds")

@@ -32,6 +32,26 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     @NameInMap("ConnectionDrainConfig")
     public UpdateServerGroupAttributeRequestConnectionDrainConfig connectionDrainConfig;
 
+    /**
+     * <p>Indicates whether cross-zone load balancing is enabled for the server group. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong> (default)</li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>Basic ALB instances do not support server groups that have cross-zone load balancing disabled. Only Standard and WAF-enabled ALB instances support server groups that have cross-zone load balancing.</p>
+     * </li>
+     * <li><p>Cross-zone load balancing can be disabled for server groups of the server and IP type, but not for server groups of the Function Compute type.</p>
+     * </li>
+     * <li><p>When cross-zone load balancing is disabled, session persistence cannot be enabled.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CrossZoneEnabled")
     public Boolean crossZoneEnabled;
 
