@@ -3,7 +3,7 @@ package com.aliyun.bailian20231229.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAndPulishAgentShrinkRequest extends TeaModel {
+public class UpdateAndPublishAgentSelectiveShrinkRequest extends TeaModel {
     @NameInMap("applicationConfig")
     public String applicationConfigShrink;
 
@@ -19,12 +19,12 @@ public class CreateAndPulishAgentShrinkRequest extends TeaModel {
     @NameInMap("sampleLibrary")
     public String sampleLibraryShrink;
 
-    public static CreateAndPulishAgentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateAndPulishAgentShrinkRequest self = new CreateAndPulishAgentShrinkRequest();
+    public static UpdateAndPublishAgentSelectiveShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateAndPublishAgentSelectiveShrinkRequest self = new UpdateAndPublishAgentSelectiveShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateAndPulishAgentShrinkRequest setApplicationConfigShrink(String applicationConfigShrink) {
+    public UpdateAndPublishAgentSelectiveShrinkRequest setApplicationConfigShrink(String applicationConfigShrink) {
         this.applicationConfigShrink = applicationConfigShrink;
         return this;
     }
@@ -32,7 +32,7 @@ public class CreateAndPulishAgentShrinkRequest extends TeaModel {
         return this.applicationConfigShrink;
     }
 
-    public CreateAndPulishAgentShrinkRequest setInstructions(String instructions) {
+    public UpdateAndPublishAgentSelectiveShrinkRequest setInstructions(String instructions) {
         this.instructions = instructions;
         return this;
     }
@@ -40,7 +40,7 @@ public class CreateAndPulishAgentShrinkRequest extends TeaModel {
         return this.instructions;
     }
 
-    public CreateAndPulishAgentShrinkRequest setModelId(String modelId) {
+    public UpdateAndPublishAgentSelectiveShrinkRequest setModelId(String modelId) {
         this.modelId = modelId;
         return this;
     }
@@ -48,7 +48,7 @@ public class CreateAndPulishAgentShrinkRequest extends TeaModel {
         return this.modelId;
     }
 
-    public CreateAndPulishAgentShrinkRequest setName(String name) {
+    public UpdateAndPublishAgentSelectiveShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -56,7 +56,7 @@ public class CreateAndPulishAgentShrinkRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateAndPulishAgentShrinkRequest setSampleLibraryShrink(String sampleLibraryShrink) {
+    public UpdateAndPublishAgentSelectiveShrinkRequest setSampleLibraryShrink(String sampleLibraryShrink) {
         this.sampleLibraryShrink = sampleLibraryShrink;
         return this;
     }

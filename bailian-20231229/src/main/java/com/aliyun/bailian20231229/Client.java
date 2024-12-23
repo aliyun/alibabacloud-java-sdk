@@ -77,18 +77,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you have obtained the lease and uploaded the document to the temporary storage space by using the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. For more information, see <a href="https://help.aliyun.com/zh/model-studio/developer-reference/upload-files-by-calling-api">Upload files by calling API</a>.</p>
+     * <p>  Before you call this operation, make sure that you have obtained the lease and uploaded the document to the temporary storage space by using the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/upload-files-by-calling-api">Upload files by calling API</a>.</p>
      * <blockquote>
      * <p> After you call this operation, the used lease ID expires immediately. Do not use the same lease ID to submit new requests.</p>
      * </blockquote>
      * <ul>
-     * <li>You must call this operation within 12 hours after you call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. Otherwise, the lease expires and the request fails.</li>
+     * <li>You must call this operation within 12 hours after you call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. Otherwise, the lease expires and the request fails.</li>
      * <li>After you call this operation, the system parses and imports your document. The process takes some time.</li>
      * <li>This interface is not idempotent.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports an unstructured document stored in the temporary storage space to Data Management.</p>
+     * <p>Imports an unstructured document stored in the temporary storage space to Data Management. You cannot use the API to import structured documents. Use the console instead.</p>
      * 
      * @param tmpReq AddFileRequest
      * @param headers map
@@ -140,18 +140,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you have obtained the lease and uploaded the document to the temporary storage space by using the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. For more information, see <a href="https://help.aliyun.com/zh/model-studio/developer-reference/upload-files-by-calling-api">Upload files by calling API</a>.</p>
+     * <p>  Before you call this operation, make sure that you have obtained the lease and uploaded the document to the temporary storage space by using the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/upload-files-by-calling-api">Upload files by calling API</a>.</p>
      * <blockquote>
      * <p> After you call this operation, the used lease ID expires immediately. Do not use the same lease ID to submit new requests.</p>
      * </blockquote>
      * <ul>
-     * <li>You must call this operation within 12 hours after you call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. Otherwise, the lease expires and the request fails.</li>
+     * <li>You must call this operation within 12 hours after you call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. Otherwise, the lease expires and the request fails.</li>
      * <li>After you call this operation, the system parses and imports your document. The process takes some time.</li>
      * <li>This interface is not idempotent.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports an unstructured document stored in the temporary storage space to Data Management.</p>
+     * <p>Imports an unstructured document stored in the temporary storage space to Data Management. You cannot use the API to import structured documents. Use the console instead.</p>
      * 
      * @param request AddFileRequest
      * @return AddFileResponse
@@ -250,6 +250,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.applicationConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.applicationConfig, "applicationConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sampleLibrary)) {
+            request.sampleLibraryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sampleLibrary, "sampleLibrary", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationConfigShrink)) {
             body.put("applicationConfig", request.applicationConfigShrink);
@@ -265,6 +269,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sampleLibraryShrink)) {
+            body.put("sampleLibrary", request.sampleLibraryShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2062,6 +2070,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.applicationConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.applicationConfig, "applicationConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sampleLibrary)) {
+            request.sampleLibraryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sampleLibrary, "sampleLibrary", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationConfigShrink)) {
             body.put("applicationConfig", request.applicationConfigShrink);
@@ -2077,6 +2089,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sampleLibraryShrink)) {
+            body.put("sampleLibrary", request.sampleLibraryShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2108,6 +2124,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateAndPublishAgentWithOptions(workspaceId, appCode, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>选择更新并发布智能体应用</p>
+     * 
+     * @param tmpReq UpdateAndPublishAgentSelectiveRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAndPublishAgentSelectiveResponse
+     */
+    public UpdateAndPublishAgentSelectiveResponse updateAndPublishAgentSelectiveWithOptions(String workspaceId, String appCode, UpdateAndPublishAgentSelectiveRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAndPublishAgentSelectiveShrinkRequest request = new UpdateAndPublishAgentSelectiveShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.applicationConfig)) {
+            request.applicationConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.applicationConfig, "applicationConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sampleLibrary)) {
+            request.sampleLibraryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sampleLibrary, "sampleLibrary", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationConfigShrink)) {
+            body.put("applicationConfig", request.applicationConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instructions)) {
+            body.put("instructions", request.instructions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sampleLibraryShrink)) {
+            body.put("sampleLibrary", request.sampleLibraryShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAndPublishAgentSelective"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/application/agents/" + com.aliyun.openapiutil.Client.getEncodeParam(appCode) + "/updateAndPublishAgentSelective"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAndPublishAgentSelectiveResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>选择更新并发布智能体应用</p>
+     * 
+     * @param request UpdateAndPublishAgentSelectiveRequest
+     * @return UpdateAndPublishAgentSelectiveResponse
+     */
+    public UpdateAndPublishAgentSelectiveResponse updateAndPublishAgentSelective(String workspaceId, String appCode, UpdateAndPublishAgentSelectiveRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAndPublishAgentSelectiveWithOptions(workspaceId, appCode, request, headers, runtime);
     }
 
     /**
