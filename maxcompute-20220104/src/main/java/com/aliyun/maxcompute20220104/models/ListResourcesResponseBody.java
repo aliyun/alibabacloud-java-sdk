@@ -12,6 +12,9 @@ public class ListResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc3b4ae16685836687916212e7850</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,108 +43,136 @@ public class ListResourcesResponseBody extends TeaModel {
     public static class ListResourcesResponseBodyDataResources extends TeaModel {
         /**
          * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         @NameInMap("comment")
         public String comment;
 
         /**
          * <p>The Base64-encoded 128-bit MD5 hash value of the HTTP request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MACiECZtnLiNkNS1v5****=1</p>
          */
         @NameInMap("contentMD5")
         public String contentMD5;
 
         /**
          * <p>The time when the resource was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-29T03:34:09Z</p>
          */
         @NameInMap("creationTime")
         public Long creationTime;
 
         /**
          * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>res_1</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
         /**
          * <p>The time when the resource was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-18T06:15:05Z</p>
          */
         @NameInMap("lastModifiedTime")
         public Long lastModifiedTime;
 
         /**
          * <p>The user who updated the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN$<a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></p>
          */
         @NameInMap("lastUpdator")
         public String lastUpdator;
 
         /**
          * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>res_1</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The owner of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1265860483008101</p>
          */
         @NameInMap("owner")
         public String owner;
 
         /**
          * <p>The schema to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schemaA</p>
          */
         @NameInMap("schema")
         public String schema;
 
         /**
          * <p>The size of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("size")
         public Long size;
 
         /**
          * <p>The resource type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   file</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   py</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   jar</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   volumefile</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   table</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>file</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>py</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>jar</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>volumefile</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>table</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         @NameInMap("type")
         public String type;
@@ -244,12 +275,18 @@ public class ListResourcesResponseBody extends TeaModel {
     public static class ListResourcesResponseBodyData extends TeaModel {
         /**
          * <p>Indicates the marker after which the returned list begins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZmN0X21vbnRoX3Rhb2Jhb19pbmRleCE=</p>
          */
         @NameInMap("marker")
         public String marker;
 
         /**
          * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("maxItem")
         public Integer maxItem;

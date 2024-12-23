@@ -12,6 +12,9 @@ public class GetTrustedProjectsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc0590416675329272834336e4387</p>
      */
     @NameInMap("requestId")
     public String requestId;

@@ -6,12 +6,58 @@ import com.aliyun.tea.*;
 public class CreatePackageRequest extends TeaModel {
     /**
      * <p>The request body parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     * &quot;name&quot;: &quot;test_packege&quot;, 
+     *     &quot;resourceList&quot;: { 
+     *         &quot;table&quot;: [
+     *             {
+     *                 &quot;name&quot;: &quot;table_name&quot;,
+     *                 &quot;actions&quot;: [
+     *                     &quot;Describe&quot;,
+     *                     &quot;Select&quot;
+     *                 ]
+     *             },
+     *             {
+     *                 &quot;name&quot;: &quot;table_name&quot;,
+     *                 &quot;actions&quot;: [
+     *                     &quot;Describe&quot;,
+     *                     &quot;Select&quot;
+     *                 ]
+     *             }
+     *         ],
+     *         &quot;resource&quot;: [
+     *             {
+     *                 &quot;name&quot;: &quot;&quot;,
+     *                 &quot;actions&quot;: []
+     *             },
+     *             {
+     *                 &quot;name&quot;: &quot;&quot;,
+     *                 &quot;actions&quot;: []
+     *             }
+     *         ],
+     *         &quot;function&quot;: [
+     *             {
+     *                 &quot;name&quot;: &quot;&quot;,
+     *                 &quot;actions&quot;: []
+     *             },
+     *             {
+     *                 &quot;name&quot;: &quot;&quot;,
+     *                 &quot;actions&quot;: []
+     *             }
+     *         ]
+     *     }
+     * }</p>
      */
     @NameInMap("body")
     public String body;
 
     /**
      * <p>Specifies whether to install the package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("isInstall")
     public Boolean isInstall;

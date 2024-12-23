@@ -12,24 +12,36 @@ public class GetPackageResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>040002</p>
      */
     @NameInMap("errorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>error message.</p>
      */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("httpCode")
     public Integer httpCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0b57ff8316614119858417939e3e54</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -82,12 +94,18 @@ public class GetPackageResponseBody extends TeaModel {
     public static class GetPackageResponseBodyDataAllowedProjectList extends TeaModel {
         /**
          * <p>The security level for sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("label")
         public String label;
 
         /**
          * <p>The name of the MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proejctB</p>
          */
         @NameInMap("project")
         public String project;
@@ -124,12 +142,18 @@ public class GetPackageResponseBody extends TeaModel {
 
         /**
          * <p>The name of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>function_1</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The name of schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("schemaName")
         public String schemaName;
@@ -174,12 +198,18 @@ public class GetPackageResponseBody extends TeaModel {
 
         /**
          * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>res_1</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The name of schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("schemaName")
         public String schemaName;
@@ -224,12 +254,18 @@ public class GetPackageResponseBody extends TeaModel {
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dim_odps</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The name of schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("schemaName")
         public String schemaName;

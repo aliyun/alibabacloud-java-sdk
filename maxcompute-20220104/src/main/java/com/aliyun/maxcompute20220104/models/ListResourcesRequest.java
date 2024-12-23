@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListResourcesRequest extends TeaModel {
     /**
      * <p>Specifies the marker after which the returned list begins.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
      */
     @NameInMap("marker")
     public String marker;
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("maxItem")
     public Integer maxItem;
 
     /**
      * <p>The name of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>res</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>The name of the schema.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("schemaName")
     public String schemaName;

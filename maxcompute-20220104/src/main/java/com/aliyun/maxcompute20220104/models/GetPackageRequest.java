@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetPackageRequest extends TeaModel {
     /**
      * <p>The project to which the package belongs. This parameter is required if the package is installed in the MaxCompute project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>projectB</p>
      */
     @NameInMap("sourceProject")
     public String sourceProject;

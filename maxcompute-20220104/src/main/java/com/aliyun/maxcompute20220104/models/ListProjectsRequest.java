@@ -5,79 +5,100 @@ import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to list a project named SystemCatalog.</p>
-     * <br>
+     * <p>Specifies whether to list the built-in <strong>SYSTEM_CATALOG</strong> projects that are used to provide data such as project metadata and historical usage data. For more information, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tenant-level-information-schema">Tenant-level Information Schema</a>.</p>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   false</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li>true: The built-in SYSTEM_CATALOG projects are listed.</li>
+     * <li>false: The built-in SYSTEM_CATALOG projects are not listed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("listSystemCatalog")
     public Boolean listSystemCatalog;
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
      */
     @NameInMap("marker")
     public String marker;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The maximum number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("maxItem")
     public Integer maxItem;
 
     /**
      * <p>Specifies the marker after which the returned list begins.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a</p>
      */
     @NameInMap("prefix")
     public String prefix;
 
     /**
-     * <p>The name of the quota. The value of this parameter is the identifier of the quota in MaxCompute, which differs from the quotaNickname parameter. You can configure the quotaNickname parameter. The system automatically generates a value for the quotaName parameter. This parameter is only used to describe the tunnel quota.</p>
+     * <p>The quota name that is automatically generated. You can log on to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a>, choose <strong>Workspace</strong> &gt; <strong>Quotas</strong> from the left-side navigation pane, and then view the quota name on the <strong>Quotas</strong> page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;hsajkdgbkaubh&quot;</p>
      */
     @NameInMap("quotaName")
     public String quotaName;
 
     /**
-     * <p>The name of the quota.</p>
+     * <p>The quota nickname. You can log on to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a>, choose <strong>Workspace</strong> &gt; <strong>Quotas</strong> from the left-side navigation pane, and then view the quota nickname on the <strong>Quotas</strong> page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quotaA</p>
      */
     @NameInMap("quotaNickName")
     public String quotaNickName;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("region")
     public String region;
 
     /**
-     * <p>The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.</p>
+     * <p>The instance ID and billing method of the default computing quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;aaaa-bbbb&quot;</p>
      */
     @NameInMap("saleTags")
     public String saleTags;
 
     /**
-     * <p>The tenant ID.</p>
+     * <p>The tenant ID. You can log on to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a>, and choose <strong>Tenants</strong> &gt; <strong>Tenant Property</strong> from the left-side navigation pane to view the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>549532154333697</p>
      */
     @NameInMap("tenantId")
     public String tenantId;
 
     /**
-     * <p>The project type. Valid values: external and managed. The value external indicates an external project, which is used in the data lakehouse solution. The value managed indicates an internal project.</p>
+     * <p>The project type. Valid values:</p>
+     * <ul>
+     * <li><strong>managed</strong>: internal project</li>
+     * <li><strong>external</strong>: external project</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;managed&quot;</p>
      */
     @NameInMap("type")
     public String type;

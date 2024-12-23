@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetJobResourceUsageShrinkRequest extends TeaModel {
     /**
      * <p>The date that is accurate to the day part for the query. The date must be in the yyyy-MM-dd format.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-05-15</p>
      */
     @NameInMap("date")
     public String date;
@@ -18,12 +22,18 @@ public class GetJobResourceUsageShrinkRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("pageSize")
     public Long pageSize;

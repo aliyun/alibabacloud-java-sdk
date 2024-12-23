@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListQuotasPlansRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("region")
     public String region;
 
     /**
      * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>478403690625249</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetProjectRequest extends TeaModel {
     /**
      * <p>Specifies whether to use additional information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("verbose")
     public Boolean verbose;

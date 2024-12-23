@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetRoleAclOnObjectResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The returned data</p>
      */
     @NameInMap("data")
     public GetRoleAclOnObjectResponseBodyData data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1366d16686529650188023ef87f</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -44,12 +47,6 @@ public class GetRoleAclOnObjectResponseBody extends TeaModel {
         @NameInMap("actions")
         public java.util.List<String> actions;
 
-        /**
-         * <p>The name of the object.</p>
-         */
-        @NameInMap("name")
-        public String name;
-
         public static GetRoleAclOnObjectResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetRoleAclOnObjectResponseBodyData self = new GetRoleAclOnObjectResponseBodyData();
             return TeaModel.build(map, self);
@@ -61,14 +58,6 @@ public class GetRoleAclOnObjectResponseBody extends TeaModel {
         }
         public java.util.List<String> getActions() {
             return this.actions;
-        }
-
-        public GetRoleAclOnObjectResponseBodyData setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
     }

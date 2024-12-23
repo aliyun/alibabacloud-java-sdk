@@ -3,7 +3,7 @@ package com.aliyun.maxcompute20220104.models;
 
 import com.aliyun.tea.*;
 
-public class CreateQuotaScheduleResponse extends TeaModel {
+public class UpdateMmsDataSourceResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class CreateQuotaScheduleResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public CreateQuotaScheduleResponseBody body;
+    public UpdateMmsDataSourceResponseBody body;
 
-    public static CreateQuotaScheduleResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateQuotaScheduleResponse self = new CreateQuotaScheduleResponse();
+    public static UpdateMmsDataSourceResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateMmsDataSourceResponse self = new UpdateMmsDataSourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateQuotaScheduleResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateMmsDataSourceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateQuotaScheduleResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateQuotaScheduleResponse setStatusCode(Integer statusCode) {
+    public UpdateMmsDataSourceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class CreateQuotaScheduleResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateQuotaScheduleResponse setBody(CreateQuotaScheduleResponseBody body) {
+    public UpdateMmsDataSourceResponse setBody(UpdateMmsDataSourceResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateQuotaScheduleResponseBody getBody() {
+    public UpdateMmsDataSourceResponseBody getBody() {
         return this.body;
     }
 

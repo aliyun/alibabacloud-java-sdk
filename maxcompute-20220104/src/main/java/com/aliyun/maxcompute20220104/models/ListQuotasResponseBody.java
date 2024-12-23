@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListQuotasResponseBody extends TeaModel {
     /**
      * <p>A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2w6Olxc+cMPjUtUMo/CvPe4IK7f7kIQFrIZjyc</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -18,12 +21,18 @@ public class ListQuotasResponseBody extends TeaModel {
 
     /**
      * <p>Indicates the marker after which the returned list begins.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
      */
     @NameInMap("marker")
     public String marker;
 
     /**
      * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("maxItem")
     public Long maxItem;
@@ -36,6 +45,9 @@ public class ListQuotasResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc12e6f16677875480593081d2956</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -96,12 +108,18 @@ public class ListQuotasResponseBody extends TeaModel {
     public static class ListQuotasResponseBodyDataQuotaInfoListTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Department</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a12351qHDP6YEQMt</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -132,21 +150,31 @@ public class ListQuotasResponseBody extends TeaModel {
     public static class ListQuotasResponseBodyDataQuotaInfoListBillingPolicy extends TeaModel {
         /**
          * <p>The billing method of the quota. Valid values:</p>
-         * <br>
-         * <p>*   subscription: a subscription quota.</p>
-         * <p>*   payasyougo: a pay-as-you-go quota.</p>
+         * <ul>
+         * <li>subscription: a subscription quota.</li>
+         * <li>payasyougo: a pay-as-you-go quota.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>subscription</p>
          */
         @NameInMap("billingMethod")
         public String billingMethod;
 
         /**
          * <p>The specifications of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OdpsStandard</p>
          */
         @NameInMap("odpsSpecCode")
         public String odpsSpecCode;
 
         /**
          * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45245678</p>
          */
         @NameInMap("orderId")
         public String orderId;
@@ -191,6 +219,9 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The type of the object. Valid values: quota and project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;quota&quot;</p>
          */
         @NameInMap("resourceType")
         public String resourceType;
@@ -221,48 +252,72 @@ public class ListQuotasResponseBody extends TeaModel {
     public static class ListQuotasResponseBodyDataQuotaInfoListScheduleInfo extends TeaModel {
         /**
          * <p>The quota plan that takes effect based on the scheduling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planA</p>
          */
         @NameInMap("currPlan")
         public String currPlan;
 
         /**
          * <p>The time when the current quota plan is scheduled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0800</p>
          */
         @NameInMap("currTime")
         public String currTime;
 
         /**
          * <p>The next quota plan that will take effect based on the scheduling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planB</p>
          */
         @NameInMap("nextPlan")
         public String nextPlan;
 
         /**
          * <p>The time when the next quota plan is scheduled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700</p>
          */
         @NameInMap("nextTime")
         public String nextTime;
 
         /**
          * <p>The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planC</p>
          */
         @NameInMap("oncePlan")
         public String oncePlan;
 
         /**
          * <p>The time when the quota plan immediately takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500</p>
          */
         @NameInMap("onceTime")
         public String onceTime;
 
         /**
          * <p>The name of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userA</p>
          */
         @NameInMap("operatorName")
         public String operatorName;
 
         /**
          * <p>The time zone of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UTC+8</p>
          */
         @NameInMap("timezone")
         public String timezone;
@@ -341,21 +396,31 @@ public class ListQuotasResponseBody extends TeaModel {
     public static class ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListBillingPolicy extends TeaModel {
         /**
          * <p>The billing method of the quota. Valid values:</p>
-         * <br>
-         * <p>*   subscription: a subscription quota.</p>
-         * <p>*   payasyougo: a pay-as-you-go quota.</p>
+         * <ul>
+         * <li>subscription: a subscription quota.</li>
+         * <li>payasyougo: a pay-as-you-go quota.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>subscription</p>
          */
         @NameInMap("billingMethod")
         public String billingMethod;
 
         /**
          * <p>The specifications of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OdpsStandard</p>
          */
         @NameInMap("odpsSpecCode")
         public String odpsSpecCode;
 
         /**
          * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45245678</p>
          */
         @NameInMap("orderId")
         public String orderId;
@@ -400,6 +465,9 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The type of the object. Valid values: quota and project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;quota&quot;</p>
          */
         @NameInMap("resourceType")
         public String resourceType;
@@ -430,48 +498,72 @@ public class ListQuotasResponseBody extends TeaModel {
     public static class ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListScheduleInfo extends TeaModel {
         /**
          * <p>The quota plan that takes effect based on the scheduling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planA</p>
          */
         @NameInMap("currPlan")
         public String currPlan;
 
         /**
          * <p>The time when the current quota plan is scheduled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0800</p>
          */
         @NameInMap("currTime")
         public String currTime;
 
         /**
          * <p>The next quota plan that will take effect based on the scheduling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planB</p>
          */
         @NameInMap("nextPlan")
         public String nextPlan;
 
         /**
          * <p>The time when the next quota plan is scheduled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700</p>
          */
         @NameInMap("nextTime")
         public String nextTime;
 
         /**
          * <p>The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planC</p>
          */
         @NameInMap("oncePlan")
         public String oncePlan;
 
         /**
          * <p>The time when the quota plan immediately takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500</p>
          */
         @NameInMap("onceTime")
         public String onceTime;
 
         /**
          * <p>The name of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userA</p>
          */
         @NameInMap("operatorName")
         public String operatorName;
 
         /**
          * <p>The time zone of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UTC+8</p>
          */
         @NameInMap("timezone")
         public String timezone;
@@ -556,54 +648,85 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AT-120N</p>
          */
         @NameInMap("cluster")
         public String cluster;
 
         /**
          * <p>The time when the resource was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-06T02:14:44Z</p>
          */
         @NameInMap("createTime")
         public Long createTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to create the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>672863518</p>
          */
         @NameInMap("creatorId")
         public String creatorId;
 
         /**
          * <p>The ID of the level-2 quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000048</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The name of the level-2 quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subquotaA</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The nickname of the level-2 quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subquotaA</p>
          */
         @NameInMap("nickName")
         public String nickName;
 
         /**
          * <p>The description of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;minCU&quot;:10,	
+         * &quot;adhocCU&quot;:0,
+         * &quot;maxCU&quot;:10,
+         * &quot;schedulerType&quot;:&quot;Fair&quot;,
+         * }</p>
          */
         @NameInMap("parameter")
         public java.util.Map<String, ?> parameter;
 
         /**
          * <p>The ID of the parent resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("parentId")
         public String parentId;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("regionId")
         public String regionId;
@@ -622,30 +745,45 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The status of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The tag of the resource for the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("tag")
         public String tag;
 
         /**
          * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>280747109771520</p>
          */
         @NameInMap("tenantId")
         public String tenantId;
 
         /**
          * <p>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FUXI_ONLINE</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The version of the algorithm image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("version")
         public String version;
@@ -808,54 +946,85 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AT-120N</p>
          */
         @NameInMap("cluster")
         public String cluster;
 
         /**
          * <p>The time when the resource was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-06T02:14:44Z</p>
          */
         @NameInMap("createTime")
         public Long createTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to create the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>672863518</p>
          */
         @NameInMap("creatorId")
         public String creatorId;
 
         /**
          * <p>The quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The name of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota_a</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The alias of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota_nickname</p>
          */
         @NameInMap("nickName")
         public String nickName;
 
         /**
          * <p>The description of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;minCU&quot;:10,	
+         * &quot;adhocCU&quot;:0,
+         * &quot;maxCU&quot;:10,
+         * &quot;schedulerType&quot;:&quot;Fair&quot;,
+         * }</p>
          */
         @NameInMap("parameter")
         public java.util.Map<String, ?> parameter;
 
         /**
          * <p>The ID of the parent resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("parentId")
         public String parentId;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("regionId")
         public String regionId;
@@ -874,6 +1043,9 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The status of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         @NameInMap("status")
         public String status;
@@ -886,24 +1058,36 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The tag of the resource for the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("tag")
         public String tag;
 
         /**
          * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>280747109771520</p>
          */
         @NameInMap("tenantId")
         public String tenantId;
 
         /**
          * <p>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FUXI_ONLINE</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("version")
         public String version;
@@ -1070,18 +1254,27 @@ public class ListQuotasResponseBody extends TeaModel {
     public static class ListQuotasResponseBodyData extends TeaModel {
         /**
          * <p>A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;abcde&quot;</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
          * <p>Indicates the marker after which the returned list begins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
          */
         @NameInMap("marker")
         public String marker;
 
         /**
          * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("maxItem")
         public Long maxItem;
@@ -1134,12 +1327,18 @@ public class ListQuotasResponseBody extends TeaModel {
     public static class ListQuotasResponseBodyQuotaInfoListTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Department</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -1170,21 +1369,31 @@ public class ListQuotasResponseBody extends TeaModel {
     public static class ListQuotasResponseBodyQuotaInfoListBillingPolicy extends TeaModel {
         /**
          * <p>The billing method of the quota. Valid values:</p>
-         * <br>
-         * <p>*   subscription: a subscription quota.</p>
-         * <p>*   payasyougo: a pay-as-you-go quota.</p>
+         * <ul>
+         * <li>subscription: a subscription quota.</li>
+         * <li>payasyougo: a pay-as-you-go quota.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>subscription</p>
          */
         @NameInMap("billingMethod")
         public String billingMethod;
 
         /**
          * <p>The specifications of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OdpsStandard</p>
          */
         @NameInMap("odpsSpecCode")
         public String odpsSpecCode;
 
         /**
          * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45245678</p>
          */
         @NameInMap("orderId")
         public String orderId;
@@ -1229,6 +1438,9 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The type of the object. Valid values: quota and project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;project&quot;</p>
          */
         @NameInMap("resourceType")
         public String resourceType;
@@ -1259,48 +1471,72 @@ public class ListQuotasResponseBody extends TeaModel {
     public static class ListQuotasResponseBodyQuotaInfoListScheduleInfo extends TeaModel {
         /**
          * <p>The quota plan that takes effect based on the scheduling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planA</p>
          */
         @NameInMap("currPlan")
         public String currPlan;
 
         /**
          * <p>The time when the current quota plan is scheduled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0800</p>
          */
         @NameInMap("currTime")
         public String currTime;
 
         /**
          * <p>The next quota plan that will take effect based on the scheduling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planB</p>
          */
         @NameInMap("nextPlan")
         public String nextPlan;
 
         /**
          * <p>The time when the next quota plan is scheduled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700</p>
          */
         @NameInMap("nextTime")
         public String nextTime;
 
         /**
          * <p>The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planC</p>
          */
         @NameInMap("oncePlan")
         public String oncePlan;
 
         /**
          * <p>The time when the quota plan immediately takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500</p>
          */
         @NameInMap("onceTime")
         public String onceTime;
 
         /**
          * <p>The name of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userA</p>
          */
         @NameInMap("operatorName")
         public String operatorName;
 
         /**
          * <p>The time zone of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UTC+8</p>
          */
         @NameInMap("timezone")
         public String timezone;
@@ -1379,21 +1615,31 @@ public class ListQuotasResponseBody extends TeaModel {
     public static class ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListBillingPolicy extends TeaModel {
         /**
          * <p>The billing method of the quota. Valid values:</p>
-         * <br>
-         * <p>*   subscription: a subscription quota.</p>
-         * <p>*   payasyougo: a pay-as-you-go quota.</p>
+         * <ul>
+         * <li>subscription: a subscription quota.</li>
+         * <li>payasyougo: a pay-as-you-go quota.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>subscription</p>
          */
         @NameInMap("billingMethod")
         public String billingMethod;
 
         /**
          * <p>The specifications of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OdpsStandard</p>
          */
         @NameInMap("odpsSpecCode")
         public String odpsSpecCode;
 
         /**
          * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45245678</p>
          */
         @NameInMap("orderId")
         public String orderId;
@@ -1438,6 +1684,9 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The type of the object. Valid values: quota and project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;quota&quot;</p>
          */
         @NameInMap("resourceType")
         public String resourceType;
@@ -1468,48 +1717,72 @@ public class ListQuotasResponseBody extends TeaModel {
     public static class ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListScheduleInfo extends TeaModel {
         /**
          * <p>The quota plan that takes effect based on the scheduling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planA</p>
          */
         @NameInMap("currPlan")
         public String currPlan;
 
         /**
          * <p>The time when the current quota plan is scheduled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0800</p>
          */
         @NameInMap("currTime")
         public String currTime;
 
         /**
          * <p>The next quota plan that will take effect based on the scheduling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planB</p>
          */
         @NameInMap("nextPlan")
         public String nextPlan;
 
         /**
          * <p>The time when the next quota plan is scheduled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700</p>
          */
         @NameInMap("nextTime")
         public String nextTime;
 
         /**
          * <p>The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planC</p>
          */
         @NameInMap("oncePlan")
         public String oncePlan;
 
         /**
          * <p>The time when the quota plan immediately takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500</p>
          */
         @NameInMap("onceTime")
         public String onceTime;
 
         /**
          * <p>The name of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userA</p>
          */
         @NameInMap("operatorName")
         public String operatorName;
 
         /**
          * <p>The time zone of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UTC+8</p>
          */
         @NameInMap("timezone")
         public String timezone;
@@ -1594,54 +1867,85 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AT-120N</p>
          */
         @NameInMap("cluster")
         public String cluster;
 
         /**
          * <p>The time when the resource was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-06T02:14:44Z</p>
          */
         @NameInMap("createTime")
         public Long createTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to create the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>672863518</p>
          */
         @NameInMap("creatorId")
         public String creatorId;
 
         /**
          * <p>The ID of the level-2 quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000048</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The name of the level-2 quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subquotaA</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The alias of the level-2 quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subquotaA</p>
          */
         @NameInMap("nickName")
         public String nickName;
 
         /**
          * <p>The description of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;minCU&quot;:10,	
+         * &quot;adhocCU&quot;:0,
+         * &quot;maxCU&quot;:10,
+         * &quot;schedulerType&quot;:&quot;Fair&quot;,
+         * }</p>
          */
         @NameInMap("parameter")
         public java.util.Map<String, ?> parameter;
 
         /**
          * <p>The ID of the parent resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("parentId")
         public String parentId;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("regionId")
         public String regionId;
@@ -1660,30 +1964,45 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The status of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The tag of the resource for the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("tag")
         public String tag;
 
         /**
          * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>280747109771520</p>
          */
         @NameInMap("tenantId")
         public String tenantId;
 
         /**
          * <p>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FUXI_ONLINE</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("version")
         public String version;
@@ -1846,54 +2165,85 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AT-120N</p>
          */
         @NameInMap("cluster")
         public String cluster;
 
         /**
          * <p>The time when the resource was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-06T02:14:44Z</p>
          */
         @NameInMap("createTime")
         public Long createTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to create the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>672863518</p>
          */
         @NameInMap("creatorId")
         public String creatorId;
 
         /**
          * <p>The quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The name of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota_a</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The alias of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota_nickname</p>
          */
         @NameInMap("nickName")
         public String nickName;
 
         /**
          * <p>The description of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;minCU&quot;:10,	
+         * &quot;adhocCU&quot;:0,
+         * &quot;maxCU&quot;:10,
+         * &quot;schedulerType&quot;:&quot;Fair&quot;,
+         * }</p>
          */
         @NameInMap("parameter")
         public java.util.Map<String, ?> parameter;
 
         /**
          * <p>The ID of the parent resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("parentId")
         public String parentId;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("regionId")
         public String regionId;
@@ -1912,6 +2262,9 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The status of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         @NameInMap("status")
         public String status;
@@ -1924,24 +2277,36 @@ public class ListQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The tag of the resource for the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("tag")
         public String tag;
 
         /**
          * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>280747109771520</p>
          */
         @NameInMap("tenantId")
         public String tenantId;
 
         /**
          * <p>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FUXI_ONLINE</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("version")
         public String version;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdatePackageResponseBody extends TeaModel {
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec4016697018733156991e0888</p>
      */
     @NameInMap("requestId")
     public String requestId;

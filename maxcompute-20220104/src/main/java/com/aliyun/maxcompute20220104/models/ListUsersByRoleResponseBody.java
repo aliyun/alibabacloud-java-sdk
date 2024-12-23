@@ -12,6 +12,9 @@ public class ListUsersByRoleResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0be3e0bb16654558425251398e27a9</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class ListUsersByRoleResponseBody extends TeaModel {
     public static class ListUsersByRoleResponseBodyDataUsers extends TeaModel {
         /**
          * <p>The name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN${account_name}</p>
          */
         @NameInMap("name")
         public String name;

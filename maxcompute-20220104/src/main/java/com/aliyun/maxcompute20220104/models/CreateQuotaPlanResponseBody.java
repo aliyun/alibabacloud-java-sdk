@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateQuotaPlanResponseBody extends TeaModel {
     /**
      * <p>The returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc3b4b016674434996033675e71ee</p>
      */
     @NameInMap("requestId")
     public String requestId;

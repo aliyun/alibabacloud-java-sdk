@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListFunctionsRequest extends TeaModel {
     /**
      * <p>Specifies the marker after which the returned list begins.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
      */
     @NameInMap("marker")
     public String marker;
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("maxItem")
     public Integer maxItem;
 
     /**
      * <p>The names of the returned resources. The names must start with the value specified by the prefix parameter. If the prefix parameter is set to a, the names of the returned resources must start with a.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a</p>
      */
     @NameInMap("prefix")
     public String prefix;
 
     /**
      * <p>the name of schema.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("schemaName")
     public String schemaName;

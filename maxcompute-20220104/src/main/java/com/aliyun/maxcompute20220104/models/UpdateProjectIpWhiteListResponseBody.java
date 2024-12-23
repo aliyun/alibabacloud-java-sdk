@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateProjectIpWhiteListResponseBody extends TeaModel {
     /**
      * <p>The returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc12e4316675560945192024e1044</p>
      */
     @NameInMap("requestId")
     public String requestId;

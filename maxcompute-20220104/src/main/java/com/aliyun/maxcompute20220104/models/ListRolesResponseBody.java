@@ -12,6 +12,9 @@ public class ListRolesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a06dfe716686526652451361e80ae</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -46,6 +49,9 @@ public class ListRolesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>functionA</p>
          */
         @NameInMap("name")
         public String name;
@@ -82,6 +88,9 @@ public class ListRolesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceA</p>
          */
         @NameInMap("name")
         public String name;
@@ -118,6 +127,9 @@ public class ListRolesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>packageA</p>
          */
         @NameInMap("name")
         public String name;
@@ -154,6 +166,9 @@ public class ListRolesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectA</p>
          */
         @NameInMap("name")
         public String name;
@@ -190,6 +205,9 @@ public class ListRolesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceA</p>
          */
         @NameInMap("name")
         public String name;
@@ -226,6 +244,9 @@ public class ListRolesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tableA</p>
          */
         @NameInMap("name")
         public String name;
@@ -354,18 +375,40 @@ public class ListRolesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>roleA</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The policy that is attached to the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;Statement&quot;: [
+         *             {
+         *                   &quot;Action&quot;: [
+         *                         &quot;odps:<em>&quot;
+         *                   ],
+         *                   &quot;Effect&quot;: &quot;Allow&quot;,
+         *                   &quot;Resource&quot;: [
+         *                         &quot;acs:odps:</em>:projects/{projectname}/authorization/packages&quot;
+         *                   ]
+         *             }
+         *       ],
+         *       &quot;Version&quot;: &quot;1&quot;
+         * }</p>
          */
         @NameInMap("policy")
         public String policy;
 
         /**
          * <p>The type of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         @NameInMap("type")
         public String type;

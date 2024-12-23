@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class ListQuotasRequest extends TeaModel {
     /**
      * <p>The billing method of the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>subscription</p>
      */
     @NameInMap("billingType")
     public String billingType;
 
     /**
      * <p>Specifies the marker after which the returned list begins.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
      */
     @NameInMap("marker")
     public String marker;
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("maxItem")
     public Long maxItem;
 
     /**
      * <p>The service ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ODPS</p>
      */
     @NameInMap("productId")
     public String productId;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("region")
     public String region;
 
     /**
      * <p>The cost tag. You can filter out quota objects based on the cost tag. The cost tag is created when you tag a service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;tag&quot;:&quot;this_is_tag_demo&quot;}</p>
      */
     @NameInMap("saleTags")
     public String saleTags;
 
     /**
      * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>280747109771520</p>
      */
     @NameInMap("tenantId")
     public String tenantId;
