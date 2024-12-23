@@ -4,17 +4,27 @@ package com.aliyun.dyvmsapi_intl20211015.models;
 import com.aliyun.tea.*;
 
 public class SignalCallResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <p>请求状态码。  返回OK代表请求成功。 其他错误码，请参见API错误码。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>返回信息描述。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
@@ -24,12 +34,18 @@ public class SignalCallResponseBody extends TeaModel {
 
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9CB****-<strong><strong>-</strong></strong>-****-********9D23</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>请求是否成功，成功：true，失败：false。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -90,6 +106,9 @@ public class SignalCallResponseBody extends TeaModel {
     public static class SignalCallResponseBodyModel extends TeaModel {
         /**
          * <p>任务ID，可以通过此ID查询任务的详情。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550E****-<strong><strong>-</strong></strong>-****-********0CA0</p>
          */
         @NameInMap("CallId")
         public String callId;

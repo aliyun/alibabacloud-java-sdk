@@ -4,17 +4,27 @@ package com.aliyun.dyvmsapi_intl20211015.models;
 import com.aliyun.tea.*;
 
 public class GroupCallResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <p>请求状态码。  返回OK代表请求成功。 其他错误码，请参见API错误码。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>返回信息描述</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
@@ -24,6 +34,9 @@ public class GroupCallResponseBody extends TeaModel {
 
     /**
      * <p>请求ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E50F****-<strong><strong>-</strong></strong>-****-********966F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -76,6 +89,9 @@ public class GroupCallResponseBody extends TeaModel {
     public static class GroupCallResponseBodyModel extends TeaModel {
         /**
          * <p>任务ID，可以通过此ID查询任务的详情。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550E****-<strong><strong>-</strong></strong>-****-********00A0</p>
          */
         @NameInMap("TaskId")
         public String taskId;

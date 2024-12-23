@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class BackendCallGroupResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
      * <p>The value OK indicates that the request was successful. Other values indicate that the request failed. For more information, see Error codes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E50FFA85-0B79-4421-A7BD-00B0A271966F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The task ID. You can use this ID to query the details of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>550e8400-e29b-41d4-a716-446655440000</p>
      */
     @NameInMap("TaskId")
     public String taskId;
