@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteApiTemplateResponseBody extends TeaModel {
     /**
-     * <p>请求ID。</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -14,6 +14,8 @@ public class DeleteApiTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful: - true: Call succeeded - false: Call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

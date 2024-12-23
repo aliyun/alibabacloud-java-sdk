@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteApiTemplateRequest extends TeaModel {
     /**
-     * <p>接口名。</p>
+     * <p>Interface name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteApiTemplateRequest extends TeaModel {
     public String apiName;
 
     /**
-     * <p>区域ID。</p>
+     * <p>Region ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteApiTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>资源组ID。</p>
+     * <p>Resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzabjyop****</p>
@@ -34,7 +34,7 @@ public class DeleteApiTemplateRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>集群模板id。</p>
+     * <p>Cluster template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

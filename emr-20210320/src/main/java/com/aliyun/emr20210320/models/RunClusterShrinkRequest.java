@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RunClusterShrinkRequest extends TeaModel {
     /**
-     * <p>The service configurations. Number of elements in the array: 1 to 1,000.</p>
+     * <p>The application configurations. Number of elements in the array: 1 to 1000.</p>
      */
     @NameInMap("ApplicationConfigs")
     public String applicationConfigsShrink;
 
     /**
-     * <p>The list of services. Number of elements in the array: 1 to 100.</p>
+     * <p>The services. Number of elements in the array: 1 to 100.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Applications")
@@ -87,7 +87,7 @@ public class RunClusterShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The basic attributes of all ECS instances in the cluster.</p>
+     * <p>The attributes of all ECS instances.</p>
      */
     @NameInMap("NodeAttributes")
     public String nodeAttributesShrink;
@@ -156,13 +156,13 @@ public class RunClusterShrinkRequest extends TeaModel {
     public String securityMode;
 
     /**
-     * <p>The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.</p>
+     * <p>The subscription configurations. This parameter takes effect only if you set the PaymentType parameter to Subscription.</p>
      */
     @NameInMap("SubscriptionConfig")
     public String subscriptionConfigShrink;
 
     /**
-     * <p>The list of tags. Number of elements in the array: 0 to 20.</p>
+     * <p>The tags. Number of elements in the array: 0 to 20.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
