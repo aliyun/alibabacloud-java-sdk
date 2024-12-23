@@ -6,18 +6,36 @@ import com.aliyun.tea.*;
 public class KillJobsRequest extends TeaModel {
     /**
      * <p>The request body parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[
+     *       {
+     *             &quot;instanceId&quot;: &quot;&quot;,
+     *             &quot;projectName&quot;: &quot;&quot;
+     *       },
+     *       {
+     *             &quot;instanceId&quot;: &quot;&quot;,
+     *             &quot;projectName&quot;: &quot;&quot;
+     *       }
+     * ]</p>
      */
     @NameInMap("body")
     public String body;
 
     /**
      * <p>The ID of the region in which the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("region")
     public String region;
 
     /**
      * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>478403690625249</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

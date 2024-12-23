@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class KillJobsResponseBody extends TeaModel {
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("data")
     public String data;
 
     /**
      * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("httpCode")
     public Integer httpCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0abb7ede16814560741256732e91b6</p>
      */
     @NameInMap("requestId")
     public String requestId;

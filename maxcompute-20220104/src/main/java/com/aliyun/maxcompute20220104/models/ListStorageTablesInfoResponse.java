@@ -3,7 +3,7 @@ package com.aliyun.maxcompute20220104.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateQuotaResponse extends TeaModel {
+public class ListStorageTablesInfoResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class UpdateQuotaResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public UpdateQuotaResponseBody body;
+    public ListStorageTablesInfoResponseBody body;
 
-    public static UpdateQuotaResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateQuotaResponse self = new UpdateQuotaResponse();
+    public static ListStorageTablesInfoResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListStorageTablesInfoResponse self = new ListStorageTablesInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateQuotaResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListStorageTablesInfoResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class UpdateQuotaResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateQuotaResponse setStatusCode(Integer statusCode) {
+    public ListStorageTablesInfoResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class UpdateQuotaResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateQuotaResponse setBody(UpdateQuotaResponseBody body) {
+    public ListStorageTablesInfoResponse setBody(ListStorageTablesInfoResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateQuotaResponseBody getBody() {
+    public ListStorageTablesInfoResponseBody getBody() {
         return this.body;
     }
 

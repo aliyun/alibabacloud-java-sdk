@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateProjectResponseBody extends TeaModel {
     /**
      * <p>The returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0b87b7a316654730544735643e9200</p>
      */
     @NameInMap("requestId")
     public String requestId;

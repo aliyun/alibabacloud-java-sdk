@@ -82,6 +82,224 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @param request CreateMmsDataSourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMmsDataSourceResponse
+     */
+    public CreateMmsDataSourceResponse createMmsDataSourceWithOptions(CreateMmsDataSourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networklink)) {
+            body.put("networklink", request.networklink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMmsDataSource"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMmsDataSourceResponse());
+    }
+
+    /**
+     * @param request CreateMmsDataSourceRequest
+     * @return CreateMmsDataSourceResponse
+     */
+    public CreateMmsDataSourceResponse createMmsDataSource(CreateMmsDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createMmsDataSourceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建数据源的更新元数据操作</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMmsFetchMetadataJobResponse
+     */
+    public CreateMmsFetchMetadataJobResponse createMmsFetchMetadataJobWithOptions(String sourceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMmsFetchMetadataJob"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/scans"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMmsFetchMetadataJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建数据源的更新元数据操作</p>
+     * @return CreateMmsFetchMetadataJobResponse
+     */
+    public CreateMmsFetchMetadataJobResponse createMmsFetchMetadataJob(String sourceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createMmsFetchMetadataJobWithOptions(sourceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建迁移任务</p>
+     * 
+     * @param request CreateMmsJobRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMmsJobResponse
+     */
+    public CreateMmsJobResponse createMmsJobWithOptions(String sourceId, CreateMmsJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.columnMapping)) {
+            body.put("columnMapping", request.columnMapping);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstDbName)) {
+            body.put("dstDbName", request.dstDbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstSchemaName)) {
+            body.put("dstSchemaName", request.dstSchemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableVerification)) {
+            body.put("enableVerification", request.enableVerification);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.increment)) {
+            body.put("increment", request.increment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.others)) {
+            body.put("others", request.others);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partitionFilters)) {
+            body.put("partitionFilters", request.partitionFilters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partitions)) {
+            body.put("partitions", request.partitions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schemaOnly)) {
+            body.put("schemaOnly", request.schemaOnly);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            body.put("sourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceName)) {
+            body.put("sourceName", request.sourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcDbName)) {
+            body.put("srcDbName", request.srcDbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcSchemaName)) {
+            body.put("srcSchemaName", request.srcSchemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableBlackList)) {
+            body.put("tableBlackList", request.tableBlackList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableMapping)) {
+            body.put("tableMapping", request.tableMapping);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableWhiteList)) {
+            body.put("tableWhiteList", request.tableWhiteList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tables)) {
+            body.put("tables", request.tables);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            body.put("taskType", request.taskType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMmsJob"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/jobs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMmsJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建迁移任务</p>
+     * 
+     * @param request CreateMmsJobRequest
+     * @return CreateMmsJobResponse
+     */
+    public CreateMmsJobResponse createMmsJob(String sourceId, CreateMmsJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createMmsJobWithOptions(sourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a package.</p>
+     * 
+     * @param request CreatePackageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePackageResponse
+     */
     public CreatePackageResponse createPackageWithOptions(String projectName, CreatePackageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -108,12 +326,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePackageResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a package.</p>
+     * 
+     * @param request CreatePackageRequest
+     * @return CreatePackageResponse
+     */
     public CreatePackageResponse createPackage(String projectName, CreatePackageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createPackageWithOptions(projectName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a MaxCompute project.</p>
+     * 
+     * @param request CreateProjectRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateProjectResponse
+     */
     public CreateProjectResponse createProjectWithOptions(CreateProjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -134,12 +368,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProjectResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a MaxCompute project.</p>
+     * 
+     * @param request CreateProjectRequest
+     * @return CreateProjectResponse
+     */
     public CreateProjectResponse createProject(CreateProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createProjectWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a quota plan.</p>
+     * 
+     * @param request CreateQuotaPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateQuotaPlanResponse
+     */
     public CreateQuotaPlanResponse createQuotaPlanWithOptions(String nickname, CreateQuotaPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -170,48 +420,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateQuotaPlanResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a quota plan.</p>
+     * 
+     * @param request CreateQuotaPlanRequest
+     * @return CreateQuotaPlanResponse
+     */
     public CreateQuotaPlanResponse createQuotaPlan(String nickname, CreateQuotaPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createQuotaPlanWithOptions(nickname, request, headers, runtime);
     }
 
-    public CreateQuotaScheduleResponse createQuotaScheduleWithOptions(String nickname, CreateQuotaScheduleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
-            query.put("region", request.region);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            query.put("tenantId", request.tenantId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateQuotaSchedule"),
-            new TeaPair("version", "2022-01-04"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/quotas/" + com.aliyun.openapiutil.Client.getEncodeParam(nickname) + "/schedule"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateQuotaScheduleResponse());
-    }
-
-    public CreateQuotaScheduleResponse createQuotaSchedule(String nickname, CreateQuotaScheduleRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createQuotaScheduleWithOptions(nickname, request, headers, runtime);
-    }
-
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a role at the MaxCompute project level.</p>
+     * 
+     * @param request CreateRoleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRoleResponse
+     */
     public CreateRoleResponse createRoleWithOptions(String projectName, CreateRoleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -232,12 +462,97 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRoleResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a role at the MaxCompute project level.</p>
+     * 
+     * @param request CreateRoleRequest
+     * @return CreateRoleResponse
+     */
     public CreateRoleResponse createRole(String projectName, CreateRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createRoleWithOptions(projectName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>删除数据源</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMmsDataSourceResponse
+     */
+    public DeleteMmsDataSourceResponse deleteMmsDataSourceWithOptions(String sourceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMmsDataSource"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMmsDataSourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除数据源</p>
+     * @return DeleteMmsDataSourceResponse
+     */
+    public DeleteMmsDataSourceResponse deleteMmsDataSource(String sourceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteMmsDataSourceWithOptions(sourceId, headers, runtime);
+    }
+
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMmsJobResponse
+     */
+    public DeleteMmsJobResponse deleteMmsJobWithOptions(String sourceId, String jobId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMmsJob"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(jobId) + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMmsJobResponse());
+    }
+
+    /**
+     * @return DeleteMmsJobResponse
+     */
+    public DeleteMmsJobResponse deleteMmsJob(String sourceId, String jobId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteMmsJobWithOptions(sourceId, jobId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a quota plan.</p>
+     * 
+     * @param request DeleteQuotaPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteQuotaPlanResponse
+     */
     public DeleteQuotaPlanResponse deleteQuotaPlanWithOptions(String nickname, String planName, DeleteQuotaPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -267,12 +582,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteQuotaPlanResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a quota plan.</p>
+     * 
+     * @param request DeleteQuotaPlanRequest
+     * @return DeleteQuotaPlanResponse
+     */
     public DeleteQuotaPlanResponse deleteQuotaPlan(String nickname, String planName, DeleteQuotaPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteQuotaPlanWithOptions(nickname, planName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Performs statistics on all jobs that are complete on a specified day and obtains the total resource usage of each job executor on a daily basis.</p>
+     * 
+     * @param tmpReq GetJobResourceUsageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobResourceUsageResponse
+     */
     public GetJobResourceUsageResponse getJobResourceUsageWithOptions(GetJobResourceUsageRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetJobResourceUsageShrinkRequest request = new GetJobResourceUsageShrinkRequest();
@@ -324,12 +655,297 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobResourceUsageResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Performs statistics on all jobs that are complete on a specified day and obtains the total resource usage of each job executor on a daily basis.</p>
+     * 
+     * @param request GetJobResourceUsageRequest
+     * @return GetJobResourceUsageResponse
+     */
     public GetJobResourceUsageResponse getJobResourceUsage(GetJobResourceUsageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getJobResourceUsageWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMmsAsyncTaskResponse
+     */
+    public GetMmsAsyncTaskResponse getMmsAsyncTaskWithOptions(String sourceId, String asyncTaskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMmsAsyncTask"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/asyncTasks/" + com.aliyun.openapiutil.Client.getEncodeParam(asyncTaskId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMmsAsyncTaskResponse());
+    }
+
+    /**
+     * @return GetMmsAsyncTaskResponse
+     */
+    public GetMmsAsyncTaskResponse getMmsAsyncTask(String sourceId, String asyncTaskId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMmsAsyncTaskWithOptions(sourceId, asyncTaskId, headers, runtime);
+    }
+
+    /**
+     * @param request GetMmsDataSourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMmsDataSourceResponse
+     */
+    public GetMmsDataSourceResponse getMmsDataSourceWithOptions(String sourceId, GetMmsDataSourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withConfig)) {
+            query.put("withConfig", request.withConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMmsDataSource"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMmsDataSourceResponse());
+    }
+
+    /**
+     * @param request GetMmsDataSourceRequest
+     * @return GetMmsDataSourceResponse
+     */
+    public GetMmsDataSourceResponse getMmsDataSource(String sourceId, GetMmsDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMmsDataSourceWithOptions(sourceId, request, headers, runtime);
+    }
+
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMmsDbResponse
+     */
+    public GetMmsDbResponse getMmsDbWithOptions(String sourceId, String dbId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMmsDb"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/dbs/" + com.aliyun.openapiutil.Client.getEncodeParam(dbId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMmsDbResponse());
+    }
+
+    /**
+     * @return GetMmsDbResponse
+     */
+    public GetMmsDbResponse getMmsDb(String sourceId, String dbId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMmsDbWithOptions(sourceId, dbId, headers, runtime);
+    }
+
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMmsFetchMetadataJobResponse
+     */
+    public GetMmsFetchMetadataJobResponse getMmsFetchMetadataJobWithOptions(String sourceId, String scanId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMmsFetchMetadataJob"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/scans/" + com.aliyun.openapiutil.Client.getEncodeParam(scanId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMmsFetchMetadataJobResponse());
+    }
+
+    /**
+     * @return GetMmsFetchMetadataJobResponse
+     */
+    public GetMmsFetchMetadataJobResponse getMmsFetchMetadataJob(String sourceId, String scanId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMmsFetchMetadataJobWithOptions(sourceId, scanId, headers, runtime);
+    }
+
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMmsJobResponse
+     */
+    public GetMmsJobResponse getMmsJobWithOptions(String sourceId, String jobId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMmsJob"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(jobId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMmsJobResponse());
+    }
+
+    /**
+     * @return GetMmsJobResponse
+     */
+    public GetMmsJobResponse getMmsJob(String sourceId, String jobId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMmsJobWithOptions(sourceId, jobId, headers, runtime);
+    }
+
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMmsPartitionResponse
+     */
+    public GetMmsPartitionResponse getMmsPartitionWithOptions(String sourceId, String partitionId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMmsPartition"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/partitions/" + com.aliyun.openapiutil.Client.getEncodeParam(partitionId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMmsPartitionResponse());
+    }
+
+    /**
+     * @return GetMmsPartitionResponse
+     */
+    public GetMmsPartitionResponse getMmsPartition(String sourceId, String partitionId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMmsPartitionWithOptions(sourceId, partitionId, headers, runtime);
+    }
+
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMmsTableResponse
+     */
+    public GetMmsTableResponse getMmsTableWithOptions(String sourceId, String tableId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMmsTable"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/tables/" + com.aliyun.openapiutil.Client.getEncodeParam(tableId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMmsTableResponse());
+    }
+
+    /**
+     * @return GetMmsTableResponse
+     */
+    public GetMmsTableResponse getMmsTable(String sourceId, String tableId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMmsTableWithOptions(sourceId, tableId, headers, runtime);
+    }
+
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMmsTaskResponse
+     */
+    public GetMmsTaskResponse getMmsTaskWithOptions(String sourceId, String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMmsTask"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMmsTaskResponse());
+    }
+
+    /**
+     * @return GetMmsTaskResponse
+     */
+    public GetMmsTaskResponse getMmsTask(String sourceId, String taskId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMmsTaskWithOptions(sourceId, taskId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the information about a package.</p>
+     * 
+     * @param request GetPackageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPackageResponse
+     */
     public GetPackageResponse getPackageWithOptions(String projectName, String packageName, GetPackageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -355,12 +971,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetPackageResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the information about a package.</p>
+     * 
+     * @param request GetPackageRequest
+     * @return GetPackageResponse
+     */
     public GetPackageResponse getPackage(String projectName, String packageName, GetPackageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getPackageWithOptions(projectName, packageName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a MaxCompute project.</p>
+     * 
+     * @param request GetProjectRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProjectResponse
+     */
     public GetProjectResponse getProjectWithOptions(String projectName, GetProjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -386,12 +1018,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetProjectResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a MaxCompute project.</p>
+     * 
+     * @param request GetProjectRequest
+     * @return GetProjectResponse
+     */
     public GetProjectResponse getProject(String projectName, GetProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getProjectWithOptions(projectName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the information about a specified level-1 quota.</p>
+     * 
+     * @param request GetQuotaRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetQuotaResponse
+     */
     public GetQuotaResponse getQuotaWithOptions(String nickname, GetQuotaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -429,12 +1077,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetQuotaResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the information about a specified level-1 quota.</p>
+     * 
+     * @param request GetQuotaRequest
+     * @return GetQuotaResponse
+     */
     public GetQuotaResponse getQuota(String nickname, GetQuotaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getQuotaWithOptions(nickname, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the information of a quota plan.</p>
+     * 
+     * @param request GetQuotaPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetQuotaPlanResponse
+     */
     public GetQuotaPlanResponse getQuotaPlanWithOptions(String nickname, String planName, GetQuotaPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -464,12 +1128,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetQuotaPlanResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the information of a quota plan.</p>
+     * 
+     * @param request GetQuotaPlanRequest
+     * @return GetQuotaPlanResponse
+     */
     public GetQuotaPlanResponse getQuotaPlan(String nickname, String planName, GetQuotaPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getQuotaPlanWithOptions(nickname, planName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the scheduling plan for a quota plan.</p>
+     * 
+     * @param request GetQuotaScheduleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetQuotaScheduleResponse
+     */
     public GetQuotaScheduleResponse getQuotaScheduleWithOptions(String nickname, GetQuotaScheduleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -503,12 +1183,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetQuotaScheduleResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the scheduling plan for a quota plan.</p>
+     * 
+     * @param request GetQuotaScheduleRequest
+     * @return GetQuotaScheduleResponse
+     */
     public GetQuotaScheduleResponse getQuotaSchedule(String nickname, GetQuotaScheduleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getQuotaScheduleWithOptions(nickname, request, headers, runtime);
     }
 
+    /**
+     * @param tmpReq GetQuotaUsageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetQuotaUsageResponse
+     */
+    public GetQuotaUsageResponse getQuotaUsageWithOptions(String nickname, GetQuotaUsageRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetQuotaUsageShrinkRequest request = new GetQuotaUsageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.plotTypes)) {
+            request.plotTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.plotTypes, "plotTypes", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.yAxisTypes)) {
+            request.yAxisTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.yAxisTypes, "yAxisTypes", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggMethod)) {
+            query.put("aggMethod", request.aggMethod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            query.put("from", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.plotTypesShrink)) {
+            query.put("plotTypes", request.plotTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
+            query.put("productId", request.productId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subQuotaNickname)) {
+            query.put("subQuotaNickname", request.subQuotaNickname);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.to)) {
+            query.put("to", request.to);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.yAxisTypesShrink)) {
+            query.put("yAxisTypes", request.yAxisTypesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetQuotaUsage"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/quotas/" + com.aliyun.openapiutil.Client.getEncodeParam(nickname) + "/usage"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQuotaUsageResponse());
+    }
+
+    /**
+     * @param request GetQuotaUsageRequest
+     * @return GetQuotaUsageResponse
+     */
+    public GetQuotaUsageResponse getQuotaUsage(String nickname, GetQuotaUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getQuotaUsageWithOptions(nickname, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the ACL-based permissions that is granted to a project-level role.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRoleAclResponse
+     */
     public GetRoleAclResponse getRoleAclWithOptions(String projectName, String roleName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -527,12 +1305,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetRoleAclResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the ACL-based permissions that is granted to a project-level role.</p>
+     * @return GetRoleAclResponse
+     */
     public GetRoleAclResponse getRoleAcl(String projectName, String roleName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getRoleAclWithOptions(projectName, roleName, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains ACL-based permissions on an object that are granted to a project-level role.</p>
+     * 
+     * @param request GetRoleAclOnObjectRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRoleAclOnObjectResponse
+     */
     public GetRoleAclOnObjectResponse getRoleAclOnObjectWithOptions(String projectName, String roleName, GetRoleAclOnObjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -562,12 +1354,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetRoleAclOnObjectResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains ACL-based permissions on an object that are granted to a project-level role.</p>
+     * 
+     * @param request GetRoleAclOnObjectRequest
+     * @return GetRoleAclOnObjectResponse
+     */
     public GetRoleAclOnObjectResponse getRoleAclOnObject(String projectName, String roleName, GetRoleAclOnObjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getRoleAclOnObjectWithOptions(projectName, roleName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the policy that is attached to a project-level role.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRolePolicyResponse
+     */
     public GetRolePolicyResponse getRolePolicyWithOptions(String projectName, String roleName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -586,12 +1393,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetRolePolicyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the policy that is attached to a project-level role.</p>
+     * @return GetRolePolicyResponse
+     */
     public GetRolePolicyResponse getRolePolicy(String projectName, String roleName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getRolePolicyWithOptions(projectName, roleName, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the running state data of jobs that are in the running state in a specified period of time.</p>
+     * 
+     * @param tmpReq GetRunningJobsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRunningJobsResponse
+     */
     public GetRunningJobsResponse getRunningJobsWithOptions(GetRunningJobsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetRunningJobsShrinkRequest request = new GetRunningJobsShrinkRequest();
@@ -647,12 +1468,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetRunningJobsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the running state data of jobs that are in the running state in a specified period of time.</p>
+     * 
+     * @param request GetRunningJobsRequest
+     * @return GetRunningJobsResponse
+     */
     public GetRunningJobsResponse getRunningJobs(GetRunningJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getRunningJobsWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Views the information about MaxCompute internal tables, views, external tables, clustered tables, or transactional tables.</p>
+     * 
+     * @param request GetTableInfoRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTableInfoResponse
+     */
     public GetTableInfoResponse getTableInfoWithOptions(String projectName, String tableName, GetTableInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -682,12 +1519,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableInfoResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Views the information about MaxCompute internal tables, views, external tables, clustered tables, or transactional tables.</p>
+     * 
+     * @param request GetTableInfoRequest
+     * @return GetTableInfoResponse
+     */
     public GetTableInfoResponse getTableInfo(String projectName, String tableName, GetTableInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTableInfoWithOptions(projectName, tableName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the trusted projects of the current project.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTrustedProjectsResponse
+     */
     public GetTrustedProjectsResponse getTrustedProjectsWithOptions(String projectName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -706,12 +1558,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTrustedProjectsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the trusted projects of the current project.</p>
+     * @return GetTrustedProjectsResponse
+     */
     public GetTrustedProjectsResponse getTrustedProjects(String projectName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTrustedProjectsWithOptions(projectName, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Terminates a running job.</p>
+     * 
+     * @param request KillJobsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return KillJobsResponse
+     */
     public KillJobsResponse killJobsWithOptions(KillJobsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -742,12 +1608,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new KillJobsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Terminates a running job.</p>
+     * 
+     * @param request KillJobsRequest
+     * @return KillJobsResponse
+     */
     public KillJobsResponse killJobs(KillJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.killJobsWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains functions in a MaxCompute project.</p>
+     * 
+     * @param request ListFunctionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFunctionsResponse
+     */
     public ListFunctionsResponse listFunctionsWithOptions(String projectName, ListFunctionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -785,12 +1667,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains functions in a MaxCompute project.</p>
+     * 
+     * @param request ListFunctionsRequest
+     * @return ListFunctionsResponse
+     */
     public ListFunctionsResponse listFunctions(String projectName, ListFunctionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listFunctionsWithOptions(projectName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Views a list of jobs.</p>
+     * 
+     * @param request ListJobInfosRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListJobInfosResponse
+     */
     public ListJobInfosResponse listJobInfosWithOptions(ListJobInfosRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -818,10 +1716,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("tenantId", request.tenantId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extNodeIdList)) {
+            body.put("extNodeIdList", request.extNodeIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            body.put("from", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdList)) {
+            body.put("instanceIdList", request.instanceIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobOwnerList)) {
+            body.put("jobOwnerList", request.jobOwnerList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priorityList)) {
+            body.put("priorityList", request.priorityList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectList)) {
+            body.put("projectList", request.projectList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaNickname)) {
+            body.put("quotaNickname", request.quotaNickname);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneTagList)) {
+            body.put("sceneTagList", request.sceneTagList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signatureList)) {
+            body.put("signatureList", request.signatureList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortByList)) {
+            body.put("sortByList", request.sortByList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrderList)) {
+            body.put("sortOrderList", request.sortOrderList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusList)) {
+            body.put("statusList", request.statusList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.to)) {
+            body.put("to", request.to);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.typeList)) {
+            body.put("typeList", request.typeList);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListJobInfos"),
@@ -837,12 +1792,521 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListJobInfosResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Views a list of jobs.</p>
+     * 
+     * @param request ListJobInfosRequest
+     * @return ListJobInfosResponse
+     */
     public ListJobInfosResponse listJobInfos(ListJobInfosRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listJobInfosWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @param request ListMmsDataSourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMmsDataSourcesResponse
+     */
+    public ListMmsDataSourcesResponse listMmsDataSourcesWithOptions(ListMmsDataSourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMmsDataSources"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMmsDataSourcesResponse());
+    }
+
+    /**
+     * @param request ListMmsDataSourcesRequest
+     * @return ListMmsDataSourcesResponse
+     */
+    public ListMmsDataSourcesResponse listMmsDataSources(ListMmsDataSourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMmsDataSourcesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一个数据源内“库”列表</p>
+     * 
+     * @param tmpReq ListMmsDbsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMmsDbsResponse
+     */
+    public ListMmsDbsResponse listMmsDbsWithOptions(String sourceId, ListMmsDbsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListMmsDbsShrinkRequest request = new ListMmsDbsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sorter)) {
+            request.sorterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sorter, "sorter", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sorterShrink)) {
+            query.put("sorter", request.sorterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMmsDbs"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/dbs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMmsDbsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一个数据源内“库”列表</p>
+     * 
+     * @param request ListMmsDbsRequest
+     * @return ListMmsDbsResponse
+     */
+    public ListMmsDbsResponse listMmsDbs(String sourceId, ListMmsDbsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMmsDbsWithOptions(sourceId, request, headers, runtime);
+    }
+
+    /**
+     * @param request ListMmsJobsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMmsJobsResponse
+     */
+    public ListMmsJobsResponse listMmsJobsWithOptions(String sourceId, ListMmsJobsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dstDbName)) {
+            query.put("dstDbName", request.dstDbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstTableName)) {
+            query.put("dstTableName", request.dstTableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcDbName)) {
+            query.put("srcDbName", request.srcDbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcTableName)) {
+            query.put("srcTableName", request.srcTableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stopped)) {
+            query.put("stopped", request.stopped);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sorter)) {
+            query.put("sorter", request.sorter);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMmsJobs"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/jobs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMmsJobsResponse());
+    }
+
+    /**
+     * @param request ListMmsJobsRequest
+     * @return ListMmsJobsResponse
+     */
+    public ListMmsJobsResponse listMmsJobs(String sourceId, ListMmsJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMmsJobsWithOptions(sourceId, request, headers, runtime);
+    }
+
+    /**
+     * @param tmpReq ListMmsPartitionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMmsPartitionsResponse
+     */
+    public ListMmsPartitionsResponse listMmsPartitionsWithOptions(String sourceId, ListMmsPartitionsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListMmsPartitionsShrinkRequest request = new ListMmsPartitionsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.status)) {
+            request.statusShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.status, "status", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("dbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            query.put("dbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lastDdlTimeEnd)) {
+            query.put("lastDdlTimeEnd", request.lastDdlTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lastDdlTimeStart)) {
+            query.put("lastDdlTimeStart", request.lastDdlTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusShrink)) {
+            query.put("status", request.statusShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("tableName", request.tableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updated)) {
+            query.put("updated", request.updated);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.value)) {
+            query.put("value", request.value);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sorter)) {
+            query.put("sorter", request.sorter);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMmsPartitions"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/partitions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMmsPartitionsResponse());
+    }
+
+    /**
+     * @param request ListMmsPartitionsRequest
+     * @return ListMmsPartitionsResponse
+     */
+    public ListMmsPartitionsResponse listMmsPartitions(String sourceId, ListMmsPartitionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMmsPartitionsWithOptions(sourceId, request, headers, runtime);
+    }
+
+    /**
+     * @param tmpReq ListMmsTablesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMmsTablesResponse
+     */
+    public ListMmsTablesResponse listMmsTablesWithOptions(String sourceId, ListMmsTablesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListMmsTablesShrinkRequest request = new ListMmsTablesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.status)) {
+            request.statusShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.status, "status", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("dbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            query.put("dbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hasPartitions)) {
+            query.put("hasPartitions", request.hasPartitions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lastDdlTimeEnd)) {
+            query.put("lastDdlTimeEnd", request.lastDdlTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lastDdlTimeStart)) {
+            query.put("lastDdlTimeStart", request.lastDdlTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.onlyName)) {
+            query.put("onlyName", request.onlyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusShrink)) {
+            query.put("status", request.statusShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sorter)) {
+            query.put("sorter", request.sorter);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMmsTables"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/tables"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMmsTablesResponse());
+    }
+
+    /**
+     * @param request ListMmsTablesRequest
+     * @return ListMmsTablesResponse
+     */
+    public ListMmsTablesResponse listMmsTables(String sourceId, ListMmsTablesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMmsTablesWithOptions(sourceId, request, headers, runtime);
+    }
+
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMmsTaskLogsResponse
+     */
+    public ListMmsTaskLogsResponse listMmsTaskLogsWithOptions(String sourceId, String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMmsTaskLogs"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + "/logs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMmsTaskLogsResponse());
+    }
+
+    /**
+     * @return ListMmsTaskLogsResponse
+     */
+    public ListMmsTaskLogsResponse listMmsTaskLogs(String sourceId, String taskId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMmsTaskLogsWithOptions(sourceId, taskId, headers, runtime);
+    }
+
+    /**
+     * @param request ListMmsTasksRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMmsTasksResponse
+     */
+    public ListMmsTasksResponse listMmsTasksWithOptions(String sourceId, ListMmsTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dstDbName)) {
+            query.put("dstDbName", request.dstDbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstTableName)) {
+            query.put("dstTableName", request.dstTableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("jobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobName)) {
+            query.put("jobName", request.jobName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partition)) {
+            query.put("partition", request.partition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcDbName)) {
+            query.put("srcDbName", request.srcDbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcTableName)) {
+            query.put("srcTableName", request.srcTableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sorter)) {
+            query.put("sorter", request.sorter);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMmsTasks"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/tasks"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMmsTasksResponse());
+    }
+
+    /**
+     * @param request ListMmsTasksRequest
+     * @return ListMmsTasksResponse
+     */
+    public ListMmsTasksResponse listMmsTasks(String sourceId, ListMmsTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMmsTasksWithOptions(sourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the packages in a MaxCompute project.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPackagesResponse
+     */
     public ListPackagesResponse listPackagesWithOptions(String projectName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -861,12 +2325,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListPackagesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the packages in a MaxCompute project.</p>
+     * @return ListPackagesResponse
+     */
     public ListPackagesResponse listPackages(String projectName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listPackagesWithOptions(projectName, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of users in a project.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProjectUsersResponse
+     */
     public ListProjectUsersResponse listProjectUsersWithOptions(String projectName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -885,12 +2362,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectUsersResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of users in a project.</p>
+     * @return ListProjectUsersResponse
+     */
     public ListProjectUsersResponse listProjectUsers(String projectName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listProjectUsersWithOptions(projectName, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of MaxCompute projects.</p>
+     * 
+     * @param request ListProjectsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProjectsResponse
+     */
     public ListProjectsResponse listProjectsWithOptions(ListProjectsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -952,12 +2443,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of MaxCompute projects.</p>
+     * 
+     * @param request ListProjectsRequest
+     * @return ListProjectsResponse
+     */
     public ListProjectsResponse listProjects(ListProjectsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listProjectsWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries quotas.</p>
+     * 
+     * @param request ListQuotasRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListQuotasResponse
+     */
     public ListQuotasResponse listQuotasWithOptions(ListQuotasRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1007,12 +2514,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListQuotasResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries quotas.</p>
+     * 
+     * @param request ListQuotasRequest
+     * @return ListQuotasResponse
+     */
     public ListQuotasResponse listQuotas(ListQuotasRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listQuotasWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains quota plans.</p>
+     * 
+     * @param request ListQuotasPlansRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListQuotasPlansResponse
+     */
     public ListQuotasPlansResponse listQuotasPlansWithOptions(String nickname, ListQuotasPlansRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1042,12 +2565,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListQuotasPlansResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains quota plans.</p>
+     * 
+     * @param request ListQuotasPlansRequest
+     * @return ListQuotasPlansResponse
+     */
     public ListQuotasPlansResponse listQuotasPlans(String nickname, ListQuotasPlansRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listQuotasPlansWithOptions(nickname, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains resources in a MaxCompute project.</p>
+     * 
+     * @param request ListResourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourcesResponse
+     */
     public ListResourcesResponse listResourcesWithOptions(String projectName, ListResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1085,12 +2624,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourcesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains resources in a MaxCompute project.</p>
+     * 
+     * @param request ListResourcesRequest
+     * @return ListResourcesResponse
+     */
     public ListResourcesResponse listResources(String projectName, ListResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listResourcesWithOptions(projectName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains MaxCompute project-level roles.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRolesResponse
+     */
     public ListRolesResponse listRolesWithOptions(String projectName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1109,12 +2663,196 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListRolesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains MaxCompute project-level roles.</p>
+     * @return ListRolesResponse
+     */
     public ListRolesResponse listRoles(String projectName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listRolesWithOptions(projectName, headers, runtime);
     }
 
+    /**
+     * @param tmpReq ListStoragePartitionsInfoRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListStoragePartitionsInfoResponse
+     */
+    public ListStoragePartitionsInfoResponse listStoragePartitionsInfoWithOptions(String project, String table, ListStoragePartitionsInfoRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListStoragePartitionsInfoShrinkRequest request = new ListStoragePartitionsInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.types)) {
+            request.typesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.types, "types", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ascOrder)) {
+            query.put("ascOrder", request.ascOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.date)) {
+            query.put("date", request.date);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderColumn)) {
+            query.put("orderColumn", request.orderColumn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partitionPrefix)) {
+            query.put("partitionPrefix", request.partitionPrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("schema", request.schema);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.typesShrink)) {
+            query.put("types", request.typesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListStoragePartitionsInfo"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/observations/analysis/storage/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(project) + "/tables/" + com.aliyun.openapiutil.Client.getEncodeParam(table) + "/partitionsInfo"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListStoragePartitionsInfoResponse());
+    }
+
+    /**
+     * @param request ListStoragePartitionsInfoRequest
+     * @return ListStoragePartitionsInfoResponse
+     */
+    public ListStoragePartitionsInfoResponse listStoragePartitionsInfo(String project, String table, ListStoragePartitionsInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listStoragePartitionsInfoWithOptions(project, table, request, headers, runtime);
+    }
+
+    /**
+     * @param tmpReq ListStorageTablesInfoRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListStorageTablesInfoResponse
+     */
+    public ListStorageTablesInfoResponse listStorageTablesInfoWithOptions(String project, ListStorageTablesInfoRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListStorageTablesInfoShrinkRequest request = new ListStorageTablesInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.types)) {
+            request.typesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.types, "types", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ascOrder)) {
+            query.put("ascOrder", request.ascOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.date)) {
+            query.put("date", request.date);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderColumn)) {
+            query.put("orderColumn", request.orderColumn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recentDays)) {
+            query.put("recentDays", request.recentDays);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("schema", request.schema);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tablePrefix)) {
+            query.put("tablePrefix", request.tablePrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.typesShrink)) {
+            query.put("types", request.typesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListStorageTablesInfo"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/observations/analysis/storage/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(project) + "/tablesInfo"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListStorageTablesInfoResponse());
+    }
+
+    /**
+     * @param request ListStorageTablesInfoRequest
+     * @return ListStorageTablesInfoResponse
+     */
+    public ListStorageTablesInfoResponse listStorageTablesInfo(String project, ListStorageTablesInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listStorageTablesInfoWithOptions(project, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains tables in a MaxCompute project.</p>
+     * 
+     * @param request ListTablesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTablesResponse
+     */
     public ListTablesResponse listTablesWithOptions(String projectName, ListTablesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1156,12 +2894,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTablesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains tables in a MaxCompute project.</p>
+     * 
+     * @param request ListTablesRequest
+     * @return ListTablesResponse
+     */
     public ListTablesResponse listTables(String projectName, ListTablesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listTablesWithOptions(projectName, request, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTunnelQuotaTimerResponse
+     */
+    public ListTunnelQuotaTimerResponse listTunnelQuotaTimerWithOptions(String nickname, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTunnelQuotaTimer"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/tunnel/" + com.aliyun.openapiutil.Client.getEncodeParam(nickname) + "/timers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTunnelQuotaTimerResponse());
+    }
+
+    /**
+     * @return ListTunnelQuotaTimerResponse
+     */
+    public ListTunnelQuotaTimerResponse listTunnelQuotaTimer(String nickname) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listTunnelQuotaTimerWithOptions(nickname, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of all users under a tenant.</p>
+     * 
+     * @param request ListUsersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUsersResponse
+     */
     public ListUsersResponse listUsersWithOptions(ListUsersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1191,12 +2977,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListUsersResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of all users under a tenant.</p>
+     * 
+     * @param request ListUsersRequest
+     * @return ListUsersResponse
+     */
     public ListUsersResponse listUsers(ListUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listUsersWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains information about the users who are assigned a project-level role.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUsersByRoleResponse
+     */
     public ListUsersByRoleResponse listUsersByRoleWithOptions(String projectName, String roleName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1215,12 +3016,234 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListUsersByRoleResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains information about the users who are assigned a project-level role.</p>
+     * @return ListUsersByRoleResponse
+     */
     public ListUsersByRoleResponse listUsersByRole(String projectName, String roleName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listUsersByRoleWithOptions(projectName, roleName, headers, runtime);
     }
 
+    /**
+     * @param request QueryQuotaRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryQuotaResponse
+     */
+    public QueryQuotaResponse queryQuotaWithOptions(String nickname, QueryQuotaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.akProven)) {
+            query.put("AkProven", request.akProven);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mock)) {
+            query.put("mock", request.mock);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryQuota"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/quotas/" + com.aliyun.openapiutil.Client.getEncodeParam(nickname) + "/query"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryQuotaResponse());
+    }
+
+    /**
+     * @param request QueryQuotaRequest
+     * @return QueryQuotaResponse
+     */
+    public QueryQuotaResponse queryQuota(String nickname, QueryQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryQuotaWithOptions(nickname, request, headers, runtime);
+    }
+
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RetryMmsJobResponse
+     */
+    public RetryMmsJobResponse retryMmsJobWithOptions(String sourceId, String jobId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RetryMmsJob"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(jobId) + "/retry"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RetryMmsJobResponse());
+    }
+
+    /**
+     * @return RetryMmsJobResponse
+     */
+    public RetryMmsJobResponse retryMmsJob(String sourceId, String jobId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.retryMmsJobWithOptions(sourceId, jobId, headers, runtime);
+    }
+
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartMmsJobResponse
+     */
+    public StartMmsJobResponse startMmsJobWithOptions(String sourceId, String jobId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartMmsJob"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(jobId) + "/start"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartMmsJobResponse());
+    }
+
+    /**
+     * @return StartMmsJobResponse
+     */
+    public StartMmsJobResponse startMmsJob(String sourceId, String jobId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startMmsJobWithOptions(sourceId, jobId, headers, runtime);
+    }
+
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopMmsJobResponse
+     */
+    public StopMmsJobResponse stopMmsJobWithOptions(String sourceId, String jobId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopMmsJob"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(jobId) + "/stop"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopMmsJobResponse());
+    }
+
+    /**
+     * @return StopMmsJobResponse
+     */
+    public StopMmsJobResponse stopMmsJob(String sourceId, String jobId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopMmsJobWithOptions(sourceId, jobId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新数据源配置、名称，启/停数据源实例</p>
+     * 
+     * @param request UpdateMmsDataSourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMmsDataSourceResponse
+     */
+    public UpdateMmsDataSourceResponse updateMmsDataSourceWithOptions(String sourceId, UpdateMmsDataSourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.action)) {
+            body.put("action", request.action);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.test)) {
+            body.put("test", request.test);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMmsDataSource"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMmsDataSourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新数据源配置、名称，启/停数据源实例</p>
+     * 
+     * @param request UpdateMmsDataSourceRequest
+     * @return UpdateMmsDataSourceResponse
+     */
+    public UpdateMmsDataSourceResponse updateMmsDataSource(String sourceId, UpdateMmsDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMmsDataSourceWithOptions(sourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the objects in a package and projects in which the package can be installed.</p>
+     * 
+     * @param request UpdatePackageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePackageResponse
+     */
     public UpdatePackageResponse updatePackageWithOptions(String projectName, String packageName, UpdatePackageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1241,12 +3264,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePackageResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the objects in a package and projects in which the package can be installed.</p>
+     * 
+     * @param request UpdatePackageRequest
+     * @return UpdatePackageResponse
+     */
     public UpdatePackageResponse updatePackage(String projectName, String packageName, UpdatePackageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updatePackageWithOptions(projectName, packageName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Update Project Basic Information</p>
+     * 
+     * @param request UpdateProjectBasicMetaRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateProjectBasicMetaResponse
+     */
+    public UpdateProjectBasicMetaResponse updateProjectBasicMetaWithOptions(String projectName, UpdateProjectBasicMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            body.put("comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.properties)) {
+            body.put("properties", request.properties);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateProjectBasicMeta"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(projectName) + "/meta"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProjectBasicMetaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Update Project Basic Information</p>
+     * 
+     * @param request UpdateProjectBasicMetaRequest
+     * @return UpdateProjectBasicMetaResponse
+     */
+    public UpdateProjectBasicMetaResponse updateProjectBasicMeta(String projectName, UpdateProjectBasicMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateProjectBasicMetaWithOptions(projectName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modify Default Project Compute Quota</p>
+     * 
+     * @param request UpdateProjectDefaultQuotaRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateProjectDefaultQuotaResponse
+     */
+    public UpdateProjectDefaultQuotaResponse updateProjectDefaultQuotaWithOptions(String projectName, UpdateProjectDefaultQuotaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.quota)) {
+            body.put("quota", request.quota);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateProjectDefaultQuota"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(projectName) + "/quota"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProjectDefaultQuotaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modify Default Project Compute Quota</p>
+     * 
+     * @param request UpdateProjectDefaultQuotaRequest
+     * @return UpdateProjectDefaultQuotaResponse
+     */
+    public UpdateProjectDefaultQuotaResponse updateProjectDefaultQuota(String projectName, UpdateProjectDefaultQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateProjectDefaultQuotaWithOptions(projectName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the IP address whitelist of a MaxCompute project.</p>
+     * 
+     * @param request UpdateProjectIpWhiteListRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateProjectIpWhiteListResponse
+     */
     public UpdateProjectIpWhiteListResponse updateProjectIpWhiteListWithOptions(String projectName, UpdateProjectIpWhiteListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1267,57 +3404,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProjectIpWhiteListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the IP address whitelist of a MaxCompute project.</p>
+     * 
+     * @param request UpdateProjectIpWhiteListRequest
+     * @return UpdateProjectIpWhiteListResponse
+     */
     public UpdateProjectIpWhiteListResponse updateProjectIpWhiteList(String projectName, UpdateProjectIpWhiteListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateProjectIpWhiteListWithOptions(projectName, request, headers, runtime);
     }
 
-    public UpdateQuotaResponse updateQuotaWithOptions(String nickname, UpdateQuotaRequest request, UpdateQuotaHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
-            query.put("region", request.region);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            query.put("tenantId", request.tenantId);
-        }
-
-        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
-            realHeaders = headers.commonHeaders;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.akProven)) {
-            realHeaders.put("AkProven", com.aliyun.teautil.Common.toJSONString(headers.akProven));
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", realHeaders),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateQuota"),
-            new TeaPair("version", "2022-01-04"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/quotas/" + com.aliyun.openapiutil.Client.getEncodeParam(nickname) + ""),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateQuotaResponse());
-    }
-
-    public UpdateQuotaResponse updateQuota(String nickname, UpdateQuotaRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        UpdateQuotaHeaders headers = new UpdateQuotaHeaders();
-        return this.updateQuotaWithOptions(nickname, request, headers, runtime);
-    }
-
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a quota plan.</p>
+     * 
+     * @param request UpdateQuotaPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateQuotaPlanResponse
+     */
     public UpdateQuotaPlanResponse updateQuotaPlanWithOptions(String nickname, String planName, UpdateQuotaPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1348,12 +3456,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateQuotaPlanResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a quota plan.</p>
+     * 
+     * @param request UpdateQuotaPlanRequest
+     * @return UpdateQuotaPlanResponse
+     */
     public UpdateQuotaPlanResponse updateQuotaPlan(String nickname, String planName, UpdateQuotaPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateQuotaPlanWithOptions(nickname, planName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the scheduling plan for a quota plan.</p>
+     * 
+     * @param request UpdateQuotaScheduleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateQuotaScheduleResponse
+     */
     public UpdateQuotaScheduleResponse updateQuotaScheduleWithOptions(String nickname, UpdateQuotaScheduleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1384,9 +3508,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateQuotaScheduleResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the scheduling plan for a quota plan.</p>
+     * 
+     * @param request UpdateQuotaScheduleRequest
+     * @return UpdateQuotaScheduleResponse
+     */
     public UpdateQuotaScheduleResponse updateQuotaSchedule(String nickname, UpdateQuotaScheduleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateQuotaScheduleWithOptions(nickname, request, headers, runtime);
+    }
+
+    /**
+     * @param request UpdateTunnelQuotaTimerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateTunnelQuotaTimerResponse
+     */
+    public UpdateTunnelQuotaTimerResponse updateTunnelQuotaTimerWithOptions(String nickname, UpdateTunnelQuotaTimerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.teautil.Common.toArray(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateTunnelQuotaTimer"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/tunnel/" + com.aliyun.openapiutil.Client.getEncodeParam(nickname) + "/timers"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTunnelQuotaTimerResponse());
+    }
+
+    /**
+     * @param request UpdateTunnelQuotaTimerRequest
+     * @return UpdateTunnelQuotaTimerResponse
+     */
+    public UpdateTunnelQuotaTimerResponse updateTunnelQuotaTimer(String nickname, UpdateTunnelQuotaTimerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateTunnelQuotaTimerWithOptions(nickname, request, headers, runtime);
     }
 }

@@ -11,26 +11,40 @@ public class GetRunningJobsResponseBody extends TeaModel {
     public GetRunningJobsResponseBodyData data;
 
     /**
-     * <p>*   If the value of success was false, an error code was returned.</p>
-     * <p>*   If the value of success was true, a null value was returned.</p>
+     * <ul>
+     * <li>If the value of success was false, an error code was returned.</li>
+     * <li>If the value of success was true, a null value was returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("errorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A3B1FD2006A24C8D8BE65CDAC028298</p>
      */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("httpCode")
     public Integer httpCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc3b4ab16684833172127321e2c25</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -83,54 +97,81 @@ public class GetRunningJobsResponseBody extends TeaModel {
     public static class GetRunningJobsResponseBodyDataRunningJobInfoList extends TeaModel {
         /**
          * <p>The compute unit (CU) snapshot proportion of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.45</p>
          */
         @NameInMap("cuSnapshot")
         public Double cuSnapshot;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023050206371544gomgtp3ljcr4</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The account that submits the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN$<a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></p>
          */
         @NameInMap("jobOwner")
         public String jobOwner;
 
         /**
          * <p>The memory snapshot proportion of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.45</p>
          */
         @NameInMap("memorySnapshot")
         public Double memorySnapshot;
 
         /**
          * <p>The progress of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("progress")
         public Double progress;
 
         /**
          * <p>The name of the MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project_20221021123044_981b</p>
          */
         @NameInMap("project")
         public String project;
 
         /**
          * <p>The nickname of the quota that is used by the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_quota</p>
          */
         @NameInMap("quotaNickname")
         public String quotaNickname;
 
         /**
          * <p>The time when the job starts to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1689746864</p>
          */
         @NameInMap("runningAtTime")
         public Long runningAtTime;
 
         /**
          * <p>The time when the job is submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1689746864</p>
          */
         @NameInMap("submittedAtTime")
         public Long submittedAtTime;
@@ -217,12 +258,18 @@ public class GetRunningJobsResponseBody extends TeaModel {
     public static class GetRunningJobsResponseBodyData extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("pageNumber")
         public Long pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("pageSize")
         public Long pageSize;
@@ -235,6 +282,9 @@ public class GetRunningJobsResponseBody extends TeaModel {
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         @NameInMap("totalCount")
         public Long totalCount;

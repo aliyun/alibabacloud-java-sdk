@@ -12,24 +12,36 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("errorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A3B1E82006A23A918C70905BF08AEC7</p>
      */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("httpCode")
     public Integer httpCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0b57ff7616612271051086500ea3ce</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -82,30 +94,45 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
     public static class GetJobResourceUsageResponseBodyDataJobResourceUsageList extends TeaModel {
         /**
          * <p>The total number of used compute units (CUs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1185100</p>
          */
         @NameInMap("cuUsage")
         public Long cuUsage;
 
         /**
          * <p>The start date of the query in the format of yyyy-MM-dd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-09</p>
          */
         @NameInMap("date")
         public String date;
 
         /**
          * <p>The job executor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN$<a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></p>
          */
         @NameInMap("jobOwner")
         public String jobOwner;
 
         /**
          * <p>The total memory usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15169536</p>
          */
         @NameInMap("memoryUsage")
         public Long memoryUsage;
 
         /**
          * <p>The quota nickname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_quota</p>
          */
         @NameInMap("quotaNickname")
         public String quotaNickname;
@@ -166,18 +193,27 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("pageNumber")
         public Long pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("pageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         @NameInMap("totalCount")
         public Long totalCount;

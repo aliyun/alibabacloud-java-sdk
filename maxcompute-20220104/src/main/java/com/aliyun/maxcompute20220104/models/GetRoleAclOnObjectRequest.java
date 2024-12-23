@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class GetRoleAclOnObjectRequest extends TeaModel {
     /**
      * <p>The name of the object.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tableA</p>
      */
     @NameInMap("objectName")
     public String objectName;
 
     /**
      * <p>The type of the object.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table</p>
      */
     @NameInMap("objectType")
     public String objectType;

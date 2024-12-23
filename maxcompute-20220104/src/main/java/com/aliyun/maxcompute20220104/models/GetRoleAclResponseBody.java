@@ -12,24 +12,36 @@ public class GetRoleAclResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>040002</p>
      */
     @NameInMap("errorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>error message</p>
      */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("httpCode")
     public Integer httpCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a06dc0916696898838762018e9564</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -88,12 +100,18 @@ public class GetRoleAclResponseBody extends TeaModel {
 
         /**
          * <p>The name of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>functionA</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The Schema name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("schemaName")
         public String schemaName;
@@ -138,12 +156,18 @@ public class GetRoleAclResponseBody extends TeaModel {
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceA</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The Schema name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("schemaName")
         public String schemaName;
@@ -188,12 +212,18 @@ public class GetRoleAclResponseBody extends TeaModel {
 
         /**
          * <p>The name of the package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>packageA</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The Schema name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("schemaName")
         public String schemaName;
@@ -238,12 +268,18 @@ public class GetRoleAclResponseBody extends TeaModel {
 
         /**
          * <p>The name of the MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectA</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The Schema name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("schemaName")
         public String schemaName;
@@ -288,12 +324,18 @@ public class GetRoleAclResponseBody extends TeaModel {
 
         /**
          * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceA</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The Schema name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("schemaName")
         public String schemaName;
@@ -338,12 +380,18 @@ public class GetRoleAclResponseBody extends TeaModel {
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tableA</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The Schema name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("schemaName")
         public String schemaName;

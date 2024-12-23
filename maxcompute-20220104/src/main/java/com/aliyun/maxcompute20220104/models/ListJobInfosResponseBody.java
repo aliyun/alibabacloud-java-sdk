@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListJobInfosResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("data")
     public ListJobInfosResponseBodyData data;
 
     /**
      * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("httpCode")
     public Integer httpCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc13a9516807484336515320e38f5</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -51,165 +57,359 @@ public class ListJobInfosResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListJobInfosResponseBodyDataJobInfoListSceneResults extends TeaModel {
+        /**
+         * <p>The intelligent diagnostics result description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This job uses annual and monthly computing resources. It may be that the job is waiting for resources due to the large amount of overall job running data, many resources requested, and low job priority. Please go to Resource Consumption to view the specific situation. You can also go to Cost Optimization to see if you need to adjust resource configuration.</p>
+         */
+        @NameInMap("description")
+        public String description;
+
+        /**
+         * <p>Information about the nodes where data skew or data expansion is detected. This parameter is returned only when the diagnostics scenario is data skew or data expansion.</p>
+         */
+        @NameInMap("params")
+        public java.util.Map<String, String> params;
+
+        /**
+         * <p>The intelligent diagnostics result scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LackResource</p>
+         */
+        @NameInMap("scene")
+        public String scene;
+
+        /**
+         * <p>The intelligent diagnostics result tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SubscriptionLackResource</p>
+         */
+        @NameInMap("sceneTag")
+        public String sceneTag;
+
+        /**
+         * <p>The intelligent diagnostics result summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Insufficient computing resources available for the job. Click to view details.</p>
+         */
+        @NameInMap("summary")
+        public String summary;
+
+        /**
+         * <p>The intelligent diagnostics result type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>warning</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static ListJobInfosResponseBodyDataJobInfoListSceneResults build(java.util.Map<String, ?> map) throws Exception {
+            ListJobInfosResponseBodyDataJobInfoListSceneResults self = new ListJobInfosResponseBodyDataJobInfoListSceneResults();
+            return TeaModel.build(map, self);
+        }
+
+        public ListJobInfosResponseBodyDataJobInfoListSceneResults setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListJobInfosResponseBodyDataJobInfoListSceneResults setParams(java.util.Map<String, String> params) {
+            this.params = params;
+            return this;
+        }
+        public java.util.Map<String, String> getParams() {
+            return this.params;
+        }
+
+        public ListJobInfosResponseBodyDataJobInfoListSceneResults setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+        public ListJobInfosResponseBodyDataJobInfoListSceneResults setSceneTag(String sceneTag) {
+            this.sceneTag = sceneTag;
+            return this;
+        }
+        public String getSceneTag() {
+            return this.sceneTag;
+        }
+
+        public ListJobInfosResponseBodyDataJobInfoListSceneResults setSummary(String summary) {
+            this.summary = summary;
+            return this;
+        }
+        public String getSummary() {
+            return this.summary;
+        }
+
+        public ListJobInfosResponseBodyDataJobInfoListSceneResults setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class ListJobInfosResponseBodyDataJobInfoList extends TeaModel {
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AY20A</p>
          */
         @NameInMap("cluster")
         public String cluster;
 
         /**
          * <p>The CU snapshot proportion of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.48</p>
          */
         @NameInMap("cuSnapshot")
         public Double cuSnapshot;
 
         /**
          * <p>The total number of used compute units (CUs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("cuUsage")
         public Long cuUsage;
 
         /**
          * <p>The time when the job stops running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("endAtTime")
         public Long endAtTime;
 
         /**
          * <p>The node ID of DataWorks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node_4</p>
          */
         @NameInMap("extNodeId")
         public String extNodeId;
 
         /**
          * <p>The account of the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>duty_2</p>
          */
         @NameInMap("extNodeOnDuty")
         public String extNodeOnDuty;
 
         /**
          * <p>The upstream platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>platform_3</p>
          */
         @NameInMap("extPlantFrom")
         public String extPlantFrom;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230410050036549gfmsdwf60gg</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The account that commits the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN$<a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></p>
          */
         @NameInMap("jobOwner")
         public String jobOwner;
 
         /**
          * <p>The type of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         @NameInMap("jobType")
         public String jobType;
 
         /**
          * <p>The memory snapshot proportion of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.42</p>
          */
         @NameInMap("memorySnapshot")
         public Double memorySnapshot;
 
         /**
          * <p>The total memory usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("memoryUsage")
         public Long memoryUsage;
 
         /**
          * <p>The priority of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("priority")
         public Long priority;
 
         /**
          * <p>The name of the MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openrec_new</p>
          */
         @NameInMap("project")
         public String project;
 
         /**
          * <p>The nickname of the quota that is used by the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_quota</p>
          */
         @NameInMap("quotaNickname")
         public String quotaNickname;
 
         /**
          * <p>The type of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subscription</p>
          */
         @NameInMap("quotaType")
         public String quotaType;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("region")
         public String region;
 
         /**
          * <p>The time when the job starts to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672112113</p>
          */
         @NameInMap("runningAtTime")
         public Long runningAtTime;
 
         /**
          * <p>The period for which the job runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         @NameInMap("runningTime")
         public Long runningTime;
 
         /**
+         * <p>The intelligent diagnostics results.</p>
+         */
+        @NameInMap("sceneResults")
+        public java.util.List<ListJobInfosResponseBodyDataJobInfoListSceneResults> sceneResults;
+
+        /**
          * <p>The signature of the SQL job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i094KijGrN3kOXZ74kbexB77XQY=</p>
          */
         @NameInMap("signature")
         public String signature;
 
         /**
          * <p>The status of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The status of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("statusSnapshot")
         public String statusSnapshot;
 
         /**
          * <p>The time when the job was committed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672112013</p>
          */
         @NameInMap("submittedAtTime")
         public Long submittedAtTime;
 
         /**
          * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("tags")
         public String tags;
 
         /**
          * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>213065738244354</p>
          */
         @NameInMap("tenantId")
         public String tenantId;
 
         /**
          * <p>The total period for which the job runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         @NameInMap("totalTime")
         public Long totalTime;
 
         /**
          * <p>The duration for which the job waits to start.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("waitingTime")
         public Long waitingTime;
@@ -371,6 +571,14 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.runningTime;
         }
 
+        public ListJobInfosResponseBodyDataJobInfoList setSceneResults(java.util.List<ListJobInfosResponseBodyDataJobInfoListSceneResults> sceneResults) {
+            this.sceneResults = sceneResults;
+            return this;
+        }
+        public java.util.List<ListJobInfosResponseBodyDataJobInfoListSceneResults> getSceneResults() {
+            return this.sceneResults;
+        }
+
         public ListJobInfosResponseBodyDataJobInfoList setSignature(String signature) {
             this.signature = signature;
             return this;
@@ -439,25 +647,34 @@ public class ListJobInfosResponseBody extends TeaModel {
 
     public static class ListJobInfosResponseBodyData extends TeaModel {
         /**
-         * <p>The list of the information about the jobs.</p>
+         * <p>The information about the jobs.</p>
          */
         @NameInMap("jobInfoList")
         public java.util.List<ListJobInfosResponseBodyDataJobInfoList> jobInfoList;
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("pageNumber")
         public Long pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("pageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         @NameInMap("totalCount")
         public Long totalCount;

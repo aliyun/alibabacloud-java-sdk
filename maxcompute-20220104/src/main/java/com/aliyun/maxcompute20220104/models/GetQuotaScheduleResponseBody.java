@@ -11,26 +11,40 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
     public java.util.List<GetQuotaScheduleResponseBodyData> data;
 
     /**
-     * <p>*   If the value of success was false, an error code was returned.</p>
-     * <p>*   If the value of success was true, a null value was returned.</p>
+     * <ul>
+     * <li>If the value of success was false, an error code was returned.</li>
+     * <li>If the value of success was true, a null value was returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("errorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>errorMsg</p>
      */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("httpCode")
     public Integer httpCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc059b716696296266308790e0d3e</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -83,12 +97,18 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
     public static class GetQuotaScheduleResponseBodyDataCondition extends TeaModel {
         /**
          * <p>The start time when the quota plan takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-25T04:23:04Z</p>
          */
         @NameInMap("after")
         public String after;
 
         /**
          * <p>The time when the quota plan takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0900</p>
          */
         @NameInMap("at")
         public String at;
@@ -125,30 +145,45 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the quota plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The name of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userA</p>
          */
         @NameInMap("operator")
         public String operator;
 
         /**
          * <p>The name of the quota plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planA</p>
          */
         @NameInMap("plan")
         public String plan;
 
         /**
          * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UTC+8</p>
          */
         @NameInMap("timezone")
         public String timezone;
 
         /**
          * <p>The type of the quota plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>once</p>
          */
         @NameInMap("type")
         public String type;

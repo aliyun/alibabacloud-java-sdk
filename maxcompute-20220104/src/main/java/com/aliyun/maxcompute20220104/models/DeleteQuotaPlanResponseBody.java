@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteQuotaPlanResponseBody extends TeaModel {
     /**
      * <p>The returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0b57ff7616612271051086500ea3ce</p>
      */
     @NameInMap("requestId")
     public String requestId;

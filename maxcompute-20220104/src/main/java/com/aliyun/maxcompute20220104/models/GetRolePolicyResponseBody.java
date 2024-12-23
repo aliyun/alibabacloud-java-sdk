@@ -6,12 +6,31 @@ import com.aliyun.tea.*;
 public class GetRolePolicyResponseBody extends TeaModel {
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;Statement&quot;: [
+     *             {
+     *                   &quot;Action&quot;: [
+     *                         &quot;odps:<em>&quot;
+     *                   ],
+     *                   &quot;Effect&quot;: &quot;Allow&quot;,
+     *                   &quot;Resource&quot;: [
+     *                         &quot;acs:odps:</em>:projects/{projectname}/authorization/packages&quot;
+     *                   ]
+     *             }
+     *       ],
+     *       &quot;Version&quot;: &quot;1&quot;
+     * }</p>
      */
     @NameInMap("data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1eeed16675342848904412e08dd</p>
      */
     @NameInMap("requestId")
     public String requestId;
