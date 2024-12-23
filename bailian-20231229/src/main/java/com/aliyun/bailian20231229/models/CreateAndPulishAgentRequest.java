@@ -16,6 +16,9 @@ public class CreateAndPulishAgentRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("sampleLibrary")
+    public CreateAndPulishAgentRequestSampleLibrary sampleLibrary;
+
     public static CreateAndPulishAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAndPulishAgentRequest self = new CreateAndPulishAgentRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreateAndPulishAgentRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateAndPulishAgentRequest setSampleLibrary(CreateAndPulishAgentRequestSampleLibrary sampleLibrary) {
+        this.sampleLibrary = sampleLibrary;
+        return this;
+    }
+    public CreateAndPulishAgentRequestSampleLibrary getSampleLibrary() {
+        return this.sampleLibrary;
     }
 
     public static class CreateAndPulishAgentRequestApplicationConfigHistoryConfig extends TeaModel {
@@ -177,14 +188,38 @@ public class CreateAndPulishAgentRequest extends TeaModel {
     }
 
     public static class CreateAndPulishAgentRequestApplicationConfigRagConfig extends TeaModel {
+        @NameInMap("answerScope")
+        public String answerScope;
+
         @NameInMap("enableCitation")
         public Boolean enableCitation;
 
         @NameInMap("enableSearch")
         public Boolean enableSearch;
 
+        @NameInMap("enableWebSearch")
+        public Boolean enableWebSearch;
+
+        @NameInMap("fixedReplyDetail")
+        public String fixedReplyDetail;
+
         @NameInMap("knowledgeBaseCodeList")
         public java.util.List<String> knowledgeBaseCodeList;
+
+        @NameInMap("promptStrategy")
+        public String promptStrategy;
+
+        @NameInMap("ragRejectType")
+        public String ragRejectType;
+
+        @NameInMap("rejectFilterPrompt")
+        public String rejectFilterPrompt;
+
+        @NameInMap("rejectFilterType")
+        public String rejectFilterType;
+
+        @NameInMap("retrieveMaxLength")
+        public Integer retrieveMaxLength;
 
         @NameInMap("topK")
         public Integer topK;
@@ -192,6 +227,14 @@ public class CreateAndPulishAgentRequest extends TeaModel {
         public static CreateAndPulishAgentRequestApplicationConfigRagConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateAndPulishAgentRequestApplicationConfigRagConfig self = new CreateAndPulishAgentRequestApplicationConfigRagConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAndPulishAgentRequestApplicationConfigRagConfig setAnswerScope(String answerScope) {
+            this.answerScope = answerScope;
+            return this;
+        }
+        public String getAnswerScope() {
+            return this.answerScope;
         }
 
         public CreateAndPulishAgentRequestApplicationConfigRagConfig setEnableCitation(Boolean enableCitation) {
@@ -210,12 +253,68 @@ public class CreateAndPulishAgentRequest extends TeaModel {
             return this.enableSearch;
         }
 
+        public CreateAndPulishAgentRequestApplicationConfigRagConfig setEnableWebSearch(Boolean enableWebSearch) {
+            this.enableWebSearch = enableWebSearch;
+            return this;
+        }
+        public Boolean getEnableWebSearch() {
+            return this.enableWebSearch;
+        }
+
+        public CreateAndPulishAgentRequestApplicationConfigRagConfig setFixedReplyDetail(String fixedReplyDetail) {
+            this.fixedReplyDetail = fixedReplyDetail;
+            return this;
+        }
+        public String getFixedReplyDetail() {
+            return this.fixedReplyDetail;
+        }
+
         public CreateAndPulishAgentRequestApplicationConfigRagConfig setKnowledgeBaseCodeList(java.util.List<String> knowledgeBaseCodeList) {
             this.knowledgeBaseCodeList = knowledgeBaseCodeList;
             return this;
         }
         public java.util.List<String> getKnowledgeBaseCodeList() {
             return this.knowledgeBaseCodeList;
+        }
+
+        public CreateAndPulishAgentRequestApplicationConfigRagConfig setPromptStrategy(String promptStrategy) {
+            this.promptStrategy = promptStrategy;
+            return this;
+        }
+        public String getPromptStrategy() {
+            return this.promptStrategy;
+        }
+
+        public CreateAndPulishAgentRequestApplicationConfigRagConfig setRagRejectType(String ragRejectType) {
+            this.ragRejectType = ragRejectType;
+            return this;
+        }
+        public String getRagRejectType() {
+            return this.ragRejectType;
+        }
+
+        public CreateAndPulishAgentRequestApplicationConfigRagConfig setRejectFilterPrompt(String rejectFilterPrompt) {
+            this.rejectFilterPrompt = rejectFilterPrompt;
+            return this;
+        }
+        public String getRejectFilterPrompt() {
+            return this.rejectFilterPrompt;
+        }
+
+        public CreateAndPulishAgentRequestApplicationConfigRagConfig setRejectFilterType(String rejectFilterType) {
+            this.rejectFilterType = rejectFilterType;
+            return this;
+        }
+        public String getRejectFilterType() {
+            return this.rejectFilterType;
+        }
+
+        public CreateAndPulishAgentRequestApplicationConfigRagConfig setRetrieveMaxLength(Integer retrieveMaxLength) {
+            this.retrieveMaxLength = retrieveMaxLength;
+            return this;
+        }
+        public Integer getRetrieveMaxLength() {
+            return this.retrieveMaxLength;
         }
 
         public CreateAndPulishAgentRequestApplicationConfigRagConfig setTopK(Integer topK) {
@@ -366,6 +465,47 @@ public class CreateAndPulishAgentRequest extends TeaModel {
         }
         public java.util.List<CreateAndPulishAgentRequestApplicationConfigWorkFlows> getWorkFlows() {
             return this.workFlows;
+        }
+
+    }
+
+    public static class CreateAndPulishAgentRequestSampleLibrary extends TeaModel {
+        @NameInMap("enableSample")
+        public Boolean enableSample;
+
+        @NameInMap("sampleLibraryIdList")
+        public java.util.List<String> sampleLibraryIdList;
+
+        @NameInMap("topK")
+        public Integer topK;
+
+        public static CreateAndPulishAgentRequestSampleLibrary build(java.util.Map<String, ?> map) throws Exception {
+            CreateAndPulishAgentRequestSampleLibrary self = new CreateAndPulishAgentRequestSampleLibrary();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAndPulishAgentRequestSampleLibrary setEnableSample(Boolean enableSample) {
+            this.enableSample = enableSample;
+            return this;
+        }
+        public Boolean getEnableSample() {
+            return this.enableSample;
+        }
+
+        public CreateAndPulishAgentRequestSampleLibrary setSampleLibraryIdList(java.util.List<String> sampleLibraryIdList) {
+            this.sampleLibraryIdList = sampleLibraryIdList;
+            return this;
+        }
+        public java.util.List<String> getSampleLibraryIdList() {
+            return this.sampleLibraryIdList;
+        }
+
+        public CreateAndPulishAgentRequestSampleLibrary setTopK(Integer topK) {
+            this.topK = topK;
+            return this;
+        }
+        public Integer getTopK() {
+            return this.topK;
         }
 
     }

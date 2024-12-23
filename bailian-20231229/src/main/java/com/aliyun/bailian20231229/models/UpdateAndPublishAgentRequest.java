@@ -16,6 +16,9 @@ public class UpdateAndPublishAgentRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("sampleLibrary")
+    public UpdateAndPublishAgentRequestSampleLibrary sampleLibrary;
+
     public static UpdateAndPublishAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAndPublishAgentRequest self = new UpdateAndPublishAgentRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class UpdateAndPublishAgentRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateAndPublishAgentRequest setSampleLibrary(UpdateAndPublishAgentRequestSampleLibrary sampleLibrary) {
+        this.sampleLibrary = sampleLibrary;
+        return this;
+    }
+    public UpdateAndPublishAgentRequestSampleLibrary getSampleLibrary() {
+        return this.sampleLibrary;
     }
 
     public static class UpdateAndPublishAgentRequestApplicationConfigHistoryConfig extends TeaModel {
@@ -177,14 +188,38 @@ public class UpdateAndPublishAgentRequest extends TeaModel {
     }
 
     public static class UpdateAndPublishAgentRequestApplicationConfigRagConfig extends TeaModel {
+        @NameInMap("answerScope")
+        public String answerScope;
+
         @NameInMap("enableCitation")
         public Boolean enableCitation;
 
         @NameInMap("enableSearch")
         public Boolean enableSearch;
 
+        @NameInMap("enableWebSearch")
+        public Boolean enableWebSearch;
+
+        @NameInMap("fixedReplyDetail")
+        public String fixedReplyDetail;
+
         @NameInMap("knowledgeBaseCodeList")
         public java.util.List<String> knowledgeBaseCodeList;
+
+        @NameInMap("promptStrategy")
+        public String promptStrategy;
+
+        @NameInMap("ragRejectType")
+        public String ragRejectType;
+
+        @NameInMap("rejectFilterPrompt")
+        public String rejectFilterPrompt;
+
+        @NameInMap("rejectFilterType")
+        public String rejectFilterType;
+
+        @NameInMap("retrieveMaxLength")
+        public Integer retrieveMaxLength;
 
         @NameInMap("topK")
         public Integer topK;
@@ -192,6 +227,14 @@ public class UpdateAndPublishAgentRequest extends TeaModel {
         public static UpdateAndPublishAgentRequestApplicationConfigRagConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateAndPublishAgentRequestApplicationConfigRagConfig self = new UpdateAndPublishAgentRequestApplicationConfigRagConfig();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateAndPublishAgentRequestApplicationConfigRagConfig setAnswerScope(String answerScope) {
+            this.answerScope = answerScope;
+            return this;
+        }
+        public String getAnswerScope() {
+            return this.answerScope;
         }
 
         public UpdateAndPublishAgentRequestApplicationConfigRagConfig setEnableCitation(Boolean enableCitation) {
@@ -210,12 +253,68 @@ public class UpdateAndPublishAgentRequest extends TeaModel {
             return this.enableSearch;
         }
 
+        public UpdateAndPublishAgentRequestApplicationConfigRagConfig setEnableWebSearch(Boolean enableWebSearch) {
+            this.enableWebSearch = enableWebSearch;
+            return this;
+        }
+        public Boolean getEnableWebSearch() {
+            return this.enableWebSearch;
+        }
+
+        public UpdateAndPublishAgentRequestApplicationConfigRagConfig setFixedReplyDetail(String fixedReplyDetail) {
+            this.fixedReplyDetail = fixedReplyDetail;
+            return this;
+        }
+        public String getFixedReplyDetail() {
+            return this.fixedReplyDetail;
+        }
+
         public UpdateAndPublishAgentRequestApplicationConfigRagConfig setKnowledgeBaseCodeList(java.util.List<String> knowledgeBaseCodeList) {
             this.knowledgeBaseCodeList = knowledgeBaseCodeList;
             return this;
         }
         public java.util.List<String> getKnowledgeBaseCodeList() {
             return this.knowledgeBaseCodeList;
+        }
+
+        public UpdateAndPublishAgentRequestApplicationConfigRagConfig setPromptStrategy(String promptStrategy) {
+            this.promptStrategy = promptStrategy;
+            return this;
+        }
+        public String getPromptStrategy() {
+            return this.promptStrategy;
+        }
+
+        public UpdateAndPublishAgentRequestApplicationConfigRagConfig setRagRejectType(String ragRejectType) {
+            this.ragRejectType = ragRejectType;
+            return this;
+        }
+        public String getRagRejectType() {
+            return this.ragRejectType;
+        }
+
+        public UpdateAndPublishAgentRequestApplicationConfigRagConfig setRejectFilterPrompt(String rejectFilterPrompt) {
+            this.rejectFilterPrompt = rejectFilterPrompt;
+            return this;
+        }
+        public String getRejectFilterPrompt() {
+            return this.rejectFilterPrompt;
+        }
+
+        public UpdateAndPublishAgentRequestApplicationConfigRagConfig setRejectFilterType(String rejectFilterType) {
+            this.rejectFilterType = rejectFilterType;
+            return this;
+        }
+        public String getRejectFilterType() {
+            return this.rejectFilterType;
+        }
+
+        public UpdateAndPublishAgentRequestApplicationConfigRagConfig setRetrieveMaxLength(Integer retrieveMaxLength) {
+            this.retrieveMaxLength = retrieveMaxLength;
+            return this;
+        }
+        public Integer getRetrieveMaxLength() {
+            return this.retrieveMaxLength;
         }
 
         public UpdateAndPublishAgentRequestApplicationConfigRagConfig setTopK(Integer topK) {
@@ -366,6 +465,47 @@ public class UpdateAndPublishAgentRequest extends TeaModel {
         }
         public java.util.List<UpdateAndPublishAgentRequestApplicationConfigWorkFlows> getWorkFlows() {
             return this.workFlows;
+        }
+
+    }
+
+    public static class UpdateAndPublishAgentRequestSampleLibrary extends TeaModel {
+        @NameInMap("enableSample")
+        public Boolean enableSample;
+
+        @NameInMap("sampleLibraryIdList")
+        public java.util.List<String> sampleLibraryIdList;
+
+        @NameInMap("topK")
+        public Integer topK;
+
+        public static UpdateAndPublishAgentRequestSampleLibrary build(java.util.Map<String, ?> map) throws Exception {
+            UpdateAndPublishAgentRequestSampleLibrary self = new UpdateAndPublishAgentRequestSampleLibrary();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateAndPublishAgentRequestSampleLibrary setEnableSample(Boolean enableSample) {
+            this.enableSample = enableSample;
+            return this;
+        }
+        public Boolean getEnableSample() {
+            return this.enableSample;
+        }
+
+        public UpdateAndPublishAgentRequestSampleLibrary setSampleLibraryIdList(java.util.List<String> sampleLibraryIdList) {
+            this.sampleLibraryIdList = sampleLibraryIdList;
+            return this;
+        }
+        public java.util.List<String> getSampleLibraryIdList() {
+            return this.sampleLibraryIdList;
+        }
+
+        public UpdateAndPublishAgentRequestSampleLibrary setTopK(Integer topK) {
+            this.topK = topK;
+            return this;
+        }
+        public Integer getTopK() {
+            return this.topK;
         }
 
     }
