@@ -50,6 +50,9 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         @NameInMap("MaxCapacity")
         public Integer maxCapacity;
 
+        /**
+         * <p>The maximum number of nodes that you can configure based on your business requirements.</p>
+         */
         @NameInMap("MaxOnDemandCapacity")
         public Integer maxOnDemandCapacity;
 
@@ -239,6 +242,9 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         @NameInMap("ScalingPolicyId")
         public String scalingPolicyId;
 
+        /**
+         * <p>The type of the auto scaling policy.</p>
+         */
         @NameInMap("ScalingPolicyType")
         public String scalingPolicyType;
 
@@ -412,7 +418,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         public Boolean existCloneConfig;
 
         /**
-         * <p>The attributes of all ECS instances.</p>
+         * <p>The node attributes.</p>
          */
         @NameInMap("NodeAttributes")
         public NodeAttributes nodeAttributes;
@@ -489,7 +495,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         public SubscriptionConfig subscriptionConfig;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<Tag> tags;

@@ -3656,7 +3656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the bootstrap actions or common scripts of an E-MapReduce (EMR) cluster.</p>
+     * <p>Query EMR cluster bootstrap scripts or regular scripts.</p>
      * 
      * @param request ListScriptsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3704,7 +3704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the bootstrap actions or common scripts of an E-MapReduce (EMR) cluster.</p>
+     * <p>Query EMR cluster bootstrap scripts or regular scripts.</p>
      * 
      * @param request ListScriptsRequest
      * @return ListScriptsResponse
@@ -4012,7 +4012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</p>
+     * <p>RunCluster is an upgraded version of CreateCluster. RunCluster uses HTTPS POST requests and supports more parameters. Complex parameters, such as parameters of the object and array types, are in the JSON format and are more friendly for users who use CLI.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</p>
@@ -4147,7 +4147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</p>
+     * <p>RunCluster is an upgraded version of CreateCluster. RunCluster uses HTTPS POST requests and supports more parameters. Complex parameters, such as parameters of the object and array types, are in the JSON format and are more friendly for users who use CLI.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</p>
@@ -4425,6 +4425,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateApplicationConfigsResponse updateApplicationConfigs(UpdateApplicationConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateApplicationConfigsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateClusterAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateClusterAttributeResponse
+     */
+    public UpdateClusterAttributeResponse updateClusterAttributeWithOptions(UpdateClusterAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterName)) {
+            query.put("ClusterName", request.clusterName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
+            query.put("DeletionProtection", request.deletionProtection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateClusterAttribute"),
+            new TeaPair("version", "2021-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateClusterAttributeResponse());
+    }
+
+    /**
+     * @param request UpdateClusterAttributeRequest
+     * @return UpdateClusterAttributeResponse
+     */
+    public UpdateClusterAttributeResponse updateClusterAttribute(UpdateClusterAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateClusterAttributeWithOptions(request, runtime);
     }
 
     /**

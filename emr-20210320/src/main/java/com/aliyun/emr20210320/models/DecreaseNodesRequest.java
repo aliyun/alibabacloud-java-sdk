@@ -4,9 +4,15 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class DecreaseNodesRequest extends TeaModel {
+    /**
+     * <p>The cooldown interval between two batches.</p>
+     */
     @NameInMap("BatchInterval")
     public Integer batchInterval;
 
+    /**
+     * <p>The number of nodes to be removed in a single batch.</p>
+     */
     @NameInMap("BatchSize")
     public Integer batchSize;
 

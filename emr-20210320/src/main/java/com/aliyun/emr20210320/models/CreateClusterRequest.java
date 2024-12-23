@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     /**
-     * <p>The service configurations. Number of elements in the array: 1 to 1000.</p>
+     * <p>The application configurations. Number of elements in the array: 1 to 1000.</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<ApplicationConfig> applicationConfigs;
@@ -78,6 +78,8 @@ public class CreateClusterRequest extends TeaModel {
     public String deployMode;
 
     /**
+     * <p>The cluster description.</p>
+     * 
      * <strong>example:</strong>
      * <p>Emr cluster for ETL</p>
      */
@@ -85,7 +87,7 @@ public class CreateClusterRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The attributes of all ECS instances. The basic attributes of all ECS instances in the cluster.</p>
+     * <p>The attributes of all ECS instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeAttributes")
@@ -126,7 +128,7 @@ public class CreateClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The version of EMR. You can view the EMR release version on the EMR cluster purchase page.</p>
+     * <p>The EMR version. You can query available E-MapReduce (EMR) versions in the EMR console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -158,13 +160,13 @@ public class CreateClusterRequest extends TeaModel {
     public String securityMode;
 
     /**
-     * <p>The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.</p>
+     * <p>The subscription configurations. This parameter takes effect only if you set the PaymentType parameter to Subscription.</p>
      */
     @NameInMap("SubscriptionConfig")
     public SubscriptionConfig subscriptionConfig;
 
     /**
-     * <p>The list of tags. Number of elements in the array: 0 to 20.</p>
+     * <p>The tags. Number of elements in the array: 0 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
