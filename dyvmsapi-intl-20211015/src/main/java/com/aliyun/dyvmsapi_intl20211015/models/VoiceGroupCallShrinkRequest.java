@@ -3,17 +3,11 @@ package com.aliyun.dyvmsapi_intl20211015.models;
 
 import com.aliyun.tea.*;
 
-public class BackendCallGroupShrinkRequest extends TeaModel {
-    /**
-     * <p>The called numbers. You can specify up to 50,000 phone numbers.</p>
-     */
+public class VoiceGroupCallShrinkRequest extends TeaModel {
     @NameInMap("CalledNumber")
     public String calledNumberShrink;
 
     /**
-     * <p>The calling number.</p>
-     * <p>If you do not specify this parameter, the system uses a local random number as the display number. If you use a dedicated number for outbound calls, you must specify the purchased number. You can specify only one number. You can log on to the VMS console and choose Number Management to view the purchased phone numbers.</p>
-     * 
      * <strong>example:</strong>
      * <p>852****1111</p>
      */
@@ -21,8 +15,6 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
     public String callerIdNumber;
 
     /**
-     * <p>The ISO2 country code.</p>
-     * 
      * <strong>example:</strong>
      * <p>HK</p>
      */
@@ -30,9 +22,6 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
     public String countryId;
 
     /**
-     * <p>The ID reserved for the caller. This ID is returned to the caller in a receipt message.</p>
-     * <p>The value must be of the STRING type and 1 to 15 bytes in length.</p>
-     * 
      * <strong>example:</strong>
      * <p>22596****</p>
      */
@@ -43,8 +32,6 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of times the audio file is played. Valid values: 1 to 3.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -58,35 +45,27 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The delivery type. Valid values: 1 and 2.</p>
-     * <p>1: The audio file is delivered immediately.</p>
-     * <p>2: The audio file is delivered at a scheduled time. If you specify SendType as 2, you must specify TimingStart.</p>
-     * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("SendType")
     public Long sendType;
 
     /**
-     * <p>The playback speed. Valid values: -500 to 500.</p>
-     * <p>You must specify this parameter when the audio type is text-to-speech (TTS). You do not need to specify this parameter when you use recordings.</p>
-     * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>100</p>
      */
     @NameInMap("Speed")
     public Long speed;
 
     /**
-     * <p>The task name.</p>
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
-     * <p>The time when the audio file is scheduled to be delivered.</p>
-     * 
      * <strong>example:</strong>
      * <p>2022-05-01T08:00:00+08:00</p>
      */
@@ -94,42 +73,39 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
     public String timingStart;
 
     /**
-     * <p>The voice template ID of the audio file.</p>
-     * <p>You can log on to the VMS console and choose Voice Call Template &gt; Audio File to view the template ID.</p>
-     * <p>You must specify either TtsCode or VoiceCode. You can specify TtsCode to use the audio file as the call content. Alternatively, you can specify VoiceCode to use preset text as the call content.</p>
-     * 
      * <strong>example:</strong>
-     * <p>100001</p>
+     * <p>1****01</p>
      */
     @NameInMap("TtsCode")
     public String ttsCode;
 
     /**
-     * <p>The TTS template ID.</p>
-     * <p>You can log on to the VMS console and choose Voice Call Template &gt; TTS Template to view the template ID.</p>
-     * <p>You must specify either TtsCode or VoiceCode. You can specify TtsCode to use the audio file as the call content. Alternatively, you can specify VoiceCode to use preset text as the call content.</p>
-     * 
      * <strong>example:</strong>
-     * <p>200001</p>
+     * <p>{&quot;code&quot;:&quot;1234&quot;}</p>
+     */
+    @NameInMap("TtsParam")
+    public String ttsParam;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2*****01</p>
      */
     @NameInMap("VoiceCode")
     public String voiceCode;
 
     /**
-     * <p>The playback volume of the audio file. Valid values: 0 to 100. Default value: 100.</p>
-     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("Volume")
     public Long volume;
 
-    public static BackendCallGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        BackendCallGroupShrinkRequest self = new BackendCallGroupShrinkRequest();
+    public static VoiceGroupCallShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        VoiceGroupCallShrinkRequest self = new VoiceGroupCallShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public BackendCallGroupShrinkRequest setCalledNumberShrink(String calledNumberShrink) {
+    public VoiceGroupCallShrinkRequest setCalledNumberShrink(String calledNumberShrink) {
         this.calledNumberShrink = calledNumberShrink;
         return this;
     }
@@ -137,7 +113,7 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.calledNumberShrink;
     }
 
-    public BackendCallGroupShrinkRequest setCallerIdNumber(String callerIdNumber) {
+    public VoiceGroupCallShrinkRequest setCallerIdNumber(String callerIdNumber) {
         this.callerIdNumber = callerIdNumber;
         return this;
     }
@@ -145,7 +121,7 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.callerIdNumber;
     }
 
-    public BackendCallGroupShrinkRequest setCountryId(String countryId) {
+    public VoiceGroupCallShrinkRequest setCountryId(String countryId) {
         this.countryId = countryId;
         return this;
     }
@@ -153,7 +129,7 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.countryId;
     }
 
-    public BackendCallGroupShrinkRequest setOutId(String outId) {
+    public VoiceGroupCallShrinkRequest setOutId(String outId) {
         this.outId = outId;
         return this;
     }
@@ -161,7 +137,7 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.outId;
     }
 
-    public BackendCallGroupShrinkRequest setOwnerId(Long ownerId) {
+    public VoiceGroupCallShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -169,7 +145,7 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public BackendCallGroupShrinkRequest setPlayTimes(Long playTimes) {
+    public VoiceGroupCallShrinkRequest setPlayTimes(Long playTimes) {
         this.playTimes = playTimes;
         return this;
     }
@@ -177,7 +153,7 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.playTimes;
     }
 
-    public BackendCallGroupShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public VoiceGroupCallShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -185,7 +161,7 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public BackendCallGroupShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
+    public VoiceGroupCallShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -193,7 +169,7 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public BackendCallGroupShrinkRequest setSendType(Long sendType) {
+    public VoiceGroupCallShrinkRequest setSendType(Long sendType) {
         this.sendType = sendType;
         return this;
     }
@@ -201,7 +177,7 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.sendType;
     }
 
-    public BackendCallGroupShrinkRequest setSpeed(Long speed) {
+    public VoiceGroupCallShrinkRequest setSpeed(Long speed) {
         this.speed = speed;
         return this;
     }
@@ -209,7 +185,7 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.speed;
     }
 
-    public BackendCallGroupShrinkRequest setTaskName(String taskName) {
+    public VoiceGroupCallShrinkRequest setTaskName(String taskName) {
         this.taskName = taskName;
         return this;
     }
@@ -217,7 +193,7 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.taskName;
     }
 
-    public BackendCallGroupShrinkRequest setTimingStart(String timingStart) {
+    public VoiceGroupCallShrinkRequest setTimingStart(String timingStart) {
         this.timingStart = timingStart;
         return this;
     }
@@ -225,7 +201,7 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.timingStart;
     }
 
-    public BackendCallGroupShrinkRequest setTtsCode(String ttsCode) {
+    public VoiceGroupCallShrinkRequest setTtsCode(String ttsCode) {
         this.ttsCode = ttsCode;
         return this;
     }
@@ -233,7 +209,15 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.ttsCode;
     }
 
-    public BackendCallGroupShrinkRequest setVoiceCode(String voiceCode) {
+    public VoiceGroupCallShrinkRequest setTtsParam(String ttsParam) {
+        this.ttsParam = ttsParam;
+        return this;
+    }
+    public String getTtsParam() {
+        return this.ttsParam;
+    }
+
+    public VoiceGroupCallShrinkRequest setVoiceCode(String voiceCode) {
         this.voiceCode = voiceCode;
         return this;
     }
@@ -241,7 +225,7 @@ public class BackendCallGroupShrinkRequest extends TeaModel {
         return this.voiceCode;
     }
 
-    public BackendCallGroupShrinkRequest setVolume(Long volume) {
+    public VoiceGroupCallShrinkRequest setVolume(Long volume) {
         this.volume = volume;
         return this;
     }

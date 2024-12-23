@@ -3,30 +3,18 @@ package com.aliyun.dyvmsapi_intl20211015.models;
 
 import com.aliyun.tea.*;
 
-public class BackendCallSignalRequest extends TeaModel {
-    /**
-     * <p>The phone number that receives the voice notification.</p>
-     * <p>You must add the country code to the beginning of the phone number. Example: 85200\<em>\</em>\*\*00.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>852****0000</p>
-     */
+public class VoiceGroupCallRequest extends TeaModel {
     @NameInMap("CalledNumber")
-    public String calledNumber;
+    public java.util.List<String> calledNumber;
 
     /**
-     * <p>The calling number.</p>
-     * <p>If you do not specify this parameter, the system uses a local random number as the display number. If you use a dedicated number for outbound calls, you must specify the purchased number. You can specify only one number. You can log on to the VMS console and choose Number Management to view the purchased phone numbers.</p>
-     * 
      * <strong>example:</strong>
-     * <p>852****0000</p>
+     * <p>852****1111</p>
      */
     @NameInMap("CallerIdNumber")
     public String callerIdNumber;
 
     /**
-     * <p>The ISO2 country code.</p>
-     * 
      * <strong>example:</strong>
      * <p>HK</p>
      */
@@ -34,11 +22,8 @@ public class BackendCallSignalRequest extends TeaModel {
     public String countryId;
 
     /**
-     * <p>The ID reserved for the caller. This ID is returned to the caller in a receipt message.</p>
-     * <p>The value must be of the STRING type and 1 to 15 bytes in length.</p>
-     * 
      * <strong>example:</strong>
-     * <p>22522****</p>
+     * <p>22596****</p>
      */
     @NameInMap("OutId")
     public String outId;
@@ -47,10 +32,8 @@ public class BackendCallSignalRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of times the voice notification is played back in a call. Valid values: 1 to 3. Default value: 3.</p>
-     * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("PlayTimes")
     public Long playTimes;
@@ -62,27 +45,41 @@ public class BackendCallSignalRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The playback speed. Valid values: -500 to 500.</p>
-     * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>1</p>
+     */
+    @NameInMap("SendType")
+    public Long sendType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Speed")
     public Long speed;
 
     /**
-     * <p>The ID of the approved voice verification code template.</p>
-     * <p>You can log on to the VMS console and choose Voice Call Template to view the template ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>1001</p>
+     * <p>示例值示例值</p>
+     */
+    @NameInMap("TaskName")
+    public String taskName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-01T08:00:00+08:00</p>
+     */
+    @NameInMap("TimingStart")
+    public String timingStart;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1****01</p>
      */
     @NameInMap("TtsCode")
     public String ttsCode;
 
     /**
-     * <p>The variables in the template, in the JSON format.</p>
-     * 
      * <strong>example:</strong>
      * <p>{&quot;code&quot;:&quot;1234&quot;}</p>
      */
@@ -90,28 +87,33 @@ public class BackendCallSignalRequest extends TeaModel {
     public String ttsParam;
 
     /**
-     * <p>The playback volume of the voice notification. Valid values: 0 to 100. Default value: 100.</p>
-     * 
+     * <strong>example:</strong>
+     * <p>2*****01</p>
+     */
+    @NameInMap("VoiceCode")
+    public String voiceCode;
+
+    /**
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("Volume")
     public Long volume;
 
-    public static BackendCallSignalRequest build(java.util.Map<String, ?> map) throws Exception {
-        BackendCallSignalRequest self = new BackendCallSignalRequest();
+    public static VoiceGroupCallRequest build(java.util.Map<String, ?> map) throws Exception {
+        VoiceGroupCallRequest self = new VoiceGroupCallRequest();
         return TeaModel.build(map, self);
     }
 
-    public BackendCallSignalRequest setCalledNumber(String calledNumber) {
+    public VoiceGroupCallRequest setCalledNumber(java.util.List<String> calledNumber) {
         this.calledNumber = calledNumber;
         return this;
     }
-    public String getCalledNumber() {
+    public java.util.List<String> getCalledNumber() {
         return this.calledNumber;
     }
 
-    public BackendCallSignalRequest setCallerIdNumber(String callerIdNumber) {
+    public VoiceGroupCallRequest setCallerIdNumber(String callerIdNumber) {
         this.callerIdNumber = callerIdNumber;
         return this;
     }
@@ -119,7 +121,7 @@ public class BackendCallSignalRequest extends TeaModel {
         return this.callerIdNumber;
     }
 
-    public BackendCallSignalRequest setCountryId(String countryId) {
+    public VoiceGroupCallRequest setCountryId(String countryId) {
         this.countryId = countryId;
         return this;
     }
@@ -127,7 +129,7 @@ public class BackendCallSignalRequest extends TeaModel {
         return this.countryId;
     }
 
-    public BackendCallSignalRequest setOutId(String outId) {
+    public VoiceGroupCallRequest setOutId(String outId) {
         this.outId = outId;
         return this;
     }
@@ -135,7 +137,7 @@ public class BackendCallSignalRequest extends TeaModel {
         return this.outId;
     }
 
-    public BackendCallSignalRequest setOwnerId(Long ownerId) {
+    public VoiceGroupCallRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -143,7 +145,7 @@ public class BackendCallSignalRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public BackendCallSignalRequest setPlayTimes(Long playTimes) {
+    public VoiceGroupCallRequest setPlayTimes(Long playTimes) {
         this.playTimes = playTimes;
         return this;
     }
@@ -151,7 +153,7 @@ public class BackendCallSignalRequest extends TeaModel {
         return this.playTimes;
     }
 
-    public BackendCallSignalRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public VoiceGroupCallRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -159,7 +161,7 @@ public class BackendCallSignalRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public BackendCallSignalRequest setResourceOwnerId(Long resourceOwnerId) {
+    public VoiceGroupCallRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -167,7 +169,15 @@ public class BackendCallSignalRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public BackendCallSignalRequest setSpeed(Long speed) {
+    public VoiceGroupCallRequest setSendType(Long sendType) {
+        this.sendType = sendType;
+        return this;
+    }
+    public Long getSendType() {
+        return this.sendType;
+    }
+
+    public VoiceGroupCallRequest setSpeed(Long speed) {
         this.speed = speed;
         return this;
     }
@@ -175,7 +185,23 @@ public class BackendCallSignalRequest extends TeaModel {
         return this.speed;
     }
 
-    public BackendCallSignalRequest setTtsCode(String ttsCode) {
+    public VoiceGroupCallRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    public VoiceGroupCallRequest setTimingStart(String timingStart) {
+        this.timingStart = timingStart;
+        return this;
+    }
+    public String getTimingStart() {
+        return this.timingStart;
+    }
+
+    public VoiceGroupCallRequest setTtsCode(String ttsCode) {
         this.ttsCode = ttsCode;
         return this;
     }
@@ -183,7 +209,7 @@ public class BackendCallSignalRequest extends TeaModel {
         return this.ttsCode;
     }
 
-    public BackendCallSignalRequest setTtsParam(String ttsParam) {
+    public VoiceGroupCallRequest setTtsParam(String ttsParam) {
         this.ttsParam = ttsParam;
         return this;
     }
@@ -191,7 +217,15 @@ public class BackendCallSignalRequest extends TeaModel {
         return this.ttsParam;
     }
 
-    public BackendCallSignalRequest setVolume(Long volume) {
+    public VoiceGroupCallRequest setVoiceCode(String voiceCode) {
+        this.voiceCode = voiceCode;
+        return this;
+    }
+    public String getVoiceCode() {
+        return this.voiceCode;
+    }
+
+    public VoiceGroupCallRequest setVolume(Long volume) {
         this.volume = volume;
         return this;
     }
