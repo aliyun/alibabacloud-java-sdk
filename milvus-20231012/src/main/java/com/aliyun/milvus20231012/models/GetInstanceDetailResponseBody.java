@@ -125,6 +125,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @NameInMap("CuNum")
         public Integer cuNum;
 
+        @NameInMap("CuRatio")
+        public Integer cuRatio;
+
         /**
          * <strong>example:</strong>
          * <p>100</p>
@@ -165,6 +168,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
         public Integer getCuNum() {
             return this.cuNum;
+        }
+
+        public GetInstanceDetailResponseBodyDataClusterInfoMilvusResourceInfoList setCuRatio(Integer cuRatio) {
+            this.cuRatio = cuRatio;
+            return this;
+        }
+        public Integer getCuRatio() {
+            return this.cuRatio;
         }
 
         public GetInstanceDetailResponseBodyDataClusterInfoMilvusResourceInfoList setDiskSize(Integer diskSize) {
@@ -516,6 +527,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @NameInMap("MeasureConfig")
         public GetInstanceDetailResponseBodyDataMeasureConfig measureConfig;
 
+        @NameInMap("NodeType")
+        public String nodeType;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -705,6 +719,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
         public GetInstanceDetailResponseBodyDataMeasureConfig getMeasureConfig() {
             return this.measureConfig;
+        }
+
+        public GetInstanceDetailResponseBodyData setNodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+        public String getNodeType() {
+            return this.nodeType;
         }
 
         public GetInstanceDetailResponseBodyData setOpenPublicNet(Boolean openPublicNet) {
