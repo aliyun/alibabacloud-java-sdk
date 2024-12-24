@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRegisteredLocationRequest extends TeaModel {
     /**
+     * <p>Whether to enable OSS bucket inventory</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,10 @@ public class UpdateRegisteredLocationRequest extends TeaModel {
     public Boolean inventoryCollectEnabled;
 
     /**
+     * <p>Location ID</p>
+     * <blockquote>
+     * <p> You can call the RegisterLocation operation to obtain the Location ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +27,8 @@ public class UpdateRegisteredLocationRequest extends TeaModel {
     public String locationId;
 
     /**
+     * <p>Whether to enable OSS log storage</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

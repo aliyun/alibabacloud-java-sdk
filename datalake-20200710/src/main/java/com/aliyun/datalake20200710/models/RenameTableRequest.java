@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RenameTableRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,8 @@ public class RenameTableRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
@@ -19,16 +23,27 @@ public class RenameTableRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>Whether to synchronize the update. Valid values:</p>
+     * <ul>
+     * <li>false (default): indicates that the operation is called synchronously. The operation returns results only when the background task is completed. Then the risk of false is that the interface will time out if the background task needs to be done very long.</li>
+     * <li>true: The API operation is called asynchronously and does not wait for the background task to be returned. The response contains a taskid. In this way, the client can query the status of the task by using the taskid.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("IsAsync")
     public Boolean isAsync;
 
+    /**
+     * <p>The data table object. Note that you only need to enter TableName.</p>
+     */
     @NameInMap("TableInput")
     public TableInput tableInput;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_20201223</p>
      */

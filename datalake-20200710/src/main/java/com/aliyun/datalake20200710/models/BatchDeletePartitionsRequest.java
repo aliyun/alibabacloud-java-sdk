@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchDeletePartitionsRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,8 @@ public class BatchDeletePartitionsRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
@@ -19,16 +23,23 @@ public class BatchDeletePartitionsRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>If a partition with the same name has been deleted, whether to ignore the exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IfExists")
     public Boolean ifExists;
 
+    /**
+     * <p>The list of partition values to be deleted.</p>
+     */
     @NameInMap("PartitionValueList")
     public java.util.List<BatchDeletePartitionsRequestPartitionValueList> partitionValueList;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_20201225</p>
      */

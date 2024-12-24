@@ -87,7 +87,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>abort lock context with the lockid</p>
+     * <p>Aborts the specified metadata lock.</p>
      * 
      * @param request AbortLockRequest
      * @param headers map
@@ -121,7 +121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>abort lock context with the lockid</p>
+     * <p>Aborts the specified metadata lock.</p>
      * 
      * @param request AbortLockRequest
      * @return AbortLockResponse
@@ -134,7 +134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量创建分区</p>
+     * <p>Add multiple partitions to a data table in a data lake at a time.</p>
      * 
      * @param request BatchCreatePartitionsRequest
      * @param headers map
@@ -188,7 +188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量创建分区</p>
+     * <p>Add multiple partitions to a data table in a data lake at a time.</p>
      * 
      * @param request BatchCreatePartitionsRequest
      * @return BatchCreatePartitionsResponse
@@ -201,7 +201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量创建表</p>
+     * <p>Add data tables to a data lake at a time.</p>
      * 
      * @param request BatchCreateTablesRequest
      * @param headers map
@@ -247,7 +247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量创建表</p>
+     * <p>Add data tables to a data lake at a time.</p>
      * 
      * @param request BatchCreateTablesRequest
      * @return BatchCreateTablesResponse
@@ -260,7 +260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>batch delete partitions</p>
+     * <p>Deletes multiple partitions of a data table in the data lake.</p>
      * 
      * @param request BatchDeletePartitionsRequest
      * @param headers map
@@ -310,7 +310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>batch delete partitions</p>
+     * <p>Deletes multiple partitions of a data table in the data lake.</p>
      * 
      * @param request BatchDeletePartitionsRequest
      * @return BatchDeletePartitionsResponse
@@ -323,7 +323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>BatchDeleteTableVersions</p>
+     * <p>Deletes a specified version of a data table in a data lake at a time.</p>
      * 
      * @param request BatchDeleteTableVersionsRequest
      * @param headers map
@@ -369,7 +369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>BatchDeleteTableVersions</p>
+     * <p>Deletes a specified version of a data table in a data lake at a time.</p>
      * 
      * @param request BatchDeleteTableVersionsRequest
      * @return BatchDeleteTableVersionsResponse
@@ -382,7 +382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>BatchDeleteTables</p>
+     * <p>Deletes multiple data tables in a data lake by name.</p>
      * 
      * @param request BatchDeleteTablesRequest
      * @param headers map
@@ -428,7 +428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>BatchDeleteTables</p>
+     * <p>Deletes multiple data tables in a data lake by name.</p>
      * 
      * @param request BatchDeleteTablesRequest
      * @return BatchDeleteTablesResponse
@@ -441,7 +441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Get Partition Column Statistics</p>
+     * <p>Obtains the field statistics of data table partitions in a data lake at a time.</p>
      * 
      * @param request BatchGetPartitionColumnStatisticsRequest
      * @param headers map
@@ -491,7 +491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Get Partition Column Statistics</p>
+     * <p>Obtains the field statistics of data table partitions in a data lake at a time.</p>
      * 
      * @param request BatchGetPartitionColumnStatisticsRequest
      * @return BatchGetPartitionColumnStatisticsResponse
@@ -504,7 +504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>batch get partitions</p>
+     * <p>Obtains the details of database partitions in a data lake in batches.</p>
      * 
      * @param request BatchGetPartitionsRequest
      * @param headers map
@@ -554,7 +554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>batch get partitions</p>
+     * <p>Obtains the details of database partitions in a data lake in batches.</p>
      * 
      * @param request BatchGetPartitionsRequest
      * @return BatchGetPartitionsResponse
@@ -567,7 +567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>batch get tables</p>
+     * <p>Obtain detailed information about data tables in the data lake in batches.</p>
      * 
      * @param request BatchGetTablesRequest
      * @param headers map
@@ -609,7 +609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>batch get tables</p>
+     * <p>Obtain detailed information about data tables in the data lake in batches.</p>
      * 
      * @param request BatchGetTablesRequest
      * @return BatchGetTablesResponse
@@ -622,7 +622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量授权</p>
+     * <p>Grant the operation permissions on resources to a user or a data lake role at a time.</p>
      * 
      * @param request BatchGrantPermissionsRequest
      * @param headers map
@@ -664,7 +664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量授权</p>
+     * <p>Grant the operation permissions on resources to a user or a data lake role at a time.</p>
      * 
      * @param request BatchGrantPermissionsRequest
      * @return BatchGrantPermissionsResponse
@@ -677,7 +677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量取消授权</p>
+     * <p>You can call this operation to revoke permissions on resources from a user or data lake role at a time.</p>
      * 
      * @param request BatchRevokePermissionsRequest
      * @param headers map
@@ -719,7 +719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量取消授权</p>
+     * <p>You can call this operation to revoke permissions on resources from a user or data lake role at a time.</p>
      * 
      * @param request BatchRevokePermissionsRequest
      * @return BatchRevokePermissionsResponse
@@ -732,7 +732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>batch update partitions</p>
+     * <p>Batch update multiple partitions for a data table in a data lake.</p>
      * 
      * @param request BatchUpdatePartitionsRequest
      * @param headers map
@@ -778,7 +778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>batch update partitions</p>
+     * <p>Batch update multiple partitions for a data table in a data lake.</p>
      * 
      * @param request BatchUpdatePartitionsRequest
      * @return BatchUpdatePartitionsResponse
@@ -791,7 +791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新表</p>
+     * <p>Update the details of data tables in the data lake in batches.</p>
      * 
      * @param request BatchUpdateTablesRequest
      * @param headers map
@@ -837,7 +837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新表</p>
+     * <p>Update the details of data tables in the data lake in batches.</p>
      * 
      * @param request BatchUpdateTablesRequest
      * @return BatchUpdateTablesResponse
@@ -850,7 +850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消查询任务</p>
+     * <p>Cancel a query request.</p>
      * 
      * @param request CancelQueryRequest
      * @param headers map
@@ -884,7 +884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消查询任务</p>
+     * <p>Cancel a query request.</p>
      * 
      * @param request CancelQueryRequest
      * @return CancelQueryResponse
@@ -897,7 +897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check permissions</p>
+     * <p>Verify user permissions.</p>
      * 
      * @param request CheckPermissionsRequest
      * @param headers map
@@ -926,7 +926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check permissions</p>
+     * <p>Verify user permissions.</p>
      * 
      * @param request CheckPermissionsRequest
      * @return CheckPermissionsResponse
@@ -939,7 +939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据湖Catalog</p>
+     * <p>Create a Data Catalog for Data Lake.</p>
      * 
      * @param request CreateCatalogRequest
      * @param headers map
@@ -973,7 +973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据湖Catalog</p>
+     * <p>Create a Data Catalog for Data Lake.</p>
      * 
      * @param request CreateCatalogRequest
      * @return CreateCatalogResponse
@@ -986,7 +986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>create database</p>
+     * <p>Create a metadabase in the data lake metadata.</p>
      * 
      * @param request CreateDatabaseRequest
      * @param headers map
@@ -1024,7 +1024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>create database</p>
+     * <p>Create a metadabase in the data lake metadata.</p>
      * 
      * @param request CreateDatabaseRequest
      * @return CreateDatabaseResponse
@@ -1037,7 +1037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create function</p>
+     * <p>Added user-defined functions for databases in the data lake.</p>
      * 
      * @param request CreateFunctionRequest
      * @param headers map
@@ -1079,7 +1079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create function</p>
+     * <p>Added user-defined functions for databases in the data lake.</p>
      * 
      * @param request CreateFunctionRequest
      * @return CreateFunctionResponse
@@ -1092,7 +1092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>create lock</p>
+     * <p>Creates a specified metadata lock.</p>
      * 
      * @param request CreateLockRequest
      * @param headers map
@@ -1126,7 +1126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>create lock</p>
+     * <p>Creates a specified metadata lock.</p>
      * 
      * @param request CreateLockRequest
      * @return CreateLockResponse
@@ -1139,7 +1139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Partition</p>
+     * <p>Add a partition to the data table of the data lake.</p>
      * 
      * @param request CreatePartitionRequest
      * @param headers map
@@ -1193,7 +1193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Partition</p>
+     * <p>Add a partition to the data table of the data lake.</p>
      * 
      * @param request CreatePartitionRequest
      * @return CreatePartitionResponse
@@ -1206,7 +1206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据糊角色</p>
+     * <p>In the Data Lake Permissions section, add a role.</p>
      * 
      * @param request CreateRoleRequest
      * @param headers map
@@ -1235,7 +1235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据糊角色</p>
+     * <p>In the Data Lake Permissions section, add a role.</p>
      * 
      * @param request CreateRoleRequest
      * @return CreateRoleResponse
@@ -1248,7 +1248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create tables</p>
+     * <p>Add a data table for the data lake.</p>
      * 
      * @param request CreateTableRequest
      * @param headers map
@@ -1290,7 +1290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create tables</p>
+     * <p>Add a data table for the data lake.</p>
      * 
      * @param request CreateTableRequest
      * @return CreateTableResponse
@@ -1303,7 +1303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Catalog by catalogId</p>
+     * <p>Deletes a data directory.</p>
      * 
      * @param request DeleteCatalogRequest
      * @param headers map
@@ -1341,7 +1341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Catalog by catalogId</p>
+     * <p>Deletes a data directory.</p>
      * 
      * @param request DeleteCatalogRequest
      * @return DeleteCatalogResponse
@@ -1354,7 +1354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete database by catalogId and database name</p>
+     * <p>Deletes a database in the data lake by name.</p>
      * 
      * @param request DeleteDatabaseRequest
      * @param headers map
@@ -1400,7 +1400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete database by catalogId and database name</p>
+     * <p>Deletes a database in the data lake by name.</p>
      * 
      * @param request DeleteDatabaseRequest
      * @return DeleteDatabaseResponse
@@ -1413,7 +1413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete function</p>
+     * <p>Deletes a user-defined function for a database in the data lake by name.</p>
      * 
      * @param request DeleteFunctionRequest
      * @param headers map
@@ -1455,7 +1455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete function</p>
+     * <p>Deletes a user-defined function for a database in the data lake by name.</p>
      * 
      * @param request DeleteFunctionRequest
      * @return DeleteFunctionResponse
@@ -1468,7 +1468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete partition</p>
+     * <p>Deletes a specified partition from a data table in the data lake.</p>
      * 
      * @param request DeletePartitionRequest
      * @param headers map
@@ -1518,7 +1518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete partition</p>
+     * <p>Deletes a specified partition from a data table in the data lake.</p>
      * 
      * @param request DeletePartitionRequest
      * @return DeletePartitionResponse
@@ -1531,7 +1531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DeletePartitionColumnStatistics</p>
+     * <p>Reclaim the field statistics of data table partitions in the data lake.</p>
      * 
      * @param tmpReq DeletePartitionColumnStatisticsRequest
      * @param headers map
@@ -1591,7 +1591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DeletePartitionColumnStatistics</p>
+     * <p>Reclaim the field statistics of data table partitions in the data lake.</p>
      * 
      * @param request DeletePartitionColumnStatisticsRequest
      * @return DeletePartitionColumnStatisticsResponse
@@ -1604,7 +1604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除角色</p>
+     * <p>Delete a role from Data Lake Permissions.</p>
      * 
      * @param request DeleteRoleRequest
      * @param headers map
@@ -1638,7 +1638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除角色</p>
+     * <p>Delete a role from Data Lake Permissions.</p>
      * 
      * @param request DeleteRoleRequest
      * @return DeleteRoleResponse
@@ -1651,7 +1651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete table</p>
+     * <p>Deletes a data table in a data lake by name.</p>
      * 
      * @param request DeleteTableRequest
      * @param headers map
@@ -1693,7 +1693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete table</p>
+     * <p>Deletes a data table in a data lake by name.</p>
      * 
      * @param request DeleteTableRequest
      * @return DeleteTableResponse
@@ -1706,7 +1706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DeleteTableColumnStatistics</p>
+     * <p>Recycle field statistics for data tables in the data lake.</p>
      * 
      * @param tmpReq DeleteTableColumnStatisticsRequest
      * @param headers map
@@ -1758,7 +1758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DeleteTableColumnStatistics</p>
+     * <p>Recycle field statistics for data tables in the data lake.</p>
      * 
      * @param request DeleteTableColumnStatisticsRequest
      * @return DeleteTableColumnStatisticsResponse
@@ -1771,7 +1771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete table version</p>
+     * <p>Deletes a specified version of a data table in the data lake.</p>
      * 
      * @param request DeleteTableVersionRequest
      * @param headers map
@@ -1817,7 +1817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete table version</p>
+     * <p>Deletes a specified version of a data table in the data lake.</p>
      * 
      * @param request DeleteTableVersionRequest
      * @return DeleteTableVersionResponse
@@ -1830,7 +1830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消注册Location</p>
+     * <p>Cancel Location registration.</p>
      * 
      * @param request DeregisterLocationRequest
      * @param headers map
@@ -1864,7 +1864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消注册Location</p>
+     * <p>Cancel Location registration.</p>
      * 
      * @param request DeregisterLocationRequest
      * @return DeregisterLocationResponse
@@ -1876,6 +1876,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the list of open regions.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
@@ -1899,6 +1902,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the list of open regions.</p>
      * @return DescribeRegionsResponse
      */
     public DescribeRegionsResponse describeRegions() throws Exception {
@@ -1909,7 +1914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetAsyncTaskStatus</p>
+     * <p>Used in metadata-related asynchronous APIs to check the status of asynchronous execution tasks.</p>
      * 
      * @param request GetAsyncTaskStatusRequest
      * @param headers map
@@ -1947,7 +1952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetAsyncTaskStatus</p>
+     * <p>Used in metadata-related asynchronous APIs to check the status of asynchronous execution tasks.</p>
      * 
      * @param request GetAsyncTaskStatusRequest
      * @return GetAsyncTaskStatusResponse
@@ -1960,7 +1965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Catalog</p>
+     * <p>Obtains the details of a data directory.</p>
      * 
      * @param request GetCatalogRequest
      * @param headers map
@@ -1994,7 +1999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Catalog</p>
+     * <p>Obtains the details of a data directory.</p>
      * 
      * @param request GetCatalogRequest
      * @return GetCatalogResponse
@@ -2007,7 +2012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖配置</p>
+     * <p>To obtain the configurations of Data Lake Catalog, you must assume the admin role or above.</p>
      * 
      * @param request GetCatalogSettingsRequest
      * @param headers map
@@ -2041,7 +2046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖配置</p>
+     * <p>To obtain the configurations of Data Lake Catalog, you must assume the admin role or above.</p>
      * 
      * @param request GetCatalogSettingsRequest
      * @return GetCatalogSettingsResponse
@@ -2054,7 +2059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Database</p>
+     * <p>Obtains the details of a database in a data lake.</p>
      * 
      * @param request GetDatabaseRequest
      * @param headers map
@@ -2092,7 +2097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Database</p>
+     * <p>Obtains the details of a database in a data lake.</p>
      * 
      * @param request GetDatabaseRequest
      * @return GetDatabaseResponse
@@ -2104,8 +2109,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To use a data profile, you must first host the OSS bucket of the database.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取库数据概览信息</p>
+     * <p>Gets the details of the database data profile.</p>
      * 
      * @param request GetDatabaseProfileRequest
      * @param headers map
@@ -2142,8 +2150,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To use a data profile, you must first host the OSS bucket of the database.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取库数据概览信息</p>
+     * <p>Gets the details of the database data profile.</p>
      * 
      * @param request GetDatabaseProfileRequest
      * @return GetDatabaseProfileResponse
@@ -2156,7 +2167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Function</p>
+     * <p>Obtain the user-defined function of the database in the data lake based on the function name.</p>
      * 
      * @param request GetFunctionRequest
      * @param headers map
@@ -2198,7 +2209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Function</p>
+     * <p>Obtain the user-defined function of the database in the data lake based on the function name.</p>
      * 
      * @param request GetFunctionRequest
      * @return GetFunctionResponse
@@ -2211,7 +2222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取生命周期规则</p>
+     * <p>Obtains the lifecycle rules of a database and table.</p>
      * 
      * @param request GetLifecycleRuleRequest
      * @param headers map
@@ -2249,7 +2260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取生命周期规则</p>
+     * <p>Obtains the lifecycle rules of a database and table.</p>
      * 
      * @param request GetLifecycleRuleRequest
      * @return GetLifecycleRuleResponse
@@ -2262,7 +2273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get lock status</p>
+     * <p>Queries the specified metadata lock.</p>
      * 
      * @param request GetLockRequest
      * @param headers map
@@ -2296,7 +2307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get lock status</p>
+     * <p>Queries the specified metadata lock.</p>
      * 
      * @param request GetLockRequest
      * @return GetLockResponse
@@ -2309,7 +2320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get partition</p>
+     * <p>Get details about the database partitions in the data lake.</p>
      * 
      * @param request GetPartitionRequest
      * @param headers map
@@ -2355,7 +2366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get partition</p>
+     * <p>Get details about the database partitions in the data lake.</p>
      * 
      * @param request GetPartitionRequest
      * @return GetPartitionResponse
@@ -2368,7 +2379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Get Partition Column Statistics</p>
+     * <p>Obtains the statistics of a specified field for a data partition in a data lake.</p>
      * 
      * @param tmpReq GetPartitionColumnStatisticsRequest
      * @param headers map
@@ -2428,7 +2439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Get Partition Column Statistics</p>
+     * <p>Obtains the statistics of a specified field for a data partition in a data lake.</p>
      * 
      * @param request GetPartitionColumnStatisticsRequest
      * @return GetPartitionColumnStatisticsResponse
@@ -2441,7 +2452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取查询结果</p>
+     * <p>Obtains the results of a data exploration query.</p>
      * 
      * @param request GetQueryResultRequest
      * @param headers map
@@ -2483,7 +2494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取查询结果</p>
+     * <p>Obtains the results of a data exploration query.</p>
      * 
      * @param request GetQueryResultRequest
      * @return GetQueryResultResponse
@@ -2495,6 +2506,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can Data Lake Formation the activation status of the service in the specified region.</p>
+     * 
      * @param request GetRegionStatusRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2526,6 +2540,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can Data Lake Formation the activation status of the service in the specified region.</p>
+     * 
      * @param request GetRegionStatusRequest
      * @return GetRegionStatusResponse
      */
@@ -2537,7 +2554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetRole</p>
+     * <p>Obtain the role in Data Lake Permissions based on the role name.</p>
      * 
      * @param request GetRoleRequest
      * @param headers map
@@ -2571,7 +2588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetRole</p>
+     * <p>Obtain the role in Data Lake Permissions based on the role name.</p>
      * 
      * @param request GetRoleRequest
      * @return GetRoleResponse
@@ -2583,6 +2600,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the service activation status of a Data Lake Formation user.</p>
+     * 
      * @param request GetServiceStatusRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2614,6 +2634,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the service activation status of a Data Lake Formation user.</p>
+     * 
      * @param request GetServiceStatusRequest
      * @return GetServiceStatusResponse
      */
@@ -2625,7 +2648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get table</p>
+     * <p>Get detailed information about the data tables in the data lake.</p>
      * 
      * @param request GetTableRequest
      * @param headers map
@@ -2667,7 +2690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get table</p>
+     * <p>Get detailed information about the data tables in the data lake.</p>
      * 
      * @param request GetTableRequest
      * @return GetTableResponse
@@ -2680,7 +2703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>An example of API</p>
+     * <p>You can call this operation to obtain statistics about a specified field in a data table in a data lake.</p>
      * 
      * @param tmpReq GetTableColumnStatisticsRequest
      * @param headers map
@@ -2732,7 +2755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>An example of API</p>
+     * <p>You can call this operation to obtain statistics about a specified field in a data table in a data lake.</p>
      * 
      * @param request GetTableColumnStatisticsRequest
      * @return GetTableColumnStatisticsResponse
@@ -2744,8 +2767,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To use a data profile, you must first host the OSS bucket of the table.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取表数据概况信息</p>
+     * <p>Obtains the details of a table data profile.</p>
      * 
      * @param request GetTableProfileRequest
      * @param headers map
@@ -2786,8 +2812,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To use a data profile, you must first host the OSS bucket of the table.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取表数据概况信息</p>
+     * <p>Obtains the details of a table data profile.</p>
      * 
      * @param request GetTableProfileRequest
      * @return GetTableProfileResponse
@@ -2800,7 +2829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get table version</p>
+     * <p>Gets a specified version of a data table in the data lake.</p>
      * 
      * @param request GetTableVersionRequest
      * @param headers map
@@ -2846,7 +2875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get table version</p>
+     * <p>Gets a specified version of a data table in the data lake.</p>
      * 
      * @param request GetTableVersionRequest
      * @return GetTableVersionResponse
@@ -2859,7 +2888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>赋予Principal资源的权限</p>
+     * <p>Grant the operation permissions on resources to the User /Data Lake role.</p>
      * 
      * @param request GrantPermissionsRequest
      * @param headers map
@@ -2913,7 +2942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>赋予Principal资源的权限</p>
+     * <p>Grant the operation permissions on resources to the User /Data Lake role.</p>
      * 
      * @param request GrantPermissionsRequest
      * @return GrantPermissionsResponse
@@ -2926,7 +2955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grant 单个角色给一个或多个用户</p>
+     * <p>Grant a Data Lake role to multiple users.</p>
      * 
      * @param request GrantRoleToUsersRequest
      * @param headers map
@@ -2964,7 +2993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grant 单个角色给一个或多个用户</p>
+     * <p>Grant a Data Lake role to multiple users.</p>
      * 
      * @param request GrantRoleToUsersRequest
      * @return GrantRoleToUsersResponse
@@ -2977,7 +3006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grant 一个或多个角色给一个用户</p>
+     * <p>Grant multiple roles to a single user.</p>
      * 
      * @param request GrantRolesToUserRequest
      * @param headers map
@@ -3015,7 +3044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grant 一个或多个角色给一个用户</p>
+     * <p>Grant multiple roles to a single user.</p>
      * 
      * @param request GrantRolesToUserRequest
      * @return GrantRolesToUserResponse
@@ -3028,7 +3057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListCatalogs</p>
+     * <p>You can call this operation to query the list of metabase namespaces (catalogs).</p>
      * 
      * @param request ListCatalogsRequest
      * @param headers map
@@ -3070,7 +3099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListCatalogs</p>
+     * <p>You can call this operation to query the list of metabase namespaces (catalogs).</p>
      * 
      * @param request ListCatalogsRequest
      * @return ListCatalogsResponse
@@ -3083,7 +3112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Databases List</p>
+     * <p>Obtains a list of databases in the data lake and queries them by page. You can match them based on the database name.</p>
      * 
      * @param request ListDatabasesRequest
      * @param headers map
@@ -3129,7 +3158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Databases List</p>
+     * <p>Obtains a list of databases in the data lake and queries them by page. You can match them based on the database name.</p>
      * 
      * @param request ListDatabasesRequest
      * @return ListDatabasesResponse
@@ -3142,7 +3171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list function names</p>
+     * <p>Paged query to obtain the list of function names of the database.</p>
      * 
      * @param request ListFunctionNamesRequest
      * @param headers map
@@ -3192,7 +3221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list function names</p>
+     * <p>Paged query to obtain the list of function names of the database.</p>
      * 
      * @param request ListFunctionNamesRequest
      * @return ListFunctionNamesResponse
@@ -3205,7 +3234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list functions</p>
+     * <p>Obtains a list of user-defined functions for databases in the data lake in bulk.</p>
      * 
      * @param request ListFunctionsRequest
      * @param headers map
@@ -3255,7 +3284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list functions</p>
+     * <p>Obtains a list of user-defined functions for databases in the data lake in bulk.</p>
      * 
      * @param request ListFunctionsRequest
      * @return ListFunctionsResponse
@@ -3268,7 +3297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>partition names</p>
+     * <p>You can call this operation to obtain a list of partition names of data tables in a data lake. This method is usually used for multi-level partitioning.</p>
      * 
      * @param request ListPartitionNamesRequest
      * @param headers map
@@ -3322,7 +3351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>partition names</p>
+     * <p>You can call this operation to obtain a list of partition names of data tables in a data lake. This method is usually used for multi-level partitioning.</p>
      * 
      * @param request ListPartitionNamesRequest
      * @return ListPartitionNamesResponse
@@ -3335,7 +3364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list partitions</p>
+     * <p>Obtains a list of database partition details in the data lake.</p>
      * 
      * @param request ListPartitionsRequest
      * @param headers map
@@ -3393,7 +3422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list partitions</p>
+     * <p>Obtains a list of database partition details in the data lake.</p>
      * 
      * @param request ListPartitionsRequest
      * @return ListPartitionsResponse
@@ -3405,6 +3434,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You cannot specify expr to filter partitions. Currently, you need to call the listpartitionsbyfilter to complete the corresponding function.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a list of data table partitions in the data lake and queries them by condition.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPartitionsByExprResponse
@@ -3428,6 +3463,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You cannot specify expr to filter partitions. Currently, you need to call the listpartitionsbyfilter to complete the corresponding function.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a list of data table partitions in the data lake and queries them by condition.</p>
      * @return ListPartitionsByExprResponse
      */
     public ListPartitionsByExprResponse listPartitionsByExpr() throws Exception {
@@ -3438,7 +3478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list partitions by filter</p>
+     * <p>Obtain the list of data table partitions in the data lake and query them by filter condition.</p>
      * 
      * @param request ListPartitionsByFilterRequest
      * @param headers map
@@ -3496,7 +3536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list partitions by filter</p>
+     * <p>Obtain the list of data table partitions in the data lake and query them by filter condition.</p>
      * 
      * @param request ListPartitionsByFilterRequest
      * @return ListPartitionsByFilterResponse
@@ -3508,8 +3548,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To use a data profile, you must first host the OSS bucket of the table.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取分区数据概况信息</p>
+     * <p>Obtains the details of a partition data profile.</p>
      * 
      * @param tmpReq ListPartitionsProfileRequest
      * @param headers map
@@ -3568,8 +3611,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To use a data profile, you must first host the OSS bucket of the table.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取分区数据概况信息</p>
+     * <p>Obtains the details of a partition data profile.</p>
      * 
      * @param request ListPartitionsProfileRequest
      * @return ListPartitionsProfileResponse
@@ -3582,7 +3628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定资源或指定Principal的权限信息</p>
+     * <p>Queries permissions.</p>
      * 
      * @param request ListPermissionsRequest
      * @param headers map
@@ -3644,7 +3690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定资源或指定Principal的权限信息</p>
+     * <p>Queries permissions.</p>
      * 
      * @param request ListPermissionsRequest
      * @return ListPermissionsResponse
@@ -3657,7 +3703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户角色列表</p>
+     * <p>Gets the list of users for a single role.</p>
      * 
      * @param request ListRoleUsersRequest
      * @param headers map
@@ -3703,7 +3749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户角色列表</p>
+     * <p>Gets the list of users for a single role.</p>
      * 
      * @param request ListRoleUsersRequest
      * @return ListRoleUsersResponse
@@ -3716,7 +3762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListRoles</p>
+     * <p>You can query the list of data lake roles.</p>
      * 
      * @param request ListRolesRequest
      * @param headers map
@@ -3758,7 +3804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListRoles</p>
+     * <p>You can query the list of data lake roles.</p>
      * 
      * @param request ListRolesRequest
      * @return ListRolesResponse
@@ -3771,7 +3817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list table names</p>
+     * <p>This function is used only to query the names of data tables in Data Lake.</p>
      * 
      * @param request ListTableNamesRequest
      * @param headers map
@@ -3825,7 +3871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list table names</p>
+     * <p>This function is used only to query the names of data tables in Data Lake.</p>
      * 
      * @param request ListTableNamesRequest
      * @return ListTableNamesResponse
@@ -3838,7 +3884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List table versions</p>
+     * <p>Queries the list of specified versions of data tables in a data lake by page.</p>
      * 
      * @param request ListTableVersionsRequest
      * @param headers map
@@ -3888,7 +3934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List table versions</p>
+     * <p>Queries the list of specified versions of data tables in a data lake by page.</p>
      * 
      * @param request ListTableVersionsRequest
      * @return ListTableVersionsResponse
@@ -3901,7 +3947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list tables</p>
+     * <p>You can call this operation to obtain a list of data tables in the data lake.</p>
      * 
      * @param request ListTablesRequest
      * @param headers map
@@ -3955,7 +4001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list tables</p>
+     * <p>You can call this operation to obtain a list of data tables in the data lake.</p>
      * 
      * @param request ListTablesRequest
      * @return ListTablesResponse
@@ -3968,7 +4014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户角色列表</p>
+     * <p>Obtains the list of data lake roles for a single user.</p>
      * 
      * @param request ListUserRolesRequest
      * @param headers map
@@ -4014,7 +4060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户角色列表</p>
+     * <p>Obtains the list of data lake roles for a single user.</p>
      * 
      * @param request ListUserRolesRequest
      * @return ListUserRolesResponse
@@ -4027,7 +4073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>refresh to keep the lock alive</p>
+     * <p>Refreshes the specified metadata lock.</p>
      * 
      * @param request RefreshLockRequest
      * @param headers map
@@ -4061,7 +4107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>refresh to keep the lock alive</p>
+     * <p>Refreshes the specified metadata lock.</p>
      * 
      * @param request RefreshLockRequest
      * @return RefreshLockResponse
@@ -4074,7 +4120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册Location</p>
+     * <p>Register the OSS path to be managed by DLF.</p>
      * 
      * @param request RegisterLocationRequest
      * @param headers map
@@ -4120,7 +4166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册Location</p>
+     * <p>Register the OSS path to be managed by DLF.</p>
      * 
      * @param request RegisterLocationRequest
      * @return RegisterLocationResponse
@@ -4133,7 +4179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>rename partition</p>
+     * <p>Update the partition name of the data table in the data lake.</p>
      * 
      * @param request RenamePartitionRequest
      * @param headers map
@@ -4183,7 +4229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>rename partition</p>
+     * <p>Update the partition name of the data table in the data lake.</p>
      * 
      * @param request RenamePartitionRequest
      * @return RenamePartitionResponse
@@ -4196,7 +4242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>rename table</p>
+     * <p>is used only to update the name of a data table in the data lake.</p>
      * 
      * @param request RenameTableRequest
      * @param headers map
@@ -4246,7 +4292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>rename table</p>
+     * <p>is used only to update the name of a data table in the data lake.</p>
      * 
      * @param request RenameTableRequest
      * @return RenameTableResponse
@@ -4259,7 +4305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消Principal资源的权限</p>
+     * <p>Cancels the operation permissions on resources granted to a User /Data Lake role.</p>
      * 
      * @param request RevokePermissionsRequest
      * @param headers map
@@ -4313,7 +4359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消Principal资源的权限</p>
+     * <p>Cancels the operation permissions on resources granted to a User /Data Lake role.</p>
      * 
      * @param request RevokePermissionsRequest
      * @return RevokePermissionsResponse
@@ -4326,7 +4372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量将该角色从这些用户中revoke</p>
+     * <p>Removes multiple users from a single data lake role.</p>
      * 
      * @param request RevokeRoleFromUsersRequest
      * @param headers map
@@ -4364,7 +4410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量将该角色从这些用户中revoke</p>
+     * <p>Removes multiple users from a single data lake role.</p>
      * 
      * @param request RevokeRoleFromUsersRequest
      * @return RevokeRoleFromUsersResponse
@@ -4377,7 +4423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量Revoke该用户的角色</p>
+     * <p>Removes multiple roles from a single user.</p>
      * 
      * @param request RevokeRolesFromUserRequest
      * @param headers map
@@ -4415,7 +4461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量Revoke该用户的角色</p>
+     * <p>Removes multiple roles from a single user.</p>
      * 
      * @param request RevokeRolesFromUserRequest
      * @return RevokeRolesFromUserResponse
@@ -4428,7 +4474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>运行元数据迁移任务</p>
+     * <p>Run the metadata migration task.</p>
      * 
      * @param request RunMigrationWorkflowRequest
      * @param headers map
@@ -4462,7 +4508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>运行元数据迁移任务</p>
+     * <p>Run the metadata migration task.</p>
      * 
      * @param request RunMigrationWorkflowRequest
      * @return RunMigrationWorkflowResponse
@@ -4474,8 +4520,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Metadata search</p>
+     * 
      * <b>summary</b> : 
-     * <p>DLF 元数据search</p>
+     * <p>Metadata retrieval.</p>
      * 
      * @param request SearchRequest
      * @param headers map
@@ -4528,8 +4577,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Metadata search</p>
+     * 
      * <b>summary</b> : 
-     * <p>DLF 元数据search</p>
+     * <p>Metadata retrieval.</p>
      * 
      * @param request SearchRequest
      * @return SearchResponse
@@ -4542,7 +4594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DLF 跨Catalog检索元数据</p>
+     * <p>Search across catalogs for content such as libraries, tables, and fields.</p>
      * 
      * @param request SearchAcrossCatalogRequest
      * @param headers map
@@ -4596,7 +4648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DLF 跨Catalog检索元数据</p>
+     * <p>Search across catalogs for content such as libraries, tables, and fields.</p>
      * 
      * @param request SearchAcrossCatalogRequest
      * @return SearchAcrossCatalogResponse
@@ -4609,7 +4661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止元数据迁移任务</p>
+     * <p>Stop the metadata migration task.</p>
      * 
      * @param request StopMigrationWorkflowRequest
      * @param headers map
@@ -4643,7 +4695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止元数据迁移任务</p>
+     * <p>Stop the metadata migration task.</p>
      * 
      * @param request StopMigrationWorkflowRequest
      * @return StopMigrationWorkflowResponse
@@ -4655,6 +4707,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Only suitable for submitting small and medium-sized queries. The execution time cannot exceed 1 hour.</p>
+     * <ul>
+     * <li>A maximum of 10000 query results can be returned.</li>
+     * <li>There are limits on concurrent execution under a single master account. If multiple queries are submitted at the same time, they will be queued.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Submit an SQL query task.</p>
+     * 
      * @param request SubmitQueryRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4694,6 +4756,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Only suitable for submitting small and medium-sized queries. The execution time cannot exceed 1 hour.</p>
+     * <ul>
+     * <li>A maximum of 10000 query results can be returned.</li>
+     * <li>There are limits on concurrent execution under a single master account. If multiple queries are submitted at the same time, they will be queued.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Submit an SQL query task.</p>
+     * 
      * @param request SubmitQueryRequest
      * @return SubmitQueryResponse
      */
@@ -4705,7 +4777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>unlock</p>
+     * <p>Unlocks the specified metadata lock.</p>
      * 
      * @param request UnLockRequest
      * @param headers map
@@ -4739,7 +4811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>unlock</p>
+     * <p>Unlocks the specified metadata lock.</p>
      * 
      * @param request UnLockRequest
      * @return UnLockResponse
@@ -4752,7 +4824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据湖Catalog</p>
+     * <p>Updates the contents of the Data Catalog.</p>
      * 
      * @param request UpdateCatalogRequest
      * @param headers map
@@ -4786,7 +4858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据湖Catalog</p>
+     * <p>Updates the contents of the Data Catalog.</p>
      * 
      * @param request UpdateCatalogRequest
      * @return UpdateCatalogResponse
@@ -4799,7 +4871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖配置</p>
+     * <p>To update the configurations of Data Lake Catalog, you must assume the admin role or more.</p>
      * 
      * @param request UpdateCatalogSettingsRequest
      * @param headers map
@@ -4837,7 +4909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖配置</p>
+     * <p>To update the configurations of Data Lake Catalog, you must assume the admin role or more.</p>
      * 
      * @param request UpdateCatalogSettingsRequest
      * @return UpdateCatalogSettingsResponse
@@ -4850,7 +4922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update database</p>
+     * <p>Update the details of a database in the data lake.</p>
      * 
      * @param request UpdateDatabaseRequest
      * @param headers map
@@ -4892,7 +4964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update database</p>
+     * <p>Update the details of a database in the data lake.</p>
      * 
      * @param request UpdateDatabaseRequest
      * @return UpdateDatabaseResponse
@@ -4905,7 +4977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>update function</p>
+     * <p>Updates the user-defined function information for a database in the data lake by name.</p>
      * 
      * @param request UpdateFunctionRequest
      * @param headers map
@@ -4951,7 +5023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>update function</p>
+     * <p>Updates the user-defined function information for a database in the data lake by name.</p>
      * 
      * @param request UpdateFunctionRequest
      * @return UpdateFunctionResponse
@@ -4964,7 +5036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>update partition columnstatistics</p>
+     * <p>Creates or updates the field statistics of a data table partition.</p>
      * 
      * @param request UpdatePartitionColumnStatisticsRequest
      * @param headers map
@@ -4993,7 +5065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>update partition columnstatistics</p>
+     * <p>Creates or updates the field statistics of a data table partition.</p>
      * 
      * @param request UpdatePartitionColumnStatisticsRequest
      * @return UpdatePartitionColumnStatisticsResponse
@@ -5006,7 +5078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>赋予Principal资源的权限</p>
+     * <p>Update the permissions of the User /Data Lake role.</p>
      * 
      * @param request UpdatePermissionsRequest
      * @param headers map
@@ -5060,7 +5132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>赋予Principal资源的权限</p>
+     * <p>Update the permissions of the User /Data Lake role.</p>
      * 
      * @param request UpdatePermissionsRequest
      * @return UpdatePermissionsResponse
@@ -5073,7 +5145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改Location</p>
+     * <p>Edit a Registered Location.</p>
      * 
      * @param request UpdateRegisteredLocationRequest
      * @param headers map
@@ -5115,7 +5187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改Location</p>
+     * <p>Edit a Registered Location.</p>
      * 
      * @param request UpdateRegisteredLocationRequest
      * @return UpdateRegisteredLocationResponse
@@ -5128,7 +5200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新角色</p>
+     * <p>Update a role in Data Lake Permissions in which the RDS instance resides.</p>
      * 
      * @param request UpdateRoleRequest
      * @param headers map
@@ -5166,7 +5238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新角色</p>
+     * <p>Update a role in Data Lake Permissions in which the RDS instance resides.</p>
      * 
      * @param request UpdateRoleRequest
      * @return UpdateRoleResponse
@@ -5179,7 +5251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Role中的Users</p>
+     * <p>Update the user in the role to include ram user/ram role.</p>
      * 
      * @param request UpdateRoleUsersRequest
      * @param headers map
@@ -5217,7 +5289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Role中的Users</p>
+     * <p>Update the user in the role to include ram user/ram role.</p>
      * 
      * @param request UpdateRoleUsersRequest
      * @return UpdateRoleUsersResponse
@@ -5230,7 +5302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>update table</p>
+     * <p>Update the data table information in the data lake based on the name.</p>
      * 
      * @param request UpdateTableRequest
      * @param headers map
@@ -5288,7 +5360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>update table</p>
+     * <p>Update the data table information in the data lake based on the name.</p>
      * 
      * @param request UpdateTableRequest
      * @return UpdateTableResponse
@@ -5301,7 +5373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>update table columnstatistics</p>
+     * <p>Creates or updates field statistics for a data table.</p>
      * 
      * @param request UpdateTableColumnStatisticsRequest
      * @param headers map
@@ -5330,7 +5402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>update table columnstatistics</p>
+     * <p>Creates or updates field statistics for a data table.</p>
      * 
      * @param request UpdateTableColumnStatisticsRequest
      * @return UpdateTableColumnStatisticsResponse

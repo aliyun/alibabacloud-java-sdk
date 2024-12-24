@@ -4,6 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class UpdatePartitionColumnStatisticsRequest extends TeaModel {
+    /**
+     * <p>Updates data table partition parameters.</p>
+     */
     @NameInMap("UpdateTablePartitionColumnStatisticsRequest")
     public UpdateTablePartitionColumnStatisticsRequest updateTablePartitionColumnStatisticsRequest;
 

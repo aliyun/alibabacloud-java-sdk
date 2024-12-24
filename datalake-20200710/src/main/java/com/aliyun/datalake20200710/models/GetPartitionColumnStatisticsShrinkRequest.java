@@ -5,26 +5,38 @@ import com.aliyun.tea.*;
 
 public class GetPartitionColumnStatisticsShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <p>The list of fields in the data table.</p>
+     */
     @NameInMap("ColumnNames")
     public String columnNamesShrink;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The list of partitions in the data table.</p>
+     */
     @NameInMap("PartitionNames")
     public String partitionNamesShrink;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_20201223</p>
      */

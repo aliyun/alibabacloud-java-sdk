@@ -5,26 +5,38 @@ import com.aliyun.tea.*;
 
 public class DeletePartitionColumnStatisticsRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <p>The list of field names.</p>
+     */
     @NameInMap("ColumnNames")
     public java.util.List<String> columnNames;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The list of partition names.</p>
+     */
     @NameInMap("PartitionNames")
     public java.util.List<String> partitionNames;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_20201223</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnLockResponseBody extends TeaModel {
     /**
-     * <p>Code</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class UnLockResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>.</p>
@@ -23,7 +23,7 @@ public class UnLockResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>37C8470A-5E6D-5E4E-AEF0-EA3EBE9C89EE</p>
@@ -32,7 +32,11 @@ public class UnLockResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success</p>
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

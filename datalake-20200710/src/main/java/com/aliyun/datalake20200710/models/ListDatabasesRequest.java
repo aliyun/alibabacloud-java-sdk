@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDatabasesRequest extends TeaModel {
     /**
+     * <p>The namespace of the database category. By default, the Uid of the primary account is entered.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,8 @@ public class ListDatabasesRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The regular expression used to match the database name. If all matches are specified, this parameter is specified. \*</p>
+     * 
      * <strong>example:</strong>
      * <p>.*</p>
      */
@@ -19,6 +23,8 @@ public class ListDatabasesRequest extends TeaModel {
     public String namePattern;
 
     /**
+     * <p>The paging token, which is returned by the result. For example, you can specify &quot;&quot; for the first page.</p>
+     * 
      * <strong>example:</strong>
      * <p>2cb472ec1bf84f8d92f9c4baa0d21c19aa!</p>
      */
@@ -26,6 +32,8 @@ public class ListDatabasesRequest extends TeaModel {
     public String nextPageToken;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

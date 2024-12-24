@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePartitionRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,8 @@ public class CreatePartitionRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
@@ -19,6 +23,8 @@ public class CreatePartitionRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>Specifies whether to ignore the exception if a partition with the same name already exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,16 +32,23 @@ public class CreatePartitionRequest extends TeaModel {
     public Boolean ifNotExists;
 
     /**
+     * <p>Indicates whether to return partition information. If the value is true, Partitions is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("NeedResult")
     public Boolean needResult;
 
+    /**
+     * <p>The partition input information.</p>
+     */
     @NameInMap("PartitionInput")
     public PartitionInput partitionInput;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_20201223</p>
      */

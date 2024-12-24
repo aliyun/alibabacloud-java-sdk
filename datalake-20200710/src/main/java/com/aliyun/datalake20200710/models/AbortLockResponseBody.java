@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AbortLockResponseBody extends TeaModel {
     /**
-     * <p>Code</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class AbortLockResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Message</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>.</p>
@@ -23,7 +23,7 @@ public class AbortLockResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>01D8DD6B-4929-5999-9BB3-950AA30E3BD0</p>
@@ -32,7 +32,11 @@ public class AbortLockResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>

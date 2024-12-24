@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetQueryResultRequest extends TeaModel {
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetQueryResultRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The size of each page. The maximum value is 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,6 +23,11 @@ public class GetQueryResultRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The query ID.</p>
+     * <blockquote>
+     * <p> You can call the SubmitQuery operation to query the query ID.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Q-41676378709440CE</p>
      */

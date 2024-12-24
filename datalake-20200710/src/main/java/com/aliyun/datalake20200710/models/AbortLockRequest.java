@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AbortLockRequest extends TeaModel {
     /**
-     * <p>LockId</p>
+     * <p>The lock ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16530</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteRoleRequest extends TeaModel {
     /**
+     * <p>The name of the role to be deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>roleId/roleName至少有一个是非空</p>
      */

@@ -4,11 +4,14 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetLifecycleRuleResponseBody extends TeaModel {
+    /**
+     * <p>The information about the lifecycle rule.</p>
+     */
     @NameInMap("Data")
     public LifecycleRule data;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EDBC848F-7CC7-52E3-9FBF-924D09B5C27A</p>
@@ -17,7 +20,11 @@ public class GetLifecycleRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success</p>
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>

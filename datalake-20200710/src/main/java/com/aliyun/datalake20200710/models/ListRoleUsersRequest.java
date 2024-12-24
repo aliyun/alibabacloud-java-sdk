@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRoleUsersRequest extends TeaModel {
     /**
-     * <p>NextPageToken</p>
+     * <p>The pagination token, which is returned from the returned result. If none is returned, an empty string or \&quot;\&quot;is passed.</p>
      * 
      * <strong>example:</strong>
      * <p>token!</p>
@@ -14,7 +14,7 @@ public class ListRoleUsersRequest extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>PageSize</p>
+     * <p>The size of each page. The maximum value is 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>-1/100</p>
@@ -23,6 +23,8 @@ public class ListRoleUsersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The name of the role.</p>
+     * 
      * <strong>example:</strong>
      * <p>admin</p>
      */
@@ -30,7 +32,7 @@ public class ListRoleUsersRequest extends TeaModel {
     public String roleName;
 
     /**
-     * <p>use name pattern filter</p>
+     * <p>The regular expression that matches the user name.</p>
      * 
      * <strong>example:</strong>
      * <p>.<em>user.</em></p>

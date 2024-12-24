@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPartitionRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,16 +14,23 @@ public class GetPartitionRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The data disk partitions.</p>
+     */
     @NameInMap("PartitionValues")
     public java.util.List<String> partitionValues;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_20200715162543389</p>
      */

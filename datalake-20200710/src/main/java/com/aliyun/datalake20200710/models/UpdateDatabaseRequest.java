@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateDatabaseRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <p>The new database</p>
+     */
     @NameInMap("DatabaseInput")
     public DatabaseInput databaseInput;
 
     /**
+     * <p>The name of the database before the modification. If the database before and after the update is the same, only other Meta is updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */

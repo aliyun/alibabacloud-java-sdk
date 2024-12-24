@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCatalogResponseBody extends TeaModel {
     /**
-     * <p>Response Code</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class DeleteCatalogResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response Message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>.</p>
@@ -23,7 +23,7 @@ public class DeleteCatalogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
@@ -32,7 +32,11 @@ public class DeleteCatalogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Request is success or not</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,6 +45,8 @@ public class DeleteCatalogResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the task for asynchronously deleting a catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>c38206c3aca0c41332ffe49294243009</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunMigrationWorkflowResponseBody extends TeaModel {
     /**
+     * <p>The returned data. The value is the ID of the workflow instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>FI-7193B85809CAD95C</p>
      */
@@ -12,6 +14,8 @@ public class RunMigrationWorkflowResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A048EA8E-3519-5B18-B81E-EE3E0B6DBE0C</p>
      */
@@ -19,6 +23,12 @@ public class RunMigrationWorkflowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

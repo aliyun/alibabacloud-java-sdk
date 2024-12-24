@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopMigrationWorkflowRequest extends TeaModel {
     /**
+     * <p>The ID of the migration task instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

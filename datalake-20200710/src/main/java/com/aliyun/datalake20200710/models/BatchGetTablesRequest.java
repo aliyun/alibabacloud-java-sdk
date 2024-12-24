@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchGetTablesRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,12 +14,17 @@ public class BatchGetTablesRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The name of the data table.</p>
+     */
     @NameInMap("TableNames")
     public java.util.List<String> tableNames;
 

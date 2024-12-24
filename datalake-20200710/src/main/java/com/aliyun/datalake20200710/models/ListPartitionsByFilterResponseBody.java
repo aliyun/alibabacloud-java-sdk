@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPartitionsByFilterResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListPartitionsByFilterResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>.</p>
      */
@@ -19,6 +23,8 @@ public class ListPartitionsByFilterResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page turning token, which is used to obtain the next page of data.</p>
+     * 
      * <strong>example:</strong>
      * <p>2cb472ec1bf84f8d92f9c4baa0d21c19aa</p>
      */
@@ -26,15 +32,20 @@ public class ListPartitionsByFilterResponseBody extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>PartitionSpecs</p>
+     * <p>The list of partition specifications.</p>
      */
     @NameInMap("PartitionSpecs")
     public java.util.List<PartitionSpec> partitionSpecs;
 
+    /**
+     * <p>The list of partition details after query.</p>
+     */
     @NameInMap("Partitions")
     public java.util.List<Partition> partitions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
      */
@@ -42,6 +53,12 @@ public class ListPartitionsByFilterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

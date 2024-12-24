@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RegisterLocationRequest extends TeaModel {
     /**
+     * <p>Whether to enable OSS bucket inventory</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class RegisterLocationRequest extends TeaModel {
     public Boolean inventoryCollectEnabled;
 
     /**
+     * <p>Registered OSS path</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class RegisterLocationRequest extends TeaModel {
     public String location;
 
     /**
+     * <p>Whether to enable OSS log storage</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +33,10 @@ public class RegisterLocationRequest extends TeaModel {
     public Boolean ossLogCollectEnabled;
 
     /**
+     * <p>RAM role name</p>
+     * <blockquote>
+     * <p> Data Lake Formation read and write data in the OSS path. If you want to AliyunDLFWorkFlowDefaultRole a role, the role is automatically built in to the role. Alternatively, you can create a custom role, but you must manually ensure that the role has the read and write permissions on the corresponding path.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

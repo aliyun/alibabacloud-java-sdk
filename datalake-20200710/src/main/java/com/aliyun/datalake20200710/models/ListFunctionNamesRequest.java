@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListFunctionNamesRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,8 @@ public class ListFunctionNamesRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
@@ -19,6 +23,8 @@ public class ListFunctionNamesRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>The regular expression that matches the function name.</p>
+     * 
      * <strong>example:</strong>
      * <p>.*</p>
      */
@@ -26,6 +32,8 @@ public class ListFunctionNamesRequest extends TeaModel {
     public String functionNamePattern;
 
     /**
+     * <p>The pagination token, which is returned from the returned result. If none is returned, an empty string or \&quot;\&quot;is passed.</p>
+     * 
      * <strong>example:</strong>
      * <p>\&quot;\&quot;</p>
      */
@@ -33,6 +41,8 @@ public class ListFunctionNamesRequest extends TeaModel {
     public String nextPageToken;
 
     /**
+     * <p>The size of each page. The maximum value is 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class CheckPermissionsRequest extends TeaModel {
+    /**
+     * <p>The HTTP request body, which is in the JSON format.</p>
+     */
     @NameInMap("Body")
     public AccessRequest body;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCatalogRequest extends TeaModel {
     /**
-     * <p>cataloginput</p>
+     * <p>Create /update the structure of the Catalog.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CatalogInput")

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDatabaseResponseBody extends TeaModel {
     /**
+     * <p>The description of the distribution status.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDatabaseResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>A related error message is displayed.</p>
+     * 
      * <strong>example:</strong>
      * <p>.</p>
      */
@@ -19,6 +23,8 @@ public class UpdateDatabaseResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>161F5EFC-E97E-43C0-AACF-FF18FAC912F0</p>
      */
@@ -26,6 +32,12 @@ public class UpdateDatabaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

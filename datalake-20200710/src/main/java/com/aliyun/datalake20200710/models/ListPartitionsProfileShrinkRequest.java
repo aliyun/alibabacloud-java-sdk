@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPartitionsProfileShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory. By default, the ID of the primary account is entered.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,7 @@ public class ListPartitionsProfileShrinkRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of the metadatabase.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListPartitionsProfileShrinkRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,16 +33,23 @@ public class ListPartitionsProfileShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The names of partitions.</p>
+     */
     @NameInMap("PartitionNames")
     public String partitionNamesShrink;
 
     /**
+     * <p>The name of the metadata table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_tbl</p>
      */

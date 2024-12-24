@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCatalogRequest extends TeaModel {
     /**
-     * <p>CatalogId</p>
+     * <p>The ID of the data directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class DeleteCatalogRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>Whether asynchronous, synchronous by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

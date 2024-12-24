@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class CancelQueryRequest extends TeaModel {
     /**
+     * <p>The query ID.</p>
+     * <blockquote>
+     * <p> You can call the SubmitQuery operation to query the query ID.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Q-BCA5E96CB84BB8B8</p>
      */

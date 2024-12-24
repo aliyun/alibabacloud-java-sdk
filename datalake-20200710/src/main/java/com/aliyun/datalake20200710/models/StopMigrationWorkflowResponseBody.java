@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopMigrationWorkflowResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
      */
@@ -12,6 +14,8 @@ public class StopMigrationWorkflowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the test feature is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetFunctionResponseBody extends TeaModel {
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The description of the function.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;FunctionName&quot;:test}</p>
+     */
     @NameInMap("Function")
     public Function function;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>.</p>
      */
@@ -22,6 +32,8 @@ public class GetFunctionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
      */
@@ -29,6 +41,12 @@ public class GetFunctionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

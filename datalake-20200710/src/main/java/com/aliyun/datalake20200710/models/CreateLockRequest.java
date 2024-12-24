@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLockRequest extends TeaModel {
     /**
-     * <p>LockObjList</p>
+     * <p>The list of lock information.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;databaseName&quot;:&quot;db&quot;,&quot;tableName&quot;:&quot;test&quot;}</p>

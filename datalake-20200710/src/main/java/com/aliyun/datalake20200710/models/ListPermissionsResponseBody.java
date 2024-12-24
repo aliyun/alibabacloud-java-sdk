@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPermissionsResponseBody extends TeaModel {
     /**
-     * <p>Response Code</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class ListPermissionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Message Code</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>.</p>
@@ -23,7 +23,7 @@ public class ListPermissionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>NextPageToken</p>
+     * <p>The page turning token, which is used to obtain the next page of data.</p>
      * 
      * <strong>example:</strong>
      * <p>token!</p>
@@ -32,6 +32,8 @@ public class ListPermissionsResponseBody extends TeaModel {
     public String nextPageToken;
 
     /**
+     * <p>The permissions.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -39,7 +41,7 @@ public class ListPermissionsResponseBody extends TeaModel {
     public java.util.List<PrincipalResourcePermissions> principalResourcePermissionsList;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>745EAAE2-5010-5C9F-A95C-B8FC5C1B03BF</p>
@@ -48,7 +50,11 @@ public class ListPermissionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success</p>
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -57,7 +63,7 @@ public class ListPermissionsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>TotalCount</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;

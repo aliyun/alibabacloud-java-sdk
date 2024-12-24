@@ -4,10 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class SearchAcrossCatalogRequest extends TeaModel {
+    /**
+     * <p>The array of CatalogId. If this parameter is empty, all catalogs are searched.</p>
+     */
     @NameInMap("CatalogIds")
     public java.util.List<String> catalogIds;
 
     /**
+     * <p>Page number of the current query</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class SearchAcrossCatalogRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>Page size of the current query</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -22,15 +29,23 @@ public class SearchAcrossCatalogRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Search-related Issue</p>
+     * 
      * <strong>example:</strong>
      * <p>tags:tag1 or comment:^iso and name=aliyun and (createTime &gt; &quot;20211111&quot; and createTime &lt; &quot;20211117&quot;) and has category</p>
      */
     @NameInMap("SearchText")
     public String searchText;
 
+    /**
+     * <p>The SearchTypes array. The value can be ALL, CATALOG, DATABASE, or TABLE.</p>
+     */
     @NameInMap("SearchTypes")
     public java.util.List<String> searchTypes;
 
+    /**
+     * <p>Sorting structure</p>
+     */
     @NameInMap("SortCriteria")
     public java.util.List<SortCriterion> sortCriteria;
 

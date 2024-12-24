@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPermissionsRequest extends TeaModel {
     /**
-     * <p>CatalogId</p>
+     * <p>The ID of the data directory.</p>
      * 
      * <strong>example:</strong>
      * <p>1344371</p>
@@ -14,16 +14,23 @@ public class ListPermissionsRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>Specifies whether to obtain the permissions of the role to which the user belongs. This field takes effect only when you specify a specific resource object.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("IsListUserRolePermissions")
     public Boolean isListUserRolePermissions;
 
+    /**
+     * <p>Filters permission information based on resources.</p>
+     */
     @NameInMap("MetaResource")
     public MetaResource metaResource;
 
     /**
+     * <p>Specifies the type of resource to filter, such as database or table. If not specified, both are included.</p>
+     * 
      * <strong>example:</strong>
      * <p>DATABASE</p>
      */
@@ -31,6 +38,8 @@ public class ListPermissionsRequest extends TeaModel {
     public String metaResourceType;
 
     /**
+     * <p>The page turning token, which is used to obtain the next page of data. If not provided in the response result, a string (&quot;&quot;) or empty string (&quot;) is empty string.</p>
+     * 
      * <strong>example:</strong>
      * <p>token!</p>
      */
@@ -38,16 +47,22 @@ public class ListPermissionsRequest extends TeaModel {
     public String nextPageToken;
 
     /**
+     * <p>The size of each page. The maximum value is 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Filters permission information based on the principal.</p>
+     */
     @NameInMap("Principal")
     public Principal principal;
 
     /**
+     * <p>The type for obtaining permission information. Currently, only Hive is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

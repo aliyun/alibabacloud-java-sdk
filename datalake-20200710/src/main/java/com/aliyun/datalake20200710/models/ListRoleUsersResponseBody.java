@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRoleUsersResponseBody extends TeaModel {
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListRoleUsersResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>.</p>
      */
@@ -19,7 +23,7 @@ public class ListRoleUsersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>NextPageToken</p>
+     * <p>The paging token.</p>
      * 
      * <strong>example:</strong>
      * <p>token!</p>
@@ -28,7 +32,7 @@ public class ListRoleUsersResponseBody extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>558D764F-8C55-49CA-BF38-80EA532FC08F</p>
@@ -37,6 +41,12 @@ public class ListRoleUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -44,7 +54,7 @@ public class ListRoleUsersResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>user roles</p>
+     * <p>The roles assigned to the user.</p>
      */
     @NameInMap("UserRoles")
     public java.util.List<UserRole> userRoles;

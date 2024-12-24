@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchGrantPermissionsResponseBody extends TeaModel {
     /**
-     * <p>result</p>
+     * <p>The result of batch authorization errors.</p>
      */
     @NameInMap("BatchGrantRevokeFailureResult")
     public java.util.List<GrantRevokeFailureEntry> batchGrantRevokeFailureResult;
 
     /**
-     * <p>Response Code</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -20,7 +20,7 @@ public class BatchGrantPermissionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>.</p>
@@ -29,7 +29,7 @@ public class BatchGrantPermissionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
@@ -38,7 +38,11 @@ public class BatchGrantPermissionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success</p>
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

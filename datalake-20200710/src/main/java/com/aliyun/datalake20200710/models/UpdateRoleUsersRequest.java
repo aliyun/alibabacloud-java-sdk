@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateRoleUsersRequest extends TeaModel {
     /**
+     * <p>The name of the role.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_role_8</p>
      */
     @NameInMap("RoleName")
     public String roleName;
 
+    /**
+     * <p>The list of users or roles. The format of the name must meet the following requirements:</p>
+     * <p>RAM user: acs:ram::[accountId]:user/[userName].</p>
+     * <p>RAM role: acs:ram::[accountId]:role/[roleName].</p>
+     */
     @NameInMap("Users")
     public java.util.List<Principal> users;
 

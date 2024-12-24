@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAsyncTaskStatusRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,8 @@ public class GetAsyncTaskStatusRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The result returned by the asynchronous task.</p>
+     * 
      * <strong>example:</strong>
      * <p>f546c761570e5efc8146a1986f7890d2</p>
      */

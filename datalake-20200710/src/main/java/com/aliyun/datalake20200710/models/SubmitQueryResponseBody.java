@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitQueryResponseBody extends TeaModel {
     /**
+     * <p>The data returned</p>
+     * 
      * <strong>example:</strong>
      * <p>Q-14475CF9B51FCE5E</p>
      */
@@ -12,6 +14,8 @@ public class SubmitQueryResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>279AA630-A8ED-5EA9-80A3-2E213D63548C</p>
      */
@@ -19,6 +23,12 @@ public class SubmitQueryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

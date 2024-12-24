@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteTableVersionsRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,8 @@ public class BatchDeleteTableVersionsRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
@@ -19,12 +23,17 @@ public class BatchDeleteTableVersionsRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_20200715162543389</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <p>The list of version numbers.</p>
+     */
     @NameInMap("VersionIds")
     public java.util.List<Integer> versionIds;
 

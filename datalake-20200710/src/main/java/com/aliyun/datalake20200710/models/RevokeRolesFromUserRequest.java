@@ -5,12 +5,18 @@ import com.aliyun.tea.*;
 
 public class RevokeRolesFromUserRequest extends TeaModel {
     /**
+     * <p>The list of roles to be deleted.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RoleNames")
     public java.util.List<String> roleNames;
 
     /**
+     * <p>Remove the user /role. The format of the name must meet the following requirements:</p>
+     * <ul>
+     * <li>RAM user: acs:ram::[accountId]:user/[userName].</li>
+     * <li>RAM role: acs:ram::[accountId]:role/[roleName].</li>
+     * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("User")

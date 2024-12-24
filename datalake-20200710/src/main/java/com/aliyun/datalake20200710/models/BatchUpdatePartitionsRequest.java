@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchUpdatePartitionsRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,16 +14,23 @@ public class BatchUpdatePartitionsRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The list of partition input information.</p>
+     */
     @NameInMap("PartitionInputs")
     public java.util.List<PartitionInput> partitionInputs;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_20201223</p>
      */

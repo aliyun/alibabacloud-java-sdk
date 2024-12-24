@@ -4,10 +4,22 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DeleteDatabaseRequest extends TeaModel {
+    /**
+     * <p>Whether to asynchronously execute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Async")
     public Boolean async;
 
     /**
+     * <p>Whether to cascade delete data. Valid values:</p>
+     * <ul>
+     * <li>true: deletes a table from the database.</li>
+     * <li>false: does not delete tables from the database. If a table still exists in the database, the deletion fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -15,6 +27,8 @@ public class DeleteDatabaseRequest extends TeaModel {
     public Boolean cascade;
 
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -22,6 +36,8 @@ public class DeleteDatabaseRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */

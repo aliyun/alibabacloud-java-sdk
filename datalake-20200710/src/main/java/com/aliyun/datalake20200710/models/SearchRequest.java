@@ -14,6 +14,8 @@ public class SearchRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>Page number of the current query</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +23,8 @@ public class SearchRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>Page size of the current query</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -28,6 +32,8 @@ public class SearchRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Search-related Issue</p>
+     * 
      * <strong>example:</strong>
      * <p>tags:tag1 or comment:^iso and name=aliyun and (createTime &gt; &quot;20211111&quot; and createTime &lt; &quot;20211117&quot;) and has category</p>
      */
@@ -35,12 +41,17 @@ public class SearchRequest extends TeaModel {
     public String searchText;
 
     /**
+     * <p>Search Type</p>
+     * 
      * <strong>example:</strong>
      * <p>TABLE/DATABASE/CATALOG</p>
      */
     @NameInMap("SearchType")
     public String searchType;
 
+    /**
+     * <p>Sorting structure</p>
+     */
     @NameInMap("SortCriteria")
     public java.util.List<SortCriterion> sortCriteria;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLifecycleRuleRequest extends TeaModel {
     /**
+     * <p>The business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>LCRU-17E7192705C365C0</p>
      */
@@ -12,6 +14,8 @@ public class GetLifecycleRuleRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The name of the resource, which is a string that consists of the data directory, database, and table.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo_catalog_id.demo_db_name.demo_table_name</p>
      */

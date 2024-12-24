@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class GrantRolesToUserRequest extends TeaModel {
     /**
+     * <p>The list of role names to be authorized.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RoleNames")
     public java.util.List<String> roleNames;
 
     /**
+     * <p>Specify the authorized users or roles. The format of the name must meet the following requirements:</p>
+     * <p>RAM user: acs:ram::[accountId]:user/[userName].</p>
+     * <p>RAM role: acs:ram::[accountId]:role/[roleName].</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("User")

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRegionStatusResponseBody extends TeaModel {
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;RegionId\&quot;: \&quot;cn-shanghai\&quot;, \&quot;RegionStatus\&quot;: \&quot;SERVICE_INVALID\&quot;, \&quot;AccountStatus\&quot;: \&quot;\&quot;, \&quot;IsDlfServiceOpen\&quot;: False}</p>
      */
@@ -12,6 +14,8 @@ public class GetRegionStatusResponseBody extends TeaModel {
     public GetRegionStatusResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CC58A776-0662-5C6D-B467-FFD4CF7F4C40</p>
      */
@@ -19,6 +23,8 @@ public class GetRegionStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -56,6 +62,8 @@ public class GetRegionStatusResponseBody extends TeaModel {
 
     public static class GetRegionStatusResponseBodyData extends TeaModel {
         /**
+         * <p>Account status enabled or disabled</p>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -63,6 +71,8 @@ public class GetRegionStatusResponseBody extends TeaModel {
         public String accountStatus;
 
         /**
+         * <p>Whether the dependency is ready</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -70,6 +80,8 @@ public class GetRegionStatusResponseBody extends TeaModel {
         public Boolean isDependencyReady;
 
         /**
+         * <p>Whether the DLF service is activated</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -77,6 +89,8 @@ public class GetRegionStatusResponseBody extends TeaModel {
         public Boolean isDlfServiceOpen;
 
         /**
+         * <p>region id</p>
+         * 
          * <strong>example:</strong>
          * <p>cn_hangzhou</p>
          */
@@ -84,6 +98,8 @@ public class GetRegionStatusResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The status of the region. SERVICE_INVALID: The service is unavailable. UNITITIALIZED: Not initialized. READY: Normal.</p>
+         * 
          * <strong>example:</strong>
          * <p>READY</p>
          */

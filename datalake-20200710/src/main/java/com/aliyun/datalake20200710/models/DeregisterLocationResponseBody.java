@@ -4,10 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DeregisterLocationResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public DeregisterLocationResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E47920CD-BAE6-1305-88DF-FBDD3D300845</p>
      */
@@ -15,6 +20,12 @@ public class DeregisterLocationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -60,6 +71,9 @@ public class DeregisterLocationResponseBody extends TeaModel {
         @NameInMap("LocationId")
         public String locationId;
 
+        /**
+         * <p>Disable the result list of a collection task</p>
+         */
         @NameInMap("StorageCollectTaskOperationResultList")
         public java.util.List<StorageCollectTaskOperationResult> storageCollectTaskOperationResultList;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCatalogResponseBody extends TeaModel {
     /**
+     * <p>Response encoding.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class UpdateCatalogResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>.</p>
      */
@@ -19,6 +23,8 @@ public class UpdateCatalogResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>64E46067-49EA-5A91-A7B1-E812E18FC243</p>
      */
@@ -26,6 +32,12 @@ public class UpdateCatalogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

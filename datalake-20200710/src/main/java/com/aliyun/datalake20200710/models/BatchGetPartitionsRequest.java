@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchGetPartitionsRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,8 @@ public class BatchGetPartitionsRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
@@ -19,16 +23,23 @@ public class BatchGetPartitionsRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>Specifies whether to share the column information in the SD of the partition.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsShareSd")
     public Boolean isShareSd;
 
+    /**
+     * <p>The list of partition values.</p>
+     */
     @NameInMap("PartitionValueList")
     public java.util.List<BatchGetPartitionsRequestPartitionValueList> partitionValueList;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_20200715162543389</p>
      */

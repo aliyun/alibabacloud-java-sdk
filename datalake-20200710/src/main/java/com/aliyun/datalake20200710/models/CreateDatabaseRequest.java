@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateDatabaseRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <p>The details of the database.</p>
+     */
     @NameInMap("DatabaseInput")
     public DatabaseInput databaseInput;
 

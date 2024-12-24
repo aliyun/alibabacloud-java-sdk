@@ -4,20 +4,30 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class SearchAcrossCatalogResponseBody extends TeaModel {
+    /**
+     * <p>Returned Catalog result</p>
+     */
     @NameInMap("CatalogResult")
     public SearchAcrossCatalogResponseBodyCatalogResult catalogResult;
 
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned db result.</p>
+     */
     @NameInMap("DatabaseResult")
     public SearchAcrossCatalogResponseBodyDatabaseResult databaseResult;
 
     /**
+     * <p>Response</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -25,6 +35,8 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>460C862F-BB91-5C04-BC3F-946EEF467862</p>
      */
@@ -32,12 +44,17 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the information about the service was queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The returned table result.</p>
+     */
     @NameInMap("TableResult")
     public SearchAcrossCatalogResponseBodyTableResult tableResult;
 
@@ -103,9 +120,15 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
     }
 
     public static class SearchAcrossCatalogResponseBodyCatalogResultCatalogs extends TeaModel {
+        /**
+         * <p>Catalog details</p>
+         */
         @NameInMap("Catalog")
         public Catalog catalog;
 
+        /**
+         * <p>Return highlighted text</p>
+         */
         @NameInMap("HighLightList")
         public java.util.List<HighLight> highLightList;
 
@@ -133,10 +156,15 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
     }
 
     public static class SearchAcrossCatalogResponseBodyCatalogResult extends TeaModel {
+        /**
+         * <p>Catalog details</p>
+         */
         @NameInMap("Catalogs")
         public java.util.List<SearchAcrossCatalogResponseBodyCatalogResultCatalogs> catalogs;
 
         /**
+         * <p>Total number of catalogs that meet the match conditions</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -167,9 +195,15 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
     }
 
     public static class SearchAcrossCatalogResponseBodyDatabaseResultDatabases extends TeaModel {
+        /**
+         * <p>Returned Database</p>
+         */
         @NameInMap("Database")
         public Database database;
 
+        /**
+         * <p>Return highlighted text</p>
+         */
         @NameInMap("HighLightList")
         public java.util.List<HighLight> highLightList;
 
@@ -197,10 +231,15 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
     }
 
     public static class SearchAcrossCatalogResponseBodyDatabaseResult extends TeaModel {
+        /**
+         * <p>Returned DatabaseList</p>
+         */
         @NameInMap("Databases")
         public java.util.List<SearchAcrossCatalogResponseBodyDatabaseResultDatabases> databases;
 
         /**
+         * <p>Total number of databases that meet the match conditions</p>
+         * 
          * <strong>example:</strong>
          * <p>11000</p>
          */
@@ -231,9 +270,15 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
     }
 
     public static class SearchAcrossCatalogResponseBodyTableResultTables extends TeaModel {
+        /**
+         * <p>Returned highlighted text</p>
+         */
         @NameInMap("HighLightList")
         public java.util.List<HighLight> highLightList;
 
+        /**
+         * <p>Returned Table</p>
+         */
         @NameInMap("Table")
         public Table table;
 
@@ -261,10 +306,15 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
     }
 
     public static class SearchAcrossCatalogResponseBodyTableResult extends TeaModel {
+        /**
+         * <p>Returned TableList</p>
+         */
         @NameInMap("Tables")
         public java.util.List<SearchAcrossCatalogResponseBodyTableResultTables> tables;
 
         /**
+         * <p>The total number of tables that meet the match conditions.</p>
+         * 
          * <strong>example:</strong>
          * <p>1100</p>
          */

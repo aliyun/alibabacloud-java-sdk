@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokePermissionsResponseBody extends TeaModel {
     /**
-     * <p>Response Code</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class RevokePermissionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Message Code</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>.</p>
@@ -23,7 +23,7 @@ public class RevokePermissionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7CB5765C-F209-5B10-8792-D2BE9156ABE8</p>
@@ -32,7 +32,11 @@ public class RevokePermissionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success</p>
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

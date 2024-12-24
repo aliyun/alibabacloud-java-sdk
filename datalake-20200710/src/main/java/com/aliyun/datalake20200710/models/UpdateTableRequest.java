@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateTableRequest extends TeaModel {
     /**
+     * <p>Indicates whether the partition key can be updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,8 @@ public class UpdateTableRequest extends TeaModel {
     public Boolean allowPartitionKeyChange;
 
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -19,6 +23,8 @@ public class UpdateTableRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
@@ -26,6 +32,8 @@ public class UpdateTableRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>Whether to synchronize the update.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,16 +41,23 @@ public class UpdateTableRequest extends TeaModel {
     public Boolean isAsync;
 
     /**
+     * <p>By default, updating a data table creates a new archive version, but if skipArchive is set to true, no version is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("SkipArchive")
     public Boolean skipArchive;
 
+    /**
+     * <p>The details of the updated data table.</p>
+     */
     @NameInMap("TableInput")
     public TableInput tableInput;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_20201223</p>
      */

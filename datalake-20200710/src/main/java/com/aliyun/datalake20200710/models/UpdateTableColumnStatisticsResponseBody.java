@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateTableColumnStatisticsResponseBody extends TeaModel {
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class UpdateTableColumnStatisticsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message that is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>.</p>
      */
@@ -19,6 +23,8 @@ public class UpdateTableColumnStatisticsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
      */
@@ -26,6 +32,12 @@ public class UpdateTableColumnStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

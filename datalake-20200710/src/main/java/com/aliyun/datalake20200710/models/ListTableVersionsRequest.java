@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTableVersionsRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,8 @@ public class ListTableVersionsRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
@@ -19,6 +23,8 @@ public class ListTableVersionsRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>The page turning token, which is used to obtain the next page of data. If not provided in the response result, a string (&quot;&quot;) or empty string (&quot;) is empty string.</p>
+     * 
      * <strong>example:</strong>
      * <p>\&quot;\&quot;</p>
      */
@@ -26,6 +32,8 @@ public class ListTableVersionsRequest extends TeaModel {
     public String nextPageToken;
 
     /**
+     * <p>The size of each page. The maximum value is 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class ListTableVersionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table_20200715162543389</p>
      */
