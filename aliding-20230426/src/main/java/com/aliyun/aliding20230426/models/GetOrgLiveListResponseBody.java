@@ -73,6 +73,9 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         @NameInMap("AnchorNickname")
         public String anchorNickname;
 
+        @NameInMap("AnchorUnionId")
+        public String anchorUnionId;
+
         /**
          * <strong>example:</strong>
          * <p>ersqqdddf</p>
@@ -126,6 +129,14 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         }
         public String getAnchorNickname() {
             return this.anchorNickname;
+        }
+
+        public GetOrgLiveListResponseBodyResultNewLiveLiveList setAnchorUnionId(String anchorUnionId) {
+            this.anchorUnionId = anchorUnionId;
+            return this;
+        }
+        public String getAnchorUnionId() {
+            return this.anchorUnionId;
         }
 
         public GetOrgLiveListResponseBodyResultNewLiveLiveList setAnchorUserId(String anchorUserId) {
@@ -269,6 +280,9 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         @NameInMap("AnchorNickname")
         public String anchorNickname;
 
+        @NameInMap("AnchorUnionId")
+        public String anchorUnionId;
+
         /**
          * <strong>example:</strong>
          * <p>012345</p>
@@ -315,6 +329,14 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         }
         public String getAnchorNickname() {
             return this.anchorNickname;
+        }
+
+        public GetOrgLiveListResponseBodyResultUpdateLiveLiveList setAnchorUnionId(String anchorUnionId) {
+            this.anchorUnionId = anchorUnionId;
+            return this;
+        }
+        public String getAnchorUnionId() {
+            return this.anchorUnionId;
         }
 
         public GetOrgLiveListResponseBodyResultUpdateLiveLiveList setAnchorUserId(String anchorUserId) {
