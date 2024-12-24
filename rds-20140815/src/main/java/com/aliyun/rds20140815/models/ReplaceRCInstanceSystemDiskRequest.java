@@ -4,21 +4,45 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ReplaceRCInstanceSystemDiskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>m-2zec4lvlhcdkyd13****</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rc-m5ei7b1w38w2l91x****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("IsLocalDisk")
     public Boolean isLocalDisk;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testKeyPairName</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testPassword</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

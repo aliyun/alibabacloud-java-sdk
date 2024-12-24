@@ -23489,6 +23489,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ColdDataEnabled", request.coldDataEnabled);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.compressionMode)) {
+            query.put("CompressionMode", request.compressionMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceClass)) {
             query.put("DBInstanceClass", request.DBInstanceClass);
         }

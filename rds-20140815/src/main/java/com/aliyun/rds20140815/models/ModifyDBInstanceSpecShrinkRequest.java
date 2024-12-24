@@ -80,6 +80,9 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     @NameInMap("ColdDataEnabled")
     public Boolean coldDataEnabled;
 
+    @NameInMap("CompressionMode")
+    public String compressionMode;
+
     /**
      * <p>The new instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>. You can also call the DescribeAvailableClasses operation to query the instance types that are supported by an instance.</p>
      * <blockquote>
@@ -422,6 +425,14 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     }
     public Boolean getColdDataEnabled() {
         return this.coldDataEnabled;
+    }
+
+    public ModifyDBInstanceSpecShrinkRequest setCompressionMode(String compressionMode) {
+        this.compressionMode = compressionMode;
+        return this;
+    }
+    public String getCompressionMode() {
+        return this.compressionMode;
     }
 
     public ModifyDBInstanceSpecShrinkRequest setDBInstanceClass(String DBInstanceClass) {

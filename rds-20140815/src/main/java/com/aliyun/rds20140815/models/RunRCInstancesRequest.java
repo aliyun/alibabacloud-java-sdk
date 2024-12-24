@@ -623,6 +623,9 @@ public class RunRCInstancesRequest extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
         /**
          * <p>The size of the system disk. Unit: GiB. Only performance level 1 (PL1) ESSDs are supported. Valid values: 20 to 2048.</p>
          * 
@@ -643,6 +646,14 @@ public class RunRCInstancesRequest extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public RunRCInstancesRequestSystemDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
         }
 
         public RunRCInstancesRequestSystemDisk setSize(Integer size) {
