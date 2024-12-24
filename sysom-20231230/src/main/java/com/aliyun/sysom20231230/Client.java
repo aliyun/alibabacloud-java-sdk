@@ -160,6 +160,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("pod", request.pod);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.showPod)) {
+            query.put("showPod", request.showPod);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.start)) {
             query.put("start", request.start);
         }

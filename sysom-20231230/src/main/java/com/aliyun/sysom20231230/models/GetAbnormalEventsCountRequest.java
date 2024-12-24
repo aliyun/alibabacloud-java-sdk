@@ -41,6 +41,9 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     @NameInMap("pod")
     public String pod;
 
+    @NameInMap("showPod")
+    public Integer showPod;
+
     /**
      * <strong>example:</strong>
      * <p>1725797727754</p>
@@ -91,6 +94,14 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     }
     public String getPod() {
         return this.pod;
+    }
+
+    public GetAbnormalEventsCountRequest setShowPod(Integer showPod) {
+        this.showPod = showPod;
+        return this;
+    }
+    public Integer getShowPod() {
+        return this.showPod;
     }
 
     public GetAbnormalEventsCountRequest setStart(Float start) {
