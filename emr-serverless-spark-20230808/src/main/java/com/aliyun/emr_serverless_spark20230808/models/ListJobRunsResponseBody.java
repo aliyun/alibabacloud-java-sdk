@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobRunsResponseBody extends TeaModel {
     /**
-     * <p>The list of Spark jobs.</p>
+     * <p>The Spark jobs.</p>
      */
     @NameInMap("jobRuns")
     public java.util.List<ListJobRunsResponseBodyJobRuns> jobRuns;
@@ -183,9 +183,17 @@ public class ListJobRunsResponseBody extends TeaModel {
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.059</p>
+         */
         @NameInMap("cuHours")
         public Long cuHours;
 
+        /**
+         * <strong>example:</strong>
+         * <p>esr-3.0.0 (Spark 3.4.3, Scala 2.12)</p>
+         */
         @NameInMap("displayReleaseVersion")
         public String displayReleaseVersion;
 
@@ -207,6 +215,10 @@ public class ListJobRunsResponseBody extends TeaModel {
         @NameInMap("executionTimeoutSeconds")
         public Integer executionTimeoutSeconds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("fusion")
         public Boolean fusion;
 
@@ -231,6 +243,10 @@ public class ListJobRunsResponseBody extends TeaModel {
         @NameInMap("log")
         public RunLog log;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33030784</p>
+         */
         @NameInMap("mbSeconds")
         public Long mbSeconds;
 
@@ -277,11 +293,15 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Long submitTime;
 
         /**
-         * <p>The tags of the job.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8236</p>
+         */
         @NameInMap("vcoreSeconds")
         public Long vcoreSeconds;
 

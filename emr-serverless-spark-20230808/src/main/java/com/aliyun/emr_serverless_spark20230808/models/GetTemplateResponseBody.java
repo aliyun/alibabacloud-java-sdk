@@ -4,10 +4,18 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public Template data;
 
     /**
+     * <ul>
+     * <li>If the value of success was false, an error code was returned.</li>
+     * <li>If the value of success was true, a null value was returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>040003</p>
      */
@@ -15,6 +23,11 @@ public class GetTemplateResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <ul>
+     * <li>If the value of success was false, an error message was returned.</li>
+     * <li>If the value of success was true, a null value was returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>InvalidUser.NotFound</p>
      */
@@ -22,7 +35,7 @@ public class GetTemplateResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -31,6 +44,8 @@ public class GetTemplateResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>484D9DDA-300D-525E-AF7A-0CCCA5C64A7A</p>
      */
@@ -38,6 +53,8 @@ public class GetTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

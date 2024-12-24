@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSqlStatementResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("data")
     public GetSqlStatementResponseBodyData data;
