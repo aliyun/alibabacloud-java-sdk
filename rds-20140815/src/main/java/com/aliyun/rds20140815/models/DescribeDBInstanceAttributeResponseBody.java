@@ -663,6 +663,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Collation")
         public String collation;
 
+        @NameInMap("CompressionMode")
+        public String compressionMode;
+
+        @NameInMap("CompressionRatio")
+        public String compressionRatio;
+
         /**
          * <p>The connection mode of the instance. Valid values:</p>
          * <ul>
@@ -1262,6 +1268,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("SuperPermissionMode")
         public String superPermissionMode;
 
+        @NameInMap("SupportCompression")
+        public Boolean supportCompression;
+
         /**
          * <p>The ID of the temporary instance that is attached to the primary instance.</p>
          * 
@@ -1466,6 +1475,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getCollation() {
             return this.collation;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setCompressionMode(String compressionMode) {
+            this.compressionMode = compressionMode;
+            return this;
+        }
+        public String getCompressionMode() {
+            return this.compressionMode;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setCompressionRatio(String compressionRatio) {
+            this.compressionRatio = compressionRatio;
+            return this;
+        }
+        public String getCompressionRatio() {
+            return this.compressionRatio;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setConnectionMode(String connectionMode) {
@@ -1930,6 +1955,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getSuperPermissionMode() {
             return this.superPermissionMode;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setSupportCompression(Boolean supportCompression) {
+            this.supportCompression = supportCompression;
+            return this;
+        }
+        public Boolean getSupportCompression() {
+            return this.supportCompression;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setTempDBInstanceId(String tempDBInstanceId) {
