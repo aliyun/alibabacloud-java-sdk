@@ -356,6 +356,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        @NameInMap("NodeType")
+        public String nodeType;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -484,6 +487,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getInstanceStatus() {
             return this.instanceStatus;
+        }
+
+        public ListInstancesResponseBodyData setNodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+        public String getNodeType() {
+            return this.nodeType;
         }
 
         public ListInstancesResponseBodyData setOpenPublicNet(Boolean openPublicNet) {
