@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>httpdns20160201</artifactId>
-  <version>2.0.2</version>
+  <version>2.1.0</version>
   <packaging>jar</packaging>
   <name>httpdns20160201</name>
   <description>Alibaba Cloud HTTPDNS (20160201) SDK for Java
