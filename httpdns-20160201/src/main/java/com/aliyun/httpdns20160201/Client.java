@@ -355,4 +355,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDomainsWithOptions(request, runtime);
     }
+
+    /**
+     * <b>summary</b> : 
+     * <p>刷新域名缓存</p>
+     * 
+     * @param tmpReq RefreshResolveCacheRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RefreshResolveCacheResponse
+     */
+    public RefreshResolveCacheResponse refreshResolveCacheWithOptions(RefreshResolveCacheRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RefreshResolveCacheShrinkRequest request = new RefreshResolveCacheShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.domains)) {
+            request.domainsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.domains, "Domains", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainsShrink)) {
+            query.put("Domains", request.domainsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RefreshResolveCache"),
+            new TeaPair("version", "2016-02-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshResolveCacheResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>刷新域名缓存</p>
+     * 
+     * @param request RefreshResolveCacheRequest
+     * @return RefreshResolveCacheResponse
+     */
+    public RefreshResolveCacheResponse refreshResolveCache(RefreshResolveCacheRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.refreshResolveCacheWithOptions(request, runtime);
+    }
 }
