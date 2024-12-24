@@ -91,7 +91,7 @@ public class StartJobRunRequest extends TeaModel {
     public String resourceQueueId;
 
     /**
-     * <p>The tags of the job.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTemplateRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,12 @@ public class GetTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The template type.</p>
+     * <ul>
+     * <li>TASK</li>
+     * <li>SESSION</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>TASK</p>
      */

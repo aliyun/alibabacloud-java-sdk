@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSessionClusterResponseBody extends TeaModel {
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -13,6 +13,9 @@ public class GetSessionClusterResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The session.</p>
+     */
     @NameInMap("sessionCluster")
     public GetSessionClusterResponseBodySessionCluster sessionCluster;
 
@@ -39,6 +42,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
 
     public static class GetSessionClusterResponseBodySessionClusterApplicationConfigs extends TeaModel {
         /**
+         * <p>The name of the configuration file.</p>
+         * 
          * <strong>example:</strong>
          * <p>spark-defaults.conf</p>
          */
@@ -46,6 +51,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public String configFileName;
 
         /**
+         * <p>The key of the configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>spark.app.name</p>
          */
@@ -53,6 +60,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public String configItemKey;
 
         /**
+         * <p>The configuration value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -92,6 +101,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
 
     public static class GetSessionClusterResponseBodySessionClusterAutoStartConfiguration extends TeaModel {
         /**
+         * <p>Indicates whether automatic startup is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -115,6 +126,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
 
     public static class GetSessionClusterResponseBodySessionClusterAutoStopConfiguration extends TeaModel {
         /**
+         * <p>Indicates whether automatic termination is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -122,6 +135,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The idle timeout period. The session is automatically terminated when the idle timeout period is exceeded.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -153,6 +168,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
 
     public static class GetSessionClusterResponseBodySessionClusterStateChangeReason extends TeaModel {
         /**
+         * <p>The status change code.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000000</p>
          */
@@ -160,6 +177,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The status change message.</p>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
@@ -190,16 +209,27 @@ public class GetSessionClusterResponseBody extends TeaModel {
     }
 
     public static class GetSessionClusterResponseBodySessionCluster extends TeaModel {
+        /**
+         * <p>The Spark configurations.</p>
+         */
         @NameInMap("applicationConfigs")
         public java.util.List<GetSessionClusterResponseBodySessionClusterApplicationConfigs> applicationConfigs;
 
+        /**
+         * <p>The automatic startup configurations.</p>
+         */
         @NameInMap("autoStartConfiguration")
         public GetSessionClusterResponseBodySessionClusterAutoStartConfiguration autoStartConfiguration;
 
+        /**
+         * <p>The automatic termination configurations.</p>
+         */
         @NameInMap("autoStopConfiguration")
         public GetSessionClusterResponseBodySessionClusterAutoStopConfiguration autoStopConfiguration;
 
         /**
+         * <p>The version of the Spark engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>esr-2.2(Java Runtime)</p>
          */
@@ -207,16 +237,26 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public String displayReleaseVersion;
 
         /**
+         * <p>The domain name to which the Spark UI of the session belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>your.domain.com</p>
          */
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <p>The internal endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr-spark-gateway-cn-hangzhou-internal.data.aliyuncs.com</p>
+         */
         @NameInMap("domainInner")
         public String domainInner;
 
         /**
+         * <p>The ID of the job that is associated with the session.</p>
+         * 
          * <strong>example:</strong>
          * <p>TSK-xxxxxxxx</p>
          */
@@ -224,6 +264,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public String draftId;
 
         /**
+         * <p>The environment ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>env-cpv569tlhtgndjl86t40</p>
          */
@@ -231,16 +273,31 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public String envId;
 
         /**
+         * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("fusion")
         public Boolean fusion;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-01 06:23:01</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
         /**
+         * <p>The type of the job. This parameter is required and cannot be modified after the deployment is created. Valid values:</p>
+         * <ul>
+         * <li>SQLSCRIPT</li>
+         * <li>JAR</li>
+         * <li>PYTHON</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SQL</p>
          */
@@ -248,6 +305,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public String kind;
 
         /**
+         * <p>The name of the session.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -255,7 +314,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>作业实例名称。</p>
+         * <p>The queue name.</p>
          * 
          * <strong>example:</strong>
          * <p>jobName</p>
@@ -264,14 +323,16 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public String queueName;
 
         /**
+         * <p>The version of E-MapReduce (EMR) Serverless Spark.</p>
+         * 
          * <strong>example:</strong>
-         * <p>esr-2.2（Java Runtime）</p>
+         * <p>esr-2.2(Java Runtime)</p>
          */
         @NameInMap("releaseVersion")
         public String releaseVersion;
 
         /**
-         * <p>交互式作业会话id。</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234abcd-12ab-34cd-56ef-1234567890ab</p>
@@ -279,11 +340,17 @@ public class GetSessionClusterResponseBody extends TeaModel {
         @NameInMap("sessionClusterId")
         public String sessionClusterId;
 
+        /**
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-01 06:23:01</p>
+         */
         @NameInMap("startTime")
         public Long startTime;
 
         /**
-         * <p>作业状态。</p>
+         * <p>The job status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -291,11 +358,14 @@ public class GetSessionClusterResponseBody extends TeaModel {
         @NameInMap("state")
         public String state;
 
+        /**
+         * <p>The reason of the job status change.</p>
+         */
         @NameInMap("stateChangeReason")
         public GetSessionClusterResponseBodySessionClusterStateChangeReason stateChangeReason;
 
         /**
-         * <p>任务实例ID。</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>jr-231231</p>
@@ -304,6 +374,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The name of the account that is used to create the session.</p>
+         * 
          * <strong>example:</strong>
          * <p>user1</p>
          */
@@ -311,6 +383,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public String userName;
 
         /**
+         * <p>The Spark UI of the session.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://spark-ui/link">https://spark-ui/link</a></p>
          */
@@ -318,7 +392,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public String webUI;
 
         /**
-         * <p>工作空间id。</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>w-1234abcd</p>

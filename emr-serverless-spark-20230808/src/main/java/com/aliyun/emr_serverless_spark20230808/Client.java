@@ -132,6 +132,131 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建工作流定义</p>
+     * 
+     * @param tmpReq CreateProcessDefinitionWithScheduleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateProcessDefinitionWithScheduleResponse
+     */
+    public CreateProcessDefinitionWithScheduleResponse createProcessDefinitionWithScheduleWithOptions(String bizId, CreateProcessDefinitionWithScheduleRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateProcessDefinitionWithScheduleShrinkRequest request = new CreateProcessDefinitionWithScheduleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.schedule)) {
+            request.scheduleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.schedule, "schedule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "tags", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskDefinitionJson)) {
+            request.taskDefinitionJsonShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskDefinitionJson, "taskDefinitionJson", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskRelationJson)) {
+            request.taskRelationJsonShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskRelationJson, "taskRelationJson", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertEmailAddress)) {
+            query.put("alertEmailAddress", request.alertEmailAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executionType)) {
+            query.put("executionType", request.executionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productNamespace)) {
+            query.put("productNamespace", request.productNamespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publish)) {
+            query.put("publish", request.publish);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceQueue)) {
+            query.put("resourceQueue", request.resourceQueue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryTimes)) {
+            query.put("retryTimes", request.retryTimes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runAs)) {
+            query.put("runAs", request.runAs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleShrink)) {
+            query.put("schedule", request.scheduleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskDefinitionJsonShrink)) {
+            query.put("taskDefinitionJson", request.taskDefinitionJsonShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskParallelism)) {
+            query.put("taskParallelism", request.taskParallelism);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskRelationJsonShrink)) {
+            query.put("taskRelationJson", request.taskRelationJsonShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            query.put("timeout", request.timeout);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateProcessDefinitionWithSchedule"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dolphinscheduler/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(bizId) + "/process-definition"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProcessDefinitionWithScheduleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建工作流定义</p>
+     * 
+     * @param request CreateProcessDefinitionWithScheduleRequest
+     * @return CreateProcessDefinitionWithScheduleResponse
+     */
+    public CreateProcessDefinitionWithScheduleResponse createProcessDefinitionWithSchedule(String bizId, CreateProcessDefinitionWithScheduleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createProcessDefinitionWithScheduleWithOptions(bizId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates an SQL query task.</p>
      * 
      * @param request CreateSqlStatementRequest
@@ -248,7 +373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询SessionCluster集群</p>
+     * <p>Queries a list of sessions.</p>
      * 
      * @param request GetSessionClusterRequest
      * @param headers map
@@ -282,7 +407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询SessionCluster集群</p>
+     * <p>Queries a list of sessions.</p>
      * 
      * @param request GetSessionClusterRequest
      * @return GetSessionClusterResponse
@@ -342,7 +467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务模板</p>
+     * <p>Queries task templates.</p>
      * 
      * @param request GetTemplateRequest
      * @param headers map
@@ -380,7 +505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务模板</p>
+     * <p>Queries task templates.</p>
      * 
      * @param request GetTemplateRequest
      * @return GetTemplateResponse
@@ -959,6 +1084,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>启动工作流实例</p>
+     * 
+     * @param request StartProcessInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartProcessInstanceResponse
+     */
+    public StartProcessInstanceResponse startProcessInstanceWithOptions(String bizId, StartProcessInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isProd)) {
+            query.put("isProd", request.isProd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processDefinitionCode)) {
+            query.put("processDefinitionCode", request.processDefinitionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productNamespace)) {
+            query.put("productNamespace", request.productNamespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runtimeQueue)) {
+            query.put("runtimeQueue", request.runtimeQueue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionHashCode)) {
+            query.put("versionHashCode", request.versionHashCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionNumber)) {
+            query.put("versionNumber", request.versionNumber);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartProcessInstance"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dolphinscheduler/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(bizId) + "/executors/start-process-instance"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartProcessInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动工作流实例</p>
+     * 
+     * @param request StartProcessInstanceRequest
+     * @return StartProcessInstanceResponse
+     */
+    public StartProcessInstanceResponse startProcessInstance(String bizId, StartProcessInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startProcessInstanceWithOptions(bizId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Starts a session.</p>
      * 
      * @param request StartSessionClusterRequest
@@ -1116,5 +1312,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.terminateSqlStatementWithOptions(workspaceId, statementId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新工作流定义和定时调度</p>
+     * 
+     * @param tmpReq UpdateProcessDefinitionWithScheduleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateProcessDefinitionWithScheduleResponse
+     */
+    public UpdateProcessDefinitionWithScheduleResponse updateProcessDefinitionWithScheduleWithOptions(String bizId, String code, UpdateProcessDefinitionWithScheduleRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateProcessDefinitionWithScheduleShrinkRequest request = new UpdateProcessDefinitionWithScheduleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.schedule)) {
+            request.scheduleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.schedule, "schedule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "tags", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskDefinitionJson)) {
+            request.taskDefinitionJsonShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskDefinitionJson, "taskDefinitionJson", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskRelationJson)) {
+            request.taskRelationJsonShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskRelationJson, "taskRelationJson", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertEmailAddress)) {
+            query.put("alertEmailAddress", request.alertEmailAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executionType)) {
+            query.put("executionType", request.executionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productNamespace)) {
+            query.put("productNamespace", request.productNamespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publish)) {
+            query.put("publish", request.publish);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.releaseState)) {
+            query.put("releaseState", request.releaseState);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceQueue)) {
+            query.put("resourceQueue", request.resourceQueue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryTimes)) {
+            query.put("retryTimes", request.retryTimes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runAs)) {
+            query.put("runAs", request.runAs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleShrink)) {
+            query.put("schedule", request.scheduleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskDefinitionJsonShrink)) {
+            query.put("taskDefinitionJson", request.taskDefinitionJsonShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskParallelism)) {
+            query.put("taskParallelism", request.taskParallelism);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskRelationJsonShrink)) {
+            query.put("taskRelationJson", request.taskRelationJsonShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            query.put("timeout", request.timeout);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateProcessDefinitionWithSchedule"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dolphinscheduler/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(bizId) + "/process-definition/" + com.aliyun.openapiutil.Client.getEncodeParam(code) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProcessDefinitionWithScheduleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新工作流定义和定时调度</p>
+     * 
+     * @param request UpdateProcessDefinitionWithScheduleRequest
+     * @return UpdateProcessDefinitionWithScheduleResponse
+     */
+    public UpdateProcessDefinitionWithScheduleResponse updateProcessDefinitionWithSchedule(String bizId, String code, UpdateProcessDefinitionWithScheduleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateProcessDefinitionWithScheduleWithOptions(bizId, code, request, headers, runtime);
     }
 }

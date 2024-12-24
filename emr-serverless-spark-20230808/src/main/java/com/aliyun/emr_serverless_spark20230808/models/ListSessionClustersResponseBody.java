@@ -14,7 +14,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>A pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -32,7 +32,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of sessions.</p>
+     * <p>The sessions.</p>
      */
     @NameInMap("sessionClusters")
     public java.util.List<ListSessionClustersResponseBodySessionClusters> sessionClusters;
@@ -280,13 +280,28 @@ public class ListSessionClustersResponseBody extends TeaModel {
 
         /**
          * <p>The version of the Spark engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
          */
         @NameInMap("displayReleaseVersion")
         public String displayReleaseVersion;
 
+        /**
+         * <p>The public endpoint of the Thrift server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr-spark-gateway-cn-hangzhou.data.aliyun.com</p>
+         */
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <p>The internal endpoint of the Thrift server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr-spark-gateway-cn-hangzhou-internal.data.aliyuncs.com</p>
+         */
         @NameInMap("domainInner")
         public String domainInner;
 
@@ -308,6 +323,12 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @NameInMap("fusion")
         public Boolean fusion;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1732267598000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
@@ -362,11 +383,24 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @NameInMap("sessionClusterId")
         public String sessionClusterId;
 
+        /**
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1732267598000</p>
+         */
         @NameInMap("startTime")
         public Long startTime;
 
         /**
          * <p>The status of the session.</p>
+         * <ul>
+         * <li>Starting</li>
+         * <li>Running</li>
+         * <li>Stopping</li>
+         * <li>Stopped</li>
+         * <li>Error</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
