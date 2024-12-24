@@ -55,7 +55,7 @@ public class SubmitBatchMediaProducingJobRequest extends TeaModel {
     public String outputConfig;
 
     /**
-     * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html?spm=a2c4g.439285.0.i1#section-urj-v3f-0s1">UserData</a>.</p>
+     * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData</a>.</p>
      */
     @NameInMap("UserData")
     public String userData;

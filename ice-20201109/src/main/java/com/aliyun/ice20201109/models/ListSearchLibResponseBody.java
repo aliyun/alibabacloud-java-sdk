@@ -91,7 +91,51 @@ public class ListSearchLibResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class ListSearchLibResponseBodySearchLibInfoListIndexInfo extends TeaModel {
+        @NameInMap("IndexReadiness")
+        public String indexReadiness;
+
+        @NameInMap("IndexStatus")
+        public String indexStatus;
+
+        @NameInMap("IndexType")
+        public String indexType;
+
+        public static ListSearchLibResponseBodySearchLibInfoListIndexInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListSearchLibResponseBodySearchLibInfoListIndexInfo self = new ListSearchLibResponseBodySearchLibInfoListIndexInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSearchLibResponseBodySearchLibInfoListIndexInfo setIndexReadiness(String indexReadiness) {
+            this.indexReadiness = indexReadiness;
+            return this;
+        }
+        public String getIndexReadiness() {
+            return this.indexReadiness;
+        }
+
+        public ListSearchLibResponseBodySearchLibInfoListIndexInfo setIndexStatus(String indexStatus) {
+            this.indexStatus = indexStatus;
+            return this;
+        }
+        public String getIndexStatus() {
+            return this.indexStatus;
+        }
+
+        public ListSearchLibResponseBodySearchLibInfoListIndexInfo setIndexType(String indexType) {
+            this.indexType = indexType;
+            return this;
+        }
+        public String getIndexType() {
+            return this.indexType;
+        }
+
+    }
+
     public static class ListSearchLibResponseBodySearchLibInfoList extends TeaModel {
+        @NameInMap("IndexInfo")
+        public java.util.List<ListSearchLibResponseBodySearchLibInfoListIndexInfo> indexInfo;
+
         /**
          * <p>The search library.</p>
          * 
@@ -118,6 +162,14 @@ public class ListSearchLibResponseBody extends TeaModel {
         public static ListSearchLibResponseBodySearchLibInfoList build(java.util.Map<String, ?> map) throws Exception {
             ListSearchLibResponseBodySearchLibInfoList self = new ListSearchLibResponseBodySearchLibInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public ListSearchLibResponseBodySearchLibInfoList setIndexInfo(java.util.List<ListSearchLibResponseBodySearchLibInfoListIndexInfo> indexInfo) {
+            this.indexInfo = indexInfo;
+            return this;
+        }
+        public java.util.List<ListSearchLibResponseBodySearchLibInfoListIndexInfo> getIndexInfo() {
+            return this.indexInfo;
         }
 
         public ListSearchLibResponseBodySearchLibInfoList setSearchLibName(String searchLibName) {

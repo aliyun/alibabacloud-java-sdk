@@ -13,6 +13,9 @@ public class QuerySearchLibResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("IndexInfo")
+    public java.util.List<QuerySearchLibResponseBodyIndexInfo> indexInfo;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -72,6 +75,14 @@ public class QuerySearchLibResponseBody extends TeaModel {
         return this.code;
     }
 
+    public QuerySearchLibResponseBody setIndexInfo(java.util.List<QuerySearchLibResponseBodyIndexInfo> indexInfo) {
+        this.indexInfo = indexInfo;
+        return this;
+    }
+    public java.util.List<QuerySearchLibResponseBodyIndexInfo> getIndexInfo() {
+        return this.indexInfo;
+    }
+
     public QuerySearchLibResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -102,6 +113,47 @@ public class QuerySearchLibResponseBody extends TeaModel {
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public static class QuerySearchLibResponseBodyIndexInfo extends TeaModel {
+        @NameInMap("IndexReadiness")
+        public String indexReadiness;
+
+        @NameInMap("IndexStatus")
+        public String indexStatus;
+
+        @NameInMap("IndexType")
+        public String indexType;
+
+        public static QuerySearchLibResponseBodyIndexInfo build(java.util.Map<String, ?> map) throws Exception {
+            QuerySearchLibResponseBodyIndexInfo self = new QuerySearchLibResponseBodyIndexInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public QuerySearchLibResponseBodyIndexInfo setIndexReadiness(String indexReadiness) {
+            this.indexReadiness = indexReadiness;
+            return this;
+        }
+        public String getIndexReadiness() {
+            return this.indexReadiness;
+        }
+
+        public QuerySearchLibResponseBodyIndexInfo setIndexStatus(String indexStatus) {
+            this.indexStatus = indexStatus;
+            return this;
+        }
+        public String getIndexStatus() {
+            return this.indexStatus;
+        }
+
+        public QuerySearchLibResponseBodyIndexInfo setIndexType(String indexType) {
+            this.indexType = indexType;
+            return this;
+        }
+        public String getIndexType() {
+            return this.indexType;
+        }
+
     }
 
 }
