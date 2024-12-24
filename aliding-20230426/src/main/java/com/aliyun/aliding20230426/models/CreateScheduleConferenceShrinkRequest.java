@@ -13,6 +13,9 @@ public class CreateScheduleConferenceShrinkRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    @NameInMap("ScheduleConfSettingModel")
+    public String scheduleConfSettingModelShrink;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -45,6 +48,14 @@ public class CreateScheduleConferenceShrinkRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public CreateScheduleConferenceShrinkRequest setScheduleConfSettingModelShrink(String scheduleConfSettingModelShrink) {
+        this.scheduleConfSettingModelShrink = scheduleConfSettingModelShrink;
+        return this;
+    }
+    public String getScheduleConfSettingModelShrink() {
+        return this.scheduleConfSettingModelShrink;
     }
 
     public CreateScheduleConferenceShrinkRequest setStartTime(Long startTime) {
