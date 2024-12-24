@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteTablesRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,8 @@ public class BatchDeleteTablesRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
@@ -19,7 +23,7 @@ public class BatchDeleteTablesRequest extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>IfExists</p>
+     * <p>If a table with the same name has been deleted, whether to ignore the exception.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -27,6 +31,9 @@ public class BatchDeleteTablesRequest extends TeaModel {
     @NameInMap("IfExists")
     public Boolean ifExists;
 
+    /**
+     * <p>The list of data table names.</p>
+     */
     @NameInMap("TableNames")
     public java.util.List<String> tableNames;
 

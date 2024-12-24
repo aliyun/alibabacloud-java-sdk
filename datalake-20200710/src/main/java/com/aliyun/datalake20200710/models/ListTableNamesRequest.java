@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTableNamesRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,8 @@ public class ListTableNamesRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
@@ -19,6 +23,8 @@ public class ListTableNamesRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>The pagination token, which is returned from the returned result. If none is returned, an empty string or \&quot;\&quot;is passed.</p>
+     * 
      * <strong>example:</strong>
      * <p>\&quot;\&quot;</p>
      */
@@ -26,6 +32,8 @@ public class ListTableNamesRequest extends TeaModel {
     public String nextPageToken;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class ListTableNamesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The data table name matches the regular expression.</p>
+     * 
      * <strong>example:</strong>
      * <p>.*</p>
      */
@@ -40,6 +50,13 @@ public class ListTableNamesRequest extends TeaModel {
     public String tableNamePattern;
 
     /**
+     * <p>The type of the data table. Valid values:</p>
+     * <p>MANAGED_TABLE: internal table</p>
+     * <p>EXTERNAL_TABLE: foreign table</p>
+     * <p>VIRTUAL_VIEW: virtual view</p>
+     * <p>INDEX_TABLE: index table</p>
+     * <p>MATERIALIZED_VIEW: materialized view.</p>
+     * 
      * <strong>example:</strong>
      * <p>MANAGED_TABLE</p>
      */

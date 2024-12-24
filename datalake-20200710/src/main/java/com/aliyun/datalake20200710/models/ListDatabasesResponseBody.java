@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDatabasesResponseBody extends TeaModel {
     /**
+     * <p>Description</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListDatabasesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The list of metadatabases.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;:&quot;test&quot;}]</p>
      */
@@ -19,6 +23,8 @@ public class ListDatabasesResponseBody extends TeaModel {
     public java.util.List<Database> databases;
 
     /**
+     * <p>The error message that is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>.</p>
      */
@@ -26,6 +32,8 @@ public class ListDatabasesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Page Flip token</p>
+     * 
      * <strong>example:</strong>
      * <p>2cb472ec1bf84f8d92f9c4baa0d21c19aa</p>
      */
@@ -33,6 +41,8 @@ public class ListDatabasesResponseBody extends TeaModel {
     public String nextPageToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>558D764F-8C55-49CA-BF38-80EA532FC08F</p>
      */
@@ -40,6 +50,8 @@ public class ListDatabasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the test feature is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

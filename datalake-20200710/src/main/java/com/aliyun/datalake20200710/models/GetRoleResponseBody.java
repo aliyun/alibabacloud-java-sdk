@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRoleResponseBody extends TeaModel {
     /**
-     * <p>code</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class GetRoleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>.</p>
@@ -23,7 +23,7 @@ public class GetRoleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>requestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4316D7DA-9816-596D-A3D7-12676FA59BDA</p>
@@ -32,13 +32,17 @@ public class GetRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>role</p>
+     * <p>The role of the current API caller.</p>
      */
     @NameInMap("Role")
     public Role role;
 
     /**
-     * <p>success</p>
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

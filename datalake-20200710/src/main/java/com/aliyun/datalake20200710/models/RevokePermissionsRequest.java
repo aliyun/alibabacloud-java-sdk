@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class RevokePermissionsRequest extends TeaModel {
     /**
+     * <p>The list of access items for which you want to revoke authorization.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Accesses")
     public java.util.List<String> accesses;
 
     /**
-     * <p>CatalogId</p>
+     * <p>The ID of the data directory.</p>
      * 
      * <strong>example:</strong>
      * <p>1344371</p>
@@ -19,22 +20,33 @@ public class RevokePermissionsRequest extends TeaModel {
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <p>The list of grantable access items that are not supported.</p>
+     */
     @NameInMap("DelegateAccesses")
     public java.util.List<String> delegateAccesses;
 
     /**
+     * <p>Cancels authorization on a meta resource.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MetaResource")
     public MetaResource metaResource;
 
     /**
+     * <p>Cancels authorization for a user or role. The format of the name must meet the following requirements:</p>
+     * <ul>
+     * <li>RAM user: acs:ram::[accountId]:user/[userName].</li>
+     * <li>RAM role: acs:ram::[accountId]:role/[roleName].</li>
+     * <li>Data Lake Role: acs:dlf::[accountId]:role/[roleName].</li>
+     * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Principal")
     public Principal principal;
 
     /**
+     * <p>The type of the authorization to cancel. Currently, only Hive is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

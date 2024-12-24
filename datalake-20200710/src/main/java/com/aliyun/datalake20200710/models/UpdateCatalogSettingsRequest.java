@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateCatalogSettingsRequest extends TeaModel {
     /**
-     * <p>CatalogId</p>
+     * <p>The ID of the data directory.</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <p>Data lake-related configurations.</p>
+     */
     @NameInMap("CatalogSettings")
     public CatalogSettings catalogSettings;
 

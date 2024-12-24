@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelQueryResponseBody extends TeaModel {
     /**
+     * <p>Query ID</p>
+     * 
      * <strong>example:</strong>
      * <p>Q-BCA5E96CB84BB8B8</p>
      */
@@ -12,6 +14,8 @@ public class CancelQueryResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DB07AAE9-4B88-5DEA-8F1D-4D1A9A864A85</p>
      */
@@ -19,6 +23,8 @@ public class CancelQueryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

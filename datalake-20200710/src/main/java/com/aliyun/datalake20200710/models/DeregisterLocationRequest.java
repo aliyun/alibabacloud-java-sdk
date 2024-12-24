@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeregisterLocationRequest extends TeaModel {
     /**
+     * <p>Location ID</p>
+     * <blockquote>
+     * <p> You can call the RegisterLocation operation to obtain the Location ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetQueryResultResponseBody extends TeaModel {
     /**
+     * <p>up time in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>8000</p>
      */
@@ -12,6 +14,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public Long duration;
 
     /**
+     * <p>The time when the query was completed.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-05-09 16:19:09</p>
      */
@@ -19,6 +23,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The error message of the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>Table or view not found:</p>
      */
@@ -26,6 +32,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The time when the query was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-05-09 16:18:09</p>
      */
@@ -33,6 +41,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The time when the query result was updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-05-09 16:19:09</p>
      */
@@ -40,6 +50,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>The query ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>Q-41676378709440CE</p>
      */
@@ -47,6 +59,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>Whether the query has been completed. false indicates that you need to continue polling this interface.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +68,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public Boolean jobCompleted;
 
     /**
+     * <p>Run logs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;this is log&quot;]</p>
      */
@@ -61,6 +77,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String logs;
 
     /**
+     * <p>The uid of the primary account of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>229167306180609***</p>
      */
@@ -68,6 +86,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public Long owner;
 
     /**
+     * <p>The progress of the query. The value ranges from 0 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>99</p>
      */
@@ -75,6 +95,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public Integer progress;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -82,6 +104,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1D2BCFBA-7639-59A9-817B-944EC1339279</p>
      */
@@ -89,6 +113,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result temporary library is not available.</p>
+     * 
      * <strong>example:</strong>
      * <p>db</p>
      */
@@ -96,6 +122,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String resultTmpDb;
 
     /**
+     * <p>The result temporary table, which is not available.</p>
+     * 
      * <strong>example:</strong>
      * <p>table</p>
      */
@@ -103,6 +131,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String resultTmpTable;
 
     /**
+     * <p>The total number of rows in the result. This parameter is returned only when the status is AVAILABLE.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -110,6 +140,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public Integer rowCount;
 
     /**
+     * <p>Whether the total number of rows in the result exceeds the maximum value.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -117,6 +149,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public Boolean rowCountOverLimit;
 
     /**
+     * <p>The returned result. This value is returned only when the status is AVAILABLE. The content is represented as a two-dimensional JSON array.</p>
+     * 
      * <strong>example:</strong>
      * <p>[[10,&quot;Tom&quot;],[11,&quot;Jerry&quot;]]</p>
      */
@@ -124,6 +158,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String rows;
 
     /**
+     * <p>The header field and type of the query result. This parameter is returned only when the status is AVAILABLE.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;INT&quot;},{&quot;name&quot;:&quot;student_name&quot;,&quot;type&quot;:&quot;VARCHAR&quot;}]</p>
      */
@@ -131,6 +167,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String schema;
 
     /**
+     * <p>The original SQL statement.</p>
+     * 
      * <strong>example:</strong>
      * <p>select * from db.student</p>
      */
@@ -138,6 +176,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String sql;
 
     /**
+     * <p>The point in time when the query was initiated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-05-09 16:18:09</p>
      */
@@ -145,6 +185,17 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The query status.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>AVAILABLE</li>
+     * <li>CANCELLED: The has canceled the.</li>
+     * <li></li>
+     * <li>CANCELLING: The is being canceled.</li>
+     * <li>WAITING: The is waiting for.</li>
+     * <li>ERROR</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AVAILABLE</p>
      */
@@ -152,6 +203,12 @@ public class GetQueryResultResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -159,6 +216,8 @@ public class GetQueryResultResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total amount of data scanned. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */

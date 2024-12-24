@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDatabaseResponseBody extends TeaModel {
     /**
+     * <p>The description of the distribution status.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DeleteDatabaseResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>A related error message is displayed.</p>
+     * 
      * <strong>example:</strong>
      * <p>.</p>
      */
@@ -19,6 +23,8 @@ public class DeleteDatabaseResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>73201200-4C1A-4FEF-BD6B-C0DA7994FFA2</p>
      */
@@ -26,12 +32,24 @@ public class DeleteDatabaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the task that is used to asynchronously delete a database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c38206c3aca0c41332ffe49294243009</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

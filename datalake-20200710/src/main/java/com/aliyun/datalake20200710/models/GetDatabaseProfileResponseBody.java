@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDatabaseProfileResponseBody extends TeaModel {
     /**
-     * <p>Code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,6 +14,8 @@ public class GetDatabaseProfileResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Database Data Overview</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;FileCnt&quot;: 213,
@@ -24,13 +26,18 @@ public class GetDatabaseProfileResponseBody extends TeaModel {
     public DatabaseProfile databaseProfile;
 
     /**
-     * <p>Message</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AEA7DCC8-DBF5-561B-A7FD-0747D7D51FEB</p>
@@ -39,7 +46,11 @@ public class GetDatabaseProfileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

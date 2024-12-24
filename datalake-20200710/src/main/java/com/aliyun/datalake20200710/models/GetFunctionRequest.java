@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFunctionRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,8 @@ public class GetFunctionRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
@@ -19,6 +23,8 @@ public class GetFunctionRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>The name of the user-defined function.</p>
+     * 
      * <strong>example:</strong>
      * <p>func2</p>
      */

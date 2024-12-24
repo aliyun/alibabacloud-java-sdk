@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdatePermissionsRequest extends TeaModel {
     /**
+     * <p>The list of authorized access permissions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Accesses")
     public java.util.List<String> accesses;
 
     /**
-     * <p>CatalogId</p>
+     * <p>The ID of the data directory.</p>
      * 
      * <strong>example:</strong>
      * <p>1344371</p>
@@ -20,24 +21,33 @@ public class UpdatePermissionsRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The list of access permissions that can be delegated.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DelegateAccesses")
     public java.util.List<String> delegateAccesses;
 
     /**
+     * <p>The metadata resource to be authorized.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MetaResource")
     public MetaResource metaResource;
 
     /**
+     * <p>Specify the authorized users or roles. The format of the name must meet the following requirements:</p>
+     * <ul>
+     * <li>RAM user: acs:ram::[accountId]:user/[userName].</li>
+     * <li>RAM role: acs:ram::[accountId]:role/[roleName].</li>
+     * <li>Data Lake Role: acs:dlf::[accountId]:role/[roleName].</li>
+     * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Principal")
     public Principal principal;
 
     /**
+     * <p>The type of the authorization. Only Hive is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

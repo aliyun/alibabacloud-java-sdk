@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SearchResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned db result.</p>
+     */
     @NameInMap("DatabaseResult")
     public SearchResponseBodyDatabaseResult databaseResult;
 
     /**
+     * <p>Response</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +29,8 @@ public class SearchResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>460C862F-BB91-5C04-BC3F-946EEF467862</p>
      */
@@ -29,12 +38,17 @@ public class SearchResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the information about the service was queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The returned table result.</p>
+     */
     @NameInMap("TableResult")
     public SearchResponseBodyTableResult tableResult;
 
@@ -92,9 +106,15 @@ public class SearchResponseBody extends TeaModel {
     }
 
     public static class SearchResponseBodyDatabaseResultDatabases extends TeaModel {
+        /**
+         * <p>Returned Database</p>
+         */
         @NameInMap("Database")
         public Database database;
 
+        /**
+         * <p>Return highlighted text</p>
+         */
         @NameInMap("HighLightList")
         public java.util.List<HighLight> highLightList;
 
@@ -122,10 +142,15 @@ public class SearchResponseBody extends TeaModel {
     }
 
     public static class SearchResponseBodyDatabaseResult extends TeaModel {
+        /**
+         * <p>Returned DatabaseList</p>
+         */
         @NameInMap("Databases")
         public java.util.List<SearchResponseBodyDatabaseResultDatabases> databases;
 
         /**
+         * <p>Total number of databases that meet the match conditions</p>
+         * 
          * <strong>example:</strong>
          * <p>11000</p>
          */
@@ -156,9 +181,15 @@ public class SearchResponseBody extends TeaModel {
     }
 
     public static class SearchResponseBodyTableResultTables extends TeaModel {
+        /**
+         * <p>Returned highlighted text</p>
+         */
         @NameInMap("HighLightList")
         public java.util.List<HighLight> highLightList;
 
+        /**
+         * <p>Returned Table</p>
+         */
         @NameInMap("Table")
         public Table table;
 
@@ -186,10 +217,15 @@ public class SearchResponseBody extends TeaModel {
     }
 
     public static class SearchResponseBodyTableResult extends TeaModel {
+        /**
+         * <p>Returned TableList</p>
+         */
         @NameInMap("Tables")
         public java.util.List<SearchResponseBodyTableResultTables> tables;
 
         /**
+         * <p>The total number of tables that meet the match conditions.</p>
+         * 
          * <strong>example:</strong>
          * <p>1100</p>
          */

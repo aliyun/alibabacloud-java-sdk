@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantPermissionsResponseBody extends TeaModel {
     /**
-     * <p>Response Code</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class GrantPermissionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Message Code</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>.</p>
@@ -23,7 +23,7 @@ public class GrantPermissionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4912024D-2A06-5E9F-9667-35D9319917D7</p>
@@ -32,7 +32,11 @@ public class GrantPermissionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success</p>
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

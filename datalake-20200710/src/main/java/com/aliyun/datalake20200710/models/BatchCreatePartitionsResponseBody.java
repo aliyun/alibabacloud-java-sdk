@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchCreatePartitionsResponseBody extends TeaModel {
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,19 +14,29 @@ public class BatchCreatePartitionsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of error messages.</p>
+     */
     @NameInMap("PartitionErrors")
     public java.util.List<PartitionError> partitionErrors;
 
+    /**
+     * <p>The list of partitioning results. This parameter is returned if NeedResult=true.</p>
+     */
     @NameInMap("Partitions")
     public java.util.List<Partition> partitions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
      */
@@ -32,6 +44,12 @@ public class BatchCreatePartitionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

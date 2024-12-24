@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCatalogsRequest extends TeaModel {
     /**
+     * <p>Regular matching of CatalogId</p>
+     * 
      * <strong>example:</strong>
      * <p>.*</p>
      */
@@ -12,6 +14,8 @@ public class ListCatalogsRequest extends TeaModel {
     public String idPattern;
 
     /**
+     * <p>The page turning token, which is returned from the returned result. If none is returned, an empty string or\&quot;\&quot;</p>
+     * 
      * <strong>example:</strong>
      * <p>‘’</p>
      */
@@ -19,6 +23,8 @@ public class ListCatalogsRequest extends TeaModel {
     public String nextPageToken;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class CreateRoleRequest extends TeaModel {
+    /**
+     * <p>The HTTP request body, which is in the JSON format.</p>
+     */
     @NameInMap("body")
     public RoleInput body;
 

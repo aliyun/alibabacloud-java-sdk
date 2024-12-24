@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnLockRequest extends TeaModel {
     /**
-     * <p>LockId</p>
+     * <p>The lock ID.</p>
      * 
      * <strong>example:</strong>
      * <p>11709</p>

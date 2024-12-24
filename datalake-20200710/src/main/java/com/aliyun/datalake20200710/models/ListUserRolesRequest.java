@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserRolesRequest extends TeaModel {
     /**
+     * <p>The page turning token, which is used to obtain the next page of data. If not provided in the response result, a string (&quot;&quot;) or empty string (&quot;) is empty string.</p>
+     * 
      * <strong>example:</strong>
      * <p>token!</p>
      */
@@ -12,7 +14,7 @@ public class ListUserRolesRequest extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>PageSize</p>
+     * <p>The size of each page. The maximum value is 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>-1/100</p>
@@ -21,6 +23,12 @@ public class ListUserRolesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Used to uniquely identify a RAM user or RAM role. The OSS URL is in the following format:</p>
+     * <ul>
+     * <li>RAM user: acs:ram::[accountId]:user/[userName].</li>
+     * <li>RAM role: acs:ram::[accountId]:role/[roleName].</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::1111:user/userName</p>
      */
@@ -28,7 +36,7 @@ public class ListUserRolesRequest extends TeaModel {
     public String principalArn;
 
     /**
-     * <p>role name pattern filter</p>
+     * <p>The regular expression that matches the role name. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>.<em>test.</em></p>

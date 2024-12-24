@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetDatabaseProfileRequest extends TeaModel {
     /**
-     * <p>CatalogId</p>
+     * <p>The ID of the data directory. By default, the ID of the primary account is entered.</p>
      * 
      * <strong>example:</strong>
-     * <p>可不填</p>
+     * <p>1344371</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
     /**
-     * <p>DatabaseName</p>
+     * <p>The name of the metadatabase.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

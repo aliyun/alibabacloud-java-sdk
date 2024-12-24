@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLockResponseBody extends TeaModel {
     /**
-     * <p>Code</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,6 +14,8 @@ public class CreateLockResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The lock status information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;lockId&quot;:12323,&quot;lockStatus&quot;:&quot;ACQUIRED&quot;}</p>
      */
@@ -21,7 +23,7 @@ public class CreateLockResponseBody extends TeaModel {
     public LockStatus lockStatus;
 
     /**
-     * <p>Message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>.</p>
@@ -30,7 +32,7 @@ public class CreateLockResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>73201200-4C1A-4FEF-BD6B-C0DA7994FFA2</p>
@@ -39,7 +41,11 @@ public class CreateLockResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success</p>
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>

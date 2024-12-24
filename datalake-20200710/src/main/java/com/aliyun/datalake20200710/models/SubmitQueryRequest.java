@@ -4,10 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class SubmitQueryRequest extends TeaModel {
+    /**
+     * <p>The ID of the data directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>catalog1</p>
+     */
     @NameInMap("catalogId")
     public String catalogId;
 
     /**
+     * <p>The SQL statement.</p>
+     * 
      * <strong>example:</strong>
      * <p>show databases</p>
      */
@@ -15,6 +23,8 @@ public class SubmitQueryRequest extends TeaModel {
     public String sql;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>WS-A129E61C4892D2B4</p>
      */

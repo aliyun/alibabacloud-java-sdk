@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCatalogResponseBody extends TeaModel {
     /**
-     * <p>Response Code</p>
+     * <p>The status code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class CreateCatalogResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response Message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>.</p>
@@ -23,7 +23,7 @@ public class CreateCatalogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BA84F8D4-5160-5544-BE76-3A306CD3A7B0</p>
@@ -32,7 +32,11 @@ public class CreateCatalogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success</p>
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

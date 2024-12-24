@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefreshLockRequest extends TeaModel {
     /**
-     * <p>LockId</p>
+     * <p>The lock ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12324</p>

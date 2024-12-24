@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchGetPartitionColumnStatisticsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class BatchGetPartitionColumnStatisticsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The partition statistics.</p>
+     */
     @NameInMap("PartitionStatisticsMap")
     public java.util.Map<String, java.util.List<ColumnStatisticsObj>> partitionStatisticsMap;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
      */
@@ -29,6 +38,12 @@ public class BatchGetPartitionColumnStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

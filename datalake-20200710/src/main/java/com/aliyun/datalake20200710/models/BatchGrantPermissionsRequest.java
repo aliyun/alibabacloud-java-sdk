@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchGrantPermissionsRequest extends TeaModel {
     /**
-     * <p>catalogId</p>
+     * <p>The ID of the data directory.</p>
      * 
      * <strong>example:</strong>
      * <p>1344371</p>
@@ -13,10 +13,14 @@ public class BatchGrantPermissionsRequest extends TeaModel {
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <p>The list to be authorized.</p>
+     */
     @NameInMap("GrantRevokeEntries")
     public java.util.List<GrantRevokeEntry> grantRevokeEntries;
 
     /**
+     * <p>The type of the authorization. Only Hive is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

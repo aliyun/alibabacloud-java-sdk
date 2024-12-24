@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchCreateTablesRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,6 +14,8 @@ public class BatchCreateTablesRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
@@ -19,12 +23,17 @@ public class BatchCreateTablesRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>Specifies whether to ignore the exception if a table with the same name already exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IfNotExists")
     public Boolean ifNotExists;
 
+    /**
+     * <p>The list of data tables.</p>
+     */
     @NameInMap("TableInputs")
     public java.util.List<TableInput> tableInputs;
 

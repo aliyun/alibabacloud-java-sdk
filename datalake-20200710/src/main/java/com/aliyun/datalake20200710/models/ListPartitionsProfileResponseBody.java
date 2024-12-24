@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPartitionsProfileResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -13,10 +15,15 @@ public class ListPartitionsProfileResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of partition data profiles</p>
+     */
     @NameInMap("Data")
     public java.util.List<PartitionProfile> data;
 
     /**
+     * <p>The time when the access frequency is updated. This parameter is obsolete.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -26,6 +33,8 @@ public class ListPartitionsProfileResponseBody extends TeaModel {
     public String latestAccessNumDate;
 
     /**
+     * <p>The time when the metadata warehouse was updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-30 19:16:10</p>
      */
@@ -33,6 +42,8 @@ public class ListPartitionsProfileResponseBody extends TeaModel {
     public String latestDate;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -42,6 +53,8 @@ public class ListPartitionsProfileResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>97434FA4-A6B2-1AE4-A174-76964F29C759</p>
      */
@@ -49,6 +62,12 @@ public class ListPartitionsProfileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -56,6 +75,8 @@ public class ListPartitionsProfileResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

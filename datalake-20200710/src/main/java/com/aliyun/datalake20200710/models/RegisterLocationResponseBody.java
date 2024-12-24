@@ -4,10 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class RegisterLocationResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public RegisterLocationResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3C2678BA-3451-14C3-90E2-D4EF5B4E7A84</p>
      */
@@ -15,6 +20,12 @@ public class RegisterLocationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -60,6 +71,9 @@ public class RegisterLocationResponseBody extends TeaModel {
         @NameInMap("LocationId")
         public String locationId;
 
+        /**
+         * <p>Enable the result list of the collection task</p>
+         */
         @NameInMap("StorageCollectTaskOperationResultList")
         public java.util.List<StorageCollectTaskOperationResult> storageCollectTaskOperationResultList;
 

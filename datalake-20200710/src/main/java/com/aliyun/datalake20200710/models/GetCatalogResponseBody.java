@@ -4,11 +4,14 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetCatalogResponseBody extends TeaModel {
+    /**
+     * <p>The catalog details.</p>
+     */
     @NameInMap("Catalog")
     public Catalog catalog;
 
     /**
-     * <p>Code</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -17,7 +20,7 @@ public class GetCatalogResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Message</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>.</p>
@@ -26,7 +29,7 @@ public class GetCatalogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DB07AAE9-4B88-5DEA-8F1D-4D1A9A864A85</p>
@@ -35,7 +38,7 @@ public class GetCatalogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

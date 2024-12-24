@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateFunctionRequest extends TeaModel {
     /**
+     * <p>The ID of the data directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>1344371</p>
      */
@@ -12,12 +14,17 @@ public class CreateFunctionRequest extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The name of a database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_test</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The details of the function definition.</p>
+     */
     @NameInMap("FunctionInput")
     public FunctionInput functionInput;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCatalogRequest extends TeaModel {
     /**
-     * <p>catalogId</p>
+     * <p>The ID of the data directory.</p>
      * 
      * <strong>example:</strong>
      * <p>catalog_test</p>

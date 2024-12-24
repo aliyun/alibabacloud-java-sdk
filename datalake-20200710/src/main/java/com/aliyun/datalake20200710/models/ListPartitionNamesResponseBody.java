@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPartitionNamesResponseBody extends TeaModel {
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListPartitionNamesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>.</p>
      */
@@ -19,16 +23,23 @@ public class ListPartitionNamesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The paging token.</p>
+     * 
      * <strong>example:</strong>
      * <p>2cb472ec1bf84f8d92f9c4baa0d21c19aa</p>
      */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>The list of partition names.</p>
+     */
     @NameInMap("PartitionNames")
     public java.util.List<String> partitionNames;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
      */
@@ -36,6 +47,12 @@ public class ListPartitionNamesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

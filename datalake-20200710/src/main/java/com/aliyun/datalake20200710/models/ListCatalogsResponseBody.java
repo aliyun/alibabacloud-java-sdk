@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCatalogsResponseBody extends TeaModel {
     /**
+     * <p>Catalog list</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;CatalogId&quot;:&quot;xx&quot;}]</p>
      */
@@ -12,6 +14,8 @@ public class ListCatalogsResponseBody extends TeaModel {
     public java.util.List<Catalog> catalogs;
 
     /**
+     * <p>Status Code Description</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class ListCatalogsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message that is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>.</p>
      */
@@ -26,6 +32,8 @@ public class ListCatalogsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Page Flip token</p>
+     * 
      * <strong>example:</strong>
      * <p>2cb472ec1bf84f8d92f9c4baa0d21c19aa</p>
      */
@@ -33,6 +41,8 @@ public class ListCatalogsResponseBody extends TeaModel {
     public String nextPageToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
      */
@@ -40,6 +50,8 @@ public class ListCatalogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the test feature is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

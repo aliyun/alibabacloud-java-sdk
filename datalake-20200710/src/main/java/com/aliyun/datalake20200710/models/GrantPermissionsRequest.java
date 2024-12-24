@@ -5,36 +5,46 @@ import com.aliyun.tea.*;
 
 public class GrantPermissionsRequest extends TeaModel {
     /**
+     * <p>The list of authorized access items.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Accesses")
     public java.util.List<String> accesses;
 
     /**
-     * <p>CatalogId</p>
+     * <p>The ID of the data directory.</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
     /**
+     * <p>The list of authorized access permissions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DelegateAccesses")
     public java.util.List<String> delegateAccesses;
 
     /**
+     * <p>Authorize meta resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MetaResource")
     public MetaResource metaResource;
 
     /**
+     * <p>Specify the authorized users or roles. The format of the name must meet the following requirements:</p>
+     * <ul>
+     * <li>RAM user: acs:ram::[accountId]:user/[userName].</li>
+     * <li>RAM role: acs:ram::[accountId]:role/[roleName].</li>
+     * <li>Data Lake Role: acs:dlf::[accountId]:role/[roleName].</li>
+     * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Principal")
     public Principal principal;
 
     /**
+     * <p>The type of the authorization. Only Hive is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

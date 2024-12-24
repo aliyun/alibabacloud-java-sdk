@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchUpdateTablesResponseBody extends TeaModel {
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class BatchUpdateTablesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>.</p>
      */
@@ -19,6 +23,8 @@ public class BatchUpdateTablesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
      */
@@ -26,6 +32,12 @@ public class BatchUpdateTablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +45,8 @@ public class BatchUpdateTablesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The list of error messages.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;ErrorDetails&quot;:{},&quot;TableName&quot;:&quot;test&quot;}</p>
      */
@@ -40,6 +54,8 @@ public class BatchUpdateTablesResponseBody extends TeaModel {
     public java.util.List<TableError> tableErrors;
 
     /**
+     * <p>The ID of the asynchronous update task.</p>
+     * 
      * <strong>example:</strong>
      * <p>f8deec55f54ac566e7ec8944fbe01588</p>
      */

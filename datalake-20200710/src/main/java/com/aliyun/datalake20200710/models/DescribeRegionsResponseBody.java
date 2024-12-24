@@ -4,10 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The region list.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
      */
@@ -15,6 +20,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the test feature is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,20 +58,30 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The description of the filtering table.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The name of the data.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The display name.</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
         /**
+         * <p>The type.</p>
+         * 
          * <strong>example:</strong>
          * <p>region</p>
          */

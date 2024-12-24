@@ -4,11 +4,14 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class UpdateRoleRequest extends TeaModel {
+    /**
+     * <p>Input information of the updated element</p>
+     */
     @NameInMap("RoleInput")
     public RoleInput roleInput;
 
     /**
-     * <p>RoleName</p>
+     * <p>Role name</p>
      * 
      * <strong>example:</strong>
      * <p>原始名称</p>

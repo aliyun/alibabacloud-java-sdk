@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRolesRequest extends TeaModel {
     /**
-     * <p>Next PageToken</p>
+     * <p>The page turning token, which is used to obtain the next page of data. If not provided in the response result, a string (&quot;&quot;) or empty string (&quot;) is empty string.</p>
      * 
      * <strong>example:</strong>
      * <p>token!</p>
@@ -14,6 +14,8 @@ public class ListRolesRequest extends TeaModel {
     public String nextPageToken;
 
     /**
+     * <p>the number of entries returned on each page, the maximum value is 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>-1/100</p>
      */
@@ -21,6 +23,8 @@ public class ListRolesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The regular expression that matches the role name. Fuzzy search is supported, such as.\<em>test.\</em>.</p>
+     * 
      * <strong>example:</strong>
      * <p>.<em>test.</em></p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetServiceStatusResponseBody extends TeaModel {
     /**
+     * <p>Service status</p>
+     * 
      * <strong>example:</strong>
      * <p>{ 			&quot;AccountStatus&quot;:&quot;&quot;, 			&quot;RegionStatus&quot;:&quot;READY&quot;, 			&quot;RegionId&quot;:&quot;cn-shanghai&quot;, 			&quot;IsDependencyReady&quot;:true, 			&quot;IsDlfServiceOpen&quot;:true 		}</p>
      */
@@ -12,6 +14,8 @@ public class GetServiceStatusResponseBody extends TeaModel {
     public GetServiceStatusResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
      */
@@ -19,6 +23,8 @@ public class GetServiceStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the test feature is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -56,6 +62,8 @@ public class GetServiceStatusResponseBody extends TeaModel {
 
     public static class GetServiceStatusResponseBodyData extends TeaModel {
         /**
+         * <p>Whether to complete RAM authorization</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -63,6 +71,8 @@ public class GetServiceStatusResponseBody extends TeaModel {
         public Boolean hasRamPermissions;
 
         /**
+         * <p>Whether the DLF service is activated</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -70,6 +80,8 @@ public class GetServiceStatusResponseBody extends TeaModel {
         public Boolean isDlfServiceOpen;
 
         /**
+         * <p>Whether the OSS service is enabled</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
