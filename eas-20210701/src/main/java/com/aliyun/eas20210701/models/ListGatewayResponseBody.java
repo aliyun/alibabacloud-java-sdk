@@ -187,6 +187,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public Integer replicas;
 
         /**
+         * <p>Specifies whether to enable HTTP to HTTPS redirection.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListGatewayIntranetSupportedZoneResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The zones that are supported by the region.</p>
+     */
     @NameInMap("Zones")
     public java.util.List<String> zones;
 
