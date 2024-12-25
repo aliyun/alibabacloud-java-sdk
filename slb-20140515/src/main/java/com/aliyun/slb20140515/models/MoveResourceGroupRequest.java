@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which you want to move the resource.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2rpsek5h****</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
@@ -20,22 +22,29 @@ public class MoveResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2dmxj56z****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The resource ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-uf6ghek7ds2btzt65****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -48,18 +57,24 @@ public class MoveResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   **loadbalancer**: a CLB instance</p>
-     * <p>*   **certificate**: a certificate</p>
-     * <p>*   **acl**: an access control list (ACL)</p>
-     * <br>
+     * <ul>
+     * <li><strong>loadbalancer</strong>: a CLB instance</li>
+     * <li><strong>certificate</strong>: a certificate</li>
+     * <li><strong>acl</strong>: an access control list (ACL)</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>loadbalancer</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The AccessKey ID provided by Alibaba Cloud.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LTAI5tPmFGUpmyWwD8gp****</p>
      */
     @NameInMap("access_key_id")
     public String accessKeyId;

@@ -6,38 +6,48 @@ import com.aliyun.tea.*;
 public class ModifyLoadBalancerInstanceSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
-     * <br>
-     * <p>*   **true**: automatically completes the payment.</p>
-     * <p>*   **false** (default): If you select this option, you must complete the payment in the Order Center.</p>
-     * <br>
-     * <p>> This parameter takes effect only for subscription instances.</p>
+     * <ul>
+     * <li><strong>true</strong>: automatically completes the payment.</li>
+     * <li><strong>false</strong> (default): If you select this option, you must complete the payment in the Order Center.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter takes effect only for subscription instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>The ID of the CLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1b6c719df*********</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
      * <p>The specification of the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **slb.s1.small**</p>
-     * <p>*   **slb.s2.small**</p>
-     * <p>*   **slb.s2.medium**</p>
-     * <p>*   **slb.s3.small**</p>
-     * <p>*   **slb.s3.medium**</p>
-     * <p>*   **slb.s3.large**</p>
-     * <br>
-     * <p>The specifications available vary by region. For more information about the specifications, see [High-performance CLB instance](https://help.aliyun.com/document_detail/85931.html).</p>
-     * <br>
-     * <p>> When you switch a shared-resource CLB instance to a high-performance CLB instance, your service may be interrupted for 10 to 30 seconds. We recommend that you modify the specification during off-peak hours or use Alibaba Cloud DNS to schedule your workloads to another CLB instance before you modify the specification.</p>
-     * <br>
+     * <ul>
+     * <li><strong>slb.s1.small</strong></li>
+     * <li><strong>slb.s2.small</strong></li>
+     * <li><strong>slb.s2.medium</strong></li>
+     * <li><strong>slb.s3.small</strong></li>
+     * <li><strong>slb.s3.medium</strong></li>
+     * <li><strong>slb.s3.large</strong></li>
+     * </ul>
+     * <p>The specifications available vary by region. For more information about the specifications, see <a href="https://help.aliyun.com/document_detail/85931.html">High-performance CLB instance</a>.</p>
+     * <blockquote>
+     * <p>When you switch a shared-resource CLB instance to a high-performance CLB instance, your service may be interrupted for 10 to 30 seconds. We recommend that you modify the specification during off-peak hours or use Alibaba Cloud DNS to schedule your workloads to another CLB instance before you modify the specification.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>slb.s2.small</p>
      */
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
@@ -50,8 +60,10 @@ public class ModifyLoadBalancerInstanceSpecRequest extends TeaModel {
 
     /**
      * <p>The region ID of the CLB instance.</p>
-     * <br>
-     * <p>You can query the region ID from the [Regions and zones](https://help.aliyun.com/document_detail/40654.html) list or by calling the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation.</p>
+     * <p>You can query the region ID from the <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a> list or by calling the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

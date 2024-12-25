@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeHealthStatusResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers.</p>
+     * <p>The backend servers.</p>
      */
     @NameInMap("BackendServers")
     public DescribeHealthStatusResponseBodyBackendServers backendServers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,41 +42,60 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     public static class DescribeHealthStatusResponseBodyBackendServersBackendServer extends TeaModel {
         /**
-         * <p>The frontend port that is used by the CLB instance.</p>
+         * <p>The frontend port that is used by the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
         /**
-         * <p>The backend port that is used by the CLB instance.</p>
+         * <p>The backend port that is used by the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The frontend protocol that is used by the CLB instance.</p>
+         * <p>The frontend protocol that is used by the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The health status of the backend server. Valid values:</p>
-         * <br>
-         * <p>*   **normal**: The backend server is healthy.</p>
-         * <p>*   **abnormal**: The backend server is unhealthy.</p>
-         * <p>*   **unavailable**: The health check is not complete.</p>
+         * <ul>
+         * <li>normal: The backend server is healthy.</li>
+         * <li>abnormal: The backend server is unhealthy.</li>
+         * <li>unavailable: The health check is not completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>abnormal</p>
          */
         @NameInMap("ServerHealthStatus")
         public String serverHealthStatus;
 
         /**
-         * <p>The ID of the Elastic Compute Service (ECS) instance or elastic network interface (ENI).</p>
+         * <p>The ID of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1h5u3fv54ytf***</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The IP address of the ECS instance.</p>
+         * <p>The IP address of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.XX.XX.11</p>
          */
         @NameInMap("ServerIp")
         public String serverIp;

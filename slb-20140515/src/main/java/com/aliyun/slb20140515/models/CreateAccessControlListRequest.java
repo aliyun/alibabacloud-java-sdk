@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateAccessControlListRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **CreateAccessControlList**.</p>
-     * <br>
+     * <p>The name of the ACL. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (_). The name of the ACL that you create must be unique within each region.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rule1</p>
      */
     @NameInMap("AclName")
     public String aclName;
 
     /**
-     * <p>The ID of the region where you want to create the ACL.</p>
+     * <p>The IP version. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
@@ -25,15 +30,20 @@ public class CreateAccessControlListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID.</p>
-     * <br>
+     * <p>The region ID of the ACL.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the ACL. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (_). The name of the ACL that you create must be unique within each region.</p>
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rt******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -129,17 +139,19 @@ public class CreateAccessControlListRequest extends TeaModel {
 
     public static class CreateAccessControlListRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the bastion host. Valid values of N: **1 to 20**. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be at most 64 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.</p>
+         * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. The tag value cannot be an empty string.</p>
-         * <br>
-         * <p>The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string. The tag value must be 0 to 128 characters in length, and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

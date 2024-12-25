@@ -5,27 +5,32 @@ import com.aliyun.tea.*;
 
 public class CreateDomainExtensionRequest extends TeaModel {
     /**
-     * <p>The domain name to be created.</p>
-     * <br>
+     * <p>The domain name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>*.example1.com</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>The frontend port of the HTTPS listener.</p>
-     * <br>
-     * <p>Value range:** 1 to 65535**</p>
-     * <br>
+     * <p>The frontend port that is used by the HTTPS listener of the SLB instance.</p>
+     * <p>Valid values: <strong>1 to 65535</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>443</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The ID of the SLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1o94dp5i6earrxxxxxx</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -37,9 +42,11 @@ public class CreateDomainExtensionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the SLB instance belongs.</p>
-     * <br>
+     * <p>The region ID of the Server Load Balancer (SLB) instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -52,6 +59,9 @@ public class CreateDomainExtensionRequest extends TeaModel {
 
     /**
      * <p>The ID of the certificate used by the domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123157xxxxxxx_166f820xxxxxx_1714763408_709981xxxx</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteMasterSlaveServerGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

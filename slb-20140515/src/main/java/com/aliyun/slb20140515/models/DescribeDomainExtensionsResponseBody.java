@@ -12,6 +12,9 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48C1B671-C6DB-4DDE-9B30-10557E36CDE0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
     public static class DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension extends TeaModel {
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The ID of the additional certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de-bp1rp7ta1****</p>
          */
         @NameInMap("DomainExtensionId")
         public String domainExtensionId;
 
         /**
          * <p>The ID of the server certificate that is used by the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231579085529123_166f8204689_1714763408_70998****</p>
          */
         @NameInMap("ServerCertificateId")
         public String serverCertificateId;

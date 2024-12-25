@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaModel {
     /**
-     * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+     * <p>The time when the CLB instance was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-12-02T02:49:05Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The ID of the associated CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-14fadafw4343a******</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The list of backend servers in the primary/secondary server group.</p>
+     * <p>A list of backend servers in the primary/secondary server group.</p>
      */
     @NameInMap("MasterSlaveBackendServers")
     public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers masterSlaveBackendServers;
 
     /**
      * <p>The ID of the primary/secondary server group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rsp-cige6******</p>
      */
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
 
     /**
      * <p>The name of the primary/secondary server group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Group1</p>
      */
     @NameInMap("MasterSlaveServerGroupName")
     public String masterSlaveServerGroupName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -110,39 +125,59 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
     public static class DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer extends TeaModel {
         /**
          * <p>The description of the primary/secondary server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary and secondary server group description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The port used by the backend server.</p>
+         * <p>The port that is used by the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The ID of the ECS instance or ENI.</p>
+         * <p>The ID of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vm-hrf******</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The type of backend server. Valid values: **Master and Slave. Default value: Master.</p>
+         * <p>The type of backend server. Valid values: <strong>Master</strong> and <strong>Slave</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Slave</p>
          */
         @NameInMap("ServerType")
         public String serverType;
 
         /**
          * <p>The type of the backend server. Valid values:</p>
-         * <br>
-         * <p>*   **ecs** (default): an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **eni**: an elastic network interface (ENI)</p>
+         * <ul>
+         * <li><strong>ecs</strong> (default): Elastic Compute Service (ECS) instance</li>
+         * <li><strong>eni</strong>: elastic network interface (ENI)</li>
+         * <li><strong>eci</strong>: elastic container instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -223,13 +258,21 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
 
     public static class DescribeMasterSlaveServerGroupAttributeResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

@@ -12,6 +12,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>173B0EEA-22ED-4EE2-91F9-3A1CDDFFBBBA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,16 +43,20 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource extends TeaModel {
         /**
          * <p>The type of the IP address.</p>
-         * <br>
-         * <p>Valid values: **ipv4 and ipv6**.</p>
+         * <p>Valid values: <strong>ipv4 and ipv6</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
         /**
          * <p>The network type.</p>
-         * <br>
-         * <p>Valid values: **vpc, classic-internet, and classic-intranet**.</p>
+         * <p>Valid values: <strong>vpc, classic-internet, and classic-intranet</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>classic_internet</p>
          */
         @NameInMap("AddressType")
         public String addressType;
@@ -99,12 +106,18 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource extends TeaModel {
         /**
          * <p>The primary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-a</p>
          */
         @NameInMap("MasterZoneId")
         public String masterZoneId;
 
         /**
          * <p>The secondary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-b</p>
          */
         @NameInMap("SlaveZoneId")
         public String slaveZoneId;

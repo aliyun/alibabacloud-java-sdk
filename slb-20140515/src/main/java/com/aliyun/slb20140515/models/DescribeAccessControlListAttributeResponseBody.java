@@ -5,64 +5,82 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     /**
-     * <p>The IP entries that you want to remove from the network ACL. Valid values:</p>
-     * <br>
-     * <p>*   **entry**: the IP address or CIDR block that you want to remove from the network ACL. Separate multiple IP addresses or CIDR blocks with commas (,).</p>
-     * <p>*   **comment**: the description of the network ACL.</p>
+     * <p>The information about the access control policy.</p>
      */
     @NameInMap("AclEntrys")
     public DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys;
 
     /**
-     * <p>The ID of the network ACL.</p>
+     * <p>The ACL ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-bp1ut10zzvh1y8dfs****</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
-     * <p>The ACL name. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (_). The name of each ACL must be unique within a region. Fuzzy match is supported.</p>
+     * <p>The ACL name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>doctest</p>
      */
     @NameInMap("AclName")
     public String aclName;
 
     /**
-     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+     * <p>The IP version. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
     /**
-     * <p>The time when the ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+     * <p>The time when the ACL was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-08-31T02:49:05Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
-     * <p>The listeners that are associated with the network ACL.</p>
+     * <p>The listeners with which the ACL is associated.</p>
      */
     @NameInMap("RelatedListeners")
     public DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C9906A1D-86F7-4C9C-A369-54DA42EF206A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmz3jksig****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags added to the ACL.</p>
      */
     @NameInMap("Tags")
     public DescribeAccessControlListAttributeResponseBodyTags tags;
 
     /**
-     * <p>The total number of access control entries.</p>
+     * <p>The total number of ACL entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalAclEntry")
     public Integer totalAclEntry;
@@ -154,13 +172,19 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
 
     public static class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry extends TeaModel {
         /**
-         * <p>The description of the ACL entry.</p>
+         * <p>The remarks of the ACL entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("AclEntryComment")
         public String aclEntryComment;
 
         /**
-         * <p>The IP address specified in the ACL entry.</p>
+         * <p>The IP entry in the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         @NameInMap("AclEntryIP")
         public String aclEntryIP;
@@ -210,27 +234,40 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     public static class DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener extends TeaModel {
         /**
          * <p>The type of ACL. Valid values:</p>
-         * <br>
-         * <p>*   **black**</p>
-         * <p>*   **white**</p>
+         * <ul>
+         * <li><strong>black</strong></li>
+         * <li><strong>white</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>white</p>
          */
         @NameInMap("AclType")
         public String aclType;
 
         /**
          * <p>The frontend port of the listener with which the ACL is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
         /**
          * <p>The CLB instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1qpzldlm38bnexl****</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
          * <p>The type of protocol that the associated listener uses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -296,12 +333,18 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     public static class DescribeAccessControlListAttributeResponseBodyTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class RemoveAccessControlListEntryRequest extends TeaModel {
     /**
      * <p>The IP entries that you want to remove from the network ACL. Valid values:</p>
-     * <br>
-     * <p>*   **entry**: the IP address or CIDR block that you want to remove from the network ACL. Separate multiple IP addresses or CIDR blocks with commas (,).</p>
-     * <p>*   **comment**: the description of the network ACL.</p>
+     * <ul>
+     * <li><strong>entry</strong>: the IP address or CIDR block that you want to remove from the network ACL. Separate multiple IP addresses or CIDR blocks with commas (,).</li>
+     * <li><strong>comment</strong>: the description of the network ACL.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;entry&quot;:&quot;10.0.10.0/24&quot;,&quot;comment&quot;:&quot;privaterule1&quot;}]</p>
      */
     @NameInMap("AclEntrys")
     public String aclEntrys;
 
     /**
      * <p>The ID of the network ACL.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-bp1l0kk4gxce43k******</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -29,10 +35,11 @@ public class RemoveAccessControlListEntryRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the network ACL is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

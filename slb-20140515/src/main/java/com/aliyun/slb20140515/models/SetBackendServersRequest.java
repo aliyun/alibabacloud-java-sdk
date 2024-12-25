@@ -5,41 +5,60 @@ import com.aliyun.tea.*;
 
 public class SetBackendServersRequest extends TeaModel {
     /**
-     * <p>The list of backend servers that you want to modify.</p>
-     * <br>
-     * <p>The value of this parameter must be a STRING list in the JSON format. You can specify up to 20 elements in each request.</p>
-     * <br>
-     * <p>*   **ServerId**: Required. Specify the ID of the backend server. This parameter must be of the STRING type.</p>
-     * <br>
-     * <p>*   **Port**: Required. Specify the port that is used by the backend server. This parameter must be of the INTEGER type. Valid values: **1** to **65535**.</p>
-     * <br>
-     * <p>*   **Weight**: Specify the weight of the backend server. This parameter must be of the INTEGER type. Valid values: **0** to **100**.</p>
-     * <br>
-     * <p>*   **Description**: Optional. The description of the backend server. This value must be a string. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
-     * <br>
-     * <p>*   **Type**: the type of backend server. This parameter must be of the STRING type. Valid values:</p>
-     * <br>
-     * <p>    *   **ecs** (default): an Elastic Compute Service (ECS) instance</p>
-     * <p>    *   **eni**: an elastic network interface (ENI). You can specify ENIs as the backend servers only for high-performance CLB instances.</p>
-     * <br>
-     * <p>*   **ServerIp**: the IP address of the ECS instance or ENI</p>
-     * <br>
+     * <p>The backend servers that you want to add. Configure the following parameters:</p>
+     * <ul>
+     * <li><p><strong>ServerId</strong>: Required. The ID of the backend server. Specify the value in a string. You can specify the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance. If you set <strong>ServerId</strong> to the ID of an ENI or an elastic container instance, you must configure the <strong>Type</strong> parameter.</p>
+     * </li>
+     * <li><p><strong>Weight</strong>: the weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If you set the weight of a backend server to 0, no requests are forwarded to the backend server.</p>
+     * </li>
+     * <li><p><strong>Description</strong>: Optional. The description of the backend server. Specify the value in a string. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
+     * </li>
+     * <li><p><strong>Type</strong>: the type of the backend server. Valid values:</p>
+     * <ul>
+     * <li><strong>ecs</strong> (default): ECS instance</li>
+     * <li><strong>eni</strong>: ENI</li>
+     * <li><strong>eci</strong>: elastic container instance</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You can specify ENIs and elastic container instances as backend servers only for high-performance CLB instances.</p>
+     * </blockquote>
+     * <ul>
+     * <li><strong>ServerIp</strong>: the IP address of the ENI or elastic container instance.</li>
+     * <li><strong>Port</strong>: the backend port.</li>
+     * </ul>
      * <p>Examples:</p>
-     * <br>
-     * <p>*   ECS instance: `[{ "ServerId": "ecs-******FmYAXG", "Weight": "100", "Type": "ecs", "Port":"80","Description":"test-112" }]`</p>
-     * <p>*   ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" }]`</p>
-     * <p>*   ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.\*\*.**", "Port":"80","Description":"test-113" }]`</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   The backend servers must be in the Running state. You can specify up to 20 backend servers in each request.</p>
+     * <ul>
+     * <li><p>ECS instance:</p>
+     * <p><code>[{ &quot;ServerId&quot;: &quot;i-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;ecs&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-112&quot; }]</code></p>
+     * </li>
+     * <li><p>ENI:</p>
+     * <p><code>[{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;``192.168.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-112&quot; }]</code></p>
+     * </li>
+     * <li><p>ENI with multiple IP addresses:</p>
+     * <p><code>[{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;``192.168.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-113&quot; },{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;``172.166.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-113&quot; }]</code></p>
+     * </li>
+     * <li><p>Elastic container instance:</p>
+     * <p><code>[{ &quot;ServerId&quot;: &quot;eci-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eci&quot;, &quot;ServerIp&quot;: &quot;``192.168.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-114&quot; }]</code></p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You can add only running backend servers to a CLB instance. You can specify at most 20 backend servers in each call.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[{ &quot;ServerId&quot;: &quot;ecs-******FmYAXG&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;ecs&quot;,  &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-112&quot; }]</p>
      */
     @NameInMap("BackendServers")
     public String backendServers;
 
     /**
      * <p>The ID of the CLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1qjwo61pqz3a******</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -52,6 +71,9 @@ public class SetBackendServersRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

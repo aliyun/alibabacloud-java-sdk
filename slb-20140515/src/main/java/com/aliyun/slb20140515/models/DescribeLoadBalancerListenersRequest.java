@@ -6,46 +6,71 @@ import com.aliyun.tea.*;
 public class DescribeLoadBalancerListenersRequest extends TeaModel {
     /**
      * <p>The description of the listener.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTPS_443</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The frontend port that is used by the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>443</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The protocol used by the listener. Valid values:</p>
-     * <br>
-     * <p>*   **tcp**</p>
-     * <p>*   **udp**</p>
-     * <p>*   **http**</p>
-     * <p>*   **https**</p>
+     * <ul>
+     * <li><strong>tcp</strong></li>
+     * <li><strong>udp</strong></li>
+     * <li><strong>http</strong></li>
+     * <li><strong>https</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>http</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
      * <p>The ID of the CLB instance. You can specify at most 10 IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-123wrwer</p>
      */
     @NameInMap("LoadBalancerId")
     public java.util.List<String> loadBalancerId;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
-     * <p>Valid values: **1** to **100**. If you do not specify this parameter, the default value **20** is used.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>100</strong>. If you do not specify this parameter, the default value <strong>20</strong> is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query and no subsequent queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query and no subsequent queries are to be sent, ignore this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -58,10 +83,13 @@ public class DescribeLoadBalancerListenersRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the CLB instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
-     * <br>
-     * <p>>  If the endpoint of the selected region is slb.aliyuncs.com, the `RegionId` parameter is required.</p>
+     * <p>You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> If the endpoint of the selected region is slb.aliyuncs.com, the <code>RegionId</code> parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -182,16 +210,20 @@ public class DescribeLoadBalancerListenersRequest extends TeaModel {
     public static class DescribeLoadBalancerListenersRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key must be 1 to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. Valid values of N: **1 to 20**. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.</p>
+         * <p>The tag value. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

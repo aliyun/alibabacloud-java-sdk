@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeAccessLogsDownloadAttributeRequest extends TeaModel {
     /**
      * <p>The CLB instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1b6c719dfa08ex*****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The type of access log. Set the value to **layer7**, which specifies Layer 7 access logs.</p>
+     * <p>The type of access log. Set the value to <strong>layer7</strong>, which specifies Layer 7 access logs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>layer7</p>
      */
     @NameInMap("LogType")
     public String logType;
@@ -23,23 +29,30 @@ public class DescribeAccessLogsDownloadAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the CLB instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -52,8 +65,10 @@ public class DescribeAccessLogsDownloadAttributeRequest extends TeaModel {
 
     /**
      * <p>The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
-     * <br>
      * <p>You can specify up to 10 tags in each call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;tagKey&quot;:&quot;Key1&quot;,&quot;tagValue&quot;:&quot;Value1&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;

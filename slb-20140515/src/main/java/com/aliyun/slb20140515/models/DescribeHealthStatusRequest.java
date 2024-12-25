@@ -5,25 +5,32 @@ import com.aliyun.tea.*;
 
 public class DescribeHealthStatusRequest extends TeaModel {
     /**
-     * <p>The frontend port that is used by the CLB instance.</p>
-     * <br>
-     * <p>Valid values: **1 to 65535**.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the health status of all ports is returned.</p>
+     * <p>The frontend port that is used by the SLB instance. Valid values: <strong>1 to 65535</strong>.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the health status of all ports is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The frontend protocol that is used by the CLB instance.</p>
+     * <p>The frontend protocol that is used by the SLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>https</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
      * <p>The ID of the Classic Load Balancer (CLB) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1qjwo61pqz3ah****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -35,7 +42,10 @@ public class DescribeHealthStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the CLB instance is deployed.</p>
+     * <p>The region ID of the SLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

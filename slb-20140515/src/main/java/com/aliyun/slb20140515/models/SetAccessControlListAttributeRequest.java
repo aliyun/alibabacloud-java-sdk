@@ -5,17 +5,21 @@ import com.aliyun.tea.*;
 
 public class SetAccessControlListAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the network ACL.</p>
-     * <br>
+     * <p>The ACL ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-bp1l0kk4gxce43k******</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
-     * <p>The new name of the network ACL. The name must be 1 to 80 characters in length, and can contain only letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (_). The name of the network ACL must be unique within each region.</p>
-     * <br>
+     * <p>The ACL name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
      */
     @NameInMap("AclName")
     public String aclName;
@@ -27,11 +31,12 @@ public class SetAccessControlListAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the network ACL is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the ACL.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

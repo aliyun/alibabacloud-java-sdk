@@ -6,24 +6,35 @@ import com.aliyun.tea.*;
 public class ListTLSCipherPoliciesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the current page is the last page. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The current page is the last page.</p>
-     * <p>*   **false**: The current page is not the last page.</p>
+     * <ul>
+     * <li><strong>true</strong>: The current page is the last page.</li>
+     * <li><strong>false</strong>: The current page is not the last page.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, it indicates that no next query is to be sent.</p>
-     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</li>
+     * <li>If <strong>NextToken</strong> is not empty, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -36,6 +47,9 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of TLS policies returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -88,23 +102,33 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
     public static class ListTLSCipherPoliciesResponseBodyTLSCipherPoliciesRelateListeners extends TeaModel {
         /**
          * <p>The ID of the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1b6c719dfa08ex****</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
-         * <p>The listening port. Valid values: **1** to **65535**.</p>
+         * <p>The listening port. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The listening protocol. Valid values:</p>
-         * <br>
-         * <p>*   **TCP**</p>
-         * <p>*   **UDP**</p>
-         * <p>*   **HTTP**</p>
-         * <p>*   **HTTPS**</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * <li><strong>HTTP</strong></li>
+         * <li><strong>HTTPS</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -143,61 +167,70 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
     public static class ListTLSCipherPoliciesResponseBodyTLSCipherPolicies extends TeaModel {
         /**
          * <p>The cipher suites supported by the TLS version.</p>
-         * <br>
          * <p>TLS 1.0 and TLS 1.1 support the following cipher suites:</p>
-         * <br>
-         * <p>*   ECDHE-ECDSA-AES128-SHA</p>
-         * <p>*   ECDHE-ECDSA-AES256-SHA</p>
-         * <p>*   ECDHE-RSA-AES128-SHA</p>
-         * <p>*   ECDHE-RSA-AES256-SHA</p>
-         * <p>*   AES128-SHA AES256-SHA</p>
-         * <p>*   DES-CBC3-SHA</p>
-         * <br>
+         * <ul>
+         * <li>ECDHE-ECDSA-AES128-SHA</li>
+         * <li>ECDHE-ECDSA-AES256-SHA</li>
+         * <li>ECDHE-RSA-AES128-SHA</li>
+         * <li>ECDHE-RSA-AES256-SHA</li>
+         * <li>AES128-SHA AES256-SHA</li>
+         * <li>DES-CBC3-SHA</li>
+         * </ul>
          * <p>TLS 1.2 supports the following cipher suites:</p>
-         * <br>
-         * <p>*   ECDHE-ECDSA-AES128-SHA</p>
-         * <p>*   ECDHE-ECDSA-AES256-SHA</p>
-         * <p>*   ECDHE-RSA-AES128-SHA</p>
-         * <p>*   ECDHE-RSA-AES256-SHA</p>
-         * <p>*   AES128-SHA AES256-SHA</p>
-         * <p>*   DES-CBC3-SHA</p>
-         * <p>*   ECDHE-ECDSA-AES128-GCM-SHA256</p>
-         * <p>*   ECDHE-ECDSA-AES256-GCM-SHA384</p>
-         * <p>*   ECDHE-ECDSA-AES128-SHA256</p>
-         * <p>*   ECDHE-ECDSA-AES256-SHA384</p>
-         * <p>*   ECDHE-RSA-AES128-GCM-SHA256</p>
-         * <p>*   ECDHE-RSA-AES256-GCM-SHA384</p>
-         * <p>*   ECDHE-RSA-AES128-SHA256</p>
-         * <p>*   ECDHE-RSA-AES256-SHA384</p>
-         * <p>*   AES128-GCM-SHA256</p>
-         * <p>*   AES256-GCM-SHA384</p>
-         * <p>*   AES128-SHA256 AES256-SHA256</p>
-         * <br>
+         * <ul>
+         * <li>ECDHE-ECDSA-AES128-SHA</li>
+         * <li>ECDHE-ECDSA-AES256-SHA</li>
+         * <li>ECDHE-RSA-AES128-SHA</li>
+         * <li>ECDHE-RSA-AES256-SHA</li>
+         * <li>AES128-SHA AES256-SHA</li>
+         * <li>DES-CBC3-SHA</li>
+         * <li>ECDHE-ECDSA-AES128-GCM-SHA256</li>
+         * <li>ECDHE-ECDSA-AES256-GCM-SHA384</li>
+         * <li>ECDHE-ECDSA-AES128-SHA256</li>
+         * <li>ECDHE-ECDSA-AES256-SHA384</li>
+         * <li>ECDHE-RSA-AES128-GCM-SHA256</li>
+         * <li>ECDHE-RSA-AES256-GCM-SHA384</li>
+         * <li>ECDHE-RSA-AES128-SHA256</li>
+         * <li>ECDHE-RSA-AES256-SHA384</li>
+         * <li>AES128-GCM-SHA256</li>
+         * <li>AES256-GCM-SHA384</li>
+         * <li>AES128-SHA256 AES256-SHA256</li>
+         * </ul>
          * <p>TLS 1.3 supports the following cipher suites:</p>
-         * <br>
-         * <p>*   TLS_AES_128_GCM_SHA256</p>
-         * <p>*   TLS_AES_256_GCM_SHA384</p>
-         * <p>*   TLS_CHACHA20_POLY1305_SHA256</p>
-         * <p>*   TLS_AES_128_CCM_SHA256</p>
-         * <p>*   TLS_AES_128_CCM_8_SHA256</p>
+         * <ul>
+         * <li>TLS_AES_128_GCM_SHA256</li>
+         * <li>TLS_AES_256_GCM_SHA384</li>
+         * <li>TLS_CHACHA20_POLY1305_SHA256</li>
+         * <li>TLS_AES_128_CCM_SHA256</li>
+         * <li>TLS_AES_128_CCM_8_SHA256</li>
+         * </ul>
          */
         @NameInMap("Ciphers")
         public java.util.List<String> ciphers;
 
         /**
          * <p>The timestamp generated when the TLS policy is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608273800000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The ID of the TLS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tls-bp17elso1h323r****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the TLS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLSPolicy-test****</p>
          */
         @NameInMap("Name")
         public String name;
@@ -210,9 +243,13 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
 
         /**
          * <p>The status of the TLS policy. Valid values:</p>
-         * <br>
-         * <p>*   **configuring**: The TLS policy is being configured.</p>
-         * <p>*   **normal**: The TLS policy works as expected.</p>
+         * <ul>
+         * <li><strong>configuring</strong>: The TLS policy is being configured.</li>
+         * <li><strong>normal</strong>: The TLS policy works as expected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("Status")
         public String status;

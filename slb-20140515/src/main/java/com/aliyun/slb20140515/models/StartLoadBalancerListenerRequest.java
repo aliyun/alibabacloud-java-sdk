@@ -5,27 +5,34 @@ import com.aliyun.tea.*;
 
 public class StartLoadBalancerListenerRequest extends TeaModel {
     /**
-     * <p>The listener port of the SLB instance.</p>
-     * <br>
-     * <p>Valid values: **1 to 65535**.</p>
-     * <br>
+     * <p>The frontend port that is used by the CLB instance.</p>
+     * <p>Valid values: <strong>1 to 65535</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The protocol used by the listener of the SLB instance.</p>
-     * <br>
-     * <p>>  If different listeners use the same port, you must specify this parameter.</p>
+     * <p>The frontend protocol that is used by the CLB instance.</p>
+     * <blockquote>
+     * <p> This parameter is required if the same port is used by listeners of different protocols.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>https</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
-     * <p>The ID of the SLB instance.</p>
-     * <br>
+     * <p>The CLB instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp13jaf5qli5*********</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -37,9 +44,11 @@ public class StartLoadBalancerListenerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the SLB instance is deployed.</p>
-     * <br>
-     * <p>You can retrieve the region ID by calling the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation.</p>
+     * <p>The region where the CLB instance is created.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

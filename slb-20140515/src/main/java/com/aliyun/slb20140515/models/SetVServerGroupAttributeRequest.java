@@ -5,28 +5,50 @@ import com.aliyun.tea.*;
 
 public class SetVServerGroupAttributeRequest extends TeaModel {
     /**
-     * <p>The list of backend servers in the vServer group. You can specify at most 20 backend servers for a vServer group in each call.</p>
-     * <br>
-     * <p>*   **ServerId**: required. The ID of the Elastic Compute Service (ECS) instance or elastic network interface (ENI) that serves as a backend server. This parameter must be of the STRING type.</p>
-     * <br>
-     * <p>*   **Port**: required. The port that is used by the backend server. This parameter must be of the INTEGER type. Valid values: **1 to 65535**.</p>
-     * <br>
-     * <p>*   **Weight**: required. The weight of the backend server. This parameter must be of the INTEGER type. You can modify this parameter. Valid values: **0 to 100**.</p>
-     * <br>
-     * <p>*   **Description**: optional. The description of the backend server. This parameter must be of the STRING type. You can modify this parameter. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (_).</p>
-     * <br>
-     * <p>*   **Type**: the type of backend server. This parameter must be of the STRING type. Valid values:</p>
-     * <br>
-     * <p>    *   **ecs**: an ECS instance. This is the default value.</p>
-     * <p>    *   **eni**: an ENI.</p>
-     * <br>
-     * <p>*   **ServerIp**: the IP address of the ECS instance or ENI.</p>
-     * <br>
+     * <p>The backend servers. This operation only can be used to modify the weights of backend servers and names of vServer groups. Configure the following parameters:</p>
+     * <ul>
+     * <li><p><strong>ServerId</strong>: Required. The ID of the backend server. Specify the value in a string. You can specify the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance. If you set <strong>ServerId</strong> to the ID of an ENI or an elastic container instance, you must configure the <strong>Type</strong> parameter.</p>
+     * </li>
+     * <li><p><strong>Weight</strong>: the weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If you set the weight of a backend server to 0, no requests are forwarded to the backend server.</p>
+     * </li>
+     * <li><p><strong>Description</strong>: Optional. The description of the backend server. Specify the value in a string. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
+     * </li>
+     * <li><p><strong>Type</strong>: the type of the backend server. Valid values:</p>
+     * <ul>
+     * <li><strong>ecs</strong> (default): ECS instance</li>
+     * <li><strong>eni</strong>: ENI</li>
+     * <li><strong>eci</strong>: elastic container instance</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You can specify ENIs and elastic container instances as backend servers only for high-performance CLB instances.</p>
+     * </blockquote>
+     * <ul>
+     * <li><strong>ServerIp</strong>: the IP address of an ENI or an elastic container instance.</li>
+     * <li><strong>Port</strong>: the backend port.</li>
+     * </ul>
      * <p>Examples:</p>
-     * <br>
-     * <p>*   An ECS instance: `[{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"80","Description":"test-112" }]`</p>
-     * <p>*   An ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" }]`</p>
-     * <p>*   An ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.\*\*.**", "Port":"80","Description":"test-113" }]`</p>
+     * <ul>
+     * <li><p>Add ECS instances:</p>
+     * <p><code>[{ &quot;ServerId&quot;: &quot;i-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;ecs&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-112&quot; }]</code></p>
+     * </li>
+     * <li><p>Add ENIs:</p>
+     * <p><code>[{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;``192.168.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-112&quot; }]</code></p>
+     * </li>
+     * <li><p>Add ENIs with multiple IP addresses:</p>
+     * <p><code>[{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;``192.168.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-113&quot; },{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;``172.166.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-113&quot; }]</code></p>
+     * </li>
+     * <li><p>Add elastic container instances:</p>
+     * <p><code>[{ &quot;ServerId&quot;: &quot;eci-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eci&quot;, &quot;ServerIp&quot;: &quot;``192.168.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-114&quot; }]</code></p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You can add only running backend servers to SLB instances. You can specify at most 20 backend servers in each call.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;192.XX.XX.6&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-112&quot; },{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;172.XX.XX.6&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-113&quot; }]</p>
      */
     @NameInMap("BackendServers")
     public String backendServers;
@@ -38,9 +60,11 @@ public class SetVServerGroupAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed. This parameter cannot be modified.</p>
-     * <br>
+     * <p>The region ID of the Server Load Balancer (SLB) instance, which cannot be modified.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -52,15 +76,20 @@ public class SetVServerGroupAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the vServer group. This parameter cannot be modified.</p>
-     * <br>
+     * <p>The vServer group ID, which cannot be modified.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rsp-cige6****</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
     /**
-     * <p>The name of the vServer group. You can specify a custom name for the vServer group.</p>
+     * <p>The vServer group name. You can specify a name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Group1</p>
      */
     @NameInMap("VServerGroupName")
     public String VServerGroupName;

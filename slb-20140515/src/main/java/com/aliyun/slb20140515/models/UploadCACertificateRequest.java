@@ -5,19 +5,20 @@ import com.aliyun.tea.*;
 
 public class UploadCACertificateRequest extends TeaModel {
     /**
-     * <p>The name of this action.</p>
-     * <br>
-     * <p>Value: **UploadCACertificate**</p>
-     * <br>
+     * <p>The information about the CA certificate.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("CACertificate")
     public String CACertificate;
 
     /**
-     * <p>The ID of the region to which the CA certificate belongs.</p>
-     * <br>
-     * <p>To query the region ID, call [DescribeRegions](https://help.aliyun.com/document_detail/27584.html).</p>
+     * <p>The CA certificate name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mycacert01</p>
      */
     @NameInMap("CACertificateName")
     public String CACertificateName;
@@ -29,15 +30,21 @@ public class UploadCACertificateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region id.</p>
-     * <br>
+     * <p>The region of the CA certificates.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401682.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The content of the CA certificate to be uploaded.</p>
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rto*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -50,6 +57,9 @@ public class UploadCACertificateRequest extends TeaModel {
 
     /**
      * <p>The tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UploadCACertificate</p>
      */
     @NameInMap("Tag")
     public java.util.List<UploadCACertificateRequestTag> tag;
@@ -133,17 +143,19 @@ public class UploadCACertificateRequest extends TeaModel {
 
     public static class UploadCACertificateRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys.</p>
-         * <br>
-         * <p>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. Valid values of N: **1 to 20**. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.</p>
+         * <p>The tag value. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string. The tag value must be 1 to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

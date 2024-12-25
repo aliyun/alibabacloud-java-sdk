@@ -6,97 +6,138 @@ import com.aliyun.tea.*;
 public class UploadServerCertificateResponseBody extends TeaModel {
     /**
      * <p>The AliCloud certificate ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>775****</p>
      */
     @NameInMap("AliCloudCertificateId")
     public String aliCloudCertificateId;
 
     /**
      * <p>The AliCloud certificate name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloudcertificate****</p>
      */
     @NameInMap("AliCloudCertificateName")
     public String aliCloudCertificateName;
 
     /**
      * <p>The domain name of the CA certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("CommonName")
     public String commonName;
 
     /**
      * <p>The time when the CA certificate is uploaded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-02-21T02:49:05Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The timestamp generated when the CA certificate is uploaded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1504147745000</p>
      */
     @NameInMap("CreateTimeStamp")
     public Long createTimeStamp;
 
     /**
      * <p>The time when the CA certificate expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-10-18T23:59:59Z</p>
      */
     @NameInMap("ExpireTime")
     public String expireTime;
 
     /**
      * <p>The timestamp generated when the CA certificate expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1504147745000</p>
      */
     @NameInMap("ExpireTimeStamp")
     public Long expireTimeStamp;
 
     /**
      * <p>The fingerprint of the CA certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8f:7d:cb:e5:f8:c8:33:9c:17:65:c1:92:30:9e:45:55:9c:3a:85:60</p>
      */
     @NameInMap("Fingerprint")
     public String fingerprint;
 
     /**
      * <p>Indicates whether the certificate is provided by Alibaba Cloud Certificate Management Service. Valid values:</p>
-     * <p>- **0**: The certificate is not provided by Alibaba Cloud Certificate Management Service.</p>
-     * <p>- **1**: The certificate is provided by Alibaba Cloud Certificate Management Service.</p>
+     * <ul>
+     * <li><strong>0</strong>: The certificate is not provided by Alibaba Cloud Certificate Management Service.</li>
+     * <li><strong>1</strong>: The certificate is provided by Alibaba Cloud Certificate Management Service.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("IsAliCloudCertificate")
     public Integer isAliCloudCertificate;
 
     /**
      * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rt****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the server certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1321932713******<em>17f1b4b696b_1114720822</em>-1671******</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
 
     /**
      * <p>The name of the server certificate.</p>
-     * <br>
      * <p>The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mycert01</p>
      */
     @NameInMap("ServerCertificateName")
     public String serverCertificateName;
 
     /**
      * <p>The subject alternative names.</p>
-     * <br>
      * <p>A domain name list is supported. A maximum of 10 domain names are supported.</p>
      */
     @NameInMap("SubjectAlternativeNames")

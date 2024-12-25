@@ -6,156 +6,214 @@ import com.aliyun.tea.*;
 public class CreateLoadBalancerRequest extends TeaModel {
     /**
      * <p>The private IP address of the CLB instance. The private IP address must belong to the destination CIDR block of the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
-     * <p>The IP version that is used by the CLB instance. Valid values: **ipv4** and **ipv6**.</p>
+     * <p>The IP version of the CLB instance. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
     /**
      * <p>The network type of the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **internet**: After an Internet-facing CLB instance is created, the system assigns a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.</p>
-     * <p>*   **intranet**: After an internal-facing CLB instance is created, the system assigns a private IP address to the CLB instance. Then, the CLB instance can forward requests only over the internal networks.</p>
+     * <ul>
+     * <li><strong>internet</strong>: After an Internet-facing CLB instance is created, the system allocates a public IP address to the instance. The CLB instance can forward requests over the Internet.</li>
+     * <li><strong>intranet</strong>: After an internal-facing CLB instance is created, the system allocates a private IP address to the CLB instance. The CLB instance can forward requests only within the VPC.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>internet</p>
      */
     @NameInMap("AddressType")
     public String addressType;
 
     /**
-     * <p>Specifies whether to automatically pay for the subscription Internet-facing CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**: automatically pays for the CLB instance. After you call this operation, the system automatically completes the payment and creates the CLB instance.</p>
-     * <p>*   **false** (default): After you call the operation, the order is created but the payment is not completed. You can view the pending order in the console. The CLB instance will not be created until you complete the payment.</p>
-     * <br>
-     * <p>>  This parameter is supported only by subscription instances created on the Alibaba Cloud China site.</p>
+     * <p>Specifies whether to automatically pay the subscription fee of the Internet-facing CLB instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: yes. The CLB instance is created after you call the API operation.</li>
+     * <li><strong>false</strong> (default): After you call the operation, the order is created but the payment is not completed. You can view pending orders in the console. The CLB instance will not be created until you complete the payment.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only for subscription CLB instances created on the Alibaba Cloud China site.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
+    @Deprecated
     public Boolean autoPay;
 
     /**
      * <p>The maximum bandwidth of the listener. Unit: Mbit/s.</p>
-     * <br>
-     * <p>Valid values: **1** to **5120**. For a pay-by-bandwidth Internet-facing CLB instance, you can specify the maximum bandwidth of each listener. The sum of the maximum bandwidth of all listeners cannot exceed the maximum bandwidth of the CLB instance.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>5120</strong>. For a pay-by-bandwidth Internet-facing CLB instance, you can specify a maximum bandwidth for each listener. The sum of the maximum bandwidth of all listeners cannot exceed the maximum bandwidth of the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to enable deletion protection for the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("DeleteProtection")
     public String deleteProtection;
 
     /**
      * <p>The subscription duration of the Internet-facing CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   If **PricingCycle** is set to **month**, the valid values are **1 to 9**.</p>
-     * <p>*   If **PricingCycle** is set to **year**, the valid values are **1 to 5**.</p>
-     * <br>
-     * <p>>  This parameter is supported only by subscription instances created on the Alibaba Cloud China site.</p>
+     * <ul>
+     * <li>If <strong>PricingCycle</strong> is set to <strong>month</strong>, the valid values are <strong>1 to 9</strong>.</li>
+     * <li>If <strong>PricingCycle</strong> is set to <strong>year</strong>, the valid values are <strong>1 to 5</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is supported only by subscription instances created on the Alibaba Cloud China site.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Duration")
+    @Deprecated
     public Integer duration;
 
     /**
      * <p>The metering method of the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **PayBySpec** (default)</p>
-     * <p>*   **PayByCLCU**</p>
-     * <br>
-     * <p>>  This parameter is supported only by instances created on the Alibaba Cloud China site and only when **PayType** is set to **PayOnDemand**.</p>
+     * <ul>
+     * <li><strong>PayBySpec</strong> (default)</li>
+     * <li><strong>PayByCLCU</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is supported only by instances created on the Alibaba Cloud China site and only when <strong>PayType</strong> is set to <strong>PayOnDemand</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PayBySpec</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
      * <p>The metering method of the Internet-facing CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **paybytraffic** (default)</p>
-     * <br>
-     * <p>> If you set the value to **paybytraffic**, you do not need to specify **Bandwidth**. Even if you specify **Bandwidth**, the value does not take effect.</p>
-     * <br>
-     * <p>*   **paybybandwidth**: pay-by-bandwidth</p>
-     * <br>
-     * <p>>  If you set **PayType** to **PayOnDemand** and set **InstanceChargeType** to **PayByCLCU**, you must set InternetChargeType to **paybytraffic**.</p>
+     * <ul>
+     * <li><p><strong>paybytraffic</strong> (default): pay-by-data-transfer</p>
+     * <blockquote>
+     * <p> If you set InternetChargeType to <strong>paybytraffic</strong>, you do not need to configure the <strong>Bandwidth</strong> parameter. The value of <strong>Bandwidth</strong> does not take effect even if you specify one.</p>
+     * </blockquote>
+     * </li>
+     * <li><p><strong>paybybandwidth</strong>: pay-by-bandwidth</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set <strong>PayType</strong> to <strong>PayOnDemand</strong> and <strong>InstanceChargeType</strong> to <strong>PayByCLCU</strong>, the only valid value for InternetChargeType is <strong>paybytraffic</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>paybytraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The CLB instance name.</p>
-     * <br>
      * <p>The name must be 1 to 80 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
-     * <br>
      * <p>If you do not specify this parameter, the system automatically assigns a name to the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1o94dp5i6ea****</p>
      */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
     /**
      * <p>The specification of the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **slb.s1.small**</p>
-     * <br>
-     * <p>*   **slb.s2.small**</p>
-     * <br>
-     * <p>*   **slb.s2.medium**</p>
-     * <br>
-     * <p>*   **slb.s3.small**</p>
-     * <br>
-     * <p>*   **slb.s3.medium**</p>
-     * <br>
-     * <p>*   **slb.s3.large**</p>
-     * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note** If you do not specify this parameter, a shared-resource CLB instance is created. Shared-resource CLB instances are no longer available for purchase. Therefore, you must specify this parameter.</p>
-     * <br>
-     * <p>If **InstanceChargeType** is set to **PayByCLCU**, this parameter is invalid and you do not need to specify this parameter.</p>
+     * <ul>
+     * <li><p><strong>slb.s1.small</strong></p>
+     * </li>
+     * <li><p><strong>slb.s2.small</strong></p>
+     * </li>
+     * <li><p><strong>slb.s2.medium</strong></p>
+     * </li>
+     * <li><p><strong>slb.s3.small</strong></p>
+     * </li>
+     * <li><p><strong>slb.s3.medium</strong></p>
+     * </li>
+     * <li><p><strong>slb.s3.large</strong></p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>  If you do not specify this parameter, a shared-resource CLB instance is created. Shared-resource CLB instances are no longer available for purchase. Therefore, you must specify this parameter.</p>
+     * </blockquote>
+     * <p>If <strong>InstanceChargeType</strong> is set to <strong>PayByCLCU</strong>, this parameter is invalid and you do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>slb.s1.small</p>
      */
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
     /**
      * <p>The ID of the primary zone to which the CLB instance belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeZone](~~DescribeZone~~) operation to query the primary and secondary zones in the region where you want to create the CLB instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401683.html">DescribeZone</a> operation to query the primary and secondary zones in the region where you want to create the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("MasterZoneId")
     public String masterZoneId;
 
     /**
      * <p>The reason for enabling the configuration read-only mode. The reason must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
-     * <br>
-     * <p>>  This parameter takes effect only when **ModificationProtectionStatus** is set to **ConsoleProtection**.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when <strong>ModificationProtectionStatus</strong> is set to <strong>ConsoleProtection</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Managed instance</p>
      */
     @NameInMap("ModificationProtectionReason")
     public String modificationProtectionReason;
 
     /**
      * <p>Specifies whether to enable the configuration read-only mode. Valid values:</p>
-     * <br>
-     * <p>*   **NonProtection**: disables the configuration read-only mode. After you disable the configuration read-only mode, the value of **ModificationProtectionReason** is cleared.</p>
-     * <p>*   **ConsoleProtection**: enables the configuration read-only mode.</p>
-     * <br>
-     * <p>>  If you set this parameter to **ConsoleProtection**, you cannot modify instance configurations in the CLB console. However, you can modify instance configurations by calling API operations.</p>
+     * <ul>
+     * <li><strong>NonProtection</strong>: disables the configuration read-only mode. After you disable the configuration read-only mode, the value of <strong>ModificationProtectionReason</strong> is cleared.</li>
+     * <li><strong>ConsoleProtection</strong>: enables the configuration read-only mode.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set this parameter to <strong>ConsoleProtection</strong>, you cannot modify instance configurations in the CLB console. However, you can modify instance configurations by calling API operations.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ConsoleProtection</p>
      */
     @NameInMap("ModificationProtectionStatus")
     public String modificationProtectionStatus;
@@ -167,36 +225,52 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The billing method of the CLB instance. Set the value to</p>
-     * <br>
-     * <p>**PayOnDemand**, which specifies the pay-as-you-go billing method.</p>
+     * <p>The billing method of the CLB instance. Valid values:</p>
+     * <p><strong>PayOnDemand</strong>: pay-as-you-go.</p>
+     * <blockquote>
+     * <p> The Alibaba Cloud International site supports only pay-as-you-go CLB instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PayOnDemand</p>
      */
     @NameInMap("PayType")
+    @Deprecated
     public String payType;
 
     /**
      * <p>The billing cycle of the subscription Internet-facing CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **month**</p>
-     * <p>*   **year**</p>
-     * <br>
-     * <p>>  This parameter is supported only by subscription instances created on the Alibaba Cloud China site.</p>
+     * <ul>
+     * <li><strong>month</strong></li>
+     * <li><strong>year</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is supported only by subscription instances created on the Alibaba Cloud China site.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>month</p>
      */
     @NameInMap("PricingCycle")
+    @Deprecated
     public String pricingCycle;
 
     /**
      * <p>The region ID of the CLB instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rtopt****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -209,8 +283,10 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * <p>The ID of the secondary zone to which the CLB instance belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeZone](~~DescribeZone~~) operation to query the primary and secondary zones in the region where you want to create the CLB instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401683.html">DescribeZone</a> operation to query the primary and secondary zones in the region where you want to create the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-d</p>
      */
     @NameInMap("SlaveZoneId")
     public String slaveZoneId;
@@ -223,14 +299,19 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the CLB instance belongs.</p>
-     * <br>
-     * <p>If you want to deploy the CLB instance in a VPC, this parameter is required. If this parameter is specified, **AddessType** is set to **intranet** by default.</p>
+     * <p>If you want to deploy the CLB instance in a VPC, this parameter is required. If this parameter is specified, <strong>AddessType</strong> is set to <strong>intranet</strong> by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp12mw1f8k3jgy****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the CLB instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1aevy8sofi8mh1****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -458,17 +539,21 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public static class CreateLoadBalancerRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the bastion host. Valid values of N: **1 to 20**. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be at most 64 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.</p>
+         * <p>The tag key of the bastion host. Valid values of N: <strong>1 to 20</strong>. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be at most 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It must not start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. Valid values of N: **1 to 20**. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.</p>
+         * <p>The tag value. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;

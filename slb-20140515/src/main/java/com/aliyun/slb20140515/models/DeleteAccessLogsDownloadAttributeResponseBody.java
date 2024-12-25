@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteAccessLogsDownloadAttributeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

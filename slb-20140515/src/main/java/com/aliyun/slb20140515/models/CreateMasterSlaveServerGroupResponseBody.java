@@ -11,13 +11,19 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
     public CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServers masterSlaveBackendServers;
 
     /**
-     * <p>The primary/secondary server group ID.</p>
+     * <p>The ID of the active/standby server group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rsp-bp19au4******</p>
      */
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7CA4DB76-4D32-523B-822E-5C9494613D46</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,41 +60,60 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
     public static class CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer extends TeaModel {
         /**
          * <p>The description of the primary/secondary server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-112</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The port that is used by the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The ID of the ECS instance or ENI that is added.</p>
+         * <p>The ID of the backend server that you want to add.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1fq61enf4loa5i****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The type of the backend server.</p>
-         * <br>
-         * <p>Valid values: **Master** and **Slave**.</p>
+         * <p>The type of backend server.</p>
+         * <p>Valid values: <strong>Master</strong> and <strong>Slave</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Master</p>
          */
         @NameInMap("ServerType")
         public String serverType;
 
         /**
-         * <p>The service type of the backend server. Valid values:</p>
-         * <br>
-         * <p>*   **ecs**</p>
-         * <p>*   **eni**</p>
+         * <p>The type of backend server. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: ECS instance</li>
+         * <li><strong>eni</strong>: ENI</li>
+         * <li><strong>eci</strong>: elastic container instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Weight")
         public Integer weight;

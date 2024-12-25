@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeMasterSlaveServerGroupAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the primary/secondary server group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rsp-cige6j******</p>
      */
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
@@ -20,8 +22,10 @@ public class DescribeMasterSlaveServerGroupAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

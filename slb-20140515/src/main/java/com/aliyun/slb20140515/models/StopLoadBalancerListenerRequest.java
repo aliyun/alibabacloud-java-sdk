@@ -5,27 +5,34 @@ import com.aliyun.tea.*;
 
 public class StopLoadBalancerListenerRequest extends TeaModel {
     /**
-     * <p>The frontend listening port used by the listener.</p>
-     * <br>
-     * <p>Value range: **1 to 65535**</p>
-     * <br>
+     * <p>The frontend port that is used by the CLB instance.</p>
+     * <p>Valid values: <strong>1 to 65535</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The frontend listening protocol used by the SLB instance.</p>
-     * <br>
-     * <p>>  This parameter is required when listeners with different protocols use the same port.</p>
+     * <p>The frontend protocol that is used by the CLB instance.</p>
+     * <blockquote>
+     * <p>This parameter is required if the same port is used by listeners of different protocols.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>https</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
-     * <p>The ID of the SLB instance to which the listener belongs.</p>
-     * <br>
+     * <p>The CLB instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp13jaf5qli5xmg******</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -38,8 +45,10 @@ public class StopLoadBalancerListenerRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the SLB instance belongs.</p>
-     * <br>
-     * <p>To query the region ID, refer to the list of [regions and zones](https://help.aliyun.com/document_detail/40654.html) or call [DescribeRegions](https://help.aliyun.com/document_detail/25609.html).</p>
+     * <p>To query the region ID, refer to the list of  <a href="https://help.aliyun.com/document_detail/40654.html">regions and zones</a> or call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

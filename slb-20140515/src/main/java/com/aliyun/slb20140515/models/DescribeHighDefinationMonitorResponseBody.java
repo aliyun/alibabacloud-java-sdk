@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class DescribeHighDefinationMonitorResponseBody extends TeaModel {
     /**
      * <p>The name of the Log Service project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-project</p>
      */
     @NameInMap("LogProject")
     public String logProject;
 
     /**
      * <p>The name of the Logstore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-log-store</p>
      */
     @NameInMap("LogStore")
     public String logStore;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F398FF5-B349-5C01-8638-8E9A0BF1DBE6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UploadServerCertificateRequest extends TeaModel {
     /**
      * <p>AliCloud certificate ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>775****</p>
      */
     @NameInMap("AliCloudCertificateId")
     public String aliCloudCertificateId;
 
     /**
      * <p>AliCloud certificate name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloudcertificate</p>
      */
     @NameInMap("AliCloudCertificateName")
     public String aliCloudCertificateName;
 
     /**
      * <p>The region ID of AliCloud certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("AliCloudCertificateRegionId")
     public String aliCloudCertificateRegionId;
@@ -30,22 +39,29 @@ public class UploadServerCertificateRequest extends TeaModel {
 
     /**
      * <p>The private key of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN RSA PRIVATE KEY----- MIIEogIB****** -----END RSA PRIVATE KEY-----</p>
      */
     @NameInMap("PrivateKey")
     public String privateKey;
 
     /**
      * <p>The region ID of the CLB instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rto****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -58,14 +74,19 @@ public class UploadServerCertificateRequest extends TeaModel {
 
     /**
      * <p>The server certificate to be uploaded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE----- MIIGDTCC****** -----END CERTIFICATE-----</p>
      */
     @NameInMap("ServerCertificate")
     public String serverCertificate;
 
     /**
      * <p>The name of the server certificate.</p>
-     * <br>
      * <p>The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mycert01</p>
      */
     @NameInMap("ServerCertificateName")
     public String serverCertificateName;
@@ -187,15 +208,20 @@ public class UploadServerCertificateRequest extends TeaModel {
 
     public static class UploadServerCertificateRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: **1 to 20**. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
+         * <p>The key of tag N. Valid values of N: <strong>1 to 20</strong>. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: **1 to 20**. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` and `acs:`.</p>
+         * <p>The value of tag N. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> and <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

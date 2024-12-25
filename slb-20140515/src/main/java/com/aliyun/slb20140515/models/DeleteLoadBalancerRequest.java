@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteLoadBalancerRequest extends TeaModel {
     /**
      * <p>The SLB instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1h66tp5uat8********</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -20,8 +22,10 @@ public class DeleteLoadBalancerRequest extends TeaModel {
 
     /**
      * <p>The region ID of the SLB instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

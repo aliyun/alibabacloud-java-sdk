@@ -6,16 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeAccessControlListAttributeRequest extends TeaModel {
     /**
      * <p>The remarks of the ACL entry.</p>
-     * <br>
-     * <p>It must be 2 to 100 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("AclEntryComment")
     public String aclEntryComment;
 
     /**
-     * <p>The ID of the ACL.</p>
-     * <br>
+     * <p>The ID of the ACL that you want to query.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-bp1ut10zzvh1y8dfs****</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -27,21 +30,30 @@ public class DescribeAccessControlListAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
-     * <p>The number of entries returned on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The time when the network ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
-     * <br>
+     * <p>The region ID of the ACL.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401682.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

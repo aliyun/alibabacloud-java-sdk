@@ -5,38 +5,60 @@ import com.aliyun.tea.*;
 
 public class CreateVServerGroupRequest extends TeaModel {
     /**
-     * <p>The list of backend servers to be added.</p>
-     * <br>
-     * <p>The value of this parameter must be a STRING list in the JSON format. You can specify up to 20 elements in each request.</p>
-     * <br>
-     * <p>*   **ServerId**: Required. Specify the ID of an Elastic Compute Service (ECS) instance or an Elastic Network Interface (ENI). This parameter must be of the STRING type.</p>
-     * <br>
-     * <p>*   **Port**: Required. Specify the port that is used by the backend server. This parameter must be of the INTEGER type. Valid values: **1** to **65535**.</p>
-     * <br>
-     * <p>*   **Weight**: Required. Specify the weight of the backend server. This parameter must be of the INTEGER type. Valid values: **0** to **100**.</p>
-     * <br>
-     * <p>*   **Description**: Optional. Specify the description of the backend server. This parameter must be of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (_).</p>
-     * <br>
-     * <p>*   **Type**: Specify the type of the backend server. This parameter must be of the STRING type. Valid values:</p>
-     * <br>
-     * <p>    *   **ecs**: an ECS instance. This is the default value.</p>
-     * <p>    *   **eni**: an ENI.</p>
-     * <br>
-     * <p>*   **ServerIp**: The IP address of the ECS instance or ENI.</p>
-     * <br>
+     * <p>The backend servers that you want to add. Configure the following parameters:</p>
+     * <ul>
+     * <li><p><strong>ServerId</strong>:  required. The ID of the backend server. Specify the ID in a string. You can specify the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance. If you set ServerId to the ID of an ENI or an elastic container instance, you must configure the Type parameter.</p>
+     * </li>
+     * <li><p><strong>Weight</strong>: the weight of the backend server. Valid values: 0 to 100. Default value: 100. If you set the weight of a backend server to 0, no requests are forwarded to the backend server.</p>
+     * </li>
+     * <li><p><strong>Description</strong>: optional. The description of the backend server. Specify the description in a string. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
+     * </li>
+     * <li><p><strong>Type</strong>: the type of the backend server. Valid values:</p>
+     * <ul>
+     * <li><strong>ecs (default)</strong>: ECS instance</li>
+     * <li><strong>eni</strong>: ENI.</li>
+     * <li><strong>eni</strong>: elastic container instance.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>You can specify ENIs and elastic container instances as backend servers only for high-performance SLB instances.</p>
+     * </blockquote>
+     * <ul>
+     * <li><strong>ServerIp</strong>: The IP address of the ECS instance or ENI.</li>
+     * <li><strong>Port</strong>: the backend port.</li>
+     * </ul>
      * <p>Examples:</p>
-     * <br>
-     * <p>*   ECS instance:`  [{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port": "80", "Description": "test-112" }]. `</p>
-     * <p>*   ENI:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" }] `</p>
-     * <p>*   ENI with multiple IP addresses:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.\*\*.**", "Port":"80","Description":"test-113" }] `</p>
+     * <ul>
+     * <li><p>Add an ECS instance:</p>
+     * <p><code>[{ &quot;ServerId&quot;: &quot;i-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;ecs&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-112&quot; }]</code></p>
+     * </li>
+     * <li><p>Add an ENI:</p>
+     * <p><code> [{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;``192.168.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-112&quot; }]</code></p>
+     * </li>
+     * <li><p>Add an ENI with multiple IP addresses:</p>
+     * <p> <code>[{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;``192.168.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-113&quot; },{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;``172.166.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-113&quot; }]</code></p>
+     * </li>
+     * <li><p>Add an elastic container instance:</p>
+     * <p><code> [{ &quot;ServerId&quot;: &quot;eci-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eci&quot;, &quot;ServerIp&quot;: &quot;``192.168.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-114&quot; }]</code></p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>You can add only running backend servers to SLB instances. You can specify at most 20 backend servers.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;<code>192.168.**.**</code>&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-112&quot; },{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;<code>172.166.**.**</code>&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-113&quot; }]</p>
      */
     @NameInMap("BackendServers")
     public String backendServers;
 
     /**
      * <p>The ID of the Server Load Balancer (SLB) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1qjwo61pqz3ahl******</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -49,8 +71,10 @@ public class CreateVServerGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the SLB instance is deployed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -62,15 +86,17 @@ public class CreateVServerGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>标签列表。</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateVServerGroupRequestTag> tag;
 
     /**
      * <p>The name of the vServer group.</p>
-     * <br>
      * <p>The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (_).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Group1</p>
      */
     @NameInMap("VServerGroupName")
     public String VServerGroupName;
@@ -154,16 +180,21 @@ public class CreateVServerGroupRequest extends TeaModel {
 
     public static class CreateVServerGroupRequestTag extends TeaModel {
         /**
-         * <p>资源的标签键。N的取值范围：**1~20**。一旦输入该值，则不允许为空字符串。</p>
-         * <br>
-         * <p>最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。</p>
+         * <p>The key of tag N. Valid values of N: <strong>1 to 20</strong>. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>资源的标签值。N的取值范围：**1~20**。一旦输入该值，可以为空字符串。</p>
-         * <p>最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。</p>
+         * <p>The tag value. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

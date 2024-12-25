@@ -6,28 +6,33 @@ import com.aliyun.tea.*;
 public class DeleteLoadBalancerListenerRequest extends TeaModel {
     /**
      * <p>The frontend port that is used by the CLB instance.</p>
-     * <br>
-     * <p>Valid values: **1 to 65535**.</p>
-     * <br>
+     * <p>Valid values: <strong>1 to 65535</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The frontend protocol that is used by the CLB instance.</p>
-     * <br>
-     * <p>>  This parameter is required if the same port is specified for listeners of different protocols.</p>
+     * <blockquote>
+     * <p> This parameter is required if the same port is specified for listeners of different protocols.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>https</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
      * <p>The ID of the CLB instance.</p>
-     * <br>
-     * <p>>  If the endpoint of the selected region is slb.aliyuncs.com, the **RegionId** parameter is required.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp13jaf5qli5xmg******</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -40,8 +45,13 @@ public class DeleteLoadBalancerListenerRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> The <strong>RegionId</strong> parameter is required if the endpoint of the region is slb.aliyuncs.com.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

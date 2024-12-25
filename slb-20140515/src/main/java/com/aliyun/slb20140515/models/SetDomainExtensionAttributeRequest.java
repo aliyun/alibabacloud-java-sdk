@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class SetDomainExtensionAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the domain name that is associated with the additional certificate to be replaced.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de-bp1rp7ta*****</p>
      */
     @NameInMap("DomainExtensionId")
     public String domainExtensionId;
@@ -19,9 +21,11 @@ public class SetDomainExtensionAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the SLB instance is created.</p>
-     * <br>
+     * <p>The region ID of the Server Load Balancer (SLB) instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -34,6 +38,9 @@ public class SetDomainExtensionAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the new certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1231579xxxxxxxx_166f8204689_1714763408_709981xxx</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;

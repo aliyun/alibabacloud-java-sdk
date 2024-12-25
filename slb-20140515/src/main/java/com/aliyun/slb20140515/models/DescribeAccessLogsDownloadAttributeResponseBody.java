@@ -12,24 +12,36 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8B9DB03B-ED39-5DB8-9C9F-1ED5F548D61E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,30 +94,45 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
     public static class DescribeAccessLogsDownloadAttributeResponseBodyLogsDownloadAttributesLogsDownloadAttribute extends TeaModel {
         /**
          * <p>The CLB instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1b6c719dfa08ex*****</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
          * <p>The name of the Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-log-project</p>
          */
         @NameInMap("LogProject")
         public String logProject;
 
         /**
          * <p>The name of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-log-store</p>
          */
         @NameInMap("LogStore")
         public String logStore;
 
         /**
-         * <p>The type of access log. Only **layer7** is returned, which indicates Layer 7 access logs.</p>
+         * <p>The type of access log. Only <strong>layer7</strong> is returned, which indicates Layer 7 access logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>layer7</p>
          */
         @NameInMap("LogType")
         public String logType;
 
         /**
          * <p>The region ID of the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;

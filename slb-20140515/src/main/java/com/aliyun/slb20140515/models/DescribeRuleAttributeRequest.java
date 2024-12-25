@@ -12,10 +12,11 @@ public class DescribeRuleAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the Server Load Balancer (SLB) instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -28,8 +29,10 @@ public class DescribeRuleAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the forwarding rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rule-bp1efemp9****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

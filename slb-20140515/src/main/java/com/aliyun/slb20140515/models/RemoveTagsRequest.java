@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class RemoveTagsRequest extends TeaModel {
     /**
-     * <p>The ID of the SLB instance.</p>
-     * <br>
+     * <p>The SLB instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1l5j******</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -19,9 +21,12 @@ public class RemoveTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the SLB instance belongs.</p>
-     * <br>
+     * <p>The ID of the region where the Server Load Balancer (SLB) instance is created.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401682.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -34,8 +39,10 @@ public class RemoveTagsRequest extends TeaModel {
 
     /**
      * <p>A list of tags to be removed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;TagKey&quot;:&quot;Key1&quot;,&quot;TagValue&quot;:&quot;Value1&quot;},{&quot;TagKey&quot;:&quot;Key2&quot;,&quot;TagValue&quot;:&quot;Value2&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;

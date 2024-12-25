@@ -12,6 +12,9 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
     public static class DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -95,64 +104,92 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
     public static class DescribeCACertificatesResponseBodyCACertificatesCACertificate extends TeaModel {
         /**
          * <p>The CA certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139a00604bd-cn-east-hangzho****</p>
          */
         @NameInMap("CACertificateId")
         public String CACertificateId;
 
         /**
          * <p>The CA certificate name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("CACertificateName")
         public String CACertificateName;
 
         /**
          * <p>The domain name of the CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
-         * <p>The time when the CA certificate was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the CA certificate was created. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-31T02:49:05Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The timestamp when the CA certificate was created. Unit: milliseconds.</p>
-         * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1504147745000</p>
          */
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
         /**
-         * <p>The time when the CA certificate expires. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the CA certificate expires. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-21T06:04:25Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The timestamp that indicates when the CA certificate expires. Unit: milliseconds.</p>
-         * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1732169065000</p>
          */
         @NameInMap("ExpireTimeStamp")
         public Long expireTimeStamp;
 
         /**
          * <p>The fingerprint of the CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79:43:fb:7d:a4:7f:44:32:61:16:57:17:e3:e8:b7:36:03:57:f6:89</p>
          */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
         /**
          * <p>The region of the CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

@@ -6,36 +6,49 @@ import com.aliyun.tea.*;
 public class ModifyLoadBalancerInternetSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically pay the subscription fee of the Internet-facing CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables automatic payments. This is the default value.</p>
-     * <p>*   **false**: disables automatic payment. You must complete the payment in Order Center.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables automatic payments. This is the default value.</li>
+     * <li><strong>false</strong>: disables automatic payment. You must complete the payment in Order Center.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>The maximum bandwidth of the Internet-facing CLB instance that uses the pay-by-bandwidth metering method. Unit: Mbit/s.</p>
-     * <br>
-     * <p>Valid values: **1 to 5000**. The maximum bandwidth varies based on the region where the CLB instance is created.****</p>
-     * <br>
-     * <p>>  You do not need to specify this parameter if you set **InternetChargeType** to **paybytraffic** (pay-by-data-transfer).</p>
+     * <p>Valid values: <strong>1 to 5000</strong>. The maximum bandwidth varies based on the region where the CLB instance is created.****</p>
+     * <blockquote>
+     * <p> You do not need to specify this parameter if you set <strong>InternetChargeType</strong> to <strong>paybytraffic</strong> (pay-by-data-transfer).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The metering method of the Internet-facing CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **paybybandwidth**: pay-by-bandwidth</p>
-     * <p>*   **paybytraffic**: pay-by-data-transfer</p>
+     * <ul>
+     * <li><strong>paybybandwidth</strong>: pay-by-bandwidth</li>
+     * <li><strong>paybytraffic</strong>: pay-by-data-transfer</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>paybytraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The ID of the CLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1b6c719dfa08ex******</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -48,8 +61,10 @@ public class ModifyLoadBalancerInternetSpecRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the CLB instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers.</p>
+     * <p>The backend servers.</p>
      */
     @NameInMap("BackendServers")
     public ModifyVServerGroupBackendServersResponseBodyBackendServers backendServers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the vServer group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rsp-cige6j****</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
@@ -54,33 +60,50 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
     public static class ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
         /**
          * <p>The description of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Backend server description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The port that is used by the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The ID of the ECS instance or ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1ge5hrp****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
          * <p>The type of backend server. Valid values:</p>
-         * <br>
-         * <p>*   **ecs**: an ECS instance. This is the default value.</p>
-         * <p>*   **eni**: an ENI.</p>
+         * <ul>
+         * <li><strong>ecs</strong> (default): ECS instance</li>
+         * <li><strong>eni</strong>: ENI</li>
+         * <li><strong>eci</strong>: elastic container instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Weight")
         public Integer weight;

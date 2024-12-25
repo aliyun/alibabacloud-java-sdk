@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     /**
      * <p>The service IP address of the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42.XX.XX.6</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
-     * <p>The version of the IP address. Valid values: **ipv4** and **ipv6**.</p>
+     * <p>The version of the IP address. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
     /**
      * <p>The address type of the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>internet</p>
      */
     @NameInMap("AddressType")
     public String addressType;
 
     /**
      * <p>The timestamp generated when the CLB instance is released.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1513947075000</p>
      */
     @NameInMap("AutoReleaseTime")
     public Long autoReleaseTime;
@@ -36,58 +48,84 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The maximum bandwidth of the Internet-facing CLB instance that is billed on a pay-by-bandwidth basis.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
-     * <p>The time when the CLB instance was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+     * <p>The time when the CLB instance was created. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-08-31T02:49:05Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The timestamp generated when the CA certificate is uploaded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1504147745000</p>
      */
     @NameInMap("CreateTimeStamp")
     public Long createTimeStamp;
 
     /**
      * <p>Indicates whether deletion protection is enabled for the CLB instance.</p>
-     * <br>
-     * <p>Valid values: **on** and **off**.</p>
+     * <p>Valid values: <strong>on</strong> and <strong>off</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
      */
     @NameInMap("DeleteProtection")
     public String deleteProtection;
 
     /**
      * <p>The time when the CLB instance expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-09-08T16:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The timestamp that indicates the expiration time of the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32493801600000</p>
      */
     @NameInMap("EndTimeStamp")
     public Long endTimeStamp;
 
     /**
      * <p>The metering method of the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **PayBySpec** (default)</p>
-     * <p>*   **PayByCLCU**</p>
-     * <br>
-     * <p>> This parameter is available only on the China site and takes effect only when **PayType** is set to **PayOnDemand**.</p>
+     * <ul>
+     * <li><strong>PayBySpec</strong> (default)</li>
+     * <li><strong>PayByCLCU</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is available only on the China site and takes effect only when <strong>PayType</strong> is set to <strong>PayOnDemand</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PayBySpec</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
      * <p>The metering method of the Internet-facing CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **paybytraffic**</p>
-     * <p>*   **paybybandwidth**</p>
+     * <ul>
+     * <li><strong>paybytraffic</strong></li>
+     * <li><strong>paybybandwidth</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>paybytraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -112,133 +150,196 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The CLB instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1b6c719dfa08ex****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
      * <p>The name of the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-instance-test</p>
      */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
     /**
      * <p>The specification of the CLB instance.</p>
+     * <blockquote>
+     * <p> Pay-as-you-go CLB instances are not subject to specifications. By default, <strong>slb.lcu.elastic</strong> is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>slb.s1.small</p>
      */
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
     /**
      * <p>The status of the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **inactive**: The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.</p>
-     * <p>*   **active**: The CLB instance is running as expected. Newly created CLB instances are in the **active** state by default.</p>
-     * <p>*   **locked**: The CLB instance is locked. CLB instances may be locked due to overdue payments or other reasons.</p>
+     * <ul>
+     * <li><strong>inactive</strong>: The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.</li>
+     * <li><strong>active</strong>: The CLB instance is running as expected. Newly created CLB instances are in the <strong>active</strong> state by default.</li>
+     * <li><strong>locked</strong>: The CLB instance is locked. CLB instances may be locked due to overdue payments or other reasons.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
     /**
      * <p>The ID of the primary zone to which the CLB instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("MasterZoneId")
     public String masterZoneId;
 
     /**
      * <p>The reason why the configuration read-only mode is enabled. The value is 1 to 80 characters in length. It starts with a letter and can contain digits, periods (.), underscores (_), and hyphens (-).</p>
-     * <br>
-     * <p>>  This parameter is valid only when **ModificationProtectionStatus** is set to **ConsoleProtection**.</p>
+     * <blockquote>
+     * <p> This parameter is valid only when <strong>ModificationProtectionStatus</strong> is set to <strong>ConsoleProtection</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Managed instance</p>
      */
     @NameInMap("ModificationProtectionReason")
     public String modificationProtectionReason;
 
     /**
      * <p>Indicates whether the configuration read-only mode is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **NonProtection**: The configuration read-only mode is disabled. After you disable the configuration read-only mode, the value of **ModificationProtectionReason** is cleared.</p>
-     * <p>*   **ConsoleProtection**: The configuration read-only mode is enabled.</p>
-     * <br>
-     * <p>>  If this parameter is set to **ConsoleProtection**, you cannot modify instance configurations in the CLB console. However, you can modify instance configurations by calling API operations.</p>
+     * <ul>
+     * <li><strong>NonProtection</strong>: The configuration read-only mode is disabled. After you disable the configuration read-only mode, the value of <strong>ModificationProtectionReason</strong> is cleared.</li>
+     * <li><strong>ConsoleProtection</strong>: The configuration read-only mode is enabled.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If this parameter is set to <strong>ConsoleProtection</strong>, you cannot modify instance configurations in the CLB console. However, you can modify instance configurations by calling API operations.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ConsoleProtection</p>
      */
     @NameInMap("ModificationProtectionStatus")
     public String modificationProtectionStatus;
 
     /**
      * <p>The network type of the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
      * <p>The billing method of the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   Only **PayOnDemand** may be returned, which indicates the pay-as-you-go billing method.</p>
+     * <ul>
+     * <li>Only <strong>PayOnDemand</strong> may be returned, which indicates the pay-as-you-go billing method.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayOnDemand</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>The region ID of the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The alias of the region to which the CLB instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hangzhou</p>
      */
     @NameInMap("RegionIdAlias")
     public String regionIdAlias;
 
     /**
-     * <p>The auto-renewal cycle. Valid values: **Year** and **Month**. Default value: Month.</p>
-     * <br>
-     * <p>>  This parameter is valid only if you create a subscription CLB instance on the Alibaba Cloud China site. In this case, **PayType** must be set to **PrePay** and **RenewalStatus** must be set to **AutoRenewal**.</p>
+     * <p>The auto-renewal cycle. Valid values: <strong>Year</strong> and <strong>Month</strong>. Default value: Month.</p>
+     * <blockquote>
+     * <p> This parameter is valid only if you create a subscription CLB instance on the Alibaba Cloud China site. In this case, <strong>PayType</strong> must be set to <strong>PrePay</strong> and <strong>RenewalStatus</strong> must be set to <strong>AutoRenewal</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("RenewalCycUnit")
     public String renewalCycUnit;
 
     /**
-     * <p>The auto-renewal duration. This parameter is valid only if **RenewalStatus** is set to **AutoRenewal**.</p>
-     * <br>
-     * <p>*   Valid values when **PeriodUnit** is set to **Year**: **1**, **2**, and **3**.</p>
-     * <br>
-     * <p>*   Valid values when **PeriodUnit** is set to **Month**: **1**, **2**, **3**, and **6**.</p>
-     * <br>
-     * <p>> This parameter is valid only when you create a subscription CLB instance on the Alibaba Cloud China site. In this case, the **PayType** parameter must be set to **PrePay**.</p>
+     * <p>The auto-renewal duration. This parameter is valid only if <strong>RenewalStatus</strong> is set to <strong>AutoRenewal</strong>.</p>
+     * <ul>
+     * <li><p>Valid values when <strong>PeriodUnit</strong> is set to <strong>Year</strong>: <strong>1</strong>~<strong>5</strong>.</p>
+     * </li>
+     * <li><p>Valid values when <strong>PeriodUnit</strong> is set to <strong>Month</strong>: <strong>1</strong>~ <strong>9</strong>.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is valid only when you create a subscription CLB instance on the Alibaba Cloud China site. In this case, the <strong>PayType</strong> parameter must be set to <strong>PrePay</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RenewalDuration")
     public Integer renewalDuration;
 
     /**
      * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **AutoRenewal**: Auto-renewal is enabled.</p>
-     * <br>
-     * <p>*   **Normal**: Auto-renewal is disabled. You must manually renew the CLB instance.</p>
-     * <br>
-     * <p>*   **NotRenewal**: The CLB instance will not be renewed upon expiration. If this value is returned, the system does not send notifications until three days before the expiration date.</p>
-     * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note** This parameter is valid only when you create a subscription CLB instance on the Alibaba Cloud China site. In this case, **PayType** must be set to **PrePay**.</p>
+     * <ul>
+     * <li><p><strong>AutoRenewal</strong>: Auto-renewal is enabled.</p>
+     * </li>
+     * <li><p><strong>Normal</strong>: Auto-renewal is disabled. You must manually renew the CLB instance.</p>
+     * </li>
+     * <li><p><strong>NotRenewal</strong>: The CLB instance will not be renewed upon expiration. If this value is returned, the system does not send notifications until three days before the expiration date.</p>
+     * <p>**</p>
+     * <p><strong>Note</strong> This parameter is valid only when you create a subscription CLB instance on the Alibaba Cloud China site. In this case, <strong>PayType</strong> must be set to <strong>PrePay</strong>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AutoRenewal</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rtop****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the secondary zone to which the CLB instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-d</p>
      */
     @NameInMap("SlaveZoneId")
     public String slaveZoneId;
@@ -251,12 +352,18 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the internal-facing CLB instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-255ecrwq5****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) where the internal-facing CLB instance is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-25dvzy9f8****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -557,32 +664,48 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public static class DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer extends TeaModel {
         /**
          * <p>The description of the backend server.</p>
-         * <br>
-         * <p>> This parameter is not returned if Description is not set.</p>
+         * <blockquote>
+         * <p>This parameter is not returned if Description is not set.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>backend server description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The backend server ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zej4lxhjoq1icu*****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
          * <p>The ID of the elastic network interface (ENI) or elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.XX.XX.11</p>
          */
         @NameInMap("ServerIp")
         public String serverIp;
 
         /**
          * <p>The type of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -675,12 +798,18 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal extends TeaModel {
         /**
          * <p>The frontend port that is used by the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
         /**
          * <p>The frontend protocol that is used by the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         @NameInMap("ListenerProtocal")
         public String listenerProtocal;
@@ -730,30 +859,45 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol extends TeaModel {
         /**
          * <p>Indicates whether the listener is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Listener Description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The destination listening port to which requests are forwarded. The port must be open and use HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("ForwardPort")
         public Integer forwardPort;
 
         /**
          * <p>Indicates whether the listener is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("ListenerForward")
         public String listenerForward;
 
         /**
          * <p>The frontend port that is used by the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
         /**
          * <p>The frontend protocol that is used by the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https</p>
          */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
@@ -826,17 +970,21 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     public static class DescribeLoadBalancerAttributeResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The tag key. Valid values of N: **1** to **20**. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be at most 64 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.</p>
+         * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be at most 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It must not start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value. Valid values of N: **1** to **20**. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.</p>
+         * <p>The tag value. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

@@ -11,9 +11,11 @@ public class SetServerCertificateNameRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Classic Load Balancer (CLB) instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/2401682.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the Classic Load Balancer (CLB) instance. You can call the <a href="https://help.aliyun.com/document_detail/2401682.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -26,16 +28,20 @@ public class SetServerCertificateNameRequest extends TeaModel {
 
     /**
      * <p>The ID of the server certificate.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>139a0******-cn-east-hangzhou-01</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
 
     /**
-     * <p>The name of the third-party server certificate that you want to upload. The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), underscores (_), and asterisks (\\*).</p>
-     * <br>
+     * <p>The name of the third-party server certificate that you want to upload. The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), underscores (_), and asterisks (\*).</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("ServerCertificateName")
     public String serverCertificateName;

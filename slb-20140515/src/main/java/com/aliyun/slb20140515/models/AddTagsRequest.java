@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class AddTagsRequest extends TeaModel {
     /**
-     * <p>The name of this action.</p>
-     * <br>
-     * <p>Value: **AddTags**</p>
-     * <br>
+     * <p>The ID of the Server Load Balancer (SLB) instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1kuzyb******</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -22,8 +22,10 @@ public class AddTagsRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the SLB instance belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,9 +37,11 @@ public class AddTagsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the region to which the SLB instance belongs.</p>
-     * <br>
+     * <p>The list of tags that need to be added.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;TagKey&quot;:&quot;Key1&quot;,&quot;TagValue&quot;:&quot;Value1&quot;},{&quot;TagKey&quot;:&quot;Key2&quot;,&quot;TagValue&quot;:&quot;Value2&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;

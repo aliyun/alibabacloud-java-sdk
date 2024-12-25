@@ -12,10 +12,11 @@ public class DeleteTLSCipherPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the Classic Load Balancer (CLB) instance is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -28,8 +29,10 @@ public class DeleteTLSCipherPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the TLS policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tls-bp1lp2076qx4ebridp******</p>
      */
     @NameInMap("TLSCipherPolicyId")
     public String TLSCipherPolicyId;

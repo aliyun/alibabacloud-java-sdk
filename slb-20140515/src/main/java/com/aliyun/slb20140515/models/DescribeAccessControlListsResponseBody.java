@@ -12,30 +12,45 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
 
     /**
      * <p>The number of ACLs on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
-     * <p>The number of the returned page. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The number of the returned page. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries returned on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3CB646EF-6147-4566-A9D9-CE8FBE86F971</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of ACLs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,12 +111,18 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
     public static class DescribeAccessControlListsResponseBodyAclsAclTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -151,30 +172,45 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
     public static class DescribeAccessControlListsResponseBodyAclsAcl extends TeaModel {
         /**
          * <p>The ACL ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-bp1l0kk4gxce43k*****</p>
          */
         @NameInMap("AclId")
         public String aclId;
 
         /**
          * <p>The ACL name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule1</p>
          */
         @NameInMap("AclName")
         public String aclName;
 
         /**
          * <p>The IP version that is used by the CLB instance associated with the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
         /**
-         * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the CLB instance was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-31T02:49:05Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-jfenfbp1lhl0****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

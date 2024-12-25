@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
     /**
-     * <p>Specifies whether the tag is DistinctKey.</p>
-     * <br>
-     * <p>Valid values: **true and false**.</p>
+     * <p>Specifies whether the tags contain distinct keys.</p>
+     * <p>Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DistinctKey")
     public Boolean distinctKey;
 
     /**
-     * <p>The ID of the SLB instance.</p>
+     * <p>The SLB instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1kuzybm******</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -26,20 +31,28 @@ public class DescribeTagsRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Minimum value: 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 50. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the Server Load Balancer (SLB) instance is deployed.</p>
-     * <br>
+     * <p>The region ID of the Server Load Balancer (SLB) instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -52,6 +65,9 @@ public class DescribeTagsRequest extends TeaModel {
 
     /**
      * <p>The tags that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;TagKey&quot;:&quot;Key1&quot;,&quot;TagValue&quot;:&quot;Value1&quot;},{&quot;TagKey&quot;:&quot;Key2&quot;,&quot;TagValue&quot;:&quot;Value2&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;

@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateAccessControlListResponseBody extends TeaModel {
     /**
-     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+     * <p>The IP version. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-rj9xpxzcwxrukois****</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
-     * <p>The ID of the resource group to which the ACL belongs.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>988CB45E-1643-48C0-87B4-928DDF77EA49</p>
      */
     @NameInMap("RequestId")
     public String requestId;

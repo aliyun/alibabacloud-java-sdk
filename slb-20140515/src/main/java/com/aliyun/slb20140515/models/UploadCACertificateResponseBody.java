@@ -5,61 +5,91 @@ import com.aliyun.tea.*;
 
 public class UploadCACertificateResponseBody extends TeaModel {
     /**
-     * <p>The name of the CA certificate.</p>
+     * <p>The ID of the CA certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>139a0******-cn-east-hangzhou-01</p>
      */
     @NameInMap("CACertificateId")
     public String CACertificateId;
 
     /**
-     * <p>The domain name of the CA certificate.</p>
+     * <p>The CA certificate name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mycacert01</p>
      */
     @NameInMap("CACertificateName")
     public String CACertificateName;
 
     /**
-     * <p>The fingerprint of the CA certificate.</p>
+     * <p>The domain name on the CA certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.example.com</p>
      */
     @NameInMap("CommonName")
     public String commonName;
 
     /**
-     * <p>The time when the CA certificate expires.</p>
+     * <p>The time when the CA certificate was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-08-31T02:49:05Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
-     * <p>The name of the CA certificate.</p>
+     * <p>The timestamp when the CA certificate was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1504147745000</p>
      */
     @NameInMap("CreateTimeStamp")
     public Long createTimeStamp;
 
     /**
-     * <p>The timestamp generated when the CA certificate is uploaded.</p>
+     * <p>The time when the CA certificate expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-11-21T06:04:25Z</p>
      */
     @NameInMap("ExpireTime")
     public String expireTime;
 
     /**
-     * <p>The ID of the enterprise resource group.</p>
+     * <p>The timestamp when the server certificate expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1732169065000</p>
      */
     @NameInMap("ExpireTimeStamp")
     public Long expireTimeStamp;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The fingerprint of the server certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>02:DF:AB:ED</p>
      */
     @NameInMap("Fingerprint")
     public String fingerprint;
 
     /**
-     * <p>The ID of the enterprise resource group.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The time when the CA certificate is uploaded.</p>
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rt******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

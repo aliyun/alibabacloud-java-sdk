@@ -11,17 +11,23 @@ public class DescribeServerCertificatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the CLB instances are deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>>  If the endpoint of the region is slb.aliyuncs.com, you must specify the `RegionId` parameter.</p>
+     * <p>The region where the CLB instance is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> If the endpoint of the selected region is slb.aliyuncs.com, you must specify <code>RegionId</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rtop****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -33,7 +39,10 @@ public class DescribeServerCertificatesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the server certificate.</p>
+     * <p>The server certificate ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12315790*******_166f8204689_1714763408_709981430</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
@@ -115,13 +124,21 @@ public class DescribeServerCertificatesRequest extends TeaModel {
 
     public static class DescribeServerCertificatesRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys.</p>
+         * <p>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs</code>:. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value cannot be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Value")
         public String value;

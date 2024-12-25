@@ -12,10 +12,11 @@ public class DescribeHighDefinationMonitorRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where you want to query the configuration of fine-grained monitoring.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -28,6 +29,9 @@ public class DescribeHighDefinationMonitorRequest extends TeaModel {
 
     /**
      * <p>The tags of the logs. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;tagKey&quot;:&quot;Key1&quot;,&quot;tagValue&quot;:&quot;Value1&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;

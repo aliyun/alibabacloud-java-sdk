@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class SetDomainExtensionAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>149A2470-F010-4437-BF68-343D5099C19D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

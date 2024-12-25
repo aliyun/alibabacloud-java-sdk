@@ -12,6 +12,9 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
     public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener extends TeaModel {
         /**
          * <p>The listener port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The listener protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -117,12 +126,18 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
     public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_slb_yaochi_tag_key-0</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000098dab00323fb</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -177,19 +192,28 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects associatedObjects;
 
         /**
-         * <p>The time when the CLB instance was created. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the CLB instance was created. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-02T02:49:05Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the primary/secondary server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-0bfuc******</p>
          */
         @NameInMap("MasterSlaveServerGroupId")
         public String masterSlaveServerGroupId;
 
         /**
          * <p>The name of the primary/secondary server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Group3</p>
          */
         @NameInMap("MasterSlaveServerGroupName")
         public String masterSlaveServerGroupName;
