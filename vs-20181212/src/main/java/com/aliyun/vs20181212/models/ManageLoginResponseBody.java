@@ -36,6 +36,9 @@ public class ManageLoginResponseBody extends TeaModel {
     }
 
     public static class ManageLoginResponseBodyLoginInfo extends TeaModel {
+        @NameInMap("AdbLoginPort")
+        public Integer adbLoginPort;
+
         /**
          * <strong>example:</strong>
          * <p>12.10.4.10</p>
@@ -53,6 +56,14 @@ public class ManageLoginResponseBody extends TeaModel {
         public static ManageLoginResponseBodyLoginInfo build(java.util.Map<String, ?> map) throws Exception {
             ManageLoginResponseBodyLoginInfo self = new ManageLoginResponseBodyLoginInfo();
             return TeaModel.build(map, self);
+        }
+
+        public ManageLoginResponseBodyLoginInfo setAdbLoginPort(Integer adbLoginPort) {
+            this.adbLoginPort = adbLoginPort;
+            return this;
+        }
+        public Integer getAdbLoginPort() {
+            return this.adbLoginPort;
         }
 
         public ManageLoginResponseBodyLoginInfo setLoginHostname(String loginHostname) {

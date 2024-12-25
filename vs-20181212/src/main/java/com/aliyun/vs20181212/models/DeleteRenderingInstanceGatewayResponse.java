@@ -3,7 +3,7 @@ package com.aliyun.vs20181212.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeClustersResponse extends TeaModel {
+public class DeleteRenderingInstanceGatewayResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeClustersResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeClustersResponseBody body;
+    public DeleteRenderingInstanceGatewayResponseBody body;
 
-    public static DescribeClustersResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeClustersResponse self = new DescribeClustersResponse();
+    public static DeleteRenderingInstanceGatewayResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteRenderingInstanceGatewayResponse self = new DeleteRenderingInstanceGatewayResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeClustersResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteRenderingInstanceGatewayResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeClustersResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeClustersResponse setStatusCode(Integer statusCode) {
+    public DeleteRenderingInstanceGatewayResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeClustersResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeClustersResponse setBody(DescribeClustersResponseBody body) {
+    public DeleteRenderingInstanceGatewayResponse setBody(DeleteRenderingInstanceGatewayResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeClustersResponseBody getBody() {
+    public DeleteRenderingInstanceGatewayResponseBody getBody() {
         return this.body;
     }
 

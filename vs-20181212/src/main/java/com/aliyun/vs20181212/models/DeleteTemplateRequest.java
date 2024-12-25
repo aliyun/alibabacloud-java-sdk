@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class DeleteTemplateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>323*****998-cn-qingdao</p>
      */
     @NameInMap("Id")
     public String id;

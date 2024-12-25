@@ -3,7 +3,7 @@ package com.aliyun.vs20181212.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeUserDevicesResponse extends TeaModel {
+public class ListRenderingInstanceGatewayResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeUserDevicesResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeUserDevicesResponseBody body;
+    public ListRenderingInstanceGatewayResponseBody body;
 
-    public static DescribeUserDevicesResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeUserDevicesResponse self = new DescribeUserDevicesResponse();
+    public static ListRenderingInstanceGatewayResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListRenderingInstanceGatewayResponse self = new ListRenderingInstanceGatewayResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeUserDevicesResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListRenderingInstanceGatewayResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeUserDevicesResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeUserDevicesResponse setStatusCode(Integer statusCode) {
+    public ListRenderingInstanceGatewayResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeUserDevicesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeUserDevicesResponse setBody(DescribeUserDevicesResponseBody body) {
+    public ListRenderingInstanceGatewayResponse setBody(ListRenderingInstanceGatewayResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeUserDevicesResponseBody getBody() {
+    public ListRenderingInstanceGatewayResponseBody getBody() {
         return this.body;
     }
 

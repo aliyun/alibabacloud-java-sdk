@@ -32,6 +32,9 @@ public class ListRenderingInstancesRequest extends TeaModel {
     @NameInMap("RenderingSpec")
     public String renderingSpec;
 
+    @NameInMap("StorageSize")
+    public Integer storageSize;
+
     public static ListRenderingInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRenderingInstancesRequest self = new ListRenderingInstancesRequest();
         return TeaModel.build(map, self);
@@ -67,6 +70,14 @@ public class ListRenderingInstancesRequest extends TeaModel {
     }
     public String getRenderingSpec() {
         return this.renderingSpec;
+    }
+
+    public ListRenderingInstancesRequest setStorageSize(Integer storageSize) {
+        this.storageSize = storageSize;
+        return this;
+    }
+    public Integer getStorageSize() {
+        return this.storageSize;
     }
 
 }

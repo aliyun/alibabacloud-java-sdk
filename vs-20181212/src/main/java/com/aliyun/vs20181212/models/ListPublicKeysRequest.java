@@ -18,6 +18,9 @@ public class ListPublicKeysRequest extends TeaModel {
     @NameInMap("KeyName")
     public String keyName;
 
+    @NameInMap("KeyType")
+    public String keyType;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,6 +54,14 @@ public class ListPublicKeysRequest extends TeaModel {
     }
     public String getKeyName() {
         return this.keyName;
+    }
+
+    public ListPublicKeysRequest setKeyType(String keyType) {
+        this.keyType = keyType;
+        return this;
+    }
+    public String getKeyType() {
+        return this.keyType;
     }
 
     public ListPublicKeysRequest setPageNumber(Long pageNumber) {

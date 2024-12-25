@@ -32,6 +32,9 @@ public class UploadPublicKeyRequest extends TeaModel {
     @NameInMap("KeyName")
     public String keyName;
 
+    @NameInMap("KeyType")
+    public String keyType;
+
     public static UploadPublicKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadPublicKeyRequest self = new UploadPublicKeyRequest();
         return TeaModel.build(map, self);
@@ -67,6 +70,14 @@ public class UploadPublicKeyRequest extends TeaModel {
     }
     public String getKeyName() {
         return this.keyName;
+    }
+
+    public UploadPublicKeyRequest setKeyType(String keyType) {
+        this.keyType = keyType;
+        return this;
+    }
+    public String getKeyType() {
+        return this.keyType;
     }
 
 }
