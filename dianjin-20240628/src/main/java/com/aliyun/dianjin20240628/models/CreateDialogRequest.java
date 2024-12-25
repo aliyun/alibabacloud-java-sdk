@@ -13,6 +13,9 @@ public class CreateDialogRequest extends TeaModel {
     @NameInMap("channel")
     public String channel;
 
+    @NameInMap("enableLibrary")
+    public Boolean enableLibrary;
+
     /**
      * <strong>example:</strong>
      * <p>null</p>
@@ -29,9 +32,6 @@ public class CreateDialogRequest extends TeaModel {
     @NameInMap("playCode")
     public String playCode;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("qaLibraryList")
     public java.util.List<String> qaLibraryList;
 
@@ -44,6 +44,9 @@ public class CreateDialogRequest extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("selfDirected")
+    public Boolean selfDirected;
+
     public static CreateDialogRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDialogRequest self = new CreateDialogRequest();
         return TeaModel.build(map, self);
@@ -55,6 +58,14 @@ public class CreateDialogRequest extends TeaModel {
     }
     public String getChannel() {
         return this.channel;
+    }
+
+    public CreateDialogRequest setEnableLibrary(Boolean enableLibrary) {
+        this.enableLibrary = enableLibrary;
+        return this;
+    }
+    public Boolean getEnableLibrary() {
+        return this.enableLibrary;
     }
 
     public CreateDialogRequest setMetaData(java.util.Map<String, ?> metaData) {
@@ -87,6 +98,14 @@ public class CreateDialogRequest extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateDialogRequest setSelfDirected(Boolean selfDirected) {
+        this.selfDirected = selfDirected;
+        return this;
+    }
+    public Boolean getSelfDirected() {
+        return this.selfDirected;
     }
 
 }
