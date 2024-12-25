@@ -1,3 +1,31 @@
+2024-12-25 Version: 3.0.0
+- Support API CreateRenderingDataPackage.
+- Support API CreateRenderingInstanceGateway.
+- Support API DeleteRenderingInstanceGateway.
+- Support API ListRenderingInstanceGateway.
+- Support API ModifyRenderingInstance.
+- Support API ReleaseRenderingDataPackage.
+- Delete API CreateCluster.
+- Delete API DeleteCluster.
+- Delete API DescribeCluster.
+- Delete API DescribeClusterDevices.
+- Delete API DescribeClusters.
+- Delete API DescribeContainerInstanceId.
+- Delete API DescribeUserDevices.
+- Delete API UpdateCluster.
+- Update API CreateRenderingInstance: add param InstanceBillingCycle.
+- Update API CreateRenderingInstance: add param StorageSize.
+- Update API CreateRenderingInstance: update param InstanceChargeType.
+- Update API CreateRenderingInstance: update param InternetChargeType.
+- Update API DescribeRenderingInstance: update response param.
+- Update API ListPublicKeys: add param KeyType.
+- Update API ListPublicKeys: update response param.
+- Update API ListRenderingInstances: add param StorageSize.
+- Update API ListRenderingInstances: update response param.
+- Update API ManageLogin: update response param.
+- Update API UploadPublicKey: add param KeyType.
+
+
 2024-07-05 Version: 2.0.0
 - Support API CreateRenderingInstance.
 - Support API DeleteCloudApp.

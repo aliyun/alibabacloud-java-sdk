@@ -105,6 +105,9 @@ public class ListPublicKeysResponseBody extends TeaModel {
         @NameInMap("KeyName")
         public String keyName;
 
+        @NameInMap("KeyType")
+        public String keyType;
+
         /**
          * <strong>example:</strong>
          * <p>2024-06-11T14:26:48+08:00</p>
@@ -147,6 +150,14 @@ public class ListPublicKeysResponseBody extends TeaModel {
         }
         public String getKeyName() {
             return this.keyName;
+        }
+
+        public ListPublicKeysResponseBodyPublicKeys setKeyType(String keyType) {
+            this.keyType = keyType;
+            return this;
+        }
+        public String getKeyType() {
+            return this.keyType;
         }
 
         public ListPublicKeysResponseBodyPublicKeys setUploadTime(String uploadTime) {

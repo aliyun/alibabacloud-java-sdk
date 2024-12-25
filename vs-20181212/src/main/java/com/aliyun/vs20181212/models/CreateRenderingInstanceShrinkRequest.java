@@ -14,6 +14,9 @@ public class CreateRenderingInstanceShrinkRequest extends TeaModel {
     @NameInMap("ClientInfo")
     public String clientInfoShrink;
 
+    @NameInMap("InstanceBillingCycle")
+    public String instanceBillingCycle;
+
     /**
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -51,6 +54,9 @@ public class CreateRenderingInstanceShrinkRequest extends TeaModel {
     @NameInMap("RenderingSpec")
     public String renderingSpec;
 
+    @NameInMap("StorageSize")
+    public String storageSize;
+
     public static CreateRenderingInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRenderingInstanceShrinkRequest self = new CreateRenderingInstanceShrinkRequest();
         return TeaModel.build(map, self);
@@ -70,6 +76,14 @@ public class CreateRenderingInstanceShrinkRequest extends TeaModel {
     }
     public String getClientInfoShrink() {
         return this.clientInfoShrink;
+    }
+
+    public CreateRenderingInstanceShrinkRequest setInstanceBillingCycle(String instanceBillingCycle) {
+        this.instanceBillingCycle = instanceBillingCycle;
+        return this;
+    }
+    public String getInstanceBillingCycle() {
+        return this.instanceBillingCycle;
     }
 
     public CreateRenderingInstanceShrinkRequest setInstanceChargeType(String instanceChargeType) {
@@ -110,6 +124,14 @@ public class CreateRenderingInstanceShrinkRequest extends TeaModel {
     }
     public String getRenderingSpec() {
         return this.renderingSpec;
+    }
+
+    public CreateRenderingInstanceShrinkRequest setStorageSize(String storageSize) {
+        this.storageSize = storageSize;
+        return this;
+    }
+    public String getStorageSize() {
+        return this.storageSize;
     }
 
 }

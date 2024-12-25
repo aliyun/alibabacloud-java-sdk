@@ -31,6 +31,9 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     @NameInMap("RenderingInstanceId")
     public String renderingInstanceId;
 
+    @NameInMap("RenderingSpec")
+    public String renderingSpec;
+
     @NameInMap("RenderingStatus")
     public DescribeRenderingInstanceResponseBodyRenderingStatus renderingStatus;
 
@@ -40,6 +43,9 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("StorageSize")
+    public Integer storageSize;
 
     @NameInMap("SystemInfo")
     public DescribeRenderingInstanceResponseBodySystemInfo systemInfo;
@@ -89,6 +95,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         return this.renderingInstanceId;
     }
 
+    public DescribeRenderingInstanceResponseBody setRenderingSpec(String renderingSpec) {
+        this.renderingSpec = renderingSpec;
+        return this;
+    }
+    public String getRenderingSpec() {
+        return this.renderingSpec;
+    }
+
     public DescribeRenderingInstanceResponseBody setRenderingStatus(DescribeRenderingInstanceResponseBodyRenderingStatus renderingStatus) {
         this.renderingStatus = renderingStatus;
         return this;
@@ -103,6 +117,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeRenderingInstanceResponseBody setStorageSize(Integer storageSize) {
+        this.storageSize = storageSize;
+        return this;
+    }
+    public Integer getStorageSize() {
+        return this.storageSize;
     }
 
     public DescribeRenderingInstanceResponseBody setSystemInfo(DescribeRenderingInstanceResponseBodySystemInfo systemInfo) {
