@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteMasterSlaveServerGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the active/standby server group to be deleted.</p>
-     * <br>
-     * <p>>  An active/standby server group in use cannot be deleted.</p>
-     * <br>
+     * <p>The primary/secondary server group ID.</p>
+     * <blockquote>
+     * <p> You cannot delete a primary/secondary server group that is in use.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rsp-cige6*****</p>
      */
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
@@ -21,9 +24,11 @@ public class DeleteMasterSlaveServerGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the associated Server Load Balancer (SLB) instance belongs.</p>
-     * <br>
+     * <p>The region ID of the Server Load Balancer (SLB) instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

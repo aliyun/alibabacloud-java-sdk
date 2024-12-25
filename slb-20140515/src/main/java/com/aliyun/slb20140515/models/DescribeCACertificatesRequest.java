@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCACertificatesRequest extends TeaModel {
     /**
      * <p>The CA certificate ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>139a00604bd-cn-east-hangzho****</p>
      */
     @NameInMap("CACertificateId")
     public String CACertificateId;
@@ -18,16 +21,20 @@ public class DescribeCACertificatesRequest extends TeaModel {
 
     /**
      * <p>The region of the CA certificates.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rtop****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -115,15 +122,20 @@ public class DescribeCACertificatesRequest extends TeaModel {
 
     public static class DescribeCACertificatesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: **1 to 20**. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.</p>
+         * <p>The key of tag N. Valid values of N: <strong>1 to 20</strong>. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It must not start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: **1 to 20**. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.</p>
+         * <p>The value of tag N. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It must not start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Value")
         public String value;

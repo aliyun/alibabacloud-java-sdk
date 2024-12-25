@@ -12,24 +12,36 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8B9DB03B-ED39-5DB8-9C9F-1ED5F548D61E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of instances returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
     public static class DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancerTagsTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -137,174 +155,255 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
     public static class DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer extends TeaModel {
         /**
          * <p>The endpoint of the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.XX.XX.28</p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
-         * <p>The IP version that is used by the CLB instance. Valid values: **ipv4** and **ipv6**.</p>
+         * <p>The IP version that is used by the CLB instance. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
         /**
          * <p>The network type of the CLB instance. Valid values:</p>
-         * <br>
-         * <p>*   **internet:** After an Internet-facing CLB instance is created, the system assigns a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.</p>
-         * <p>*   **intranet:** After an internal-facing CLB instance is created, the system assigns a private IP address to the CLB instance. Then, the CLB instance can forward requests only over internal networks.</p>
+         * <ul>
+         * <li><strong>internet:</strong> After an Internet-facing CLB instance is created, the system assigns a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.</li>
+         * <li><strong>intranet:</strong> After an internal-facing CLB instance is created, the system assigns a private IP address to the CLB instance. Then, the CLB instance can forward requests only over internal networks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>intranet</p>
          */
         @NameInMap("AddressType")
         public String addressType;
 
         /**
-         * <p>The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:</p>
-         * <br>
-         * <p>*   **-1:** For a pay-by-data-transfer Internet-facing CLB instance, this value is set to -1. This indicates that the bandwidth is unlimited.</p>
-         * <p>*   **1 to 5120:** For a pay-by-bandwidth Internet-facing CLB instance, you can specify the maximum bandwidth for each listener. The sum of the maximum bandwidth of all listeners cannot exceed the maximum bandwidth of the CLB instance.</p>
+         * <p>The maximum bandwidth of the listener. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
-         * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the CLB instance was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-02T02:49:05Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The timestamp when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1504147745000</p>
          */
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
         /**
          * <p>Indicates whether deletion protection is enabled for the CLB instance. Valid values:</p>
-         * <br>
-         * <p>*   **on:** Deletion protection is enabled.</p>
-         * <p>*   **off:** Deletion protection is disabled.</p>
+         * <ul>
+         * <li><strong>on:</strong> Deletion protection is enabled.</li>
+         * <li><strong>off:</strong> Deletion protection is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         @NameInMap("DeleteProtection")
         public String deleteProtection;
 
         /**
          * <p>The metering method of the CLB instance. Valid values:</p>
-         * <br>
-         * <p>*   **PayBySpec:** pay-by-specification.</p>
-         * <p>*   **PayByCLCU:** pay-by-LCU.</p>
-         * <br>
-         * <p>>  This parameter takes effect only for accounts registered on the China site (aliyun.com) and when the **PayType** parameter is set to **PayOnDemand**.</p>
+         * <ul>
+         * <li><strong>PayBySpec:</strong> pay-by-specification.</li>
+         * <li><strong>PayByCLCU:</strong> pay-by-LCU.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only for accounts registered on the China site (aliyun.com) and when the <strong>PayType</strong> parameter is set to <strong>PayOnDemand</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>PayBySpec</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
         /**
          * <p>The metering method of the Internet-facing CLB instance. Valid values:</p>
-         * <br>
-         * <p>*   **3:** pay-by-bandwidth (**paybybandwidth**).</p>
-         * <p>*   **4:** pay-by-data-transfer (**paybytraffic**).</p>
+         * <ul>
+         * <li><strong>3:</strong> pay-by-bandwidth (<strong>paybybandwidth</strong>).</li>
+         * <li><strong>4:</strong> pay-by-data-transfer (<strong>paybytraffic</strong>).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
         /**
          * <p>The metering method of Internet data transfer. Valid values:</p>
-         * <br>
-         * <p>*   **paybybandwidth:** pay-by-bandwidth.</p>
-         * <p>*   **paybytraffic:** pay-by-data-transfer.</p>
+         * <ul>
+         * <li><strong>paybybandwidth:</strong> pay-by-bandwidth.</li>
+         * <li><strong>paybytraffic:</strong> pay-by-data-transfer.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>paybybandwidth</p>
          */
         @NameInMap("InternetChargeTypeAlias")
         public String internetChargeTypeAlias;
 
         /**
          * <p>The ID of the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1b6c719dfa****</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
          * <p>The name of the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1o94dp5i6ea****</p>
          */
         @NameInMap("LoadBalancerName")
         public String loadBalancerName;
 
         /**
          * <p>The specification of the CLB instance.</p>
+         * <blockquote>
+         * <p> Pay-as-you-go CLB instances are not subject to specifications. <strong>slb.lcu.elastic</strong> is returned by default.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>slb.s1.small</p>
          */
         @NameInMap("LoadBalancerSpec")
         public String loadBalancerSpec;
 
         /**
          * <p>The status of the CLB instance. Valid values:</p>
-         * <br>
-         * <p>*   **inactive:** The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.</p>
-         * <p>*   **active:** The CLB instance runs as expected. By default, newly created CLB instances are in the **active** state.</p>
-         * <p>*   **locked:** The CLB instance is locked.</p>
+         * <ul>
+         * <li><strong>inactive:</strong> The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.</li>
+         * <li><strong>active:</strong> The CLB instance runs as expected. By default, newly created CLB instances are in the <strong>active</strong> state.</li>
+         * <li><strong>locked:</strong> The CLB instance is locked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("LoadBalancerStatus")
         public String loadBalancerStatus;
 
         /**
          * <p>The ID of the primary zone to which the CLB instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("MasterZoneId")
         public String masterZoneId;
 
         /**
          * <p>The reason why the configuration read-only mode was enabled. The reason must be 1 to 80 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.</p>
-         * <br>
-         * <p>> This parameter takes effect only when you set the `ModificationProtectionStatus` parameter to **ConsoleProtection**.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when you set the <code>ModificationProtectionStatus</code> parameter to <strong>ConsoleProtection</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ManagedInstance</p>
          */
         @NameInMap("ModificationProtectionReason")
         public String modificationProtectionReason;
 
         /**
          * <p>Indicates whether the configuration read-only mode is enabled for the CLB instance. Valid values:</p>
-         * <br>
-         * <p>*   **NonProtection:** The configuration read-only mode is disabled. In this case, you cannot specify the ModificationProtectionReason parameter. If you specify the `ModificationProtectionReason` parameter, the value is cleared.</p>
-         * <p>*   **ConsoleProtection:** The configuration read-only mode is enabled.</p>
-         * <br>
-         * <p>>  If you set this parameter to **ConsoleProtection**, you cannot modify the configurations of the CLB instance in the CLB console. However, you can call API operations to modify the configurations of the CLB instance.</p>
+         * <ul>
+         * <li><strong>NonProtection:</strong> The configuration read-only mode is disabled. In this case, you cannot specify the ModificationProtectionReason parameter. If you specify the <code>ModificationProtectionReason</code> parameter, the value is cleared.</li>
+         * <li><strong>ConsoleProtection:</strong> The configuration read-only mode is enabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set this parameter to <strong>ConsoleProtection</strong>, you cannot modify the configurations of the CLB instance in the CLB console. However, you can call API operations to modify the configurations of the CLB instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ConsoleProtection</p>
          */
         @NameInMap("ModificationProtectionStatus")
         public String modificationProtectionStatus;
 
         /**
          * <p>The network type of the internal-facing CLB instance. Valid values:</p>
-         * <br>
-         * <p>*   **vpc:** VPC.</p>
-         * <p>*   **classic:** classic network.</p>
+         * <ul>
+         * <li><strong>vpc:</strong> VPC.</li>
+         * <li><strong>classic:</strong> classic network.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The billing method of the CLB instance.</p>
-         * <br>
-         * <p>*   **PayOnDemand** is returned, which indicates the pay-as-you-go billing method.</p>
+         * <ul>
+         * <li><strong>PayOnDemand</strong> is returned, which indicates the pay-as-you-go billing method.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayOnDemand</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>The ID of the region where the CLB instance was deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The region where the CLB instance was deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hangzhou</p>
          */
         @NameInMap("RegionIdAlias")
         public String regionIdAlias;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3r****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The ID of the secondary zone to which the CLB instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-d</p>
          */
         @NameInMap("SlaveZoneId")
         public String slaveZoneId;
@@ -317,12 +416,18 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the vSwitch to which the internal-facing CLB instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-255ecr****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the VPC in which the internal-facing CLB instance was deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-25dvzy9f8****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

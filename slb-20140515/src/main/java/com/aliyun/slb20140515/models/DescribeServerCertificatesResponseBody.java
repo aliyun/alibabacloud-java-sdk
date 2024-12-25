@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeServerCertificatesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of server certificates.</p>
+     * <p>The server certificates.</p>
      */
     @NameInMap("ServerCertificates")
     public DescribeServerCertificatesResponseBodyServerCertificates serverCertificates;
@@ -59,12 +62,18 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
     public static class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag extends TeaModel {
         /**
          * <p>The tag keys of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -114,87 +123,127 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
     public static class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate extends TeaModel {
         /**
          * <p>The ID of the server certificate from Alibaba Cloud Certificate Management Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7309********_15d97e7709a_71445759hr_789289731</p>
          */
         @NameInMap("AliCloudCertificateId")
         public String aliCloudCertificateId;
 
         /**
          * <p>The name of the server certificate from Alibaba Cloud Certificate Management Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testcertkey</p>
          */
         @NameInMap("AliCloudCertificateName")
         public String aliCloudCertificateName;
 
         /**
-         * <p>The domain name of the certificate. The domain name is specified in the `CommonName` field.</p>
+         * <p>The domain name of the server certificate. The domain name is specified in the <code>CommonName</code> field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
-         * <p>The time when the server certificate is uploaded.</p>
+         * <p>The time when the server certificate was uploaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-31T02:49:05Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The timestamp generated when the server certificate is uploaded.</p>
+         * <p>The timestamp when the server certificate was uploaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1504147745000</p>
          */
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The time when the server certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-26T23:59:59Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
-         * <p>The timestamp that indicates when the certificate expires.</p>
+         * <p>The timestamp when the server certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15041477450</p>
          */
         @NameInMap("ExpireTimeStamp")
         public Long expireTimeStamp;
 
         /**
          * <p>The fingerprint of the server certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68:08:1a:f8:2c:97:69:a3:a1:e6:16:41:4b:ca:4f:5d:ee:a5:ef:0d</p>
          */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
         /**
          * <p>Indicates whether the server certificate is from Alibaba Cloud Certificate Management Service. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsAliCloudCertificate")
         public Integer isAliCloudCertificate;
 
         /**
-         * <p>The ID of the region where the server certificate is created.</p>
+         * <p>The region ID of the server certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the server certificate.</p>
+         * <p>The server certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123157********_166f8204689_1714763408_709981430-cn-east-hangzhou-02</p>
          */
         @NameInMap("ServerCertificateId")
         public String serverCertificateId;
 
         /**
          * <p>The name of the server certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slb</p>
          */
         @NameInMap("ServerCertificateName")
         public String serverCertificateName;
 
         /**
-         * <p>The list of alternative domain names of the server certificate. The alternative domain names are specified in the `Subject Alternative Name` field of the server certificate.</p>
+         * <p>The alternative domain names of the server certificate. The alternative domain names are specified in the Subject Alternative Name field of the server certificate.</p>
          */
         @NameInMap("SubjectAlternativeNames")
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames subjectAlternativeNames;

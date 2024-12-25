@@ -5,43 +5,58 @@ import com.aliyun.tea.*;
 
 public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers.</p>
+     * <p>The backend servers.</p>
      */
     @NameInMap("BackendServers")
     public DescribeVServerGroupAttributeResponseBodyBackendServers backendServers;
 
     /**
-     * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+     * <p>The time when the CLB instance was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-08-31T02:49:05Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The ID of the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-jfakd****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The tags of the backend server.</p>
      */
     @NameInMap("Tags")
     public DescribeVServerGroupAttributeResponseBodyTags tags;
 
     /**
      * <p>The ID of the vServer group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rsp-cige6****</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
     /**
      * <p>The name of the vServer group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Group1</p>
      */
     @NameInMap("VServerGroupName")
     public String VServerGroupName;
@@ -109,41 +124,63 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
 
     public static class DescribeVServerGroupAttributeResponseBodyBackendServersBackendServer extends TeaModel {
         /**
-         * <p>The description of the vServer group.</p>
+         * <p>The description of the server group.</p>
+         * <blockquote>
+         * <p> This parameter is not returned if the Description parameter is not specified in the request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Server Group Description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The port used by the backend server.</p>
+         * <p>The port that is used by the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The ID of the ECS instance, ENI, or elastic container instance.</p>
+         * <p>The ID of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vm-233</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The IP address of the ECS instance, ENI, or elastic container instance.</p>
+         * <p>The IP address of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.XX.XX.11</p>
          */
         @NameInMap("ServerIp")
         public String serverIp;
 
         /**
-         * <p>The type of the backend server. Valid values:</p>
-         * <br>
-         * <p>*   **ecs** (default): an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **eni**: an elastic network interface (ENI)</p>
-         * <p>*   **eci**: an elastic container instance</p>
+         * <p>The type of backend server. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: ECS instance</li>
+         * <li><strong>eni</strong>: ENI</li>
+         * <li><strong>eci</strong>: elastic container instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -224,13 +261,21 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
 
     public static class DescribeVServerGroupAttributeResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

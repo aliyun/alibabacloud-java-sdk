@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class EnableHighDefinationMonitorRequest extends TeaModel {
     /**
      * <p>The name of the project of Log Service. The name must be 4 to 63 characters in length, and can contain digits and lowercase letters. It must start and end with a digit or a letter.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-project</p>
      */
     @NameInMap("LogProject")
     public String logProject;
 
     /**
      * <p>The name of the Logstore of Log Service. The name must be 2 to 64 characters in length and can contain digits, lowercase letters, hyphens (-) and underscores (_). It must start and end with a digit or a letter.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-log-store</p>
      */
     @NameInMap("LogStore")
     public String logStore;
@@ -28,10 +32,11 @@ public class EnableHighDefinationMonitorRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -44,6 +49,9 @@ public class EnableHighDefinationMonitorRequest extends TeaModel {
 
     /**
      * <p>The tags of the logs. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;tagKey&quot;:&quot;Key1&quot;,&quot;tagValue&quot;:&quot;Value1&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;

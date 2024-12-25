@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the specified one or more resources. This parameter takes effect only if the **TagKey.N** parameter is not set.</p>
-     * <br>
-     * <p>Valid values: **true** and **false**.</p>
+     * <p>Specifies whether to remove all tags from the specified resource. This parameter takes effect only if <strong>TagKey.N</strong> is empty.</p>
+     * <p>Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -19,19 +21,25 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the Server Load Balancer (SLB) instance is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource. Valid values of N: 1 to 20.</p>
-     * <br>
+     * <p>The ID of the resource. You can specify at most 20 resources.</p>
+     * <blockquote>
+     * <p> Set <strong>ResourceId</strong> of the <strong>listener</strong> to <strong>LoadBalancerId_Listener protocol_Port</strong>. Set LoadBalancerId to the ID of the CLB instance, and Port to the listener port.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp16qjewdsunr41m1****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -43,23 +51,32 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   **instance**: an SLB instance</p>
-     * <p>*   **certificate**: a certificate</p>
-     * <p>*   **acl**: a network access control list (ACL)</p>
-     * <br>
+     * <p>The type of resource. Valid values:</p>
+     * <ul>
+     * <li><strong>instance</strong>: CLB instance</li>
+     * <li><strong>certificate</strong>: certificate</li>
+     * <li><strong>acl</strong>: access control list (ACL)</li>
+     * <li><strong>listener</strong>: listener</li>
+     * <li><strong>vservergroup</strong>: vServer group</li>
+     * <li><strong>masterslaveservergroup</strong>: primary/secondary server group</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tag value. Valid values of N: **1** to **20**.</p>
-     * <br>
-     * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`.</p>
-     * <br>
-     * <p>>  If you do not set **TagKey**, all tags of the specified instance are removed.</p>
+     * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+     * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+     * <blockquote>
+     * <p> If you do not specify <strong>TagKey</strong>, all tags are removed from the instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>FinanceDept</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

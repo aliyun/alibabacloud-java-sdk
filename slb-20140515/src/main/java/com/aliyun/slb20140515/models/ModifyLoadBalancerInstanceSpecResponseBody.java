@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyLoadBalancerInstanceSpecResponseBody extends TeaModel {
     /**
      * <p>The order ID of the subscription CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>201429619788910</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;

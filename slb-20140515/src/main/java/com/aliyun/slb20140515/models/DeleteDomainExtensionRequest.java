@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteDomainExtensionRequest extends TeaModel {
     /**
      * <p>The ID of the additional domain name that you want to delete.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de-bp1rp7ta1****</p>
      */
     @NameInMap("DomainExtensionId")
     public String domainExtensionId;
@@ -20,8 +22,10 @@ public class DeleteDomainExtensionRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Server Load Balancer (SLB) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

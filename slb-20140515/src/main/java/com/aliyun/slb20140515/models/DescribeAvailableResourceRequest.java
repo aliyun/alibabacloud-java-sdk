@@ -6,22 +6,23 @@ import com.aliyun.tea.*;
 public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The type of the IP address.</p>
-     * <br>
-     * <p>Valid values: **ipv4 and ipv6**.</p>
+     * <p>Valid values: <strong>ipv4 and ipv6</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
     /**
      * <p>The network type.</p>
-     * <br>
-     * <p>Valid values: **vpc, classic-internet, and classic-intranet**.</p>
-     * <br>
+     * <p>Valid values: <strong>vpc, classic-internet, and classic-intranet</strong>.</p>
      * <p>vpc: an internal Classic Load Balancer (CLB) instance that is deployed in a virtual private cloud (VPC).</p>
-     * <br>
      * <p>classic_internet: a public-facing CLB instance.</p>
-     * <br>
      * <p>classic_intranet: an internal CLB instance that is deployed in a classic network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
      */
     @NameInMap("AddressType")
     public String addressType;
@@ -34,8 +35,10 @@ public class DescribeAvailableResourceRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

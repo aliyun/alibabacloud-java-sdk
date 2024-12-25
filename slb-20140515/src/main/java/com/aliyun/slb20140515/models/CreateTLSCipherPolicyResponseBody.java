@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTLSCipherPolicyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D7A8875F-373A-5F48-8484-25B07A61F2AF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tls-bp14bb1e7dll4f****</p>
      */
     @NameInMap("TLSCipherPolicyId")
     public String TLSCipherPolicyId;

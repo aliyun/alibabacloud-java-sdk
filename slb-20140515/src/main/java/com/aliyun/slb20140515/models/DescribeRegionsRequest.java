@@ -6,10 +6,14 @@ import com.aliyun.tea.*;
 public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The supported language. Valid values:</p>
-     * <br>
-     * <p>*   zh-CN: Chinese</p>
-     * <p>*   en-US: English</p>
-     * <p>*   ja: Japanese</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US: English</li>
+     * <li>ja: Japanese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -22,6 +26,9 @@ public class DescribeRegionsRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

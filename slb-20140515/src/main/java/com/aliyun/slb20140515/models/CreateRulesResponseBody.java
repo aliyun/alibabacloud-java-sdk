@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateRulesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class CreateRulesResponseBody extends TeaModel {
     public static class CreateRulesResponseBodyRulesRule extends TeaModel {
         /**
          * <p>The forwarding rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-bp12jzy0*****</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
 
         /**
          * <p>The name of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule2</p>
          */
         @NameInMap("RuleName")
         public String ruleName;

@@ -6,28 +6,32 @@ import com.aliyun.tea.*;
 public class SetLoadBalancerStatusRequest extends TeaModel {
     /**
      * <p>The ID of the CLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1b6c719dfa08e******</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The state of the CLB instance. Valid values: **active** and **inactive**.</p>
-     * <br>
-     * <p>*   **active** (default)</p>
-     * <br>
-     * <p>    If a CLB instance is in the **active** state, listeners of the CLB instance can forward traffic based on forwarding rules.</p>
-     * <br>
-     * <p>    By default, newly created CLB instances are in the **active** state.</p>
-     * <br>
-     * <p>*   **inactive**</p>
-     * <br>
-     * <p>    If a CLB instance is in the **inactive** state, listeners of the CLB instance do not forward traffic.</p>
-     * <br>
-     * <p>>  If all listeners of a CLB instance are deleted, the CLB instance automatically switches to the **inactive** state.</p>
-     * <br>
+     * <p>The state of the CLB instance. Valid values: <strong>active</strong> and <strong>inactive</strong>.</p>
+     * <ul>
+     * <li><p><strong>active</strong> (default)</p>
+     * <p>If a CLB instance is in the <strong>active</strong> state, listeners of the CLB instance can forward traffic based on forwarding rules.</p>
+     * <p>By default, newly created CLB instances are in the <strong>active</strong> state.</p>
+     * </li>
+     * <li><p><strong>inactive</strong></p>
+     * <p>If a CLB instance is in the <strong>inactive</strong> state, listeners of the CLB instance do not forward traffic.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> If all listeners of a CLB instance are deleted, the CLB instance automatically switches to the <strong>inactive</strong> state.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
@@ -40,8 +44,10 @@ public class SetLoadBalancerStatusRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the CLB instance is deployed.</p>
-     * <br>
-     * <p>You can query region IDs from the [Regions and zones](https://help.aliyun.com/document_detail/40654.html) list or by calling the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation.</p>
+     * <p>You can query region IDs from the <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a> list or by calling the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class RemoveListenerWhiteListItemRequest extends TeaModel {
     /**
      * <p>The listening port.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The frontend protocol that is used by the CLB instance.</p>
-     * <br>
-     * <p>>  This parameter is required when listeners that use different protocols listen on the same port.</p>
+     * <blockquote>
+     * <p> This parameter is required when listeners that use different protocols listen on the same port.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>https</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
      * <p>The ID of the CLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-8vb86hxixo8lvsja8****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -36,8 +44,10 @@ public class RemoveListenerWhiteListItemRequest extends TeaModel {
 
     /**
      * <p>The region where the Classic Load Balancer (CLB) instance is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -50,10 +60,13 @@ public class RemoveListenerWhiteListItemRequest extends TeaModel {
 
     /**
      * <p>The list of IP addresses or CIDR blocks that you want to remove from the whitelist. Separate multiple IP addresses or CIDR blocks with commas (,).</p>
-     * <br>
-     * <p>>  If all IP addresses are removed from the whitelist, the listener does not forward requests.</p>
-     * <br>
+     * <blockquote>
+     * <p> If all IP addresses are removed from the whitelist, the listener does not forward requests.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("SourceItems")
     public String sourceItems;

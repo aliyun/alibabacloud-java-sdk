@@ -6,30 +6,42 @@ import com.aliyun.tea.*;
 public class DescribeTagsResponseBody extends TeaModel {
     /**
      * <p>The number of the returned page. Minimum value: 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>Default value: 50. Maximum value: 100.</p>
+     * <p>The number of entries returned per page. Default value: 50. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The tags that are queried.</p>
      */
     @NameInMap("TagSets")
     public DescribeTagsResponseBodyTagSets tagSets;
 
     /**
      * <p>The number of instances returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,27 @@ public class DescribeTagsResponseBody extends TeaModel {
     public static class DescribeTagsResponseBodyTagSetsTagSet extends TeaModel {
         /**
          * <p>The number of instances to which the tag is added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeListenerAccessControlAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the whitelist is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **open_white_list**: the whitelist is enabled.</p>
-     * <p>*   **close**: the whitelist is disabled.</p>
+     * <ul>
+     * <li><strong>open_white_list</strong>: the whitelist is enabled.</li>
+     * <li><strong>close</strong>: the whitelist is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>open_white_list</p>
      */
     @NameInMap("AccessControlStatus")
     public String accessControlStatus;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The queried ACLs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("SourceItems")
     public String sourceItems;

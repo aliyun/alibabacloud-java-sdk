@@ -6,18 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     /**
      * <p>The frontend port that is used by the CLB instance.</p>
-     * <br>
-     * <p>Valid values: **1** to **65535**.</p>
-     * <br>
+     * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The CLB instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1mxu5r8lau****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -30,6 +33,9 @@ public class DescribeLoadBalancerHTTPSListenerAttributeRequest extends TeaModel 
 
     /**
      * <p>The region ID of the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

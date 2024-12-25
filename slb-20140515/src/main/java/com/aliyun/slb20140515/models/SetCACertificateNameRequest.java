@@ -6,18 +6,21 @@ import com.aliyun.tea.*;
 public class SetCACertificateNameRequest extends TeaModel {
     /**
      * <p>The ID of the CA certificate.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>139a0******-cn-east-hangzhou-01</p>
      */
     @NameInMap("CACertificateId")
     public String CACertificateId;
 
     /**
-     * <p>The name of the CA certificate.</p>
-     * <br>
-     * <p>The name must be 1 to 80 characters in length and start with an English letter or a Chinese character. It can contain numbers, underscores (_), periods (.), and hyphens (-).</p>
-     * <br>
+     * <p>The CA certificate name.</p>
+     * <p>The name must be 1 to 80 character in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mycacert02</p>
      */
     @NameInMap("CACertificateName")
     public String CACertificateName;
@@ -29,11 +32,12 @@ public class SetCACertificateNameRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region to which the CA certificate belongs.</p>
-     * <br>
-     * <p>To query the region ID, call [DescribeRegions](https://help.aliyun.com/document_detail/27584.html).</p>
-     * <br>
+     * <p>The region of the CA certificate.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

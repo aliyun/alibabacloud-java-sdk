@@ -6,32 +6,48 @@ import com.aliyun.tea.*;
 public class DescribeVServerGroupsRequest extends TeaModel {
     /**
      * <p>The name of the vServer group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Group3</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to return information about the associated listeners. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong> (default): no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeListener")
     public Boolean includeListener;
 
     /**
      * <p>Specifies whether to return the forwarding rules associated with the vServer groups. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong> (default): no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeRule")
     public Boolean includeRule;
 
     /**
      * <p>The ID of the CLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1o94dp5i6ea*******</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -44,10 +60,11 @@ public class DescribeVServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -151,13 +168,21 @@ public class DescribeVServerGroupsRequest extends TeaModel {
 
     public static class DescribeVServerGroupsRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs</code>:.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,21 +6,28 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, it indicates that no subsequent query is to be sent.</p>
-     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, it indicates that no subsequent query is to be sent.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DE65F6B7-7566-4802-9007-96F2494AC512</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details about the resource to which the tags are added.</p>
+     * <p>The resources to which the tags are added.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -56,25 +63,37 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp16qjewdsunr4****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

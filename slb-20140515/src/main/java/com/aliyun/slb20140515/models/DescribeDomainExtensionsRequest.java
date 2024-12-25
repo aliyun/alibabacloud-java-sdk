@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeDomainExtensionsRequest extends TeaModel {
     /**
      * <p>The ID of the additional certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de-bp1rp7ta1****</p>
      */
     @NameInMap("DomainExtensionId")
     public String domainExtensionId;
 
     /**
-     * <p>The frontend port of the HTTPS listener that is configured for the Classic Load Balancer (CLB) instance. Valid values: **1 to 65535**.</p>
-     * <br>
+     * <p>The frontend port of the HTTPS listener that is configured for the Classic Load Balancer (CLB) instance. Valid values: <strong>1 to 65535</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>443</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The ID of the CLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1b6c719dfa08ex****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -34,8 +41,10 @@ public class DescribeDomainExtensionsRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the CLB instance is deployed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

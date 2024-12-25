@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteAccessLogsDownloadAttributeRequest extends TeaModel {
     /**
      * <p>The CLB instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-uf68ps3rekbljmdb0****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
      * <p>The access log forwarding rule. Parameters:</p>
-     * <br>
-     * <p>*   **LogProject**: the name of the project of Log Service.</p>
-     * <p>*   **LogStore**: the name of the Logstore of Log Service.</p>
-     * <p>*   **LoadBalancerId**: the ID of the CLB instance.</p>
-     * <br>
+     * <ul>
+     * <li><strong>LogProject</strong>: the name of the project of Log Service.</li>
+     * <li><strong>LogStore</strong>: the name of the Logstore of Log Service.</li>
+     * <li><strong>LoadBalancerId</strong>: the ID of the CLB instance.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;logProject&quot;:&quot;my-project&quot;, &quot;LogStore&quot;:&quot;my-log-store&quot;, &quot;LoadBalancerId&quot;:&quot;lb-uf68ps3rekbljmdb0****&quot;}]</p>
      */
     @NameInMap("LogsDownloadAttributes")
     public String logsDownloadAttributes;
@@ -30,8 +36,10 @@ public class DeleteAccessLogsDownloadAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the CLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -44,6 +52,9 @@ public class DeleteAccessLogsDownloadAttributeRequest extends TeaModel {
 
     /**
      * <p>The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;tagKey&quot;:&quot;Key1&quot;,&quot;tagValue&quot;:&quot;Value1&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;

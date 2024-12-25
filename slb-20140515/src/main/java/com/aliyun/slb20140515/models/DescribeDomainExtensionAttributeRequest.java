@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDomainExtensionAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the additional certificate.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de-bp1rp7ta1****</p>
      */
     @NameInMap("DomainExtensionId")
     public String domainExtensionId;
@@ -20,8 +22,10 @@ public class DescribeDomainExtensionAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the Server Load Balancer (SLB) instance is deployed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

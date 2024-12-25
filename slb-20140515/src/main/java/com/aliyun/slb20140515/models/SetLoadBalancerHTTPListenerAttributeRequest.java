@@ -6,190 +6,252 @@ import com.aliyun.tea.*;
 public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the access control list (ACL) that is associated with the listener.</p>
-     * <br>
-     * <p>> This parameter is required when **AclStatus** is set to **on**.</p>
+     * <blockquote>
+     * <p>This parameter is required when <strong>AclStatus</strong> is set to <strong>on</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
      * <p>Specifies whether to enable access control. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
      */
     @NameInMap("AclStatus")
     public String aclStatus;
 
     /**
      * <p>The type of the ACL. Valid values:</p>
-     * <br>
-     * <p>*   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where you want to allow only specific IP addresses to access an application. Risks may occur if a whitelist is improperly configured. If a whitelist is configured, only requests from IP addresses that are added to the whitelist are forwarded by the listener.</p>
-     * <br>
+     * <ul>
+     * <li><strong>white</strong>: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where you want to allow only specific IP addresses to access an application. Risks may occur if a whitelist is improperly configured. If a whitelist is configured, only requests from IP addresses that are added to the whitelist are forwarded by the listener.</li>
+     * </ul>
      * <p>If you enable a whitelist but do not add an IP address to the ACL, the listener forwards all requests.</p>
-     * <br>
-     * <p>*   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists apply to scenarios where you want to block access from specified IP addresses to an application.</p>
-     * <br>
+     * <ul>
+     * <li><strong>black</strong>: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists apply to scenarios where you want to block access from specified IP addresses to an application.</li>
+     * </ul>
      * <p>If a blacklist is configured for a listener but no IP addresses are added to the blacklist, the listener forwards all requests.</p>
-     * <br>
-     * <p>> This parameter takes effect when the value of **AclStatus** is set to **on**.</p>
+     * <blockquote>
+     * <p>This parameter takes effect when the value of <strong>AclStatus</strong> is set to <strong>on</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>white</p>
      */
     @NameInMap("AclType")
     public String aclType;
 
     /**
      * <p>The maximum bandwidth of the listener. Unit: Mbit/s. Set the value to</p>
-     * <br>
-     * <p>*   **-1**: For a pay-by-data-transfer Internet-facing CLB instance, this value specifies that the bandwidth of the listener is unlimited.</p>
+     * <ul>
+     * <li><strong>-1</strong>: For a pay-by-data-transfer Internet-facing CLB instance, this value specifies that the bandwidth of the listener is unlimited.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The cookie that is configured on the server.</p>
-     * <br>
      * <p>The cookie must be 1 to 200 characters in length, and can contain ASCII characters and digits. It cannot contain commas (,), semicolons (;), or spaces. It cannot start with a dollar sign ($).</p>
-     * <br>
-     * <p>> This parameter is required when **StickySession** is set to **on** and **StickySessionType** is set to **server**.</p>
+     * <blockquote>
+     * <p>This parameter is required when <strong>StickySession</strong> is set to <strong>on</strong> and <strong>StickySessionType</strong> is set to <strong>server</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>B490B5EBF6F3CD402E515D22BCDA****</p>
      */
     @NameInMap("Cookie")
     public String cookie;
 
     /**
      * <p>The timeout period of a cookie.</p>
-     * <br>
-     * <p>Valid values: **1** to **86400**. Unit: seconds.</p>
-     * <br>
-     * <p>> This parameter is required when **StickySession** is set to **on** and **StickySessionType** is set to **insert**.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>86400</strong>. Unit: seconds.</p>
+     * <blockquote>
+     * <p>This parameter is required when <strong>StickySession</strong> is set to <strong>on</strong> and <strong>StickySessionType</strong> is set to <strong>insert</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("CookieTimeout")
     public Integer cookieTimeout;
 
     /**
      * <p>The description of the listener.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Specifies whether to enable `GZIP` compression to compress specific types of files. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <p>Specifies whether to enable <code>GZIP</code> compression to compress specific types of files. Valid values:</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("Gzip")
     public String gzip;
 
     /**
      * <p>Specifies whether to enable the health check feature. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("HealthCheck")
     public String healthCheck;
 
     /**
      * <p>The port that is used for health checks.</p>
-     * <br>
-     * <p>Valid values: **1** to **65535**.</p>
-     * <br>
-     * <p>> This parameter takes effect only if you set **HealthCheck** to **on**.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
      */
     @NameInMap("HealthCheckConnectPort")
     public Integer healthCheckConnectPort;
 
     /**
      * <p>The domain name that is used for health checks. Valid values:</p>
-     * <br>
-     * <p>*   **$_ip**: the private IP address of a backend server. If you specify \\*\\*$_ip **or** ignore HealthCheckDomain\\*\\*, CLB uses the private IP addresses of backend servers as the health check domain names.</p>
-     * <p>*   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
-     * <br>
-     * <p>> The parameter takes effect only if you set **HealthCheck** to **on**.</p>
+     * <ul>
+     * <li><strong>$_ip</strong>: the private IP address of a backend server. If you specify \<em>\</em>$_ip <strong>or</strong> ignore HealthCheckDomain\<em>\</em>, CLB uses the private IP addresses of backend servers as the health check domain names.</li>
+     * <li><strong>domain</strong>: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</li>
+     * </ul>
+     * <blockquote>
+     * <p>The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>172.XX.XX.16</p>
      */
     @NameInMap("HealthCheckDomain")
     public String healthCheckDomain;
 
     /**
      * <p>The HTTP status code for a successful health check. Separate multiple HTTP status codes with commas (,).</p>
-     * <br>
-     * <p>Valid values: **http_2xx**, **http_3xx**, **http_4xx**, and **http_5xx**.</p>
-     * <br>
-     * <p>>  The parameter takes effect only if you set **HealthCheck** to **on**.</p>
+     * <p>Valid values: <strong>http_2xx</strong>, <strong>http_3xx</strong>, <strong>http_4xx</strong>, and <strong>http_5xx</strong>.</p>
+     * <blockquote>
+     * <p> The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>http_2xx,http_3xx</p>
      */
     @NameInMap("HealthCheckHttpCode")
     public String healthCheckHttpCode;
 
     /**
      * <p>The interval at which health checks are performed.</p>
-     * <br>
-     * <p>Valid values: **1** to **50**. Unit: seconds.</p>
-     * <br>
-     * <p>>  The parameter takes effect only if you set **HealthCheck** to **on**.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>50</strong>. Unit: seconds.</p>
+     * <blockquote>
+     * <p> The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("HealthCheckInterval")
     public Integer healthCheckInterval;
 
     /**
-     * <p>The health check method that is used in HTTP health checks. Valid values: **head** and **get**.</p>
-     * <br>
-     * <p>> The parameter takes effect only if you set **HealthCheck** to **on**.</p>
+     * <p>The health check method that is used in HTTP health checks. Valid values: <strong>head</strong> and <strong>get</strong>.</p>
+     * <blockquote>
+     * <p>The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>get</p>
      */
     @NameInMap("HealthCheckMethod")
     public String healthCheckMethod;
 
     /**
-     * <p>The timeout period of a health check response. If a backend server, such as an Elastic Compute Service (ECS) instance, does not respond to a probe packet within the specified timeout period, the server fails the health check. This parameter takes effect only if you set **HealthCheck** to **on**.</p>
-     * <br>
-     * <p>Valid values: **1** to **300**. Unit: seconds.</p>
-     * <br>
-     * <p>> If the value of **HealthCheckTimeout** is smaller than the value of **HealthCheckInterval**, the value of **HealthCheckTimeout** becomes invalid and the value of **HealthCheckInterval** is used as the timeout period.</p>
+     * <p>The timeout period of a health check response. If a backend ECS instance does not respond within the specified timeout period, the ECS instance fails the health check. This parameter takes effect only if the <strong>HealthCheck</strong> parameter is set to <strong>on</strong>.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>300</strong>. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("HealthCheckTimeout")
     public Integer healthCheckTimeout;
 
     /**
      * <p>The Uniform Resource Identifier (URI) that you want to use for health checks.</p>
-     * <br>
-     * <p>The URI must be 1 to 80 characters in length, and can contain letters, digits, and the following characters: - / . % ? # & The URI must start with a forward slash (/) but cannot be a single forward slash (/).</p>
-     * <br>
-     * <p>> The parameter takes effect only if you set **HealthCheck** to **on**.</p>
+     * <p>The URI must be 1 to 80 characters in length, and can contain letters, digits, and the following characters: - / . % ? # &amp; The URI must start with a forward slash (/) but cannot be a single forward slash (/).</p>
+     * <blockquote>
+     * <p>The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>/test/index.html</p>
      */
     @NameInMap("HealthCheckURI")
     public String healthCheckURI;
 
     /**
-     * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.</p>
-     * <br>
-     * <p>Valid values: **2** to **10**.</p>
-     * <br>
-     * <p>> The parameter takes effect only if you set **HealthCheck** to **on**.</p>
+     * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from <strong>fail</strong> to <strong>success</strong>.</p>
+     * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+     * <blockquote>
+     * <p>The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
 
     /**
-     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: **1 to 60**. Default value: **15**.</p>
-     * <br>
+     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: <strong>1 to 60</strong>. Default value: <strong>15</strong>.</p>
      * <p>If no request is received within the specified timeout period, CLB closes the connection. When a request is received, CLB establishes a new connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
     /**
      * <p>The frontend port that is used by the CLB instance.</p>
-     * <br>
-     * <p>Valid values: **1** to **65535**.</p>
-     * <br>
+     * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The CLB instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1qjwo61pqz3ah*****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -202,16 +264,20 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the CLB instance.</p>
-     * <br>
-     * <p>You can query the region ID from the [Regions and zones](https://help.aliyun.com/document_detail/27585.html) list or by calling the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation.</p>
+     * <p>You can query the region ID from the <a href="https://help.aliyun.com/document_detail/27585.html">Regions and zones</a> list or by calling the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The timeout period of a request. Unit: seconds. Valid values: **1 to 180**. Default value: **60**.</p>
-     * <br>
+     * <p>The timeout period of a request. Unit: seconds. Valid values: <strong>1 to 180</strong>. Default value: <strong>60</strong>.</p>
      * <p>If no response is received from the backend server within the request timeout period, CLB returns an HTTP 504 error code to the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
@@ -224,113 +290,159 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
 
     /**
      * <p>The scheduling algorithm. Valid values:</p>
-     * <br>
-     * <p>*   **wrr**: Backend servers that have higher weights receive more requests than backend servers that have lower weights.</p>
-     * <p>*   **rr**: Requests are distributed to backend servers in sequence.</p>
+     * <ul>
+     * <li><strong>wrr</strong>: Backend servers that have higher weights receive more requests than backend servers that have lower weights.</li>
+     * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>wrr</p>
      */
     @NameInMap("Scheduler")
     public String scheduler;
 
     /**
      * <p>Specifies whether to enable session persistence. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("StickySession")
     public String stickySession;
 
     /**
      * <p>The method that is used to handle a cookie. Valid values:</p>
-     * <br>
-     * <p>*   **insert**: inserts a cookie.</p>
-     * <br>
+     * <ul>
+     * <li><strong>insert</strong>: inserts a cookie.</li>
+     * </ul>
      * <p>CLB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie, and the listener distributes the request to the recorded backend server.</p>
-     * <br>
-     * <p>*   **server**: rewrites a cookie.</p>
-     * <br>
+     * <ul>
+     * <li><strong>server</strong>: rewrites a cookie.</li>
+     * </ul>
      * <p>When CLB detects a user-defined cookie, CLB overwrites the original cookie with the user-defined cookie. The next request from the client carries the user-defined cookie, and the listener forwards the request to the recorded backend server.</p>
-     * <br>
-     * <p>> This parameter is required when **StickySession** is set to **on**.</p>
+     * <blockquote>
+     * <p>This parameter is required when <strong>StickySession</strong> is set to <strong>on</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>insert</p>
      */
     @NameInMap("StickySessionType")
     public String stickySessionType;
 
     /**
-     * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.</p>
-     * <br>
-     * <p>Valid values: **2** to **10**.</p>
-     * <br>
-     * <p>> The parameter takes effect only if you set **HealthCheck** to **on**.</p>
+     * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from <strong>success</strong> to <strong>fail</strong>.</p>
+     * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+     * <blockquote>
+     * <p>The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("UnhealthyThreshold")
     public Integer unhealthyThreshold;
 
     /**
      * <p>Specifies whether to use a vServer group. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("VServerGroup")
     public String VServerGroup;
 
     /**
      * <p>The ID of the vServer group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rsp-cige6j*****</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
     /**
-     * <p>Specifies whether to use the `X-Forwarded-For` header to preserve client IP addresses. Valid values:</p>
-     * <br>
-     * <p>*   **on** (default)</p>
-     * <p>*   **off**</p>
+     * <p>Specifies whether to use the <code>X-Forwarded-For</code> header to preserve client IP addresses. Valid values:</p>
+     * <ul>
+     * <li><strong>on</strong> (default)</li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("XForwardedFor")
     public String XForwardedFor;
 
     /**
-     * <p>Specifies whether to use the `XForwardedFor_ClientSrcPort` header to retrieve the client port. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <p>Specifies whether to use the <code>XForwardedFor_ClientSrcPort</code> header to retrieve the client port. Valid values:</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
      */
     @NameInMap("XForwardedFor_ClientSrcPort")
     public String XForwardedFor_ClientSrcPort;
 
     /**
-     * <p>Specifies whether to use the `SLB-ID` header to retrieve the ID of the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <p>Specifies whether to use the <code>SLB-ID</code> header to retrieve the ID of the CLB instance. Valid values:</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("XForwardedFor_SLBID")
     public String XForwardedFor_SLBID;
 
     /**
-     * <p>Specifies whether to use the `SLB-IP` header to retrieve the virtual IP address (VIP) requested by the client. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <p>Specifies whether to use the <code>SLB-IP</code> header to retrieve the virtual IP address (VIP) requested by the client. Valid values:</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("XForwardedFor_SLBIP")
     public String XForwardedFor_SLBIP;
 
     /**
-     * <p>Specifies whether to use the `XForwardedFor_SLBPORT` header to retrieve the listener port of the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <p>Specifies whether to use the <code>XForwardedFor_SLBPORT</code> header to retrieve the listener port of the CLB instance. Valid values:</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
      */
     @NameInMap("XForwardedFor_SLBPORT")
     public String XForwardedFor_SLBPORT;
 
     /**
-     * <p>Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listener protocol. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <p>Specifies whether to use the <code>X-Forwarded-Proto</code> header to retrieve the listener protocol. Valid values:</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("XForwardedFor_proto")
     public String XForwardedFor_proto;

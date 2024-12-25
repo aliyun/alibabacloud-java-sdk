@@ -6,63 +6,94 @@ import com.aliyun.tea.*;
 public class CreateLoadBalancerResponseBody extends TeaModel {
     /**
      * <p>The IP address that is allocated to the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42.XX.XX.6</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
      * <p>The IP version that is used by the CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
     /**
      * <p>The CLB instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-hddhfjg****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
      * <p>The CLB instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1o94dp5i6ea****</p>
      */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
     /**
      * <p>The network type of the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **vpc**</p>
-     * <p>*   **classic**</p>
+     * <ul>
+     * <li><strong>vpc</strong></li>
+     * <li><strong>classic</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>classic</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
      * <p>The order ID of the subscription CLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20212961978****</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group to which the CLB instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rto****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the vSwitch to which the CLB instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-255ecr****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the VPC to which the CLB instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-25dvzy9****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

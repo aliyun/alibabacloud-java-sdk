@@ -6,17 +6,25 @@ import com.aliyun.tea.*;
 public class AddAccessControlListEntryRequest extends TeaModel {
     /**
      * <p>The configuration of the network ACL. Valid values:</p>
-     * <br>
-     * <p>*   **entry**: the IP entries that you want to add to the network ACL. You can add CIDR blocks. Separate multiple CIDR blocks with commas (,).</p>
-     * <p>*   **comment**: the comment on the network ACL.</p>
-     * <br>
-     * <p>> You can add at most 50 IP entries to a network ACL in each call. If the IP entry that you want to add to a network ACL already exists, the IP entry is not added. The IP entries that you add must be CIDR blocks.</p>
+     * <ul>
+     * <li><strong>entry</strong>: the IP entries that you want to add to the network ACL. You can add CIDR blocks. Separate multiple CIDR blocks with commas (,).</li>
+     * <li><strong>comment</strong>: the comment on the network ACL.</li>
+     * </ul>
+     * <blockquote>
+     * <p>You can add at most 50 IP entries to a network ACL in each call. If the IP entry that you want to add to a network ACL already exists, the IP entry is not added. The IP entries that you add must be CIDR blocks.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;entry&quot;:&quot;<code>10.0.**.**</code>/24&quot;,&quot;comment&quot;:&quot;privaterule1&quot;},{&quot;entry&quot;:&quot;<code>192.168.**.**</code>/16&quot;,&quot;comment&quot;:&quot;privaterule2&quot;}]</p>
      */
     @NameInMap("AclEntrys")
     public String aclEntrys;
 
     /**
      * <p>The ID of the network ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-bp1l0kk4gxce43kze*****</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -29,8 +37,10 @@ public class AddAccessControlListEntryRequest extends TeaModel {
 
     /**
      * <p>The region ID of the network ACL.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

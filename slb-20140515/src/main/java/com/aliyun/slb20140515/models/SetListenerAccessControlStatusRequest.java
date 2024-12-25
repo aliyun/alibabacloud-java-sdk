@@ -6,39 +6,50 @@ import com.aliyun.tea.*;
 public class SetListenerAccessControlStatusRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the whitelist. Valid values:</p>
-     * <br>
-     * <p>*   **open_white_list**: enables the whitelist.</p>
-     * <p>*   **close**: disables the whitelist.</p>
-     * <br>
-     * <p>>  After the whitelist is enabled, if no IP address is added to the whitelist, the CLB instance does not distribute network traffic.</p>
-     * <br>
+     * <ul>
+     * <li><strong>open_white_list</strong>: enables the whitelist.</li>
+     * <li><strong>close</strong>: disables the whitelist.</li>
+     * </ul>
+     * <blockquote>
+     * <p> After the whitelist is enabled, if no IP address is added to the whitelist, the CLB instance does not distribute network traffic.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open_white_list</p>
      */
     @NameInMap("AccessControlStatus")
     public String accessControlStatus;
 
     /**
      * <p>The frontend port that is used by the CLB instance.</p>
-     * <br>
-     * <p>Valid values: **1 to 65535**.</p>
-     * <br>
+     * <p>Valid values: <strong>1 to 65535</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The frontend protocol that is used by the CLB instance.</p>
-     * <br>
-     * <p>>  This parameter is required when listeners that use different protocols listen on the same port.</p>
+     * <blockquote>
+     * <p> This parameter is required when listeners that use different protocols listen on the same port.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>https</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
      * <p>The ID of the CLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-8vb86hxixo8lvsja8****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -51,8 +62,10 @@ public class SetListenerAccessControlStatusRequest extends TeaModel {
 
     /**
      * <p>The region where the Classic Load Balancer (CLB) instance is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

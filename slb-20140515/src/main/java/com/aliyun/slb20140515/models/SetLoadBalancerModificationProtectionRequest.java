@@ -6,29 +6,39 @@ import com.aliyun.tea.*;
 public class SetLoadBalancerModificationProtectionRequest extends TeaModel {
     /**
      * <p>The ID of the CLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1b6c719dfa08e*****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
      * <p>The reason why the configuration read-only mode is enabled. The value must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
-     * <br>
-     * <p>>  This parameter is valid only if the **ModificationProtectionStatus** parameter is set to **ConsoleProtection**.</p>
+     * <blockquote>
+     * <p> This parameter is valid only if the <strong>ModificationProtectionStatus</strong> parameter is set to <strong>ConsoleProtection</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Configuration change</p>
      */
     @NameInMap("ModificationProtectionReason")
     public String modificationProtectionReason;
 
     /**
      * <p>Specifies whether to enable the configuration read-only mode. Valid values:</p>
-     * <br>
-     * <p>*   **NonProtection**: disables the configuration read-only mode. After you disable the configuration read-only mode, the value of **ModificationProtectionReason** is cleared.</p>
-     * <p>*   **ConsoleProtection**: enables the configuration read-only mode.</p>
-     * <br>
-     * <p>>  If you set this parameter to **ConsoleProtection**, you cannot use the CLB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
-     * <br>
+     * <ul>
+     * <li><strong>NonProtection</strong>: disables the configuration read-only mode. After you disable the configuration read-only mode, the value of <strong>ModificationProtectionReason</strong> is cleared.</li>
+     * <li><strong>ConsoleProtection</strong>: enables the configuration read-only mode.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set this parameter to <strong>ConsoleProtection</strong>, you cannot use the CLB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ConsoleProtection</p>
      */
     @NameInMap("ModificationProtectionStatus")
     public String modificationProtectionStatus;
@@ -41,10 +51,11 @@ public class SetLoadBalancerModificationProtectionRequest extends TeaModel {
 
     /**
      * <p>The region ID of the CLB instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

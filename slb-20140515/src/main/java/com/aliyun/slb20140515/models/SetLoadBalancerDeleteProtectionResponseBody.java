@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SetLoadBalancerDeleteProtectionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>791D8B68-AE0F-4174-AF54-088C8B3C5D54</p>
      */
     @NameInMap("RequestId")
     public String requestId;

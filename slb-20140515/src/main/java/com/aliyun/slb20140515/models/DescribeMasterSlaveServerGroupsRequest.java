@@ -6,23 +6,35 @@ import com.aliyun.tea.*;
 public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     /**
      * <p>The description of the primary/secondary server group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-112</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to return information about the associated listeners. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeListener")
     public Boolean includeListener;
 
     /**
      * <p>The CLB instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp14zi0n66zpg6o******</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -35,8 +47,10 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the CLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -132,15 +146,20 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
 
     public static class DescribeMasterSlaveServerGroupsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: **1 to 20**. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
+         * <p>The key of tag N. Valid values of N: <strong>1 to 20</strong>. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: **1 to 20**. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` and `acs:`.</p>
+         * <p>The value of tag N. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> and <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;
