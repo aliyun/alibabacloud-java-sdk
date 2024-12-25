@@ -126,6 +126,9 @@ public class CreateDialogResponseBody extends TeaModel {
     }
 
     public static class CreateDialogResponseBodyData extends TeaModel {
+        @NameInMap("openingRemarks")
+        public String openingRemarks;
+
         /**
          * <strong>example:</strong>
          * <p>1728545917713234</p>
@@ -136,6 +139,14 @@ public class CreateDialogResponseBody extends TeaModel {
         public static CreateDialogResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateDialogResponseBodyData self = new CreateDialogResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDialogResponseBodyData setOpeningRemarks(String openingRemarks) {
+            this.openingRemarks = openingRemarks;
+            return this;
+        }
+        public String getOpeningRemarks() {
+            return this.openingRemarks;
         }
 
         public CreateDialogResponseBodyData setSessionId(String sessionId) {

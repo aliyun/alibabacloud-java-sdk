@@ -105,6 +105,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("channel", request.channel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableLibrary)) {
+            body.put("enableLibrary", request.enableLibrary);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.metaData)) {
             body.put("metaData", request.metaData);
         }
@@ -119,6 +123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
             body.put("requestId", request.requestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selfDirected)) {
+            body.put("selfDirected", request.selfDirected);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1617,6 +1625,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.reIndexWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>实时对话</p>
+     * 
+     * @param request RealTimeDialogRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RealTimeDialogResponse
+     */
+    public RealTimeDialogResponse realTimeDialogWithOptions(String workspaceId, RealTimeDialogRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.analysis)) {
+            body.put("analysis", request.analysis);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            body.put("bizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conversationModel)) {
+            body.put("conversationModel", request.conversationModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dialogMemoryTurns)) {
+            body.put("dialogMemoryTurns", request.dialogMemoryTurns);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metaData)) {
+            body.put("metaData", request.metaData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recommend)) {
+            body.put("recommend", request.recommend);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stream)) {
+            body.put("stream", request.stream);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RealTimeDialog"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/realtime/dialog/chat"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RealTimeDialogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>实时对话</p>
+     * 
+     * @param request RealTimeDialogRequest
+     * @return RealTimeDialogResponse
+     */
+    public RealTimeDialogResponse realTimeDialog(String workspaceId, RealTimeDialogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.realTimeDialogWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
