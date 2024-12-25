@@ -4,6 +4,9 @@ package com.aliyun.dataanalysisgbi20240823.models;
 import com.aliyun.tea.*;
 
 public class RunDataAnalysisRequest extends TeaModel {
+    @NameInMap("dataRole")
+    public java.util.List<String> dataRole;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -31,9 +34,20 @@ public class RunDataAnalysisRequest extends TeaModel {
     @NameInMap("specificationType")
     public String specificationType;
 
+    @NameInMap("userParams")
+    public java.util.Map<String, ?> userParams;
+
     public static RunDataAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         RunDataAnalysisRequest self = new RunDataAnalysisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunDataAnalysisRequest setDataRole(java.util.List<String> dataRole) {
+        this.dataRole = dataRole;
+        return this;
+    }
+    public java.util.List<String> getDataRole() {
+        return this.dataRole;
     }
 
     public RunDataAnalysisRequest setGenerateSqlOnly(Boolean generateSqlOnly) {
@@ -66,6 +80,14 @@ public class RunDataAnalysisRequest extends TeaModel {
     }
     public String getSpecificationType() {
         return this.specificationType;
+    }
+
+    public RunDataAnalysisRequest setUserParams(java.util.Map<String, ?> userParams) {
+        this.userParams = userParams;
+        return this;
+    }
+    public java.util.Map<String, ?> getUserParams() {
+        return this.userParams;
     }
 
 }
