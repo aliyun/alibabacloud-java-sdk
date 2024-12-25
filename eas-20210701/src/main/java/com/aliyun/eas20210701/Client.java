@@ -1885,6 +1885,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取群组端点列表</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeGroupEndpointsResponse
+     */
+    public DescribeGroupEndpointsResponse describeGroupEndpointsWithOptions(String ClusterId, String GroupName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeGroupEndpoints"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/groups/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(GroupName) + "/endpoints"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGroupEndpointsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取群组端点列表</p>
+     * @return DescribeGroupEndpointsResponse
+     */
+    public DescribeGroupEndpointsResponse describeGroupEndpoints(String ClusterId, String GroupName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeGroupEndpointsWithOptions(ClusterId, GroupName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the information about a resource group.</p>
      * 
      * @param headers map
@@ -2140,6 +2177,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeServiceDiagnosisWithOptions(ClusterId, ServiceName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取服务端点列表</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeServiceEndpointsResponse
+     */
+    public DescribeServiceEndpointsResponse describeServiceEndpointsWithOptions(String ClusterId, String ServiceName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeServiceEndpoints"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(ServiceName) + "/endpoints"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceEndpointsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取服务端点列表</p>
+     * @return DescribeServiceEndpointsResponse
+     */
+    public DescribeServiceEndpointsResponse describeServiceEndpoints(String ClusterId, String ServiceName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeServiceEndpointsWithOptions(ClusterId, ServiceName, headers, runtime);
     }
 
     /**
@@ -2842,7 +2916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取网关内网支持的可用区</p>
+     * <p>Obtains the zones supported by a gateway within an intranet.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2868,7 +2942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取网关内网支持的可用区</p>
+     * <p>Obtains the zones supported by a gateway within an intranet.</p>
      * @return ListGatewayIntranetSupportedZoneResponse
      */
     public ListGatewayIntranetSupportedZoneResponse listGatewayIntranetSupportedZone(String GatewayId, String ClusterId) throws Exception {
