@@ -767,6 +767,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("CustomHostAlias")
         public String customHostAlias;
 
+        @NameInMap("CustomImageNetworkType")
+        public String customImageNetworkType;
+
         @NameInMap("Dotnet")
         public String dotnet;
 
@@ -1503,6 +1506,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getCustomHostAlias() {
             return this.customHostAlias;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setCustomImageNetworkType(String customImageNetworkType) {
+            this.customImageNetworkType = customImageNetworkType;
+            return this;
+        }
+        public String getCustomImageNetworkType() {
+            return this.customImageNetworkType;
         }
 
         public DescribeApplicationConfigResponseBodyData setDotnet(String dotnet) {

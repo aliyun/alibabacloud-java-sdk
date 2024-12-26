@@ -33,6 +33,9 @@ public class DescribeApplicationInstancesRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     /**
      * <p>10</p>
      * 
@@ -78,6 +81,14 @@ public class DescribeApplicationInstancesRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeApplicationInstancesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeApplicationInstancesRequest setPageSize(Integer pageSize) {

@@ -385,6 +385,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CustomHostAlias", request.customHostAlias);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customImageNetworkType)) {
+            query.put("CustomImageNetworkType", request.customImageNetworkType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deploy)) {
             query.put("Deploy", request.deploy);
         }
@@ -2098,6 +2102,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CustomHostAlias", request.customHostAlias);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customImageNetworkType)) {
+            query.put("CustomImageNetworkType", request.customImageNetworkType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deploy)) {
             query.put("Deploy", request.deploy);
         }
@@ -2607,6 +2615,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
