@@ -297,6 +297,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("MainContainerStatus")
+        public String mainContainerStatus;
+
         /**
          * <p>The version of the package.</p>
          * 
@@ -308,6 +311,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
 
         @NameInMap("SidecarContainersStatus")
         public java.util.List<DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus> sidecarContainersStatus;
+
+        @NameInMap("UnhealthyMessage")
+        public String unhealthyMessage;
 
         /**
          * <p>The ID of the zone where the instance is deployed.</p>
@@ -411,6 +417,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public DescribeApplicationInstancesResponseBodyDataInstances setMainContainerStatus(String mainContainerStatus) {
+            this.mainContainerStatus = mainContainerStatus;
+            return this;
+        }
+        public String getMainContainerStatus() {
+            return this.mainContainerStatus;
+        }
+
         public DescribeApplicationInstancesResponseBodyDataInstances setPackageVersion(String packageVersion) {
             this.packageVersion = packageVersion;
             return this;
@@ -425,6 +439,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus> getSidecarContainersStatus() {
             return this.sidecarContainersStatus;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setUnhealthyMessage(String unhealthyMessage) {
+            this.unhealthyMessage = unhealthyMessage;
+            return this;
+        }
+        public String getUnhealthyMessage() {
+            return this.unhealthyMessage;
         }
 
         public DescribeApplicationInstancesResponseBodyDataInstances setVSwitchId(String vSwitchId) {

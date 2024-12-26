@@ -110,6 +110,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("CustomHostAlias")
     public String customHostAlias;
 
+    @NameInMap("CustomImageNetworkType")
+    public String customImageNetworkType;
+
     /**
      * <p>true</p>
      * 
@@ -630,6 +633,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getCustomHostAlias() {
         return this.customHostAlias;
+    }
+
+    public CreateApplicationShrinkRequest setCustomImageNetworkType(String customImageNetworkType) {
+        this.customImageNetworkType = customImageNetworkType;
+        return this;
+    }
+    public String getCustomImageNetworkType() {
+        return this.customImageNetworkType;
     }
 
     public CreateApplicationShrinkRequest setDeploy(Boolean deploy) {

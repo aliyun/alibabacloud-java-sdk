@@ -142,6 +142,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("CustomHostAlias")
     public String customHostAlias;
 
+    @NameInMap("CustomImageNetworkType")
+    public String customImageNetworkType;
+
     /**
      * <p>This parameter takes effect only for applications that are in the Stopped state. If you call the <strong>DeployApplication</strong> operation to manage a running application, the application is immediately redeployed.</p>
      * <ul>
@@ -836,6 +839,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getCustomHostAlias() {
         return this.customHostAlias;
+    }
+
+    public DeployApplicationRequest setCustomImageNetworkType(String customImageNetworkType) {
+        this.customImageNetworkType = customImageNetworkType;
+        return this;
+    }
+    public String getCustomImageNetworkType() {
+        return this.customImageNetworkType;
     }
 
     public DeployApplicationRequest setDeploy(String deploy) {
