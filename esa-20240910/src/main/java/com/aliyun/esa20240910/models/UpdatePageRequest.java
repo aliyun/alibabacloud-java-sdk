@@ -30,6 +30,7 @@ public class UpdatePageRequest extends TeaModel {
 
     /**
      * <p>The description of the custom error page.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>a custom deny page</p>

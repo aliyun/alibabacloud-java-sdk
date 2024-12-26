@@ -1,3 +1,14 @@
+2024-12-26 Version: 2.10.0
+- Support API ApplyCertificate.
+- Support API GetCertificate.
+- Support API ListCertificates.
+- Update API CreateUserDeliveryTask: add param Details.
+- Update API GetOriginProtection: update param SiteId.
+- Update API GetUserDeliveryTask: update response param.
+- Update API UpdatePage: update param Description.
+- Update API UpdateUserDeliveryTask: add param Details.
+
+
 2024-12-24 Version: 2.9.7
 - Update API GetOriginProtection: update param SiteId.
 
