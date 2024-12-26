@@ -2438,6 +2438,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取服务监控签名地址</p>
+     * 
+     * @param request DescribeServiceSignedUrlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeServiceSignedUrlResponse
+     */
+    public DescribeServiceSignedUrlResponse describeServiceSignedUrlWithOptions(String ClusterId, String ServiceName, DescribeServiceSignedUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expire)) {
+            query.put("Expire", request.expire);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.internal)) {
+            query.put("Internal", request.internal);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeServiceSignedUrl"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(ServiceName) + "/signed_url"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceSignedUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取服务监控签名地址</p>
+     * 
+     * @param request DescribeServiceSignedUrlRequest
+     * @return DescribeServiceSignedUrlResponse
+     */
+    public DescribeServiceSignedUrlResponse describeServiceSignedUrl(String ClusterId, String ServiceName, DescribeServiceSignedUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeServiceSignedUrlWithOptions(ClusterId, ServiceName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the historical prices of preemptible instances. For more information about preemptible instances, see Create and use preemptible instances.</p>
      * 
      * @param request DescribeSpotDiscountHistoryRequest

@@ -42,6 +42,13 @@ public class Instance extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>ecs.c7.large</p>
+     */
+    @NameInMap("InstanceType")
+    public String instanceType;
+
+    /**
+     * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("IsSpot")
@@ -191,6 +198,14 @@ public class Instance extends TeaModel {
     }
     public Integer getInstancePort() {
         return this.instancePort;
+    }
+
+    public Instance setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public Instance setIsSpot(Boolean isSpot) {
