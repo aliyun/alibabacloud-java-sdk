@@ -3,20 +3,22 @@ package com.aliyun.vs20181212.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteTemplateResponseBody extends TeaModel {
+public class RecoverRenderingDataPackageResponseBody extends TeaModel {
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteTemplateResponseBody self = new DeleteTemplateResponseBody();
+    public static RecoverRenderingDataPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RecoverRenderingDataPackageResponseBody self = new RecoverRenderingDataPackageResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteTemplateResponseBody setRequestId(String requestId) {
+    public RecoverRenderingDataPackageResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

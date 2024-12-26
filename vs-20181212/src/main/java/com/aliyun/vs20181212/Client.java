@@ -5825,6 +5825,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询所有云应用数据包信息，支持分页查询。</p>
+     * 
+     * @param request ListRenderingDataPackagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRenderingDataPackagesResponse
+     */
+    public ListRenderingDataPackagesResponse listRenderingDataPackagesWithOptions(ListRenderingDataPackagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataPackageId)) {
+            query.put("DataPackageId", request.dataPackageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRenderingDataPackages"),
+            new TeaPair("version", "2018-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRenderingDataPackagesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询所有云应用数据包信息，支持分页查询。</p>
+     * 
+     * @param request ListRenderingDataPackagesRequest
+     * @return ListRenderingDataPackagesResponse
+     */
+    public ListRenderingDataPackagesResponse listRenderingDataPackages(ListRenderingDataPackagesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRenderingDataPackagesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询自定义网关</p>
      * 
      * @param request ListRenderingInstanceGatewayRequest
@@ -6810,6 +6870,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RebootRenderingInstanceResponse rebootRenderingInstance(RebootRenderingInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rebootRenderingInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>恢复数据到云渲染实例</p>
+     * 
+     * @param request RecoverRenderingDataPackageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RecoverRenderingDataPackageResponse
+     */
+    public RecoverRenderingDataPackageResponse recoverRenderingDataPackageWithOptions(RecoverRenderingDataPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataPackageId)) {
+            query.put("DataPackageId", request.dataPackageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renderingInstanceId)) {
+            query.put("RenderingInstanceId", request.renderingInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecoverRenderingDataPackage"),
+            new TeaPair("version", "2018-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecoverRenderingDataPackageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>恢复数据到云渲染实例</p>
+     * 
+     * @param request RecoverRenderingDataPackageRequest
+     * @return RecoverRenderingDataPackageResponse
+     */
+    public RecoverRenderingDataPackageResponse recoverRenderingDataPackage(RecoverRenderingDataPackageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.recoverRenderingDataPackageWithOptions(request, runtime);
     }
 
     /**
