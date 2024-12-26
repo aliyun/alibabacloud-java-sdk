@@ -731,6 +731,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("StorageType")
+        public String storageType;
+
         /**
          * <p>The reason for the suspension.</p>
          * <p>Valid values:</p>
@@ -1003,6 +1006,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public GetInstanceResponseBodyInstance setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
         public GetInstanceResponseBodyInstance setSuspendReason(String suspendReason) {

@@ -46,6 +46,12 @@ public class ScaleInstanceRequest extends TeaModel {
     @NameInMap("cpu")
     public Long cpu;
 
+    /**
+     * <p>是否开启ServerlessComputing</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableServerlessComputing")
     public Boolean enableServerlessComputing;
 
