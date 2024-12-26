@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VerifySendMessageRequest extends TeaModel {
     /**
+     * <p>The message body.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -12,6 +14,8 @@ public class VerifySendMessageRequest extends TeaModel {
     public String message;
 
     /**
+     * <p>The message key.</p>
+     * 
      * <strong>example:</strong>
      * <p>xx</p>
      */
@@ -19,6 +23,8 @@ public class VerifySendMessageRequest extends TeaModel {
     public String messageKey;
 
     /**
+     * <p>The message tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>xx</p>
      */

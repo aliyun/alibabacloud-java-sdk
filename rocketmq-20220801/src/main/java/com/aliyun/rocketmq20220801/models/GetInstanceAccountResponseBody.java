@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetInstanceAccountResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>MissingInstanceId</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public GetInstanceAccountResponseBodyData data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ConsumerGroupId</p>
      */
@@ -22,6 +29,8 @@ public class GetInstanceAccountResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -29,6 +38,8 @@ public class GetInstanceAccountResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class GetInstanceAccountResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The instance cannot be found.</p>
      */
@@ -43,6 +56,8 @@ public class GetInstanceAccountResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID, each request\&quot;s ID is unique and can be used for troubleshooting and problem localization.</p>
+     * 
      * <strong>example:</strong>
      * <p>B5C59E80-FCFC-5796-ABE4-D39EAAE578E4</p>
      */
@@ -50,6 +65,8 @@ public class GetInstanceAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +144,8 @@ public class GetInstanceAccountResponseBody extends TeaModel {
 
     public static class GetInstanceAccountResponseBodyData extends TeaModel {
         /**
+         * <p>The password of the account.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -134,6 +153,8 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         public String password;
 
         /**
+         * <p>The username of the account.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstanceAclResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial. This parameter is returned only if the access is denied due to the reason that the Resource Access Management (RAM) user does not have the required permissions.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,16 +14,23 @@ public class ListInstanceAclResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>MissingInstanceId</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListInstanceAclResponseBodyData data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -29,6 +38,8 @@ public class ListInstanceAclResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -36,6 +47,8 @@ public class ListInstanceAclResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +56,8 @@ public class ListInstanceAclResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The instance cannot be found.</p>
      */
@@ -50,6 +65,8 @@ public class ListInstanceAclResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DA4D2F89-E2C8-5F04-936B-60D55B055FA7</p>
      */
@@ -57,6 +74,8 @@ public class ListInstanceAclResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -142,16 +161,32 @@ public class ListInstanceAclResponseBody extends TeaModel {
 
     public static class ListInstanceAclResponseBodyDataList extends TeaModel {
         /**
+         * <p>The ACL type.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>APACHE: open source ACL.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>APACHE</p>
          */
         @NameInMap("aclType")
         public String aclType;
 
+        /**
+         * <p>The types of the operations that are allowed by the ACL.</p>
+         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
         /**
+         * <p>The decision result.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Deny: Access is denied.</li>
+         * <li>Allow: Access is allowed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Allow</p>
          */
@@ -159,16 +194,23 @@ public class ListInstanceAclResponseBody extends TeaModel {
         public String decision;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-7e22ody****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The IP address whitelists.</p>
+         */
         @NameInMap("ipWhitelists")
         public java.util.List<String> ipWhitelists;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -176,6 +218,8 @@ public class ListInstanceAclResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -183,6 +227,13 @@ public class ListInstanceAclResponseBody extends TeaModel {
         public String resourceName;
 
         /**
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Group</li>
+         * <li>Topic</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Topic</p>
          */
@@ -190,6 +241,8 @@ public class ListInstanceAclResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -276,10 +329,15 @@ public class ListInstanceAclResponseBody extends TeaModel {
     }
 
     public static class ListInstanceAclResponseBodyData extends TeaModel {
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("list")
         public java.util.List<ListInstanceAclResponseBodyDataList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -287,6 +345,8 @@ public class ListInstanceAclResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -294,6 +354,8 @@ public class ListInstanceAclResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */

@@ -26,6 +26,9 @@ public class UpdateConsumerGroupRequest extends TeaModel {
     @NameInMap("deliveryOrderType")
     public String deliveryOrderType;
 
+    @NameInMap("maxReceiveTps")
+    public Long maxReceiveTps;
+
     /**
      * <p>The new remarks on the consumer group.</p>
      * 
@@ -54,6 +57,14 @@ public class UpdateConsumerGroupRequest extends TeaModel {
     }
     public String getDeliveryOrderType() {
         return this.deliveryOrderType;
+    }
+
+    public UpdateConsumerGroupRequest setMaxReceiveTps(Long maxReceiveTps) {
+        this.maxReceiveTps = maxReceiveTps;
+        return this;
+    }
+    public Long getMaxReceiveTps() {
+        return this.maxReceiveTps;
     }
 
     public UpdateConsumerGroupRequest setRemark(String remark) {

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>Topic.NotFound</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Return result</p>
+     */
     @NameInMap("data")
     public ListTagResourcesResponseBodyData data;
 
     /**
+     * <p>Dynamic error code</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -22,6 +29,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -29,6 +38,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>The topic already exists.</p>
      */
@@ -43,6 +56,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>F00C6A70-C782-5DD6-9D11-0CFC710100C7</p>
      */
@@ -50,6 +65,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the operation was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +144,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyDataTagResources extends TeaModel {
         /**
+         * <p>UID of the resource owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1876441048322426</p>
          */
@@ -134,6 +153,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>Tag category.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom</p>
          */
@@ -141,6 +162,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>Resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-pe334n08h08</p>
          */
@@ -148,6 +171,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>Resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>instance</p>
          */
@@ -155,6 +180,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>Visibility scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>public</p>
          */
@@ -162,6 +189,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String scope;
 
         /**
+         * <p>Tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>key</p>
          */
@@ -169,6 +198,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>Tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */
@@ -240,6 +271,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyData extends TeaModel {
         /**
+         * <p>The position from which the next query starts.</p>
+         * 
          * <strong>example:</strong>
          * <p>d09e2b63e1b12d905b7080ff70</p>
          */
@@ -247,12 +280,17 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>Request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>F00C6A70-C782-5DD6-9D11-0CFC710100C7</p>
          */
         @NameInMap("requestId")
         public String requestId;
 
+        /**
+         * <p>Resource tag relationships.</p>
+         */
         @NameInMap("tagResources")
         public java.util.List<ListTagResourcesResponseBodyDataTagResources> tagResources;
 

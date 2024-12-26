@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListInstanceAccountRequest extends TeaModel {
     /**
+     * <p>The status of the account.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>DISABLE</li>
+     * <li>ENABLE</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ENABLE</p>
      */
@@ -12,6 +19,12 @@ public class ListInstanceAccountRequest extends TeaModel {
     public String accountStatus;
 
     /**
+     * <p>The account type.</p>
+     * <ul>
+     * <li>CUSTOMER</li>
+     * <li>DEFAULT</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CUSTOMER</p>
      */
@@ -19,6 +32,7 @@ public class ListInstanceAccountRequest extends TeaModel {
     public String accountType;
 
     /**
+     * <p>The page number. Default value: 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +42,7 @@ public class ListInstanceAccountRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +52,8 @@ public class ListInstanceAccountRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The username of the account.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

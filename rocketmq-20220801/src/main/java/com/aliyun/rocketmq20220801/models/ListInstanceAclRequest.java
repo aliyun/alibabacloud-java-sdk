@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstanceAclRequest extends TeaModel {
     /**
+     * <p>The condition that you specify to filter the ACLs. If you do not specify this parameter, all ACLs are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>CID-TEST</p>
      */
@@ -12,6 +14,7 @@ public class ListInstanceAclRequest extends TeaModel {
     public String filter;
 
     /**
+     * <p>The page number. Pages start from page 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ListInstanceAclRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

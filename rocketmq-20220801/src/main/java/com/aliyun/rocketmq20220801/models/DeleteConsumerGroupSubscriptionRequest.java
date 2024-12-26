@@ -5,18 +5,38 @@ import com.aliyun.tea.*;
 
 public class DeleteConsumerGroupSubscriptionRequest extends TeaModel {
     /**
+     * <p>The filter expression.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("filterExpression")
     public String filterExpression;
 
     /**
+     * <p>The type of the filter expression. Valid values:</p>
+     * <ul>
+     * <li>SQL: filters messages by using SQL expressions.</li>
+     * <li>TAG: filters messages by using tags.</li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>TAG: filters messages by using SQL expressions.</li>
+     * <li>SQL: filters messages by using SQL expressions.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TAG</p>
      */
     @NameInMap("filterType")
     public String filterType;
 
     /**
+     * <p>The topic name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

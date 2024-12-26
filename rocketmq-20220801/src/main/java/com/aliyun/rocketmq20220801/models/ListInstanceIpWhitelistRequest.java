@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstanceIpWhitelistRequest extends TeaModel {
     /**
+     * <p>IP whitelist.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0.0.0/0</p>
      */
@@ -12,6 +14,7 @@ public class ListInstanceIpWhitelistRequest extends TeaModel {
     public String ipWhitelist;
 
     /**
+     * <p>The page number. Default value: 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ListInstanceIpWhitelistRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("data")
     public GetInstanceResponseBodyData data;
@@ -250,7 +250,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public static class GetInstanceResponseBodyDataExtConfig extends TeaModel {
         /**
          * <p>The authentication type of the instance.</p>
-         * <p>Valid values:</p>
+         * <p>Valid value:</p>
          * <ul>
          * <li>default: intelligent authentication</li>
          * </ul>
@@ -286,7 +286,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer flowOutBandwidth;
 
         /**
-         * <p>The metering method for Internet usage.</p>
+         * <p>The metering method of Internet usage.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>PayByTraffic: pay-by-traffic</li>
@@ -301,13 +301,13 @@ public class GetInstanceResponseBody extends TeaModel {
         public String flowOutType;
 
         /**
-         * <p>Specifies whether to enable the Internet access feature.</p>
+         * <p>Indicates whether Internet access is enabled.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>enable</li>
          * <li>disable</li>
          * </ul>
-         * <p>By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/427240.html">Internet access fee</a>.</p>
+         * <p>By default, you can access ApsaraMQ for RocketMQ instances in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/427240.html">Internet access fees</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>enable</p>
@@ -527,7 +527,7 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <ul>
          * <li>TCP_VPC: VPC endpoint</li>
-         * <li>TCP_INTERNET:public endpoint</li>
+         * <li>TCP_INTERNET: public endpoint</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -796,7 +796,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyDataNetworkInfo extends TeaModel {
         /**
-         * <p>The information about endpoints.</p>
+         * <p>The endpoints.</p>
          */
         @NameInMap("endpoints")
         public java.util.List<GetInstanceResponseBodyDataNetworkInfoEndpoints> endpoints;
@@ -890,6 +890,24 @@ public class GetInstanceResponseBody extends TeaModel {
         public Float sendReceiveRatio;
 
         /**
+         * <p>Indicates whether storage encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("storageEncryption")
+        public Boolean storageEncryption;
+
+        /**
+         * <p>The storage encryption key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
+         */
+        @NameInMap("storageSecretKey")
+        public String storageSecretKey;
+
+        /**
          * <p>Specifies whether to enable the elastic TPS feature for the instance.</p>
          * <p>Valid values:</p>
          * <ul>
@@ -956,6 +974,22 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public Float getSendReceiveRatio() {
             return this.sendReceiveRatio;
+        }
+
+        public GetInstanceResponseBodyDataProductInfo setStorageEncryption(Boolean storageEncryption) {
+            this.storageEncryption = storageEncryption;
+            return this;
+        }
+        public Boolean getStorageEncryption() {
+            return this.storageEncryption;
+        }
+
+        public GetInstanceResponseBodyDataProductInfo setStorageSecretKey(String storageSecretKey) {
+            this.storageSecretKey = storageSecretKey;
+            return this;
+        }
+        public String getStorageSecretKey() {
+            return this.storageSecretKey;
         }
 
         public GetInstanceResponseBodyDataProductInfo setSupportAutoScaling(Boolean supportAutoScaling) {
@@ -1183,7 +1217,7 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>The billing method of the instance.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>PayAsYouGo: pay-as-you-go</li>
+         * <li>PayAsYouGo</li>
          * <li>Subscription</li>
          * </ul>
          * 

@@ -14,7 +14,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("data")
     public ListInstancesResponseBodyData data;
@@ -359,7 +359,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The instance status.</p>
+         * <p>The status of the instance.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>RELEASED</li>

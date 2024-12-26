@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyConsumeMessageRequest extends TeaModel {
     /**
+     * <p>The client ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class VerifyConsumeMessageRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The ID of the consumer group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
