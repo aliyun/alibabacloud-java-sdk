@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstanceAccountResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,16 +14,23 @@ public class ListInstanceAccountResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>MissingInstanceId</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public ListInstanceAccountResponseBodyData data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -29,6 +38,8 @@ public class ListInstanceAccountResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -36,6 +47,8 @@ public class ListInstanceAccountResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +56,8 @@ public class ListInstanceAccountResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
      */
@@ -50,6 +65,8 @@ public class ListInstanceAccountResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>C115601B-8736-5BBF-AC99-7FEAE1245A80</p>
      */
@@ -57,6 +74,8 @@ public class ListInstanceAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -142,6 +161,13 @@ public class ListInstanceAccountResponseBody extends TeaModel {
 
     public static class ListInstanceAccountResponseBodyDataList extends TeaModel {
         /**
+         * <p>The status of the account.
+         * Valid values:</p>
+         * <ul>
+         * <li>DISABLE</li>
+         * <li>ENABLE</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
          */
@@ -149,6 +175,12 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         public String accountStatus;
 
         /**
+         * <p>The account type.</p>
+         * <ul>
+         * <li>CUSTOMER</li>
+         * <li>DEFAULT</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOMER</p>
          */
@@ -156,6 +188,8 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         public String accountType;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-7e22ody****</p>
          */
@@ -163,6 +197,8 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -170,6 +206,8 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The username of the account.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -224,10 +262,15 @@ public class ListInstanceAccountResponseBody extends TeaModel {
     }
 
     public static class ListInstanceAccountResponseBodyData extends TeaModel {
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("list")
         public java.util.List<ListInstanceAccountResponseBodyDataList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -235,6 +278,8 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>Number of items per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -242,6 +287,8 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of returned entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */

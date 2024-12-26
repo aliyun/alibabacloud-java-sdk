@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource IDs, in the JSON format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The type of resource.</p>
+     * <p>Set this parameter to <strong>instance</strong>. The value of this parameter cannot be changed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +36,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>tag, in JSON format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

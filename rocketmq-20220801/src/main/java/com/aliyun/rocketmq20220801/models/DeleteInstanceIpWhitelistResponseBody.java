@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceIpWhitelistResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial. This parameter is returned only if the access is denied due to the reason that the Resource Access Management (RAM) user does not have the required permissions.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class DeleteInstanceIpWhitelistResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>MissingInstanceId</p>
      */
@@ -19,6 +23,8 @@ public class DeleteInstanceIpWhitelistResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +32,8 @@ public class DeleteInstanceIpWhitelistResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -33,6 +41,8 @@ public class DeleteInstanceIpWhitelistResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -40,6 +50,8 @@ public class DeleteInstanceIpWhitelistResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -47,6 +59,8 @@ public class DeleteInstanceIpWhitelistResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
      */
@@ -54,6 +68,8 @@ public class DeleteInstanceIpWhitelistResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16425867-C948-5A0C-9A24-5259727BE727</p>
      */
@@ -61,6 +77,8 @@ public class DeleteInstanceIpWhitelistResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

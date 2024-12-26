@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VerifyConsumeMessageResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Topic.NotFound</p>
      */
@@ -12,6 +14,8 @@ public class VerifyConsumeMessageResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class VerifyConsumeMessageResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -26,6 +32,8 @@ public class VerifyConsumeMessageResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -33,6 +41,8 @@ public class VerifyConsumeMessageResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +50,8 @@ public class VerifyConsumeMessageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
      */
@@ -47,6 +59,8 @@ public class VerifyConsumeMessageResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5304143F-AB0E-5AB4-A227-7C5489216FD5</p>
      */
@@ -54,6 +68,8 @@ public class VerifyConsumeMessageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

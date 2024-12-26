@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance.NotFound</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public java.util.List<GetConsumerGroupSubscriptionResponseBodyData> data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -22,6 +29,8 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -29,6 +38,8 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
      */
@@ -43,6 +56,8 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>157DF7D4-53FB-58C6-BEBC-A9400E7EF68A</p>
      */
@@ -50,6 +65,8 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +144,8 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
 
     public static class GetConsumerGroupSubscriptionResponseBodyDataConnectionDTO extends TeaModel {
         /**
+         * <p>The client ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.50.191@19908#-2093249153#1534215565#40385215750900</p>
          */
@@ -134,6 +153,8 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         public String clientId;
 
         /**
+         * <p>The public IP address of the host.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx.xx.xx.xx</p>
          */
@@ -141,6 +162,8 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         public String egressIp;
 
         /**
+         * <p>The host name.</p>
+         * 
          * <strong>example:</strong>
          * <p>nginx</p>
          */
@@ -148,6 +171,8 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>The language used by the client.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh</p>
          */
@@ -155,6 +180,12 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         public String language;
 
         /**
+         * <p>The consumption mode of the consumer group. Valid values:</p>
+         * <ul>
+         * <li>BROADCASTING: broadcasting consumption</li>
+         * <li>CLUSTERING: clustering consumption</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BROADCASTING</p>
          */
@@ -162,6 +193,8 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         public String messageModel;
 
         /**
+         * <p>The client version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */
@@ -225,6 +258,8 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
 
     public static class GetConsumerGroupSubscriptionResponseBodyDataSubscriptionDTO extends TeaModel {
         /**
+         * <p>The consumer group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>GID_inspector_group</p>
          */
@@ -232,6 +267,8 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
+         * <p>The filter expression.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -241,6 +278,12 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         public String filterExpression;
 
         /**
+         * <p>The type of the filter expression. Valid values:</p>
+         * <ul>
+         * <li>SQL: filters messages by using SQL expressions.</li>
+         * <li>TAG: filters messages by using tags.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>UNSPECIFIED</p>
          */
@@ -248,6 +291,12 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         public String filterExpressionType;
 
         /**
+         * <p>The consumption mode of the consumer group. Valid values:</p>
+         * <ul>
+         * <li>BROADCASTING: broadcasting consumption</li>
+         * <li>CLUSTERING: clustering consumption</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BROADCASTING</p>
          */
@@ -255,6 +304,12 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         public String messageModel;
 
         /**
+         * <p>The subscription status. Valid values:</p>
+         * <ul>
+         * <li>ONLINE: The consumer group is online. If the consumer group contains multiple consumers, this value is returned if at least one of the consumers is online.</li>
+         * <li>OFFLINE: The consumer group is offline. If the consumer group contains multiple consumers, this value is returned only if all consumers are offline.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
          */
@@ -262,6 +317,8 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         public String subscriptionStatus;
 
         /**
+         * <p>The topic to which the consumer group subscribes.</p>
+         * 
          * <strong>example:</strong>
          * <p>Topic_normal_inspector</p>
          */
@@ -324,9 +381,15 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetConsumerGroupSubscriptionResponseBodyData extends TeaModel {
+        /**
+         * <p>The connection details.</p>
+         */
         @NameInMap("connectionDTO")
         public GetConsumerGroupSubscriptionResponseBodyDataConnectionDTO connectionDTO;
 
+        /**
+         * <p>The subscription details.</p>
+         */
         @NameInMap("subscriptionDTO")
         public GetConsumerGroupSubscriptionResponseBodyDataSubscriptionDTO subscriptionDTO;
 

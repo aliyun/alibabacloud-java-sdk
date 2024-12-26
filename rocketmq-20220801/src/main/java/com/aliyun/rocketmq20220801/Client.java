@@ -28,6 +28,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>添加容灾计划条目</p>
+     * 
+     * @param request AddDisasterRecoveryItemRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddDisasterRecoveryItemResponse
+     */
+    public AddDisasterRecoveryItemResponse addDisasterRecoveryItemWithOptions(String planId, AddDisasterRecoveryItemRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.topics)) {
+            body.put("topics", request.topics);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddDisasterRecoveryItem"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + "/items"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDisasterRecoveryItemResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加容灾计划条目</p>
+     * 
+     * @param request AddDisasterRecoveryItemRequest
+     * @return AddDisasterRecoveryItemResponse
+     */
+    public AddDisasterRecoveryItemResponse addDisasterRecoveryItem(String planId, AddDisasterRecoveryItemRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.addDisasterRecoveryItemWithOptions(planId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</p>
      * 
      * @param request ChangeResourceGroupRequest
@@ -108,6 +155,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.deliveryOrderType)) {
             body.put("deliveryOrderType", request.deliveryOrderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxReceiveTps)) {
+            body.put("maxReceiveTps", request.maxReceiveTps);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
@@ -267,7 +318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建访问控制acl用户</p>
+     * <p>Creates an account that is used to access an instance.</p>
      * 
      * @param request CreateInstanceAccountRequest
      * @param headers map
@@ -305,7 +356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建访问控制acl用户</p>
+     * <p>Creates an account that is used to access an instance.</p>
      * 
      * @param request CreateInstanceAccountRequest
      * @return CreateInstanceAccountResponse
@@ -318,7 +369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建访问控制acl数据</p>
+     * <p>Creates an access control list (ACL) in a specific instance.</p>
      * 
      * @param request CreateInstanceAclRequest
      * @param headers map
@@ -368,7 +419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建访问控制acl数据</p>
+     * <p>Creates an access control list (ACL) in a specific instance.</p>
      * 
      * @param request CreateInstanceAclRequest
      * @return CreateInstanceAclResponse
@@ -381,7 +432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建访问控制ip白名单</p>
+     * <p>Creates an IP address whitelist.</p>
      * 
      * @param request CreateInstanceIpWhitelistRequest
      * @param headers map
@@ -415,7 +466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建访问控制ip白名单</p>
+     * <p>Creates an IP address whitelist.</p>
      * 
      * @param request CreateInstanceIpWhitelistRequest
      * @return CreateInstanceIpWhitelistResponse
@@ -438,6 +489,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateTopicResponse createTopicWithOptions(String instanceId, String topicName, CreateTopicRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxSendTps)) {
+            body.put("maxSendTps", request.maxSendTps);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.messageType)) {
             body.put("messageType", request.messageType);
         }
@@ -528,7 +583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消消费组订阅关系</p>
+     * <p>Deletes the subscriptions of a consumer group.</p>
      * 
      * @param request DeleteConsumerGroupSubscriptionRequest
      * @param headers map
@@ -570,7 +625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消消费组订阅关系</p>
+     * <p>Deletes the subscriptions of a consumer group.</p>
      * 
      * @param request DeleteConsumerGroupSubscriptionRequest
      * @return DeleteConsumerGroupSubscriptionResponse
@@ -638,7 +693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除访问控制acl用户</p>
+     * <p>Delete access control ACL user</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -664,7 +719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除访问控制acl用户</p>
+     * <p>Delete access control ACL user</p>
      * @return DeleteInstanceAccountResponse
      */
     public DeleteInstanceAccountResponse deleteInstanceAccount(String instanceId, String username) throws Exception {
@@ -675,7 +730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除访问控制acl数据</p>
+     * <p>Deletes the permissions of a specific account of an instance.</p>
      * 
      * @param request DeleteInstanceAclRequest
      * @param headers map
@@ -713,7 +768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除访问控制acl数据</p>
+     * <p>Deletes the permissions of a specific account of an instance.</p>
      * 
      * @param request DeleteInstanceAclRequest
      * @return DeleteInstanceAclResponse
@@ -726,7 +781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除访问控制ip白名单</p>
+     * <p>Deletes a specific IP address whitelist from an instance.</p>
      * 
      * @param request DeleteInstanceIpWhitelistRequest
      * @param headers map
@@ -760,7 +815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除访问控制ip白名单</p>
+     * <p>Deletes a specific IP address whitelist from an instance.</p>
      * 
      * @param request DeleteInstanceIpWhitelistRequest
      * @return DeleteInstanceIpWhitelistResponse
@@ -863,7 +918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者组堆积信息</p>
+     * <p>Query Consumer Group Backlog Information</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -889,7 +944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者组堆积信息</p>
+     * <p>Query Consumer Group Backlog Information</p>
      * @return GetConsumerGroupLagResponse
      */
     public GetConsumerGroupLagResponse getConsumerGroupLag(String instanceId, String consumerGroupId) throws Exception {
@@ -900,7 +955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费组订阅关系列表客户端分布</p>
+     * <p>Queries the subscriptions of a consumer group.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -926,7 +981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费组订阅关系列表客户端分布</p>
+     * <p>Queries the subscriptions of a consumer group.</p>
      * @return GetConsumerGroupSubscriptionResponse
      */
     public GetConsumerGroupSubscriptionResponse getConsumerGroupSubscription(String instanceId, String consumerGroupId, String topicName) throws Exception {
@@ -937,7 +992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者堆栈信息</p>
+     * <p>Queries the stack information about a consumer.</p>
      * 
      * @param request GetConsumerStackRequest
      * @param headers map
@@ -971,7 +1026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者堆栈信息</p>
+     * <p>Queries the stack information about a consumer.</p>
      * 
      * @param request GetConsumerStackRequest
      * @return GetConsumerStackResponse
@@ -1031,7 +1086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例账号</p>
+     * <p>Obtains the account used to access a specific instance.</p>
      * 
      * @param request GetInstanceAccountRequest
      * @param headers map
@@ -1065,7 +1120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例账号</p>
+     * <p>Obtains the account used to access a specific instance.</p>
      * 
      * @param request GetInstanceAccountRequest
      * @return GetInstanceAccountResponse
@@ -1078,7 +1133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>消息详情</p>
+     * <p>Obtains the details of a specific message.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1104,7 +1159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>消息详情</p>
+     * <p>Obtains the details of a specific message.</p>
      * @return GetMessageDetailResponse
      */
     public GetMessageDetailResponse getMessageDetail(String instanceId, String topicName, String messageId) throws Exception {
@@ -1152,7 +1207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>轨迹查询</p>
+     * <p>Queries the trace of a specific message in a specific topic.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1178,7 +1233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>轨迹查询</p>
+     * <p>Queries the trace of a specific message in a specific topic.</p>
      * @return GetTraceResponse
      */
     public GetTraceResponse getTrace(String instanceId, String topicName, String messageId) throws Exception {
@@ -1365,7 +1420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>访问控制acl用户列表</p>
+     * <p>Queries the accounts that are used to access a specific instance.</p>
      * 
      * @param request ListInstanceAccountRequest
      * @param headers map
@@ -1415,7 +1470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>访问控制acl用户列表</p>
+     * <p>Queries the accounts that are used to access a specific instance.</p>
      * 
      * @param request ListInstanceAccountRequest
      * @return ListInstanceAccountResponse
@@ -1428,7 +1483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>访问控制acl数据列表</p>
+     * <p>Queries the access control lists (ACLs) of an instance.</p>
      * 
      * @param request ListInstanceAclRequest
      * @param headers map
@@ -1470,7 +1525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>访问控制acl数据列表</p>
+     * <p>Queries the access control lists (ACLs) of an instance.</p>
      * 
      * @param request ListInstanceAclRequest
      * @return ListInstanceAclResponse
@@ -1483,7 +1538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询访问控制ip白名单列表</p>
+     * <p>Queries the IP address whitelists of an instance.</p>
      * 
      * @param request ListInstanceIpWhitelistRequest
      * @param headers map
@@ -1525,7 +1580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询访问控制ip白名单列表</p>
+     * <p>Queries the IP address whitelists of an instance.</p>
      * 
      * @param request ListInstanceIpWhitelistRequest
      * @return ListInstanceIpWhitelistResponse
@@ -1579,6 +1634,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("seriesCodes", request.seriesCodesShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.storageSecretKey)) {
+            query.put("storageSecretKey", request.storageSecretKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
             query.put("tags", request.tags);
         }
@@ -1621,7 +1680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消息列表</p>
+     * <p>Queries the list of messages.</p>
      * 
      * @param request ListMessagesRequest
      * @param headers map
@@ -1679,7 +1738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消息列表</p>
+     * <p>Queries the list of messages.</p>
      * 
      * @param request ListMessagesRequest
      * @return ListMessagesResponse
@@ -1729,7 +1788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可见的资源标签关系</p>
+     * <p>Query visible resource tag relationships</p>
      * 
      * @param request ListTagResourcesRequest
      * @param headers map
@@ -1783,7 +1842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可见的资源标签关系</p>
+     * <p>Query visible resource tag relationships</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -1898,7 +1957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>轨迹消息列表</p>
+     * <p>Queries the message traces of a specific topic.</p>
      * 
      * @param request ListTracesRequest
      * @param headers map
@@ -1956,7 +2015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>轨迹消息列表</p>
+     * <p>Queries the message traces of a specific topic.</p>
      * 
      * @param request ListTracesRequest
      * @return ListTracesResponse
@@ -2020,7 +2079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户创建标签资源关系（用户标签）</p>
+     * <p>Creates resource tags.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -2066,7 +2125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户创建标签资源关系（用户标签）</p>
+     * <p>Creates resource tags.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -2079,7 +2138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户删除标签资源关系</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @param headers map
@@ -2129,7 +2188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户删除标签资源关系</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -2163,6 +2222,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.deliveryOrderType)) {
             body.put("deliveryOrderType", request.deliveryOrderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxReceiveTps)) {
+            body.put("maxReceiveTps", request.maxReceiveTps);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
@@ -2280,7 +2343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改访问控制acl用户</p>
+     * <p>Updates the information about a specific account in a specific instance.</p>
      * 
      * @param request UpdateInstanceAccountRequest
      * @param headers map
@@ -2318,7 +2381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改访问控制acl用户</p>
+     * <p>Updates the information about a specific account in a specific instance.</p>
      * 
      * @param request UpdateInstanceAccountRequest
      * @return UpdateInstanceAccountResponse
@@ -2331,7 +2394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除访问控制acl数据</p>
+     * <p>Updates the permissions on the resources of a specific instance for a specific user.</p>
      * 
      * @param request UpdateInstanceAclRequest
      * @param headers map
@@ -2381,7 +2444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除访问控制acl数据</p>
+     * <p>Updates the permissions on the resources of a specific instance for a specific user.</p>
      * 
      * @param request UpdateInstanceAclRequest
      * @return UpdateInstanceAclResponse
@@ -2404,6 +2467,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateTopicResponse updateTopicWithOptions(String instanceId, String topicName, UpdateTopicRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxSendTps)) {
+            body.put("maxSendTps", request.maxSendTps);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
             body.put("remark", request.remark);
         }
@@ -2441,7 +2508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>消费验证</p>
+     * <p>Verifies the consumption status of a message in a specific topic on a specific instance.</p>
      * 
      * @param request VerifyConsumeMessageRequest
      * @param headers map
@@ -2479,7 +2546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>消费验证</p>
+     * <p>Verifies the consumption status of a message in a specific topic on a specific instance.</p>
      * 
      * @param request VerifyConsumeMessageRequest
      * @return VerifyConsumeMessageResponse
@@ -2492,7 +2559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发送消息</p>
+     * <p>Verifies the message sending feature of a specific topic on a specific instance.</p>
      * 
      * @param request VerifySendMessageRequest
      * @param headers map
@@ -2534,7 +2601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发送消息</p>
+     * <p>Verifies the message sending feature of a specific topic on a specific instance.</p>
      * 
      * @param request VerifySendMessageRequest
      * @return VerifySendMessageResponse

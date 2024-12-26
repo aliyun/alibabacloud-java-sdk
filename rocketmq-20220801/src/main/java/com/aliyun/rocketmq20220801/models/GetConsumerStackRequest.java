@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConsumerStackRequest extends TeaModel {
     /**
+     * <p>The client ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTracesResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Topic.NotFound</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("data")
     public ListTracesResponseBodyData data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -22,6 +29,8 @@ public class ListTracesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -29,6 +38,8 @@ public class ListTracesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class ListTracesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
      */
@@ -52,6 +65,8 @@ public class ListTracesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -129,6 +144,8 @@ public class ListTracesResponseBody extends TeaModel {
 
     public static class ListTracesResponseBodyDataList extends TeaModel {
         /**
+         * <p>Message born time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
          */
@@ -136,6 +153,8 @@ public class ListTracesResponseBody extends TeaModel {
         public String bornTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-7e22ody****</p>
          */
@@ -143,16 +162,23 @@ public class ListTracesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Message id.</p>
+         * 
          * <strong>example:</strong>
          * <p>7F00000100207A4F0F294A938F7807AE</p>
          */
         @NameInMap("messageId")
         public String messageId;
 
+        /**
+         * <p>Message keys.</p>
+         */
         @NameInMap("messageKeys")
         public java.util.List<String> messageKeys;
 
         /**
+         * <p>Message tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -160,6 +186,8 @@ public class ListTracesResponseBody extends TeaModel {
         public String messageTag;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -167,6 +195,8 @@ public class ListTracesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The name of the topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>topic_test</p>
          */
@@ -237,10 +267,15 @@ public class ListTracesResponseBody extends TeaModel {
     }
 
     public static class ListTracesResponseBodyData extends TeaModel {
+        /**
+         * <p>Trace list.</p>
+         */
         @NameInMap("list")
         public java.util.List<ListTracesResponseBodyDataList> list;
 
         /**
+         * <p>The page number of the returned page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -248,6 +283,8 @@ public class ListTracesResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -255,6 +292,8 @@ public class ListTracesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of returned entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

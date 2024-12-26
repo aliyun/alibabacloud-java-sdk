@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>The position from which the next query starts.</p>
+     * 
      * <strong>example:</strong>
      * <p>d09e2b63e1b12d905b7080ff70</p>
      */
@@ -12,6 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,17 +23,26 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmx7caj******</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>List of resource IDs, in JSON format.</p>
+     * 
      * <strong>example:</strong>
-     * <p>rmq-cn-lbj34bb2r0i</p>
+     * <p>[&quot;rmq-cn-pe334n08h08&quot;]</p>
      */
     @NameInMap("resourceId")
     public String resourceId;
 
     /**
+     * <p>Resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +52,8 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>List of tags, in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;key&quot;: &quot;rmq-test&quot;, &quot;value&quot;: &quot;test&quot;}]</p>
      */

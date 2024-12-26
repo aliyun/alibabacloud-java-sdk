@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceIpWhitelistRequest extends TeaModel {
     /**
+     * <p>The IP address whitelist.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

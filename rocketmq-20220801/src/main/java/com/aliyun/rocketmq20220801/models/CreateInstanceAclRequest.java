@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceAclRequest extends TeaModel {
     /**
+     * <p>The type of operations that can be performed on the resource.</p>
+     * <p>The following types of operations are supported based on the resource type:</p>
+     * <ul>
+     * <li>Topic: Pub, Sub, and Pub|Sub</li>
+     * <li>Consumer group: Sub</li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>SUB: subscribe</li>
+     * <li>Pub|Sub: publish and subscribe</li>
+     * <li>Pub: publish</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +26,12 @@ public class CreateInstanceAclRequest extends TeaModel {
     public String actions;
 
     /**
+     * <p>The decision result of the authorization.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Deny</li>
+     * <li>Allow</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +40,14 @@ public class CreateInstanceAclRequest extends TeaModel {
     @NameInMap("decision")
     public String decision;
 
+    /**
+     * <p>The IP address whitelists.</p>
+     */
     @NameInMap("ipWhitelists")
     public java.util.List<String> ipWhitelists;
 
     /**
+     * <p>The name of the resource on which you want to grant permissions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +57,12 @@ public class CreateInstanceAclRequest extends TeaModel {
     public String resourceName;
 
     /**
+     * <p>The type of the resource on which you want to grant permissions.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Group</li>
+     * <li>Topic</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

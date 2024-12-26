@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceAccountRequest extends TeaModel {
     /**
+     * <p>The status of the account.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>DISABLE</li>
+     * <li>ENABLE</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ENABLE</p>
      */
@@ -12,6 +19,8 @@ public class UpdateInstanceAccountRequest extends TeaModel {
     public String accountStatus;
 
     /**
+     * <p>The password of the account.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

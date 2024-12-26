@@ -4,6 +4,9 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class UpdateTopicRequest extends TeaModel {
+    @NameInMap("maxSendTps")
+    public Long maxSendTps;
+
     /**
      * <p>The new remarks on the topic.</p>
      * 
@@ -16,6 +19,14 @@ public class UpdateTopicRequest extends TeaModel {
     public static UpdateTopicRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTopicRequest self = new UpdateTopicRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateTopicRequest setMaxSendTps(Long maxSendTps) {
+        this.maxSendTps = maxSendTps;
+        return this;
+    }
+    public Long getMaxSendTps() {
+        return this.maxSendTps;
     }
 
     public UpdateTopicRequest setRemark(String remark) {

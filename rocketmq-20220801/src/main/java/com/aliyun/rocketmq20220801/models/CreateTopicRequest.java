@@ -4,6 +4,9 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class CreateTopicRequest extends TeaModel {
+    @NameInMap("maxSendTps")
+    public Long maxSendTps;
+
     /**
      * <p>The type of messages in the topic that you want to create.</p>
      * <p>Valid values:</p>
@@ -35,6 +38,14 @@ public class CreateTopicRequest extends TeaModel {
     public static CreateTopicRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTopicRequest self = new CreateTopicRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTopicRequest setMaxSendTps(Long maxSendTps) {
+        this.maxSendTps = maxSendTps;
+        return this;
+    }
+    public Long getMaxSendTps() {
+        return this.maxSendTps;
     }
 
     public CreateTopicRequest setMessageType(String messageType) {

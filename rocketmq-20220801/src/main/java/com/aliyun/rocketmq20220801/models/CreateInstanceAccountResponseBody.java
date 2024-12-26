@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceAccountResponseBody extends TeaModel {
     /**
+     * <p>No permission details</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,16 +14,26 @@ public class CreateInstanceAccountResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The error code returned if the call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>MissingInstanceId</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("data")
     public Boolean data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -29,6 +41,8 @@ public class CreateInstanceAccountResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -36,6 +50,8 @@ public class CreateInstanceAccountResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +59,8 @@ public class CreateInstanceAccountResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The instance cannot be found.</p>
      */
@@ -50,6 +68,8 @@ public class CreateInstanceAccountResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3AE0999C-8DBA-5CEE-8D9A-BE8D4A90DF8D</p>
      */
@@ -57,6 +77,8 @@ public class CreateInstanceAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

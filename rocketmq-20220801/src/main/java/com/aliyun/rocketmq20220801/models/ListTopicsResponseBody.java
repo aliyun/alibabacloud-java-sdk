@@ -161,6 +161,9 @@ public class ListTopicsResponseBody extends TeaModel {
         @NameInMap("instanceId")
         public String instanceId;
 
+        @NameInMap("maxSendTps")
+        public Long maxSendTps;
+
         /**
          * <p>The message type of the topic.</p>
          * <p>Valid values:</p>
@@ -297,6 +300,14 @@ public class ListTopicsResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListTopicsResponseBodyDataList setMaxSendTps(Long maxSendTps) {
+            this.maxSendTps = maxSendTps;
+            return this;
+        }
+        public Long getMaxSendTps() {
+            return this.maxSendTps;
         }
 
         public ListTopicsResponseBodyDataList setMessageType(String messageType) {

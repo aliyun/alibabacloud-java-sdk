@@ -4,10 +4,18 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class ListMessagesRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-09-09 09:00:00</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
     /**
+     * <p>Message Id.</p>
+     * 
      * <strong>example:</strong>
      * <p>7F00000100207A4F0F294A938F7807AE</p>
      */
@@ -15,21 +23,48 @@ public class ListMessagesRequest extends TeaModel {
     public String messageId;
 
     /**
+     * <p>Message key.</p>
+     * 
      * <strong>example:</strong>
      * <p>XSCBillResult</p>
      */
     @NameInMap("messageKey")
     public String messageKey;
 
+    /**
+     * <p>The page number. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The scroll ID of the request.</p>
+     * <p>You do not need to configure this parameter for the first page. This parameter is included in the pagination request based on the result returned for the first page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B13D0B07-F24B-4790-88D8-D47A38063D00</p>
+     */
     @NameInMap("scrollId")
     public String scrollId;
 
+    /**
+     * <p>The beginning of the time range to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-09-09 08:00:00</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 

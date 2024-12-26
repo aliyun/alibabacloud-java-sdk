@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetConsumerStackResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Topic.NotFound</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public GetConsumerStackResponseBodyData data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -22,6 +29,8 @@ public class GetConsumerStackResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -29,6 +38,8 @@ public class GetConsumerStackResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class GetConsumerStackResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The instance cannot be found.</p>
      */
@@ -43,6 +56,8 @@ public class GetConsumerStackResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30F2CBC7-F69D-5D78-9661-0254C9E1FBFA</p>
      */
@@ -50,6 +65,8 @@ public class GetConsumerStackResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,12 +144,17 @@ public class GetConsumerStackResponseBody extends TeaModel {
 
     public static class GetConsumerStackResponseBodyDataStacks extends TeaModel {
         /**
+         * <p>Thread id.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
         @NameInMap("thread")
         public String thread;
 
+        /**
+         * <p>Stack Information.</p>
+         */
         @NameInMap("tracks")
         public java.util.List<String> tracks;
 
@@ -161,6 +183,8 @@ public class GetConsumerStackResponseBody extends TeaModel {
 
     public static class GetConsumerStackResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the consumer group.</p>
+         * 
          * <strong>example:</strong>
          * <p>CID-TEST</p>
          */
@@ -168,6 +192,8 @@ public class GetConsumerStackResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-7e22ody****</p>
          */
@@ -175,12 +201,17 @@ public class GetConsumerStackResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>Stack Information.</p>
+         */
         @NameInMap("stacks")
         public java.util.List<GetConsumerStackResponseBodyDataStacks> stacks;
 

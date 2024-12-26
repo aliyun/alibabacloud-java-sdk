@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetMessageDetailResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Topic.NotFound</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public GetMessageDetailResponseBodyData data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -22,6 +29,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -29,6 +38,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
      */
@@ -43,6 +56,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FAEBD71F-E839-52F9-BD7B-8F1290525841</p>
      */
@@ -50,6 +65,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +144,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
 
     public static class GetMessageDetailResponseBodyData extends TeaModel {
         /**
+         * <p>The message body.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -134,6 +153,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String body;
 
         /**
+         * <p>The size of the message body.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -141,6 +162,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public Integer bodySize;
 
         /**
+         * <p>The client on which the message was produced.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx.xx.xxx.xx</p>
          */
@@ -148,6 +171,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String bornHost;
 
         /**
+         * <p>The time when the message was generated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
          */
@@ -155,6 +180,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String bornTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-7e22ody****</p>
          */
@@ -162,6 +189,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The sharding key. This parameter is returned only for ordered messages.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -169,16 +198,23 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String messageGroup;
 
         /**
+         * <p>The message ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>01BE87E485F0C7808C04543CAF00000001</p>
          */
         @NameInMap("messageId")
         public String messageId;
 
+        /**
+         * <p>The message keys.</p>
+         */
         @NameInMap("messageKeys")
         public java.util.List<String> messageKeys;
 
         /**
+         * <p>The tags.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -186,6 +222,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String messageTag;
 
         /**
+         * <p>The message type.</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -193,6 +231,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String messageType;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -200,6 +240,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The broker on which the message was stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx.xx.xxx.xx</p>
          */
@@ -207,22 +249,32 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String storeHost;
 
         /**
+         * <p>The time when the message was stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
          */
         @NameInMap("storeTime")
         public String storeTime;
 
+        /**
+         * <p>The default system attributes.</p>
+         */
         @NameInMap("systemProperties")
         public java.util.Map<String, String> systemProperties;
 
         /**
+         * <p>The topic name.</p>
+         * 
          * <strong>example:</strong>
          * <p>topic_test</p>
          */
         @NameInMap("topicName")
         public String topicName;
 
+        /**
+         * <p>The user attributes.</p>
+         */
         @NameInMap("userProperties")
         public java.util.Map<String, String> userProperties;
 

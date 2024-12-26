@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetConsumerGroupLagResponseBody extends TeaModel {
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>Topic.NotFound</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public GetConsumerGroupLagResponseBodyData data;
 
     /**
+     * <p>Dynamic error code</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -22,6 +29,8 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -29,6 +38,8 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
      */
@@ -43,6 +56,8 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F5764C40-FB8C-53AE-B95D-96AB3D0E9375</p>
      */
@@ -50,6 +65,8 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +144,8 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
 
     public static class GetConsumerGroupLagResponseBodyDataTotalLag extends TeaModel {
         /**
+         * <p>Delivery delay time, in seconds</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -134,13 +153,20 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         public Long deliveryDuration;
 
         /**
+         * <p>The number of messages being consumed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("inflightCount")
         public Long inflightCount;
 
+        @NameInMap("lastConsumeTimestamp")
+        public Long lastConsumeTimestamp;
+
         /**
+         * <p>Ready message count</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -168,6 +194,14 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
             return this.inflightCount;
         }
 
+        public GetConsumerGroupLagResponseBodyDataTotalLag setLastConsumeTimestamp(Long lastConsumeTimestamp) {
+            this.lastConsumeTimestamp = lastConsumeTimestamp;
+            return this;
+        }
+        public Long getLastConsumeTimestamp() {
+            return this.lastConsumeTimestamp;
+        }
+
         public GetConsumerGroupLagResponseBodyDataTotalLag setReadyCount(Long readyCount) {
             this.readyCount = readyCount;
             return this;
@@ -180,6 +214,8 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
 
     public static class GetConsumerGroupLagResponseBodyData extends TeaModel {
         /**
+         * <p>Consumer Group ID</p>
+         * 
          * <strong>example:</strong>
          * <p>CID-TEST</p>
          */
@@ -187,13 +223,8 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
-         * <strong>example:</strong>
-         * <p>2022-08-01 20:05:50</p>
-         */
-        @NameInMap("createTime")
-        public String createTime;
-
-        /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-7e22ody****</p>
          */
@@ -201,24 +232,25 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Region ID</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>Backlog for each topic</p>
+         */
         @NameInMap("topicLagMap")
         public java.util.Map<String, DataTopicLagMapValue> topicLagMap;
 
+        /**
+         * <p>Total lag count</p>
+         */
         @NameInMap("totalLag")
         public GetConsumerGroupLagResponseBodyDataTotalLag totalLag;
-
-        /**
-         * <strong>example:</strong>
-         * <p>2022-08-01 20:05:50</p>
-         */
-        @NameInMap("updateTime")
-        public String updateTime;
 
         public static GetConsumerGroupLagResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetConsumerGroupLagResponseBodyData self = new GetConsumerGroupLagResponseBodyData();
@@ -231,14 +263,6 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         }
         public String getConsumerGroupId() {
             return this.consumerGroupId;
-        }
-
-        public GetConsumerGroupLagResponseBodyData setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         public GetConsumerGroupLagResponseBodyData setInstanceId(String instanceId) {
@@ -271,14 +295,6 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         }
         public GetConsumerGroupLagResponseBodyDataTotalLag getTotalLag() {
             return this.totalLag;
-        }
-
-        public GetConsumerGroupLagResponseBodyData setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
         }
 
     }

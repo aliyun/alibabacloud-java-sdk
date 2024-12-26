@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceAccountRequest extends TeaModel {
     /**
+     * <p>The password of the account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateInstanceAccountRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The username of the account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

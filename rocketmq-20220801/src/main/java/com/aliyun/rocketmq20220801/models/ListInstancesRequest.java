@@ -57,6 +57,15 @@ public class ListInstancesRequest extends TeaModel {
     public java.util.List<String> seriesCodes;
 
     /**
+     * <p>The storage encryption key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxx</p>
+     */
+    @NameInMap("storageSecretKey")
+    public String storageSecretKey;
+
+    /**
      * <p>The tags that are used to filter instances.</p>
      * 
      * <strong>example:</strong>
@@ -108,6 +117,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public java.util.List<String> getSeriesCodes() {
         return this.seriesCodes;
+    }
+
+    public ListInstancesRequest setStorageSecretKey(String storageSecretKey) {
+        this.storageSecretKey = storageSecretKey;
+        return this;
+    }
+    public String getStorageSecretKey() {
+        return this.storageSecretKey;
     }
 
     public ListInstancesRequest setTags(String tags) {

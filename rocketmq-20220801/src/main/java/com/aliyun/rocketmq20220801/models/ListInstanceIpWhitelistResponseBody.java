@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstanceIpWhitelistResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,16 +14,23 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance.NotFound</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public ListInstanceIpWhitelistResponseBodyData data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -29,6 +38,8 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -36,6 +47,8 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +56,8 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
      */
@@ -50,6 +65,8 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>7358418D-83BD-507A-8079-611C63E05674</p>
      */
@@ -57,6 +74,8 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -141,10 +160,15 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
     }
 
     public static class ListInstanceIpWhitelistResponseBodyData extends TeaModel {
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("list")
         public java.util.List<String> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -152,6 +176,8 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>Number of items per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -159,6 +185,8 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of returned entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

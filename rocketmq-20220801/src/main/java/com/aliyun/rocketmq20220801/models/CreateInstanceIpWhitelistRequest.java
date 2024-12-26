@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceIpWhitelistRequest extends TeaModel {
     /**
+     * <p>The IP address whitelists.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ipWhitelists")

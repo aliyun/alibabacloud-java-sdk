@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetTraceResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidConsumerGroupId</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public GetTraceResponseBodyData data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -22,6 +29,8 @@ public class GetTraceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -29,6 +38,8 @@ public class GetTraceResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class GetTraceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The instance cannot be found.</p>
      */
@@ -43,6 +56,8 @@ public class GetTraceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7779A8FC-1BCD-5A1D-A603-C4A9BD8ADC49</p>
      */
@@ -50,6 +65,8 @@ public class GetTraceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +144,8 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodyDataBrokerInfoOperations extends TeaModel {
         /**
+         * <p>Operation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
          */
@@ -134,6 +153,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String operateTime;
 
         /**
+         * <p>Operation type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ADD</p>
          */
@@ -165,16 +186,23 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodyDataBrokerInfo extends TeaModel {
         /**
+         * <p>Delay status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
         @NameInMap("delayStatus")
         public String delayStatus;
 
+        /**
+         * <p>Operation list.</p>
+         */
         @NameInMap("operations")
         public java.util.List<GetTraceResponseBodyDataBrokerInfoOperations> operations;
 
         /**
+         * <p>Preset delivery time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
          */
@@ -214,6 +242,8 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodyDataConsumerInfosDeadLetterInfo extends TeaModel {
         /**
+         * <p>MessageId.</p>
+         * 
          * <strong>example:</strong>
          * <p>7F000001001F7A4F0F29463F0376047D</p>
          */
@@ -221,6 +251,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String messageId;
 
         /**
+         * <p>Arrival time in the dead letter queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
          */
@@ -228,6 +260,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String toDlqTime;
 
         /**
+         * <p>The topic name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Register_Sync</p>
          */
@@ -267,6 +301,8 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodyDataConsumerInfosRecordsOperations extends TeaModel {
         /**
+         * <p>Whether it is a dead letter message.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -274,6 +310,8 @@ public class GetTraceResponseBody extends TeaModel {
         public Boolean deadMessage;
 
         /**
+         * <p>Invisible time, milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -281,6 +319,8 @@ public class GetTraceResponseBody extends TeaModel {
         public Long invisibleTime;
 
         /**
+         * <p>Operation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
          */
@@ -288,6 +328,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String operateTime;
 
         /**
+         * <p>Operation type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ADD</p>
          */
@@ -335,6 +377,8 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodyDataConsumerInfosRecords extends TeaModel {
         /**
+         * <p>Client host.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx.xx.xx.xx</p>
          */
@@ -342,6 +386,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String clientHost;
 
         /**
+         * <p>Consume status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -349,12 +395,17 @@ public class GetTraceResponseBody extends TeaModel {
         public String consumeStatus;
 
         /**
+         * <p>Whether to consume fifo.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("fifoEnable")
         public Boolean fifoEnable;
 
+        /**
+         * <p>Operation list.</p>
+         */
         @NameInMap("operations")
         public java.util.List<GetTraceResponseBodyDataConsumerInfosRecordsOperations> operations;
 
@@ -368,6 +419,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String popCk;
 
         /**
+         * <p>Consumer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -431,6 +484,8 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodyDataConsumerInfos extends TeaModel {
         /**
+         * <p>Consume status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -438,22 +493,32 @@ public class GetTraceResponseBody extends TeaModel {
         public String consumeStatus;
 
         /**
+         * <p>The consumer group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>GID_inspector_group</p>
          */
         @NameInMap("consumerGroupId")
         public String consumerGroupId;
 
+        /**
+         * <p>Dead letter info.</p>
+         */
         @NameInMap("deadLetterInfo")
         public GetTraceResponseBodyDataConsumerInfosDeadLetterInfo deadLetterInfo;
 
         /**
+         * <p>Whether it is a dead letter message.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("deadMessage")
         public Boolean deadMessage;
 
+        /**
+         * <p>Consumer record list.</p>
+         */
         @NameInMap("records")
         public java.util.List<GetTraceResponseBodyDataConsumerInfosRecords> records;
 
@@ -506,6 +571,8 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodyDataMessageInfo extends TeaModel {
         /**
+         * <p>Message body.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -513,6 +580,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String body;
 
         /**
+         * <p>Message born host.</p>
+         * 
          * <strong>example:</strong>
          * <p>x.x.x.x</p>
          */
@@ -520,6 +589,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String bornHost;
 
         /**
+         * <p>Message born time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
          */
@@ -527,6 +598,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String bornTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-u0t2ygjq505</p>
          */
@@ -534,6 +607,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Message grpup.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -541,16 +616,23 @@ public class GetTraceResponseBody extends TeaModel {
         public String messageGroup;
 
         /**
+         * <p>The message ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0A79275A00207A4F0F2916C92F9A0B94</p>
          */
         @NameInMap("messageId")
         public String messageId;
 
+        /**
+         * <p>Message keys.</p>
+         */
         @NameInMap("messageKeys")
         public java.util.List<String> messageKeys;
 
         /**
+         * <p>Message tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -558,6 +640,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String messageTag;
 
         /**
+         * <p>Message type.</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -565,6 +649,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String messageType;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -572,13 +658,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        @NameInMap("setted")
-        public Boolean setted;
-
-        /**
+         * <p>Message store host.</p>
+         * 
          * <strong>example:</strong>
          * <p>x.x.x.x</p>
          */
@@ -586,6 +667,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String storeHost;
 
         /**
+         * <p>Message store time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
          */
@@ -593,6 +676,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String storeTime;
 
         /**
+         * <p>The topic name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Topic_normal_inspector</p>
          */
@@ -600,12 +685,17 @@ public class GetTraceResponseBody extends TeaModel {
         public String topicName;
 
         /**
+         * <p>Message transaction id.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("transactionId")
         public String transactionId;
 
+        /**
+         * <p>Message user properties.</p>
+         */
         @NameInMap("userProperties")
         public java.util.Map<String, String> userProperties;
 
@@ -694,14 +784,6 @@ public class GetTraceResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public GetTraceResponseBodyDataMessageInfo setSetted(Boolean setted) {
-            this.setted = setted;
-            return this;
-        }
-        public Boolean getSetted() {
-            return this.setted;
-        }
-
         public GetTraceResponseBodyDataMessageInfo setStoreHost(String storeHost) {
             this.storeHost = storeHost;
             return this;
@@ -746,6 +828,8 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodyDataProducerInfoRecords extends TeaModel {
         /**
+         * <p>Arrive time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
          */
@@ -753,6 +837,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String arriveTime;
 
         /**
+         * <p>Client host.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx.xx.xx.xx</p>
          */
@@ -760,6 +846,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String clientHost;
 
         /**
+         * <p>Dead-letter queue message ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0A79275A00207A4F0F2916C92F9A0B94</p>
          */
@@ -767,6 +855,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String dlqOriginMessageId;
 
         /**
+         * <p>Dead-letter queue topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_topic</p>
          */
@@ -774,6 +864,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String dlqOriginTopic;
 
         /**
+         * <p>Message source.</p>
+         * 
          * <strong>example:</strong>
          * <p>CONSOLE</p>
          */
@@ -781,6 +873,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String messageSource;
 
         /**
+         * <p>Producer duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -788,6 +882,8 @@ public class GetTraceResponseBody extends TeaModel {
         public Long produceDuration;
 
         /**
+         * <p>Producer status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -795,6 +891,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String produceStatus;
 
         /**
+         * <p>Producer time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
          */
@@ -802,6 +900,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String produceTime;
 
         /**
+         * <p>Producer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -888,6 +988,9 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodyDataProducerInfo extends TeaModel {
+        /**
+         * <p>Producer record list.</p>
+         */
         @NameInMap("records")
         public java.util.List<GetTraceResponseBodyDataProducerInfoRecords> records;
 
@@ -907,26 +1010,42 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodyData extends TeaModel {
+        /**
+         * <p>Broker trace info.</p>
+         */
         @NameInMap("brokerInfo")
         public GetTraceResponseBodyDataBrokerInfo brokerInfo;
 
+        /**
+         * <p>Consumer trace info.</p>
+         */
         @NameInMap("consumerInfos")
         public java.util.List<GetTraceResponseBodyDataConsumerInfos> consumerInfos;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-7e22ody****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The message information.</p>
+         */
         @NameInMap("messageInfo")
         public GetTraceResponseBodyDataMessageInfo messageInfo;
 
+        /**
+         * <p>Producer trace info.</p>
+         */
         @NameInMap("producerInfo")
         public GetTraceResponseBodyDataProducerInfo producerInfo;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -934,6 +1053,8 @@ public class GetTraceResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The topic name.</p>
+         * 
          * <strong>example:</strong>
          * <p>topic_test</p>
          */
