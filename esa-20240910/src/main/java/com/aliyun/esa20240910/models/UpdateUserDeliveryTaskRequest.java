@@ -19,6 +19,9 @@ public class UpdateUserDeliveryTaskRequest extends TeaModel {
     @NameInMap("BusinessType")
     public String businessType;
 
+    @NameInMap("Details")
+    public String details;
+
     /**
      * <p>The discard rate. Default value: 0.</p>
      * 
@@ -59,6 +62,14 @@ public class UpdateUserDeliveryTaskRequest extends TeaModel {
     }
     public String getBusinessType() {
         return this.businessType;
+    }
+
+    public UpdateUserDeliveryTaskRequest setDetails(String details) {
+        this.details = details;
+        return this;
+    }
+    public String getDetails() {
+        return this.details;
     }
 
     public UpdateUserDeliveryTaskRequest setDiscardRate(Float discardRate) {

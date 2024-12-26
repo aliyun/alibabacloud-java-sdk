@@ -52,6 +52,9 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     @NameInMap("DeliveryType")
     public String deliveryType;
 
+    @NameInMap("Details")
+    public String details;
+
     /**
      * <p>The discard rate. Default value: 0.</p>
      * 
@@ -138,6 +141,14 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     }
     public String getDeliveryType() {
         return this.deliveryType;
+    }
+
+    public CreateUserDeliveryTaskShrinkRequest setDetails(String details) {
+        this.details = details;
+        return this;
+    }
+    public String getDetails() {
+        return this.details;
     }
 
     public CreateUserDeliveryTaskShrinkRequest setDiscardRate(Float discardRate) {
