@@ -14,6 +14,9 @@ public class AddFileShrinkRequest extends TeaModel {
     @NameInMap("CategoryId")
     public String categoryId;
 
+    @NameInMap("CategoryType")
+    public String categoryType;
+
     /**
      * <p>The lease ID, which corresponds to the <code>FileUploadLeaseId</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation.</p>
      * <p>This parameter is required.</p>
@@ -54,6 +57,14 @@ public class AddFileShrinkRequest extends TeaModel {
     }
     public String getCategoryId() {
         return this.categoryId;
+    }
+
+    public AddFileShrinkRequest setCategoryType(String categoryType) {
+        this.categoryType = categoryType;
+        return this;
+    }
+    public String getCategoryType() {
+        return this.categoryType;
     }
 
     public AddFileShrinkRequest setLeaseId(String leaseId) {
