@@ -341,6 +341,12 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     }
 
     public static class ModifyInstanceAttributeRequestCpuOptions extends TeaModel {
+        @NameInMap("Core")
+        public Integer core;
+
+        @NameInMap("ThreadsPerCore")
+        public Integer threadsPerCore;
+
         /**
          * <p>The CPU topology type of the instance. Valid values:</p>
          * <ul>
@@ -366,6 +372,22 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         public static ModifyInstanceAttributeRequestCpuOptions build(java.util.Map<String, ?> map) throws Exception {
             ModifyInstanceAttributeRequestCpuOptions self = new ModifyInstanceAttributeRequestCpuOptions();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyInstanceAttributeRequestCpuOptions setCore(Integer core) {
+            this.core = core;
+            return this;
+        }
+        public Integer getCore() {
+            return this.core;
+        }
+
+        public ModifyInstanceAttributeRequestCpuOptions setThreadsPerCore(Integer threadsPerCore) {
+            this.threadsPerCore = threadsPerCore;
+            return this;
+        }
+        public Integer getThreadsPerCore() {
+            return this.threadsPerCore;
         }
 
         public ModifyInstanceAttributeRequestCpuOptions setTopologyType(String topologyType) {

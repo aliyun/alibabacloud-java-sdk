@@ -14,7 +14,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +25,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -216,7 +220,11 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the snapshot is encrypted.</p>
+         * <p>Indicates whether the snapshot was encrypted. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -439,9 +447,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The status of the snapshot. Valid values:</p>
          * <ul>
-         * <li>progressing</li>
-         * <li>accomplished</li>
-         * <li>failed</li>
+         * <li>progressing: The snapshot is being created.</li>
+         * <li>accomplished: The snapshot is created.</li>
+         * <li>failed: The snapshot failed to be created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -457,12 +465,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public DescribeSnapshotsResponseBodySnapshotsSnapshotTags tags;
 
         /**
-         * <p>Indicates whether the snapshot was used to create images or disks. Valid values:</p>
+         * <p>Indicates whether the snapshot was used to create images or cloud disks. Valid values:</p>
          * <ul>
-         * <li>image</li>
-         * <li>disk</li>
-         * <li>image_disk</li>
-         * <li>none</li>
+         * <li>image: The snapshot was used to create custom images.</li>
+         * <li>disk: The snapshot was used to create cloud disks.</li>
+         * <li>image_disk: The snapshot was used to create custom images and data disks.</li>
+         * <li>none: The snapshot was not used to create custom images or cloud disks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
