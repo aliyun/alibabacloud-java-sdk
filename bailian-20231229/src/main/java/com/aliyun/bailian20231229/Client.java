@@ -108,6 +108,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CategoryId", request.categoryId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryType)) {
+            body.put("CategoryType", request.categoryType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.leaseId)) {
             body.put("LeaseId", request.leaseId);
         }
@@ -182,6 +186,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ApplyFileUploadLeaseResponse applyFileUploadLeaseWithOptions(String CategoryId, String WorkspaceId, ApplyFileUploadLeaseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryType)) {
+            body.put("CategoryType", request.categoryType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
             body.put("FileName", request.fileName);
         }

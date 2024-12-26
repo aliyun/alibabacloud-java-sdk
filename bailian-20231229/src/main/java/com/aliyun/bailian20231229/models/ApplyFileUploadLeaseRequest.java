@@ -4,6 +4,9 @@ package com.aliyun.bailian20231229.models;
 import com.aliyun.tea.*;
 
 public class ApplyFileUploadLeaseRequest extends TeaModel {
+    @NameInMap("CategoryType")
+    public String categoryType;
+
     /**
      * <p>The name of the uploaded document, including the extension. Supported formats: pdf, doc, docx, md, txt, ppt, and pptx. The document name must be 4 to 128 characters in length.</p>
      * <p>This parameter is required.</p>
@@ -34,6 +37,14 @@ public class ApplyFileUploadLeaseRequest extends TeaModel {
     public static ApplyFileUploadLeaseRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyFileUploadLeaseRequest self = new ApplyFileUploadLeaseRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ApplyFileUploadLeaseRequest setCategoryType(String categoryType) {
+        this.categoryType = categoryType;
+        return this;
+    }
+    public String getCategoryType() {
+        return this.categoryType;
     }
 
     public ApplyFileUploadLeaseRequest setFileName(String fileName) {
