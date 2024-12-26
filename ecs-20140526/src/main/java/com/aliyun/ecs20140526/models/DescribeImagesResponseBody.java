@@ -262,7 +262,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String device;
 
         @NameInMap("Encrypted")
-        public String encrypted;
+        public Boolean encrypted;
 
         /**
          * <p>The format of the image.</p>
@@ -349,11 +349,11 @@ public class DescribeImagesResponseBody extends TeaModel {
             return this.device;
         }
 
-        public DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping setEncrypted(String encrypted) {
+        public DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping setEncrypted(Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-        public String getEncrypted() {
+        public Boolean getEncrypted() {
             return this.encrypted;
         }
 
@@ -443,8 +443,20 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImagesImageFeatures extends TeaModel {
+        @NameInMap("CpuOnlineDowngrade")
+        public String cpuOnlineDowngrade;
+
+        @NameInMap("CpuOnlineUpgrade")
+        public String cpuOnlineUpgrade;
+
         @NameInMap("ImdsSupport")
         public String imdsSupport;
+
+        @NameInMap("MemoryOnlineDowngrade")
+        public String memoryOnlineDowngrade;
+
+        @NameInMap("MemoryOnlineUpgrade")
+        public String memoryOnlineUpgrade;
 
         /**
          * <p>Indicates whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
@@ -464,12 +476,44 @@ public class DescribeImagesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeImagesResponseBodyImagesImageFeatures setCpuOnlineDowngrade(String cpuOnlineDowngrade) {
+            this.cpuOnlineDowngrade = cpuOnlineDowngrade;
+            return this;
+        }
+        public String getCpuOnlineDowngrade() {
+            return this.cpuOnlineDowngrade;
+        }
+
+        public DescribeImagesResponseBodyImagesImageFeatures setCpuOnlineUpgrade(String cpuOnlineUpgrade) {
+            this.cpuOnlineUpgrade = cpuOnlineUpgrade;
+            return this;
+        }
+        public String getCpuOnlineUpgrade() {
+            return this.cpuOnlineUpgrade;
+        }
+
         public DescribeImagesResponseBodyImagesImageFeatures setImdsSupport(String imdsSupport) {
             this.imdsSupport = imdsSupport;
             return this;
         }
         public String getImdsSupport() {
             return this.imdsSupport;
+        }
+
+        public DescribeImagesResponseBodyImagesImageFeatures setMemoryOnlineDowngrade(String memoryOnlineDowngrade) {
+            this.memoryOnlineDowngrade = memoryOnlineDowngrade;
+            return this;
+        }
+        public String getMemoryOnlineDowngrade() {
+            return this.memoryOnlineDowngrade;
+        }
+
+        public DescribeImagesResponseBodyImagesImageFeatures setMemoryOnlineUpgrade(String memoryOnlineUpgrade) {
+            this.memoryOnlineUpgrade = memoryOnlineUpgrade;
+            return this;
+        }
+        public String getMemoryOnlineUpgrade() {
+            return this.memoryOnlineUpgrade;
         }
 
         public DescribeImagesResponseBodyImagesImageFeatures setNvmeSupport(String nvmeSupport) {

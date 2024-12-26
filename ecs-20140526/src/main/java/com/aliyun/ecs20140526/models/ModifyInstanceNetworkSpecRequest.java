@@ -65,7 +65,7 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     public String ISP;
 
     /**
-     * <p>The ID of the instance for which you want to modify bandwidth configurations.</p>
+     * <p>The ID of the instance for which you want to modify network configurations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

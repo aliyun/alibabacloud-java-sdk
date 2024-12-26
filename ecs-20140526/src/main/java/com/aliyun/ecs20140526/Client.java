@@ -283,10 +283,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Adds tags to Elastic Compute Service (ECS) resources, or overwrites tags of ECS resources. You can add tags to ECS resources such as instances, disks, snapshots, images, and security groups for easy management.</p>
      * 
+     * @deprecated OpenAPI AddTags is deprecated, please use Ecs::2014-05-26::TagResources instead.
+     * 
      * @param request AddTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddTagsResponse
      */
+    @Deprecated
+    // Deprecated
     public AddTagsResponse addTagsWithOptions(AddTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -347,9 +351,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Adds tags to Elastic Compute Service (ECS) resources, or overwrites tags of ECS resources. You can add tags to ECS resources such as instances, disks, snapshots, images, and security groups for easy management.</p>
      * 
+     * @deprecated OpenAPI AddTags is deprecated, please use Ecs::2014-05-26::TagResources instead.
+     * 
      * @param request AddTagsRequest
      * @return AddTagsResponse
      */
+    @Deprecated
+    // Deprecated
     public AddTagsResponse addTags(AddTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addTagsWithOptions(request, runtime);
@@ -18937,10 +18945,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries resources by tag or resource type.</p>
      * 
+     * @deprecated OpenAPI DescribeResourceByTags is deprecated, please use Tag::2018-08-28::ListResourcesByTag instead.
+     * 
      * @param request DescribeResourceByTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeResourceByTagsResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeResourceByTagsResponse describeResourceByTagsWithOptions(DescribeResourceByTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18997,9 +19009,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries resources by tag or resource type.</p>
      * 
+     * @deprecated OpenAPI DescribeResourceByTags is deprecated, please use Tag::2018-08-28::ListResourcesByTag instead.
+     * 
      * @param request DescribeResourceByTagsRequest
      * @return DescribeResourceByTagsResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeResourceByTagsResponse describeResourceByTags(DescribeResourceByTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeResourceByTagsWithOptions(request, runtime);
@@ -20265,8 +20281,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can configure multiple request parameters such as <code>InstanceId</code>, <code>DiskId</code>, and <code>SnapshotIds</code> to query snapshots. Configured parameters have logical AND relations. Only the configured parameters are included in the filter conditions.
-     * When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</p>
+     * <p>You can specify multiple request parameters, such as <code>InstanceId</code>, <code>DiskId</code>, and <code>SnapshotIds</code>, to query snapshots. The specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
+     * When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.
+     * Sample requests:
+     * <strong>Query the snapshots of all cloud disks attached to an Elastic Compute Service (ECS) instance in the China (Hangzhou) region</strong>
+     *     RegionId:  cn-hangzhou,   // Specify the China (Hangzhou) region.InstanceId:  i-bp1fh7by6d9mw7zr****   // Specify the ID of the instance that you want to query.
+     * <strong>Query the snapshots of a specific cloud disk in the China (Hangzhou) region</strong>
+     *     RegionId:  cn-hangzhou,   // Specify the China (Hangzhou) region.DiskId:   d-bp10e7ej8z743dmu****   // Specify the ID of the cloud disk that you want to query.
+     * <strong>Query information about two snapshots in the China (Hangzhou) region by snapshot ID</strong>
+     *     RegionId:  cn-hangzhou,   // Specify the China (Hangzhou) region.SnapshotIds:   [&quot;d-bp10e7ej8z743dmu****&quot;, &quot;s-bp19vd1lorzgzt2s****&quot;]   // Specify the IDs of the snapshots that you want to query.
+     * <strong>Query snapshots created after a specific point in time in the China (Hangzhou) region</strong>
+     *     RegionId:  cn-hangzhou,   // Specify the China (Hangzhou) region.Filter.1.Key:   CreationStartTime,   // Specify a point in time to query snapshots that were created after the specified point in time.Filter.1.Value:   2024-11-27T00:00Z</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of cloud disk snapshots. The details include the status of the snapshots, the amount of remaining time required to create the snapshots, and the retention period of the automatic snapshots in days.</p>
@@ -20397,8 +20422,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can configure multiple request parameters such as <code>InstanceId</code>, <code>DiskId</code>, and <code>SnapshotIds</code> to query snapshots. Configured parameters have logical AND relations. Only the configured parameters are included in the filter conditions.
-     * When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</p>
+     * <p>You can specify multiple request parameters, such as <code>InstanceId</code>, <code>DiskId</code>, and <code>SnapshotIds</code>, to query snapshots. The specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
+     * When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.
+     * Sample requests:
+     * <strong>Query the snapshots of all cloud disks attached to an Elastic Compute Service (ECS) instance in the China (Hangzhou) region</strong>
+     *     RegionId:  cn-hangzhou,   // Specify the China (Hangzhou) region.InstanceId:  i-bp1fh7by6d9mw7zr****   // Specify the ID of the instance that you want to query.
+     * <strong>Query the snapshots of a specific cloud disk in the China (Hangzhou) region</strong>
+     *     RegionId:  cn-hangzhou,   // Specify the China (Hangzhou) region.DiskId:   d-bp10e7ej8z743dmu****   // Specify the ID of the cloud disk that you want to query.
+     * <strong>Query information about two snapshots in the China (Hangzhou) region by snapshot ID</strong>
+     *     RegionId:  cn-hangzhou,   // Specify the China (Hangzhou) region.SnapshotIds:   [&quot;d-bp10e7ej8z743dmu****&quot;, &quot;s-bp19vd1lorzgzt2s****&quot;]   // Specify the IDs of the snapshots that you want to query.
+     * <strong>Query snapshots created after a specific point in time in the China (Hangzhou) region</strong>
+     *     RegionId:  cn-hangzhou,   // Specify the China (Hangzhou) region.Filter.1.Key:   CreationStartTime,   // Specify a point in time to query snapshots that were created after the specified point in time.Filter.1.Value:   2024-11-27T00:00Z</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of cloud disk snapshots. The details include the status of the snapshots, the amount of remaining time required to create the snapshots, and the retention period of the automatic snapshots in days.</p>
@@ -20970,10 +21004,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries tags that are available to you. You can specify multiple filter conditions, such as a resource type, a resource ID, a tag key, and a tag value, to query tags. The specified filter conditions have logical AND relations.</p>
      * 
+     * @deprecated OpenAPI DescribeTags is deprecated, please use Tag::2018-08-28::CountResourcesByTags instead.
+     * 
      * @param request DescribeTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTagsResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeTagsResponse describeTagsWithOptions(DescribeTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21041,9 +21079,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries tags that are available to you. You can specify multiple filter conditions, such as a resource type, a resource ID, a tag key, and a tag value, to query tags. The specified filter conditions have logical AND relations.</p>
      * 
+     * @deprecated OpenAPI DescribeTags is deprecated, please use Tag::2018-08-28::CountResourcesByTags instead.
+     * 
      * @param request DescribeTagsRequest
      * @return DescribeTagsResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeTagsResponse describeTags(DescribeTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTagsWithOptions(request, runtime);
@@ -27651,21 +27693,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a subscription (PrePaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, a public IP address is automatically assigned to the instance.</li>
-     * <li>If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a pay-as-you-go (PostPaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, no public IP address is automatically assigned to the instance. In this case, you can set <code>AllocatePublicIp</code> to <code>true</code> or call the <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> operation to assign a public IP address to the instance.</li>
+     * <li>If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a subscription (PrePaid) instance from 0 Mbit/s when you modify the network configurations of the instance, a static public IP address is automatically assigned to the instance.</li>
+     * <li>If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a pay-as-you-go (PostPaid) instance from 0 Mbit/s when you modify the network configurations of the instance, no static public IP address is automatically assigned to the instance. In this case, to assign a static public IP address to the instance, you must set <code>AllocatePublicIp</code> to <code>true</code>.</li>
      * <li>You can upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of an instance in the classic network from 0 Mbit/s only if the instance is in the Stopped state.<blockquote>
      * <p> For the limits on the sum of maximum public bandwidths of ECS instances that use the pay-by-bandwidth billing method for network usage per region per Alibaba Cloud account, see the <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a> section of the &quot;Limits&quot; topic.</p>
      * </blockquote>
      * </li>
      * <li>Billing:<ul>
-     * <li>After the bandwidth is upgraded, AutoPay is set to true by default and the payment is automatically made. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set AutoPay to false. In this case, when you call the ModifyInstanceNetworkSpec operation, an unpaid order is generated. Then, you can log on to the ECS console to pay for the order.</li>
-     * <li>After the bandwidth is downgraded, the price difference is refunded to the payment account that you used. Vouchers or coupons that have been redeemed are not refundable.</li>
+     * <li>After the public bandwidth is upgraded, AutoPay is automatically set to true and the payment is automatically made. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set AutoPay to false. In this case, when you call the ModifyInstanceNetworkSpec operation, an unpaid order is generated. Then, you can log on to the ECS console to pay for the order.</li>
+     * <li>After the public bandwidth is downgraded, the price difference is refunded to the payment account that you used. Vouchers or coupons that have been redeemed are not refundable.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the bandwidth configurations of an Elastic Compute Service (ECS) instance. You can modify the bandwidth configurations of ECS instances to improve network performance. You can call this operation to upgrade or downgrade the bandwidth configurations of ECS instances.</p>
+     * <p>Modifies the network configurations of an Elastic Compute Service (ECS) instance, such as the public bandwidth, assignment or unassignment of a static public IP address (also known as system-assigned or auto-assigned public IP address), and billing method for network usage. You can call this operation to upgrade or downgrade the network configurations of ECS instances.</p>
      * 
      * @param request ModifyInstanceNetworkSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27751,21 +27793,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a subscription (PrePaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, a public IP address is automatically assigned to the instance.</li>
-     * <li>If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a pay-as-you-go (PostPaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, no public IP address is automatically assigned to the instance. In this case, you can set <code>AllocatePublicIp</code> to <code>true</code> or call the <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> operation to assign a public IP address to the instance.</li>
+     * <li>If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a subscription (PrePaid) instance from 0 Mbit/s when you modify the network configurations of the instance, a static public IP address is automatically assigned to the instance.</li>
+     * <li>If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a pay-as-you-go (PostPaid) instance from 0 Mbit/s when you modify the network configurations of the instance, no static public IP address is automatically assigned to the instance. In this case, to assign a static public IP address to the instance, you must set <code>AllocatePublicIp</code> to <code>true</code>.</li>
      * <li>You can upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of an instance in the classic network from 0 Mbit/s only if the instance is in the Stopped state.<blockquote>
      * <p> For the limits on the sum of maximum public bandwidths of ECS instances that use the pay-by-bandwidth billing method for network usage per region per Alibaba Cloud account, see the <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a> section of the &quot;Limits&quot; topic.</p>
      * </blockquote>
      * </li>
      * <li>Billing:<ul>
-     * <li>After the bandwidth is upgraded, AutoPay is set to true by default and the payment is automatically made. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set AutoPay to false. In this case, when you call the ModifyInstanceNetworkSpec operation, an unpaid order is generated. Then, you can log on to the ECS console to pay for the order.</li>
-     * <li>After the bandwidth is downgraded, the price difference is refunded to the payment account that you used. Vouchers or coupons that have been redeemed are not refundable.</li>
+     * <li>After the public bandwidth is upgraded, AutoPay is automatically set to true and the payment is automatically made. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set AutoPay to false. In this case, when you call the ModifyInstanceNetworkSpec operation, an unpaid order is generated. Then, you can log on to the ECS console to pay for the order.</li>
+     * <li>After the public bandwidth is downgraded, the price difference is refunded to the payment account that you used. Vouchers or coupons that have been redeemed are not refundable.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the bandwidth configurations of an Elastic Compute Service (ECS) instance. You can modify the bandwidth configurations of ECS instances to improve network performance. You can call this operation to upgrade or downgrade the bandwidth configurations of ECS instances.</p>
+     * <p>Modifies the network configurations of an Elastic Compute Service (ECS) instance, such as the public bandwidth, assignment or unassignment of a static public IP address (also known as system-assigned or auto-assigned public IP address), and billing method for network usage. You can call this operation to upgrade or downgrade the network configurations of ECS instances.</p>
      * 
      * @param request ModifyInstanceNetworkSpecRequest
      * @return ModifyInstanceNetworkSpecResponse
@@ -31855,10 +31897,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>释放公网IP</p>
      * 
+     * @deprecated OpenAPI ReleasePublicIpAddress is deprecated
+     * 
      * @param request ReleasePublicIpAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleasePublicIpAddressResponse
      */
+    @Deprecated
+    // Deprecated
     public ReleasePublicIpAddressResponse releasePublicIpAddressWithOptions(ReleasePublicIpAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -31899,9 +31945,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>释放公网IP</p>
      * 
+     * @deprecated OpenAPI ReleasePublicIpAddress is deprecated
+     * 
      * @param request ReleasePublicIpAddressRequest
      * @return ReleasePublicIpAddressResponse
      */
+    @Deprecated
+    // Deprecated
     public ReleasePublicIpAddressResponse releasePublicIpAddress(ReleasePublicIpAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releasePublicIpAddressWithOptions(request, runtime);
@@ -31985,10 +32035,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Removes one or more tags from a resource such as an instance, disk, snapshot, image, or security group.</p>
      * 
+     * @deprecated OpenAPI RemoveTags is deprecated, please use Ecs::2014-05-26::UntagResources instead.
+     * 
      * @param request RemoveTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveTagsResponse
      */
+    @Deprecated
+    // Deprecated
     public RemoveTagsResponse removeTagsWithOptions(RemoveTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -32041,9 +32095,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Removes one or more tags from a resource such as an instance, disk, snapshot, image, or security group.</p>
      * 
+     * @deprecated OpenAPI RemoveTags is deprecated, please use Ecs::2014-05-26::UntagResources instead.
+     * 
      * @param request RemoveTagsRequest
      * @return RemoveTagsResponse
      */
+    @Deprecated
+    // Deprecated
     public RemoveTagsResponse removeTags(RemoveTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeTagsWithOptions(request, runtime);
