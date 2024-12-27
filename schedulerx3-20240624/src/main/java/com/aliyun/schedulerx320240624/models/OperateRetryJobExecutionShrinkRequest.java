@@ -3,7 +3,7 @@ package com.aliyun.schedulerx320240624.models;
 
 import com.aliyun.tea.*;
 
-public class OperateStopJobExecutionRequest extends TeaModel {
+public class OperateRetryJobExecutionShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -32,14 +32,14 @@ public class OperateStopJobExecutionRequest extends TeaModel {
     public String jobExecutionId;
 
     @NameInMap("TaskList")
-    public java.util.List<String> taskList;
+    public String taskListShrink;
 
-    public static OperateStopJobExecutionRequest build(java.util.Map<String, ?> map) throws Exception {
-        OperateStopJobExecutionRequest self = new OperateStopJobExecutionRequest();
+    public static OperateRetryJobExecutionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        OperateRetryJobExecutionShrinkRequest self = new OperateRetryJobExecutionShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public OperateStopJobExecutionRequest setAppName(String appName) {
+    public OperateRetryJobExecutionShrinkRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -47,7 +47,7 @@ public class OperateStopJobExecutionRequest extends TeaModel {
         return this.appName;
     }
 
-    public OperateStopJobExecutionRequest setClusterId(String clusterId) {
+    public OperateRetryJobExecutionShrinkRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
@@ -55,7 +55,7 @@ public class OperateStopJobExecutionRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public OperateStopJobExecutionRequest setJobExecutionId(String jobExecutionId) {
+    public OperateRetryJobExecutionShrinkRequest setJobExecutionId(String jobExecutionId) {
         this.jobExecutionId = jobExecutionId;
         return this;
     }
@@ -63,12 +63,12 @@ public class OperateStopJobExecutionRequest extends TeaModel {
         return this.jobExecutionId;
     }
 
-    public OperateStopJobExecutionRequest setTaskList(java.util.List<String> taskList) {
-        this.taskList = taskList;
+    public OperateRetryJobExecutionShrinkRequest setTaskListShrink(String taskListShrink) {
+        this.taskListShrink = taskListShrink;
         return this;
     }
-    public java.util.List<String> getTaskList() {
-        return this.taskList;
+    public String getTaskListShrink() {
+        return this.taskListShrink;
     }
 
 }
