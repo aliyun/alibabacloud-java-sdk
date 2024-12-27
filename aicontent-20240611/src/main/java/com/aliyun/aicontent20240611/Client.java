@@ -252,6 +252,526 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>进行拓展练对话</p>
+     * 
+     * @param request ExecuteAITeacherExpansionDialogueRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteAITeacherExpansionDialogueResponse
+     */
+    public ExecuteAITeacherExpansionDialogueResponse executeAITeacherExpansionDialogueWithOptions(ExecuteAITeacherExpansionDialogueRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.background)) {
+            body.put("background", request.background);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dialogueTasks)) {
+            body.put("dialogueTasks", request.dialogueTasks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.languageCode)) {
+            body.put("languageCode", request.languageCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.records)) {
+            body.put("records", request.records);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleInfo)) {
+            body.put("roleInfo", request.roleInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startSentence)) {
+            body.put("startSentence", request.startSentence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("topic", request.topic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteAITeacherExpansionDialogue"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiteacher/expansionPractice/executeExpansionTraining"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteAITeacherExpansionDialogueResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>进行拓展练对话</p>
+     * 
+     * @param request ExecuteAITeacherExpansionDialogueRequest
+     * @return ExecuteAITeacherExpansionDialogueResponse
+     */
+    public ExecuteAITeacherExpansionDialogueResponse executeAITeacherExpansionDialogue(ExecuteAITeacherExpansionDialogueRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.executeAITeacherExpansionDialogueWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>拓展练根据上下文进行润色</p>
+     * 
+     * @param request ExecuteAITeacherExpansionDialogueRefineRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteAITeacherExpansionDialogueRefineResponse
+     */
+    public ExecuteAITeacherExpansionDialogueRefineResponse executeAITeacherExpansionDialogueRefineWithOptions(ExecuteAITeacherExpansionDialogueRefineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.background)) {
+            body.put("background", request.background);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dialogueTasks)) {
+            body.put("dialogueTasks", request.dialogueTasks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.languageCode)) {
+            body.put("languageCode", request.languageCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.records)) {
+            body.put("records", request.records);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleInfo)) {
+            body.put("roleInfo", request.roleInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startSentence)) {
+            body.put("startSentence", request.startSentence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("topic", request.topic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteAITeacherExpansionDialogueRefine"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiteacher/expansionPractice/refineByContext"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteAITeacherExpansionDialogueRefineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>拓展练根据上下文进行润色</p>
+     * 
+     * @param request ExecuteAITeacherExpansionDialogueRefineRequest
+     * @return ExecuteAITeacherExpansionDialogueRefineResponse
+     */
+    public ExecuteAITeacherExpansionDialogueRefineResponse executeAITeacherExpansionDialogueRefine(ExecuteAITeacherExpansionDialogueRefineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.executeAITeacherExpansionDialogueRefineWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>拓展练语境翻译</p>
+     * 
+     * @param request ExecuteAITeacherExpansionDialogueTranslateRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteAITeacherExpansionDialogueTranslateResponse
+     */
+    public ExecuteAITeacherExpansionDialogueTranslateResponse executeAITeacherExpansionDialogueTranslateWithOptions(ExecuteAITeacherExpansionDialogueTranslateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.background)) {
+            body.put("background", request.background);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dialogueTasks)) {
+            body.put("dialogueTasks", request.dialogueTasks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.records)) {
+            body.put("records", request.records);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleInfo)) {
+            body.put("roleInfo", request.roleInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startSentence)) {
+            body.put("startSentence", request.startSentence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("topic", request.topic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteAITeacherExpansionDialogueTranslate"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiteacher/expansionPractice/translate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteAITeacherExpansionDialogueTranslateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>拓展练语境翻译</p>
+     * 
+     * @param request ExecuteAITeacherExpansionDialogueTranslateRequest
+     * @return ExecuteAITeacherExpansionDialogueTranslateResponse
+     */
+    public ExecuteAITeacherExpansionDialogueTranslateResponse executeAITeacherExpansionDialogueTranslate(ExecuteAITeacherExpansionDialogueTranslateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.executeAITeacherExpansionDialogueTranslateWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>语法检测</p>
+     * 
+     * @param request ExecuteAITeacherGrammarCheckRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteAITeacherGrammarCheckResponse
+     */
+    public ExecuteAITeacherGrammarCheckResponse executeAITeacherGrammarCheckWithOptions(ExecuteAITeacherGrammarCheckRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteAITeacherGrammarCheck"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiteacher/common/grammarChecking"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteAITeacherGrammarCheckResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>语法检测</p>
+     * 
+     * @param request ExecuteAITeacherGrammarCheckRequest
+     * @return ExecuteAITeacherGrammarCheckResponse
+     */
+    public ExecuteAITeacherGrammarCheckResponse executeAITeacherGrammarCheck(ExecuteAITeacherGrammarCheckRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.executeAITeacherGrammarCheckWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>进行同步练对话</p>
+     * 
+     * @param request ExecuteAITeacherSyncDialogueRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteAITeacherSyncDialogueResponse
+     */
+    public ExecuteAITeacherSyncDialogueResponse executeAITeacherSyncDialogueWithOptions(ExecuteAITeacherSyncDialogueRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dialogueTasks)) {
+            body.put("dialogueTasks", request.dialogueTasks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.languageCode)) {
+            body.put("languageCode", request.languageCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.records)) {
+            body.put("records", request.records);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteAITeacherSyncDialogue"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiteacher/syncPractice/executeSyncTraining"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteAITeacherSyncDialogueResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>进行同步练对话</p>
+     * 
+     * @param request ExecuteAITeacherSyncDialogueRequest
+     * @return ExecuteAITeacherSyncDialogueResponse
+     */
+    public ExecuteAITeacherSyncDialogueResponse executeAITeacherSyncDialogue(ExecuteAITeacherSyncDialogueRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.executeAITeacherSyncDialogueWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>同步练语境翻译</p>
+     * 
+     * @param request ExecuteAITeacherSyncDialogueTranslateRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteAITeacherSyncDialogueTranslateResponse
+     */
+    public ExecuteAITeacherSyncDialogueTranslateResponse executeAITeacherSyncDialogueTranslateWithOptions(ExecuteAITeacherSyncDialogueTranslateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dialogueTasks)) {
+            body.put("dialogueTasks", request.dialogueTasks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.records)) {
+            body.put("records", request.records);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteAITeacherSyncDialogueTranslate"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiteacher/syncPractice/translate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteAITeacherSyncDialogueTranslateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>同步练语境翻译</p>
+     * 
+     * @param request ExecuteAITeacherSyncDialogueTranslateRequest
+     * @return ExecuteAITeacherSyncDialogueTranslateResponse
+     */
+    public ExecuteAITeacherSyncDialogueTranslateResponse executeAITeacherSyncDialogueTranslate(ExecuteAITeacherSyncDialogueTranslateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.executeAITeacherSyncDialogueTranslateWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>拓展练小助手</p>
+     * 
+     * @param request GetAITeacherExpansionDialogueSuggestionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAITeacherExpansionDialogueSuggestionResponse
+     */
+    public GetAITeacherExpansionDialogueSuggestionResponse getAITeacherExpansionDialogueSuggestionWithOptions(GetAITeacherExpansionDialogueSuggestionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.background)) {
+            body.put("background", request.background);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dialogueTasks)) {
+            body.put("dialogueTasks", request.dialogueTasks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.languageCode)) {
+            body.put("languageCode", request.languageCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.records)) {
+            body.put("records", request.records);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleInfo)) {
+            body.put("roleInfo", request.roleInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startSentence)) {
+            body.put("startSentence", request.startSentence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("topic", request.topic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAITeacherExpansionDialogueSuggestion"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiteacher/expansionPractice/suggestion"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAITeacherExpansionDialogueSuggestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>拓展练小助手</p>
+     * 
+     * @param request GetAITeacherExpansionDialogueSuggestionRequest
+     * @return GetAITeacherExpansionDialogueSuggestionResponse
+     */
+    public GetAITeacherExpansionDialogueSuggestionResponse getAITeacherExpansionDialogueSuggestion(GetAITeacherExpansionDialogueSuggestionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAITeacherExpansionDialogueSuggestionWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>同步练小助手</p>
+     * 
+     * @param request GetAITeacherSyncDialogueSuggestionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAITeacherSyncDialogueSuggestionResponse
+     */
+    public GetAITeacherSyncDialogueSuggestionResponse getAITeacherSyncDialogueSuggestionWithOptions(GetAITeacherSyncDialogueSuggestionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dialogueTasks)) {
+            body.put("dialogueTasks", request.dialogueTasks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.languageCode)) {
+            body.put("languageCode", request.languageCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.records)) {
+            body.put("records", request.records);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAITeacherSyncDialogueSuggestion"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiteacher/syncPractice/suggestion"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAITeacherSyncDialogueSuggestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>同步练小助手</p>
+     * 
+     * @param request GetAITeacherSyncDialogueSuggestionRequest
+     * @return GetAITeacherSyncDialogueSuggestionResponse
+     */
+    public GetAITeacherSyncDialogueSuggestionResponse getAITeacherSyncDialogueSuggestion(GetAITeacherSyncDialogueSuggestionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAITeacherSyncDialogueSuggestionWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>个性化文生图/基于一个预训练模型创建图片推理任务</p>
      * 
      * @param request PersonalizedTextToImageAddInferenceJobRequest
