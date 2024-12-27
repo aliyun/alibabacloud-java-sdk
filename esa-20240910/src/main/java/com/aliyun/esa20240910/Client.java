@@ -1484,6 +1484,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>新增源地址池</p>
+     * 
+     * @param tmpReq CreateOriginPoolRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateOriginPoolResponse
+     */
+    public CreateOriginPoolResponse createOriginPoolWithOptions(CreateOriginPoolRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateOriginPoolShrinkRequest request = new CreateOriginPoolShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.origins)) {
+            request.originsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.origins, "Origins", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originsShrink)) {
+            query.put("Origins", request.originsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateOriginPool"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOriginPoolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增源地址池</p>
+     * 
+     * @param request CreateOriginPoolRequest
+     * @return CreateOriginPoolResponse
+     */
+    public CreateOriginPoolResponse createOriginPool(CreateOriginPoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createOriginPoolWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Enables origin protection.</p>
      * 
      * @param request CreateOriginProtectionRequest
@@ -3086,6 +3148,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteListResponse deleteList(DeleteListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除源地址池</p>
+     * 
+     * @param request DeleteOriginPoolRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteOriginPoolResponse
+     */
+    public DeleteOriginPoolResponse deleteOriginPoolWithOptions(DeleteOriginPoolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOriginPool"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOriginPoolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除源地址池</p>
+     * 
+     * @param request DeleteOriginPoolRequest
+     * @return DeleteOriginPoolResponse
+     */
+    public DeleteOriginPoolResponse deleteOriginPool(DeleteOriginPoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteOriginPoolWithOptions(request, runtime);
     }
 
     /**
@@ -5014,6 +5124,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询特定源地址池</p>
+     * 
+     * @param request GetOriginPoolRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetOriginPoolResponse
+     */
+    public GetOriginPoolResponse getOriginPoolWithOptions(GetOriginPoolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOriginPool"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOriginPoolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询特定源地址池</p>
+     * 
+     * @param request GetOriginPoolRequest
+     * @return GetOriginPoolResponse
+     */
+    public GetOriginPoolResponse getOriginPool(GetOriginPoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getOriginPoolWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the origin protection configurations of a website, including the origin protection, IP convergence, and the status and details of the IP whitelist for origin protection. The details includes the IP whitelist used by the website, the latest IP whitelist, and the differences between them.</p>
      * 
      * @param request GetOriginProtectionRequest
@@ -6728,6 +6878,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListManagedRulesGroupsResponse listManagedRulesGroups(ListManagedRulesGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listManagedRulesGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询源地址池列表</p>
+     * 
+     * @param request ListOriginPoolsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOriginPoolsResponse
+     */
+    public ListOriginPoolsResponse listOriginPoolsWithOptions(ListOriginPoolsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOriginPools"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOriginPoolsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询源地址池列表</p>
+     * 
+     * @param request ListOriginPoolsRequest
+     * @return ListOriginPoolsResponse
+     */
+    public ListOriginPoolsResponse listOriginPools(ListOriginPoolsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listOriginPoolsWithOptions(request, runtime);
     }
 
     /**
@@ -8867,6 +9057,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateKvNamespaceResponse updateKvNamespace(UpdateKvNamespaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateKvNamespaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改监视器</p>
+     * 
+     * @param tmpReq UpdateOriginPoolRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateOriginPoolResponse
+     */
+    public UpdateOriginPoolResponse updateOriginPoolWithOptions(UpdateOriginPoolRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateOriginPoolShrinkRequest request = new UpdateOriginPoolShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.origins)) {
+            request.originsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.origins, "Origins", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originsShrink)) {
+            query.put("Origins", request.originsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateOriginPool"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateOriginPoolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改监视器</p>
+     * 
+     * @param request UpdateOriginPoolRequest
+     * @return UpdateOriginPoolResponse
+     */
+    public UpdateOriginPoolResponse updateOriginPool(UpdateOriginPoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateOriginPoolWithOptions(request, runtime);
     }
 
     /**
