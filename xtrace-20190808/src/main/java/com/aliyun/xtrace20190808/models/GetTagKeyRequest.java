@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetTagKeyRequest extends TeaModel {
     /**
-     * <p>The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     * <p>The end of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+     * <blockquote>
+     * <p> The value of this parameter is of the LONG type. Precision loss may occur during serialization or deserialization. The value must be less than or equal to 9007199254740991.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1575622455686</p>
@@ -42,7 +45,10 @@ public class GetTagKeyRequest extends TeaModel {
     public String spanName;
 
     /**
-     * <p>The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     * <p>The beginning of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+     * <blockquote>
+     * <p> The value of this parameter is of the LONG type. Precision loss may occur during serialization or deserialization. The value must be less than or equal to 9007199254740991.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1575561600000</p>

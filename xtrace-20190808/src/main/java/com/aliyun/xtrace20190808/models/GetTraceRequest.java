@@ -5,13 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetTraceRequest extends TeaModel {
     /**
-     * <p>The type of the application. You can set the value to <strong>XTRACE</strong> or leave this parameter unspecified.</p>
+     * <p>The type of the application. You can leave this parameter empty or set this parameter to <code>XTRACE</code>. We recommend that you leave this parameter empty.</p>
+     * <ul>
+     * <li>If you leave this parameter empty, traces reported to Managed Service for OpenTelemetry and Application Real-Time Monitoring Service (ARMS) can be queried.</li>
+     * <li>If you set this parameter to <code>XTRACE</code>, only traces reported to Managed Service for OpenTelemetry can be queried.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>XTRACE</p>
      */
     @NameInMap("AppType")
     public String appType;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public String pageSize;
 
     /**
      * <p>The ID of the region.</p>
@@ -24,7 +34,8 @@ public class GetTraceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The unique ID of the trace.</p>
+     * <p>The trace ID, which is the unique identifier of the trace.</p>
+     * <p>You can obtain the trace ID on the <strong>Trace Explorer</strong> page in the Managed Service for OpenTelemetry console or by calling the <a href="https://help.aliyun.com/document_detail/2399674.html~">SearchTraces</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +55,22 @@ public class GetTraceRequest extends TeaModel {
     }
     public String getAppType() {
         return this.appType;
+    }
+
+    public GetTraceRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public GetTraceRequest setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
     }
 
     public GetTraceRequest setRegionId(String regionId) {

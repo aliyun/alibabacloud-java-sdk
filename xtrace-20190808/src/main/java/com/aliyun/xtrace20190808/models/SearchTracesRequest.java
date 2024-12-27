@@ -14,7 +14,7 @@ public class SearchTracesRequest extends TeaModel {
     public String appType;
 
     /**
-     * <p>The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     * <p>The end of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class SearchTracesRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The time more than which is used to call the trace. Unit: milliseconds. For example, a value of 100 specifies to return the traces that more than 100 milliseconds are used to call.</p>
+     * <p>The minimum value of an execution duration. Unit: seconds. For example, a value of 2 indicates that the traces whose execution duration is more than 2 seconds are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -51,7 +51,7 @@ public class SearchTracesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -83,7 +83,7 @@ public class SearchTracesRequest extends TeaModel {
     public Boolean reverse;
 
     /**
-     * <p>The IP address that corresponds to the span.</p>
+     * <p>The IP address of the server on which the span is running.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.0</p>
@@ -101,7 +101,7 @@ public class SearchTracesRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     * <p>The beginning of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,6 +109,9 @@ public class SearchTracesRequest extends TeaModel {
      */
     @NameInMap("StartTime")
     public Long startTime;
+
+    @NameInMap("StatusCode")
+    public String statusCode;
 
     /**
      * <p>The list of the tags.</p>
@@ -207,6 +210,14 @@ public class SearchTracesRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public SearchTracesRequest setStatusCode(String statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public String getStatusCode() {
+        return this.statusCode;
     }
 
     public SearchTracesRequest setTag(java.util.List<SearchTracesRequestTag> tag) {

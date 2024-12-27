@@ -14,7 +14,7 @@ public class GetTraceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the trace.</p>
+     * <p>The spans that are contained in the trace.</p>
      */
     @NameInMap("Spans")
     public GetTraceResponseBodySpans spans;
@@ -42,7 +42,7 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryListTagEntry extends TeaModel {
         /**
-         * <p>The tag key in the log event.</p>
+         * <p>The tag key of the log event.</p>
          * 
          * <strong>example:</strong>
          * <p>logLevel</p>
@@ -51,7 +51,7 @@ public class GetTraceResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value in the log event.</p>
+         * <p>The tag value of the log event.</p>
          * 
          * <strong>example:</strong>
          * <p>Warning</p>
@@ -103,13 +103,13 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodySpansSpanLogEventListLogEvent extends TeaModel {
         /**
-         * <p>The tags in the log event.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("TagEntryList")
         public GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryList tagEntryList;
 
         /**
-         * <p>The timestamp when the log event was generated.</p>
+         * <p>The timestamp when the log event was generated. Unit: microseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1583683202047000</p>
@@ -161,7 +161,7 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodySpansSpanTagEntryListTagEntry extends TeaModel {
         /**
-         * <p>The tag key in the span.</p>
+         * <p>The tag key of the span.</p>
          * 
          * <strong>example:</strong>
          * <p>logLevel</p>
@@ -170,7 +170,7 @@ public class GetTraceResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value in the span.</p>
+         * <p>The tag value of the span.</p>
          * 
          * <strong>example:</strong>
          * <p>Warning</p>
@@ -222,7 +222,7 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodySpansSpan extends TeaModel {
         /**
-         * <p>The time used to call the trace. Unit: milliseconds.</p>
+         * <p>The duration of the span. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -233,8 +233,8 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the span has child spans. Valid values:</p>
          * <ul>
-         * <li>true: The span has child spans. </li>
-         * <li>false: The span has no child spans.</li>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class GetTraceResponseBody extends TeaModel {
         public Boolean haveStack;
 
         /**
-         * <p>The log events in the trace.</p>
+         * <p>The log events.</p>
          */
         @NameInMap("LogEventList")
         public GetTraceResponseBodySpansSpanLogEventList logEventList;
@@ -268,7 +268,7 @@ public class GetTraceResponseBody extends TeaModel {
         public String parentSpanId;
 
         /**
-         * <p>The status code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -286,7 +286,7 @@ public class GetTraceResponseBody extends TeaModel {
         public String rpcId;
 
         /**
-         * <p>The IP address of the server where the span resides.</p>
+         * <p>The IP address of the server on which the span resides.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XXX.XXX</p>
@@ -304,7 +304,7 @@ public class GetTraceResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>Span ID.</p>
+         * <p>The span ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fec891bb8f8XXX</p>
@@ -312,8 +312,11 @@ public class GetTraceResponseBody extends TeaModel {
         @NameInMap("SpanId")
         public String spanId;
 
+        @NameInMap("StatusCode")
+        public Long statusCode;
+
         /**
-         * <p>The tags in the span.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("TagEntryList")
         public GetTraceResponseBodySpansSpanTagEntryList tagEntryList;
@@ -328,7 +331,7 @@ public class GetTraceResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
-         * <p>The unique ID of the trace.</p>
+         * <p>The trace ID, which is the unique identifier of the trace.</p>
          * 
          * <strong>example:</strong>
          * <p>1c6881aab84191a4****</p>
@@ -419,6 +422,14 @@ public class GetTraceResponseBody extends TeaModel {
         }
         public String getSpanId() {
             return this.spanId;
+        }
+
+        public GetTraceResponseBodySpansSpan setStatusCode(Long statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+        public Long getStatusCode() {
+            return this.statusCode;
         }
 
         public GetTraceResponseBodySpansSpan setTagEntryList(GetTraceResponseBodySpansSpanTagEntryList tagEntryList) {

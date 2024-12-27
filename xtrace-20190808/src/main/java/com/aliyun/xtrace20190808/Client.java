@@ -213,6 +213,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppType", request.appType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -252,7 +260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP addresses of an application.</p>
+     * <p>Queries IP addresses or hostnames in trace data. You can obtain all IP addresses of an application or in a region.</p>
      * 
      * @param request ListIpOrHostsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -296,7 +304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP addresses of an application.</p>
+     * <p>Queries IP addresses or hostnames in trace data. You can obtain all IP addresses of an application or in a region.</p>
      * 
      * @param request ListIpOrHostsRequest
      * @return ListIpOrHostsResponse
@@ -412,7 +420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通xtrace和对应的sls</p>
+     * <p>Activates Managed Service for OpenTelemetry.</p>
      * 
      * @param request OpenXtraceServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -444,7 +452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通xtrace和对应的sls</p>
+     * <p>Activates Managed Service for OpenTelemetry.</p>
      * 
      * @param request OpenXtraceServiceRequest
      * @return OpenXtraceServiceResponse
@@ -591,6 +599,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusCode)) {
+            query.put("StatusCode", request.statusCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {

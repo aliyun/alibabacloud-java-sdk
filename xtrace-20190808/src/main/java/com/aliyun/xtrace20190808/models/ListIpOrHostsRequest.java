@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIpOrHostsRequest extends TeaModel {
     /**
-     * <p>The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     * <p>The end of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1583723776974</p>
@@ -14,7 +14,7 @@ public class ListIpOrHostsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListIpOrHostsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the application. If you do not set this parameter, the IP addresses of all applications in the specified region are returned.</p>
+     * <p>The name of the service. If you do not specify this parameter, the IP addresses of all applications in the specified region are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>service1</p>
@@ -33,7 +33,7 @@ public class ListIpOrHostsRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     * <p>The beginning of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1583683200000</p>

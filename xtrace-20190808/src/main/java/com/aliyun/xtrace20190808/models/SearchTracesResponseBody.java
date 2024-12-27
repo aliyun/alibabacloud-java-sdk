@@ -42,7 +42,7 @@ public class SearchTracesResponseBody extends TeaModel {
 
     public static class SearchTracesResponseBodyPageBeanTraceInfosTraceInfo extends TeaModel {
         /**
-         * <p>The time used to call the trace. Unit: milliseconds.</p>
+         * <p>The execution duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -51,7 +51,7 @@ public class SearchTracesResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>The name of the span.</p>
+         * <p>The span name.</p>
          * 
          * <strong>example:</strong>
          * <p>/api</p>
@@ -60,7 +60,7 @@ public class SearchTracesResponseBody extends TeaModel {
         public String operationName;
 
         /**
-         * <p>The IP address of the server where the span resides.</p>
+         * <p>The IP address or name of the server on which the span is running.</p>
          * 
          * <strong>example:</strong>
          * <p>192.163.XXX.XXX</p>
@@ -69,7 +69,7 @@ public class SearchTracesResponseBody extends TeaModel {
         public String serviceIp;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>service1</p>
@@ -77,8 +77,11 @@ public class SearchTracesResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        @NameInMap("StatusCode")
+        public Long statusCode;
+
         /**
-         * <p>The map of tags.</p>
+         * <p>The tag information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;env&quot;:&quot;dev&quot;}</p>
@@ -87,7 +90,7 @@ public class SearchTracesResponseBody extends TeaModel {
         public java.util.Map<String, ?> tagMap;
 
         /**
-         * <p>The time when the span was generated. Unit: microseconds.</p>
+         * <p>The timestamp when the span was generated. Unit: millisecond.</p>
          * 
          * <strong>example:</strong>
          * <p>1575561600000000</p>
@@ -96,7 +99,7 @@ public class SearchTracesResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
-         * <p>The ID of the trace.</p>
+         * <p>The trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1c6881aab84191a4</p>
@@ -139,6 +142,14 @@ public class SearchTracesResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public SearchTracesResponseBodyPageBeanTraceInfosTraceInfo setStatusCode(Long statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+        public Long getStatusCode() {
+            return this.statusCode;
         }
 
         public SearchTracesResponseBodyPageBeanTraceInfosTraceInfo setTagMap(java.util.Map<String, ?> tagMap) {
@@ -197,7 +208,7 @@ public class SearchTracesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -215,7 +226,7 @@ public class SearchTracesResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
-         * <p>The information about the trace.</p>
+         * <p>The information about the traces that are returned.</p>
          */
         @NameInMap("TraceInfos")
         public SearchTracesResponseBodyPageBeanTraceInfos traceInfos;

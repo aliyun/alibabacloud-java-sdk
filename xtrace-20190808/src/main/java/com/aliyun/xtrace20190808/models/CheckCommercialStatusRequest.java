@@ -12,6 +12,7 @@ public class CheckCommercialStatusRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
