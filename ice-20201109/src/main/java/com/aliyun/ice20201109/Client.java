@@ -11400,6 +11400,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>提交高燃混剪任务</p>
+     * 
+     * @param request SubmitScreenMediaHighlightsJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitScreenMediaHighlightsJobResponse
+     */
+    public SubmitScreenMediaHighlightsJobResponse submitScreenMediaHighlightsJobWithOptions(SubmitScreenMediaHighlightsJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.outputConfig)) {
+            query.put("OutputConfig", request.outputConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.editingConfig)) {
+            body.put("EditingConfig", request.editingConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputConfig)) {
+            body.put("InputConfig", request.inputConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitScreenMediaHighlightsJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitScreenMediaHighlightsJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交高燃混剪任务</p>
+     * 
+     * @param request SubmitScreenMediaHighlightsJobRequest
+     * @return SubmitScreenMediaHighlightsJobResponse
+     */
+    public SubmitScreenMediaHighlightsJobResponse submitScreenMediaHighlightsJob(SubmitScreenMediaHighlightsJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitScreenMediaHighlightsJobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation to submit a smart tagging job, you must add a smart tagging template and specify the analysis types that you want to use in the template. For more information, see CreateCustomTemplate. You can use the smart tagging feature only in the China (Beijing), China (Shanghai), and China (Hangzhou) regions. By default, an ApsaraVideo Media Processing (MPS) queue can process a maximum of two concurrent smart tagging jobs. If you need to process more concurrent smart tagging jobs, submit a ticket to contact Alibaba Cloud Technical Support for evaluation and configuration.</p>
      * 
