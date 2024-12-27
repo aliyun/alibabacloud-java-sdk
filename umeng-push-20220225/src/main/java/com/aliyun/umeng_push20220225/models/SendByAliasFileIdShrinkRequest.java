@@ -28,6 +28,9 @@ public class SendByAliasFileIdShrinkRequest extends TeaModel {
     @NameInMap("FileId")
     public String fileId;
 
+    @NameInMap("HarmonyPayload")
+    public String harmonyPayloadShrink;
+
     @NameInMap("IosPayload")
     public String iosPayloadShrink;
 
@@ -108,6 +111,14 @@ public class SendByAliasFileIdShrinkRequest extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public SendByAliasFileIdShrinkRequest setHarmonyPayloadShrink(String harmonyPayloadShrink) {
+        this.harmonyPayloadShrink = harmonyPayloadShrink;
+        return this;
+    }
+    public String getHarmonyPayloadShrink() {
+        return this.harmonyPayloadShrink;
     }
 
     public SendByAliasFileIdShrinkRequest setIosPayloadShrink(String iosPayloadShrink) {

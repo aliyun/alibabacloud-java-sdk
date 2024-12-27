@@ -16,6 +16,9 @@ public class SendByAppShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("HarmonyPayload")
+    public String harmonyPayloadShrink;
+
     @NameInMap("IosPayload")
     public String iosPayloadShrink;
 
@@ -80,6 +83,14 @@ public class SendByAppShrinkRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public SendByAppShrinkRequest setHarmonyPayloadShrink(String harmonyPayloadShrink) {
+        this.harmonyPayloadShrink = harmonyPayloadShrink;
+        return this;
+    }
+    public String getHarmonyPayloadShrink() {
+        return this.harmonyPayloadShrink;
     }
 
     public SendByAppShrinkRequest setIosPayloadShrink(String iosPayloadShrink) {

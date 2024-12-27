@@ -25,6 +25,9 @@ public class SendByDeviceFileIdShrinkRequest extends TeaModel {
     @NameInMap("FileId")
     public String fileId;
 
+    @NameInMap("HarmonyPayload")
+    public String harmonyPayloadShrink;
+
     @NameInMap("IosPayload")
     public String iosPayloadShrink;
 
@@ -97,6 +100,14 @@ public class SendByDeviceFileIdShrinkRequest extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public SendByDeviceFileIdShrinkRequest setHarmonyPayloadShrink(String harmonyPayloadShrink) {
+        this.harmonyPayloadShrink = harmonyPayloadShrink;
+        return this;
+    }
+    public String getHarmonyPayloadShrink() {
+        return this.harmonyPayloadShrink;
     }
 
     public SendByDeviceFileIdShrinkRequest setIosPayloadShrink(String iosPayloadShrink) {

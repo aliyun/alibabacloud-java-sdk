@@ -10,6 +10,9 @@ public class ChannelProperties extends TeaModel {
     @NameInMap("channelFcm")
     public String channelFcm;
 
+    @NameInMap("harmonyChannelCategory")
+    public String harmonyChannelCategory;
+
     @NameInMap("huaweiChannelCategory")
     public String huaweiChannelCategory;
 
@@ -84,6 +87,14 @@ public class ChannelProperties extends TeaModel {
     }
     public String getChannelFcm() {
         return this.channelFcm;
+    }
+
+    public ChannelProperties setHarmonyChannelCategory(String harmonyChannelCategory) {
+        this.harmonyChannelCategory = harmonyChannelCategory;
+        return this;
+    }
+    public String getHarmonyChannelCategory() {
+        return this.harmonyChannelCategory;
     }
 
     public ChannelProperties setHuaweiChannelCategory(String huaweiChannelCategory) {

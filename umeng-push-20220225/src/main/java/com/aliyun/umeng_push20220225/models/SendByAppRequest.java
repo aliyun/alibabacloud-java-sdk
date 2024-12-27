@@ -16,6 +16,9 @@ public class SendByAppRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("HarmonyPayload")
+    public HarmonyPayload harmonyPayload;
+
     @NameInMap("IosPayload")
     public IosPayload iosPayload;
 
@@ -80,6 +83,14 @@ public class SendByAppRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public SendByAppRequest setHarmonyPayload(HarmonyPayload harmonyPayload) {
+        this.harmonyPayload = harmonyPayload;
+        return this;
+    }
+    public HarmonyPayload getHarmonyPayload() {
+        return this.harmonyPayload;
     }
 
     public SendByAppRequest setIosPayload(IosPayload iosPayload) {

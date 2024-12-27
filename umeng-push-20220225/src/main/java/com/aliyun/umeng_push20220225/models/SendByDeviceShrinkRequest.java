@@ -25,6 +25,9 @@ public class SendByDeviceShrinkRequest extends TeaModel {
     @NameInMap("DeviceTokens")
     public String deviceTokens;
 
+    @NameInMap("HarmonyPayload")
+    public String harmonyPayloadShrink;
+
     @NameInMap("IosPayload")
     public String iosPayloadShrink;
 
@@ -97,6 +100,14 @@ public class SendByDeviceShrinkRequest extends TeaModel {
     }
     public String getDeviceTokens() {
         return this.deviceTokens;
+    }
+
+    public SendByDeviceShrinkRequest setHarmonyPayloadShrink(String harmonyPayloadShrink) {
+        this.harmonyPayloadShrink = harmonyPayloadShrink;
+        return this;
+    }
+    public String getHarmonyPayloadShrink() {
+        return this.harmonyPayloadShrink;
     }
 
     public SendByDeviceShrinkRequest setIosPayloadShrink(String iosPayloadShrink) {
