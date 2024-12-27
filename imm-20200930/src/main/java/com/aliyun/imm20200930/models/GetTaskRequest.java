@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTaskRequest extends TeaModel {
     /**
+     * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class GetTaskRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>Specifies whether to return the initial request parameters that are used to create the task. Default value: False.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("RequestDefinition")
     public Boolean requestDefinition;
 
     /**
+     * <p>The ID of the task. You can obtain the ID of a task after you create the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +34,7 @@ public class GetTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The type of the task. For information about valid values, see <a href="https://help.aliyun.com/document_detail/2743993.html">Task types</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

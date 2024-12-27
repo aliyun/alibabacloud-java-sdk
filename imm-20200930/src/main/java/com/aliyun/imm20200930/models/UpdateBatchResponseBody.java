@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateBatchResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CB4D73A3-BAF4-4A9D-A631-15F219AF****</p>
      */

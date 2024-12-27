@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectImageCroppingResponseBody extends TeaModel {
+    /**
+     * <p>The image croppings.</p>
+     */
     @NameInMap("Croppings")
     public java.util.List<CroppingSuggestion> croppings;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>91AC8C98-0F36-49D2-8290-742E24D*****</p>
      */

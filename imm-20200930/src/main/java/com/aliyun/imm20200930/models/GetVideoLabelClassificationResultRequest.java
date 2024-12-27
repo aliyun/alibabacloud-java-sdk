@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVideoLabelClassificationResultRequest extends TeaModel {
     /**
+     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetVideoLabelClassificationResultRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The task ID, which is obtained from response parameters of <a href="https://help.aliyun.com/document_detail/478223.html">CreateVideoLabelClassificationTask</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetVideoLabelClassificationResultRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The type of the task. Valid values:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

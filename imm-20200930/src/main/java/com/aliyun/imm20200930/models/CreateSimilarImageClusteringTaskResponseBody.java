@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSimilarImageClusteringTaskResponseBody extends TeaModel {
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3BF-1UhtFyrua71eOkFlqYq23Co****</p>
      */
@@ -12,6 +14,8 @@ public class CreateSimilarImageClusteringTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
      */
@@ -19,6 +23,8 @@ public class CreateSimilarImageClusteringTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>SimilarImageClustering-48d0a0f3-8459-47f4-b8af-ff49c64****</p>
      */

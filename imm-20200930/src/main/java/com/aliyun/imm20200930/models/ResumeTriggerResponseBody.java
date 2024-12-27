@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResumeTriggerResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FEDC9B1F-30F2-4C1F-8ED2-B7860187****</p>
      */

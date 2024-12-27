@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOSSBucketAttachmentRequest extends TeaModel {
     /**
+     * <p>The name of the OSS bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

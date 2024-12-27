@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchGetFigureClusterRequest extends TeaModel {
     /**
+     * <p>The name of the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class BatchGetFigureClusterRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The cluster IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ObjectIds")
     public java.util.List<String> objectIds;
 
     /**
+     * <p>The name of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

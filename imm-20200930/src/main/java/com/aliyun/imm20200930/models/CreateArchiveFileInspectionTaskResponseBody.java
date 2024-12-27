@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateArchiveFileInspectionTaskResponseBody extends TeaModel {
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0ED-1Bz8z71k5TtsUejT4UJ16Es*****</p>
      */
@@ -12,6 +14,8 @@ public class CreateArchiveFileInspectionTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EC564A9A-BA5C-4499-A087-D9B9E76E*****</p>
      */
@@ -19,6 +23,8 @@ public class CreateArchiveFileInspectionTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ArchiveFileInspection-8475218e-d86e-4c66-b3cf-50e74d6c****</p>
      */

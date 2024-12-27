@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class BatchGetFigureClusterResponseBody extends TeaModel {
+    /**
+     * <p>The clusters.</p>
+     */
     @NameInMap("FigureClusters")
     public java.util.List<FigureCluster> figureClusters;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CA995EFD-083D-4F40-BE8A-BDF75FFF****</p>
      */

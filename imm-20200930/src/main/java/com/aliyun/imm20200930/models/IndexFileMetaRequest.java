@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class IndexFileMetaRequest extends TeaModel {
     /**
+     * <p>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +15,20 @@ public class IndexFileMetaRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The file for which you want to create an index. The value must be in the JSON format.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("File")
     public InputFile file;
 
+    /**
+     * <p>The notification settings. For more information, click Notification. For information about the formats of asynchronous notifications, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</p>
+     */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
+     * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

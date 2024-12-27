@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SuspendTriggerRequest extends TeaModel {
     /**
+     * <p>The ID of the trigger.<a href="~~479912~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SuspendTriggerRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The name of the project.<a href="~~478153~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

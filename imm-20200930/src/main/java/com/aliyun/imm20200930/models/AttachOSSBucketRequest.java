@@ -4,10 +4,17 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class AttachOSSBucketRequest extends TeaModel {
+    /**
+     * <p>The description of the binding. The description must be 1 to 128 characters in length. By default, no description is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-attachment</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The name of the OSS bucket in the same region as the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,7 @@ public class AttachOSSBucketRequest extends TeaModel {
     public String OSSBucket;
 
     /**
+     * <p>The name of the project. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

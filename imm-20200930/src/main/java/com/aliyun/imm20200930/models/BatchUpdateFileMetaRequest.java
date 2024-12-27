@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchUpdateFileMetaRequest extends TeaModel {
     /**
+     * <p>The name of the dataset.<a href="~~478160~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class BatchUpdateFileMetaRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The files whose metadata you want to update.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Files")
     public java.util.List<InputFile> files;
 
     /**
+     * <p>The name of the project.<a href="~~478153~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchIndexFileMetaResponseBody extends TeaModel {
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>387-1DAPFFZplUZhuCuhnB6I9H****</p>
      */
@@ -12,6 +14,8 @@ public class BatchIndexFileMetaResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8F93E6D9-5AC0-49F9-914D-E02678A3****</p>
      */

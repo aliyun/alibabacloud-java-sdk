@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteProjectRequest extends TeaModel {
     /**
+     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

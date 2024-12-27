@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProjectRequest extends TeaModel {
     /**
+     * <p>The name of the project. You can obtain the name from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class GetProjectRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>Specifies whether to enable real-time retrieval of file statistics. Default value: false.</p>
+     * <ul>
+     * <li>If you set the value to true, the returned values of FileCount and TotalFileSize in the response are valid.</li>
+     * <li>If you set the value to false, the returned values of FileCount and TotalFileSize in the response are invalid or equal to 0.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

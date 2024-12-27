@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteLocationDateClusterResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B121940C-9794-4EE3-8D6E-F8EC525F****</p>
      */

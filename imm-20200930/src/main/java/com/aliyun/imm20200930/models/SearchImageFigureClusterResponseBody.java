@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SearchImageFigureClusterResponseBody extends TeaModel {
+    /**
+     * <p>The face clusters.</p>
+     */
     @NameInMap("Clusters")
     public java.util.List<SearchImageFigureClusterResponseBodyClusters> clusters;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C2734912-E6D5-052C-AC67-6A9FD02*****</p>
      */
@@ -36,10 +41,15 @@ public class SearchImageFigureClusterResponseBody extends TeaModel {
     }
 
     public static class SearchImageFigureClusterResponseBodyClusters extends TeaModel {
+        /**
+         * <p>The bounding box of the face.</p>
+         */
         @NameInMap("Boundary")
         public Boundary boundary;
 
         /**
+         * <p>The ID of the face cluster that contains faces similar to the face within the bounding box.</p>
+         * 
          * <strong>example:</strong>
          * <p>Cluster-ca730577-06b1-42c7-a25b-8f2c7******</p>
          */
@@ -47,6 +57,8 @@ public class SearchImageFigureClusterResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The similarity between the face within the bounding box and the face cluster. Valid value: 0 to 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.87413794</p>
          */

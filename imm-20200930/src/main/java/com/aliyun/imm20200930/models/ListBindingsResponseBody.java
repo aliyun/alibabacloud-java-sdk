@@ -4,10 +4,19 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListBindingsResponseBody extends TeaModel {
+    /**
+     * <p>The bindings between the dataset and OSS buckets.</p>
+     */
     @NameInMap("Bindings")
     public java.util.List<Binding> bindings;
 
     /**
+     * <ul>
+     * <li>The pagination token that is used in the next request to retrieve a new page of results if the total number of results exceeds the value of the MaxResults parameter.</li>
+     * <li>The next request returns remaining results starting from the position marked by the NextToken parameter value.</li>
+     * <li>This parameter has a non-empty value only when not all bindings are returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>immtest:dataset001:examplebucket01</p>
      */
@@ -15,6 +24,8 @@ public class ListBindingsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EFDFD356-C928-4A36-951A-6EB5A592****</p>
      */

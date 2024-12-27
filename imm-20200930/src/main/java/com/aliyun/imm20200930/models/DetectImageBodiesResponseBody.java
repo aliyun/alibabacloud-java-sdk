@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectImageBodiesResponseBody extends TeaModel {
+    /**
+     * <p>The human bodies.</p>
+     */
     @NameInMap("Bodies")
     public java.util.List<Body> bodies;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>501339F9-4B70-0CE2-AB8C-866C********</p>
      */

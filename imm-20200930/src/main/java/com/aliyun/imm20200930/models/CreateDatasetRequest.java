@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetRequest extends TeaModel {
     /**
+     * <p>The maximum number of bindings for the dataset. Valid values: 1 to 10. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class CreateDatasetRequest extends TeaModel {
     public Long datasetMaxBindCount;
 
     /**
+     * <p>The maximum number of metadata entities in the dataset. Default value: 10000000000.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000000000</p>
      */
@@ -19,6 +23,8 @@ public class CreateDatasetRequest extends TeaModel {
     public Long datasetMaxEntityCount;
 
     /**
+     * <p>The maximum number of files in the dataset. Valid values: 1 to 100000000. Default value: 100000000.</p>
+     * 
      * <strong>example:</strong>
      * <p>100000000</p>
      */
@@ -26,6 +32,8 @@ public class CreateDatasetRequest extends TeaModel {
     public Long datasetMaxFileCount;
 
     /**
+     * <p>The maximum number of metadata relationships in the dataset. Default value: 100000000000.</p>
+     * 
      * <strong>example:</strong>
      * <p>100000000000</p>
      */
@@ -33,6 +41,8 @@ public class CreateDatasetRequest extends TeaModel {
     public Long datasetMaxRelationCount;
 
     /**
+     * <p>The maximum total file size for the dataset. If the total file size of the dataset exceeds this limit, indexes can no longer be added. Default value: 90000000000000000. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>90000000000000000</p>
      */
@@ -40,6 +50,12 @@ public class CreateDatasetRequest extends TeaModel {
     public Long datasetMaxTotalFileSize;
 
     /**
+     * <p>The name of the dataset. The dataset name must be unique in the same project. The name must meet the following requirements:</p>
+     * <ul>
+     * <li>The name must be 1 to 128 characters in length.</li>
+     * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>The name must start with a letter or underscore (_).</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +65,8 @@ public class CreateDatasetRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The description of the dataset. The description must be 1 to 256 characters in length. You can leave this parameter empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>immtest</p>
      */
@@ -56,12 +74,18 @@ public class CreateDatasetRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the project.<a href="~~478153~~"></a></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
+     * <p>The ID of the workflow template. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Official:AllFunction</p>
      */

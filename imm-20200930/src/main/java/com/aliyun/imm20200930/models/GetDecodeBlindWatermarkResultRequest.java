@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDecodeBlindWatermarkResultRequest extends TeaModel {
     /**
+     * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetDecodeBlindWatermarkResultRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The ID of the task. You can obtain the ID of the task from the response of the CreateDecodeBlindWatermarkTask operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,10 @@ public class GetDecodeBlindWatermarkResultRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The type of the task.</p>
+     * <ul>
+     * <li>Set the value to DecodeBlindWatermark.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

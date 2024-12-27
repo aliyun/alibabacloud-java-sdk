@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResumeBatchResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D2C628B8-35DF-473C-8A41-757F30******</p>
      */

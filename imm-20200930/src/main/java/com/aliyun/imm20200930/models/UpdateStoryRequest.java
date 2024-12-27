@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateStoryRequest extends TeaModel {
+    /**
+     * <p>The cover image of the story.</p>
+     */
     @NameInMap("Cover")
     public UpdateStoryRequestCover cover;
 
     /**
+     * <p>The custom ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -15,6 +20,8 @@ public class UpdateStoryRequest extends TeaModel {
     public String customId;
 
     /**
+     * <p>The custom tags. You can specify up to 100 custom tags.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;: &quot;value&quot;}</p>
      */
@@ -22,6 +29,7 @@ public class UpdateStoryRequest extends TeaModel {
     public java.util.Map<String, ?> customLabels;
 
     /**
+     * <p>The name of the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +39,7 @@ public class UpdateStoryRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The ID of the story.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,7 @@ public class UpdateStoryRequest extends TeaModel {
     public String objectId;
 
     /**
+     * <p>The name of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +59,8 @@ public class UpdateStoryRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The name of the story.</p>
+     * 
      * <strong>example:</strong>
      * <p>newstory</p>
      */
@@ -118,6 +130,9 @@ public class UpdateStoryRequest extends TeaModel {
 
     public static class UpdateStoryRequestCover extends TeaModel {
         /**
+         * <p>The URI of the cover image.</p>
+         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://bucket1/object</p>
          */

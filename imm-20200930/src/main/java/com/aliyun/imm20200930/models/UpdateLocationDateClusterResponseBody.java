@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateLocationDateClusterResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>52B017A8-FEF5-0A61-BAEE-234A8AD8****</p>
      */

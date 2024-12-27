@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateCustomizedStoryShrinkRequest extends TeaModel {
     /**
+     * <p>The cover image of the story. You can specify an image as the cover image of the custom story.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Cover")
     public String coverShrink;
 
     /**
+     * <p>The custom labels. You can specify labels to help you identify and retrieve the story.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
      */
@@ -18,6 +21,7 @@ public class CreateCustomizedStoryShrinkRequest extends TeaModel {
     public String customLabelsShrink;
 
     /**
+     * <p>The name of the dataset.<a href="~~478160~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,12 +31,14 @@ public class CreateCustomizedStoryShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The files of the story. You can specify up to 100 files in a custom story.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Files")
     public String filesShrink;
 
     /**
+     * <p>The name of the project.<a href="~~478153~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +48,7 @@ public class CreateCustomizedStoryShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The name of the story.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +58,7 @@ public class CreateCustomizedStoryShrinkRequest extends TeaModel {
     public String storyName;
 
     /**
+     * <p>The subtype of the story. For information about valid subtypes, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +68,7 @@ public class CreateCustomizedStoryShrinkRequest extends TeaModel {
     public String storySubType;
 
     /**
+     * <p>The type of the story. For information about valid types, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateProjectRequest extends TeaModel {
     /**
+     * <p>The maximum number of bindings for each dataset. Valid values: 1 to 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,11 @@ public class UpdateProjectRequest extends TeaModel {
     public Long datasetMaxBindCount;
 
     /**
+     * <p>The maximum number of metadata entities in each dataset.</p>
+     * <blockquote>
+     * <p> This is a precautionary setting that does not impose practical limitations.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>10000000000</p>
      */
@@ -19,6 +26,8 @@ public class UpdateProjectRequest extends TeaModel {
     public Long datasetMaxEntityCount;
 
     /**
+     * <p>The maximum number of files in each dataset. Valid values: 1 to 100000000.</p>
+     * 
      * <strong>example:</strong>
      * <p>100000000</p>
      */
@@ -26,6 +35,11 @@ public class UpdateProjectRequest extends TeaModel {
     public Long datasetMaxFileCount;
 
     /**
+     * <p>The maximum number of metadata relationships in a dataset.</p>
+     * <blockquote>
+     * <p> This is a precautionary setting that does not impose practical limitations.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>100000000000</p>
      */
@@ -33,6 +47,8 @@ public class UpdateProjectRequest extends TeaModel {
     public Long datasetMaxRelationCount;
 
     /**
+     * <p>The maximum size of files in each dataset. If the maximum size is exceeded, indexes can no longer be added. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>90000000000000000</p>
      */
@@ -40,6 +56,8 @@ public class UpdateProjectRequest extends TeaModel {
     public Long datasetMaxTotalFileSize;
 
     /**
+     * <p>The description of the project. The description must be 1 to 256 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>immtest</p>
      */
@@ -47,6 +65,8 @@ public class UpdateProjectRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The maximum number of datasets in the project. Valid values: 1 to 1000000000.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000000000</p>
      */
@@ -54,22 +74,34 @@ public class UpdateProjectRequest extends TeaModel {
     public Long projectMaxDatasetCount;
 
     /**
+     * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
+     * <p>The name of the Resource Access Management (RAM) role. You must grant the RAM role to Intelligent Media Management (IMM) before IMM can access other cloud resources such as Object Storage Service (OSS).</p>
+     * <p>You can also create a custom service role in the RAM console and grant the required permissions to the role based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a regular service role</a> and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a role</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliyunIMMDefaultRole</p>
      */
     @NameInMap("ServiceRole")
     public String serviceRole;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<UpdateProjectRequestTag> tag;
 
     /**
+     * <p>The ID of the workflow template. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliyunIMMDefaultRole</p>
      */
@@ -170,9 +202,21 @@ public class UpdateProjectRequest extends TeaModel {
     }
 
     public static class UpdateProjectRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListTriggersResponseBody extends TeaModel {
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</p>
      */
@@ -12,12 +15,17 @@ public class ListTriggersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F480BFAF-E778-5079-93AD-1E4631******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The triggers.</p>
+     */
     @NameInMap("Triggers")
     public java.util.List<DataIngestion> triggers;
 

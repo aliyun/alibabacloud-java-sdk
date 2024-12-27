@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCompressPointCloudTaskResponseBody extends TeaModel {
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0B7-1LR4Wcue1aBhk2xT85MfL*****</p>
      */
@@ -12,6 +14,8 @@ public class CreateCompressPointCloudTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CA995EFD-083D-4F40-BE8A-BDF75FFF****</p>
      */
@@ -19,6 +23,8 @@ public class CreateCompressPointCloudTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>PointCloudCompress-badda57d-a3ab-4e6d-938f-49b77ce****</p>
      */

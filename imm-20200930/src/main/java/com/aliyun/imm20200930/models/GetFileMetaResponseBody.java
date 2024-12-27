@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetFileMetaResponseBody extends TeaModel {
+    /**
+     * <p>The metadata returned.</p>
+     */
     @NameInMap("Files")
     public java.util.List<File> files;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7F84C6D9-5AC0-49F9-914D-F02678E3****</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddStoryFilesRequest extends TeaModel {
     /**
+     * <p>The name of the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class AddStoryFilesRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The objects that you want to add.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Files")
     public java.util.List<AddStoryFilesRequestFiles> files;
 
     /**
+     * <p>The ID of the story.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,7 @@ public class AddStoryFilesRequest extends TeaModel {
     public String objectId;
 
     /**
+     * <p>The name of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,6 +80,9 @@ public class AddStoryFilesRequest extends TeaModel {
 
     public static class AddStoryFilesRequestFiles extends TeaModel {
         /**
+         * <p>The URI of the object.</p>
+         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://test-bucket/test-object</p>
          */

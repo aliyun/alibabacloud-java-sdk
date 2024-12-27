@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryStoriesResponseBody extends TeaModel {
     /**
+     * <p>The pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3Qx****</p>
      */
@@ -12,12 +14,17 @@ public class QueryStoriesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2C5C1E0F-D8B8-4DA0-8127-EC32C771****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The stories.</p>
+     */
     @NameInMap("Stories")
     public java.util.List<Story> stories;
 

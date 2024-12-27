@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class DetectImageCarsResponseBody extends TeaModel {
     /**
+     * <p>The vehicles.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Cars")
     public java.util.List<Car> cars;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A8745209-DD0E-027E-8ABA-085E0C******</p>
      */

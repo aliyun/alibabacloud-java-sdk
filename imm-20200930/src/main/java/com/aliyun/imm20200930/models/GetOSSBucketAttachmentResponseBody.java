@@ -4,13 +4,27 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetOSSBucketAttachmentResponseBody extends TeaModel {
+    /**
+     * <p>The time when the dataset was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;2023-12-19T17:29:34.790931971+08:00&quot;</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The description of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;Dataset&quot;</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The name of the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>immtest</p>
      */
@@ -18,12 +32,20 @@ public class GetOSSBucketAttachmentResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5F74C5C9-5AC0-49F9-914D-E01589D3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time when the dataset was last updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;2023-12-19T17:29:34.790931971+08:00&quot;</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 

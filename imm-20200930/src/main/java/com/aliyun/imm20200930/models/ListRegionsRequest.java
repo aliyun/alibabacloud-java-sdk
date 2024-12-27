@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListRegionsRequest extends TeaModel {
     /**
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese.</li>
+     * <li>en-US: English.</li>
+     * <li>ja: Japanese.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

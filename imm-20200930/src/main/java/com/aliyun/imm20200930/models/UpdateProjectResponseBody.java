@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectResponseBody extends TeaModel {
+    /**
+     * <p>The project. For more information, see &quot;Project&quot;.</p>
+     */
     @NameInMap("Project")
     public Project project;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D33C3574-4093-448E-86E7-15BE2BD3****</p>
      */

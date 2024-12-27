@@ -30,8 +30,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * <li>The operation accepts JPG and PNG images with a maximum side length of 30,000 pixels and a total of up to 250 million pixels.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>图片打马赛克算子</p>
+     * <p>Adds mosaics, Gaussian blurs, or solid color shapes to blur one or more areas of an image for privacy protection and saves the output image to the specified path in Object Storage Service (OSS).</p>
      * 
      * @param tmpReq AddImageMosaicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -96,8 +103,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * <li>The operation accepts JPG and PNG images with a maximum side length of 30,000 pixels and a total of up to 250 million pixels.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>图片打马赛克算子</p>
+     * <p>Adds mosaics, Gaussian blurs, or solid color shapes to blur one or more areas of an image for privacy protection and saves the output image to the specified path in Object Storage Service (OSS).</p>
      * 
      * @param request AddImageMosaicRequest
      * @return AddImageMosaicResponse
@@ -109,7 +123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为故事新增文件</p>
+     * <p>Adds objects to a story.</p>
      * 
      * @param tmpReq AddStoryFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -159,7 +173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为故事新增文件</p>
+     * <p>Adds objects to a story.</p>
      * 
      * @param request AddStoryFilesRequest
      * @return AddStoryFilesResponse
@@ -170,8 +184,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>To use data processing capabilities of IMM based on the x-oss-process parameter, you must bind an OSS bucket to an IMM project. For more information, see <a href="https://help.aliyun.com/document_detail/2391270.html">x-oss-process</a>.</li>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>绑定ossbucket</p>
+     * <p>Binds an Object Storage Service (OSS) bucket to the specified project. The binding enables you to use IMM features by using the x-oss-process parameter.</p>
      * 
      * @param request AttachOSSBucketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -210,8 +231,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>To use data processing capabilities of IMM based on the x-oss-process parameter, you must bind an OSS bucket to an IMM project. For more information, see <a href="https://help.aliyun.com/document_detail/2391270.html">x-oss-process</a>.</li>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>绑定ossbucket</p>
+     * <p>Binds an Object Storage Service (OSS) bucket to the specified project. The binding enables you to use IMM features by using the x-oss-process parameter.</p>
      * 
      * @param request AttachOSSBucketRequest
      * @return AttachOSSBucketResponse
@@ -222,8 +250,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>A successful deletion message is returned regardless of whether the metadata of the file exists in the dataset.<blockquote>
+     * </blockquote>
+     * </li>
+     * <li>If you delete the metadata of a file from a dataset, the file stored in Object Storage Service (OSS) or Photo and Drive Service is <strong>not</strong> deleted. If you want to delete the file, use the operations provided by OSS or Photo and Drive Service.</li>
+     * <li>Metadata deletion affects existing face groups and stories but does not affect existing spatiotemporal groups.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量删除文件元信息</p>
+     * <p>Deletes the metadata of multiple files from a dataset.</p>
      * 
      * @param tmpReq BatchDeleteFileMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -268,8 +306,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>A successful deletion message is returned regardless of whether the metadata of the file exists in the dataset.<blockquote>
+     * </blockquote>
+     * </li>
+     * <li>If you delete the metadata of a file from a dataset, the file stored in Object Storage Service (OSS) or Photo and Drive Service is <strong>not</strong> deleted. If you want to delete the file, use the operations provided by OSS or Photo and Drive Service.</li>
+     * <li>Metadata deletion affects existing face groups and stories but does not affect existing spatiotemporal groups.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量删除文件元信息</p>
+     * <p>Deletes the metadata of multiple files from a dataset.</p>
      * 
      * @param request BatchDeleteFileMetaRequest
      * @return BatchDeleteFileMetaResponse
@@ -281,7 +329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取分组信息</p>
+     * <p>Queries face clusters.</p>
      * 
      * @param tmpReq BatchGetFigureClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -327,7 +375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取分组信息</p>
+     * <p>Queries face clusters.</p>
      * 
      * @param request BatchGetFigureClusterRequest
      * @return BatchGetFigureClusterResponse
@@ -338,8 +386,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, feel free to join the DingTalk chat group (ID: 31690030817) and share your questions with us.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量获取文件元信息</p>
+     * <p>Queries metadata of multiple objects or files in the specified dataset.</p>
      * 
      * @param tmpReq BatchGetFileMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -392,8 +447,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, feel free to join the DingTalk chat group (ID: 31690030817) and share your questions with us.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量获取文件元信息</p>
+     * <p>Queries metadata of multiple objects or files in the specified dataset.</p>
      * 
      * @param request BatchGetFileMetaRequest
      * @return BatchGetFileMetaResponse
@@ -404,8 +466,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Data processing operations supported for metadata processing vary with workflow templates. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</li>
+     * <li>Metadata indexing poses limits on the total number and size of objects. For more information about these limits, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>. For more information about how to create</li>
+     * <li>Metadata indexing is available in specific regions. For information about regions that support metadata indexing, see the &quot;Data management and indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量索引文件元信息</p>
+     * <p>Indexes metadata of multiple objects into the specified dataset. The process involves data processing operations such as label detection, face detection, and location detection. Metadata indexing helps meet diverse data retrieval requirements.</p>
      * 
      * @param tmpReq BatchIndexFileMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -462,8 +532,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Data processing operations supported for metadata processing vary with workflow templates. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</li>
+     * <li>Metadata indexing poses limits on the total number and size of objects. For more information about these limits, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>. For more information about how to create</li>
+     * <li>Metadata indexing is available in specific regions. For information about regions that support metadata indexing, see the &quot;Data management and indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量索引文件元信息</p>
+     * <p>Indexes metadata of multiple objects into the specified dataset. The process involves data processing operations such as label detection, face detection, and location detection. Metadata indexing helps meet diverse data retrieval requirements.</p>
      * 
      * @param request BatchIndexFileMetaRequest
      * @return BatchIndexFileMetaResponse
@@ -474,8 +552,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>You cannot call this operation to update all metadata. You can update only metadata fields such as CustomLabels, CustomId, and Figures. For more information, see the &quot;Request parameters&quot; section of this topic.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量更新文件元信息</p>
+     * <p>Updates some metadata items of files indexed into a dataset.</p>
      * 
      * @param tmpReq BatchUpdateFileMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -520,8 +604,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>You cannot call this operation to update all metadata. You can update only metadata fields such as CustomLabels, CustomId, and Figures. For more information, see the &quot;Request parameters&quot; section of this topic.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量更新文件元信息</p>
+     * <p>Updates some metadata items of files indexed into a dataset.</p>
      * 
      * @param request BatchUpdateFileMetaRequest
      * @return BatchUpdateFileMetaResponse
@@ -532,8 +622,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>For the input image, only the face with the largest face frame in the image is used for face comparison. The face frame detection result is consistent with the responses of the <a href="https://help.aliyun.com/document_detail/478213.html">DetectImageFaces</a> operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>以脸搜分组</p>
+     * <p>Compares the similarity of the largest faces in two images. The largest face refers to the largest face frame in an image after face detection.</p>
      * 
      * @param tmpReq CompareImageFacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -582,8 +678,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>For the input image, only the face with the largest face frame in the image is used for face comparison. The face frame detection result is consistent with the responses of the <a href="https://help.aliyun.com/document_detail/478213.html">DetectImageFaces</a> operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>以脸搜分组</p>
+     * <p>Compares the similarity of the largest faces in two images. The largest face refers to the largest face frame in an image after face detection.</p>
      * 
      * @param request CompareImageFacesRequest
      * @return CompareImageFacesResponse
@@ -595,7 +697,156 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建查看压缩包内文件列表任务</p>
+     * <p>AI 助手二期，问答API</p>
+     * 
+     * @param tmpReq ContextualAnswerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ContextualAnswerResponse
+     */
+    public ContextualAnswerResponse contextualAnswerWithOptions(ContextualAnswerRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ContextualAnswerShrinkRequest request = new ContextualAnswerShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.files)) {
+            request.filesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.files, "Files", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.messages)) {
+            request.messagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.messages, "Messages", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filesShrink)) {
+            body.put("Files", request.filesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messagesShrink)) {
+            body.put("Messages", request.messagesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ContextualAnswer"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ContextualAnswerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>AI 助手二期，问答API</p>
+     * 
+     * @param request ContextualAnswerRequest
+     * @return ContextualAnswerResponse
+     */
+    public ContextualAnswerResponse contextualAnswer(ContextualAnswerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.contextualAnswerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>AI助手二期，检索API</p>
+     * 
+     * @param tmpReq ContextualRetrievalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ContextualRetrievalResponse
+     */
+    public ContextualRetrievalResponse contextualRetrievalWithOptions(ContextualRetrievalRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ContextualRetrievalShrinkRequest request = new ContextualRetrievalShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.messages)) {
+            request.messagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.messages, "Messages", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.smartClusterIds)) {
+            request.smartClusterIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.smartClusterIds, "SmartClusterIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
+            query.put("DatasetName", request.datasetName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recallOnly)) {
+            query.put("RecallOnly", request.recallOnly);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.messagesShrink)) {
+            body.put("Messages", request.messagesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smartClusterIdsShrink)) {
+            body.put("SmartClusterIds", request.smartClusterIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ContextualRetrieval"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ContextualRetrievalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>AI助手二期，检索API</p>
+     * 
+     * @param request ContextualRetrievalRequest
+     * @return ContextualRetrievalResponse
+     */
+    public ContextualRetrievalResponse contextualRetrieval(ContextualRetrievalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.contextualRetrievalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The operation is in public preview. For any inquires, join our DingTalk chat group (ID: 31690030817) and share your questions with us.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
+     * <li>The operation supports a package that contains up to 80,000 files.</li>
+     * <li>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an archive file inspection task to preview the files in a package without decompressing the package.</p>
      * 
      * @param tmpReq CreateArchiveFileInspectionTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -656,8 +907,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The operation is in public preview. For any inquires, join our DingTalk chat group (ID: 31690030817) and share your questions with us.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
+     * <li>The operation supports a package that contains up to 80,000 files.</li>
+     * <li>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建查看压缩包内文件列表任务</p>
+     * <p>Creates an archive file inspection task to preview the files in a package without decompressing the package.</p>
      * 
      * @param request CreateArchiveFileInspectionTaskRequest
      * @return CreateArchiveFileInspectionTaskResponse
@@ -668,8 +932,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you want to create a batch processing task to process data in <a href="https://help.aliyun.com/document_detail/99372.html">OSS</a>, make sure that you have bound the dataset to the OSS bucket where the data is stored. For more information about how to bind a dataset to a bucket, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建数据接入</p>
+     * <p>Creates a batch processing task to perform a data processing operation, such as transcoding or format conversion, on multiple existing files at a time.</p>
      * 
      * @param tmpReq CreateBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -738,8 +1005,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you want to create a batch processing task to process data in <a href="https://help.aliyun.com/document_detail/99372.html">OSS</a>, make sure that you have bound the dataset to the OSS bucket where the data is stored. For more information about how to bind a dataset to a bucket, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建数据接入</p>
+     * <p>Creates a batch processing task to perform a data processing operation, such as transcoding or format conversion, on multiple existing files at a time.</p>
      * 
      * @param request CreateBatchRequest
      * @return CreateBatchResponse
@@ -750,8 +1020,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     * Before you create a binding relationship, make sure that the project and the dataset that you want to use exist.</p>
+     * <ul>
+     * <li>For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</li>
+     * <li>For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.<blockquote>
+     * <p> The CreateBinding operation works by using the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that is specified when you created the project or dataset.
+     * After you create a binding relationship between a dataset and an OSS bucket, IMM scans the existing objects in the bucket and extracts metadata based on the scanning result. Then, IMM creates an index from the extracted metadata. If new objects are added to the OSS bucket, IMM constantly tracks and scans the objects and updates the index. For objects whose index is created in this way, you can call the <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a> operation to query, manage, and collect statistics from the objects.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建一个绑定任务，将 IMM 的数据集和 OSS Bucket 进行绑定，自动对其文件进行索引。</p>
+     * <p>Creates a binding relationship between a dataset and an Object Storage Service (OSS) bucket. This allows for the automatic synchronization of incremental and full data and indexing.</p>
      * 
      * @param request CreateBindingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -790,8 +1072,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     * Before you create a binding relationship, make sure that the project and the dataset that you want to use exist.</p>
+     * <ul>
+     * <li>For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</li>
+     * <li>For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.<blockquote>
+     * <p> The CreateBinding operation works by using the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that is specified when you created the project or dataset.
+     * After you create a binding relationship between a dataset and an OSS bucket, IMM scans the existing objects in the bucket and extracts metadata based on the scanning result. Then, IMM creates an index from the extracted metadata. If new objects are added to the OSS bucket, IMM constantly tracks and scans the objects and updates the index. For objects whose index is created in this way, you can call the <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a> operation to query, manage, and collect statistics from the objects.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建一个绑定任务，将 IMM 的数据集和 OSS Bucket 进行绑定，自动对其文件进行索引。</p>
+     * <p>Creates a binding relationship between a dataset and an Object Storage Service (OSS) bucket. This allows for the automatic synchronization of incremental and full data and indexing.</p>
      * 
      * @param request CreateBindingRequest
      * @return CreateBindingResponse
@@ -802,8 +1096,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
+     * <ul>
+     * <li>This operation supports only Point Cloud Data (PCD) files.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications. &gt;</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建点云压缩任务</p>
+     * <p>Compresses point cloud data (PCD) in Object Storage Service (OSS) to reduce the amount of data transferred over networks.</p>
      * 
      * @param tmpReq CreateCompressPointCloudTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -904,8 +1207,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
+     * <ul>
+     * <li>This operation supports only Point Cloud Data (PCD) files.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications. &gt;</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建点云压缩任务</p>
+     * <p>Compresses point cloud data (PCD) in Object Storage Service (OSS) to reduce the amount of data transferred over networks.</p>
      * 
      * @param request CreateCompressPointCloudTaskRequest
      * @return CreateCompressPointCloudTaskResponse
@@ -916,8 +1228,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义故事</p>
+     * <p>Creates a story based on the specified images and videos.</p>
      * 
      * @param tmpReq CreateCustomizedStoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -990,8 +1308,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义故事</p>
+     * <p>Creates a story based on the specified images and videos.</p>
      * 
      * @param request CreateCustomizedStoryRequest
      * @return CreateCustomizedStoryResponse
@@ -1002,8 +1326,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</p>
+     * <ul>
+     * <li>A dataset name must be unique within the same project.</li>
+     * <li>A project has an upper limit on the number of datasets that can be created in the project. You can call the <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> operation to query the dataset limit of the project.</li>
+     * <li>After creating a dataset, you can call the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> operation to index metadata. Metadata indexing enhances <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval efficiency and statistics collection</a>, and enables intelligent data management.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建数据集</p>
+     * <p>Creates a dataset.</p>
      * 
      * @param request CreateDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1066,8 +1398,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</p>
+     * <ul>
+     * <li>A dataset name must be unique within the same project.</li>
+     * <li>A project has an upper limit on the number of datasets that can be created in the project. You can call the <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> operation to query the dataset limit of the project.</li>
+     * <li>After creating a dataset, you can call the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> operation to index metadata. Metadata indexing enhances <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval efficiency and statistics collection</a>, and enables intelligent data management.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建数据集</p>
+     * <p>Creates a dataset.</p>
      * 
      * @param request CreateDatasetRequest
      * @return CreateDatasetResponse
@@ -1078,8 +1418,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</p>
+     * <ul>
+     * <li>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</li>
+     * <li>A blind watermark can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提取盲水印</p>
+     * <p>Decodes the blind watermark in an image.</p>
      * 
      * @param tmpReq CreateDecodeBlindWatermarkTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1148,8 +1496,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</p>
+     * <ul>
+     * <li>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</li>
+     * <li>A blind watermark can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提取盲水印</p>
+     * <p>Decodes the blind watermark in an image.</p>
      * 
      * @param request CreateDecodeBlindWatermarkTaskRequest
      * @return CreateDecodeBlindWatermarkTaskResponse
@@ -1160,8 +1516,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>The operation searches for faces within the face boundary in each input image.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>以脸搜图</p>
+     * <p>Searches the dataset for the specified number of images most similar to the specified image or face and returns face IDs and boundaries in descending order of similarity.</p>
      * 
      * @param tmpReq CreateFacesSearchingTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1222,8 +1585,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>The operation searches for faces within the face boundary in each input image.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>以脸搜图</p>
+     * <p>Searches the dataset for the specified number of images most similar to the specified image or face and returns face IDs and boundaries in descending order of similarity.</p>
      * 
      * @param request CreateFacesSearchingTaskRequest
      * @return CreateFacesSearchingTaskResponse
@@ -1234,8 +1604,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the CreateBinding operation or manually by calling the IndexFileMeta or BatchIndexFileMeta operation.</li>
+     * <li>Each call to the operation incrementally processes metadata in the dataset. You can regularly call this operation to process incremental files.
+     * After the clustering task is completed, you can call the GetFigureCluster or BatchGetFigureCluster  operation to query information about a specific cluster. You can also call the QueryFigureClusters operation to query all face clusters of the specified dataset.</li>
+     * <li>Removing image information from the dataset causes changes to face clusters. When images that contain all faces in a cluster are removed, the cluster is deleted.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>聚类</p>
+     * <p>Creates a face clustering task to cluster faces of different persons in images by person based on the intelligent algorithms.</p>
      * 
      * @param tmpReq CreateFigureClusteringTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1292,8 +1674,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the CreateBinding operation or manually by calling the IndexFileMeta or BatchIndexFileMeta operation.</li>
+     * <li>Each call to the operation incrementally processes metadata in the dataset. You can regularly call this operation to process incremental files.
+     * After the clustering task is completed, you can call the GetFigureCluster or BatchGetFigureCluster  operation to query information about a specific cluster. You can also call the QueryFigureClusters operation to query all face clusters of the specified dataset.</li>
+     * <li>Removing image information from the dataset causes changes to face clusters. When images that contain all faces in a cluster are removed, the cluster is deleted.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>聚类</p>
+     * <p>Creates a face clustering task to cluster faces of different persons in images by person based on the intelligent algorithms.</p>
      * 
      * @param request CreateFigureClusteringTaskRequest
      * @return CreateFigureClusteringTaskResponse
@@ -1304,8 +1698,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</li>
+     * <li>If you merge unrelated groups, the feature values of the target groups are affected. As a result, the incremental data may be inaccurately grouped when you create a face clustering task.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>合并聚类</p>
+     * <p>Merges two or more face clustering groups into one face clustering group.</p>
      * 
      * @param tmpReq CreateFigureClustersMergingTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1378,8 +1780,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</li>
+     * <li>If you merge unrelated groups, the feature values of the target groups are affected. As a result, the incremental data may be inaccurately grouped when you create a face clustering task.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>合并聚类</p>
+     * <p>Merges two or more face clustering groups into one face clustering group.</p>
      * 
      * @param request CreateFigureClustersMergingTaskRequest
      * @return CreateFigureClustersMergingTaskResponse
@@ -1390,8 +1800,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.
+     *  The operation supports file packing only. Compression support will be added later.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
+     * <li>A call to the operation can pack up to 80,000 objects into a package.</li>
+     * <li>The total size of all objects to be packed into a package cannot exceed 200 GB.</li>
+     * <li>The operation can pack only Standard objects in Object Storage Service (OSS). To pack an object in another storage class, you must first <a href="https://help.aliyun.com/document_detail/90090.html">convert the storage class of the object</a>.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>压缩/打包下载API</p>
+     * <p>Creates a file packing task.</p>
      * 
      * @param tmpReq CreateFileCompressionTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1464,8 +1889,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.
+     *  The operation supports file packing only. Compression support will be added later.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
+     * <li>A call to the operation can pack up to 80,000 objects into a package.</li>
+     * <li>The total size of all objects to be packed into a package cannot exceed 200 GB.</li>
+     * <li>The operation can pack only Standard objects in Object Storage Service (OSS). To pack an object in another storage class, you must first <a href="https://help.aliyun.com/document_detail/90090.html">convert the storage class of the object</a>.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>压缩/打包下载API</p>
+     * <p>Creates a file packing task.</p>
      * 
      * @param request CreateFileCompressionTaskRequest
      * @return CreateFileCompressionTaskResponse
@@ -1476,8 +1916,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
+     * <li>The operation supports a package that contains up to 80,000 files.</li>
+     * <li>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</li>
+     * <li>The operation extracts files in streams to the specified directory. If the file extraction task is interrupted by a corrupt file, files that have been extracted are not deleted.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>在线解压API</p>
+     * <p>Extracts the specified files from a ZIP, RAR, or 7z package to the specified directory or decompresses the entire package.</p>
      * 
      * @param tmpReq CreateFileUncompressionTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1550,8 +2004,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
+     * <li>The operation supports a package that contains up to 80,000 files.</li>
+     * <li>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</li>
+     * <li>The operation extracts files in streams to the specified directory. If the file extraction task is interrupted by a corrupt file, files that have been extracted are not deleted.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>在线解压API</p>
+     * <p>Extracts the specified files from a ZIP, RAR, or 7z package to the specified directory or decompresses the entire package.</p>
      * 
      * @param request CreateFileUncompressionTaskRequest
      * @return CreateFileUncompressionTaskResponse
@@ -1562,8 +2030,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
+     * <ul>
+     * <li>The image for which you want to create a content moderation task must meet the following requirements:<ul>
+     * <li>The image URL supports the HTTP and HTTPS protocols.</li>
+     * <li>The image is in one of the following formats: PNG, JPG, JPEG, BMP, GIF, and WebP</li>
+     * <li>The image size is limited to 20 MB for synchronous and asynchronous calls, with a maximum height or width of 30,000 pixels. The total number of pixels cannot exceed 250 million. GIF images are limited to 4,194,304 pixels, with a maximum height or width of 30,000 pixels.</li>
+     * <li>The image download time is limited to 3 seconds. If the download takes longer, a timeout error occurs.</li>
+     * <li>To ensure effective moderation, we recommend that you submit an image with dimensions of at least 256 × 256 pixels.</li>
+     * <li>The response time of the CreateImageModerationTask operation varies based on the duration of the image download. Make sure that the image is stored in a stable and reliable service. We recommend that you store images on Alibaba Cloud Object Storage Service (OSS) or cache them on Alibaba Cloud CDN.</li>
+     * </ul>
+     * </li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478241.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.<blockquote>
+     * <p> The detection result is sent as an asynchronous notification. The Suggestion field of the notification can have one of the following values:</p>
+     * </blockquote>
+     * </li>
+     * <li>pass: No non-compliant content is found.</li>
+     * <li>block: Non-compliant content is detected. The Categories field value indicates the non-compliance categories. For more information, see Content moderation results.</li>
+     * <li>review: A manual review is needed. After the manual review is finished, another asynchronous notification is sent to inform you about the review result. &gt;</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建图片检测</p>
+     * <p>Creates an image moderation task to ensure image content compliance. You can call this operation to identify inappropriate content, such as pornography, violence, terrorism, politically sensitive content, undesirable scenes, unauthorized logos, and non-compliant ads.</p>
      * 
      * @param tmpReq CreateImageModerationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1644,8 +2135,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
+     * <ul>
+     * <li>The image for which you want to create a content moderation task must meet the following requirements:<ul>
+     * <li>The image URL supports the HTTP and HTTPS protocols.</li>
+     * <li>The image is in one of the following formats: PNG, JPG, JPEG, BMP, GIF, and WebP</li>
+     * <li>The image size is limited to 20 MB for synchronous and asynchronous calls, with a maximum height or width of 30,000 pixels. The total number of pixels cannot exceed 250 million. GIF images are limited to 4,194,304 pixels, with a maximum height or width of 30,000 pixels.</li>
+     * <li>The image download time is limited to 3 seconds. If the download takes longer, a timeout error occurs.</li>
+     * <li>To ensure effective moderation, we recommend that you submit an image with dimensions of at least 256 × 256 pixels.</li>
+     * <li>The response time of the CreateImageModerationTask operation varies based on the duration of the image download. Make sure that the image is stored in a stable and reliable service. We recommend that you store images on Alibaba Cloud Object Storage Service (OSS) or cache them on Alibaba Cloud CDN.</li>
+     * </ul>
+     * </li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478241.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.<blockquote>
+     * <p> The detection result is sent as an asynchronous notification. The Suggestion field of the notification can have one of the following values:</p>
+     * </blockquote>
+     * </li>
+     * <li>pass: No non-compliant content is found.</li>
+     * <li>block: Non-compliant content is detected. The Categories field value indicates the non-compliance categories. For more information, see Content moderation results.</li>
+     * <li>review: A manual review is needed. After the manual review is finished, another asynchronous notification is sent to inform you about the review result. &gt;</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建图片检测</p>
+     * <p>Creates an image moderation task to ensure image content compliance. You can call this operation to identify inappropriate content, such as pornography, violence, terrorism, politically sensitive content, undesirable scenes, unauthorized logos, and non-compliant ads.</p>
      * 
      * @param request CreateImageModerationTaskRequest
      * @return CreateImageModerationTaskResponse
@@ -1656,8 +2170,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that the project that you want to use exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * <li>You can call this operation to splice up to eight images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</li>
+     * <li>The CreateImageSplicingTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period elapses, the task information is no longer retrievable. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>图片拼接</p>
+     * <p>Creates an image splicing task. You can call this operation to splice multiple images into one based on a given rule and save the final image into an Object Storage Service (OSS) bucket.</p>
      * 
      * @param tmpReq CreateImageSplicingTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1762,8 +2284,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that the project that you want to use exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * <li>You can call this operation to splice up to eight images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</li>
+     * <li>The CreateImageSplicingTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period elapses, the task information is no longer retrievable. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>图片拼接</p>
+     * <p>Creates an image splicing task. You can call this operation to splice multiple images into one based on a given rule and save the final image into an Object Storage Service (OSS) bucket.</p>
      * 
      * @param request CreateImageSplicingTaskRequest
      * @return CreateImageSplicingTaskResponse
@@ -1774,8 +2304,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * <li>You can specify up to 100 images in a call to the operation.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>图片转PDF</p>
+     * <p>Converts multiple images into one single PDF file and stores the PDF file to the specified path in Object Storage Service (OSS).</p>
      * 
      * @param tmpReq CreateImageToPDFTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1848,8 +2386,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * <li>You can specify up to 100 images in a call to the operation.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>图片转PDF</p>
+     * <p>Converts multiple images into one single PDF file and stores the PDF file to the specified path in Object Storage Service (OSS).</p>
      * 
      * @param request CreateImageToPDFTaskRequest
      * @return CreateImageToPDFTaskResponse
@@ -1860,8 +2406,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</li>
+     * <li>After a spatiotemporal clustering task is complete, you can call the <a href="https://help.aliyun.com/document_detail/478189.html">QueryLocationDateClusters</a> operation to query the spatiotemporal clustering result.</li>
+     * <li>Removing metadata from a dataset does not affect existing spatiotemporal clusters for the dataset. To delete a spatiotemporal cluster, call the <a href="https://help.aliyun.com/document_detail/478191.html">DeleteLocationDateCluster</a> operation.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建时空聚类任务</p>
+     * <p>Creates a spatiotemporal clustering task to cluster photos and videos based on geolocation and time information. Spatiotemporal clustering allows you to group photos and videos taken during a travel or at different places by their spatial and temporal similarity. Based on spatiotemporal clustering, you can develop media capabilities such as media file categorization, photo collections, and image and video-based stories.</p>
      * 
      * @param tmpReq CreateLocationDateClusteringTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1934,8 +2492,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</li>
+     * <li>After a spatiotemporal clustering task is complete, you can call the <a href="https://help.aliyun.com/document_detail/478189.html">QueryLocationDateClusters</a> operation to query the spatiotemporal clustering result.</li>
+     * <li>Removing metadata from a dataset does not affect existing spatiotemporal clusters for the dataset. To delete a spatiotemporal cluster, call the <a href="https://help.aliyun.com/document_detail/478191.html">DeleteLocationDateCluster</a> operation.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建时空聚类任务</p>
+     * <p>Creates a spatiotemporal clustering task to cluster photos and videos based on geolocation and time information. Spatiotemporal clustering allows you to group photos and videos taken during a travel or at different places by their spatial and temporal similarity. Based on spatiotemporal clustering, you can develop media capabilities such as media file categorization, photo collections, and image and video-based stories.</p>
      * 
      * @param request CreateLocationDateClusteringTaskRequest
      * @return CreateLocationDateClusteringTaskResponse
@@ -1946,8 +2516,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
+     * <li>By default, only one type of video, audio, and subtitle streams is processed when you call this operation to process media transcoding. However, you can specify the number of video, audio, or subtitle streams that you want to process.</li>
+     * <li>When you use this operation to execute a media merging task, up to 11 media files are supported. In this case, the parameters that involve media transcoding and frame capturing apply to the merged media data.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.
+     * **<hr>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建转码服务</p>
+     * <p>Creates an asynchronous media transcoding task to provide audio and video file processing abilities, such as media transcoding, media splicing, video frame capturing, and video to GIF conversion.</p>
      * 
      * @param tmpReq CreateMediaConvertTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2028,8 +2611,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
+     * <li>By default, only one type of video, audio, and subtitle streams is processed when you call this operation to process media transcoding. However, you can specify the number of video, audio, or subtitle streams that you want to process.</li>
+     * <li>When you use this operation to execute a media merging task, up to 11 media files are supported. In this case, the parameters that involve media transcoding and frame capturing apply to the merged media data.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.
+     * **<hr>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建转码服务</p>
+     * <p>Creates an asynchronous media transcoding task to provide audio and video file processing abilities, such as media transcoding, media splicing, video frame capturing, and video to GIF conversion.</p>
      * 
      * @param request CreateMediaConvertTaskRequest
      * @return CreateMediaConvertTaskResponse
@@ -2040,8 +2636,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
+     * <ul>
+     * <li>The operation supports the following input formats:<ul>
+     * <li>Text documents: doc, docx, wps, wpss, docm, dotm, dot, dotx, and html</li>
+     * <li>Presentation documents: pptx, ppt, pot, potx, pps, ppsx, dps, dpt, pptm, potm, ppsm, and dpss</li>
+     * <li>Spreadsheet documents: xls, xlt, et, ett, xlsx, xltx, csv, xlsb, xlsm, xltm, and ets</li>
+     * <li>PDF documents: pdf</li>
+     * </ul>
+     * </li>
+     * <li>The operation supports the following output formats:<ul>
+     * <li>Image files: png and jpg</li>
+     * <li>Text files: txt</li>
+     * <li>PDF files: pdf</li>
+     * </ul>
+     * </li>
+     * <li>Each input document can be up to 200 MB in size.</li>
+     * <li>The maximum conversion time is 120 seconds. If the document is large in size or contains complex content, the conversion may time out.</li>
+     * <li>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can use one of the following methods to query task information:<ul>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</li>
+     * <li>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</li>
+     * <li>In the region in which the IMM project is located, create an ApsaraMQ for RocketMQ 4.0 instance, a topic, and a group to receive task notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about how to use ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/169009.html">Call HTTP SDKs to send and subscribe to messages</a>.</li>
+     * <li>In the region in which the IMM project is located, use <a href="https://www.aliyun.com/product/aliware/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建文档转换任务</p>
+     * <p>Creates a document format conversion task to convert the format of a document stored in an Object Storage Service (OSS) bucket.</p>
      * 
      * @param tmpReq CreateOfficeConversionTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2057,6 +2682,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
             request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sources)) {
+            request.sourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sources, "Sources", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
@@ -2192,8 +2821,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UserData", request.userData);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sourcesShrink)) {
+            body.put("Sources", request.sourcesShrink);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateOfficeConversionTask"),
@@ -2210,8 +2845,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
+     * <ul>
+     * <li>The operation supports the following input formats:<ul>
+     * <li>Text documents: doc, docx, wps, wpss, docm, dotm, dot, dotx, and html</li>
+     * <li>Presentation documents: pptx, ppt, pot, potx, pps, ppsx, dps, dpt, pptm, potm, ppsm, and dpss</li>
+     * <li>Spreadsheet documents: xls, xlt, et, ett, xlsx, xltx, csv, xlsb, xlsm, xltm, and ets</li>
+     * <li>PDF documents: pdf</li>
+     * </ul>
+     * </li>
+     * <li>The operation supports the following output formats:<ul>
+     * <li>Image files: png and jpg</li>
+     * <li>Text files: txt</li>
+     * <li>PDF files: pdf</li>
+     * </ul>
+     * </li>
+     * <li>Each input document can be up to 200 MB in size.</li>
+     * <li>The maximum conversion time is 120 seconds. If the document is large in size or contains complex content, the conversion may time out.</li>
+     * <li>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can use one of the following methods to query task information:<ul>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</li>
+     * <li>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</li>
+     * <li>In the region in which the IMM project is located, create an ApsaraMQ for RocketMQ 4.0 instance, a topic, and a group to receive task notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about how to use ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/169009.html">Call HTTP SDKs to send and subscribe to messages</a>.</li>
+     * <li>In the region in which the IMM project is located, use <a href="https://www.aliyun.com/product/aliware/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建文档转换任务</p>
+     * <p>Creates a document format conversion task to convert the format of a document stored in an Object Storage Service (OSS) bucket.</p>
      * 
      * @param request CreateOfficeConversionTaskRequest
      * @return CreateOfficeConversionTaskResponse
@@ -2222,8 +2886,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  The name of a project must be unique in a region.</p>
+     * <ul>
+     * <li>By default, you can create up to 100 projects in a region. If you want to request a quota increase to create more projects, submit a ticket or join the DingTalk chat group (ID: 88490020073).</li>
+     * <li>After you create a project, you can create other Intelligent Media Management (IMM) resources in the project. For more information, see the following links:<ul>
+     * <li><a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/479912.html">CreateTrigger</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/606694.html">CreateBatch</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a></li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建项目</p>
+     * <p>Creates a project.</p>
      * 
      * @param tmpReq CreateProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2300,8 +2977,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  The name of a project must be unique in a region.</p>
+     * <ul>
+     * <li>By default, you can create up to 100 projects in a region. If you want to request a quota increase to create more projects, submit a ticket or join the DingTalk chat group (ID: 88490020073).</li>
+     * <li>After you create a project, you can create other Intelligent Media Management (IMM) resources in the project. For more information, see the following links:<ul>
+     * <li><a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/479912.html">CreateTrigger</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/606694.html">CreateBatch</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a></li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建项目</p>
+     * <p>Creates a project.</p>
      * 
      * @param request CreateProjectRequest
      * @return CreateProjectResponse
@@ -2312,8 +3002,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note that</strong> Asynchronous processing does not guarantee timely task completion.</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</li>
+     * <li>After clustering is completed, you can call the <a href="https://help.aliyun.com/document_detail/611304.html">QuerySimilarImageClusters</a> operation to query image clustering results.</li>
+     * <li>An image cluster contains at lest two images. Removing similar images from the dataset affects existing image clusters. If image deletion reduces the number of images in a cluster to less than 2, the cluster is automatically deleted.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建相似图片聚类任务</p>
+     * <p>Clusters images indexed into a dataset by similarity. Image clustering is suitable for image deduplication and selection. For example, you can use image clustering to filter photos in your album that are taken in continuous shooting mode.</p>
      * 
      * @param tmpReq CreateSimilarImageClusteringTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2370,8 +3072,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note that</strong> Asynchronous processing does not guarantee timely task completion.</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</li>
+     * <li>After clustering is completed, you can call the <a href="https://help.aliyun.com/document_detail/611304.html">QuerySimilarImageClusters</a> operation to query image clustering results.</li>
+     * <li>An image cluster contains at lest two images. Removing similar images from the dataset affects existing image clusters. If image deletion reduces the number of images in a cluster to less than 2, the cluster is automatically deleted.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建相似图片聚类任务</p>
+     * <p>Clusters images indexed into a dataset by similarity. Image clustering is suitable for image deduplication and selection. For example, you can use image clustering to filter photos in your album that are taken in continuous shooting mode.</p>
      * 
      * @param request CreateSimilarImageClusteringTaskRequest
      * @return CreateSimilarImageClusteringTaskResponse
@@ -2382,8 +3096,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建一个 Story</p>
+     * <p>Creates a story.</p>
      * 
      * @param tmpReq CreateStoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2498,8 +3219,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建一个 Story</p>
+     * <p>Creates a story.</p>
      * 
      * @param request CreateStoryRequest
      * @return CreateStoryResponse
@@ -2510,8 +3238,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you want to create a trigger to process data in <a href="https://help.aliyun.com/document_detail/99372.html">OSS</a>, make sure that you have bound the dataset to the OSS bucket where the data is stored. For more information about how to bind a dataset to a bucket, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建数据接入</p>
+     * <p>Creates a trigger. A trigger can trigger Intelligent Media Management (IMM) based on events such as events in Object Storage Service (OSS) to process files, such as images, videos, and documents based on data processing templates.</p>
      * 
      * @param tmpReq CreateTriggerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2580,8 +3311,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you want to create a trigger to process data in <a href="https://help.aliyun.com/document_detail/99372.html">OSS</a>, make sure that you have bound the dataset to the OSS bucket where the data is stored. For more information about how to bind a dataset to a bucket, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建数据接入</p>
+     * <p>Creates a trigger. A trigger can trigger Intelligent Media Management (IMM) based on events such as events in Object Storage Service (OSS) to process files, such as images, videos, and documents based on data processing templates.</p>
      * 
      * @param request CreateTriggerRequest
      * @return CreateTriggerResponse
@@ -2592,8 +3326,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/2747104.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
+     * <li>For more information about video label detection, see <a href="https://help.aliyun.com/document_detail/477189.html">Video label detection</a>.</li>
+     * <li>This operation supports multiple video formats, such as MP4, MPEG-TS, MKV, MOV, AVI, FLV, and M3U8.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>检测视频中的内容</p>
+     * <p>Detects the scene, object, and event tag information of video content. Scene information includes categories such as natural landscapes, life scenes, and disaster scenes. Event information includes categories such as talent shows, office events, performances, and production events. Object information includes categories such as tableware, electronic products, furniture, and transportation. Video tag detection supports more than 30 tag categories and thousands of tags.</p>
      * 
      * @param tmpReq CreateVideoLabelClassificationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2658,8 +3403,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/2747104.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
+     * <li>For more information about video label detection, see <a href="https://help.aliyun.com/document_detail/477189.html">Video label detection</a>.</li>
+     * <li>This operation supports multiple video formats, such as MP4, MPEG-TS, MKV, MOV, AVI, FLV, and M3U8.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>检测视频中的内容</p>
+     * <p>Detects the scene, object, and event tag information of video content. Scene information includes categories such as natural landscapes, life scenes, and disaster scenes. Event information includes categories such as talent shows, office events, performances, and production events. Object information includes categories such as tableware, electronic products, furniture, and transportation. Video tag detection supports more than 30 tag categories and thousands of tags.</p>
      * 
      * @param request CreateVideoLabelClassificationTaskRequest
      * @return CreateVideoLabelClassificationTaskResponse
@@ -2670,8 +3426,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>The detection result is sent as an asynchronous notification. The Suggestion parameter in asynchronous notifications supports the following values:<ul>
+     * <li>pass: No non-compliant content is found.</li>
+     * <li>block: Non-compliant content is detected. The Categories field value indicates the non-compliance category. For more information, see <a href="https://help.aliyun.com/document_detail/2743995.html">Content moderation results</a>.</li>
+     * <li>review: A manual review is needed before an asynchronous notification is sent to inform you about the result.</li>
+     * </ul>
+     * </li>
+     * <li>The following video frame requirements apply:<ul>
+     * <li>The URLs for video frames must use HTTP or HTTPS.</li>
+     * <li>Video frames must be in PNG, JPG, JPEG, BMP, GIF, or WebP format.</li>
+     * <li>The size of a video frame cannot exceed 10 MB.</li>
+     * <li>The recommended resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than the recommended resolution may affect detection accuracy.</li>
+     * <li>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to detect are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</li>
+     * </ul>
+     * </li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建视频检测</p>
+     * <p>Detects risky or non-compliant content from videos. You can use this operation in scenarios such as intelligent pornography detection, terrorist content and political bias detection, ad violation detection, and logo detection.</p>
      * 
      * @param tmpReq CreateVideoModerationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2752,8 +3528,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>The detection result is sent as an asynchronous notification. The Suggestion parameter in asynchronous notifications supports the following values:<ul>
+     * <li>pass: No non-compliant content is found.</li>
+     * <li>block: Non-compliant content is detected. The Categories field value indicates the non-compliance category. For more information, see <a href="https://help.aliyun.com/document_detail/2743995.html">Content moderation results</a>.</li>
+     * <li>review: A manual review is needed before an asynchronous notification is sent to inform you about the result.</li>
+     * </ul>
+     * </li>
+     * <li>The following video frame requirements apply:<ul>
+     * <li>The URLs for video frames must use HTTP or HTTPS.</li>
+     * <li>Video frames must be in PNG, JPG, JPEG, BMP, GIF, or WebP format.</li>
+     * <li>The size of a video frame cannot exceed 10 MB.</li>
+     * <li>The recommended resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than the recommended resolution may affect detection accuracy.</li>
+     * <li>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to detect are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</li>
+     * </ul>
+     * </li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建视频检测</p>
+     * <p>Detects risky or non-compliant content from videos. You can use this operation in scenarios such as intelligent pornography detection, terrorist content and political bias detection, ad violation detection, and logo detection.</p>
      * 
      * @param request CreateVideoModerationTaskRequest
      * @return CreateVideoModerationTaskResponse
@@ -2764,8 +3560,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can delete only a batch processing task that is in one of the following states: Ready, Failed, Suspended, and Succeeded.</p>
+     * <ul>
+     * <li>Before you delete a batch processing task, you can call the <a href="https://help.aliyun.com/document_detail/479922.html">GetBatch</a> operation to query the task status. This ensures a successful deletion.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除数据接入实例</p>
+     * <p>Deletes a batch processing task.</p>
      * 
      * @param request DeleteBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2800,8 +3602,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can delete only a batch processing task that is in one of the following states: Ready, Failed, Suspended, and Succeeded.</p>
+     * <ul>
+     * <li>Before you delete a batch processing task, you can call the <a href="https://help.aliyun.com/document_detail/479922.html">GetBatch</a> operation to query the task status. This ensures a successful deletion.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除数据接入实例</p>
+     * <p>Deletes a batch processing task.</p>
      * 
      * @param request DeleteBatchRequest
      * @return DeleteBatchResponse
@@ -2812,8 +3620,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>If you delete a binding, new changes in the OSS bucket are not synchronized to the dataset. Exercise caution when you perform this operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除绑定</p>
+     * <p>Deletes the binding between a dataset and an Object Storage Service (OSS) bucket.</p>
      * 
      * @param request DeleteBindingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2852,8 +3666,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>If you delete a binding, new changes in the OSS bucket are not synchronized to the dataset. Exercise caution when you perform this operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除绑定</p>
+     * <p>Deletes the binding between a dataset and an Object Storage Service (OSS) bucket.</p>
      * 
      * @param request DeleteBindingRequest
      * @return DeleteBindingResponse
@@ -2864,8 +3684,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you delete a dataset, make sure that you have deleted all indexes in the dataset. For more information about how to delete indexes, see <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> and <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a>.</p>
+     * <ul>
+     * <li>Before you <a href="https://help.aliyun.com/document_detail/478160.html">delete a dataset</a>, make sure that you have deleted all bindings between the dataset and Object Storage Service (OSS) buckets. For more information about how to delete a binding, see <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a>. The <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a> operation does not delete an index that is manually created, even if you set the <code>Cleanup</code> parameter to <code>true</code>. To delete indexes that are manually created, you must call the <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a> operation. For more information about the differences between automatically and manually created indexes, see <a href="https://help.aliyun.com/document_detail/478166.html">Create a metadata index</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除媒体集</p>
+     * <p>Deletes a dataset.</p>
      * 
      * @param request DeleteDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2900,8 +3726,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you delete a dataset, make sure that you have deleted all indexes in the dataset. For more information about how to delete indexes, see <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> and <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a>.</p>
+     * <ul>
+     * <li>Before you <a href="https://help.aliyun.com/document_detail/478160.html">delete a dataset</a>, make sure that you have deleted all bindings between the dataset and Object Storage Service (OSS) buckets. For more information about how to delete a binding, see <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a>. The <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a> operation does not delete an index that is manually created, even if you set the <code>Cleanup</code> parameter to <code>true</code>. To delete indexes that are manually created, you must call the <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a> operation. For more information about the differences between automatically and manually created indexes, see <a href="https://help.aliyun.com/document_detail/478166.html">Create a metadata index</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除媒体集</p>
+     * <p>Deletes a dataset.</p>
      * 
      * @param request DeleteDatasetRequest
      * @return DeleteDatasetResponse
@@ -2912,8 +3744,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>A successful deletion message is returned regardless of whether the metadata of the file exists in the dataset.<blockquote>
+     * </blockquote>
+     * </li>
+     * <li>The objects stored in Object Storage Service (OSS) or Photo and Drive Service are <strong>not</strong> deleted if you delete metadata from a dataset. If you want to delete the file, call the corresponding operations of OSS and Photo and Drive Service.</li>
+     * <li>When you delete file metadata, the corresponding face clustering group information and story (if any) are changed, but the spatiotemporal clustering is not changed.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除文件元信息</p>
+     * <p>Removes the metadata of a file from a dataset.</p>
      * 
      * @param request DeleteFileMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2952,8 +3794,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>A successful deletion message is returned regardless of whether the metadata of the file exists in the dataset.<blockquote>
+     * </blockquote>
+     * </li>
+     * <li>The objects stored in Object Storage Service (OSS) or Photo and Drive Service are <strong>not</strong> deleted if you delete metadata from a dataset. If you want to delete the file, call the corresponding operations of OSS and Photo and Drive Service.</li>
+     * <li>When you delete file metadata, the corresponding face clustering group information and story (if any) are changed, but the spatiotemporal clustering is not changed.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除文件元信息</p>
+     * <p>Removes the metadata of a file from a dataset.</p>
      * 
      * @param request DeleteFileMetaRequest
      * @return DeleteFileMetaResponse
@@ -2964,8 +3816,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</p>
+     * <ul>
+     * <li>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to perform spatiotemporal clustering.</li>
+     * <li>A successful deletion is returned regardless of whether a spatiotemporal clustering group ID exists.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除时空聚类</p>
+     * <p>Deletes a spatiotemporal cluster.</p>
      * 
      * @param request DeleteLocationDateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3006,8 +3865,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</p>
+     * <ul>
+     * <li>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to perform spatiotemporal clustering.</li>
+     * <li>A successful deletion is returned regardless of whether a spatiotemporal clustering group ID exists.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除时空聚类</p>
+     * <p>Deletes a spatiotemporal cluster.</p>
      * 
      * @param request DeleteLocationDateClusterRequest
      * @return DeleteLocationDateClusterResponse
@@ -3018,8 +3884,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you delete a project, make sure that all resources in the project, such as datasets, bindings, batch processing tasks, and triggers, are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/478164.html">DeleteDataset</a>, <a href="https://help.aliyun.com/document_detail/479918.html">DeleteBatch</a>, and <a href="https://help.aliyun.com/document_detail/479915.html">DeleteTrigger</a>.</p>
+     * <ul>
+     * <li>After a project is deleted, all resources used by the project are recycled, and all related data is lost and cannot be recovered.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除项目</p>
+     * <p>Deletes a project.</p>
      * 
      * @param request DeleteProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3050,8 +3922,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you delete a project, make sure that all resources in the project, such as datasets, bindings, batch processing tasks, and triggers, are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/478164.html">DeleteDataset</a>, <a href="https://help.aliyun.com/document_detail/479918.html">DeleteBatch</a>, and <a href="https://help.aliyun.com/document_detail/479915.html">DeleteTrigger</a>.</p>
+     * <ul>
+     * <li>After a project is deleted, all resources used by the project are recycled, and all related data is lost and cannot be recovered.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除项目</p>
+     * <p>Deletes a project.</p>
      * 
      * @param request DeleteProjectRequest
      * @return DeleteProjectResponse
@@ -3062,8 +3940,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除一个 Story</p>
+     * <p>Deletes a story.</p>
      * 
      * @param request DeleteStoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3102,8 +3987,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除一个 Story</p>
+     * <p>Deletes a story.</p>
      * 
      * @param request DeleteStoryRequest
      * @return DeleteStoryResponse
@@ -3114,8 +4006,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete a trigger only if the trigger is in one of the following states: Ready, Failed, Suspended, and Succeeded. You cannot delete a trigger that is in the Running state.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除数据接入实例</p>
+     * <p>Deletes a trigger.</p>
      * 
      * @param request DeleteTriggerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3150,8 +4045,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete a trigger only if the trigger is in one of the following states: Ready, Failed, Suspended, and Succeeded. You cannot delete a trigger that is in the Running state.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除数据接入实例</p>
+     * <p>Deletes a trigger.</p>
      * 
      * @param request DeleteTriggerRequest
      * @return DeleteTriggerResponse
@@ -3162,8 +4060,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that the project is bound to a bucket. For more information, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>解绑ossbucket</p>
+     * <p>Unbinds an Object Storage Service (OSS) bucket from the corresponding project.</p>
      * 
      * @param request DetachOSSBucketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3194,8 +4098,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that the project is bound to a bucket. For more information, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>解绑ossbucket</p>
+     * <p>Unbinds an Object Storage Service (OSS) bucket from the corresponding project.</p>
      * 
      * @param request DetachOSSBucketRequest
      * @return DetachOSSBucketResponse
@@ -3206,8 +4116,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+     * <ul>
+     * <li>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>人体检测算子</p>
+     * <p>Detects human body information, such as the confidence level and body bounding box, in an image.</p>
      * 
      * @param tmpReq DetectImageBodiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3256,8 +4172,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+     * <ul>
+     * <li>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>人体检测算子</p>
+     * <p>Detects human body information, such as the confidence level and body bounding box, in an image.</p>
      * 
      * @param request DetectImageBodiesRequest
      * @return DetectImageBodiesResponse
@@ -3268,8 +4190,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>检测图片中车辆信息</p>
+     * <p>Detects the outline data, attributes, and license plate information of vehicles in an image. The vehicle attributes include the vehicle color (CarColor) and vehicle type (CarType). The license plate information includes the recognition content (Content) and plate frame (Boundary).</p>
      * 
      * @param tmpReq DetectImageCarsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3314,8 +4239,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>检测图片中车辆信息</p>
+     * <p>Detects the outline data, attributes, and license plate information of vehicles in an image. The vehicle attributes include the vehicle color (CarColor) and vehicle type (CarType). The license plate information includes the recognition content (Content) and plate frame (Boundary).</p>
      * 
      * @param request DetectImageCarsRequest
      * @return DetectImageCarsResponse
@@ -3326,8 +4254,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取图片二维码检测</p>
+     * <p>Detects barcodes and QR codes in an image.</p>
      * 
      * @param tmpReq DetectImageCodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3372,8 +4303,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取图片二维码检测</p>
+     * <p>Detects barcodes and QR codes in an image.</p>
      * 
      * @param request DetectImageCodesRequest
      * @return DetectImageCodesResponse
@@ -3385,7 +4319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取图片裁剪信息</p>
+     * <p>Detects the cropping area that produces the optimal visual effect based on a given image ratio by using AI model capabilities.</p>
      * 
      * @param tmpReq DetectImageCroppingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3435,7 +4369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取图片裁剪信息</p>
+     * <p>Detects the cropping area that produces the optimal visual effect based on a given image ratio by using AI model capabilities.</p>
      * 
      * @param request DetectImageCroppingRequest
      * @return DetectImageCroppingResponse
@@ -3446,8 +4380,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取图片人脸信息</p>
+     * <p>Detects faces from an image, including face boundary information, attributes, and quality. The boundary information includes the distance from the y-coordinate of the vertex to the top edge (Top), distance from the x-coordinate of the vertex to the left edge (Left), height (Height), and width (Width). Face attributes include the age (Age), age standard deviation (AgeSD), gender (Gender), emotion (Emotion), mouth opening (Mouth), beard (Beard), hat wearing (Hat), mask wearing (Mask), glasses wearing (Glasses), head orientation (HeadPose), attractiveness (Attractive), and confidence levels for preceding attributes. Quality information includes the face quality score (FaceQuality) and face resolution (Sharpness).</p>
      * 
      * @param tmpReq DetectImageFacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3492,8 +4432,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取图片人脸信息</p>
+     * <p>Detects faces from an image, including face boundary information, attributes, and quality. The boundary information includes the distance from the y-coordinate of the vertex to the top edge (Top), distance from the x-coordinate of the vertex to the left edge (Left), height (Height), and width (Width). Face attributes include the age (Age), age standard deviation (AgeSD), gender (Gender), emotion (Emotion), mouth opening (Mouth), beard (Beard), hat wearing (Hat), mask wearing (Mask), glasses wearing (Glasses), head orientation (HeadPose), attractiveness (Attractive), and confidence levels for preceding attributes. Quality information includes the face quality score (FaceQuality) and face resolution (Sharpness).</p>
      * 
      * @param request DetectImageFacesRequest
      * @return DetectImageFacesResponse
@@ -3504,8 +4450,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that an IMM <a href="https://help.aliyun.com/document_detail/478273.html">project</a> is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</li>
+     * <li>For more information about the features of this operation, see <a href="https://help.aliyun.com/document_detail/477179.html">Image label detection</a>.</li>
+     * <li>For more information about the input images supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>检测图像中的内容</p>
+     * <p>Detects scene, object, and event information in an image. Scene information includes natural landscapes, daily life, and disasters. Event information includes talent shows, office events, performances, and production events. Object information includes tableware, electronics, furniture, and transportation. The DetectImageLabels operation supports more than 30 different categories and thousands of labels.</p>
      * 
      * @param tmpReq DetectImageLabelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3554,8 +4508,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that an IMM <a href="https://help.aliyun.com/document_detail/478273.html">project</a> is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</li>
+     * <li>For more information about the features of this operation, see <a href="https://help.aliyun.com/document_detail/477179.html">Image label detection</a>.</li>
+     * <li>For more information about the input images supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>检测图像中的内容</p>
+     * <p>Detects scene, object, and event information in an image. Scene information includes natural landscapes, daily life, and disasters. Event information includes talent shows, office events, performances, and production events. Object information includes tableware, electronics, furniture, and transportation. The DetectImageLabels operation supports more than 30 different categories and thousands of labels.</p>
      * 
      * @param request DetectImageLabelsRequest
      * @return DetectImageLabelsResponse
@@ -3566,8 +4528,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478273.html">Project management</a>.<a href="~~478152~~"></a></li>
+     * <li>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取图片打分</p>
+     * <p>Calculates the aesthetics quality score of an image based on metrics such as the composition, brightness, contrast, color, and resolution. The operation returns a score within the range from 0 to 1. A higher score indicates better image quality.</p>
      * 
      * @param tmpReq DetectImageScoreRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3612,8 +4581,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478273.html">Project management</a>.<a href="~~478152~~"></a></li>
+     * <li>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取图片打分</p>
+     * <p>Calculates the aesthetics quality score of an image based on metrics such as the composition, brightness, contrast, color, and resolution. The operation returns a score within the range from 0 to 1. A higher score indicates better image quality.</p>
      * 
      * @param request DetectImageScoreRequest
      * @return DetectImageScoreResponse
@@ -3624,8 +4600,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>The size of the image cannot exceed 20 MB.</li>
+     * <li>The shortest side of the image is not less than 20 px, and the longest side is not more than 30,000 px.</li>
+     * <li>The aspect ratio of the image is less than 1:2.</li>
+     * <li>We recommend that you do not use an image that is smaller than 15 px × 15 px in size. Otherwise, the recognition rate is low.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>进行图片光学字符检测</p>
+     * <p>Recognizes and extracts text content from an image.</p>
      * 
      * @param tmpReq DetectImageTextsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3670,8 +4655,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>The size of the image cannot exceed 20 MB.</li>
+     * <li>The shortest side of the image is not less than 20 px, and the longest side is not more than 30,000 px.</li>
+     * <li>The aspect ratio of the image is less than 1:2.</li>
+     * <li>We recommend that you do not use an image that is smaller than 15 px × 15 px in size. Otherwise, the recognition rate is low.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>进行图片光学字符检测</p>
+     * <p>Recognizes and extracts text content from an image.</p>
      * 
      * @param request DetectImageTextsRequest
      * @return DetectImageTextsResponse
@@ -3682,8 +4676,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取媒体文件信息</p>
+     * <p>Queries media metadata, including the media format and stream information.</p>
      * 
      * @param tmpReq DetectMediaMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3728,8 +4728,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取媒体文件信息</p>
+     * <p>Queries media metadata, including the media format and stream information.</p>
      * 
      * @param request DetectMediaMetaRequest
      * @return DetectMediaMetaResponse
@@ -3740,8 +4746,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <blockquote>
+     * <p> The text compliance detection feature only supports Chinese characters.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>检测文本</p>
+     * <p>Detects whether specified text contains anomalies, such as pornography, advertisements, excessive junk content, politically sensitive content, and abuse.</p>
      * 
      * @param request DetectTextAnomalyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3776,8 +4788,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <blockquote>
+     * <p> The text compliance detection feature only supports Chinese characters.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>检测文本</p>
+     * <p>Detects whether specified text contains anomalies, such as pornography, advertisements, excessive junk content, politically sensitive content, and abuse.</p>
      * 
      * @param request DetectTextAnomalyRequest
      * @return DetectTextAnomalyResponse
@@ -3788,8 +4806,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</p>
+     * <ul>
+     * <li>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</li>
+     * <li>You can embed only text as blind watermarks to an image.</li>
+     * <li>The format of the output image is the same as that of the input image.</li>
+     * <li>The watermarks can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</li>
+     * <li>Pure black and white images and images with low resolution (roughly less than 200 px × 200 px,) are not supported.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>嵌入图片盲水印算子</p>
+     * <p>Embeds specific textual information into an image as watermarks. These watermarks are visually imperceptible and do not affect the aesthetics of the image or the integrity of the original data. The watermarks can be extracted by using the CreateDecodeBlindWatermarkTask operation.</p>
      * 
      * @param request EncodeBlindWatermarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3840,8 +4868,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</p>
+     * <ul>
+     * <li>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</li>
+     * <li>You can embed only text as blind watermarks to an image.</li>
+     * <li>The format of the output image is the same as that of the input image.</li>
+     * <li>The watermarks can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</li>
+     * <li>Pure black and white images and images with low resolution (roughly less than 200 px × 200 px,) are not supported.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>嵌入图片盲水印算子</p>
+     * <p>Embeds specific textual information into an image as watermarks. These watermarks are visually imperceptible and do not affect the aesthetics of the image or the integrity of the original data. The watermarks can be extracted by using the CreateDecodeBlindWatermarkTask operation.</p>
      * 
      * @param request EncodeBlindWatermarkRequest
      * @return EncodeBlindWatermarkResponse
@@ -3852,8 +4890,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  <strong>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).</strong></p>
+     * <ul>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478273.html">Project management</a>.<a href="~~478152~~"></a></li>
+     * <li>The following document formats are supported: Word, Excel, PPT, PDF, and TXT.</li>
+     * <li>The document cannot exceed 200 MB in size. The size of the extracted text cannot exceed 2 MB in size (approximately 1.2 million letters).<blockquote>
+     * <p> If the format of the document is complex or the document body is too large, a timeout error may occur. In this case, we recommend that you call the CreateOfficeConversionTask operation to convert the document to the TXT format before you call the ExtractDocumentText operation.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提取文档中的文本</p>
+     * <p>Extracts the text from the document body.</p>
      * 
      * @param tmpReq ExtractDocumentTextRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3902,8 +4951,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  <strong>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).</strong></p>
+     * <ul>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478273.html">Project management</a>.<a href="~~478152~~"></a></li>
+     * <li>The following document formats are supported: Word, Excel, PPT, PDF, and TXT.</li>
+     * <li>The document cannot exceed 200 MB in size. The size of the extracted text cannot exceed 2 MB in size (approximately 1.2 million letters).<blockquote>
+     * <p> If the format of the document is complex or the document body is too large, a timeout error may occur. In this case, we recommend that you call the CreateOfficeConversionTask operation to convert the document to the TXT format before you call the ExtractDocumentText operation.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提取文档中的文本</p>
+     * <p>Extracts the text from the document body.</p>
      * 
      * @param request ExtractDocumentTextRequest
      * @return ExtractDocumentTextResponse
@@ -3914,8 +4974,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 88490020073) and share your questions with us.</li>
+     * <li>For information about the fields that you can use as query conditions, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>对 Dataset 内的元数据进行模糊搜索。</p>
+     * <p>Queries the extracted file metadata, including the file name, labels, path, custom tags, text, and other fields. If the value of a metadata field of a file matches the specified string, the metadata of the file is returned.</p>
      * 
      * @param tmpReq FuzzyQueryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3980,8 +5048,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 88490020073) and share your questions with us.</li>
+     * <li>For information about the fields that you can use as query conditions, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>对 Dataset 内的元数据进行模糊搜索。</p>
+     * <p>Queries the extracted file metadata, including the file name, labels, path, custom tags, text, and other fields. If the value of a metadata field of a file matches the specified string, the metadata of the file is returned.</p>
      * 
      * @param request FuzzyQueryRequest
      * @return FuzzyQueryResponse
@@ -3992,8 +5068,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  <strong>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).</strong></p>
+     * <ul>
+     * <li>Make sure that the project that you want to use is available in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project Management</a>.</li>
+     * <li>By default, you can call this operation to process only one video, audio, or subtitle track. You can specify the number of the video, audio, or subtitle tracks that you want to process.</li>
+     * <li>You can call this operation to generate a media playlist and a master playlist. For more information, see the parameter description.</li>
+     * <li>This operation is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can configure the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to obtain the transcoding task result.</li>
+     * <li>For information about the feature description of this operation, see <a href="https://help.aliyun.com/document_detail/477192.html">Live transcoding</a>.</li>
+     * <li>The data processing capability of Object Storage Service (OSS) also provides the playlist generation feature. However, this feature can generate only a media playlist, and related parameters are simplified.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建实时转码任务</p>
+     * <p>Generates a live transcoding playlist and converts video files into M3U8 files. After a playlist is generated, the videos in the playlist are immediately played and the video files are transcoded based on the playback progress. Compared with offline transcoding, online transcoding significantly reduces the time spent in waiting for the videos to be transcoded and reduces transcoding and storage costs.</p>
      * 
      * @param tmpReq GenerateVideoPlaylistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4090,8 +5177,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  <strong>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).</strong></p>
+     * <ul>
+     * <li>Make sure that the project that you want to use is available in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project Management</a>.</li>
+     * <li>By default, you can call this operation to process only one video, audio, or subtitle track. You can specify the number of the video, audio, or subtitle tracks that you want to process.</li>
+     * <li>You can call this operation to generate a media playlist and a master playlist. For more information, see the parameter description.</li>
+     * <li>This operation is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can configure the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to obtain the transcoding task result.</li>
+     * <li>For information about the feature description of this operation, see <a href="https://help.aliyun.com/document_detail/477192.html">Live transcoding</a>.</li>
+     * <li>The data processing capability of Object Storage Service (OSS) also provides the playlist generation feature. However, this feature can generate only a media playlist, and related parameters are simplified.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建实时转码任务</p>
+     * <p>Generates a live transcoding playlist and converts video files into M3U8 files. After a playlist is generated, the videos in the playlist are immediately played and the video files are transcoded based on the playback progress. Compared with offline transcoding, online transcoding significantly reduces the time spent in waiting for the videos to be transcoded and reduces transcoding and storage costs.</p>
      * 
      * @param request GenerateVideoPlaylistRequest
      * @return GenerateVideoPlaylistResponse
@@ -4102,8 +5200,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>The operation generates an access token that is valid for 30 minutes and a refresh token that is valid for 1 day.</li>
+     * <li>The returned expiration time is in UTC.</li>
+     * <li>The operation supports the following input formats:<ul>
+     * <li>Word files: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</li>
+     * <li>Presentation files: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</li>
+     * <li>Spreadsheet documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</li>
+     * <li>PDF files: .pdf</li>
+     * </ul>
+     * </li>
+     * <li>The operation supports an input document that is up to 200 MB in size.</li>
+     * <li>The operation supports an input document that contains up to 5,000 pages.</li>
+     * <li>For a project created before December 1, 2023, you are charged for previewing or editing a document in the project based on the number of times the document is opened. For a project created on or after December 1, 2023, you are charged based on the number of API operation calls made for previewing or editing a document. If you want to switch to API call-based billing for document previewing and editing, use a project created on or after December 1, 2023. In API call-based billing, one API call allows only one user to use the feature. If multiple users use the information returned by the API call, only the last user has access to the document and the access permissions of other users are revoked.</li>
+     * <li>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<blockquote>
+     * <p> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取文档预览编辑凭证</p>
+     * <p>Generates an access token for document preview or editing.</p>
      * 
      * @param tmpReq GenerateWebofficeTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4216,8 +5335,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>The operation generates an access token that is valid for 30 minutes and a refresh token that is valid for 1 day.</li>
+     * <li>The returned expiration time is in UTC.</li>
+     * <li>The operation supports the following input formats:<ul>
+     * <li>Word files: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</li>
+     * <li>Presentation files: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</li>
+     * <li>Spreadsheet documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</li>
+     * <li>PDF files: .pdf</li>
+     * </ul>
+     * </li>
+     * <li>The operation supports an input document that is up to 200 MB in size.</li>
+     * <li>The operation supports an input document that contains up to 5,000 pages.</li>
+     * <li>For a project created before December 1, 2023, you are charged for previewing or editing a document in the project based on the number of times the document is opened. For a project created on or after December 1, 2023, you are charged based on the number of API operation calls made for previewing or editing a document. If you want to switch to API call-based billing for document previewing and editing, use a project created on or after December 1, 2023. In API call-based billing, one API call allows only one user to use the feature. If multiple users use the information returned by the API call, only the last user has access to the document and the access permissions of other users are revoked.</li>
+     * <li>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<blockquote>
+     * <p> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取文档预览编辑凭证</p>
+     * <p>Generates an access token for document preview or editing.</p>
      * 
      * @param request GenerateWebofficeTokenRequest
      * @return GenerateWebofficeTokenResponse
@@ -4229,7 +5369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据接入实例</p>
+     * <p>Queries the information about a batch processing task.</p>
      * 
      * @param request GetBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4265,7 +5405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据接入实例</p>
+     * <p>Queries the information about a batch processing task.</p>
      * 
      * @param request GetBatchRequest
      * @return GetBatchResponse
@@ -4276,8 +5416,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  <strong>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</strong></p>
+     * <ul>
+     * <li>Make sure that the binding relationship that you want to query exists. For information about how to create a binding relationship, see <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取一个绑定任务的运行详情。</p>
+     * <p>Queries the binding relationship between a specific dataset and an Object Storage Service (OSS) bucket.</p>
      * 
      * @param request GetBindingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4316,8 +5462,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  <strong>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</strong></p>
+     * <ul>
+     * <li>Make sure that the binding relationship that you want to query exists. For information about how to create a binding relationship, see <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取一个绑定任务的运行详情。</p>
+     * <p>Queries the binding relationship between a specific dataset and an Object Storage Service (OSS) bucket.</p>
      * 
      * @param request GetBindingRequest
      * @return GetBindingResponse
@@ -4396,8 +5548,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>The GetDataset operation supports real-time retrieval of file statistics. You can specify WithStatistics to enable real-time retrieval of file statistics.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取媒体集信息</p>
+     * <p>Queries a dataset.</p>
      * 
      * @param request GetDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4436,8 +5594,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>The GetDataset operation supports real-time retrieval of file statistics. You can specify WithStatistics to enable real-time retrieval of file statistics.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取媒体集信息</p>
+     * <p>Queries a dataset.</p>
      * 
      * @param request GetDatasetRequest
      * @return GetDatasetResponse
@@ -4448,8 +5612,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that an invisible watermark task is created and the task ID is obtained.``</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取提取水印的结果</p>
+     * <p>Queries the result of an invisible watermark parsing task.</p>
      * 
      * @param request GetDecodeBlindWatermarkResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4488,8 +5658,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that an invisible watermark task is created and the task ID is obtained.``</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取提取水印的结果</p>
+     * <p>Queries the result of an invisible watermark parsing task.</p>
      * 
      * @param request GetDecodeBlindWatermarkResultRequest
      * @return GetDecodeBlindWatermarkResultResponse
@@ -4500,8 +5676,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  <strong>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</strong></p>
+     * <ul>
+     * <li>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取聚类</p>
+     * <p>Obtains basic information about face clustering, including the creation time, number of images, and cover.</p>
      * 
      * @param request GetFigureClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4540,8 +5722,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  <strong>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</strong></p>
+     * <ul>
+     * <li>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取聚类</p>
+     * <p>Obtains basic information about face clustering, including the creation time, number of images, and cover.</p>
      * 
      * @param request GetFigureClusterRequest
      * @return GetFigureClusterResponse
@@ -4552,8 +5740,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取文件元信息</p>
+     * <p>Queries metadata of a file whose metadata is indexed into the dataset.</p>
      * 
      * @param tmpReq GetFileMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4602,8 +5797,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取文件元信息</p>
+     * <p>Queries metadata of a file whose metadata is indexed into the dataset.</p>
      * 
      * @param request GetFileMetaRequest
      * @return GetFileMetaResponse
@@ -4615,7 +5817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取图片审核任务结果</p>
+     * <p>Queries an image compliance detection task.</p>
      * 
      * @param request GetImageModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4655,7 +5857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取图片审核任务结果</p>
+     * <p>Queries an image compliance detection task.</p>
      * 
      * @param request GetImageModerationResultRequest
      * @return GetImageModerationResultResponse
@@ -4666,8 +5868,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  <strong>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</strong></p>
+     * <ul>
+     * <li>Before you call this operation, make sure that <a href="https://help.aliyun.com/document_detail/478206.html">the project whose name you want to query is bound to the specified OSS bucket</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取绑定的ossbucket</p>
+     * <p>Queries the name of the project bound to an Object Storage Service (OSS) bucket.</p>
      * 
      * @param request GetOSSBucketAttachmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4698,8 +5906,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  <strong>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</strong></p>
+     * <ul>
+     * <li>Before you call this operation, make sure that <a href="https://help.aliyun.com/document_detail/478206.html">the project whose name you want to query is bound to the specified OSS bucket</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取绑定的ossbucket</p>
+     * <p>Queries the name of the project bound to an Object Storage Service (OSS) bucket.</p>
      * 
      * @param request GetOSSBucketAttachmentRequest
      * @return GetOSSBucketAttachmentResponse
@@ -4710,8 +5924,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, you can enable the real-time retrieval of file statistics based on your business requirements. For more information, see the &quot;Request parameters&quot; section of this topic.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取项目信息</p>
+     * <p>Queries the basic information, datasets, and file statistics of a project.</p>
      * 
      * @param request GetProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4746,8 +5963,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, you can enable the real-time retrieval of file statistics based on your business requirements. For more information, see the &quot;Request parameters&quot; section of this topic.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取项目信息</p>
+     * <p>Queries the basic information, datasets, and file statistics of a project.</p>
      * 
      * @param request GetProjectRequest
      * @return GetProjectResponse
@@ -4758,8 +5978,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>返回一个 Story 的详细信息</p>
+     * <p>Queries a story.</p>
      * 
      * @param request GetStoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4798,8 +6025,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>返回一个 Story 的详细信息</p>
+     * <p>Queries a story.</p>
      * 
      * @param request GetStoryRequest
      * @return GetStoryResponse
@@ -4810,8 +6044,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取任务信息</p>
+     * <p>Queries information about an asynchronous task. Intelligent Media Management (IMM) has multiple asynchronous data processing capabilities, each of which has its own operation for creating tasks. For example, you can call the CreateFigureClusteringTask operation to create a face clustering task and the CreateFileCompressionTask operation to create a file compression task. The GetTask operation is a general operation. You can call this operation to query information about asynchronous tasks by task ID or type.</p>
      * 
      * @param request GetTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4854,8 +6091,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取任务信息</p>
+     * <p>Queries information about an asynchronous task. Intelligent Media Management (IMM) has multiple asynchronous data processing capabilities, each of which has its own operation for creating tasks. For example, you can call the CreateFigureClusteringTask operation to create a face clustering task and the CreateFileCompressionTask operation to create a file compression task. The GetTask operation is a general operation. You can call this operation to query information about asynchronous tasks by task ID or type.</p>
      * 
      * @param request GetTaskRequest
      * @return GetTaskResponse
@@ -4867,7 +6107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据接入实例</p>
+     * <p>Queries the information about a trigger.</p>
      * 
      * @param request GetTriggerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4903,7 +6143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据接入实例</p>
+     * <p>Queries the information about a trigger.</p>
      * 
      * @param request GetTriggerRequest
      * @return GetTriggerResponse
@@ -4914,8 +6154,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that a <a href="https://help.aliyun.com/document_detail/478273.html">project</a> is created on Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that a video label detection task is created and the <code>TaskId</code> of the task is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/478223.html">CreateVideoLabelClassificationTask</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取视频标签检测任务结果</p>
+     * <p>Queries the results of a video label detection task.</p>
      * 
      * @param request GetVideoLabelClassificationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4954,8 +6200,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that a <a href="https://help.aliyun.com/document_detail/478273.html">project</a> is created on Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that a video label detection task is created and the <code>TaskId</code> of the task is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/478223.html">CreateVideoLabelClassificationTask</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取视频标签检测任务结果</p>
+     * <p>Queries the results of a video label detection task.</p>
      * 
      * @param request GetVideoLabelClassificationResultRequest
      * @return GetVideoLabelClassificationResultResponse
@@ -5018,8 +6270,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>For information about how to create indexes from metadata, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</li>
+     * <li>For information about the limits on the maximum number and size of index files that you can create, see the &quot;Limits on datasets&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic. For information about how to create a dataset, see the &quot;CreateDataset&quot; topic.</li>
+     * <li>For information about the regions in which you can create index files from metadata, see the &quot;Datasets and indexes&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic.</li>
+     * <li>After you create an index from metadata, you can try <a href="https://help.aliyun.com/document_detail/478175.html">simple query</a> to retrieve data. For information about other query capabilities, see <a href="https://help.aliyun.com/document_detail/2402363.html">Query and statistics</a>. You can also <a href="https://help.aliyun.com/document_detail/478180.html">create a face clustering task</a> to group faces. For information about other clustering capabilities, see <a href="https://help.aliyun.com/document_detail/2402365.html">Intelligent management</a>.
+     * **
+     * <strong>Usage notes</strong></li>
+     * <li>The IndexFileMeta operation is asynchronous, indicating that it takes some time to process the data after a request is submitted. After the processing is complete, the metadata is stored in your dataset. The amount of time it takes for this process varies based on <a href="https://help.aliyun.com/document_detail/466304.html">the workflow template, the operator</a>, and the content of the file, ranging from several seconds to several minutes or even longer. You can subscribe to <a href="https://help.aliyun.com/document_detail/2743997.html">Simple Message Service</a> for task completion notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>添加文件元信息</p>
+     * <p>Creates an index from metadata extracted by using techniques such as label recognition, face detection, and location detection from input files. You can retrieve data from the same dataset by using multiple methods.</p>
      * 
      * @param tmpReq IndexFileMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5076,8 +6340,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>For information about how to create indexes from metadata, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</li>
+     * <li>For information about the limits on the maximum number and size of index files that you can create, see the &quot;Limits on datasets&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic. For information about how to create a dataset, see the &quot;CreateDataset&quot; topic.</li>
+     * <li>For information about the regions in which you can create index files from metadata, see the &quot;Datasets and indexes&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic.</li>
+     * <li>After you create an index from metadata, you can try <a href="https://help.aliyun.com/document_detail/478175.html">simple query</a> to retrieve data. For information about other query capabilities, see <a href="https://help.aliyun.com/document_detail/2402363.html">Query and statistics</a>. You can also <a href="https://help.aliyun.com/document_detail/478180.html">create a face clustering task</a> to group faces. For information about other clustering capabilities, see <a href="https://help.aliyun.com/document_detail/2402365.html">Intelligent management</a>.
+     * **
+     * <strong>Usage notes</strong></li>
+     * <li>The IndexFileMeta operation is asynchronous, indicating that it takes some time to process the data after a request is submitted. After the processing is complete, the metadata is stored in your dataset. The amount of time it takes for this process varies based on <a href="https://help.aliyun.com/document_detail/466304.html">the workflow template, the operator</a>, and the content of the file, ranging from several seconds to several minutes or even longer. You can subscribe to <a href="https://help.aliyun.com/document_detail/2743997.html">Simple Message Service</a> for task completion notifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>添加文件元信息</p>
+     * <p>Creates an index from metadata extracted by using techniques such as label recognition, face detection, and location detection from input files. You can retrieve data from the same dataset by using multiple methods.</p>
      * 
      * @param request IndexFileMetaRequest
      * @return IndexFileMetaResponse
@@ -5089,7 +6365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出数据接入实例</p>
+     * <p>Queries batch processing tasks. You can query batch processing tasks based on conditions such task tags and status. The results can be sorted.</p>
      * 
      * @param request ListBatchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5145,7 +6421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出数据接入实例</p>
+     * <p>Queries batch processing tasks. You can query batch processing tasks based on conditions such task tags and status. The results can be sorted.</p>
      * 
      * @param request ListBatchesRequest
      * @return ListBatchesResponse
@@ -5156,8 +6432,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出绑定</p>
+     * <p>Queries bindings between a dataset and Object Storage Service (OSS) buckets.</p>
      * 
      * @param request ListBindingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5200,8 +6479,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出绑定</p>
+     * <p>Queries bindings between a dataset and Object Storage Service (OSS) buckets.</p>
      * 
      * @param request ListBindingsRequest
      * @return ListBindingsResponse
@@ -5213,7 +6495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出媒体集列表</p>
+     * <p>Queries a list of datasets. You can query the list by dataset prefix.</p>
      * 
      * @param request ListDatasetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5257,7 +6539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出媒体集列表</p>
+     * <p>Queries a list of datasets. You can query the list by dataset prefix.</p>
      * 
      * @param request ListDatasetsRequest
      * @return ListDatasetsResponse
@@ -5268,8 +6550,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The ListProjects operation supports pagination. When you call this operation, you must specify the token that is obtained from the previous query as the value of NextToken. You must also specify MaxResults to limit the number of entries to return.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取项目列表</p>
+     * <p>Queries projects. You can call this operation to query the basic information, datasets, and file statistics of multiple projects at the same time.</p>
      * 
      * @param tmpReq ListProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5318,8 +6603,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The ListProjects operation supports pagination. When you call this operation, you must specify the token that is obtained from the previous query as the value of NextToken. You must also specify MaxResults to limit the number of entries to return.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取项目列表</p>
+     * <p>Queries projects. You can call this operation to query the basic information, datasets, and file statistics of multiple projects at the same time.</p>
      * 
      * @param request ListProjectsRequest
      * @return ListProjectsResponse
@@ -5331,7 +6619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取地区列表</p>
+     * <p>Queries the regions where Intelligent Media Management (IMM) is available and the supported languages.</p>
      * 
      * @param request ListRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5363,7 +6651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取地区列表</p>
+     * <p>Queries the regions where Intelligent Media Management (IMM) is available and the supported languages.</p>
      * 
      * @param request ListRegionsRequest
      * @return ListRegionsResponse
@@ -5374,8 +6662,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取任务信息列表</p>
+     * <p>Lists tasks based on specific conditions, such as by time range and by tag.</p>
      * 
      * @param tmpReq ListTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5460,8 +6751,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取任务信息列表</p>
+     * <p>Lists tasks based on specific conditions, such as by time range and by tag.</p>
      * 
      * @param request ListTasksRequest
      * @return ListTasksResponse
@@ -5473,7 +6767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出数据接入实例</p>
+     * <p>Queries triggers by tag or status.</p>
      * 
      * @param request ListTriggersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5529,7 +6823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出数据接入实例</p>
+     * <p>Queries triggers by tag or status.</p>
      * 
      * @param request ListTriggersRequest
      * @return ListTriggersResponse
@@ -5540,8 +6834,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询聚类分组</p>
+     * <p>Queries face groups based on given conditions.</p>
      * 
      * @param tmpReq QueryFigureClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5618,8 +6918,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询聚类分组</p>
+     * <p>Queries face groups based on given conditions.</p>
      * 
      * @param request QueryFigureClustersRequest
      * @return QueryFigureClustersResponse
@@ -5630,8 +6936,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to perform spatiotemporal clustering.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查找时空分组</p>
+     * <p>Queries a list of spatiotemporal clustering groups. Multiple conditions are supported. For more information, see the request parameters.</p>
      * 
      * @param tmpReq QueryLocationDateClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5744,8 +7056,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to perform spatiotemporal clustering.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查找时空分组</p>
+     * <p>Queries a list of spatiotemporal clustering groups. Multiple conditions are supported. For more information, see the request parameters.</p>
      * 
      * @param request QueryLocationDateClustersRequest
      * @return QueryLocationDateClustersResponse
@@ -5756,8 +7074,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/611302.html">CreateSimilarImageClusteringTask</a> operation to cluster similar images in the dataset.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查找相似图片分组</p>
+     * <p>You can call this operation to query the list of similar image clusters.</p>
      * 
      * @param request QuerySimilarImageClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5812,8 +7136,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/611302.html">CreateSimilarImageClusteringTask</a> operation to cluster similar images in the dataset.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查找相似图片分组</p>
+     * <p>You can call this operation to query the list of similar image clusters.</p>
      * 
      * @param request QuerySimilarImageClustersRequest
      * @return QuerySimilarImageClustersResponse
@@ -5824,8 +7154,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查找 Story</p>
+     * <p>Queries stories based on the specified conditions.</p>
      * 
      * @param tmpReq QueryStoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5934,8 +7271,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查找 Story</p>
+     * <p>Queries stories based on the specified conditions.</p>
      * 
      * @param request QueryStoriesRequest
      * @return QueryStoriesResponse
@@ -5946,8 +7290,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</p>
+     * <ul>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/2639703.html">WebOffice billing</a>.</li>
+     * <li>The access token returned by this operation is valid for 30 minutes. After the access token expires, you cannot use it to access the document.</li>
+     * <li>The refresh token returned by this operation is valid for one day. You need to use the refresh token for the next call to the operation before the refresh token expires. After the validity period elapses, the refresh token is invalid.</li>
+     * <li>The returned expiration time is displayed in UTC.<blockquote>
+     * <p> An access token is used to actually access a document, whereas a refresh token is used to avoid repeated access configurations.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>刷新文档预览编辑凭证</p>
+     * <p>Refreshes the access credential of WebOffice. The access credential of WebOffice is valid for 30 minutes. After the credential expires, you cannot access Weboffice. To access Weboffice again, call this operation to obtain a new credential. The new credential is also valid for 30 minutes.</p>
      * 
      * @param tmpReq RefreshWebofficeTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5996,8 +7352,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</p>
+     * <ul>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/2639703.html">WebOffice billing</a>.</li>
+     * <li>The access token returned by this operation is valid for 30 minutes. After the access token expires, you cannot use it to access the document.</li>
+     * <li>The refresh token returned by this operation is valid for one day. You need to use the refresh token for the next call to the operation before the refresh token expires. After the validity period elapses, the refresh token is invalid.</li>
+     * <li>The returned expiration time is displayed in UTC.<blockquote>
+     * <p> An access token is used to actually access a document, whereas a refresh token is used to avoid repeated access configurations.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>刷新文档预览编辑凭证</p>
+     * <p>Refreshes the access credential of WebOffice. The access credential of WebOffice is valid for 30 minutes. After the credential expires, you cannot access Weboffice. To access Weboffice again, call this operation to obtain a new credential. The new credential is also valid for 30 minutes.</p>
      * 
      * @param request RefreshWebofficeTokenRequest
      * @return RefreshWebofficeTokenResponse
@@ -6009,7 +7377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为故事移除文件</p>
+     * <p>Deletes files from a story.</p>
      * 
      * @param tmpReq RemoveStoryFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6059,7 +7427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为故事移除文件</p>
+     * <p>Deletes files from a story.</p>
      * 
      * @param request RemoveStoryFilesRequest
      * @return RemoveStoryFilesResponse
@@ -6070,8 +7438,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can resume a batch processing task only when the task is in the Suspended or Failed state. A batch processing task continues to provide services after you resume the task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>恢复一个挂起的数据接入任务</p>
+     * <p>Resumes a batch processing task that is in the Suspended or Failed state.</p>
      * 
      * @param request ResumeBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6106,8 +7477,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can resume a batch processing task only when the task is in the Suspended or Failed state. A batch processing task continues to provide services after you resume the task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>恢复一个挂起的数据接入任务</p>
+     * <p>Resumes a batch processing task that is in the Suspended or Failed state.</p>
      * 
      * @param request ResumeBatchRequest
      * @return ResumeBatchResponse
@@ -6118,8 +7492,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can resume only a trigger that is in the Suspended or Failed state. After you resume a trigger, the trigger continues to provide services as expected.</p>
+     * 
      * <b>summary</b> : 
-     * <p>恢复一个挂起的数据接入任务</p>
+     * <p>Resumes a trigger that is in the Suspended or Failed state.</p>
      * 
      * @param request ResumeTriggerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6154,8 +7531,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can resume only a trigger that is in the Suspended or Failed state. After you resume a trigger, the trigger continues to provide services as expected.</p>
+     * 
      * <b>summary</b> : 
-     * <p>恢复一个挂起的数据接入任务</p>
+     * <p>Resumes a trigger that is in the Suspended or Failed state.</p>
      * 
      * @param request ResumeTriggerRequest
      * @return ResumeTriggerResponse
@@ -6166,8 +7546,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have created a face clustering task by calling the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>以脸搜分组</p>
+     * <p>Queries face clusters that contain a specific face in an image. Each face cluster contains information such as bounding boxes and similarity.</p>
      * 
      * @param tmpReq SearchImageFigureClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6216,8 +7602,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have created a face clustering task by calling the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>以脸搜分组</p>
+     * <p>Queries face clusters that contain a specific face in an image. Each face cluster contains information such as bounding boxes and similarity.</p>
      * 
      * @param request SearchImageFigureClusterRequest
      * @return SearchImageFigureClusterResponse
@@ -6228,8 +7620,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).**** Each time you call this operation, you are charged for semantic understanding and query fees.</li>
+     * <li>Before you call this operation, make sure that the file that you want to use is indexed into the dataset that you use. To index a file into a dataset, you can call one of the following operations: <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>, <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a>, and <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>.</li>
+     * <li>The response provided in this example is for reference only. The categories and content of metadata vary based on configurations of <a href="https://help.aliyun.com/document_detail/466304.html">workflow templates</a>. If you have questions, search for and join the DingTalk group numbered 21714099.</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage limits</h3>
+     * <ul>
+     * <li>Each time you call this operation, up to 1,000 metadata files are returned.</li>
+     * <li>Pagination is not supported.</li>
+     * <li>The natural language processing capability may not always produce completely accurate results.</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage methods</h3>
+     * <p>You can query files within a dataset by using natural language keywords. Key information supported for understanding includes labels (Labels.LabelName), time (ProduceTime), and location (Address.AddressLine). For example, if you use <code>2023 Hangzhou scenery</code> as the query criterion, the operation intelligently breaks the query criterion down into the following sub-criteria, and returns the files that meet all the sub-criteria:</p>
+     * <ul>
+     * <li>ProduceTime: 00:00 on January 1, 2023 to 00:00 on December 31, 2023.</li>
+     * <li>Address.AddressLine: <code>Hangzhou</code></li>
+     * <li>Labels.LabelName: <code>scenery</code>.
+     * When you call this operation, you can configure a <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that includes the <code>ImageEmbeddingExtraction</code> operator. This allows the operation to return image content when the query you input matches the image content, thereby achieving intelligent image retrieval.``</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>通过输入自然语言文字，对 Dataset 内的元数据进行查询与统计分析</p>
+     * <p>Queries metadata in a dataset by inputting natural language.</p>
      * 
      * @param tmpReq SemanticQueryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6241,10 +7655,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.mediaTypes)) {
             request.mediaTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.mediaTypes, "MediaTypes", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.smartClusterIds)) {
-            request.smartClusterIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.smartClusterIds, "SmartClusterIds", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.withFields)) {
@@ -6276,10 +7686,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Query", request.query);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.smartClusterIdsShrink)) {
-            query.put("SmartClusterIds", request.smartClusterIdsShrink);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.withFieldsShrink)) {
             query.put("WithFields", request.withFieldsShrink);
         }
@@ -6302,8 +7708,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).**** Each time you call this operation, you are charged for semantic understanding and query fees.</li>
+     * <li>Before you call this operation, make sure that the file that you want to use is indexed into the dataset that you use. To index a file into a dataset, you can call one of the following operations: <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>, <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a>, and <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>.</li>
+     * <li>The response provided in this example is for reference only. The categories and content of metadata vary based on configurations of <a href="https://help.aliyun.com/document_detail/466304.html">workflow templates</a>. If you have questions, search for and join the DingTalk group numbered 21714099.</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage limits</h3>
+     * <ul>
+     * <li>Each time you call this operation, up to 1,000 metadata files are returned.</li>
+     * <li>Pagination is not supported.</li>
+     * <li>The natural language processing capability may not always produce completely accurate results.</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage methods</h3>
+     * <p>You can query files within a dataset by using natural language keywords. Key information supported for understanding includes labels (Labels.LabelName), time (ProduceTime), and location (Address.AddressLine). For example, if you use <code>2023 Hangzhou scenery</code> as the query criterion, the operation intelligently breaks the query criterion down into the following sub-criteria, and returns the files that meet all the sub-criteria:</p>
+     * <ul>
+     * <li>ProduceTime: 00:00 on January 1, 2023 to 00:00 on December 31, 2023.</li>
+     * <li>Address.AddressLine: <code>Hangzhou</code></li>
+     * <li>Labels.LabelName: <code>scenery</code>.
+     * When you call this operation, you can configure a <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that includes the <code>ImageEmbeddingExtraction</code> operator. This allows the operation to return image content when the query you input matches the image content, thereby achieving intelligent image retrieval.``</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>通过输入自然语言文字，对 Dataset 内的元数据进行查询与统计分析</p>
+     * <p>Queries metadata in a dataset by inputting natural language.</p>
      * 
      * @param request SemanticQueryRequest
      * @return SemanticQueryResponse
@@ -6314,8 +7742,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.
+     * <strong>Limits</strong></li>
+     * <li>Each query returns information about up to 100 files.</li>
+     * <li>Each query returns up to 2,000 aggregations.</li>
+     * <li>A subquery supports up to 100 conditions.</li>
+     * <li>A subquery can have a maximum nesting depth of 5 levels.
+     * <strong>Example query conditions</strong></li>
+     * <li>Retrieve JPEG images larger than 1,000 pixels:<!---->
+     * {
+     *   &quot;SubQueries&quot;:[
+     * {
+     *   &quot;Field&quot;:&quot;ContentType&quot;,
+     *   &quot;Value&quot;: &quot;image/jpeg&quot;,
+     *   &quot;Operation&quot;:&quot;eq&quot;
+     * },<br>{
+     *   &quot;Field&quot;:&quot;ImageWidth&quot;,
+     *   &quot;Value&quot;:&quot;1000&quot;,
+     *   &quot;Operation&quot;:&quot;gt&quot;
+     * }
+     *   ],
+     *   &quot;Operation&quot;:&quot;and&quot;
+     * }</li>
+     * <li>Search <code>oss://examplebucket/path/</code> for objects that have the <code>TV</code> or <code>Stereo</code> label and are larger than 10 MB in size:<blockquote>
+     * <p> This query requires matching files to have the <code>TV</code> or <code>Stereo</code> label. The two labels are specified as separate objects in the <code>Labels</code> fields.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <pre><code>{
+     *   &quot;SubQueries&quot;: [
+     *     {
+     *       &quot;Field&quot;: &quot;URI&quot;,
+     *       &quot;Value&quot;: &quot;oss://examplebucket/path/&quot;,
+     *       &quot;Operation&quot;: &quot;prefix&quot;
+     *     },
+     *     {
+     *       &quot;Field&quot;: &quot;Size&quot;,
+     *       &quot;Value&quot;: &quot;1048576&quot;,
+     *       &quot;Operation&quot;: &quot;gt&quot;
+     *     },
+     *     {
+     *       &quot;SubQueries&quot;: [
+     *         {
+     *           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
+     *           &quot;Value&quot;: &quot;TV&quot;,
+     *           &quot;Operation&quot;: &quot;eq&quot;
+     *         },
+     *         {
+     *           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
+     *           &quot;Value&quot;: &quot;Stereo&quot;,
+     *           &quot;Operation&quot;: &quot;eq&quot;
+     *         }
+     *       ],
+     *       &quot;Operation&quot;: &quot;or&quot;
+     *     }
+     *   ],
+     *   &quot;Operation&quot;: &quot;and&quot;
+     * }
+     *         
+     * </code></pre>
+     * <ul>
+     * <li>Exclude images that contain a face of a male over the age of 36:<blockquote>
+     * <p> In this example query, an image will be excluded from the query results if it contains a face of a male over the age of 36. This query is different from excluding an image that contains a male face or a face of a person over the age of 36. In this query, you need to use the <code>nested</code> operator to specify that the conditions are met on the same element.
+     * {
+     *     &quot;Operation&quot;: &quot;not&quot;,
+     *     &quot;SubQueries&quot;: [{
+     *         &quot;Operation&quot;: &quot;nested&quot;,
+     *         &quot;SubQueries&quot;: [{
+     *             &quot;Operation&quot;: &quot;and&quot;,
+     *             &quot;SubQueries&quot;: [{
+     *                 &quot;Field&quot;: &quot;Figures.Age&quot;,
+     *                 &quot;Operation&quot;: &quot;gt&quot;,
+     *                 &quot;Value&quot;: &quot;36&quot;
+     *             }, {
+     *                 &quot;Field&quot;: &quot;Figures.Gender&quot;,
+     *                 &quot;Operation&quot;: &quot;eq&quot;,
+     *                 &quot;Value&quot;: &quot;male&quot;
+     *             }]
+     *         }]
+     *     }]
+     * }</p>
+     * </blockquote>
+     * </li>
+     * <li>Query JPEG images that have both custom labels and system labels:<!---->
+     * {
+     *   &quot;SubQueries&quot;:[
+     * {
+     *   &quot;Field&quot;:&quot;ContentType&quot;,
+     *   &quot;Value&quot;: &quot;image/jpeg&quot;,
+     *   &quot;Operation&quot;:&quot;eq&quot;
+     * },<br>{
+     *   &quot;Field&quot;:&quot;CustomLabels.test&quot;,
+     *   &quot;Operation&quot;:&quot;exist&quot;
+     * },<br>{
+     *   &quot;Field&quot;:&quot;Labels.LabelName&quot;,
+     *   &quot;Operation&quot;:&quot;exist&quot;
+     * }
+     *   ],
+     *   &quot;Operation&quot;:&quot;and&quot;
+     * }
+     * You can also perform aggregate operations to collect and analyze different data based on the specified conditions. For example, you can calculate the sum, count, average value, or maximum value of all files that meet the query conditions. You can also calculate the size distribution of images that meet the query conditions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>通过 JSON 结构的查询语言，对 Dataset 内的元数据进行查询与统计分析。</p>
+     * <p>Queries files in a dataset by performing a simple query operation. The operation supports logical expressions.</p>
      * 
      * @param tmpReq SimpleQueryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6396,8 +7930,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.
+     * <strong>Limits</strong></li>
+     * <li>Each query returns information about up to 100 files.</li>
+     * <li>Each query returns up to 2,000 aggregations.</li>
+     * <li>A subquery supports up to 100 conditions.</li>
+     * <li>A subquery can have a maximum nesting depth of 5 levels.
+     * <strong>Example query conditions</strong></li>
+     * <li>Retrieve JPEG images larger than 1,000 pixels:<!---->
+     * {
+     *   &quot;SubQueries&quot;:[
+     * {
+     *   &quot;Field&quot;:&quot;ContentType&quot;,
+     *   &quot;Value&quot;: &quot;image/jpeg&quot;,
+     *   &quot;Operation&quot;:&quot;eq&quot;
+     * },<br>{
+     *   &quot;Field&quot;:&quot;ImageWidth&quot;,
+     *   &quot;Value&quot;:&quot;1000&quot;,
+     *   &quot;Operation&quot;:&quot;gt&quot;
+     * }
+     *   ],
+     *   &quot;Operation&quot;:&quot;and&quot;
+     * }</li>
+     * <li>Search <code>oss://examplebucket/path/</code> for objects that have the <code>TV</code> or <code>Stereo</code> label and are larger than 10 MB in size:<blockquote>
+     * <p> This query requires matching files to have the <code>TV</code> or <code>Stereo</code> label. The two labels are specified as separate objects in the <code>Labels</code> fields.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <pre><code>{
+     *   &quot;SubQueries&quot;: [
+     *     {
+     *       &quot;Field&quot;: &quot;URI&quot;,
+     *       &quot;Value&quot;: &quot;oss://examplebucket/path/&quot;,
+     *       &quot;Operation&quot;: &quot;prefix&quot;
+     *     },
+     *     {
+     *       &quot;Field&quot;: &quot;Size&quot;,
+     *       &quot;Value&quot;: &quot;1048576&quot;,
+     *       &quot;Operation&quot;: &quot;gt&quot;
+     *     },
+     *     {
+     *       &quot;SubQueries&quot;: [
+     *         {
+     *           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
+     *           &quot;Value&quot;: &quot;TV&quot;,
+     *           &quot;Operation&quot;: &quot;eq&quot;
+     *         },
+     *         {
+     *           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
+     *           &quot;Value&quot;: &quot;Stereo&quot;,
+     *           &quot;Operation&quot;: &quot;eq&quot;
+     *         }
+     *       ],
+     *       &quot;Operation&quot;: &quot;or&quot;
+     *     }
+     *   ],
+     *   &quot;Operation&quot;: &quot;and&quot;
+     * }
+     *         
+     * </code></pre>
+     * <ul>
+     * <li>Exclude images that contain a face of a male over the age of 36:<blockquote>
+     * <p> In this example query, an image will be excluded from the query results if it contains a face of a male over the age of 36. This query is different from excluding an image that contains a male face or a face of a person over the age of 36. In this query, you need to use the <code>nested</code> operator to specify that the conditions are met on the same element.
+     * {
+     *     &quot;Operation&quot;: &quot;not&quot;,
+     *     &quot;SubQueries&quot;: [{
+     *         &quot;Operation&quot;: &quot;nested&quot;,
+     *         &quot;SubQueries&quot;: [{
+     *             &quot;Operation&quot;: &quot;and&quot;,
+     *             &quot;SubQueries&quot;: [{
+     *                 &quot;Field&quot;: &quot;Figures.Age&quot;,
+     *                 &quot;Operation&quot;: &quot;gt&quot;,
+     *                 &quot;Value&quot;: &quot;36&quot;
+     *             }, {
+     *                 &quot;Field&quot;: &quot;Figures.Gender&quot;,
+     *                 &quot;Operation&quot;: &quot;eq&quot;,
+     *                 &quot;Value&quot;: &quot;male&quot;
+     *             }]
+     *         }]
+     *     }]
+     * }</p>
+     * </blockquote>
+     * </li>
+     * <li>Query JPEG images that have both custom labels and system labels:<!---->
+     * {
+     *   &quot;SubQueries&quot;:[
+     * {
+     *   &quot;Field&quot;:&quot;ContentType&quot;,
+     *   &quot;Value&quot;: &quot;image/jpeg&quot;,
+     *   &quot;Operation&quot;:&quot;eq&quot;
+     * },<br>{
+     *   &quot;Field&quot;:&quot;CustomLabels.test&quot;,
+     *   &quot;Operation&quot;:&quot;exist&quot;
+     * },<br>{
+     *   &quot;Field&quot;:&quot;Labels.LabelName&quot;,
+     *   &quot;Operation&quot;:&quot;exist&quot;
+     * }
+     *   ],
+     *   &quot;Operation&quot;:&quot;and&quot;
+     * }
+     * You can also perform aggregate operations to collect and analyze different data based on the specified conditions. For example, you can calculate the sum, count, average value, or maximum value of all files that meet the query conditions. You can also calculate the size distribution of images that meet the query conditions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>通过 JSON 结构的查询语言，对 Dataset 内的元数据进行查询与统计分析。</p>
+     * <p>Queries files in a dataset by performing a simple query operation. The operation supports logical expressions.</p>
      * 
      * @param request SimpleQueryRequest
      * @return SimpleQueryResponse
@@ -6408,8 +8048,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can suspend a batch processing task that is in the Running state. You can call the <a href="https://help.aliyun.com/document_detail/479914.html">ResumeBatch</a> operation to resume a batch processing task that is suspended.</p>
+     * 
      * <b>summary</b> : 
-     * <p>挂起一个数据接入任务</p>
+     * <p>Suspends a batch processing task.</p>
      * 
      * @param request SuspendBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6444,8 +8087,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can suspend a batch processing task that is in the Running state. You can call the <a href="https://help.aliyun.com/document_detail/479914.html">ResumeBatch</a> operation to resume a batch processing task that is suspended.</p>
+     * 
      * <b>summary</b> : 
-     * <p>挂起一个数据接入任务</p>
+     * <p>Suspends a batch processing task.</p>
      * 
      * @param request SuspendBatchRequest
      * @return SuspendBatchResponse
@@ -6456,8 +8102,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The operation can be used to suspend a trigger only in the Running state. If you want to resume a suspended trigger, call the <a href="https://help.aliyun.com/document_detail/479919.html">ResumeTrigger</a> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>挂起一个数据接入任务</p>
+     * <p>Suspends a running trigger.</p>
      * 
      * @param request SuspendTriggerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6492,8 +8141,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The operation can be used to suspend a trigger only in the Running state. If you want to resume a suspended trigger, call the <a href="https://help.aliyun.com/document_detail/479919.html">ResumeTrigger</a> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>挂起一个数据接入任务</p>
+     * <p>Suspends a running trigger.</p>
      * 
      * @param request SuspendTriggerRequest
      * @return SuspendTriggerResponse
@@ -6504,8 +8156,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can update only a batch processing task that is in the Ready or Failed state. The update operation does not change the status of the batch processing task.</p>
+     * <ul>
+     * <li>If you update a batch processing task that is in progress, the task is not automatically resumed after the update is complete. You must call the <a href="https://help.aliyun.com/document_detail/479914.html">ResumeBatch</a> operation to resume the task.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新数据接入实例</p>
+     * <p>Updates information about a batch processing task, including the input data source, data processing settings, and tags.</p>
      * 
      * @param tmpReq UpdateBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6566,8 +8224,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can update only a batch processing task that is in the Ready or Failed state. The update operation does not change the status of the batch processing task.</p>
+     * <ul>
+     * <li>If you update a batch processing task that is in progress, the task is not automatically resumed after the update is complete. You must call the <a href="https://help.aliyun.com/document_detail/479914.html">ResumeBatch</a> operation to resume the task.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新数据接入实例</p>
+     * <p>Updates information about a batch processing task, including the input data source, data processing settings, and tags.</p>
      * 
      * @param request UpdateBatchRequest
      * @return UpdateBatchResponse
@@ -6654,8 +8318,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</li>
+     * <li>The operation updates only the cover image, cluster name, and tags.</li>
+     * <li>After the operation is successful, you can call the <a href="https://help.aliyun.com/document_detail/478182.html">GetFigureCluster</a> or <a href="https://help.aliyun.com/document_detail/2248450.html">BatchGetFigureCluster</a> operation to query the updated cluster.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新聚类</p>
+     * <p>Updates information about a face cluster, such as the cluster name and labels.</p>
      * 
      * @param tmpReq UpdateFigureClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6700,8 +8372,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</li>
+     * <li>The operation updates only the cover image, cluster name, and tags.</li>
+     * <li>After the operation is successful, you can call the <a href="https://help.aliyun.com/document_detail/478182.html">GetFigureCluster</a> or <a href="https://help.aliyun.com/document_detail/2248450.html">BatchGetFigureCluster</a> operation to query the updated cluster.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新聚类</p>
+     * <p>Updates information about a face cluster, such as the cluster name and labels.</p>
      * 
      * @param request UpdateFigureClusterRequest
      * @return UpdateFigureClusterResponse
@@ -6712,8 +8392,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>You cannot call this operation to update all metadata. You can update only metadata specified by CustomLabels, CustomId, and Figures. For more information, see the &quot;Request parameters&quot; section of this topic.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新文件元信息</p>
+     * <p>Updates the partial metadata of the indexed files in a dataset.</p>
      * 
      * @param tmpReq UpdateFileMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6758,8 +8444,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>You cannot call this operation to update all metadata. You can update only metadata specified by CustomLabels, CustomId, and Figures. For more information, see the &quot;Request parameters&quot; section of this topic.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新文件元信息</p>
+     * <p>Updates the partial metadata of the indexed files in a dataset.</p>
      * 
      * @param request UpdateFileMetaRequest
      * @return UpdateFileMetaResponse
@@ -6770,8 +8462,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to create spatiotemporal clusters in the project.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新时空聚类</p>
+     * <p>Updates a spatiotemporal cluster.</p>
      * 
      * @param tmpReq UpdateLocationDateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6828,8 +8526,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to create spatiotemporal clusters in the project.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新时空聚类</p>
+     * <p>Updates a spatiotemporal cluster.</p>
      * 
      * @param request UpdateLocationDateClusterRequest
      * @return UpdateLocationDateClusterResponse
@@ -6840,8 +8544,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that the project exists. For information about how to create a project, see &quot;CreateProject&quot;.</p>
+     * <ul>
+     * <li>When you call this operation, you need to specify only the parameters that you want to update. The parameters that you do not specify remain unchanged after you call this operation.</li>
+     * <li>Wait for up to 5 minutes for the update to take effect.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新项目</p>
+     * <p>Updates information about a project.</p>
      * 
      * @param tmpReq UpdateProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6918,8 +8629,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that the project exists. For information about how to create a project, see &quot;CreateProject&quot;.</p>
+     * <ul>
+     * <li>When you call this operation, you need to specify only the parameters that you want to update. The parameters that you do not specify remain unchanged after you call this operation.</li>
+     * <li>Wait for up to 5 minutes for the update to take effect.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新项目</p>
+     * <p>Updates information about a project.</p>
      * 
      * @param request UpdateProjectRequest
      * @return UpdateProjectResponse
@@ -6931,7 +8649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新故事</p>
+     * <p>Updates the information about a story, such as the story name and cover image.</p>
      * 
      * @param tmpReq UpdateStoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6997,7 +8715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新故事</p>
+     * <p>Updates the information about a story, such as the story name and cover image.</p>
      * 
      * @param request UpdateStoryRequest
      * @return UpdateStoryResponse
@@ -7008,8 +8726,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can update only a trigger that is in the Ready or Failed state. The update operation does not change the trigger status.</p>
+     * <ul>
+     * <li>After you update a trigger, the uncompleted tasks under the original trigger are no longer executed. You can call the <a href="https://help.aliyun.com/document_detail/479916.html">ResumeTrigger</a> operation to resume the execution of the trigger.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新数据接入实例</p>
+     * <p>Updates information about a trigger, such as the input data source, data processing settings, and tags.</p>
      * 
      * @param tmpReq UpdateTriggerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7070,8 +8794,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can update only a trigger that is in the Ready or Failed state. The update operation does not change the trigger status.</p>
+     * <ul>
+     * <li>After you update a trigger, the uncompleted tasks under the original trigger are no longer executed. You can call the <a href="https://help.aliyun.com/document_detail/479916.html">ResumeTrigger</a> operation to resume the execution of the trigger.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新数据接入实例</p>
+     * <p>Updates information about a trigger, such as the input data source, data processing settings, and tags.</p>
      * 
      * @param request UpdateTriggerRequest
      * @return UpdateTriggerResponse

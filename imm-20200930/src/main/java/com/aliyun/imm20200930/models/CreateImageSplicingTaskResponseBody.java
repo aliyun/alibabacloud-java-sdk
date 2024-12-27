@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateImageSplicingTaskResponseBody extends TeaModel {
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10C-1R6p7Km0H5Ieg38LKXTIvw*****</p>
      */
@@ -12,6 +14,8 @@ public class CreateImageSplicingTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>94D6F994-E298-037E-8E8B-0090F27*****</p>
      */
@@ -19,6 +23,8 @@ public class CreateImageSplicingTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ImageSplicing-537cc157-7645-444a-a631-c8db4d02*****</p>
      */

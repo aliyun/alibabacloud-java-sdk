@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class QueryLocationDateClustersResponseBody extends TeaModel {
+    /**
+     * <p>The list of spatiotemporal groups.</p>
+     */
     @NameInMap("LocationDateClusters")
     public java.util.List<LocationDateCluster> locationDateClusters;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>MzQNjmY2MzYxNhNjk2ZNjEu****</p>
      */
@@ -15,6 +20,8 @@ public class QueryLocationDateClustersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7055FCF7-4D7B-098E-BD4D-DD2932B0****</p>
      */

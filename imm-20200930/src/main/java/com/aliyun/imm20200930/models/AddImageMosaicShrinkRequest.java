@@ -4,10 +4,16 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class AddImageMosaicShrinkRequest extends TeaModel {
+    /**
+     * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
+     * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
     /**
+     * <p>The encoding of the output image. By default, the output image uses the same encoding as the input image. Valid values: jpg, png, and webp.</p>
+     * 
      * <strong>example:</strong>
      * <p>jpg</p>
      */
@@ -15,12 +21,18 @@ public class AddImageMosaicShrinkRequest extends TeaModel {
     public String imageFormat;
 
     /**
+     * <p>The name of the project.<a href="~~478153~~"></a></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
+     * <p>The quality of the output image. This parameter applies only to JPG and WebP images. Valid values: 0 to 100. Default value: 80.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -28,18 +40,30 @@ public class AddImageMosaicShrinkRequest extends TeaModel {
     public Integer quality;
 
     /**
+     * <p>The OSS URI of the input image.</p>
+     * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+     * <p>Supported formats of input images include JPG, PNG, TIFF, JP2, and BMP.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://examplebucket/sampleobject.jpg</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;
 
     /**
+     * <p>The OSS URI of the output image.</p>
+     * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://examplebucket/outputImage.jpg</p>
      */
     @NameInMap("TargetURI")
     public String targetURI;
 
     /**
+     * <p>The bounding boxes and processing parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Targets")

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBatchRequest extends TeaModel {
     /**
+     * <p>The ID of the batch processing task. For more information about how to obtain the ID, see <a href="https://help.aliyun.com/document_detail/606694.html">CreateBatch</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetBatchRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

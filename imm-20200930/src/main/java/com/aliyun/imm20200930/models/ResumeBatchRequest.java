@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeBatchRequest extends TeaModel {
     /**
+     * <p>The ID of the batch processing task. You can obtain the ID of the batch processing task from the response of the <a href="https://help.aliyun.com/document_detail/606694.html">CreateBatch</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ResumeBatchRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

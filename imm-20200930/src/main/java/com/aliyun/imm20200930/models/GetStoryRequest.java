@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStoryRequest extends TeaModel {
     /**
+     * <p>The name of the dataset.<a href="~~478160~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetStoryRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The ID of the story.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetStoryRequest extends TeaModel {
     public String objectId;
 
     /**
+     * <p>The name of the project.<a href="~~478153~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

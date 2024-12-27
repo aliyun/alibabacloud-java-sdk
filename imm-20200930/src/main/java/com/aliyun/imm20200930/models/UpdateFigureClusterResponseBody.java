@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateFigureClusterResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5F74C5C9-5AC0-49F9-914D-E01589D3****</p>
      */

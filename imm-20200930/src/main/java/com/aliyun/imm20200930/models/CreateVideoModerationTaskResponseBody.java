@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVideoModerationTaskResponseBody extends TeaModel {
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2E6-1I0FGn0zFnl5AflRfhzClma*****</p>
      */
@@ -12,6 +14,8 @@ public class CreateVideoModerationTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
      */
@@ -19,6 +23,8 @@ public class CreateVideoModerationTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>VideoModeration-9442a216-4691-4a48-846d-76daccaf*****</p>
      */
