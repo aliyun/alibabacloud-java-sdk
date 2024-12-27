@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecutePolicyV2Request extends TeaModel {
     /**
+     * <p>Data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-bp1************dtv</p>
      */
@@ -12,6 +14,7 @@ public class ExecutePolicyV2Request extends TeaModel {
     public String dataSourceId;
 
     /**
+     * <p>Policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ExecutePolicyV2Request extends TeaModel {
     public String policyId;
 
     /**
+     * <p>Rule ID, limited to executing rules of <strong>RuleType</strong> <strong>BACKUP</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,11 @@ public class ExecutePolicyV2Request extends TeaModel {
     public String ruleId;
 
     /**
+     * <p>Data source type, with the value range as follows:</p>
+     * <ul>
+     * <li><strong>UDM_ECS</strong>: Represents ECS full machine backup.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>UDM_ECS</p>
      */

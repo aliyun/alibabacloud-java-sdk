@@ -4,15 +4,21 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyBindingsRequest extends TeaModel {
+    /**
+     * <p>List of data source IDs.</p>
+     */
     @NameInMap("DataSourceIds")
     public java.util.List<String> dataSourceIds;
 
+    /**
+     * <p>Query filters.</p>
+     */
     @NameInMap("Filters")
     public java.util.List<DescribePolicyBindingsRequestFilters> filters;
 
     /**
-     * <p>The number of results for each query.</p>
-     * <p>Valid values: 10 to 100. Default value: 10.</p>
+     * <p>Number of results per query.</p>
+     * <p>Range: 10~100. Default: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -21,6 +27,8 @@ public class DescribePolicyBindingsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token required to fetch the next page of policy and data source associations.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a</p>
      */
@@ -28,6 +36,8 @@ public class DescribePolicyBindingsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Policy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>po-000************hky</p>
      */
@@ -35,6 +45,11 @@ public class DescribePolicyBindingsRequest extends TeaModel {
     public String policyId;
 
     /**
+     * <p>Data source type. Possible values:</p>
+     * <ul>
+     * <li><strong>UDM_ECS</strong>: Indicates ECS full machine backup.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>UDM_ECS</p>
      */
@@ -96,6 +111,13 @@ public class DescribePolicyBindingsRequest extends TeaModel {
 
     public static class DescribePolicyBindingsRequestFilters extends TeaModel {
         /**
+         * <p>Key in the query filter. Possible values include:</p>
+         * <ul>
+         * <li><strong>PolicyId</strong>: Backup policy ID</li>
+         * <li><strong>DataSourceId</strong>: ECS instance ID</li>
+         * <li><strong>DataSourceType</strong>: Data source type</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DataSourceType</p>
          */
@@ -103,12 +125,27 @@ public class DescribePolicyBindingsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>Matching method. Default is IN. This refers to the matching operation (Operator) supported by the Key and Value in the filter. Possible values include:</p>
+         * <ul>
+         * <li><strong>EQUAL</strong>: Equal to</li>
+         * <li><strong>NOT_EQUAL</strong>: Not equal to</li>
+         * <li><strong>GREATER_THAN</strong>: Greater than</li>
+         * <li><strong>GREATER_THAN_OR_EQUAL</strong>: Greater than or equal to</li>
+         * <li><strong>LESS_THAN</strong>: Less than</li>
+         * <li><strong>LESS_THAN_OR_EQUAL</strong>: Less than or equal to</li>
+         * <li><strong>BETWEEN</strong>: Range, where value is a JSON array <code>[lower_bound, upper_bound]</code>.</li>
+         * <li><strong>IN</strong>: In the set, where value is an array.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>IN</p>
          */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>Values to be matched in the query filter.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 

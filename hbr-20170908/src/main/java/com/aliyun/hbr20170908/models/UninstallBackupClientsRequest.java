@@ -45,7 +45,7 @@ public class UninstallBackupClientsRequest extends TeaModel {
     public Long crossAccountUserId;
 
     /**
-     * <p>The IDs of ECS instances. You can specify a maximum of 20 ECS instances.</p>
+     * <p>The IDs of Elastic Compute Service (ECS) instances. You can specify a maximum of 20 ECS instances.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;i-0xi5wj5*****v3j3bh2gj5&quot;]</p>

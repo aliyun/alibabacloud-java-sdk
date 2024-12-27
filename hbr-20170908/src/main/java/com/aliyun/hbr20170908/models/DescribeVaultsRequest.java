@@ -23,6 +23,8 @@ public class DescribeVaultsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-*********************</p>
      */
@@ -45,6 +47,8 @@ public class DescribeVaultsRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>Tag information. Supports up to 20 tags.</p>
+     * 
      * <strong>example:</strong>
      * <p>6a745bceffb042959b3b5206d6f12ad1</p>
      */
@@ -52,6 +56,8 @@ public class DescribeVaultsRequest extends TeaModel {
     public java.util.List<DescribeVaultsRequestTag> tag;
 
     /**
+     * <p>Backup vault ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>v-*********************</p>
      */
@@ -59,6 +65,8 @@ public class DescribeVaultsRequest extends TeaModel {
     public String vaultId;
 
     /**
+     * <p>The region ID to which the backup vault belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -66,6 +74,12 @@ public class DescribeVaultsRequest extends TeaModel {
     public String vaultRegionId;
 
     /**
+     * <p>Backup repository type. The values are as follows: </p>
+     * <ul>
+     * <li><strong>STANDARD</strong>: Represents a standard repository, which can be used for ECS file backups, OSS backups, NAS backups, etc. </li>
+     * <li><strong>OTS_BACKUP</strong>: Represents a TableStore repository, which is only used for TableStore backups, and TableStore must use this type of repository.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>STANDARD</p>
      */
@@ -143,6 +157,8 @@ public class DescribeVaultsRequest extends TeaModel {
 
     public static class DescribeVaultsRequestTag extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -150,6 +166,8 @@ public class DescribeVaultsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The Value of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */

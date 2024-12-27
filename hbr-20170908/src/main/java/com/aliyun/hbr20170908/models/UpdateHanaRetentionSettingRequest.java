@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class UpdateHanaRetentionSettingRequest extends TeaModel {
     /**
      * <p>The ID of the SAP HANA instance.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cl-00024vyjj******srrq</p>
@@ -63,6 +64,7 @@ public class UpdateHanaRetentionSettingRequest extends TeaModel {
 
     /**
      * <p>The ID of the backup vault.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>v-000fb0v2ly******k6</p>

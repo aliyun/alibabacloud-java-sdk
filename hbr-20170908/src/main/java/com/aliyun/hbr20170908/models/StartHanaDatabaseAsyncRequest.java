@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class StartHanaDatabaseAsyncRequest extends TeaModel {
     /**
      * <p>The ID of the SAP HANA instance.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cl-000a9ipe******sme</p>
@@ -25,6 +26,7 @@ public class StartHanaDatabaseAsyncRequest extends TeaModel {
 
     /**
      * <p>The ID of the backup vault.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>v-0000hrh******vhr3i</p>

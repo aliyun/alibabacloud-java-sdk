@@ -200,6 +200,12 @@ public class CreatePolicyBindingsRequest extends TeaModel {
     }
 
     public static class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail extends TeaModel {
+        /**
+         * <p>Do not prompt for archival type objects in task statistics and failed file lists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IgnoreArchiveObject")
         public Boolean ignoreArchiveObject;
 
@@ -458,7 +464,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsFileDetail fileDetail;
 
         /**
-         * <p>The advanced options for OSS backup.</p>
+         * <p>The advanced options for Object Storage Service (OSS) backup.</p>
          */
         @NameInMap("OssDetail")
         public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail ossDetail;
@@ -559,7 +565,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
          * <ul>
          * <li><strong>UDM_ECS</strong>: the ID of the Elastic Compute Service (ECS) instance</li>
          * <li><strong>OSS</strong>: the name of the Object Storage Service (OSS) bucket</li>
-         * <li><strong>NAS</strong>: the ID of the Apsara File Storage NAS (NAS) file system</li>
+         * <li><strong>NAS</strong>: the ID of the File Storage NAS (NAS) file system</li>
          * <li><strong>COMMON_NAS</strong>: the ID of the on-premises NAS file system</li>
          * <li><strong>ECS_FILE</strong>: the ID of the ECS instance</li>
          * <li><strong>File</strong>: the ID of the Cloud Backup client</li>
@@ -586,7 +592,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String disabled;
 
         /**
-         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>, <strong>File</strong>, <strong>NAS</strong>, <strong>COMMON_NAS</strong>, or <strong>COMMON_FILE_SYSTEM</strong>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
@@ -595,7 +601,7 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public String exclude;
 
         /**
-         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>, <strong>File</strong>, <strong>NAS</strong>, <strong>COMMON_NAS</strong>, or <strong>COMMON_FILE_SYSTEM</strong>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
@@ -615,7 +621,8 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         /**
          * <ul>
          * <li>If the SourceType parameter is set to <strong>OSS</strong>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</li>
-         * <li>If the SourceType parameter is set to <strong>ECS_FILE</strong> or <strong>File</strong>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths backed up.</li>
+         * <li>If the SourceType parameter is set to <strong>ECS_FILE</strong> or <strong>File</strong>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths are backed up.</li>
+         * <li>This parameter is required if the SourceType parameter is set to <strong>COMMON_FILE_SYSTEM</strong>. This parameter specifies the path to be backed up. To back up the /src path, enter [&quot;/src&quot;]. To back up the root path, enter [&quot;/&quot;].</li>
          * </ul>
          * 
          * <strong>example:</strong>

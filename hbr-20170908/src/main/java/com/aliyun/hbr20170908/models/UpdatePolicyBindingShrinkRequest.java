@@ -34,6 +34,8 @@ public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     public Boolean disabled;
 
     /**
+     * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
      */
@@ -41,6 +43,8 @@ public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     public String exclude;
 
     /**
+     * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</p>
      */
@@ -67,6 +71,11 @@ public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     public String policyId;
 
     /**
+     * <ul>
+     * <li>If the SourceType parameter is set to <strong>OSS</strong>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</li>
+     * <li>If the SourceType parameter is set to <strong>ECS_FILE</strong> or <strong>File</strong>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths backed up.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>backup/</p>
      */
@@ -87,6 +96,13 @@ public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the throttling rules. Format: <code>{start}{end}{bandwidth}</code>. Separate multiple throttling rules with vertical bars (|). The time ranges of the throttling rules cannot overlap.</p>
+     * <ul>
+     * <li><strong>start</strong>: the start hour.</li>
+     * <li><strong>end</strong>: the end hour.</li>
+     * <li><strong>bandwidth</strong>: the bandwidth. Unit: KB/s.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0:24:5120</p>
      */

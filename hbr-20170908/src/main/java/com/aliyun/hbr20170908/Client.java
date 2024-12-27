@@ -454,15 +454,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
      * <ul>
-     * <li>You can specify only one type of data source in a backup schedule.</li>
-     * <li>You can specify only one interval as a backup cycle in a backup schedule.</li>
-     * <li>Each backup schedule allows you to back up data to only one backup vault.</li>
+     * <li>A backup plan associates data sources with backup policies and other necessary information for backups. After the execution of a backup plan, it generates a backup task that records the progress and results of the backup. If the backup task is successful, a backup snapshot is created. You can use the backup snapshot to create a recovery task.</li>
+     * <li>A backup plan supports only one type of data source.</li>
+     * <li>A backup plan supports only a single fixed interval backup cycle strategy.</li>
+     * <li>A backup plan can back up to only one backup vault.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a backup plan.</p>
+     * <p>Create a backup plan.</p>
      * 
      * @param tmpReq CreateBackupPlanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -626,15 +626,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
      * <ul>
-     * <li>You can specify only one type of data source in a backup schedule.</li>
-     * <li>You can specify only one interval as a backup cycle in a backup schedule.</li>
-     * <li>Each backup schedule allows you to back up data to only one backup vault.</li>
+     * <li>A backup plan associates data sources with backup policies and other necessary information for backups. After the execution of a backup plan, it generates a backup task that records the progress and results of the backup. If the backup task is successful, a backup snapshot is created. You can use the backup snapshot to create a recovery task.</li>
+     * <li>A backup plan supports only one type of data source.</li>
+     * <li>A backup plan supports only a single fixed interval backup cycle strategy.</li>
+     * <li>A backup plan can back up to only one backup vault.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a backup plan.</p>
+     * <p>Create a backup plan.</p>
      * 
      * @param request CreateBackupPlanRequest
      * @return CreateBackupPlanResponse
@@ -649,7 +649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Cloud Backup. For more information, see <a href="https://help.aliyun.com/document_detail/89062.html">Billing methods and billable items</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Installs one or more HBR clients on specified instances.</p>
+     * <p>Installs one or more Cloud Backup clients on specified instances.</p>
      * 
      * @param request CreateClientsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -712,7 +712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Cloud Backup. For more information, see <a href="https://help.aliyun.com/document_detail/89062.html">Billing methods and billable items</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Installs one or more HBR clients on specified instances.</p>
+     * <p>Installs one or more Cloud Backup clients on specified instances.</p>
      * 
      * @param request CreateClientsRequest
      * @return CreateClientsResponse
@@ -1581,6 +1581,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Removes the Elastic Compute Service (ECS) instance that is used for restoration only in ECS Backup Essential Edition.</p>
+     * 
+     * @param tmpReq DeleteAirEcsInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAirEcsInstanceResponse
+     */
+    public DeleteAirEcsInstanceResponse deleteAirEcsInstanceWithOptions(DeleteAirEcsInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteAirEcsInstanceShrinkRequest request = new DeleteAirEcsInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.uninstallClientSourceTypes)) {
+            request.uninstallClientSourceTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.uninstallClientSourceTypes, "UninstallClientSourceTypes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ecsInstanceId)) {
+            query.put("EcsInstanceId", request.ecsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uninstallClientSourceTypesShrink)) {
+            query.put("UninstallClientSourceTypes", request.uninstallClientSourceTypesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAirEcsInstance"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAirEcsInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes the Elastic Compute Service (ECS) instance that is used for restoration only in ECS Backup Essential Edition.</p>
+     * 
+     * @param request DeleteAirEcsInstanceRequest
+     * @return DeleteAirEcsInstanceResponse
+     */
+    public DeleteAirEcsInstanceResponse deleteAirEcsInstance(DeleteAirEcsInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAirEcsInstanceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</p>
      * <ul>
@@ -2120,7 +2174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消保护云盘</p>
+     * <p>Cancels a protected disk.</p>
      * 
      * @param request DeleteUdmDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2152,7 +2206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消保护云盘</p>
+     * <p>Cancels a protected disk.</p>
      * 
      * @param request DeleteUdmDiskRequest
      * @return DeleteUdmDiskResponse
@@ -3311,7 +3365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries one or more data sources bound to a backup policy or queries one or more backup policies bound to a data source.</p>
+     * <p>Query one or more data sources bound to a policy, or query one or more policies bound to a data source.</p>
      * 
      * @param tmpReq DescribePolicyBindingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3371,7 +3425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries one or more data sources bound to a backup policy or queries one or more backup policies bound to a data source.</p>
+     * <p>Query one or more data sources bound to a policy, or query one or more policies bound to a data source.</p>
      * 
      * @param request DescribePolicyBindingsRequest
      * @return DescribePolicyBindingsResponse
@@ -3785,7 +3839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a mount target that is created by Hybrid Backup Recovery (HBR).</p>
+     * <p>Deletes an internal mount target created by Cloud Backup.</p>
      * 
      * @param request DetachNasFileSystemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3839,7 +3893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a mount target that is created by Hybrid Backup Recovery (HBR).</p>
+     * <p>Deletes an internal mount target created by Cloud Backup.</p>
      * 
      * @param request DetachNasFileSystemRequest
      * @return DetachNasFileSystemResponse
@@ -4146,6 +4200,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Execute a policy for one or all bound data sources.</p>
+     * 
      * @param request ExecutePolicyV2Request
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExecutePolicyV2Response
@@ -4189,6 +4246,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Execute a policy for one or all bound data sources.</p>
+     * 
      * @param request ExecutePolicyV2Request
      * @return ExecutePolicyV2Response
      */
@@ -4963,7 +5023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name and network type of a Container Service for Kubernetes (ACK) cluster.</p>
+     * <p>Update container cluster information, including the container cluster name, network type, etc.</p>
      * 
      * @param request UpdateContainerClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5011,7 +5071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name and network type of a Container Service for Kubernetes (ACK) cluster.</p>
+     * <p>Update container cluster information, including the container cluster name, network type, etc.</p>
      * 
      * @param request UpdateContainerClusterRequest
      * @return UpdateContainerClusterResponse

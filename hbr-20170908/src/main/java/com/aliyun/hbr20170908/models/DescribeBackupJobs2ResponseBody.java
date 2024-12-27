@@ -235,6 +235,26 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         @NameInMap("DoCopy")
         public Boolean doCopy;
 
+        /**
+         * <p>ECS instance information, including ECS instance name, instance type, etc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;i-xxxxxxxx&quot;: {
+         *     &quot;hostName&quot;: &quot;test&quot;,
+         *     &quot;instanceName&quot;: &quot;test&quot;,
+         *     &quot;instanceType&quot;: &quot;ecs.c7.xlarge&quot;,
+         *     &quot;osType&quot;: &quot;linux&quot;,
+         *     &quot;diskIds&quot;: [
+         *       &quot;d-xxxxxxxx01&quot;,
+         *       &quot;d-xxxxxxxx02&quot;
+         *     ],
+         *     &quot;osNameEn&quot;: &quot;Rocky Linux 8.8 64 bit&quot;,
+         *     &quot;osName&quot;: &quot;Rocky Linux 8.8 64位&quot;,
+         *     &quot;platform&quot;: &quot;Rocky Linux&quot;
+         *   }
+         * }</p>
+         */
         @NameInMap("InstanceInfos")
         public java.util.Map<String, ?> instanceInfos;
 
@@ -614,6 +634,9 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
         /**
          * <p>The identifier of the cluster that is backed up in the container backup job. This parameter is returned only if the value of SourceType is CONTAINER. If the cluster is a Container Service for Kubernetes (ACK) cluster, the value of this parameter is the ACK cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c83**************************b76</p>
          */
         @NameInMap("Identifier")
         public String identifier;

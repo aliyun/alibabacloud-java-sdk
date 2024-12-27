@@ -14,6 +14,12 @@ public class CreateReplicationVaultRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The method that is used to encrypt the source data. This parameter is valid only if you set the VaultType parameter to STANDARD or OTS_BACKUP. Valid values:</p>
+     * <ul>
+     * <li><strong>HBR_PRIVATE</strong>: The source data is encrypted by using the built-in encryption method of Hybrid Backup Recovery (HBR).</li>
+     * <li><strong>KMS</strong>: The source data is encrypted by using Key Management Service (KMS).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HBR_PRIVATE</p>
      */
@@ -21,6 +27,8 @@ public class CreateReplicationVaultRequest extends TeaModel {
     public String encryptType;
 
     /**
+     * <p>The customer master key (CMK) created in KMS or the alias of the key. This parameter is required only if you set the EncryptType parameter to KMS.</p>
+     * 
      * <strong>example:</strong>
      * <p>alias/test</p>
      */
@@ -81,7 +89,7 @@ public class CreateReplicationVaultRequest extends TeaModel {
     public String vaultRegionId;
 
     /**
-     * <p>The storage class of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
+     * <p>The storage type of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
      * 
      * <strong>example:</strong>
      * <p>STANDARD</p>

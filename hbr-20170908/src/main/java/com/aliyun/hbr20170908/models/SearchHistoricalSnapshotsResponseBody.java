@@ -188,6 +188,8 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         public Long actualItems;
 
         /**
+         * <p>Time to archive</p>
+         * 
          * <strong>example:</strong>
          * <p>1640334062</p>
          */
@@ -276,6 +278,8 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         public String errorFile;
 
         /**
+         * <p>Backup paths not included in the backup job.</p>
+         * 
          * <strong>example:</strong>
          * <p>[\&quot;/test/example_cn-hangzhou_7.txt\&quot;, \&quot;/test/example_cn-hangzhou_1.txt\&quot;, \&quot;/test/example_cn-hangzhou_3.txt\&quot;, \&quot;/test/example_cn-hangzhou_9.txt\&quot;, \&quot;/test/example_cn-hangzhou_6.txt\&quot;]</p>
          */
@@ -301,6 +305,8 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
+         * <p>Backup paths included in the backup job.</p>
+         * 
          * <strong>example:</strong>
          * <p>[\&quot;/test/example_cn-huhehaote_3.txt\&quot;, \&quot;/test/example_cn-huhehaote_9.txt\&quot;, \&quot;/test/example_cn-huhehaote_5.txt\&quot;, \&quot;/test/example_cn-huhehaote_1.txt\&quot;, \&quot;/test/example_cn-huhehaote_7.txt\&quot;]</p>
          */
@@ -440,6 +446,8 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         public String snapshotId;
 
         /**
+         * <p>Parent snapshot HASH value before archiving.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwer***</p>
          */
@@ -447,6 +455,8 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         public String sourceParentSnapshotHash;
 
         /**
+         * <p>Snapshot HASH value before archiving</p>
+         * 
          * <strong>example:</strong>
          * <p>qwer***</p>
          */
@@ -491,6 +501,13 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Storage type. Values: </p>
+         * <ul>
+         * <li><strong>Standard</strong>: Standard. </li>
+         * <li><strong>Archive</strong>: Archive. </li>
+         * <li><strong>ColdArchive</strong>: Cold Archive.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STANDARD</p>
          */
@@ -516,6 +533,8 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         public Long updatedTime;
 
         /**
+         * <p>Whether to use local NAS.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

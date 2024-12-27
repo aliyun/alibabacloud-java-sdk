@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPlansRequest extends TeaModel {
     /**
-     * <p>The filter.</p>
+     * <p>The filters.</p>
      */
     @NameInMap("Filters")
     public java.util.List<DescribeBackupPlansRequestFilters> filters;
