@@ -1,3 +1,27 @@
+2024-12-27 Version: 3.4.0
+- Support API ApplyAdviceById.
+- Support API BatchApplyAdviceByIdList.
+- Support API CreateAPSJob.
+- Support API DescribeAdviceServiceEnabled.
+- Support API GetCreateTableSQL.
+- Support API ModifyUserEniVswitchOptions.
+- Update API AttachUserENI: update param AccessKeyId.
+- Update API CreatePerformanceView: update param AccessKeyId.
+- Update API DeletePerformanceView: update param AccessKeyId.
+- Update API DescribeBackupPolicy: update param AccessKeyId.
+- Update API DescribeDBClusterAttribute: update param AccessKeyId.
+- Update API DescribeDBClusterAttribute: update response param.
+- Update API DescribeDBClusterSpaceSummary: update param AccessKeyId.
+- Update API DescribeExcessivePrimaryKeys: update param AccessKeyId.
+- Update API DescribePerformanceViewAttribute: update param AccessKeyId.
+- Update API DescribePerformanceViews: update param AccessKeyId.
+- Update API DetachUserENI: update param AccessKeyId.
+- Update API ModifyAccountDescription: update param AccessKeyId.
+- Update API ModifyDBClusterDescription: update param AccessKeyId.
+- Update API ModifyDBClusterMaintainTime: update param AccessKeyId.
+- Update API ModifyPerformanceView: update param AccessKeyId.
+
+
 2024-12-16 Version: 3.3.0
 - Support API DescribeSparkAppDiagnosisInfo.
 - Support API DescribeSparkAppType.
