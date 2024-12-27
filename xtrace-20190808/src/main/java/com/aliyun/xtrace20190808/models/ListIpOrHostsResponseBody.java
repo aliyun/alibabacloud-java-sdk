@@ -11,7 +11,7 @@ public class ListIpOrHostsResponseBody extends TeaModel {
     public ListIpOrHostsResponseBodyIpNames ipNames;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1E2B6A4C-6B83-4062-8B6F-AEEC1FC4****</p>
