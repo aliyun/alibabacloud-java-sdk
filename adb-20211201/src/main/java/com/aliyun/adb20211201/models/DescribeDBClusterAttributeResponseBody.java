@@ -632,6 +632,15 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("UserENIStatus")
         public Boolean userENIStatus;
 
+        @NameInMap("UserENIVSwitchOptions")
+        public String userENIVSwitchOptions;
+
+        @NameInMap("UserENIVpcId")
+        public String userENIVpcId;
+
+        @NameInMap("UserENIZoneOptions")
+        public String userENIZoneOptions;
+
         /**
          * <p>The virtual private cloud (VPC) ID of the cluster.</p>
          * 
@@ -958,6 +967,30 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public Boolean getUserENIStatus() {
             return this.userENIStatus;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setUserENIVSwitchOptions(String userENIVSwitchOptions) {
+            this.userENIVSwitchOptions = userENIVSwitchOptions;
+            return this;
+        }
+        public String getUserENIVSwitchOptions() {
+            return this.userENIVSwitchOptions;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setUserENIVpcId(String userENIVpcId) {
+            this.userENIVpcId = userENIVpcId;
+            return this;
+        }
+        public String getUserENIVpcId() {
+            return this.userENIVpcId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setUserENIZoneOptions(String userENIZoneOptions) {
+            this.userENIZoneOptions = userENIZoneOptions;
+            return this;
+        }
+        public String getUserENIZoneOptions() {
+            return this.userENIZoneOptions;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setVPCId(String VPCId) {
