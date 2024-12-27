@@ -145,6 +145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.channelPropertiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.channelProperties, "ChannelProperties", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.harmonyPayload)) {
+            request.harmonyPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.harmonyPayload, "HarmonyPayload", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.iosPayload)) {
             request.iosPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.iosPayload, "IosPayload", "json");
         }
@@ -176,6 +180,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.harmonyPayloadShrink)) {
+            body.put("HarmonyPayload", request.harmonyPayloadShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iosPayloadShrink)) {
@@ -262,6 +270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.channelPropertiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.channelProperties, "ChannelProperties", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.harmonyPayload)) {
+            request.harmonyPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.harmonyPayload, "HarmonyPayload", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.iosPayload)) {
             request.iosPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.iosPayload, "IosPayload", "json");
         }
@@ -293,6 +305,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
             body.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.harmonyPayloadShrink)) {
+            body.put("HarmonyPayload", request.harmonyPayloadShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iosPayloadShrink)) {
@@ -379,6 +395,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.channelPropertiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.channelProperties, "ChannelProperties", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.harmonyPayload)) {
+            request.harmonyPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.harmonyPayload, "HarmonyPayload", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.iosPayload)) {
             request.iosPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.iosPayload, "IosPayload", "json");
         }
@@ -402,6 +422,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.harmonyPayloadShrink)) {
+            body.put("HarmonyPayload", request.harmonyPayloadShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iosPayloadShrink)) {
@@ -488,6 +512,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.channelPropertiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.channelProperties, "ChannelProperties", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.harmonyPayload)) {
+            request.harmonyPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.harmonyPayload, "HarmonyPayload", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.iosPayload)) {
             request.iosPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.iosPayload, "IosPayload", "json");
         }
@@ -515,6 +543,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.deviceTokens)) {
             body.put("DeviceTokens", request.deviceTokens);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.harmonyPayloadShrink)) {
+            body.put("HarmonyPayload", request.harmonyPayloadShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iosPayloadShrink)) {
@@ -601,6 +633,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.channelPropertiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.channelProperties, "ChannelProperties", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.harmonyPayload)) {
+            request.harmonyPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.harmonyPayload, "HarmonyPayload", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.iosPayload)) {
             request.iosPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.iosPayload, "IosPayload", "json");
         }
@@ -628,6 +664,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
             body.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.harmonyPayloadShrink)) {
+            body.put("HarmonyPayload", request.harmonyPayloadShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iosPayloadShrink)) {
@@ -710,6 +750,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.channelPropertiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.channelProperties, "ChannelProperties", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.harmonyPayload)) {
+            request.harmonyPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.harmonyPayload, "HarmonyPayload", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.iosPayload)) {
             request.iosPayloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.iosPayload, "IosPayload", "json");
         }
@@ -737,6 +781,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
             body.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.harmonyPayloadShrink)) {
+            body.put("HarmonyPayload", request.harmonyPayloadShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iosPayloadShrink)) {

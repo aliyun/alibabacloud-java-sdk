@@ -23,6 +23,9 @@ public class SendByFilterShrinkRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("HarmonyPayload")
+    public String harmonyPayloadShrink;
+
     @NameInMap("IosPayload")
     public String iosPayloadShrink;
 
@@ -95,6 +98,14 @@ public class SendByFilterShrinkRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public SendByFilterShrinkRequest setHarmonyPayloadShrink(String harmonyPayloadShrink) {
+        this.harmonyPayloadShrink = harmonyPayloadShrink;
+        return this;
+    }
+    public String getHarmonyPayloadShrink() {
+        return this.harmonyPayloadShrink;
     }
 
     public SendByFilterShrinkRequest setIosPayloadShrink(String iosPayloadShrink) {

@@ -25,6 +25,9 @@ public class SendByDeviceFileIdRequest extends TeaModel {
     @NameInMap("FileId")
     public String fileId;
 
+    @NameInMap("HarmonyPayload")
+    public HarmonyPayload harmonyPayload;
+
     @NameInMap("IosPayload")
     public IosPayload iosPayload;
 
@@ -97,6 +100,14 @@ public class SendByDeviceFileIdRequest extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public SendByDeviceFileIdRequest setHarmonyPayload(HarmonyPayload harmonyPayload) {
+        this.harmonyPayload = harmonyPayload;
+        return this;
+    }
+    public HarmonyPayload getHarmonyPayload() {
+        return this.harmonyPayload;
     }
 
     public SendByDeviceFileIdRequest setIosPayload(IosPayload iosPayload) {

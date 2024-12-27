@@ -23,6 +23,9 @@ public class SendByFilterRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("HarmonyPayload")
+    public HarmonyPayload harmonyPayload;
+
     @NameInMap("IosPayload")
     public IosPayload iosPayload;
 
@@ -95,6 +98,14 @@ public class SendByFilterRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public SendByFilterRequest setHarmonyPayload(HarmonyPayload harmonyPayload) {
+        this.harmonyPayload = harmonyPayload;
+        return this;
+    }
+    public HarmonyPayload getHarmonyPayload() {
+        return this.harmonyPayload;
     }
 
     public SendByFilterRequest setIosPayload(IosPayload iosPayload) {

@@ -28,6 +28,9 @@ public class SendByAliasShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("HarmonyPayload")
+    public String harmonyPayloadShrink;
+
     @NameInMap("IosPayload")
     public String iosPayloadShrink;
 
@@ -108,6 +111,14 @@ public class SendByAliasShrinkRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public SendByAliasShrinkRequest setHarmonyPayloadShrink(String harmonyPayloadShrink) {
+        this.harmonyPayloadShrink = harmonyPayloadShrink;
+        return this;
+    }
+    public String getHarmonyPayloadShrink() {
+        return this.harmonyPayloadShrink;
     }
 
     public SendByAliasShrinkRequest setIosPayloadShrink(String iosPayloadShrink) {

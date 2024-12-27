@@ -25,6 +25,9 @@ public class SendByDeviceRequest extends TeaModel {
     @NameInMap("DeviceTokens")
     public String deviceTokens;
 
+    @NameInMap("HarmonyPayload")
+    public HarmonyPayload harmonyPayload;
+
     @NameInMap("IosPayload")
     public IosPayload iosPayload;
 
@@ -97,6 +100,14 @@ public class SendByDeviceRequest extends TeaModel {
     }
     public String getDeviceTokens() {
         return this.deviceTokens;
+    }
+
+    public SendByDeviceRequest setHarmonyPayload(HarmonyPayload harmonyPayload) {
+        this.harmonyPayload = harmonyPayload;
+        return this;
+    }
+    public HarmonyPayload getHarmonyPayload() {
+        return this.harmonyPayload;
     }
 
     public SendByDeviceRequest setIosPayload(IosPayload iosPayload) {

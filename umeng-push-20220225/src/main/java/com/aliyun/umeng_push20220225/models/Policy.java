@@ -4,6 +4,9 @@ package com.aliyun.umeng_push20220225.models;
 import com.aliyun.tea.*;
 
 public class Policy extends TeaModel {
+    @NameInMap("channelStrategy")
+    public java.util.Map<String, String> channelStrategy;
+
     /**
      * <strong>example:</strong>
      * <p>yyyy-MM-dd HH:mm:ss</p>
@@ -31,6 +34,14 @@ public class Policy extends TeaModel {
     public static Policy build(java.util.Map<String, ?> map) throws Exception {
         Policy self = new Policy();
         return TeaModel.build(map, self);
+    }
+
+    public Policy setChannelStrategy(java.util.Map<String, String> channelStrategy) {
+        this.channelStrategy = channelStrategy;
+        return this;
+    }
+    public java.util.Map<String, String> getChannelStrategy() {
+        return this.channelStrategy;
     }
 
     public Policy setExpireTime(String expireTime) {
