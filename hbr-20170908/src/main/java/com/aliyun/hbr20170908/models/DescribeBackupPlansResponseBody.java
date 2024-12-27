@@ -147,12 +147,34 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag-based matching rule. Valid values:</p>
+         * <ul>
+         * <li><strong>EQUAL</strong>: Both the tag key and tag value are matched.</li>
+         * <li><strong>NOT</strong>: The tag key is matched and the tag value is not matched.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -668,6 +690,12 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Indicates whether a backup plan is automatically created based on tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CreatedByTag")
         public Boolean createdByTag;
 
@@ -787,6 +815,9 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
+        /**
+         * <p>The matched tag rules.</p>
+         */
         @NameInMap("HitTags")
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTags hitTags;
 

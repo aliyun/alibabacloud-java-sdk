@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteClientRequest extends TeaModel {
     /**
+     * <p>The ID of the client.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-000************f3h</p>
      */
@@ -12,6 +14,8 @@ public class DeleteClientRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acf************kwy</p>
      */
@@ -19,6 +23,8 @@ public class DeleteClientRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The ID of the backup vault.</p>
+     * 
      * <strong>example:</strong>
      * <p>v-000************gs3</p>
      */

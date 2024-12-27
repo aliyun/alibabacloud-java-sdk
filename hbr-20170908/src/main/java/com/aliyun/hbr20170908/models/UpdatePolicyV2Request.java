@@ -75,10 +75,22 @@ public class UpdatePolicyV2Request extends TeaModel {
     }
 
     public static class UpdatePolicyV2RequestRulesDataSourceFilters extends TeaModel {
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("DataSourceIds")
         public java.util.List<String> dataSourceIds;
 
         /**
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li><strong>UDM_ECS</strong>: Elastic Compute Service (ECS) instance This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>UDM_ECS_ONLY</strong>.</li>
+         * <li><strong>OSS</strong>: Object Storage Service (OSS) bucket This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
+         * <li><strong>NAS</strong>: File Storage NAS (NAS) file system This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
+         * <li><strong>ECS_FILE</strong>: ECS file This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
+         * <li><strong>OTS</strong>: Tablestore instance This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>UDM_ECS</p>
          */
@@ -174,6 +186,8 @@ public class UpdatePolicyV2Request extends TeaModel {
 
     public static class UpdatePolicyV2RequestRulesTagFilters extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>env</p>
          */
@@ -181,6 +195,12 @@ public class UpdatePolicyV2Request extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag-based matching rule. Valid values:</p>
+         * <ul>
+         * <li><strong>EQUAL</strong>: Both the tag key and tag value are matched.</li>
+         * <li><strong>NOT</strong>: The tag key is matched and the tag value is not matched.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>EQUAL</p>
          */
@@ -188,6 +208,8 @@ public class UpdatePolicyV2Request extends TeaModel {
         public String operator;
 
         /**
+         * <p>The tag value. If you leave this parameter empty, the value is any value.</p>
+         * 
          * <strong>example:</strong>
          * <p>prod</p>
          */
@@ -253,9 +275,18 @@ public class UpdatePolicyV2Request extends TeaModel {
         @NameInMap("ColdArchiveDays")
         public Long coldArchiveDays;
 
+        /**
+         * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TAG</strong>. This parameter specifies the data source filter rule.</p>
+         */
         @NameInMap("DataSourceFilters")
         public java.util.List<UpdatePolicyV2RequestRulesDataSourceFilters> dataSourceFilters;
 
+        /**
+         * <p>This parameter is required only if the <strong>PolicyType</strong> parameter is set to <strong>UDM_ECS_ONLY</strong>. This parameter specifies whether to enable the immutable backup feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Immutable")
         public Boolean immutable;
 
@@ -295,7 +326,7 @@ public class UpdatePolicyV2Request extends TeaModel {
         public Long retention;
 
         /**
-         * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>. This parameter specifies the special retention rules.</p>
+         * <p>This parameter is required only if the value of the <strong>RuleType</strong> parameter is <strong>TRANSITION</strong>. This parameter specifies the special retention rules.</p>
          */
         @NameInMap("RetentionRules")
         public java.util.List<UpdatePolicyV2RequestRulesRetentionRules> retentionRules;
@@ -336,6 +367,9 @@ public class UpdatePolicyV2Request extends TeaModel {
         @NameInMap("Schedule")
         public String schedule;
 
+        /**
+         * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TAG</strong>. This parameter specifies the resource tag filter rule.</p>
+         */
         @NameInMap("TagFilters")
         public java.util.List<UpdatePolicyV2RequestRulesTagFilters> tagFilters;
 

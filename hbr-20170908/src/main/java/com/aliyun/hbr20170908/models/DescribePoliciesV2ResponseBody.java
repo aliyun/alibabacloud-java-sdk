@@ -148,10 +148,22 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     }
 
     public static class DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters extends TeaModel {
+        /**
+         * <p>Deprecated.</p>
+         */
         @NameInMap("DataSourceIds")
         public java.util.List<String> dataSourceIds;
 
         /**
+         * <p>Data source type. The value range is as follows: </p>
+         * <ul>
+         * <li><strong>UDM_ECS</strong>: Indicates ECS server backup. </li>
+         * <li><strong>OSS</strong>: Indicates OSS backup. </li>
+         * <li><strong>NAS</strong>: Indicates Alibaba Cloud NAS backup. </li>
+         * <li><strong>ECS_FILE</strong>: Indicates ECS file backup. </li>
+         * <li><strong>OTS</strong>: Indicates Tablestore backup.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>UDM_ECS</p>
          */
@@ -247,6 +259,8 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
 
     public static class DescribePoliciesV2ResponseBodyPoliciesRulesTagFilters extends TeaModel {
         /**
+         * <p>Tag key</p>
+         * 
          * <strong>example:</strong>
          * <p>env</p>
          */
@@ -254,6 +268,8 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Tag matching rules, supporting: - <strong>EQUAL</strong>: Matches both the tag key and tag value. - <strong>NOT</strong>: Matches the tag key but not the tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>EQUAL</p>
          */
@@ -261,6 +277,8 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public String operator;
 
         /**
+         * <p>Tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>prod</p>
          */
@@ -317,9 +335,18 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         @NameInMap("BackupType")
         public String backupType;
 
+        /**
+         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TAG</strong>. It defines the data source filtering rule.</p>
+         */
         @NameInMap("DataSourceFilters")
         public java.util.List<DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters> dataSourceFilters;
 
+        /**
+         * <p>This parameter is returned only if the <strong>PolicyType</strong> is <strong>UDM_ECS_ONLY</strong>. This parameter indicates whether the immutable backup feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Immutable")
         public Boolean immutable;
 
@@ -400,6 +427,9 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         @NameInMap("Schedule")
         public String schedule;
 
+        /**
+         * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TAG</strong>. It defines the resource tag filtering rule.</p>
+         */
         @NameInMap("TagFilters")
         public java.util.List<DescribePoliciesV2ResponseBodyPoliciesRulesTagFilters> tagFilters;
 

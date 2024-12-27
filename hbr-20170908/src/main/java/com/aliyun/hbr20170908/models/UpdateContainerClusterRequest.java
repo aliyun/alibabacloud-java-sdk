@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateContainerClusterRequest extends TeaModel {
     /**
+     * <p>Cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateContainerClusterRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Cluster description.</p>
+     * 
      * <strong>example:</strong>
      * <p>description ack pv backup</p>
      */
@@ -21,6 +24,8 @@ public class UpdateContainerClusterRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Cluster name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ack_pv_backup_location</p>
      */
@@ -28,6 +33,12 @@ public class UpdateContainerClusterRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Network type, with possible values including:</p>
+     * <ul>
+     * <li><strong>CLASSIC</strong>: Classic Network.</li>
+     * <li><strong>VPC</strong>: Virtual Private Cloud.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>VPC</p>
      */
@@ -35,6 +46,8 @@ public class UpdateContainerClusterRequest extends TeaModel {
     public String networkType;
 
     /**
+     * <p>Whether to regenerate the token.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

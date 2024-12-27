@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVaultsResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVaultsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVaultsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Page number for pagination, starting from 1. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class DescribeVaultsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, with a minimum value of 1, a maximum value of 99, and a default value of 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class DescribeVaultsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -40,6 +50,11 @@ public class DescribeVaultsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful.</p>
+     * <ul>
+     * <li>true: Success - false: Failure</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -47,6 +62,8 @@ public class DescribeVaultsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Returns the total number of backup repositories.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -142,6 +159,8 @@ public class DescribeVaultsResponseBody extends TeaModel {
         public Integer archive;
 
         /**
+         * <p>The number of Cloud Parallel File Storage (CPFS) backup plans.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -602,6 +621,8 @@ public class DescribeVaultsResponseBody extends TeaModel {
 
     public static class DescribeVaultsResponseBodyVaultsVault extends TeaModel {
         /**
+         * <p>Archival tier backup data volume. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024000</p>
          */
@@ -828,6 +849,8 @@ public class DescribeVaultsResponseBody extends TeaModel {
         public String replicationSourceVaultId;
 
         /**
+         * <p>Target region for remote backup repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateContainerClusterResponseBody extends TeaModel {
     /**
+     * <p>Return code, 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateContainerClusterResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return information.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class UpdateContainerClusterResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -26,6 +32,12 @@ public class UpdateContainerClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the request was successful.</p>
+     * <ul>
+     * <li>true: Success</li>
+     * <li>false: Failure</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +45,8 @@ public class UpdateContainerClusterResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Cluster token, used for registering HBR clients within the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJhY2NvdW*****VnZpgXQC5A==</p>
      */
@@ -40,6 +54,8 @@ public class UpdateContainerClusterResponseBody extends TeaModel {
     public String token;
 
     /**
+     * <p>Indicates whether the cluster token has been updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

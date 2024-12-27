@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecutePolicyV2ResponseBody extends TeaModel {
     /**
+     * <p>Return code, 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ExecutePolicyV2ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Backup job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-*********************</p>
      */
@@ -19,6 +23,8 @@ public class ExecutePolicyV2ResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Description of the return message, usually returns \&quot;successful\&quot; on success, and corresponding error messages on failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class ExecutePolicyV2ResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F4EEB401-DD21-588D-AE3B-1E835C7655E1</p>
      */
@@ -33,6 +41,12 @@ public class ExecutePolicyV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li>true: Success</li>
+     * <li>false: Failure</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

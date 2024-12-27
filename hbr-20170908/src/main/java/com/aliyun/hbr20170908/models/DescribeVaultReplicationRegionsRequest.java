@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVaultReplicationRegionsRequest extends TeaModel {
     /**
-     * <p>The access token.</p>
+     * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>01W3ZZOQ</p>
@@ -14,7 +14,7 @@ public class DescribeVaultReplicationRegionsRequest extends TeaModel {
     public String token;
 
     /**
-     * <p>The ID of the backup vault.</p>
+     * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>v-00030j3c******sn</p>

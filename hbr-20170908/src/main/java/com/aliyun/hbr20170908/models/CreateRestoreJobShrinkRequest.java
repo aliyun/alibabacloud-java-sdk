@@ -44,6 +44,9 @@ public class CreateRestoreJobShrinkRequest extends TeaModel {
     @NameInMap("Exclude")
     public String exclude;
 
+    /**
+     * <p>Details of restoration to local.</p>
+     */
     @NameInMap("FailbackDetail")
     public String failbackDetailShrink;
 
@@ -65,6 +68,12 @@ public class CreateRestoreJobShrinkRequest extends TeaModel {
     @NameInMap("InitiatedByAck")
     public Boolean initiatedByAck;
 
+    /**
+     * <p>Parameters for restoring a task</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;includes\&quot;:[],\&quot;excludes\&quot;:[],\&quot;conflictPolicy\&quot;:\&quot;OVERWRITE_EXISTING\&quot;}</p>
+     */
     @NameInMap("Options")
     public String options;
 
