@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveStoryFilesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6E93D6C9-5AC0-49F9-914D-E02678D3****</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddStoryFilesShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class AddStoryFilesShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The objects that you want to add.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Files")
     public String filesShrink;
 
     /**
+     * <p>The ID of the story.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,7 @@ public class AddStoryFilesShrinkRequest extends TeaModel {
     public String objectId;
 
     /**
+     * <p>The name of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

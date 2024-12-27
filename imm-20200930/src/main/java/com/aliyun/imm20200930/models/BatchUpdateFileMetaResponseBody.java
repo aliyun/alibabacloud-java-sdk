@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class BatchUpdateFileMetaResponseBody extends TeaModel {
+    /**
+     * <p>The files whose metadata was updated.</p>
+     */
     @NameInMap("Files")
     public java.util.List<BatchUpdateFileMetaResponseBodyFiles> files;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F5BF215E-3237-0852-B9C6-F233D44A****</p>
      */
@@ -37,15 +42,34 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
 
     public static class BatchUpdateFileMetaResponseBodyFiles extends TeaModel {
         /**
+         * <p>The error message returned when the value of the Success parameter is false.</p>
+         * 
          * <strong>example:</strong>
          * <p>*error.OpError : InvalidArgument | Index KV count exceeded, should be no more than 100.</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
+        /**
+         * <p>The URI of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://examplebucket/example.jpg</p>
+         */
         @NameInMap("URI")
         public String URI;
 

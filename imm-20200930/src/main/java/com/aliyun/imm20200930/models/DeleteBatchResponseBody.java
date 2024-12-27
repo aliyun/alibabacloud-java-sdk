@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteBatchResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>91AC8C98-0F36-49D2-8290-742E24******</p>
      */

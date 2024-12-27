@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectImageScoreResponseBody extends TeaModel {
+    /**
+     * <p>The quality score of the image.</p>
+     */
     @NameInMap("ImageScore")
     public DetectImageScoreResponseBodyImageScore imageScore;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6E93D6C9-5AC0-49F9-914D-E02678D3****</p>
      */
@@ -37,6 +42,8 @@ public class DetectImageScoreResponseBody extends TeaModel {
 
     public static class DetectImageScoreResponseBodyImageScore extends TeaModel {
         /**
+         * <p>The overall quality score.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6</p>
          */

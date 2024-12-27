@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateOfficeConversionTaskResponseBody extends TeaModel {
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2C2-1I0EG57VR37J4rQ8oKG6C9*****</p>
      */
@@ -12,6 +14,8 @@ public class CreateOfficeConversionTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FF3B7D81-66AE-47E0-BF69-157DCF18*****</p>
      */
@@ -19,6 +23,8 @@ public class CreateOfficeConversionTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>formatconvert-00bec802-073a-4b61-ba3b-39bc2fdd*****</p>
      */

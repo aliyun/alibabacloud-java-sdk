@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SuspendTriggerResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0BC1F0C9-8E99-46C6-B502-10DED******</p>
      */

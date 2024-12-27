@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateStoryShrinkRequest extends TeaModel {
+    /**
+     * <p>The cover image of the story.</p>
+     */
     @NameInMap("Cover")
     public String coverShrink;
 
     /**
+     * <p>The custom ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -15,6 +20,8 @@ public class UpdateStoryShrinkRequest extends TeaModel {
     public String customId;
 
     /**
+     * <p>The custom tags. You can specify up to 100 custom tags.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;: &quot;value&quot;}</p>
      */
@@ -22,6 +29,7 @@ public class UpdateStoryShrinkRequest extends TeaModel {
     public String customLabelsShrink;
 
     /**
+     * <p>The name of the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +39,7 @@ public class UpdateStoryShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The ID of the story.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,7 @@ public class UpdateStoryShrinkRequest extends TeaModel {
     public String objectId;
 
     /**
+     * <p>The name of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +59,8 @@ public class UpdateStoryShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The name of the story.</p>
+     * 
      * <strong>example:</strong>
      * <p>newstory</p>
      */

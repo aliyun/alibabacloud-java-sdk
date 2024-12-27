@@ -5,21 +5,28 @@ import com.aliyun.tea.*;
 
 public class CreateBatchRequest extends TeaModel {
     /**
+     * <p>The processing templates.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Actions")
     public java.util.List<CreateBatchRequestActions> actions;
 
     /**
+     * <p>The data source configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public Input input;
 
+    /**
+     * <p>The notification settings. The operation supports multiple messaging middleware options. For more information about notification messages, see Asynchronous message examples. You can use one of the following methods to receive notification messages:</p>
+     * <p>Activate and connect to EventBridge in the same region as the IMM project. For more information, see IMM events. Activate Simple Message Queue in the same region as the IMM project and configure a subscription.</p>
+     */
     @NameInMap("Notification")
     public CreateBatchRequestNotification notification;
 
     /**
+     * <p>The name of the project.<a href="~~478153~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +36,8 @@ public class CreateBatchRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The service role. IMM assumes the service role so that it can access resources in other cloud services, such as OSS. Default value: AliyunIMMBatchTriggerRole.</p>
+     * <p>You can also create a custom service role in the RAM console and grant the required permissions to the role based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a regular service role</a> and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a role</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +47,8 @@ public class CreateBatchRequest extends TeaModel {
     public String serviceRole;
 
     /**
+     * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;: &quot;val&quot;}</p>
      */
@@ -98,10 +109,14 @@ public class CreateBatchRequest extends TeaModel {
     }
 
     public static class CreateBatchRequestActions extends TeaModel {
+        /**
+         * <p>The policy configurations for handling failures.</p>
+         */
         @NameInMap("FastFailPolicy")
         public FastFailPolicy fastFailPolicy;
 
         /**
+         * <p>The name of the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +125,9 @@ public class CreateBatchRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The template parameters.</p>
+         */
         @NameInMap("Parameters")
         public java.util.List<String> parameters;
 
@@ -145,6 +163,9 @@ public class CreateBatchRequest extends TeaModel {
     }
 
     public static class CreateBatchRequestNotification extends TeaModel {
+        /**
+         * <p>The Simple Message Queue notification message configurations.</p>
+         */
         @NameInMap("MNS")
         public MNS MNS;
 

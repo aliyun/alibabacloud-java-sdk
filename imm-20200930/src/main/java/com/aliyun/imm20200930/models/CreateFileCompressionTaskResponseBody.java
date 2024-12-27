@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateFileCompressionTaskResponseBody extends TeaModel {
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0ED-1Bz8z71k5TtsUejT4UJ16Es*****</p>
      */
@@ -12,6 +14,8 @@ public class CreateFileCompressionTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EC564A9A-BA5C-4499-A087-D9B9E76E*****</p>
      */
@@ -19,6 +23,8 @@ public class CreateFileCompressionTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FileCompression-3579a380-6f7a-4a9d-b9d2-65996*****</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTaskResponseBody extends TeaModel {
     /**
+     * <p>The error code of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ResourceNotFound</p>
      */
@@ -12,6 +14,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The end time of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-24T03:01:49.480109219Z</p>
      */
@@ -19,6 +23,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2F6-1Bz99Xi93EnRpNEyLudILJm****</p>
      */
@@ -26,16 +32,29 @@ public class GetTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The error message of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified resource project is not found.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The task progress. Valid values: 0 to 100. Unit: %.</p>
+     * <blockquote>
+     * <p> This parameter is valid only if the task is in the <code>Running</code> state.``</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Progress")
     public Integer progress;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>immtest</p>
      */
@@ -43,6 +62,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2C5C1E0F-D8B8-4DA0-8127-EC32C771****</p>
      */
@@ -50,6 +71,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-24T03:01:41.662060377Z</p>
      */
@@ -57,6 +80,13 @@ public class GetTaskResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The status of the task. Valid values:</p>
+     * <ul>
+     * <li>RUNNING: The task is running.</li>
+     * <li>Succeeded: The task is successful.</li>
+     * <li>Failed: The task failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -64,6 +94,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The tags. This parameter is returned only if you specified Tags when you created the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
      */
@@ -71,16 +103,31 @@ public class GetTaskResponseBody extends TeaModel {
     public java.util.Map<String, ?> tags;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c2b277b9-0d30-4882-ad6d-ad661382****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The initial request parameters used to create the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;ProjectName&quot;:&quot;test-project&quot;,
+     *     &quot;CompressedFormat&quot;:&quot;zip&quot;,
+     *     &quot;TargetURI&quot;:&quot;oss://test-bucket/output/test.zip&quot;,
+     *     &quot;Sources&quot;:[{&quot;URI&quot;:&quot;oss://test-bucket/input/test.jpg&quot;}]
+     * }</p>
+     */
     @NameInMap("TaskRequestDefinition")
     public String taskRequestDefinition;
 
     /**
+     * <p>The type of the task. For more information, see <a href="https://help.aliyun.com/document_detail/2743993.html">Task types</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>VideoLabelClassification</p>
      */
@@ -88,6 +135,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String taskType;
 
     /**
+     * <p>The user data of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
      */

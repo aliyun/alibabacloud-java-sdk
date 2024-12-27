@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetImageModerationResultResponseBody extends TeaModel {
     /**
+     * <p>The error code of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ResourceNotFound</p>
      */
@@ -12,6 +14,8 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The end time of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-03T09:44:32Z</p>
      */
@@ -19,6 +23,8 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1B6-1XBMX3BixLMILvXVGtlkr******</p>
      */
@@ -26,16 +32,23 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The error message of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified resource TaskId is not found.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The result of the image compliance detection task.</p>
+     */
     @NameInMap("ModerationResult")
     public GetImageModerationResultResponseBodyModerationResult moderationResult;
 
     /**
+     * <p>The name of the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-project</p>
      */
@@ -43,6 +56,8 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E6A120B1-BEB3-0F63-A7C2-0783B6******</p>
      */
@@ -50,6 +65,8 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-03T09:44:31.029Z</p>
      */
@@ -57,6 +74,13 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li>Running</li>
+     * <li>Succeeded</li>
+     * <li>Failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
      */
@@ -64,6 +88,8 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ImageModeration-ff207203-3f93-4645-a041-7b8f0f******</p>
      */
@@ -71,6 +97,8 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The type of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ImageModeration</p>
      */
@@ -78,6 +106,8 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String taskType;
 
     /**
+     * <p>The custom information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *       &quot;fileId&quot;: &quot;123&quot;
@@ -189,6 +219,8 @@ public class GetImageModerationResultResponseBody extends TeaModel {
 
     public static class GetImageModerationResultResponseBodyModerationResultFramesBlockFrames extends TeaModel {
         /**
+         * <p>The label of the violation.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *       &quot;test&quot;: &quot;val&quot;
@@ -198,6 +230,8 @@ public class GetImageModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
+         * <p>The offset of the frame.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -205,6 +239,8 @@ public class GetImageModerationResultResponseBody extends TeaModel {
         public Integer offset;
 
         /**
+         * <p>The confidence level of the violation.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -243,10 +279,15 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     }
 
     public static class GetImageModerationResultResponseBodyModerationResultFrames extends TeaModel {
+        /**
+         * <p>The violated frames.</p>
+         */
         @NameInMap("BlockFrames")
         public java.util.List<GetImageModerationResultResponseBodyModerationResultFramesBlockFrames> blockFrames;
 
         /**
+         * <p>The total number of detected frames.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -277,13 +318,26 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     }
 
     public static class GetImageModerationResultResponseBodyModerationResult extends TeaModel {
+        /**
+         * <p>List of categories.</p>
+         */
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
+        /**
+         * <p>The information about video and motion detection frames.</p>
+         */
         @NameInMap("Frames")
         public GetImageModerationResultResponseBodyModerationResultFrames frames;
 
         /**
+         * <p>The recommended operation. Valid values:</p>
+         * <ul>
+         * <li>pass: The image has passed the check. No action is required.</li>
+         * <li>review: The image contains suspected violations and requires human review.</li>
+         * <li>block: The image contains violations. Further actions, such as deleting or blocking the image, are recommended.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>block</p>
          */
@@ -291,6 +345,8 @@ public class GetImageModerationResultResponseBody extends TeaModel {
         public String suggestion;
 
         /**
+         * <p>The OSS URI of the file. The URI follows the oss://${bucketname}/${objectname} format. bucketname indicates the name of an OSS bucket that is in the same region as the current project, and objectname is the file path.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://test-bucket/test-object</p>
          */

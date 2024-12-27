@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     /**
+     * <p>The error code of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ResourceNotFound</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The watermark content.</p>
+     */
     @NameInMap("Content")
     public String content;
 
     /**
+     * <p>The end time of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-03-03T09:45:56.87Z</p>
      */
@@ -22,6 +29,8 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2C2-1I0EG57VR37J4rQ8oKG6C9*****</p>
      */
@@ -29,6 +38,8 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The error message of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified resource project is not found.</p>
      */
@@ -36,6 +47,8 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-project</p>
      */
@@ -43,6 +56,8 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>93126E40-0296-4129-95E3-AFAC709372E5</p>
      */
@@ -50,6 +65,8 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-03-03T09:44:31.029Z</p>
      */
@@ -57,6 +74,8 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
      */
@@ -64,6 +83,8 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DecodeBlindWatermark-c09b0943-ed79-4983-8dbe-7a882574****</p>
      */
@@ -71,6 +92,8 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The task type.</p>
+     * 
      * <strong>example:</strong>
      * <p>DecodeBlindWatermark</p>
      */
@@ -78,6 +101,8 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     public String taskType;
 
     /**
+     * <p>The user data of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
      */

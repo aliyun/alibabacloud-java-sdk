@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the dataset.<a href="~~478160~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,16 +15,22 @@ public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The number of the most similar faces that you want to return. Valid values: 1 to 100. Default value: 5.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("MaxResult")
     public Long maxResult;
 
+    /**
+     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     */
     @NameInMap("Notification")
     public String notificationShrink;
 
     /**
+     * <p>The name of the project.<a href="~~478153~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,10 +39,15 @@ public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The images.</p>
+     */
     @NameInMap("Sources")
     public String sourcesShrink;
 
     /**
+     * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>
      */

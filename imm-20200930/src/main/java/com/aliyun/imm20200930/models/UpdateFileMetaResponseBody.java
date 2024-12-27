@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateFileMetaResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6D53E6C9-5AC0-48F9-825F-D02678E3****</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DetectTextAnomalyResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>91AC8C98-0F36-49D2-8290-742E24DF*****</p>
      */
@@ -12,6 +14,12 @@ public class DetectTextAnomalyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the text contains anomalies. Valid values:</p>
+     * <ul>
+     * <li>pass: the text does not contain anomalies.</li>
+     * <li>block: the text contains anomalies.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>pass</p>
      */

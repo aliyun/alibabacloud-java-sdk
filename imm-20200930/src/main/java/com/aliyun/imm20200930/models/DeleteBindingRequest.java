@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBindingRequest extends TeaModel {
     /**
+     * <p>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteBindingRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DeleteBindingRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The URI of the OSS bucket to which the dataset is bound.</p>
+     * <p>Specify the value in the oss://${Bucket} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

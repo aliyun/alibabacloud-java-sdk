@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteFileMetaResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7F82D6C9-5AC0-49F9-914D-F02678F3****</p>
      */

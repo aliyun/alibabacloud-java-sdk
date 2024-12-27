@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateImageModerationTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>The authorization chain. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
     /**
+     * <p>The time interval between two consecutive frames in a GIF or long image. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -15,6 +20,8 @@ public class CreateImageModerationTaskShrinkRequest extends TeaModel {
     public Long interval;
 
     /**
+     * <p>The maximum number of frames that can be captured in a GIF or long image. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,12 +29,13 @@ public class CreateImageModerationTaskShrinkRequest extends TeaModel {
     public Long maxFrames;
 
     /**
-     * <p>消息通知配置，支持使用MNS、RocketMQ接收异步消息通知。</p>
+     * <p>The notification settings. For more information, click Notification. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification format</a>.</p>
      */
     @NameInMap("Notification")
     public String notificationShrink;
 
     /**
+     * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,10 +44,15 @@ public class CreateImageModerationTaskShrinkRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The scenarios in which you want to apply the image moderation task.</p>
+     */
     @NameInMap("Scenes")
     public String scenesShrink;
 
     /**
+     * <p>The URI of the Object Storage Service (OSS) bucket in which you store the image.</p>
+     * <p>Specify the value in the <code>oss://&lt;Bucket&gt;/&lt;Object&gt;</code> format. <code>&lt;Bucket&gt;</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>&lt;Object&gt;</code> specifies the complete path to the image file that has an extension.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +62,8 @@ public class CreateImageModerationTaskShrinkRequest extends TeaModel {
     public String sourceURI;
 
     /**
+     * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
      */
@@ -56,6 +71,8 @@ public class CreateImageModerationTaskShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
+     * <p>The user data, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the user data is 2,048 bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
      */

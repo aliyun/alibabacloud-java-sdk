@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateDecodeBlindWatermarkTaskRequest extends TeaModel {
     /**
+     * <p>The quality of the output image.
+     * The higher the quality, the larger the image size and the higher the watermark resolution quality.</p>
+     * 
      * <strong>example:</strong>
      * <p>90</p>
      */
@@ -12,16 +15,26 @@ public class CreateDecodeBlindWatermarkTaskRequest extends TeaModel {
     public Integer imageQuality;
 
     /**
+     * <p>The watermark algorithm model.Valid values: FFT, FFT_FULL, DWT, and DWT_IBG. Default value: FFT.</p>
+     * <p>If this parameter is left empty, the DecodeBlindWatermark operation is called. Otherwise, the CreateDecodeBlindWatermarkTask operation is called.</p>
+     * 
      * <strong>example:</strong>
      * <p>FFT</p>
      */
     @NameInMap("Model")
     public String model;
 
+    /**
+     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
+     * <p>The OSS URI of the image before the blind watermark is added. </p>
+     * <p>Do not specify this parameter when you set the Model parameter to DWT or DWT_IBG.</p>
+     * <p>Specify the OSS URI in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format, where <code>&lt;bucket&gt;</code> is the name of the bucket in the same region as the current project and <code>&lt;object&gt;</code> is the path of the object with the extension included.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://imm-test/testcases/watermarktestbefore.jpg</p>
      */
@@ -29,6 +42,7 @@ public class CreateDecodeBlindWatermarkTaskRequest extends TeaModel {
     public String originalImageURI;
 
     /**
+     * <p>The name of the project.<a href="~~478153~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +52,8 @@ public class CreateDecodeBlindWatermarkTaskRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The OSS URI of the image.</p>
+     * <p>Specify the OSS URI in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format, where <code>&lt;bucket&gt;</code> is the name of the bucket in the same region as the current project and <code>&lt;object&gt;</code> is the path of the object with the extension included.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +63,8 @@ public class CreateDecodeBlindWatermarkTaskRequest extends TeaModel {
     public String sourceURI;
 
     /**
+     * <p>The watermark strength level. The higher the strength level, the more resistant the watermarked image is to attacks, but the more the image is distorted. Valid values: low, medium, and high. Default value: low.</p>
+     * 
      * <strong>example:</strong>
      * <p>low</p>
      */
@@ -54,6 +72,9 @@ public class CreateDecodeBlindWatermarkTaskRequest extends TeaModel {
     public String strengthLevel;
 
     /**
+     * <p>The OSS URI of the output image.
+     * Specify the OSS URI in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format, where <code>&lt;bucket&gt;</code> is the name of the bucket in the same region as the current project and <code>&lt;object&gt;</code> is the path of the object with the extension included.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://target/targetobject.jpg</p>
      */
@@ -61,6 +82,9 @@ public class CreateDecodeBlindWatermarkTaskRequest extends TeaModel {
     public String targetURI;
 
     /**
+     * <p>The type of the watermark. Valid value: text.</p>
+     * <p>No image watermarks are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */

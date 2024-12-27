@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCustomizedStoryResponseBody extends TeaModel {
     /**
+     * <p>The ID of the story.</p>
+     * 
      * <strong>example:</strong>
      * <p>563062c0b085733f34ab****</p>
      */
@@ -12,6 +14,8 @@ public class CreateCustomizedStoryResponseBody extends TeaModel {
     public String objectId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BC91D091-D49F-0ACD-95D5-F0621045****</p>
      */

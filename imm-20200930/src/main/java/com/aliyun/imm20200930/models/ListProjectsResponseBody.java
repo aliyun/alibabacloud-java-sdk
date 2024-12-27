@@ -4,13 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListProjectsResponseBody extends TeaModel {
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTIzNDU2Nzg6aW1tdGVzdDAx</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The projects.</p>
+     */
     @NameInMap("Projects")
     public java.util.List<Project> projects;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4A7A2D0E-D8B8-4DA0-8127-EB32C660</p>
      */

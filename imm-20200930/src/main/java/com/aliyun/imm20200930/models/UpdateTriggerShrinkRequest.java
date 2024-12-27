@@ -4,10 +4,14 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateTriggerShrinkRequest extends TeaModel {
+    /**
+     * <p>The processing templates.</p>
+     */
     @NameInMap("Actions")
     public String actionsShrink;
 
     /**
+     * <p>The ID of the trigger. You can obtain the ID of the trigger from the response of the <a href="https://help.aliyun.com/document_detail/479912.html">CreateTrigger</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +20,14 @@ public class UpdateTriggerShrinkRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The input data source.</p>
+     */
     @NameInMap("Input")
     public String inputShrink;
 
     /**
+     * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +37,8 @@ public class UpdateTriggerShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
      */

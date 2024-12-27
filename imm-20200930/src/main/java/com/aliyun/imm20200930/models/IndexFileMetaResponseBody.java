@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IndexFileMetaResponseBody extends TeaModel {
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30F-1D8FxFzDXKJH9YQdve4CjR****</p>
      */
@@ -12,6 +14,8 @@ public class IndexFileMetaResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6E93D6C9-5AC0-49F9-914D-E02678D3****</p>
      */

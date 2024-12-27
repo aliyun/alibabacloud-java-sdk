@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDecodeBlindWatermarkTaskResponseBody extends TeaModel {
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>27C-1jyAP5qQI7RoI8lFFwvMrWtl0ft</p>
      */
@@ -12,6 +14,8 @@ public class CreateDecodeBlindWatermarkTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4A7A2D0E-D8B8-4DA0-8127-EB32C6600ADE</p>
      */
@@ -19,6 +23,8 @@ public class CreateDecodeBlindWatermarkTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DecodeBlindWatermark-78ac8f3b-59e0-45a6-9b67-32168c3f22b9</p>
      */

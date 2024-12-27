@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EncodeBlindWatermarkResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8E0DD64B-28C6-4653-8FF7-93E4C234BCF0</p>
      */

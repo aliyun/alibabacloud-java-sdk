@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateBindingResponseBody extends TeaModel {
+    /**
+     * <p>The binding relationship.</p>
+     */
     @NameInMap("Binding")
     public Binding binding;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5F74C5C9-5AC0-49F9-914D-E01589D3****</p>
      */

@@ -4,13 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectImageTextsResponseBody extends TeaModel {
+    /**
+     * <p>OCR text blocks.</p>
+     */
     @NameInMap("OCRContents")
     public java.util.List<OCRContents> OCRContents;
 
+    /**
+     * <p>The full Optical Character Recognition (OCR) text, which is spliced by using the content of OCRContents.</p>
+     */
     @NameInMap("OCRTexts")
     public String OCRTexts;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
      */

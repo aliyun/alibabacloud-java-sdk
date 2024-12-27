@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteBindingResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACDFE467-C817-4B36-951A-6EB5A592****</p>
      */

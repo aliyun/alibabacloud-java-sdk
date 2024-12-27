@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateTriggerResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A022F78-B9A8-4ACC-BB6B-B35975******</p>
      */

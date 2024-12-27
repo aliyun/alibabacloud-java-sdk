@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateVideoModerationTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
     /**
+     * <p>The interval of capturing video frames. Unit: seconds. Valid values: 1 to 600. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class CreateVideoModerationTaskShrinkRequest extends TeaModel {
     public Long interval;
 
     /**
+     * <p>The maximum number of frames that can be captured from the video. Valid values: 5 to 3600. Default value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,12 +29,13 @@ public class CreateVideoModerationTaskShrinkRequest extends TeaModel {
     public Long maxFrames;
 
     /**
-     * <p>消息通知配置，支持使用MNS、RocketMQ接收异步消息通知。</p>
+     * <p>The notification settings. For information about the asynchronous notification format, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</p>
      */
     @NameInMap("Notification")
     public String notificationShrink;
 
     /**
+     * <p>The name of the project.<a href="~~478153~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,10 +44,15 @@ public class CreateVideoModerationTaskShrinkRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The scenarios of video moderation.</p>
+     */
     @NameInMap("Scenes")
     public String scenesShrink;
 
     /**
+     * <p>The OSS URI of the video.</p>
+     * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +62,8 @@ public class CreateVideoModerationTaskShrinkRequest extends TeaModel {
     public String sourceURI;
 
     /**
+     * <p>The custom tags. The custom tags help you retrieve the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
      */
@@ -56,6 +71,8 @@ public class CreateVideoModerationTaskShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
+     * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
      */

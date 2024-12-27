@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetDatasetResponseBody extends TeaModel {
+    /**
+     * <p>The dataset.</p>
+     */
     @NameInMap("Dataset")
     public Dataset dataset;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6D74B3A9-5AC0-49F9-914D-E01589D3****</p>
      */

@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class UpdateFigureClusterShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the dataset.<a href="~~478160~~"></a></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-dataset</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
 
     /**
+     * <p>The information about the cluster.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FigureCluster")
     public String figureClusterShrink;
 
     /**
+     * <p>The name of the project.<a href="~~478153~~"></a></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;

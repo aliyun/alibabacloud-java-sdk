@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachOSSBucketRequest extends TeaModel {
     /**
+     * <p>The OSS bucket that you want to unbind.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class DetectImageCodesResponseBody extends TeaModel {
     /**
+     * <p>The barcodes or QR codes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Codes")
     public java.util.List<Codes> codes;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6E93D6C9-5AC0-49F9-914D-E02678D3****</p>
      */

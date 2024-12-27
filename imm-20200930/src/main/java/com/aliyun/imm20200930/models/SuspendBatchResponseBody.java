@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SuspendBatchResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EC564A9A-BA5C-4499-A087-D9B9E76E*****</p>
      */

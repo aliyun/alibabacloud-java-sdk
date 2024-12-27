@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class AddStoryFilesResponseBody extends TeaModel {
+    /**
+     * <p>The objects that were added.</p>
+     */
     @NameInMap("Files")
     public java.util.List<AddStoryFilesResponseBodyFiles> files;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6E93D6C9-5AC0-49F9-914D-E02678D3****</p>
      */
@@ -37,6 +42,8 @@ public class AddStoryFilesResponseBody extends TeaModel {
 
     public static class AddStoryFilesResponseBodyFiles extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>ResourceNotFound</p>
          */
@@ -44,6 +51,8 @@ public class AddStoryFilesResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message that is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>The specified resource %s is not found.</p>
          */
@@ -51,6 +60,9 @@ public class AddStoryFilesResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The URI of the object.</p>
+         * <p>The OSS URI follows the <code>oss://{bucketname}/{objectname}</code> format, where <code>bucketname</code> is the name of the bucket in the same region as the current project and <code>objectname</code> is the path of the object with the extension included.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://test-bucket/test-object</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateFigureClusteringTaskResponseBody extends TeaModel {
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0ED-1Bz8z71k5TtsUejT4UJ16****</p>
      */
@@ -12,6 +14,8 @@ public class CreateFigureClusteringTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
      */
@@ -19,6 +23,8 @@ public class CreateFigureClusteringTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>formatconvert-00bec802-073a-4b61-ba3b-39bc****</p>
      */

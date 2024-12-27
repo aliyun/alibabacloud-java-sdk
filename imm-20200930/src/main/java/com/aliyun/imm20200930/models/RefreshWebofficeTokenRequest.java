@@ -13,6 +13,10 @@ public class RefreshWebofficeTokenRequest extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
+    /**
+     * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
+     * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 

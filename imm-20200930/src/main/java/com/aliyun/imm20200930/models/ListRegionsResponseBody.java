@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The regions.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<RegionType> regions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7F7D235C-76FF-4B65-800C-8238AE3F****</p>
      */

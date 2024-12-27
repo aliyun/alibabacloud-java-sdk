@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTriggerRequest extends TeaModel {
     /**
+     * <p>The ID of the trigger. You can obtain the ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/479912.html">CreateTrigger</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetTriggerRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

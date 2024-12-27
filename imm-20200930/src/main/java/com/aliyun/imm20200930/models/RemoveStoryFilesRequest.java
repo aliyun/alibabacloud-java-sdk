@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveStoryFilesRequest extends TeaModel {
     /**
+     * <p>The name of the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class RemoveStoryFilesRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The files that you want to delete.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Files")
     public java.util.List<RemoveStoryFilesRequestFiles> files;
 
     /**
+     * <p>The ID of the story.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,7 @@ public class RemoveStoryFilesRequest extends TeaModel {
     public String objectId;
 
     /**
+     * <p>The name of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,6 +80,9 @@ public class RemoveStoryFilesRequest extends TeaModel {
 
     public static class RemoveStoryFilesRequestFiles extends TeaModel {
         /**
+         * <p>The URI of the Object Storage Service (OSS) bucket where you store the files that you want to delete.</p>
+         * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the complete path to the files that have an extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://bucket1/object</p>
          */

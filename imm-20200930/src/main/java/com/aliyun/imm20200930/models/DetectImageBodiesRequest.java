@@ -4,10 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectImageBodiesRequest extends TeaModel {
+    /**
+     * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
+     * <p>The authorization chain. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
     /**
+     * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +22,8 @@ public class DetectImageBodiesRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The accuracy level of detecting and recognizing specific content in the image. Valid values: 0 to 1. Default value: 0.6. A higher sensitivity specifies that more image details can be detected.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.6</p>
      * 
@@ -27,6 +34,9 @@ public class DetectImageBodiesRequest extends TeaModel {
     public Float sensitivity;
 
     /**
+     * <p>The URI of the Object Storage Service (OSS) bucket in which the image file is stored.</p>
+     * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the complete path to the file that has an extension.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://test-bucket/test-object</p>
      */

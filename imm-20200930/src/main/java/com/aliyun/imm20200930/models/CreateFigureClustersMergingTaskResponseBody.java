@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateFigureClustersMergingTaskResponseBody extends TeaModel {
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0ED-1Bz8z71k5TtsUejT4UJ16E****</p>
      */
@@ -12,6 +14,8 @@ public class CreateFigureClustersMergingTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CA995EFD-083D-4F40-BE8A-BDF75FF****</p>
      */
@@ -19,6 +23,8 @@ public class CreateFigureClustersMergingTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>92376fbb-171f-4259-913f-705f7ee0****</p>
      */
