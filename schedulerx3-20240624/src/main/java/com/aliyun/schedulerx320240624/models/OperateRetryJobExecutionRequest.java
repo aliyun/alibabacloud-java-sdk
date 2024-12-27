@@ -23,18 +23,16 @@ public class OperateRetryJobExecutionRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1310630367761285120</p>
      */
     @NameInMap("JobExecutionId")
     public String jobExecutionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>74</p>
-     */
-    @NameInMap("JobId")
-    public Long jobId;
+    @NameInMap("TaskList")
+    public java.util.List<String> taskList;
 
     public static OperateRetryJobExecutionRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateRetryJobExecutionRequest self = new OperateRetryJobExecutionRequest();
@@ -65,12 +63,12 @@ public class OperateRetryJobExecutionRequest extends TeaModel {
         return this.jobExecutionId;
     }
 
-    public OperateRetryJobExecutionRequest setJobId(Long jobId) {
-        this.jobId = jobId;
+    public OperateRetryJobExecutionRequest setTaskList(java.util.List<String> taskList) {
+        this.taskList = taskList;
         return this;
     }
-    public Long getJobId() {
-        return this.jobId;
+    public java.util.List<String> getTaskList() {
+        return this.taskList;
     }
 
 }

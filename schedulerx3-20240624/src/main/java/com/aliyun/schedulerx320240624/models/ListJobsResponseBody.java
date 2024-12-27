@@ -4,6 +4,9 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class ListJobsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     /**
      * <ul>
      * <li></li>
@@ -12,9 +15,26 @@ public class ListJobsResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListJobsResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static ListJobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListJobsResponseBody self = new ListJobsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListJobsResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public ListJobsResponseBody setData(ListJobsResponseBodyData data) {
@@ -23,6 +43,30 @@ public class ListJobsResponseBody extends TeaModel {
     }
     public ListJobsResponseBodyData getData() {
         return this.data;
+    }
+
+    public ListJobsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListJobsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListJobsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class ListJobsResponseBodyDataRecords extends TeaModel {
@@ -65,11 +109,21 @@ public class ListJobsResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>3</p>
          */
+        @NameInMap("CurrentExecuteStatus")
+        public Integer currentExecuteStatus;
+
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("DataOffset")
         public Integer dataOffset;
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("ExecutorBlockStrategy")
+        public String executorBlockStrategy;
 
         /**
          * <strong>example:</strong>
@@ -91,6 +145,12 @@ public class ListJobsResponseBody extends TeaModel {
          */
         @NameInMap("JobType")
         public String jobType;
+
+        @NameInMap("LastExecuteEndTime")
+        public String lastExecuteEndTime;
+
+        @NameInMap("LastExecuteStatus")
+        public Integer lastExecuteStatus;
 
         /**
          * <strong>example:</strong>
@@ -234,6 +294,14 @@ public class ListJobsResponseBody extends TeaModel {
             return this.creator;
         }
 
+        public ListJobsResponseBodyDataRecords setCurrentExecuteStatus(Integer currentExecuteStatus) {
+            this.currentExecuteStatus = currentExecuteStatus;
+            return this;
+        }
+        public Integer getCurrentExecuteStatus() {
+            return this.currentExecuteStatus;
+        }
+
         public ListJobsResponseBodyDataRecords setDataOffset(Integer dataOffset) {
             this.dataOffset = dataOffset;
             return this;
@@ -248,6 +316,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListJobsResponseBodyDataRecords setExecutorBlockStrategy(String executorBlockStrategy) {
+            this.executorBlockStrategy = executorBlockStrategy;
+            return this;
+        }
+        public String getExecutorBlockStrategy() {
+            return this.executorBlockStrategy;
         }
 
         public ListJobsResponseBodyDataRecords setJobHandler(String jobHandler) {
@@ -272,6 +348,22 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public String getJobType() {
             return this.jobType;
+        }
+
+        public ListJobsResponseBodyDataRecords setLastExecuteEndTime(String lastExecuteEndTime) {
+            this.lastExecuteEndTime = lastExecuteEndTime;
+            return this;
+        }
+        public String getLastExecuteEndTime() {
+            return this.lastExecuteEndTime;
+        }
+
+        public ListJobsResponseBodyDataRecords setLastExecuteStatus(Integer lastExecuteStatus) {
+            this.lastExecuteStatus = lastExecuteStatus;
+            return this;
+        }
+        public Integer getLastExecuteStatus() {
+            return this.lastExecuteStatus;
         }
 
         public ListJobsResponseBodyDataRecords setMaxAttempt(Integer maxAttempt) {

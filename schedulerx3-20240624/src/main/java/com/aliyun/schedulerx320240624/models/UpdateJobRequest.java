@@ -45,6 +45,13 @@ public class UpdateJobRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("ExecutorBlockStrategy")
+    public Integer executorBlockStrategy;
+
+    /**
+     * <strong>example:</strong>
      * <p>testJobVoidHandler</p>
      */
     @NameInMap("JobHandler")
@@ -178,6 +185,14 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateJobRequest setExecutorBlockStrategy(Integer executorBlockStrategy) {
+        this.executorBlockStrategy = executorBlockStrategy;
+        return this;
+    }
+    public Integer getExecutorBlockStrategy() {
+        return this.executorBlockStrategy;
     }
 
     public UpdateJobRequest setJobHandler(String jobHandler) {

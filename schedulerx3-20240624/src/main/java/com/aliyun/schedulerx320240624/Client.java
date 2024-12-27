@@ -197,6 +197,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.executorBlockStrategy)) {
+            body.put("ExecutorBlockStrategy", request.executorBlockStrategy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jobHandler)) {
             body.put("JobHandler", request.jobHandler);
         }
@@ -1584,12 +1588,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>重跑失败的任务实例</p>
      * 
-     * @param request OperateRetryJobExecutionRequest
+     * @param tmpReq OperateRetryJobExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OperateRetryJobExecutionResponse
      */
-    public OperateRetryJobExecutionResponse operateRetryJobExecutionWithOptions(OperateRetryJobExecutionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public OperateRetryJobExecutionResponse operateRetryJobExecutionWithOptions(OperateRetryJobExecutionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        OperateRetryJobExecutionShrinkRequest request = new OperateRetryJobExecutionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskList)) {
+            request.taskListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskList, "TaskList", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             query.put("AppName", request.appName);
@@ -1603,8 +1613,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobExecutionId", request.jobExecutionId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
-            query.put("JobId", request.jobId);
+        if (!com.aliyun.teautil.Common.isUnset(request.taskListShrink)) {
+            query.put("TaskList", request.taskListShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1640,12 +1650,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>停止正在运行的任务实例</p>
      * 
-     * @param request OperateStopJobExecutionRequest
+     * @param tmpReq OperateStopJobExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OperateStopJobExecutionResponse
      */
-    public OperateStopJobExecutionResponse operateStopJobExecutionWithOptions(OperateStopJobExecutionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public OperateStopJobExecutionResponse operateStopJobExecutionWithOptions(OperateStopJobExecutionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        OperateStopJobExecutionShrinkRequest request = new OperateStopJobExecutionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskList)) {
+            request.taskListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskList, "TaskList", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             query.put("AppName", request.appName);
@@ -1659,8 +1675,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobExecutionId", request.jobExecutionId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
-            query.put("JobId", request.jobId);
+        if (!com.aliyun.teautil.Common.isUnset(request.taskListShrink)) {
+            query.put("TaskList", request.taskListShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1843,6 +1859,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executorBlockStrategy)) {
+            body.put("ExecutorBlockStrategy", request.executorBlockStrategy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobHandler)) {
