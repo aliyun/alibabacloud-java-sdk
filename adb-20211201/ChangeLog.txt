@@ -1,3 +1,31 @@
+2024-12-29 Version: 3.5.0
+- Support API CreateApsHiveJob.
+- Support API CreateLakeStorage.
+- Support API DeleteApsDatasoure.
+- Support API DeleteApsJob.
+- Support API DescribeAPSADBInstances.
+- Support API DescribeApsDatasource.
+- Support API DescribeApsDatasources.
+- Support API DescribeApsHiveWorkload.
+- Support API DescribeApsJobDetail.
+- Support API DescribeApsJobs.
+- Support API DescribeApsMigrationWorkloads.
+- Support API DescribeApsProgress.
+- Support API DescribeInclinedNodes.
+- Support API GetApsManagedDatabases.
+- Support API GetLakeStorage.
+- Support API ListApsLifecycleStrategy.
+- Support API ListApsOptimizationStrategy.
+- Support API ListApsOptimizationTasks.
+- Support API ListResultExportJobHistory.
+- Support API ModifyApsDatasoure.
+- Support API ModifyApsJob.
+- Support API ModifyApsWorkloadName.
+- Support API StartApsJob.
+- Support API SubmitResultExportJob.
+- Support API UpdateLakeStorage.
+
+
 2024-12-27 Version: 3.4.0
 - Support API ApplyAdviceById.
 - Support API BatchApplyAdviceByIdList.
