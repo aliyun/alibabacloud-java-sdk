@@ -59,7 +59,7 @@ public class DescribeCertsResponseBody extends TeaModel {
 
     public static class DescribeCertsResponseBodyCerts extends TeaModel {
         /**
-         * <p>The time when the certificate becomes valid.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>1976256736582</p>
@@ -68,7 +68,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         public Long afterDate;
 
         /**
-         * <p>The time when the certificate expires.</p>
+         * <p>The effective time.</p>
          * 
          * <strong>example:</strong>
          * <p>1976256836582</p>
@@ -77,10 +77,10 @@ public class DescribeCertsResponseBody extends TeaModel {
         public Long beforeDate;
 
         /**
-         * <p>The globally unique ID of the certificate. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</p>
+         * <p>The globally unique ID of the certificate. The value follows a &quot;\<Certificate ID>-ap-southeast-1&quot; format. For example, if the ID of the certificate is 123, the value of the CertIdentifier parameter is 123-ap-southeast-1.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234567-cn-hangzhou</p>
+         * <p>123-ap-southeast-1</p>
          */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
@@ -104,7 +104,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The domain name that is added to WAF.</p>
+         * <p>The domain that is supported by the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>

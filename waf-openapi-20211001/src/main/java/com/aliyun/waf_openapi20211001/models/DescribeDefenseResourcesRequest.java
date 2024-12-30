@@ -69,9 +69,6 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
-    /**
-     * <p>The tags of the resources that you want to query. You can specify up to 20 tags.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<DescribeDefenseResourcesRequestTag> tag;
 
@@ -138,8 +135,6 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
 
     public static class DescribeDefenseResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
-         * 
          * <strong>example:</strong>
          * <p>Tagkey1</p>
          */
@@ -147,8 +142,6 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
-         * 
          * <strong>example:</strong>
          * <p>TagValue1</p>
          */

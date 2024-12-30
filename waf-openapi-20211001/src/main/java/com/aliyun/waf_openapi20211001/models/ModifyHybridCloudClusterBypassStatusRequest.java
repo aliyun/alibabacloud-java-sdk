@@ -26,6 +26,12 @@ public class ModifyHybridCloudClusterBypassStatusRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceManagerResourceGroupId")
+    public String resourceManagerResourceGroupId;
+
     /**
      * <p>The status of manual bypass. Valid values:</p>
      * <ul>
@@ -59,6 +65,22 @@ public class ModifyHybridCloudClusterBypassStatusRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyHybridCloudClusterBypassStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyHybridCloudClusterBypassStatusRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+        this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+        return this;
+    }
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
     }
 
     public ModifyHybridCloudClusterBypassStatusRequest setRuleStatus(String ruleStatus) {

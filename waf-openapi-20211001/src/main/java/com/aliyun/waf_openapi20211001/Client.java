@@ -3815,8 +3815,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RuleId", request.ruleId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ruleType)) {
             query.put("RuleType", request.ruleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4221,6 +4229,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateIds)) {
+            query.put("TemplateIds", request.templateIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
@@ -8796,7 +8812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the default SSL and Transport Layer Security (TLS) settings.</p>
+     * <p>Modifies the default Secure Sockets Layer (SSL) and Transport Layer Security (TLS) settings.</p>
      * 
      * @param request ModifyDefaultHttpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8856,7 +8872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the default SSL and Transport Layer Security (TLS) settings.</p>
+     * <p>Modifies the default Secure Sockets Layer (SSL) and Transport Layer Security (TLS) settings.</p>
      * 
      * @param request ModifyDefaultHttpsRequest
      * @return ModifyDefaultHttpsResponse
@@ -9471,6 +9487,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ruleStatus)) {
@@ -10275,7 +10299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>SyncProductInstance is an asynchronous operation. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).</p>
+     * <p>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances with Web Application Firewall (WAF).</p>
      * 
      * @param request SyncProductInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10318,7 +10342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>SyncProductInstance is an asynchronous operation. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).</p>
+     * <p>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances with Web Application Firewall (WAF).</p>
      * 
      * @param request SyncProductInstanceRequest
      * @return SyncProductInstanceResponse
