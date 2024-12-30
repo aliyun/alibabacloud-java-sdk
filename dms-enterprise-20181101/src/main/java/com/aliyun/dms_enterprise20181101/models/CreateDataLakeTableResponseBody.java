@@ -3,13 +3,10 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class ListDataLakeCatalogResponseBody extends TeaModel {
-    @NameInMap("CataLogList")
-    public java.util.List<DLCatalog> cataLogList;
-
+public class CreateDataLakeTableResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>400</p>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -23,7 +20,7 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>E76DD2E7-EBAC-5724-B163-19AAC233F8F2</p>
+     * <p>7FAD400F-7A5C-4193-8F9A-39D86C4F0231</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,20 +32,15 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static ListDataLakeCatalogResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListDataLakeCatalogResponseBody self = new ListDataLakeCatalogResponseBody();
+    @NameInMap("Table")
+    public DLTable table;
+
+    public static CreateDataLakeTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateDataLakeTableResponseBody self = new CreateDataLakeTableResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListDataLakeCatalogResponseBody setCataLogList(java.util.List<DLCatalog> cataLogList) {
-        this.cataLogList = cataLogList;
-        return this;
-    }
-    public java.util.List<DLCatalog> getCataLogList() {
-        return this.cataLogList;
-    }
-
-    public ListDataLakeCatalogResponseBody setErrorCode(String errorCode) {
+    public CreateDataLakeTableResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -56,7 +48,7 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListDataLakeCatalogResponseBody setErrorMessage(String errorMessage) {
+    public CreateDataLakeTableResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -64,7 +56,7 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public ListDataLakeCatalogResponseBody setRequestId(String requestId) {
+    public CreateDataLakeTableResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -72,12 +64,20 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDataLakeCatalogResponseBody setSuccess(Boolean success) {
+    public CreateDataLakeTableResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public CreateDataLakeTableResponseBody setTable(DLTable table) {
+        this.table = table;
+        return this;
+    }
+    public DLTable getTable() {
+        return this.table;
     }
 
 }

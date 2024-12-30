@@ -3,13 +3,10 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class ListDataLakeCatalogResponseBody extends TeaModel {
-    @NameInMap("CataLogList")
-    public java.util.List<DLCatalog> cataLogList;
-
+public class DeleteDataLakeDatabaseResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>400</p>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -23,7 +20,7 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>E76DD2E7-EBAC-5724-B163-19AAC233F8F2</p>
+     * <p>C51420E3-144A-4A94-B473-8662FCF4AD10</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,20 +32,12 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static ListDataLakeCatalogResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListDataLakeCatalogResponseBody self = new ListDataLakeCatalogResponseBody();
+    public static DeleteDataLakeDatabaseResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteDataLakeDatabaseResponseBody self = new DeleteDataLakeDatabaseResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListDataLakeCatalogResponseBody setCataLogList(java.util.List<DLCatalog> cataLogList) {
-        this.cataLogList = cataLogList;
-        return this;
-    }
-    public java.util.List<DLCatalog> getCataLogList() {
-        return this.cataLogList;
-    }
-
-    public ListDataLakeCatalogResponseBody setErrorCode(String errorCode) {
+    public DeleteDataLakeDatabaseResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -56,7 +45,7 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListDataLakeCatalogResponseBody setErrorMessage(String errorMessage) {
+    public DeleteDataLakeDatabaseResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -64,7 +53,7 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public ListDataLakeCatalogResponseBody setRequestId(String requestId) {
+    public DeleteDataLakeDatabaseResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -72,7 +61,7 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDataLakeCatalogResponseBody setSuccess(Boolean success) {
+    public DeleteDataLakeDatabaseResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

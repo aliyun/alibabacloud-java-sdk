@@ -3,13 +3,10 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class ListDataLakeCatalogResponseBody extends TeaModel {
-    @NameInMap("CataLogList")
-    public java.util.List<DLCatalog> cataLogList;
-
+public class GetDataLakePartitionResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>400</p>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -21,9 +18,12 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("Partition")
+    public DLPartition partition;
+
     /**
      * <strong>example:</strong>
-     * <p>E76DD2E7-EBAC-5724-B163-19AAC233F8F2</p>
+     * <p>FE8EE2F1-4880-46BC-A704-5CF63EAF9A04</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,20 +35,12 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static ListDataLakeCatalogResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListDataLakeCatalogResponseBody self = new ListDataLakeCatalogResponseBody();
+    public static GetDataLakePartitionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetDataLakePartitionResponseBody self = new GetDataLakePartitionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListDataLakeCatalogResponseBody setCataLogList(java.util.List<DLCatalog> cataLogList) {
-        this.cataLogList = cataLogList;
-        return this;
-    }
-    public java.util.List<DLCatalog> getCataLogList() {
-        return this.cataLogList;
-    }
-
-    public ListDataLakeCatalogResponseBody setErrorCode(String errorCode) {
+    public GetDataLakePartitionResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -56,7 +48,7 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListDataLakeCatalogResponseBody setErrorMessage(String errorMessage) {
+    public GetDataLakePartitionResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -64,7 +56,15 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public ListDataLakeCatalogResponseBody setRequestId(String requestId) {
+    public GetDataLakePartitionResponseBody setPartition(DLPartition partition) {
+        this.partition = partition;
+        return this;
+    }
+    public DLPartition getPartition() {
+        return this.partition;
+    }
+
+    public GetDataLakePartitionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -72,7 +72,7 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDataLakeCatalogResponseBody setSuccess(Boolean success) {
+    public GetDataLakePartitionResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
