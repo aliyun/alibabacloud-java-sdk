@@ -1,3 +1,28 @@
+2024-12-30 Version: 3.6.0
+- Support API CreateApsCopyWorkload.
+- Support API CreateApsDatasoure.
+- Support API CreateApsSlsADBJob.
+- Support API DeleteLakeStorage.
+- Support API DescribeAbnormalPatternDetection.
+- Support API DescribeAppliedAdvices.
+- Support API DescribeAvailableAdvices.
+- Support API DescribeBadSqlDetection.
+- Support API DescribeControllerDetection.
+- Support API DescribeExecutorDetection.
+- Support API DescribeOversizeNonPartitionTableInfos.
+- Support API DescribeTableDetail.
+- Support API DescribeTablePartitionDiagnose.
+- Support API DescribeWorkerDetection.
+- Support API DisableAdviceService.
+- Support API DownloadInstanceCACertificate.
+- Support API EnableAdviceService.
+- Support API KillProcess.
+- Support API ListLakeStorages.
+- Support API ModifyApsSlsADBJob.
+- Support API ModifyClickhouseEngine.
+- Support API SuspendApsJob.
+
+
 2024-12-29 Version: 3.5.0
 - Support API CreateApsHiveJob.
 - Support API CreateLakeStorage.
