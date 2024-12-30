@@ -100,6 +100,9 @@ public class ListOperationPlansResponseBody extends TeaModel {
         @NameInMap("target_type")
         public String targetType;
 
+        @NameInMap("task_id")
+        public String taskId;
+
         /**
          * <p>The plan type. Valid values:</p>
          * <ul>
@@ -179,6 +182,14 @@ public class ListOperationPlansResponseBody extends TeaModel {
         }
         public String getTargetType() {
             return this.targetType;
+        }
+
+        public ListOperationPlansResponseBodyPlans setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
         public ListOperationPlansResponseBodyPlans setType(String type) {

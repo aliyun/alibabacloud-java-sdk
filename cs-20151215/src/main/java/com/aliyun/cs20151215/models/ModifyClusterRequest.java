@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterRequest extends TeaModel {
     /**
-     * <p>The network access control lists (ACLs) of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
+     * <p>The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
      */
     @NameInMap("access_control_list")
     public java.util.List<String> accessControlList;
@@ -48,16 +48,19 @@ public class ModifyClusterRequest extends TeaModel {
     @NameInMap("cluster_name")
     public String clusterName;
 
+    /**
+     * <p>The control plane configurations of an ACK dedicated cluster.</p>
+     */
     @NameInMap("control_plane_config")
     public ModifyClusterRequestControlPlaneConfig controlPlaneConfig;
 
     /**
-     * <p>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
+     * <p>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
      * <ul>
      * <li><code>true</code>: enables cluster deletion protection.</li>
      * <li><code>false</code>: disables cluster deletion protection.</li>
      * </ul>
-     * <p>Default value: <code>false</code></p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -84,7 +87,7 @@ public class ModifyClusterRequest extends TeaModel {
      * <li><code>true</code>: remaps the test domain name of the cluster.</li>
      * <li><code>false</code>: does not remap the test domain name of the cluster.</li>
      * </ul>
-     * <p>Default value: <code>false</code></p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -107,7 +110,7 @@ public class ModifyClusterRequest extends TeaModel {
      * <li><code>true</code>: enables instance deletion protection.</li>
      * <li><code>false</code>: disables instance deletion protection.</li>
      * </ul>
-     * <p>Default value: <code>false</code></p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -128,7 +131,7 @@ public class ModifyClusterRequest extends TeaModel {
     public ModifyClusterRequestOperationPolicy operationPolicy;
 
     /**
-     * <p>The cluster resource group ID.</p>
+     * <p>The resource group ID of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyvw3wjm****</p>
@@ -143,12 +146,12 @@ public class ModifyClusterRequest extends TeaModel {
     public ModifyClusterRequestSystemEventsLogging systemEventsLogging;
 
     /**
-     * <p>The vSwitches of the control planes. This parameter can be used to change the vSwitches of the control planes in an ACK managed cluster. Take note of the following items:</p>
+     * <p>The vSwitches of the control plane. This parameter can be used to change the vSwitches of the control plane in an ACK managed cluster. Take note of the following items:</p>
      * <ul>
-     * <li>This parameter overwrites the existing configuration. You must specify all vSwitches of the control planes.</li>
-     * <li>The control planes restart during the update process. Exercise caution when you perform this operation.</li>
-     * <li>Make sure that all security groups of the cluster, including the security groups of the control planes, all node pools, and container network, are allowed to access the CIDR blocks of the new vSwitches. This ensures that the nodes and containers can connect to the API server.</li>
-     * <li>If the new vSwitches of the control planes are configured with an access control list (ACL), ensure that the ACL allows communication between the new vSwitches and the CIDR blocks of cluster nodes and container networks.</li>
+     * <li>This parameter overwrites the existing configuration. You must specify all vSwitches of the control plane.</li>
+     * <li>The control plane restarts during the change process. Exercise caution when you perform this operation.</li>
+     * <li>Ensure that all security groups of the cluster, including the security groups of the control plane, all node pools, and container network, are allowed to access the CIDR blocks of the new vSwitches. This ensures that the nodes and containers can connect to the API server.</li>
+     * <li>If the new vSwitches of the control plane are configured with an ACL, ensure that the ACL allows communication between the new vSwitches and CIDR blocks such as those of the cluster nodes and the container network.</li>
      * </ul>
      */
     @NameInMap("vswitch_ids")
@@ -302,7 +305,7 @@ public class ModifyClusterRequest extends TeaModel {
         public String action;
 
         /**
-         * <p>The SANs.</p>
+         * <p>The list of SANs.</p>
          */
         @NameInMap("subject_alternative_names")
         public java.util.List<String> subjectAlternativeNames;
@@ -331,75 +334,271 @@ public class ModifyClusterRequest extends TeaModel {
     }
 
     public static class ModifyClusterRequestControlPlaneConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to enable auto-renewal for the instance. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables auto-renewal.</li>
+         * <li><code>false</code>: disables auto-renewal.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("auto_renew")
         public Boolean autoRenew;
 
+        /**
+         * <p>The auto-renewal period of the instance. Valid values: 1, 2, 3, 6, and 12.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
+        /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><code>PrePaid</code>: subscription.</li>
+         * <li><code>PostPaid</code>: pay-as-you-go.</li>
+         * </ul>
+         * <p>Default value: <code>PostPaid</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
+         */
         @NameInMap("charge_type")
         public String chargeType;
 
+        /**
+         * <p>Specifies whether to install the CloudMonitor agent. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: installs the CloudMonitor agent.</li>
+         * <li><code>false</code>: does not install the CloudMonitor agent.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("cloud_monitor_flags")
         public Boolean cloudMonitorFlags;
 
+        /**
+         * <p>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+         * <ul>
+         * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</li>
+         * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
+         * </ul>
+         * <p>Default value: <code>none</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("cpu_policy")
         public String cpuPolicy;
 
+        /**
+         * <p>The ID of the deployment set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp10b35imuam5amw****</p>
+         */
         @NameInMap("deploymentset_id")
         public String deploymentsetId;
 
+        /**
+         * <p>The custom image ID. You must configure this parameter if you use a custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_3_x64_20G_alibase_20240819.vhd</p>
+         */
         @NameInMap("image_id")
         public String imageId;
 
+        /**
+         * <p>The type of the OS image. Valid values:</p>
+         * <ul>
+         * <li><code>AliyunLinux3</code>: Alibaba Cloud Linux 3.</li>
+         * <li><code>Custom</code>: the custom image.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunLinux3</p>
+         */
         @NameInMap("image_type")
         public String imageType;
 
+        /**
+         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
+         */
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
+        /**
+         * <p>The name of the key pair. You must configure either this parameter or the <code>login_password</code> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack</p>
+         */
         @NameInMap("key_pair")
         public String keyPair;
 
+        /**
+         * <p>The password for SSH logon. You must configure either this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. To log on with a password, you must specify this parameter during the scale-out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ack@2000.</p>
+         */
         @NameInMap("login_password")
         public String loginPassword;
 
+        /**
+         * <p>The node port range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000-32767</p>
+         */
         @NameInMap("node_port_range")
         public String nodePortRange;
 
+        /**
+         * <p>The subscription duration of the instance. This parameter takes effect and is required only when <code>charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>If <code>PeriodUnit=Month</code> is specified, the valid values are 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("period")
         public Long period;
 
+        /**
+         * <p>The billing cycle of the instance. This parameter takes effect only when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>Valid value: <code>Month</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("period_unit")
         public String periodUnit;
 
+        /**
+         * <p>The type of the container runtime. Valid values:</p>
+         * <ul>
+         * <li><code>containerd</code>: supports all Kubernetes versions. We recommend that you set the parameter to this value.</li>
+         * </ul>
+         * <p>Default value: containerd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>containerd</p>
+         */
         @NameInMap("runtime")
         public String runtime;
 
+        /**
+         * <p>Specifies whether to enable Alibaba Cloud Linux Security Hardening. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables Alibaba Cloud Linux Security Hardening.</li>
+         * <li><code>false</code>: disables Alibaba Cloud Linux Security Hardening.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("security_hardening_os")
         public Boolean securityHardeningOs;
 
+        /**
+         * <p>The number of control plane nodes. If you want to scale out the control plane in an ACK dedicated cluster, set this parameter to the desired number of nodes. This parameter must be greater than the current number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("size")
         public Long size;
 
+        /**
+         * <p>Specifies whether to enable Multi-Level Protection Scheme (MLPS) security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables MLPS security hardening.</li>
+         * <li><code>false</code>: disables MLPS security hardening.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("soc_enabled")
         public Boolean socEnabled;
 
+        /**
+         * <p>Specifies whether to enable the burst feature for the system disk. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the burst feature.</li>
+         * <li><code>false</code>: disables the burst feature.</li>
+         * </ul>
+         * <p>This parameter is effective only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
 
+        /**
+         * <p>The type of the node system disk. Valid values:</p>
+         * <ul>
+         * <li><code>cloud</code>: basic disk.</li>
+         * <li><code>cloud_efficiency</code>: ultra disk.</li>
+         * <li><code>cloud_ssd</code>: standard SSD.</li>
+         * <li><code>cloud_essd</code>: enhanced SSD (ESSD).</li>
+         * <li><code>cloud_auto</code>: ESSD AutoPL disk.</li>
+         * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
+        /**
+         * <p>The performance level (PL) of the system disk that you want to use for the node. This parameter is effective only for ESSDs. This parameter is related to the disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
 
+        /**
+         * <p>The preset read/write input/output operations per second (IOPS) of the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS} Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <p>This parameter is effective only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("system_disk_provisioned_iops")
         public Long systemDiskProvisionedIops;
 
+        /**
+         * <p>The type of the system disk. Valid values: [40,500]. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
 
+        /**
+         * <p>The ID of the automatic snapshot policy applied to the node system disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-2zej1nogjvovnz4z****</p>
+         */
         @NameInMap("system_disk_snapshot_policy_id")
         public String systemDiskSnapshotPolicyId;
 
@@ -604,10 +803,10 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestOperationPolicyClusterAutoUpgrade extends TeaModel {
         /**
-         * <p>The automatic update frequency. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</p>
+         * <p>The frequency of automatic cluster updates. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>patch: specifies the latest patch version.</li>
+         * <li>patch: the latest patch version.</li>
          * <li>stables: the second-latest minor version.</li>
          * <li>rapid: the latest minor version.</li>
          * </ul>
