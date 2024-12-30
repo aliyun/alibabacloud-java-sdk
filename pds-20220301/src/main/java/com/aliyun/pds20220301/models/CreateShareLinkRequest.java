@@ -80,6 +80,9 @@ public class CreateShareLinkRequest extends TeaModel {
     @NameInMap("file_id_list")
     public java.util.List<String> fileIdList;
 
+    @NameInMap("office_editable")
+    public Boolean officeEditable;
+
     /**
      * <p>The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.</p>
      * 
@@ -88,6 +91,9 @@ public class CreateShareLinkRequest extends TeaModel {
      */
     @NameInMap("preview_limit")
     public Long previewLimit;
+
+    @NameInMap("require_login")
+    public Boolean requireLogin;
 
     /**
      * <p>The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.</p>
@@ -216,12 +222,28 @@ public class CreateShareLinkRequest extends TeaModel {
         return this.fileIdList;
     }
 
+    public CreateShareLinkRequest setOfficeEditable(Boolean officeEditable) {
+        this.officeEditable = officeEditable;
+        return this;
+    }
+    public Boolean getOfficeEditable() {
+        return this.officeEditable;
+    }
+
     public CreateShareLinkRequest setPreviewLimit(Long previewLimit) {
         this.previewLimit = previewLimit;
         return this;
     }
     public Long getPreviewLimit() {
         return this.previewLimit;
+    }
+
+    public CreateShareLinkRequest setRequireLogin(Boolean requireLogin) {
+        this.requireLogin = requireLogin;
+        return this;
+    }
+    public Boolean getRequireLogin() {
+        return this.requireLogin;
     }
 
     public CreateShareLinkRequest setSaveLimit(Long saveLimit) {

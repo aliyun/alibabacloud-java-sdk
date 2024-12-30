@@ -5,26 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateDomainRequest extends TeaModel {
     /**
-     * <p>The description of the domain.</p>
+     * <p>domain 描述</p>
      * 
      * <strong>example:</strong>
-     * <p>domain for test</p>
+     * <p>你好企业网盘开发环境</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The name of the domain.</p>
+     * <p>If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_domain</p>
+     * <p>你好企业网盘</p>
      */
     @NameInMap("domain_name")
     public String domainName;
 
     /**
-     * <p>Specifies whether to enable the default drive feature. A value of true specifies that all users are assigned a drive by default on the first logon. Default value: false.</p>
+     * <p>https</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +33,7 @@ public class CreateDomainRequest extends TeaModel {
     public Boolean initDriveEnable;
 
     /**
-     * <p>The size of the default drive. Unit: bytes. You must specify init_drive_size if you set init_drive_enable to true. Default value: 0. A value of 0 specifies that the size of the default drive is 0 bytes and you cannot upload files to the drive. To initialize the default drive, set init_drive_size to 0. A value of -1 specifies that the size is unlimited.</p>
+     * <p>http</p>
      * 
      * <strong>example:</strong>
      * <p>1073741824</p>
@@ -42,7 +42,7 @@ public class CreateDomainRequest extends TeaModel {
     public Long initDriveSize;
 
     /**
-     * <p>The ID of the parent domain. If you want to create a child domain, specify parent_domain_id. In most cases, you do not need to create a child domain. If you want to perform secondary operations based on Drive and Photo Service, contact the customer service.</p>
+     * <p>Create domain.</p>
      * 
      * <strong>example:</strong>
      * <p>bj1</p>
@@ -51,7 +51,7 @@ public class CreateDomainRequest extends TeaModel {
     public String parentDomainId;
 
     /**
-     * <p>The total storage quota for all drives in the domain. A value of 0 specifies that the quota is unlimited.</p>
+     * <p>The ID of the parent domain. If you want to create a child domain, specify parent_domain_id. In most cases, you do not need to create a child domain. If you want to perform secondary operations based on Drive and Photo Service, contact the customer service.</p>
      * 
      * <strong>example:</strong>
      * <p>1099511627776</p>
@@ -60,7 +60,7 @@ public class CreateDomainRequest extends TeaModel {
     public Long sizeQuota;
 
     /**
-     * <p>The largest number of users that can be created in the domain. A value of 0 specifies that the number is unlimited.</p>
+     * <p>The information about the domain.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

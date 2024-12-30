@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class ListMyGroupDriveRequest extends TeaModel {
+    @NameInMap("drive_name")
+    public String driveName;
+
     /**
      * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
      * 
@@ -25,6 +28,14 @@ public class ListMyGroupDriveRequest extends TeaModel {
     public static ListMyGroupDriveRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMyGroupDriveRequest self = new ListMyGroupDriveRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListMyGroupDriveRequest setDriveName(String driveName) {
+        this.driveName = driveName;
+        return this;
+    }
+    public String getDriveName() {
+        return this.driveName;
     }
 
     public ListMyGroupDriveRequest setLimit(Integer limit) {
