@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class AddUserRequest extends TeaModel {
     @NameInMap("AccountId")
-    @Deprecated
     public String accountId;
 
     /**
