@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UnLinkAccountRequest extends TeaModel {
     /**
+     * <p>Additional information for the unique account identifier. For example, when the account is a phone number, this field should be filled with the area code of the phone, such as 86 for Mainland China. If not provided, it defaults to 86.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,7 @@ public class UnLinkAccountRequest extends TeaModel {
     public String extra;
 
     /**
+     * <p>Unique identifier of the account, such as a phone number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,14 @@ public class UnLinkAccountRequest extends TeaModel {
     public String identity;
 
     /**
+     * <p>Account type</p>
+     * <p>mobile: Phone number</p>
+     * <p>email: Email address</p>
+     * <p>ding: DingTalk</p>
+     * <p>ram: Alibaba Cloud RAM User</p>
+     * <p>wechat: WeCom</p>
+     * <p>ldap: LDAP account</p>
+     * <p>custom: Custom account</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +41,7 @@ public class UnLinkAccountRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>User identifier</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -64,6 +64,9 @@ public class UpdateShareLinkRequest extends TeaModel {
     @NameInMap("expiration")
     public String expiration;
 
+    @NameInMap("office_editable")
+    public Boolean officeEditable;
+
     /**
      * <p>The number of times that the shared files are previewed. The value must be greater than or equal to 0.</p>
      * 
@@ -215,6 +218,14 @@ public class UpdateShareLinkRequest extends TeaModel {
     }
     public String getExpiration() {
         return this.expiration;
+    }
+
+    public UpdateShareLinkRequest setOfficeEditable(Boolean officeEditable) {
+        this.officeEditable = officeEditable;
+        return this;
+    }
+    public Boolean getOfficeEditable() {
+        return this.officeEditable;
     }
 
     public UpdateShareLinkRequest setPreviewCount(Long previewCount) {

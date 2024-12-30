@@ -678,10 +678,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.</p>
+     * <p>The description of the domain.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create domain.</p>
+     * <p>test_domain</p>
      * 
      * @param request CreateDomainRequest
      * @param headers map
@@ -739,10 +739,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.</p>
+     * <p>The description of the domain.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create domain.</p>
+     * <p>test_domain</p>
      * 
      * @param request CreateDomainRequest
      * @return CreateDomainResponse
@@ -1221,8 +1221,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("file_id_list", request.fileIdList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.officeEditable)) {
+            body.put("office_editable", request.officeEditable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.previewLimit)) {
             body.put("preview_limit", request.previewLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requireLogin)) {
+            body.put("require_login", request.requireLogin);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.saveLimit)) {
@@ -4456,6 +4464,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListMyGroupDriveResponse listMyGroupDriveWithOptions(ListMyGroupDriveRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.driveName)) {
+            body.put("drive_name", request.driveName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             body.put("limit", request.limit);
         }
@@ -6108,7 +6120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消账号绑定</p>
+     * <p>Unlink Account Binding</p>
      * 
      * @param request UnLinkAccountRequest
      * @param headers map
@@ -6154,7 +6166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消账号绑定</p>
+     * <p>Unlink Account Binding</p>
      * 
      * @param request UnLinkAccountRequest
      * @return UnLinkAccountResponse
@@ -6668,6 +6680,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.expiration)) {
             body.put("expiration", request.expiration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeEditable)) {
+            body.put("office_editable", request.officeEditable);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.previewCount)) {
