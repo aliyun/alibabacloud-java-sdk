@@ -3,13 +3,10 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class ListDataLakeDatabaseResponseBody extends TeaModel {
-    @NameInMap("DatabaseList")
-    public java.util.List<DLDatabase> databaseList;
-
+public class ListDataLakePartitionNameResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>400</p>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -21,15 +18,26 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NesLoKLEdIZrKhDT7I2gS****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("PartitionNameList")
+    public java.util.List<String> partitionNameList;
+
     /**
      * <strong>example:</strong>
-     * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</p>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -41,20 +49,12 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static ListDataLakeDatabaseResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListDataLakeDatabaseResponseBody self = new ListDataLakeDatabaseResponseBody();
+    public static ListDataLakePartitionNameResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListDataLakePartitionNameResponseBody self = new ListDataLakePartitionNameResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListDataLakeDatabaseResponseBody setDatabaseList(java.util.List<DLDatabase> databaseList) {
-        this.databaseList = databaseList;
-        return this;
-    }
-    public java.util.List<DLDatabase> getDatabaseList() {
-        return this.databaseList;
-    }
-
-    public ListDataLakeDatabaseResponseBody setErrorCode(String errorCode) {
+    public ListDataLakePartitionNameResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -62,7 +62,7 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListDataLakeDatabaseResponseBody setErrorMessage(String errorMessage) {
+    public ListDataLakePartitionNameResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -70,7 +70,7 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public ListDataLakeDatabaseResponseBody setMaxResults(Integer maxResults) {
+    public ListDataLakePartitionNameResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -78,7 +78,7 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         return this.maxResults;
     }
 
-    public ListDataLakeDatabaseResponseBody setNextToken(String nextToken) {
+    public ListDataLakePartitionNameResponseBody setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -86,7 +86,15 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public ListDataLakeDatabaseResponseBody setRequestId(String requestId) {
+    public ListDataLakePartitionNameResponseBody setPartitionNameList(java.util.List<String> partitionNameList) {
+        this.partitionNameList = partitionNameList;
+        return this;
+    }
+    public java.util.List<String> getPartitionNameList() {
+        return this.partitionNameList;
+    }
+
+    public ListDataLakePartitionNameResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -94,7 +102,7 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDataLakeDatabaseResponseBody setSuccess(Boolean success) {
+    public ListDataLakePartitionNameResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

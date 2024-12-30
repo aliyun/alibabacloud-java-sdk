@@ -17,7 +17,7 @@ public class DLSerdeInfo extends TeaModel {
     public java.util.Map<String, ?> parameters;
 
     @NameInMap("SerdeType")
-    public String serdeType;
+    public Integer serdeType;
 
     @NameInMap("SerializationLib")
     public String serializationLib;
@@ -62,11 +62,11 @@ public class DLSerdeInfo extends TeaModel {
         return this.parameters;
     }
 
-    public DLSerdeInfo setSerdeType(String serdeType) {
+    public DLSerdeInfo setSerdeType(Integer serdeType) {
         this.serdeType = serdeType;
         return this;
     }
-    public String getSerdeType() {
+    public Integer getSerdeType() {
         return this.serdeType;
     }
 

@@ -33,7 +33,7 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
     public Boolean success;
 
     @NameInMap("TablebaseInfoList")
-    public ListDataLakeTablebaseInfoResponseBodyTablebaseInfoList tablebaseInfoList;
+    public java.util.List<DLTablebaseInfo> tablebaseInfoList;
 
     /**
      * <strong>example:</strong>
@@ -79,11 +79,11 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListDataLakeTablebaseInfoResponseBody setTablebaseInfoList(ListDataLakeTablebaseInfoResponseBodyTablebaseInfoList tablebaseInfoList) {
+    public ListDataLakeTablebaseInfoResponseBody setTablebaseInfoList(java.util.List<DLTablebaseInfo> tablebaseInfoList) {
         this.tablebaseInfoList = tablebaseInfoList;
         return this;
     }
-    public ListDataLakeTablebaseInfoResponseBodyTablebaseInfoList getTablebaseInfoList() {
+    public java.util.List<DLTablebaseInfo> getTablebaseInfoList() {
         return this.tablebaseInfoList;
     }
 
@@ -93,25 +93,6 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
     }
     public String getTotalCount() {
         return this.totalCount;
-    }
-
-    public static class ListDataLakeTablebaseInfoResponseBodyTablebaseInfoList extends TeaModel {
-        @NameInMap("TablebaseInfo")
-        public java.util.List<DLTablebaseInfo> tablebaseInfo;
-
-        public static ListDataLakeTablebaseInfoResponseBodyTablebaseInfoList build(java.util.Map<String, ?> map) throws Exception {
-            ListDataLakeTablebaseInfoResponseBodyTablebaseInfoList self = new ListDataLakeTablebaseInfoResponseBodyTablebaseInfoList();
-            return TeaModel.build(map, self);
-        }
-
-        public ListDataLakeTablebaseInfoResponseBodyTablebaseInfoList setTablebaseInfo(java.util.List<DLTablebaseInfo> tablebaseInfo) {
-            this.tablebaseInfo = tablebaseInfo;
-            return this;
-        }
-        public java.util.List<DLTablebaseInfo> getTablebaseInfo() {
-            return this.tablebaseInfo;
-        }
-
     }
 
 }
