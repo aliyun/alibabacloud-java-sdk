@@ -556,6 +556,9 @@ public class RunStepByStepWritingRequest extends TeaModel {
         @NameInMap("Step")
         public String step;
 
+        @NameInMap("SummaryReturnType")
+        public String summaryReturnType;
+
         @NameInMap("Tags")
         public java.util.List<RunStepByStepWritingRequestWritingConfigTags> tags;
 
@@ -609,6 +612,14 @@ public class RunStepByStepWritingRequest extends TeaModel {
         }
         public String getStep() {
             return this.step;
+        }
+
+        public RunStepByStepWritingRequestWritingConfig setSummaryReturnType(String summaryReturnType) {
+            this.summaryReturnType = summaryReturnType;
+            return this;
+        }
+        public String getSummaryReturnType() {
+            return this.summaryReturnType;
         }
 
         public RunStepByStepWritingRequestWritingConfig setTags(java.util.List<RunStepByStepWritingRequestWritingConfigTags> tags) {
