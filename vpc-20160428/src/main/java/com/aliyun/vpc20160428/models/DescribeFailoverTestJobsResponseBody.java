@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeFailoverTestJobsResponseBody extends TeaModel {
     /**
+     * <p>The number of entries on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -27,6 +29,12 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is used to retrieve a new page of results.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -34,6 +42,8 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -41,6 +51,8 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -168,6 +180,8 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The beginning of the fault drill task. The time must be in UTC. Specify the time in the ISO 8601 standard in <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-11-21T14:00:00Z</p>
          */
@@ -191,6 +205,8 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The end of the fault drill task. The time must be in UTC. Specify the time in the ISO 8601 standard in <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-11-21T15:00:00Z</p>
          */

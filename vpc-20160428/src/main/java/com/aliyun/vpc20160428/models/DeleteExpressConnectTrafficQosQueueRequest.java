@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteExpressConnectTrafficQosQueueRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
      */
@@ -18,6 +24,7 @@ public class DeleteExpressConnectTrafficQosQueueRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the QoS policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +34,7 @@ public class DeleteExpressConnectTrafficQosQueueRequest extends TeaModel {
     public String qosId;
 
     /**
+     * <p>The ID of the QoS queue.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +44,8 @@ public class DeleteExpressConnectTrafficQosQueueRequest extends TeaModel {
     public String queueId;
 
     /**
+     * <p>The region ID of the QoS policy.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

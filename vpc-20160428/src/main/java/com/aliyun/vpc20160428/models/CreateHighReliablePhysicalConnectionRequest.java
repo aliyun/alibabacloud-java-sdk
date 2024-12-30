@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     /**
+     * <p>The language to display the results. Valid values:</p>
+     * <ul>
+     * <li><strong>zh-CN</strong> (default): Chinese</li>
+     * <li><strong>en-US</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -12,22 +18,38 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The access points.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApList")
     public java.util.List<CreateHighReliablePhysicalConnectionRequestApList> apList;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The advanced features of the device.</p>
+     */
     @NameInMap("DeviceAdvancedCapacity")
     public java.util.List<String> deviceAdvancedCapacity;
 
     /**
+     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -35,6 +57,13 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     public String dryRun;
 
     /**
+     * <p>The high availability mode. Valid values:</p>
+     * <ul>
+     * <li><strong>MultiApMultiDevice</strong> : This mode supports two access points and two devices, and provides the maximum disaster recovery capability.</li>
+     * <li><strong>MultiApSingleDevice</strong> : This mode supports two access points and one device, and provides robust disaster recovery capability.</li>
+     * <li><strong>SingleApMultiDevice</strong> : This mode supports one access point and two devices, and is recommended for non-critical business test and development.</li>
+     * <li><strong>SingleApMultiConnection</strong> : This mode supports one access point, one device, and multiple physical ports. Only users in the whitelist can use this mode. To use this mode, contact your account manager.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +79,19 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The port type. Valid values:</p>
+     * <ul>
+     * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
+     * <li><strong>1000Base-T</strong>: 1,000 Mbit/s copper Ethernet port</li>
+     * <li><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 km)</li>
+     * <li><strong>10GBase-T</strong>: 10,000 Mbit/s copper Ethernet port</li>
+     * <li><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 km)</li>
+     * <li><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port</li>
+     * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
+     * </ul>
+     * <blockquote>
+     * <p> To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +101,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     public String portType;
 
     /**
+     * <p>The region ID of the Express Connect circuit.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -66,6 +111,8 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4p****</p>
      */
@@ -78,6 +125,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateHighReliablePhysicalConnectionRequestTag> tag;
 
@@ -200,6 +250,10 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
 
     public static class CreateHighReliablePhysicalConnectionRequestApList extends TeaModel {
         /**
+         * <p>The ID of the access point that is associated with the Express Connect circuit.</p>
+         * <blockquote>
+         * <p>Two access points must be specified when <strong>HighReliableType</strong> is set to <strong>MultiApMultiDevice</strong> or <strong>MultiApSingleDevice</strong>. One access point must be specified when <strong>HighReliableType</strong> is set to <strong>SingleApMultiDevice</strong> or <strong>SingleApMultiConnection</strong>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,6 +263,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
         public String accessPointId;
 
         /**
+         * <p>The maximum bandwidth of the hosted connection. Unit: Mbit/s.</p>
+         * <p>Valid values: 50, 100, 200, 300, 400, 500, 1000, 2000, 4000, 5000, 8000, and 10000.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -216,6 +273,8 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
         public Long bandwidth;
 
         /**
+         * <p>The circuit code of the Express Connect circuit, which is provided by the connectivity provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>longtel001</p>
          */
@@ -223,6 +282,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
         public String circuitCode;
 
         /**
+         * <p>The description of the Express Connect circuit.</p>
+         * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>description</p>
          */
@@ -230,6 +292,15 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+         * <ul>
+         * <li><strong>CT</strong>: China Telecom.</li>
+         * <li><strong>CU</strong>: China Unicom.</li>
+         * <li><strong>CM</strong>: China Mobile.</li>
+         * <li><strong>CO</strong>: other connectivity providers in the Chinese mainland.</li>
+         * <li><strong>Equinix</strong>: Equinix.</li>
+         * <li><strong>Other</strong>: other connectivity providers outside the Chinese mainland.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,16 +310,27 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
         public String lineOperator;
 
         /**
+         * <p>The name of the Express Connect circuit.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter but cannot start with <code>http://</code> or<code> https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The geographical location of the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ram-test</p>
+         */
         @NameInMap("PeerLocation")
         public String peerLocation;
 
         /**
+         * <p>The number of ports. Valid values: 2 to 16. This parameter is required only when <strong>HighReliableType</strong> is set to <strong>SingleApMultiConnection</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -256,6 +338,8 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
         public Integer portNum;
 
         /**
+         * <p>The region ID of the Express Connect circuit.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,6 +349,8 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The type of the Express Connect circuit. Default value: <strong>VPC</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */
@@ -360,6 +446,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
 
     public static class CreateHighReliablePhysicalConnectionRequestTag extends TeaModel {
         /**
+         * <p>The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
          */
@@ -367,6 +456,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value cannot be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>
          */

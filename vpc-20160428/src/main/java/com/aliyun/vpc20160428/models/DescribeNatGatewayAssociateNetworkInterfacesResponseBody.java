@@ -7,6 +7,9 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     @NameInMap("AssociateNetworkInterfaces")
     public DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfaces associateNetworkInterfaces;
 
+    @NameInMap("Count")
+    public Integer count;
+
     /**
      * <strong>example:</strong>
      * <p>20</p>
@@ -53,6 +56,14 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     }
     public DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfaces getAssociateNetworkInterfaces() {
         return this.associateNetworkInterfaces;
+    }
+
+    public DescribeNatGatewayAssociateNetworkInterfacesResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
     }
 
     public DescribeNatGatewayAssociateNetworkInterfacesResponseBody setMaxResults(Integer maxResults) {
