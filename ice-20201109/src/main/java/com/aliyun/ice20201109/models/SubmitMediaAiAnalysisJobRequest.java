@@ -22,6 +22,9 @@ public class SubmitMediaAiAnalysisJobRequest extends TeaModel {
     @NameInMap("Input")
     public String input;
 
+    @NameInMap("UserData")
+    public String userData;
+
     public static SubmitMediaAiAnalysisJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitMediaAiAnalysisJobRequest self = new SubmitMediaAiAnalysisJobRequest();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class SubmitMediaAiAnalysisJobRequest extends TeaModel {
     }
     public String getInput() {
         return this.input;
+    }
+
+    public SubmitMediaAiAnalysisJobRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
 }
