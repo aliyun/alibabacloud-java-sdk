@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceUserRoleRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>25</p>
      */
     @NameInMap("RoleId")
     public Long roleId;
+
+    @NameInMap("RoleIds")
+    public String roleIds;
 
     /**
      * <p>This parameter is required.</p>
@@ -42,6 +43,14 @@ public class UpdateWorkspaceUserRoleRequest extends TeaModel {
     }
     public Long getRoleId() {
         return this.roleId;
+    }
+
+    public UpdateWorkspaceUserRoleRequest setRoleIds(String roleIds) {
+        this.roleIds = roleIds;
+        return this;
+    }
+    public String getRoleIds() {
+        return this.roleIds;
     }
 
     public UpdateWorkspaceUserRoleRequest setUserId(String userId) {

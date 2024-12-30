@@ -99,6 +99,9 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         @NameInMap("DataType")
         public String dataType;
 
+        @NameInMap("Expression")
+        public String expression;
+
         /**
          * <p>The type of the field. Valid values:</p>
          * <ul>
@@ -175,6 +178,14 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             return this.dataType;
         }
 
+        public QueryWorksBloodRelationshipResponseBodyResultQueryParams setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
         public QueryWorksBloodRelationshipResponseBodyResultQueryParams setIsMeasure(Boolean isMeasure) {
             this.isMeasure = isMeasure;
             return this;
@@ -229,6 +240,9 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         @NameInMap("ComponentType")
         public Integer componentType;
 
+        @NameInMap("ComponentTypeCnName")
+        public String componentTypeCnName;
+
         /**
          * <p>The type of the image component.</p>
          * 
@@ -280,6 +294,14 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         }
         public Integer getComponentType() {
             return this.componentType;
+        }
+
+        public QueryWorksBloodRelationshipResponseBodyResult setComponentTypeCnName(String componentTypeCnName) {
+            this.componentTypeCnName = componentTypeCnName;
+            return this;
+        }
+        public String getComponentTypeCnName() {
+            return this.componentTypeCnName;
         }
 
         public QueryWorksBloodRelationshipResponseBodyResult setComponentTypeName(String componentTypeName) {

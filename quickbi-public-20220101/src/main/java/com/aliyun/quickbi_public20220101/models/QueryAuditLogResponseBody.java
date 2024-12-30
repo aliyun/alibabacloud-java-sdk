@@ -79,6 +79,9 @@ public class QueryAuditLogResponseBody extends TeaModel {
         @NameInMap("OperatorType")
         public String operatorType;
 
+        @NameInMap("TargetId")
+        public String targetId;
+
         @NameInMap("TargetName")
         public String targetName;
 
@@ -131,6 +134,14 @@ public class QueryAuditLogResponseBody extends TeaModel {
         }
         public String getOperatorType() {
             return this.operatorType;
+        }
+
+        public QueryAuditLogResponseBodyResult setTargetId(String targetId) {
+            this.targetId = targetId;
+            return this;
+        }
+        public String getTargetId() {
+            return this.targetId;
         }
 
         public QueryAuditLogResponseBodyResult setTargetName(String targetName) {
