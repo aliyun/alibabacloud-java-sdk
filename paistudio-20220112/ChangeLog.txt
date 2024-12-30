@@ -1,3 +1,7 @@
+2024-12-30 Version: 2.1.0
+- Support API GetSpotPriceHistory.
+
+
 2024-12-16 Version: 2.0.1
 - Update API ListTrainingJobs: update response param.
 

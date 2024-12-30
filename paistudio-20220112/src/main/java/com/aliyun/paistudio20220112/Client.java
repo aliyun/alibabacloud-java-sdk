@@ -1294,6 +1294,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取抢占式实例历史价格</p>
+     * 
+     * @param request GetSpotPriceHistoryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSpotPriceHistoryResponse
+     */
+    public GetSpotPriceHistoryResponse getSpotPriceHistoryWithOptions(String InstanceType, GetSpotPriceHistoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spotDuration)) {
+            query.put("SpotDuration", request.spotDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSpotPriceHistory"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/spots/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceType) + "/pricehistory"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSpotPriceHistoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取抢占式实例历史价格</p>
+     * 
+     * @param request GetSpotPriceHistoryRequest
+     * @return GetSpotPriceHistoryResponse
+     */
+    public GetSpotPriceHistoryResponse getSpotPriceHistory(String InstanceType, GetSpotPriceHistoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSpotPriceHistoryWithOptions(InstanceType, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>调用GetToken获取临时鉴权信息</p>
      * 
      * @param request GetTokenRequest

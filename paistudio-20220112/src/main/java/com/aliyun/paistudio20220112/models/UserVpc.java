@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UserVpc extends TeaModel {
+    @NameInMap("DefaultForwardInfo")
+    public ForwardInfo defaultForwardInfo;
+
     @NameInMap("DefaultRoute")
     public String defaultRoute;
 
@@ -25,6 +28,14 @@ public class UserVpc extends TeaModel {
     public static UserVpc build(java.util.Map<String, ?> map) throws Exception {
         UserVpc self = new UserVpc();
         return TeaModel.build(map, self);
+    }
+
+    public UserVpc setDefaultForwardInfo(ForwardInfo defaultForwardInfo) {
+        this.defaultForwardInfo = defaultForwardInfo;
+        return this;
+    }
+    public ForwardInfo getDefaultForwardInfo() {
+        return this.defaultForwardInfo;
     }
 
     public UserVpc setDefaultRoute(String defaultRoute) {
