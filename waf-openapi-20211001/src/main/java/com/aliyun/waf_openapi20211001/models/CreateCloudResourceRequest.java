@@ -62,6 +62,9 @@ public class CreateCloudResourceRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    /**
+     * <p>The tags to add to the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateCloudResourceRequestTag> tag;
 
@@ -604,9 +607,21 @@ public class CreateCloudResourceRequest extends TeaModel {
     }
 
     public static class CreateCloudResourceRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N to add to the resource. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N to add to the resource. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue1</p>
+         */
         @NameInMap("Value")
         public String value;
 

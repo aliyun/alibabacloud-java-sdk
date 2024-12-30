@@ -71,6 +71,9 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     @NameInMap("RuleId")
     public Long ruleId;
 
+    @NameInMap("RuleName")
+    public String ruleName;
+
     /**
      * <p>The type of the protection rule. Valid values:</p>
      * <ul>
@@ -83,6 +86,9 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
      */
     @NameInMap("RuleType")
     public String ruleType;
+
+    @NameInMap("TemplateName")
+    public String templateName;
 
     public static DescribeDefenseResourceTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDefenseResourceTemplatesRequest self = new DescribeDefenseResourceTemplatesRequest();
@@ -137,12 +143,28 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
         return this.ruleId;
     }
 
+    public DescribeDefenseResourceTemplatesRequest setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    public String getRuleName() {
+        return this.ruleName;
+    }
+
     public DescribeDefenseResourceTemplatesRequest setRuleType(String ruleType) {
         this.ruleType = ruleType;
         return this;
     }
     public String getRuleType() {
         return this.ruleType;
+    }
+
+    public DescribeDefenseResourceTemplatesRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
     }
 
 }

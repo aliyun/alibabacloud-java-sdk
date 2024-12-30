@@ -129,6 +129,12 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     @NameInMap("TemplateId")
     public Long templateId;
 
+    @NameInMap("TemplateIds")
+    public String templateIds;
+
+    @NameInMap("TemplateName")
+    public String templateName;
+
     /**
      * <p>The type of the protection template. Valid values:</p>
      * <ul>
@@ -225,6 +231,22 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     }
     public Long getTemplateId() {
         return this.templateId;
+    }
+
+    public DescribeDefenseTemplatesRequest setTemplateIds(String templateIds) {
+        this.templateIds = templateIds;
+        return this;
+    }
+    public String getTemplateIds() {
+        return this.templateIds;
+    }
+
+    public DescribeDefenseTemplatesRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
     }
 
     public DescribeDefenseTemplatesRequest setTemplateType(String templateType) {
