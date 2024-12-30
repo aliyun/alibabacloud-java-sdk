@@ -5364,7 +5364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建高可靠物理专线</p>
+     * <p>Creates Express Connect circuits in high reliability mode. This improves the stability of multiple Express Connect circuits and prevents service interruptions caused by single points of failures (SPOFs).</p>
      * 
      * @param request CreateHighReliablePhysicalConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5452,7 +5452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建高可靠物理专线</p>
+     * <p>Creates Express Connect circuits in high reliability mode. This improves the stability of multiple Express Connect circuits and prevents service interruptions caused by single points of failures (SPOFs).</p>
      * 
      * @param request CreateHighReliablePhysicalConnectionRequest
      * @return CreateHighReliablePhysicalConnectionResponse
@@ -10762,7 +10762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除高速通道Qos队列</p>
+     * <p>Deletes a quality of service (QoS) queue.</p>
      * 
      * @param request DeleteExpressConnectTrafficQosQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10822,7 +10822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除高速通道Qos队列</p>
+     * <p>Deletes a quality of service (QoS) queue.</p>
      * 
      * @param request DeleteExpressConnectTrafficQosQueueRequest
      * @return DeleteExpressConnectTrafficQosQueueResponse
@@ -15910,7 +15910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询高速通道Qos</p>
+     * <p>Queries the quality of service (QoS) policies of Express Connect. The response can be displayed by page.</p>
      * 
      * @param request DescribeExpressConnectTrafficQosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15986,7 +15986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询高速通道Qos</p>
+     * <p>Queries the quality of service (QoS) policies of Express Connect. The response can be displayed by page.</p>
      * 
      * @param request DescribeExpressConnectTrafficQosRequest
      * @return DescribeExpressConnectTrafficQosResponse
@@ -15998,7 +15998,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询高速通道Qos队列</p>
+     * <p>Queries the information about the quality of service (QoS) queues of the Express Connect circuit.</p>
      * 
      * @param request DescribeExpressConnectTrafficQosQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16062,7 +16062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询高速通道Qos队列</p>
+     * <p>Queries the information about the quality of service (QoS) queues of the Express Connect circuit.</p>
      * 
      * @param request DescribeExpressConnectTrafficQosQueueRequest
      * @return DescribeExpressConnectTrafficQosQueueResponse
@@ -32444,7 +32444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>结束故障演练任务</p>
+     * <p>Terminates a failover test.</p>
      * 
      * @param request StopFailoverTestJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32500,7 +32500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>结束故障演练任务</p>
+     * <p>Terminates a failover test.</p>
      * 
      * @param request StopFailoverTestJobRequest
      * @return StopFailoverTestJobResponse
@@ -33812,7 +33812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新故障演练任务</p>
+     * <p>Updates a failover test.</p>
      * 
      * @param request UpdateFailoverTestJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33888,7 +33888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新故障演练任务</p>
+     * <p>Updates a failover test.</p>
      * 
      * @param request UpdateFailoverTestJobRequest
      * @return UpdateFailoverTestJobResponse

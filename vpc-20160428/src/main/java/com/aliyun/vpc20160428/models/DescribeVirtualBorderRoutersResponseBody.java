@@ -670,6 +670,12 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         @NameInMap("EcrId")
         public String ecrId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account (primary account)  to which the ECR belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192732132151xxxx</p>
+         */
         @NameInMap("EcrOwnerId")
         public String ecrOwnerId;
 

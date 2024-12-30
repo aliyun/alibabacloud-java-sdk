@@ -33,6 +33,12 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <ul>
+     * <li>If the value of <strong>NextToken</strong> is not returned, it indicates that no next query is to be sent.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */

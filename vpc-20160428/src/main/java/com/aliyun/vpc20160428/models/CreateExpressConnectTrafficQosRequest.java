@@ -54,12 +54,21 @@ public class CreateExpressConnectTrafficQosRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazfdgdg****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The tag to add to the resource.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateExpressConnectTrafficQosRequestTags> tags;
 
@@ -141,9 +150,23 @@ public class CreateExpressConnectTrafficQosRequest extends TeaModel {
     }
 
     public static class CreateExpressConnectTrafficQosRequestTags extends TeaModel {
+        /**
+         * <p>The tag key to add to the resource. You must enter at least one tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
+         */
         @NameInMap("Value")
         public String value;
 

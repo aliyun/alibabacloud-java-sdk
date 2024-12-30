@@ -201,6 +201,12 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Indicates whether to allow service access between data centers. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
