@@ -637,6 +637,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除容灾计划</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDisasterRecoveryPlanResponse
+     */
+    public DeleteDisasterRecoveryPlanResponse deleteDisasterRecoveryPlanWithOptions(String planId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDisasterRecoveryPlan"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDisasterRecoveryPlanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除容灾计划</p>
+     * @return DeleteDisasterRecoveryPlanResponse
+     */
+    public DeleteDisasterRecoveryPlanResponse deleteDisasterRecoveryPlan(String planId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteDisasterRecoveryPlanWithOptions(planId, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
@@ -1751,6 +1788,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询监控项列表</p>
+     * 
+     * @param request ListMetricMetaRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMetricMetaResponse
+     */
+    public ListMetricMetaResponse listMetricMetaWithOptions(ListMetricMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMetricMeta"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/monitor/metrics/meta"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMetricMetaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询监控项列表</p>
+     * 
+     * @param request ListMetricMetaRequest
+     * @return ListMetricMetaResponse
+     */
+    public ListMetricMetaResponse listMetricMeta(ListMetricMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMetricMetaWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries regions in which ApsaraMQ for RocketMQ is available.</p>
      * 
      * @param headers map
@@ -2075,6 +2163,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.resetConsumeOffsetWithOptions(instanceId, consumerGroupId, topicName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用容灾计划条目</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartDisasterRecoveryItemResponse
+     */
+    public StartDisasterRecoveryItemResponse startDisasterRecoveryItemWithOptions(String planId, String itemId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartDisasterRecoveryItem"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + "/items/" + com.aliyun.openapiutil.Client.getEncodeParam(itemId) + "/start"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartDisasterRecoveryItemResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用容灾计划条目</p>
+     * @return StartDisasterRecoveryItemResponse
+     */
+    public StartDisasterRecoveryItemResponse startDisasterRecoveryItem(String planId, String itemId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startDisasterRecoveryItemWithOptions(planId, itemId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停用容灾计划条目</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopDisasterRecoveryItemResponse
+     */
+    public StopDisasterRecoveryItemResponse stopDisasterRecoveryItemWithOptions(String planId, String itemId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopDisasterRecoveryItem"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + "/items/" + com.aliyun.openapiutil.Client.getEncodeParam(itemId) + "/stop"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopDisasterRecoveryItemResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停用容灾计划条目</p>
+     * @return StopDisasterRecoveryItemResponse
+     */
+    public StopDisasterRecoveryItemResponse stopDisasterRecoveryItem(String planId, String itemId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopDisasterRecoveryItemWithOptions(planId, itemId, headers, runtime);
     }
 
     /**
