@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterAndNodesParametersRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class ModifyDBClusterAndNodesParametersRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The node ID. You can set this parameter to modify the parameters of a specified node or of the cluster. Separate multiple node IDs with commas (,).</p>
+     * <p>The IDs of nodes. You can specify this parameter, or leave this parameter empty. Separate multiple node IDs with commas (,).</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, only the cluster parameters are modified.</p>
+     * <p> If you do not specify this parameter, only the cluster parameters are modified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class ModifyDBClusterAndNodesParametersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the parameter template that is used for the instance.</p>
+     * <p>The ID of the parameter template.</p>
      * 
      * <strong>example:</strong>
      * <p>pcpg-**************</p>
@@ -103,6 +103,12 @@ public class ModifyDBClusterAndNodesParametersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The secondary clusters in the GDN to which the parameter settings are synchronized.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gdn-<strong><strong><strong><strong><strong>,gdn-</strong></strong></strong></strong></strong></p>
+     */
     @NameInMap("StandbyClusterIdListNeedToSync")
     public String standbyClusterIdListNeedToSync;
 

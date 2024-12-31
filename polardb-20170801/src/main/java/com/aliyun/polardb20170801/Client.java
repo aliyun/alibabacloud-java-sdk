@@ -74,7 +74,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户侧取消任务</p>
+     * <p>Cancels O\&amp;M events at a time.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -130,7 +130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户侧取消任务</p>
+     * <p>Cancels O\&amp;M events at a time.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @return CancelActiveOperationTasksResponse
@@ -1113,6 +1113,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageAutoScale)) {
             query.put("StorageAutoScale", request.storageAutoScale);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageEncryption)) {
+            query.put("StorageEncryption", request.storageEncryption);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageEncryptionKey)) {
+            query.put("StorageEncryptionKey", request.storageEncryptionKey);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storagePayType)) {
@@ -8112,7 +8120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户侧修改任务</p>
+     * <p>Modifies the switching time of scheduled O\&amp;M events for an instance.</p>
      * 
      * @param request ModifyActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8176,7 +8184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户侧修改任务</p>
+     * <p>Modifies the switching time of scheduled O\&amp;M events for an instance.</p>
      * 
      * @param request ModifyActiveOperationTasksRequest
      * @return ModifyActiveOperationTasksResponse

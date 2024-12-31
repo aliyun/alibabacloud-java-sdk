@@ -9,7 +9,6 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-************</p>

@@ -100,6 +100,12 @@ public class DescribeClassListResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public String cpu;
 
+        /**
+         * <p>The maximum ESSD storage capacity. Unit: TB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("EssdMaxStorageCapacity")
         public String essdMaxStorageCapacity;
 
@@ -166,6 +172,12 @@ public class DescribeClassListResponseBody extends TeaModel {
         @NameInMap("Pl3MaxIOPS")
         public String pl3MaxIOPS;
 
+        /**
+         * <p>The maximum PSL4/PSL5 storage capacity. Unit: TB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("PolarStoreMaxStorageCapacity")
         public String polarStoreMaxStorageCapacity;
 
