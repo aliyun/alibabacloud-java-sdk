@@ -31,6 +31,9 @@ public class DataTopicLagMapValue extends TeaModel {
     @NameInMap("deliveryDuration")
     public Long deliveryDuration;
 
+    @NameInMap("lastConsumeTimestamp")
+    public Long lastConsumeTimestamp;
+
     public static DataTopicLagMapValue build(java.util.Map<String, ?> map) throws Exception {
         DataTopicLagMapValue self = new DataTopicLagMapValue();
         return TeaModel.build(map, self);
@@ -58,6 +61,14 @@ public class DataTopicLagMapValue extends TeaModel {
     }
     public Long getDeliveryDuration() {
         return this.deliveryDuration;
+    }
+
+    public DataTopicLagMapValue setLastConsumeTimestamp(Long lastConsumeTimestamp) {
+        this.lastConsumeTimestamp = lastConsumeTimestamp;
+        return this;
+    }
+    public Long getLastConsumeTimestamp() {
+        return this.lastConsumeTimestamp;
     }
 
 }
