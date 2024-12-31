@@ -88,6 +88,9 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
+        @NameInMap("DomainBlockTrade")
+        public java.util.List<String> domainBlockTrade;
+
         /**
          * <strong>example:</strong>
          * <p>31199295f2074ce895645d386cb22c36</p>
@@ -113,6 +116,14 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public CreateFixedPriceSelectedOrderResponseBodyModule setDomainBlockTrade(java.util.List<String> domainBlockTrade) {
+            this.domainBlockTrade = domainBlockTrade;
+            return this;
+        }
+        public java.util.List<String> getDomainBlockTrade() {
+            return this.domainBlockTrade;
         }
 
         public CreateFixedPriceSelectedOrderResponseBodyModule setOrderNo(String orderNo) {
