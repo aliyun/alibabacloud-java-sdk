@@ -54,6 +54,9 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
+    @NameInMap("EncryptionKeyStatus")
+    public String encryptionKeyStatus;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -133,6 +136,14 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     }
     public String getEncryptionKey() {
         return this.encryptionKey;
+    }
+
+    public DescribeDBClusterTDEResponseBody setEncryptionKeyStatus(String encryptionKeyStatus) {
+        this.encryptionKeyStatus = encryptionKeyStatus;
+        return this;
+    }
+    public String getEncryptionKeyStatus() {
+        return this.encryptionKeyStatus;
     }
 
     public DescribeDBClusterTDEResponseBody setRequestId(String requestId) {

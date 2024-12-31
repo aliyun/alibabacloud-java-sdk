@@ -637,6 +637,12 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("StorageAutoScale")
     public String storageAutoScale;
 
+    @NameInMap("StorageEncryption")
+    public Boolean storageEncryption;
+
+    @NameInMap("StorageEncryptionKey")
+    public String storageEncryptionKey;
+
     /**
      * <p>The storage billing type, with valid values as follows:</p>
      * <ul>
@@ -1143,6 +1149,22 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public String getStorageAutoScale() {
         return this.storageAutoScale;
+    }
+
+    public CreateDBClusterRequest setStorageEncryption(Boolean storageEncryption) {
+        this.storageEncryption = storageEncryption;
+        return this;
+    }
+    public Boolean getStorageEncryption() {
+        return this.storageEncryption;
+    }
+
+    public CreateDBClusterRequest setStorageEncryptionKey(String storageEncryptionKey) {
+        this.storageEncryptionKey = storageEncryptionKey;
+        return this;
+    }
+    public String getStorageEncryptionKey() {
+        return this.storageEncryptionKey;
     }
 
     public CreateDBClusterRequest setStoragePayType(String storagePayType) {
