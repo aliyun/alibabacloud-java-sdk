@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListClusterNodesResponseBody extends TeaModel {
     /**
+     * <p>The query token value returned by this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAXW/ZB9TBvH+0ZK0phtCibQgQmu1RbqplAI6Velo2OKR</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>List of nodes</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<ListClusterNodesResponseBodyNodes> nodes;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>2BA76272-6608-5AEC-BBA8-B6F0D3D14CDB</p>
      */
@@ -51,15 +58,39 @@ public class ListClusterNodesResponseBody extends TeaModel {
     }
 
     public static class ListClusterNodesResponseBodyNodesNetworks extends TeaModel {
+        /**
+         * <p>Machine network interface name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bond0</p>
+         */
         @NameInMap("BondName")
         public String bondName;
 
+        /**
+         * <p>IP address within the VPC</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.22.2</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>VPC subnet ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subnet-fwekrvg9</p>
+         */
         @NameInMap("SubnetId")
         public String subnetId;
 
+        /**
+         * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-eoiy88ju</p>
+         */
         @NameInMap("VpdId")
         public String vpdId;
 
@@ -104,6 +135,8 @@ public class ListClusterNodesResponseBody extends TeaModel {
 
     public static class ListClusterNodesResponseBodyNodes extends TeaModel {
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>1642472468000</p>
          */
@@ -111,6 +144,8 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Machine expiration time</p>
+         * 
          * <strong>example:</strong>
          * <p>1762185600000</p>
          */
@@ -118,16 +153,26 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
+         * <p>Hostname</p>
+         * 
          * <strong>example:</strong>
          * <p>72432f80-273e-11ed-b57a-acde48001122</p>
          */
         @NameInMap("Hostname")
         public String hostname;
 
+        /**
+         * <p>Hpn Zone</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1</p>
+         */
         @NameInMap("HpnZone")
         public String hpnZone;
 
         /**
+         * <p>System image ID</p>
+         * 
          * <strong>example:</strong>
          * <p>i190297201669099844192</p>
          */
@@ -135,16 +180,23 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>Machine type</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu-b11</p>
          */
         @NameInMap("MachineType")
         public String machineType;
 
+        /**
+         * <p>Network information</p>
+         */
         @NameInMap("Networks")
         public java.util.List<ListClusterNodesResponseBodyNodesNetworks> networks;
 
         /**
+         * <p>Node group ID</p>
+         * 
          * <strong>example:</strong>
          * <p>ng-e9b74f4d450cf18d</p>
          */
@@ -152,6 +204,8 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String nodeGroupId;
 
         /**
+         * <p>Node group name</p>
+         * 
          * <strong>example:</strong>
          * <p>emr_master</p>
          */
@@ -159,6 +213,8 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String nodeGroupName;
 
         /**
+         * <p>Node ID</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-2r42tmj4z02</p>
          */
@@ -166,6 +222,8 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>Node status</p>
+         * 
          * <strong>example:</strong>
          * <p>Extending</p>
          */
@@ -173,6 +231,8 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String operatingState;
 
         /**
+         * <p>Machine SN</p>
+         * 
          * <strong>example:</strong>
          * <p>sn_tOuUk</p>
          */
@@ -180,6 +240,8 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String sn;
 
         /**
+         * <p>Zone ID</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>
          */

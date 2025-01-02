@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExtendClusterRequest extends TeaModel {
     /**
+     * <p>Cluster ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i15b480fbd2fcdbc2869cd80</p>
      */
@@ -12,21 +14,38 @@ public class ExtendClusterRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Whether to allow skipping failed node tasks, default value is False</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
+    /**
+     * <p>IP allocation policy combination: Each policy can only choose one type, and multiple policies can be combined</p>
+     */
     @NameInMap("IpAllocationPolicy")
     public java.util.List<ExtendClusterRequestIpAllocationPolicy> ipAllocationPolicy;
 
+    /**
+     * <p>Node Group</p>
+     */
     @NameInMap("NodeGroups")
     public java.util.List<ExtendClusterRequestNodeGroups> nodeGroups;
 
+    /**
+     * <p>VSwitch availability zone ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai-b</p>
+     */
     @NameInMap("VSwitchZoneId")
     public String vSwitchZoneId;
 
+    /**
+     * <p>List of cluster subnets</p>
+     */
     @NameInMap("VpdSubnets")
     public java.util.List<String> vpdSubnets;
 
@@ -85,6 +104,8 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestIpAllocationPolicyBondPolicyBonds extends TeaModel {
         /**
+         * <p>Bond name</p>
+         * 
          * <strong>example:</strong>
          * <p>Bond0</p>
          */
@@ -92,6 +113,8 @@ public class ExtendClusterRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>IP source cluster subnet</p>
+         * 
          * <strong>example:</strong>
          * <p>subnet-3od2fe</p>
          */
@@ -123,12 +146,17 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestIpAllocationPolicyBondPolicy extends TeaModel {
         /**
+         * <p>Default bond cluster subnet</p>
+         * 
          * <strong>example:</strong>
          * <p>subnet-3od2fe</p>
          */
         @NameInMap("BondDefaultSubnet")
         public String bondDefaultSubnet;
 
+        /**
+         * <p>Bond information</p>
+         */
         @NameInMap("Bonds")
         public java.util.List<ExtendClusterRequestIpAllocationPolicyBondPolicyBonds> bonds;
 
@@ -157,6 +185,8 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestIpAllocationPolicyMachineTypePolicyBonds extends TeaModel {
         /**
+         * <p>Bond name</p>
+         * 
          * <strong>example:</strong>
          * <p>Bond0</p>
          */
@@ -164,6 +194,8 @@ public class ExtendClusterRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>IP source cluster subnet</p>
+         * 
          * <strong>example:</strong>
          * <p>subnet-fdo3dv</p>
          */
@@ -194,10 +226,15 @@ public class ExtendClusterRequest extends TeaModel {
     }
 
     public static class ExtendClusterRequestIpAllocationPolicyMachineTypePolicy extends TeaModel {
+        /**
+         * <p>Bond information</p>
+         */
         @NameInMap("Bonds")
         public java.util.List<ExtendClusterRequestIpAllocationPolicyMachineTypePolicyBonds> bonds;
 
         /**
+         * <p>Machine Type</p>
+         * 
          * <strong>example:</strong>
          * <p>efg1.nvga1</p>
          */
@@ -229,6 +266,8 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestIpAllocationPolicyNodePolicyBonds extends TeaModel {
         /**
+         * <p>Bond name</p>
+         * 
          * <strong>example:</strong>
          * <p>Bond0</p>
          */
@@ -236,6 +275,8 @@ public class ExtendClusterRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>IP source cluster subnet</p>
+         * 
          * <strong>example:</strong>
          * <p>subnet-fdo3dv</p>
          */
@@ -266,10 +307,15 @@ public class ExtendClusterRequest extends TeaModel {
     }
 
     public static class ExtendClusterRequestIpAllocationPolicyNodePolicy extends TeaModel {
+        /**
+         * <p>Bond information</p>
+         */
         @NameInMap("Bonds")
         public java.util.List<ExtendClusterRequestIpAllocationPolicyNodePolicyBonds> bonds;
 
         /**
+         * <p>Node ID</p>
+         * 
          * <strong>example:</strong>
          * <p>i-3fdodw2</p>
          */
@@ -300,12 +346,21 @@ public class ExtendClusterRequest extends TeaModel {
     }
 
     public static class ExtendClusterRequestIpAllocationPolicy extends TeaModel {
+        /**
+         * <p>Specify the cluster subnet ID based on the bond name</p>
+         */
         @NameInMap("BondPolicy")
         public ExtendClusterRequestIpAllocationPolicyBondPolicy bondPolicy;
 
+        /**
+         * <p>Machine type allocation policy</p>
+         */
         @NameInMap("MachineTypePolicy")
         public java.util.List<ExtendClusterRequestIpAllocationPolicyMachineTypePolicy> machineTypePolicy;
 
+        /**
+         * <p>Node allocation policy</p>
+         */
         @NameInMap("NodePolicy")
         public java.util.List<ExtendClusterRequestIpAllocationPolicyNodePolicy> nodePolicy;
 
@@ -342,6 +397,8 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestNodeGroupsNodes extends TeaModel {
         /**
+         * <p>Hostname</p>
+         * 
          * <strong>example:</strong>
          * <p>d044d220-33fd-11ed-86a6</p>
          */
@@ -349,6 +406,8 @@ public class ExtendClusterRequest extends TeaModel {
         public String hostname;
 
         /**
+         * <p>Login Password</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -356,15 +415,29 @@ public class ExtendClusterRequest extends TeaModel {
         public String loginPassword;
 
         /**
+         * <p>Node ID</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-zvp2zdpy601</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>VSwitch ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp169pi5fj151rrms4sia</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-0jlasms92fdxqd3wlf8ny</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -417,18 +490,36 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestNodeGroups extends TeaModel {
         /**
+         * <p>Node Group ID</p>
+         * 
          * <strong>example:</strong>
          * <p>i16d4883a46cbadeb4bc9</p>
          */
         @NameInMap("NodeGroupId")
         public String nodeGroupId;
 
+        /**
+         * <p>List of Nodes</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<ExtendClusterRequestNodeGroupsNodes> nodes;
 
+        /**
+         * <p>Custom Data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#!/bin/sh
+         * echo &quot;Hello World. The time is now $(date -R)!&quot; | tee /root/userdata_test.txt</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
+        /**
+         * <p>Zone ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

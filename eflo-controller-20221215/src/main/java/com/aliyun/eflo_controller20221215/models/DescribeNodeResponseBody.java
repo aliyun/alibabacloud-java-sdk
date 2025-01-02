@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNodeResponseBody extends TeaModel {
     /**
+     * <p>Cluster ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i116913051662373010974</p>
      */
@@ -12,6 +14,8 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Cluster name</p>
+     * 
      * <strong>example:</strong>
      * <p>Standard_Cluster</p>
      */
@@ -19,6 +23,8 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>Creation time</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-09-30T03:35:53Z</p>
      */
@@ -26,6 +32,8 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>Expiration time</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-06-23T16:00:00Z</p>
      */
@@ -33,16 +41,26 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String expiredTime;
 
     /**
+     * <p>Hostname</p>
+     * 
      * <strong>example:</strong>
      * <p>31d38530-241e-11ed-bc63-acde48001122</p>
      */
     @NameInMap("Hostname")
     public String hostname;
 
+    /**
+     * <p>Cluster number</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1</p>
+     */
     @NameInMap("HpnZone")
     public String hpnZone;
 
     /**
+     * <p>Image ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i190297201634099844192</p>
      */
@@ -50,7 +68,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String imageId;
 
     /**
-     * <p>镜像名称</p>
+     * <p>Image name</p>
      * 
      * <strong>example:</strong>
      * <p>Centos7.9_all_0811</p>
@@ -59,16 +77,23 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String imageName;
 
     /**
+     * <p>Machine type</p>
+     * 
      * <strong>example:</strong>
      * <p>efg1.nvga1</p>
      */
     @NameInMap("MachineType")
     public String machineType;
 
+    /**
+     * <p>Network information</p>
+     */
     @NameInMap("Networks")
     public java.util.List<DescribeNodeResponseBodyNetworks> networks;
 
     /**
+     * <p>Node group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>ng-ec3c96ff0aa4c60d</p>
      */
@@ -76,6 +101,8 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>Node group name</p>
+     * 
      * <strong>example:</strong>
      * <p>emr-default</p>
      */
@@ -83,26 +110,44 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String nodeGroupName;
 
     /**
+     * <p>Node ID</p>
+     * 
      * <strong>example:</strong>
      * <p>e01-cn-zvp2tgykr08</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>Node status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Using</p>
+     */
     @NameInMap("OperatingState")
     public String operatingState;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>AC4F0004-7BCE-52E0-891B-CAC7D64E3368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>资源组ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmywpvugkh7kq</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>Unique machine identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>sag42ckf4jx</p>
      */
@@ -110,6 +155,8 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String sn;
 
     /**
+     * <p>Zone ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>
      */
@@ -267,6 +314,8 @@ public class DescribeNodeResponseBody extends TeaModel {
 
     public static class DescribeNodeResponseBodyNetworks extends TeaModel {
         /**
+         * <p>Network interface port information</p>
+         * 
          * <strong>example:</strong>
          * <p>Bond0</p>
          */
@@ -274,6 +323,8 @@ public class DescribeNodeResponseBody extends TeaModel {
         public String bondName;
 
         /**
+         * <p>Machine IP</p>
+         * 
          * <strong>example:</strong>
          * <p>47.254.235.44</p>
          */
@@ -281,6 +332,8 @@ public class DescribeNodeResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>Cluster subnet ID</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-uf68v51fldm5egmui5a6k</p>
          */
@@ -288,6 +341,8 @@ public class DescribeNodeResponseBody extends TeaModel {
         public String subnetId;
 
         /**
+         * <p>Cluster network ID</p>
+         * 
          * <strong>example:</strong>
          * <p>vpd-xcuhjyrj</p>
          */

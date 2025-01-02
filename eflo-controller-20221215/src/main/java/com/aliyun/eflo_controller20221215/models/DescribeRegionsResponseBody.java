@@ -4,10 +4,15 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>List of region information.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1D2FBB36-C39B-5EBB-9928-FCC1A236D65D</p>
      */
@@ -36,10 +41,18 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>Region name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hang Zhou</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
         /**
+         * <p>region id</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */

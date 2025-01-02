@@ -4,10 +4,15 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
+    /**
+     * <p>Cluster information</p>
+     */
     @NameInMap("Clusters")
     public java.util.List<ListClustersResponseBodyClusters> clusters;
 
     /**
+     * <p>The query token value returned by this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>f4f9a292c17072a2</p>
      */
@@ -15,6 +20,8 @@ public class ListClustersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>2FE2B22C-CF9D-59DE-BF63-DC9B9B33A9D1</p>
      */
@@ -51,10 +58,18 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyClusters extends TeaModel {
+        /**
+         * <p>Cluster description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PPU-cluster2 bz</p>
+         */
         @NameInMap("ClusterDescription")
         public String clusterDescription;
 
         /**
+         * <p>Cluster ID</p>
+         * 
          * <strong>example:</strong>
          * <p>i137590131672134915401</p>
          */
@@ -62,6 +77,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>Cluster name</p>
+         * 
          * <strong>example:</strong>
          * <p>cnp_test_cluster</p>
          */
@@ -69,33 +86,53 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterName;
 
         /**
+         * <p>Cluster type</p>
+         * 
          * <strong>example:</strong>
-         * <p>AckEdgPro</p>
+         * <p>AckEdgePro</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
+         * <p>Component information</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("Components")
         public Object components;
 
+        /**
+         * <p>IP version of the computing network</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("ComputingIpVersion")
         public String computingIpVersion;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>1672134938</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Cluster number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1</p>
+         */
         @NameInMap("HpnZone")
         public String hpnZone;
 
         /**
+         * <p>Number of nodes</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -103,6 +140,8 @@ public class ListClustersResponseBody extends TeaModel {
         public Long nodeCount;
 
         /**
+         * <p>Number of node groups</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -110,6 +149,8 @@ public class ListClustersResponseBody extends TeaModel {
         public Long nodeGroupCount;
 
         /**
+         * <p>Cluster status</p>
+         * 
          * <strong>example:</strong>
          * <p>initializing</p>
          */
@@ -117,6 +158,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String operatingState;
 
         /**
+         * <p>Resource group ID</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aek2ajbjoloa23q</p>
          */
@@ -124,6 +167,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>i156365121663149566024</p>
          */
@@ -131,12 +176,20 @@ public class ListClustersResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Update time</p>
+         * 
          * <strong>example:</strong>
          * <p>1672134968</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-0jlx4hol2bjboafzmffvd</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

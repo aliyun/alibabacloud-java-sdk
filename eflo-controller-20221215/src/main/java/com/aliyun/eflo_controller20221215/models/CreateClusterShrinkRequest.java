@@ -4,10 +4,18 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterShrinkRequest extends TeaModel {
+    /**
+     * <p>Cluster description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cluster description</p>
+     */
     @NameInMap("ClusterDescription")
     public String clusterDescription;
 
     /**
+     * <p>Cluster name</p>
+     * 
      * <strong>example:</strong>
      * <p>Standard_Cluster</p>
      */
@@ -15,44 +23,77 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>Cluster type</p>
+     * 
      * <strong>example:</strong>
      * <p>Lite</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
+    /**
+     * <p>Components (software instances)</p>
+     */
     @NameInMap("Components")
     public String componentsShrink;
 
+    /**
+     * <p>Cluster number</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1</p>
+     */
     @NameInMap("HpnZone")
     public String hpnZone;
 
     /**
+     * <p>Whether to allow skipping failed nodes, default value is False</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
+    /**
+     * <p>Network information</p>
+     */
     @NameInMap("Networks")
     public String networksShrink;
 
+    /**
+     * <p>Node VSwitches</p>
+     */
     @NameInMap("NimizVSwitches")
     public String nimizVSwitchesShrink;
 
+    /**
+     * <p>Node group list</p>
+     */
     @NameInMap("NodeGroups")
     public String nodeGroupsShrink;
 
+    /**
+     * <p>Open Eni Jumbo Frame</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OpenEniJumboFrame")
     public Boolean openEniJumboFrame;
 
     /**
+     * <p>Resource group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2xdkc6icwfha</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Resource tags</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateClusterShrinkRequestTag> tag;
 
@@ -159,6 +200,8 @@ public class CreateClusterShrinkRequest extends TeaModel {
 
     public static class CreateClusterShrinkRequestTag extends TeaModel {
         /**
+         * <p>Key</p>
+         * 
          * <strong>example:</strong>
          * <p>env-name</p>
          */
@@ -166,6 +209,8 @@ public class CreateClusterShrinkRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>Value</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */

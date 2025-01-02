@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListFreeNodesResponseBody extends TeaModel {
     /**
+     * <p>The query token value returned by this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>a3f2224a5ec7224116c4f5246120abe4</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>List of nodes</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<ListFreeNodesResponseBodyNodes> nodes;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>AA14CB86-70C4-5CB7-9E7B-6CCA77F3512B</p>
      */
@@ -52,6 +59,8 @@ public class ListFreeNodesResponseBody extends TeaModel {
 
     public static class ListFreeNodesResponseBodyNodes extends TeaModel {
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>1652321554</p>
          */
@@ -59,16 +68,26 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Expiration time of the machine</p>
+         * 
          * <strong>example:</strong>
          * <p>1673107200</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>Cluster number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1</p>
+         */
         @NameInMap("HpnZone")
         public String hpnZone;
 
         /**
+         * <p>Machine type</p>
+         * 
          * <strong>example:</strong>
          * <p>efg1.nvga1</p>
          */
@@ -76,16 +95,26 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String machineType;
 
         /**
+         * <p>Node ID</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-7pp2x193801</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>Resource group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzkkbrpl4owgy</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
+         * <p>Machine SN</p>
+         * 
          * <strong>example:</strong>
          * <p>sn_pozkHBgicd</p>
          */
@@ -93,6 +122,8 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String sn;
 
         /**
+         * <p>Availability zone ID</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
          */

@@ -4,10 +4,18 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterResponseBody extends TeaModel {
+    /**
+     * <p>Cluster Description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default cluster</p>
+     */
     @NameInMap("ClusterDescription")
     public String clusterDescription;
 
     /**
+     * <p>Cluster ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i116913051662373010974</p>
      */
@@ -15,6 +23,8 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Cluster Name</p>
+     * 
      * <strong>example:</strong>
      * <p>Eflo-YJ-Test-Cluster</p>
      */
@@ -22,32 +32,56 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>Cluster Type</p>
+     * 
      * <strong>example:</strong>
-     * <p>AckEdgPro</p>
+     * <p>AckEdgePro</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
+    /**
+     * <p>Component Information</p>
+     */
     @NameInMap("Components")
     public java.util.List<DescribeClusterResponseBodyComponents> components;
 
+    /**
+     * <p>Type of IP in the compute network</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("ComputingIpVersion")
     public String computingIpVersion;
 
     /**
+     * <p>Creation Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-06-08T07:05:11Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>Cluster Number</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A2</p>
+     */
     @NameInMap("HpnZone")
     public String hpnZone;
 
+    /**
+     * <p>Network Information</p>
+     */
     @NameInMap("Networks")
     public java.util.List<DescribeClusterResponseBodyNetworks> networks;
 
     /**
+     * <p>Number of Nodes</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -55,16 +89,26 @@ public class DescribeClusterResponseBody extends TeaModel {
     public Long nodeCount;
 
     /**
+     * <p>Number of Node Groups</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("NodeGroupCount")
     public Long nodeGroupCount;
 
+    /**
+     * <p>Open Eni Jumbo Frame</p>
+     * 
+     * <strong>example:</strong>
+     * <p>close</p>
+     */
     @NameInMap("OpenEniJumboFrame")
     public String openEniJumboFrame;
 
     /**
+     * <p>Cluster State</p>
+     * 
      * <strong>example:</strong>
      * <p>running</p>
      */
@@ -72,6 +116,8 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String operatingState;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
      */
@@ -79,6 +125,8 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Resource Group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2k3rqlvv6ytq</p>
      */
@@ -86,6 +134,8 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Task ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i152609221670466904596</p>
      */
@@ -93,12 +143,20 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Update Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-08-23T06:36:17.000Z</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>VPC ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-0jlkqysom5dmcviymep3f</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -253,6 +311,8 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     public static class DescribeClusterResponseBodyComponents extends TeaModel {
         /**
+         * <p>Component ID</p>
+         * 
          * <strong>example:</strong>
          * <p>i149549021660892626529</p>
          */
@@ -260,6 +320,8 @@ public class DescribeClusterResponseBody extends TeaModel {
         public String componentId;
 
         /**
+         * <p>Component Type</p>
+         * 
          * <strong>example:</strong>
          * <p>ACKEdge</p>
          */
@@ -291,6 +353,8 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     public static class DescribeClusterResponseBodyNetworks extends TeaModel {
         /**
+         * <p>VPC Segment ID</p>
+         * 
          * <strong>example:</strong>
          * <p>vpd-iqd7xunc</p>
          */

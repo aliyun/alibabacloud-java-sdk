@@ -4,10 +4,18 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListFreeNodesRequest extends TeaModel {
+    /**
+     * <p>Cluster number</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1</p>
+     */
     @NameInMap("HpnZone")
     public String hpnZone;
 
     /**
+     * <p>Machine type</p>
+     * 
      * <strong>example:</strong>
      * <p>mock-machine-type2</p>
      */
@@ -15,6 +23,8 @@ public class ListFreeNodesRequest extends TeaModel {
     public String machineType;
 
     /**
+     * <p>Number of items per page for paginated queries, default is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,12 +32,20 @@ public class ListFreeNodesRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>Query token (Token), the value should be the NextToken parameter value returned from the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>a3f2224a5ec7224116c4f5246120abe4</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>Resource group ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxno4vh5muoq</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

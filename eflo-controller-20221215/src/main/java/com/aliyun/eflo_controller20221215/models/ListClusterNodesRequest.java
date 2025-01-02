@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterNodesRequest extends TeaModel {
     /**
+     * <p>Cluster ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListClusterNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Number of items per page in a paginated query, with a default value of 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -21,6 +24,8 @@ public class ListClusterNodesRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>Query token (Token), which is the value of the NextToken parameter returned by the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>
      */
@@ -28,6 +33,8 @@ public class ListClusterNodesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Node group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>ng-ec3c96ff0aa4c60d</p>
      */

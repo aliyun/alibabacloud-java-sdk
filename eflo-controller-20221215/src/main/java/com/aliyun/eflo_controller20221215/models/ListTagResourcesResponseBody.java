@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
+     * <p>NextToken for the next page, include this returned value when requesting the next page</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>
      */
@@ -12,12 +14,17 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>8F208B6D-4C42-5FD3-B6BE-E826E92A44DD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Tagged resources.</p>
+     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -52,6 +59,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
+         * <p>Resource ID</p>
+         * 
          * <strong>example:</strong>
          * <p>i15azeddnvf7uhw2oij57o0</p>
          */
@@ -59,6 +68,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>Resource type</p>
+         * 
          * <strong>example:</strong>
          * <p>Cluster</p>
          */
@@ -66,6 +77,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>Tag key</p>
+         * 
          * <strong>example:</strong>
          * <p>env</p>
          */
@@ -73,6 +86,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>Tag value</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
