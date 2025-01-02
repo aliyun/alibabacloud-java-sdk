@@ -63,6 +63,12 @@ public class DescribeAssetListRequest extends TeaModel {
     @NameInMap("NewResourceTag")
     public String newResourceTag;
 
+    /**
+     * <p>Whether to query external traffic information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("OutStatistic")
     public String outStatistic;
 
@@ -119,6 +125,12 @@ public class DescribeAssetListRequest extends TeaModel {
     @NameInMap("SearchItem")
     public String searchItem;
 
+    /**
+     * <p>Data leakage detection activation status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
+     */
     @NameInMap("SensitiveStatus")
     public String sensitiveStatus;
 

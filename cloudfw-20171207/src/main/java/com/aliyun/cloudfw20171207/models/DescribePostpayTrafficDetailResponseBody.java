@@ -94,9 +94,21 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         @NameInMap("OutBytes")
         public Long outBytes;
 
+        /**
+         * <p>Protection duration. Unit: hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("ProtectionDuration")
         public Long protectionDuration;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionNo")
         public String regionNo;
 

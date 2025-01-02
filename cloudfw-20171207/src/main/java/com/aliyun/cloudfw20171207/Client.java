@@ -453,6 +453,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskData", request.taskData);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            query.put("TaskType", request.taskType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.timeZone)) {
             query.put("TimeZone", request.timeZone);
         }
@@ -2318,7 +2322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资产统计信息</p>
+     * <p>Queries statistics on the assets that are protected by Cloud Firewall.</p>
      * 
      * @param request DescribeAssetStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2358,7 +2362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资产统计信息</p>
+     * <p>Queries statistics on the assets that are protected by Cloud Firewall.</p>
      * 
      * @param request DescribeAssetStatisticRequest
      * @return DescribeAssetStatisticResponse
@@ -4533,8 +4537,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the edition information about Cloud Firewall.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用户版本信息</p>
+     * <p>Queries the edition information about Cloud Firewall.</p>
      * 
      * @param request DescribeUserBuyVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4565,8 +4574,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the edition information about Cloud Firewall.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用户版本信息</p>
+     * <p>Queries the edition information about Cloud Firewall.</p>
      * 
      * @param request DescribeUserBuyVersionRequest
      * @return DescribeUserBuyVersionResponse

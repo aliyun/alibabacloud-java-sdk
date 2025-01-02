@@ -39,6 +39,17 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The level of the rule group for the IPS. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: loose.</li>
+     * <li><strong>2</strong>: medium.</li>
+     * <li><strong>3</strong>: strict.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RuleClass")
     public Integer ruleClass;
 

@@ -173,9 +173,21 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         @NameInMap("ServiceNameList")
         public java.util.List<String> serviceNameList;
 
+        /**
+         * <p>Number of source IPs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("SrcIpCnt")
         public Long srcIpCnt;
 
+        /**
+         * <p>Outbound traffic in the last 7 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
+         */
         @NameInMap("TotalReplyBytes")
         public Long totalReplyBytes;
 

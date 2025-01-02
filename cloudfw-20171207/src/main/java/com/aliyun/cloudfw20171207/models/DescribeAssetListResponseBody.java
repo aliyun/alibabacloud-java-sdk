@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetListResponseBody extends TeaModel {
     /**
-     * <p>The details about the assets that are protected by Cloud Firewall.</p>
+     * <p>The assets that are protected by Cloud Firewall.</p>
      */
     @NameInMap("Assets")
     public java.util.List<DescribeAssetListResponseBodyAssets> assets;
@@ -129,6 +129,12 @@ public class DescribeAssetListResponseBody extends TeaModel {
         @NameInMap("IpVersion")
         public Integer ipVersion;
 
+        /**
+         * <p>Outbound traffic in the last 7 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Last7DayOutTrafficBytes")
         public Long last7DayOutTrafficBytes;
 
@@ -262,6 +268,12 @@ public class DescribeAssetListResponseBody extends TeaModel {
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>Data leakage detection enabled status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
+         */
         @NameInMap("SensitiveDataStatus")
         public String sensitiveDataStatus;
 

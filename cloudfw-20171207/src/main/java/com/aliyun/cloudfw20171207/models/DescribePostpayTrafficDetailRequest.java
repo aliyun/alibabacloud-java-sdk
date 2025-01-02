@@ -58,6 +58,12 @@ public class DescribePostpayTrafficDetailRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionNo")
     public String regionNo;
 

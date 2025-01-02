@@ -1,3 +1,12 @@
+2025-01-02 Version: 5.0.0
+- Update API CreateDownloadTask: add param TaskType.
+- Update API DeleteNatFirewallControlPolicyBatch: update param AclUuidList.
+- Update API DescribeAddressBook: update response param.
+- Update API DescribeAssetStatistic: update response param.
+- Update API DescribePrefixLists: update param RegionNo.
+- Update API DescribeVpcZone: update param RegionNo.
+
+
 2024-12-04 Version: 4.2.3
 - Update API DescribeRiskEventGroup: add param IsOnlyPrivateAssoc.
 

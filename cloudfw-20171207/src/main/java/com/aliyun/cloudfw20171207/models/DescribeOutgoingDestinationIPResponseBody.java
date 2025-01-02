@@ -179,9 +179,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: low</li>
-         * <li><strong>2</strong>: medium</li>
-         * <li><strong>3</strong>: high</li>
+         * <li><strong>1</strong>: low.</li>
+         * <li><strong>2</strong>: medium.</li>
+         * <li><strong>3</strong>: high.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,10 +308,19 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
 
         /**
          * <p>The application ports.</p>
+         * <blockquote>
+         * <p> Only the first 100 application ports are displayed.</p>
+         * </blockquote>
          */
         @NameInMap("ApplicationPortList")
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList> applicationPortList;
 
+        /**
+         * <p>The outbound asset count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("AssetCount")
         public Long assetCount;
 
@@ -421,6 +430,12 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         @NameInMap("IsMarkNormal")
         public Boolean isMarkNormal;
 
+        /**
+         * <p>Location name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>山东省青岛市</p>
+         */
         @NameInMap("LocationName")
         public String locationName;
 
@@ -433,6 +448,12 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         @NameInMap("OutBytes")
         public Long outBytes;
 
+        /**
+         * <p>The outbound private asset count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PrivateAssetCount")
         public Long privateAssetCount;
 

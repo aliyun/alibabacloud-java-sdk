@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetStatisticResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>850A84******25g4d2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The statistics on specifications.</p>
+     */
     @NameInMap("ResourceSpecStatistic")
     public DescribeAssetStatisticResponseBodyResourceSpecStatistic resourceSpecStatistic;
 
@@ -37,6 +42,8 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
 
     public static class DescribeAssetStatisticResponseBodyResourceSpecStatistic extends TeaModel {
         /**
+         * <p>The number of public IP addresses that can be protected.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -44,30 +51,29 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         public Integer ipNumSpec;
 
         /**
+         * <p>The number of public IP addresses that are protected.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("IpNumUsed")
         public Integer ipNumUsed;
 
-        @NameInMap("IsIpNumEnough")
-        public Integer isIpNumEnough;
-
-        @NameInMap("IsRegionNumEnough")
-        public Integer isRegionNumEnough;
-
-        @NameInMap("IsSuggestUpdate")
-        public Integer isSuggestUpdate;
-
-        @NameInMap("RegionNumSpec")
-        public Integer regionNumSpec;
-
-        @NameInMap("RegionNumUsed")
-        public Integer regionNumUsed;
-
+        /**
+         * <p>The number of public IP addresses that can enable data leakage detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SensitiveDataIpNumSpec")
         public Long sensitiveDataIpNumSpec;
 
+        /**
+         * <p>The number of public IP addresses that enabled data leakage detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SensitiveDataIpNumUsed")
         public Long sensitiveDataIpNumUsed;
 
@@ -90,46 +96,6 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         }
         public Integer getIpNumUsed() {
             return this.ipNumUsed;
-        }
-
-        public DescribeAssetStatisticResponseBodyResourceSpecStatistic setIsIpNumEnough(Integer isIpNumEnough) {
-            this.isIpNumEnough = isIpNumEnough;
-            return this;
-        }
-        public Integer getIsIpNumEnough() {
-            return this.isIpNumEnough;
-        }
-
-        public DescribeAssetStatisticResponseBodyResourceSpecStatistic setIsRegionNumEnough(Integer isRegionNumEnough) {
-            this.isRegionNumEnough = isRegionNumEnough;
-            return this;
-        }
-        public Integer getIsRegionNumEnough() {
-            return this.isRegionNumEnough;
-        }
-
-        public DescribeAssetStatisticResponseBodyResourceSpecStatistic setIsSuggestUpdate(Integer isSuggestUpdate) {
-            this.isSuggestUpdate = isSuggestUpdate;
-            return this;
-        }
-        public Integer getIsSuggestUpdate() {
-            return this.isSuggestUpdate;
-        }
-
-        public DescribeAssetStatisticResponseBodyResourceSpecStatistic setRegionNumSpec(Integer regionNumSpec) {
-            this.regionNumSpec = regionNumSpec;
-            return this;
-        }
-        public Integer getRegionNumSpec() {
-            return this.regionNumSpec;
-        }
-
-        public DescribeAssetStatisticResponseBodyResourceSpecStatistic setRegionNumUsed(Integer regionNumUsed) {
-            this.regionNumUsed = regionNumUsed;
-            return this;
-        }
-        public Integer getRegionNumUsed() {
-            return this.regionNumUsed;
         }
 
         public DescribeAssetStatisticResponseBodyResourceSpecStatistic setSensitiveDataIpNumSpec(Long sensitiveDataIpNumSpec) {

@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteNatFirewallControlPolicyBatchRequest extends TeaModel {
     /**
      * <p>The UUIDs of access control policies.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclUuidList")
     public java.util.List<String> aclUuidList;
