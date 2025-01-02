@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReimageNodesRequest extends TeaModel {
     /**
+     * <p>Cluster ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i15dfa12e8f27c44f4a006c2c8bb</p>
      */
@@ -12,15 +14,27 @@ public class ReimageNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Whether to allow skipping failed node tasks, default value is False</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
+    /**
+     * <p>Node list</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<ReimageNodesRequestNodes> nodes;
 
+    /**
+     * <p>Custom data</p>
+     * 
+     * <strong>example:</strong>
+     * <p>#!/bin/sh
+     * echo &quot;Hello World. The time is now $(date -R)!&quot; | tee /root/userdata_test.txt</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -63,6 +77,8 @@ public class ReimageNodesRequest extends TeaModel {
 
     public static class ReimageNodesRequestNodes extends TeaModel {
         /**
+         * <p>Hostname</p>
+         * 
          * <strong>example:</strong>
          * <p>457db5ca-241d-11ed-9fd7-acde48001122</p>
          */
@@ -70,6 +86,8 @@ public class ReimageNodesRequest extends TeaModel {
         public String hostname;
 
         /**
+         * <p>System image ID</p>
+         * 
          * <strong>example:</strong>
          * <p>m-8vbf8rpv2nn14y7oybjy</p>
          */
@@ -77,6 +95,8 @@ public class ReimageNodesRequest extends TeaModel {
         public String imageId;
 
         /**
+         * <p>Login password</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -84,6 +104,8 @@ public class ReimageNodesRequest extends TeaModel {
         public String loginPassword;
 
         /**
+         * <p>Node ID</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-zvp2tgykr0b</p>
          */

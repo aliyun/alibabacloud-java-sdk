@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApproveOperationRequest extends TeaModel {
     /**
+     * <p>Node ID</p>
+     * 
      * <strong>example:</strong>
      * <p>e01-cn-zvp2tgykr08</p>
      */
@@ -12,6 +14,8 @@ public class ApproveOperationRequest extends TeaModel {
     public String nodeId;
 
     /**
+     * <p>Operation Type</p>
+     * 
      * <strong>example:</strong>
      * <p>RepairMachine</p>
      */

@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class SendFileShrinkRequest extends TeaModel {
     /**
+     * <p>The content of the file. After Base64 encoding, the size cannot exceed 32 KB.</p>
+     * <ul>
+     * <li>When the <code>ContentType</code> parameter is <code>PlainText</code>, this field is plain text.</li>
+     * <li>When the <code>ContentType</code> parameter is <code>Base64</code>, this field is Base64 encoded text.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,11 @@ public class SendFileShrinkRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The content type of the file.</p>
+     * <p>PlainText: Plain text.
+     * Base64: Base64 encoded.
+     * The default value is PlainText.</p>
+     * 
      * <strong>example:</strong>
      * <p>PlainText</p>
      */
@@ -21,6 +31,8 @@ public class SendFileShrinkRequest extends TeaModel {
     public String contentType;
 
     /**
+     * <p>Description information. Supports all character sets, and the length must not exceed 512 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a test file.</p>
      */
@@ -28,6 +40,10 @@ public class SendFileShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The group of the file. Applies only to Linux instances, and the default is root. The length must not exceed 64 characters.</p>
+     * <p>Note
+     * When using other groups, ensure that the group exists in the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -35,6 +51,9 @@ public class SendFileShrinkRequest extends TeaModel {
     public String fileGroup;
 
     /**
+     * <p>The permissions of the file. Applies only to Linux instances, and the setting method is the same as the chmod command.</p>
+     * <p>The default value is 0644, which means the user has read and write permissions, while the group and other users have read-only permissions.</p>
+     * 
      * <strong>example:</strong>
      * <p>0644</p>
      */
@@ -42,6 +61,8 @@ public class SendFileShrinkRequest extends TeaModel {
     public String fileMode;
 
     /**
+     * <p>The owner of the file. Applies only to Linux instances, and the default is root.</p>
+     * 
      * <strong>example:</strong>
      * <p>root</p>
      */
@@ -49,6 +70,7 @@ public class SendFileShrinkRequest extends TeaModel {
     public String fileOwner;
 
     /**
+     * <p>The name of the file. Supports all character sets, and the length must not exceed 255 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,12 +80,20 @@ public class SendFileShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>List of nodes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeIdList")
     public String nodeIdListShrink;
 
     /**
+     * <p>Whether to overwrite the file if a file with the same name already exists in the target directory.</p>
+     * <ul>
+     * <li>true: Overwrite.</li>
+     * <li>false: Do not overwrite.</li>
+     * </ul>
+     * <p>The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -71,6 +101,7 @@ public class SendFileShrinkRequest extends TeaModel {
     public Boolean overwrite;
 
     /**
+     * <p>The directory in the target Lingjun node where the file will be sent. If it does not exist, it will be automatically created.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,6 +111,13 @@ public class SendFileShrinkRequest extends TeaModel {
     public String targetDir;
 
     /**
+     * <p>The timeout for sending the file. Unit: seconds.</p>
+     * <ul>
+     * <li>A timeout may occur due to process reasons, missing modules, or missing Cloud Assistant Agent.</li>
+     * <li>If the set timeout is less than 10 seconds, to ensure successful delivery, the system will automatically set the timeout to 10 seconds.</li>
+     * </ul>
+     * <p>The default value is 60.</p>
+     * 
      * <strong>example:</strong>
      * <p>600</p>
      */

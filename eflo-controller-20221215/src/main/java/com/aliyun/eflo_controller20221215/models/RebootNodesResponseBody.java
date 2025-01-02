@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RebootNodesResponseBody extends TeaModel {
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
      */
@@ -12,6 +14,8 @@ public class RebootNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Task Id</p>
+     * 
      * <strong>example:</strong>
      * <p>i158475611663639202234</p>
      */

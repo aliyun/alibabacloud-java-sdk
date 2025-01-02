@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RebootNodesRequest extends TeaModel {
     /**
+     * <p>Cluster ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i15b480fbd2fcdbc2869cd80</p>
      */
@@ -12,12 +14,17 @@ public class RebootNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Whether to allow skipping failed node tasks, default value is False</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
+    /**
+     * <p>List of nodes</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<String> nodes;
 

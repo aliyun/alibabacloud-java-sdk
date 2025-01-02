@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopInvocationShrinkRequest extends TeaModel {
     /**
+     * <p>Command execution ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class StopInvocationShrinkRequest extends TeaModel {
     @NameInMap("InvokeId")
     public String invokeId;
 
+    /**
+     * <p>List of nodes.</p>
+     */
     @NameInMap("NodeIdList")
     public String nodeIdListShrink;
 

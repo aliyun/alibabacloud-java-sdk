@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSendFileResultsRequest extends TeaModel {
     /**
+     * <p>Command execution ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String invokeId;
 
     /**
+     * <p>Node ID</p>
+     * 
      * <strong>example:</strong>
      * <p>e01-cn-zvp2tgykr08</p>
      */

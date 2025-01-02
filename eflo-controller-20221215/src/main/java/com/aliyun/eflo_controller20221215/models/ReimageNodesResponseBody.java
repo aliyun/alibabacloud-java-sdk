@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReimageNodesResponseBody extends TeaModel {
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>15FBCD9B-C93F-54E8-A168-AADE7E66DAD2</p>
      */
@@ -12,6 +14,8 @@ public class ReimageNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Task ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i158782151663841517926</p>
      */

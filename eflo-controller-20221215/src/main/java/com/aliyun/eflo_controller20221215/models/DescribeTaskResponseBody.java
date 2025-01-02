@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTaskResponseBody extends TeaModel {
     /**
+     * <p>Cluster ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i119982311660892626523</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTaskResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Cluster Name</p>
+     * 
      * <strong>example:</strong>
      * <p>Standard_Cluster</p>
      */
@@ -19,6 +23,8 @@ public class DescribeTaskResponseBody extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>Start Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-11-30T02:00:00.852Z</p>
      */
@@ -26,26 +32,38 @@ public class DescribeTaskResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>Task Failure Message</p>
+     * 
      * <strong>example:</strong>
      * <p>Releasing [prod_main_mid_26e234cf] in region [cn-beijing] with weight [0]</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of node IDs</p>
+     */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>A7FD7411-9395-52E8-AF42-EB3A4A55446D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Execution Steps</p>
+     */
     @NameInMap("Steps")
     public java.util.List<DescribeTaskResponseBodySteps> steps;
 
     /**
+     * <p>Task State</p>
+     * 
      * <strong>example:</strong>
      * <p>running</p>
      */
@@ -53,6 +71,8 @@ public class DescribeTaskResponseBody extends TeaModel {
     public String taskState;
 
     /**
+     * <p>Task Type</p>
+     * 
      * <strong>example:</strong>
      * <p>cut_cluster</p>
      */
@@ -60,6 +80,8 @@ public class DescribeTaskResponseBody extends TeaModel {
     public String taskType;
 
     /**
+     * <p>Update Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-11-30T03:40:14.852Z</p>
      */
@@ -153,6 +175,8 @@ public class DescribeTaskResponseBody extends TeaModel {
 
     public static class DescribeTaskResponseBodyStepsSubTasks extends TeaModel {
         /**
+         * <p>Creation Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-30T2:00:00.852Z</p>
          */
@@ -160,6 +184,8 @@ public class DescribeTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Subtask Failure Message</p>
+         * 
          * <strong>example:</strong>
          * <p>Releasing [prod_main_mid_26e234cf] in region [cn-beijing] with weight [0]</p>
          */
@@ -167,6 +193,8 @@ public class DescribeTaskResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>i158805051661047928377</p>
          */
@@ -174,6 +202,8 @@ public class DescribeTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Task Execution State</p>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
@@ -181,6 +211,8 @@ public class DescribeTaskResponseBody extends TeaModel {
         public String taskState;
 
         /**
+         * <p>Task Type</p>
+         * 
          * <strong>example:</strong>
          * <p>cut_node_sub_task</p>
          */
@@ -188,6 +220,8 @@ public class DescribeTaskResponseBody extends TeaModel {
         public String taskType;
 
         /**
+         * <p>Update Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-30T02:20:14.852Z</p>
          */
@@ -251,16 +285,26 @@ public class DescribeTaskResponseBody extends TeaModel {
 
     public static class DescribeTaskResponseBodySteps extends TeaModel {
         /**
+         * <p>Step Failure Message</p>
+         * 
          * <strong>example:</strong>
          * <p>get taskinfo failed</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Stage Tag</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node scaling</p>
+         */
         @NameInMap("StageTag")
         public String stageTag;
 
         /**
+         * <p>Start Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-30T2:00:00.852Z</p>
          */
@@ -268,6 +312,8 @@ public class DescribeTaskResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>Step Name</p>
+         * 
          * <strong>example:</strong>
          * <p>create_vpd</p>
          */
@@ -275,6 +321,8 @@ public class DescribeTaskResponseBody extends TeaModel {
         public String stepName;
 
         /**
+         * <p>Step Execution State</p>
+         * 
          * <strong>example:</strong>
          * <p>execution_success</p>
          */
@@ -282,16 +330,23 @@ public class DescribeTaskResponseBody extends TeaModel {
         public String stepState;
 
         /**
+         * <p>Step Type</p>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */
         @NameInMap("StepType")
         public String stepType;
 
+        /**
+         * <p>Subtasks</p>
+         */
         @NameInMap("SubTasks")
         public java.util.List<DescribeTaskResponseBodyStepsSubTasks> subTasks;
 
         /**
+         * <p>Update Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-30T02:20:14.852Z</p>
          */

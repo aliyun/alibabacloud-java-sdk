@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNodeRequest extends TeaModel {
     /**
+     * <p>Node ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
