@@ -144,6 +144,12 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     @NameInMap("FirewallType")
     public String firewallType;
 
+    /**
+     * <p>Whether to query only the data that has completed private network tracing.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsOnlyPrivateAssoc")
     public String isOnlyPrivateAssoc;
 

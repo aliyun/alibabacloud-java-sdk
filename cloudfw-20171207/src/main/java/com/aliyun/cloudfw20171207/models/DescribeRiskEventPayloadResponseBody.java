@@ -31,12 +31,30 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     @NameInMap("DstVpcId")
     public String dstVpcId;
 
+    /**
+     * <p>Type of the hit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("HitContentType")
     public Integer hitContentType;
 
+    /**
+     * <p>The position where the hit ends.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>67</p>
+     */
     @NameInMap("HitTo")
     public Integer hitTo;
 
+    /**
+     * <p>Hit payload.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2f636f6d706f7365722f73656e645f656d61696c3f746f3d6d61667740776f66736f7961792675726c3d687474703a2f2f302e302e302e303a31323334352f692f6431366530312f313664622f673670772f</p>
+     */
     @NameInMap("ParsedContent")
     public String parsedContent;
 

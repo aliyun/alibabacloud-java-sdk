@@ -23,7 +23,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>An array that consists of the details about the VPC firewall.</p>
+     * <p>The information about the VPC firewalls.</p>
      */
     @NameInMap("VpcFirewalls")
     public java.util.List<DescribeVpcFirewallCenListResponseBodyVpcFirewalls> vpcFirewalls;
@@ -84,6 +84,17 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         @NameInMap("EnableAllPatch")
         public Integer enableAllPatch;
 
+        /**
+         * <p>The level of the rule group for the IPS. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: loose.</li>
+         * <li><strong>2</strong>: medium.</li>
+         * <li><strong>3</strong>: strict.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RuleClass")
         public Integer ruleClass;
 
@@ -520,7 +531,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         public String firewallSwitchStatus;
 
         /**
-         * <p>The information about the intrusion prevention system (IPS) configuration.</p>
+         * <p>The intrusion prevention system (IPS) configurations.</p>
          */
         @NameInMap("IpsConfig")
         public DescribeVpcFirewallCenListResponseBodyVpcFirewallsIpsConfig ipsConfig;

@@ -81,8 +81,8 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     /**
      * <p>The language of the content within the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong> (default)</li>
+     * <li><strong>en</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,10 +92,10 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The method that is used to sort the results. Valid values:</p>
+     * <p>The method that you want to use to sort the query results. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong>: the ascending order.</li>
-     * <li><strong>desc</strong> (default): the descending order.</li>
+     * <li><strong>asc</strong></li>
+     * <li><strong>desc</strong> (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>

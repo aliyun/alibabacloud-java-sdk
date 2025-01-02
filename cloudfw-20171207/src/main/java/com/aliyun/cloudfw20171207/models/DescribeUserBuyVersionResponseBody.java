@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeUserBuyVersionResponseBody extends TeaModel {
     /**
+     * <p>The ID of the Alibaba Cloud account that is used to purchase Cloud Firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>119898001566xxxx</p>
      */
@@ -12,6 +14,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public Long aliUid;
 
     /**
+     * <p>The time when Cloud Firewall expires.</p>
+     * <blockquote>
+     * <p> The value is a timestamp in milliseconds.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p> If you use Cloud Firewall that uses the pay-as-you-go billing method, ignore this parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1726934400000</p>
      */
@@ -19,6 +29,11 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public Long expire;
 
     /**
+     * <p>The instance ID of Cloud Firewall.</p>
+     * <blockquote>
+     * <p> If you use a trial of Cloud Firewall, ignore this parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>vipcloudfw-cn-xxxxx</p>
      */
@@ -26,6 +41,15 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The status of Cloud Firewall. Valid values:</p>
+     * <ul>
+     * <li><strong>normal</strong>: Cloud Firewall is running as expected.</li>
+     * <li><strong>init</strong>: Cloud Firewall is being initialized.</li>
+     * <li><strong>deleting</strong>: Cloud Firewall is being deleted.</li>
+     * <li><strong>abnormal</strong>: An exception occurs in Cloud Firewall.</li>
+     * <li><strong>free</strong>: Cloud Firewall is invalid.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
@@ -33,6 +57,11 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public String instanceStatus;
 
     /**
+     * <p>The number of public IP addresses that can be protected.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only for Cloud Firewall that uses the subscription billing method.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>63</p>
      */
@@ -40,6 +69,12 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public Long ipNumber;
 
     /**
+     * <p>Indicates whether log delivery is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -47,6 +82,11 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public Boolean logStatus;
 
     /**
+     * <p>The log storage capacity.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only for Cloud Firewall that uses the subscription billing method.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3000</p>
      */
@@ -54,6 +94,15 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public Long logStorage;
 
     /**
+     * <p>The status of the burstable protected traffic feature. Valid values:</p>
+     * <ul>
+     * <li><strong>1000000</strong>: enabled.</li>
+     * <li><strong>0</strong>: disabled.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only for Cloud Firewall that uses the subscription billing method.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -61,6 +110,8 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public Long maxOverflow;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F71B03EE-xxxxx-91D79CC6AA1A</p>
      */
@@ -68,6 +119,11 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The time when Cloud Firewall was activated.</p>
+     * <blockquote>
+     * <p> The value is a timestamp in milliseconds.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1692504764000</p>
      */
@@ -75,6 +131,12 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>Indicates whether Cloud Firewall is valid. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +144,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public Boolean userStatus;
 
     /**
+     * <p>The edition of Cloud Firewall. Valid values:</p>
+     * <ul>
+     * <li><strong>2</strong>: Premium Edition.</li>
+     * <li><strong>3</strong>: Enterprise Edition.</li>
+     * <li><strong>4</strong>: Ultimate Edition.</li>
+     * <li><strong>10</strong>: Cloud Firewall that uses the pay-as-you-go billing method.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -89,6 +159,11 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public Integer version;
 
     /**
+     * <p>The number of virtual private clouds (VPCs) that can be protected.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only for Cloud Firewall that uses the subscription billing method.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>21</p>
      */

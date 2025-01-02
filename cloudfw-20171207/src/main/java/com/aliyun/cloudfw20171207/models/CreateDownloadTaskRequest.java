@@ -28,6 +28,15 @@ public class CreateDownloadTaskRequest extends TeaModel {
     public String taskData;
 
     /**
+     * <p>The type of the task. For more information about task types, see the descriptions in the &quot;DescribeDownloadTaskType&quot; topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternetFirewallAsset</p>
+     */
+    @NameInMap("TaskType")
+    public String taskType;
+
+    /**
      * <p>The time zone of the time information in the downloaded file. The value must be an identifier of a time zone in the Internet Assigned Numbers Authority (IANA) database. The default value is Asia/Shanghai, which indicates UTC+8.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +64,14 @@ public class CreateDownloadTaskRequest extends TeaModel {
     }
     public String getTaskData() {
         return this.taskData;
+    }
+
+    public CreateDownloadTaskRequest setTaskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    public String getTaskType() {
+        return this.taskType;
     }
 
     public CreateDownloadTaskRequest setTimeZone(String timeZone) {

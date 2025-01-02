@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDomainResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the domain names in outbound connections.</p>
+     * <p>The domain names in outbound connections.</p>
      */
     @NameInMap("DomainList")
     public java.util.List<DescribeOutgoingDomainResponseBodyDomainList> domainList;
@@ -214,9 +214,18 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         @NameInMap("AddressGroupUUID")
         public String addressGroupUUID;
 
+        /**
+         * <p>The application names.</p>
+         */
         @NameInMap("ApplicationNameList")
         public java.util.List<String> applicationNameList;
 
+        /**
+         * <p>The outbound asset count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("AssetCount")
         public Long assetCount;
 
@@ -353,6 +362,12 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         @NameInMap("OutBytes")
         public Long outBytes;
 
+        /**
+         * <p>The outbound private asset count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PrivateAssetCount")
         public Long privateAssetCount;
 

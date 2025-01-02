@@ -4,6 +4,12 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserBuyVersionRequest extends TeaModel {
+    /**
+     * <p>Instance ID. If the Instance ID is provided, the query will be based on this ID. If not provided, the latest instance will be queried by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cfw_elasticity_public_cn-*******</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

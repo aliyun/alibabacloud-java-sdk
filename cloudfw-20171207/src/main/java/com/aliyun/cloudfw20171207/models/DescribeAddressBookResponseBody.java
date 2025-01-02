@@ -91,6 +91,36 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeAddressBookResponseBodyAclsAddresses extends TeaModel {
+        @NameInMap("Address")
+        public String address;
+
+        @NameInMap("Note")
+        public String note;
+
+        public static DescribeAddressBookResponseBodyAclsAddresses build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAddressBookResponseBodyAclsAddresses self = new DescribeAddressBookResponseBodyAclsAddresses();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAddressBookResponseBodyAclsAddresses setAddress(String address) {
+            this.address = address;
+            return this;
+        }
+        public String getAddress() {
+            return this.address;
+        }
+
+        public DescribeAddressBookResponseBodyAclsAddresses setNote(String note) {
+            this.note = note;
+            return this;
+        }
+        public String getNote() {
+            return this.note;
+        }
+
+    }
+
     public static class DescribeAddressBookResponseBodyAclsTagList extends TeaModel {
         /**
          * <p>The key of the ECS tag.</p>
@@ -148,6 +178,9 @@ public class DescribeAddressBookResponseBody extends TeaModel {
          */
         @NameInMap("AddressListCount")
         public Integer addressListCount;
+
+        @NameInMap("Addresses")
+        public java.util.List<DescribeAddressBookResponseBodyAclsAddresses> addresses;
 
         /**
          * <p>Indicates whether the public IP addresses of ECS instances are automatically added to the address book if the instances match the specified tags. The setting takes effect on both newly purchased ECS instances whose tag settings are complete and ECS instances whose tag settings are modified. Valid values:</p>
@@ -253,6 +286,14 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
         public Integer getAddressListCount() {
             return this.addressListCount;
+        }
+
+        public DescribeAddressBookResponseBodyAcls setAddresses(java.util.List<DescribeAddressBookResponseBodyAclsAddresses> addresses) {
+            this.addresses = addresses;
+            return this;
+        }
+        public java.util.List<DescribeAddressBookResponseBodyAclsAddresses> getAddresses() {
+            return this.addresses;
         }
 
         public DescribeAddressBookResponseBodyAcls setAutoAddTagEcs(Integer autoAddTagEcs) {
