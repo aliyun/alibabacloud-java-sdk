@@ -4,12 +4,18 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HttpApiOperation extends TeaModel {
+    @NameInMap("authConfig")
+    public AuthConfig authConfig;
+
     /**
      * <strong>example:</strong>
      * <p>获取用户信息</p>
      */
     @NameInMap("description")
     public String description;
+
+    @NameInMap("enableAuth")
+    public Boolean enableAuth;
 
     /**
      * <p>This parameter is required.</p>
@@ -52,12 +58,28 @@ public class HttpApiOperation extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public HttpApiOperation setAuthConfig(AuthConfig authConfig) {
+        this.authConfig = authConfig;
+        return this;
+    }
+    public AuthConfig getAuthConfig() {
+        return this.authConfig;
+    }
+
     public HttpApiOperation setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public HttpApiOperation setEnableAuth(Boolean enableAuth) {
+        this.enableAuth = enableAuth;
+        return this;
+    }
+    public Boolean getEnableAuth() {
+        return this.enableAuth;
     }
 
     public HttpApiOperation setMethod(String method) {

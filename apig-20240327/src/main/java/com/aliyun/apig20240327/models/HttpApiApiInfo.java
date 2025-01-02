@@ -7,6 +7,9 @@ public class HttpApiApiInfo extends TeaModel {
     @NameInMap("aiProtocols")
     public java.util.List<String> aiProtocols;
 
+    @NameInMap("authConfig")
+    public AuthConfig authConfig;
+
     /**
      * <strong>example:</strong>
      * <p>/v1</p>
@@ -19,6 +22,9 @@ public class HttpApiApiInfo extends TeaModel {
 
     @NameInMap("description")
     public String description;
+
+    @NameInMap("enabelAuth")
+    public Boolean enabelAuth;
 
     @NameInMap("environments")
     public java.util.List<HttpApiApiInfoEnvironments> environments;
@@ -73,6 +79,14 @@ public class HttpApiApiInfo extends TeaModel {
         return this.aiProtocols;
     }
 
+    public HttpApiApiInfo setAuthConfig(AuthConfig authConfig) {
+        this.authConfig = authConfig;
+        return this;
+    }
+    public AuthConfig getAuthConfig() {
+        return this.authConfig;
+    }
+
     public HttpApiApiInfo setBasePath(String basePath) {
         this.basePath = basePath;
         return this;
@@ -95,6 +109,14 @@ public class HttpApiApiInfo extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public HttpApiApiInfo setEnabelAuth(Boolean enabelAuth) {
+        this.enabelAuth = enabelAuth;
+        return this;
+    }
+    public Boolean getEnabelAuth() {
+        return this.enabelAuth;
     }
 
     public HttpApiApiInfo setEnvironments(java.util.List<HttpApiApiInfoEnvironments> environments) {

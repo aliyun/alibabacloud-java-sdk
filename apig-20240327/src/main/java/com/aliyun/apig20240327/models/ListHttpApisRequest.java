@@ -94,6 +94,9 @@ public class ListHttpApisRequest extends TeaModel {
     @NameInMap("withEnvironmentInfoById")
     public String withEnvironmentInfoById;
 
+    @NameInMap("withIngressInfo")
+    public Boolean withIngressInfo;
+
     @NameInMap("withPluginAttachmentByPluginId")
     public String withPluginAttachmentByPluginId;
 
@@ -196,6 +199,14 @@ public class ListHttpApisRequest extends TeaModel {
     }
     public String getWithEnvironmentInfoById() {
         return this.withEnvironmentInfoById;
+    }
+
+    public ListHttpApisRequest setWithIngressInfo(Boolean withIngressInfo) {
+        this.withIngressInfo = withIngressInfo;
+        return this;
+    }
+    public Boolean getWithIngressInfo() {
+        return this.withIngressInfo;
     }
 
     public ListHttpApisRequest setWithPluginAttachmentByPluginId(String withPluginAttachmentByPluginId) {

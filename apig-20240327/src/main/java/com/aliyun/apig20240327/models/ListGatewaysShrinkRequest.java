@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewaysShrinkRequest extends TeaModel {
     /**
-     * <p>Query exactly by gateway ID.</p>
+     * <p>Query exactly by Gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cpv4sqdl****</p>
@@ -23,7 +23,7 @@ public class ListGatewaysShrinkRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>Query exactly by gateway name.</p>
+     * <p>Query exactly by Gateway name.</p>
      * 
      * <strong>example:</strong>
      * <p>itemcenter-gateway</p>
@@ -49,11 +49,20 @@ public class ListGatewaysShrinkRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz3wes3hnre5a</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("tags")
-    public String tagsShrink;
+    /**
+     * <p>Filter list by tags</p>
+     */
+    @NameInMap("tag")
+    public String tagShrink;
 
     public static ListGatewaysShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGatewaysShrinkRequest self = new ListGatewaysShrinkRequest();
@@ -108,12 +117,12 @@ public class ListGatewaysShrinkRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public ListGatewaysShrinkRequest setTagsShrink(String tagsShrink) {
-        this.tagsShrink = tagsShrink;
+    public ListGatewaysShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
         return this;
     }
-    public String getTagsShrink() {
-        return this.tagsShrink;
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
 }

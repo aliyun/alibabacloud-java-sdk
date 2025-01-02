@@ -40,6 +40,12 @@ public class ListDomainsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-ahr5uil8raz0rq3b</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 

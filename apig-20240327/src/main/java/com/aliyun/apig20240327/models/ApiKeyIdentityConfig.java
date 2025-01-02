@@ -4,14 +4,11 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ApiKeyIdentityConfig extends TeaModel {
-    @NameInMap("apikey")
-    public String apikey;
-
     @NameInMap("apikeySource")
     public ApiKeyIdentityConfigApikeySource apikeySource;
 
-    @NameInMap("generateMode")
-    public String generateMode;
+    @NameInMap("credentials")
+    public java.util.List<ApiKeyIdentityConfigCredentials> credentials;
 
     @NameInMap("type")
     public String type;
@@ -19,14 +16,6 @@ public class ApiKeyIdentityConfig extends TeaModel {
     public static ApiKeyIdentityConfig build(java.util.Map<String, ?> map) throws Exception {
         ApiKeyIdentityConfig self = new ApiKeyIdentityConfig();
         return TeaModel.build(map, self);
-    }
-
-    public ApiKeyIdentityConfig setApikey(String apikey) {
-        this.apikey = apikey;
-        return this;
-    }
-    public String getApikey() {
-        return this.apikey;
     }
 
     public ApiKeyIdentityConfig setApikeySource(ApiKeyIdentityConfigApikeySource apikeySource) {
@@ -37,12 +26,12 @@ public class ApiKeyIdentityConfig extends TeaModel {
         return this.apikeySource;
     }
 
-    public ApiKeyIdentityConfig setGenerateMode(String generateMode) {
-        this.generateMode = generateMode;
+    public ApiKeyIdentityConfig setCredentials(java.util.List<ApiKeyIdentityConfigCredentials> credentials) {
+        this.credentials = credentials;
         return this;
     }
-    public String getGenerateMode() {
-        return this.generateMode;
+    public java.util.List<ApiKeyIdentityConfigCredentials> getCredentials() {
+        return this.credentials;
     }
 
     public ApiKeyIdentityConfig setType(String type) {
@@ -79,6 +68,36 @@ public class ApiKeyIdentityConfig extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class ApiKeyIdentityConfigCredentials extends TeaModel {
+        @NameInMap("apikey")
+        public String apikey;
+
+        @NameInMap("generateMode")
+        public String generateMode;
+
+        public static ApiKeyIdentityConfigCredentials build(java.util.Map<String, ?> map) throws Exception {
+            ApiKeyIdentityConfigCredentials self = new ApiKeyIdentityConfigCredentials();
+            return TeaModel.build(map, self);
+        }
+
+        public ApiKeyIdentityConfigCredentials setApikey(String apikey) {
+            this.apikey = apikey;
+            return this;
+        }
+        public String getApikey() {
+            return this.apikey;
+        }
+
+        public ApiKeyIdentityConfigCredentials setGenerateMode(String generateMode) {
+            this.generateMode = generateMode;
+            return this;
+        }
+        public String getGenerateMode() {
+            return this.generateMode;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HttpApiOperationInfo extends TeaModel {
+    @NameInMap("authConfig")
+    public AuthConfig authConfig;
+
     /**
      * <strong>example:</strong>
      * <p>1719386834548</p>
@@ -17,6 +20,9 @@ public class HttpApiOperationInfo extends TeaModel {
      */
     @NameInMap("description")
     public String description;
+
+    @NameInMap("enableAuth")
+    public Boolean enableAuth;
 
     /**
      * <strong>example:</strong>
@@ -60,6 +66,14 @@ public class HttpApiOperationInfo extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public HttpApiOperationInfo setAuthConfig(AuthConfig authConfig) {
+        this.authConfig = authConfig;
+        return this;
+    }
+    public AuthConfig getAuthConfig() {
+        return this.authConfig;
+    }
+
     public HttpApiOperationInfo setCreateTimestamp(Long createTimestamp) {
         this.createTimestamp = createTimestamp;
         return this;
@@ -74,6 +88,14 @@ public class HttpApiOperationInfo extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public HttpApiOperationInfo setEnableAuth(Boolean enableAuth) {
+        this.enableAuth = enableAuth;
+        return this;
+    }
+    public Boolean getEnableAuth() {
+        return this.enableAuth;
     }
 
     public HttpApiOperationInfo setMethod(String method) {

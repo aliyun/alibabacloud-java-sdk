@@ -4,11 +4,20 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class GetEnvironmentRequest extends TeaModel {
+    /**
+     * <p>Indicates whether to return online resource info.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("withStatistics")
     public Boolean withStatistics;
 
     /**
      * <p>Option for vpc info.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("withVpcInfo")
     public Boolean withVpcInfo;

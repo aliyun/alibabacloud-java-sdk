@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewaysRequest extends TeaModel {
     /**
-     * <p>Query exactly by gateway ID.</p>
+     * <p>Query exactly by Gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cpv4sqdl****</p>
@@ -23,7 +23,7 @@ public class ListGatewaysRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>Query exactly by gateway name.</p>
+     * <p>Query exactly by Gateway name.</p>
      * 
      * <strong>example:</strong>
      * <p>itemcenter-gateway</p>
@@ -49,11 +49,20 @@ public class ListGatewaysRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz3wes3hnre5a</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("tags")
-    public java.util.List<ListGatewaysRequestTags> tags;
+    /**
+     * <p>Filter list by tags</p>
+     */
+    @NameInMap("tag")
+    public java.util.List<ListGatewaysRequestTag> tag;
 
     public static ListGatewaysRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGatewaysRequest self = new ListGatewaysRequest();
@@ -108,27 +117,39 @@ public class ListGatewaysRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public ListGatewaysRequest setTags(java.util.List<ListGatewaysRequestTags> tags) {
-        this.tags = tags;
+    public ListGatewaysRequest setTag(java.util.List<ListGatewaysRequestTag> tag) {
+        this.tag = tag;
         return this;
     }
-    public java.util.List<ListGatewaysRequestTags> getTags() {
-        return this.tags;
+    public java.util.List<ListGatewaysRequestTag> getTag() {
+        return this.tag;
     }
 
-    public static class ListGatewaysRequestTags extends TeaModel {
+    public static class ListGatewaysRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("value")
         public String value;
 
-        public static ListGatewaysRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            ListGatewaysRequestTags self = new ListGatewaysRequestTags();
+        public static ListGatewaysRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewaysRequestTag self = new ListGatewaysRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public ListGatewaysRequestTags setKey(String key) {
+        public ListGatewaysRequestTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -136,7 +157,7 @@ public class ListGatewaysRequest extends TeaModel {
             return this.key;
         }
 
-        public ListGatewaysRequestTags setValue(String value) {
+        public ListGatewaysRequestTag setValue(String value) {
             this.value = value;
             return this;
         }

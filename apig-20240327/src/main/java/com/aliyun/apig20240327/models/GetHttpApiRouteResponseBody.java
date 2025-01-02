@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetHttpApiRouteResponseBody extends TeaModel {
     /**
+     * <p>Response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Route detail data.</p>
+     */
     @NameInMap("data")
     public HttpRoute data;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class GetHttpApiRouteResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
      */
