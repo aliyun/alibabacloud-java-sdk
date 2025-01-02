@@ -102,21 +102,29 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
     public static class GetAITeacherSyncDialogueSuggestionResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>谢谢莉莉.你喜欢吃肉吗，莉莉？</p>
+         */
+        @NameInMap("chineseResult")
+        public String chineseResult;
+
+        /**
+         * <strong>example:</strong>
          * <p>Thanks, Lily. Do you like meat, Lily?</p>
          */
         @NameInMap("englishResult")
         public String englishResult;
 
-        /**
-         * <strong>example:</strong>
-         * <p>谢谢莉莉.你喜欢吃肉吗，莉莉？</p>
-         */
-        @NameInMap("englishResult1")
-        public String englishResult1;
-
         public static GetAITeacherSyncDialogueSuggestionResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAITeacherSyncDialogueSuggestionResponseBodyData self = new GetAITeacherSyncDialogueSuggestionResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetAITeacherSyncDialogueSuggestionResponseBodyData setChineseResult(String chineseResult) {
+            this.chineseResult = chineseResult;
+            return this;
+        }
+        public String getChineseResult() {
+            return this.chineseResult;
         }
 
         public GetAITeacherSyncDialogueSuggestionResponseBodyData setEnglishResult(String englishResult) {
@@ -125,14 +133,6 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
         }
         public String getEnglishResult() {
             return this.englishResult;
-        }
-
-        public GetAITeacherSyncDialogueSuggestionResponseBodyData setEnglishResult1(String englishResult1) {
-            this.englishResult1 = englishResult1;
-            return this;
-        }
-        public String getEnglishResult1() {
-            return this.englishResult1;
         }
 
     }
