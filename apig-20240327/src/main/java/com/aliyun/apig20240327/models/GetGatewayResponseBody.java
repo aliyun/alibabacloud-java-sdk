@@ -399,9 +399,21 @@ public class GetGatewayResponseBody extends TeaModel {
     }
 
     public static class GetGatewayResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The tag key of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The tag value of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -693,6 +705,12 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("replicas")
         public String replicas;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2s3cvc4jzfxi</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
@@ -734,6 +752,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The resource tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<GetGatewayResponseBodyDataTags> tags;
 

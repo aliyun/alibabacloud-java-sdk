@@ -58,6 +58,12 @@ public class ListEnvironmentsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2sy66mftleiq</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 

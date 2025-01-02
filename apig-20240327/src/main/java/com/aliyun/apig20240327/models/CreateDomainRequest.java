@@ -64,9 +64,18 @@ public class CreateDomainRequest extends TeaModel {
     @NameInMap("protocol")
     public String protocol;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzoiafjtr7zyq</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The TLS cipher suites config.</p>
+     */
     @NameInMap("tlsCipherSuitesConfig")
     public TlsCipherSuitesConfig tlsCipherSuitesConfig;
 

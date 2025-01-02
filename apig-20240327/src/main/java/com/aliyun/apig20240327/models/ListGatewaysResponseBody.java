@@ -14,7 +14,7 @@ public class ListGatewaysResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Result of the gateway list query.</p>
+     * <p>Result of gateway list query.</p>
      */
     @NameInMap("data")
     public ListGatewaysResponseBodyData data;
@@ -175,7 +175,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
-         * <p>Mode of load balancer provision for the gateway:</p>
+         * <p>Load balancer provision mode for the gateway:</p>
          * <ul>
          * <li>Managed: Managed by the Cloud Native API Gateway.</li>
          * </ul>
@@ -300,6 +300,9 @@ public class ListGatewaysResponseBody extends TeaModel {
     public static class ListGatewaysResponseBodyDataItemsSecurityGroup extends TeaModel {
         /**
          * <p>The Security Group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxxx</p>
          */
         @NameInMap("securityGroupId")
         public String securityGroupId;
@@ -320,31 +323,43 @@ public class ListGatewaysResponseBody extends TeaModel {
     }
 
     public static class ListGatewaysResponseBodyDataItemsTags extends TeaModel {
-        @NameInMap("tagKey")
-        public String tagKey;
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
+         */
+        @NameInMap("key")
+        public String key;
 
-        @NameInMap("tagValue")
-        public String tagValue;
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
+        @NameInMap("value")
+        public String value;
 
         public static ListGatewaysResponseBodyDataItemsTags build(java.util.Map<String, ?> map) throws Exception {
             ListGatewaysResponseBodyDataItemsTags self = new ListGatewaysResponseBodyDataItemsTags();
             return TeaModel.build(map, self);
         }
 
-        public ListGatewaysResponseBodyDataItemsTags setTagKey(String tagKey) {
-            this.tagKey = tagKey;
+        public ListGatewaysResponseBodyDataItemsTags setKey(String key) {
+            this.key = key;
             return this;
         }
-        public String getTagKey() {
-            return this.tagKey;
+        public String getKey() {
+            return this.key;
         }
 
-        public ListGatewaysResponseBodyDataItemsTags setTagValue(String tagValue) {
-            this.tagValue = tagValue;
+        public ListGatewaysResponseBodyDataItemsTags setValue(String value) {
+            this.value = value;
             return this;
         }
-        public String getTagValue() {
-            return this.tagValue;
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -435,7 +450,7 @@ public class ListGatewaysResponseBody extends TeaModel {
          * <p>The ID of the current zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-hangzhou-f</p>
          */
         @NameInMap("zoneId")
         public String zoneId;
@@ -499,7 +514,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>Expiration timestamp for the prepaid (annual or monthly) plan. Unit: milliseconds.</p>
+         * <p>Expiration timestamp for prepaid (annual or monthly) subscriptions. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>172086834548</p>
@@ -540,6 +555,12 @@ public class ListGatewaysResponseBody extends TeaModel {
         @NameInMap("replicas")
         public String replicas;
 
+        /**
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxx</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
@@ -581,11 +602,14 @@ public class ListGatewaysResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>Array of tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListGatewaysResponseBodyDataItemsTags> tags;
 
         /**
-         * <p>Target version of the gateway. When it is inconsistent with <code>version</code>, a version upgrade can be performed.</p>
+         * <p>Target version of the gateway. When it is inconsistent with the current <code>version</code>, an upgrade can be performed.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.2</p>
@@ -602,6 +626,9 @@ public class ListGatewaysResponseBody extends TeaModel {
         @NameInMap("updateTimestamp")
         public Long updateTimestamp;
 
+        /**
+         * <p>The vSwtich.</p>
+         */
         @NameInMap("vSwitch")
         public ListGatewaysResponseBodyDataItemsVSwitch vSwitch;
 
@@ -614,9 +641,15 @@ public class ListGatewaysResponseBody extends TeaModel {
         @NameInMap("version")
         public String version;
 
+        /**
+         * <p>The VPC.</p>
+         */
         @NameInMap("vpc")
         public ListGatewaysResponseBodyDataItemsVpc vpc;
 
+        /**
+         * <p>The Zones.</p>
+         */
         @NameInMap("zones")
         public java.util.List<ListGatewaysResponseBodyDataItemsZones> zones;
 

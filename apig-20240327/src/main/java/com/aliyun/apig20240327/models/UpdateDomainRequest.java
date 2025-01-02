@@ -4,23 +4,11 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdateDomainRequest extends TeaModel {
-    /**
-     * <p>Cloud Shield CA certificate identifier.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123455-cn-hangzhou</p>
-     */
-    @NameInMap("caCertIndentifier")
-    public String caCertIndentifier;
+    @NameInMap("caCertIdentifier")
+    public String caCertIdentifier;
 
-    /**
-     * <p>Cloud Shield certificate identifier.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123458-cn-hangzhou</p>
-     */
-    @NameInMap("certIndentifier")
-    public String certIndentifier;
+    @NameInMap("certIdentifier")
+    public String certIdentifier;
 
     /**
      * <p>Set the HTTPS protocol type, whether to enable forced HTTPS redirection.</p>
@@ -54,6 +42,9 @@ public class UpdateDomainRequest extends TeaModel {
     @NameInMap("protocol")
     public String protocol;
 
+    /**
+     * <p>TLS Cipher Suite Configuration.</p>
+     */
     @NameInMap("tlsCipherSuitesConfig")
     public TlsCipherSuitesConfig tlsCipherSuitesConfig;
 
@@ -80,20 +71,20 @@ public class UpdateDomainRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateDomainRequest setCaCertIndentifier(String caCertIndentifier) {
-        this.caCertIndentifier = caCertIndentifier;
+    public UpdateDomainRequest setCaCertIdentifier(String caCertIdentifier) {
+        this.caCertIdentifier = caCertIdentifier;
         return this;
     }
-    public String getCaCertIndentifier() {
-        return this.caCertIndentifier;
+    public String getCaCertIdentifier() {
+        return this.caCertIdentifier;
     }
 
-    public UpdateDomainRequest setCertIndentifier(String certIndentifier) {
-        this.certIndentifier = certIndentifier;
+    public UpdateDomainRequest setCertIdentifier(String certIdentifier) {
+        this.certIdentifier = certIdentifier;
         return this;
     }
-    public String getCertIndentifier() {
-        return this.certIndentifier;
+    public String getCertIdentifier() {
+        return this.certIdentifier;
     }
 
     public UpdateDomainRequest setForceHttps(Boolean forceHttps) {

@@ -43,6 +43,12 @@ public class CreateEnvironmentRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmycs5expl7oq</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 

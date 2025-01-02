@@ -85,6 +85,12 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     @NameInMap("withConsumerInfoById")
     public String withConsumerInfoById;
 
+    /**
+     * <p>Plugin ID, use this plugin ID to retrieve the plugin release information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pl-xxx</p>
+     */
     @NameInMap("withPluginAttachmentByPluginId")
     public String withPluginAttachmentByPluginId;
 

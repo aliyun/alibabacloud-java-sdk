@@ -4,8 +4,14 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdateHttpApiRequest extends TeaModel {
+    /**
+     * <p>List of AI protocols.</p>
+     */
     @NameInMap("aiProtocols")
     public java.util.List<String> aiProtocols;
+
+    @NameInMap("authConfig")
+    public AuthConfig authConfig;
 
     /**
      * <p>Base path of the API, which must start with a \&quot;/\&quot;.</p>
@@ -17,6 +23,9 @@ public class UpdateHttpApiRequest extends TeaModel {
     @NameInMap("basePath")
     public String basePath;
 
+    /**
+     * <p>List of API deployment configurations.</p>
+     */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
@@ -28,6 +37,9 @@ public class UpdateHttpApiRequest extends TeaModel {
      */
     @NameInMap("description")
     public String description;
+
+    @NameInMap("enableAuth")
+    public Boolean enableAuth;
 
     /**
      * <p>Configuration information for the HTTP Ingress API.</p>
@@ -60,6 +72,14 @@ public class UpdateHttpApiRequest extends TeaModel {
         return this.aiProtocols;
     }
 
+    public UpdateHttpApiRequest setAuthConfig(AuthConfig authConfig) {
+        this.authConfig = authConfig;
+        return this;
+    }
+    public AuthConfig getAuthConfig() {
+        return this.authConfig;
+    }
+
     public UpdateHttpApiRequest setBasePath(String basePath) {
         this.basePath = basePath;
         return this;
@@ -82,6 +102,14 @@ public class UpdateHttpApiRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateHttpApiRequest setEnableAuth(Boolean enableAuth) {
+        this.enableAuth = enableAuth;
+        return this;
+    }
+    public Boolean getEnableAuth() {
+        return this.enableAuth;
     }
 
     public UpdateHttpApiRequest setIngressConfig(UpdateHttpApiRequestIngressConfig ingressConfig) {

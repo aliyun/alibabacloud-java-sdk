@@ -4,8 +4,14 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class CreateHttpApiRequest extends TeaModel {
+    /**
+     * <p>The AI protocols list.</p>
+     */
     @NameInMap("aiProtocols")
     public java.util.List<String> aiProtocols;
+
+    @NameInMap("authConfig")
+    public AuthConfig authConfig;
 
     /**
      * <p>Base path of the API, which must start with a \&quot;/\&quot;.</p>
@@ -16,6 +22,9 @@ public class CreateHttpApiRequest extends TeaModel {
     @NameInMap("basePath")
     public String basePath;
 
+    /**
+     * <p>The deploy configs.</p>
+     */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
@@ -27,6 +36,9 @@ public class CreateHttpApiRequest extends TeaModel {
      */
     @NameInMap("description")
     public String description;
+
+    @NameInMap("enableAuth")
+    public Boolean enableAuth;
 
     /**
      * <p>Configuration information for the HTTP Ingress API.</p>
@@ -50,6 +62,12 @@ public class CreateHttpApiRequest extends TeaModel {
     @NameInMap("protocols")
     public java.util.List<String> protocols;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzgvmlotionbi</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
@@ -87,6 +105,14 @@ public class CreateHttpApiRequest extends TeaModel {
         return this.aiProtocols;
     }
 
+    public CreateHttpApiRequest setAuthConfig(AuthConfig authConfig) {
+        this.authConfig = authConfig;
+        return this;
+    }
+    public AuthConfig getAuthConfig() {
+        return this.authConfig;
+    }
+
     public CreateHttpApiRequest setBasePath(String basePath) {
         this.basePath = basePath;
         return this;
@@ -109,6 +135,14 @@ public class CreateHttpApiRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateHttpApiRequest setEnableAuth(Boolean enableAuth) {
+        this.enableAuth = enableAuth;
+        return this;
+    }
+    public Boolean getEnableAuth() {
+        return this.enableAuth;
     }
 
     public CreateHttpApiRequest setIngressConfig(CreateHttpApiRequestIngressConfig ingressConfig) {

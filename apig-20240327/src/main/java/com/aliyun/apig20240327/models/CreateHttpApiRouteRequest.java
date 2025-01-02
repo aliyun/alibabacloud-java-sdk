@@ -1,0 +1,247 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.apig20240327.models;
+
+import com.aliyun.tea.*;
+
+public class CreateHttpApiRouteRequest extends TeaModel {
+    /**
+     * <p>Backend service configuration for the route.</p>
+     */
+    @NameInMap("backendConfig")
+    public CreateHttpApiRouteRequestBackendConfig backendConfig;
+
+    /**
+     * <p>Route description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户登陆路由。</p>
+     */
+    @NameInMap("description")
+    public String description;
+
+    /**
+     * <p>Domain IDs.</p>
+     */
+    @NameInMap("domainIds")
+    public java.util.List<String> domainIds;
+
+    /**
+     * <p>Environment ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-cpqnr6tlhtgubcv***</p>
+     */
+    @NameInMap("environmentId")
+    public String environmentId;
+
+    /**
+     * <p>Route match rules.</p>
+     */
+    @NameInMap("match")
+    public HttpRouteMatch match;
+
+    /**
+     * <p>Route name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>login</p>
+     */
+    @NameInMap("name")
+    public String name;
+
+    public static CreateHttpApiRouteRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateHttpApiRouteRequest self = new CreateHttpApiRouteRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateHttpApiRouteRequest setBackendConfig(CreateHttpApiRouteRequestBackendConfig backendConfig) {
+        this.backendConfig = backendConfig;
+        return this;
+    }
+    public CreateHttpApiRouteRequestBackendConfig getBackendConfig() {
+        return this.backendConfig;
+    }
+
+    public CreateHttpApiRouteRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateHttpApiRouteRequest setDomainIds(java.util.List<String> domainIds) {
+        this.domainIds = domainIds;
+        return this;
+    }
+    public java.util.List<String> getDomainIds() {
+        return this.domainIds;
+    }
+
+    public CreateHttpApiRouteRequest setEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
+    public String getEnvironmentId() {
+        return this.environmentId;
+    }
+
+    public CreateHttpApiRouteRequest setMatch(HttpRouteMatch match) {
+        this.match = match;
+        return this;
+    }
+    public HttpRouteMatch getMatch() {
+        return this.match;
+    }
+
+    public CreateHttpApiRouteRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public static class CreateHttpApiRouteRequestBackendConfigServices extends TeaModel {
+        /**
+         * <p>Service port, not provided for dynamic ports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
+         */
+        @NameInMap("port")
+        public Integer port;
+
+        /**
+         * <p>Service protocol:</p>
+         * <ul>
+         * <li>HTTP.</li>
+         * <li>HTTPS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
+        @NameInMap("protocol")
+        public String protocol;
+
+        /**
+         * <p>Service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-crbgq0dlhtgr***</p>
+         */
+        @NameInMap("serviceId")
+        public String serviceId;
+
+        /**
+         * <p>Service version, valid only in label-based scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
+        @NameInMap("version")
+        public String version;
+
+        /**
+         * <p>Percentage value of traffic distribution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49</p>
+         */
+        @NameInMap("weight")
+        public Integer weight;
+
+        public static CreateHttpApiRouteRequestBackendConfigServices build(java.util.Map<String, ?> map) throws Exception {
+            CreateHttpApiRouteRequestBackendConfigServices self = new CreateHttpApiRouteRequestBackendConfigServices();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateHttpApiRouteRequestBackendConfigServices setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public CreateHttpApiRouteRequestBackendConfigServices setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public CreateHttpApiRouteRequestBackendConfigServices setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public CreateHttpApiRouteRequestBackendConfigServices setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+        public CreateHttpApiRouteRequestBackendConfigServices setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+    }
+
+    public static class CreateHttpApiRouteRequestBackendConfig extends TeaModel {
+        /**
+         * <p>Backend service scenario.</p>
+         * <ul>
+         * <li>SingleService: Single service.</li>
+         * <li>MultiServiceByRatio: Multiple services with ratio-based canary release.</li>
+         * <li>Mock: Mock service.</li>
+         * <li>Redirect: Redirect service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SingleService</p>
+         */
+        @NameInMap("scene")
+        public String scene;
+
+        /**
+         * <p>List of backend services.</p>
+         */
+        @NameInMap("services")
+        public java.util.List<CreateHttpApiRouteRequestBackendConfigServices> services;
+
+        public static CreateHttpApiRouteRequestBackendConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateHttpApiRouteRequestBackendConfig self = new CreateHttpApiRouteRequestBackendConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateHttpApiRouteRequestBackendConfig setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+        public CreateHttpApiRouteRequestBackendConfig setServices(java.util.List<CreateHttpApiRouteRequestBackendConfigServices> services) {
+            this.services = services;
+            return this;
+        }
+        public java.util.List<CreateHttpApiRouteRequestBackendConfigServices> getServices() {
+            return this.services;
+        }
+
+    }
+
+}

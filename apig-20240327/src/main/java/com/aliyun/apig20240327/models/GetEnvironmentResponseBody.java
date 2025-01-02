@@ -75,9 +75,18 @@ public class GetEnvironmentResponseBody extends TeaModel {
     }
 
     public static class GetEnvironmentResponseBodyDataStatisticsInfo extends TeaModel {
+        /**
+         * <p>The array of related resource information.</p>
+         */
         @NameInMap("resourceStatistics")
         public java.util.List<ResourceStatistic> resourceStatistics;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("totalCount")
         public Integer totalCount;
 
@@ -165,9 +174,18 @@ public class GetEnvironmentResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzzzntl5njbpi</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Related resource information.</p>
+         */
         @NameInMap("statisticsInfo")
         public GetEnvironmentResponseBodyDataStatisticsInfo statisticsInfo;
 
