@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTestCaseRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19xxxx31947xxxx</p>
      */
     @NameInMap("assignedTo")
     public String assignedTo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fdd395xxxxx9q9845xxxxx23</p>
      */
     @NameInMap("directoryIdentifier")
     public String directoryIdentifier;
@@ -19,11 +25,18 @@ public class CreateTestCaseRequest extends TeaModel {
     @NameInMap("fieldValueList")
     public java.util.List<CreateTestCaseRequestFieldValueList> fieldValueList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ik3dexxxxxfdfds1xxxxx23</p>
+     */
     @NameInMap("priority")
     public String priority;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asd345xxxxx9q9845xxxxx34</p>
      */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
@@ -110,9 +123,17 @@ public class CreateTestCaseRequest extends TeaModel {
     }
 
     public static class CreateTestCaseRequestFieldValueList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6aexxxxxa1d98c09c60xxxx16</p>
+         */
         @NameInMap("fieldIdentifier")
         public String fieldIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>77c7fb03c4186c8691d6...</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -178,6 +199,9 @@ public class CreateTestCaseRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEXT</p>
          */
         @NameInMap("stepType")
         public String stepType;

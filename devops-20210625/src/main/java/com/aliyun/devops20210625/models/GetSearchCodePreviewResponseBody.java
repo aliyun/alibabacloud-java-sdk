@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetSearchCodePreviewResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A7586FEB-E48D-5579-983F-74981FBFF627</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public GetSearchCodePreviewResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class GetSearchCodePreviewResponseBody extends TeaModel {
     }
 
     public static class GetSearchCodePreviewResponseBodyResultHighlightTextMap extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("clob")
         public String clob;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test.rb</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5ffd468b1e45db3c1cc26ad6</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
@@ -106,24 +134,52 @@ public class GetSearchCodePreviewResponseBody extends TeaModel {
     }
 
     public static class GetSearchCodePreviewResponseBodyResultSource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("branch")
         public String branch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-12 12:12:12</p>
+         */
         @NameInMap("checkinDate")
         public String checkinDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test.rb</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>config/environments/test.rb</p>
+         */
         @NameInMap("filePath")
         public String filePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Ruby</p>
+         */
         @NameInMap("language")
         public String language;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5f9f9f6122a8c7ff3934f99a</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup/test-repo</p>
+         */
         @NameInMap("repoPath")
         public String repoPath;
 
@@ -191,6 +247,10 @@ public class GetSearchCodePreviewResponseBody extends TeaModel {
     }
 
     public static class GetSearchCodePreviewResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("docId")
         public String docId;
 

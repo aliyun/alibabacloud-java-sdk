@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateResourceMemberRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
      */
     @NameInMap("roleName")
     public String roleName;

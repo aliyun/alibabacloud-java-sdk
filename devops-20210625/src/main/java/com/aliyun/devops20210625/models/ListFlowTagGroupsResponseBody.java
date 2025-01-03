@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListFlowTagGroupsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("flowTagGroups")
     public java.util.List<ListFlowTagGroupsResponseBodyFlowTagGroups> flowTagGroups;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true 接口调用成功，false 接口调用失败</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,15 +81,31 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
     }
 
     public static class ListFlowTagGroupsResponseBodyFlowTagGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>111111111</p>
+         */
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11111111</p>
+         */
         @NameInMap("modiferAccountId")
         public String modiferAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>标签名称</p>
+         */
         @NameInMap("name")
         public String name;
 

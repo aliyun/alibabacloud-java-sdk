@@ -4,23 +4,41 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class MergeMergeRequestRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0cf2c8458ac44d9481aab2dd6ec10596v3</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("mergeMessage")
     public String mergeMessage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>no-fast-forward</p>
      */
     @NameInMap("mergeType")
     public String mergeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("removeSourceBranch")
     public Boolean removeSourceBranch;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60de7a6852743a5162b5f957</p>
      */
     @NameInMap("organizationId")
     public String organizationId;

@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class ListProjectsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Project</p>
      */
     @NameInMap("category")
     public String category;
 
     /**
-     * <p>{"conditionGroups":[[]]}</p>
+     * <p>{&quot;conditionGroups&quot;:[[]]}</p>
      */
     @NameInMap("conditions")
     public String conditions;
@@ -19,12 +22,24 @@ public class ListProjectsRequest extends TeaModel {
     @NameInMap("extraConditions")
     public String extraConditions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>public</p>
+     */
     @NameInMap("scope")
     public String scope;
 

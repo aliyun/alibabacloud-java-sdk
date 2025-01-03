@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetFileLastCommitResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F7B85D1B-D1C2-140F-A039-341859F130B9</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public GetFileLastCommitResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -67,10 +83,17 @@ public class GetFileLastCommitResponseBody extends TeaModel {
     public static class GetFileLastCommitResponseBodyResultSignature extends TeaModel {
         /**
          * <p>GPG密钥ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34d2c47c7ce46a5c4639c5ffe208</p>
          */
         @NameInMap("gpgKeyId")
         public String gpgKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>verified</p>
+         */
         @NameInMap("verificationStatus")
         public String verificationStatus;
 
@@ -98,27 +121,59 @@ public class GetFileLastCommitResponseBody extends TeaModel {
     }
 
     public static class GetFileLastCommitResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-08 18:09:09</p>
+         */
         @NameInMap("authorDate")
         public String authorDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("authorEmail")
         public String authorEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("authorName")
         public String authorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 15:00:02</p>
+         */
         @NameInMap("committedDate")
         public String committedDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("committerEmail")
         public String committerEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>committer-codeup</p>
+         */
         @NameInMap("committerName")
         public String committerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 14:24:54</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ff4fb5ac6d1f44f452654336d2dba468ae6c8d04</p>
+         */
         @NameInMap("id")
         public String id;
 
@@ -128,6 +183,10 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         @NameInMap("parentIds")
         public java.util.List<String> parentIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ff4fb5ac</p>
+         */
         @NameInMap("shortId")
         public String shortId;
 

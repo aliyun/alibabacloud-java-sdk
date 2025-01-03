@@ -4,15 +4,31 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListProjectTemplatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,48 +81,108 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListProjectTemplatesResponseBodyTemplates extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("copyFrom")
         public String copyFrom;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>迭代的具体信息</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1623916393000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1623916393000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.xxxx.png">https://img.xxxx.png</a></p>
+         */
         @NameInMap("icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8bxxxxxxxxxxxxxxxx23</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("modifier")
         public String modifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>专用模板</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Test Template</p>
+         */
         @NameInMap("nameEn")
         public String nameEn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Project</p>
+         */
         @NameInMap("resourceCategory")
         public String resourceCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("spaceIdentifier")
         public String spaceIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("spaceType")
         public String spaceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("type")
         public Long type;
 

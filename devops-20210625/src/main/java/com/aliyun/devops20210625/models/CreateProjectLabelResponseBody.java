@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectLabelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A7586FEB-E48D-5579-983F-74981FBFF627</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public CreateProjectLabelResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,12 +81,20 @@ public class CreateProjectLabelResponseBody extends TeaModel {
     }
 
     public static class CreateProjectLabelResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>#006AD4</p>
+         */
         @NameInMap("color")
         public String color;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b5b5738b94954bc6aa5a293316ed1d24</p>
+         */
         @NameInMap("id")
         public String id;
 

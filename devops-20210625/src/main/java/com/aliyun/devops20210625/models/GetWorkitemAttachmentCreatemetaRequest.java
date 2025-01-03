@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetWorkitemAttachmentCreatemetaRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>application.jar</p>
      */
     @NameInMap("fileName")
     public String fileName;

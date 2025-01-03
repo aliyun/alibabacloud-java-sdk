@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdatePushRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public UpdatePushRuleResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class UpdatePushRuleResponseBody extends TeaModel {
     }
 
     public static class UpdatePushRuleResponseBodyResultRuleInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CommitAuthorChecker</p>
+         */
         @NameInMap("checkerName")
         public String checkerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>warn</p>
+         */
         @NameInMap("checkerType")
         public String checkerType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("extraMessage")
         public String extraMessage;
 
@@ -117,9 +145,17 @@ public class UpdatePushRuleResponseBody extends TeaModel {
     }
 
     public static class UpdatePushRuleResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-09-03T18:20:06+08:00</p>
+         */
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-09-03T18:20:06+08:00</p>
+         */
         @NameInMap("gmtModified")
         public String gmtModified;
 

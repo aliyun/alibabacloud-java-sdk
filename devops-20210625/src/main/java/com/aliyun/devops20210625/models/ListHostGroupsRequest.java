@@ -4,30 +4,66 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListHostGroupsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1586863220000</p>
+     */
     @NameInMap("createEndTime")
     public Long createEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1586863220000</p>
+     */
     @NameInMap("createStartTime")
     public Long createStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1112122121,3223332</p>
+     */
     @NameInMap("creatorAccountIds")
     public String creatorAccountIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>121,1212121232</p>
+     */
     @NameInMap("ids")
     public String ids;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>主机组</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>221212221</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("pageOrder")
     public String pageOrder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ID</p>
+     */
     @NameInMap("pageSort")
     public String pageSort;
 

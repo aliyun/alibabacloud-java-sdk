@@ -4,14 +4,25 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryCommitDiffResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0EE38A4E-8991-532A-8E8B-5C22B5D2E058</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -19,6 +30,10 @@ public class ListRepositoryCommitDiffResponseBody extends TeaModel {
     @NameInMap("result")
     public java.util.List<ListRepositoryCommitDiffResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -68,15 +83,27 @@ public class ListRepositoryCommitDiffResponseBody extends TeaModel {
     }
 
     public static class ListRepositoryCommitDiffResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100644</p>
+         */
         @NameInMap("aMode")
         public String aMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100755</p>
+         */
         @NameInMap("bMode")
         public String bMode;
 
         @NameInMap("deletedFile")
         public Boolean deletedFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>--- /dev/null\n+++ b/src/test/java/com/aliyun/codeupdemo/CodeupDemoApplicationTests.java\n@@ -0,0 +1,13 @@\n+package com.aliyun.codeupdemo;\n+\n+import org.junit.jupiter.api.Test;\n+import org.springframework.boot.test.context.SpringBootTest;\n+\n+@SpringBootTest\n+class CodeupDemoApplicationTest {\n+\n+ @Test\n+ void contextLoads() {\n+ }\n+\n+}\n</p>
+         */
         @NameInMap("diff")
         public String diff;
 
@@ -92,15 +119,31 @@ public class ListRepositoryCommitDiffResponseBody extends TeaModel {
         @NameInMap("newFile")
         public Boolean newFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6c268061a546378276559c713d0ad377d4xxxxxx</p>
+         */
         @NameInMap("newId")
         public String newId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>src/test/java/com/aliyun/codeupdemo/CodeupDemoApplicationTests.java</p>
+         */
         @NameInMap("newPath")
         public String newPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0000000000000000000000000000000000000000</p>
+         */
         @NameInMap("oldId")
         public String oldId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>src/test/java/com/aliyun/codeupdemo/CodeupDemoApplicationTests.java</p>
+         */
         @NameInMap("oldPath")
         public String oldPath;
 

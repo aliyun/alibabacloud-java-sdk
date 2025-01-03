@@ -4,9 +4,17 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListMergeRequestsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890</p>
+     */
     @NameInMap("authorIds")
     public String authorIds;
 
@@ -16,42 +24,85 @@ public class ListMergeRequestsRequest extends TeaModel {
     @NameInMap("createdBefore")
     public String createdBefore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>new</p>
+     */
     @NameInMap("filter")
     public String filter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>889910, 889911</p>
+     */
     @NameInMap("groupIds")
     public String groupIds;
 
     @NameInMap("labelIds")
     public String labelIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>updated_at</p>
+     */
     @NameInMap("orderBy")
     public String orderBy;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60de7a6852743a5162b5f957</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page")
     public Long page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2308912, 2308913</p>
+     */
     @NameInMap("projectIds")
     public String projectIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890123</p>
+     */
     @NameInMap("reviewerIds")
     public String reviewerIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-search</p>
+     */
     @NameInMap("search")
     public String search;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("sort")
     public String sort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>opened</p>
+     */
     @NameInMap("state")
     public String state;
 

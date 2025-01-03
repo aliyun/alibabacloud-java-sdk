@@ -4,9 +4,17 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateCommitStatusRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("context")
     public String context;
 
@@ -15,27 +23,43 @@ public class CreateCommitStatusRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("state")
     public String state;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("targetUrl")
     public String targetUrl;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5ebbc0228123212b59xxxxx</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2080972</p>
      */
     @NameInMap("repositoryIdentity")
     public String repositoryIdentity;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e0c1a1299a2656bfc155650bbd2df5e628fa1f4c</p>
      */
     @NameInMap("sha")
     public String sha;

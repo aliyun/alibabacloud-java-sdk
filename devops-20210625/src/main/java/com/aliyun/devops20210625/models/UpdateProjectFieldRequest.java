@@ -4,6 +4,10 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectFieldRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>fdsaadsfasxxxxdddd</p>
+     */
     @NameInMap("statusIdentifier")
     public String statusIdentifier;
 
@@ -43,6 +47,10 @@ public class UpdateProjectFieldRequest extends TeaModel {
     }
 
     public static class UpdateProjectFieldRequestUpdateBasicFieldRequestList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("propertyKey")
         public String propertyKey;
 
@@ -73,6 +81,10 @@ public class UpdateProjectFieldRequest extends TeaModel {
     }
 
     public static class UpdateProjectFieldRequestUpdateForOpenApiList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>c4fd21xxxxxxxx9oj8jk</p>
+         */
         @NameInMap("fieldIdentifier")
         public String fieldIdentifier;
 

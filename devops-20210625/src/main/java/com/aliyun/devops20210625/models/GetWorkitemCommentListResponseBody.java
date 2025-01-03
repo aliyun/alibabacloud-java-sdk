@@ -7,14 +7,25 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
     @NameInMap("commentList")
     public java.util.List<GetWorkitemCommentListResponseBodyCommentList> commentList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -131,33 +142,73 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
     }
 
     public static class GetWorkitemCommentListResponseBodyCommentList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>066961</p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1667205617061</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RICHTEXT/MARKDOWN</p>
+         */
         @NameInMap("formatType")
         public String formatType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6573</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true/false</p>
+         */
         @NameInMap("isTop")
         public Boolean isTop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1646323200000</p>
+         */
         @NameInMap("modifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1013131897677566</p>
+         */
         @NameInMap("parentId")
         public Long parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9144ef6b72d8exxxxx9e61a4d0</p>
+         */
         @NameInMap("targetIdentifier")
         public String targetIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workitem</p>
+         */
         @NameInMap("targetType")
         public String targetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1667205617089</p>
+         */
         @NameInMap("topTime")
         public Long topTime;
 

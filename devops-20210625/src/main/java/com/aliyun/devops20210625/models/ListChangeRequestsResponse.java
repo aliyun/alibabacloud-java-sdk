@@ -3,7 +3,7 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class GetPushRuleResponse extends TeaModel {
+public class ListChangeRequestsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetPushRuleResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetPushRuleResponseBody body;
+    public ListChangeRequestsResponseBody body;
 
-    public static GetPushRuleResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetPushRuleResponse self = new GetPushRuleResponse();
+    public static ListChangeRequestsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListChangeRequestsResponse self = new ListChangeRequestsResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetPushRuleResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListChangeRequestsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetPushRuleResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetPushRuleResponse setStatusCode(Integer statusCode) {
+    public ListChangeRequestsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetPushRuleResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetPushRuleResponse setBody(GetPushRuleResponseBody body) {
+    public ListChangeRequestsResponse setBody(ListChangeRequestsResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetPushRuleResponseBody getBody() {
+    public ListChangeRequestsResponseBody getBody() {
         return this.body;
     }
 

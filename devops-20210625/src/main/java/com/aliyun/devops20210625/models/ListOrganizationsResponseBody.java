@@ -4,21 +4,41 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListOrganizationsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>95FE5953-FF5B-5F80-94AD-FFF97D990FE0</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListOrganizationsResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("total")
     public Long total;
 
@@ -76,9 +96,17 @@ public class ListOrganizationsResponseBody extends TeaModel {
     }
 
     public static class ListOrganizationsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("accessLevel")
         public Integer accessLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5240</p>
+         */
         @NameInMap("id")
         public Long id;
 
@@ -88,12 +116,20 @@ public class ListOrganizationsResponseBody extends TeaModel {
         @NameInMap("organizationAlias")
         public String organizationAlias;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
         @NameInMap("organizationName")
         public String organizationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ORG_ADMIN</p>
+         */
         @NameInMap("organizationRole")
         public String organizationRole;
 

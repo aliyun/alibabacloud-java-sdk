@@ -71,12 +71,20 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup</p>
+         */
         @NameInMap("name")
         public String name;
 
         @NameInMap("nameWithNamespace")
         public String nameWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup</p>
+         */
         @NameInMap("path")
         public String path;
 
@@ -86,6 +94,10 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("visibilityLevel")
         public String visibilityLevel;
 
@@ -156,6 +168,10 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
         @NameInMap("accessLevel")
         public Integer accessLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
@@ -168,12 +184,24 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
         @NameInMap("inherited")
         public ListRepositoryMemberWithInheritedResponseBodyResultInherited inherited;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yunxiao</p>
+         */
         @NameInMap("username")
         public String username;
 

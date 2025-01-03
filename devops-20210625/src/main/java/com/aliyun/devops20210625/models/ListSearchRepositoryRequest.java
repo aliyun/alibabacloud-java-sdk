@@ -4,38 +4,72 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListSearchRepositoryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1840004904455497</p>
+     */
     @NameInMap("aliyunPk")
     public String aliyunPk;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     @NameInMap("repoPath")
     public ListSearchRepositoryRequestRepoPath repoPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("scope")
     public String scope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("sort")
     public String sort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("visibilityLevel")
     public Integer visibilityLevel;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61e54b0e0bb300d827e1ae27</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
@@ -126,12 +160,24 @@ public class ListSearchRepositoryRequest extends TeaModel {
     }
 
     public static class ListSearchRepositoryRequestRepoPath extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>term</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>equal</p>
+         */
         @NameInMap("operatorType")
         public String operatorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>orgId/test-group/spring-boot-demo</p>
+         */
         @NameInMap("value")
         public String value;
 

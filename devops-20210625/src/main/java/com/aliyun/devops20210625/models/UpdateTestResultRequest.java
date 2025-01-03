@@ -4,9 +4,17 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateTestResultRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>131xxx38624xxxx68</p>
+     */
     @NameInMap("executor")
     public String executor;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TO DO</p>
+     */
     @NameInMap("status")
     public String status;
 

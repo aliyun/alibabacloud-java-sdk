@@ -4,15 +4,31 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListVariableGroupsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aaaaaa</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("pageOrder")
     public String pageOrder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ID</p>
+     */
     @NameInMap("pageSort")
     public String pageSort;
 

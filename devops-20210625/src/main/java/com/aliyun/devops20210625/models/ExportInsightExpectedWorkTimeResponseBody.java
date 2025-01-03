@@ -4,15 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ExportInsightExpectedWorkTimeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     @NameInMap("result")
     public java.util.List<ExportInsightExpectedWorkTimeResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -54,39 +66,83 @@ public class ExportInsightExpectedWorkTimeResponseBody extends TeaModel {
     }
 
     public static class ExportInsightExpectedWorkTimeResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1714976497000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1714976520000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26281535</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bd4ddc7b0ea0ef2ab52699xxxx</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("isDeleted")
         public String isDeleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>61db9af2148974246be6xxxx</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6c4687b0179e1d458fedf1xxxx</p>
+         */
         @NameInMap("projectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>63466a385dc8531eebd7xxxx</p>
+         */
         @NameInMap("recorderId")
         public String recorderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>projex</p>
+         */
         @NameInMap("source")
         public String source;
 
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>180</p>
+         */
         @NameInMap("value")
         public Double value;
 
+        /**
+         * <strong>example:</strong>
+         * <p>de7c6fd3bd4b53f4d9e279xxxx</p>
+         */
         @NameInMap("workitemId")
         public String workitemId;
 

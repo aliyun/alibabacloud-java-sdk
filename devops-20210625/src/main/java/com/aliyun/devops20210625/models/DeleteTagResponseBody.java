@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class DeleteTagResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60945D4F-CF6D-5CFF-89ED-1D1F6657032C</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public DeleteTagResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class DeleteTagResponseBody extends TeaModel {
     }
 
     public static class DeleteTagResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>v1.0</p>
+         */
         @NameInMap("tagName")
         public String tagName;
 

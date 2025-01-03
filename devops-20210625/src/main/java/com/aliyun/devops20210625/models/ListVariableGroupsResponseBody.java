@@ -4,21 +4,45 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListVariableGroupsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>assassa</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -87,9 +111,17 @@ public class ListVariableGroupsResponseBody extends TeaModel {
     }
 
     public static class ListVariableGroupsResponseBodyVariableGroupsRelatedPipelines extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>流水线</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -117,12 +149,24 @@ public class ListVariableGroupsResponseBody extends TeaModel {
     }
 
     public static class ListVariableGroupsResponseBodyVariableGroupsVariables extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isEncrypted")
         public Boolean isEncrypted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name1</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -158,27 +202,55 @@ public class ListVariableGroupsResponseBody extends TeaModel {
     }
 
     public static class ListVariableGroupsResponseBodyVariableGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13232343434343</p>
+         */
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>变量组</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12234</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13232343434343</p>
+         */
         @NameInMap("modifierAccountId")
         public String modifierAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>变量组</p>
+         */
         @NameInMap("name")
         public String name;
 
         @NameInMap("relatedPipelines")
         public java.util.List<ListVariableGroupsResponseBodyVariableGroupsRelatedPipelines> relatedPipelines;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("updateTime")
         public Long updateTime;
 

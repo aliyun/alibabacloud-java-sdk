@@ -4,24 +4,52 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListWorkitemsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -98,69 +126,153 @@ public class ListWorkitemsResponseBody extends TeaModel {
     }
 
     public static class ListWorkitemsResponseBodyWorkitems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("assignedTo")
         public String assignedTo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Req</p>
+         */
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>html格式</p>
+         */
         @NameInMap("document")
         public String document;
 
         @NameInMap("finishTime")
         public Long finishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640850318000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640850318000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8bxxxxxxxxxxxxxxxx23</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("logicalStatus")
         public String logicalStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("modifier")
         public String modifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8bxxxxxxxxxxxxxxxx24</p>
+         */
         @NameInMap("parentIdentifier")
         public String parentIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ABCD-1</p>
+         */
         @NameInMap("serialNumber")
         public String serialNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8b26xxxxx6e76aa20xxxxx23</p>
+         */
         @NameInMap("spaceIdentifier")
         public String spaceIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>需求项目</p>
+         */
         @NameInMap("spaceName")
         public String spaceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Project</p>
+         */
         @NameInMap("spaceType")
         public String spaceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75528f17703e92e5a568......</p>
+         */
         @NameInMap("sprintIdentifier")
         public String sprintIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>待处理</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100005</p>
+         */
         @NameInMap("statusIdentifier")
         public String statusIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("statusStageIdentifier")
         public String statusStageIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试工作项</p>
+         */
         @NameInMap("subject")
         public String subject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640850328000</p>
+         */
         @NameInMap("updateStatusAt")
         public Long updateStatusAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9uxxxxxxre573f5xxxxxx0</p>
+         */
         @NameInMap("workitemTypeIdentifier")
         public String workitemTypeIdentifier;
 

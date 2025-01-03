@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetCodeupOrganizationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>InvalidTagGroup.IdNotFound</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public GetCodeupOrganizationResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,24 +81,52 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
     }
 
     public static class GetCodeupOrganizationResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-12 12:00:00</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3624</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100003</p>
+         */
         @NameInMap("namespaceId")
         public Long namespaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 14:24:54</p>
+         */
         @NameInMap("updatedAt")
         public String updatedAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ORG_MEMBER</p>
+         */
         @NameInMap("userRole")
         public String userRole;
 

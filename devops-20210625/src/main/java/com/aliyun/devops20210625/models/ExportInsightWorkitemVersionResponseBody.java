@@ -4,15 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ExportInsightWorkitemVersionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     @NameInMap("result")
     public java.util.List<ExportInsightWorkitemVersionResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -54,45 +66,97 @@ public class ExportInsightWorkitemVersionResponseBody extends TeaModel {
     }
 
     public static class ExportInsightWorkitemVersionResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1704251228000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1704251228000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1704902400000</p>
+         */
         @NameInMap("gmtPublish")
         public Long gmtPublish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1704297600000</p>
+         */
         @NameInMap("gmtStart")
         public Long gmtStart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>648131</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7ba6e8261b973c976df76b7de1</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("isDeleted")
         public String isDeleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("lockStatus")
         public Integer lockStatus;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>61db9af2148974246bexxxx</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>projex</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7eee44ec7f699d4e6980faxxxx</p>
+         */
         @NameInMap("targetId")
         public String targetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Project</p>
+         */
         @NameInMap("targetType")
         public String targetType;
 

@@ -7,18 +7,34 @@ public class ListRepositoriesResponseBody extends TeaModel {
     @NameInMap("errorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4D6AF7CC-B43B-5454-86AB-023D25E44868</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListRepositoriesResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>149</p>
+     */
     @NameInMap("total")
     public Long total;
 
@@ -76,18 +92,34 @@ public class ListRepositoriesResponseBody extends TeaModel {
     }
 
     public static class ListRepositoriesResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("accessLevel")
         public Integer accessLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("archive")
         public Boolean archive;
 
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-14T21:08:26+08:00</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
@@ -97,36 +129,76 @@ public class ListRepositoriesResponseBody extends TeaModel {
         @NameInMap("importStatus")
         public String importStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-14T21:08:26+08:00</p>
+         */
         @NameInMap("lastActivityAt")
         public String lastActivityAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeupTest</p>
+         */
         @NameInMap("name")
         public String name;
 
         @NameInMap("nameWithNamespace")
         public String nameWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>745</p>
+         */
         @NameInMap("namespaceId")
         public Long namespaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup-test-org/test-codeup</p>
+         */
         @NameInMap("pathWithNamespace")
         public String pathWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("star")
         public Boolean star;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("starCount")
         public Long starCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-14T21:08:26+08:00</p>
+         */
         @NameInMap("updatedAt")
         public String updatedAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("visibilityLevel")
         public String visibilityLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("webUrl")
         public String webUrl;
 

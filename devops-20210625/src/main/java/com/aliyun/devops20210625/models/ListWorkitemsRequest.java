@@ -6,39 +6,76 @@ import com.aliyun.tea.*;
 public class ListWorkitemsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Req</p>
      */
     @NameInMap("category")
     public String category;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;conditionGroups&quot;:[]}</p>
+     */
     @NameInMap("conditions")
     public String conditions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;conditionGroups&quot;:[]}</p>
+     */
     @NameInMap("extraConditions")
     public String extraConditions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;fieldIdentifier&quot;:&quot;tag&quot;,&quot;className&quot;:&quot;tag&quot;,&quot;format&quot;:&quot;multiList&quot;,&quot;value&quot;:[&quot;c76e0e4bf64801cfad73......&quot;],&quot;operator&quot;:&quot;EQUALS&quot;}</p>
+     */
     @NameInMap("groupCondition")
     public String groupCondition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("maxResults")
     public String maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;fieldIdentifier&quot;:&quot;status&quot;,&quot;format&quot;:&quot;list&quot;,&quot;order&quot;:&quot;desc&quot;,&quot;className&quot;:&quot;status&quot;}</p>
+     */
     @NameInMap("orderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LIST</p>
+     */
     @NameInMap("searchType")
     public String searchType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8fb83debd69a6c7c6626......</p>
      */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Project</p>
      */
     @NameInMap("spaceType")
     public String spaceType;

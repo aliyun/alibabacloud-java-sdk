@@ -1,3 +1,28 @@
+2025-01-03 Version: 5.0.0
+- Support API CancelExecutionReleaseStage.
+- Support API CreateChangeRequest.
+- Support API ExecuteChangeRequestReleaseStage.
+- Support API GetReleaseStagePipelineRun.
+- Support API ListAllReleaseWorkflows.
+- Support API ListAppReleaseStageExecutionIntegratedMetadata.
+- Support API ListAppReleaseStageExecutions.
+- Support API ListChangeRequestWorkflowExecutions.
+- Support API ListChangeRequests.
+- Support API PassReleaseStagePipelineValidate.
+- Support API RefuseReleaseStagePipelineValidate.
+- Support API UpdateOrganizationMember.
+- Delete API CreateWorkspace.
+- Delete API FrozenWorkspace.
+- Delete API GetPushRule.
+- Delete API GetWorkspace.
+- Delete API ListWorkspaces.
+- Delete API ReleaseWorkspace.
+- Update API ExportInsightSpace: update response param.
+- Update API ExportInsightWorkitemStatus: update response param.
+- Update API ExportInsightWorkitemStatusJoinWorkitemDefectExtra: update response param.
+- Update API GetWorkItemInfo: update response param.
+
+
 2024-05-28 Version: 4.14.0
 - Support API ExportInsightCustomValue.
 - Support API ExportInsightExpectedWorkTime.

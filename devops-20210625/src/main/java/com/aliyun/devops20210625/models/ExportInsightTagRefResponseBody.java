@@ -4,15 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ExportInsightTagRefResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     @NameInMap("result")
     public java.util.List<ExportInsightTagRefResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -54,33 +66,73 @@ public class ExportInsightTagRefResponseBody extends TeaModel {
     }
 
     public static class ExportInsightTagRefResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1696660187000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1696660187000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>41317426</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8545272</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("isDeleted")
         public String isDeleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>61db9af2148974246bexxxx</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19e0bc5348ccbe6c0d00fbxxxx</p>
+         */
         @NameInMap("tagId")
         public String tagId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bde89961b5a4acc8cf54eaxxxx</p>
+         */
         @NameInMap("targetId")
         public String targetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Workitem</p>
+         */
         @NameInMap("targetType")
         public String targetType;
 

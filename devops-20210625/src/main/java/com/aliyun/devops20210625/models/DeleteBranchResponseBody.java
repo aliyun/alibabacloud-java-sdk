@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class DeleteBranchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6177543A-8D54-5736-A93B-E0195A1512CB</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public DeleteBranchResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public String success;
 
@@ -65,6 +81,10 @@ public class DeleteBranchResponseBody extends TeaModel {
     }
 
     public static class DeleteBranchResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>deleteBranch</p>
+         */
         @NameInMap("branchName")
         public String branchName;
 

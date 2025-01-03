@@ -4,27 +4,55 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListPipelineGroupPipelinesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1586863220000</p>
+     */
     @NameInMap("createEndTime")
     public Long createEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1586863220000</p>
+     */
     @NameInMap("createStartTime")
     public Long createStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1586863220000</p>
+     */
     @NameInMap("executeEndTime")
     public Long executeEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1586863220000</p>
+     */
     @NameInMap("executeStartTime")
     public Long executeStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aaaa</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     @NameInMap("pipelineName")
     public String pipelineName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING,SUCCESS</p>
+     */
     @NameInMap("resultStatusList")
     public String resultStatusList;
 

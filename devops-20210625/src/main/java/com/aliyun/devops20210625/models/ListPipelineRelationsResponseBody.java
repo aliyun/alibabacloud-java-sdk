@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListPipelineRelationsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("pipelineRelations")
     public java.util.List<ListPipelineRelationsResponseBodyPipelineRelations> pipelineRelations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class ListPipelineRelationsResponseBody extends TeaModel {
     }
 
     public static class ListPipelineRelationsResponseBodyPipelineRelations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12234</p>
+         */
         @NameInMap("refObjectId")
         public Long refObjectId;
 

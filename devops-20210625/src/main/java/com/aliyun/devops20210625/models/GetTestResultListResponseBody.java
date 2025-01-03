@@ -4,15 +4,31 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetTestResultListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -180,9 +196,17 @@ public class GetTestResultListResponseBody extends TeaModel {
         @NameInMap("assignedTo")
         public GetTestResultListResponseBodyTestResultAssignedTo assignedTo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("bugCount")
         public Long bugCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Req</p>
+         */
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
@@ -195,6 +219,10 @@ public class GetTestResultListResponseBody extends TeaModel {
         @NameInMap("spaceIdentifier")
         public String spaceIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试工作项</p>
+         */
         @NameInMap("subject")
         public String subject;
 
@@ -204,9 +232,17 @@ public class GetTestResultListResponseBody extends TeaModel {
         @NameInMap("testResultGmtCreate")
         public Long testResultGmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a8bxxxxxxxxxxxxxxxx54</p>
+         */
         @NameInMap("testResultIdentifier")
         public String testResultIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TO DO</p>
+         */
         @NameInMap("testResultStatus")
         public String testResultStatus;
 

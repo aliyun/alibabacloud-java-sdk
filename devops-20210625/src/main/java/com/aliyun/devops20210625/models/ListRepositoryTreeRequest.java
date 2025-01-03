@@ -4,21 +4,40 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryTreeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>624666bd54d036291ae13a36</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>module</p>
+     */
     @NameInMap("path")
     public String path;
 
+    /**
+     * <strong>example:</strong>
+     * <p>master / tag1.0 / sjjfssa</p>
+     */
     @NameInMap("refName")
     public String refName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RECURSIVE</p>
+     */
     @NameInMap("type")
     public String type;
 

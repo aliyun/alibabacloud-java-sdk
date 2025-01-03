@@ -4,24 +4,47 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryCommitsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-08-18 08:00:00</p>
+     */
     @NameInMap("end")
     public String end;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60de7a6852743a5162b5f957</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page")
     public Long page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>src/cpp/main.cpp</p>
+     */
     @NameInMap("path")
     public String path;
 
@@ -31,15 +54,31 @@ public class ListRepositoryCommitsRequest extends TeaModel {
     @NameInMap("refName")
     public String refName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>search</p>
+     */
     @NameInMap("search")
     public String search;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("showCommentsCount")
     public Boolean showCommentsCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("showSignature")
     public Boolean showSignature;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-03-18 08:00:00</p>
+     */
     @NameInMap("start")
     public String start;
 

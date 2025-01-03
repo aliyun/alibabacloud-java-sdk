@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListProtectedBranchesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>313A1BF6-63B7-52D4-A098-952221A65254</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListProtectedBranchesResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,18 +81,34 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
     }
 
     public static class ListProtectedBranchesResponseBodyResultAllowMergeUsers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatar")
         public String avatar;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19238</p>
+         */
         @NameInMap("id")
         public Long id;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup-test</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -128,18 +160,34 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
     }
 
     public static class ListProtectedBranchesResponseBodyResultAllowPushUsers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatar")
         public String avatar;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19238</p>
+         */
         @NameInMap("id")
         public Long id;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup-test</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -191,18 +239,34 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
     }
 
     public static class ListProtectedBranchesResponseBodyResultMergeRequestSettingDefaultAssignees extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatar")
         public String avatar;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19238</p>
+         */
         @NameInMap("id")
         public Long id;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup-test</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -260,24 +324,52 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         @NameInMap("defaultAssignees")
         public java.util.List<ListProtectedBranchesResponseBodyResultMergeRequestSettingDefaultAssignees> defaultAssignees;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isAllowSelfApproval")
         public Boolean isAllowSelfApproval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isRequireDiscussionProcessed")
         public Boolean isRequireDiscussionProcessed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isRequired")
         public Boolean isRequired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isResetApprovalWhenNewPush")
         public Boolean isResetApprovalWhenNewPush;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minimumApproval")
         public Integer minimumApproval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>general</p>
+         */
         @NameInMap("mrMode")
         public String mrMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>**.java</p>
+         */
         @NameInMap("whiteList")
         public String whiteList;
 
@@ -361,6 +453,10 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
     }
 
     public static class ListProtectedBranchesResponseBodyResultTestSettingDTOCheckConfigCheckItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isRequired")
         public Boolean isRequired;
 
@@ -410,15 +506,31 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
     }
 
     public static class ListProtectedBranchesResponseBodyResultTestSettingDTOCheckTaskQualityConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("bizNo")
         public String bizNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_task_quality</p>
+         */
         @NameInMap("message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>biz-task-quality</p>
+         */
         @NameInMap("taskName")
         public String taskName;
 
@@ -462,9 +574,17 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
     }
 
     public static class ListProtectedBranchesResponseBodyResultTestSettingDTOCodeGuidelinesDetection extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_code_guide_lines</p>
+         */
         @NameInMap("message")
         public String message;
 
@@ -492,9 +612,17 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
     }
 
     public static class ListProtectedBranchesResponseBodyResultTestSettingDTOSensitiveInfoDetection extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_code_sensitive_info</p>
+         */
         @NameInMap("message")
         public String message;
 
@@ -531,6 +659,10 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         @NameInMap("codeGuidelinesDetection")
         public ListProtectedBranchesResponseBodyResultTestSettingDTOCodeGuidelinesDetection codeGuidelinesDetection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isRequired")
         public Boolean isRequired;
 
@@ -603,12 +735,24 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         @NameInMap("allowPushUsers")
         public java.util.List<ListProtectedBranchesResponseBodyResultAllowPushUsers> allowPushUsers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>protectedBranch</p>
+         */
         @NameInMap("branch")
         public String branch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 14:24:54</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19285</p>
+         */
         @NameInMap("id")
         public Long id;
 
@@ -621,6 +765,10 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         @NameInMap("testSettingDTO")
         public ListProtectedBranchesResponseBodyResultTestSettingDTO testSettingDTO;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 14:24:54</p>
+         */
         @NameInMap("updatedAt")
         public String updatedAt;
 

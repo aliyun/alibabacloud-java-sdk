@@ -7,14 +7,25 @@ public class CreateWorkitemEstimateResponseBody extends TeaModel {
     @NameInMap("WorkitemTimeEstimate")
     public CreateWorkitemEstimateResponseBodyWorkitemTimeEstimate workitemTimeEstimate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -68,57 +79,105 @@ public class CreateWorkitemEstimateResponseBody extends TeaModel {
     }
 
     public static class CreateWorkitemEstimateResponseBodyWorkitemTimeEstimateRecordUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1316458xxxxx41068</p>
+         */
         @NameInMap("account")
         public String account;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112m7150e256dbba0d6456bafbb65c81f90d/w/200/h/200">https://tcs-devops.aliyuncs.com/thumbnail/112m7150e256dbba0d6456bafbb65c81f90d/w/200/h/200</a></p>
+         */
         @NameInMap("avatar")
         public String avatar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fdsad12xxx11</p>
+         */
         @NameInMap("dingTalkId")
         public String dingTalkId;
 
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wangwu</p>
+         */
         @NameInMap("displayNickName")
         public String displayNickName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wangwu</p>
+         */
         @NameInMap("displayRealName")
         public String displayRealName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:xxxxxxcc@xxx.com">xxxxxxcc@xxx.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
         @NameInMap("gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>deafe5f33xxxxx6a259d8dafd</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true/false</p>
+         */
         @NameInMap("isDisabled")
         public Boolean isDisabled;
 
         @NameInMap("mobile")
         public String mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wangwu</p>
+         */
         @NameInMap("nameEn")
         public String nameEn;
 
         @NameInMap("nickName")
         public String nickName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wangwu</p>
+         */
         @NameInMap("nickNamePinyin")
         public String nickNamePinyin;
 
         @NameInMap("realName")
         public String realName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wangwu</p>
+         */
         @NameInMap("realNamePinyin")
         public String realNamePinyin;
 
         @NameInMap("stamp")
         public String stamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9144ef6b72d8exxxxx9e61a4d0</p>
+         */
         @NameInMap("tbRoleId")
         public String tbRoleId;
 
@@ -277,18 +336,34 @@ public class CreateWorkitemEstimateResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>deafe5f33xxxxx6a259d8dafd</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
         @NameInMap("recordUser")
         public CreateWorkitemEstimateResponseBodyWorkitemTimeEstimateRecordUser recordUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("spentTime")
         public Long spentTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9144ef6b72d8exxxxx9e61a4d0</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1e9903d8b3f1xxxxxf9286ef5</p>
+         */
         @NameInMap("workitemIdentifier")
         public String workitemIdentifier;
 

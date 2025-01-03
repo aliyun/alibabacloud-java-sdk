@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class JoinPipelineGroupRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("groupId")
     public Long groupId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>122,122</p>
      */
     @NameInMap("pipelineIds")
     public String pipelineIds;

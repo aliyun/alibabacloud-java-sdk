@@ -4,15 +4,31 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,36 +81,80 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemWorkFlowInfoResponseBodyWorkflowStatuses extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1613805843000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1613805843000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>156603</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("modifier")
         public String modifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>待处理</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Workitem</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("workflowStageIdentifier")
         public String workflowStageIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>确认阶段</p>
+         */
         @NameInMap("workflowStageName")
         public String workflowStageName;
 
@@ -194,18 +254,38 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemWorkFlowInfoResponseBodyWorkflowWorkflowActions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>16274887</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100011</p>
+         */
         @NameInMap("nextWorkflowStatusIdentifier")
         public String nextWorkflowStatusIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fd0xxxxxd00d355b05dxxxx26</p>
+         */
         @NameInMap("workflowIdentifier")
         public String workflowIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100005</p>
+         */
         @NameInMap("workflowStatusIdentifier")
         public String workflowStatusIdentifier;
 
@@ -257,42 +337,94 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemWorkFlowInfoResponseBodyWorkflow extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100005</p>
+         */
         @NameInMap("defaultStatusIdentifier")
         public String defaultStatusIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>工作流的描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640850318000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640850318000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8bxxxxxxxxxxxxxxxx23</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("modifier")
         public String modifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>名称</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8b26xxxxx6e76aa20xxxxx23</p>
+         */
         @NameInMap("ownerSpaceIdentifier")
         public String ownerSpaceIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ownerSpaceType")
         public String ownerSpaceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Project</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("statusOrder")
         public String statusOrder;
 

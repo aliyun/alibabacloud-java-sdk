@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListProjectWorkitemTypesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Req</p>
      */
     @NameInMap("category")
     public String category;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Project</p>
      */
     @NameInMap("spaceType")
     public String spaceType;

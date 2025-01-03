@@ -4,23 +4,36 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateBranchRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0cf2c8458ac44d9481aab2dd6ec10596v3</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>createBranch</p>
      */
     @NameInMap("branchName")
     public String branchName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>master</p>
      */
     @NameInMap("ref")
     public String ref;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60de7a6852743a5162b5f957</p>
      */
     @NameInMap("organizationId")
     public String organizationId;

@@ -4,21 +4,41 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListUserResourcesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A35869D5-BB29-5F84-A4DD-B09985EA2AFA</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListUserResourcesResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("total")
     public Long total;
 
@@ -76,36 +96,76 @@ public class ListUserResourcesResponseBody extends TeaModel {
     }
 
     public static class ListUserResourcesResponseBodyResultGroupInfosGroupInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-14T21:08:26+08:00</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-group</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35268</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-group</p>
+         */
         @NameInMap("name")
         public String name;
 
         @NameInMap("nameWithNamespace")
         public String nameWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("ownerId")
         public Long ownerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1183319</p>
+         */
         @NameInMap("parentId")
         public Long parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-group</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-org/test-group</p>
+         */
         @NameInMap("pathWithNamespace")
         public String pathWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-14T21:08:26+08:00</p>
+         */
         @NameInMap("updatedAt")
         public String updatedAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("visibilityLevel")
         public Integer visibilityLevel;
 
@@ -205,18 +265,34 @@ public class ListUserResourcesResponseBody extends TeaModel {
     }
 
     public static class ListUserResourcesResponseBodyResultGroupInfosGroupRole extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("accessLevel")
         public Integer accessLevel;
 
         @NameInMap("cnRoleName")
         public String cnRoleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Admin</p>
+         */
         @NameInMap("enRoleName")
         public String enRoleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35268</p>
+         */
         @NameInMap("sourceId")
         public Long sourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Namespace</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
@@ -298,48 +374,100 @@ public class ListUserResourcesResponseBody extends TeaModel {
     }
 
     public static class ListUserResourcesResponseBodyResultRepositoryInfosRepositoryInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("accessLevel")
         public Integer accessLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("archived")
         public Boolean archived;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-14T21:08:26+08:00</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12679</p>
+         */
         @NameInMap("creatorId")
         public Long creatorId;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("encrypted")
         public Boolean encrypted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>37229</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-14T21:08:26+08:00</p>
+         */
         @NameInMap("lastActivityAt")
         public String lastActivityAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-repo</p>
+         */
         @NameInMap("name")
         public String name;
 
         @NameInMap("nameWithNamespace")
         public String nameWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>600002</p>
+         */
         @NameInMap("namespaceId")
         public Long namespaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-repo</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-org/test-group/test-repo</p>
+         */
         @NameInMap("pathWithNamespace")
         public String pathWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-14T21:08:26+08:00</p>
+         */
         @NameInMap("updatedAt")
         public String updatedAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("visibilityLevel")
         public Integer visibilityLevel;
 
@@ -471,18 +599,34 @@ public class ListUserResourcesResponseBody extends TeaModel {
     }
 
     public static class ListUserResourcesResponseBodyResultRepositoryInfosRepositoryRole extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("accessLevel")
         public Integer accessLevel;
 
         @NameInMap("cnRoleName")
         public String cnRoleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Admin</p>
+         */
         @NameInMap("enRoleName")
         public String enRoleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>37229</p>
+         */
         @NameInMap("sourceId")
         public Long sourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Project</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
@@ -564,21 +708,45 @@ public class ListUserResourcesResponseBody extends TeaModel {
     }
 
     public static class ListUserResourcesResponseBodyResultUserInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19230</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("username")
         public String username;
 

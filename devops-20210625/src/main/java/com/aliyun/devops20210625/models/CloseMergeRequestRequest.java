@@ -4,11 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CloseMergeRequestRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0cf2c8458ac44d9481aab2dd6ec10596v3</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5ebbc0228123212b59xxxxx</p>
      */
     @NameInMap("organizationId")
     public String organizationId;

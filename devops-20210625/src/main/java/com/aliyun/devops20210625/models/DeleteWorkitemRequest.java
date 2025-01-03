@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteWorkitemRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3ef2ef6018d254d660e65f87a6</p>
      */
     @NameInMap("identifier")
     public String identifier;

@@ -4,24 +4,48 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListHostGroupsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("hostGroups")
     public java.util.List<ListHostGroupsResponseBodyHostGroups> hostGroups;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asassasassa</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -87,48 +111,103 @@ public class ListHostGroupsResponseBody extends TeaModel {
     }
 
     public static class ListHostGroupsResponseBodyHostGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("aliyunRegion")
         public String aliyunRegion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2222222222222</p>
+         */
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>主机组</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs</p>
+         */
         @NameInMap("ecsLabelKey")
         public String ecsLabelKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("ecsLabelValue")
         public String ecsLabelValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ECS_ALIYUN</p>
+         */
         @NameInMap("ecsType")
         public String ecsType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("hostNum")
         public Long hostNum;
 
         /**
          * <p>323232</p>
+         * 
+         * <strong>example:</strong>
+         * <p>部署组Id</p>
          */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>211111111</p>
+         */
         @NameInMap("modifierAccountId")
         public String modifierAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>部署组</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1212122</p>
+         */
         @NameInMap("serviceConnectionId")
         public Long serviceConnectionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ECS</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("updateTime")
         public Long updateTime;
 

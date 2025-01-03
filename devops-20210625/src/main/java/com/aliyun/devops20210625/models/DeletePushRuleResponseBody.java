@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class DeletePushRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>InvalidParam.NotFound</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public DeletePushRuleResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public String success;
 
@@ -65,6 +81,10 @@ public class DeletePushRuleResponseBody extends TeaModel {
     }
 
     public static class DeletePushRuleResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("result")
         public Boolean result;
 

@@ -4,33 +4,73 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListPipelinesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1586863220000</p>
+     */
     @NameInMap("createEndTime")
     public Long createEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1586863220000</p>
+     */
     @NameInMap("createStartTime")
     public Long createStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>112122121</p>
+     */
     @NameInMap("creatorAccountIds")
     public String creatorAccountIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1111111</p>
+     */
     @NameInMap("executeAccountIds")
     public String executeAccountIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1586863220000</p>
+     */
     @NameInMap("executeEndTime")
     public Long executeEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1586863220000</p>
+     */
     @NameInMap("executeStartTime")
     public Long executeStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aaaaaaaaaa</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>流水线</p>
+     */
     @NameInMap("pipelineName")
     public String pipelineName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING,SUCCESS</p>
+     */
     @NameInMap("statusList")
     public String statusList;
 

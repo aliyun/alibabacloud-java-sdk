@@ -6,21 +6,34 @@ import com.aliyun.tea.*;
 public class GetSearchCodePreviewRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60d54f3daccf2bbd6659f3ad/gitlabhq/master/config/environments/test.rb</p>
      */
     @NameInMap("docId")
     public String docId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("isDsl")
     public Boolean isDsl;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>627475075b46541dd2ff01bc</p>
      */
     @NameInMap("organizationId")
     public String organizationId;

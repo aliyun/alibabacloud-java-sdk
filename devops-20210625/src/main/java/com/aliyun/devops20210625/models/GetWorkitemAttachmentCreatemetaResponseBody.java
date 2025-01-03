@@ -4,15 +4,31 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetWorkitemAttachmentCreatemetaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Invalid.IdNotFound</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Forbidden.UserNotInCurrentOrganization</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public String success;
 
@@ -65,18 +81,38 @@ public class GetWorkitemAttachmentCreatemetaResponseBody extends TeaModel {
     }
 
     public static class GetWorkitemAttachmentCreatemetaResponseBodyUploadInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxxx</p>
+         */
         @NameInMap("accessid")
         public String accessid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ddd/dddd</p>
+         */
         @NameInMap("dir")
         public String dir;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
+         */
         @NameInMap("host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxxx</p>
+         */
         @NameInMap("policy")
         public String policy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xdWcrl/yTmIUA0kE7a3B0Ox4Vu8=</p>
+         */
         @NameInMap("signature")
         public String signature;
 

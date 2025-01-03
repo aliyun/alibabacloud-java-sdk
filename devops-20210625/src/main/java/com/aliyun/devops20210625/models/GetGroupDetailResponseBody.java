@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetGroupDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4CA06B0B-5867-5DE6-A0FA-9F39C97B524C</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public GetGroupDetailResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,39 +81,79 @@ public class GetGroupDetailResponseBody extends TeaModel {
     }
 
     public static class GetGroupDetailResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>36612</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-group-detail</p>
+         */
         @NameInMap("name")
         public String name;
 
         @NameInMap("nameWithNamespace")
         public String nameWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19230</p>
+         */
         @NameInMap("ownerId")
         public Long ownerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26842</p>
+         */
         @NameInMap("parentId")
         public Long parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-group-detail</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup-test-org/test-group-detail</p>
+         */
         @NameInMap("pathWithNamespace")
         public String pathWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Group</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("visibilityLevel")
         public Integer visibilityLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("webUrl")
         public String webUrl;
 

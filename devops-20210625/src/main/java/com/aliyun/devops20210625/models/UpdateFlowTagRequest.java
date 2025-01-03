@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateFlowTagRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>#1F9AEF</p>
      */
     @NameInMap("color")
     public String color;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("flowTagGroupId")
     public Long flowTagGroupId;

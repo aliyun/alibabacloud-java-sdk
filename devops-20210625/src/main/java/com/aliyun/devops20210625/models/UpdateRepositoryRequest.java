@@ -4,39 +4,83 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateRepositoryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>c3c09f1230187a879678da43c973d069</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Java</p>
+     */
     @NameInMap("adminSettingLanguage")
     public String adminSettingLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://xxxx">https://xxxx</a></p>
+     */
     @NameInMap("avatar")
     public String avatar;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("buildsEnabled")
     public Boolean buildsEnabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("checkEmail")
     public Boolean checkEmail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>master</p>
+     */
     @NameInMap("defaultBranch")
     public String defaultBranch;
 
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2080398</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("issuesEnabled")
     public Boolean issuesEnabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("mergeRequestsEnabled")
     public Boolean mergeRequestsEnabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>codeup</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("openCloneDownloadControl")
     public Boolean openCloneDownloadControl;
 
@@ -49,17 +93,32 @@ public class UpdateRepositoryRequest extends TeaModel {
     @NameInMap("projectCloneDownloadRoleList")
     public java.util.List<UpdateRepositoryRequestProjectCloneDownloadRoleList> projectCloneDownloadRoleList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("snippetsEnabled")
     public Boolean snippetsEnabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("visibilityLevel")
     public Integer visibilityLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("wikiEnabled")
     public Boolean wikiEnabled;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60de7a6852743a5162b5f957</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
@@ -222,9 +281,17 @@ public class UpdateRepositoryRequest extends TeaModel {
     }
 
     public static class UpdateRepositoryRequestProjectCloneDownloadMethodList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("allowed")
         public Boolean allowed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>project:download</p>
+         */
         @NameInMap("permissionCode")
         public String permissionCode;
 
@@ -252,9 +319,17 @@ public class UpdateRepositoryRequest extends TeaModel {
     }
 
     public static class UpdateRepositoryRequestProjectCloneDownloadRoleList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("allowed")
         public Boolean allowed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("roleCode")
         public Integer roleCode;
 

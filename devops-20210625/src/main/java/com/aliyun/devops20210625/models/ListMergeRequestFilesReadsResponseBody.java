@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListMergeRequestFilesReadsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListMergeRequestFilesReadsResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,21 +81,45 @@ public class ListMergeRequestFilesReadsResponseBody extends TeaModel {
     }
 
     public static class ListMergeRequestFilesReadsResponseBodyResultReadUsers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>204485087002425236</p>
+         */
         @NameInMap("aliyunPk")
         public String aliyunPk;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -139,21 +179,41 @@ public class ListMergeRequestFilesReadsResponseBody extends TeaModel {
     }
 
     public static class ListMergeRequestFilesReadsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("deletedFile")
         public String deletedFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("newFile")
         public Boolean newFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text.txt</p>
+         */
         @NameInMap("newFilePath")
         public String newFilePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text.txt</p>
+         */
         @NameInMap("oldFilePath")
         public String oldFilePath;
 
         @NameInMap("readUsers")
         public java.util.List<ListMergeRequestFilesReadsResponseBodyResultReadUsers> readUsers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("renamedFile")
         public String renamedFile;
 

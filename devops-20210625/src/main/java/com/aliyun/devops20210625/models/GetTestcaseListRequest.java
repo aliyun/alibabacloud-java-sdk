@@ -4,20 +4,39 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetTestcaseListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;conditionGroups\&quot;:[[{\&quot;fieldIdentifier\&quot;:\&quot;status\&quot;,\&quot;operator\&quot;:\&quot;CONTAINS\&quot;,\&quot;value\&quot;:[\&quot;cc961a18adf770c6e423ccc5\&quot;],\&quot;toValue\&quot;:null,,\&quot;className\&quot;:\&quot;status\&quot;,\&quot;format\&quot;:\&quot;list\&quot;}]]}</p>
+     */
     @NameInMap("conditions")
     public String conditions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e27b8eace6501ce51cf5d56784</p>
+     */
     @NameInMap("directoryIdentifier")
     public String directoryIdentifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("maxResult")
     public String maxResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2591861102250c4522380b33a6</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6d5984c7d92b23fa53d4743c37</p>
      */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;

@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectMemberResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     @NameInMap("member")
     public UpdateProjectMemberResponseBodyMember member;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,27 +81,59 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
     }
 
     public static class UpdateProjectMemberResponseBodyMember extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1623916393000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1623916393000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1124382</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>project.admin</p>
+         */
         @NameInMap("roleIdentifier")
         public String roleIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5e70xxxxxxcd000xxxxe96</p>
+         */
         @NameInMap("targetIdentifier")
         public String targetIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Space</p>
+         */
         @NameInMap("targetType")
         public String targetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("userIdentifier")
         public String userIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("userType")
         public String userType;
 

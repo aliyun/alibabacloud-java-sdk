@@ -4,18 +4,38 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkitemV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>InvalidTagGroup.IdNotFound</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EAE03103-5497-58D1-9169-E524DDE8604C</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public String success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11234455454355</p>
+     */
     @NameInMap("workitemIdentifier")
     public String workitemIdentifier;
 

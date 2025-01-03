@@ -4,21 +4,41 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryTagsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListRepositoryTagsResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("total")
     public Long total;
 
@@ -76,9 +96,17 @@ public class ListRepositoryTagsResponseBody extends TeaModel {
     }
 
     public static class ListRepositoryTagsResponseBodyResultCommitSignature extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("gpgKeyId")
         public String gpgKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>verified</p>
+         */
         @NameInMap("verificationStatus")
         public String verificationStatus;
 
@@ -106,27 +134,51 @@ public class ListRepositoryTagsResponseBody extends TeaModel {
     }
 
     public static class ListRepositoryTagsResponseBodyResultCommit extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("authorEmail")
         public String authorEmail;
 
         @NameInMap("authorName")
         public String authorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 10:00:00</p>
+         */
         @NameInMap("authoredDate")
         public String authoredDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 09:00:00</p>
+         */
         @NameInMap("committedDate")
         public String committedDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("committerEmail")
         public String committerEmail;
 
         @NameInMap("committerName")
         public String committerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 10:00:00</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>de02b625ba8488f92eb204bcb3773a40c1b4ddac</p>
+         */
         @NameInMap("id")
         public String id;
 
@@ -136,6 +188,10 @@ public class ListRepositoryTagsResponseBody extends TeaModel {
         @NameInMap("parentIds")
         public java.util.List<String> parentIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>de02b625</p>
+         */
         @NameInMap("shortId")
         public String shortId;
 
@@ -260,12 +316,20 @@ public class ListRepositoryTagsResponseBody extends TeaModel {
         @NameInMap("commit")
         public ListRepositoryTagsResponseBodyResultCommit commit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9a494e7b88ca35cde00579af2df4ab46136c022e</p>
+         */
         @NameInMap("id")
         public String id;
 
         @NameInMap("message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tag v1.0</p>
+         */
         @NameInMap("name")
         public String name;
 

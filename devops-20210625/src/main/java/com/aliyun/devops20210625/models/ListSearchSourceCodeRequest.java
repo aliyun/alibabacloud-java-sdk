@@ -7,38 +7,72 @@ public class ListSearchSourceCodeRequest extends TeaModel {
     @NameInMap("filePath")
     public ListSearchSourceCodeRequestFilePath filePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("isCodeBlock")
     public Boolean isCodeBlock;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Java</p>
+     */
     @NameInMap("language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     @NameInMap("repoPath")
     public ListSearchSourceCodeRequestRepoPath repoPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("scope")
     public String scope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("sort")
     public String sort;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66c0c9fffeb86b450c199fcd</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
@@ -137,12 +171,24 @@ public class ListSearchSourceCodeRequest extends TeaModel {
     }
 
     public static class ListSearchSourceCodeRequestFilePath extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>term</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>equal</p>
+         */
         @NameInMap("operatorType")
         public String operatorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>orgId/test-group/spring-boot-demo/test.java</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -178,12 +224,24 @@ public class ListSearchSourceCodeRequest extends TeaModel {
     }
 
     public static class ListSearchSourceCodeRequestRepoPath extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>term</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>equal</p>
+         */
         @NameInMap("operatorType")
         public String operatorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("value")
         public String value;
 

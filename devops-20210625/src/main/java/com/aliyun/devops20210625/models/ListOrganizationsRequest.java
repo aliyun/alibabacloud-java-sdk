@@ -4,12 +4,20 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListOrganizationsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("accessLevel")
     public Integer accessLevel;
 
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("minAccessLevel")
     public Integer minAccessLevel;
 

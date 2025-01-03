@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateWorkitemRecordRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("actualTime")
     public String actualTime;
@@ -15,30 +18,45 @@ public class CreateWorkitemRecordRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1646323200000</p>
      */
     @NameInMap("gmtEnd")
     public String gmtEnd;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1667205617061</p>
      */
     @NameInMap("gmtStart")
     public String gmtStart;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1316458xxxxx41068</p>
      */
     @NameInMap("recordUserIdentifier")
     public String recordUserIdentifier;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>deafe5f33xxxxx6a259d8dafd</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9144ef6b72d8exxxxx9e61a4d0</p>
      */
     @NameInMap("workitemIdentifier")
     public String workitemIdentifier;

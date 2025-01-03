@@ -7,12 +7,20 @@ public class ListRepositoriesRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("archived")
     public Boolean archived;
 
     @NameInMap("minAccessLevel")
     public Integer minAccessLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>created_at</p>
+     */
     @NameInMap("orderBy")
     public String orderBy;
 
@@ -22,15 +30,31 @@ public class ListRepositoriesRequest extends TeaModel {
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("page")
     public Long page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("perPage")
     public Long perPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Demo</p>
+     */
     @NameInMap("search")
     public String search;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("sort")
     public String sort;
 

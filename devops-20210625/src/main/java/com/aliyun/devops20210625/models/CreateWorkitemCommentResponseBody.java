@@ -7,14 +7,25 @@ public class CreateWorkitemCommentResponseBody extends TeaModel {
     @NameInMap("Comment")
     public CreateWorkitemCommentResponseBodyComment comment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -68,15 +79,27 @@ public class CreateWorkitemCommentResponseBody extends TeaModel {
     }
 
     public static class CreateWorkitemCommentResponseBodyCommentUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>13164xxxxx41068</p>
+         */
         @NameInMap("account")
         public String account;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxx/thumbnail/112m7150e256dbba0d6456bafbb65c81f90d/w/200/h/200">https://xxxxx/thumbnail/112m7150e256dbba0d6456bafbb65c81f90d/w/200/h/200</a></p>
+         */
         @NameInMap("avatar")
         public String avatar;
 
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1e9903d8bxxxxxxe9df9286ef5</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
@@ -86,6 +109,10 @@ public class CreateWorkitemCommentResponseBody extends TeaModel {
         @NameInMap("realName")
         public String realName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workitem</p>
+         */
         @NameInMap("targetType")
         public String targetType;
 
@@ -153,33 +180,69 @@ public class CreateWorkitemCommentResponseBody extends TeaModel {
     }
 
     public static class CreateWorkitemCommentResponseBodyComment extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>26842</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1667202662000</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RICHTEXT/MARKDOWN</p>
+         */
         @NameInMap("formatType")
         public String formatType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true/false</p>
+         */
         @NameInMap("isTop")
         public Boolean isTop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1637995553000</p>
+         */
         @NameInMap("modifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26842</p>
+         */
         @NameInMap("parentId")
         public Long parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>79d523806bdxxxxx95612a5154</p>
+         */
         @NameInMap("targetIdentifier")
         public String targetIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workitem</p>
+         */
         @NameInMap("targetType")
         public String targetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1667202662000</p>
+         */
         @NameInMap("topTime")
         public Long topTime;
 

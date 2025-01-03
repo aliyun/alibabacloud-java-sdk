@@ -3,7 +3,7 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class ReleaseWorkspaceResponse extends TeaModel {
+public class GetReleaseStagePipelineRunResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ReleaseWorkspaceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ReleaseWorkspaceResponseBody body;
+    public GetReleaseStagePipelineRunResponseBody body;
 
-    public static ReleaseWorkspaceResponse build(java.util.Map<String, ?> map) throws Exception {
-        ReleaseWorkspaceResponse self = new ReleaseWorkspaceResponse();
+    public static GetReleaseStagePipelineRunResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetReleaseStagePipelineRunResponse self = new GetReleaseStagePipelineRunResponse();
         return TeaModel.build(map, self);
     }
 
-    public ReleaseWorkspaceResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetReleaseStagePipelineRunResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ReleaseWorkspaceResponse extends TeaModel {
         return this.headers;
     }
 
-    public ReleaseWorkspaceResponse setStatusCode(Integer statusCode) {
+    public GetReleaseStagePipelineRunResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ReleaseWorkspaceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ReleaseWorkspaceResponse setBody(ReleaseWorkspaceResponseBody body) {
+    public GetReleaseStagePipelineRunResponse setBody(GetReleaseStagePipelineRunResponseBody body) {
         this.body = body;
         return this;
     }
-    public ReleaseWorkspaceResponseBody getBody() {
+    public GetReleaseStagePipelineRunResponseBody getBody() {
         return this.body;
     }
 

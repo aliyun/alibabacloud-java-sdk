@@ -7,18 +7,33 @@ public class UpdateWorkitemCommentResponseBody extends TeaModel {
     @NameInMap("comment")
     public UpdateWorkitemCommentResponseBodyComment comment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>InvalidParam.NotFound</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7B85D1B-D1C2-140F-A039-341859F130B9</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public String success;
 
@@ -68,15 +83,27 @@ public class UpdateWorkitemCommentResponseBody extends TeaModel {
     }
 
     public static class UpdateWorkitemCommentResponseBodyCommentUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1316458xxxxx41068</p>
+         */
         @NameInMap("account")
         public String account;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112m7150e256dbba0d6456bafbb65c81f90d/w/200/h/200">https://tcs-devops.aliyuncs.com/thumbnail/112m7150e256dbba0d6456bafbb65c81f90d/w/200/h/200</a></p>
+         */
         @NameInMap("avatar")
         public String avatar;
 
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9144ef6b72d8exxxxx9e61a4d0</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
@@ -145,30 +172,66 @@ public class UpdateWorkitemCommentResponseBody extends TeaModel {
         @NameInMap("content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1667205617061</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MARKDOWN/RICHTEXT</p>
+         */
         @NameInMap("formatType")
         public String formatType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1964584</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true/false</p>
+         */
         @NameInMap("isTop")
         public Boolean isTop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1646323200000</p>
+         */
         @NameInMap("modifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2684432</p>
+         */
         @NameInMap("parentId")
         public Long parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>deafe5f33xxxxx6a259d8dafd</p>
+         */
         @NameInMap("targetIdentifier")
         public String targetIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workitem</p>
+         */
         @NameInMap("targetType")
         public String targetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1667205617089</p>
+         */
         @NameInMap("topTime")
         public Long topTime;
 

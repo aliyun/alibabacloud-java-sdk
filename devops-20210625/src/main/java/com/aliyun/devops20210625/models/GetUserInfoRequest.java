@@ -4,6 +4,10 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetUserInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>61e54b0e0bb300d827e1ae27</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

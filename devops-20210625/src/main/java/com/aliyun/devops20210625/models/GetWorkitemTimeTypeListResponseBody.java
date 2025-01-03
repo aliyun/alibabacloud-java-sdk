@@ -4,18 +4,33 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetWorkitemTimeTypeListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Invalid.IdNotFound</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HC93CE1A-8D7A-13A9-8306-7465DE2E5C0F</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public String success;
 
@@ -71,15 +86,27 @@ public class GetWorkitemTimeTypeListResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>deploy</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>67fb001005aac8d3d2a3372416</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("position")
         public Long position;
 

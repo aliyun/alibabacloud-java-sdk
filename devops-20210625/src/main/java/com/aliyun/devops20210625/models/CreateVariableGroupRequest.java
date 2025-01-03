@@ -4,17 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateVariableGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>变量组</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>变量组</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;isEncrypted&quot;:true,&quot;name&quot;:&quot;name1&quot;,&quot;value&quot;:&quot;vaue1&quot;}]</p>
      */
     @NameInMap("variables")
     public String variables;

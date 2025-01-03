@@ -3,7 +3,7 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class FrozenWorkspaceResponse extends TeaModel {
+public class CancelExecutionReleaseStageResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class FrozenWorkspaceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public FrozenWorkspaceResponseBody body;
+    public CancelExecutionReleaseStageResponseBody body;
 
-    public static FrozenWorkspaceResponse build(java.util.Map<String, ?> map) throws Exception {
-        FrozenWorkspaceResponse self = new FrozenWorkspaceResponse();
+    public static CancelExecutionReleaseStageResponse build(java.util.Map<String, ?> map) throws Exception {
+        CancelExecutionReleaseStageResponse self = new CancelExecutionReleaseStageResponse();
         return TeaModel.build(map, self);
     }
 
-    public FrozenWorkspaceResponse setHeaders(java.util.Map<String, String> headers) {
+    public CancelExecutionReleaseStageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class FrozenWorkspaceResponse extends TeaModel {
         return this.headers;
     }
 
-    public FrozenWorkspaceResponse setStatusCode(Integer statusCode) {
+    public CancelExecutionReleaseStageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class FrozenWorkspaceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public FrozenWorkspaceResponse setBody(FrozenWorkspaceResponseBody body) {
+    public CancelExecutionReleaseStageResponse setBody(CancelExecutionReleaseStageResponseBody body) {
         this.body = body;
         return this;
     }
-    public FrozenWorkspaceResponseBody getBody() {
+    public CancelExecutionReleaseStageResponseBody getBody() {
         return this.body;
     }
 

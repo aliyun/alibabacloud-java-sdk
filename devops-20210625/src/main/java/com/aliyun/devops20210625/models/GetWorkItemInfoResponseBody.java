@@ -4,15 +4,31 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetWorkItemInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,18 +81,38 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-01 00:00:00</p>
+         */
         @NameInMap("displayValue")
         public String displayValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-01 00:00:00</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("level")
         public Long level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-01 00:00:00</p>
+         */
         @NameInMap("value")
         public String value;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("valueEn")
         public String valueEn;
 
@@ -128,30 +164,62 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemInfoResponseBodyWorkitemCustomFields extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>例如：date</p>
+         */
         @NameInMap("fieldClassName")
         public String fieldClassName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>例：input</p>
+         */
         @NameInMap("fieldFormat")
         public String fieldFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>例：80</p>
+         */
         @NameInMap("fieldIdentifier")
         public String fieldIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("level")
         public Long level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("objectValue")
         public String objectValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("position")
         public Long position;
 
+        /**
+         * <strong>example:</strong>
+         * <p>例：2022-01-06 00:00:00</p>
+         */
         @NameInMap("value")
         public String value;
 
         @NameInMap("valueList")
         public java.util.List<GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList> valueList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5daa9a15c7fd55523996......</p>
+         */
         @NameInMap("workitemIdentifier")
         public String workitemIdentifier;
 
@@ -275,19 +343,65 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
 
     }
 
+    public static class GetWorkItemInfoResponseBodyWorkitemVersions extends TeaModel {
+        @NameInMap("identifier")
+        public String identifier;
+
+        @NameInMap("name")
+        public String name;
+
+        public static GetWorkItemInfoResponseBodyWorkitemVersions build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkItemInfoResponseBodyWorkitemVersions self = new GetWorkItemInfoResponseBodyWorkitemVersions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemVersions setIdentifier(String identifier) {
+            this.identifier = identifier;
+            return this;
+        }
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemVersions setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class GetWorkItemInfoResponseBodyWorkitem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("assignedTo")
         public String assignedTo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Req</p>
+         */
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("creator")
         public String creator;
 
         @NameInMap("customFields")
         public java.util.List<GetWorkItemInfoResponseBodyWorkitemCustomFields> customFields;
 
+        /**
+         * <strong>example:</strong>
+         * <p>html格式</p>
+         */
         @NameInMap("document")
         public String document;
 
@@ -297,51 +411,107 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         @NameInMap("finishTime")
         public Long finishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640850318000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640850318000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8bxxxxxxxxxxxxxxxx23</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("logicalStatus")
         public String logicalStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("modifier")
         public String modifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8bxxxxxxxxxxxxxxxx24</p>
+         */
         @NameInMap("parentIdentifier")
         public String parentIdentifier;
 
         @NameInMap("participant")
         public java.util.List<String> participant;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ABCD-1</p>
+         */
         @NameInMap("serialNumber")
         public String serialNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8b26xxxxx6e76aa20xxxxx23</p>
+         */
         @NameInMap("spaceIdentifier")
         public String spaceIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>需求项目</p>
+         */
         @NameInMap("spaceName")
         public String spaceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Project</p>
+         */
         @NameInMap("spaceType")
         public String spaceType;
 
         @NameInMap("sprint")
         public java.util.List<String> sprint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>待处理</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>例：100005</p>
+         */
         @NameInMap("statusIdentifier")
         public String statusIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("statusStageIdentifier")
         public String statusStageIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试工作项</p>
+         */
         @NameInMap("subject")
         public String subject;
 
@@ -354,12 +524,23 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         @NameInMap("tracker")
         public java.util.List<String> tracker;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640850328000</p>
+         */
         @NameInMap("updateStatusAt")
         public Long updateStatusAt;
 
         @NameInMap("verifier")
         public java.util.List<String> verifier;
 
+        @NameInMap("versions")
+        public java.util.List<GetWorkItemInfoResponseBodyWorkitemVersions> versions;
+
+        /**
+         * <strong>example:</strong>
+         * <p>9uxxxxxxre573f5xxxxxx0</p>
+         */
         @NameInMap("workitemTypeIdentifier")
         public String workitemTypeIdentifier;
 
@@ -590,6 +771,14 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         }
         public java.util.List<String> getVerifier() {
             return this.verifier;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitem setVersions(java.util.List<GetWorkItemInfoResponseBodyWorkitemVersions> versions) {
+            this.versions = versions;
+            return this;
+        }
+        public java.util.List<GetWorkItemInfoResponseBodyWorkitemVersions> getVersions() {
+            return this.versions;
         }
 
         public GetWorkItemInfoResponseBodyWorkitem setWorkitemTypeIdentifier(String workitemTypeIdentifier) {

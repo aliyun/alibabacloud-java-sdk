@@ -4,11 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateFileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0cf2c8458ac44d9481aab2dd6ec10596v3</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>master</p>
      */
     @NameInMap("branchName")
     public String branchName;
@@ -25,23 +32,36 @@ public class UpdateFileRequest extends TeaModel {
     @NameInMap("content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>text</p>
+     */
     @NameInMap("encoding")
     public String encoding;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>src/main/update.txt</p>
      */
     @NameInMap("newPath")
     public String newPath;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>src/main/update.txt</p>
      */
     @NameInMap("oldPath")
     public String oldPath;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60de7a6852743a5162b5f957</p>
      */
     @NameInMap("organizationId")
     public String organizationId;

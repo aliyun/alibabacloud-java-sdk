@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateWorkitemCommentRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1964584</p>
      */
     @NameInMap("commentId")
     public Long commentId;
@@ -18,12 +21,18 @@ public class UpdateWorkitemCommentRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MARKDOWN/RICHTEXT</p>
      */
     @NameInMap("formatType")
     public String formatType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9144ef6b72d8exxxxx9e61a4d0</p>
      */
     @NameInMap("workitemIdentifier")
     public String workitemIdentifier;

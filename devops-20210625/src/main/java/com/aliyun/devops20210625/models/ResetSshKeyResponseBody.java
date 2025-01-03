@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ResetSshKeyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("sshKey")
     public ResetSshKeyResponseBodySshKey sshKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class ResetSshKeyResponseBody extends TeaModel {
     }
 
     public static class ResetSshKeyResponseBodySshKey extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1212</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>saaaaaaaaaaaaaaaa</p>
+         */
         @NameInMap("publicKey")
         public String publicKey;
 

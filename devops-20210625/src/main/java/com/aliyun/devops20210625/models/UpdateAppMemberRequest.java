@@ -10,6 +10,10 @@ public class UpdateAppMemberRequest extends TeaModel {
     @NameInMap("roleNames")
     public java.util.List<String> roleNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66c0c9fffeb86b450c199fcd</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
@@ -43,9 +47,17 @@ public class UpdateAppMemberRequest extends TeaModel {
     }
 
     public static class UpdateAppMemberRequestPlayer extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1332695887xxxxxx</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>User</p>
+         */
         @NameInMap("type")
         public String type;
 

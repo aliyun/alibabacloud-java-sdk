@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListMergeRequestPatchSetsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F7B85D1B-D1C2-140F-A039-341859F130B9</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListMergeRequestPatchSetsResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,24 +81,48 @@ public class ListMergeRequestPatchSetsResponseBody extends TeaModel {
     }
 
     public static class ListMergeRequestPatchSetsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1a072f5367c21f9de3464b8c0ee8546e47764d2d</p>
+         */
         @NameInMap("commitId")
         public String commitId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 14:24:54</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>513fcfd81a9142d2bb0db4f72c0aa15b</p>
+         */
         @NameInMap("patchSetBizId")
         public String patchSetBizId;
 
         @NameInMap("patchSetName")
         public String patchSetName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("patchSetNo")
         public Long patchSetNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MERGE_SOURCE</p>
+         */
         @NameInMap("relatedMergeItemType")
         public String relatedMergeItemType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1a072f53</p>
+         */
         @NameInMap("shortCommitId")
         public String shortCommitId;
 

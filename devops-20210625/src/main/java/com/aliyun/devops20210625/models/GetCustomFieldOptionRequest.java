@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetCustomFieldOptionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e8bxxxxxxxxxxxxxxxx23</p>
      */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Project</p>
      */
     @NameInMap("spaceType")
     public String spaceType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9uyxxxx1re573f561dxxxxx</p>
      */
     @NameInMap("workitemTypeIdentifier")
     public String workitemTypeIdentifier;

@@ -7,18 +7,33 @@ public class UpdateTestCaseResponseBody extends TeaModel {
     @NameInMap("Testcase")
     public UpdateTestCaseResponseBodyTestcase testcase;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -68,12 +83,20 @@ public class UpdateTestCaseResponseBody extends TeaModel {
     }
 
     public static class UpdateTestCaseResponseBodyTestcaseAssignedTo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1316xxxxxx8624xxx</p>
+         */
         @NameInMap("assignIdentifier")
         public String assignIdentifier;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxxxewdds12xxx</p>
+         */
         @NameInMap("tbRoleId")
         public String tbRoleId;
 
@@ -109,9 +132,17 @@ public class UpdateTestCaseResponseBody extends TeaModel {
     }
 
     public static class UpdateTestCaseResponseBodyTestcaseCreator extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1316xxxxxx8624xxx</p>
+         */
         @NameInMap("createIdentifier")
         public String createIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxxx</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -142,9 +173,17 @@ public class UpdateTestCaseResponseBody extends TeaModel {
         @NameInMap("expectContent")
         public String expectContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MARKDOWN</p>
+         */
         @NameInMap("expectContentType")
         public String expectContentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>685340d13127b01185335bd360</p>
+         */
         @NameInMap("expectIdentifier")
         public String expectIdentifier;
 
@@ -183,9 +222,17 @@ public class UpdateTestCaseResponseBody extends TeaModel {
         @NameInMap("preContent")
         public String preContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MARKDOWN</p>
+         */
         @NameInMap("preContentType")
         public String preContentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3354596c7b3004480b635acf95</p>
+         */
         @NameInMap("preIdentifier")
         public String preIdentifier;
 
@@ -224,9 +271,17 @@ public class UpdateTestCaseResponseBody extends TeaModel {
         @NameInMap("stepContent")
         public String stepContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RICHTEXT</p>
+         */
         @NameInMap("stepContentType")
         public String stepContentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ad504e6cdcd2165b28eb1e1b9f</p>
+         */
         @NameInMap("stepIdentifier")
         public String stepIdentifier;
 
@@ -271,6 +326,10 @@ public class UpdateTestCaseResponseBody extends TeaModel {
         @NameInMap("stepContent")
         public UpdateTestCaseResponseBodyTestcaseDetailInfoStepContent stepContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TEXT/TABLE</p>
+         */
         @NameInMap("stepType")
         public String stepType;
 
@@ -314,9 +373,17 @@ public class UpdateTestCaseResponseBody extends TeaModel {
     }
 
     public static class UpdateTestCaseResponseBodyTestcaseDirectory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2973f597c14c6f533fffdcd05c</p>
+         */
         @NameInMap("childIdentifier")
         public String childIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e27b8eace6501ce51cf5d56784</p>
+         */
         @NameInMap("directoryIdentifier")
         public String directoryIdentifier;
 
@@ -366,9 +433,17 @@ public class UpdateTestCaseResponseBody extends TeaModel {
     }
 
     public static class UpdateTestCaseResponseBodyTestcaseModifier extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1316xxxxxx8624xxx</p>
+         */
         @NameInMap("modifyIdentifier")
         public String modifyIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxxx</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -399,6 +474,10 @@ public class UpdateTestCaseResponseBody extends TeaModel {
         @NameInMap("assignedTo")
         public UpdateTestCaseResponseBodyTestcaseAssignedTo assignedTo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestCase</p>
+         */
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
@@ -411,15 +490,27 @@ public class UpdateTestCaseResponseBody extends TeaModel {
         @NameInMap("directory")
         public UpdateTestCaseResponseBodyTestcaseDirectory directory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c7f7033b021ead52cc42721382</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
         @NameInMap("modifier")
         public UpdateTestCaseResponseBodyTestcaseModifier modifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1e7d7a412b91a2144ec4aa8411</p>
+         */
         @NameInMap("spaceIdentifier")
         public String spaceIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestRepo</p>
+         */
         @NameInMap("spaceType")
         public String spaceType;
 

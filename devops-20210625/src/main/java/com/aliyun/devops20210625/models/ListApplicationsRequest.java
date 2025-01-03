@@ -4,21 +4,45 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>vxc2341gfssad12</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("orderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66c0c9fffeb86b450c199fcd</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>keyset</p>
+     */
     @NameInMap("pagination")
     public String pagination;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("perPage")
     public Integer perPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>id</p>
+     */
     @NameInMap("sort")
     public String sort;
 

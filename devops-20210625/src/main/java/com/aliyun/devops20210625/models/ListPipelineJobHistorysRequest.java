@@ -6,22 +6,35 @@ import com.aliyun.tea.*;
 public class ListPipelineJobHistorysRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEPLOY</p>
      */
     @NameInMap("category")
     public String category;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10_ssasasa</p>
      */
     @NameInMap("identifier")
     public String identifier;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xsaxsa</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

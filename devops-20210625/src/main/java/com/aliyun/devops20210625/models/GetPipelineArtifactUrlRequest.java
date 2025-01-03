@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetPipelineArtifactUrlRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test.tgz</p>
      */
     @NameInMap("fileName")
     public String fileName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/test/test/test.tgz</p>
      */
     @NameInMap("filePath")
     public String filePath;

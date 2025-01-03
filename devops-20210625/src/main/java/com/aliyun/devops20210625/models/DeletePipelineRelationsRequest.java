@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeletePipelineRelationsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("relObjectId")
     public String relObjectId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VARIABLE_GROUP</p>
      */
     @NameInMap("relObjectType")
     public String relObjectType;

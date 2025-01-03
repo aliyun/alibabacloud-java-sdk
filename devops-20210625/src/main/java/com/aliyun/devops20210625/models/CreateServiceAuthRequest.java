@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateServiceAuthRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RAM</p>
      */
     @NameInMap("serviceAuthType")
     public String serviceAuthType;

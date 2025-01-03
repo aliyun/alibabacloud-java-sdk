@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetPipelineScanReportUrlRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/test/test/test.html</p>
      */
     @NameInMap("reportPath")
     public String reportPath;

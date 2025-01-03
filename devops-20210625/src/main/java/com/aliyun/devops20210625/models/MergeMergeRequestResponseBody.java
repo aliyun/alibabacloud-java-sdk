@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class MergeMergeRequestResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9ED5E382-3A58-51E4-8A81-CE25D1756025</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public MergeMergeRequestResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -77,6 +93,10 @@ public class MergeMergeRequestResponseBody extends TeaModel {
         @NameInMap("projectId")
         public Long projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("result")
         public Boolean result;
 

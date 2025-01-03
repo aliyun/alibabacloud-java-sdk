@@ -12,15 +12,25 @@ public class CreateWorkitemCommentRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RICHTEXT/MARKDOWN</p>
      */
     @NameInMap("formatType")
     public String formatType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>26842</p>
+     */
     @NameInMap("parentId")
     public String parentId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1e9903d8b3f12xxxxxf9286ef5</p>
      */
     @NameInMap("workitemIdentifier")
     public String workitemIdentifier;

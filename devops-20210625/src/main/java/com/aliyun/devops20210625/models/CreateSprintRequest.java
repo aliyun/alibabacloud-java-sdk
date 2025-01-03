@@ -4,17 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateSprintRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-02</p>
+     */
     @NameInMap("endDate")
     public String endDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asd345xxxxx9q9845xxxxx34</p>
      */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
@@ -25,6 +35,10 @@ public class CreateSprintRequest extends TeaModel {
     @NameInMap("staffIds")
     public java.util.List<String> staffIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-01</p>
+     */
     @NameInMap("startDate")
     public String startDate;
 

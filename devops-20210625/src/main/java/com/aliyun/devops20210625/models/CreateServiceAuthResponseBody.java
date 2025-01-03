@@ -4,21 +4,40 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceAuthResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1223</p>
+     */
     @NameInMap("id")
     public String id;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 

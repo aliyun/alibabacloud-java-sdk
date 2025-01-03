@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class DeleteFileResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7EFAD5FB-2296-5D52-BC60-FCC992A40767</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public DeleteFileResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class DeleteFileResponseBody extends TeaModel {
     }
 
     public static class DeleteFileResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("branchName")
         public String branchName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>src/main/delete.java</p>
+         */
         @NameInMap("filePath")
         public String filePath;
 

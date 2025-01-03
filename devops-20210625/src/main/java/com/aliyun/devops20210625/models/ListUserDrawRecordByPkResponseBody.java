@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListUserDrawRecordByPkResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("data")
     public java.util.List<ListUserDrawRecordByPkResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,24 +81,52 @@ public class ListUserDrawRecordByPkResponseBody extends TeaModel {
     }
 
     public static class ListUserDrawRecordByPkResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1401072305438324</p>
+         */
         @NameInMap("aliyunPk")
         public String aliyunPk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dsadsadsadas</p>
+         */
         @NameInMap("drawGroup")
         public String drawGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dasdsadasdas</p>
+         */
         @NameInMap("drawPoolName")
         public String drawPoolName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("drawResult")
         public String drawResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1545726028000</p>
+         */
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("taskGroupId")
         public String taskGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dsadsadasd</p>
+         */
         @NameInMap("uccId")
         public String uccId;
 

@@ -4,24 +4,48 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListPipelineGroupsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ssaassasass</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     @NameInMap("pipelineGroups")
     public java.util.List<ListPipelineGroupsResponseBodyPipelineGroups> pipelineGroups;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -87,9 +111,17 @@ public class ListPipelineGroupsResponseBody extends TeaModel {
     }
 
     public static class ListPipelineGroupsResponseBodyPipelineGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("id")
         public Long id;
 

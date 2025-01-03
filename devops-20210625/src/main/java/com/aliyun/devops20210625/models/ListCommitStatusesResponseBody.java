@@ -4,21 +4,41 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListCommitStatusesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListCommitStatusesResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>28</p>
+     */
     @NameInMap("total")
     public Long total;
 
@@ -76,15 +96,31 @@ public class ListCommitStatusesResponseBody extends TeaModel {
     }
 
     public static class ListCommitStatusesResponseBodyResultCreator extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>235671547828975455</p>
+         */
         @NameInMap("aliyunPk")
         public String aliyunPk;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup</p>
+         */
         @NameInMap("login")
         public String login;
 
+        /**
+         * <strong>example:</strong>
+         * <p>User</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -128,6 +164,10 @@ public class ListCommitStatusesResponseBody extends TeaModel {
     }
 
     public static class ListCommitStatusesResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test-commit-status-context</p>
+         */
         @NameInMap("context")
         public String context;
 
@@ -137,15 +177,31 @@ public class ListCommitStatusesResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19285</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>61cc69557962d29f737a91730b3e86f497f083a3</p>
+         */
         @NameInMap("sha")
         public String sha;
 
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("targetUrl")
         public String targetUrl;
 

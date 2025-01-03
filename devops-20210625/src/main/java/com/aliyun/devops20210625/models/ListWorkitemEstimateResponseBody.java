@@ -4,18 +4,38 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListWorkitemEstimateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -76,6 +96,10 @@ public class ListWorkitemEstimateResponseBody extends TeaModel {
     }
 
     public static class ListWorkitemEstimateResponseBodyWorkitemTimeEstimateRecordUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>132xxxx123</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
@@ -106,33 +130,69 @@ public class ListWorkitemEstimateResponseBody extends TeaModel {
     }
 
     public static class ListWorkitemEstimateResponseBodyWorkitemTimeEstimate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>开发代码等</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1653235200000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1653235200000</p>
+         */
         @NameInMap("gmtEnd")
         public Long gmtEnd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1653235200000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1653235200000</p>
+         */
         @NameInMap("gmtStart")
         public Long gmtStart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a4ac3a81e90217db32b7......</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
         @NameInMap("recordUser")
         public ListWorkitemEstimateResponseBodyWorkitemTimeEstimateRecordUser recordUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("spentTime")
         public Float spentTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>研发</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5daa9a15c7fd55523996......</p>
+         */
         @NameInMap("workitemIdentifier")
         public String workitemIdentifier;
 

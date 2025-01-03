@@ -4,11 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateCommentRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GLOBAL_COMMENT</p>
      */
     @NameInMap("commentType")
     public String commentType;
@@ -19,32 +26,62 @@ public class CreateCommentRequest extends TeaModel {
     @NameInMap("content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("draft")
     public Boolean draft;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/src/main/test.java</p>
+     */
     @NameInMap("filePath")
     public String filePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("lineNumber")
     public Integer lineNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2666ac1ac53841b0ba1b042e383279cc</p>
+     */
     @NameInMap("parentCommentBizId")
     public String parentCommentBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>b7d8386be17c4ca68a07140db4836257</p>
+     */
     @NameInMap("patchSetBizId")
     public String patchSetBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("resolved")
     public Boolean resolved;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("localId")
     public Long localId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5ebbc0228123212b59xxxxx</p>
      */
     @NameInMap("organizationId")
     public String organizationId;

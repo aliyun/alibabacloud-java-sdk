@@ -4,15 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ExportInsightSpaceRefResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     @NameInMap("result")
     public java.util.List<ExportInsightSpaceRefResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -54,36 +66,80 @@ public class ExportInsightSpaceRefResponseBody extends TeaModel {
     }
 
     public static class ExportInsightSpaceRefResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>65659358c319d2a0f912xxxx</p>
+         */
         @NameInMap("creatorId")
         public String creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7bc2be989727d0d4c9801fxxxx</p>
+         */
         @NameInMap("fromId")
         public String fromId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1704267849000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1704267849000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>356525</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49565</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("isDeleted")
         public String isDeleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>65659358c319d2a0f912xxxx</p>
+         */
         @NameInMap("modifierId")
         public String modifierId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>61db9af2148974246bexxxx</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>732026500a48d7a74f8b43xxxx</p>
+         */
         @NameInMap("toId")
         public String toId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ASSOCIATED</p>
+         */
         @NameInMap("type")
         public String type;
 

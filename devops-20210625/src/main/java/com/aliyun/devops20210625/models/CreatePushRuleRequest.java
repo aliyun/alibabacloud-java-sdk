@@ -4,6 +4,10 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreatePushRuleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
@@ -15,6 +19,9 @@ public class CreatePushRuleRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5ebbc0228123212b59xxxxx</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
@@ -49,12 +56,24 @@ public class CreatePushRuleRequest extends TeaModel {
     }
 
     public static class CreatePushRuleRequestRuleInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CommitMessageChecker</p>
+         */
         @NameInMap("checkerName")
         public String checkerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>warn</p>
+         */
         @NameInMap("checkerType")
         public String checkerType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:user@example.com">user@example.com</a></p>
+         */
         @NameInMap("extraMessage")
         public String extraMessage;
 

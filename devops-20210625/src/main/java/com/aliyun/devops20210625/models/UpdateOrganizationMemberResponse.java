@@ -3,7 +3,7 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class ListWorkspacesResponse extends TeaModel {
+public class UpdateOrganizationMemberResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListWorkspacesResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListWorkspacesResponseBody body;
+    public UpdateOrganizationMemberResponseBody body;
 
-    public static ListWorkspacesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListWorkspacesResponse self = new ListWorkspacesResponse();
+    public static UpdateOrganizationMemberResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateOrganizationMemberResponse self = new UpdateOrganizationMemberResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListWorkspacesResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateOrganizationMemberResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListWorkspacesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListWorkspacesResponse setStatusCode(Integer statusCode) {
+    public UpdateOrganizationMemberResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListWorkspacesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListWorkspacesResponse setBody(ListWorkspacesResponseBody body) {
+    public UpdateOrganizationMemberResponse setBody(UpdateOrganizationMemberResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListWorkspacesResponseBody getBody() {
+    public UpdateOrganizationMemberResponseBody getBody() {
         return this.body;
     }
 

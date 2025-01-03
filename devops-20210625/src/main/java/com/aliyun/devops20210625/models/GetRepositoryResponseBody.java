@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetRepositoryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("repository")
     public GetRepositoryResponseBodyRepository repository;
 
+    /**
+     * <strong>example:</strong>
+     * <p>37294673-00CA-5B8B-914F-A8B35511E90A</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,33 +81,68 @@ public class GetRepositoryResponseBody extends TeaModel {
     }
 
     public static class GetRepositoryResponseBodyRepositoryNamespace extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.jpg">https://xxx.jpg</a></p>
+         */
         @NameInMap("avatar")
         public String avatar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-06-19T04:02:00.744Z</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>repo desc</p>
+         */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ownerId")
         public Long ownerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-06-19T04:02:00.744Z</p>
+         */
         @NameInMap("updatedAt")
         public String updatedAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("visibilityLevel")
         public Integer visibilityLevel;
 
@@ -175,57 +226,125 @@ public class GetRepositoryResponseBody extends TeaModel {
     }
 
     public static class GetRepositoryResponseBodyRepository extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("archive")
         public Boolean archive;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-06-19T04:02:00.744Z</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19258</p>
+         */
         @NameInMap("creatorId")
         public Long creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("defaultBranch")
         public String defaultBranch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("demoProjectStatus")
         public Boolean demoProjectStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>repo desc</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://codeup.aliyun.com/xxx/test/test.git">https://codeup.aliyun.com/xxx/test/test.git</a></p>
+         */
         @NameInMap("httpUrlToRepository")
         public String httpUrlToRepository;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-06-19T04:02:00.744Z</p>
+         */
         @NameInMap("lastActivityAt")
         public String lastActivityAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test / test</p>
+         */
         @NameInMap("nameWithNamespace")
         public String nameWithNamespace;
 
         @NameInMap("namespace")
         public GetRepositoryResponseBodyRepositoryNamespace namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test/test</p>
+         */
         @NameInMap("pathWithNamespace")
         public String pathWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:git@codeup.aliyun.com">git@codeup.aliyun.com</a>:xxx/test/test.git</p>
+         */
         @NameInMap("sshUrlToRepository")
         public String sshUrlToRepository;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("visibilityLevel")
         public Integer visibilityLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://codeup.aliyun.com/xxx/test/test">https://codeup.aliyun.com/xxx/test/test</a></p>
+         */
         @NameInMap("webUrl")
         public String webUrl;
 

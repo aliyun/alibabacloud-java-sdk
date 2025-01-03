@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListServiceCredentialsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("serviceCredentials")
     public java.util.List<ListServiceCredentialsResponseBodyServiceCredentials> serviceCredentials;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,15 +81,31 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
     }
 
     public static class ListServiceCredentialsResponseBodyServiceCredentials extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("ownerName")
         public String ownerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456789</p>
+         */
         @NameInMap("ownerStaffId")
         public String ownerStaffId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Codeup</p>
+         */
         @NameInMap("type")
         public String type;
 

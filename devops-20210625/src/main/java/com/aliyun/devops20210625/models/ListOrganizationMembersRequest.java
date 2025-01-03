@@ -10,27 +10,55 @@ public class ListOrganizationMembersRequest extends TeaModel {
     @NameInMap("containsExternInfo")
     public Boolean containsExternInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1236666</p>
+     */
     @NameInMap("externUid")
     public String externUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1631845101798</p>
+     */
     @NameInMap("joinTimeFrom")
     public Long joinTimeFrom;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1631845101798</p>
+     */
     @NameInMap("joinTimeTo")
     public Long joinTimeTo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     @NameInMap("organizationMemberName")
     public String organizationMemberName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Dingtalk</p>
+     */
     @NameInMap("provider")
     public String provider;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("state")
     public String state;
 

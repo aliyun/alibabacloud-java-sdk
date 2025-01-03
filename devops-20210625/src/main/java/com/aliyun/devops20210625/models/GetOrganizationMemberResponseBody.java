@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetOrganizationMemberResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error info</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("member")
     public GetOrganizationMemberResponseBodyMember member;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HC93CE1A-8D7A-13A9-8306-7465DE2E5C0F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
     }
 
     public static class GetOrganizationMemberResponseBodyMemberIdentities extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1236666</p>
+         */
         @NameInMap("externUid")
         public String externUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Dingtalk</p>
+         */
         @NameInMap("provider")
         public String provider;
 
@@ -95,18 +119,34 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
     }
 
     public static class GetOrganizationMemberResponseBodyMember extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123456677888</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1631845101798</p>
+         */
         @NameInMap("birthday")
         public Long birthday;
 
         @NameInMap("deptLists")
         public java.util.List<String> deptLists;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@mail.com">123@mail.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1631845101798</p>
+         */
         @NameInMap("hiredDate")
         public Long hiredDate;
 
@@ -116,24 +156,44 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         @NameInMap("jobNumber")
         public String jobNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1631845101798</p>
+         */
         @NameInMap("joinTime")
         public Long joinTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1631845101798</p>
+         */
         @NameInMap("lastVisitTime")
         public Long lastVisitTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1390000****</p>
+         */
         @NameInMap("mobile")
         public String mobile;
 
         @NameInMap("organizationMemberName")
         public String organizationMemberName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8fc0c9ff039711dd64acd000</p>
+         */
         @NameInMap("organizationRoleId")
         public String organizationRoleId;
 
         @NameInMap("organizationRoleName")
         public String organizationRoleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("state")
         public String state;
 

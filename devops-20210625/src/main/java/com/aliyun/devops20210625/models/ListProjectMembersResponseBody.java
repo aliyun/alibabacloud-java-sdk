@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListProjectMembersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     @NameInMap("members")
     public java.util.List<ListProjectMembersResponseBodyMembers> members;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
     }
 
     public static class ListProjectMembersResponseBodyMembersDivision extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1345xxxxxxx947xxxx</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
@@ -84,6 +104,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
     }
 
     public static class ListProjectMembersResponseBodyMembersOrganizationUserInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5e7xxxxb3cd3711dd6xxx2c</p>
+         */
         @NameInMap("organizationIdentifier")
         public String organizationIdentifier;
 
@@ -103,54 +127,114 @@ public class ListProjectMembersResponseBody extends TeaModel {
     }
 
     public static class ListProjectMembersResponseBodyMembers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("account")
         public String account;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxx.png">https://xxxxxx.png</a></p>
+         */
         @NameInMap("avatar")
         public String avatar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("dingTalkId")
         public String dingTalkId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>名称</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mingcheng</p>
+         */
         @NameInMap("displayNickName")
         public String displayNickName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>名称</p>
+         */
         @NameInMap("displayRealName")
         public String displayRealName;
 
         @NameInMap("division")
         public ListProjectMembersResponseBodyMembersDivision division;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:accountsxxxx@mail.com">accountsxxxx@mail.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xxxx31947xxxx</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>135xxxxxxxxx</p>
+         */
         @NameInMap("mobile")
         public String mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("nameEn")
         public String nameEn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>昵称</p>
+         */
         @NameInMap("nickName")
         public String nickName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nicheng</p>
+         */
         @NameInMap("nickNamePinyin")
         public String nickNamePinyin;
 
         @NameInMap("organizationUserInfo")
         public ListProjectMembersResponseBodyMembersOrganizationUserInfo organizationUserInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("realName")
         public String realName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("realNamePinyin")
         public String realNamePinyin;
 
@@ -160,9 +244,17 @@ public class ListProjectMembersResponseBody extends TeaModel {
         @NameInMap("roleName")
         public String roleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>User</p>
+         */
         @NameInMap("stamp")
         public String stamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("tbRoleId")
         public String tbRoleId;
 

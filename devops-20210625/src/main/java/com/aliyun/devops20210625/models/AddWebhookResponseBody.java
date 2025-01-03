@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class AddWebhookResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_NOT_FOUND_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6177543A-8D54-5736-A93B-E0195A1512CB</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public AddWebhookResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,39 +81,83 @@ public class AddWebhookResponseBody extends TeaModel {
     }
 
     public static class AddWebhookResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-12 12:00:00</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enableSslVerification")
         public Boolean enableSslVerification;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30815</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("lastTestResult")
         public String lastTestResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("mergeRequestsEvents")
         public Boolean mergeRequestsEvents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("noteEvents")
         public Boolean noteEvents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("pushEvents")
         public Boolean pushEvents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2835387</p>
+         */
         @NameInMap("repositoryId")
         public Long repositoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("secretToken")
         public String secretToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("tagPushEvents")
         public Boolean tagPushEvents;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxx">https://xxxxx</a></p>
+         */
         @NameInMap("url")
         public String url;
 

@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateUserKeyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public CreateUserKeyResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,27 +81,59 @@ public class CreateUserKeyResponseBody extends TeaModel {
     }
 
     public static class CreateUserKeyResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-12 12:00:00</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-12 12:00:00</p>
+         */
         @NameInMap("expireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("fingerPrint")
         public String fingerPrint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11072</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
         @NameInMap("keyScope")
         public String keyScope;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-12 12:00:00</p>
+         */
         @NameInMap("lastUsedTime")
         public String lastUsedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("publicKey")
         public String publicKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>My Title</p>
+         */
         @NameInMap("title")
         public String title;
 

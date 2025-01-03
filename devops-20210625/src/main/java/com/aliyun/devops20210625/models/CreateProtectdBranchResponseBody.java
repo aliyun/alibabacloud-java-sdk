@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateProtectdBranchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C2F153F6-BB43-50C4-9F4F-40593203E19A</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public CreateProtectdBranchResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -71,24 +87,52 @@ public class CreateProtectdBranchResponseBody extends TeaModel {
         @NameInMap("defaultAssignees")
         public java.util.List<String> defaultAssignees;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isAllowSelfApproval")
         public Boolean isAllowSelfApproval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isRequireDiscussionProcessed")
         public Boolean isRequireDiscussionProcessed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isRequired")
         public Boolean isRequired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isResetApprovalWhenNewPush")
         public Boolean isResetApprovalWhenNewPush;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minimumApproval")
         public Integer minimumApproval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>general</p>
+         */
         @NameInMap("mrMode")
         public String mrMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>**.java</p>
+         */
         @NameInMap("whiteList")
         public String whiteList;
 
@@ -172,6 +216,10 @@ public class CreateProtectdBranchResponseBody extends TeaModel {
     }
 
     public static class CreateProtectdBranchResponseBodyResultTestSettingDTOCheckConfigCheckItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isRequired")
         public Boolean isRequired;
 
@@ -221,15 +269,31 @@ public class CreateProtectdBranchResponseBody extends TeaModel {
     }
 
     public static class CreateProtectdBranchResponseBodyResultTestSettingDTOCheckTaskQualityConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("bizNo")
         public String bizNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_task_quality</p>
+         */
         @NameInMap("message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>biz-task-quality</p>
+         */
         @NameInMap("taskName")
         public String taskName;
 
@@ -273,9 +337,17 @@ public class CreateProtectdBranchResponseBody extends TeaModel {
     }
 
     public static class CreateProtectdBranchResponseBodyResultTestSettingDTOCodeGuidelinesDetection extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_code_guide_lines</p>
+         */
         @NameInMap("message")
         public String message;
 
@@ -303,9 +375,17 @@ public class CreateProtectdBranchResponseBody extends TeaModel {
     }
 
     public static class CreateProtectdBranchResponseBodyResultTestSettingDTOSensitiveInfoDetection extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_code_sensitive_info</p>
+         */
         @NameInMap("message")
         public String message;
 
@@ -342,6 +422,10 @@ public class CreateProtectdBranchResponseBody extends TeaModel {
         @NameInMap("codeGuidelinesDetection")
         public CreateProtectdBranchResponseBodyResultTestSettingDTOCodeGuidelinesDetection codeGuidelinesDetection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isRequired")
         public Boolean isRequired;
 
@@ -408,9 +492,17 @@ public class CreateProtectdBranchResponseBody extends TeaModel {
         @NameInMap("allowPushUserIds")
         public java.util.List<Long> allowPushUserIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>protectBranch</p>
+         */
         @NameInMap("branch")
         public String branch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5240</p>
+         */
         @NameInMap("id")
         public Long id;
 

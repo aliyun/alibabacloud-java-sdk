@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdatePushReviewOnOffResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6177543A-8D54-5736-A93B-E0195A1512CB</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public UpdatePushReviewOnOffResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class UpdatePushReviewOnOffResponseBody extends TeaModel {
     }
 
     public static class UpdatePushReviewOnOffResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("result")
         public Boolean result;
 

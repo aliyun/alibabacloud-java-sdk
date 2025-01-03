@@ -4,24 +4,48 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListPipelineJobHistorysResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("jobs")
     public java.util.List<ListPipelineJobHistorysResponseBodyJobs> jobs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xsxxs</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true 接口调用成功，false 接口调用失败</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -87,30 +111,62 @@ public class ListPipelineJobHistorysResponseBody extends TeaModel {
     }
 
     public static class ListPipelineJobHistorysResponseBodyJobs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("executeNumber")
         public Integer executeNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10_xaxxsxa</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("jobId")
         public Long jobId;
 
         @NameInMap("jobName")
         public String jobName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ssaasssa</p>
+         */
         @NameInMap("operatorAccountId")
         public String operatorAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("pipelineId")
         public Long pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("pipelineRunId")
         public Long pipelineRunId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("sources")
         public String sources;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("status")
         public String status;
 

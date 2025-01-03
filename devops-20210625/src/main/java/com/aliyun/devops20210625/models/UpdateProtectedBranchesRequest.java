@@ -4,6 +4,10 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateProtectedBranchesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
@@ -19,9 +23,17 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
     @NameInMap("allowPushUserIds")
     public java.util.List<String> allowPushUserIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>master</p>
+     */
     @NameInMap("branch")
     public String branch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19224</p>
+     */
     @NameInMap("id")
     public Long id;
 
@@ -31,6 +43,10 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
     @NameInMap("testSettingDTO")
     public UpdateProtectedBranchesRequestTestSettingDTO testSettingDTO;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
@@ -126,24 +142,52 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
         @NameInMap("defaultAssignees")
         public java.util.List<String> defaultAssignees;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isAllowSelfApproval")
         public Boolean isAllowSelfApproval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isRequireDiscussionProcessed")
         public Boolean isRequireDiscussionProcessed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isRequired")
         public Boolean isRequired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isResetApprovalWhenNewPush")
         public Boolean isResetApprovalWhenNewPush;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minimumApproval")
         public Integer minimumApproval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>general</p>
+         */
         @NameInMap("mrMode")
         public String mrMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>**.java</p>
+         */
         @NameInMap("whiteList")
         public String whiteList;
 
@@ -227,6 +271,10 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
     }
 
     public static class UpdateProtectedBranchesRequestTestSettingDTOCheckConfigCheckItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isRequired")
         public Boolean isRequired;
 
@@ -276,15 +324,31 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
     }
 
     public static class UpdateProtectedBranchesRequestTestSettingDTOCheckTaskQualityConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("bizNo")
         public String bizNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_task_quality</p>
+         */
         @NameInMap("message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bz-task-quality</p>
+         */
         @NameInMap("taskName")
         public String taskName;
 
@@ -328,9 +392,17 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
     }
 
     public static class UpdateProtectedBranchesRequestTestSettingDTOCodeGuidelinesDetection extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_code_guide_lines</p>
+         */
         @NameInMap("message")
         public String message;
 
@@ -358,9 +430,17 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
     }
 
     public static class UpdateProtectedBranchesRequestTestSettingDTOSensitiveInfoDetection extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_code_sensitive_info</p>
+         */
         @NameInMap("message")
         public String message;
 
@@ -397,6 +477,10 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
         @NameInMap("codeGuidelinesDetection")
         public UpdateProtectedBranchesRequestTestSettingDTOCodeGuidelinesDetection codeGuidelinesDetection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isRequired")
         public Boolean isRequired;
 

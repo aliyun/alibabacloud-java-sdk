@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateServiceConnectionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CREDENTIAL</p>
      */
     @NameInMap("authType")
     public String authType;
@@ -18,18 +21,27 @@ public class CreateServiceConnectionRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("connectionType")
     public String connectionType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PERSON</p>
      */
     @NameInMap("scope")
     public String scope;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
      */
     @NameInMap("serviceAuthId")
     public Long serviceAuthId;

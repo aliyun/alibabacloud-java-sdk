@@ -7,15 +7,31 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
     @NameInMap("activities")
     public java.util.List<GetWorkItemActivityResponseBodyActivities> activities;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemActivityResponseBodyActivitiesNewValue extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Sprint-221124</p>
+         */
         @NameInMap("displayValue")
         public String displayValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bed1cca179badeb501a72d1194</p>
+         */
         @NameInMap("plainValue")
         public String plainValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Sprint</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
@@ -106,12 +134,24 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemActivityResponseBodyActivitiesOldValue extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Sprint-221124</p>
+         */
         @NameInMap("displayValue")
         public String displayValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bed1cca179badeb501a72d1194</p>
+         */
         @NameInMap("plainValue")
         public String plainValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Sprint</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
@@ -147,15 +187,31 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemActivityResponseBodyActivitiesProperty extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>标题</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>subject</p>
+         */
         @NameInMap("propertyIdentifier")
         public String propertyIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>subject</p>
+         */
         @NameInMap("propertyName")
         public String propertyName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("propertyType")
         public String propertyType;
 
@@ -199,15 +255,31 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemActivityResponseBodyActivities extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>update</p>
+         */
         @NameInMap("actionType")
         public String actionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3201131</p>
+         */
         @NameInMap("eventId")
         public Long eventId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640867079624</p>
+         */
         @NameInMap("eventTime")
         public Long eventTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workitem.updated</p>
+         */
         @NameInMap("eventType")
         public String eventType;
 
@@ -217,15 +289,31 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         @NameInMap("oldValue")
         public java.util.List<GetWorkItemActivityResponseBodyActivitiesOldValue> oldValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3201132</p>
+         */
         @NameInMap("parentEventId")
         public Long parentEventId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>public</p>
+         */
         @NameInMap("property")
         public GetWorkItemActivityResponseBodyActivitiesProperty property;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8bxxxxxxxxxxxxxxxx23</p>
+         */
         @NameInMap("resourceIdentifier")
         public String resourceIdentifier;
 

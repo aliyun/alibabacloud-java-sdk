@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetCompareDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public GetCompareDetailResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,21 +81,41 @@ public class GetCompareDetailResponseBody extends TeaModel {
     }
 
     public static class GetCompareDetailResponseBodyResultCommitsAuthor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21396</p>
+         */
         @NameInMap("id")
         public Long id;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Codeup</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -139,21 +175,41 @@ public class GetCompareDetailResponseBody extends TeaModel {
     }
 
     public static class GetCompareDetailResponseBodyResultCommitsCommitter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>43910</p>
+         */
         @NameInMap("id")
         public Long id;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Codeup-commiter</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -216,42 +272,78 @@ public class GetCompareDetailResponseBody extends TeaModel {
         @NameInMap("author")
         public GetCompareDetailResponseBodyResultCommitsAuthor author;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("authorEmail")
         public String authorEmail;
 
         @NameInMap("authorName")
         public String authorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-03T15:41:26+08:00</p>
+         */
         @NameInMap("authoredDate")
         public String authoredDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("commentsCount")
         public Long commentsCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-03T15:41:26+08:00</p>
+         */
         @NameInMap("committedDate")
         public String committedDate;
 
         @NameInMap("committer")
         public GetCompareDetailResponseBodyResultCommitsCommitter committer;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("committerEmail")
         public String committerEmail;
 
         @NameInMap("committerName")
         public String committerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-03T15:41:26+08:00</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b8f6f28520b1936aafe2e638373e19ccafa42b02</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("message")
         public String message;
 
         @NameInMap("parentIds")
         public java.util.List<String> parentIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b8f6f285</p>
+         */
         @NameInMap("shortId")
         public String shortId;
 
@@ -386,42 +478,90 @@ public class GetCompareDetailResponseBody extends TeaModel {
     }
 
     public static class GetCompareDetailResponseBodyResultDiffs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100644</p>
+         */
         @NameInMap("aMode")
         public String aMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100644</p>
+         */
         @NameInMap("bMode")
         public String bMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("deletedFile")
         public Boolean deletedFile;
 
         @NameInMap("diff")
         public String diff;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isBinary")
         public Boolean isBinary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isNewLfs")
         public Boolean isNewLfs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isOldLfs")
         public Boolean isOldLfs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("newFile")
         public Boolean newFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cb75846da2df3d3d7f290c3569236fcf3dd17224</p>
+         */
         @NameInMap("newId")
         public String newId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>new_test.txt</p>
+         */
         @NameInMap("newPath")
         public String newPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6c268061a546378276559c713d0ad377d4dsjfh</p>
+         */
         @NameInMap("oldId")
         public String oldId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test.txt</p>
+         */
         @NameInMap("oldPath")
         public String oldPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("renamedFile")
         public Boolean renamedFile;
 
