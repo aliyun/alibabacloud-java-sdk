@@ -14,6 +14,20 @@ public class DescribeEventsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The severity level of the event. Valid values:</p>
+     * <ul>
+     * <li><strong>INFO</strong></li>
+     * <li><strong>WARN</strong></li>
+     * <li><strong>CRITICAL</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>WARN</p>
+     */
+    @NameInMap("EventLevel")
+    public String eventLevel;
+
+    /**
      * <p>The name of the event. Valid values:</p>
      * <ul>
      * <li>NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.</li>
@@ -37,9 +51,9 @@ public class DescribeEventsRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The maximum number of entries per page. If you specify MaxResults, <code>MaxResults</code> and <code>NextToken</code> are used for a paged query.</p>
+     * <p>The number of entries to return on each page. If you specify MaxResults, <code>MaxResults</code> and <code>NextToken</code> are used for a paged query.</p>
      * <p>Valid values: 1 to 100.</p>
-     * <p>Default value: 10.</p>
+     * <p>Default value: 10</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -125,6 +139,14 @@ public class DescribeEventsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeEventsRequest setEventLevel(String eventLevel) {
+        this.eventLevel = eventLevel;
+        return this;
+    }
+    public String getEventLevel() {
+        return this.eventLevel;
     }
 
     public DescribeEventsRequest setEventName(String eventName) {

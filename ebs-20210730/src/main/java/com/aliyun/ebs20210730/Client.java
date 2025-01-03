@@ -1791,6 +1791,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.eventLevel)) {
+            query.put("EventLevel", request.eventLevel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.eventName)) {
             query.put("EventName", request.eventName);
         }
@@ -1865,6 +1869,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.diskCategory)) {
             query.put("DiskCategory", request.diskCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskIdPattern)) {
+            query.put("DiskIdPattern", request.diskIdPattern);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.diskIds)) {

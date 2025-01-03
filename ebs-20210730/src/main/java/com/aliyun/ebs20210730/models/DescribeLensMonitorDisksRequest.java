@@ -21,6 +21,9 @@ public class DescribeLensMonitorDisksRequest extends TeaModel {
     @NameInMap("DiskCategory")
     public String diskCategory;
 
+    @NameInMap("DiskIdPattern")
+    public String diskIdPattern;
+
     /**
      * <p>The list of disks.</p>
      * 
@@ -93,6 +96,14 @@ public class DescribeLensMonitorDisksRequest extends TeaModel {
     }
     public String getDiskCategory() {
         return this.diskCategory;
+    }
+
+    public DescribeLensMonitorDisksRequest setDiskIdPattern(String diskIdPattern) {
+        this.diskIdPattern = diskIdPattern;
+        return this;
+    }
+    public String getDiskIdPattern() {
+        return this.diskIdPattern;
     }
 
     public DescribeLensMonitorDisksRequest setDiskIds(java.util.List<String> diskIds) {
