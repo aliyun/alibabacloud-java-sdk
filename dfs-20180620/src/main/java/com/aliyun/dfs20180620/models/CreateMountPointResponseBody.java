@@ -7,6 +7,10 @@ public class CreateMountPointResponseBody extends TeaModel {
     @NameInMap("MountPointId")
     public String mountPointId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,21 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class GetAccessGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
+     */
     @NameInMap("AccessGroupId")
     public String accessGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("InputRegionId")
     public String inputRegionId;
 

@@ -4,18 +4,42 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class DescribeVscMountPointsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>037****e1d</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("InputRegionId")
     public String inputRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;ecs-instance1&quot;, &quot;ecs-instance2&quot;]</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>037cb49e1d-c***5</p>
+     */
     @NameInMap("MountPointId")
     public String mountPointId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("Status")
     public String status;
 

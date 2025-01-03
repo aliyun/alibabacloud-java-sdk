@@ -7,6 +7,10 @@ public class CreateFileSystemResponseBody extends TeaModel {
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

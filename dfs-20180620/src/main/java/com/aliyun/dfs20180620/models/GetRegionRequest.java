@@ -4,6 +4,12 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class GetRegionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("InputRegionId")
     public String inputRegionId;
 

@@ -7,9 +7,20 @@ public class ListAccessGroupsResponseBody extends TeaModel {
     @NameInMap("AccessGroups")
     public java.util.List<ListAccessGroupsResponseBodyAccessGroups> accessGroups;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
+     * <strong>example:</strong>
+     * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -24,6 +35,14 @@ public class ListAccessGroupsResponseBody extends TeaModel {
     }
     public java.util.List<ListAccessGroupsResponseBodyAccessGroups> getAccessGroups() {
         return this.accessGroups;
+    }
+
+    public ListAccessGroupsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListAccessGroupsResponseBody setRequestId(String requestId) {
@@ -43,9 +62,17 @@ public class ListAccessGroupsResponseBody extends TeaModel {
     }
 
     public static class ListAccessGroupsResponseBodyAccessGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
+         */
         @NameInMap("AccessGroupId")
         public String accessGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-cluster-policy</p>
+         */
         @NameInMap("AccessGroupName")
         public String accessGroupName;
 
@@ -55,18 +82,38 @@ public class ListAccessGroupsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MountPointCount")
         public Integer mountPointCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("RuleCount")
         public Integer ruleCount;
 

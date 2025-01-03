@@ -7,17 +7,42 @@ public class AttachVscMountPointShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>037****e1d</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("InputRegionId")
     public String inputRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;ecs-instance1&quot;, &quot;ecs-instance2&quot;]</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>037cb49e1d-c***5</p>
+     */
     @NameInMap("MountPointId")
     public String mountPointId;
+
+    @NameInMap("UseAssumeRoleChkServerPerm")
+    public Boolean useAssumeRoleChkServerPerm;
 
     @NameInMap("VscIds")
     public String vscIdsShrink;
@@ -68,6 +93,14 @@ public class AttachVscMountPointShrinkRequest extends TeaModel {
     }
     public String getMountPointId() {
         return this.mountPointId;
+    }
+
+    public AttachVscMountPointShrinkRequest setUseAssumeRoleChkServerPerm(Boolean useAssumeRoleChkServerPerm) {
+        this.useAssumeRoleChkServerPerm = useAssumeRoleChkServerPerm;
+        return this;
+    }
+    public Boolean getUseAssumeRoleChkServerPerm() {
+        return this.useAssumeRoleChkServerPerm;
     }
 
     public AttachVscMountPointShrinkRequest setVscIdsShrink(String vscIdsShrink) {

@@ -1,3 +1,38 @@
+2025-01-03 Version: 2.0.0
+- Support API CreateQosPolicy.
+- Support API DeleteQosPolicy.
+- Support API ListFederations.
+- Support API ListQosPolicies.
+- Support API ModifyQosPolicy.
+- Update API AttachVscMountPoint: add param UseAssumeRoleChkServerPerm.
+- Update API CreateFileSystem: add param DedicatedClusterId.
+- Update API CreateFileSystem: update param ZoneId.
+- Update API CreateMountPoint: add param UsePerformanceMode.
+- Update API DeleteUserGroupsMapping: update param GroupNames.
+- Update API DetachVscMountPoint: add param UseAssumeRoleChkServerPerm.
+- Update API GetMountPoint: update response param.
+- Update API ListAccessGroups: add param NextToken.
+- Update API ListAccessGroups: update param OrderBy.
+- Update API ListAccessGroups: update param OrderType.
+- Update API ListAccessGroups: update param StartOffset.
+- Update API ListAccessGroups: update response param.
+- Update API ListAccessRules: add param NextToken.
+- Update API ListAccessRules: update param OrderBy.
+- Update API ListAccessRules: update param OrderType.
+- Update API ListAccessRules: update param StartOffset.
+- Update API ListAccessRules: update response param.
+- Update API ListFileSystems: add param NextToken.
+- Update API ListFileSystems: update param OrderBy.
+- Update API ListFileSystems: update param OrderType.
+- Update API ListFileSystems: update param StartOffset.
+- Update API ListFileSystems: update response param.
+- Update API ListMountPoints: add param NextToken.
+- Update API ListMountPoints: update param OrderBy.
+- Update API ListMountPoints: update param OrderType.
+- Update API ListMountPoints: update param StartOffset.
+- Update API ListMountPoints: update response param.
+
+
 2024-04-07 Version: 1.0.2
 - Update API AttachVscMountPoint: update param InstanceIds.
 - Update API CreateVscMountPoint: update param InstanceIds.

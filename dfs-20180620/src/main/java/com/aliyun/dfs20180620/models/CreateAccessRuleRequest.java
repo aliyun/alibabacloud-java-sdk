@@ -4,21 +4,51 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
+     */
     @NameInMap("AccessGroupId")
     public String accessGroupId;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("InputRegionId")
     public String inputRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.2.0/24</p>
+     */
     @NameInMap("NetworkSegment")
     public String networkSegment;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RDWR</p>
+     */
     @NameInMap("RWAccessType")
     public String RWAccessType;
 

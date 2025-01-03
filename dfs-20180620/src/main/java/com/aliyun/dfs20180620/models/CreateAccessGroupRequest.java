@@ -4,15 +4,33 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-online-cluster-policy</p>
+     */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("InputRegionId")
     public String inputRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 

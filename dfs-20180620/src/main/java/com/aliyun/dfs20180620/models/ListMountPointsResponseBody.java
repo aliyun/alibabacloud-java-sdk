@@ -7,9 +7,20 @@ public class ListMountPointsResponseBody extends TeaModel {
     @NameInMap("MountPoints")
     public java.util.List<ListMountPointsResponseBodyMountPoints> mountPoints;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
+     * <strong>example:</strong>
+     * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -24,6 +35,14 @@ public class ListMountPointsResponseBody extends TeaModel {
     }
     public java.util.List<ListMountPointsResponseBodyMountPoints> getMountPoints() {
         return this.mountPoints;
+    }
+
+    public ListMountPointsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListMountPointsResponseBody setRequestId(String requestId) {
@@ -43,6 +62,10 @@ public class ListMountPointsResponseBody extends TeaModel {
     }
 
     public static class ListMountPointsResponseBodyMountPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
+         */
         @NameInMap("AccessGroupId")
         public String accessGroupId;
 
@@ -55,24 +78,47 @@ public class ListMountPointsResponseBody extends TeaModel {
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
+        @NameInMap("MountPointAlias")
+        public String mountPointAlias;
+
         @NameInMap("MountPointDomain")
         public String mountPointDomain;
 
         @NameInMap("MountPointId")
         public String mountPointId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Inactive</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-iq8fymi327krd14mt****</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-iq8hhsk3ymzv9m4wn****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -111,6 +157,14 @@ public class ListMountPointsResponseBody extends TeaModel {
         }
         public String getFileSystemId() {
             return this.fileSystemId;
+        }
+
+        public ListMountPointsResponseBodyMountPoints setMountPointAlias(String mountPointAlias) {
+            this.mountPointAlias = mountPointAlias;
+            return this;
+        }
+        public String getMountPointAlias() {
+            return this.mountPointAlias;
         }
 
         public ListMountPointsResponseBodyMountPoints setMountPointDomain(String mountPointDomain) {
