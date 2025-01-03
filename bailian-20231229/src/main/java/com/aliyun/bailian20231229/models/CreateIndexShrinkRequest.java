@@ -200,6 +200,9 @@ public class CreateIndexShrinkRequest extends TeaModel {
     @NameInMap("StructureType")
     public String structureType;
 
+    @NameInMap("enableHeaders")
+    public Boolean enableHeaders;
+
     @NameInMap("metaExtractColumns")
     public String metaExtractColumnsShrink;
 
@@ -342,6 +345,14 @@ public class CreateIndexShrinkRequest extends TeaModel {
     }
     public String getStructureType() {
         return this.structureType;
+    }
+
+    public CreateIndexShrinkRequest setEnableHeaders(Boolean enableHeaders) {
+        this.enableHeaders = enableHeaders;
+        return this;
+    }
+    public Boolean getEnableHeaders() {
+        return this.enableHeaders;
     }
 
     public CreateIndexShrinkRequest setMetaExtractColumnsShrink(String metaExtractColumnsShrink) {
