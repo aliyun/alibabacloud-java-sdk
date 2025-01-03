@@ -398,6 +398,9 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyResult extends TeaModel {
+        @NameInMap("bsVersion")
+        public String bsVersion;
+
         /**
          * <p>The billing method.</p>
          * 
@@ -569,6 +572,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public static GetInstanceResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyResult self = new GetInstanceResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyResult setBsVersion(String bsVersion) {
+            this.bsVersion = bsVersion;
+            return this;
+        }
+        public String getBsVersion() {
+            return this.bsVersion;
         }
 
         public GetInstanceResponseBodyResult setChargeType(String chargeType) {

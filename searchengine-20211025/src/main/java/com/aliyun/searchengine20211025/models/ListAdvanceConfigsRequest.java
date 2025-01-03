@@ -31,6 +31,12 @@ public class ListAdvanceConfigsRequest extends TeaModel {
     @NameInMap("newMode")
     public Boolean newMode;
 
+    @NameInMap("pageNumber")
+    public String pageNumber;
+
+    @NameInMap("pageSize")
+    public String pageSize;
+
     /**
      * <p>The type of advanced configurations that you want to query. Valid values: - online -offline (default)</p>
      * 
@@ -67,6 +73,22 @@ public class ListAdvanceConfigsRequest extends TeaModel {
     }
     public Boolean getNewMode() {
         return this.newMode;
+    }
+
+    public ListAdvanceConfigsRequest setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListAdvanceConfigsRequest setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
     }
 
     public ListAdvanceConfigsRequest setType(String type) {

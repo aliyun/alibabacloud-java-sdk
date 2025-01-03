@@ -2503,6 +2503,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("newMode", request.newMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("type", request.type);
         }
