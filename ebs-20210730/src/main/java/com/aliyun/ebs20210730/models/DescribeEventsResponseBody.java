@@ -145,6 +145,19 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventType;
 
         /**
+         * <p>Extra attributes of event, possible fields are:</p>
+         * <ul>
+         * <li>EcsInstanceId: ECS instance ID where the cloud disk is mounted;</li>
+         * <li>Adapter: cloud disk mount point.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;EcsInstanceId\&quot;:\&quot;i-uf6dkn9qpcw6y94g7ag7\&quot;,\&quot;Adapter\&quot;:\&quot;hda\&quot;}</p>
+         */
+        @NameInMap("ExtraAttributes")
+        public String extraAttributes;
+
+        /**
          * <p>The recommended action after the event occurred. Valid values:</p>
          * <ul>
          * <li>ModifyDiskSpec</li>
@@ -256,6 +269,14 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
         public String getEventType() {
             return this.eventType;
+        }
+
+        public DescribeEventsResponseBodyResourceEvents setExtraAttributes(String extraAttributes) {
+            this.extraAttributes = extraAttributes;
+            return this;
+        }
+        public String getExtraAttributes() {
+            return this.extraAttributes;
         }
 
         public DescribeEventsResponseBodyResourceEvents setRecommendAction(String recommendAction) {
