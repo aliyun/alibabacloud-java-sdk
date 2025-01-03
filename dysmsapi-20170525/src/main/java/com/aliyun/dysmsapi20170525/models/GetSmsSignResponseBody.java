@@ -75,6 +75,9 @@ public class GetSmsSignResponseBody extends TeaModel {
     @NameInMap("QualificationId")
     public Long qualificationId;
 
+    @NameInMap("RegisterResult")
+    public Integer registerResult;
+
     /**
      * <p>Explanation of the SMS signature scenario, with a maximum length of 200 characters.</p>
      * 
@@ -232,6 +235,14 @@ public class GetSmsSignResponseBody extends TeaModel {
     }
     public Long getQualificationId() {
         return this.qualificationId;
+    }
+
+    public GetSmsSignResponseBody setRegisterResult(Integer registerResult) {
+        this.registerResult = registerResult;
+        return this;
+    }
+    public Integer getRegisterResult() {
+        return this.registerResult;
     }
 
     public GetSmsSignResponseBody setRemark(String remark) {
