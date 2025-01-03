@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterConfigChangeLogsRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>be.conf</p>
      */
