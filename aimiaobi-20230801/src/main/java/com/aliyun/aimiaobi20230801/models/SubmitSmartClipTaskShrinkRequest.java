@@ -7,6 +7,9 @@ public class SubmitSmartClipTaskShrinkRequest extends TeaModel {
     @NameInMap("EditingConfig")
     public String editingConfigShrink;
 
+    @NameInMap("ExtendParam")
+    public String extendParam;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -33,6 +36,14 @@ public class SubmitSmartClipTaskShrinkRequest extends TeaModel {
     }
     public String getEditingConfigShrink() {
         return this.editingConfigShrink;
+    }
+
+    public SubmitSmartClipTaskShrinkRequest setExtendParam(String extendParam) {
+        this.extendParam = extendParam;
+        return this;
+    }
+    public String getExtendParam() {
+        return this.extendParam;
     }
 
     public SubmitSmartClipTaskShrinkRequest setInputConfigShrink(String inputConfigShrink) {

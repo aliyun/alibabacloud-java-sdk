@@ -108,7 +108,7 @@ public class FetchImageTaskResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p><a href="https://a-hbr-temp-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/r-000aham3nsx9gc7a8r5l.csv?Expires=1678260131&OSSAccessKeyId=LTAIjGotF8wXIEjy&Signature=WpMfqBnjeR0w5UL1xFAd1J556Pw%3D">https://a-hbr-temp-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/r-000aham3nsx9gc7a8r5l.csv?Expires=1678260131&amp;OSSAccessKeyId=LTAIjGotF8wXIEjy&amp;Signature=WpMfqBnjeR0w5UL1xFAd1J556Pw%3D</a></p>
+         * <p><a href="http://www.example.com/xxx.png">http://www.example.com/xxx.png</a></p>
          */
         @NameInMap("Url")
         public String url;

@@ -7027,6 +7027,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EditingConfig", request.editingConfigShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extendParam)) {
+            body.put("ExtendParam", request.extendParam);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inputConfigShrink)) {
             body.put("InputConfig", request.inputConfigShrink);
         }
