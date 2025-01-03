@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetMergeRequestResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F7B85D1B-D1C2-140F-A039-341859F130B9</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public GetMergeRequestResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,21 +81,45 @@ public class GetMergeRequestResponseBody extends TeaModel {
     }
 
     public static class GetMergeRequestResponseBodyResultAuthor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19927</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>root-test-codeup</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -139,33 +179,65 @@ public class GetMergeRequestResponseBody extends TeaModel {
     }
 
     public static class GetMergeRequestResponseBodyResultReviewers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
         @NameInMap("hasCommented")
         public Boolean hasCommented;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("hasReviewed")
         public Boolean hasReviewed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>90452</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NOT_PASS</p>
+         */
         @NameInMap("reviewOpinionStatus")
         public String reviewOpinionStatus;
 
         @NameInMap("reviewTime")
         public String reviewTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>root-test-codeup</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -257,21 +329,45 @@ public class GetMergeRequestResponseBody extends TeaModel {
     }
 
     public static class GetMergeRequestResponseBodyResultSubscribers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>90452</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-subscriber</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-subscriber</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -331,9 +427,17 @@ public class GetMergeRequestResponseBody extends TeaModel {
     }
 
     public static class GetMergeRequestResponseBodyResultTodoListRequirementCheckItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>COMMENTS_CHECK</p>
+         */
         @NameInMap("itemType")
         public String itemType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("pass")
         public Boolean pass;
 
@@ -380,72 +484,140 @@ public class GetMergeRequestResponseBody extends TeaModel {
     }
 
     public static class GetMergeRequestResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ahead")
         public Integer ahead;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("allRequirementsPass")
         public Boolean allRequirementsPass;
 
         @NameInMap("author")
         public GetMergeRequestResponseBodyResultAuthor author;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("behind")
         public Integer behind;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WEB</p>
+         */
         @NameInMap("createFrom")
         public String createFrom;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-30T02:53:36Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("detailUrl")
         public String detailUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("localId")
         public Long localId;
 
         @NameInMap("mergedRevision")
         public String mergedRevision;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bca90244c4b749e0b109df52ac0eb570</p>
+         */
         @NameInMap("mrBizId")
         public String mrBizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CODE_REVIEW</p>
+         */
         @NameInMap("mrType")
         public String mrType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2369234</p>
+         */
         @NameInMap("projectId")
         public Long projectId;
 
         @NameInMap("reviewers")
         public java.util.List<GetMergeRequestResponseBodyResultReviewers> reviewers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-merge-request</p>
+         */
         @NameInMap("sourceBranch")
         public String sourceBranch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2369234</p>
+         */
         @NameInMap("sourceProjectId")
         public Long sourceProjectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UNDER_REVIEW</p>
+         */
         @NameInMap("status")
         public String status;
 
         @NameInMap("subscribers")
         public java.util.List<GetMergeRequestResponseBodyResultSubscribers> subscribers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("supportMergeFastForwardOnly")
         public Boolean supportMergeFastForwardOnly;
 
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("targetBranch")
         public String targetBranch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2369234</p>
+         */
         @NameInMap("targetProjectId")
         public Long targetProjectId;
 
         @NameInMap("targetProjectNameWithNamespace")
         public String targetProjectNameWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>orgId/test-group/test-target-repo</p>
+         */
         @NameInMap("targetProjectPathWithNamespace")
         public String targetProjectPathWithNamespace;
 
@@ -455,9 +627,17 @@ public class GetMergeRequestResponseBody extends TeaModel {
         @NameInMap("todoList")
         public GetMergeRequestResponseBodyResultTodoList todoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-30T02:53:36Z</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("webUrl")
         public String webUrl;
 

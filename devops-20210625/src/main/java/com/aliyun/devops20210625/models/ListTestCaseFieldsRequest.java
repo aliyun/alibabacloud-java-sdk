@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListTestCaseFieldsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e8bxxxxxxxxxxxxxxxx23</p>
      */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;

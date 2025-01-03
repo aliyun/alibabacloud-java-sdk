@@ -4,15 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ExportInsightSpaceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     @NameInMap("result")
     public java.util.List<ExportInsightSpaceResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -54,42 +66,85 @@ public class ExportInsightSpaceResponseBody extends TeaModel {
     }
 
     public static class ExportInsightSpaceResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Project</p>
+         */
         @NameInMap("category")
         public String category;
+
+        @NameInMap("customCode")
+        public String customCode;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1706510424000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1706511201000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11034222</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>83a2861bbb43b270a04b42xxxx</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("isDeleted")
         public String isDeleted;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>61db9af2148974246be6xxxx</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>projex</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("stage")
         public String stage;
 
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Project</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -104,6 +159,14 @@ public class ExportInsightSpaceResponseBody extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public ExportInsightSpaceResponseBodyResult setCustomCode(String customCode) {
+            this.customCode = customCode;
+            return this;
+        }
+        public String getCustomCode() {
+            return this.customCode;
         }
 
         public ExportInsightSpaceResponseBodyResult setDescription(String description) {

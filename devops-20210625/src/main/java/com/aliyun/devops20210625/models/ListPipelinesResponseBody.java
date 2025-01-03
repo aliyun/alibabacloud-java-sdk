@@ -4,24 +4,48 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListPipelinesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ssaassasass</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     @NameInMap("pipelines")
     public java.util.List<ListPipelinesResponseBodyPipelines> pipelines;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -87,18 +111,34 @@ public class ListPipelinesResponseBody extends TeaModel {
     }
 
     public static class ListPipelinesResponseBodyPipelines extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22121222</p>
+         */
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
         @NameInMap("groupId")
         public Long groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>124</p>
+         */
         @NameInMap("pipelineId")
         public Long pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>流水线</p>
+         */
         @NameInMap("pipelineName")
         public String pipelineName;
 

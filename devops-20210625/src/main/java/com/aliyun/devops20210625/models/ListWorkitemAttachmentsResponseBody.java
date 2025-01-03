@@ -7,18 +7,33 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
     @NameInMap("attachments")
     public java.util.List<ListWorkitemAttachmentsResponseBodyAttachments> attachments;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7B85D1B-D1C2-140F-A039-341859F130B9</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -68,24 +83,52 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListWorkitemAttachmentsResponseBodyAttachments extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>237109</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dflkjlsdddsdl234lkjfg</p>
+         */
         @NameInMap("fileIdentifier")
         public String fileIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Artifacts_1565193_1.tgz</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tgz</p>
+         */
         @NameInMap("fileSuffix")
         public String fileSuffix;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1545726028000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("size")
         public String size;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://grace-share.oss-cn-hangzhou.aliyuncs.com/qf%2Fheap.bin?Expires=1675750082&OSSAccessKeyId=LTAI5t8irN2Wu3BGrBpffZue&Signature=RqRUEuHiwW8wuahYz6CenHaWWs4%3D">http://grace-share.oss-cn-hangzhou.aliyuncs.com/qf%2Fheap.bin?Expires=1675750082&amp;OSSAccessKeyId=LTAI5t8irN2Wu3BGrBpffZue&amp;Signature=RqRUEuHiwW8wuahYz6CenHaWWs4%3D</a></p>
+         */
         @NameInMap("url")
         public String url;
 

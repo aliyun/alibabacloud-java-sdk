@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateBranchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F7B85D1B-D1C2-140F-A039-341859F130B9</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public CreateBranchResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,36 +81,68 @@ public class CreateBranchResponseBody extends TeaModel {
     }
 
     public static class CreateBranchResponseBodyResultCommit extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("authorEmail")
         public String authorEmail;
 
         @NameInMap("authorName")
         public String authorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 09:00:00</p>
+         */
         @NameInMap("authoredDate")
         public String authoredDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 10:00:00</p>
+         */
         @NameInMap("committedDate")
         public String committedDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("committerEmail")
         public String committerEmail;
 
         @NameInMap("committerName")
         public String committerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 10:00:00</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ff4fb5ac6d1f44f452654336d2dba468ae6c8d04</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>create branch</p>
+         */
         @NameInMap("message")
         public String message;
 
         @NameInMap("parentIds")
         public java.util.List<String> parentIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ff4fb5ac</p>
+         */
         @NameInMap("shortId")
         public String shortId;
 
@@ -208,9 +256,17 @@ public class CreateBranchResponseBody extends TeaModel {
         @NameInMap("commit")
         public CreateBranchResponseBodyResultCommit commit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>createBranch</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("protected")
         public Boolean _protected;
 

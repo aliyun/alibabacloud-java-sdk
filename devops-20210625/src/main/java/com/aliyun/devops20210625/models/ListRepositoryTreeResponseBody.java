@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryTreeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6557983C-FB08-51A9-AC5A-A7A0D0950A07</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListRepositoryTreeResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,21 +81,45 @@ public class ListRepositoryTreeResponseBody extends TeaModel {
     }
 
     public static class ListRepositoryTreeResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>76c3f251f414ac31f2e01faf6f2008a9d756a437</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isLFS")
         public Boolean isLFS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100644</p>
+         */
         @NameInMap("mode")
         public String mode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>blob</p>
+         */
         @NameInMap("type")
         public String type;
 

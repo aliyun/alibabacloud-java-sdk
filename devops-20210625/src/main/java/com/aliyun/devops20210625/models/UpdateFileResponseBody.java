@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateFileResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C2F153F6-BB43-50C4-9F4F-40593203E19A</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public UpdateFileResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class UpdateFileResponseBody extends TeaModel {
     }
 
     public static class UpdateFileResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("branchName")
         public String branchName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>src/main/update.txt</p>
+         */
         @NameInMap("filePath")
         public String filePath;
 

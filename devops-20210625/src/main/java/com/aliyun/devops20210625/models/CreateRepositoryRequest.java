@@ -4,42 +4,90 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateRepositoryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+     */
     @NameInMap("avatarUrl")
     public String avatarUrl;
 
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Java</p>
+     */
     @NameInMap("gitignoreType")
     public String gitignoreType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>codeup-test</p>
+     */
     @NameInMap("importAccount")
     public String importAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("importDemoProject")
     public Boolean importDemoProject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GIT</p>
+     */
     @NameInMap("importRepoType")
     public String importRepoType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxx</p>
+     */
     @NameInMap("importToken")
     public String importToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>text</p>
+     */
     @NameInMap("importTokenEncrypted")
     public String importTokenEncrypted;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://github.com/a/b.git">https://github.com/a/b.git</a></p>
+     */
     @NameInMap("importUrl")
     public String importUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("initStandardService")
     public Boolean initStandardService;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("isCryptoEnabled")
     public Boolean isCryptoEnabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("localImportUrl")
     public String localImportUrl;
 
@@ -55,21 +103,40 @@ public class CreateRepositoryRequest extends TeaModel {
     @NameInMap("path")
     public String path;
 
+    /**
+     * <strong>example:</strong>
+     * <p>USER_GUIDE</p>
+     */
     @NameInMap("readmeType")
     public String readmeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("visibilityLevel")
     public Integer visibilityLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("createParentPath")
     public Boolean createParentPath;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60de7a6852743a5162b5f957</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("sync")
     public Boolean sync;
 

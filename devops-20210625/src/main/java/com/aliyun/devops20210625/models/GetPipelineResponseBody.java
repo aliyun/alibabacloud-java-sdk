@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetPipelineResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("pipeline")
     public GetPipelineResponseBodyPipeline pipeline;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,26 +81,43 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodyPipelinePipelineConfigSourcesData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("branch")
         public String branch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("cloneDepth")
         public Long cloneDepth;
 
         /**
          * <p>Credential Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222</p>
          */
         @NameInMap("credentialId")
         public Long credentialId;
 
         /**
          * <p>Credential Label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>企业公钥</p>
          */
         @NameInMap("credentialLabel")
         public String credentialLabel;
 
         /**
          * <p>Credential Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region-ssh</p>
          */
         @NameInMap("credentialType")
         public String credentialType;
@@ -92,33 +125,73 @@ public class GetPipelineResponseBody extends TeaModel {
         @NameInMap("events")
         public java.util.List<String> events;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isBranchMode")
         public Boolean isBranchMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isCloneDepth")
         public Boolean isCloneDepth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isSubmodule")
         public Boolean isSubmodule;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isTrigger")
         public Boolean isTrigger;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cdup/ss</p>
+         */
         @NameInMap("label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>asasasas</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://codeup.aliyun.com/test.git">https://codeup.aliyun.com/test.git</a></p>
+         */
         @NameInMap("repo")
         public String repo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("serviceConnectionId")
         public Long serviceConnectionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>.*</p>
+         */
         @NameInMap("triggerFilter")
         public String triggerFilter;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://flow.aliyun/webhook/asassasa">https://flow.aliyun/webhook/asassasa</a></p>
+         */
         @NameInMap("webhook")
         public String webhook;
 
@@ -261,9 +334,17 @@ public class GetPipelineResponseBody extends TeaModel {
         @NameInMap("data")
         public GetPipelineResponseBodyPipelinePipelineConfigSourcesData data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxsxsxs</p>
+         */
         @NameInMap("sign")
         public String sign;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Codeup</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -299,9 +380,17 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodyPipelinePipelineConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>schema: tb pipeline:   - name: 执行命令     stages:       - driven: AUTO         jobs:           - displayName: 执行命令             task: execution-component-production@10             identifier: &quot;10_1626147407245&quot;             templateType: task             templateSign: &quot;&quot;             templateBatchUpdate: &quot;N&quot;             extraInfo: &quot;&quot;             params:               version1: pre-jdk1.62               steps:                 - name: 执行命令                   stepType: exec-shell                   stepIdentifier: &quot;10_1626147407245__11_1626147407249&quot;                   command: |                     # input your command here                     echo hello,world!                   ARTIFACTS: &quot;&quot;                   JSONEncoding: true                   freeInTaskGroupModeFields:                     - ARTIFACTS                   source: 132504-sss_ddd_3mvJ               ENGINE_PIPELINE_NAME: &quot;${INPUTS.ENGINE_PIPELINE_NAME}&quot;               ENGINE_PIPELINE_ID: &quot;${INPUTS.ENGINE_PIPELINE_ID}&quot;               ENGINE_PIPELINE_INST_ID: &quot;${INPUTS.ENGINE_PIPELINE_INST_ID}&quot;               ENGINE_PIPELINE_INST_NUMBER: &quot;${INPUTS.ENGINE_PIPELINE_INST_NUMBER}&quot;               buildNodeGroup: K8S-4             plugins: []             output: []             freeInTaskGroupModeFields: []</p>
+         */
         @NameInMap("flow")
         public String flow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("settings")
         public String settings;
 
@@ -340,9 +429,17 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodyPipelineTagList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>标签1</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -370,24 +467,52 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodyPipeline extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>112222122</p>
+         */
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("envId")
         public Integer envId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>日常环境</p>
+         */
         @NameInMap("envName")
         public String envName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111</p>
+         */
         @NameInMap("groupId")
         public Long groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>112222122</p>
+         */
         @NameInMap("modifierAccountId")
         public String modifierAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>流水线</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -397,6 +522,10 @@ public class GetPipelineResponseBody extends TeaModel {
         @NameInMap("tagList")
         public java.util.List<GetPipelineResponseBodyPipelineTagList> tagList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("updateTime")
         public Long updateTime;
 

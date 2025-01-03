@@ -12,6 +12,9 @@ public class UpdateWorkitemFieldRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9144ef6b72d8exxxxx9e61a4d0</p>
      */
     @NameInMap("workitemIdentifier")
     public String workitemIdentifier;
@@ -40,6 +43,9 @@ public class UpdateWorkitemFieldRequest extends TeaModel {
     public static class UpdateWorkitemFieldRequestUpdateWorkitemPropertyRequest extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag</p>
          */
         @NameInMap("fieldIdentifier")
         public String fieldIdentifier;

@@ -4,11 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateMergeRequestRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WEB</p>
      */
     @NameInMap("createFrom")
     public String createFrom;
@@ -21,24 +28,36 @@ public class CreateMergeRequestRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sourceBranch</p>
      */
     @NameInMap("sourceBranch")
     public String sourceBranch;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2369234</p>
      */
     @NameInMap("sourceProjectId")
     public Long sourceProjectId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>targetBranch</p>
      */
     @NameInMap("targetBranch")
     public String targetBranch;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2369234</p>
      */
     @NameInMap("targetProjectId")
     public Long targetProjectId;
@@ -49,11 +68,18 @@ public class CreateMergeRequestRequest extends TeaModel {
     @NameInMap("title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>722200214032b6b31e6f1434ab</p>
+     */
     @NameInMap("workItemIds")
     public String workItemIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6270e731cfea268afc21ccac</p>
      */
     @NameInMap("organizationId")
     public String organizationId;

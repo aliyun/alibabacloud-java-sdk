@@ -4,21 +4,41 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationMembersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("current")
     public Long current;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pages")
     public Long pages;
 
     @NameInMap("records")
     public java.util.List<ListApplicationMembersResponseBodyRecords> records;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FC93CE1A-8D7A-13A9-8306-7465DE2E5C0F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("total")
     public Long total;
 
@@ -76,9 +96,17 @@ public class ListApplicationMembersResponseBody extends TeaModel {
     }
 
     public static class ListApplicationMembersResponseBodyRecordsRoleList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>开发者</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>developer</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -106,21 +134,41 @@ public class ListApplicationMembersResponseBody extends TeaModel {
     }
 
     public static class ListApplicationMembersResponseBodyRecords extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>http://</p>
+         */
         @NameInMap("avatar")
         public String avatar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>成语描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>成员1</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1332695887xxxxxx</p>
+         */
         @NameInMap("id")
         public String id;
 
         @NameInMap("roleList")
         public java.util.List<ListApplicationMembersResponseBodyRecordsRoleList> roleList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>User</p>
+         */
         @NameInMap("type")
         public String type;
 

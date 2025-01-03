@@ -4,21 +4,41 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListGroupRepositoriesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9293CBDA-B5BC-5AD6-A8F4-C7873AC7A3DF</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListGroupRepositoriesResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("total")
     public Long total;
 
@@ -76,78 +96,170 @@ public class ListGroupRepositoriesResponseBody extends TeaModel {
     }
 
     public static class ListGroupRepositoriesResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("archived")
         public Boolean archived;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("commitCount")
         public Long commitCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 14:24:54</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19238</p>
+         */
         @NameInMap("creatorId")
         public Long creatorId;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxx/test/test">https://xxx/test/test</a></p>
+         */
         @NameInMap("httpUrl")
         public String httpUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>89616</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx/x">http://xxx/x</a></p>
+         */
         @NameInMap("importUrl")
         public String importUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isStared")
         public Boolean isStared;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("issuesEnabled")
         public Boolean issuesEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 14:24:54</p>
+         */
         @NameInMap("lastActivityAt")
         public String lastActivityAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("mergeRequestsEnabled")
         public Boolean mergeRequestsEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-group-repo</p>
+         */
         @NameInMap("name")
         public String name;
 
         @NameInMap("nameWithNamespace")
         public String nameWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100003</p>
+         */
         @NameInMap("namespaceId")
         public Boolean namespaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-group-repo</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup-test-org/test-group-repo</p>
+         */
         @NameInMap("pathWithNamespace")
         public String pathWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("privateFlag")
         public Boolean privateFlag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("snippetsEnabled")
         public Boolean snippetsEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>git@xxx:xxx/test/test.git</p>
+         */
         @NameInMap("sshUrl")
         public String sshUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("starCount")
         public Integer starCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 14:24:54</p>
+         */
         @NameInMap("updatedAt")
         public String updatedAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("visibilityLevel")
         public Integer visibilityLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("webUrl")
         public String webUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("wikiEnabled")
         public Boolean wikiEnabled;
 

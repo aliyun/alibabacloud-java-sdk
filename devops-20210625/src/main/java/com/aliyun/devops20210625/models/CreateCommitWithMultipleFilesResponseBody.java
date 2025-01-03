@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A7586FEB-E48D-5579-983F-74981FBFF627</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public CreateCommitWithMultipleFilesResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,27 +81,59 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
     }
 
     public static class CreateCommitWithMultipleFilesResponseBodyResultAuthor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>284692704493684695</p>
+         */
         @NameInMap("aliyunPk")
         public String aliyunPk;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c4ef67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c4ef67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19927</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("username")
         public String username;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("websiteUrl")
         public String websiteUrl;
 
@@ -161,27 +209,59 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
     }
 
     public static class CreateCommitWithMultipleFilesResponseBodyResultCommitter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>235671547828975455</p>
+         */
         @NameInMap("aliyunPk")
         public String aliyunPk;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24661</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>committer-codeup</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>committer-codeup</p>
+         */
         @NameInMap("username")
         public String username;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("websiteUrl")
         public String websiteUrl;
 
@@ -260,30 +340,62 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
         @NameInMap("author")
         public CreateCommitWithMultipleFilesResponseBodyResultAuthor author;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("authorEmail")
         public String authorEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("authorName")
         public String authorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 15:00:00</p>
+         */
         @NameInMap("authoredDate")
         public String authoredDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 16:00:00</p>
+         */
         @NameInMap("committedDate")
         public String committedDate;
 
         @NameInMap("committer")
         public CreateCommitWithMultipleFilesResponseBodyResultCommitter committer;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("committerEmail")
         public String committerEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>committer-codeup</p>
+         */
         @NameInMap("committerName")
         public String committerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 14:24:54</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>de02b625ba8488f92eb204bcb3773a40c1b4ddac</p>
+         */
         @NameInMap("id")
         public String id;
 
@@ -293,6 +405,10 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
         @NameInMap("parentIds")
         public java.util.List<String> parentIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>de02b625</p>
+         */
         @NameInMap("shortId")
         public String shortId;
 

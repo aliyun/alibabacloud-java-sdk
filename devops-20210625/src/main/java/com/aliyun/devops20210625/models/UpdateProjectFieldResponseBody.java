@@ -4,20 +4,35 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectFieldResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>errormessage</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("project")
     public UpdateProjectFieldResponseBodyProject project;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>true/false</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -71,12 +86,24 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b787ff504c0b36f8b71d15a4fd</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ace3wxxxxxxx7rff3ee</p>
+         */
         @NameInMap("value")
         public String value;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("valueType")
         public String valueType;
 
@@ -120,15 +147,31 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
     }
 
     public static class UpdateProjectFieldResponseBodyProject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Project</p>
+         */
         @NameInMap("category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Project</p>
+         */
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OJAY</p>
+         */
         @NameInMap("customCode")
         public String customCode;
 
@@ -138,63 +181,135 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
         @NameInMap("fieldList")
         public java.util.List<UpdateProjectFieldResponseBodyProjectFieldList> fieldList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1623916393000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1684134690000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxx.png">https://xxxxxx.png</a></p>
+         */
         @NameInMap("icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxx.png">https://xxxxxx.png</a></p>
+         */
         @NameInMap("iconBig")
         public String iconBig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;small&quot;:&quot;<a href="https://xxxxxx.png%22,%22big%22:%22https://img.yyyyyy.png%22%7D">https://xxxxxx.png&quot;,&quot;big&quot;:&quot;https://img.yyyyyy.png&quot;}</a></p>
+         */
         @NameInMap("iconGroup")
         public String iconGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.yyyyyy.png">https://img.yyyyyy.png</a></p>
+         */
         @NameInMap("iconSmall")
         public String iconSmall;
 
+        /**
+         * <strong>example:</strong>
+         * <p>66893</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1e2ea73d24652d5874d001b351</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8b2xxxxxx2abdxxxxxxxx23</p>
+         */
         @NameInMap("identifierPath")
         public String identifierPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("logicalStatus")
         public String logicalStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("modifier")
         public String modifier;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5e70xxxxxxcd000xxxxe96</p>
+         */
         @NameInMap("organizationIdentifier")
         public String organizationIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("parentIdentifier")
         public String parentIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>public</p>
+         */
         @NameInMap("scope")
         public String scope;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8a40xxxxxxxxxxxxx64</p>
+         */
         @NameInMap("statusIdentifier")
         public String statusIdentifier;
 
         @NameInMap("statusName")
         public String statusName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8a4058a71159b68254......</p>
+         */
         @NameInMap("statusStageIdentifier")
         public String statusStageIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("subType")
         public String subType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CustomProject</p>
+         */
         @NameInMap("typeIdentifier")
         public String typeIdentifier;
 

@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class CreateProjectRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABCD</p>
      */
     @NameInMap("customCode")
     public String customCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
      */
     @NameInMap("scope")
     public String scope;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>704eaxxxx5efede61xxx5</p>
      */
     @NameInMap("templateIdentifier")
     public String templateIdentifier;

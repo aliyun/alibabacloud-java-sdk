@@ -4,9 +4,17 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetWorkitemRelationsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>InvalidGroup.IdNotFound</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
@@ -15,10 +23,17 @@ public class GetWorkitemRelationsResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -68,27 +83,55 @@ public class GetWorkitemRelationsResponseBody extends TeaModel {
     }
 
     public static class GetWorkitemRelationsResponseBodyRelationList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>aliyun_1384605</p>
+         */
         @NameInMap("assignedTo")
         public String assignedTo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Req</p>
+         */
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1667205617061</p>
+         */
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1667205617089</p>
+         */
         @NameInMap("gmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>deafe5f33xxxxx6a259d8dafd</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2b856dxxxxxxb61d93676255ba</p>
+         */
         @NameInMap("spaceIdentifier")
         public String spaceIdentifier;
 
         @NameInMap("subject")
         public String subject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9uy29901re573f561d69jn40</p>
+         */
         @NameInMap("workitemTypeIdentifier")
         public String workitemTypeIdentifier;
 

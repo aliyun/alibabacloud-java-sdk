@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetProjectInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("project")
     public GetProjectInfoResponseBodyProject project;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,75 +81,167 @@ public class GetProjectInfoResponseBody extends TeaModel {
     }
 
     public static class GetProjectInfoResponseBodyProject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Project</p>
+         */
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OJAY</p>
+         */
         @NameInMap("customCode")
         public String customCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1623916393000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1623916393000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxx.png">https://xxxxxx.png</a></p>
+         */
         @NameInMap("icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxx.png">https://xxxxxx.png</a></p>
+         */
         @NameInMap("iconBig")
         public String iconBig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;small&quot;:&quot;<a href="https://xxxxxx.png%22,%22big%22:%22https://img.yyyyyy.png%22%7D">https://xxxxxx.png&quot;,&quot;big&quot;:&quot;https://img.yyyyyy.png&quot;}</a></p>
+         */
         @NameInMap("iconGroup")
         public String iconGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.yyyyyy.png">https://img.yyyyyy.png</a></p>
+         */
         @NameInMap("iconSmall")
         public String iconSmall;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8bxxxxxxxxxxxxxxxx23</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8b2xxxxxx2abdxxxxxxxx23</p>
+         */
         @NameInMap("identifierPath")
         public String identifierPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("logicalStatus")
         public String logicalStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19xx7043xxxxxxx914</p>
+         */
         @NameInMap("modifier")
         public String modifier;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5e70xxxxxxcd000xxxxe96</p>
+         */
         @NameInMap("organizationIdentifier")
         public String organizationIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("parentIdentifier")
         public String parentIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>public</p>
+         */
         @NameInMap("scope")
         public String scope;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8a40xxxxxxxxxxxxx64</p>
+         */
         @NameInMap("statusIdentifier")
         public String statusIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8a4058a71159b68254......</p>
+         */
         @NameInMap("statusStageIdentifier")
         public String statusStageIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("subType")
         public String subType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CustomProject</p>
+         */
         @NameInMap("typeIdentifier")
         public String typeIdentifier;
 

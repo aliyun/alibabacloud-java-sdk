@@ -4,6 +4,10 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdatePipelineBaseInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("envId")
     public Long envId;
 
@@ -13,6 +17,10 @@ public class UpdatePipelineBaseInfoRequest extends TeaModel {
     @NameInMap("pipelineName")
     public String pipelineName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;11,222,33&quot;</p>
+     */
     @NameInMap("tagList")
     public String tagList;
 

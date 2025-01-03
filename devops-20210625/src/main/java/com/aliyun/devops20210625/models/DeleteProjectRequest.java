@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteProjectRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7fb72727f32143574f7a...</p>
      */
     @NameInMap("identifier")
     public String identifier;

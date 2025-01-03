@@ -4,23 +4,36 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListMergeRequestFilesReadsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>agp_4d57a6796b3626f52064ab1fba5384a5</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5e733626d53f4b04a6aa0e23d4ff72b8</p>
      */
     @NameInMap("fromPatchSetBizId")
     public String fromPatchSetBizId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("localId")
     public Long localId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60de7a6852743a5162b5f957</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
@@ -33,6 +46,9 @@ public class ListMergeRequestFilesReadsRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>513fcfd81a9142d2bb0db4f72c0aa15b</p>
      */
     @NameInMap("toPatchSetBizId")
     public String toPatchSetBizId;

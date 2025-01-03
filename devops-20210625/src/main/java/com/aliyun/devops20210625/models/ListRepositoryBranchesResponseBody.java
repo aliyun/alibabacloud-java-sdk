@@ -4,21 +4,41 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryBranchesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1F4F342D-493A-5B2C-B133-BA78B30FF834</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListRepositoryBranchesResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("total")
     public Long total;
 
@@ -76,27 +96,59 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
     }
 
     public static class ListRepositoryBranchesResponseBodyResultCommit extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("authorEmail")
         public String authorEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("authorName")
         public String authorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 10:00:00</p>
+         */
         @NameInMap("authoredDate")
         public String authoredDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 11:00:00</p>
+         */
         @NameInMap("committedDate")
         public String committedDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("committerEmail")
         public String committerEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>commit-codeup</p>
+         */
         @NameInMap("committerName")
         public String committerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 10:00:00</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>de02b625ba8488f92eb204bcb3773a40c1b4ddac</p>
+         */
         @NameInMap("id")
         public String id;
 
@@ -106,6 +158,10 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
         @NameInMap("parentIds")
         public java.util.List<String> parentIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e0297d8f</p>
+         */
         @NameInMap("shortId")
         public String shortId;
 
@@ -219,9 +275,17 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
         @NameInMap("commit")
         public ListRepositoryBranchesResponseBodyResultCommit commit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testBranch</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("protected")
         public String _protected;
 

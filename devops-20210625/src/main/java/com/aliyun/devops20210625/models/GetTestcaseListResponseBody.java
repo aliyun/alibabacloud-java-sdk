@@ -4,27 +4,55 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetTestcaseListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     @NameInMap("testcase")
     public java.util.List<GetTestcaseListResponseBodyTestcase> testcase;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -98,6 +126,10 @@ public class GetTestcaseListResponseBody extends TeaModel {
     }
 
     public static class GetTestcaseListResponseBodyTestcaseAssignedTo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12xxxxx456</p>
+         */
         @NameInMap("assignedToIdenttifier")
         public String assignedToIdenttifier;
 
@@ -128,15 +160,31 @@ public class GetTestcaseListResponseBody extends TeaModel {
     }
 
     public static class GetTestcaseListResponseBodyTestcaseCustomFields extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>User</p>
+         */
         @NameInMap("fieldClassName")
         public String fieldClassName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Input</p>
+         */
         @NameInMap("fieldFormat")
         public String fieldFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>85702b33f14bfa82cb458173ba</p>
+         */
         @NameInMap("fieldIdentifier")
         public String fieldIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d7f112f9d023e2108fa1b0d8</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -180,9 +228,17 @@ public class GetTestcaseListResponseBody extends TeaModel {
     }
 
     public static class GetTestcaseListResponseBodyTestcaseSpace extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>22c32972b853cd703dbf0efe4c</p>
+         */
         @NameInMap("spaceIdentifier")
         public String spaceIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestRepo</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -213,6 +269,10 @@ public class GetTestcaseListResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>85702b33f14bxxxxxx58173ba</p>
+         */
         @NameInMap("tagIdentifier")
         public String tagIdentifier;
 
@@ -243,21 +303,37 @@ public class GetTestcaseListResponseBody extends TeaModel {
         @NameInMap("assignedTo")
         public GetTestcaseListResponseBodyTestcaseAssignedTo assignedTo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Req</p>
+         */
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
         @NameInMap("customFields")
         public java.util.List<GetTestcaseListResponseBodyTestcaseCustomFields> customFields;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8bxxxxxxxxxxxxxxxx23</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
         @NameInMap("space")
         public GetTestcaseListResponseBodyTestcaseSpace space;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试工作项</p>
+         */
         @NameInMap("subject")
         public String subject;
 

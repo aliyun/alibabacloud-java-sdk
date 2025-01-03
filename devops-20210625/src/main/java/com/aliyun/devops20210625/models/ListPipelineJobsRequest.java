@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListPipelineJobsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEPLOY</p>
      */
     @NameInMap("category")
     public String category;

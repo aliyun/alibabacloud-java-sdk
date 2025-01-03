@@ -4,15 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     @NameInMap("result")
     public java.util.List<ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -54,83 +66,174 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
     }
 
     public static class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>65e836b981d758be7a25xxxx</p>
+         */
         @NameInMap("assignedToId")
         public String assignedToId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>65e836b981d758be7a25xxxx</p>
+         */
         @NameInMap("creatorId")
         public String creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("expectedWorkTime")
         public Long expectedWorkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("extraId")
         public Long extraId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("extraIsDeleted")
         public String extraIsDeleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("foundPhase")
         public Integer foundPhase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33166339200000</p>
+         */
         @NameInMap("gmtClosed")
         public Long gmtClosed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1713430241000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33166339200000</p>
+         */
         @NameInMap("gmtDue")
         public Long gmtDue;
 
         @NameInMap("gmtFixed")
         public String gmtFixed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1714755985000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33166339200000</p>
+         */
         @NameInMap("gmtStart")
         public Long gmtStart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33166339200000</p>
+         */
         @NameInMap("gmtTodo")
         public Long gmtTodo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>701615370</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("isArchived")
         public String isArchived;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("isDeleted")
         public String isDeleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("isDone")
         public String isDone;
 
         @NameInMap("isStupid")
         public String isStupid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>61db9af2148974246bexxxx</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a80a203a9078a7a1b1f2c6xxxx</p>
+         */
         @NameInMap("parentId")
         public String parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6135b21fb383ef39551cf02e,63466a385dc8531eebd764e9</p>
+         */
         @NameInMap("participantIds")
         public String participantIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("phase")
         public Integer phase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("priority")
         public Integer priority;
 
         @NameInMap("productId")
         public String productId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6732a29d846bf998dc09e7xxxx</p>
+         */
         @NameInMap("projectId")
         public String projectId;
 
         @NameInMap("reopenNum")
         public Integer reopenNum;
+
+        @NameInMap("serialNumber")
+        public Integer serialNumber;
 
         @NameInMap("seriousLevel")
         public Integer seriousLevel;
@@ -138,45 +241,89 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
         @NameInMap("solution")
         public String solution;
 
+        /**
+         * <strong>example:</strong>
+         * <p>projex</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>731c83a40bbf3c2f080e07xxxx</p>
+         */
         @NameInMap("sprintId")
         public String sprintId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("stage")
         public Integer stage;
 
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100005</p>
+         */
         @NameInMap("statusId")
         public String statusId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.0</p>
+         */
         @NameInMap("storyPoint")
         public Float storyPoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9uy29901re573f561d69xxxx</p>
+         */
         @NameInMap("subType")
         public String subType;
 
         @NameInMap("subject")
         public String subject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>65e836b981d758be7a25xxxx</p>
+         */
         @NameInMap("verifierId")
         public String verifierId;
 
         @NameInMap("versionId")
         public String versionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{6a8cdda167415bea1506c7262c}</p>
+         */
         @NameInMap("versions")
         public String versions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("workTime")
         public Long workTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>636f661a612a945bbcdb4cxxxx</p>
+         */
         @NameInMap("workitemId")
         public String workitemId;
 
@@ -391,6 +538,14 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
         }
         public Integer getReopenNum() {
             return this.reopenNum;
+        }
+
+        public ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBodyResult setSerialNumber(Integer serialNumber) {
+            this.serialNumber = serialNumber;
+            return this;
+        }
+        public Integer getSerialNumber() {
+            return this.serialNumber;
         }
 
         public ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBodyResult setSeriousLevel(Integer seriousLevel) {

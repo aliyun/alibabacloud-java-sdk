@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetHostGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("hostGroup")
     public GetHostGroupResponseBodyHostGroup hostGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,30 +81,66 @@ public class GetHostGroupResponseBody extends TeaModel {
     }
 
     public static class GetHostGroupResponseBodyHostGroupHostInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("aliyunRegionId")
         public String aliyunRegionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11111</p>
+         */
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ceshi</p>
+         */
         @NameInMap("instanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("ip")
         public String ip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1ssasa</p>
+         */
         @NameInMap("machineSn")
         public String machineSn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11111111111</p>
+         */
         @NameInMap("modifierAccountId")
         public String modifierAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MachineInfo</p>
+         */
         @NameInMap("objectType")
         public String objectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("updateTime")
         public Long updateTime;
 
@@ -172,48 +224,96 @@ public class GetHostGroupResponseBody extends TeaModel {
     }
 
     public static class GetHostGroupResponseBodyHostGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-bejing</p>
+         */
         @NameInMap("aliyunRegion")
         public String aliyunRegion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111111</p>
+         */
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs</p>
+         */
         @NameInMap("ecsLabelKey")
         public String ecsLabelKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs</p>
+         */
         @NameInMap("ecsLabelValue")
         public String ecsLabelValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ECS_ALIYUN</p>
+         */
         @NameInMap("ecsType")
         public String ecsType;
 
         @NameInMap("hostInfos")
         public java.util.List<GetHostGroupResponseBodyHostGroupHostInfos> hostInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("hostNum")
         public Long hostNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11111</p>
+         */
         @NameInMap("modifierAccountId")
         public String modifierAccountId;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("serviceConnectionId")
         public Long serviceConnectionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ECS</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("upateTIme")
         public Long upateTIme;
 

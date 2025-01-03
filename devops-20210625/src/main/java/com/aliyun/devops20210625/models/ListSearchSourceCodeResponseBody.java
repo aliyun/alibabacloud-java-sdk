@@ -4,21 +4,41 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListSearchSourceCodeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListSearchSourceCodeResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("total")
     public Long total;
 
@@ -76,15 +96,31 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
     }
 
     public static class ListSearchSourceCodeResponseBodyResultHighlightTextMap extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("clob")
         public String clob;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test.java</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>java</p>
+         */
         @NameInMap("language")
         public String language;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
@@ -128,24 +164,52 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
     }
 
     public static class ListSearchSourceCodeResponseBodyResultSource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("branch")
         public String branch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-10-10 10:00:00</p>
+         */
         @NameInMap("checkinDate")
         public String checkinDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_utils.js</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>spec/frontend/snippets/test_utils.js</p>
+         */
         @NameInMap("filePath")
         public String filePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>JavaScript</p>
+         */
         @NameInMap("language")
         public String language;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup/test-repo</p>
+         */
         @NameInMap("repoPath")
         public String repoPath;
 
@@ -213,6 +277,10 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
     }
 
     public static class ListSearchSourceCodeResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>60d54f3daccf2bbd6659f3ad/gitlabhq/master/spec/frontend/snippets/test_utils.js</p>
+         */
         @NameInMap("docId")
         public String docId;
 

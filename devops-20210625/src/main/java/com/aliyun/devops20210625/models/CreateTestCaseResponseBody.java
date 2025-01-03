@@ -4,18 +4,33 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateTestCaseResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18E50717-93A4-53BC-A30D-963F742A1CE6</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -68,12 +83,20 @@ public class CreateTestCaseResponseBody extends TeaModel {
     }
 
     public static class CreateTestCaseResponseBodyTestcaseAssignedTo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>134xxx343xxxxx</p>
+         */
         @NameInMap("assignIdentifier")
         public String assignIdentifier;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3c2253c22xxxxxxxx53a</p>
+         */
         @NameInMap("tbRoleId")
         public String tbRoleId;
 
@@ -109,6 +132,10 @@ public class CreateTestCaseResponseBody extends TeaModel {
     }
 
     public static class CreateTestCaseResponseBodyTestcaseCreator extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>134xxx343xxxxx</p>
+         */
         @NameInMap("createIdentifier")
         public String createIdentifier;
 
@@ -142,9 +169,17 @@ public class CreateTestCaseResponseBody extends TeaModel {
         @NameInMap("expectContent")
         public String expectContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RICHTEXT</p>
+         */
         @NameInMap("expectContentType")
         public String expectContentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>59253164xxxxxxf2e98dbc7e27</p>
+         */
         @NameInMap("expectIdentifier")
         public String expectIdentifier;
 
@@ -183,9 +218,17 @@ public class CreateTestCaseResponseBody extends TeaModel {
         @NameInMap("preContent")
         public String preContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RICHTEXT</p>
+         */
         @NameInMap("preContentType")
         public String preContentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>59253164xxxxxxf2e98dbc7e27</p>
+         */
         @NameInMap("preIdentifier")
         public String preIdentifier;
 
@@ -224,9 +267,17 @@ public class CreateTestCaseResponseBody extends TeaModel {
         @NameInMap("stepContent")
         public String stepContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RICHTEXT</p>
+         */
         @NameInMap("stepContentType")
         public String stepContentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>59253164xxxxxxf2e98dbc7e27</p>
+         */
         @NameInMap("stepIdentifier")
         public String stepIdentifier;
 
@@ -271,6 +322,10 @@ public class CreateTestCaseResponseBody extends TeaModel {
         @NameInMap("stepContent")
         public CreateTestCaseResponseBodyTestcaseDetailInfoStepContent stepContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TEXT/TABLE</p>
+         */
         @NameInMap("stepType")
         public String stepType;
 
@@ -314,9 +369,17 @@ public class CreateTestCaseResponseBody extends TeaModel {
     }
 
     public static class CreateTestCaseResponseBodyTestcaseDirectory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0bc1150dcxxxxxxxx04c</p>
+         */
         @NameInMap("childIdentifier")
         public String childIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0bc1150dcxxxxxxxx04c</p>
+         */
         @NameInMap("directoryIdentifier")
         public String directoryIdentifier;
 
@@ -366,6 +429,10 @@ public class CreateTestCaseResponseBody extends TeaModel {
     }
 
     public static class CreateTestCaseResponseBodyTestcaseModifier extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>134xxx343xxxxx</p>
+         */
         @NameInMap("modifyIdentifier")
         public String modifyIdentifier;
 
@@ -399,6 +466,10 @@ public class CreateTestCaseResponseBody extends TeaModel {
         @NameInMap("assignedTo")
         public CreateTestCaseResponseBodyTestcaseAssignedTo assignedTo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestCase</p>
+         */
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
@@ -411,15 +482,27 @@ public class CreateTestCaseResponseBody extends TeaModel {
         @NameInMap("directory")
         public CreateTestCaseResponseBodyTestcaseDirectory directory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5a73f81c834d013361d92bdcce</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
         @NameInMap("modifier")
         public CreateTestCaseResponseBodyTestcaseModifier modifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a18571eba8fe9267cd8375fc06</p>
+         */
         @NameInMap("spaceIdentifier")
         public String spaceIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestRepo</p>
+         */
         @NameInMap("spaceType")
         public String spaceType;
 

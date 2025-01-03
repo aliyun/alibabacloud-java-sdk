@@ -6,27 +6,43 @@ import com.aliyun.tea.*;
 public class CreateServiceCredentialRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三的Git证书</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zhangsan</p>
      */
     @NameInMap("password")
     public String password;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PERSON</p>
+     */
     @NameInMap("scope")
     public String scope;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>USERNAME_PASSWORD</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zhangsan</p>
      */
     @NameInMap("username")
     public String username;

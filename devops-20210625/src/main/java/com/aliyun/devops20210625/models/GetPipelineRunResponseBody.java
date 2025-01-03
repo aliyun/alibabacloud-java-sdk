@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetPipelineRunResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("pipelineRun")
     public GetPipelineRunResponseBodyPipelineRun pipelineRun;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRunSourcesData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("branch")
         public String branch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("commint")
         public String commint;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://codeup.aliyun.com/a.git">http://codeup.aliyun.com/a.git</a></p>
+         */
         @NameInMap("repo")
         public String repo;
 
@@ -109,9 +137,17 @@ public class GetPipelineRunResponseBody extends TeaModel {
         @NameInMap("data")
         public GetPipelineRunResponseBodyPipelineRunSourcesData data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>assaaaaaasasasa</p>
+         */
         @NameInMap("sign")
         public String sign;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Codeup</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -147,12 +183,24 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("disable")
         public Boolean disable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("params")
         public java.util.Map<String, ?> params;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PassPipelineValidate</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -191,21 +239,45 @@ public class GetPipelineRunResponseBody extends TeaModel {
         @NameInMap("actions")
         public java.util.List<GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions> actions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("endTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21212</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>java构建</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("params")
         public String params;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("startTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -273,18 +345,34 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRunStagesStageInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("endTime")
         public Long endTime;
 
         @NameInMap("jobs")
         public java.util.List<GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs> jobs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Java构建</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("startTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -336,6 +424,10 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRunStages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Java构建</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -366,18 +458,38 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRun extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111111111</p>
+         */
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11111111111</p>
+         */
         @NameInMap("modifierAccountId")
         public String modifierAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("pipelineId")
         public Long pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("pipelineRunId")
         public Long pipelineRunId;
 
@@ -390,12 +502,24 @@ public class GetPipelineRunResponseBody extends TeaModel {
         @NameInMap("stages")
         public java.util.List<GetPipelineRunResponseBodyPipelineRunStages> stages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("triggerMode")
         public Integer triggerMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("updateTime")
         public Long updateTime;
 

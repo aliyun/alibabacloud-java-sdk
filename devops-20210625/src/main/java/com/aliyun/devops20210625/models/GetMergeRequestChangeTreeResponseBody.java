@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HC93CE1A-8D7A-13A9-8306-7465DE2E5C0F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public GetMergeRequestChangeTreeResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,27 +81,59 @@ public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
     }
 
     public static class GetMergeRequestChangeTreeResponseBodyResultChangedFilesInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("addLines")
         public Long addLines;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("binaryFile")
         public Boolean binaryFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("delLines")
         public Long delLines;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("deletedFile")
         public Boolean deletedFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("newFile")
         public Boolean newFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test.txt</p>
+         */
         @NameInMap("newPath")
         public String newPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test.txt</p>
+         */
         @NameInMap("oldPath")
         public String oldPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("renamedFile")
         public Boolean renamedFile;
 
@@ -161,15 +209,27 @@ public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
     }
 
     public static class GetMergeRequestChangeTreeResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("changedFilesCount")
         public Long changedFilesCount;
 
         @NameInMap("changedFilesInfos")
         public java.util.List<GetMergeRequestChangeTreeResponseBodyResultChangedFilesInfos> changedFilesInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("totalAddLines")
         public Long totalAddLines;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("totalDelLines")
         public Long totalDelLines;
 

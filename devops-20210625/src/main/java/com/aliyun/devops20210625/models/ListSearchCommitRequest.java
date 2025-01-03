@@ -6,30 +6,56 @@ import com.aliyun.tea.*;
 public class ListSearchCommitRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     @NameInMap("repoPath")
     public ListSearchCommitRequestRepoPath repoPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("scope")
     public String scope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("sort")
     public String sort;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60d54f3daccf2bbd6659f3ad</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
@@ -104,12 +130,24 @@ public class ListSearchCommitRequest extends TeaModel {
     }
 
     public static class ListSearchCommitRequestRepoPath extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>term</p>
+         */
         @NameInMap("matchType")
         public String matchType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>equal</p>
+         */
         @NameInMap("operatorType")
         public String operatorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>orgId/test-group/spring-boot-demo</p>
+         */
         @NameInMap("value")
         public String value;
 

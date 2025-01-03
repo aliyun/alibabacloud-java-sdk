@@ -6,25 +6,43 @@ import com.aliyun.tea.*;
 public class CreateWorkitemRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19xxxx31947xxxx</p>
      */
     @NameInMap("assignedTo")
     public String assignedTo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Req</p>
      */
     @NameInMap("category")
     public String category;
 
+    /**
+     * <strong>example:</strong>
+     * <p>测试内容</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RICHTEXT</p>
+     */
     @NameInMap("descriptionFormat")
     public String descriptionFormat;
 
     @NameInMap("fieldValueList")
     public java.util.List<CreateWorkitemRequestFieldValueList> fieldValueList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3a0c9cdd24ae1e1995b8...</p>
+     */
     @NameInMap("parent")
     public String parent;
 
@@ -33,18 +51,27 @@ public class CreateWorkitemRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asd345xxxxx9q9845xxxxx34</p>
      */
     @NameInMap("space")
     public String space;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asd345xxxxx9q9845xxxxx34</p>
      */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Project</p>
      */
     @NameInMap("spaceType")
     public String spaceType;
@@ -54,6 +81,9 @@ public class CreateWorkitemRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试工作项</p>
      */
     @NameInMap("subject")
     public String subject;
@@ -66,6 +96,9 @@ public class CreateWorkitemRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9uyxxxxxre573f561dxxn40</p>
      */
     @NameInMap("workitemType")
     public String workitemType;
@@ -196,12 +229,24 @@ public class CreateWorkitemRequest extends TeaModel {
     }
 
     public static class CreateWorkitemRequestFieldValueList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6aexxxxxa1d98c09c60xxxx16</p>
+         */
         @NameInMap("fieldIdentifier")
         public String fieldIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>77c7fb03c4186c8691d6...</p>
+         */
         @NameInMap("value")
         public String value;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("workitemIdentifier")
         public String workitemIdentifier;
 

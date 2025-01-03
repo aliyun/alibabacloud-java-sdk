@@ -4,18 +4,38 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateRepositoryMemberRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("accessLevel")
     public Integer accessLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-08-08 08:08:08</p>
+     */
     @NameInMap("expireAt")
     public String expireAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>USERS</p>
+     */
     @NameInMap("memberType")
     public String memberType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10010</p>
+     */
     @NameInMap("relatedId")
     public String relatedId;
 
@@ -24,6 +44,9 @@ public class UpdateRepositoryMemberRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60de7a6852743a5162b5f957</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
@@ -90,12 +113,24 @@ public class UpdateRepositoryMemberRequest extends TeaModel {
     }
 
     public static class UpdateRepositoryMemberRequestRelatedInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10011</p>
+         */
         @NameInMap("relatedId")
         public String relatedId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24790</p>
+         */
         @NameInMap("sourceId")
         public Long sourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Project</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 

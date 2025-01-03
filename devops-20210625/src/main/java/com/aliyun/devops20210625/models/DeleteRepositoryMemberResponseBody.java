@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class DeleteRepositoryMemberResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0E1BCF81-51E6-59D4-8D55-FF945111127A</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public DeleteRepositoryMemberResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,24 +81,52 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
     }
 
     public static class DeleteRepositoryMemberResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("accessLevel")
         public Integer accessLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-12 12:00:00</p>
+         */
         @NameInMap("createAt")
         public String createAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30815</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2080398</p>
+         */
         @NameInMap("sourceId")
         public Long sourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Project</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-12 12:00:00</p>
+         */
         @NameInMap("updateAt")
         public String updateAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19280</p>
+         */
         @NameInMap("userId")
         public Long userId;
 

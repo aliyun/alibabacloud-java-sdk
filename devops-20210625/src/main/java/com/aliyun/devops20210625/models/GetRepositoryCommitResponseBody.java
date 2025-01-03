@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetRepositoryCommitResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A7586FEB-E48D-5579-983F-74981FBFF627</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public GetRepositoryCommitResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,24 +81,52 @@ public class GetRepositoryCommitResponseBody extends TeaModel {
     }
 
     public static class GetRepositoryCommitResponseBodyResultAuthor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c4ef67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c4ef67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19927</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-nickname</p>
+         */
         @NameInMap("username")
         public String username;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("websiteUrl")
         public String websiteUrl;
 
@@ -150,24 +194,52 @@ public class GetRepositoryCommitResponseBody extends TeaModel {
     }
 
     public static class GetRepositoryCommitResponseBodyResultCommitter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c4ef67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c4ef67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24661</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>committer-codeup</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nickname</p>
+         */
         @NameInMap("username")
         public String username;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("websiteUrl")
         public String websiteUrl;
 
@@ -235,9 +307,17 @@ public class GetRepositoryCommitResponseBody extends TeaModel {
     }
 
     public static class GetRepositoryCommitResponseBodyResultSignature extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>34d2c47c7ce46a5c4639c5ffe208</p>
+         */
         @NameInMap("gpgKeyId")
         public String gpgKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>verified</p>
+         */
         @NameInMap("verificationStatus")
         public String verificationStatus;
 
@@ -268,33 +348,69 @@ public class GetRepositoryCommitResponseBody extends TeaModel {
         @NameInMap("author")
         public GetRepositoryCommitResponseBodyResultAuthor author;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("authorEmail")
         public String authorEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("authorName")
         public String authorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 15:00:00</p>
+         */
         @NameInMap("authoredDate")
         public String authoredDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("commentsCount")
         public Long commentsCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 15:00:02</p>
+         */
         @NameInMap("committedDate")
         public String committedDate;
 
         @NameInMap("committer")
         public GetRepositoryCommitResponseBodyResultCommitter committer;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("committerEmail")
         public String committerEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>committer-codeup</p>
+         */
         @NameInMap("committerName")
         public String committerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 14:24:54</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ff4fb5ac6d1f44f452654336d2dba468ae6c8d04</p>
+         */
         @NameInMap("id")
         public String id;
 
@@ -304,6 +420,10 @@ public class GetRepositoryCommitResponseBody extends TeaModel {
         @NameInMap("parentIds")
         public java.util.List<String> parentIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ff4fb5ac</p>
+         */
         @NameInMap("shortId")
         public String shortId;
 

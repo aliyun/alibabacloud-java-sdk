@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>例：Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>errormessage</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("statuses")
     public java.util.List<ListWorkItemWorkFlowStatusResponseBodyStatuses> statuses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true或者false</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,36 +81,80 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
     }
 
     public static class ListWorkItemWorkFlowStatusResponseBodyStatuses extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>用户阿里云pk，例如19xxxx31947xxxx</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>该状态的具体信息</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620455467000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1641870287000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dfexxxxxf4fee18xxxxx36</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>用户阿里云pk，例如19xxxx31947xxxx</p>
+         */
         @NameInMap("modifier")
         public String modifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>例：待处理</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Workitem</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>例如：1</p>
+         */
         @NameInMap("workflowStageIdentifier")
         public String workflowStageIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>例：确认阶段</p>
+         */
         @NameInMap("workflowStageName")
         public String workflowStageName;
 

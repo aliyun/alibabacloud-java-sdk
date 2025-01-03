@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListServiceCredentialsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>username_password</p>
      */
     @NameInMap("serviceCredentialType")
     public String serviceCredentialType;

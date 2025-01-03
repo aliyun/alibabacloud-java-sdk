@@ -6,22 +6,35 @@ import com.aliyun.tea.*;
 public class ListWorkItemWorkFlowStatusRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>例：5e70xxxxxxcd000xxxxe96</p>
      */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Project</p>
      */
     @NameInMap("spaceType")
     public String spaceType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Req</p>
      */
     @NameInMap("workitemCategoryIdentifier")
     public String workitemCategoryIdentifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>例：5e7xxxxb3cd3711dd6xxx2c</p>
+     */
     @NameInMap("workitemTypeIdentifier")
     public String workitemTypeIdentifier;
 

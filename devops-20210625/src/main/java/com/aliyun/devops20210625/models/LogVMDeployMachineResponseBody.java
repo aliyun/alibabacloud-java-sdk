@@ -7,15 +7,31 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
     @NameInMap("deployMachineLog")
     public LogVMDeployMachineResponseBodyDeployMachineLog deployMachineLog;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true 接口调用成功，false 接口调用失败</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,18 +81,38 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
     }
 
     public static class LogVMDeployMachineResponseBodyDeployMachineLog extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("aliyunRegion")
         public String aliyunRegion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11111111111</p>
+         */
         @NameInMap("deployBeginTime")
         public Long deployBeginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12222222</p>
+         */
         @NameInMap("deployEndTime")
         public Long deployEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("deployLog")
         public String deployLog;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/tmp/log</p>
+         */
         @NameInMap("deployLogPath")
         public String deployLogPath;
 

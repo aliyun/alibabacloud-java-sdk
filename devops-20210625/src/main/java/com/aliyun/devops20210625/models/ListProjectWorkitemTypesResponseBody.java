@@ -4,15 +4,31 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListProjectWorkitemTypesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>例：Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>errormessage</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true或者false</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,39 +81,87 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
     }
 
     public static class ListProjectWorkitemTypesResponseBodyWorkitemTypes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>用户阿里云pk，例如19xxxx31947xxxx</p>
+         */
         @NameInMap("addUser")
         public String addUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Req</p>
+         */
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>用户阿里云pk，例如19xxxx31947xxxx</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true或者false</p>
+         */
         @NameInMap("defaultType")
         public Boolean defaultType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>该类型的具体信息</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true或者false</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1641870287000</p>
+         */
         @NameInMap("gmtAdd")
         public Long gmtAdd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620455467000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dfexxxxxf4fee18xxxxx36</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>例：业务类需求</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>例：Business Requirement</p>
+         */
         @NameInMap("nameEn")
         public String nameEn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("systemDefault")
         public Boolean systemDefault;
 

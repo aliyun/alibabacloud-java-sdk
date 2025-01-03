@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateWorkitemV2Request extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19xxxx31947xxxx</p>
      */
     @NameInMap("assignedTo")
     public String assignedTo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Req</p>
      */
     @NameInMap("category")
     public String category;
@@ -22,6 +28,10 @@ public class CreateWorkitemV2Request extends TeaModel {
     @NameInMap("fieldValueList")
     public java.util.List<CreateWorkitemV2RequestFieldValueList> fieldValueList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11223331122</p>
+     */
     @NameInMap("parentIdentifier")
     public String parentIdentifier;
 
@@ -30,10 +40,17 @@ public class CreateWorkitemV2Request extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asd345xxxxx9q9845xxxxx34</p>
      */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>455532323455</p>
+     */
     @NameInMap("sprintIdentifier")
     public String sprintIdentifier;
 
@@ -49,6 +66,10 @@ public class CreateWorkitemV2Request extends TeaModel {
     @NameInMap("trackers")
     public java.util.List<String> trackers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1561159309......</p>
+     */
     @NameInMap("verifier")
     public String verifier;
 
@@ -57,6 +78,9 @@ public class CreateWorkitemV2Request extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9uy29901re573f561d69jn40</p>
      */
     @NameInMap("workitemTypeIdentifier")
     public String workitemTypeIdentifier;
@@ -179,9 +203,17 @@ public class CreateWorkitemV2Request extends TeaModel {
     }
 
     public static class CreateWorkitemV2RequestFieldValueList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6aexxxxxa1d98c09c60xxxx16</p>
+         */
         @NameInMap("fieldIdentifier")
         public String fieldIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("value")
         public String value;
 

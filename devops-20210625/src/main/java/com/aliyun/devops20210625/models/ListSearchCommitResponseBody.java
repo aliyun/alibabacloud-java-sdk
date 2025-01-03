@@ -4,21 +4,41 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListSearchCommitResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F7B85D1B-D1C2-140F-A039-341859F130B9</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListSearchCommitResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("total")
     public Long total;
 
@@ -76,12 +96,20 @@ public class ListSearchCommitResponseBody extends TeaModel {
     }
 
     public static class ListSearchCommitResponseBodyResultHighlightTextMap extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>df1b701cb0f3f7ca92320d49d31995821f2d045c</p>
+         */
         @NameInMap("commitId")
         public String commitId;
 
         @NameInMap("commitMessage")
         public String commitMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
@@ -128,6 +156,10 @@ public class ListSearchCommitResponseBody extends TeaModel {
     }
 
     public static class ListSearchCommitResponseBodyResultSourceAuthor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
@@ -161,18 +193,34 @@ public class ListSearchCommitResponseBody extends TeaModel {
         @NameInMap("author")
         public ListSearchCommitResponseBodyResultSourceAuthor author;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-11-11 11:11:11</p>
+         */
         @NameInMap("authorTime")
         public String authorTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a748f5ecb17a93900d4808944bfcc96dc158ee2d</p>
+         */
         @NameInMap("commitId")
         public String commitId;
 
         @NameInMap("commitMessage")
         public String commitMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>61133b011bd96aa110f1b500</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup/test-repo</p>
+         */
         @NameInMap("repoPath")
         public String repoPath;
 
@@ -243,6 +291,10 @@ public class ListSearchCommitResponseBody extends TeaModel {
     }
 
     public static class ListSearchCommitResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>60d54f3daccf2bbd6659f3ad/gitlabhq/master/config/environments/test.rb</p>
+         */
         @NameInMap("docId")
         public String docId;
 

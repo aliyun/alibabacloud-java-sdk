@@ -6,34 +6,52 @@ import com.aliyun.tea.*;
 public class CreateOAuthTokenRequest extends TeaModel {
     /**
      * <p>clientId</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dc7e0b3c00a3e58f46</p>
      */
     @NameInMap("clientId")
     public String clientId;
 
     /**
      * <p>client_secret</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a433294edea39cae7e7870</p>
      */
     @NameInMap("clientSecret")
     public String clientSecret;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86df532f74454e189740d100ac97f4b9</p>
+     */
     @NameInMap("code")
     public String code;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>code</p>
      */
     @NameInMap("grantType")
     public String grantType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>username</p>
+     */
     @NameInMap("login")
     public String login;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>read:repo</p>
      */
     @NameInMap("scope")
     public String scope;

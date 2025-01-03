@@ -4,21 +4,45 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateHostGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("aliyunRegion")
     public String aliyunRegion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("ecsLabelKey")
     public String ecsLabelKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("ecsLabelValue")
     public String ecsLabelValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ECS_ALIYUN</p>
+     */
     @NameInMap("ecsType")
     public String ecsType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("envId")
     public String envId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;aliyunRegionId&quot;:&quot;cn-beijing&quot;,&quot;machineSn&quot;:&quot;i-sssssss&quot;,&quot;instanceName&quot;:&quot;ceshi&quot;,&quot;ip&quot;:&quot;120.0.0.0&quot;}]</p>
+     */
     @NameInMap("machineInfos")
     public String machineInfos;
 
@@ -30,15 +54,25 @@ public class UpdateHostGroupRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("serviceConnectionId")
     public Long serviceConnectionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12,23</p>
+     */
     @NameInMap("tagIds")
     public String tagIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
      */
     @NameInMap("type")
     public String type;

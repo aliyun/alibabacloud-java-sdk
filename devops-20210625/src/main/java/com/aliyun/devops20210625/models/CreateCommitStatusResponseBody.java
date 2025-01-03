@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateCommitStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>020F71F3-F063-5B8B-8978-2B01833216BB</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public CreateCommitStatusResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,15 +81,31 @@ public class CreateCommitStatusResponseBody extends TeaModel {
     }
 
     public static class CreateCommitStatusResponseBodyResultCreator extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>204485087002425236</p>
+         */
         @NameInMap("aliyunPk")
         public Long aliyunPk;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup</p>
+         */
         @NameInMap("login")
         public String login;
 
+        /**
+         * <strong>example:</strong>
+         * <p>User</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -117,6 +149,10 @@ public class CreateCommitStatusResponseBody extends TeaModel {
     }
 
     public static class CreateCommitStatusResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("context")
         public String context;
 
@@ -126,15 +162,31 @@ public class CreateCommitStatusResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30815</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c0ca103441b9fa7f369be8d24a6f20db44dfddf7</p>
+         */
         @NameInMap("sha")
         public String sha;
 
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("targetUrl")
         public String targetUrl;
 

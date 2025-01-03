@@ -4,12 +4,24 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class DeleteAppMemberRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>66c0c9fffeb86b450c199fcd</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1332695887xxxxxx</p>
+     */
     @NameInMap("subjectId")
     public String subjectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>User</p>
+     */
     @NameInMap("subjectType")
     public String subjectType;
 

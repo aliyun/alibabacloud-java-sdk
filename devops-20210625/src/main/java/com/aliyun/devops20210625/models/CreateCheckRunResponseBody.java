@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateCheckRunResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_UNKNOWN_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public CreateCheckRunResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,30 +81,58 @@ public class CreateCheckRunResponseBody extends TeaModel {
     }
 
     public static class CreateCheckRunResponseBodyResultAnnotations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>notice</p>
+         */
         @NameInMap("annotationLevel")
         public String annotationLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("endColumn")
         public Long endColumn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("endLine")
         public Long endLine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("id")
         public Long id;
 
         @NameInMap("message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo/test.txt</p>
+         */
         @NameInMap("path")
         public String path;
 
         @NameInMap("rawDetails")
         public String rawDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("startColumn")
         public Long startColumn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("startLine")
         public Long startLine;
 
@@ -183,6 +227,10 @@ public class CreateCheckRunResponseBody extends TeaModel {
     }
 
     public static class CreateCheckRunResponseBodyResultCheckSuite extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("id")
         public Long id;
 
@@ -202,12 +250,24 @@ public class CreateCheckRunResponseBody extends TeaModel {
     }
 
     public static class CreateCheckRunResponseBodyResultOutputImages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test-image-alt</p>
+         */
         @NameInMap("alt")
         public String alt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("caption")
         public String caption;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("imageUrl")
         public String imageUrl;
 
@@ -252,6 +312,10 @@ public class CreateCheckRunResponseBody extends TeaModel {
         @NameInMap("text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Mighty Readme report</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -295,18 +359,38 @@ public class CreateCheckRunResponseBody extends TeaModel {
     }
 
     public static class CreateCheckRunResponseBodyResultWriter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("logoUrl")
         public String logoUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-codeup</p>
+         */
         @NameInMap("slug")
         public String slug;
 
+        /**
+         * <strong>example:</strong>
+         * <p>User</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -364,39 +448,83 @@ public class CreateCheckRunResponseBody extends TeaModel {
         @NameInMap("checkSuite")
         public CreateCheckRunResponseBodyResultCheckSuite checkSuite;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-15T08:00:00Z</p>
+         */
         @NameInMap("completedAt")
         public String completedAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("conclusion")
         public String conclusion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-14T21:08:26+08:00</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("detailsUrl")
         public String detailsUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>42</p>
+         */
         @NameInMap("externalId")
         public String externalId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40f4ccfe019cdd4a62d4acb0c57130106fc7e1be</p>
+         */
         @NameInMap("headSha")
         public String headSha;
 
+        /**
+         * <strong>example:</strong>
+         * <p>524836</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my-check-ci</p>
+         */
         @NameInMap("name")
         public String name;
 
         @NameInMap("output")
         public CreateCheckRunResponseBodyResultOutput output;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-15T08:00:00Z</p>
+         */
         @NameInMap("startedAt")
         public String startedAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>completed</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-14T21:08:26+08:00</p>
+         */
         @NameInMap("updatedAt")
         public String updatedAt;
 

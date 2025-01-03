@@ -4,26 +4,43 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateGroupMemberRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1789095186553536</p>
      */
     @NameInMap("aliyunPk")
     public String aliyunPk;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("accessLevel")
     public Integer accessLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>USERS</p>
+     */
     @NameInMap("memberType")
     public String memberType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>632bbfdf419338aaa2b1360a</p>
      */
     @NameInMap("organizationId")
     public String organizationId;

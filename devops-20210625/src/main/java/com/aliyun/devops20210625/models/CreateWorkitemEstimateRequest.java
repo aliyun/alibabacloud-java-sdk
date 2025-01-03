@@ -9,24 +9,36 @@ public class CreateWorkitemEstimateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1316458xxxxx41068</p>
      */
     @NameInMap("recordUserIdentifier")
     public String recordUserIdentifier;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21</p>
      */
     @NameInMap("spentTime")
     public String spentTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9144ef6b72d8exxxxx9e61a4d0</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1e9903d8b3f1xxxxxf9286ef5</p>
      */
     @NameInMap("workitemIdentifier")
     public String workitemIdentifier;

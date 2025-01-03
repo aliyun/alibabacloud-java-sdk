@@ -4,15 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ExportInsightWorkitemStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     @NameInMap("result")
     public java.util.List<ExportInsightWorkitemStatusResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -54,102 +66,221 @@ public class ExportInsightWorkitemStatusResponseBody extends TeaModel {
     }
 
     public static class ExportInsightWorkitemStatusResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>65e836b981d758be7a25xxxx</p>
+         */
         @NameInMap("assignedToId")
         public String assignedToId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>65e836b981d758be7a25xxxx</p>
+         */
         @NameInMap("creatorId")
         public String creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("expectedWorkTime")
         public Long expectedWorkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33166339200000</p>
+         */
         @NameInMap("gmtClosed")
         public Long gmtClosed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1713430241000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33166339200000</p>
+         */
         @NameInMap("gmtDue")
         public Long gmtDue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1713430241000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33166339200000</p>
+         */
         @NameInMap("gmtStart")
         public Long gmtStart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33166339200000</p>
+         */
         @NameInMap("gmtTodo")
         public Long gmtTodo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>701615370</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("isArchived")
         public String isArchived;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("isDeleted")
         public String isDeleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("isDone")
         public String isDone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>61db9af2148974246bexxxx</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c3640ab6233fcc10a7e3aaxxxx</p>
+         */
         @NameInMap("parentId")
         public String parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6135b21fb383ef39551cxxxx,63466a385dc8531eebd7xxxx</p>
+         */
         @NameInMap("participantIds")
         public String participantIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("phase")
         public Integer phase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("priority")
         public Integer priority;
 
         @NameInMap("productId")
         public String productId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>505ac6433dfbda8df0b08bxxxx</p>
+         */
         @NameInMap("projectId")
         public String projectId;
 
+        @NameInMap("serialNumber")
+        public Integer serialNumber;
+
+        /**
+         * <strong>example:</strong>
+         * <p>projex</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>505ac6433dfbda8df0b08bxxxx</p>
+         */
         @NameInMap("sprintId")
         public String sprintId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("stage")
         public Integer stage;
 
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100005</p>
+         */
         @NameInMap("statusId")
         public String statusId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.0</p>
+         */
         @NameInMap("storyPoint")
         public Float storyPoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9uy29901re573f561d69xxxx</p>
+         */
         @NameInMap("subType")
         public String subType;
 
         @NameInMap("subject")
         public String subject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("type")
         public Integer type;
 
         @NameInMap("versionId")
         public String versionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[6a8cdda167415bea1506c7262c]</p>
+         */
         @NameInMap("versions")
         public String versions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("workTime")
         public Long workTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>636f661a612a945bbcdb4cxxxx</p>
+         */
         @NameInMap("workitemId")
         public String workitemId;
 
@@ -316,6 +447,14 @@ public class ExportInsightWorkitemStatusResponseBody extends TeaModel {
         }
         public String getProjectId() {
             return this.projectId;
+        }
+
+        public ExportInsightWorkitemStatusResponseBodyResult setSerialNumber(Integer serialNumber) {
+            this.serialNumber = serialNumber;
+            return this;
+        }
+        public Integer getSerialNumber() {
+            return this.serialNumber;
         }
 
         public ExportInsightWorkitemStatusResponseBodyResult setSource(String source) {

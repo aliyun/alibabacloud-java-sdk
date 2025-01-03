@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class TriggerRepositoryMirrorSyncResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_ILLEGAL_ARGUMENT_ERROR</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>企业不存在</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>37294673-00CA-5B8B-914F-A8B35511E90A</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public TriggerRepositoryMirrorSyncResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class TriggerRepositoryMirrorSyncResponseBody extends TeaModel {
     }
 
     public static class TriggerRepositoryMirrorSyncResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("result")
         public Boolean result;
 

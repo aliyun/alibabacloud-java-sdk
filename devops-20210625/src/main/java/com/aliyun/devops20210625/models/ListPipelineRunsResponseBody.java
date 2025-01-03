@@ -4,24 +4,48 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListPipelineRunsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xzxsasasaas</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     @NameInMap("pipelineRuns")
     public java.util.List<ListPipelineRunsResponseBodyPipelineRuns> pipelineRuns;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -87,24 +111,52 @@ public class ListPipelineRunsResponseBody extends TeaModel {
     }
 
     public static class ListPipelineRunsResponseBodyPipelineRuns extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1222222222</p>
+         */
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("endTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("pipelineId")
         public Long pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("pipelineRunId")
         public Long pipelineRunId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1586863220000</p>
+         */
         @NameInMap("startTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>状态 FAIL 运行失败 SUCCESS 运行成功 RUNNING 运行中</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("triggerMode")
         public Long triggerMode;
 

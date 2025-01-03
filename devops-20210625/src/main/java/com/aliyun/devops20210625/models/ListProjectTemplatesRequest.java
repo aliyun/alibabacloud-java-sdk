@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListProjectTemplatesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Project</p>
      */
     @NameInMap("category")
     public String category;

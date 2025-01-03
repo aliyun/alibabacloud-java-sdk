@@ -4,12 +4,24 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListUserDrawRecordByPkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1789095186553536</p>
+     */
     @NameInMap("aliyunPk")
     public String aliyunPk;
 
+    /**
+     * <strong>example:</strong>
+     * <p>task_group_0000</p>
+     */
     @NameInMap("drawGroup")
     public String drawGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>developer-award-draw-pool_123</p>
+     */
     @NameInMap("drawPoolName")
     public String drawPoolName;
 

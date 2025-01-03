@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AddPipelineRelationsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11,22</p>
      */
     @NameInMap("relObjectIds")
     public String relObjectIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VARIABLE_GROUP</p>
      */
     @NameInMap("relObjectType")
     public String relObjectType;

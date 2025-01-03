@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetFlowTagGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("flowTagGroup")
     public GetFlowTagGroupResponseBodyFlowTagGroup flowTagGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true 接口调用成功，false 接口调用失败</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,15 +81,31 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
     }
 
     public static class GetFlowTagGroupResponseBodyFlowTagGroupFlowTagList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>#1F9AEF</p>
+         */
         @NameInMap("color")
         public String color;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111111111111</p>
+         */
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111111111111</p>
+         */
         @NameInMap("modiferAccountId")
         public String modiferAccountId;
 
@@ -128,15 +160,27 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
     }
 
     public static class GetFlowTagGroupResponseBodyFlowTagGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1111111111111</p>
+         */
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
         @NameInMap("flowTagList")
         public java.util.List<GetFlowTagGroupResponseBodyFlowTagGroupFlowTagList> flowTagList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111111111111</p>
+         */
         @NameInMap("modiferAccountId")
         public String modiferAccountId;
 

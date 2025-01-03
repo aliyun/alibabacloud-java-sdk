@@ -4,32 +4,58 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateCheckRunRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
     @NameInMap("annotations")
     public java.util.List<CreateCheckRunRequestAnnotations> annotations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-15T08:00:00Z</p>
+     */
     @NameInMap("completedAt")
     public String completedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("conclusion")
     public String conclusion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("detailsUrl")
     public String detailsUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>42</p>
+     */
     @NameInMap("externalId")
     public String externalId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40f4ccfe019cdd4a62d4acb0c57130106fc7e1be</p>
      */
     @NameInMap("headSha")
     public String headSha;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-check-ci</p>
      */
     @NameInMap("name")
     public String name;
@@ -37,14 +63,25 @@ public class CreateCheckRunRequest extends TeaModel {
     @NameInMap("output")
     public CreateCheckRunRequestOutput output;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-15T08:00:00Z</p>
+     */
     @NameInMap("startedAt")
     public String startedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>completed</p>
+     */
     @NameInMap("status")
     public String status;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5ebbc0228123212b59xxxxx</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
@@ -167,15 +204,25 @@ public class CreateCheckRunRequest extends TeaModel {
     public static class CreateCheckRunRequestAnnotations extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>notice</p>
          */
         @NameInMap("annotationLevel")
         public String annotationLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("endColumn")
         public Long endColumn;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("endLine")
         public Long endLine;
@@ -188,6 +235,9 @@ public class CreateCheckRunRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo/test.txt</p>
          */
         @NameInMap("path")
         public String path;
@@ -195,11 +245,18 @@ public class CreateCheckRunRequest extends TeaModel {
         @NameInMap("rawDetails")
         public String rawDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("startColumn")
         public Long startColumn;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("startLine")
         public Long startLine;
@@ -289,15 +346,25 @@ public class CreateCheckRunRequest extends TeaModel {
     public static class CreateCheckRunRequestOutputImages extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-image-alt</p>
          */
         @NameInMap("alt")
         public String alt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("caption")
         public String caption;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("imageUrl")
         public String imageUrl;
@@ -348,6 +415,9 @@ public class CreateCheckRunRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mighty Readme report</p>
          */
         @NameInMap("title")
         public String title;

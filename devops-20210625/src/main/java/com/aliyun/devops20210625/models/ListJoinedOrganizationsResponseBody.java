@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListJoinedOrganizationsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("organizations")
     public java.util.List<ListJoinedOrganizationsResponseBodyOrganizations> organizations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11D0EE6E-5803-5D4C-A652-E672BE1F3D8E</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
     }
 
     public static class ListJoinedOrganizationsResponseBodyOrganizations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>65f25d0fa54c216dcf6b1dbd</p>
+         */
         @NameInMap("id")
         public String id;
 

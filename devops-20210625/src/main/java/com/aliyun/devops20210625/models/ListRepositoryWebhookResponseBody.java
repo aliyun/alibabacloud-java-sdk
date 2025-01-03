@@ -10,15 +10,27 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HC93CE1A-8D7A-13A9-8306-7465DE2E5C0F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListRepositoryWebhookResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("total")
     public Long total;
 
@@ -76,39 +88,75 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
     }
 
     public static class ListRepositoryWebhookResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 14:24:54</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enableSslVerification")
         public Boolean enableSslVerification;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16776</p>
+         */
         @NameInMap("id")
         public Long id;
 
         @NameInMap("lastTestResult")
         public String lastTestResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("mergeRequestsEvents")
         public Boolean mergeRequestsEvents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("noteEvents")
         public Boolean noteEvents;
 
         @NameInMap("projectId")
         public Long projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("pushEvents")
         public Boolean pushEvents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("secretToken")
         public String secretToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("tagPushEvents")
         public Boolean tagPushEvents;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxxx">https://xxxx</a></p>
+         */
         @NameInMap("url")
         public String url;
 

@@ -26,12 +26,18 @@ public class UpdateTestCaseRequest extends TeaModel {
     public static class UpdateTestCaseRequestUpdateWorkitemPropertyRequest extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tc.type</p>
          */
         @NameInMap("fieldIdentifier")
         public String fieldIdentifier;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a032xx28107xxxx53e87a9</p>
          */
         @NameInMap("fieldValue")
         public String fieldValue;

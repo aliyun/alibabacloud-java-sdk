@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteWorkitemCommentRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12xx34</p>
      */
     @NameInMap("commentId")
     public Long commentId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e8b2xxxxxx2abdxxxxxxxx23</p>
      */
     @NameInMap("identifier")
     public String identifier;

@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetBranchInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6177543A-8D54-5736-A93B-E0195A1512CB</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public GetBranchInfoResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,21 +81,45 @@ public class GetBranchInfoResponseBody extends TeaModel {
     }
 
     public static class GetBranchInfoResponseBodyResultCommitAuthor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>28056</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup-test</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testtest</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -139,21 +179,45 @@ public class GetBranchInfoResponseBody extends TeaModel {
     }
 
     public static class GetBranchInfoResponseBodyResultCommitCommitter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></p>
+         */
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5035</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup-commit</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>commitcommit</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -213,9 +277,17 @@ public class GetBranchInfoResponseBody extends TeaModel {
     }
 
     public static class GetBranchInfoResponseBodyResultCommitSignature extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("gpgKeyId")
         public String gpgKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>verified</p>
+         */
         @NameInMap("verificationStatus")
         public String verificationStatus;
 
@@ -246,33 +318,61 @@ public class GetBranchInfoResponseBody extends TeaModel {
         @NameInMap("author")
         public GetBranchInfoResponseBodyResultCommitAuthor author;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("authorEmail")
         public String authorEmail;
 
         @NameInMap("authorName")
         public String authorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 08:00:00</p>
+         */
         @NameInMap("authoredDate")
         public String authoredDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("commentsCount")
         public Long commentsCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 09:00:00</p>
+         */
         @NameInMap("committedDate")
         public String committedDate;
 
         @NameInMap("committer")
         public GetBranchInfoResponseBodyResultCommitCommitter committer;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("committerEmail")
         public String committerEmail;
 
         @NameInMap("committerName")
         public String committerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-18 10:00:00</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e0297d8fb0393c833a8531e7cc8832739e3cba6d</p>
+         */
         @NameInMap("id")
         public String id;
 
@@ -282,6 +382,10 @@ public class GetBranchInfoResponseBody extends TeaModel {
         @NameInMap("parentIds")
         public java.util.List<String> parentIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e0297d8f</p>
+         */
         @NameInMap("shortId")
         public String shortId;
 
@@ -430,9 +534,17 @@ public class GetBranchInfoResponseBody extends TeaModel {
         @NameInMap("commit")
         public GetBranchInfoResponseBodyResultCommit commit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("protected")
         public String _protected;
 

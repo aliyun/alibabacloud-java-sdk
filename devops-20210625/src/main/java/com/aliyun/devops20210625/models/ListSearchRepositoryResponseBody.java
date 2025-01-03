@@ -4,21 +4,41 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListSearchRepositoryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Openapi.RequestError</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F7B85D1B-D1C2-140F-A039-341859F130B9</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListSearchRepositoryResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("total")
     public Long total;
 
@@ -76,21 +96,41 @@ public class ListSearchRepositoryResponseBody extends TeaModel {
     }
 
     public static class ListSearchRepositoryResponseBodyResultHighlightTextMap extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("creatorUserId")
         public String creatorUserId;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("readMe")
         public String readMe;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup/test-repo</p>
+         */
         @NameInMap("repoNameWithNamespace")
         public String repoNameWithNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup/test-repo</p>
+         */
         @NameInMap("repoPath")
         public String repoPath;
 
@@ -150,27 +190,55 @@ public class ListSearchRepositoryResponseBody extends TeaModel {
     }
 
     public static class ListSearchRepositoryResponseBodyResultSource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-10-10 10:10:10</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-11-11 11:11:11</p>
+         */
         @NameInMap("lastActivityTime")
         public String lastActivityTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62a94a8611fc0f0c9e2a7bc1</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("readMe")
         public String readMe;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-repo</p>
+         */
         @NameInMap("repoName")
         public String repoName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>codeup/test-repo</p>
+         */
         @NameInMap("repoPath")
         public String repoPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("visibilityLevel")
         public Integer visibilityLevel;
 
@@ -246,6 +314,10 @@ public class ListSearchRepositoryResponseBody extends TeaModel {
     }
 
     public static class ListSearchRepositoryResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>60d54f3daccf2bbd6659f3ad/gitlabhq/master/config/environments/test.rb</p>
+         */
         @NameInMap("docId")
         public String docId;
 

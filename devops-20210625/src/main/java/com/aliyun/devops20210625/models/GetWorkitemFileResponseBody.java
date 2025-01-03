@@ -4,18 +4,33 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetWorkitemFileResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public String success;
 
@@ -68,18 +83,38 @@ public class GetWorkitemFileResponseBody extends TeaModel {
     }
 
     public static class GetWorkitemFileResponseBodyWorkitemFile extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sddrdfdf123df</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ddc.pdf</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
         @NameInMap("size")
         public Integer size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pdf</p>
+         */
         @NameInMap("suffix")
         public String suffix;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://tmaestro-oss.oss-cn-hongkong.aliyuncs.com/thread_1682129288279.log">http://tmaestro-oss.oss-cn-hongkong.aliyuncs.com/thread_1682129288279.log</a></p>
+         */
         @NameInMap("url")
         public String url;
 

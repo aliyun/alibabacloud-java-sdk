@@ -4,6 +4,10 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateCommitWithMultipleFilesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0b1e61db5961df5975a93f9129d2513</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 
@@ -15,15 +19,25 @@ public class CreateCommitWithMultipleFilesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>master</p>
      */
     @NameInMap("branch")
     public String branch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>auto</p>
+     */
     @NameInMap("commitMessage")
     public String commitMessage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5ebbc0228123212b59xxxxx</p>
      */
     @NameInMap("organizationId")
     public String organizationId;
@@ -88,15 +102,31 @@ public class CreateCommitWithMultipleFilesRequest extends TeaModel {
     }
 
     public static class CreateCommitWithMultipleFilesRequestActions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>create</p>
+         */
         @NameInMap("action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>src/test.java</p>
+         */
         @NameInMap("filePath")
         public String filePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>src/main/test.java</p>
+         */
         @NameInMap("previousPath")
         public String previousPath;
 

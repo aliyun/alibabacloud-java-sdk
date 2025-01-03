@@ -4,18 +4,34 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListMergeRequestLabelsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Invalid.IdNotFound</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4D6AF7CC-B43B-5454-86AB-023D25E44868</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListMergeRequestLabelsResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,12 +81,20 @@ public class ListMergeRequestLabelsResponseBody extends TeaModel {
     }
 
     public static class ListMergeRequestLabelsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>#A16AD7</p>
+         */
         @NameInMap("color")
         public String color;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f2bf0e0b4ce34a348b2d971c69a1d11f</p>
+         */
         @NameInMap("id")
         public String id;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListServiceConnectionsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>codeup</p>
      */
     @NameInMap("sericeConnectionType")
     public String sericeConnectionType;

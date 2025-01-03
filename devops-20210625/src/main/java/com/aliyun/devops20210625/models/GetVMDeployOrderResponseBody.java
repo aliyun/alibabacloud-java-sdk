@@ -7,15 +7,31 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
     @NameInMap("deployOrder")
     public GetVMDeployOrderResponseBodyDeployOrder deployOrder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”“</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true 接口调用成功，false 接口调用失败</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
     }
 
     public static class GetVMDeployOrderResponseBodyDeployOrderActions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("disable")
         public Boolean disable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("params")
         public Object params;
 
+        /**
+         * <strong>example:</strong>
+         * <p>StopVMDeployOrder</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -106,12 +134,24 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
     }
 
     public static class GetVMDeployOrderResponseBodyDeployOrderDeployMachineInfoDeployMachinesActions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("disable")
         public Boolean disable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("params")
         public Object params;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RetryVMDeployMachine</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -150,24 +190,52 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         @NameInMap("actions")
         public java.util.List<GetVMDeployOrderResponseBodyDeployOrderDeployMachineInfoDeployMachinesActions> actions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("batchNum")
         public Integer batchNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("clientStatus")
         public String clientStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111111111</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("ip")
         public String ip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sasssasa</p>
+         */
         @NameInMap("machineSn")
         public String machineSn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11111111</p>
+         */
         @NameInMap("updateTime")
         public Long updateTime;
 
@@ -243,12 +311,20 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
     }
 
     public static class GetVMDeployOrderResponseBodyDeployOrderDeployMachineInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("batchNum")
         public Integer batchNum;
 
         @NameInMap("deployMachines")
         public java.util.List<GetVMDeployOrderResponseBodyDeployOrderDeployMachineInfoDeployMachines> deployMachines;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111</p>
+         */
         @NameInMap("hostGroupId")
         public Long hostGroupId;
 
@@ -287,30 +363,58 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         @NameInMap("actions")
         public java.util.List<GetVMDeployOrderResponseBodyDeployOrderActions> actions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111111111111</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ssaassa</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("currentBatch")
         public Integer currentBatch;
 
         @NameInMap("deployMachineInfo")
         public GetVMDeployOrderResponseBodyDeployOrderDeployMachineInfo deployMachineInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11111</p>
+         */
         @NameInMap("deployOrderId")
         public String deployOrderId;
 
         @NameInMap("exceptionCode")
         public String exceptionCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("totalBatch")
         public Integer totalBatch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11111111111</p>
+         */
         @NameInMap("updateTime")
         public Long updateTime;
 
