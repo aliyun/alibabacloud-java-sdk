@@ -4,18 +4,43 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class ListFileSystemsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("InputRegionId")
     public String inputRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Limit")
     public Integer limit;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("StartOffset")
     public Integer startOffset;
 
@@ -38,6 +63,14 @@ public class ListFileSystemsRequest extends TeaModel {
     }
     public Integer getLimit() {
         return this.limit;
+    }
+
+    public ListFileSystemsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListFileSystemsRequest setOrderBy(String orderBy) {

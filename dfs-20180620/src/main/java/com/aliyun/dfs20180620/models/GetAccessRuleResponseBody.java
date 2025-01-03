@@ -7,6 +7,10 @@ public class GetAccessRuleResponseBody extends TeaModel {
     @NameInMap("AccessRule")
     public GetAccessRuleResponseBodyAccessRule accessRule;
 
+    /**
+     * <strong>example:</strong>
+     * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class GetAccessRuleResponseBody extends TeaModel {
     }
 
     public static class GetAccessRuleResponseBodyAccessRule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
+         */
         @NameInMap("AccessGroupId")
         public String accessGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acr-c38028f0-f313-4385-9456-3501b1f5****</p>
+         */
         @NameInMap("AccessRuleId")
         public String accessRuleId;
 
@@ -44,15 +56,31 @@ public class GetAccessRuleResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.0.2.0/24</p>
+         */
         @NameInMap("NetworkSegment")
         public String networkSegment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RDWR</p>
+         */
         @NameInMap("RWAccessType")
         public String RWAccessType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

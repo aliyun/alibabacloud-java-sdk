@@ -4,12 +4,24 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class ListUserGroupsMappingsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HasMore")
     public Boolean hasMore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user1</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,6 +69,10 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
         @NameInMap("GroupNames")
         public java.util.List<String> groupNames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user1</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

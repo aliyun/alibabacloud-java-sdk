@@ -7,9 +7,20 @@ public class ListFileSystemsResponseBody extends TeaModel {
     @NameInMap("FileSystems")
     public java.util.List<ListFileSystemsResponseBodyFileSystems> fileSystems;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
+     * <strong>example:</strong>
+     * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -24,6 +35,14 @@ public class ListFileSystemsResponseBody extends TeaModel {
     }
     public java.util.List<ListFileSystemsResponseBodyFileSystems> getFileSystems() {
         return this.fileSystems;
+    }
+
+    public ListFileSystemsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListFileSystemsResponseBody setRequestId(String requestId) {
@@ -52,48 +71,108 @@ public class ListFileSystemsResponseBody extends TeaModel {
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MyFirstHDFS</p>
+         */
         @NameInMap("FileSystemName")
         public String fileSystemName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>107374182400</p>
+         */
         @NameInMap("MeteringSpaceSize")
         public Float meteringSpaceSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MountPointCount")
         public Long mountPointCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("NumberOfDirectories")
         public Long numberOfDirectories;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("NumberOfFiles")
         public Long numberOfFiles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HDFS</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("ProvisionedThroughputInMiBps")
         public Long provisionedThroughputInMiBps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("SpaceCapacity")
         public Long spaceCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StoragePackageId")
         public String storagePackageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("ThroughputMode")
         public String throughputMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("UsedSpaceSize")
         public Float usedSpaceSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

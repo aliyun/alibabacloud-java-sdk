@@ -7,9 +7,20 @@ public class ListAccessRulesResponseBody extends TeaModel {
     @NameInMap("AccessRules")
     public java.util.List<ListAccessRulesResponseBodyAccessRules> accessRules;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
+     * <strong>example:</strong>
+     * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -24,6 +35,14 @@ public class ListAccessRulesResponseBody extends TeaModel {
     }
     public java.util.List<ListAccessRulesResponseBodyAccessRules> getAccessRules() {
         return this.accessRules;
+    }
+
+    public ListAccessRulesResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListAccessRulesResponseBody setRequestId(String requestId) {
@@ -43,9 +62,17 @@ public class ListAccessRulesResponseBody extends TeaModel {
     }
 
     public static class ListAccessRulesResponseBodyAccessRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
+         */
         @NameInMap("AccessGroupId")
         public String accessGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acr-c38028f0-f313-4385-9456-3501b1f5****</p>
+         */
         @NameInMap("AccessRuleId")
         public String accessRuleId;
 
@@ -55,15 +82,31 @@ public class ListAccessRulesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.0.2.0/24</p>
+         */
         @NameInMap("NetworkSegment")
         public String networkSegment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RDWR</p>
+         */
         @NameInMap("RWAccessType")
         public String RWAccessType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

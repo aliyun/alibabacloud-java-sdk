@@ -7,21 +7,46 @@ public class ModifyFileSystemRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MyFirstModDFS</p>
+     */
     @NameInMap("FileSystemName")
     public String fileSystemName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("InputRegionId")
     public String inputRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("ProvisionedThroughputInMiBps")
     public Long provisionedThroughputInMiBps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("SpaceCapacity")
     public Long spaceCapacity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Standard</p>
+     */
     @NameInMap("ThroughputMode")
     public String throughputMode;
 

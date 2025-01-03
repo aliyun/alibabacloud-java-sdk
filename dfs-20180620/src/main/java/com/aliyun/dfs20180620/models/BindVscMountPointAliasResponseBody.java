@@ -4,9 +4,17 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class BindVscMountPointAliasResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>sdfe</p>
+     */
     @NameInMap("MountPointAlias")
     public String mountPointAlias;
 
+    /**
+     * <strong>example:</strong>
+     * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

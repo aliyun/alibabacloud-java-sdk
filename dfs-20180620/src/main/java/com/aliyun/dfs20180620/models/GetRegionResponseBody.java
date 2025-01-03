@@ -7,6 +7,10 @@ public class GetRegionResponseBody extends TeaModel {
     @NameInMap("AvailableZones")
     public java.util.List<GetRegionResponseBodyAvailableZones> availableZones;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AEC07154-5A4C-4B34-BB74-0893C6E9****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class GetRegionResponseBody extends TeaModel {
     }
 
     public static class GetRegionResponseBodyAvailableZonesOptions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HDFS</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
@@ -65,6 +77,10 @@ public class GetRegionResponseBody extends TeaModel {
         @NameInMap("Options")
         public java.util.List<GetRegionResponseBodyAvailableZonesOptions> options;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

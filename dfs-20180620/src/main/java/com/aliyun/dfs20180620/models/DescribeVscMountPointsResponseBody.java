@@ -7,9 +7,17 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
     @NameInMap("MountPoints")
     public java.util.List<DescribeVscMountPointsResponseBodyMountPoints> mountPoints;
 
+    /**
+     * <strong>example:</strong>
+     * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -84,9 +92,17 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
     }
 
     public static class DescribeVscMountPointsResponseBodyMountPointsInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;ecs-instance1&quot;, &quot;ecs-instance2&quot;]</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -128,15 +144,27 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("InstanceTotalCount")
         public Integer instanceTotalCount;
 
         @NameInMap("Instances")
         public java.util.List<DescribeVscMountPointsResponseBodyMountPointsInstances> instances;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hdfs1</p>
+         */
         @NameInMap("MountPointAlias")
         public String mountPointAlias;
 
+        /**
+         * <strong>example:</strong>
+         * <p>037cb49e1d-c***5</p>
+         */
         @NameInMap("MountPointId")
         public String mountPointId;
 

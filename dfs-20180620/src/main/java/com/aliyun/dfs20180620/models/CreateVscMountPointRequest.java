@@ -7,12 +7,31 @@ public class CreateVscMountPointRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e389e5c7-bcb4-4558-846a-e5afc444****</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("InputRegionId")
     public String inputRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[
+     *       &quot;i-bp1g6zv0ce8oghu7****&quot;,
+     *       &quot;i-bp1g6zv0ce8oghu1****&quot;
+     * ]</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
