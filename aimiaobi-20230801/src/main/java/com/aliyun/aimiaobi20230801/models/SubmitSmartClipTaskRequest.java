@@ -7,6 +7,9 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
     @NameInMap("EditingConfig")
     public SubmitSmartClipTaskRequestEditingConfig editingConfig;
 
+    @NameInMap("ExtendParam")
+    public String extendParam;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -35,6 +38,14 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         return this.editingConfig;
     }
 
+    public SubmitSmartClipTaskRequest setExtendParam(String extendParam) {
+        this.extendParam = extendParam;
+        return this;
+    }
+    public String getExtendParam() {
+        return this.extendParam;
+    }
+
     public SubmitSmartClipTaskRequest setInputConfig(SubmitSmartClipTaskRequestInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -57,6 +68,231 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public static class SubmitSmartClipTaskRequestEditingConfigBackgroundMusicConfig extends TeaModel {
+        @NameInMap("Style")
+        public String style;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Volume")
+        public Double volume;
+
+        public static SubmitSmartClipTaskRequestEditingConfigBackgroundMusicConfig build(java.util.Map<String, ?> map) throws Exception {
+            SubmitSmartClipTaskRequestEditingConfigBackgroundMusicConfig self = new SubmitSmartClipTaskRequestEditingConfigBackgroundMusicConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigBackgroundMusicConfig setStyle(String style) {
+            this.style = style;
+            return this;
+        }
+        public String getStyle() {
+            return this.style;
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigBackgroundMusicConfig setVolume(Double volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Double getVolume() {
+            return this.volume;
+        }
+
+    }
+
+    public static class SubmitSmartClipTaskRequestEditingConfigMediaConfig extends TeaModel {
+        @NameInMap("Volume")
+        public Double volume;
+
+        public static SubmitSmartClipTaskRequestEditingConfigMediaConfig build(java.util.Map<String, ?> map) throws Exception {
+            SubmitSmartClipTaskRequestEditingConfigMediaConfig self = new SubmitSmartClipTaskRequestEditingConfigMediaConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigMediaConfig setVolume(Double volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Double getVolume() {
+            return this.volume;
+        }
+
+    }
+
+    public static class SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig extends TeaModel {
+        @NameInMap("Alignment")
+        public String alignment;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SimSun</p>
+         */
+        @NameInMap("Font")
+        public String font;
+
+        /**
+         * <strong>example:</strong>
+         * <p>#ffffff</p>
+         */
+        @NameInMap("FontColor")
+        public String fontColor;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("FontSize")
+        public String fontSize;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("Spacing")
+        public String spacing;
+
+        @NameInMap("X")
+        public Float x;
+
+        @NameInMap("Y")
+        public Float y;
+
+        public static SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig build(java.util.Map<String, ?> map) throws Exception {
+            SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig self = new SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig setAlignment(String alignment) {
+            this.alignment = alignment;
+            return this;
+        }
+        public String getAlignment() {
+            return this.alignment;
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig setFont(String font) {
+            this.font = font;
+            return this;
+        }
+        public String getFont() {
+            return this.font;
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig setFontColor(String fontColor) {
+            this.fontColor = fontColor;
+            return this;
+        }
+        public String getFontColor() {
+            return this.fontColor;
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig setFontSize(String fontSize) {
+            this.fontSize = fontSize;
+            return this;
+        }
+        public String getFontSize() {
+            return this.fontSize;
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig setSpacing(String spacing) {
+            this.spacing = spacing;
+            return this;
+        }
+        public String getSpacing() {
+            return this.spacing;
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig setX(Float x) {
+            this.x = x;
+            return this;
+        }
+        public Float getX() {
+            return this.x;
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
+        }
+
+    }
+
+    public static class SubmitSmartClipTaskRequestEditingConfigSpeechConfig extends TeaModel {
+        @NameInMap("AsrConfig")
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig asrConfig;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("SpeechRate")
+        public Double speechRate;
+
+        @NameInMap("Style")
+        public String style;
+
+        @NameInMap("Voice")
+        public String voice;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
+        @NameInMap("Volume")
+        public Double volume;
+
+        public static SubmitSmartClipTaskRequestEditingConfigSpeechConfig build(java.util.Map<String, ?> map) throws Exception {
+            SubmitSmartClipTaskRequestEditingConfigSpeechConfig self = new SubmitSmartClipTaskRequestEditingConfigSpeechConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfig setAsrConfig(SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig asrConfig) {
+            this.asrConfig = asrConfig;
+            return this;
+        }
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig getAsrConfig() {
+            return this.asrConfig;
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfig setSpeechRate(Double speechRate) {
+            this.speechRate = speechRate;
+            return this;
+        }
+        public Double getSpeechRate() {
+            return this.speechRate;
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfig setStyle(String style) {
+            this.style = style;
+            return this;
+        }
+        public String getStyle() {
+            return this.style;
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfig setVoice(String voice) {
+            this.voice = voice;
+            return this;
+        }
+        public String getVoice() {
+            return this.voice;
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfig setVolume(Double volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Double getVolume() {
+            return this.volume;
+        }
+
     }
 
     public static class SubmitSmartClipTaskRequestEditingConfigTitleConfig extends TeaModel {
@@ -143,12 +379,45 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
     }
 
     public static class SubmitSmartClipTaskRequestEditingConfig extends TeaModel {
+        @NameInMap("BackgroundMusicConfig")
+        public SubmitSmartClipTaskRequestEditingConfigBackgroundMusicConfig backgroundMusicConfig;
+
+        @NameInMap("MediaConfig")
+        public SubmitSmartClipTaskRequestEditingConfigMediaConfig mediaConfig;
+
+        @NameInMap("SpeechConfig")
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfig speechConfig;
+
         @NameInMap("TitleConfig")
         public SubmitSmartClipTaskRequestEditingConfigTitleConfig titleConfig;
 
         public static SubmitSmartClipTaskRequestEditingConfig build(java.util.Map<String, ?> map) throws Exception {
             SubmitSmartClipTaskRequestEditingConfig self = new SubmitSmartClipTaskRequestEditingConfig();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfig setBackgroundMusicConfig(SubmitSmartClipTaskRequestEditingConfigBackgroundMusicConfig backgroundMusicConfig) {
+            this.backgroundMusicConfig = backgroundMusicConfig;
+            return this;
+        }
+        public SubmitSmartClipTaskRequestEditingConfigBackgroundMusicConfig getBackgroundMusicConfig() {
+            return this.backgroundMusicConfig;
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfig setMediaConfig(SubmitSmartClipTaskRequestEditingConfigMediaConfig mediaConfig) {
+            this.mediaConfig = mediaConfig;
+            return this;
+        }
+        public SubmitSmartClipTaskRequestEditingConfigMediaConfig getMediaConfig() {
+            return this.mediaConfig;
+        }
+
+        public SubmitSmartClipTaskRequestEditingConfig setSpeechConfig(SubmitSmartClipTaskRequestEditingConfigSpeechConfig speechConfig) {
+            this.speechConfig = speechConfig;
+            return this;
+        }
+        public SubmitSmartClipTaskRequestEditingConfigSpeechConfig getSpeechConfig() {
+            return this.speechConfig;
         }
 
         public SubmitSmartClipTaskRequestEditingConfig setTitleConfig(SubmitSmartClipTaskRequestEditingConfigTitleConfig titleConfig) {
