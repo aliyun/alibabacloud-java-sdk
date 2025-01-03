@@ -200,6 +200,9 @@ public class CreateIndexRequest extends TeaModel {
     @NameInMap("StructureType")
     public String structureType;
 
+    @NameInMap("enableHeaders")
+    public Boolean enableHeaders;
+
     @NameInMap("metaExtractColumns")
     public java.util.List<CreateIndexRequestMetaExtractColumns> metaExtractColumns;
 
@@ -342,6 +345,14 @@ public class CreateIndexRequest extends TeaModel {
     }
     public String getStructureType() {
         return this.structureType;
+    }
+
+    public CreateIndexRequest setEnableHeaders(Boolean enableHeaders) {
+        this.enableHeaders = enableHeaders;
+        return this;
+    }
+    public Boolean getEnableHeaders() {
+        return this.enableHeaders;
     }
 
     public CreateIndexRequest setMetaExtractColumns(java.util.List<CreateIndexRequestMetaExtractColumns> metaExtractColumns) {

@@ -423,6 +423,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StructureType", request.structureType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableHeaders)) {
+            query.put("enableHeaders", request.enableHeaders);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.metaExtractColumnsShrink)) {
             query.put("metaExtractColumns", request.metaExtractColumnsShrink);
         }

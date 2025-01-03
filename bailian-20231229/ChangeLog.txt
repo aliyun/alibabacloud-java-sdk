@@ -1,3 +1,10 @@
+2025-01-03 Version: 1.11.3
+- Update API AddFile: add param CategoryType.
+- Update API ApplyFileUploadLease: add param CategoryType.
+- Update API CreateIndex: add param enableHeaders.
+- Update API DescribeFile: update response param.
+
+
 2024-12-26 Version: 1.11.2
 - Update API AddFile: add param CategoryType.
 - Update API ApplyFileUploadLease: add param CategoryType.
