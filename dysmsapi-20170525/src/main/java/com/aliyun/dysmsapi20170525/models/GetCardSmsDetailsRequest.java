@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCardSmsDetailsRequest extends TeaModel {
     /**
+     * <p>Card SMS sending ID, which is the BizCardId field in the response when calling SendCardSms or SendBatchCardSms.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456^0</p>
      */
@@ -12,6 +14,8 @@ public class GetCardSmsDetailsRequest extends TeaModel {
     public String bizCardId;
 
     /**
+     * <p>Digital SMS sending ID, which is the BizDigitalId field in the response when calling SendCardSms or SendBatchCardSms.</p>
+     * 
      * <strong>example:</strong>
      * <p>12346^0</p>
      */
@@ -19,6 +23,8 @@ public class GetCardSmsDetailsRequest extends TeaModel {
     public String bizDigitId;
 
     /**
+     * <p>Text SMS sending ID, which is the BizSmsId field in the response when calling SendCardSms or SendBatchCardSms.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234576^0</p>
      */
@@ -26,6 +32,8 @@ public class GetCardSmsDetailsRequest extends TeaModel {
     public String bizSmsId;
 
     /**
+     * <p>For paginated viewing of sending records, specify the current page number of the sending records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +44,9 @@ public class GetCardSmsDetailsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>For paginated viewing of sending records, specify the number of card SMS records to display per page.</p>
+     * <p>The value range is 1~50.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +54,7 @@ public class GetCardSmsDetailsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Domestic phone number that received the SMS. Format: 11-digit phone number, for example, 1390000****.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +70,8 @@ public class GetCardSmsDetailsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Card SMS sending date, supports querying records from the last 30 days.</p>
+     * <p>Format: yyyyMMdd, for example, 20240112.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

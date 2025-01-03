@@ -1130,7 +1130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询卡片发送详情</p>
+     * <p>Query card sending details</p>
      * 
      * @param request GetCardSmsDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1198,7 +1198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询卡片发送详情</p>
+     * <p>Query card sending details</p>
      * 
      * @param request GetCardSmsDetailsRequest
      * @return GetCardSmsDetailsResponse

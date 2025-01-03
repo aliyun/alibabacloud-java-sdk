@@ -4,17 +4,27 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetCardSmsDetailsResponseBody extends TeaModel {
+    /**
+     * <p>Access denied detail; this field is returned only if the RAM check fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>卡片短信发送结果</p>
+     * <p>Card SMS sending result</p>
      */
     @NameInMap("CardSendDetailDTO")
     public GetCardSmsDetailsResponseBodyCardSendDetailDTO cardSendDetailDTO;
 
     /**
-     * <p>状态码</p>
+     * <p>Request status code.</p>
+     * <ul>
+     * <li>OK indicates a successful request.</li>
+     * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API Error Codes</a>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +33,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>状态描述</p>
+     * <p>Description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -32,6 +42,11 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Indicates whether the API call was successful. Values:</p>
+     * <ul>
+     * <li><strong>true</strong> - <strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -85,7 +100,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
 
     public static class GetCardSmsDetailsResponseBodyCardSendDetailDTORecords extends TeaModel {
         /**
-         * <p>发送错误码</p>
+         * <p>Error code for sending</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -94,7 +109,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String errCode;
 
         /**
-         * <p>客户传输outId</p>
+         * <p>Customer-transmitted outId</p>
          * 
          * <strong>example:</strong>
          * <p>12345678</p>
@@ -103,7 +118,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String outId;
 
         /**
-         * <p>接收短信手机号</p>
+         * <p>Phone number that received the SMS</p>
          * 
          * <strong>example:</strong>
          * <p>156****9080</p>
@@ -112,7 +127,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>接收时间</p>
+         * <p>Receive date</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-27 11:26:35</p>
@@ -121,7 +136,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String receiveDate;
 
         /**
-         * <p>接收短信类型</p>
+         * <p>Receive SMS type</p>
          * 
          * <strong>example:</strong>
          * <p>CARD_SMS</p>
@@ -130,7 +145,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String receiveType;
 
         /**
-         * <p>渲染时间</p>
+         * <p>Render date</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-27 12:13:39</p>
@@ -139,7 +154,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String renderDate;
 
         /**
-         * <p>解析状态.。0：未解析；1：解析成功；3：未解析</p>
+         * <p>Render status. 0: Not rendered; 1: Rendered successfully; 3: Not rendered</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -148,7 +163,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public Long renderStatus;
 
         /**
-         * <p>短信发送时间</p>
+         * <p>Time when the SMS was sent</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-27 11:26:32</p>
@@ -157,7 +172,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String sendDate;
 
         /**
-         * <p>发送状态 1：发送中；2：发送失败；3：发送成功；4：寻址失败</p>
+         * <p>Sending status. 1: Sending; 2: Send failed; 3: Sent successfully; 4: Addressing failed</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -166,7 +181,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public Long sendStatus;
 
         /**
-         * <p>短信内容。只有文本短信有值</p>
+         * <p>SMS content. Only applicable for text messages.</p>
          * 
          * <strong>example:</strong>
          * <p>您收到一条短信消息</p>
@@ -175,7 +190,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String smsContent;
 
         /**
-         * <p>模板code</p>
+         * <p>Template code</p>
          * 
          * <strong>example:</strong>
          * <p>CARD_SMS_6***</p>
@@ -280,7 +295,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
 
     public static class GetCardSmsDetailsResponseBodyCardSendDetailDTO extends TeaModel {
         /**
-         * <p>页码</p>
+         * <p>Current page number</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -289,7 +304,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public Long currentPage;
 
         /**
-         * <p>页数</p>
+         * <p>Page size</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -297,11 +312,14 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>List of card SMS sending records</p>
+         */
         @NameInMap("Records")
         public java.util.List<GetCardSmsDetailsResponseBodyCardSendDetailDTORecords> records;
 
         /**
-         * <p>总量</p>
+         * <p>Total count</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

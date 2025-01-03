@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class QueryExtCodeSignRequest extends TeaModel {
     /**
      * <p>扩展码A3</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>01</p>
@@ -39,7 +38,6 @@ public class QueryExtCodeSignRequest extends TeaModel {
 
     /**
      * <p>签名</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
