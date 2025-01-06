@@ -5,12 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListGatewayRouteOnAuthRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -18,24 +12,13 @@ public class ListGatewayRouteOnAuthRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The unique ID of the gateway.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>gw-c9bc5afd61014165bd58f621b491****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
-     * <p>The authentication method. Valid values:</p>
-     * <ul>
-     * <li>JWT</li>
-     * </ul>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>JWT</p>
      */
     @NameInMap("Type")
     public String type;
