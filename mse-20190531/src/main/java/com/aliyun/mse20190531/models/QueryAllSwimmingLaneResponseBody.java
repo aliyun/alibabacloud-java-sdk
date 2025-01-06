@@ -490,6 +490,13 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
     }
 
     public static class QueryAllSwimmingLaneResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Enable")
+        public String enable;
+
         @NameInMap("EntryRules")
         public java.util.List<QueryAllSwimmingLaneResponseBodyDataEntryRules> entryRules;
 
@@ -565,6 +572,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         public static QueryAllSwimmingLaneResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryAllSwimmingLaneResponseBodyData self = new QueryAllSwimmingLaneResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryAllSwimmingLaneResponseBodyData setEnable(String enable) {
+            this.enable = enable;
+            return this;
+        }
+        public String getEnable() {
+            return this.enable;
         }
 
         public QueryAllSwimmingLaneResponseBodyData setEntryRules(java.util.List<QueryAllSwimmingLaneResponseBodyDataEntryRules> entryRules) {
