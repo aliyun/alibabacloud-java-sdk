@@ -2272,6 +2272,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.monitorSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.monitorSpec, "MonitorSpec", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.schedulerSpec)) {
+            request.schedulerSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.schedulerSpec, "SchedulerSpec", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientVersion)) {
             query.put("ClientVersion", request.clientVersion);
@@ -2323,6 +2327,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.monitorSpecShrink)) {
             query.put("MonitorSpec", request.monitorSpecShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schedulerSpecShrink)) {
+            query.put("SchedulerSpec", request.schedulerSpecShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
