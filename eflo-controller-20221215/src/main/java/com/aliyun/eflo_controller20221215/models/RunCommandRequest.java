@@ -23,13 +23,19 @@ public class RunCommandRequest extends TeaModel {
      * <li>Custom parameter names can only contain a-zA-Z0-9-_, and are case-insensitive.</li>
      * <li>A single custom parameter name cannot exceed 64 bytes.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ZWNobyAxMjM=</p>
      */
     @NameInMap("CommandContent")
     public String commandContent;
+
+    /**
+     * <strong>example:</strong>
+     * <p>c-e996287206324975b5fbe1d***</p>
+     */
+    @NameInMap("CommandId")
+    public String commandId;
 
     /**
      * <p>Encoding method for the script content. Valid values:</p>
@@ -89,6 +95,13 @@ public class RunCommandRequest extends TeaModel {
     public String frequency;
 
     /**
+     * <strong>example:</strong>
+     * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
+     */
+    @NameInMap("Launcher")
+    public String launcher;
+
+    /**
      * <p>Command name.</p>
      * 
      * <strong>example:</strong>
@@ -139,6 +152,13 @@ public class RunCommandRequest extends TeaModel {
      */
     @NameInMap("RepeatMode")
     public String repeatMode;
+
+    /**
+     * <strong>example:</strong>
+     * <p>ProcessTree</p>
+     */
+    @NameInMap("TerminationMode")
+    public String terminationMode;
 
     /**
      * <p>Timeout for executing the command, in seconds. If the command cannot run due to process issues, missing modules, or the absence of the Cloud Assistant Agent, a timeout will occur. After a timeout, the command process will be forcibly terminated. Default value: 60.</p>
@@ -192,6 +212,14 @@ public class RunCommandRequest extends TeaModel {
         return this.commandContent;
     }
 
+    public RunCommandRequest setCommandId(String commandId) {
+        this.commandId = commandId;
+        return this;
+    }
+    public String getCommandId() {
+        return this.commandId;
+    }
+
     public RunCommandRequest setContentEncoding(String contentEncoding) {
         this.contentEncoding = contentEncoding;
         return this;
@@ -224,6 +252,14 @@ public class RunCommandRequest extends TeaModel {
         return this.frequency;
     }
 
+    public RunCommandRequest setLauncher(String launcher) {
+        this.launcher = launcher;
+        return this;
+    }
+    public String getLauncher() {
+        return this.launcher;
+    }
+
     public RunCommandRequest setName(String name) {
         this.name = name;
         return this;
@@ -254,6 +290,14 @@ public class RunCommandRequest extends TeaModel {
     }
     public String getRepeatMode() {
         return this.repeatMode;
+    }
+
+    public RunCommandRequest setTerminationMode(String terminationMode) {
+        this.terminationMode = terminationMode;
+        return this;
+    }
+    public String getTerminationMode() {
+        return this.terminationMode;
     }
 
     public RunCommandRequest setTimeout(Integer timeout) {
