@@ -126,6 +126,9 @@ public class UpdateClusterRequest extends TeaModel {
     @NameInMap("MonitorSpec")
     public UpdateClusterRequestMonitorSpec monitorSpec;
 
+    @NameInMap("SchedulerSpec")
+    public UpdateClusterRequestSchedulerSpec schedulerSpec;
+
     public static UpdateClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateClusterRequest self = new UpdateClusterRequest();
         return TeaModel.build(map, self);
@@ -235,6 +238,14 @@ public class UpdateClusterRequest extends TeaModel {
         return this.monitorSpec;
     }
 
+    public UpdateClusterRequest setSchedulerSpec(UpdateClusterRequestSchedulerSpec schedulerSpec) {
+        this.schedulerSpec = schedulerSpec;
+        return this;
+    }
+    public UpdateClusterRequestSchedulerSpec getSchedulerSpec() {
+        return this.schedulerSpec;
+    }
+
     public static class UpdateClusterRequestClusterCustomConfiguration extends TeaModel {
         /**
          * <p>The arguments that are used to run the post-processing script.</p>
@@ -292,6 +303,25 @@ public class UpdateClusterRequest extends TeaModel {
         }
         public Boolean getEnableComputeLoadMonitor() {
             return this.enableComputeLoadMonitor;
+        }
+
+    }
+
+    public static class UpdateClusterRequestSchedulerSpec extends TeaModel {
+        @NameInMap("EnableTopologyAwareness")
+        public Boolean enableTopologyAwareness;
+
+        public static UpdateClusterRequestSchedulerSpec build(java.util.Map<String, ?> map) throws Exception {
+            UpdateClusterRequestSchedulerSpec self = new UpdateClusterRequestSchedulerSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateClusterRequestSchedulerSpec setEnableTopologyAwareness(Boolean enableTopologyAwareness) {
+            this.enableTopologyAwareness = enableTopologyAwareness;
+            return this;
+        }
+        public Boolean getEnableTopologyAwareness() {
+            return this.enableTopologyAwareness;
         }
 
     }

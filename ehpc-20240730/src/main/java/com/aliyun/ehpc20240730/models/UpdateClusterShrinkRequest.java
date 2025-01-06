@@ -126,6 +126,9 @@ public class UpdateClusterShrinkRequest extends TeaModel {
     @NameInMap("MonitorSpec")
     public String monitorSpecShrink;
 
+    @NameInMap("SchedulerSpec")
+    public String schedulerSpecShrink;
+
     public static UpdateClusterShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateClusterShrinkRequest self = new UpdateClusterShrinkRequest();
         return TeaModel.build(map, self);
@@ -233,6 +236,14 @@ public class UpdateClusterShrinkRequest extends TeaModel {
     }
     public String getMonitorSpecShrink() {
         return this.monitorSpecShrink;
+    }
+
+    public UpdateClusterShrinkRequest setSchedulerSpecShrink(String schedulerSpecShrink) {
+        this.schedulerSpecShrink = schedulerSpecShrink;
+        return this;
+    }
+    public String getSchedulerSpecShrink() {
+        return this.schedulerSpecShrink;
     }
 
 }

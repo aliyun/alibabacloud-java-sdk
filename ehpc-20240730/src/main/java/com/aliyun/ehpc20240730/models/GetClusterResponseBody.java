@@ -231,6 +231,9 @@ public class GetClusterResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SchedulerSpec")
+    public GetClusterResponseBodySchedulerSpec schedulerSpec;
+
     /**
      * <p>The security group ID.</p>
      * 
@@ -427,6 +430,14 @@ public class GetClusterResponseBody extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public GetClusterResponseBody setSchedulerSpec(GetClusterResponseBodySchedulerSpec schedulerSpec) {
+        this.schedulerSpec = schedulerSpec;
+        return this;
+    }
+    public GetClusterResponseBodySchedulerSpec getSchedulerSpec() {
+        return this.schedulerSpec;
     }
 
     public GetClusterResponseBody setSecurityGroupId(String securityGroupId) {
@@ -849,6 +860,25 @@ public class GetClusterResponseBody extends TeaModel {
         }
         public Boolean getEnableComputeLoadMonitor() {
             return this.enableComputeLoadMonitor;
+        }
+
+    }
+
+    public static class GetClusterResponseBodySchedulerSpec extends TeaModel {
+        @NameInMap("EnableTopologyAwareness")
+        public Boolean enableTopologyAwareness;
+
+        public static GetClusterResponseBodySchedulerSpec build(java.util.Map<String, ?> map) throws Exception {
+            GetClusterResponseBodySchedulerSpec self = new GetClusterResponseBodySchedulerSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public GetClusterResponseBodySchedulerSpec setEnableTopologyAwareness(Boolean enableTopologyAwareness) {
+            this.enableTopologyAwareness = enableTopologyAwareness;
+            return this;
+        }
+        public Boolean getEnableTopologyAwareness() {
+            return this.enableTopologyAwareness;
         }
 
     }
