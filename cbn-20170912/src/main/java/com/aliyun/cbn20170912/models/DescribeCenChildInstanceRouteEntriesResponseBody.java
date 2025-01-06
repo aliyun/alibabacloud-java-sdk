@@ -212,9 +212,10 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         /**
          * <p>The type of the peer network instance on which the overlapping routes are found. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong></li>
-         * <li><strong>VBR</strong></li>
-         * <li><strong>CCN</strong></li>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li><strong>VBR</strong>: VBR</li>
+         * <li><strong>CCN</strong>: CCN instance</li>
+         * <li><strong>ECR</strong>: ECR</li>
          * </ul>
          * 
          * <strong>example:</strong>

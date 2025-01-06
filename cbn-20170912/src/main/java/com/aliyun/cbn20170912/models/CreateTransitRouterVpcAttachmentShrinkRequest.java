@@ -119,6 +119,9 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
+    /**
+     * <p>Feature configurations of the VPC connection.</p>
+     */
     @NameInMap("TransitRouterVPCAttachmentOptions")
     public String transitRouterVPCAttachmentOptionsShrink;
 

@@ -97,7 +97,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
 
     public static class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues extends TeaModel {
         /**
-         * <p>带宽保障类型为按绝对值模式时，当前队列分配的跨地域带宽的值。</p>
+         * <p>If the QoS queues are assigned absolute bandwidth values, this parameter indicates the absolute bandwidth value that is allocated to the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -112,7 +112,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         public java.util.List<Integer> dscps;
 
         /**
-         * <p>当前队列实际生效的带宽值。</p>
+         * <p>The actual bandwidth value of the current queue.</p>
          * 
          * <strong>example:</strong>
          * <p>1.35</p>
@@ -148,7 +148,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         public String qosQueueName;
 
         /**
-         * <p>The percentage of the inter-region bandwidth that can be used by the queue.</p>
+         * <p>If the QoS queues are assigned bandwidth percentages, this parameter indicates the percentage of bandwidth that is allocated to the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -221,10 +221,10 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
 
     public static class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies extends TeaModel {
         /**
-         * <p>带宽保障类型。</p>
+         * <p>The guaranteed bandwidth mode.</p>
          * <ul>
-         * <li><strong>byBandwidth</strong>：按带宽绝对值模式配置QoS队列。</li>
-         * <li><strong>byBandwidthPercent</strong>：按带宽百分比模式配置QoS队列。</li>
+         * <li><strong>byBandwidth</strong>: allocates absolute bandwidth values to QoS queues.</li>
+         * <li><strong>byBandwidthPercent</strong>: assigns bandwidth percentages to QoS queues.</li>
          * </ul>
          * 
          * <strong>example:</strong>

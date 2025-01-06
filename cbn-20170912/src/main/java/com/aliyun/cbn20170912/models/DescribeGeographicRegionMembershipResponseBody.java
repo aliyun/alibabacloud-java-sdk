@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,16 +14,23 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The list of regions.</p>
+     */
     @NameInMap("RegionIds")
     public DescribeGeographicRegionMembershipResponseBodyRegionIds regionIds;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>DC9EB0C9-60AF-4A09-A36C-608F70130274</p>
      */
@@ -29,6 +38,8 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +93,9 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
 
     public static class DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId extends TeaModel {
         /**
+         * <p>The ID of the region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * 
          * <strong>example:</strong>
          * <p>us-west-1</p>
          */

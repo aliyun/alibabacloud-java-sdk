@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     /**
-     * <p>按照实际的生效带宽值进行过滤，只允许输入正整数，单位Mbps。</p>
+     * <p>The filter works based on the actual bandwidth. Enter a positive integer. Unit: Mbit/s.</p>
      */
     @NameInMap("EffectiveBandwidthFilter")
     public ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter effectiveBandwidthFilter;
@@ -211,7 +211,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
 
     public static class ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter extends TeaModel {
         /**
-         * <p>实际生效带宽大于或等于指定带宽值。</p>
+         * <p>The actual bandwidth is equal to or larger than the specified value.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -220,7 +220,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
         public Long gte;
 
         /**
-         * <p>实际生效带宽小于或等于指定带宽值。</p>
+         * <p>The actual bandwidth is equal to or smaller than the specified value.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

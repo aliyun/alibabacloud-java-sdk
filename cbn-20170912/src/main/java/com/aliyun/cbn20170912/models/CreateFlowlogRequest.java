@@ -29,7 +29,7 @@ public class CreateFlowlogRequest extends TeaModel {
 
     /**
      * <p>The description of the flow log.</p>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>myFlowlog</p>
@@ -38,8 +38,8 @@ public class CreateFlowlogRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the flow log.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The flow log name.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>myFlowlog</p>
@@ -56,11 +56,22 @@ public class CreateFlowlogRequest extends TeaModel {
     @NameInMap("Interval")
     public Long interval;
 
+    /**
+     * <p>The strings that define the fields in the flow log.</p>
+     * <p>Format: <code>${Field 1}${Field 2}${Field 3}...{Field n}</code></p>
+     * <ul>
+     * <li>If you do not configure this parameter, all fields are included in the flow log.</li>
+     * <li>If you configure this parameter, start the string with <code>${srcaddr}${dstaddr}${bytes}</code> because <code>${srcaddr}${dstaddr}${bytes}</code> are required variables. For more information about the fields supported by flow logs, see <a href="https://help.aliyun.com/document_detail/339822.html">Configure a flow log</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>${srcaddr}${dstaddr}${bytes}</p>
+     */
     @NameInMap("LogFormatString")
     public String logFormatString;
 
     /**
-     * <p>The Logstore where the flow log is stored.</p>
+     * <p>The Logstore that stores the captured traffic data.</p>
      * <ul>
      * <li><p>If a Logstore is already created in the selected region, enter the name of the Logstore.</p>
      * </li>
@@ -69,7 +80,7 @@ public class CreateFlowlogRequest extends TeaModel {
      * <li>The name must be unique in a project.</li>
      * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
      * <li>The name must start and end with a lowercase letter or a digit.</li>
-     * <li>The name must be 3 to 63 characters in length.</li>
+     * <li>The name must be 3 to 63 characters in length,</li>
      * </ul>
      * </li>
      * </ul>
@@ -88,17 +99,17 @@ public class CreateFlowlogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The Log Service project where the flow log is stored.</p>
+     * <p>The project that stores the captured traffic data.</p>
      * <ul>
      * <li><p>If a project is already created in the selected region, enter the name of the project.</p>
      * </li>
      * <li><p>If no projects are created in the selected region, enter a name and the system automatically creates a project.</p>
-     * <p>The project name must be unique in a region. You cannot change the name after you create the project. The naming conventions are:</p>
+     * <p>The project name must be unique in a region. You cannot change the name after the project is created. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name must be globally unique.</li>
      * <li>The name can contain only lowercase letters, digits, and hyphens (-).</li>
      * <li>The name must start and end with a lowercase letter or a digit.</li>
-     * <li>The name must be 3 to 63 characters in length.</li>
+     * <li>The name must be 3 to 63 characters in length,</li>
      * </ul>
      * </li>
      * </ul>
@@ -128,17 +139,15 @@ public class CreateFlowlogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The information about the tags.</p>
-     * <p>You can specify at most 20 tags in each call.</p>
+     * <p>The tags.</p>
+     * <p>You can specify at most 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateFlowlogRequestTag> tag;
 
     /**
-     * <p>The ID of the inter-region connection or the VBR connection.</p>
-     * <blockquote>
-     * <p>This parameter is required.</p>
-     * </blockquote>
+     * <p>The ID of the VPC connection, VPN connection, VBR connection, ECR connection, or inter-region connection.</p>
+     * <p>If you create the flow log for a transfer router, skip this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-attach-r6g0m3epjehw57****</p>
@@ -146,6 +155,12 @@ public class CreateFlowlogRequest extends TeaModel {
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
+    /**
+     * <p>The ID of the transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-bp1rmwxnk221e3fas****</p>
+     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
@@ -284,9 +299,9 @@ public class CreateFlowlogRequest extends TeaModel {
 
     public static class CreateFlowlogRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The tag keys.</p>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length. The tag keys cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify at most 20 tag keys in each call.</p>
          * 
          * <strong>example:</strong>
          * <p>TagKey</p>
@@ -295,9 +310,9 @@ public class CreateFlowlogRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>The tag values.</p>
+         * <p>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>

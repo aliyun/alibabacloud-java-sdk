@@ -220,6 +220,13 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         @NameInMap("FlowLogName")
         public String flowLogName;
 
+        /**
+         * <p>The flow log version.</p>
+         * <p>Flow logs are automatically created in the latest version, which is <strong>3</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("FlowLogVersion")
         public String flowLogVersion;
 
@@ -232,6 +239,13 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         @NameInMap("Interval")
         public Long interval;
 
+        /**
+         * <p>The string that defines the format of the flow log. Format:</p>
+         * <p><code>${Field 1}${Field 2}${Field 3}</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>${srcaddr}${dstaddr}${bytes}</p>
+         */
         @NameInMap("LogFormatString")
         public String logFormatString;
 
@@ -276,7 +290,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>A list of tags.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public DescribeFlowlogsResponseBodyFlowLogsFlowLogTags tags;
@@ -290,6 +304,12 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
+        /**
+         * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-bp1g9313sx675zr1lajmj</p>
+         */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 

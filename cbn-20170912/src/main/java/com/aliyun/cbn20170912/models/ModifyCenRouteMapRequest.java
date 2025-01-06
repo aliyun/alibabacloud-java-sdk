@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyCenRouteMapRequest extends TeaModel {
     /**
-     * <p>The match method that is used to match routes against the AS paths. Valid values:</p>
+     * <p>The match method that is used to match routes based on the AS path. Valid values:</p>
      * <ul>
-     * <li><strong>Include</strong>: fuzzy match. A route meets the match condition if the AS path of the route overlaps with the AS paths specified in the match condition.</li>
-     * <li><strong>Complete</strong>: exact match. A route is a match only if the AS path of the route is the same as an AS path specified in the match condition.</li>
+     * <li><strong>Include</strong>: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path in the match conditions.</li>
+     * <li><strong>Complete</strong>: exact match. A route is a match only if the AS path of the route matches the AS path in the match conditions.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,13 +41,13 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     /**
      * <p>The match method that is used to match routes against the prefix list. Valid values:</p>
      * <ul>
-     * <li><p><strong>Include</strong>: fuzzy match. A route is a match if the route prefix is included in the match conditions.</p>
-     * <p>For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is enabled, the route whose prefix is 10.10.1.0/24 is a match.</p>
-     * </li>
-     * <li><p><strong>Complete</strong>: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.</p>
-     * <p>For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.</p>
-     * </li>
+     * <li><strong>Include</strong>: fuzzy match. A route is a match if the route prefix is included in the match conditions.</li>
      * </ul>
+     * <p>For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is applied, the route whose prefix is 10.10.1.0/24 meets the match condition.</p>
+     * <ul>
+     * <li><strong>Complete</strong>: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.</li>
+     * </ul>
+     * <p>For example, if you set the match condition to 10.10.0.0/16 and exact match is applied, only the route whose prefix is 10.10.0.0/16 meets the match condition.</p>
      * 
      * <strong>example:</strong>
      * <p>Include</p>
@@ -56,10 +56,10 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     public String cidrMatchMode;
 
     /**
-     * <p>The match method that is sed to match routes based on the community. Valid values:</p>
+     * <p>The match method that is used to match routes based on the community. Valid values:</p>
      * <ul>
-     * <li><strong>Include</strong>: fuzzy match. A route meets the match condition if the community of the route overlaps with the community specified in the match condition.</li>
-     * <li><strong>Complete</strong>: exact match. A route meets the match condition only if the community of the route is the same as the community specified in the match condition.</li>
+     * <li><strong>Include</strong>: fuzzy match. A route is a match if the community of the route overlaps with the community in the match conditions.</li>
+     * <li><strong>Complete</strong>: exact match. A route is a match only if the community of the route matches the community in the match conditions.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     public String communityMatchMode;
 
     /**
-     * <p>The action that is performed on the community. Valid values:</p>
+     * <p>The action to be performed on the community. Valid values:</p>
      * <ul>
      * <li><strong>Additive</strong>: adds the community to the route.</li>
      * <li><strong>Replace</strong>: replaces the original community of the route.</li>
@@ -84,7 +84,7 @@ public class ModifyCenRouteMapRequest extends TeaModel {
 
     /**
      * <p>The description of the routing policy.</p>
-     * <p>The description cannot start with <code>http://</code> or <code>https://</code>. It must start with a letter and can contain letters, digits, hyphens (-), periods (.), and underscores (_).</p>
+     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -146,10 +146,10 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     public java.util.List<String> destinationInstanceIds;
 
     /**
-     * <p>Specifies whether to exclude the destination network instance IDs. Valid values:</p>
+     * <p>Specifies whether to exclude destination instance IDs. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default value): A route is a match if its destination network instance ID is in the list specified by <strong>DestinationInstanceIds.N</strong>.</li>
-     * <li><strong>true</strong>: A route meets the match condition if its destination network instance ID is not in the list specified by <strong>DestinationInstanceIds.N</strong>.</li>
+     * <li><strong>false</strong> (default): A route is a match if the destination instance ID is included in the list specified by <strong>SourceInstanceIds.N</strong>.</li>
+     * <li><strong>true</strong>: A route is a match if the destination network instance ID is not in the list specified by <strong>SourceInstanceIds.N</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -158,6 +158,9 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     @NameInMap("DestinationInstanceIdsReverseMatch")
     public Boolean destinationInstanceIdsReverseMatch;
 
+    /**
+     * <p>The destination region IDs of the route. You can specify at most 32 region IDs.</p>
+     */
     @NameInMap("DestinationRegionIds")
     public java.util.List<String> destinationRegionIds;
 
@@ -174,7 +177,7 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     public java.util.List<String> destinationRouteTableIds;
 
     /**
-     * <p>The action to be performed on a route that meets all match conditions. Valid values:</p>
+     * <p>The action to be performed on a route that meets all the match conditions. Valid values:</p>
      * <ul>
      * <li><strong>Permit</strong>: the route is permitted.</li>
      * <li><strong>Deny</strong>: the route is denied.</li>
@@ -371,10 +374,10 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     public java.util.List<String> sourceInstanceIds;
 
     /**
-     * <p>Specifies whether to exclude the source network instance IDs. Valid values:</p>
+     * <p>Specifies whether to exclude source instance IDs. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default value): A route is a match if its source network instance ID is in the list specified by <strong>SourceInstanceIds.N</strong>.</li>
-     * <li><strong>true</strong>: A route is a match if its source network instance ID is not in the list specified by <strong>SourceInstanceIds.N</strong>.</li>
+     * <li><strong>false</strong> (default): A route is a match if the source instance ID is included in the list specified by <strong>SourceInstanceIds.N</strong>.</li>
+     * <li><strong>true</strong>: A route is a match if the source network instance ID is not in the list specified by <strong>SourceInstanceIds.N</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -36,6 +36,9 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("Options")
+    public CreateTransitRouterMulticastDomainRequestOptions options;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -123,6 +126,14 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
         return this.dryRun;
     }
 
+    public CreateTransitRouterMulticastDomainRequest setOptions(CreateTransitRouterMulticastDomainRequestOptions options) {
+        this.options = options;
+        return this;
+    }
+    public CreateTransitRouterMulticastDomainRequestOptions getOptions() {
+        return this.options;
+    }
+
     public CreateTransitRouterMulticastDomainRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -193,6 +204,25 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     }
     public String getTransitRouterMulticastDomainName() {
         return this.transitRouterMulticastDomainName;
+    }
+
+    public static class CreateTransitRouterMulticastDomainRequestOptions extends TeaModel {
+        @NameInMap("Igmpv2Support")
+        public String igmpv2Support;
+
+        public static CreateTransitRouterMulticastDomainRequestOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateTransitRouterMulticastDomainRequestOptions self = new CreateTransitRouterMulticastDomainRequestOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTransitRouterMulticastDomainRequestOptions setIgmpv2Support(String igmpv2Support) {
+            this.igmpv2Support = igmpv2Support;
+            return this;
+        }
+        public String getIgmpv2Support() {
+            return this.igmpv2Support;
+        }
+
     }
 
     public static class CreateTransitRouterMulticastDomainRequestTag extends TeaModel {

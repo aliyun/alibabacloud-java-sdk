@@ -88,7 +88,6 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
      * <li><strong>North-America</strong>: North America</li>
      * <li><strong>Asia-Pacific</strong>: Asia Pacific</li>
      * <li><strong>Europe</strong>: Europe</li>
-     * <li><strong>Australia</strong>: Australia</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -105,7 +104,6 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
      * <li><strong>North-America</strong>: North America</li>
      * <li><strong>Asia-Pacific</strong>: Asia Pacific</li>
      * <li><strong>Europe</strong>: Europe</li>
-     * <li><strong>Australia</strong>: Australia</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

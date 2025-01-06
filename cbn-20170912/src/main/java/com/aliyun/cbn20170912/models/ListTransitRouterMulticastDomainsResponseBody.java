@@ -95,6 +95,25 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         return this.transitRouterMulticastDomains;
     }
 
+    public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions extends TeaModel {
+        @NameInMap("Igmpv2Support")
+        public String igmpv2Support;
+
+        public static ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions self = new ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions setIgmpv2Support(String igmpv2Support) {
+            this.igmpv2Support = igmpv2Support;
+            return this;
+        }
+        public String getIgmpv2Support() {
+            return this.igmpv2Support;
+        }
+
+    }
+
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
@@ -146,6 +165,9 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
          */
         @NameInMap("CenId")
         public String cenId;
+
+        @NameInMap("Options")
+        public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions options;
 
         /**
          * <p>The region ID of the transit router.</p>
@@ -220,6 +242,14 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
         public String getCenId() {
             return this.cenId;
+        }
+
+        public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains setOptions(ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions options) {
+            this.options = options;
+            return this;
+        }
+        public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions getOptions() {
+            return this.options;
         }
 
         public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains setRegionId(String regionId) {

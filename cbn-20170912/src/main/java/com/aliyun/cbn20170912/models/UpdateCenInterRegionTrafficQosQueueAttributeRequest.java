@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaModel {
     /**
-     * <p>按带宽绝对值模式分配时，当前队列可使用的跨地域带宽的绝对值，单位Mbps。</p>
-     * <p>输入数字即可，无需输入单位。</p>
+     * <p>The absolute bandwidth value that can be allocated to the current queue. Unit: Mbit/s.</p>
+     * <p>Enter a number. You do not need to enter a unit.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -80,7 +80,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
     public String qosQueueName;
 
     /**
-     * <p>The percentage of the inter-region bandwidth that can be used by the queue.</p>
+     * <p>The percentage of bandwidth that can be allocated to the current queue.</p>
      * <p>Enter a number. You do not need to enter a percent sign (%).</p>
      * 
      * <strong>example:</strong>
