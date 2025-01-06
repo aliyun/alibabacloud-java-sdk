@@ -361,6 +361,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取推理结果</p>
+     * 
+     * @param request GetPredictionRequest
+     * @param headers GetPredictionHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPredictionResponse
+     */
+    public GetPredictionResponse getPredictionWithOptions(String deploymentId, GetPredictionRequest request, GetPredictionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.token)) {
+            realHeaders.put("Token", com.aliyun.teautil.Common.toJSONString(headers.token));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", request.body)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPrediction"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/deployments/" + deploymentId + "/predict"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "string")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetPredictionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取推理结果</p>
+     * 
+     * @param request GetPredictionRequest
+     * @return GetPredictionResponse
+     */
+    public GetPredictionResponse getPrediction(String deploymentId, GetPredictionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetPredictionHeaders headers = new GetPredictionHeaders();
+        return this.getPredictionWithOptions(deploymentId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取query分析结果</p>
      * 
      * @param request GetQueryAnalysisRequest
