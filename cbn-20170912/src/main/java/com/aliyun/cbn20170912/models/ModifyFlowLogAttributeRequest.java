@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyFlowLogAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-7qthudw0ll6jmc****</p>
@@ -56,6 +56,12 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     @NameInMap("FlowLogName")
     public String flowLogName;
 
+    /**
+     * <p>The time window for collecting log data. Unit: seconds. Valid values: <strong>60</strong> or <strong>600</strong> Default value: <strong>600</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
     @NameInMap("Interval")
     public Long interval;
 

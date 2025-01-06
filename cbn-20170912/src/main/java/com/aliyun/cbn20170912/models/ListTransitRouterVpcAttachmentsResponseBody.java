@@ -277,7 +277,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag key.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;
@@ -318,6 +318,9 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
+        /**
+         * <p>The features of the VPC connection.</p>
+         */
         @NameInMap("TransitRouterVPCAttachmentOptions")
         public java.util.Map<String, String> transitRouterVPCAttachmentOptions;
 

@@ -4,6 +4,16 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
+    /**
+     * <p>The allocation mode of the guaranteed bandwidth. You can specify an absolute bandwidth value or a bandwidth percentage. Valid values:</p>
+     * <ul>
+     * <li><strong>byBandwidth</strong>: allocates an absolute bandwidth value for the QoS queue.</li>
+     * <li><strong>byBandwidthPercent</strong> (default): allocates a bandwidth percentage for the OoS queue.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>byBandwidthPercent</p>
+     */
     @NameInMap("BandwidthGuaranteeMode")
     public String bandwidthGuaranteeMode;
 
@@ -191,6 +201,17 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     }
 
     public static class CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues extends TeaModel {
+        /**
+         * <p>The absolute bandwidth that can be consumed by the QoS queue. Unit: Mbit/s.</p>
+         * <p>Each QoS policy supports at most 10 queues. You can specify a valid bandwidth value for each queue.</p>
+         * <p>For example, a value of 1 specifies that the queue can consume 1 Mbit/s of the inter-region bandwidth.</p>
+         * <blockquote>
+         * <p> The sum of the absolute bandwidth values of all the queues in a QoS policy cannot exceed the total bandwidth of the inter-region connection.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
@@ -203,7 +224,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
 
         /**
          * <p>The description of the current queue.</p>
-         * <p>Each QoS policy supports at most three queues. You can specify a description for each queue.</p>
+         * <p>Each QoS policy supports at most 10 queues. You can specify a description for each queue.</p>
          * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +246,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
 
         /**
          * <p>The percentage of the inter-region bandwidth that can be used by the queue.</p>
-         * <p>Each QoS policy supports at most three queues. You can specify a valid percentage for each queue.</p>
+         * <p>Each QoS policy supports at most 10 queues. You can specify a valid percentage for each queue.</p>
          * <p>For example, a value of <strong>1</strong> specifies that the queue can consume 1% of the inter-region bandwidth.</p>
          * <blockquote>
          * <p> The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</p>

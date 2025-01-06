@@ -96,11 +96,17 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules extends TeaModel {
+        /**
+         * <p>The address family. You can set the value to IPv4 or IPv6, or leave the value empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("AddressFamily")
         public String addressFamily;
 
         /**
-         * <p>The destination CIDR block that is used to match packets.</p>
+         * <p>The destination CIDR block of packets. IPv4 and IPv6 addresses are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.120.0/24</p>
@@ -139,7 +145,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The source CIDR block that is used to match packets.</p>
+         * <p>The source CIDR block of packets. IPv6 and IPv4 addresses are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.10.0/24</p>

@@ -63,8 +63,8 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
 
     public static class ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues extends TeaModel {
         /**
-         * <p>带宽保障类型为按绝对值模式时，当前队列分配跨地域带宽的值。</p>
-         * <p>例如，<strong>1</strong>表示符合当前队列的流量报文最多只能使用1Mbps的跨地域带宽。</p>
+         * <p>The absolute bandwidth value that can be allocated to the current queue.</p>
+         * <p>A value of <strong>1</strong> indicates that the QoS queue can consume at most 1 Mbit/s of inter-region bandwidth.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -79,7 +79,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         public java.util.List<Integer> dscps;
 
         /**
-         * <p>当前队列实际生效的带宽值。</p>
+         * <p>The actual bandwidth of the current queue.</p>
          * 
          * <strong>example:</strong>
          * <p>1.35</p>
@@ -88,7 +88,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         public String effectiveBandwidth;
 
         /**
-         * <p>The percentage of the inter-region bandwidth that can be consumed by the QoS queue.</p>
+         * <p>The percentage of bandwidth that can be allocated to the current queue.</p>
          * <p>A value of <strong>1</strong> indicates that the QoS queue can consume at most 1% of the inter-region bandwidth.</p>
          * 
          * <strong>example:</strong>

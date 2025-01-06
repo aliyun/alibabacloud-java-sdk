@@ -347,7 +347,6 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
          * <li><strong>china</strong>: Chinese mainland.</li>
          * <li><strong>asia-pacific</strong>: Asia Pacific</li>
          * <li><strong>europe</strong>: Europe</li>
-         * <li><strong>australia</strong>: Australia</li>
          * <li><strong>north-america</strong>: North America</li>
          * </ul>
          * 
@@ -363,7 +362,6 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
          * <li><strong>china</strong>: Chinese mainland.</li>
          * <li><strong>asia-pacific</strong>: Asia Pacific</li>
          * <li><strong>europe</strong>: Europe</li>
-         * <li><strong>australia</strong>: Australia</li>
          * <li><strong>north-america</strong>: North America</li>
          * </ul>
          * 

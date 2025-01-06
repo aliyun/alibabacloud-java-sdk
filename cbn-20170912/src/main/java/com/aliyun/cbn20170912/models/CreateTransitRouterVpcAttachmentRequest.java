@@ -119,6 +119,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
+    /**
+     * <p>Feature configurations of the VPC connection.</p>
+     */
     @NameInMap("TransitRouterVPCAttachmentOptions")
     public java.util.Map<String, String> transitRouterVPCAttachmentOptions;
 

@@ -49,6 +49,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
      * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
      * <li><strong>VBR</strong>: virtual border router (VBR)</li>
      * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+     * <li><strong>ECR</strong>: Express Connect Router (ECR)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

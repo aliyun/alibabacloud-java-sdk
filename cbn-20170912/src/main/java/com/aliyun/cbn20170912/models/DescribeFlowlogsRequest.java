@@ -55,9 +55,22 @@ public class DescribeFlowlogsRequest extends TeaModel {
     @NameInMap("FlowLogName")
     public String flowLogName;
 
+    /**
+     * <p>The flow log version.</p>
+     * <p>Flow logs are automatically created in the latest version, which is <strong>3</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("FlowLogVersion")
     public String flowLogVersion;
 
+    /**
+     * <p>The time window for collecting log data. Unit: seconds Valid values: <strong>60</strong> or <strong>600</strong> Default value: <strong>600</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
     @NameInMap("Interval")
     public Integer interval;
 
@@ -78,7 +91,7 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -150,6 +163,12 @@ public class DescribeFlowlogsRequest extends TeaModel {
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
+    /**
+     * <p>The ID of the transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-uf654ttymmljlvh2x****</p>
+     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
