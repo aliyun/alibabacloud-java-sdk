@@ -375,6 +375,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public NearbySearchNovaResponse nearbySearchNovaWithOptions(NearbySearchNovaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cityLimit)) {
+            query.put("cityLimit", request.cityLimit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.keywords)) {
             query.put("keywords", request.keywords);
         }
@@ -446,6 +450,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PlaceSearchNovaResponse placeSearchNovaWithOptions(PlaceSearchNovaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cityLimit)) {
+            query.put("cityLimit", request.cityLimit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.keywords)) {
             query.put("keywords", request.keywords);
         }
