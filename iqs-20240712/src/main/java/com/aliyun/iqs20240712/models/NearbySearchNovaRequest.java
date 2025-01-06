@@ -4,6 +4,9 @@ package com.aliyun.iqs20240712.models;
 import com.aliyun.tea.*;
 
 public class NearbySearchNovaRequest extends TeaModel {
+    @NameInMap("cityLimit")
+    public Boolean cityLimit;
+
     @NameInMap("keywords")
     public String keywords;
 
@@ -52,6 +55,14 @@ public class NearbySearchNovaRequest extends TeaModel {
     public static NearbySearchNovaRequest build(java.util.Map<String, ?> map) throws Exception {
         NearbySearchNovaRequest self = new NearbySearchNovaRequest();
         return TeaModel.build(map, self);
+    }
+
+    public NearbySearchNovaRequest setCityLimit(Boolean cityLimit) {
+        this.cityLimit = cityLimit;
+        return this;
+    }
+    public Boolean getCityLimit() {
+        return this.cityLimit;
     }
 
     public NearbySearchNovaRequest setKeywords(String keywords) {

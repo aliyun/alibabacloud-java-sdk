@@ -4,6 +4,9 @@ package com.aliyun.iqs20240712.models;
 import com.aliyun.tea.*;
 
 public class PlaceSearchNovaRequest extends TeaModel {
+    @NameInMap("cityLimit")
+    public Boolean cityLimit;
+
     @NameInMap("keywords")
     public String keywords;
 
@@ -34,6 +37,14 @@ public class PlaceSearchNovaRequest extends TeaModel {
     public static PlaceSearchNovaRequest build(java.util.Map<String, ?> map) throws Exception {
         PlaceSearchNovaRequest self = new PlaceSearchNovaRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PlaceSearchNovaRequest setCityLimit(Boolean cityLimit) {
+        this.cityLimit = cityLimit;
+        return this;
+    }
+    public Boolean getCityLimit() {
+        return this.cityLimit;
     }
 
     public PlaceSearchNovaRequest setKeywords(String keywords) {
