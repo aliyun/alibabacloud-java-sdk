@@ -236,6 +236,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Diagnostic Task Creation Interface</p>
+     * 
+     * @param tmpReq CreateDiagnosticTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDiagnosticTaskResponse
+     */
+    public CreateDiagnosticTaskResponse createDiagnosticTaskWithOptions(CreateDiagnosticTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDiagnosticTaskShrinkRequest request = new CreateDiagnosticTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.aiJobLogInfo)) {
+            request.aiJobLogInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.aiJobLogInfo, "AiJobLogInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodeIds)) {
+            request.nodeIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodeIds, "NodeIds", "simple");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aiJobLogInfoShrink)) {
+            body.put("AiJobLogInfo", request.aiJobLogInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            body.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diagnosticType)) {
+            body.put("DiagnosticType", request.diagnosticType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIdsShrink)) {
+            body.put("NodeIds", request.nodeIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDiagnosticTask"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDiagnosticTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Diagnostic Task Creation Interface</p>
+     * 
+     * @param request CreateDiagnosticTaskRequest
+     * @return CreateDiagnosticTaskResponse
+     */
+    public CreateDiagnosticTaskResponse createDiagnosticTask(CreateDiagnosticTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDiagnosticTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Delete cluster instance</p>
      * 
      * @param request DeleteClusterRequest
@@ -850,6 +916,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询用户可用的机型列表</p>
+     * 
+     * @param request ListMachineTypesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMachineTypesResponse
+     */
+    public ListMachineTypesResponse listMachineTypesWithOptions(ListMachineTypesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMachineTypes"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMachineTypesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户可用的机型列表</p>
+     * 
+     * @param request ListMachineTypesRequest
+     * @return ListMachineTypesResponse
+     */
+    public ListMachineTypesResponse listMachineTypes(ListMachineTypesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMachineTypesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query Node Group Information Under the Cluster</p>
+     * 
+     * @param request ListNodeGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNodeGroupsResponse
+     */
+    public ListNodeGroupsResponse listNodeGroupsWithOptions(ListNodeGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            body.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
+            body.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNodeGroups"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNodeGroupsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query Node Group Information Under the Cluster</p>
+     * 
+     * @param request ListNodeGroupsRequest
+     * @return ListNodeGroupsResponse
+     */
+    public ListNodeGroupsResponse listNodeGroups(ListNodeGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNodeGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Query Resource Tags</p>
      * 
      * @param request ListTagResourcesRequest
@@ -1057,6 +1223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CommandContent", request.commandContent);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.commandId)) {
+            body.put("CommandId", request.commandId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.contentEncoding)) {
             body.put("ContentEncoding", request.contentEncoding);
         }
@@ -1073,6 +1243,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Frequency", request.frequency);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.launcher)) {
+            body.put("Launcher", request.launcher);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
         }
@@ -1087,6 +1261,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.repeatMode)) {
             body.put("RepeatMode", request.repeatMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.terminationMode)) {
+            body.put("TerminationMode", request.terminationMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
