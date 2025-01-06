@@ -39,6 +39,9 @@ public class ModifyAsrConfigRequest extends TeaModel {
     @NameInMap("ConfigLevel")
     public Integer configLevel;
 
+    @NameInMap("Engine")
+    public String engine;
+
     /**
      * <strong>example:</strong>
      * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
@@ -89,6 +92,14 @@ public class ModifyAsrConfigRequest extends TeaModel {
     }
     public Integer getConfigLevel() {
         return this.configLevel;
+    }
+
+    public ModifyAsrConfigRequest setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
     }
 
     public ModifyAsrConfigRequest setEntryId(String entryId) {

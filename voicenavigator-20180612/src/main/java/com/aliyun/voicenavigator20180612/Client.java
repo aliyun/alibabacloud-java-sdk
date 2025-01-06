@@ -1538,6 +1538,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ConfigLevel", request.configLevel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.engine)) {
+            query.put("Engine", request.engine);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.entryId)) {
             query.put("EntryId", request.entryId);
         }

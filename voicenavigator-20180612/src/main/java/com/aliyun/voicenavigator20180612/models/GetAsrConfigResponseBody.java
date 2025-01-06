@@ -124,6 +124,12 @@ public class GetAsrConfigResponseBody extends TeaModel {
         @NameInMap("AsrVocabularyId")
         public String asrVocabularyId;
 
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("EngineXufei")
+        public String engineXufei;
+
         public static GetAsrConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAsrConfigResponseBodyData self = new GetAsrConfigResponseBodyData();
             return TeaModel.build(map, self);
@@ -159,6 +165,22 @@ public class GetAsrConfigResponseBody extends TeaModel {
         }
         public String getAsrVocabularyId() {
             return this.asrVocabularyId;
+        }
+
+        public GetAsrConfigResponseBodyData setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public GetAsrConfigResponseBodyData setEngineXufei(String engineXufei) {
+            this.engineXufei = engineXufei;
+            return this;
+        }
+        public String getEngineXufei() {
+            return this.engineXufei;
         }
 
     }
