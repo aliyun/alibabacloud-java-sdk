@@ -272,6 +272,9 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @NameInMap("Advice")
         public java.util.List<TextModerationPlusResponseBodyDataAdvice> advice;
 
+        @NameInMap("DataId")
+        public String dataId;
+
         /**
          * <p>The results.</p>
          */
@@ -307,6 +310,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
         public java.util.List<TextModerationPlusResponseBodyDataAdvice> getAdvice() {
             return this.advice;
+        }
+
+        public TextModerationPlusResponseBodyData setDataId(String dataId) {
+            this.dataId = dataId;
+            return this;
+        }
+        public String getDataId() {
+            return this.dataId;
         }
 
         public TextModerationPlusResponseBodyData setResult(java.util.List<TextModerationPlusResponseBodyDataResult> result) {
