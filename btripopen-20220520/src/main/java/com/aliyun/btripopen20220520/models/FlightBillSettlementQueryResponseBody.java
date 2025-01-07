@@ -241,6 +241,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cascade_department")
         public String cascadeDepartment;
 
+        @NameInMap("category_desc")
+        public String categoryDesc;
+
         /**
          * <strong>example:</strong>
          * <p>23.9</p>
@@ -336,6 +339,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("fee_type")
         public String feeType;
+
+        @NameInMap("fee_type_desc")
+        public String feeTypeDesc;
 
         /**
          * <strong>example:</strong>
@@ -537,6 +543,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("service_fee")
         public Double serviceFee;
 
+        @NameInMap("settle_type_desc")
+        public String settleTypeDesc;
+
         /**
          * <strong>example:</strong>
          * <p>460</p>
@@ -572,6 +581,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("status")
         public Integer status;
 
+        @NameInMap("status_desc")
+        public String statusDesc;
+
         /**
          * <p>税率</p>
          * 
@@ -593,6 +605,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("trade")
         public String trade;
+
+        @NameInMap("trade_action_desc")
+        public String tradeActionDesc;
 
         @NameInMap("traveler_id")
         public String travelerId;
@@ -875,6 +890,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.cascadeDepartment;
         }
 
+        public FlightBillSettlementQueryResponseBodyModuleDataList setCategoryDesc(String categoryDesc) {
+            this.categoryDesc = categoryDesc;
+            return this;
+        }
+        public String getCategoryDesc() {
+            return this.categoryDesc;
+        }
+
         public FlightBillSettlementQueryResponseBodyModuleDataList setChangeFee(Double changeFee) {
             this.changeFee = changeFee;
             return this;
@@ -1033,6 +1056,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getFeeType() {
             return this.feeType;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setFeeTypeDesc(String feeTypeDesc) {
+            this.feeTypeDesc = feeTypeDesc;
+            return this;
+        }
+        public String getFeeTypeDesc() {
+            return this.feeTypeDesc;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setFlightNo(String flightNo) {
@@ -1355,6 +1386,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.serviceFee;
         }
 
+        public FlightBillSettlementQueryResponseBodyModuleDataList setSettleTypeDesc(String settleTypeDesc) {
+            this.settleTypeDesc = settleTypeDesc;
+            return this;
+        }
+        public String getSettleTypeDesc() {
+            return this.settleTypeDesc;
+        }
+
         public FlightBillSettlementQueryResponseBodyModuleDataList setSettlementFee(Double settlementFee) {
             this.settlementFee = settlementFee;
             return this;
@@ -1395,6 +1434,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.status;
         }
 
+        public FlightBillSettlementQueryResponseBodyModuleDataList setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
+            return this;
+        }
+        public String getStatusDesc() {
+            return this.statusDesc;
+        }
+
         public FlightBillSettlementQueryResponseBodyModuleDataList setTaxRate(String taxRate) {
             this.taxRate = taxRate;
             return this;
@@ -1425,6 +1472,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTrade() {
             return this.trade;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setTradeActionDesc(String tradeActionDesc) {
+            this.tradeActionDesc = tradeActionDesc;
+            return this;
+        }
+        public String getTradeActionDesc() {
+            return this.tradeActionDesc;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setTravelerId(String travelerId) {
@@ -1521,6 +1576,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("period_start")
         public String periodStart;
 
+        @NameInMap("scroll_id")
+        public String scrollId;
+
         /**
          * <strong>example:</strong>
          * <p>5180</p>
@@ -1571,6 +1629,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getPeriodStart() {
             return this.periodStart;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModule setScrollId(String scrollId) {
+            this.scrollId = scrollId;
+            return this;
+        }
+        public String getScrollId() {
+            return this.scrollId;
         }
 
         public FlightBillSettlementQueryResponseBodyModule setTotalNum(Long totalNum) {

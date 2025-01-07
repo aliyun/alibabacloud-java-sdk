@@ -143,6 +143,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cascade_department")
         public String cascadeDepartment;
 
+        @NameInMap("category_desc")
+        public String categoryDesc;
+
         @NameInMap("consume_report_address")
         public String consumeReportAddress;
 
@@ -189,6 +192,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("fee_type")
         public String feeType;
 
+        @NameInMap("fee_type_desc")
+        public String feeTypeDesc;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -222,6 +228,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("meal_city_code")
         public String mealCityCode;
+
+        @NameInMap("meal_reason")
+        public String mealReason;
 
         @NameInMap("meal_rule")
         public String mealRule;
@@ -294,6 +303,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("service_fee")
         public Double serviceFee;
 
+        @NameInMap("settle_type_desc")
+        public String settleTypeDesc;
+
         /**
          * <strong>example:</strong>
          * <p>110.0</p>
@@ -324,6 +336,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public Integer status;
+
+        @NameInMap("status_desc")
+        public String statusDesc;
 
         /**
          * <strong>example:</strong>
@@ -359,6 +374,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("thirdpart_apply_id")
         public String thirdpartApplyId;
+
+        @NameInMap("trade_action_desc")
+        public String tradeActionDesc;
 
         /**
          * <strong>example:</strong>
@@ -467,6 +485,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             return this.cascadeDepartment;
         }
 
+        public MealBillSettlementQueryResponseBodyModuleItems setCategoryDesc(String categoryDesc) {
+            this.categoryDesc = categoryDesc;
+            return this;
+        }
+        public String getCategoryDesc() {
+            return this.categoryDesc;
+        }
+
         public MealBillSettlementQueryResponseBodyModuleItems setConsumeReportAddress(String consumeReportAddress) {
             this.consumeReportAddress = consumeReportAddress;
             return this;
@@ -547,6 +573,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             return this.feeType;
         }
 
+        public MealBillSettlementQueryResponseBodyModuleItems setFeeTypeDesc(String feeTypeDesc) {
+            this.feeTypeDesc = feeTypeDesc;
+            return this;
+        }
+        public String getFeeTypeDesc() {
+            return this.feeTypeDesc;
+        }
+
         public MealBillSettlementQueryResponseBodyModuleItems setIndex(String index) {
             this.index = index;
             return this;
@@ -593,6 +627,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getMealCityCode() {
             return this.mealCityCode;
+        }
+
+        public MealBillSettlementQueryResponseBodyModuleItems setMealReason(String mealReason) {
+            this.mealReason = mealReason;
+            return this;
+        }
+        public String getMealReason() {
+            return this.mealReason;
         }
 
         public MealBillSettlementQueryResponseBodyModuleItems setMealRule(String mealRule) {
@@ -699,6 +741,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             return this.serviceFee;
         }
 
+        public MealBillSettlementQueryResponseBodyModuleItems setSettleTypeDesc(String settleTypeDesc) {
+            this.settleTypeDesc = settleTypeDesc;
+            return this;
+        }
+        public String getSettleTypeDesc() {
+            return this.settleTypeDesc;
+        }
+
         public MealBillSettlementQueryResponseBodyModuleItems setSettlementFee(Double settlementFee) {
             this.settlementFee = settlementFee;
             return this;
@@ -739,6 +789,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             return this.status;
         }
 
+        public MealBillSettlementQueryResponseBodyModuleItems setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
+            return this;
+        }
+        public String getStatusDesc() {
+            return this.statusDesc;
+        }
+
         public MealBillSettlementQueryResponseBodyModuleItems setStoreAddress(String storeAddress) {
             this.storeAddress = storeAddress;
             return this;
@@ -777,6 +835,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getThirdpartApplyId() {
             return this.thirdpartApplyId;
+        }
+
+        public MealBillSettlementQueryResponseBodyModuleItems setTradeActionDesc(String tradeActionDesc) {
+            this.tradeActionDesc = tradeActionDesc;
+            return this;
+        }
+        public String getTradeActionDesc() {
+            return this.tradeActionDesc;
         }
 
         public MealBillSettlementQueryResponseBodyModuleItems setTravelerId(String travelerId) {
@@ -864,6 +930,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("period_start")
         public String periodStart;
 
+        @NameInMap("scroll_id")
+        public String scrollId;
+
         /**
          * <strong>example:</strong>
          * <p>2695</p>
@@ -929,6 +998,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getPeriodStart() {
             return this.periodStart;
+        }
+
+        public MealBillSettlementQueryResponseBodyModule setScrollId(String scrollId) {
+            this.scrollId = scrollId;
+            return this;
+        }
+        public String getScrollId() {
+            return this.scrollId;
         }
 
         public MealBillSettlementQueryResponseBodyModule setTotalNum(Long totalNum) {

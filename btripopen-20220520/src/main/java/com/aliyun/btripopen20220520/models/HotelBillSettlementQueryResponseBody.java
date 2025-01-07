@@ -187,6 +187,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cascade_department")
         public String cascadeDepartment;
 
+        @NameInMap("category_desc")
+        public String categoryDesc;
+
         /**
          * <strong>example:</strong>
          * <p>2021-10-14 00:00:00</p>
@@ -260,6 +263,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("fee_type")
         public String feeType;
 
+        @NameInMap("fee_type_desc")
+        public String feeTypeDesc;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -317,6 +323,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("nights")
         public Integer nights;
+
+        @NameInMap("no_advance_booking_reason")
+        public String noAdvanceBookingReason;
 
         /**
          * <strong>example:</strong>
@@ -431,6 +440,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("service_fee")
         public Double serviceFee;
 
+        @NameInMap("settle_type_desc")
+        public String settleTypeDesc;
+
         /**
          * <strong>example:</strong>
          * <p>1000</p>
@@ -469,6 +481,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("status")
         public Integer status;
 
+        @NameInMap("status_desc")
+        public String statusDesc;
+
         /**
          * <p>税率</p>
          * 
@@ -487,6 +502,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("total_nights")
         public Integer totalNights;
+
+        @NameInMap("trade_action_desc")
+        public String tradeActionDesc;
 
         @NameInMap("traveler_id")
         public String travelerId;
@@ -714,6 +732,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.cascadeDepartment;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setCategoryDesc(String categoryDesc) {
+            this.categoryDesc = categoryDesc;
+            return this;
+        }
+        public String getCategoryDesc() {
+            return this.categoryDesc;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setCheckInDate(String checkInDate) {
             this.checkInDate = checkInDate;
             return this;
@@ -834,6 +860,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.feeType;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setFeeTypeDesc(String feeTypeDesc) {
+            this.feeTypeDesc = feeTypeDesc;
+            return this;
+        }
+        public String getFeeTypeDesc() {
+            return this.feeTypeDesc;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setFees(Double fees) {
             this.fees = fees;
             return this;
@@ -944,6 +978,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getNights() {
             return this.nights;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setNoAdvanceBookingReason(String noAdvanceBookingReason) {
+            this.noAdvanceBookingReason = noAdvanceBookingReason;
+            return this;
+        }
+        public String getNoAdvanceBookingReason() {
+            return this.noAdvanceBookingReason;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setOrderId(String orderId) {
@@ -1130,6 +1172,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.serviceFee;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setSettleTypeDesc(String settleTypeDesc) {
+            this.settleTypeDesc = settleTypeDesc;
+            return this;
+        }
+        public String getSettleTypeDesc() {
+            return this.settleTypeDesc;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setSettlementFee(Double settlementFee) {
             this.settlementFee = settlementFee;
             return this;
@@ -1178,6 +1228,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.status;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
+            return this;
+        }
+        public String getStatusDesc() {
+            return this.statusDesc;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setTaxRate(String taxRate) {
             this.taxRate = taxRate;
             return this;
@@ -1200,6 +1258,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getTotalNights() {
             return this.totalNights;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setTradeActionDesc(String tradeActionDesc) {
+            this.tradeActionDesc = tradeActionDesc;
+            return this;
+        }
+        public String getTradeActionDesc() {
+            return this.tradeActionDesc;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setTravelerId(String travelerId) {
@@ -1288,6 +1354,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("period_start")
         public String periodStart;
 
+        @NameInMap("scroll_id")
+        public String scrollId;
+
         /**
          * <strong>example:</strong>
          * <p>1402</p>
@@ -1338,6 +1407,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getPeriodStart() {
             return this.periodStart;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModule setScrollId(String scrollId) {
+            this.scrollId = scrollId;
+            return this;
+        }
+        public String getScrollId() {
+            return this.scrollId;
         }
 
         public HotelBillSettlementQueryResponseBodyModule setTotalNum(Long totalNum) {

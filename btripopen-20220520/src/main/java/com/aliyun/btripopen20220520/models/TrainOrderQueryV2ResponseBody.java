@@ -1470,6 +1470,18 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @NameInMap("run_time")
         public Long runTime;
 
+        @NameInMap("sub_from_city_ad_code")
+        public String subFromCityAdCode;
+
+        @NameInMap("sub_from_city_ad_name")
+        public String subFromCityAdName;
+
+        @NameInMap("sub_to_city_code")
+        public String subToCityCode;
+
+        @NameInMap("sub_to_city_name")
+        public String subToCityName;
+
         @NameInMap("to_city_ad_code")
         public String toCityAdCode;
 
@@ -1548,6 +1560,38 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
         public Long getRunTime() {
             return this.runTime;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainInfoList setSubFromCityAdCode(String subFromCityAdCode) {
+            this.subFromCityAdCode = subFromCityAdCode;
+            return this;
+        }
+        public String getSubFromCityAdCode() {
+            return this.subFromCityAdCode;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainInfoList setSubFromCityAdName(String subFromCityAdName) {
+            this.subFromCityAdName = subFromCityAdName;
+            return this;
+        }
+        public String getSubFromCityAdName() {
+            return this.subFromCityAdName;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainInfoList setSubToCityCode(String subToCityCode) {
+            this.subToCityCode = subToCityCode;
+            return this;
+        }
+        public String getSubToCityCode() {
+            return this.subToCityCode;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainInfoList setSubToCityName(String subToCityName) {
+            this.subToCityName = subToCityName;
+            return this;
+        }
+        public String getSubToCityName() {
+            return this.subToCityName;
         }
 
         public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainInfoList setToCityAdCode(String toCityAdCode) {
@@ -1641,6 +1685,24 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
          */
         @NameInMap("start_time")
         public String startTime;
+
+        @NameInMap("sub_from_city_ad_code")
+        public String subFromCityAdCode;
+
+        @NameInMap("sub_from_city_ad_name")
+        public String subFromCityAdName;
+
+        @NameInMap("sub_middle_city_code")
+        public String subMiddleCityCode;
+
+        @NameInMap("sub_middle_city_name")
+        public String subMiddleCityName;
+
+        @NameInMap("sub_to_city_code")
+        public String subToCityCode;
+
+        @NameInMap("sub_to_city_name")
+        public String subToCityName;
 
         @NameInMap("to_city_ad_code")
         public String toCityAdCode;
@@ -1749,6 +1811,54 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
         public String getStartTime() {
             return this.startTime;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainTransferInfo setSubFromCityAdCode(String subFromCityAdCode) {
+            this.subFromCityAdCode = subFromCityAdCode;
+            return this;
+        }
+        public String getSubFromCityAdCode() {
+            return this.subFromCityAdCode;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainTransferInfo setSubFromCityAdName(String subFromCityAdName) {
+            this.subFromCityAdName = subFromCityAdName;
+            return this;
+        }
+        public String getSubFromCityAdName() {
+            return this.subFromCityAdName;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainTransferInfo setSubMiddleCityCode(String subMiddleCityCode) {
+            this.subMiddleCityCode = subMiddleCityCode;
+            return this;
+        }
+        public String getSubMiddleCityCode() {
+            return this.subMiddleCityCode;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainTransferInfo setSubMiddleCityName(String subMiddleCityName) {
+            this.subMiddleCityName = subMiddleCityName;
+            return this;
+        }
+        public String getSubMiddleCityName() {
+            return this.subMiddleCityName;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainTransferInfo setSubToCityCode(String subToCityCode) {
+            this.subToCityCode = subToCityCode;
+            return this;
+        }
+        public String getSubToCityCode() {
+            return this.subToCityCode;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainTransferInfo setSubToCityName(String subToCityName) {
+            this.subToCityName = subToCityName;
+            return this;
+        }
+        public String getSubToCityName() {
+            return this.subToCityName;
         }
 
         public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainTransferInfo setToCityAdCode(String toCityAdCode) {

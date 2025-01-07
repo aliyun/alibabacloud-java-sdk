@@ -190,6 +190,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cascade_department")
         public String cascadeDepartment;
 
+        @NameInMap("category_desc")
+        public String categoryDesc;
+
         @NameInMap("change_affiliate_no")
         public String changeAffiliateNo;
 
@@ -267,6 +270,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("fee_type")
         public String feeType;
+
+        @NameInMap("fee_type_desc")
+        public String feeTypeDesc;
 
         /**
          * <strong>example:</strong>
@@ -385,6 +391,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("service_fee")
         public Double serviceFee;
 
+        @NameInMap("settle_type_desc")
+        public String settleTypeDesc;
+
         /**
          * <strong>example:</strong>
          * <p>350</p>
@@ -426,6 +435,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("status")
         public Integer status;
 
+        @NameInMap("status_desc")
+        public String statusDesc;
+
         /**
          * <p>税率</p>
          * 
@@ -457,6 +469,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("ticket_price")
         public Double ticketPrice;
+
+        @NameInMap("trade_action_desc")
+        public String tradeActionDesc;
 
         /**
          * <strong>example:</strong>
@@ -663,6 +678,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             return this.cascadeDepartment;
         }
 
+        public TrainBillSettlementQueryResponseBodyModuleDataList setCategoryDesc(String categoryDesc) {
+            this.categoryDesc = categoryDesc;
+            return this;
+        }
+        public String getCategoryDesc() {
+            return this.categoryDesc;
+        }
+
         public TrainBillSettlementQueryResponseBodyModuleDataList setChangeAffiliateNo(String changeAffiliateNo) {
             this.changeAffiliateNo = changeAffiliateNo;
             return this;
@@ -805,6 +828,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getFeeType() {
             return this.feeType;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setFeeTypeDesc(String feeTypeDesc) {
+            this.feeTypeDesc = feeTypeDesc;
+            return this;
+        }
+        public String getFeeTypeDesc() {
+            return this.feeTypeDesc;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setIndex(String index) {
@@ -1023,6 +1054,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             return this.serviceFee;
         }
 
+        public TrainBillSettlementQueryResponseBodyModuleDataList setSettleTypeDesc(String settleTypeDesc) {
+            this.settleTypeDesc = settleTypeDesc;
+            return this;
+        }
+        public String getSettleTypeDesc() {
+            return this.settleTypeDesc;
+        }
+
         public TrainBillSettlementQueryResponseBodyModuleDataList setSettlementFee(Double settlementFee) {
             this.settlementFee = settlementFee;
             return this;
@@ -1079,6 +1118,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             return this.status;
         }
 
+        public TrainBillSettlementQueryResponseBodyModuleDataList setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
+            return this;
+        }
+        public String getStatusDesc() {
+            return this.statusDesc;
+        }
+
         public TrainBillSettlementQueryResponseBodyModuleDataList setTaxRate(String taxRate) {
             this.taxRate = taxRate;
             return this;
@@ -1125,6 +1172,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getTicketPrice() {
             return this.ticketPrice;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setTradeActionDesc(String tradeActionDesc) {
+            this.tradeActionDesc = tradeActionDesc;
+            return this;
+        }
+        public String getTradeActionDesc() {
+            return this.tradeActionDesc;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setTrainNo(String trainNo) {
@@ -1221,6 +1276,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("period_start")
         public String periodStart;
 
+        @NameInMap("scroll_id")
+        public String scrollId;
+
         /**
          * <strong>example:</strong>
          * <p>2694</p>
@@ -1271,6 +1329,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getPeriodStart() {
             return this.periodStart;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModule setScrollId(String scrollId) {
+            this.scrollId = scrollId;
+            return this;
+        }
+        public String getScrollId() {
+            return this.scrollId;
         }
 
         public TrainBillSettlementQueryResponseBodyModule setTotalNum(Long totalNum) {

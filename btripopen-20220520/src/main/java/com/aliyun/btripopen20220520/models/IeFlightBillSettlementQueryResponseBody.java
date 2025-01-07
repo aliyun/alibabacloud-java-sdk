@@ -256,6 +256,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cascade_department")
         public String cascadeDepartment;
 
+        @NameInMap("category_desc")
+        public String categoryDesc;
+
         /**
          * <strong>example:</strong>
          * <p>23.0</p>
@@ -355,6 +358,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("fee_type")
         public String feeType;
+
+        @NameInMap("fee_type_desc")
+        public String feeTypeDesc;
 
         /**
          * <strong>example:</strong>
@@ -518,6 +524,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("service_fee")
         public Double serviceFee;
 
+        @NameInMap("settle_type_desc")
+        public String settleTypeDesc;
+
         /**
          * <strong>example:</strong>
          * <p>350</p>
@@ -552,6 +561,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public Integer status;
+
+        @NameInMap("status_desc")
+        public String statusDesc;
 
         /**
          * <strong>example:</strong>
@@ -593,6 +605,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("trade")
         public String trade;
 
+        @NameInMap("trade_action_desc")
+        public String tradeActionDesc;
+
         /**
          * <strong>example:</strong>
          * <p>54463464</p>
@@ -606,6 +621,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("traveler_job_no")
         public String travelerJobNo;
+
+        @NameInMap("traveler_member_type")
+        public String travelerMemberType;
 
         @NameInMap("traveler_name")
         public String travelerName;
@@ -868,6 +886,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.cascadeDepartment;
         }
 
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setCategoryDesc(String categoryDesc) {
+            this.categoryDesc = categoryDesc;
+            return this;
+        }
+        public String getCategoryDesc() {
+            return this.categoryDesc;
+        }
+
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setChangeFee(Double changeFee) {
             this.changeFee = changeFee;
             return this;
@@ -1026,6 +1052,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getFeeType() {
             return this.feeType;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setFeeTypeDesc(String feeTypeDesc) {
+            this.feeTypeDesc = feeTypeDesc;
+            return this;
+        }
+        public String getFeeTypeDesc() {
+            return this.feeTypeDesc;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setFlightNo(String flightNo) {
@@ -1268,6 +1302,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.serviceFee;
         }
 
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setSettleTypeDesc(String settleTypeDesc) {
+            this.settleTypeDesc = settleTypeDesc;
+            return this;
+        }
+        public String getSettleTypeDesc() {
+            return this.settleTypeDesc;
+        }
+
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setSettlementFee(Double settlementFee) {
             this.settlementFee = settlementFee;
             return this;
@@ -1306,6 +1348,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
+            return this;
+        }
+        public String getStatusDesc() {
+            return this.statusDesc;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setSubOrderId(String subOrderId) {
@@ -1356,6 +1406,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.trade;
         }
 
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setTradeActionDesc(String tradeActionDesc) {
+            this.tradeActionDesc = tradeActionDesc;
+            return this;
+        }
+        public String getTradeActionDesc() {
+            return this.tradeActionDesc;
+        }
+
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setTravelerId(String travelerId) {
             this.travelerId = travelerId;
             return this;
@@ -1370,6 +1428,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTravelerJobNo() {
             return this.travelerJobNo;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setTravelerMemberType(String travelerMemberType) {
+            this.travelerMemberType = travelerMemberType;
+            return this;
+        }
+        public String getTravelerMemberType() {
+            return this.travelerMemberType;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setTravelerName(String travelerName) {
@@ -1438,6 +1504,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("period_start")
         public String periodStart;
 
+        @NameInMap("scroll_id")
+        public String scrollId;
+
         /**
          * <strong>example:</strong>
          * <p>1402</p>
@@ -1488,6 +1557,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getPeriodStart() {
             return this.periodStart;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModule setScrollId(String scrollId) {
+            this.scrollId = scrollId;
+            return this;
+        }
+        public String getScrollId() {
+            return this.scrollId;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModule setTotalNum(Long totalNum) {

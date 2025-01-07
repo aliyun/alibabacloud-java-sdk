@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CooperatorHotelBillSettlementQueryRequest extends TeaModel {
+    @NameInMap("bill_batch")
+    public String billBatch;
+
     /**
      * <strong>example:</strong>
      * <p>cooperator_alibtrip</p>
@@ -30,8 +33,6 @@ public class CooperatorHotelBillSettlementQueryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>2021-10-02</p>
      */
@@ -45,9 +46,23 @@ public class CooperatorHotelBillSettlementQueryRequest extends TeaModel {
     @NameInMap("period_start")
     public String periodStart;
 
+    @NameInMap("scroll_id")
+    public String scrollId;
+
+    @NameInMap("scroll_mod")
+    public Boolean scrollMod;
+
     public static CooperatorHotelBillSettlementQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         CooperatorHotelBillSettlementQueryRequest self = new CooperatorHotelBillSettlementQueryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CooperatorHotelBillSettlementQueryRequest setBillBatch(String billBatch) {
+        this.billBatch = billBatch;
+        return this;
+    }
+    public String getBillBatch() {
+        return this.billBatch;
     }
 
     public CooperatorHotelBillSettlementQueryRequest setCooperatorId(String cooperatorId) {
@@ -88,6 +103,22 @@ public class CooperatorHotelBillSettlementQueryRequest extends TeaModel {
     }
     public String getPeriodStart() {
         return this.periodStart;
+    }
+
+    public CooperatorHotelBillSettlementQueryRequest setScrollId(String scrollId) {
+        this.scrollId = scrollId;
+        return this;
+    }
+    public String getScrollId() {
+        return this.scrollId;
+    }
+
+    public CooperatorHotelBillSettlementQueryRequest setScrollMod(Boolean scrollMod) {
+        this.scrollMod = scrollMod;
+        return this;
+    }
+    public Boolean getScrollMod() {
+        return this.scrollMod;
     }
 
 }
