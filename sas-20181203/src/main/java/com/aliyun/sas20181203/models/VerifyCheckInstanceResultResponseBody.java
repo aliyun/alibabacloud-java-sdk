@@ -60,6 +60,9 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         @NameInMap("OperateCode")
         public String operateCode;
 
+        @NameInMap("TaskId")
+        public String taskId;
+
         public static VerifyCheckInstanceResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             VerifyCheckInstanceResultResponseBodyData self = new VerifyCheckInstanceResultResponseBodyData();
             return TeaModel.build(map, self);
@@ -79,6 +82,14 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         }
         public String getOperateCode() {
             return this.operateCode;
+        }
+
+        public VerifyCheckInstanceResultResponseBodyData setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
     }

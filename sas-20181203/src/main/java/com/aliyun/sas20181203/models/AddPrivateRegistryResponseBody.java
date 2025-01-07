@@ -116,7 +116,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
          * <p>The IP address of the image repository.</p>
          * 
          * <strong>example:</strong>
-         * <p>114.55.**.**</p>
+         * <p><code>114.55.**.**</code></p>
          */
         @NameInMap("RegistryHostIp")
         public String registryHostIp;

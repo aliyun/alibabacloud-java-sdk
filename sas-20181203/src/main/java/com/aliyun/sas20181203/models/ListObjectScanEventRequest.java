@@ -74,7 +74,7 @@ public class ListObjectScanEventRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>When a file is a subfile within a compressed package, the ParentEventId represents the alert of the compressed package itself.</p>
+     * <p>The ID of the alert that is generated for the package to which the subfile belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

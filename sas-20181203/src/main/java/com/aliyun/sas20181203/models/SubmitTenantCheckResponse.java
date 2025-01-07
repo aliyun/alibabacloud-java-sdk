@@ -3,7 +3,7 @@ package com.aliyun.sas20181203.models;
 
 import com.aliyun.tea.*;
 
-public class GetClientInstallationStatisticResponse extends TeaModel {
+public class SubmitTenantCheckResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetClientInstallationStatisticResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetClientInstallationStatisticResponseBody body;
+    public SubmitTenantCheckResponseBody body;
 
-    public static GetClientInstallationStatisticResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetClientInstallationStatisticResponse self = new GetClientInstallationStatisticResponse();
+    public static SubmitTenantCheckResponse build(java.util.Map<String, ?> map) throws Exception {
+        SubmitTenantCheckResponse self = new SubmitTenantCheckResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetClientInstallationStatisticResponse setHeaders(java.util.Map<String, String> headers) {
+    public SubmitTenantCheckResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetClientInstallationStatisticResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetClientInstallationStatisticResponse setStatusCode(Integer statusCode) {
+    public SubmitTenantCheckResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetClientInstallationStatisticResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetClientInstallationStatisticResponse setBody(GetClientInstallationStatisticResponseBody body) {
+    public SubmitTenantCheckResponse setBody(SubmitTenantCheckResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetClientInstallationStatisticResponseBody getBody() {
+    public SubmitTenantCheckResponseBody getBody() {
         return this.body;
     }
 

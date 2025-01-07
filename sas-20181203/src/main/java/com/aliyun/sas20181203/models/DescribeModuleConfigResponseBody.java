@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeModuleConfigResponseBody extends TeaModel {
     /**
+     * <p>The number of configurations for the module.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,16 +14,23 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>An array that consists of the configurations of the module.</p>
+     */
     @NameInMap("ModuleConfigList")
     public java.util.List<DescribeModuleConfigResponseBodyModuleConfigList> moduleConfigList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
@@ -29,6 +38,12 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
 
     public static class DescribeModuleConfigResponseBodyModuleConfigListItems extends TeaModel {
         /**
+         * <p>The ID of the server group.</p>
+         * 
          * <strong>example:</strong>
          * <p>173</p>
          */
@@ -89,6 +106,8 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         public Integer groupId;
 
         /**
+         * <p>The ID of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-uf6435dn4t59b9av****</p>
          */
@@ -96,6 +115,8 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>inStanceName****</p>
          */
@@ -103,6 +124,8 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The IP address of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>31.13.XX.XX</p>
          */
@@ -110,6 +133,8 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The region in which the server resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -117,6 +142,8 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The UUID of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>a47e3713-ed22-4015-93a3-d88ebe6****</p>
          */
@@ -180,16 +207,23 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
 
     public static class DescribeModuleConfigResponseBodyModuleConfigList extends TeaModel {
         /**
+         * <p>The name of the configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>timescan</p>
          */
         @NameInMap("ConfigName")
         public String configName;
 
+        /**
+         * <p>An array that consists of the configuration items.</p>
+         */
         @NameInMap("Items")
         public java.util.List<DescribeModuleConfigResponseBodyModuleConfigListItems> items;
 
         /**
+         * <p>The name of the module.</p>
+         * 
          * <strong>example:</strong>
          * <p>alihids</p>
          */

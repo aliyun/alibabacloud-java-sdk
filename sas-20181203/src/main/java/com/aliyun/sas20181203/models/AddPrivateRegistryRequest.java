@@ -79,7 +79,7 @@ public class AddPrivateRegistryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>114.55.**.**</p>
+     * <p><code>114.55.**.**</code></p>
      */
     @NameInMap("RegistryHostIp")
     public String registryHostIp;

@@ -4,13 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
+    /**
+     * <p>The proxy clusters.</p>
+     */
     @NameInMap("ClusterList")
     public java.util.List<DescribeHybridProxyClusterListResponseBodyClusterList> clusterList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeHybridProxyClusterListResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C1A36413-50B2-5B2F-843F-EB14C582713F</p>
      */
@@ -48,6 +56,8 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
 
     public static class DescribeHybridProxyClusterListResponseBodyClusterList extends TeaModel {
         /**
+         * <p>The ID of the credential that is used for cluster authentication.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -55,6 +65,8 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         public String authKey;
 
         /**
+         * <p>The key of the credential that is used for cluster authentication.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -62,6 +74,8 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         public String authKeySecret;
 
         /**
+         * <p>The number of servers that are connected to the proxy cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -69,6 +83,8 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         public Integer clientCount;
 
         /**
+         * <p>The name of the proxy cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>idc-sas-proxy</p>
          */
@@ -76,6 +92,8 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         public String clusterName;
 
         /**
+         * <p>The installation command for the node of the proxy cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -83,13 +101,17 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         public String installCommand;
 
         /**
+         * <p>The endpoint of the cluster. An IP address or a domain name is specified.</p>
+         * 
          * <strong>example:</strong>
-         * <p>114.115.218.145</p>
+         * <p>114.115.XXX.XXX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
+         * <p>The timestamp when the cluster last sent a heartbeat message. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1608304654000</p>
          */
@@ -97,6 +119,8 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         public Long lastHeartTime;
 
         /**
+         * <p>The number of proxy nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -104,6 +128,8 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         public Integer proxyCount;
 
         /**
+         * <p>The description of the proxy cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -111,6 +137,8 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <p>The status of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>offline</p>
          */
@@ -206,6 +234,8 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
 
     public static class DescribeHybridProxyClusterListResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The number of entries on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -213,6 +243,8 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -220,6 +252,8 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -227,6 +261,8 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>45</p>
          */

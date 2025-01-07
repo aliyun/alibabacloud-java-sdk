@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCurrentVersionPublishResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetCurrentVersionPublishResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1383B0DB-D5D6-4B0C-9E6B-75939C8E67FE</p>
      */
@@ -37,6 +42,12 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
 
     public static class GetCurrentVersionPublishResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether automatic upgrade is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes.</li>
+         * <li><strong>0</strong>: no.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -44,6 +55,12 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
         public Integer autoUpgrade;
 
         /**
+         * <p>Indicates whether you can enable custom upgrade for the Security Center agent. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -51,6 +68,8 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
         public Boolean bigCustomer;
 
         /**
+         * <p>The version of the Security Center agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0.8</p>
          */
@@ -58,6 +77,8 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
         public String curVersion;
 
         /**
+         * <p>The timestamp when the Security Center agent was forcibly upgraded.</p>
+         * 
          * <strong>example:</strong>
          * <p>1732506308000</p>
          */
@@ -65,6 +86,12 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
         public Long forceUpgradeTime;
 
         /**
+         * <p>Indicates whether the canary release policy is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes.</li>
+         * <li>.<strong>0</strong>: no.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -72,6 +99,8 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
         public Integer graySwitchStatus;
 
         /**
+         * <p>The latest version of the Security Center agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0.9</p>
          */
@@ -79,6 +108,8 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
         public String latestVersion;
 
         /**
+         * <p>The timestamp when the latest version of the Security Center agent was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1662639150000</p>
          */
@@ -86,6 +117,8 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
         public Long latestVersionCreate;
 
         /**
+         * <p>The description of about the latest version.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -93,6 +126,15 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
         public String latestVersionDesc;
 
         /**
+         * <p>The publish status of the Security Center agent. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: not started.</li>
+         * <li><strong>1</strong>: publishing.</li>
+         * <li><strong>2</strong>: published.</li>
+         * <li><strong>3</strong>: publish suspended.</li>
+         * <li><strong>4</strong>: forcibly upgrading.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -100,6 +142,8 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
         public Integer publishStatus;
 
         /**
+         * <p>The destination version of the Security Center agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0.9</p>
          */

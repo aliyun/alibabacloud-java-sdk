@@ -42,7 +42,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
 
     public static class GetOssScanConfigResponseBodyData extends TeaModel {
         /**
-         * <p>Whether to match all file prefixes.</p>
+         * <p>Indicates whether the prefixes of all objects are matched.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -51,7 +51,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         public Boolean allKeyPrefix;
 
         /**
-         * <p>The number of the buckets.</p>
+         * <p>The number of buckets.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -75,7 +75,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         public java.util.List<String> bucketNameList;
 
         /**
-         * <p>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         * <p>The maximum number of objects that can be extracted during decompression. Valid values: 1 to 1000. If the maximum number of objects that can be extracted is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -84,7 +84,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         public Integer decompressMaxFileCount;
 
         /**
-         * <p>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         * <p>The maximum number of decompression levels when multi-level packages are decompressed. Valid values: 1 to 5. If the maximum number of decompression levels is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -92,6 +92,9 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         @NameInMap("DecompressMaxLayer")
         public Integer decompressMaxLayer;
 
+        /**
+         * <p>The decryption methods.</p>
+         */
         @NameInMap("DecryptionList")
         public java.util.List<String> decryptionList;
 
@@ -118,7 +121,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1274****</p>
@@ -127,7 +130,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The prefixes of the object that you want to check.</p>
+         * <p>The prefixes of the objects.</p>
          */
         @NameInMap("KeyPrefixList")
         public java.util.List<String> keyPrefixList;
@@ -138,11 +141,17 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         @NameInMap("KeySuffixList")
         public java.util.List<String> keySuffixList;
 
+        /**
+         * <p>The timestamp when the object was last modified. The time must be later than the timestamp that you specify. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1724301769834</p>
+         */
         @NameInMap("LastModifiedStartTime")
         public Long lastModifiedStartTime;
 
         /**
-         * <p>The time when the policy last update.</p>
+         * <p>The timestamp when the configuration was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1702025633079</p>
@@ -151,7 +160,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         public Long lastUpdateTime;
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>test0104</p>

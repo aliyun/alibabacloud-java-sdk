@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class SaveWhiteListStrategyAssetsRequest extends TeaModel {
     /**
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,20 @@ public class SaveWhiteListStrategyAssetsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The operation that you want to perform. This parameter is in the JSON format. The value is case-sensitive. The value contains the following fields:</p>
+     * <ul>
+     * <li><p><strong>status</strong>: the operation. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: the delete operation.</li>
+     * <li><strong>1</strong>: the add operation.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>target</strong>: the UUID of the server.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the value of <strong>target</strong> from the response parameter Uuid.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +41,11 @@ public class SaveWhiteListStrategyAssetsRequest extends TeaModel {
     public String operations;
 
     /**
+     * <p>The type of the policy. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: learning policy.</li>
+     * <li><strong>2</strong>: application policy.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +55,8 @@ public class SaveWhiteListStrategyAssetsRequest extends TeaModel {
     public Integer relationType;
 
     /**
+     * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+     * 
      * <strong>example:</strong>
      * <p>115.193.XX.XX</p>
      */
@@ -37,6 +64,10 @@ public class SaveWhiteListStrategyAssetsRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The ID of the policy.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to query the ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

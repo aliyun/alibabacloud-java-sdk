@@ -54,7 +54,65 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListAgentlessRelateMaliciousResponseBodyListDetails extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("NameKey")
+        public String nameKey;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAgentlessRelateMaliciousResponseBodyListDetails build(java.util.Map<String, ?> map) throws Exception {
+            ListAgentlessRelateMaliciousResponseBodyListDetails self = new ListAgentlessRelateMaliciousResponseBodyListDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyListDetails setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyListDetails setNameKey(String nameKey) {
+            this.nameKey = nameKey;
+            return this;
+        }
+        public String getNameKey() {
+            return this.nameKey;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyListDetails setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyListDetails setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListAgentlessRelateMaliciousResponseBodyList extends TeaModel {
+        @NameInMap("Details")
+        public java.util.List<ListAgentlessRelateMaliciousResponseBodyListDetails> details;
+
+        @NameInMap("DownloadUrl")
+        public String downloadUrl;
+
         /**
          * <p>The file path.</p>
          * 
@@ -72,6 +130,12 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
          */
         @NameInMap("FirstScanTimestamp")
         public Long firstScanTimestamp;
+
+        @NameInMap("HighLight")
+        public String highLight;
+
+        @NameInMap("Id")
+        public Long id;
 
         /**
          * <p>The name of the asset.</p>
@@ -109,6 +173,36 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         @NameInMap("LatestScanTimestamp")
         public Long latestScanTimestamp;
 
+        @NameInMap("Level")
+        public String level;
+
+        @NameInMap("MaliciousMd5")
+        public String maliciousMd5;
+
+        @NameInMap("MaliciousName")
+        public String maliciousName;
+
+        @NameInMap("MaliciousType")
+        public String maliciousType;
+
+        @NameInMap("OperateResult")
+        public String operateResult;
+
+        @NameInMap("OperateTimestamp")
+        public String operateTimestamp;
+
+        @NameInMap("Partition")
+        public String partition;
+
+        @NameInMap("TargetId")
+        public String targetId;
+
+        @NameInMap("TargetName")
+        public String targetName;
+
+        @NameInMap("TargetType")
+        public String targetType;
+
         /**
          * <p>The UUID of the server.</p>
          * 
@@ -121,6 +215,22 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public static ListAgentlessRelateMaliciousResponseBodyList build(java.util.Map<String, ?> map) throws Exception {
             ListAgentlessRelateMaliciousResponseBodyList self = new ListAgentlessRelateMaliciousResponseBodyList();
             return TeaModel.build(map, self);
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setDetails(java.util.List<ListAgentlessRelateMaliciousResponseBodyListDetails> details) {
+            this.details = details;
+            return this;
+        }
+        public java.util.List<ListAgentlessRelateMaliciousResponseBodyListDetails> getDetails() {
+            return this.details;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setDownloadUrl(String downloadUrl) {
+            this.downloadUrl = downloadUrl;
+            return this;
+        }
+        public String getDownloadUrl() {
+            return this.downloadUrl;
         }
 
         public ListAgentlessRelateMaliciousResponseBodyList setFilePath(String filePath) {
@@ -137,6 +247,22 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         }
         public Long getFirstScanTimestamp() {
             return this.firstScanTimestamp;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setHighLight(String highLight) {
+            this.highLight = highLight;
+            return this;
+        }
+        public String getHighLight() {
+            return this.highLight;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public ListAgentlessRelateMaliciousResponseBodyList setInstanceName(String instanceName) {
@@ -169,6 +295,86 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         }
         public Long getLatestScanTimestamp() {
             return this.latestScanTimestamp;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setMaliciousMd5(String maliciousMd5) {
+            this.maliciousMd5 = maliciousMd5;
+            return this;
+        }
+        public String getMaliciousMd5() {
+            return this.maliciousMd5;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setMaliciousName(String maliciousName) {
+            this.maliciousName = maliciousName;
+            return this;
+        }
+        public String getMaliciousName() {
+            return this.maliciousName;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setMaliciousType(String maliciousType) {
+            this.maliciousType = maliciousType;
+            return this;
+        }
+        public String getMaliciousType() {
+            return this.maliciousType;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setOperateResult(String operateResult) {
+            this.operateResult = operateResult;
+            return this;
+        }
+        public String getOperateResult() {
+            return this.operateResult;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setOperateTimestamp(String operateTimestamp) {
+            this.operateTimestamp = operateTimestamp;
+            return this;
+        }
+        public String getOperateTimestamp() {
+            return this.operateTimestamp;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setPartition(String partition) {
+            this.partition = partition;
+            return this;
+        }
+        public String getPartition() {
+            return this.partition;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setTargetId(String targetId) {
+            this.targetId = targetId;
+            return this;
+        }
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setTargetName(String targetName) {
+            this.targetName = targetName;
+            return this;
+        }
+        public String getTargetName() {
+            return this.targetName;
+        }
+
+        public ListAgentlessRelateMaliciousResponseBodyList setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
         }
 
         public ListAgentlessRelateMaliciousResponseBodyList setUuid(String uuid) {

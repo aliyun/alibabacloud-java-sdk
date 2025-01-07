@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RefreshRegistryTokenResponseBody extends TeaModel {
     /**
+     * <p>The returned token.</p>
+     * 
      * <strong>example:</strong>
      * <p>77ba3bf5-af95-4b77-aa94-***********</p>
      */
@@ -12,6 +14,8 @@ public class RefreshRegistryTokenResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>7BC55C8F-226E-5AF5-9A2C-2EC43864****</p>
      */

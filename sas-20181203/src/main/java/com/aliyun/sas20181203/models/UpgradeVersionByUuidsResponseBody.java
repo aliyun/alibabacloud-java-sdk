@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpgradeVersionByUuidsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7BC55C8F-226E-5AF5-9A2C-2EC43864****</p>
      */

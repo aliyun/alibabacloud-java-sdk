@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DingTalkOnlineTestRequest extends TeaModel {
     /**
+     * <p>The ID of the DingTalk notification configuration.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeDingTalk~~">DescribeDingTalk</a> operation to obtain the ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

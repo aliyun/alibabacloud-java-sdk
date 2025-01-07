@@ -14,7 +14,7 @@ public class GetOssScanConfigRequest extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The ID of the policy.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

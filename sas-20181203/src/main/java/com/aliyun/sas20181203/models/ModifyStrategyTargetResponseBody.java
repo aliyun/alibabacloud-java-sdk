@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyStrategyTargetResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0E147337-5B0B-5776-B0B6-D569DBA8F60F</p>
      */

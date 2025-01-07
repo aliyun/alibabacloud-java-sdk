@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryAssetDetailByUUIDRequest extends TeaModel {
     /**
+     * <p>A key-value pair that consists of the user ID and the asset list.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *       &quot;AliUid&quot;: &quot;176618589410****&quot;,

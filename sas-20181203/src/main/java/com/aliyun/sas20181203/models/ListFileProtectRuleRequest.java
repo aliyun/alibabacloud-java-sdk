@@ -37,6 +37,16 @@ public class ListFileProtectRuleRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The type of the operating system. Valid values:</p>
+     * <ul>
+     * <li><strong>windows</strong>: Windows</li>
+     * <li><strong>linux</strong>: Linux</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>linux</p>
+     */
     @NameInMap("Platform")
     public String platform;
 

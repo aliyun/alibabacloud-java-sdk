@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAssetInfoPublishResponseBody extends TeaModel {
+    /**
+     * <p>The servers.</p>
+     */
     @NameInMap("AssetList")
     public java.util.List<ListAssetInfoPublishResponseBodyAssetList> assetList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3956048F-9D73-5EDB-834B-4827BB483977</p>
      */
@@ -37,6 +42,8 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
 
     public static class ListAssetInfoPublishResponseBodyAssetList extends TeaModel {
         /**
+         * <p>The version of the Security Center agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0.8</p>
          */
@@ -44,6 +51,8 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
         public String curVersion;
 
         /**
+         * <p>The time when the Security Center agent was last upgraded.</p>
+         * 
          * <strong>example:</strong>
          * <p>1724522400000</p>
          */
@@ -51,6 +60,15 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
         public Long lastUpgradeTime;
 
         /**
+         * <p>The publish status of the Security Center agent. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: not started.</li>
+         * <li><strong>1</strong>: publishing.</li>
+         * <li><strong>2</strong>: published.</li>
+         * <li><strong>3</strong>: publish suspended.</li>
+         * <li><strong>4</strong>: forcibly upgrading.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -58,6 +76,12 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Indicates whether automatic upgrade is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -65,6 +89,8 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
         public Boolean upgradeEnable;
 
         /**
+         * <p>The UUID of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>2a98f149-0256-414c-a29a-a69f8a75****</p>
          */

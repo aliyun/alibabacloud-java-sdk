@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyPropertyScheduleConfigResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the collection frequency of asset fingerprints is modified. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class ModifyPropertyScheduleConfigResponseBody extends TeaModel {
     public Boolean modifyResult;
 
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>C0D1DF51-D879-55A8-B6C7-7D3B913EF34D</p>
      */

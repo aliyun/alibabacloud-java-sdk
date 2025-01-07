@@ -42,6 +42,19 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
 
     public static class GetAssetSelectionConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The operating system of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong></li>
+         * <li><strong>linux</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
+         */
+        @NameInMap("Platform")
+        public String platform;
+
+        /**
          * <p>The ID of the current asset selection. It can be used to query and modify the asset that is selected.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +80,14 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
         public static GetAssetSelectionConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAssetSelectionConfigResponseBodyData self = new GetAssetSelectionConfigResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetAssetSelectionConfigResponseBodyData setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
         }
 
         public GetAssetSelectionConfigResponseBodyData setSelectionKey(String selectionKey) {

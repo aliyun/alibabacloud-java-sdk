@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainSecureStatisticsRequest extends TeaModel {
     /**
+     * <p>The language of the content within the request and response. Valid values: Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class DescribeDomainSecureStatisticsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>113.87.<em>.</em></p>
      */

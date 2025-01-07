@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeClientProblemTypeResponseBody extends TeaModel {
     /**
+     * <p>The number of entries returned on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -12,6 +14,8 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,16 +23,23 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The issue types.</p>
+     */
     @NameInMap("ProblemTypes")
     public java.util.List<DescribeClientProblemTypeResponseBodyProblemTypes> problemTypes;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D65AADFC-1D20-5A6A-8F6A-9FA53CXXXXX</p>
      */
@@ -36,6 +47,8 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>21</p>
      */
@@ -96,10 +109,18 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeClientProblemTypeResponseBodyProblemTypes extends TeaModel {
+        /**
+         * <p>The description of the issue type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>other</p>
+         */
         @NameInMap("problemDetail")
         public String problemDetail;
 
         /**
+         * <p>The ID of the issue type.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -107,6 +128,8 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         public String problemId;
 
         /**
+         * <p>The name of the issue type.</p>
+         * 
          * <strong>example:</strong>
          * <p>high_cpu</p>
          */

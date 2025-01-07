@@ -149,6 +149,9 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("Note")
+        public String note;
+
         /**
          * <p>The operation code.</p>
          * <ul>
@@ -217,6 +220,14 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeImageEventOperationPageResponseBodyDataList setNote(String note) {
+            this.note = note;
+            return this;
+        }
+        public String getNote() {
+            return this.note;
         }
 
         public DescribeImageEventOperationPageResponseBodyDataList setOperationCode(String operationCode) {

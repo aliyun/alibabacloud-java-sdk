@@ -25,6 +25,21 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The service provider of the asset. Separate multiple service providers with commas (,). Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
+     * <li><strong>1</strong>: an asset outside Alibaba Cloud</li>
+     * <li><strong>2</strong>: an asset in a data center</li>
+     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: an asset from a third-party cloud service provider</li>
+     * <li><strong>8</strong>: a lightweight asset</li>
+     * <li><strong>9</strong>: a Serverless App Engine (SAE) instance</li>
+     * <li><strong>10</strong>: an instance in Platform for AI (PAI)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1,2,3</p>
+     */
     @NameInMap("Flags")
     public String flags;
 

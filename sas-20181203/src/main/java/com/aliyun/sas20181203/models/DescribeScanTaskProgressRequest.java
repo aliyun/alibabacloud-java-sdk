@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeScanTaskProgressRequest extends TeaModel {
     /**
+     * <p>The ID of the virus scan task.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~StartVirusScanTask~~">StartVirusScanTask</a> operation to query the IDs of virus scan tasks.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

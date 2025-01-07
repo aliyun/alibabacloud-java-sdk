@@ -74,6 +74,9 @@ public class DescribeImageEventOperationPageRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Source")
+    public String source;
+
     public static DescribeImageEventOperationPageRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageEventOperationPageRequest self = new DescribeImageEventOperationPageRequest();
         return TeaModel.build(map, self);
@@ -133,6 +136,14 @@ public class DescribeImageEventOperationPageRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeImageEventOperationPageRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

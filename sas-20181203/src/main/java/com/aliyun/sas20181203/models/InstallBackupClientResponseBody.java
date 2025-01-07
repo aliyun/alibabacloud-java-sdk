@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InstallBackupClientResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA04B21</p>
      */

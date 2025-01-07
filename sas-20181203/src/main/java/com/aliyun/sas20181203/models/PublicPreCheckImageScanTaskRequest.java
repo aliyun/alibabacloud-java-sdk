@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublicPreCheckImageScanTaskRequest extends TeaModel {
     /**
+     * <p>The SHA-256 value of the image digest. Separate multiple SHA-256 values with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>6a5e103187b31a94592a47a5858617f7****</p>
      */
@@ -12,6 +14,8 @@ public class PublicPreCheckImageScanTaskRequest extends TeaModel {
     public String digests;
 
     /**
+     * <p>The ID of the Container Registry instance in which the image repository is created. Separate multiple IDs with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>i-uf6j8vq9l4r5ntht****</p>
      */
@@ -19,6 +23,8 @@ public class PublicPreCheckImageScanTaskRequest extends TeaModel {
     public String instanceIds;
 
     /**
+     * <p>The region ID of the image. Separate multiple IDs with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -26,6 +32,13 @@ public class PublicPreCheckImageScanTaskRequest extends TeaModel {
     public String regionIds;
 
     /**
+     * <p>The type of the image repository. Separate multiple types with commas (,). Valid values:</p>
+     * <ul>
+     * <li><strong>acr</strong></li>
+     * <li><strong>harbor</strong></li>
+     * <li><strong>quay</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>acr</p>
      */
@@ -33,6 +46,8 @@ public class PublicPreCheckImageScanTaskRequest extends TeaModel {
     public String registryTypes;
 
     /**
+     * <p>The ID of the image repository. Separate multiple IDs with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>crr-vridcl4****</p>
      */
@@ -40,6 +55,8 @@ public class PublicPreCheckImageScanTaskRequest extends TeaModel {
     public String repoIds;
 
     /**
+     * <p>The name of the image repository. Separate multiple names with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>centos</p>
      */
@@ -47,6 +64,8 @@ public class PublicPreCheckImageScanTaskRequest extends TeaModel {
     public String repoNames;
 
     /**
+     * <p>The namespace to which the image repository belongs. Separate multiple namespaces with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>hanghai-namespace</p>
      */
@@ -54,6 +73,8 @@ public class PublicPreCheckImageScanTaskRequest extends TeaModel {
     public String repoNamespaces;
 
     /**
+     * <p>The source IP address of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
      */
@@ -61,6 +82,8 @@ public class PublicPreCheckImageScanTaskRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The tag that is added to the image. Separate multiple tags with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>0.2</p>
      */

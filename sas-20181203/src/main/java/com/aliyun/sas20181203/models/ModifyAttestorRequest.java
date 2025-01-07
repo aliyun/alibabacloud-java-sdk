@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAttestorRequest extends TeaModel {
     /**
+     * <p>The ID of the KMS key.</p>
+     * 
      * <strong>example:</strong>
      * <p>key-********</p>
      */
@@ -12,6 +14,8 @@ public class ModifyAttestorRequest extends TeaModel {
     public String keyId;
 
     /**
+     * <p>The region ID of the Key Management Service (KMS) key.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +23,8 @@ public class ModifyAttestorRequest extends TeaModel {
     public String keyRegionId;
 
     /**
+     * <p>The version ID of the KMS key.</p>
+     * 
      * <strong>example:</strong>
      * <p>key-****</p>
      */
@@ -26,6 +32,8 @@ public class ModifyAttestorRequest extends TeaModel {
     public String keyVersionId;
 
     /**
+     * <p>The name of the witness.</p>
+     * 
      * <strong>example:</strong>
      * <p>attestor-auto-ad5316</p>
      */
@@ -33,6 +41,8 @@ public class ModifyAttestorRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>remark</p>
      */
@@ -43,6 +53,8 @@ public class ModifyAttestorRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The source IP address of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.2.XX.XX</p>
      */

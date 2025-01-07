@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeStrategyExecDetailRequest extends TeaModel {
     /**
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,11 @@ public class DescribeStrategyExecDetailRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +26,8 @@ public class DescribeStrategyExecDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The source IP address of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.2.XX.XX</p>
      */
@@ -26,6 +35,10 @@ public class DescribeStrategyExecDetailRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The ID of the baseline check policy.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeStrategy~~">DescribeStrategy</a> operation to query the IDs of baseline check policies.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

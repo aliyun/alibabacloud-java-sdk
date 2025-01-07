@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePublishCronRequest extends TeaModel {
     /**
+     * <p>The cron expression that is used to specify the start time of the upgrade.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,17 @@ public class UpdatePublishCronRequest extends TeaModel {
     public String cron;
 
     /**
+     * <p>The day of a week on which you want to perform the upgrade. Valid values:</p>
+     * <ul>
+     * <li><strong>MON</strong></li>
+     * <li><strong>TUE</strong></li>
+     * <li><strong>WED</strong></li>
+     * <li><strong>THU</strong></li>
+     * <li><strong>FRI</strong></li>
+     * <li><strong>SAT</strong></li>
+     * <li><strong>SUN</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SUN</p>
      */
@@ -21,6 +33,8 @@ public class UpdatePublishCronRequest extends TeaModel {
     public String cronDay;
 
     /**
+     * <p>The start timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1657407600000</p>
      */
@@ -28,6 +42,12 @@ public class UpdatePublishCronRequest extends TeaModel {
     public Long cronTime;
 
     /**
+     * <p>The type of the upgrade cycle. Valid values:</p>
+     * <ul>
+     * <li><strong>day</strong>: every day</li>
+     * <li><strong>week</strong>: every week</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>day</p>
      */
@@ -35,6 +55,7 @@ public class UpdatePublishCronRequest extends TeaModel {
     public String cronType;
 
     /**
+     * <p>The duration of the upgrade. Unit: hours.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

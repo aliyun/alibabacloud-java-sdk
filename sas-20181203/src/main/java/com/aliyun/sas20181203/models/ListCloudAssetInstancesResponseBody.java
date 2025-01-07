@@ -257,7 +257,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
          * <li><strong>19</strong>: PolarDB</li>
          * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL</li>
          * <li><strong>21</strong>: Microservices Engine (MSE)</li>
-         * <li><strong>22</strong>: Apsara File Storage NAS (NAS)</li>
+         * <li><strong>22</strong>: File Storage NAS (NAS)</li>
          * <li><strong>23</strong>: Data Security Center (DSC)</li>
          * <li><strong>24</strong>: Elastic IP Address (EIP)</li>
          * <li><strong>25</strong>: Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM)</li>

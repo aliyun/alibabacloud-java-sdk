@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details of the ECS instances.</p>
+     * <p>An array that consists of the details of the instances.</p>
      */
     @NameInMap("AssetList")
     public java.util.List<DescribeAssetDetailByUuidsResponseBodyAssetList> assetList;
@@ -52,6 +52,44 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
         public String assetType;
 
         /**
+         * <p>The timestamp when Security Center is authorized to protect the instance. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1627974044000</p>
+         */
+        @NameInMap("AuthModifyTime")
+        public Long authModifyTime;
+
+        /**
+         * <p>The edition of Security Center that is authorized to protect the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Basic edition (Unauthorized)</li>
+         * <li><strong>6</strong>: Anti-virus edition</li>
+         * <li><strong>5</strong>: Advanced edition</li>
+         * <li><strong>3</strong>: Enterprise edition</li>
+         * <li><strong>7</strong>: Ultimate edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
+        @NameInMap("AuthVersion")
+        public Integer authVersion;
+
+        /**
+         * <p>Indicates whether Security Center is authorized to protect the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Bind")
+        public Boolean bind;
+
+        /**
          * <p>The status of the Security Center agent. Valid values:</p>
          * <ul>
          * <li><strong>online</strong></li>
@@ -63,6 +101,48 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
          */
         @NameInMap("ClientStatus")
         public String clientStatus;
+
+        /**
+         * <p>The version of the Security Center agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
+         */
+        @NameInMap("ClientVersion")
+        public String clientVersion;
+
+        /**
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        /**
+         * <p>The details of the CPU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Intel(R) Xeon(R) Platinum 8163 CPU @ 2.50GHz</p>
+         */
+        @NameInMap("CpuInfo")
+        public String cpuInfo;
+
+        /**
+         * <p>The timestamp when Security Center records the details of the instance. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603863599000</p>
+         */
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        /**
+         * <p>An array that consists of the information about the disk.</p>
+         */
+        @NameInMap("DiskInfoList")
+        public java.util.List<String> diskInfoList;
 
         /**
          * <p>The type of the asset by source. Valid values:</p>
@@ -79,6 +159,24 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
          */
         @NameInMap("Flag")
         public Integer flag;
+
+        /**
+         * <p>The group to which the instance belongs. By default, the instances that are not grouped belong to the <strong>Default</strong> group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("GroupTrace")
+        public String groupTrace;
+
+        /**
+         * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("HostName")
+        public String hostName;
 
         /**
          * <p>The ID of the ECS instance.</p>
@@ -129,6 +227,45 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The IP addresses of the instances.</p>
+         */
+        @NameInMap("IpList")
+        public java.util.List<String> ipList;
+
+        /**
+         * <p>The kernel version of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.18.0-80.11.2.el8_0.x86_64</p>
+         */
+        @NameInMap("Kernel")
+        public String kernel;
+
+        /**
+         * <p>The media access control (MAC) addresses of the instances.</p>
+         */
+        @NameInMap("MacList")
+        public java.util.List<String> macList;
+
+        /**
+         * <p>The memory size of the instance. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
+        @NameInMap("Mem")
+        public Integer mem;
+
+        /**
+         * <p>The memory size of the instance. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
+        @NameInMap("Memory")
+        public Long memory;
+
+        /**
          * <p>The operating system of the ECS instance.</p>
          * 
          * <strong>example:</strong>
@@ -136,6 +273,15 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
          */
         @NameInMap("Os")
         public String os;
+
+        /**
+         * <p>The operating system version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux 64bit</p>
+         */
+        @NameInMap("OsDetail")
+        public String osDetail;
 
         /**
          * <p>The name of the operating system run by the ECS instance.</p>
@@ -177,6 +323,24 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
         public String regionName;
 
         /**
+         * <p>The operating system information about the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS Linux 8.0.1905</p>
+         */
+        @NameInMap("SysInfo")
+        public String sysInfo;
+
+        /**
+         * <p>The tag added to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Tag")
+        public String tag;
+
+        /**
          * <p>The UUID of the ECS instance.</p>
          * 
          * <strong>example:</strong>
@@ -207,6 +371,30 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             return this.assetType;
         }
 
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setAuthModifyTime(Long authModifyTime) {
+            this.authModifyTime = authModifyTime;
+            return this;
+        }
+        public Long getAuthModifyTime() {
+            return this.authModifyTime;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setAuthVersion(Integer authVersion) {
+            this.authVersion = authVersion;
+            return this;
+        }
+        public Integer getAuthVersion() {
+            return this.authVersion;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setBind(Boolean bind) {
+            this.bind = bind;
+            return this;
+        }
+        public Boolean getBind() {
+            return this.bind;
+        }
+
         public DescribeAssetDetailByUuidsResponseBodyAssetList setClientStatus(String clientStatus) {
             this.clientStatus = clientStatus;
             return this;
@@ -215,12 +403,68 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             return this.clientStatus;
         }
 
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setClientVersion(String clientVersion) {
+            this.clientVersion = clientVersion;
+            return this;
+        }
+        public String getClientVersion() {
+            return this.clientVersion;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setCpuInfo(String cpuInfo) {
+            this.cpuInfo = cpuInfo;
+            return this;
+        }
+        public String getCpuInfo() {
+            return this.cpuInfo;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setDiskInfoList(java.util.List<String> diskInfoList) {
+            this.diskInfoList = diskInfoList;
+            return this;
+        }
+        public java.util.List<String> getDiskInfoList() {
+            return this.diskInfoList;
+        }
+
         public DescribeAssetDetailByUuidsResponseBodyAssetList setFlag(Integer flag) {
             this.flag = flag;
             return this;
         }
         public Integer getFlag() {
             return this.flag;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setGroupTrace(String groupTrace) {
+            this.groupTrace = groupTrace;
+            return this;
+        }
+        public String getGroupTrace() {
+            return this.groupTrace;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setHostName(String hostName) {
+            this.hostName = hostName;
+            return this;
+        }
+        public String getHostName() {
+            return this.hostName;
         }
 
         public DescribeAssetDetailByUuidsResponseBodyAssetList setInstanceId(String instanceId) {
@@ -263,12 +507,60 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             return this.ip;
         }
 
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setIpList(java.util.List<String> ipList) {
+            this.ipList = ipList;
+            return this;
+        }
+        public java.util.List<String> getIpList() {
+            return this.ipList;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setKernel(String kernel) {
+            this.kernel = kernel;
+            return this;
+        }
+        public String getKernel() {
+            return this.kernel;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setMacList(java.util.List<String> macList) {
+            this.macList = macList;
+            return this;
+        }
+        public java.util.List<String> getMacList() {
+            return this.macList;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setMem(Integer mem) {
+            this.mem = mem;
+            return this;
+        }
+        public Integer getMem() {
+            return this.mem;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setMemory(Long memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Long getMemory() {
+            return this.memory;
+        }
+
         public DescribeAssetDetailByUuidsResponseBodyAssetList setOs(String os) {
             this.os = os;
             return this;
         }
         public String getOs() {
             return this.os;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setOsDetail(String osDetail) {
+            this.osDetail = osDetail;
+            return this;
+        }
+        public String getOsDetail() {
+            return this.osDetail;
         }
 
         public DescribeAssetDetailByUuidsResponseBodyAssetList setOsName(String osName) {
@@ -301,6 +593,22 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
         }
         public String getRegionName() {
             return this.regionName;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setSysInfo(String sysInfo) {
+            this.sysInfo = sysInfo;
+            return this;
+        }
+        public String getSysInfo() {
+            return this.sysInfo;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
         public DescribeAssetDetailByUuidsResponseBodyAssetList setUuid(String uuid) {

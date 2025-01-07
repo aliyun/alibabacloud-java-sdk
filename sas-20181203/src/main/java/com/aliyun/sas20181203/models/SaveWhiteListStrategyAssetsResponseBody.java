@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveWhiteListStrategyAssetsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A4EB8B1C-1DEC-5E18-BCD0-XXXX</p>
      */

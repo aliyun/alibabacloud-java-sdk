@@ -15,6 +15,9 @@ public class AddCheckInstanceResultWhiteListRequest extends TeaModel {
 
     /**
      * <p>The ID of the check item.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>132</p>
@@ -23,17 +26,35 @@ public class AddCheckInstanceResultWhiteListRequest extends TeaModel {
     public Long checkId;
 
     /**
-     * <p>The instance IDs of assets.</p>
+     * <p>The instance IDs of the assets.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The asset instances.</p>
+     */
     @NameInMap("InstanceList")
     public java.util.List<AddCheckInstanceResultWhiteListRequestInstanceList> instanceList;
 
+    /**
+     * <p>The description. The value of this parameter can be up to 65,535 bytes in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The type of the rule. Default value: <strong>WHITE</strong>. Valid value:</p>
+     * <ul>
+     * <li>WHITE: adds check items to the whitelist.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>WHITE</p>
+     */
     @NameInMap("RuleType")
     public String ruleType;
 
@@ -91,9 +112,27 @@ public class AddCheckInstanceResultWhiteListRequest extends TeaModel {
     }
 
     public static class AddCheckInstanceResultWhiteListRequestInstanceList extends TeaModel {
+        /**
+         * <p>The instance ID of the asset.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to query the instance IDs of assets.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9fdluqx20mp2x7****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The region ID of the asset.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to query the region ID of the asset.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hongkong</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

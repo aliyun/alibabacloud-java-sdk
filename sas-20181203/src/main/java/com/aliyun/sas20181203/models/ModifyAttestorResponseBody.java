@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAttestorResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9E8B1D8F-DE1C-5421-81AA-**********</p>
      */

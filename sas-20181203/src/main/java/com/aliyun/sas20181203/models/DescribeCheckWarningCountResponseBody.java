@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCheckWarningCountResponseBody extends TeaModel {
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCheckWarningCountResponseBody extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9693CBA1-1EC4-5B5A-8D96-34010D9DXXXX</p>
      */

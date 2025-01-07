@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainSecureScoreResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>11C96623-E106-59C9-866D-A6C82911****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDomainSecureScoreResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The security score of the website.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

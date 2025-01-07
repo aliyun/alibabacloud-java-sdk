@@ -17,6 +17,12 @@ public class SetSensitiveDefineRuleConfigRequest extends TeaModel {
     @NameInMap("Config")
     public String config;
 
+    @NameInMap("EnableNewRule")
+    public Integer enableNewRule;
+
+    @NameInMap("Source")
+    public String source;
+
     public static SetSensitiveDefineRuleConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetSensitiveDefineRuleConfigRequest self = new SetSensitiveDefineRuleConfigRequest();
         return TeaModel.build(map, self);
@@ -28,6 +34,22 @@ public class SetSensitiveDefineRuleConfigRequest extends TeaModel {
     }
     public String getConfig() {
         return this.config;
+    }
+
+    public SetSensitiveDefineRuleConfigRequest setEnableNewRule(Integer enableNewRule) {
+        this.enableNewRule = enableNewRule;
+        return this;
+    }
+    public Integer getEnableNewRule() {
+        return this.enableNewRule;
+    }
+
+    public SetSensitiveDefineRuleConfigRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

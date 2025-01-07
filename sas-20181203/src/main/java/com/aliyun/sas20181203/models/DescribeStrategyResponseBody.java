@@ -215,6 +215,9 @@ public class DescribeStrategyResponseBody extends TeaModel {
         @NameInMap("PassRate")
         public Integer passRate;
 
+        @NameInMap("Percent")
+        public String percent;
+
         /**
          * <p>The number of the assets on which the baseline check is complete.</p>
          * 
@@ -254,6 +257,9 @@ public class DescribeStrategyResponseBody extends TeaModel {
          */
         @NameInMap("Type")
         public Integer type;
+
+        @NameInMap("UserModifyTime")
+        public Long userModifyTime;
 
         public static DescribeStrategyResponseBodyStrategies build(java.util.Map<String, ?> map) throws Exception {
             DescribeStrategyResponseBodyStrategies self = new DescribeStrategyResponseBodyStrategies();
@@ -340,6 +346,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
             return this.passRate;
         }
 
+        public DescribeStrategyResponseBodyStrategies setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
         public DescribeStrategyResponseBodyStrategies setProcessRate(Integer processRate) {
             this.processRate = processRate;
             return this;
@@ -370,6 +384,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
         }
         public Integer getType() {
             return this.type;
+        }
+
+        public DescribeStrategyResponseBodyStrategies setUserModifyTime(Long userModifyTime) {
+            this.userModifyTime = userModifyTime;
+            return this;
+        }
+        public Long getUserModifyTime() {
+            return this.userModifyTime;
         }
 
     }

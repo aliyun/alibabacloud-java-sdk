@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CheckTrialFixCountResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the vulnerability can be fixed. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class CheckTrialFixCountResponseBody extends TeaModel {
     public Boolean canFix;
 
     /**
+     * <p>The quota usage required for the current fix operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +27,8 @@ public class CheckTrialFixCountResponseBody extends TeaModel {
     public Integer expendCount;
 
     /**
+     * <p>The quota that remains after the current fix operation is complete.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -26,6 +36,8 @@ public class CheckTrialFixCountResponseBody extends TeaModel {
     public Integer remainCount;
 
     /**
+     * <p>The number of the vulnerabilities that are fixed.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +45,8 @@ public class CheckTrialFixCountResponseBody extends TeaModel {
     public Integer repairedCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
      */
@@ -40,6 +54,12 @@ public class CheckTrialFixCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether Security Center is in free trial. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -20,6 +20,9 @@ public class CreateSoarStrategyTaskRequest extends TeaModel {
     /**
      * <p>The name of the policy. Set the value to Automated Batch Vulnerability Fixing Policy for Multiple Servers.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Automated Batch Vulnerability Fixing Policy for Multiple Servers</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;

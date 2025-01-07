@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details about the asset.</p>
+     * <p>An array that consists of the details about the assets.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeCloudCenterInstancesResponseBodyInstances> instances;
@@ -89,9 +89,27 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
+        /**
+         * <p>The ID of the application.</p>
+         * <blockquote>
+         * <p> This parameter is available only when the <strong>Vendor</strong> parameter is set to 9.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         * <blockquote>
+         * <p> This parameter is available only when the <strong>Vendor</strong> parameter is set to 9.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testAppName</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
@@ -114,6 +132,12 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("AssetType")
         public String assetType;
 
+        /**
+         * <p>The name of the asset type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Elastic Compute Service</p>
+         */
         @NameInMap("AssetTypeName")
         public String assetTypeName;
 
@@ -144,14 +168,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer authVersion;
 
         /**
-         * <p>The name of the Security Center edition that is authorized to scan the asset. Valid values:</p>
+         * <p>The name of the Security Center edition that is authorized to protect the asset. Valid values:</p>
          * <ul>
          * <li>Basic edition</li>
          * <li>Anti-virus edition</li>
          * <li>Advanced edition</li>
          * <li>Enterprise edition</li>
          * <li>Ultimate edition</li>
-         * <li>Value-added Plan edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -186,6 +209,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
          */
         @NameInMap("ClientStatus")
         public String clientStatus;
+
+        @NameInMap("ClientSubStatus")
+        public String clientSubStatus;
 
         /**
          * <p>The ID of the cluster.</p>
@@ -258,6 +284,25 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("Flag")
         public Integer flag;
 
+        /**
+         * <p>The service provider of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>ALIYUN</strong></li>
+         * <li><strong>OUT</strong></li>
+         * <li><strong>IDC</strong></li>
+         * <li><strong>Tencent</strong></li>
+         * <li><strong>HUAWEICLOUD</strong></li>
+         * <li><strong>Azure</strong></li>
+         * <li><strong>AWS</strong></li>
+         * <li><strong>ASK</strong></li>
+         * <li><strong>TRIPARTITE</strong></li>
+         * <li><strong>SAE</strong></li>
+         * <li><strong>PAI</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASK</p>
+         */
         @NameInMap("FlagName")
         public String flagName;
 
@@ -565,6 +610,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("TagId")
         public String tagId;
 
+        @NameInMap("TagResources")
+        public String tagResources;
+
         /**
          * <p>The UUID of the asset.</p>
          * 
@@ -575,12 +623,15 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String uuid;
 
         /**
-         * <p>The type of the asset by source. Valid values:</p>
+         * <p>The service provider of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: an ECS instance.</li>
-         * <li><strong>1</strong>: a third-party cloud server.</li>
-         * <li><strong>2</strong>: a server in a data center.</li>
-         * <li><strong>3</strong>: a server deployed on Tencent Cloud. This value is returned only after the asset is protected by Security Center.</li>
+         * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
+         * <li><strong>1</strong>: an asset outside Alibaba Cloud</li>
+         * <li><strong>2</strong>: an asset in a data center</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: an asset from a third-party cloud service provider</li>
+         * <li><strong>8</strong>: a lightweight asset</li>
+         * <li><strong>9</strong>: a SAE instance</li>
+         * <li><strong>10</strong>: an instance in PAI</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -590,11 +641,19 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer vendor;
 
         /**
-         * <p>The name of the service provider (SP) for the asset.</p>
+         * <p>The name of the service provider for the asset.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>TENCENT</strong>: Tencent Cloud</li>
          * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+         * <li><strong>OUT</strong>: a third-party service provider</li>
+         * <li><strong>IDC</strong>: a data center</li>
+         * <li><strong>TENCENT</strong>: Tencent Cloud</li>
+         * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud</li>
+         * <li><strong>Microsoft</strong>: Microsoft Azure</li>
+         * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
+         * <li><strong>TRIPARTITE</strong>: a lightweight server</li>
+         * <li><strong>SAE</strong>: a SAE instance</li>
+         * <li><strong>PAI</strong>: an instance in PAI</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -717,6 +776,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public String getClientStatus() {
             return this.clientStatus;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setClientSubStatus(String clientSubStatus) {
+            this.clientSubStatus = clientSubStatus;
+            return this;
+        }
+        public String getClientSubStatus() {
+            return this.clientSubStatus;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setClusterId(String clusterId) {
@@ -997,6 +1064,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public String getTagId() {
             return this.tagId;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setTagResources(String tagResources) {
+            this.tagResources = tagResources;
+            return this;
+        }
+        public String getTagResources() {
+            return this.tagResources;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setUuid(String uuid) {

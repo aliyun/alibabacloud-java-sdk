@@ -3,7 +3,7 @@ package com.aliyun.sas20181203.models;
 
 import com.aliyun.tea.*;
 
-public class UninstallRaspAttachResponse extends TeaModel {
+public class ListOperationProcessDetailResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class UninstallRaspAttachResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public UninstallRaspAttachResponseBody body;
+    public ListOperationProcessDetailResponseBody body;
 
-    public static UninstallRaspAttachResponse build(java.util.Map<String, ?> map) throws Exception {
-        UninstallRaspAttachResponse self = new UninstallRaspAttachResponse();
+    public static ListOperationProcessDetailResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListOperationProcessDetailResponse self = new ListOperationProcessDetailResponse();
         return TeaModel.build(map, self);
     }
 
-    public UninstallRaspAttachResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListOperationProcessDetailResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class UninstallRaspAttachResponse extends TeaModel {
         return this.headers;
     }
 
-    public UninstallRaspAttachResponse setStatusCode(Integer statusCode) {
+    public ListOperationProcessDetailResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class UninstallRaspAttachResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UninstallRaspAttachResponse setBody(UninstallRaspAttachResponseBody body) {
+    public ListOperationProcessDetailResponse setBody(ListOperationProcessDetailResponseBody body) {
         this.body = body;
         return this;
     }
-    public UninstallRaspAttachResponseBody getBody() {
+    public ListOperationProcessDetailResponseBody getBody() {
         return this.body;
     }
 

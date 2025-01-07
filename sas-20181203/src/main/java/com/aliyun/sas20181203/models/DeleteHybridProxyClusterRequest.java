@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHybridProxyClusterRequest extends TeaModel {
     /**
+     * <p>The name of the proxy cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

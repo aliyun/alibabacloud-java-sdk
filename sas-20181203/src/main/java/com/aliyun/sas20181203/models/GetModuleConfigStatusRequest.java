@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetModuleConfigStatusRequest extends TeaModel {
     /**
+     * <p>The service modules that you want to query.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ModuleNames")

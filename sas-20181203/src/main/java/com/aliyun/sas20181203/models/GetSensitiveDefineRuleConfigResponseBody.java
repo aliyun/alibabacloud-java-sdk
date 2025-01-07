@@ -215,6 +215,9 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
     }
 
     public static class GetSensitiveDefineRuleConfigResponseBodyData extends TeaModel {
+        @NameInMap("EnableNewRule")
+        public Integer enableNewRule;
+
         /**
          * <p>The custom configuration ID.</p>
          * 
@@ -251,6 +254,14 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         public static GetSensitiveDefineRuleConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetSensitiveDefineRuleConfigResponseBodyData self = new GetSensitiveDefineRuleConfigResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetSensitiveDefineRuleConfigResponseBodyData setEnableNewRule(Integer enableNewRule) {
+            this.enableNewRule = enableNewRule;
+            return this;
+        }
+        public Integer getEnableNewRule() {
+            return this.enableNewRule;
         }
 
         public GetSensitiveDefineRuleConfigResponseBodyData setId(Long id) {

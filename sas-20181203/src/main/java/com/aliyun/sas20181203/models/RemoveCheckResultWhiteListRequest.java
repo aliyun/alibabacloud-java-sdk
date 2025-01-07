@@ -14,11 +14,20 @@ public class RemoveCheckResultWhiteListRequest extends TeaModel {
     public String checkGroupId;
 
     /**
-     * <p>The IDs of check items.</p>
+     * <p>The IDs of the check items.</p>
      */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
+    /**
+     * <p>The ID of the whitelist rule.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of whitelist rules.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

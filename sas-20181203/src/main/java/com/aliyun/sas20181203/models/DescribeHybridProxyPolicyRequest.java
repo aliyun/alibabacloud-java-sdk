@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridProxyPolicyRequest extends TeaModel {
     /**
+     * <p>The name of the proxy cluster. You can query the name of the proxy cluster in the Security Center console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

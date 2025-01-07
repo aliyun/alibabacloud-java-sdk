@@ -4,13 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListPublishBatchResponseBody extends TeaModel {
+    /**
+     * <p>The information about the release batches.</p>
+     */
     @NameInMap("BatchList")
     public java.util.List<ListPublishBatchResponseBodyBatchList> batchList;
 
+    /**
+     * <p>The page information.</p>
+     */
     @NameInMap("PageInfo")
     public ListPublishBatchResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7532B7EE-7CE7-5F4D-BF04-B12447DDCAE1</p>
      */
@@ -48,6 +56,8 @@ public class ListPublishBatchResponseBody extends TeaModel {
 
     public static class ListPublishBatchResponseBodyBatchList extends TeaModel {
         /**
+         * <p>The ID of the release batch.</p>
+         * 
          * <strong>example:</strong>
          * <p>1371</p>
          */
@@ -55,16 +65,26 @@ public class ListPublishBatchResponseBody extends TeaModel {
         public Long batchId;
 
         /**
+         * <p>The interval between two release batches. Unit: hours.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
         @NameInMap("BatchInterval")
         public Integer batchInterval;
 
+        /**
+         * <p>The name of the release batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("BatchName")
         public String batchName;
 
         /**
+         * <p>The current batch number during a batch release.</p>
+         * 
          * <strong>example:</strong>
          * <p>2147483647</p>
          */
@@ -72,6 +92,8 @@ public class ListPublishBatchResponseBody extends TeaModel {
         public Integer batchNo;
 
         /**
+         * <p>The progress of the release batch. This parameter indicates the number of servers that are upgraded in the release batch.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -79,6 +101,8 @@ public class ListPublishBatchResponseBody extends TeaModel {
         public Integer batchProcess;
 
         /**
+         * <p>The total number of batches.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -86,6 +110,13 @@ public class ListPublishBatchResponseBody extends TeaModel {
         public Integer batchTotal;
 
         /**
+         * <p>The asset selection dimension. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: instance.</li>
+         * <li><strong>1</strong>: machine group.</li>
+         * <li><strong>2</strong>: Virtual Private Cloud (VPC) ID.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -93,6 +124,15 @@ public class ListPublishBatchResponseBody extends TeaModel {
         public Integer operationBase;
 
         /**
+         * <p>The publish status of the Security Center agent. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: not started.</li>
+         * <li><strong>1</strong>: publishing.</li>
+         * <li><strong>2</strong>: published.</li>
+         * <li><strong>3</strong>: publish suspended.</li>
+         * <li><strong>4</strong>: forcibly upgrading.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -100,6 +140,8 @@ public class ListPublishBatchResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The destination version of the Security Center agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0.9</p>
          */
@@ -187,6 +229,8 @@ public class ListPublishBatchResponseBody extends TeaModel {
 
     public static class ListPublishBatchResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -194,6 +238,8 @@ public class ListPublishBatchResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -201,6 +247,8 @@ public class ListPublishBatchResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */

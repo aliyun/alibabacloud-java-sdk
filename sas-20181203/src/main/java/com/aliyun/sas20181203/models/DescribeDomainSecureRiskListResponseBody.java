@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
     /**
+     * <p>The number of the websites for which no certificates are installed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
     public Integer noSslCount;
 
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>CE500770-42D3-442E-9DDD-156E0F9F****</p>
      */
@@ -19,12 +23,17 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of risks.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("RiskCount")
     public Integer riskCount;
 
+    /**
+     * <p>The risks.</p>
+     */
     @NameInMap("RiskList")
     public java.util.List<DescribeDomainSecureRiskListResponseBodyRiskList> riskList;
 
@@ -67,6 +76,8 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
 
     public static class DescribeDomainSecureRiskListResponseBodyRiskList extends TeaModel {
         /**
+         * <p>The number of alerts.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -74,6 +85,8 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
         public Integer alarmCount;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.com</p>
          */
@@ -81,6 +94,8 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The issuer of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>globalsign</p>
          */
@@ -88,16 +103,27 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
         public String sslBrand;
 
         /**
+         * <p>Indicates whether the certificate is configured. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("SslStatus")
         public Integer sslStatus;
 
+        /**
+         * <p>The UUIDs of the backend servers of the website.</p>
+         */
         @NameInMap("UuidList")
         public java.util.List<String> uuidList;
 
         /**
+         * <p>The number of vulnerabilities.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

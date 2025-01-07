@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DeleteHybridProxyRequest extends TeaModel {
     /**
+     * <p>The name of the proxy cluster.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
+     * <p>The UUID of the proxy node that you want to remove. The value starts with inet-proxy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

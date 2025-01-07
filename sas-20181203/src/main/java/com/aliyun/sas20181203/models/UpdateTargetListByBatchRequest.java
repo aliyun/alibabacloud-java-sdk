@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTargetListByBatchRequest extends TeaModel {
     /**
+     * <p>The ID of the release batch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateTargetListByBatchRequest extends TeaModel {
     public Long batchId;
 
     /**
+     * <p>The operations on assets.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OperationList")
@@ -42,6 +44,11 @@ public class UpdateTargetListByBatchRequest extends TeaModel {
 
     public static class UpdateTargetListByBatchRequestOperationList extends TeaModel {
         /**
+         * <p>The ID of the server group.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>11883086</p>
          */
@@ -49,6 +56,12 @@ public class UpdateTargetListByBatchRequest extends TeaModel {
         public String groupId;
 
         /**
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li><strong>add</strong>: the add operation.</li>
+         * <li><strong>del</strong>: the remove operation.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>add</p>
          */
@@ -56,6 +69,11 @@ public class UpdateTargetListByBatchRequest extends TeaModel {
         public String operation;
 
         /**
+         * <p>The UUID of the server.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>de393767-6fe1-4a8d-837d-927a2b******</p>
          */
@@ -63,6 +81,8 @@ public class UpdateTargetListByBatchRequest extends TeaModel {
         public String uuid;
 
         /**
+         * <p>The ID of the VPC-connected instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp1ow0rm9t92iza******</p>
          */

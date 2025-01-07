@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCheckWarningCountRequest extends TeaModel {
     /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>103784262032****</p>
      */
@@ -12,6 +14,11 @@ public class DescribeCheckWarningCountRequest extends TeaModel {
     public Long aliUid;
 
     /**
+     * <p>The ID of the check item.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to query the IDs of check items.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>926</p>
      */
@@ -19,6 +26,11 @@ public class DescribeCheckWarningCountRequest extends TeaModel {
     public Long checkId;
 
     /**
+     * <p>The ID of the risk item.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs of risk items.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>43</p>
      */
@@ -26,6 +38,14 @@ public class DescribeCheckWarningCountRequest extends TeaModel {
     public Long riskId;
 
     /**
+     * <p>The status of the check item. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: failed</li>
+     * <li><strong>2</strong>: verifying</li>
+     * <li><strong>3</strong>: passed</li>
+     * <li><strong>6</strong>: ignored</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

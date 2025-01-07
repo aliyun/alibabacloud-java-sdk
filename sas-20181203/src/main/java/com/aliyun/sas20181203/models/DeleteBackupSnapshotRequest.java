@@ -115,7 +115,7 @@ public class DeleteBackupSnapshotRequest extends TeaModel {
          * <ul>
          * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files.</li>
          * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets.</li>
-         * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS) file systems.</li>
+         * <li><strong>NAS</strong>: File Storage NAS (NAS) file systems.</li>
          * <li><strong>OTS_TABLE</strong>: Tablestore instances.</li>
          * </ul>
          * <p>This parameter is required.</p>

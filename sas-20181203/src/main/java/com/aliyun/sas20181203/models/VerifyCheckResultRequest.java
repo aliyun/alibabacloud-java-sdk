@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyCheckResultRequest extends TeaModel {
     /**
-     * <p>An array that consists of the IDs of risk items.</p>
+     * <p>The IDs of the check items.</p>
      */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;

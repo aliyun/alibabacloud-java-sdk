@@ -22,14 +22,26 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     @NameInMap("ExposedComponentCount")
     public Integer exposedComponentCount;
 
+    /**
+     * <p>The number of ApsaraDB for MongoDB instances that are exposed on the Internet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ExposedDdsCount")
     public Integer exposedDdsCount;
 
+    /**
+     * <p>The number of Elastic Compute Service (ECS) instances that are exposed on the Internet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("ExposedEcsCount")
     public Integer exposedEcsCount;
 
     /**
-     * <p>The total number of servers that are exposed on the Internet.</p>
+     * <p>The total number of assets that are exposed on the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -46,6 +58,12 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     @NameInMap("ExposedIpCount")
     public Integer exposedIpCount;
 
+    /**
+     * <p>The number of ApsaraDB for Redis instances that are exposed on the Internet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ExposedKvstoreCount")
     public Integer exposedKvstoreCount;
 
@@ -76,6 +94,12 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     @NameInMap("ExposedPortCount")
     public Integer exposedPortCount;
 
+    /**
+     * <p>The number of ApsaraDB RDS instances that are exposed on the Internet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ExposedRdsCount")
     public Integer exposedRdsCount;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RollbackSuspEventQuaraFileResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>52A3AEE6-114A-499D-8990-4BA9B27FE0AA</p>
      */

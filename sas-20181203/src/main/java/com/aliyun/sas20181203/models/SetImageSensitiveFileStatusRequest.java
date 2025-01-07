@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class SetImageSensitiveFileStatusRequest extends TeaModel {
+    @NameInMap("IdList")
+    public java.util.List<Long> idList;
+
     /**
      * <p>The UUID of the image. Separate multiple UUIDs with commas (,).</p>
      * 
@@ -12,6 +15,9 @@ public class SetImageSensitiveFileStatusRequest extends TeaModel {
      */
     @NameInMap("ImageUuids")
     public String imageUuids;
+
+    @NameInMap("ScanRange")
+    public java.util.List<String> scanRange;
 
     /**
      * <p>The alert type of the sensitive file. Valid values:</p>
@@ -155,12 +161,28 @@ public class SetImageSensitiveFileStatusRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SetImageSensitiveFileStatusRequest setIdList(java.util.List<Long> idList) {
+        this.idList = idList;
+        return this;
+    }
+    public java.util.List<Long> getIdList() {
+        return this.idList;
+    }
+
     public SetImageSensitiveFileStatusRequest setImageUuids(String imageUuids) {
         this.imageUuids = imageUuids;
         return this;
     }
     public String getImageUuids() {
         return this.imageUuids;
+    }
+
+    public SetImageSensitiveFileStatusRequest setScanRange(java.util.List<String> scanRange) {
+        this.scanRange = scanRange;
+        return this;
+    }
+    public java.util.List<String> getScanRange() {
+        return this.scanRange;
     }
 
     public SetImageSensitiveFileStatusRequest setSensitiveFileKey(String sensitiveFileKey) {

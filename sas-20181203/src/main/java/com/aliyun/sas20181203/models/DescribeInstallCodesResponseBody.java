@@ -104,6 +104,15 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         public String os;
 
         /**
+         * <p>The ID of the PrivateLink endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
+        @NameInMap("PrivateLinkEndpointId")
+        public Long privateLinkEndpointId;
+
+        /**
          * <p>The name of the proxy cluster.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +181,14 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         }
         public String getOs() {
             return this.os;
+        }
+
+        public DescribeInstallCodesResponseBodyInstallCodes setPrivateLinkEndpointId(Long privateLinkEndpointId) {
+            this.privateLinkEndpointId = privateLinkEndpointId;
+            return this;
+        }
+        public Long getPrivateLinkEndpointId() {
+            return this.privateLinkEndpointId;
         }
 
         public DescribeInstallCodesResponseBodyInstallCodes setProxyCluster(String proxyCluster) {

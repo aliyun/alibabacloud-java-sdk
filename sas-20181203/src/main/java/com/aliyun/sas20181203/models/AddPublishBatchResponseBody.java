@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddPublishBatchResponseBody extends TeaModel {
     /**
+     * <p>The ID of the release batch.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class AddPublishBatchResponseBody extends TeaModel {
     public Long batchId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7BC55C8F-226E-5AF5-9A2C-2EC43864****</p>
      */

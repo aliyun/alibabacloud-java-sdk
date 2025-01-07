@@ -4,13 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeHybridProxyListResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeHybridProxyListResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The information about the proxy clusters.</p>
+     */
     @NameInMap("ProxyList")
     public java.util.List<DescribeHybridProxyListResponseBodyProxyList> proxyList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75801E5D-E2EB-5C1D-B65D-2F7D2B00EF93</p>
      */
@@ -48,6 +56,8 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
 
     public static class DescribeHybridProxyListResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The number of entries on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -55,6 +65,8 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -62,6 +74,8 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -69,6 +83,8 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>69</p>
          */
@@ -116,6 +132,8 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
 
     public static class DescribeHybridProxyListResponseBodyProxyList extends TeaModel {
         /**
+         * <p>The number of servers that are connected to the proxy instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -123,6 +141,8 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public Integer clientCount;
 
         /**
+         * <p>The version of the proxy instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>proxy_01_05</p>
          */
@@ -130,6 +150,8 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public String currentVersion;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-uf61q03boqhhmeai1XXX</p>
          */
@@ -137,6 +159,8 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
@@ -144,6 +168,8 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The public IP address of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.76.XXX.XXX</p>
          */
@@ -151,6 +177,8 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public String internetIp;
 
         /**
+         * <p>The private IP address of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.23.XXX.XXX</p>
          */
@@ -158,6 +186,8 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
+         * <p>The UUID of the proxy node.</p>
+         * 
          * <strong>example:</strong>
          * <p>inet-proxy-3bb11fad-37d6-4aee-9c37-b0ad1612a18e</p>
          */
@@ -165,6 +195,12 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public String proxyUuid;
 
         /**
+         * <p>The status of the proxy server. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong></li>
+         * <li><strong>offline</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>online</p>
          */
@@ -172,8 +208,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The UUID of the server that is connected to the proxy instance.</p>
+         * 
          * <strong>example:</strong>
-         * <p>59a9d158-b2f0-4766-a893-ae67b9432721</p>
+         * <p>59a9d158-b2f0-4766-a893-ae67b943XXXX</p>
          */
         @NameInMap("Uuid")
         public String uuid;

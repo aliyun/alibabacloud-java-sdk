@@ -62,6 +62,7 @@ public class SubmitCheckResponseBody extends TeaModel {
          * <p>The operation code of the configuration assessment task.</p>
          * <ul>
          * <li><strong>Throttling</strong>: frequency limit</li>
+         * <li><strong>AuthorizationExhaust</strong>: insufficient quota</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -70,6 +71,12 @@ public class SubmitCheckResponseBody extends TeaModel {
         @NameInMap("OperateCode")
         public String operateCode;
 
+        /**
+         * <p>The throttling duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
+         */
         @NameInMap("ThrottlingTimeSecond")
         public Integer throttlingTimeSecond;
 

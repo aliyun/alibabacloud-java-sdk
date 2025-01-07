@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataSourceResponseBody extends TeaModel {
+    /**
+     * <p>The metadata of the data sources.</p>
+     */
     @NameInMap("MetaDatas")
     public java.util.List<DescribeDataSourceResponseBodyMetaDatas> metaDatas;
 
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>7532B7EE-7CE7-5F4D-BF04-B12447DDXXXX</p>
      */
@@ -36,10 +41,18 @@ public class DescribeDataSourceResponseBody extends TeaModel {
     }
 
     public static class DescribeDataSourceResponseBodyMetaDatasMetaDataFieldsOperatorList extends TeaModel {
+        /**
+         * <p>The description of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dingtalk_vul</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The name of the operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>regex</p>
          */
@@ -71,6 +84,8 @@ public class DescribeDataSourceResponseBody extends TeaModel {
 
     public static class DescribeDataSourceResponseBodyMetaDatasMetaDataFields extends TeaModel {
         /**
+         * <p>The key of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>type</p>
          */
@@ -78,16 +93,23 @@ public class DescribeDataSourceResponseBody extends TeaModel {
         public String filed;
 
         /**
+         * <p>The name of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>dingtalk_vul_type</p>
          */
         @NameInMap("FiledName")
         public String filedName;
 
+        /**
+         * <p>The operators.</p>
+         */
         @NameInMap("OperatorList")
         public java.util.List<DescribeDataSourceResponseBodyMetaDatasMetaDataFieldsOperatorList> operatorList;
 
         /**
+         * <p>The sample field.</p>
+         * 
          * <strong>example:</strong>
          * <p>all:dingtalk_all;cms:dingtalk_vul_cms;oval:dingtalk_vul_cve;sys:dingtalk_vul_sys;emg:dingtalk_vul_emg</p>
          */
@@ -95,6 +117,8 @@ public class DescribeDataSourceResponseBody extends TeaModel {
         public String sample;
 
         /**
+         * <p>The value type of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -150,6 +174,8 @@ public class DescribeDataSourceResponseBody extends TeaModel {
 
     public static class DescribeDataSourceResponseBodyMetaDatas extends TeaModel {
         /**
+         * <p>The ID of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>1753</p>
          */
@@ -157,6 +183,8 @@ public class DescribeDataSourceResponseBody extends TeaModel {
         public Integer dataSourceId;
 
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>sas_analysis_pre-sas-operation-log-sas-event-suspicious</p>
          */
@@ -164,12 +192,17 @@ public class DescribeDataSourceResponseBody extends TeaModel {
         public String dataSourceName;
 
         /**
+         * <p>The description of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>dingtalk_suspicious</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The metadata files.</p>
+         */
         @NameInMap("MetaDataFields")
         public java.util.List<DescribeDataSourceResponseBodyMetaDatasMetaDataFields> metaDataFields;
 

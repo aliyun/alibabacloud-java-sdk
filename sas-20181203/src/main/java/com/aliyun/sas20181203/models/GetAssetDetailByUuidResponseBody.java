@@ -163,14 +163,13 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         public Long authModifyTime;
 
         /**
-         * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
+         * <p>The edition of Security Center that is authorized to protect the server. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Basic edition</li>
+         * <li><strong>1</strong>: Basic edition (Unauthorized)</li>
          * <li><strong>6</strong>: Anti-virus edition</li>
          * <li><strong>5</strong>: Advanced edition</li>
          * <li><strong>3</strong>: Enterprise edition</li>
          * <li><strong>7</strong>: Ultimate edition</li>
-         * <li><strong>10</strong>: Value-added Plan edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,6 +204,9 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
          */
         @NameInMap("ClientStatus")
         public String clientStatus;
+
+        @NameInMap("ClientSubStatus")
+        public String clientSubStatus;
 
         /**
          * <p>The version of the Security Center agent.</p>
@@ -496,6 +498,14 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         }
         public String getClientStatus() {
             return this.clientStatus;
+        }
+
+        public GetAssetDetailByUuidResponseBodyAssetDetail setClientSubStatus(String clientSubStatus) {
+            this.clientSubStatus = clientSubStatus;
+            return this;
+        }
+        public String getClientSubStatus() {
+            return this.clientSubStatus;
         }
 
         public GetAssetDetailByUuidResponseBodyAssetDetail setClientVersion(String clientVersion) {

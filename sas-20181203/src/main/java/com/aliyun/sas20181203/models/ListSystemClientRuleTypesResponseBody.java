@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListSystemClientRuleTypesResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>79CFF74D-E967-5407-8A78-EE03B925****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the rule types.</p>
+     */
     @NameInMap("RuleTypes")
     public java.util.List<String> ruleTypes;
 

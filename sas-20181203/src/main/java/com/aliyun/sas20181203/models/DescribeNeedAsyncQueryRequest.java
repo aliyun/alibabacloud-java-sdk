@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeNeedAsyncQueryRequest extends TeaModel {
     /**
+     * <p>The type of the query. Valid values:</p>
+     * <ul>
+     * <li><strong>suspicious</strong>: alerts</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

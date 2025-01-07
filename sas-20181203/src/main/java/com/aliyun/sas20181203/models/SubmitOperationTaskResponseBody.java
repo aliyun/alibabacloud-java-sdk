@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class SubmitOperationTaskResponseBody extends TeaModel {
     /**
+     * <p>The handling result code. Valid values:</p>
+     * <ul>
+     * <li>Insufficient authorization: AuthorizationExhaust</li>
+     * <li>Unauthorized: ActionTrialUnauthorized</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AuthorizationExhaust</p>
      */
@@ -12,6 +18,8 @@ public class SubmitOperationTaskResponseBody extends TeaModel {
     public String operateCode;
 
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0C8487EF-50C2-54BB-8634-10F8C35D****</p>
      */
@@ -19,6 +27,8 @@ public class SubmitOperationTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The main task ID that is returned when the task is submitted.</p>
+     * 
      * <strong>example:</strong>
      * <p>89f5d7813bd59dd237580a8664b3xxxx</p>
      */
