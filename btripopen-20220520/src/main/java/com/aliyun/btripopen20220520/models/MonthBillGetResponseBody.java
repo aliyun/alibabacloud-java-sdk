@@ -161,6 +161,9 @@ public class MonthBillGetResponseBody extends TeaModel {
         @NameInMap("mailBillDate")
         public Long mailBillDate;
 
+        @NameInMap("mealAmount")
+        public Double mealAmount;
+
         /**
          * <p>服务费金额（单位：元）</p>
          * 
@@ -178,6 +181,9 @@ public class MonthBillGetResponseBody extends TeaModel {
          */
         @NameInMap("trainAmount")
         public Double trainAmount;
+
+        @NameInMap("vasAmount")
+        public Double vasAmount;
 
         public static MonthBillGetResponseBodyModuleMonthAccountBillDetail build(java.util.Map<String, ?> map) throws Exception {
             MonthBillGetResponseBodyModuleMonthAccountBillDetail self = new MonthBillGetResponseBodyModuleMonthAccountBillDetail();
@@ -256,6 +262,14 @@ public class MonthBillGetResponseBody extends TeaModel {
             return this.mailBillDate;
         }
 
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail setMealAmount(Double mealAmount) {
+            this.mealAmount = mealAmount;
+            return this;
+        }
+        public Double getMealAmount() {
+            return this.mealAmount;
+        }
+
         public MonthBillGetResponseBodyModuleMonthAccountBillDetail setServiceAmount(Double serviceAmount) {
             this.serviceAmount = serviceAmount;
             return this;
@@ -270,6 +284,14 @@ public class MonthBillGetResponseBody extends TeaModel {
         }
         public Double getTrainAmount() {
             return this.trainAmount;
+        }
+
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail setVasAmount(Double vasAmount) {
+            this.vasAmount = vasAmount;
+            return this;
+        }
+        public Double getVasAmount() {
+            return this.vasAmount;
         }
 
     }

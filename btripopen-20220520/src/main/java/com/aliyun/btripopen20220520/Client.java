@@ -2033,6 +2033,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CarBillSettlementQueryResponse carBillSettlementQueryWithOptions(CarBillSettlementQueryRequest request, CarBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billBatch)) {
+            query.put("bill_batch", request.billBatch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
             query.put("page_no", request.pageNo);
         }
@@ -2047,6 +2051,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodStart)) {
             query.put("period_start", request.periodStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollId)) {
+            query.put("scroll_id", request.scrollId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollMod)) {
+            query.put("scroll_mod", request.scrollMod);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -2587,6 +2599,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CooperatorFlightBillSettlementQueryResponse cooperatorFlightBillSettlementQueryWithOptions(CooperatorFlightBillSettlementQueryRequest request, CooperatorFlightBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billBatch)) {
+            query.put("bill_batch", request.billBatch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cooperatorId)) {
             query.put("cooperator_id", request.cooperatorId);
         }
@@ -2605,6 +2621,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodStart)) {
             query.put("period_start", request.periodStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollId)) {
+            query.put("scroll_id", request.scrollId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollMod)) {
+            query.put("scroll_mod", request.scrollMod);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -2659,6 +2683,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CooperatorHotelBillSettlementQueryResponse cooperatorHotelBillSettlementQueryWithOptions(CooperatorHotelBillSettlementQueryRequest request, CooperatorHotelBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billBatch)) {
+            query.put("bill_batch", request.billBatch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cooperatorId)) {
             query.put("cooperator_id", request.cooperatorId);
         }
@@ -2677,6 +2705,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodStart)) {
             query.put("period_start", request.periodStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollId)) {
+            query.put("scroll_id", request.scrollId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollMod)) {
+            query.put("scroll_mod", request.scrollMod);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -4448,6 +4484,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public FlightBillSettlementQueryResponse flightBillSettlementQueryWithOptions(FlightBillSettlementQueryRequest request, FlightBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billBatch)) {
+            query.put("bill_batch", request.billBatch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
             query.put("page_no", request.pageNo);
         }
@@ -4462,6 +4502,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodStart)) {
             query.put("period_start", request.periodStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollId)) {
+            query.put("scroll_id", request.scrollId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollMod)) {
+            query.put("scroll_mod", request.scrollMod);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -7154,6 +7202,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询福豆记账数据</p>
+     * 
+     * @param request FuPointBillSettlementQueryRequest
+     * @param headers FuPointBillSettlementQueryHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FuPointBillSettlementQueryResponse
+     */
+    public FuPointBillSettlementQueryResponse fuPointBillSettlementQueryWithOptions(FuPointBillSettlementQueryRequest request, FuPointBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billBatch)) {
+            query.put("bill_batch", request.billBatch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cooperatorId)) {
+            query.put("cooperator_id", request.cooperatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("page_no", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("page_size", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodEnd)) {
+            query.put("period_end", request.periodEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodStart)) {
+            query.put("period_start", request.periodStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollId)) {
+            query.put("scroll_id", request.scrollId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollMod)) {
+            query.put("scroll_mod", request.scrollMod);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FuPointBillSettlementQuery"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/fupoint/v1/bill-settlement"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FuPointBillSettlementQueryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询福豆记账数据</p>
+     * 
+     * @param request FuPointBillSettlementQueryRequest
+     * @return FuPointBillSettlementQueryResponse
+     */
+    public FuPointBillSettlementQueryResponse fuPointBillSettlementQuery(FuPointBillSettlementQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        FuPointBillSettlementQueryHeaders headers = new FuPointBillSettlementQueryHeaders();
+        return this.fuPointBillSettlementQueryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>换取GroupCorpToken接口</p>
      * 
      * @param request GroupCorpTokenRequest
@@ -7522,6 +7654,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public HotelBillSettlementQueryResponse hotelBillSettlementQueryWithOptions(HotelBillSettlementQueryRequest request, HotelBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billBatch)) {
+            query.put("bill_batch", request.billBatch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
             query.put("page_no", request.pageNo);
         }
@@ -7536,6 +7672,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodStart)) {
             query.put("period_start", request.periodStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollId)) {
+            query.put("scroll_id", request.scrollId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollMod)) {
+            query.put("scroll_mod", request.scrollMod);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -9280,6 +9424,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public IeFlightBillSettlementQueryResponse ieFlightBillSettlementQueryWithOptions(IeFlightBillSettlementQueryRequest request, IeFlightBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billBatch)) {
+            query.put("bill_batch", request.billBatch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
             query.put("page_no", request.pageNo);
         }
@@ -9294,6 +9442,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodStart)) {
             query.put("period_start", request.periodStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollId)) {
+            query.put("scroll_id", request.scrollId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollMod)) {
+            query.put("scroll_mod", request.scrollMod);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -9348,6 +9504,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public IeHotelBillSettlementQueryResponse ieHotelBillSettlementQueryWithOptions(IeHotelBillSettlementQueryRequest request, IeHotelBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billBatch)) {
+            query.put("bill_batch", request.billBatch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.category)) {
             query.put("category", request.category);
         }
@@ -9366,6 +9526,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodStart)) {
             query.put("period_start", request.periodStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollId)) {
+            query.put("scroll_id", request.scrollId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollMod)) {
+            query.put("scroll_mod", request.scrollMod);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -11610,6 +11778,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MealBillSettlementQueryResponse mealBillSettlementQueryWithOptions(MealBillSettlementQueryRequest request, MealBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billBatch)) {
+            query.put("bill_batch", request.billBatch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
             query.put("page_no", request.pageNo);
         }
@@ -11624,6 +11796,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodStart)) {
             query.put("period_start", request.periodStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollId)) {
+            query.put("scroll_id", request.scrollId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollMod)) {
+            query.put("scroll_mod", request.scrollMod);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -11850,6 +12030,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MonthBillGetResponse monthBillGetWithOptions(MonthBillGetRequest request, MonthBillGetHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billBatch)) {
+            query.put("bill_batch", request.billBatch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.billMonth)) {
             query.put("bill_month", request.billMonth);
         }
@@ -11892,6 +12076,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         MonthBillGetHeaders headers = new MonthBillGetHeaders();
         return this.monthBillGetWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询订单退款明细</p>
+     * 
+     * @param request OrderRefundDetailQueryRequest
+     * @param headers OrderRefundDetailQueryHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OrderRefundDetailQueryResponse
+     */
+    public OrderRefundDetailQueryResponse orderRefundDetailQueryWithOptions(OrderRefundDetailQueryRequest request, OrderRefundDetailQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cooperatorOrderId)) {
+            body.put("cooperator_order_id", request.cooperatorOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            body.put("order_id", request.orderId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OrderRefundDetailQuery"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/coop-hotel/v1/refund/action/detail"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OrderRefundDetailQueryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询订单退款明细</p>
+     * 
+     * @param request OrderRefundDetailQueryRequest
+     * @return OrderRefundDetailQueryResponse
+     */
+    public OrderRefundDetailQueryResponse orderRefundDetailQuery(OrderRefundDetailQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        OrderRefundDetailQueryHeaders headers = new OrderRefundDetailQueryHeaders();
+        return this.orderRefundDetailQueryWithOptions(request, headers, runtime);
     }
 
     /**
@@ -12092,6 +12336,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         ProjectModifyHeaders headers = new ProjectModifyHeaders();
         return this.projectModifyWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询企业信息详情</p>
+     * 
+     * @param request QueryCorpDetailInfoRequest
+     * @param headers QueryCorpDetailInfoHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryCorpDetailInfoResponse
+     */
+    public QueryCorpDetailInfoResponse queryCorpDetailInfoWithOptions(QueryCorpDetailInfoRequest request, QueryCorpDetailInfoHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.targetCorpId)) {
+            query.put("target_corp_id", request.targetCorpId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryCorpDetailInfo"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/corps/v1/corps/detail"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCorpDetailInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询企业信息详情</p>
+     * 
+     * @param request QueryCorpDetailInfoRequest
+     * @return QueryCorpDetailInfoResponse
+     */
+    public QueryCorpDetailInfoResponse queryCorpDetailInfo(QueryCorpDetailInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        QueryCorpDetailInfoHeaders headers = new QueryCorpDetailInfoHeaders();
+        return this.queryCorpDetailInfoWithOptions(request, headers, runtime);
     }
 
     /**
@@ -13156,6 +13456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TrainBillSettlementQueryResponse trainBillSettlementQueryWithOptions(TrainBillSettlementQueryRequest request, TrainBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billBatch)) {
+            query.put("bill_batch", request.billBatch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
             query.put("page_no", request.pageNo);
         }
@@ -13170,6 +13474,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodStart)) {
             query.put("period_start", request.periodStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollId)) {
+            query.put("scroll_id", request.scrollId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollMod)) {
+            query.put("scroll_mod", request.scrollMod);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();

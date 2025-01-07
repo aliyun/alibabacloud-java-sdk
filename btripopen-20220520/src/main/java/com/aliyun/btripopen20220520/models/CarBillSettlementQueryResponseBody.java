@@ -192,6 +192,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cascade_department")
         public String cascadeDepartment;
 
+        @NameInMap("category_desc")
+        public String categoryDesc;
+
         @NameInMap("cost_center")
         public String costCenter;
 
@@ -274,6 +277,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("fee_type")
         public String feeType;
+
+        @NameInMap("fee_type_desc")
+        public String feeTypeDesc;
 
         /**
          * <strong>example:</strong>
@@ -374,6 +380,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("service_fee")
         public Double serviceFee;
 
+        @NameInMap("settle_type_desc")
+        public String settleTypeDesc;
+
         /**
          * <strong>example:</strong>
          * <p>5</p>
@@ -415,6 +424,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("status")
         public Integer status;
 
+        @NameInMap("status_desc")
+        public String statusDesc;
+
         /**
          * <strong>example:</strong>
          * <p>123123232</p>
@@ -439,6 +451,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("time_type")
         public String timeType;
+
+        @NameInMap("trade_action_desc")
+        public String tradeActionDesc;
 
         @NameInMap("traveler_id")
         public String travelerId;
@@ -664,6 +679,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             return this.cascadeDepartment;
         }
 
+        public CarBillSettlementQueryResponseBodyModuleDataList setCategoryDesc(String categoryDesc) {
+            this.categoryDesc = categoryDesc;
+            return this;
+        }
+        public String getCategoryDesc() {
+            return this.categoryDesc;
+        }
+
         public CarBillSettlementQueryResponseBodyModuleDataList setCostCenter(String costCenter) {
             this.costCenter = costCenter;
             return this;
@@ -798,6 +821,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getFeeType() {
             return this.feeType;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setFeeTypeDesc(String feeTypeDesc) {
+            this.feeTypeDesc = feeTypeDesc;
+            return this;
+        }
+        public String getFeeTypeDesc() {
+            return this.feeTypeDesc;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setIndex(String index) {
@@ -968,6 +999,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             return this.serviceFee;
         }
 
+        public CarBillSettlementQueryResponseBodyModuleDataList setSettleTypeDesc(String settleTypeDesc) {
+            this.settleTypeDesc = settleTypeDesc;
+            return this;
+        }
+        public String getSettleTypeDesc() {
+            return this.settleTypeDesc;
+        }
+
         public CarBillSettlementQueryResponseBodyModuleDataList setSettlementFee(Double settlementFee) {
             this.settlementFee = settlementFee;
             return this;
@@ -1024,6 +1063,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             return this.status;
         }
 
+        public CarBillSettlementQueryResponseBodyModuleDataList setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
+            return this;
+        }
+        public String getStatusDesc() {
+            return this.statusDesc;
+        }
+
         public CarBillSettlementQueryResponseBodyModuleDataList setSubOrderId(String subOrderId) {
             this.subOrderId = subOrderId;
             return this;
@@ -1062,6 +1109,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTimeType() {
             return this.timeType;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setTradeActionDesc(String tradeActionDesc) {
+            this.tradeActionDesc = tradeActionDesc;
+            return this;
+        }
+        public String getTradeActionDesc() {
+            return this.tradeActionDesc;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setTravelerId(String travelerId) {
@@ -1166,6 +1221,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("period_start")
         public String periodStart;
 
+        @NameInMap("scroll_id")
+        public String scrollId;
+
         /**
          * <strong>example:</strong>
          * <p>2695</p>
@@ -1216,6 +1274,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getPeriodStart() {
             return this.periodStart;
+        }
+
+        public CarBillSettlementQueryResponseBodyModule setScrollId(String scrollId) {
+            this.scrollId = scrollId;
+            return this;
+        }
+        public String getScrollId() {
+            return this.scrollId;
         }
 
         public CarBillSettlementQueryResponseBodyModule setTotalNum(Long totalNum) {

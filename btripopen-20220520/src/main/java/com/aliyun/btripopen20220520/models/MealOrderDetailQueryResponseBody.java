@@ -129,6 +129,9 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         @NameInMap("corp_refund_amount")
         public Long corpRefundAmount;
 
+        @NameInMap("meal_reason")
+        public String mealReason;
+
         @NameInMap("merchant_name")
         public String merchantName;
 
@@ -261,6 +264,14 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         }
         public Long getCorpRefundAmount() {
             return this.corpRefundAmount;
+        }
+
+        public MealOrderDetailQueryResponseBodyModule setMealReason(String mealReason) {
+            this.mealReason = mealReason;
+            return this;
+        }
+        public String getMealReason() {
+            return this.mealReason;
         }
 
         public MealOrderDetailQueryResponseBodyModule setMerchantName(String merchantName) {

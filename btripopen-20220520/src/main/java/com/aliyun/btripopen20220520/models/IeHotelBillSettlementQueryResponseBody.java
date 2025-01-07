@@ -213,6 +213,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cascade_department")
         public String cascadeDepartment;
 
+        @NameInMap("category_desc")
+        public String categoryDesc;
+
         /**
          * <strong>example:</strong>
          * <p>2021-10-14 00:00:00</p>
@@ -289,6 +292,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("fee_type")
         public String feeType;
+
+        @NameInMap("fee_type_desc")
+        public String feeTypeDesc;
 
         /**
          * <strong>example:</strong>
@@ -469,6 +475,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("service_fee")
         public Double serviceFee;
 
+        @NameInMap("settle_type_desc")
+        public String settleTypeDesc;
+
         /**
          * <strong>example:</strong>
          * <p>350</p>
@@ -503,6 +512,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public Integer status;
+
+        @NameInMap("status_desc")
+        public String statusDesc;
 
         /**
          * <strong>example:</strong>
@@ -552,6 +564,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("total_nights")
         public Integer totalNights;
+
+        @NameInMap("trade_action_desc")
+        public String tradeActionDesc;
 
         /**
          * <strong>example:</strong>
@@ -764,6 +779,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.cascadeDepartment;
         }
 
+        public IeHotelBillSettlementQueryResponseBodyModuleDataList setCategoryDesc(String categoryDesc) {
+            this.categoryDesc = categoryDesc;
+            return this;
+        }
+        public String getCategoryDesc() {
+            return this.categoryDesc;
+        }
+
         public IeHotelBillSettlementQueryResponseBodyModuleDataList setCheckInDate(String checkInDate) {
             this.checkInDate = checkInDate;
             return this;
@@ -882,6 +905,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getFeeType() {
             return this.feeType;
+        }
+
+        public IeHotelBillSettlementQueryResponseBodyModuleDataList setFeeTypeDesc(String feeTypeDesc) {
+            this.feeTypeDesc = feeTypeDesc;
+            return this;
+        }
+        public String getFeeTypeDesc() {
+            return this.feeTypeDesc;
         }
 
         public IeHotelBillSettlementQueryResponseBodyModuleDataList setFines(Double fines) {
@@ -1148,6 +1179,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.serviceFee;
         }
 
+        public IeHotelBillSettlementQueryResponseBodyModuleDataList setSettleTypeDesc(String settleTypeDesc) {
+            this.settleTypeDesc = settleTypeDesc;
+            return this;
+        }
+        public String getSettleTypeDesc() {
+            return this.settleTypeDesc;
+        }
+
         public IeHotelBillSettlementQueryResponseBodyModuleDataList setSettlementFee(Double settlementFee) {
             this.settlementFee = settlementFee;
             return this;
@@ -1186,6 +1225,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public IeHotelBillSettlementQueryResponseBodyModuleDataList setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
+            return this;
+        }
+        public String getStatusDesc() {
+            return this.statusDesc;
         }
 
         public IeHotelBillSettlementQueryResponseBodyModuleDataList setSubOrderId(String subOrderId) {
@@ -1242,6 +1289,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getTotalNights() {
             return this.totalNights;
+        }
+
+        public IeHotelBillSettlementQueryResponseBodyModuleDataList setTradeActionDesc(String tradeActionDesc) {
+            this.tradeActionDesc = tradeActionDesc;
+            return this;
+        }
+        public String getTradeActionDesc() {
+            return this.tradeActionDesc;
         }
 
         public IeHotelBillSettlementQueryResponseBodyModuleDataList setTravelerId(String travelerId) {
@@ -1333,6 +1388,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("period_start")
         public String periodStart;
 
+        @NameInMap("scroll_id")
+        public String scrollId;
+
         /**
          * <strong>example:</strong>
          * <p>30</p>
@@ -1391,6 +1449,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getPeriodStart() {
             return this.periodStart;
+        }
+
+        public IeHotelBillSettlementQueryResponseBodyModule setScrollId(String scrollId) {
+            this.scrollId = scrollId;
+            return this;
+        }
+        public String getScrollId() {
+            return this.scrollId;
         }
 
         public IeHotelBillSettlementQueryResponseBodyModule setTotalSize(Long totalSize) {

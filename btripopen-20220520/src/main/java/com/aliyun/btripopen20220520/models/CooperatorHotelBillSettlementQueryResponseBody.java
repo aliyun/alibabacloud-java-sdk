@@ -192,6 +192,9 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cascade_department")
         public String cascadeDepartment;
 
+        @NameInMap("category_desc")
+        public String categoryDesc;
+
         /**
          * <strong>example:</strong>
          * <p>2024-02-13</p>
@@ -282,6 +285,9 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("fee_type")
         public String feeType;
+
+        @NameInMap("fee_type_desc")
+        public String feeTypeDesc;
 
         /**
          * <strong>example:</strong>
@@ -445,6 +451,9 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("service_fee")
         public Double serviceFee;
 
+        @NameInMap("settle_type_desc")
+        public String settleTypeDesc;
+
         /**
          * <strong>example:</strong>
          * <p>110.0</p>
@@ -478,6 +487,9 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public Integer status;
+
+        @NameInMap("status_desc")
+        public String statusDesc;
 
         /**
          * <strong>example:</strong>
@@ -513,6 +525,9 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("total_nights")
         public Integer totalNights;
+
+        @NameInMap("trade_action_desc")
+        public String tradeActionDesc;
 
         /**
          * <strong>example:</strong>
@@ -712,6 +727,14 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.cascadeDepartment;
         }
 
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setCategoryDesc(String categoryDesc) {
+            this.categoryDesc = categoryDesc;
+            return this;
+        }
+        public String getCategoryDesc() {
+            return this.categoryDesc;
+        }
+
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setCheckInDate(String checkInDate) {
             this.checkInDate = checkInDate;
             return this;
@@ -846,6 +869,14 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getFeeType() {
             return this.feeType;
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setFeeTypeDesc(String feeTypeDesc) {
+            this.feeTypeDesc = feeTypeDesc;
+            return this;
+        }
+        public String getFeeTypeDesc() {
+            return this.feeTypeDesc;
         }
 
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setFees(Double fees) {
@@ -1088,6 +1119,14 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.serviceFee;
         }
 
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setSettleTypeDesc(String settleTypeDesc) {
+            this.settleTypeDesc = settleTypeDesc;
+            return this;
+        }
+        public String getSettleTypeDesc() {
+            return this.settleTypeDesc;
+        }
+
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setSettlementFee(Double settlementFee) {
             this.settlementFee = settlementFee;
             return this;
@@ -1136,6 +1175,14 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.status;
         }
 
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
+            return this;
+        }
+        public String getStatusDesc() {
+            return this.statusDesc;
+        }
+
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setSubOrderId(String subOrderId) {
             this.subOrderId = subOrderId;
             return this;
@@ -1174,6 +1221,14 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getTotalNights() {
             return this.totalNights;
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setTradeActionDesc(String tradeActionDesc) {
+            this.tradeActionDesc = tradeActionDesc;
+            return this;
+        }
+        public String getTradeActionDesc() {
+            return this.tradeActionDesc;
         }
 
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setTravelerId(String travelerId) {
@@ -1266,6 +1321,9 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("period_start")
         public String periodStart;
 
+        @NameInMap("scroll_id")
+        public String scrollId;
+
         /**
          * <strong>example:</strong>
          * <p>30</p>
@@ -1316,6 +1374,14 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getPeriodStart() {
             return this.periodStart;
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModule setScrollId(String scrollId) {
+            this.scrollId = scrollId;
+            return this;
+        }
+        public String getScrollId() {
+            return this.scrollId;
         }
 
         public CooperatorHotelBillSettlementQueryResponseBodyModule setTotalSize(Long totalSize) {

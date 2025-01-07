@@ -3,9 +3,20 @@ package com.aliyun.btripopen20220520.models;
 
 import com.aliyun.tea.*;
 
-public class MealBillSettlementQueryRequest extends TeaModel {
+public class FuPointBillSettlementQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20240101</p>
+     */
     @NameInMap("bill_batch")
     public String billBatch;
+
+    /**
+     * <strong>example:</strong>
+     * <p>cooperator_alibtrip</p>
+     */
+    @NameInMap("cooperator_id")
+    public String cooperatorId;
 
     /**
      * <p>This parameter is required.</p>
@@ -27,30 +38,38 @@ public class MealBillSettlementQueryRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2022-07-02</p>
+     * <p>2021-10-02</p>
      */
     @NameInMap("period_end")
     public String periodEnd;
 
     /**
      * <strong>example:</strong>
-     * <p>2022-07-01</p>
+     * <p>2021-10-01</p>
      */
     @NameInMap("period_start")
     public String periodStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1qwe</p>
+     */
     @NameInMap("scroll_id")
     public String scrollId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("scroll_mod")
     public Boolean scrollMod;
 
-    public static MealBillSettlementQueryRequest build(java.util.Map<String, ?> map) throws Exception {
-        MealBillSettlementQueryRequest self = new MealBillSettlementQueryRequest();
+    public static FuPointBillSettlementQueryRequest build(java.util.Map<String, ?> map) throws Exception {
+        FuPointBillSettlementQueryRequest self = new FuPointBillSettlementQueryRequest();
         return TeaModel.build(map, self);
     }
 
-    public MealBillSettlementQueryRequest setBillBatch(String billBatch) {
+    public FuPointBillSettlementQueryRequest setBillBatch(String billBatch) {
         this.billBatch = billBatch;
         return this;
     }
@@ -58,7 +77,15 @@ public class MealBillSettlementQueryRequest extends TeaModel {
         return this.billBatch;
     }
 
-    public MealBillSettlementQueryRequest setPageNo(Integer pageNo) {
+    public FuPointBillSettlementQueryRequest setCooperatorId(String cooperatorId) {
+        this.cooperatorId = cooperatorId;
+        return this;
+    }
+    public String getCooperatorId() {
+        return this.cooperatorId;
+    }
+
+    public FuPointBillSettlementQueryRequest setPageNo(Integer pageNo) {
         this.pageNo = pageNo;
         return this;
     }
@@ -66,7 +93,7 @@ public class MealBillSettlementQueryRequest extends TeaModel {
         return this.pageNo;
     }
 
-    public MealBillSettlementQueryRequest setPageSize(Integer pageSize) {
+    public FuPointBillSettlementQueryRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -74,7 +101,7 @@ public class MealBillSettlementQueryRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public MealBillSettlementQueryRequest setPeriodEnd(String periodEnd) {
+    public FuPointBillSettlementQueryRequest setPeriodEnd(String periodEnd) {
         this.periodEnd = periodEnd;
         return this;
     }
@@ -82,7 +109,7 @@ public class MealBillSettlementQueryRequest extends TeaModel {
         return this.periodEnd;
     }
 
-    public MealBillSettlementQueryRequest setPeriodStart(String periodStart) {
+    public FuPointBillSettlementQueryRequest setPeriodStart(String periodStart) {
         this.periodStart = periodStart;
         return this;
     }
@@ -90,7 +117,7 @@ public class MealBillSettlementQueryRequest extends TeaModel {
         return this.periodStart;
     }
 
-    public MealBillSettlementQueryRequest setScrollId(String scrollId) {
+    public FuPointBillSettlementQueryRequest setScrollId(String scrollId) {
         this.scrollId = scrollId;
         return this;
     }
@@ -98,7 +125,7 @@ public class MealBillSettlementQueryRequest extends TeaModel {
         return this.scrollId;
     }
 
-    public MealBillSettlementQueryRequest setScrollMod(Boolean scrollMod) {
+    public FuPointBillSettlementQueryRequest setScrollMod(Boolean scrollMod) {
         this.scrollMod = scrollMod;
         return this;
     }

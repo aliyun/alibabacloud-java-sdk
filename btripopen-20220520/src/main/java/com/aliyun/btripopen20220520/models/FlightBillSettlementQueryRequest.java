@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightBillSettlementQueryRequest extends TeaModel {
+    @NameInMap("bill_batch")
+    public String billBatch;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -23,8 +26,6 @@ public class FlightBillSettlementQueryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>2021-10-01</p>
      */
@@ -32,17 +33,29 @@ public class FlightBillSettlementQueryRequest extends TeaModel {
     public String periodEnd;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>2021-10-01</p>
      */
     @NameInMap("period_start")
     public String periodStart;
 
+    @NameInMap("scroll_id")
+    public String scrollId;
+
+    @NameInMap("scroll_mod")
+    public Boolean scrollMod;
+
     public static FlightBillSettlementQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         FlightBillSettlementQueryRequest self = new FlightBillSettlementQueryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public FlightBillSettlementQueryRequest setBillBatch(String billBatch) {
+        this.billBatch = billBatch;
+        return this;
+    }
+    public String getBillBatch() {
+        return this.billBatch;
     }
 
     public FlightBillSettlementQueryRequest setPageNo(Integer pageNo) {
@@ -75,6 +88,22 @@ public class FlightBillSettlementQueryRequest extends TeaModel {
     }
     public String getPeriodStart() {
         return this.periodStart;
+    }
+
+    public FlightBillSettlementQueryRequest setScrollId(String scrollId) {
+        this.scrollId = scrollId;
+        return this;
+    }
+    public String getScrollId() {
+        return this.scrollId;
+    }
+
+    public FlightBillSettlementQueryRequest setScrollMod(Boolean scrollMod) {
+        this.scrollMod = scrollMod;
+        return this;
+    }
+    public Boolean getScrollMod() {
+        return this.scrollMod;
     }
 
 }

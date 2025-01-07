@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IeHotelBillSettlementQueryRequest extends TeaModel {
+    @NameInMap("bill_batch")
+    public String billBatch;
+
     /**
      * <strong>example:</strong>
      * <p>12</p>
@@ -28,8 +31,6 @@ public class IeHotelBillSettlementQueryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>2021-10-02</p>
      */
@@ -37,17 +38,29 @@ public class IeHotelBillSettlementQueryRequest extends TeaModel {
     public String periodEnd;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>2021-10-01</p>
      */
     @NameInMap("period_start")
     public String periodStart;
 
+    @NameInMap("scroll_id")
+    public String scrollId;
+
+    @NameInMap("scroll_mod")
+    public Boolean scrollMod;
+
     public static IeHotelBillSettlementQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         IeHotelBillSettlementQueryRequest self = new IeHotelBillSettlementQueryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public IeHotelBillSettlementQueryRequest setBillBatch(String billBatch) {
+        this.billBatch = billBatch;
+        return this;
+    }
+    public String getBillBatch() {
+        return this.billBatch;
     }
 
     public IeHotelBillSettlementQueryRequest setCategory(Integer category) {
@@ -88,6 +101,22 @@ public class IeHotelBillSettlementQueryRequest extends TeaModel {
     }
     public String getPeriodStart() {
         return this.periodStart;
+    }
+
+    public IeHotelBillSettlementQueryRequest setScrollId(String scrollId) {
+        this.scrollId = scrollId;
+        return this;
+    }
+    public String getScrollId() {
+        return this.scrollId;
+    }
+
+    public IeHotelBillSettlementQueryRequest setScrollMod(Boolean scrollMod) {
+        this.scrollMod = scrollMod;
+        return this;
+    }
+    public Boolean getScrollMod() {
+        return this.scrollMod;
     }
 
 }

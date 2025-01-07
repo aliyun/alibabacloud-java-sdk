@@ -260,6 +260,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cascade_department")
         public String cascadeDepartment;
 
+        @NameInMap("category_desc")
+        public String categoryDesc;
+
         /**
          * <strong>example:</strong>
          * <p>100.0</p>
@@ -374,6 +377,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("fee_type")
         public String feeType;
+
+        @NameInMap("fee_type_desc")
+        public String feeTypeDesc;
 
         /**
          * <strong>example:</strong>
@@ -580,6 +586,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("service_fee")
         public Double serviceFee;
 
+        @NameInMap("settle_type_desc")
+        public String settleTypeDesc;
+
         /**
          * <strong>example:</strong>
          * <p>200.0</p>
@@ -610,6 +619,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public Integer status;
+
+        @NameInMap("status_desc")
+        public String statusDesc;
 
         /**
          * <strong>example:</strong>
@@ -652,6 +664,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("trade")
         public String trade;
+
+        @NameInMap("trade_action_desc")
+        public String tradeActionDesc;
 
         /**
          * <strong>example:</strong>
@@ -941,6 +956,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.cascadeDepartment;
         }
 
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setCategoryDesc(String categoryDesc) {
+            this.categoryDesc = categoryDesc;
+            return this;
+        }
+        public String getCategoryDesc() {
+            return this.categoryDesc;
+        }
+
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setChangeFee(Double changeFee) {
             this.changeFee = changeFee;
             return this;
@@ -1107,6 +1130,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getFeeType() {
             return this.feeType;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setFeeTypeDesc(String feeTypeDesc) {
+            this.feeTypeDesc = feeTypeDesc;
+            return this;
+        }
+        public String getFeeTypeDesc() {
+            return this.feeTypeDesc;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setFlightNo(String flightNo) {
@@ -1389,6 +1420,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.serviceFee;
         }
 
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setSettleTypeDesc(String settleTypeDesc) {
+            this.settleTypeDesc = settleTypeDesc;
+            return this;
+        }
+        public String getSettleTypeDesc() {
+            return this.settleTypeDesc;
+        }
+
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setSettlementFee(Double settlementFee) {
             this.settlementFee = settlementFee;
             return this;
@@ -1427,6 +1466,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
+            return this;
+        }
+        public String getStatusDesc() {
+            return this.statusDesc;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setSubOrderId(String subOrderId) {
@@ -1475,6 +1522,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTrade() {
             return this.trade;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setTradeActionDesc(String tradeActionDesc) {
+            this.tradeActionDesc = tradeActionDesc;
+            return this;
+        }
+        public String getTradeActionDesc() {
+            return this.tradeActionDesc;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setTravelerId(String travelerId) {
@@ -1583,6 +1638,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("period_start")
         public String periodStart;
 
+        @NameInMap("scroll_id")
+        public String scrollId;
+
         /**
          * <strong>example:</strong>
          * <p>30</p>
@@ -1633,6 +1691,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getPeriodStart() {
             return this.periodStart;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModule setScrollId(String scrollId) {
+            this.scrollId = scrollId;
+            return this;
+        }
+        public String getScrollId() {
+            return this.scrollId;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModule setTotalSize(Long totalSize) {
