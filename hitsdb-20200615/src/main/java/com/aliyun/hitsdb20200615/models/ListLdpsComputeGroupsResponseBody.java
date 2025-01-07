@@ -43,6 +43,9 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
     }
 
     public static class ListLdpsComputeGroupsResponseBodyGroupList extends TeaModel {
+        @NameInMap("ExceptionInfo")
+        public String exceptionInfo;
+
         @NameInMap("GroupName")
         public String groupName;
 
@@ -52,9 +55,23 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
         @NameInMap("Properties")
         public java.util.Map<String, ?> properties;
 
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("WebUI")
+        public String webUI;
+
         public static ListLdpsComputeGroupsResponseBodyGroupList build(java.util.Map<String, ?> map) throws Exception {
             ListLdpsComputeGroupsResponseBodyGroupList self = new ListLdpsComputeGroupsResponseBodyGroupList();
             return TeaModel.build(map, self);
+        }
+
+        public ListLdpsComputeGroupsResponseBodyGroupList setExceptionInfo(String exceptionInfo) {
+            this.exceptionInfo = exceptionInfo;
+            return this;
+        }
+        public String getExceptionInfo() {
+            return this.exceptionInfo;
         }
 
         public ListLdpsComputeGroupsResponseBodyGroupList setGroupName(String groupName) {
@@ -79,6 +96,22 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getProperties() {
             return this.properties;
+        }
+
+        public ListLdpsComputeGroupsResponseBodyGroupList setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public ListLdpsComputeGroupsResponseBodyGroupList setWebUI(String webUI) {
+            this.webUI = webUI;
+            return this;
+        }
+        public String getWebUI() {
+            return this.webUI;
         }
 
     }
