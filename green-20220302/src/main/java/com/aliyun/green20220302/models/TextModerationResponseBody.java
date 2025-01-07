@@ -84,6 +84,12 @@ public class TextModerationResponseBody extends TeaModel {
         @NameInMap("accountId")
         public String accountId;
 
+        @NameInMap("dataId")
+        public String dataId;
+
+        @NameInMap("descriptions")
+        public String descriptions;
+
         /**
          * <p>The device ID.</p>
          * 
@@ -122,6 +128,22 @@ public class TextModerationResponseBody extends TeaModel {
         }
         public String getAccountId() {
             return this.accountId;
+        }
+
+        public TextModerationResponseBodyData setDataId(String dataId) {
+            this.dataId = dataId;
+            return this;
+        }
+        public String getDataId() {
+            return this.dataId;
+        }
+
+        public TextModerationResponseBodyData setDescriptions(String descriptions) {
+            this.descriptions = descriptions;
+            return this;
+        }
+        public String getDescriptions() {
+            return this.descriptions;
         }
 
         public TextModerationResponseBodyData setDeviceId(String deviceId) {
