@@ -73,7 +73,7 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
          * <p>2020-09-04T06:22:15Z</p>
          */
         @NameInMap("CreateTime")
-        public byte[] createTime;
+        public String createTime;
 
         /**
          * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
         public java.util.List<String> formats;
 
         @NameInMap("LayoutIds")
-        public java.util.List<Long> layoutIds;
+        public java.util.List<String> layoutIds;
 
         /**
          * <strong>example:</strong>
@@ -128,11 +128,11 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeAppRecordTemplatesResponseBodyTemplates setCreateTime(byte[] createTime) {
+        public DescribeAppRecordTemplatesResponseBodyTemplates setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
-        public byte[] getCreateTime() {
+        public String getCreateTime() {
             return this.createTime;
         }
 
@@ -168,11 +168,11 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
             return this.formats;
         }
 
-        public DescribeAppRecordTemplatesResponseBodyTemplates setLayoutIds(java.util.List<Long> layoutIds) {
+        public DescribeAppRecordTemplatesResponseBodyTemplates setLayoutIds(java.util.List<String> layoutIds) {
             this.layoutIds = layoutIds;
             return this;
         }
-        public java.util.List<Long> getLayoutIds() {
+        public java.util.List<String> getLayoutIds() {
             return this.layoutIds;
         }
 
