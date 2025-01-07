@@ -11,6 +11,9 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("EncryptedInstance")
+    public Boolean encryptedInstance;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -26,6 +29,13 @@ public class UpdateInstanceRequest extends TeaModel {
      */
     @NameInMap("InstanceType")
     public String instanceType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>key-xxx</p>
+     */
+    @NameInMap("KmsKeyId")
+    public String kmsKeyId;
 
     /**
      * <strong>example:</strong>
@@ -112,6 +122,14 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public UpdateInstanceRequest setEncryptedInstance(Boolean encryptedInstance) {
+        this.encryptedInstance = encryptedInstance;
+        return this;
+    }
+    public Boolean getEncryptedInstance() {
+        return this.encryptedInstance;
+    }
+
     public UpdateInstanceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -126,6 +144,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public UpdateInstanceRequest setKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
     }
 
     public UpdateInstanceRequest setMaxConnections(Integer maxConnections) {
