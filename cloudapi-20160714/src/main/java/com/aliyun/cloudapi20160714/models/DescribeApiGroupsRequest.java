@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiGroupsRequest extends TeaModel {
+    @NameInMap("BasePath")
+    public String basePath;
+
     /**
      * <p>Specifies whether to enable tag verification.</p>
      * 
@@ -83,6 +86,14 @@ public class DescribeApiGroupsRequest extends TeaModel {
     public static DescribeApiGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApiGroupsRequest self = new DescribeApiGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeApiGroupsRequest setBasePath(String basePath) {
+        this.basePath = basePath;
+        return this;
+    }
+    public String getBasePath() {
+        return this.basePath;
     }
 
     public DescribeApiGroupsRequest setEnableTagAuth(Boolean enableTagAuth) {
