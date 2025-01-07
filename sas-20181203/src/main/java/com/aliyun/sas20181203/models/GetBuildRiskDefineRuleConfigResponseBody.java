@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
     /**
+     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetBuildRiskDefineRuleConfigResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>69BFFCDE-37D6-5A49-A8BC-BB03AC83****</p>
      */
@@ -29,6 +38,12 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
 
     public static class GetBuildRiskDefineRuleConfigResponseBodyDataRuleTreeRuleList extends TeaModel {
         /**
+         * <p>The check item.</p>
+         * 
          * <strong>example:</strong>
          * <p>add</p>
          */
@@ -89,6 +106,8 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         public String ruleKey;
 
         /**
+         * <p>The name of the check item.</p>
+         * 
          * <strong>example:</strong>
          * <p>used ADD</p>
          */
@@ -96,6 +115,12 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>Indicates whether the check item is selected. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -135,6 +160,8 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
 
     public static class GetBuildRiskDefineRuleConfigResponseBodyDataRuleTree extends TeaModel {
         /**
+         * <p>The check item type.</p>
+         * 
          * <strong>example:</strong>
          * <p>other</p>
          */
@@ -142,12 +169,17 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         public String classKey;
 
         /**
+         * <p>The name of the check item type.</p>
+         * 
          * <strong>example:</strong>
          * <p>other</p>
          */
         @NameInMap("ClassName")
         public String className;
 
+        /**
+         * <p>The check items of the type.</p>
+         */
         @NameInMap("RuleList")
         public java.util.List<GetBuildRiskDefineRuleConfigResponseBodyDataRuleTreeRuleList> ruleList;
 
@@ -184,6 +216,8 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
 
     public static class GetBuildRiskDefineRuleConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The configuration ID for scanning image build command risks.</p>
+         * 
          * <strong>example:</strong>
          * <p>273698***</p>
          */
@@ -191,16 +225,23 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The total number of check items.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("RuleCount")
         public Integer ruleCount;
 
+        /**
+         * <p>The details of all check items.</p>
+         */
         @NameInMap("RuleTree")
         public java.util.List<GetBuildRiskDefineRuleConfigResponseBodyDataRuleTree> ruleTree;
 
         /**
+         * <p>The number of selected check items.</p>
+         * 
          * <strong>example:</strong>
          * <p>99</p>
          */

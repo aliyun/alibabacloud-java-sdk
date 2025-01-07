@@ -213,6 +213,12 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         public Long firstTime;
 
         /**
+         * <p>Indicates whether an alert is generated for the file extracted from the package. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

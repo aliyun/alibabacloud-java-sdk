@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FinishGuidTaskResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>08DCAABC-82E7-5EF5-A9E7-A82DC07C****</p>
      */

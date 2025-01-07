@@ -10,6 +10,9 @@ public class GetOssBucketScanStatisticRequest extends TeaModel {
     @NameInMap("BucketNameList")
     public java.util.List<String> bucketNameList;
 
+    @NameInMap("Source")
+    public String source;
+
     public static GetOssBucketScanStatisticRequest build(java.util.Map<String, ?> map) throws Exception {
         GetOssBucketScanStatisticRequest self = new GetOssBucketScanStatisticRequest();
         return TeaModel.build(map, self);
@@ -21,6 +24,14 @@ public class GetOssBucketScanStatisticRequest extends TeaModel {
     }
     public java.util.List<String> getBucketNameList() {
         return this.bucketNameList;
+    }
+
+    public GetOssBucketScanStatisticRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

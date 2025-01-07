@@ -48,6 +48,9 @@ public class AddImageEventOperationRequest extends TeaModel {
     @NameInMap("EventType")
     public String eventType;
 
+    @NameInMap("Note")
+    public String note;
+
     /**
      * <p>The operation code.</p>
      * <ul>
@@ -72,6 +75,9 @@ public class AddImageEventOperationRequest extends TeaModel {
      */
     @NameInMap("Scenarios")
     public String scenarios;
+
+    @NameInMap("Source")
+    public String source;
 
     public static AddImageEventOperationRequest build(java.util.Map<String, ?> map) throws Exception {
         AddImageEventOperationRequest self = new AddImageEventOperationRequest();
@@ -110,6 +116,14 @@ public class AddImageEventOperationRequest extends TeaModel {
         return this.eventType;
     }
 
+    public AddImageEventOperationRequest setNote(String note) {
+        this.note = note;
+        return this;
+    }
+    public String getNote() {
+        return this.note;
+    }
+
     public AddImageEventOperationRequest setOperationCode(String operationCode) {
         this.operationCode = operationCode;
         return this;
@@ -124,6 +138,14 @@ public class AddImageEventOperationRequest extends TeaModel {
     }
     public String getScenarios() {
         return this.scenarios;
+    }
+
+    public AddImageEventOperationRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeImageBuildRiskByKeyResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>52870893-48A7-5A9E-9E05-6253E5B6****</p>
      */
@@ -29,6 +38,12 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
 
     public static class DescribeImageBuildRiskByKeyResponseBodyDataList extends TeaModel {
         /**
+         * <p>The suggestion on how to handle the risk.</p>
+         * 
          * <strong>example:</strong>
          * <p>do not use root user</p>
          */
@@ -89,6 +106,8 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         public String advice;
 
         /**
+         * <p>The description of the suggestion on how to handle the risk.</p>
+         * 
          * <strong>example:</strong>
          * <p>the root user has excessive permissions</p>
          */
@@ -96,6 +115,8 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The image build command.</p>
+         * 
          * <strong>example:</strong>
          * <p>user root</p>
          */
@@ -103,6 +124,8 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         public String layerCmd;
 
         /**
+         * <p>The digest of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>6ec898e6274f942e0e4a053eff1c3119026a6704e56cff206b2cec71f636****</p>
          */
@@ -110,6 +133,8 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         public String layerDigest;
 
         /**
+         * <p>The prompt message on the risk.</p>
+         * 
          * <strong>example:</strong>
          * <p>the root user has excessive permissions</p>
          */
@@ -117,6 +142,8 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         public String promt;
 
         /**
+         * <p>The type key of the risk rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>other</p>
          */
@@ -124,6 +151,8 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         public String riskClass;
 
         /**
+         * <p>The type name of the risk rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>other</p>
          */
@@ -131,6 +160,8 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         public String riskClassName;
 
         /**
+         * <p>The key of the risk rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>no_user</p>
          */
@@ -138,6 +169,8 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         public String riskKey;
 
         /**
+         * <p>The name of the risk rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>no_user</p>
          */
@@ -145,6 +178,13 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         public String riskKeyName;
 
         /**
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>medium</p>
          */
@@ -240,6 +280,8 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
 
     public static class DescribeImageBuildRiskByKeyResponseBodyDataPageInfo extends TeaModel {
         /**
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -247,6 +289,11 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -254,6 +301,8 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>109</p>
          */
@@ -292,9 +341,15 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageBuildRiskByKeyResponseBodyData extends TeaModel {
+        /**
+         * <p>The risks.</p>
+         */
         @NameInMap("List")
         public java.util.List<DescribeImageBuildRiskByKeyResponseBodyDataList> list;
 
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public DescribeImageBuildRiskByKeyResponseBodyDataPageInfo pageInfo;
 

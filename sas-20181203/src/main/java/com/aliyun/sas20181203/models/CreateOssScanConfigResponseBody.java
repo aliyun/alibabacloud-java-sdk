@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOssScanConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the policy.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>210****</p>

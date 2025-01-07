@@ -3,7 +3,7 @@ package com.aliyun.sas20181203.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeImageScanAuthorizationResponse extends TeaModel {
+public class GetTenantCheckAvailableResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeImageScanAuthorizationResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeImageScanAuthorizationResponseBody body;
+    public GetTenantCheckAvailableResponseBody body;
 
-    public static DescribeImageScanAuthorizationResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeImageScanAuthorizationResponse self = new DescribeImageScanAuthorizationResponse();
+    public static GetTenantCheckAvailableResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetTenantCheckAvailableResponse self = new GetTenantCheckAvailableResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeImageScanAuthorizationResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetTenantCheckAvailableResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeImageScanAuthorizationResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeImageScanAuthorizationResponse setStatusCode(Integer statusCode) {
+    public GetTenantCheckAvailableResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeImageScanAuthorizationResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeImageScanAuthorizationResponse setBody(DescribeImageScanAuthorizationResponseBody body) {
+    public GetTenantCheckAvailableResponse setBody(GetTenantCheckAvailableResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeImageScanAuthorizationResponseBody getBody() {
+    public GetTenantCheckAvailableResponseBody getBody() {
         return this.body;
     }
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyCheckResultResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public VerifyCheckResultResponseBodyData data;
@@ -54,6 +54,15 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         @NameInMap("OperateCode")
         public String operateCode;
 
+        @NameInMap("TaskId")
+        public String taskId;
+
+        /**
+         * <p>The throttling duration. Unit: seconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
+         */
         @NameInMap("ThrottlingTimeSecond")
         public Integer throttlingTimeSecond;
 
@@ -68,6 +77,14 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         }
         public String getOperateCode() {
             return this.operateCode;
+        }
+
+        public VerifyCheckResultResponseBodyData setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
         public VerifyCheckResultResponseBodyData setThrottlingTimeSecond(Integer throttlingTimeSecond) {

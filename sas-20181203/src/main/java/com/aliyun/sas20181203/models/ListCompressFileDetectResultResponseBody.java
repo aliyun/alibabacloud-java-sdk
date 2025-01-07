@@ -4,16 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCompressFileDetectResultResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListCompressFileDetectResultResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E10BAF1C-A6C5-51E2-866C-76D5922E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The detection results of files.</p>
+     */
     @NameInMap("ResultList")
     public java.util.List<ListCompressFileDetectResultResponseBodyResultList> resultList;
 
@@ -48,6 +56,8 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
 
     public static class ListCompressFileDetectResultResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -55,6 +65,8 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -62,6 +74,8 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>55</p>
          */
@@ -101,6 +115,8 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
 
     public static class ListCompressFileDetectResultResponseBodyResultList extends TeaModel {
         /**
+         * <p>The extended information about the file detection result.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;HighLight&quot;:
@@ -123,6 +139,8 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
         public String ext;
 
         /**
+         * <p>The identifier of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>0a212417e65c26ff133cfff28f6c****</p>
          */
@@ -130,6 +148,8 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
         public String hashKey;
 
         /**
+         * <p>The path to the file within the package.</p>
+         * 
          * <strong>example:</strong>
          * <p>/root/1.zip/test****</p>
          */
@@ -137,6 +157,13 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The file detection result. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The file is normal.</li>
+         * <li><strong>1</strong>: The file is suspicious.</li>
+         * <li><strong>3</strong>: The detection is in progress.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -144,6 +171,17 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
         public Integer result;
 
         /**
+         * <p>The score of the file detection result. The following list describes mappings between the score ranges and risk levels:</p>
+         * <ul>
+         * <li>0 to 60: normal</li>
+         * <li>61 to 70: risky</li>
+         * <li>71 to 80: suspicious</li>
+         * <li>81 to 100: malicious</li>
+         * </ul>
+         * <blockquote>
+         * <p> A higher score indicates a more suspicious file.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -151,6 +189,32 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
         public Integer score;
 
         /**
+         * <p>The type of the virus. Valid values:</p>
+         * <ul>
+         * <li><strong>Trojan</strong>: self-mutating trojan</li>
+         * <li><strong>WebShell</strong>: webshell</li>
+         * <li><strong>Backdoor</strong>: backdoor program</li>
+         * <li><strong>RansomWare</strong>: ransomware</li>
+         * <li><strong>Scanner</strong>: scanner</li>
+         * <li><strong>Stealer</strong>: tool that is used to steal information</li>
+         * <li><strong>Malbaseware</strong>: tainted basic software</li>
+         * <li><strong>Hacktool</strong>: attacker tool</li>
+         * <li><strong>Engtest</strong>: engine test program</li>
+         * <li><strong>Downloader</strong>: trojan downloader</li>
+         * <li><strong>Virus</strong>: infectious virus</li>
+         * <li><strong>Miner</strong>: mining program</li>
+         * <li><strong>Worm</strong>: worm</li>
+         * <li><strong>DDoS</strong>: DDoS trojan</li>
+         * <li><strong>Malware</strong>: malicious program</li>
+         * <li><strong>Backdoor</strong>: reverse shell</li>
+         * <li><strong>RiskWare</strong>: software that has risks</li>
+         * <li><strong>Proxytool</strong>: proxy</li>
+         * <li><strong>Suspicious</strong>: suspicious program</li>
+         * <li><strong>MalScript</strong>: malicious script</li>
+         * <li><strong>Rootkit</strong>: rootkit</li>
+         * <li><strong>Exploit</strong>: exploit</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>WebShell</p>
          */

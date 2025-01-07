@@ -152,6 +152,9 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
     }
 
     public static class DescribeAgentlessSensitiveFileByKeyResponseBodySensitiveFileList extends TeaModel {
+        @NameInMap("FilePath")
+        public String filePath;
+
         /**
          * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
          * 
@@ -160,6 +163,9 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
          */
         @NameInMap("FirstScanTime")
         public Long firstScanTime;
+
+        @NameInMap("Id")
+        public Long id;
 
         /**
          * <p>The instance name of the asset.</p>
@@ -196,6 +202,12 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
          */
         @NameInMap("LastScanTime")
         public Long lastScanTime;
+
+        @NameInMap("Md5")
+        public String md5;
+
+        @NameInMap("Prompt")
+        public String prompt;
 
         /**
          * <p>The risk level. Valid values:</p>
@@ -257,12 +269,28 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeAgentlessSensitiveFileByKeyResponseBodySensitiveFileList setFilePath(String filePath) {
+            this.filePath = filePath;
+            return this;
+        }
+        public String getFilePath() {
+            return this.filePath;
+        }
+
         public DescribeAgentlessSensitiveFileByKeyResponseBodySensitiveFileList setFirstScanTime(Long firstScanTime) {
             this.firstScanTime = firstScanTime;
             return this;
         }
         public Long getFirstScanTime() {
             return this.firstScanTime;
+        }
+
+        public DescribeAgentlessSensitiveFileByKeyResponseBodySensitiveFileList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public DescribeAgentlessSensitiveFileByKeyResponseBodySensitiveFileList setInstanceName(String instanceName) {
@@ -295,6 +323,22 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         }
         public Long getLastScanTime() {
             return this.lastScanTime;
+        }
+
+        public DescribeAgentlessSensitiveFileByKeyResponseBodySensitiveFileList setMd5(String md5) {
+            this.md5 = md5;
+            return this;
+        }
+        public String getMd5() {
+            return this.md5;
+        }
+
+        public DescribeAgentlessSensitiveFileByKeyResponseBodySensitiveFileList setPrompt(String prompt) {
+            this.prompt = prompt;
+            return this;
+        }
+        public String getPrompt() {
+            return this.prompt;
         }
 
         public DescribeAgentlessSensitiveFileByKeyResponseBodySensitiveFileList setRiskLevel(String riskLevel) {

@@ -185,6 +185,12 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("NoRiskInstanceCount")
         public Integer noRiskInstanceCount;
 
+        /**
+         * <p>The number of assets that are not added to Security Center of the specified asset type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("NotBindMachineInstanceCount")
         public Integer notBindMachineInstanceCount;
 

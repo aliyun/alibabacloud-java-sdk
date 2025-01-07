@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePublishCronResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1052B989-305B-50A5-B5F5-998450******</p>
      */

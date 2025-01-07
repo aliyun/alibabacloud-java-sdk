@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCheckResultRequest extends TeaModel {
+    /**
+     * <p>The IDs of the check items.</p>
+     */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
@@ -66,7 +69,7 @@ public class ListCheckResultRequest extends TeaModel {
      * <li><strong>POLARDB</strong>: PolarDB</li>
      * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL</li>
      * <li><strong>MSE</strong>: Microservices Engine (MSE)</li>
-     * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS)</li>
+     * <li><strong>NAS</strong>: File Storage NAS (NAS)</li>
      * <li><strong>SDDP</strong>: Sensitive Data Discovery and Protection (SDDP)</li>
      * <li><strong>EIP</strong>: Elastic IP Address (EIP)</li>
      * </ul>
@@ -87,6 +90,13 @@ public class ListCheckResultRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Specifies whether fixing is supported. Valid values:</p>
+     * <ul>
+     * <li><strong>SUPPORT_REPAIR</strong></li>
+     * <li><strong>NOT_SUPPORT_REPAIR</strong></li>
+     * </ul>
+     */
     @NameInMap("OperationTypes")
     public java.util.List<String> operationTypes;
 
@@ -113,7 +123,7 @@ public class ListCheckResultRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of requirement items.</p>
+     * <p>The IDs of the requirements.</p>
      */
     @NameInMap("RequirementIds")
     public java.util.List<Long> requirementIds;
@@ -140,7 +150,7 @@ public class ListCheckResultRequest extends TeaModel {
     public java.util.List<String> sortTypes;
 
     /**
-     * <p>The IDs of standards.</p>
+     * <p>The standard IDs.</p>
      */
     @NameInMap("StandardIds")
     public java.util.List<Long> standardIds;
@@ -165,9 +175,12 @@ public class ListCheckResultRequest extends TeaModel {
     public java.util.List<String> types;
 
     /**
-     * <p>The cloud service providers. Valid value:</p>
+     * <p>The cloud service providers. Valid values:</p>
      * <ul>
      * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+     * <li><strong>TENCENT</strong>: Tencent Cloud</li>
+     * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
+     * <li><strong>MICROSOFT</strong>: Microsoft Azure</li>
      * </ul>
      */
     @NameInMap("Vendors")

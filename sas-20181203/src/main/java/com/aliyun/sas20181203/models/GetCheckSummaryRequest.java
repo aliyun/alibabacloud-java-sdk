@@ -5,7 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetCheckSummaryRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the statistics of the check items, including the number of check items supported by the system and the number of check items available to you.</p>
+     * <p>Specifies whether to return the statistics of the check items, including the number of check items supported by the system and the number of check items available to you. Default value: <strong>false</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsItemStatistic")
     public Boolean isItemStatistic;
@@ -24,7 +31,10 @@ public class GetCheckSummaryRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The account ID of the resource directory.</p>
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the IDs of Alibaba Cloud accounts.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>000</p>

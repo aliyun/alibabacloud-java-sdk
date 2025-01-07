@@ -429,6 +429,9 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         @NameInMap("SensitiveFileName")
         public String sensitiveFileName;
 
+        @NameInMap("Status")
+        public Integer status;
+
         /**
          * <p>The number of unprocessed mirrors.</p>
          * 
@@ -521,6 +524,14 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         }
         public String getSensitiveFileName() {
             return this.sensitiveFileName;
+        }
+
+        public DescribeImageSensitiveFileListResponseBodySensitiveFileList setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
         public DescribeImageSensitiveFileListResponseBodySensitiveFileList setUnprocessedNum(Integer unprocessedNum) {

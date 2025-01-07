@@ -17,6 +17,9 @@ public class GetSensitiveDefineRuleConfigRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("Source")
+    public String source;
+
     public static GetSensitiveDefineRuleConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSensitiveDefineRuleConfigRequest self = new GetSensitiveDefineRuleConfigRequest();
         return TeaModel.build(map, self);
@@ -28,6 +31,14 @@ public class GetSensitiveDefineRuleConfigRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public GetSensitiveDefineRuleConfigRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

@@ -40,6 +40,9 @@ public class FixCheckWarningsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("RetentionDays")
+    public Integer retentionDays;
+
     /**
      * <p>The ID of the baseline risk item.</p>
      * <blockquote>
@@ -51,6 +54,9 @@ public class FixCheckWarningsRequest extends TeaModel {
      */
     @NameInMap("RiskId")
     public Long riskId;
+
+    @NameInMap("SnapshotName")
+    public String snapshotName;
 
     /**
      * <p>The source IP address of the request.</p>
@@ -91,12 +97,28 @@ public class FixCheckWarningsRequest extends TeaModel {
         return this.lang;
     }
 
+    public FixCheckWarningsRequest setRetentionDays(Integer retentionDays) {
+        this.retentionDays = retentionDays;
+        return this;
+    }
+    public Integer getRetentionDays() {
+        return this.retentionDays;
+    }
+
     public FixCheckWarningsRequest setRiskId(Long riskId) {
         this.riskId = riskId;
         return this;
     }
     public Long getRiskId() {
         return this.riskId;
+    }
+
+    public FixCheckWarningsRequest setSnapshotName(String snapshotName) {
+        this.snapshotName = snapshotName;
+        return this;
+    }
+    public String getSnapshotName() {
+        return this.snapshotName;
     }
 
     public FixCheckWarningsRequest setSourceIp(String sourceIp) {

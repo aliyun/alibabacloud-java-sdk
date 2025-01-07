@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebLockCreateConfigResponseBody extends TeaModel {
+    /**
+     * <p>The configuration ID of the protected directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1404656</p>
+     */
     @NameInMap("ConfigId")
     public String configId;
 

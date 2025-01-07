@@ -35,6 +35,8 @@ public class DescribePropertyScaProcessDetailRequest extends TeaModel {
     public String pid;
 
     /**
+     * <p>The information about the server that you want to query. The value can be the public IP address, private IP address, or name of the server. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.167.XX.XX</p>
      */

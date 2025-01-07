@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAssetSelectionConfigResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public CreateAssetSelectionConfigResponseBodyData data;
@@ -55,6 +55,19 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
         public String businessType;
 
         /**
+         * <p>The operating system of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: the Windows operating system</li>
+         * <li><strong>linux</strong>: the Linux operating system</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
+         */
+        @NameInMap("Platform")
+        public String platform;
+
+        /**
          * <p>The ID of the current asset selection. It can be used to query and modify the asset that is selected.</p>
          * 
          * <strong>example:</strong>
@@ -88,6 +101,14 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
         }
         public String getBusinessType() {
             return this.businessType;
+        }
+
+        public CreateAssetSelectionConfigResponseBodyData setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
         }
 
         public CreateAssetSelectionConfigResponseBodyData setSelectionKey(Long selectionKey) {

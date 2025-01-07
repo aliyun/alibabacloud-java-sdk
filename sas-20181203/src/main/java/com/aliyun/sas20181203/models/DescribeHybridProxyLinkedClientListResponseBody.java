@@ -4,13 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("List")
     public java.util.List<DescribeHybridProxyLinkedClientListResponseBodyList> list;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeHybridProxyLinkedClientListResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B01B804F-947C-5623-B050-1C8FDFA796CF</p>
      */
@@ -48,6 +56,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
 
     public static class DescribeHybridProxyLinkedClientListResponseBodyList extends TeaModel {
         /**
+         * <p>The name of the server group.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -55,6 +65,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The instance ID of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-bp1a69mvjujbakxu****</p>
          */
@@ -62,6 +74,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>sql-test-0****</p>
          */
@@ -69,6 +83,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The public IP address of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>8.210.XX.XX</p>
          */
@@ -76,6 +92,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String internetIp;
 
         /**
+         * <p>The private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.25.XX.XX</p>
          */
@@ -83,6 +101,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
+         * <p>The name of the operating system.</p>
+         * 
          * <strong>example:</strong>
          * <p>centos-xxx</p>
          */
@@ -90,6 +110,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String os;
 
         /**
+         * <p>The name of the operating system for your asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>centos</p>
          */
@@ -97,6 +119,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String osName;
 
         /**
+         * <p>The ID of the region in which the server resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -104,6 +128,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The name of the region in which the server resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
          */
@@ -111,6 +137,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String regionName;
 
         /**
+         * <p>The status of the Security Center agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>online</p>
          */
@@ -118,6 +146,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The name of the tag added to the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>latest</p>
          */
@@ -125,6 +155,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String tag;
 
         /**
+         * <p>The UUID of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
          */
@@ -132,6 +164,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String uuid;
 
         /**
+         * <p>The name of the service provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALIYUN</p>
          */
@@ -251,6 +285,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
 
     public static class DescribeHybridProxyLinkedClientListResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The number of entries on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -258,6 +294,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -265,6 +303,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -272,6 +312,8 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>149</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetAttackTypeListResponseBody extends TeaModel {
+    /**
+     * <p>The attack types.</p>
+     */
     @NameInMap("AttackTypeList")
     public java.util.List<GetAttackTypeListResponseBodyAttackTypeList> attackTypeList;
 
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>CE500770-42D3-442E-9DDD-156E0F9F****</p>
      */
@@ -37,6 +42,8 @@ public class GetAttackTypeListResponseBody extends TeaModel {
 
     public static class GetAttackTypeListResponseBodyAttackTypeList extends TeaModel {
         /**
+         * <p>The description of the attack type.</p>
+         * 
          * <strong>example:</strong>
          * <p>sas.attack.type.type12</p>
          */
@@ -44,6 +51,13 @@ public class GetAttackTypeListResponseBody extends TeaModel {
         public String label;
 
         /**
+         * <p>The attack source. Valid values:</p>
+         * <ul>
+         * <li><strong>cfw</strong>: Cloud Firewall</li>
+         * <li><strong>alinet</strong>: network defense plug-in</li>
+         * <li><strong>waf</strong>: Web Application Firewall (WAF)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>alinet</p>
          */
@@ -51,6 +65,8 @@ public class GetAttackTypeListResponseBody extends TeaModel {
         public String statusType;
 
         /**
+         * <p>The value of the attack type.</p>
+         * 
          * <strong>example:</strong>
          * <p>upload</p>
          */

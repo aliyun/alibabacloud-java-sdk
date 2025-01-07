@@ -296,7 +296,7 @@ public class ListCheckItemResponseBody extends TeaModel {
          * <li><strong>POLARDB</strong>: PolarDB.</li>
          * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL.</li>
          * <li><strong>MSE</strong>: Microservices Engine (MSE).</li>
-         * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS).</li>
+         * <li><strong>NAS</strong>: File Storage NAS (NAS).</li>
          * <li><strong>SDDP</strong>: Sensitive Data Discovery and Protection (SDDP).</li>
          * <li><strong>EIP</strong>: Elastic IP Address (EIP).</li>
          * </ul>

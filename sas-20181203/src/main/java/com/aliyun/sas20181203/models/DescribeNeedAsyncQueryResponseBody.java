@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeNeedAsyncQueryResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the result is returned. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class DescribeNeedAsyncQueryResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5DFD6277-CC36-57F7-ACE6-F5952XXXXXXXX</p>
      */

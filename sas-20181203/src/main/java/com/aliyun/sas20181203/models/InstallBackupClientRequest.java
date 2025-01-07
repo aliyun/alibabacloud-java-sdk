@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class InstallBackupClientRequest extends TeaModel {
     /**
+     * <p>The version of the anti-ransomware policy. Valid values:</p>
+     * <ul>
+     * <li><strong>1.0.0</strong></li>
+     * <li><strong>2.0.0</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,11 @@ public class InstallBackupClientRequest extends TeaModel {
     public String policyVersion;
 
     /**
+     * <p>The UUID of the server on which you want to install the anti-ransomware agent.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers. You must specify at least one of the UuidList and Uuid parameters.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>inet-617eddab-7df4-4a51-b217-a3f59194****</p>
      */
@@ -21,6 +31,11 @@ public class InstallBackupClientRequest extends TeaModel {
     public String uuid;
 
     /**
+     * <p>The UUIDs of servers on which you want to install the anti-ransomware agent.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;, &quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;]</p>
      */

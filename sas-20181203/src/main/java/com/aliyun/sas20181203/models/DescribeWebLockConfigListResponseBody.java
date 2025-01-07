@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWebLockConfigListResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the configurations of web tamper proofing.</p>
+     * <p>The configurations of web tamper proofing.</p>
      */
     @NameInMap("ConfigList")
     public java.util.List<DescribeWebLockConfigListResponseBodyConfigList> configList;
@@ -117,7 +117,7 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
         public String exclusiveFileType;
 
         /**
-         * <p>The ID of the directory that has web tamper proofing enabled.</p>
+         * <p>The configuration ID of the protected directory.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>

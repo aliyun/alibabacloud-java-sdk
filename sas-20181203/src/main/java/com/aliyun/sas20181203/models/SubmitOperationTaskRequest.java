@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class SubmitOperationTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the check item.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the ID of the check item.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,22 +18,48 @@ public class SubmitOperationTaskRequest extends TeaModel {
     public Long checkId;
 
     /**
+     * <p>The dimension of the task that you want to submit. Valid values:</p>
+     * <ul>
+     * <li>Instance dimension: INSTANCE</li>
+     * <li>Check item dimension: CHECK_ID</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CHECK_ID</p>
      */
     @NameInMap("DimensionType")
     public String dimensionType;
 
+    /**
+     * <p>The asset information required to submit the tasks for instances.</p>
+     */
     @NameInMap("OperationTaskInstances")
     public java.util.List<SubmitOperationTaskRequestOperationTaskInstances> operationTaskInstances;
 
+    /**
+     * <p>提交操作关联的跨页选择关联Key。</p>
+     * <blockquote>
+     * <p>您可调用<a href="~~CreateAssetSelectionConfig~~">CreateAssetSelectionConfig</a>接口BusinessType字段获取关联Key。</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>CSPM_OPERATION_RELATION_KEY_173***</p>
+     */
     @NameInMap("RelationKey")
     public String relationKey;
 
+    /**
+     * <p>The temporary parameters required for the repair task.</p>
+     */
     @NameInMap("RepairTempParam")
     public java.util.List<SubmitOperationTaskRequestRepairTempParam> repairTempParam;
 
     /**
+     * <p>The type of the task that you want to submit. Valid values:</p>
+     * <ul>
+     * <li>Repair task: REPAIR</li>
+     * <li>Rollback task: ROLLBACK</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,6 +123,8 @@ public class SubmitOperationTaskRequest extends TeaModel {
 
     public static class SubmitOperationTaskRequestOperationTaskInstances extends TeaModel {
         /**
+         * <p>The instance ID of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-uf6533m4vuo3oa33****</p>
          */
@@ -100,6 +132,8 @@ public class SubmitOperationTaskRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The region ID of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -107,6 +141,8 @@ public class SubmitOperationTaskRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the task that you want to roll back</p>
+         * 
          * <strong>example:</strong>
          * <p>7d0b10e35e80c9e5ebac5f1054****</p>
          */
@@ -114,6 +150,15 @@ public class SubmitOperationTaskRequest extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The service provider of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: an asset provided by Alibaba Cloud.</li>
+         * <li><strong>1</strong>: an asset outside Alibaba Cloud.</li>
+         * <li><strong>2</strong>: an asset in a data center.</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: an asset from a third-party cloud service provider.</li>
+         * <li><strong>8</strong>: a lightweight asset.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -161,6 +206,8 @@ public class SubmitOperationTaskRequest extends TeaModel {
 
     public static class SubmitOperationTaskRequestRepairTempParam extends TeaModel {
         /**
+         * <p>The name of the temporary repair parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>IPPort</p>
          */
@@ -168,6 +215,8 @@ public class SubmitOperationTaskRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the temporary repair parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1XX.1XX</p>
          */

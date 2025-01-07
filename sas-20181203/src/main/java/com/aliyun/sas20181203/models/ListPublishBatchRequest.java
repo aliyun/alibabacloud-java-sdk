@@ -4,10 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListPublishBatchRequest extends TeaModel {
+    /**
+     * <p>The name of the release batch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("BatchName")
     public String batchName;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,7 @@ public class ListPublishBatchRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +34,7 @@ public class ListPublishBatchRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The destination version of the Security Center agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

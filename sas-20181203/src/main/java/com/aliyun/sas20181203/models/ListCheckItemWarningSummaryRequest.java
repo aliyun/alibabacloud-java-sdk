@@ -50,6 +50,9 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     @NameInMap("CheckWarningStatus")
     public Integer checkWarningStatus;
 
+    @NameInMap("CheckWarningStatusList")
+    public java.util.List<Integer> checkWarningStatusList;
+
     /**
      * <p>The name of the field that is used to query containers.</p>
      * 
@@ -136,6 +139,9 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    @NameInMap("StartTime")
+    public Long startTime;
+
     /**
      * <p>The UUIDs of the servers.</p>
      * <blockquote>
@@ -180,6 +186,14 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     }
     public Integer getCheckWarningStatus() {
         return this.checkWarningStatus;
+    }
+
+    public ListCheckItemWarningSummaryRequest setCheckWarningStatusList(java.util.List<Integer> checkWarningStatusList) {
+        this.checkWarningStatusList = checkWarningStatusList;
+        return this;
+    }
+    public java.util.List<Integer> getCheckWarningStatusList() {
+        return this.checkWarningStatusList;
     }
 
     public ListCheckItemWarningSummaryRequest setContainerFieldName(String containerFieldName) {
@@ -244,6 +258,14 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
+    }
+
+    public ListCheckItemWarningSummaryRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
     public ListCheckItemWarningSummaryRequest setUuidList(java.util.List<String> uuidList) {

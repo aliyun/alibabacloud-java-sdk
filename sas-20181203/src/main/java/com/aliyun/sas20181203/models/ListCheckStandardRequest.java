@@ -38,7 +38,11 @@ public class ListCheckStandardRequest extends TeaModel {
     /**
      * <p>The cloud service providers. Valid values:</p>
      * <ul>
-     * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+     * <li><strong>ALIYUN</strong>: Alibaba Cloud.</li>
+     * <li><strong>TENCENT</strong>: Tencent Cloud.</li>
+     * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud.</li>
+     * <li><strong>MICROSOFT</strong>: Microsoft Azure.</li>
+     * <li><strong>AWS</strong>: Amazon Web Services (AWS).</li>
      * </ul>
      */
     @NameInMap("Vendors")

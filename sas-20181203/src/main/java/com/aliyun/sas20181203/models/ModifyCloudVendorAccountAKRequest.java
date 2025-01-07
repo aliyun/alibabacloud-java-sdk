@@ -18,17 +18,29 @@ public class ModifyCloudVendorAccountAKRequest extends TeaModel {
     public String authIds;
 
     /**
-     * <p>The modules that are associated with the AccessKey pair.</p>
+     * <p>The modules that are associated with the AccessKey pair. Valid values:</p>
+     * <ul>
+     * <li><strong>HOST</strong>: host.</li>
+     * <li><strong>CSPM</strong>: configuration assessment.</li>
+     * <li><strong>SIEM</strong>: Cloud Threat Detection and Response (CTDR).</li>
+     * <li><strong>TRIAL</strong>: log audit.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can call the <a href="~~GetSupportedModules~~">GetSupportedModules</a> operation to query the supported modules.</p>
+     * </blockquote>
      */
     @NameInMap("AuthModules")
     public java.util.List<String> authModules;
 
     /**
-     * <p>The Active Directory (AD) domain. This parameter takes effect only when Vendor is set to Azure. Valid values:</p>
+     * <p>The Active Directory (AD) domain. Valid values:</p>
      * <ul>
      * <li><strong>china</strong></li>
      * <li><strong>global</strong></li>
      * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only when Vendor is set to Azure.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>global</p>
@@ -37,9 +49,22 @@ public class ModifyCloudVendorAccountAKRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The regions that are examined during AccessKey pair authentication. This parameter takes effect only when Vendor is set to AWS.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
+    @NameInMap("Lang")
+    public String lang;
+
+    /**
+     * <p>The regions that are examined during AccessKey pair authentication.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to query regions.</p>
+     * <p> This parameter takes effect only when Vendor is set to AWS. You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to query regions.</p>
      * </blockquote>
      */
     @NameInMap("Regions")
@@ -47,6 +72,9 @@ public class ModifyCloudVendorAccountAKRequest extends TeaModel {
 
     /**
      * <p>The AccessKey ID.</p>
+     * <blockquote>
+     * <p> If AkType is set to <strong>primary</strong>, you must set SecretId to the AccessKey ID of the third-party master account. If AkType is set to <strong>sub</strong>, you must set SecretId to the AccessKey ID of the third-party sub-account. This parameter value does not change for a <strong>Microsoft Azure account</strong>. For an Azure account, set this parameter to the <strong>app ID</strong> that is used for authentication.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>S3D6c4O***</p>
@@ -55,21 +83,10 @@ public class ModifyCloudVendorAccountAKRequest extends TeaModel {
     public String secretId;
 
     /**
-     * <p>The AccessKey secret. Valid values:</p>
-     * <p>1\. If AkType is set to primary, specify this parameter based on the following description:</p>
-     * <ul>
-     * <li><strong>Tencent</strong>: Specify the AccessKey secret of a primary account on Tencent Cloud.</li>
-     * <li><strong>HUAWEICLOUD</strong>: Specify the AccessKey secret of a primary account on Huawei Cloud.</li>
-     * <li><strong>Azure</strong>: Specify the AccessKey secret of a primary account on Microsoft Azure.</li>
-     * <li><strong>AWS</strong>: Specifythe AccessKey secret of a primary account on Amazon Web Services (AWS).</li>
-     * </ul>
-     * <p>2\. If AkType is set to sub, specify this parameter based on the following description:</p>
-     * <ul>
-     * <li><strong>Tencent</strong>: Specify the AccessKey secret of a sub-account on Tencent Cloud.</li>
-     * <li><strong>HUAWEICLOUD</strong>: Specify the AccessKey secret of a sub-account on Huawei Cloud.</li>
-     * <li><strong>Azure</strong>: Specify the AccessKey secret of a sub-account on Microsoft Azure.</li>
-     * <li><strong>AWS</strong>: Specify the AccessKey secret of a sub-account on AWS.</li>
-     * </ul>
+     * <p>The AccessKey secret.</p>
+     * <blockquote>
+     * <p> If AkType is set to <strong>primary</strong>, you must set SecretKey to the AccessKey secret of the third-party master account. If AkType is set to <strong>sub</strong>, you must set SecretKey to the AccessKey secret of the third-party sub-account. This parameter value does not change for a <strong>Microsoft Azure account</strong>. For an Azure account, set this parameter to the <strong>password</strong> that is used for authentication.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>AE6SLd****</p>
@@ -91,13 +108,19 @@ public class ModifyCloudVendorAccountAKRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The subscription IDs. This parameter takes effect only when Vendor is set to Azure.</p>
+     * <p>The IDs of subscriptions.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when Vendor is set to Azure.</p>
+     * </blockquote>
      */
     @NameInMap("SubscriptionIds")
     public java.util.List<String> subscriptionIds;
 
     /**
-     * <p>The tenant ID. This parameter takes effect only when Vendor is set to Azure.</p>
+     * <p>The tenant ID.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when Vendor is set to Azure.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>95304a97-339b-4de5-9a7d-cdbffaf****</p>
@@ -132,6 +155,14 @@ public class ModifyCloudVendorAccountAKRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public ModifyCloudVendorAccountAKRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ModifyCloudVendorAccountAKRequest setRegions(java.util.List<String> regions) {

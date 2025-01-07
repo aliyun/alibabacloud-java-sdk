@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListPrivateK8sResponseBody extends TeaModel {
+    /**
+     * <p>The information about the self-managed Kubernetes clusters.</p>
+     */
     @NameInMap("PrivateK8sInfos")
     public java.util.List<ListPrivateK8sResponseBodyPrivateK8sInfos> privateK8sInfos;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>52870893-48A7-5A9E-9E05-6253E5B6****</p>
      */
@@ -37,6 +42,8 @@ public class ListPrivateK8sResponseBody extends TeaModel {
 
     public static class ListPrivateK8sResponseBodyPrivateK8sInfos extends TeaModel {
         /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -44,6 +51,8 @@ public class ListPrivateK8sResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The IP address of the API server.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
          */
@@ -51,6 +60,8 @@ public class ListPrivateK8sResponseBody extends TeaModel {
         public String apiServerIp;
 
         /**
+         * <p>The name of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -58,6 +69,8 @@ public class ListPrivateK8sResponseBody extends TeaModel {
         public String clusterName;
 
         /**
+         * <p>The ID of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -65,6 +78,8 @@ public class ListPrivateK8sResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The version of Kubernetes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.18</p>
          */
@@ -72,6 +87,8 @@ public class ListPrivateK8sResponseBody extends TeaModel {
         public String k8sVersion;
 
         /**
+         * <p>The server configuration of Kubernetes.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -79,6 +96,12 @@ public class ListPrivateK8sResponseBody extends TeaModel {
         public String kubeConfig;
 
         /**
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Internet.</li>
+         * <li><strong>2</strong>: VPC.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -86,6 +109,8 @@ public class ListPrivateK8sResponseBody extends TeaModel {
         public Long netType;
 
         /**
+         * <p>The ID of the region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -93,6 +118,8 @@ public class ListPrivateK8sResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-2zet5l358k6z0gnz*****</p>
          */

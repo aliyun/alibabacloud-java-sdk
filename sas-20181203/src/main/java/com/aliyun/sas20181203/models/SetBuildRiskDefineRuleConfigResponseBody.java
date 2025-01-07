@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
     /**
+     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public SetBuildRiskDefineRuleConfigResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class SetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA674E4B-00CF-5DEA-8B92-360862FB5133</p>
      */
@@ -29,6 +38,12 @@ public class SetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class SetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
 
     public static class SetBuildRiskDefineRuleConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The configuration ID for scanning image build command risks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

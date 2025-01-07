@@ -55,7 +55,7 @@ public class ModifyCloudVendorAccountAKResponseBody extends TeaModel {
          * <ul>
          * <li><strong>HOST</strong>: host.</li>
          * <li><strong>CSPM</strong>: configuration assessment.</li>
-         * <li><strong>SIEM</strong>: threat analysis and response.</li>
+         * <li><strong>SIEM</strong>: CTDR.</li>
          * <li><strong>TRIAL</strong>: log audit.</li>
          * </ul>
          * 
@@ -202,6 +202,9 @@ public class ModifyCloudVendorAccountAKResponseBody extends TeaModel {
 
         /**
          * <p>The AccessKey ID.</p>
+         * <blockquote>
+         * <p> If AkType is set to <strong>primary</strong>, the value of SecretId is AccessKey ID of the third-party master account. If AkType is set to <strong>sub</strong>, the value of SecretId is the AccessKey ID of the third-party sub-account. This parameter value does not change for a <strong>Microsoft Azure account</strong>. For an Azure account, this parameter value is the <strong>app ID</strong> that is used for authentication.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>AE6SLd****</p>
@@ -238,12 +241,12 @@ public class ModifyCloudVendorAccountAKResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The cloud service provider. Valid values:</p>
+         * <p>The type of the cloud asset. Valid values:</p>
          * <ul>
-         * <li><strong>Tencent</strong></li>
-         * <li><strong>HUAWEICLOUD</strong></li>
-         * <li><strong>Azure</strong></li>
-         * <li><strong>AWS</strong></li>
+         * <li><strong>Tencent</strong>: Tencent Cloud.</li>
+         * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud.</li>
+         * <li><strong>Azure</strong>: Microsoft Azure.</li>
+         * <li><strong>AWS</strong>: Amazon Web Services (AWS).</li>
          * </ul>
          * 
          * <strong>example:</strong>

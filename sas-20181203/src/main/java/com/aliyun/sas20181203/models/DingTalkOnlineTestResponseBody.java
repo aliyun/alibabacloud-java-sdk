@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DingTalkOnlineTestResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>2E96F605-1BE3-5954-83A5-AE96C617****</p>
      */

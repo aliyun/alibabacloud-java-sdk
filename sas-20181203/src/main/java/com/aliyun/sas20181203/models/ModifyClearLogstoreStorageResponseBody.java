@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyClearLogstoreStorageResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>DC84C453-8561-5EC4-B0E9-44E67ACCB5B5</p>
      */

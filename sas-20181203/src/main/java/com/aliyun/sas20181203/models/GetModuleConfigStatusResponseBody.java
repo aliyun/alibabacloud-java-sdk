@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetModuleConfigStatusResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetModuleConfigStatusResponseBodyData data;
 
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>843E4805-****-7EE12FA8DBFD</p>
      */
@@ -37,6 +42,15 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
 
     public static class GetModuleConfigStatusResponseBodyDataModuleConfigResults extends TeaModel {
         /**
+         * <p>The name of the check item. Valid values:</p>
+         * <ul>
+         * <li><strong>Ransom</strong>: The anti-ransomware policy is enabled.</li>
+         * <li><strong>WebLock</strong>: The web tamper proofing feature is enabled.</li>
+         * <li><strong>Rasp</strong>: Applications are added to the application protection feature.</li>
+         * <li><strong>Image</strong>: The container images that can be scanned are specified.</li>
+         * <li><strong>Virus</strong>: The periodic virus scan policy is enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Ransom</p>
          */
@@ -44,6 +58,12 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
         public String moduleName;
 
         /**
+         * <p>Indicates whether the service module passed the status check. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -74,6 +94,9 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
     }
 
     public static class GetModuleConfigStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>The check results of the service modules.</p>
+         */
         @NameInMap("ModuleConfigResults")
         public java.util.List<GetModuleConfigStatusResponseBodyDataModuleConfigResults> moduleConfigResults;
 

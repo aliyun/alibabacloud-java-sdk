@@ -14,7 +14,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array consisting of the operations that you can perform to handle the alert event.</p>
+     * <p>The operations that are performed to handle the alert.</p>
      */
     @NameInMap("SecurityEventOperationsResponse")
     public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse> securityEventOperationsResponse;
@@ -41,30 +41,92 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields extends TeaModel {
+        /**
+         * <p>The description of the field that is added to the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether the value of the field can be changed.</p>
+         * <ul>
+         * <li><strong>CUSTOM</strong>: The value of the field can be changed.</li>
+         * <li><strong>SYSTEM</strong>: The value of the field cannot be changed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
+         */
         @NameInMap("FillType")
         public String fillType;
 
+        /**
+         * <p>The maximum length of the field that is added to the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
+         */
         @NameInMap("MaxLength")
         public Integer maxLength;
 
+        /**
+         * <p>The minimum length of the field that is added to the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("MinLength")
         public Integer minLength;
 
+        /**
+         * <p>The name of the field that is added to the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pid</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the parameter is required. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
+        /**
+         * <p>The display name of the field that can be used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pid</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
+        /**
+         * <p>The display name of the field that is added to the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1791</p>
+         */
         @NameInMap("ShowValue")
         public String showValue;
 
+        /**
+         * <p>The value of the field that is added to the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1791</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -335,23 +397,26 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse extends TeaModel {
+        /**
+         * <p>The objects on which the operations are performed. This parameter is required when you add the alert to the whitelist by configuring precise defense rules.</p>
+         */
         @NameInMap("MappingMarkFields")
         public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields> mappingMarkFields;
 
         /**
-         * <p>An array consisting of the configuration information that is used when the value of the OperationCode parameter is <strong>advance_mark_mis_info</strong>.</p>
+         * <p>The configurations that are used when the value of the OperationCode parameter is <strong>advance_mark_mis_info</strong>.</p>
          */
         @NameInMap("MarkField")
         public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField> markField;
 
         /**
-         * <p>An array consisting of the configuration items that can be used when the value of the OperationCode parameter is advance_mark_mis_info.</p>
+         * <p>The configuration items that can be used when the value of the OperationCode parameter is advance_mark_mis_info.</p>
          */
         @NameInMap("MarkFieldsSource")
         public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource> markFieldsSource;
 
         /**
-         * <p>The operation that you can perform to handle the alert. Valid values:</p>
+         * <p>The operation that is performed to handle the alert. Valid values:</p>
          * <ul>
          * <li><strong>block_ip</strong>: blocks the source IP address.</li>
          * <li><strong>advance_mark_mis_info</strong>: adds the alert to the whitelist.</li>
@@ -360,9 +425,13 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
          * <li><strong>kill_process</strong>: terminates the malicious process.</li>
          * <li><strong>cleanup</strong>: performs in-depth virus detection and removal.</li>
          * <li><strong>kill_and_quara</strong>: terminates the malicious process and quarantines the source file.</li>
-         * <li><strong>disable_malicious_defense</strong>: stops the container on which the alerting files or processes exist.</li>
+         * <li><strong>disable_malicious_defense</strong>: disables the malicious behavior defense feature.</li>
          * <li><strong>client_problem_check</strong>: performs troubleshooting.</li>
          * <li><strong>quara</strong>: quarantines the source file of the malicious process.</li>
+         * <li><strong>defense_mark_mis_info</strong>: enables the precise defense feature but disables the notification feature.</li>
+         * <li><strong>rm_defense_mark_mis_info</strong>: enables the notification feature.</li>
+         * <li><strong>rm_mark_mis_info</strong>: removes the alert from the whitelist.</li>
+         * <li><strong>cancle_manual</strong>: cancels marking the alert as manually handled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -372,9 +441,9 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         public String operationCode;
 
         /**
-         * <p>The configuration of the operation that you can perform to handle the alert event.</p>
+         * <p>The configuration of the operation that is performed to handle the alert.</p>
          * <blockquote>
-         * <p> If the value of the OperationCode parameter is <code>kill_and_quara</code> or <code>block_ip</code>, the OperationParams parameter is required. If the value of the OperationCode parameter is a different value, the OperationParams parameter can be left empty.</p>
+         * <p> If the value of the <strong>OperationCode</strong> parameter is <strong>kill_and_quara</strong> or <strong>block_ip</strong>, the OperationParams parameter is required. If the value of the <strong>OperationCode</strong> parameter is a different value, the OperationParams parameter can be left empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -384,10 +453,10 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         public String operationParams;
 
         /**
-         * <p>Indicates whether you can handle the alert event in the current edition of Security Center. Valid values:</p>
+         * <p>Indicates whether you can handle the alert in the current edition of Security Center. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

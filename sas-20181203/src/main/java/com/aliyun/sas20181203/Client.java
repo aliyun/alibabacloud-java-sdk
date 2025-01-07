@@ -185,7 +185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds check items to the whitelist for instances.</p>
+     * <p>Adds instances on which risks are detected based on check items of the configuration assessment feature to a whitelist.</p>
      * 
      * @param request AddCheckInstanceResultWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -237,7 +237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds check items to the whitelist for instances.</p>
+     * <p>Adds instances on which risks are detected based on check items of the configuration assessment feature to a whitelist.</p>
      * 
      * @param request AddCheckInstanceResultWhiteListRequest
      * @return AddCheckInstanceResultWhiteListResponse
@@ -249,7 +249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds check items to the whitelist.</p>
+     * <p>Adds the check items of the configuration assessment feature to the whitelist.</p>
      * 
      * @param request AddCheckResultWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -289,7 +289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds check items to the whitelist.</p>
+     * <p>Adds the check items of the configuration assessment feature to the whitelist.</p>
      * 
      * @param request AddCheckResultWhiteListRequest
      * @return AddCheckResultWhiteListResponse
@@ -428,6 +428,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
             query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regions)) {
@@ -734,12 +738,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EventType", request.eventType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.note)) {
+            query.put("Note", request.note);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.operationCode)) {
             query.put("OperationCode", request.operationCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scenarios)) {
             query.put("Scenarios", request.scenarios);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -860,6 +872,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.os)) {
             query.put("Os", request.os);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateLinkId)) {
+            query.put("PrivateLinkId", request.privateLinkId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.proxyCluster)) {
@@ -993,7 +1009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增发布批次</p>
+     * <p>Upgrades the Security Center agent in batches.</p>
      * 
      * @param request AddPublishBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1037,7 +1053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增发布批次</p>
+     * <p>Upgrades the Security Center agent in batches.</p>
      * 
      * @param request AddPublishBatchRequest
      * @return AddPublishBatchResponse
@@ -1359,7 +1375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量创建恶意文件告警备注</p>
+     * <p>Adds alert description in batches.</p>
      * 
      * @param request BatchCreateMaliciousNoteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1391,7 +1407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量创建恶意文件告警备注</p>
+     * <p>Adds alert description in batches.</p>
      * 
      * @param request BatchCreateMaliciousNoteRequest
      * @return BatchCreateMaliciousNoteResponse
@@ -2150,8 +2166,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to check whether the remaining quota of the vulnerability fixing feature is sufficient in free trial scenarios. This operation does not trigger vulnerability fixing.</p>
+     * 
      * <b>summary</b> : 
-     * <p>检查试用修复数量</p>
+     * <p>Checks whether the remaining quota of the vulnerability fixing feature is sufficient for a free trial user of Security Center and queries the quota usage required for the current fix operation.</p>
      * 
      * @param request CheckTrialFixCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2194,8 +2213,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to check whether the remaining quota of the vulnerability fixing feature is sufficient in free trial scenarios. This operation does not trigger vulnerability fixing.</p>
+     * 
      * <b>summary</b> : 
-     * <p>检查试用修复数量</p>
+     * <p>Checks whether the remaining quota of the vulnerability fixing feature is sufficient for a free trial user of Security Center and queries the quota usage required for the current fix operation.</p>
      * 
      * @param request CheckTrialFixCountRequest
      * @return CheckTrialFixCountResponse
@@ -2502,6 +2524,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
             query.put("BusinessType", request.businessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            query.put("Platform", request.platform);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
@@ -4184,8 +4210,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建监视器帐户</p>
+     * <p>Creates a list of members of the account monitored by Security Center type by using the multi-account management feature.</p>
      * 
      * @param request CreateMonitorAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4216,8 +4245,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建监视器帐户</p>
+     * <p>Creates a list of members of the account monitored by Security Center type by using the multi-account management feature.</p>
      * 
      * @param request CreateMonitorAccountRequest
      * @return CreateMonitorAccountResponse
@@ -4649,7 +4681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a scan policy.</p>
+     * <p>Creates a policy for detecting malicious Object Storage Service (OSS) objects by using the SDK for malicious file detection feature.</p>
      * 
      * @param request CreateOssScanConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4729,7 +4761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a scan policy.</p>
+     * <p>Creates a policy for detecting malicious Object Storage Service (OSS) objects by using the SDK for malicious file detection feature.</p>
      * 
      * @param request CreateOssScanConfigRequest
      * @return CreateOssScanConfigResponse
@@ -4740,8 +4772,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增修改目录节点同步开关</p>
+     * <p>Creates an automatic account management policy for members of the account monitored by Security Center type by using the multi-account management feature. After the policy is created, the members that are newly added to the specified resource directory are automatically added to the list of members of the account monitored by Security Center type.</p>
      * 
      * @param request CreateRdDefaultSyncListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4772,8 +4807,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增修改目录节点同步开关</p>
+     * <p>Creates an automatic account management policy for members of the account monitored by Security Center type by using the multi-account management feature. After the policy is created, the members that are newly added to the specified resource directory are automatically added to the list of members of the account monitored by Security Center type.</p>
      * 
      * @param request CreateRdDefaultSyncListRequest
      * @return CreateRdDefaultSyncListResponse
@@ -6663,7 +6701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除代理</p>
+     * <p>Removes a proxy node from a specified proxy cluster.</p>
      * 
      * @param request DeleteHybridProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6699,7 +6737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除代理</p>
+     * <p>Removes a proxy node from a specified proxy cluster.</p>
      * 
      * @param request DeleteHybridProxyRequest
      * @return DeleteHybridProxyResponse
@@ -6711,7 +6749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除代理集群</p>
+     * <p>Deletes a proxy cluster based on the name of the proxy cluster.</p>
      * 
      * @param request DeleteHybridProxyClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6743,7 +6781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除代理集群</p>
+     * <p>Deletes a proxy cluster based on the name of the proxy cluster.</p>
      * 
      * @param request DeleteHybridProxyClusterRequest
      * @return DeleteHybridProxyClusterResponse
@@ -8780,6 +8818,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation will be discontinued soon. You must call the <a href="~~GetAssetDetailByUuid~~">GetAssetDetailByUuid</a> operation to query the details of the server.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the details of a server and the extended information about the server by using the UUID of the server.</p>
      * 
@@ -8824,6 +8865,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation will be discontinued soon. You must call the <a href="~~GetAssetDetailByUuid~~">GetAssetDetailByUuid</a> operation to query the details of the server.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the details of a server and the extended information about the server by using the UUID of the server.</p>
      * 
@@ -9027,54 +9071,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAssetsSecurityEventSummaryResponse describeAssetsSecurityEventSummary(DescribeAssetsSecurityEventSummaryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAssetsSecurityEventSummaryWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the results of automatically connecting applications on Elastic Compute Service (ECS) instances to the application protection feature after the Runtime Application Self-Protection (RASP) agent is installed on the ECS instances.</p>
-     * 
-     * @param request DescribeAttachRecordsRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescribeAttachRecordsResponse
-     */
-    public DescribeAttachRecordsResponse describeAttachRecordsWithOptions(DescribeAttachRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
-            query.put("ApplicationId", request.applicationId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ecsUUIDList)) {
-            query.put("EcsUUIDList", request.ecsUUIDList);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeAttachRecords"),
-            new TeaPair("version", "2018-12-03"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAttachRecordsResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the results of automatically connecting applications on Elastic Compute Service (ECS) instances to the application protection feature after the Runtime Application Self-Protection (RASP) agent is installed on the ECS instances.</p>
-     * 
-     * @param request DescribeAttachRecordsRequest
-     * @return DescribeAttachRecordsResponse
-     */
-    public DescribeAttachRecordsResponse describeAttachRecords(DescribeAttachRecordsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeAttachRecordsWithOptions(request, runtime);
     }
 
     /**
@@ -9935,7 +9931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询是否允许试用云安全中心</p>
+     * <p>Checks the permissions on the trial use of Security Center.</p>
      * 
      * @param request DescribeCanTrySasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9959,7 +9955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询是否允许试用云安全中心</p>
+     * <p>Checks the permissions on the trial use of Security Center.</p>
      * @return DescribeCanTrySasResponse
      */
     public DescribeCanTrySasResponse describeCanTrySas() throws Exception {
@@ -10085,7 +10081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询分类并附带每个分类的未处理异常数量</p>
+     * <p>Queries the number of weak passwords that can cause high risks to your assets.</p>
      * 
      * @param request DescribeCheckEcsWarningsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10117,7 +10113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询分类并附带每个分类的未处理异常数量</p>
+     * <p>Queries the number of weak passwords that can cause high risks to your assets.</p>
      * 
      * @param request DescribeCheckEcsWarningsRequest
      * @return DescribeCheckEcsWarningsResponse
@@ -10215,7 +10211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取基线问题条数</p>
+     * <p>Queries the number of alerts that are triggered by a check item.</p>
      * 
      * @param request DescribeCheckWarningCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10259,7 +10255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取基线问题条数</p>
+     * <p>Queries the number of alerts that are triggered by a check item.</p>
      * 
      * @param request DescribeCheckWarningCountRequest
      * @return DescribeCheckWarningCountResponse
@@ -10695,7 +10691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询客户端问题列表</p>
+     * <p>Queries a list of agent issue types.</p>
      * 
      * @param request DescribeClientProblemTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10719,7 +10715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询客户端问题列表</p>
+     * <p>Queries a list of agent issue types.</p>
      * @return DescribeClientProblemTypeResponse
      */
     public DescribeClientProblemTypeResponse describeClientProblemType() throws Exception {
@@ -12569,7 +12565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询操作审计数据源</p>
+     * <p>Queries data sources for DingTalk notifications. You can configure the types of alerts for which you want to use a DingTalk chatbot to send notifications based on the data sources.</p>
      * 
      * @param request DescribeDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12609,7 +12605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询操作审计数据源</p>
+     * <p>Queries data sources for DingTalk notifications. You can configure the types of alerts for which you want to use a DingTalk chatbot to send notifications based on the data sources.</p>
      * 
      * @param request DescribeDataSourceRequest
      * @return DescribeDataSourceResponse
@@ -12903,7 +12899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网络安全报告-安全告警</p>
+     * <p>Queries the security alert data of a website security report.</p>
      * 
      * @param request DescribeDomainSecureAlarmListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12943,7 +12939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网络安全报告-安全告警</p>
+     * <p>Queries the security alert data of a website security report.</p>
      * 
      * @param request DescribeDomainSecureAlarmListRequest
      * @return DescribeDomainSecureAlarmListResponse
@@ -12955,7 +12951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网络安全报告-存在风险的网站</p>
+     * <p>Queries a list of risky websites in your website security report and the security information about the websites, including the number of vulnerabilities and the number of alerts.</p>
      * 
      * @param request DescribeDomainSecureRiskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12995,7 +12991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网络安全报告-存在风险的网站</p>
+     * <p>Queries a list of risky websites in your website security report and the security information about the websites, including the number of vulnerabilities and the number of alerts.</p>
      * 
      * @param request DescribeDomainSecureRiskListRequest
      * @return DescribeDomainSecureRiskListResponse
@@ -13007,7 +13003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网络安全报告的安全分</p>
+     * <p>Queries the security score in your website security report. The full score is 100.</p>
      * 
      * @param request DescribeDomainSecureScoreRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13043,7 +13039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网络安全报告的安全分</p>
+     * <p>Queries the security score in your website security report. The full score is 100.</p>
      * 
      * @param request DescribeDomainSecureScoreRequest
      * @return DescribeDomainSecureScoreResponse
@@ -13055,7 +13051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网络安全报告- 统计值</p>
+     * <p>Queries the statistics in your website security report, including the number of websites and the number of security events.</p>
      * 
      * @param request DescribeDomainSecureStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13091,7 +13087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网络安全报告- 统计值</p>
+     * <p>Queries the statistics in your website security report, including the number of websites and the number of security events.</p>
      * 
      * @param request DescribeDomainSecureStatisticsRequest
      * @return DescribeDomainSecureStatisticsResponse
@@ -13103,7 +13099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网络安全报告-漏洞</p>
+     * <p>Queries a list of vulnerabilities in your website security report.</p>
      * 
      * @param request DescribeDomainSecureVulListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13147,7 +13143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网络安全报告-漏洞</p>
+     * <p>Queries a list of vulnerabilities in your website security report.</p>
      * 
      * @param request DescribeDomainSecureVulListRequest
      * @return DescribeDomainSecureVulListResponse
@@ -13653,7 +13649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about a specified server that is exposed on the Internet.</p>
+     * <p>Queries the details of a specified server that is exposed on the Internet.</p>
      * 
      * @param request DescribeExposedInstanceDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13662,6 +13658,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeExposedInstanceDetailResponse describeExposedInstanceDetailWithOptions(DescribeExposedInstanceDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
             query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
@@ -13689,7 +13689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about a specified server that is exposed on the Internet.</p>
+     * <p>Queries the details of a specified server that is exposed on the Internet.</p>
      * 
      * @param request DescribeExposedInstanceDetailRequest
      * @return DescribeExposedInstanceDetailResponse
@@ -13701,7 +13701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the servers that are exposed on the Internet.</p>
+     * <p>Queries the information about the assets that are exposed on the Internet.</p>
      * 
      * @param request DescribeExposedInstanceListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13781,7 +13781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the servers that are exposed on the Internet.</p>
+     * <p>Queries the information about the assets that are exposed on the Internet.</p>
      * 
      * @param request DescribeExposedInstanceListRequest
      * @return DescribeExposedInstanceListResponse
@@ -14613,7 +14613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询代理集群列表</p>
+     * <p>Queries proxy clusters by page.</p>
      * 
      * @param request DescribeHybridProxyClusterListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14653,7 +14653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询代理集群列表</p>
+     * <p>Queries proxy clusters by page.</p>
      * 
      * @param request DescribeHybridProxyClusterListRequest
      * @return DescribeHybridProxyClusterListResponse
@@ -14665,7 +14665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询代理连接的客户端</p>
+     * <p>Queries the servers that are connected to a proxy in a hybrid cloud by page.</p>
      * 
      * @param request DescribeHybridProxyLinkedClientListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14717,7 +14717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询代理连接的客户端</p>
+     * <p>Queries the servers that are connected to a proxy in a hybrid cloud by page.</p>
      * 
      * @param request DescribeHybridProxyLinkedClientListRequest
      * @return DescribeHybridProxyLinkedClientListResponse
@@ -14729,7 +14729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询代理</p>
+     * <p>Queries the proxy nodes that are deployed in a proxy cluster by page.</p>
      * 
      * @param request DescribeHybridProxyListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14769,7 +14769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询代理</p>
+     * <p>Queries the proxy nodes that are deployed in a proxy cluster by page.</p>
      * 
      * @param request DescribeHybridProxyListRequest
      * @return DescribeHybridProxyListResponse
@@ -14781,7 +14781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户代理策略设置</p>
+     * <p>Queries the data collection configurations of a proxy cluster.</p>
      * 
      * @param request DescribeHybridProxyPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14813,7 +14813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户代理策略设置</p>
+     * <p>Queries the data collection configurations of a proxy cluster.</p>
      * 
      * @param request DescribeHybridProxyPolicyRequest
      * @return DescribeHybridProxyPolicyResponse
@@ -15321,7 +15321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过风险项关键字查询镜像的构建风险。</p>
+     * <p>Queries image build command risks by page.</p>
      * 
      * @param request DescribeImageBuildRiskByKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15373,7 +15373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过风险项关键字查询镜像的构建风险。</p>
+     * <p>Queries image build command risks by page.</p>
      * 
      * @param request DescribeImageBuildRiskByKeyRequest
      * @return DescribeImageBuildRiskByKeyResponse
@@ -15576,6 +15576,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -16417,7 +16421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The quota for container image scan.</p>
+     * <p>Queries the details of the quota for container image scan.</p>
      * 
      * @param request DescribeImageScanAuthCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16441,46 +16445,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The quota for container image scan.</p>
+     * <p>Queries the details of the quota for container image scan.</p>
      * @return DescribeImageScanAuthCountResponse
      */
     public DescribeImageScanAuthCountResponse describeImageScanAuthCount() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeImageScanAuthCountWithOptions(runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries whether Security Center is authorized to scan images.</p>
-     * 
-     * @param request DescribeImageScanAuthorizationRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescribeImageScanAuthorizationResponse
-     */
-    public DescribeImageScanAuthorizationResponse describeImageScanAuthorizationWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeImageScanAuthorization"),
-            new TeaPair("version", "2018-12-03"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeImageScanAuthorizationResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries whether Security Center is authorized to scan images.</p>
-     * @return DescribeImageScanAuthorizationResponse
-     */
-    public DescribeImageScanAuthorizationResponse describeImageScanAuthorization() throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeImageScanAuthorizationWithOptions(runtime);
     }
 
     /**
@@ -17187,7 +17157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群漏洞统计</p>
+     * <p>Queries the statistics on the vulnerabilities that are detected on a serverless instance.</p>
      * 
      * @param request DescribeInstanceVulStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17223,7 +17193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群漏洞统计</p>
+     * <p>Queries the statistics on the vulnerabilities that are detected on a serverless instance.</p>
      * 
      * @param request DescribeInstanceVulStatisticsRequest
      * @return DescribeInstanceVulStatisticsResponse
@@ -17235,7 +17205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询最新病毒扫描</p>
+     * <p>Queries the progress of the last virus scan task.</p>
      * 
      * @param request DescribeLatestScanTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17259,7 +17229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询最新病毒扫描</p>
+     * <p>Queries the progress of the last virus scan task.</p>
      * @return DescribeLatestScanTaskResponse
      */
     public DescribeLatestScanTaskResponse describeLatestScanTask() throws Exception {
@@ -17603,7 +17573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the server.</p>
+     * <p>Queries the configurations of the asset fingerprint module.</p>
      * 
      * @param request DescribeModuleConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17627,7 +17597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the server.</p>
+     * <p>Queries the configurations of the asset fingerprint module.</p>
      * @return DescribeModuleConfigResponse
      */
     public DescribeModuleConfigResponse describeModuleConfig() throws Exception {
@@ -17671,7 +17641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询是否需要慢查询优化</p>
+     * <p>Queries whether slow queries need to be optimized.</p>
      * 
      * @param request DescribeNeedAsyncQueryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17703,7 +17673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询是否需要慢查询优化</p>
+     * <p>Queries whether slow queries need to be optimized.</p>
      * 
      * @param request DescribeNeedAsyncQueryRequest
      * @return DescribeNeedAsyncQueryResponse
@@ -17907,7 +17877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries troubleshooting tasks for the Security Center agent.</p>
+     * <p>Queries agent tasks.</p>
      * 
      * @param request DescribeOnceTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17967,7 +17937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries troubleshooting tasks for the Security Center agent.</p>
+     * <p>Queries agent tasks.</p>
      * 
      * @param request DescribeOnceTaskRequest
      * @return DescribeOnceTaskResponse
@@ -20039,7 +20009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DescribeScanTaskProgress</p>
+     * <p>Queries the progress of a virus scan task.</p>
      * 
      * @param request DescribeScanTaskProgressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20071,7 +20041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DescribeScanTaskProgress</p>
+     * <p>Queries the progress of a virus scan task.</p>
      * 
      * @param request DescribeScanTaskProgressRequest
      * @return DescribeScanTaskProgressResponse
@@ -20175,7 +20145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资产的筛选条件</p>
+     * <p>Queries the filter conditions that are used to search for assets.</p>
      * 
      * @param request DescribeSearchConditionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20215,7 +20185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资产的筛选条件</p>
+     * <p>Queries the filter conditions that are used to search for assets.</p>
      * 
      * @param request DescribeSearchConditionRequest
      * @return DescribeSearchConditionResponse
@@ -20461,7 +20431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the operations that you can perform to handle an alert event.</p>
+     * <p>Queries the operations that you can perform to handle an alert.</p>
      * 
      * @param request DescribeSecurityEventOperationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20505,7 +20475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the operations that you can perform to handle an alert event.</p>
+     * <p>Queries the operations that you can perform to handle an alert.</p>
      * 
      * @param request DescribeSecurityEventOperationsRequest
      * @return DescribeSecurityEventOperationsResponse
@@ -21179,7 +21149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个基线检查策略的检查结果</p>
+     * <p>Queries the results of the last baseline check by using a specified baseline check policy.</p>
      * 
      * @param request DescribeStrategyExecDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21223,7 +21193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个基线检查策略的检查结果</p>
+     * <p>Queries the results of the last baseline check by using a specified baseline check policy.</p>
      * 
      * @param request DescribeStrategyExecDetailRequest
      * @return DescribeStrategyExecDetailResponse
@@ -22689,58 +22659,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether the brute-force attacks protection feature has been authorized. The brute-force attacks protection feature cannot be used without authorization.</p>
-     * 
-     * @param request DescribeUserLayoutAuthorizationRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescribeUserLayoutAuthorizationResponse
-     */
-    public DescribeUserLayoutAuthorizationResponse describeUserLayoutAuthorizationWithOptions(DescribeUserLayoutAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
-            query.put("Lang", request.lang);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
-            query.put("SourceIp", request.sourceIp);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeUserLayoutAuthorization"),
-            new TeaPair("version", "2018-12-03"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserLayoutAuthorizationResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries whether the brute-force attacks protection feature has been authorized. The brute-force attacks protection feature cannot be used without authorization.</p>
-     * 
-     * @param request DescribeUserLayoutAuthorizationRequest
-     * @return DescribeUserLayoutAuthorizationResponse
-     */
-    public DescribeUserLayoutAuthorizationResponse describeUserLayoutAuthorization(DescribeUserLayoutAuthorizationRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeUserLayoutAuthorizationWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Queries the settings of a custom baseline check policy.</p>
      * 
      * @param request DescribeUserSettingRequest
@@ -22967,7 +22885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询钉钉群二维码地址</p>
+     * <p>Queries the QR code address of a DingTalk group.</p>
      * 
      * @param request DescribeVolDingdingMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23003,7 +22921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询钉钉群二维码地址</p>
+     * <p>Queries the QR code address of a DingTalk group.</p>
      * 
      * @param request DescribeVolDingdingMessageRequest
      * @return DescribeVolDingdingMessageResponse
@@ -24109,7 +24027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询排除文件类型</p>
+     * <p>Queries the types of files that are excluded from web tamper proofing.</p>
      * 
      * @param request DescribeWebLockExclusiveFileTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24133,7 +24051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询排除文件类型</p>
+     * <p>Queries the types of files that are excluded from web tamper proofing.</p>
      * @return DescribeWebLockExclusiveFileTypeResponse
      */
     public DescribeWebLockExclusiveFileTypeResponse describeWebLockExclusiveFileType() throws Exception {
@@ -25035,7 +24953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>钉钉通知测试</p>
+     * <p>Tests whether DingTalk notification configurations are valid.</p>
      * 
      * @param request DingTalkOnlineTestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25067,7 +24985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>钉钉通知测试</p>
+     * <p>Tests whether DingTalk notification configurations are valid.</p>
      * 
      * @param request DingTalkOnlineTestRequest
      * @return DingTalkOnlineTestResponse
@@ -26007,7 +25925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>完成任务自动领取奖励</p>
+     * <p>Completes guidance tasks for beginners to earn rewards.</p>
      * 
      * @param request FinishGuidTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26039,7 +25957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>完成任务自动领取奖励</p>
+     * <p>Completes guidance tasks for beginners to earn rewards.</p>
      * 
      * @param request FinishGuidTaskRequest
      * @return FinishGuidTaskResponse
@@ -26068,8 +25986,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.retentionDays)) {
+            query.put("RetentionDays", request.retentionDays);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.riskId)) {
             query.put("RiskId", request.riskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotName)) {
+            query.put("SnapshotName", request.snapshotName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
@@ -26303,7 +26229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取账户标签</p>
+     * <p>Obtains account tags.</p>
      * 
      * @param request GetAccountLabelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26339,7 +26265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取账户标签</p>
+     * <p>Obtains account tags.</p>
      * 
      * @param request GetAccountLabelRequest
      * @return GetAccountLabelResponse
@@ -26825,7 +26751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询攻击类型</p>
+     * <p>Queries a list of attack types on the Attack Analysis page.</p>
      * 
      * @param request GetAttackTypeListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26849,7 +26775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询攻击类型</p>
+     * <p>Queries a list of attack types on the Attack Analysis page.</p>
      * @return GetAttackTypeListResponse
      */
     public GetAttackTypeListResponse getAttackTypeList() throws Exception {
@@ -26961,7 +26887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询防勒索存储统计</p>
+     * <p>Queries the anti-ransomware capacity that is used.</p>
      * 
      * @param request GetBackupStorageCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26985,7 +26911,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询防勒索存储统计</p>
+     * <p>Queries the anti-ransomware capacity that is used.</p>
      * @return GetBackupStorageCountResponse
      */
     public GetBackupStorageCountResponse getBackupStorageCount() throws Exception {
@@ -26995,7 +26921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户的构建指令风险规则配置</p>
+     * <p>Queries configurations for scanning image build command risks.</p>
      * 
      * @param request GetBuildRiskDefineRuleConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27027,7 +26953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户的构建指令风险规则配置</p>
+     * <p>Queries configurations for scanning image build command risks.</p>
      * 
      * @param request GetBuildRiskDefineRuleConfigRequest
      * @return GetBuildRiskDefineRuleConfigResponse
@@ -27427,62 +27353,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCheckSummaryResponse getCheckSummary(GetCheckSummaryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCheckSummaryWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the installation rate of the client on cloud assets in the specified period of time.</p>
-     * 
-     * @deprecated OpenAPI GetClientInstallationStatistic is deprecated, please use Sas::2018-12-03::GetClientRatioStatistic instead.
-     * 
-     * @param request GetClientInstallationStatisticRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetClientInstallationStatisticResponse
-     */
-    @Deprecated
-    // Deprecated
-    public GetClientInstallationStatisticResponse getClientInstallationStatisticWithOptions(GetClientInstallationStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.timeEnd)) {
-            query.put("TimeEnd", request.timeEnd);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.timeStart)) {
-            query.put("TimeStart", request.timeStart);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetClientInstallationStatistic"),
-            new TeaPair("version", "2018-12-03"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetClientInstallationStatisticResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the installation rate of the client on cloud assets in the specified period of time.</p>
-     * 
-     * @deprecated OpenAPI GetClientInstallationStatistic is deprecated, please use Sas::2018-12-03::GetClientRatioStatistic instead.
-     * 
-     * @param request GetClientInstallationStatisticRequest
-     * @return GetClientInstallationStatisticResponse
-     */
-    @Deprecated
-    // Deprecated
-    public GetClientInstallationStatisticResponse getClientInstallationStatistic(GetClientInstallationStatisticRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getClientInstallationStatisticWithOptions(request, runtime);
     }
 
     /**
@@ -27997,7 +27867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取版本发布信息</p>
+     * <p>Queries the publish details of the Security Center agent.</p>
      * 
      * @param request GetCurrentVersionPublishRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28021,7 +27891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取版本发布信息</p>
+     * <p>Queries the publish details of the Security Center agent.</p>
      * @return GetCurrentVersionPublishResponse
      */
     public GetCurrentVersionPublishResponse getCurrentVersionPublish() throws Exception {
@@ -28516,6 +28386,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取蜜罐攻击统计数据</p>
+     * 
      * @param request GetHoneypotAttackStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetHoneypotAttackStatisticsResponse
@@ -28573,6 +28446,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取蜜罐攻击统计数据</p>
+     * 
      * @param request GetHoneypotAttackStatisticsRequest
      * @return GetHoneypotAttackStatisticsResponse
      */
@@ -29367,7 +29243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取配置合规信息接口</p>
+     * <p>Checks whether the purchased Security Center features are enabled and whether related configurations take effect.</p>
      * 
      * @param tmpReq GetModuleConfigStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29405,7 +29281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取配置合规信息接口</p>
+     * <p>Checks whether the purchased Security Center features are enabled and whether related configurations take effect.</p>
      * 
      * @param request GetModuleConfigStatusRequest
      * @return GetModuleConfigStatusResponse
@@ -29902,6 +29778,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BucketNameList", request.bucketNameList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -30028,8 +29908,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列举RD树</p>
+     * <p>Queries the organizational structure of a resource directory by using the multi-account management feature.</p>
      * 
      * @param request GetRdTreeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30052,8 +29935,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列举RD树</p>
+     * <p>Queries the organizational structure of a resource directory by using the multi-account management feature.</p>
      * @return GetRdTreeResponse
      */
     public GetRdTreeResponse getRdTree() throws Exception {
@@ -30240,6 +30126,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -30497,6 +30387,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSwitchRegionDetailResponse getSwitchRegionDetail(GetSwitchRegionDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSwitchRegionDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取能否提交租户一键检测</p>
+     * 
+     * @param request GetTenantCheckAvailableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTenantCheckAvailableResponse
+     */
+    public GetTenantCheckAvailableResponse getTenantCheckAvailableWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTenantCheckAvailable"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTenantCheckAvailableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取能否提交租户一键检测</p>
+     * @return GetTenantCheckAvailableResponse
+     */
+    public GetTenantCheckAvailableResponse getTenantCheckAvailable() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTenantCheckAvailableWithOptions(runtime);
     }
 
     /**
@@ -30919,10 +30843,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Ignores multiple baseline risk items at a time or cancels the ignore action that is performed on multiple baseline risk items at a time.</p>
      * 
+     * @deprecated OpenAPI IgnoreHcCheckWarnings is deprecated, please use Sas::2018-12-03::IgnoreCheckItems instead.
+     * 
      * @param request IgnoreHcCheckWarningsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return IgnoreHcCheckWarningsResponse
      */
+    @Deprecated
+    // Deprecated
     public IgnoreHcCheckWarningsResponse ignoreHcCheckWarningsWithOptions(IgnoreHcCheckWarningsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -30975,9 +30903,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Ignores multiple baseline risk items at a time or cancels the ignore action that is performed on multiple baseline risk items at a time.</p>
      * 
+     * @deprecated OpenAPI IgnoreHcCheckWarnings is deprecated, please use Sas::2018-12-03::IgnoreCheckItems instead.
+     * 
      * @param request IgnoreHcCheckWarningsRequest
      * @return IgnoreHcCheckWarningsResponse
      */
+    @Deprecated
+    // Deprecated
     public IgnoreHcCheckWarningsResponse ignoreHcCheckWarnings(IgnoreHcCheckWarningsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.ignoreHcCheckWarningsWithOptions(request, runtime);
@@ -31033,10 +30965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The UUID of the server on which you want to install the anti-ransomware agent. You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
-     * <blockquote>
-     * <p> You must specify at least one of the UuidList and Uuid parameters.</p>
-     * </blockquote>
+     * <p>Installs the anti-ransomware agent.</p>
      * 
      * @param request InstallBackupClientRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31076,10 +31005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The UUID of the server on which you want to install the anti-ransomware agent. You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
-     * <blockquote>
-     * <p> You must specify at least one of the UuidList and Uuid parameters.</p>
-     * </blockquote>
+     * <p>Installs the anti-ransomware agent.</p>
      * 
      * @param request InstallBackupClientRequest
      * @return InstallBackupClientResponse
@@ -31265,54 +31191,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InstallPmAgentResponse installPmAgent(InstallPmAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.installPmAgentWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Installs the Runtime Application Self-Protection (RASP) agent on Elastic Compute Service (ECS) instances to enable automatic application protection.</p>
-     * 
-     * @param request InstallRaspAttachRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return InstallRaspAttachResponse
-     */
-    public InstallRaspAttachResponse installRaspAttachWithOptions(InstallRaspAttachRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
-            query.put("ApplicationId", request.applicationId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ecsUUIDList)) {
-            query.put("EcsUUIDList", request.ecsUUIDList);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "InstallRaspAttach"),
-            new TeaPair("version", "2018-12-03"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new InstallRaspAttachResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Installs the Runtime Application Self-Protection (RASP) agent on Elastic Compute Service (ECS) instances to enable automatic application protection.</p>
-     * 
-     * @param request InstallRaspAttachRequest
-     * @return InstallRaspAttachResponse
-     */
-    public InstallRaspAttachResponse installRaspAttach(InstallRaspAttachRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.installRaspAttachWithOptions(request, runtime);
     }
 
     /**
@@ -31648,8 +31526,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EventId", request.eventId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scenario)) {
+            query.put("Scenario", request.scenario);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -31897,7 +31783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资产列表</p>
+     * <p>Queries the custom upgrade information about assets.</p>
      * 
      * @param request ListAssetInfoPublishRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31933,7 +31819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资产列表</p>
+     * <p>Queries the custom upgrade information about assets.</p>
      * 
      * @param request ListAssetInfoPublishRequest
      * @return ListAssetInfoPublishResponse
@@ -32580,6 +32466,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CheckWarningStatus", request.checkWarningStatus);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.checkWarningStatusList)) {
+            query.put("CheckWarningStatusList", request.checkWarningStatusList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.containerFieldName)) {
             query.put("ContainerFieldName", request.containerFieldName);
         }
@@ -32610,6 +32500,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.uuidList)) {
@@ -32923,7 +32817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端支持的所有用户自定义类型</p>
+     * <p>Queries the supported types of custom defense rules.</p>
      * 
      * @param request ListClientUserDefineRuleTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32947,7 +32841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端支持的所有用户自定义类型</p>
+     * <p>Queries the supported types of custom defense rules.</p>
      * @return ListClientUserDefineRuleTypesResponse
      */
     public ListClientUserDefineRuleTypesResponse listClientUserDefineRuleTypes() throws Exception {
@@ -33280,8 +33174,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the detection results of files only if the files are pushed to the cloud for detection and in the form of packages. You can repeatedly query the detection results of files within 5 hours because the results are retained for 5 hours. For more information about how to push a file to the cloud for detection, see the CreateFileDetect operation. For more information about how to query file detection results, see the GetFileDetectResult operation.
+     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only hexadecimal MD5 hash values of complete file content are supported. You must calculate the required MD5 hash value before you call this operation.
+     * To calculate the hexadecimal MD5 hash value for a file, you can perform the following steps:
+     * 1\. Use the MD5 algorithm to encrypt data and generate a 128-bit hash value. You can use a tool such as MessageDigest for Java and the hashlib module for Python.
+     * 2\. Convert the hash value to a hexadecimal string. You can use a tool such as Codec for Java and the hex() function for Python.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取压缩包检测结果。</p>
+     * <p>Queries the detection results of the files extracted from a package.</p>
      * 
      * @param request ListCompressFileDetectResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33324,8 +33225,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the detection results of files only if the files are pushed to the cloud for detection and in the form of packages. You can repeatedly query the detection results of files within 5 hours because the results are retained for 5 hours. For more information about how to push a file to the cloud for detection, see the CreateFileDetect operation. For more information about how to query file detection results, see the GetFileDetectResult operation.
+     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only hexadecimal MD5 hash values of complete file content are supported. You must calculate the required MD5 hash value before you call this operation.
+     * To calculate the hexadecimal MD5 hash value for a file, you can perform the following steps:
+     * 1\. Use the MD5 algorithm to encrypt data and generate a 128-bit hash value. You can use a tool such as MessageDigest for Java and the hashlib module for Python.
+     * 2\. Convert the hash value to a hexadecimal string. You can use a tool such as Codec for Java and the hex() function for Python.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取压缩包检测结果。</p>
+     * <p>Queries the detection results of the files extracted from a package.</p>
      * 
      * @param request ListCompressFileDetectResultRequest
      * @return ListCompressFileDetectResultResponse
@@ -35141,6 +35049,142 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询操作任务列表</p>
+     * 
+     * @param request ListOperationProcessRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOperationProcessResponse
+     */
+    public ListOperationProcessResponse listOperationProcessWithOptions(ListOperationProcessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusCodes)) {
+            query.put("StatusCodes", request.statusCodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIds)) {
+            query.put("TaskIds", request.taskIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskTypes)) {
+            query.put("TaskTypes", request.taskTypes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOperationProcess"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOperationProcessResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询操作任务列表</p>
+     * 
+     * @param request ListOperationProcessRequest
+     * @return ListOperationProcessResponse
+     */
+    public ListOperationProcessResponse listOperationProcess(ListOperationProcessRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listOperationProcessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询操作任务子任务列表</p>
+     * 
+     * @param request ListOperationProcessDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOperationProcessDetailResponse
+     */
+    public ListOperationProcessDetailResponse listOperationProcessDetailWithOptions(ListOperationProcessDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusCodes)) {
+            query.put("StatusCodes", request.statusCodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIds)) {
+            query.put("TaskIds", request.taskIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOperationProcessDetail"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOperationProcessDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询操作任务子任务列表</p>
+     * 
+     * @param request ListOperationProcessDetailRequest
+     * @return ListOperationProcessDetailResponse
+     */
+    public ListOperationProcessDetailResponse listOperationProcessDetail(ListOperationProcessDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listOperationProcessDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries Object Storage Service (OSS) buckets.</p>
      * 
      * @param request ListOssBucketRequest
@@ -35415,7 +35459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取私有K8s列表</p>
+     * <p>Queries the information about the self-managed Kubernetes clusters that are added to Security Center.</p>
      * 
      * @param request ListPrivateK8sRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35439,7 +35483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取私有K8s列表</p>
+     * <p>Queries the information about the self-managed Kubernetes clusters that are added to Security Center.</p>
      * @return ListPrivateK8sResponse
      */
     public ListPrivateK8sResponse listPrivateK8s() throws Exception {
@@ -35537,7 +35581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询发布批次</p>
+     * <p>Query the details of a release batch for upgrade.</p>
      * 
      * @param request ListPublishBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35581,7 +35625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询发布批次</p>
+     * <p>Query the details of a release batch for upgrade.</p>
      * 
      * @param request ListPublishBatchRequest
      * @return ListPublishBatchResponse
@@ -35855,7 +35899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询对用户生效的系统规则类型</p>
+     * <p>Queries the types of system rules.</p>
      * 
      * @param request ListSystemClientRuleTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35879,7 +35923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询对用户生效的系统规则类型</p>
+     * <p>Queries the types of system rules.</p>
      * @return ListSystemClientRuleTypesResponse
      */
     public ListSystemClientRuleTypesResponse listSystemClientRuleTypes() throws Exception {
@@ -36863,7 +36907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改证明者</p>
+     * <p>Modifies the information about a witness that is created by using the container signature feature.</p>
      * 
      * @param request ModifyAttestorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36919,7 +36963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改证明者</p>
+     * <p>Modifies the information about a witness that is created by using the container signature feature.</p>
      * 
      * @param request ModifyAttestorRequest
      * @return ModifyAttestorResponse
@@ -37096,8 +37140,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deleted logs cannot be restored. Before you call this operation to delete all logs and free up log storage, we recommend that you export and save your logs to your computer.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改日志容量</p>
+     * <p>Deletes all logs that occupy your log storage.</p>
      * 
      * @param request ModifyClearLogstoreStorageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37140,8 +37187,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deleted logs cannot be restored. Before you call this operation to delete all logs and free up log storage, we recommend that you export and save your logs to your computer.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改日志容量</p>
+     * <p>Deletes all logs that occupy your log storage.</p>
      * 
      * @param request ModifyClearLogstoreStorageRequest
      * @return ModifyClearLogstoreStorageResponse
@@ -37377,7 +37427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>多云资产配置修改ak信息</p>
+     * <p>Modifies the configuration of the AccessKey pair for a third-party account.</p>
      * 
      * @param request ModifyCloudVendorAccountAKRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37396,6 +37446,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
             query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regions)) {
@@ -37441,7 +37495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>多云资产配置修改ak信息</p>
+     * <p>Modifies the configuration of the AccessKey pair for a third-party account.</p>
      * 
      * @param request ModifyCloudVendorAccountAKRequest
      * @return ModifyCloudVendorAccountAKResponse
@@ -39023,15 +39077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The new collection frequency of asset fingerprints. Valid values:</p>
-     * <ul>
-     * <li><strong>0</strong>: disabled, which indicates that the asset fingerprints are not automatically or periodically collected.</li>
-     * <li><strong>1</strong>: collects asset fingerprints once an hour.</li>
-     * <li><strong>3</strong>: collects asset fingerprints once every 3 hours.</li>
-     * <li><strong>12</strong>: collects asset fingerprints once every 12 hours.</li>
-     * <li><strong>24</strong>: collects asset fingerprints once a day.</li>
-     * <li><strong>168</strong>: collects asset fingerprints once every 7 days.</li>
-     * </ul>
+     * <p>Modifies the collection frequency of asset fingerprints for an automatic periodic collection task.</p>
      * 
      * @param request ModifyPropertyScheduleConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -39067,15 +39113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The new collection frequency of asset fingerprints. Valid values:</p>
-     * <ul>
-     * <li><strong>0</strong>: disabled, which indicates that the asset fingerprints are not automatically or periodically collected.</li>
-     * <li><strong>1</strong>: collects asset fingerprints once an hour.</li>
-     * <li><strong>3</strong>: collects asset fingerprints once every 3 hours.</li>
-     * <li><strong>12</strong>: collects asset fingerprints once every 12 hours.</li>
-     * <li><strong>24</strong>: collects asset fingerprints once a day.</li>
-     * <li><strong>168</strong>: collects asset fingerprints once every 7 days.</li>
-     * </ul>
+     * <p>Modifies the collection frequency of asset fingerprints for an automatic periodic collection task.</p>
      * 
      * @param request ModifyPropertyScheduleConfigRequest
      * @return ModifyPropertyScheduleConfigResponse
@@ -39296,7 +39334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Specifies the time when an automatic configuration check is performed on cloud services.</p>
      * 
-     * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated
+     * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated, please use Sas::2018-12-03::ChangeCheckConfig instead.
      * 
      * @param request ModifySecurityCheckScheduleConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -39355,7 +39393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Specifies the time when an automatic configuration check is performed on cloud services.</p>
      * 
-     * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated
+     * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated, please use Sas::2018-12-03::ChangeCheckConfig instead.
      * 
      * @param request ModifySecurityCheckScheduleConfigRequest
      * @return ModifySecurityCheckScheduleConfigResponse
@@ -39617,7 +39655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The source IP address of the request.</p>
+     * <p>Modifies the servers to which a baseline check policy is applied.</p>
      * 
      * @param request ModifyStrategyTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -39661,7 +39699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The source IP address of the request.</p>
+     * <p>Modifies the servers to which a baseline check policy is applied.</p>
      * 
      * @param request ModifyStrategyTargetRequest
      * @return ModifyStrategyTargetResponse
@@ -41866,8 +41904,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the PublicPreCheckImageScanTask operation to estimate the quota for container image scan to be consumed by the task. This ensures that you know the quota to be consumed before you perform the task. If the remaining quota for container image scan is less than the quota to be consumed by the task, you must purchase a sufficient quota. This prevents the task from being stopped due to an insufficient quota.
+     * If you do not specify the optional parameters when you call this operation, the total number of protected images and the quota for container image scan to be consumed by scanning all the protected images are queried. If you specify the optional parameters, the number of images that meet the specified conditions and the quota for container image scan to be consumed by scanning the images are queried.</p>
+     * 
      * <b>summary</b> : 
-     * <p>预检测，不会实际创建扫描任务，返回本次扫描涉及的镜像数量和消耗授权数量。</p>
+     * <p>Queries the number of images to scan in an image scan task and the quota for container image scan to be consumed by the task.</p>
      * 
      * @param request PublicPreCheckImageScanTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -41930,8 +41972,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the PublicPreCheckImageScanTask operation to estimate the quota for container image scan to be consumed by the task. This ensures that you know the quota to be consumed before you perform the task. If the remaining quota for container image scan is less than the quota to be consumed by the task, you must purchase a sufficient quota. This prevents the task from being stopped due to an insufficient quota.
+     * If you do not specify the optional parameters when you call this operation, the total number of protected images and the quota for container image scan to be consumed by scanning all the protected images are queried. If you specify the optional parameters, the number of images that meet the specified conditions and the quota for container image scan to be consumed by scanning the images are queried.</p>
+     * 
      * <b>summary</b> : 
-     * <p>预检测，不会实际创建扫描任务，返回本次扫描涉及的镜像数量和消耗授权数量。</p>
+     * <p>Queries the number of images to scan in an image scan task and the quota for container image scan to be consumed by the task.</p>
      * 
      * @param request PublicPreCheckImageScanTaskRequest
      * @return PublicPreCheckImageScanTaskResponse
@@ -41991,7 +42037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过UUID获取资产详情，可跨账号</p>
+     * <p>Queries the details of assets by using asset UUIDs. Cross-account query is supported.</p>
      * 
      * @param request QueryAssetDetailByUUIDRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -42023,7 +42069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过UUID获取资产详情，可跨账号</p>
+     * <p>Queries the details of assets by using asset UUIDs. Cross-account query is supported.</p>
      * 
      * @param request QueryAssetDetailByUUIDRequest
      * @return QueryAssetDetailByUUIDResponse
@@ -42917,7 +42963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>刷新仓库token</p>
+     * <p>Updates an image token.</p>
      * 
      * @param request RefreshRegistryTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -42949,7 +42995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>刷新仓库token</p>
+     * <p>Updates an image token.</p>
      * 
      * @param request RefreshRegistryTokenRequest
      * @return RefreshRegistryTokenResponse
@@ -43057,7 +43103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes check items from the whitelist.</p>
+     * <p>Removes the check items of the configuration assessment feature from the whitelist.</p>
      * 
      * @param request RemoveCheckResultWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -43101,7 +43147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes check items from the whitelist.</p>
+     * <p>Removes the check items of the configuration assessment feature from the whitelist.</p>
      * 
      * @param request RemoveCheckResultWhiteListRequest
      * @return RemoveCheckResultWhiteListResponse
@@ -43301,7 +43347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消对文件隔离箱中文件的隔离</p>
+     * <p>Restores a quarantined file.</p>
      * 
      * @param request RollbackSuspEventQuaraFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -43341,7 +43387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消对文件隔离箱中文件的隔离</p>
+     * <p>Restores a quarantined file.</p>
      * 
      * @param request RollbackSuspEventQuaraFileRequest
      * @return RollbackSuspEventQuaraFileResponse
@@ -43353,7 +43399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SasInstallCode</p>
+     * <p>Queries the installation verification code that is used to run the installation command of the Security Center agent.</p>
      * 
      * @param request SasInstallCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -43385,7 +43431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SasInstallCode</p>
+     * <p>Queries the installation verification code that is used to run the installation command of the Security Center agent.</p>
      * 
      * @param request SasInstallCodeRequest
      * @return SasInstallCodeResponse
@@ -43687,7 +43733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑应用白名单策略配置的服务器</p>
+     * <p>Manages the servers to which an application whitelist policy is applied.</p>
      * 
      * @param request SaveWhiteListStrategyAssetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -43735,7 +43781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑应用白名单策略配置的服务器</p>
+     * <p>Manages the servers to which an application whitelist policy is applied.</p>
      * 
      * @param request SaveWhiteListStrategyAssetsRequest
      * @return SaveWhiteListStrategyAssetsResponse
@@ -43791,7 +43837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置用户的构建指令风险规则配置</p>
+     * <p>Modifies configurations for scanning image build command risks.</p>
      * 
      * @param request SetBuildRiskDefineRuleConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -43823,7 +43869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置用户的构建指令风险规则配置</p>
+     * <p>Modifies configurations for scanning image build command risks.</p>
      * 
      * @param request SetBuildRiskDefineRuleConfigRequest
      * @return SetBuildRiskDefineRuleConfigResponse
@@ -43887,7 +43933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置镜像构建风险状态。</p>
+     * <p>Specifies the status of an image build command risk.</p>
      * 
      * @param request SetImageBuildRiskStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -43927,7 +43973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置镜像构建风险状态。</p>
+     * <p>Specifies the status of an image build command risk.</p>
      * 
      * @param request SetImageBuildRiskStatusRequest
      * @return SetImageBuildRiskStatusResponse
@@ -43941,15 +43987,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Modifies the status of sensitive files in an image.</p>
      * 
-     * @param request SetImageSensitiveFileStatusRequest
+     * @param tmpReq SetImageSensitiveFileStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetImageSensitiveFileStatusResponse
      */
-    public SetImageSensitiveFileStatusResponse setImageSensitiveFileStatusWithOptions(SetImageSensitiveFileStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public SetImageSensitiveFileStatusResponse setImageSensitiveFileStatusWithOptions(SetImageSensitiveFileStatusRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SetImageSensitiveFileStatusShrinkRequest request = new SetImageSensitiveFileStatusShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scanRange)) {
+            request.scanRangeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scanRange, "ScanRange", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.idList)) {
+            query.put("IdList", request.idList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageUuids)) {
             query.put("ImageUuids", request.imageUuids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanRangeShrink)) {
+            query.put("ScanRange", request.scanRangeShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sensitiveFileKey)) {
@@ -44048,6 +44108,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Config", request.config);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableNewRule)) {
+            query.put("EnableNewRule", request.enableNewRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -44133,7 +44201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Checks cloud service configurations. You can check all items or a single item and verify whether an item is checked.</p>
      * 
-     * @deprecated OpenAPI StartBaselineSecurityCheck is deprecated
+     * @deprecated OpenAPI StartBaselineSecurityCheck is deprecated, please use Sas::2018-12-03::SubmitCheck instead.
      * 
      * @param request StartBaselineSecurityCheckRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -44185,7 +44253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Checks cloud service configurations. You can check all items or a single item and verify whether an item is checked.</p>
      * 
-     * @deprecated OpenAPI StartBaselineSecurityCheck is deprecated
+     * @deprecated OpenAPI StartBaselineSecurityCheck is deprecated, please use Sas::2018-12-03::SubmitCheck instead.
      * 
      * @param request StartBaselineSecurityCheckRequest
      * @return StartBaselineSecurityCheckResponse
@@ -44503,7 +44571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修复回滚任务下发</p>
+     * <p>Submits a repair task of risk items detected in configuration assessment or rolls back a repair task that is executed.</p>
      * 
      * @param request SubmitOperationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -44555,7 +44623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修复回滚任务下发</p>
+     * <p>Submits a repair task of risk items detected in configuration assessment or rolls back a repair task that is executed.</p>
      * 
      * @param request SubmitOperationTaskRequest
      * @return SubmitOperationTaskResponse
@@ -44563,6 +44631,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitOperationTaskResponse submitOperationTask(SubmitOperationTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitOperationTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交租户一键检测任务</p>
+     * 
+     * @param request SubmitTenantCheckRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitTenantCheckResponse
+     */
+    public SubmitTenantCheckResponse submitTenantCheckWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitTenantCheck"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitTenantCheckResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交租户一键检测任务</p>
+     * @return SubmitTenantCheckResponse
+     */
+    public SubmitTenantCheckResponse submitTenantCheck() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitTenantCheckWithOptions(runtime);
     }
 
     /**
@@ -44807,54 +44909,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UninstallBackupClientResponse uninstallBackupClient(UninstallBackupClientRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uninstallBackupClientWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Uninstalls the Runtime Application Self-Protection (RASP) agent that is installed on Elastic Compute Service (ECS) instances to enable automatic application protection.</p>
-     * 
-     * @param request UninstallRaspAttachRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UninstallRaspAttachResponse
-     */
-    public UninstallRaspAttachResponse uninstallRaspAttachWithOptions(UninstallRaspAttachRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
-            query.put("ApplicationId", request.applicationId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ecsUUIDList)) {
-            query.put("EcsUUIDList", request.ecsUUIDList);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UninstallRaspAttach"),
-            new TeaPair("version", "2018-12-03"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UninstallRaspAttachResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Uninstalls the Runtime Application Self-Protection (RASP) agent that is installed on Elastic Compute Service (ECS) instances to enable automatic application protection.</p>
-     * 
-     * @param request UninstallRaspAttachRequest
-     * @return UninstallRaspAttachResponse
-     */
-    public UninstallRaspAttachResponse uninstallRaspAttach(UninstallRaspAttachRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.uninstallRaspAttachWithOptions(request, runtime);
     }
 
     /**
@@ -45712,12 +45766,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateImageEventOperationResponse updateImageEventOperationWithOptions(UpdateImageEventOperationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.conditions)) {
+            query.put("Conditions", request.conditions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             query.put("Id", request.id);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.note)) {
+            query.put("Note", request.note);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scenarios)) {
             query.put("Scenarios", request.scenarios);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -46093,7 +46159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configurations of a bucket check policy.</p>
+     * <p>Modifies a policy of detecting Object Storage Service (OSS) objects by using the SDK for malicious file detection feature.</p>
      * 
      * @param request UpdateOssScanConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -46177,7 +46243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configurations of a bucket check policy.</p>
+     * <p>Modifies a policy of detecting Object Storage Service (OSS) objects by using the SDK for malicious file detection feature.</p>
      * 
      * @param request UpdateOssScanConfigRequest
      * @return UpdateOssScanConfigResponse
@@ -46189,7 +46255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改自动升级开关</p>
+     * <p>Enables or disables automatic upgrade.</p>
      * 
      * @param request UpdatePublishAutoUpgradeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -46221,7 +46287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改自动升级开关</p>
+     * <p>Enables or disables automatic upgrade.</p>
      * 
      * @param request UpdatePublishAutoUpgradeRequest
      * @return UpdatePublishAutoUpgradeResponse
@@ -46233,7 +46299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新发布批次</p>
+     * <p>Updates a release batch.</p>
      * 
      * @param request UpdatePublishBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -46277,7 +46343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新发布批次</p>
+     * <p>Updates a release batch.</p>
      * 
      * @param request UpdatePublishBatchRequest
      * @return UpdatePublishBatchResponse
@@ -46289,7 +46355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改升级时间</p>
+     * <p>Modifies the configuration of the client upgrade time. If you want to call this operation, contact technical support.</p>
      * 
      * @param request UpdatePublishCronRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -46337,7 +46403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改升级时间</p>
+     * <p>Modifies the configuration of the client upgrade time. If you want to call this operation, contact technical support.</p>
      * 
      * @param request UpdatePublishCronRequest
      * @return UpdatePublishCronResponse
@@ -46349,7 +46415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改灰度开关</p>
+     * <p>Modifies the settings of the canary release feature for agent upgrade. If you want to use the feature, contact technical support.</p>
      * 
      * @param request UpdatePublishGraySwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -46381,7 +46447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改灰度开关</p>
+     * <p>Modifies the settings of the canary release feature for agent upgrade. If you want to use the feature, contact technical support.</p>
      * 
      * @param request UpdatePublishGraySwitchRequest
      * @return UpdatePublishGraySwitchResponse
@@ -46441,7 +46507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改目标批次</p>
+     * <p>Updates machines in a release batch.</p>
      * 
      * @param request UpdateTargetListByBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -46477,7 +46543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改目标批次</p>
+     * <p>Updates machines in a release batch.</p>
      * 
      * @param request UpdateTargetListByBatchRequest
      * @return UpdateTargetListByBatchResponse
@@ -46647,7 +46713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级客户端</p>
+     * <p>Manually upgrades the client version on assets.</p>
      * 
      * @param request UpgradeVersionByUuidsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -46683,7 +46749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级客户端</p>
+     * <p>Manually upgrades the client version on assets.</p>
      * 
      * @param request UpgradeVersionByUuidsRequest
      * @return UpgradeVersionByUuidsResponse

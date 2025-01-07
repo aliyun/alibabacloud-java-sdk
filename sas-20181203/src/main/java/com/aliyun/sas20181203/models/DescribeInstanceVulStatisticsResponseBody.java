@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceVulStatisticsResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>1EE7B150-D67E-53FD-A52D-3E8E669A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The statistics of the vulnerabilities.</p>
+     */
     @NameInMap("VulStat")
     public DescribeInstanceVulStatisticsResponseBodyVulStat vulStat;
 
@@ -37,6 +42,8 @@ public class DescribeInstanceVulStatisticsResponseBody extends TeaModel {
 
     public static class DescribeInstanceVulStatisticsResponseBodyVulStat extends TeaModel {
         /**
+         * <p>The number of high-risk vulnerabilities.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -44,6 +51,8 @@ public class DescribeInstanceVulStatisticsResponseBody extends TeaModel {
         public String asapCount;
 
         /**
+         * <p>The number of medium-risk vulnerabilities.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -51,6 +60,8 @@ public class DescribeInstanceVulStatisticsResponseBody extends TeaModel {
         public String laterCount;
 
         /**
+         * <p>The number of low-risk vulnerabilities.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

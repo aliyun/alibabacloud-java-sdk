@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyStrategyTargetRequest extends TeaModel {
     /**
+     * <p>The ID of the baseline check policy. The ID is returned after the policy is created. The value of this parameter is in the JSON format and contains the following field:</p>
+     * <ul>
+     * <li><strong>strategyId</strong>: the ID of the policy</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,8 @@ public class ModifyStrategyTargetRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The source IP address of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
      */
@@ -21,6 +27,12 @@ public class ModifyStrategyTargetRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The information about the asset group to which the policy is applied. The value of this parameter is in the JSON format and contains the following fields:</p>
+     * <ul>
+     * <li><strong>TargetType</strong>: the type of the asset to which the policy is applied. Set the value to <strong>groupId</strong>, which indicates that the policy is applied to an asset group.</li>
+     * <li><strong>BindUuidCount</strong>: the number of servers to which the policy is applied.</li>
+     * <li><strong>Target</strong>: the ID of the asset group.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +42,7 @@ public class ModifyStrategyTargetRequest extends TeaModel {
     public String target;
 
     /**
+     * <p>The type of the configuration. Set the value to <strong>hc_strategy</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

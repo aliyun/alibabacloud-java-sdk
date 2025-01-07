@@ -105,6 +105,9 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         @NameInMap("Endpoints")
         public String endpoints;
 
+        @NameInMap("HasRiskImageCount")
+        public Integer hasRiskImageCount;
+
         /**
          * <p>The number of baseline risk items on the image repository.</p>
          * 
@@ -258,6 +261,14 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         }
         public String getEndpoints() {
             return this.endpoints;
+        }
+
+        public DescribeImageRepoDetailListResponseBodyImageRepoResponses setHasRiskImageCount(Integer hasRiskImageCount) {
+            this.hasRiskImageCount = hasRiskImageCount;
+            return this;
+        }
+        public Integer getHasRiskImageCount() {
+            return this.hasRiskImageCount;
         }
 
         public DescribeImageRepoDetailListResponseBodyImageRepoResponses setHcCount(Integer hcCount) {

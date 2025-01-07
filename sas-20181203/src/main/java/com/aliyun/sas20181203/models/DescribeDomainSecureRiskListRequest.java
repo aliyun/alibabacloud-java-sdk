@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainSecureRiskListRequest extends TeaModel {
     /**
+     * <p>The identifier of the request source. Set the value to sas.</p>
+     * 
      * <strong>example:</strong>
      * <p>sas</p>
      */
@@ -12,6 +14,12 @@ public class DescribeDomainSecureRiskListRequest extends TeaModel {
     public String from;
 
     /**
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +27,8 @@ public class DescribeDomainSecureRiskListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>124.78.<em>.</em></p>
      */

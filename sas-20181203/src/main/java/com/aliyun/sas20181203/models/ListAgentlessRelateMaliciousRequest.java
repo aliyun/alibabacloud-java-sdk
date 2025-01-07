@@ -23,6 +23,9 @@ public class ListAgentlessRelateMaliciousRequest extends TeaModel {
     @NameInMap("EventId")
     public Long eventId;
 
+    @NameInMap("Lang")
+    public String lang;
+
     /**
      * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
@@ -32,6 +35,9 @@ public class ListAgentlessRelateMaliciousRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public String pageSize;
+
+    @NameInMap("Scenario")
+    public String scenario;
 
     public static ListAgentlessRelateMaliciousRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentlessRelateMaliciousRequest self = new ListAgentlessRelateMaliciousRequest();
@@ -54,12 +60,28 @@ public class ListAgentlessRelateMaliciousRequest extends TeaModel {
         return this.eventId;
     }
 
+    public ListAgentlessRelateMaliciousRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
     public ListAgentlessRelateMaliciousRequest setPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAgentlessRelateMaliciousRequest setScenario(String scenario) {
+        this.scenario = scenario;
+        return this;
+    }
+    public String getScenario() {
+        return this.scenario;
     }
 
 }

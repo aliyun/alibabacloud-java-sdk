@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddCheckInstanceResultWhiteListResponseBody extends TeaModel {
     /**
-     * <p>The adding result.</p>
+     * <p>The data returned. This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
@@ -19,6 +22,12 @@ public class AddCheckInstanceResultWhiteListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the whitelist rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>381049</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

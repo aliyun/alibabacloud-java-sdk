@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SetImageBuildRiskStatusResponseBody extends TeaModel {
     /**
+     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public SetImageBuildRiskStatusResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class SetImageBuildRiskStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>52870893-48A7-5A9E-9E05-6253E5B6****</p>
      */
@@ -29,6 +38,12 @@ public class SetImageBuildRiskStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class SetImageBuildRiskStatusResponseBody extends TeaModel {
 
     public static class SetImageBuildRiskStatusResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>273698***</p>
          */

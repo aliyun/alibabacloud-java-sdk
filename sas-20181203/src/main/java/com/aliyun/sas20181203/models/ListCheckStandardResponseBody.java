@@ -14,7 +14,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the check items.</p>
+     * <p>The standards.</p>
      */
     @NameInMap("Standards")
     public java.util.List<ListCheckStandardResponseBodyStandards> standards;
@@ -42,7 +42,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
 
     public static class ListCheckStandardResponseBodyStandardsRequirements extends TeaModel {
         /**
-         * <p>The ID of the search condition.</p>
+         * <p>The ID of the requirement.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -51,7 +51,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The number of check items queried by using the search condition.</p>
+         * <p>The number of check items in the requirement.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -69,7 +69,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
         public String showName;
 
         /**
-         * <p>The priority field indicates the level of prominence.</p>
+         * <p>The priority for display.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -118,7 +118,23 @@ public class ListCheckStandardResponseBody extends TeaModel {
 
     public static class ListCheckStandardResponseBodyStandards extends TeaModel {
         /**
-         * <p>The ID of the check item.</p>
+         * <p>The cloud service provider that uses the standard. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Alibaba Cloud.</li>
+         * <li><strong>3</strong>: Tencent Cloud.</li>
+         * <li><strong>4</strong>: Huawei Cloud.</li>
+         * <li><strong>5</strong>: Microsoft Azure.</li>
+         * <li><strong>7</strong>: AWS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("BindVendor")
+        public Integer bindVendor;
+
+        /**
+         * <p>The ID of the standard.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,7 +143,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>An array that consists of search conditions.</p>
+         * <p>The requirements.</p>
          */
         @NameInMap("Requirements")
         public java.util.List<ListCheckStandardResponseBodyStandardsRequirements> requirements;
@@ -142,7 +158,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
         public String showName;
 
         /**
-         * <p>The priority field indicates the level of prominence.</p>
+         * <p>The priority for display.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -151,7 +167,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
         public Integer showPriorityLevel;
 
         /**
-         * <p>The type of the check item.</p>
+         * <p>The type of the standard.</p>
          * 
          * <strong>example:</strong>
          * <p>IDENTITY_PERMISSION</p>
@@ -162,6 +178,14 @@ public class ListCheckStandardResponseBody extends TeaModel {
         public static ListCheckStandardResponseBodyStandards build(java.util.Map<String, ?> map) throws Exception {
             ListCheckStandardResponseBodyStandards self = new ListCheckStandardResponseBodyStandards();
             return TeaModel.build(map, self);
+        }
+
+        public ListCheckStandardResponseBodyStandards setBindVendor(Integer bindVendor) {
+            this.bindVendor = bindVendor;
+            return this;
+        }
+        public Integer getBindVendor() {
+            return this.bindVendor;
         }
 
         public ListCheckStandardResponseBodyStandards setId(Long id) {

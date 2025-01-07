@@ -43,6 +43,16 @@ public class DescribeOnceTaskRequest extends TeaModel {
     @NameInMap("RootTaskId")
     public String rootTaskId;
 
+    /**
+     * <p>The source of the task. Valid values include the following values:</p>
+     * <ul>
+     * <li><strong>schedule</strong>: automatic scheduling of Cloud Security Scanner.</li>
+     * <li><strong>console</strong>: one-click detection in the Cloud Security Scanner console.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>console</p>
+     */
     @NameInMap("Source")
     public String source;
 

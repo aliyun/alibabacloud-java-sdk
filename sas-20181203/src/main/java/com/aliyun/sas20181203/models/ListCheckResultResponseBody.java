@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCheckResultResponseBody extends TeaModel {
     /**
-     * <p>The information about the check items.</p>
+     * <p>The check items.</p>
      */
     @NameInMap("Checks")
     public java.util.List<ListCheckResultResponseBodyChecks> checks;
@@ -165,12 +165,47 @@ public class ListCheckResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckResultResponseBodyChecks extends TeaModel {
+        /**
+         * <p>The subtype of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AssetSubType")
         public Integer assetSubType;
 
+        /**
+         * <p>The type of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: an ECS instance</li>
+         * <li><strong>1</strong>: a SLB instance</li>
+         * <li><strong>2</strong>: a NAT gateway</li>
+         * <li><strong>3</strong>: an ApsaraDB RDS instance</li>
+         * <li><strong>4</strong>: an ApsaraDB for MongoDB instance</li>
+         * <li><strong>5</strong>: an ApsaraDB for Redis instance</li>
+         * <li><strong>6</strong>: a container image</li>
+         * <li><strong>7</strong>: a container</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AssetType")
         public Integer assetType;
 
+        /**
+         * <p>The service provider of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Alibaba Cloud</li>
+         * <li><strong>3</strong>: Huawei Cloud</li>
+         * <li><strong>4</strong>: Microsoft Azure</li>
+         * <li><strong>5</strong>: AWS</li>
+         * <li><strong>7</strong>: Tencent Cloud</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("AssetVendor")
         public Integer assetVendor;
 
@@ -295,6 +330,16 @@ public class ListCheckResultResponseBody extends TeaModel {
         @NameInMap("LastCheckTime")
         public Long lastCheckTime;
 
+        /**
+         * <p>Indicates whether fixing is supported. Valid values:</p>
+         * <ul>
+         * <li><strong>SUPPORT_REPAIR</strong></li>
+         * <li><strong>NOT_SUPPORT_REPAIR</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_SUPPORT_REPAIR</p>
+         */
         @NameInMap("OperationType")
         public String operationType;
 

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class AddPublishBatchRequest extends TeaModel {
     /**
+     * <p>The name of the release batch.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("BatchName")
     public String batchName;
 
     /**
+     * <p>The interval between two release batches.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +25,13 @@ public class AddPublishBatchRequest extends TeaModel {
     public Integer interval;
 
     /**
+     * <p>The dimension based on which the asset is selected. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: selects the asset by instance.</li>
+     * <li><strong>1</strong>: selects the asset by machine group.</li>
+     * <li><strong>2</strong>: selects the asset by the ID of the instance that is deployed in the virtual private cloud (VPC).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -27,6 +39,7 @@ public class AddPublishBatchRequest extends TeaModel {
     public Integer operationBase;
 
     /**
+     * <p>The version to which you want to upgrade the agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

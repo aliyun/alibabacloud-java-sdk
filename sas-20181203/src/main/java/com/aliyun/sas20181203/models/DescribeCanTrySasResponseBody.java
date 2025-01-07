@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeCanTrySasResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether you have the permissions on the trial use of Security Center. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +18,8 @@ public class DescribeCanTrySasResponseBody extends TeaModel {
     public Integer canTry;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E90DE229-9FC6-58F6-BF4B-03AD6179****</p>
      */

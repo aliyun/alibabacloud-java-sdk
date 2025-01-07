@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeVersionByUuidsRequest extends TeaModel {
     /**
+     * <p>The version to which you want to upgrade the client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpgradeVersionByUuidsRequest extends TeaModel {
     public String upgradeVersion;
 
     /**
+     * <p>The UUIDs of the assets on which you want to run the detection task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UuidList")

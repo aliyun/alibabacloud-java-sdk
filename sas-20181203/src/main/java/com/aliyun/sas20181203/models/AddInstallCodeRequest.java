@@ -42,11 +42,10 @@ public class AddInstallCodeRequest extends TeaModel {
     public Boolean onlyImage;
 
     /**
-     * <p>The operating system of the instance. Default value: <strong>linux</strong>. Valid values:</p>
+     * <p>The operating system of the asset. Default value: <strong>linux</strong>. Valid values:</p>
      * <ul>
      * <li><strong>linux</strong></li>
      * <li><strong>windows</strong></li>
-     * <li><strong>windows-2003</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,6 +53,15 @@ public class AddInstallCodeRequest extends TeaModel {
      */
     @NameInMap("Os")
     public String os;
+
+    /**
+     * <p>The ID of the PrivateLink endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72845</p>
+     */
+    @NameInMap("PrivateLinkId")
+    public Long privateLinkId;
 
     /**
      * <p>The name of the proxy cluster.</p>
@@ -111,6 +119,14 @@ public class AddInstallCodeRequest extends TeaModel {
     }
     public String getOs() {
         return this.os;
+    }
+
+    public AddInstallCodeRequest setPrivateLinkId(Long privateLinkId) {
+        this.privateLinkId = privateLinkId;
+        return this;
+    }
+    public Long getPrivateLinkId() {
+        return this.privateLinkId;
     }
 
     public AddInstallCodeRequest setProxyCluster(String proxyCluster) {

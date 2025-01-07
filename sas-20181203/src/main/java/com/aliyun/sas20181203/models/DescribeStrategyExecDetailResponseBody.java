@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     /**
+     * <p>The time when the baseline check ends.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-05 00:12:46</p>
      */
@@ -12,16 +14,23 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The number of check items that failed to pass the baseline check. This type of check item is considered risk items.</p>
+     * 
      * <strong>example:</strong>
      * <p>94</p>
      */
     @NameInMap("FailCount")
     public Integer failCount;
 
+    /**
+     * <p>The servers on which risk items were detected.</p>
+     */
     @NameInMap("FailedEcsList")
     public java.util.List<DescribeStrategyExecDetailResponseBodyFailedEcsList> failedEcsList;
 
     /**
+     * <p>The number of tasks that are **running **based on the baseline check policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     public Integer inProcessCount;
 
     /**
+     * <p>The execution progress of the baseline check policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>100%</p>
      */
@@ -36,6 +47,8 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     public String percent;
 
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>01611D72-1E33-53F5-A9A5-C81B5561970F</p>
      */
@@ -43,6 +56,12 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The type of the baseline check. Valid values:</p>
+     * <ul>
+     * <li><strong>Schedule</strong>: automatic check that periodically runs</li>
+     * <li><strong>Manual</strong>: intermediate check that is manually performed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Manual</p>
      */
@@ -50,6 +69,8 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     public String source;
 
     /**
+     * <p>The time when the baseline check starts.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-05 00:12:16</p>
      */
@@ -57,6 +78,8 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The number of check items that <strong>passed</strong> the baseline check.</p>
+     * 
      * <strong>example:</strong>
      * <p>81</p>
      */
@@ -142,6 +165,8 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
 
     public static class DescribeStrategyExecDetailResponseBodyFailedEcsList extends TeaModel {
         /**
+         * <p>The IP address of the server on which the baseline check was performed.</p>
+         * 
          * <strong>example:</strong>
          * <p>115.28.XX.XX</p>
          */
@@ -149,6 +174,8 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         public String IP;
 
         /**
+         * <p>The name of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>worker-k8s-for-cs-cf5741fb95c3a45d0864f0e4544dc****</p>
          */
@@ -156,6 +183,8 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>115.28.XX.XX</p>
          */
@@ -163,6 +192,8 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         public String internetIp;
 
         /**
+         * <p>The private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.31.XX.XX</p>
          */
@@ -170,6 +201,8 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
+         * <p>The failure cause for the check item.</p>
+         * 
          * <strong>example:</strong>
          * <p>Detect timeout</p>
          */

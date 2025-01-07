@@ -28,6 +28,9 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Summary")
+    public GetCheckRiskStatisticsResponseBodySummary summary;
+
     public static GetCheckRiskStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCheckRiskStatisticsResponseBody self = new GetCheckRiskStatisticsResponseBody();
         return TeaModel.build(map, self);
@@ -55,6 +58,14 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetCheckRiskStatisticsResponseBody setSummary(GetCheckRiskStatisticsResponseBodySummary summary) {
+        this.summary = summary;
+        return this;
+    }
+    public GetCheckRiskStatisticsResponseBodySummary getSummary() {
+        return this.summary;
     }
 
     public static class GetCheckRiskStatisticsResponseBodyDataSubStatistics extends TeaModel {
@@ -304,6 +315,80 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
+        }
+
+    }
+
+    public static class GetCheckRiskStatisticsResponseBodySummary extends TeaModel {
+        @NameInMap("HandledCheckToday")
+        public Integer handledCheckToday;
+
+        @NameInMap("HandledCheckTotal")
+        public Integer handledCheckTotal;
+
+        @NameInMap("HandledDays")
+        public Integer handledDays;
+
+        @NameInMap("RiskCheckCnt")
+        public Integer riskCheckCnt;
+
+        @NameInMap("RiskDays")
+        public Integer riskDays;
+
+        @NameInMap("RiskWarningCnt")
+        public Integer riskWarningCnt;
+
+        public static GetCheckRiskStatisticsResponseBodySummary build(java.util.Map<String, ?> map) throws Exception {
+            GetCheckRiskStatisticsResponseBodySummary self = new GetCheckRiskStatisticsResponseBodySummary();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCheckRiskStatisticsResponseBodySummary setHandledCheckToday(Integer handledCheckToday) {
+            this.handledCheckToday = handledCheckToday;
+            return this;
+        }
+        public Integer getHandledCheckToday() {
+            return this.handledCheckToday;
+        }
+
+        public GetCheckRiskStatisticsResponseBodySummary setHandledCheckTotal(Integer handledCheckTotal) {
+            this.handledCheckTotal = handledCheckTotal;
+            return this;
+        }
+        public Integer getHandledCheckTotal() {
+            return this.handledCheckTotal;
+        }
+
+        public GetCheckRiskStatisticsResponseBodySummary setHandledDays(Integer handledDays) {
+            this.handledDays = handledDays;
+            return this;
+        }
+        public Integer getHandledDays() {
+            return this.handledDays;
+        }
+
+        public GetCheckRiskStatisticsResponseBodySummary setRiskCheckCnt(Integer riskCheckCnt) {
+            this.riskCheckCnt = riskCheckCnt;
+            return this;
+        }
+        public Integer getRiskCheckCnt() {
+            return this.riskCheckCnt;
+        }
+
+        public GetCheckRiskStatisticsResponseBodySummary setRiskDays(Integer riskDays) {
+            this.riskDays = riskDays;
+            return this;
+        }
+        public Integer getRiskDays() {
+            return this.riskDays;
+        }
+
+        public GetCheckRiskStatisticsResponseBodySummary setRiskWarningCnt(Integer riskWarningCnt) {
+            this.riskWarningCnt = riskWarningCnt;
+            return this;
+        }
+        public Integer getRiskWarningCnt() {
+            return this.riskWarningCnt;
         }
 
     }

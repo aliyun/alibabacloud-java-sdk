@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePublishGraySwitchResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231A8A81-CBB4-5AB3-A624-98A501******</p>
      */

@@ -477,6 +477,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
          * <li><strong>16</strong>: handling</li>
          * <li><strong>32</strong>: handled</li>
          * <li><strong>64</strong>: expired</li>
+         * <li><strong>604</strong>: marked as a false positive by the system</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -674,7 +675,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public String maliciousRuleStatus;
 
         /**
-         * <p>The labels of alarm event.</p>
+         * <p>The tags of the alert events.</p>
          */
         @NameInMap("MarkList")
         public java.util.List<String> markList;
@@ -764,6 +765,12 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("SecurityEventIds")
         public String securityEventIds;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account within which an alert is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>196072141348****</p>
+         */
         @NameInMap("SourceAliUid")
         public Long sourceAliUid;
 

@@ -66,6 +66,16 @@ public class DescribeEventLevelCountRequest extends TeaModel {
     @NameInMap("From")
     public String from;
 
+    /**
+     * <p>The type of the accounts that you want to query. Default value: <strong>0</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: the current account.</li>
+     * <li><strong>1</strong>: all accounts.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("MultiAccountActionType")
     public Integer multiAccountActionType;
 

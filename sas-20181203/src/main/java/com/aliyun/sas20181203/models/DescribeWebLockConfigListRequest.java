@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebLockConfigListRequest extends TeaModel {
+    /**
+     * <p>The configuration ID of the protected directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1404656</p>
+     */
     @NameInMap("Id")
     public Long id;
 
@@ -31,6 +37,9 @@ public class DescribeWebLockConfigListRequest extends TeaModel {
 
     /**
      * <p>The UUID of the server.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

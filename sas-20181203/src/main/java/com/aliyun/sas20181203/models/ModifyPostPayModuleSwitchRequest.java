@@ -7,7 +7,7 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
     /**
      * <p>The ID of the pay-as-you-go instance. This parameter is required.</p>
      * <blockquote>
-     * <p> You can call the <a href="~DescribeVersionConfig~">DescribeVersionConfig</a> operation to obtain the ID.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/421770.html">DescribeVersionConfig</a> operation to obtain the ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

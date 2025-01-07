@@ -172,7 +172,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The reason the vulnerability is added to the whitelist.</p>
+         * <p>The reason why the vulnerability is added to the whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>already config in another way</p>

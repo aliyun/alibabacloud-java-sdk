@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAssetInfoPublishRequest extends TeaModel {
     /**
+     * <p>An extended parameter. This parameter is temporarily unavailable.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,7 @@ public class ListAssetInfoPublishRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The UUIDs of the servers that you want to query.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UuidList")

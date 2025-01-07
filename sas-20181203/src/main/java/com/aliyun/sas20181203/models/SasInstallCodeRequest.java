@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SasInstallCodeRequest extends TeaModel {
     /**
+     * <p>The source IP address of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>120.41.XX.XX</p>
      */

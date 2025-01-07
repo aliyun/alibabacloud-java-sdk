@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorAccountRequest extends TeaModel {
     /**
+     * <p>The account IDs of members in the resource directory.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListAccountsInResourceDirectory~~">ListAccountsInResourceDirectory</a> operation to obtain the account IDs. Separate multiple account IDs with commas (,). If you specify a value for this parameter, the existing list of members is replaced by the new list that you specify. Otherwise, the existing list is cleared.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1026780160******,1457515594******</p>
      */

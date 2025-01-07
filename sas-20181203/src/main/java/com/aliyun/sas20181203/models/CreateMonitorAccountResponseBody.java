@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorAccountResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
      */

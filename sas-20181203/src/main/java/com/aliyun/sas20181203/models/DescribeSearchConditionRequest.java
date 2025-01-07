@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSearchConditionRequest extends TeaModel {
     /**
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class DescribeSearchConditionRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>117.220.XX.XX</p>
      */
@@ -19,6 +27,12 @@ public class DescribeSearchConditionRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The type of the asset. Valid values:</p>
+     * <ul>
+     * <li><strong>ecs</strong>: Elastic Compute Service (ECS) instances.</li>
+     * <li><strong>cloud_product</strong>: cloud services except ECS.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ecs</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
     /**
+     * <p>The number of entries on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The data collection configurations of the proxy cluster.</p>
+     */
     @NameInMap("PolicyList")
     public java.util.List<DescribeHybridProxyPolicyResponseBodyPolicyList> policyList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F7A1B40A-7EED-55A0-BCBC-2F83A486F0AB</p>
      */
@@ -52,6 +59,8 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
 
     public static class DescribeHybridProxyPolicyResponseBodyPolicyListInfo extends TeaModel {
         /**
+         * <p>The value of the policy configurations.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -59,6 +68,8 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
         public String config;
 
         /**
+         * <p>The name of the file. After you configure a blocking policy, the blocked data is written to the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -66,6 +77,13 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The type of the policy that you configured. Valid values:</p>
+         * <ul>
+         * <li><strong>file</strong></li>
+         * <li><strong>net</strong></li>
+         * <li><strong>process</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>file</p>
          */
@@ -104,10 +122,19 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridProxyPolicyResponseBodyPolicyList extends TeaModel {
+        /**
+         * <p>The information about the policy.</p>
+         */
         @NameInMap("Info")
         public java.util.List<DescribeHybridProxyPolicyResponseBodyPolicyListInfo> info;
 
         /**
+         * <p>The type of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>limitFrequency</strong></li>
+         * <li><strong>limitBandWidth</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>limitBandWidth</p>
          */

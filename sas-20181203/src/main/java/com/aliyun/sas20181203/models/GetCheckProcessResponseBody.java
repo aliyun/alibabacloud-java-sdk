@@ -22,9 +22,29 @@ public class GetCheckProcessResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status code of the Cloud Security Posture Management (CSPM) task. Valid values:</p>
+     * <ul>
+     * <li>0: The task is being initialized. The system is calculating the total number of subtasks.</li>
+     * <li>1: The task is being executed. You can query the total number of tasks and the number of completed tasks.</li>
+     * <li>2: The task is successful.</li>
+     * <li>3: The task times out.</li>
+     * <li>4: The task is invalid. Check whether assets exist.</li>
+     * <li>5: No task record is found. Check whether the TaskId parameter is valid.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("StatusCode")
     public String statusCode;
 
+    /**
+     * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5347c7b6-c85c-4070-846a-3029e08e****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

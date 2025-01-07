@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridProxyClusterListRequest extends TeaModel {
     /**
+     * <p>The name of the proxy cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class DescribeHybridProxyClusterListRequest extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeHybridProxyClusterListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class FinishGuidTaskRequest extends TeaModel {
     /**
+     * <p>The name of the task type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

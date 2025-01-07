@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
+    /**
+     * <p>The security alerts in your website assets.</p>
+     */
     @NameInMap("AlarmList")
     public java.util.List<DescribeDomainSecureAlarmListResponseBodyAlarmList> alarmList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D03DD0FD-6041-5107-AC00-383E28F1****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>42</p>
      */
@@ -52,16 +59,26 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
 
     public static class DescribeDomainSecureAlarmListResponseBodyAlarmList extends TeaModel {
         /**
+         * <p>The name of the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>Trojan</p>
          */
         @NameInMap("AlarmEventName")
         public String alarmEventName;
 
+        /**
+         * <p>The original parent name of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>login_common_location</p>
+         */
         @NameInMap("AlarmEventNameOriginal")
         public String alarmEventNameOriginal;
 
         /**
+         * <p>The type of the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>Malicious Software</p>
          */
@@ -69,6 +86,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String alarmEventType;
 
         /**
+         * <p>The unique ID of the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>8df914418f4211fbf756efe7a6f4****</p>
          */
@@ -76,6 +95,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String alarmUniqueInfo;
 
         /**
+         * <p>Indicates whether automatic defense is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -83,6 +104,12 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public Boolean autoBreaking;
 
         /**
+         * <p>Indicates whether the alert event can be handled online, such as quarantining the source file of the malicious process, adding the alert event to the whitelist, and ignoring the alert event. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -90,6 +117,12 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public Boolean canBeDealOnLine;
 
         /**
+         * <p>Indicates whether you can cancel marking the alert event as a false positive. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -97,6 +130,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public Boolean canCancelFault;
 
         /**
+         * <p>Indicates whether the safeguard mode for major activities is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -104,6 +139,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public Boolean containHwMode;
 
         /**
+         * <p>The data source of the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>aegis_****</p>
          */
@@ -111,6 +148,12 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String dataSource;
 
         /**
+         * <p>Indicates whether the alert event is handled. Valid values:</p>
+         * <ul>
+         * <li><strong>N</strong>: unhandled</li>
+         * <li><strong>Y</strong>: handled</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>y</p>
          */
@@ -118,6 +161,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public Boolean dealed;
 
         /**
+         * <p>The description of the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>The detection model finds that there is a Trojan horse program on your server. The Trojan horse program is a program specially used to invade the user\&quot;s host. Generally, it will download and release another malicious program after being implanted into the system through disguise.</p>
          */
@@ -125,6 +170,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The timestamp generated when the alert event was last detected. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1543740301000</p>
          */
@@ -132,6 +179,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The time of the last modification.</p>
+         * 
          * <strong>example:</strong>
          * <p>1656901794000</p>
          */
@@ -139,6 +188,12 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
+         * <p>Indicates whether the alert event has tracing information. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -146,6 +201,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public Boolean hasTraceInfo;
 
         /**
+         * <p>The instance ID of the affected asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-e****</p>
          */
@@ -153,6 +210,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name of the affected asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestInstance</p>
          */
@@ -160,6 +219,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The public IP address of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>95.214.<em>.</em></p>
          */
@@ -167,6 +228,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String internetIp;
 
         /**
+         * <p>The private IP address of the affected instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
          */
@@ -174,6 +237,13 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
+         * <p>The risk level of the alert event. Valid values:</p>
+         * <ul>
+         * <li><strong>serious</strong></li>
+         * <li><strong>suspicious</strong></li>
+         * <li><strong>remind</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>serious</p>
          */
@@ -181,6 +251,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String level;
 
         /**
+         * <p>The handling result code of the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>kill_and_quara.Success</p>
          */
@@ -188,6 +260,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String operateErrorCode;
 
         /**
+         * <p>The timestamp generated when the alert event was handled. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1631699497000</p>
          */
@@ -195,6 +269,13 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public Long operateTime;
 
         /**
+         * <p>The edition of Security Center in which the alert event can be detected. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Basic edition.</li>
+         * <li><strong>1</strong>: Advanced edition.</li>
+         * <li><strong>2</strong>: Enterprise edition.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -202,6 +283,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String saleVersion;
 
         /**
+         * <p>The ID of the associated alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>270789</p>
          */
@@ -209,6 +292,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String securityEventIds;
 
         /**
+         * <p>The solution to the alert event.</p>
+         * 
          * <strong>example:</strong>
          * <p>A malicious program implanted by hacker after intrusion will occupy your bandwidth and attack other servers, and may affect you own service. The malicious process may also have self-deleting behavior or disguise as a system service to evade detection.</p>
          */
@@ -216,6 +301,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String solution;
 
         /**
+         * <p>The stage at which the attack or intrusion is detected.</p>
+         * 
          * <strong>example:</strong>
          * <p>[\&quot;authority_maintenance\&quot;]</p>
          */
@@ -223,6 +310,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public String stages;
 
         /**
+         * <p>The timestamp generated when the alert event was first detected. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1543740301000</p>
          */
@@ -230,6 +319,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The total number of security alerts in your website assets.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -237,6 +328,8 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         public Integer suspiciousEventCount;
 
         /**
+         * <p>The unique ID of the associated instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>47900178-885d-4fa4-9d77-****</p>
          */

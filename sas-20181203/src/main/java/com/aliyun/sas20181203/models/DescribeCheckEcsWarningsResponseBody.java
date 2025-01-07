@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether you use the free trial of Security Center. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +18,8 @@ public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
     public String canTry;
 
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</p>
      */
@@ -19,6 +27,17 @@ public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The edition of Security Center that you use. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Basic edition</li>
+     * <li><strong>2</strong> or <strong>3</strong>: Enterprise edition</li>
+     * <li><strong>5</strong>: Advanced edition</li>
+     * <li><strong>6</strong>: Anti-virus edition</li>
+     * </ul>
+     * <blockquote>
+     * <p> Both the value 2 and the value 3 indicate the Enterprise edition.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -26,6 +45,8 @@ public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
     public String sasVersion;
 
     /**
+     * <p>The number of weak passwords that can cause high risks to your assets.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

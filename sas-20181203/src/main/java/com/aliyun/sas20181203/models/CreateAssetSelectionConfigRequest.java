@@ -22,6 +22,35 @@ public class CreateAssetSelectionConfigRequest extends TeaModel {
     public String businessType;
 
     /**
+     * <p>The operating system of the asset. Valid values:</p>
+     * <ul>
+     * <li><strong>all</strong>: all operating systems</li>
+     * <li><strong>windows</strong>: the Windows operating system</li>
+     * <li><strong>linux</strong>: the Linux operating system</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you leave this parameter empty, the system automatically selects a value for the parameter based on the value of the <strong>BusinessType</strong> parameter.</p>
+     * </blockquote>
+     * <ul>
+     * <li><p>If the BusinessType parameter is set to <strong>VIRUS_SCAN_CYCLE_CONFIG</strong>, the value of the Platform parameter is <strong>all</strong>.</p>
+     * </li>
+     * <li><p>If the BusinessType parameter is set to <strong>VIRUS_SCAN_ONCE_TASK</strong>, the value of the Platform parameter is <strong>all</strong>.</p>
+     * </li>
+     * <li><p>If the BusinessType parameter is set to <strong>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</strong>, the value of the Platform parameter is <strong>all</strong>.</p>
+     * </li>
+     * <li><p>If the BusinessType parameter is set to <strong>AGENTLESS_VUL_WHITE_LIST_[ID]</strong> the value of the Platform parameter is <strong>all</strong>.</p>
+     * </li>
+     * <li><p>If the BusinessType parameter is set to <strong>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</strong>, the value of the Platform parameter is <strong>linux</strong>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>linux</p>
+     */
+    @NameInMap("Platform")
+    public String platform;
+
+    /**
      * <p>The dimension based on which you want to select the asset. Valid values:</p>
      * <ul>
      * <li><strong>instance</strong>: selects the asset by server.</li>
@@ -47,6 +76,14 @@ public class CreateAssetSelectionConfigRequest extends TeaModel {
     }
     public String getBusinessType() {
         return this.businessType;
+    }
+
+    public CreateAssetSelectionConfigRequest setPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    public String getPlatform() {
+        return this.platform;
     }
 
     public CreateAssetSelectionConfigRequest setTargetType(String targetType) {

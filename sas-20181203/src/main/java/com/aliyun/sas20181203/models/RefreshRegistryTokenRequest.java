@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class RefreshRegistryTokenRequest extends TeaModel {
     /**
+     * <p>The ID of the image repository.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to obtain the ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

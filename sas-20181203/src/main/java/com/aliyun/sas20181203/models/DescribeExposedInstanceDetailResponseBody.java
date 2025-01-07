@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
     /**
-     * <p>The exposure details about the server.</p>
+     * <p>The list of exposure details of the server or database.</p>
      */
     @NameInMap("ExposedChains")
     public java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChains> exposedChains;
@@ -150,30 +150,130 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList extends TeaModel {
+        /**
+         * <p>The subtype of the cloud asset. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Elastic Compute Service (ECS).</p>
+         * <ul>
+         * <li><strong>100</strong>: instance.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>3</strong>: ApsaraDB RDS.</p>
+         * <ul>
+         * <li><strong>0</strong>: instance.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>4</strong>: ApsaraDB for MongoDB (MongoDB).</p>
+         * <ul>
+         * <li><strong>0</strong>: instance.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>5</strong>: ApsaraDB for Redis (Redis).</p>
+         * <ul>
+         * <li><strong>0</strong>: instance.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AssetSubType")
         public Integer assetSubType;
 
+        /**
+         * <p>The subtype name of the cloud asset. Valid values:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong>: MongoDB instance, Apsara DB for RDS instance, and ApsaraDB for Redis instance.</li>
+         * <li><strong>ECS_INSTANCE</strong>: ECS instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
+         */
         @NameInMap("AssetSubTypeName")
         public String assetSubTypeName;
 
+        /**
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li>0: an ECS instance.</li>
+         * <li>3: an ApsaraDB RDS instance.</li>
+         * <li>4: an ApsaraDB for MongoDB instance.</li>
+         * <li>5: an ApsaraDB for Redis instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AssetType")
         public Integer assetType;
 
+        /**
+         * <p>The name of the cloud asset type. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS</strong></li>
+         * <li><strong>RDS</strong></li>
+         * <li><strong>KVSTORE</strong></li>
+         * <li><strong>MONGODB</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
+         */
         @NameInMap("AssetTypeName")
         public String assetTypeName;
 
+        /**
+         * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create Alert Rule</p>
+         */
         @NameInMap("CheckName")
         public String checkName;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp14ggqzi9k6ocfb****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li><strong>HIGH</strong></li>
+         * <li><strong>MEDIUM</strong></li>
+         * <li><strong>LOW</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HIGH</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The type of the cloud asset by source. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: an asset provided by Alibaba Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Vendor")
         public Integer vendor;
 
@@ -372,6 +472,9 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         @NameInMap("AllVulList")
         public java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChainsAllVulList> allVulList;
 
+        /**
+         * <p>The list of configuration risks.</p>
+         */
         @NameInMap("CspmRiskList")
         public java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList> cspmRiskList;
 
@@ -385,7 +488,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         public String exposureComponent;
 
         /**
-         * <p>The public IP address.</p>
+         * <p>The IP address of the server or the public endpoint of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>47.99.XX.XX</p>
@@ -403,12 +506,13 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         public String exposurePort;
 
         /**
-         * <p>The resource from which the server is exposed. Valid values:</p>
+         * <p>The resource from which the server or database is exposed. Valid values:</p>
          * <ul>
-         * <li><strong>INTERNET_IP</strong>: the public IP address of an Elastic Compute Service (ECS) instance</li>
-         * <li><strong>SLB</strong>: the public IP address of a Server Load Balancer (SLB) instance</li>
-         * <li><strong>EIP</strong>: an elastic IP address (EIP)</li>
-         * <li><strong>DNAT</strong>: the NAT gateway that connects to the Internet by using the DNAT feature</li>
+         * <li><strong>INTERNET_IP</strong>: the public IP address of an Elastic Compute Service (ECS) instance.</li>
+         * <li><strong>SLB</strong>: the public IP address of a Server Load Balancer (SLB) instance.</li>
+         * <li><strong>EIP</strong>: an elastic IP address (EIP).</li>
+         * <li><strong>DNAT</strong>: the Network Address Translation (NAT) gateway that connects to the Internet by using the Destination Network Address Translation (DNAT) feature</li>
+         * <li><strong>DB_CONNECTION</strong>: the public endpoint of a database.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -420,10 +524,11 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         /**
          * <p>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.</p>
          * <ul>
-         * <li>If the value of the ExposureType parameter is <strong>INTERNET_IP</strong>, the value of this parameter is an empty string.</li>
-         * <li>If the value of the ExposureType parameter is <strong>SLB</strong>, the value of this parameter is the ID of the Internet-facing SLB instance.</li>
+         * <li>If the value of the ExposureType parameter is <strong>INTERNET_IP</strong>, this parameter is empty.</li>
+         * <li>If the value of the ExposureType parameter is <strong>SLB</strong>, the value of this parameter is the ID of the SLB instance.</li>
          * <li>If the value of the ExposureType parameter is <strong>EIP</strong>, the value of this parameter is the ID of the EIP.</li>
          * <li>If the value of the ExposureType parameter is <strong>DNAT</strong>, the value of this parameter is the ID of the NAT gateway.</li>
+         * <li>If the value of the ExposureType parameter is <strong>DB_CONNECTION</strong>, the value of this parameter is the ID of the database.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -442,7 +547,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         public String groupNo;
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp116qem8npvchqc****</p>
@@ -451,7 +556,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>worker-k8s-for-cs-c929ee2a145214f89a8b248005be5****</p>
@@ -484,9 +589,9 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         public java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChainsRealVulList> realVulList;
 
         /**
-         * <p>The region in which the server resides.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p> For information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -496,7 +601,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The UUID of the server or the instance ID of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>4f9ce097-4a7d-48fe-baef-6960e5b6****</p>

@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetAccountLabelResponseBody extends TeaModel {
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("AccountLabelList")
     public java.util.List<GetAccountLabelResponseBodyAccountLabelList> accountLabelList;
 
     /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>7BC55C8F-226E-5AF5-9A2C-2EC43864****</p>
      */
@@ -37,6 +42,8 @@ public class GetAccountLabelResponseBody extends TeaModel {
 
     public static class GetAccountLabelResponseBodyAccountLabelList extends TeaModel {
         /**
+         * <p>The tag information.</p>
+         * 
          * <strong>example:</strong>
          * <p>SasStep</p>
          */
@@ -44,6 +51,12 @@ public class GetAccountLabelResponseBody extends TeaModel {
         public String labelSeries;
 
         /**
+         * <p>Indicates whether the tag is valid.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
