@@ -1346,6 +1346,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>二要素有效期核验接口</p>
+     * 
+     * @param request Id2MetaPeriodVerifyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return Id2MetaPeriodVerifyResponse
+     */
+    public Id2MetaPeriodVerifyResponse id2MetaPeriodVerifyWithOptions(Id2MetaPeriodVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identifyNum)) {
+            body.put("IdentifyNum", request.identifyNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            body.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("UserName", request.userName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityEndDate)) {
+            body.put("ValidityEndDate", request.validityEndDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityStartDate)) {
+            body.put("ValidityStartDate", request.validityStartDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Id2MetaPeriodVerify"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new Id2MetaPeriodVerifyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>二要素有效期核验接口</p>
+     * 
+     * @param request Id2MetaPeriodVerifyRequest
+     * @return Id2MetaPeriodVerifyResponse
+     */
+    public Id2MetaPeriodVerifyResponse id2MetaPeriodVerify(Id2MetaPeriodVerifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.id2MetaPeriodVerifyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>身份二要素标准版</p>
      * 
      * @param request Id2MetaStandardVerifyRequest
@@ -1786,6 +1846,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>手机号三要素详版_标准版</p>
+     * 
+     * @param request Mobile3MetaDetailStandardVerifyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return Mobile3MetaDetailStandardVerifyResponse
+     */
+    public Mobile3MetaDetailStandardVerifyResponse mobile3MetaDetailStandardVerifyWithOptions(Mobile3MetaDetailStandardVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identifyNum)) {
+            body.put("IdentifyNum", request.identifyNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            body.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            body.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("UserName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Mobile3MetaDetailStandardVerify"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new Mobile3MetaDetailStandardVerifyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手机号三要素详版_标准版</p>
+     * 
+     * @param request Mobile3MetaDetailStandardVerifyRequest
+     * @return Mobile3MetaDetailStandardVerifyResponse
+     */
+    public Mobile3MetaDetailStandardVerifyResponse mobile3MetaDetailStandardVerify(Mobile3MetaDetailStandardVerifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.mobile3MetaDetailStandardVerifyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>手机三要素详版接口</p>
      * 
      * @param request Mobile3MetaDetailVerifyRequest
@@ -1838,6 +1954,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Mobile3MetaDetailVerifyResponse mobile3MetaDetailVerify(Mobile3MetaDetailVerifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.mobile3MetaDetailVerifyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手机号三要素简版_标准版</p>
+     * 
+     * @param request Mobile3MetaSimpleStandardVerifyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return Mobile3MetaSimpleStandardVerifyResponse
+     */
+    public Mobile3MetaSimpleStandardVerifyResponse mobile3MetaSimpleStandardVerifyWithOptions(Mobile3MetaSimpleStandardVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identifyNum)) {
+            body.put("IdentifyNum", request.identifyNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            body.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            body.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("UserName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Mobile3MetaSimpleStandardVerify"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new Mobile3MetaSimpleStandardVerifyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手机号三要素简版_标准版</p>
+     * 
+     * @param request Mobile3MetaSimpleStandardVerifyRequest
+     * @return Mobile3MetaSimpleStandardVerifyResponse
+     */
+    public Mobile3MetaSimpleStandardVerifyResponse mobile3MetaSimpleStandardVerify(Mobile3MetaSimpleStandardVerifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.mobile3MetaSimpleStandardVerifyWithOptions(request, runtime);
     }
 
     /**
