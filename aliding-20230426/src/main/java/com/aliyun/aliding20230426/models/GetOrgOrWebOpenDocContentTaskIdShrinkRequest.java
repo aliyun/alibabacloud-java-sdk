@@ -18,6 +18,13 @@ public class GetOrgOrWebOpenDocContentTaskIdShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("ScopeType")
+    public Integer scopeType;
+
+    /**
+     * <strong>example:</strong>
      * <p>markdown</p>
      */
     @NameInMap("TargetFormat")
@@ -45,6 +52,14 @@ public class GetOrgOrWebOpenDocContentTaskIdShrinkRequest extends TeaModel {
     }
     public Boolean getGenerateCp() {
         return this.generateCp;
+    }
+
+    public GetOrgOrWebOpenDocContentTaskIdShrinkRequest setScopeType(Integer scopeType) {
+        this.scopeType = scopeType;
+        return this;
+    }
+    public Integer getScopeType() {
+        return this.scopeType;
     }
 
     public GetOrgOrWebOpenDocContentTaskIdShrinkRequest setTargetFormat(String targetFormat) {

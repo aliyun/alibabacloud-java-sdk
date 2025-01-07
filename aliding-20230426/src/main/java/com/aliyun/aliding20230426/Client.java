@@ -8770,6 +8770,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("GenerateCp", request.generateCp);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeType)) {
+            body.put("ScopeType", request.scopeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.targetFormat)) {
             body.put("TargetFormat", request.targetFormat);
         }
