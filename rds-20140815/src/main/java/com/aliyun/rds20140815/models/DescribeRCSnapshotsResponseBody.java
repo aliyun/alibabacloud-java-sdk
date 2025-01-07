@@ -188,6 +188,9 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
 
         /**
          * <p>The snapshot name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-2ze8klip00xcogcwer76</p>
          */
         @NameInMap("SnapshotName")
         public String snapshotName;

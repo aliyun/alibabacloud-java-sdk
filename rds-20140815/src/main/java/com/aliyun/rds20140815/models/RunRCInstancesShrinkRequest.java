@@ -53,6 +53,12 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("CreateAckEdgeParam")
+    public String createAckEdgeParamShrink;
+
+    @NameInMap("CreateExtraParam")
+    public String createExtraParam;
+
     @NameInMap("CreateMode")
     public String createMode;
 
@@ -237,6 +243,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
+    @NameInMap("SupportCase")
+    public String supportCase;
+
     /**
      * <p>The specification of the system disk.</p>
      */
@@ -306,6 +315,22 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public RunRCInstancesShrinkRequest setCreateAckEdgeParamShrink(String createAckEdgeParamShrink) {
+        this.createAckEdgeParamShrink = createAckEdgeParamShrink;
+        return this;
+    }
+    public String getCreateAckEdgeParamShrink() {
+        return this.createAckEdgeParamShrink;
+    }
+
+    public RunRCInstancesShrinkRequest setCreateExtraParam(String createExtraParam) {
+        this.createExtraParam = createExtraParam;
+        return this;
+    }
+    public String getCreateExtraParam() {
+        return this.createExtraParam;
     }
 
     public RunRCInstancesShrinkRequest setCreateMode(String createMode) {
@@ -482,6 +507,14 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     }
     public String getSpotStrategy() {
         return this.spotStrategy;
+    }
+
+    public RunRCInstancesShrinkRequest setSupportCase(String supportCase) {
+        this.supportCase = supportCase;
+        return this;
+    }
+    public String getSupportCase() {
+        return this.supportCase;
     }
 
     public RunRCInstancesShrinkRequest setSystemDiskShrink(String systemDiskShrink) {

@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCClustersRequest extends TeaModel {
+    @NameInMap("Profile")
+    public String profile;
+
     /**
      * <p>The region ID.</p>
      * 
@@ -19,6 +22,14 @@ public class DescribeRCClustersRequest extends TeaModel {
     public static DescribeRCClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRCClustersRequest self = new DescribeRCClustersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRCClustersRequest setProfile(String profile) {
+        this.profile = profile;
+        return this;
+    }
+    public String getProfile() {
+        return this.profile;
     }
 
     public DescribeRCClustersRequest setRegionId(String regionId) {

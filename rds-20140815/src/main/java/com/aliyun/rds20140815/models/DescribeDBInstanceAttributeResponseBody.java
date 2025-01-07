@@ -663,9 +663,21 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Collation")
         public String collation;
 
+        /**
+         * <p>The storage compression mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on, off</p>
+         */
         @NameInMap("CompressionMode")
         public String compressionMode;
 
+        /**
+         * <p>The storage compression ratio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.25</p>
+         */
         @NameInMap("CompressionRatio")
         public String compressionRatio;
 
@@ -1268,6 +1280,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("SuperPermissionMode")
         public String superPermissionMode;
 
+        /**
+         * <p>Indicates whether the storage compression mode can be enabled for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true, false</p>
+         */
         @NameInMap("SupportCompression")
         public Boolean supportCompression;
 

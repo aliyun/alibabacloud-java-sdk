@@ -14,6 +14,7 @@ public class AttachRCDiskRequest extends TeaModel {
     public Boolean deleteWithInstance;
 
     /**
+     * <p>The disk ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +24,7 @@ public class AttachRCDiskRequest extends TeaModel {
     public String diskId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +34,7 @@ public class AttachRCDiskRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
