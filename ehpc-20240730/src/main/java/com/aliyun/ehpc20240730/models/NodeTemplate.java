@@ -213,6 +213,13 @@ public class NodeTemplate extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>/dev/xvdb</p>
+         */
+        @NameInMap("Device")
+        public String device;
+
+        /**
+         * <strong>example:</strong>
          * <p>PL0</p>
          */
         @NameInMap("Level")
@@ -231,6 +238,13 @@ public class NodeTemplate extends TeaModel {
          */
         @NameInMap("Size")
         public Integer size;
+
+        /**
+         * <strong>example:</strong>
+         * <p>s-bp1ei2b44ripxuo46hym</p>
+         */
+        @NameInMap("SnapshotId")
+        public String snapshotId;
 
         public static NodeTemplateDataDisks build(java.util.Map<String, ?> map) throws Exception {
             NodeTemplateDataDisks self = new NodeTemplateDataDisks();
@@ -251,6 +265,14 @@ public class NodeTemplate extends TeaModel {
         }
         public Boolean getDeleteWithInstance() {
             return this.deleteWithInstance;
+        }
+
+        public NodeTemplateDataDisks setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
         }
 
         public NodeTemplateDataDisks setLevel(String level) {
@@ -275,6 +297,14 @@ public class NodeTemplate extends TeaModel {
         }
         public Integer getSize() {
             return this.size;
+        }
+
+        public NodeTemplateDataDisks setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
         }
 
     }
