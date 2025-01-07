@@ -101,6 +101,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("ClassicEndpoint")
         public String classicEndpoint;
 
+        @NameInMap("EncryptedInstance")
+        public Boolean encryptedInstance;
+
         /**
          * <p>The timestamp that indicates when the instance expires. Unit: milliseconds.</p>
          * 
@@ -141,6 +144,9 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         @NameInMap("InstanceType")
         public String instanceType;
+
+        @NameInMap("KmsKeyId")
+        public String kmsKeyId;
 
         /**
          * <p>The maximum number of Internet-based transactions per second (TPS) for the instance.</p>
@@ -284,6 +290,14 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.classicEndpoint;
         }
 
+        public ListInstancesResponseBodyDataInstances setEncryptedInstance(Boolean encryptedInstance) {
+            this.encryptedInstance = encryptedInstance;
+            return this;
+        }
+        public Boolean getEncryptedInstance() {
+            return this.encryptedInstance;
+        }
+
         public ListInstancesResponseBodyDataInstances setExpireTime(Long expireTime) {
             this.expireTime = expireTime;
             return this;
@@ -314,6 +328,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public ListInstancesResponseBodyDataInstances setKmsKeyId(String kmsKeyId) {
+            this.kmsKeyId = kmsKeyId;
+            return this;
+        }
+        public String getKmsKeyId() {
+            return this.kmsKeyId;
         }
 
         public ListInstancesResponseBodyDataInstances setMaxEipTps(Integer maxEipTps) {

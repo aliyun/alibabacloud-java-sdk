@@ -38,6 +38,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("EncryptedInstance")
+    public Boolean encryptedInstance;
+
     /**
      * <p>The instance name. We recommend that you specify a name that does not exceed 64 characters in length.</p>
      * 
@@ -60,6 +63,13 @@ public class CreateInstanceRequest extends TeaModel {
      */
     @NameInMap("InstanceType")
     public String instanceType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>key-xxx</p>
+     */
+    @NameInMap("KmsKeyId")
+    public String kmsKeyId;
 
     /**
      * <p>The maximum number of connections that can be established to the instance. Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
@@ -287,6 +297,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateInstanceRequest setEncryptedInstance(Boolean encryptedInstance) {
+        this.encryptedInstance = encryptedInstance;
+        return this;
+    }
+    public Boolean getEncryptedInstance() {
+        return this.encryptedInstance;
+    }
+
     public CreateInstanceRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -301,6 +319,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public CreateInstanceRequest setKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
     }
 
     public CreateInstanceRequest setMaxConnections(Integer maxConnections) {
