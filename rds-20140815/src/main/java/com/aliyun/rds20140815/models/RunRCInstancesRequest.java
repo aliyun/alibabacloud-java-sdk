@@ -53,6 +53,12 @@ public class RunRCInstancesRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("CreateAckEdgeParam")
+    public RunRCInstancesRequestCreateAckEdgeParam createAckEdgeParam;
+
+    @NameInMap("CreateExtraParam")
+    public String createExtraParam;
+
     @NameInMap("CreateMode")
     public String createMode;
 
@@ -237,6 +243,9 @@ public class RunRCInstancesRequest extends TeaModel {
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
+    @NameInMap("SupportCase")
+    public String supportCase;
+
     /**
      * <p>The specification of the system disk.</p>
      */
@@ -306,6 +315,22 @@ public class RunRCInstancesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public RunRCInstancesRequest setCreateAckEdgeParam(RunRCInstancesRequestCreateAckEdgeParam createAckEdgeParam) {
+        this.createAckEdgeParam = createAckEdgeParam;
+        return this;
+    }
+    public RunRCInstancesRequestCreateAckEdgeParam getCreateAckEdgeParam() {
+        return this.createAckEdgeParam;
+    }
+
+    public RunRCInstancesRequest setCreateExtraParam(String createExtraParam) {
+        this.createExtraParam = createExtraParam;
+        return this;
+    }
+    public String getCreateExtraParam() {
+        return this.createExtraParam;
     }
 
     public RunRCInstancesRequest setCreateMode(String createMode) {
@@ -484,6 +509,14 @@ public class RunRCInstancesRequest extends TeaModel {
         return this.spotStrategy;
     }
 
+    public RunRCInstancesRequest setSupportCase(String supportCase) {
+        this.supportCase = supportCase;
+        return this;
+    }
+    public String getSupportCase() {
+        return this.supportCase;
+    }
+
     public RunRCInstancesRequest setSystemDisk(RunRCInstancesRequestSystemDisk systemDisk) {
         this.systemDisk = systemDisk;
         return this;
@@ -514,6 +547,36 @@ public class RunRCInstancesRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class RunRCInstancesRequestCreateAckEdgeParam extends TeaModel {
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("NodePoolId")
+        public String nodePoolId;
+
+        public static RunRCInstancesRequestCreateAckEdgeParam build(java.util.Map<String, ?> map) throws Exception {
+            RunRCInstancesRequestCreateAckEdgeParam self = new RunRCInstancesRequestCreateAckEdgeParam();
+            return TeaModel.build(map, self);
+        }
+
+        public RunRCInstancesRequestCreateAckEdgeParam setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public RunRCInstancesRequestCreateAckEdgeParam setNodePoolId(String nodePoolId) {
+            this.nodePoolId = nodePoolId;
+            return this;
+        }
+        public String getNodePoolId() {
+            return this.nodePoolId;
+        }
+
     }
 
     public static class RunRCInstancesRequestDataDisk extends TeaModel {

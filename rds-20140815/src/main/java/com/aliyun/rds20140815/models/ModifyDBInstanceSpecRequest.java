@@ -80,6 +80,16 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     @NameInMap("ColdDataEnabled")
     public Boolean coldDataEnabled;
 
+    /**
+     * <p>Whether to enable storage compression.</p>
+     * <ul>
+     * <li>on: Enable</li>
+     * <li>off: Disable</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("CompressionMode")
     public String compressionMode;
 

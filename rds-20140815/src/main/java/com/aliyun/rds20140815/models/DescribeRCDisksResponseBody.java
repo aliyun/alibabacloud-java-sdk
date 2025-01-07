@@ -170,7 +170,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
 
         /**
          * <p>The billing method of the disk.</p>
-         * <p>PostPaid: pay-as-you-go</p>
+         * <p>Only <strong>PostPaid</strong> (pay-as-you-go) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -219,7 +219,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Storage capacity - Baseline performance}. Baseline performance = min{1,800 + 50 × Storage capacity, 50,000}.</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline performance}. Baseline performance = min{1,800 + 50 × *Capacity, 50,000}</p>
          * <p>This parameter is available only when the <code>Category</code> parameter is set to <code>cloud_auto</code>.</p>
          * 
          * <strong>example:</strong>

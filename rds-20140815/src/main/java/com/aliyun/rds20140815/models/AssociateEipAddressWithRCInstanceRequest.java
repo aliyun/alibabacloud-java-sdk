@@ -4,12 +4,24 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class AssociateEipAddressWithRCInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>eip-bp166out2x4bpcf******</p>
+     */
     @NameInMap("AllocationId")
     public String allocationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rc-i322y2t562oh7o******</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

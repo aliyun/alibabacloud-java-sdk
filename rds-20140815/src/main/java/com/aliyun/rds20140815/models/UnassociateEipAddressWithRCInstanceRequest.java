@@ -4,12 +4,30 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class UnassociateEipAddressWithRCInstanceRequest extends TeaModel {
+    /**
+     * <p>The EIP ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-bp166out2x4bpcf******</p>
+     */
     @NameInMap("AllocationId")
     public String allocationId;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rc-i322y2t562oh7o******</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

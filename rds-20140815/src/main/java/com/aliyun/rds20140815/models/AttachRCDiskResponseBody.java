@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AttachRCDiskResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C19D1668-70CB-5421-AA91-D6D8EE3AB664</p>
      */

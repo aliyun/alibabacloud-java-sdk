@@ -62,6 +62,9 @@ public class DescribeRCClustersResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("Profile")
+        public String profile;
+
         /**
          * <p>The cluster status. Valid values:</p>
          * <ul>
@@ -108,6 +111,14 @@ public class DescribeRCClustersResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeRCClustersResponseBodyClusters setProfile(String profile) {
+            this.profile = profile;
+            return this;
+        }
+        public String getProfile() {
+            return this.profile;
         }
 
         public DescribeRCClustersResponseBodyClusters setStatus(String status) {

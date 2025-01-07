@@ -4,6 +4,10 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class AssociateEipAddressWithRCInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>EFFC7565-B3CF-5CFA-9E1F-164DD1E1F498</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
