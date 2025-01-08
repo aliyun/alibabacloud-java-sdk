@@ -1141,6 +1141,311 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
 
     }
 
+    public static class BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList extends TeaModel {
+        @NameInMap("BitDepth")
+        public Integer bitDepth;
+
+        @NameInMap("Bitrate")
+        public String bitrate;
+
+        @NameInMap("CodecName")
+        public String codecName;
+
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        @NameInMap("Definition")
+        public String definition;
+
+        @NameInMap("Duration")
+        public String duration;
+
+        @NameInMap("Encrypt")
+        public Long encrypt;
+
+        @NameInMap("EncryptMode")
+        public String encryptMode;
+
+        @NameInMap("EncryptType")
+        public String encryptType;
+
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("Fps")
+        public String fps;
+
+        @NameInMap("HDRType")
+        public String HDRType;
+
+        @NameInMap("Height")
+        public Long height;
+
+        @NameInMap("JobExt")
+        public String jobExt;
+
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("JobType")
+        public Integer jobType;
+
+        @NameInMap("ModificationTime")
+        public String modificationTime;
+
+        @NameInMap("NarrowBandType")
+        public String narrowBandType;
+
+        @NameInMap("PlayURL")
+        public String playURL;
+
+        @NameInMap("Size")
+        public Long size;
+
+        @NameInMap("Specification")
+        public String specification;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StreamType")
+        public String streamType;
+
+        @NameInMap("TemplateGroupId")
+        public String templateGroupId;
+
+        @NameInMap("TemplateId")
+        public String templateId;
+
+        @NameInMap("WatermarkId")
+        public String watermarkId;
+
+        @NameInMap("Width")
+        public Long width;
+
+        public static BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList build(java.util.Map<String, ?> map) throws Exception {
+            BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList self = new BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setBitDepth(Integer bitDepth) {
+            this.bitDepth = bitDepth;
+            return this;
+        }
+        public Integer getBitDepth() {
+            return this.bitDepth;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setBitrate(String bitrate) {
+            this.bitrate = bitrate;
+            return this;
+        }
+        public String getBitrate() {
+            return this.bitrate;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setCodecName(String codecName) {
+            this.codecName = codecName;
+            return this;
+        }
+        public String getCodecName() {
+            return this.codecName;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setDefinition(String definition) {
+            this.definition = definition;
+            return this;
+        }
+        public String getDefinition() {
+            return this.definition;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setDuration(String duration) {
+            this.duration = duration;
+            return this;
+        }
+        public String getDuration() {
+            return this.duration;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setEncrypt(Long encrypt) {
+            this.encrypt = encrypt;
+            return this;
+        }
+        public Long getEncrypt() {
+            return this.encrypt;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setEncryptMode(String encryptMode) {
+            this.encryptMode = encryptMode;
+            return this;
+        }
+        public String getEncryptMode() {
+            return this.encryptMode;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setEncryptType(String encryptType) {
+            this.encryptType = encryptType;
+            return this;
+        }
+        public String getEncryptType() {
+            return this.encryptType;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setFps(String fps) {
+            this.fps = fps;
+            return this;
+        }
+        public String getFps() {
+            return this.fps;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setHDRType(String HDRType) {
+            this.HDRType = HDRType;
+            return this;
+        }
+        public String getHDRType() {
+            return this.HDRType;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setHeight(Long height) {
+            this.height = height;
+            return this;
+        }
+        public Long getHeight() {
+            return this.height;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setJobExt(String jobExt) {
+            this.jobExt = jobExt;
+            return this;
+        }
+        public String getJobExt() {
+            return this.jobExt;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setJobType(Integer jobType) {
+            this.jobType = jobType;
+            return this;
+        }
+        public Integer getJobType() {
+            return this.jobType;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setModificationTime(String modificationTime) {
+            this.modificationTime = modificationTime;
+            return this;
+        }
+        public String getModificationTime() {
+            return this.modificationTime;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setNarrowBandType(String narrowBandType) {
+            this.narrowBandType = narrowBandType;
+            return this;
+        }
+        public String getNarrowBandType() {
+            return this.narrowBandType;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setPlayURL(String playURL) {
+            this.playURL = playURL;
+            return this;
+        }
+        public String getPlayURL() {
+            return this.playURL;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setSpecification(String specification) {
+            this.specification = specification;
+            return this;
+        }
+        public String getSpecification() {
+            return this.specification;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setStreamType(String streamType) {
+            this.streamType = streamType;
+            return this;
+        }
+        public String getStreamType() {
+            return this.streamType;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setTemplateGroupId(String templateGroupId) {
+            this.templateGroupId = templateGroupId;
+            return this;
+        }
+        public String getTemplateGroupId() {
+            return this.templateGroupId;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setWatermarkId(String watermarkId) {
+            this.watermarkId = watermarkId;
+            return this;
+        }
+        public String getWatermarkId() {
+            return this.watermarkId;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList setWidth(Long width) {
+            this.width = width;
+            return this;
+        }
+        public Long getWidth() {
+            return this.width;
+        }
+
+    }
+
     public static class BatchGetMediaInfosResponseBodyMediaInfos extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -1154,6 +1459,9 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
 
         @NameInMap("MezzanineInfo")
         public BatchGetMediaInfosResponseBodyMediaInfosMezzanineInfo mezzanineInfo;
+
+        @NameInMap("PlayInfoList")
+        public java.util.List<BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList> playInfoList;
 
         public static BatchGetMediaInfosResponseBodyMediaInfos build(java.util.Map<String, ?> map) throws Exception {
             BatchGetMediaInfosResponseBodyMediaInfos self = new BatchGetMediaInfosResponseBodyMediaInfos();
@@ -1182,6 +1490,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         }
         public BatchGetMediaInfosResponseBodyMediaInfosMezzanineInfo getMezzanineInfo() {
             return this.mezzanineInfo;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfos setPlayInfoList(java.util.List<BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList> playInfoList) {
+            this.playInfoList = playInfoList;
+            return this;
+        }
+        public java.util.List<BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList> getPlayInfoList() {
+            return this.playInfoList;
         }
 
     }
