@@ -30,6 +30,12 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     @NameInMap("CtiRules")
     public Integer ctiRules;
 
+    @NameInMap("FreeTrailStatus")
+    public String freeTrailStatus;
+
+    @NameInMap("MaxSdl")
+    public Long maxSdl;
+
     /**
      * <p>Indicates whether virtual patching is enabled. Valid values:</p>
      * <ul>
@@ -98,6 +104,22 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     }
     public Integer getCtiRules() {
         return this.ctiRules;
+    }
+
+    public DescribeDefaultIPSConfigResponseBody setFreeTrailStatus(String freeTrailStatus) {
+        this.freeTrailStatus = freeTrailStatus;
+        return this;
+    }
+    public String getFreeTrailStatus() {
+        return this.freeTrailStatus;
+    }
+
+    public DescribeDefaultIPSConfigResponseBody setMaxSdl(Long maxSdl) {
+        this.maxSdl = maxSdl;
+        return this;
+    }
+    public Long getMaxSdl() {
+        return this.maxSdl;
     }
 
     public DescribeDefaultIPSConfigResponseBody setPatchRules(Integer patchRules) {
