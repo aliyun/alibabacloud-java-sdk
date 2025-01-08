@@ -10,6 +10,9 @@ public class RecoveryFileRequest extends TeaModel {
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
+    @NameInMap("BackupAll")
+    public Boolean backupAll;
+
     /**
      * <strong>example:</strong>
      * <p>bf-azhps4rdyi2th****</p>
@@ -45,6 +48,14 @@ public class RecoveryFileRequest extends TeaModel {
     }
     public java.util.List<String> getAndroidInstanceIdList() {
         return this.androidInstanceIdList;
+    }
+
+    public RecoveryFileRequest setBackupAll(Boolean backupAll) {
+        this.backupAll = backupAll;
+        return this;
+    }
+    public Boolean getBackupAll() {
+        return this.backupAll;
     }
 
     public RecoveryFileRequest setBackupFileId(String backupFileId) {

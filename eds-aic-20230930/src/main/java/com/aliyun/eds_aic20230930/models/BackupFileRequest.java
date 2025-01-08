@@ -10,6 +10,9 @@ public class BackupFileRequest extends TeaModel {
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
+    @NameInMap("BackupAll")
+    public Boolean backupAll;
+
     @NameInMap("BackupFileName")
     public String backupFileName;
 
@@ -53,6 +56,14 @@ public class BackupFileRequest extends TeaModel {
     }
     public java.util.List<String> getAndroidInstanceIdList() {
         return this.androidInstanceIdList;
+    }
+
+    public BackupFileRequest setBackupAll(Boolean backupAll) {
+        this.backupAll = backupAll;
+        return this;
+    }
+    public Boolean getBackupAll() {
+        return this.backupAll;
     }
 
     public BackupFileRequest setBackupFileName(String backupFileName) {

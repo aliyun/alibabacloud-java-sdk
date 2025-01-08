@@ -3,23 +3,27 @@ package com.aliyun.eds_aic20230930.models;
 
 import com.aliyun.tea.*;
 
-public class InstallAppResponseBody extends TeaModel {
+public class OperateAppResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>E5138F7E-46B5-526A-8C99-82DEAE6B****</p>
+     * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>t-imr0fufqgac2z****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
-    public static InstallAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        InstallAppResponseBody self = new InstallAppResponseBody();
+    public static OperateAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        OperateAppResponseBody self = new OperateAppResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public InstallAppResponseBody setRequestId(String requestId) {
+    public OperateAppResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -27,7 +31,7 @@ public class InstallAppResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public InstallAppResponseBody setTaskId(String taskId) {
+    public OperateAppResponseBody setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }

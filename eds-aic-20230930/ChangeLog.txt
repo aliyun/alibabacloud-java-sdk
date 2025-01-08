@@ -1,3 +1,47 @@
+2025-01-08 Version: 2.1.0
+- Support API BatchGetAcpConnectionTicket.
+- Support API OperateApp.
+- Delete API GetAdbSecure.
+- Delete API SetAdbSecure.
+- Update API BackupFile: add param BackupAll.
+- Update API BackupFile: add param BackupFileName.
+- Update API BackupFile: add param SourceAppList.
+- Update API BackupFile: update param SourceFilePathList.
+- Update API BackupFile: update response param.
+- Update API CheckResourceStock: update param AcpSpecId.
+- Update API CreateApp: update param AppName.
+- Update API CreatePolicyGroup: update param NetRedirectPolicy.
+- Update API DescribeAndroidInstanceGroups: update response param.
+- Update API DescribeAndroidInstances: add param BizRegionId.
+- Update API DescribeAndroidInstances: add param Tag.
+- Update API DescribeAndroidInstances: update response param.
+- Update API DescribeApps: add param MD5.
+- Update API DescribeApps: update response param.
+- Update API DescribeBackupFiles: add param BackupAll.
+- Update API DescribeBackupFiles: add param StatusList.
+- Update API DescribeBackupFiles: update response param.
+- Update API DescribeRegions: add param AcceptLanguage.
+- Update API DescribeRegions: update response param.
+- Update API DescribeTasks: add param InstanceId.
+- Update API DescribeTasks: add param InstanceName.
+- Update API DescribeTasks: add param Level.
+- Update API DescribeTasks: add param Param.
+- Update API DescribeTasks: add param ParentTaskId.
+- Update API DescribeTasks: add param TaskStatuses.
+- Update API DescribeTasks: add param TaskTypes.
+- Update API DescribeTasks: update response param.
+- Update API FetchFile: update response param.
+- Update API InstallApp: update response param.
+- Update API ListPolicyGroups: update response param.
+- Update API ModifyPolicyGroup: update param NetRedirectPolicy.
+- Update API RecoveryFile: add param BackupAll.
+- Update API RecoveryFile: update response param.
+- Update API SendFile: update response param.
+- Update API UninstallApp: add param InstanceIdList.
+- Update API UninstallApp: update param InstanceGroupIdList.
+- Update API UninstallApp: update response param.
+
+
 2024-12-06 Version: 2.0.3
 - Delete API GetAdbSecure.
 - Delete API SetAdbSecure.

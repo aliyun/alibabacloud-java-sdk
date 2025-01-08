@@ -14,6 +14,9 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("AndroidInstanceName")
     public String androidInstanceName;
 
+    @NameInMap("BizRegionId")
+    public String bizRegionId;
+
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -65,6 +68,9 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeAndroidInstancesRequestTag> tag;
+
     public static DescribeAndroidInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAndroidInstancesRequest self = new DescribeAndroidInstancesRequest();
         return TeaModel.build(map, self);
@@ -84,6 +90,14 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     }
     public String getAndroidInstanceName() {
         return this.androidInstanceName;
+    }
+
+    public DescribeAndroidInstancesRequest setBizRegionId(String bizRegionId) {
+        this.bizRegionId = bizRegionId;
+        return this;
+    }
+    public String getBizRegionId() {
+        return this.bizRegionId;
     }
 
     public DescribeAndroidInstancesRequest setChargeType(String chargeType) {
@@ -156,6 +170,44 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeAndroidInstancesRequest setTag(java.util.List<DescribeAndroidInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeAndroidInstancesRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeAndroidInstancesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAndroidInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAndroidInstancesRequestTag self = new DescribeAndroidInstancesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAndroidInstancesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAndroidInstancesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
