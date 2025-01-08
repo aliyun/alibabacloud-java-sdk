@@ -669,6 +669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Entrusted", request.entrusted);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreInvalidInstance)) {
+            query.put("IgnoreInvalidInstance", request.ignoreInvalidInstance);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
             query.put("InstanceIds", request.instanceIds);
         }

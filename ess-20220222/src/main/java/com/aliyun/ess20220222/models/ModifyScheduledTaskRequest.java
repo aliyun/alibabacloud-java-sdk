@@ -113,6 +113,12 @@ public class ModifyScheduledTaskRequest extends TeaModel {
     @NameInMap("RecurrenceValue")
     public String recurrenceValue;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
