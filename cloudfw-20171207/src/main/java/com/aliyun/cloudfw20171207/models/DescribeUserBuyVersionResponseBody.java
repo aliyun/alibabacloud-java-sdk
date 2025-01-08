@@ -56,6 +56,9 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    @NameInMap("InternetBandwidth")
+    public Long internetBandwidth;
+
     /**
      * <p>The number of public IP addresses that can be protected.</p>
      * <blockquote>
@@ -109,6 +112,9 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     @NameInMap("MaxOverflow")
     public Long maxOverflow;
 
+    @NameInMap("NatBandwidth")
+    public Long natBandwidth;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -157,6 +163,9 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
      */
     @NameInMap("Version")
     public Integer version;
+
+    @NameInMap("VpcBandwidth")
+    public Long vpcBandwidth;
 
     /**
      * <p>The number of virtual private clouds (VPCs) that can be protected.</p>
@@ -207,6 +216,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         return this.instanceStatus;
     }
 
+    public DescribeUserBuyVersionResponseBody setInternetBandwidth(Long internetBandwidth) {
+        this.internetBandwidth = internetBandwidth;
+        return this;
+    }
+    public Long getInternetBandwidth() {
+        return this.internetBandwidth;
+    }
+
     public DescribeUserBuyVersionResponseBody setIpNumber(Long ipNumber) {
         this.ipNumber = ipNumber;
         return this;
@@ -239,6 +256,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         return this.maxOverflow;
     }
 
+    public DescribeUserBuyVersionResponseBody setNatBandwidth(Long natBandwidth) {
+        this.natBandwidth = natBandwidth;
+        return this;
+    }
+    public Long getNatBandwidth() {
+        return this.natBandwidth;
+    }
+
     public DescribeUserBuyVersionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -269,6 +294,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     }
     public Integer getVersion() {
         return this.version;
+    }
+
+    public DescribeUserBuyVersionResponseBody setVpcBandwidth(Long vpcBandwidth) {
+        this.vpcBandwidth = vpcBandwidth;
+        return this;
+    }
+    public Long getVpcBandwidth() {
+        return this.vpcBandwidth;
     }
 
     public DescribeUserBuyVersionResponseBody setVpcNumber(Long vpcNumber) {

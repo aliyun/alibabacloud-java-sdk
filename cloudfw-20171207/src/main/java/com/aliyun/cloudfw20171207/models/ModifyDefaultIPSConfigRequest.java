@@ -45,6 +45,9 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("MaxSdl")
+    public Long maxSdl;
+
     /**
      * <p>Specifies whether to enable virtual patching. Valid values:</p>
      * <ul>
@@ -113,6 +116,14 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ModifyDefaultIPSConfigRequest setMaxSdl(Long maxSdl) {
+        this.maxSdl = maxSdl;
+        return this;
+    }
+    public Long getMaxSdl() {
+        return this.maxSdl;
     }
 
     public ModifyDefaultIPSConfigRequest setPatchRules(String patchRules) {
