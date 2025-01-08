@@ -18,6 +18,9 @@ public class DescribeBackupFilesRequest extends TeaModel {
     @NameInMap("AndroidInstanceName")
     public String androidInstanceName;
 
+    @NameInMap("BackupAll")
+    public Boolean backupAll;
+
     /**
      * <strong>example:</strong>
      * <p>bf-dxrh5jrv0zpb8****</p>
@@ -95,6 +98,14 @@ public class DescribeBackupFilesRequest extends TeaModel {
     }
     public String getAndroidInstanceName() {
         return this.androidInstanceName;
+    }
+
+    public DescribeBackupFilesRequest setBackupAll(Boolean backupAll) {
+        this.backupAll = backupAll;
+        return this;
+    }
+    public Boolean getBackupAll() {
+        return this.backupAll;
     }
 
     public DescribeBackupFilesRequest setBackupFileId(String backupFileId) {

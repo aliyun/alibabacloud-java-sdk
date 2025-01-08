@@ -11,6 +11,9 @@ public class UninstallAppResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static UninstallAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UninstallAppResponseBody self = new UninstallAppResponseBody();
         return TeaModel.build(map, self);
@@ -22,6 +25,14 @@ public class UninstallAppResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UninstallAppResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

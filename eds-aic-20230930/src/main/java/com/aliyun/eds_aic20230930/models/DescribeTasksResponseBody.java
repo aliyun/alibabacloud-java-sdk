@@ -72,6 +72,9 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        @NameInMap("FailedChildCount")
+        public Integer failedChildCount;
+
         /**
          * <strong>example:</strong>
          * <p>2022-10-11T08:53:32Z</p>
@@ -79,12 +82,33 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("FinishTime")
         public String finishTime;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("InstanceStatus")
+        public String instanceStatus;
+
         /**
          * <strong>example:</strong>
          * <p>B8ED2BA9-0C6A-5643-818F-B5D60A64****</p>
          */
         @NameInMap("InvokeId")
         public String invokeId;
+
+        @NameInMap("Level")
+        public Integer level;
+
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("Param")
+        public String param;
+
+        @NameInMap("ParentTaskId")
+        public String parentTaskId;
 
         /**
          * <strong>example:</strong>
@@ -103,12 +127,18 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("Result")
         public String result;
 
+        @NameInMap("RunningChildCount")
+        public Integer runningChildCount;
+
         /**
          * <strong>example:</strong>
          * <p>2022-10-11T08:53:32Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
+
+        @NameInMap("SuccessChildCount")
+        public Integer successChildCount;
 
         /**
          * <strong>example:</strong>
@@ -131,6 +161,9 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("TaskType")
         public String taskType;
 
+        @NameInMap("TotalChildCount")
+        public Integer totalChildCount;
+
         public static DescribeTasksResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeTasksResponseBodyData self = new DescribeTasksResponseBodyData();
             return TeaModel.build(map, self);
@@ -152,6 +185,14 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.errorMsg;
         }
 
+        public DescribeTasksResponseBodyData setFailedChildCount(Integer failedChildCount) {
+            this.failedChildCount = failedChildCount;
+            return this;
+        }
+        public Integer getFailedChildCount() {
+            return this.failedChildCount;
+        }
+
         public DescribeTasksResponseBodyData setFinishTime(String finishTime) {
             this.finishTime = finishTime;
             return this;
@@ -160,12 +201,68 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.finishTime;
         }
 
+        public DescribeTasksResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeTasksResponseBodyData setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeTasksResponseBodyData setInstanceStatus(String instanceStatus) {
+            this.instanceStatus = instanceStatus;
+            return this;
+        }
+        public String getInstanceStatus() {
+            return this.instanceStatus;
+        }
+
         public DescribeTasksResponseBodyData setInvokeId(String invokeId) {
             this.invokeId = invokeId;
             return this;
         }
         public String getInvokeId() {
             return this.invokeId;
+        }
+
+        public DescribeTasksResponseBodyData setLevel(Integer level) {
+            this.level = level;
+            return this;
+        }
+        public Integer getLevel() {
+            return this.level;
+        }
+
+        public DescribeTasksResponseBodyData setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public DescribeTasksResponseBodyData setParam(String param) {
+            this.param = param;
+            return this;
+        }
+        public String getParam() {
+            return this.param;
+        }
+
+        public DescribeTasksResponseBodyData setParentTaskId(String parentTaskId) {
+            this.parentTaskId = parentTaskId;
+            return this;
+        }
+        public String getParentTaskId() {
+            return this.parentTaskId;
         }
 
         public DescribeTasksResponseBodyData setRegionId(String regionId) {
@@ -192,12 +289,28 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.result;
         }
 
+        public DescribeTasksResponseBodyData setRunningChildCount(Integer runningChildCount) {
+            this.runningChildCount = runningChildCount;
+            return this;
+        }
+        public Integer getRunningChildCount() {
+            return this.runningChildCount;
+        }
+
         public DescribeTasksResponseBodyData setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
         public String getStartTime() {
             return this.startTime;
+        }
+
+        public DescribeTasksResponseBodyData setSuccessChildCount(Integer successChildCount) {
+            this.successChildCount = successChildCount;
+            return this;
+        }
+        public Integer getSuccessChildCount() {
+            return this.successChildCount;
         }
 
         public DescribeTasksResponseBodyData setTaskId(String taskId) {
@@ -222,6 +335,14 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
         public String getTaskType() {
             return this.taskType;
+        }
+
+        public DescribeTasksResponseBodyData setTotalChildCount(Integer totalChildCount) {
+            this.totalChildCount = totalChildCount;
+            return this;
+        }
+        public Integer getTotalChildCount() {
+            return this.totalChildCount;
         }
 
     }

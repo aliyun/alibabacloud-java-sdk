@@ -73,6 +73,9 @@ public class DescribeAppsResponseBody extends TeaModel {
         @NameInMap("AndroidAppVersion")
         public String androidAppVersion;
 
+        @NameInMap("ApkSize")
+        public String apkSize;
+
         /**
          * <strong>example:</strong>
          * <p>10404</p>
@@ -124,6 +127,9 @@ public class DescribeAppsResponseBody extends TeaModel {
         @NameInMap("InstanceGroupList")
         public java.util.List<String> instanceGroupList;
 
+        @NameInMap("MD5")
+        public String MD5;
+
         @NameInMap("PackageName")
         public String packageName;
 
@@ -145,6 +151,14 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
         public String getAndroidAppVersion() {
             return this.androidAppVersion;
+        }
+
+        public DescribeAppsResponseBodyData setApkSize(String apkSize) {
+            this.apkSize = apkSize;
+            return this;
+        }
+        public String getApkSize() {
+            return this.apkSize;
         }
 
         public DescribeAppsResponseBodyData setAppId(Integer appId) {
@@ -217,6 +231,14 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
         public java.util.List<String> getInstanceGroupList() {
             return this.instanceGroupList;
+        }
+
+        public DescribeAppsResponseBodyData setMD5(String MD5) {
+            this.MD5 = MD5;
+            return this;
+        }
+        public String getMD5() {
+            return this.MD5;
         }
 
         public DescribeAppsResponseBodyData setPackageName(String packageName) {

@@ -21,6 +21,9 @@ public class RecoveryFileResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static RecoveryFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecoveryFileResponseBody self = new RecoveryFileResponseBody();
         return TeaModel.build(map, self);
@@ -48,6 +51,14 @@ public class RecoveryFileResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public RecoveryFileResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public static class RecoveryFileResponseBodyData extends TeaModel {

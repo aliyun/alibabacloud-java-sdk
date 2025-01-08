@@ -95,6 +95,36 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAndroidInstancesResponseBodyInstanceModelTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAndroidInstancesResponseBodyInstanceModelTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAndroidInstancesResponseBodyInstanceModelTags self = new DescribeAndroidInstancesResponseBodyInstanceModelTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeAndroidInstancesResponseBodyInstanceModel extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -188,6 +218,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        @NameInMap("ImageVersion")
+        public String imageVersion;
+
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -221,6 +254,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
+        @NameInMap("PublicIpAddress")
+        public String publicIpAddress;
+
         /**
          * <strong>example:</strong>
          * <p>100</p>
@@ -237,6 +273,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
         @NameInMap("RenderingType")
         public String renderingType;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelTags> tags;
 
         public static DescribeAndroidInstancesResponseBodyInstanceModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeAndroidInstancesResponseBodyInstanceModel self = new DescribeAndroidInstancesResponseBodyInstanceModel();
@@ -371,6 +410,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
+        public DescribeAndroidInstancesResponseBodyInstanceModel setImageVersion(String imageVersion) {
+            this.imageVersion = imageVersion;
+            return this;
+        }
+        public String getImageVersion() {
+            return this.imageVersion;
+        }
+
         public DescribeAndroidInstancesResponseBodyInstanceModel setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
@@ -427,6 +474,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             return this.policyGroupId;
         }
 
+        public DescribeAndroidInstancesResponseBodyInstanceModel setPublicIpAddress(String publicIpAddress) {
+            this.publicIpAddress = publicIpAddress;
+            return this;
+        }
+        public String getPublicIpAddress() {
+            return this.publicIpAddress;
+        }
+
         public DescribeAndroidInstancesResponseBodyInstanceModel setRate(Integer rate) {
             this.rate = rate;
             return this;
@@ -449,6 +504,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getRenderingType() {
             return this.renderingType;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setTags(java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelTags> getTags() {
+            return this.tags;
         }
 
     }

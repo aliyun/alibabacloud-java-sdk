@@ -20,6 +20,9 @@ public class DescribeAppsRequest extends TeaModel {
     @NameInMap("InstallationStatus")
     public String installationStatus;
 
+    @NameInMap("MD5")
+    public String MD5;
+
     /**
      * <strong>example:</strong>
      * <p>10</p>
@@ -76,6 +79,14 @@ public class DescribeAppsRequest extends TeaModel {
     }
     public String getInstallationStatus() {
         return this.installationStatus;
+    }
+
+    public DescribeAppsRequest setMD5(String MD5) {
+        this.MD5 = MD5;
+        return this;
+    }
+    public String getMD5() {
+        return this.MD5;
     }
 
     public DescribeAppsRequest setMaxResults(Integer maxResults) {
