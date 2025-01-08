@@ -28,6 +28,9 @@ public class SubmitDocParserJobRequest extends TeaModel {
     @NameInMap("FormulaEnhancement")
     public Boolean formulaEnhancement;
 
+    @NameInMap("LlmEnhancement")
+    public Boolean llmEnhancement;
+
     public static SubmitDocParserJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDocParserJobRequest self = new SubmitDocParserJobRequest();
         return TeaModel.build(map, self);
@@ -63,6 +66,14 @@ public class SubmitDocParserJobRequest extends TeaModel {
     }
     public Boolean getFormulaEnhancement() {
         return this.formulaEnhancement;
+    }
+
+    public SubmitDocParserJobRequest setLlmEnhancement(Boolean llmEnhancement) {
+        this.llmEnhancement = llmEnhancement;
+        return this;
+    }
+    public Boolean getLlmEnhancement() {
+        return this.llmEnhancement;
     }
 
 }
