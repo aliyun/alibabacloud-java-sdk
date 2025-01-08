@@ -31,6 +31,9 @@ public class AttachInstancesRequest extends TeaModel {
     @NameInMap("Entrusted")
     public Boolean entrusted;
 
+    @NameInMap("IgnoreInvalidInstance")
+    public Boolean ignoreInvalidInstance;
+
     /**
      * <p>The IDs of the ECS instances, elastic container instances, non-Alibaba Cloud instances, or instances in Economical Mode.</p>
      */
@@ -110,6 +113,14 @@ public class AttachInstancesRequest extends TeaModel {
     }
     public Boolean getEntrusted() {
         return this.entrusted;
+    }
+
+    public AttachInstancesRequest setIgnoreInvalidInstance(Boolean ignoreInvalidInstance) {
+        this.ignoreInvalidInstance = ignoreInvalidInstance;
+        return this;
+    }
+    public Boolean getIgnoreInvalidInstance() {
+        return this.ignoreInvalidInstance;
     }
 
     public AttachInstancesRequest setInstanceIds(java.util.List<String> instanceIds) {

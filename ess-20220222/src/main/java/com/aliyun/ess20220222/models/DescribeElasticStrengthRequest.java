@@ -4,10 +4,21 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticStrengthRequest extends TeaModel {
+    /**
+     * <p>The disk categories of the data disks. The disk categories that do not match the specified criteria are returned after you call this operation.</p>
+     * <blockquote>
+     * <p> If you do not specify the scaling group ID, you must specify this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("DataDiskCategories")
     public java.util.List<String> dataDiskCategories;
 
     /**
+     * <p>The name of the image family. You can specify the ImageFamily request parameter to obtain the most recent available images in the current image family for instance creation. If you specify ImageId, you cannot specify ImageFamily.</p>
+     * <blockquote>
+     * <p> If you do not specify the scaling group ID, you must specify at least one of ImageId, ImageName, and ImageFamily.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>CentOS7</p>
      */
@@ -15,6 +26,11 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     public String imageFamily;
 
     /**
+     * <p>The ID of the image file that provides the image resource for Auto Scaling to create instances.</p>
+     * <blockquote>
+     * <p> If you do not specify the scaling group ID, you must specify at least one of ImageId, ImageName, and ImageFamily.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>centos6u5_64_20G_aliaegis****.vhd</p>
      */
@@ -22,6 +38,12 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The name of the image. Each image name must be unique in a region. If you specify ImageId, ImageName is ignored.</p>
+     * <p>You cannot use ImageName to specify an Alibaba Cloud Marketplace image.</p>
+     * <blockquote>
+     * <p> If you do not specify the scaling group ID, you must specify at least one of ImageId, ImageName, and ImageFamily.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ubuntu_18_04_x64_20G_alibase_20231225.vhd</p>
      */
@@ -35,6 +57,11 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     public java.util.List<String> instanceTypes;
 
     /**
+     * <p>The number of IPv6 addresses. If the instance type that you specified does meet the requirement for the number of IPv6 addresses, the scaling strength is weak.</p>
+     * <blockquote>
+     * <p> If you do not specify the scaling group ID, you must specify this parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,10 +69,12 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     public Integer ipv6AddressCount;
 
     /**
+     * <p>**</p>
+     * <p><strong>Warning</strong> This parameter is deprecated. We recommend that you use SpotStrategy.</p>
      * <p>The preemption policy that you want to apply to pay-as-you-go instances. The preemption policy specified by this parameter overwrites the preemption policy specified in the scaling configuration. Valid values:</p>
      * <ul>
      * <li>NoSpot: The instances are created as regular pay-as-you-go instances.</li>
-     * <li>SpotWithPriceLimit: The instances are created as preemptible instances that have a user-defined maximum hourly price.</li>
+     * <li>SpotWithPriceLimit: The instances are created as preemptible instances with a user-defined maximum hourly price.</li>
      * <li>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bidding price.</li>
      * </ul>
      * <p>Default value: NoSpot.</p>
@@ -82,6 +111,14 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     public java.util.List<String> scalingGroupIds;
 
     /**
+     * <p>The instance bidding policy. Valid values:</p>
+     * <ul>
+     * <li>NoSpot: The instances are created as pay-as-you-go instances.</li>
+     * <li>SpotWithPriceLimit: The instances are created as preemptible instances with a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
+     * </ul>
+     * <p>Default value: NoSpot.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoSpot</p>
      */
@@ -96,10 +133,19 @@ public class DescribeElasticStrengthRequest extends TeaModel {
      * <li>cloud_ssd: standard SSD.</li>
      * <li>cloud_essd: Enterprise SSD (ESSD).</li>
      * </ul>
+     * <blockquote>
+     * <p> If you do not specify the scaling group ID, you must specify this parameter.</p>
+     * </blockquote>
      */
     @NameInMap("SystemDiskCategories")
     public java.util.List<String> systemDiskCategories;
 
+    /**
+     * <p>The vSwitch IDs.</p>
+     * <blockquote>
+     * <p> If you do not specify the scaling group ID, you must specify this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
