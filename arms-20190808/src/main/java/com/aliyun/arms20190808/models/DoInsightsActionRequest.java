@@ -135,6 +135,9 @@ public class DoInsightsActionRequest extends TeaModel {
     @NameInMap("Module")
     public String module;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DoInsightsActionRequest build(java.util.Map<String, ?> map) throws Exception {
         DoInsightsActionRequest self = new DoInsightsActionRequest();
         return TeaModel.build(map, self);
@@ -154,6 +157,14 @@ public class DoInsightsActionRequest extends TeaModel {
     }
     public String getModule() {
         return this.module;
+    }
+
+    public DoInsightsActionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

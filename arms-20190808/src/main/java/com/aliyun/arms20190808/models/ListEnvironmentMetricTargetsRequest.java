@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentMetricTargetsRequest extends TeaModel {
     /**
+     * <p>The environment ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListEnvironmentMetricTargetsRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The job name.</p>
+     * 
      * <strong>example:</strong>
      * <p>blackbox</p>
      */
@@ -21,6 +24,8 @@ public class ListEnvironmentMetricTargetsRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
     /**
+     * <p>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListEnvironmentKubeResourcesResponseBodyData> data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>message</p>
      */
@@ -22,7 +29,7 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
@@ -31,6 +38,12 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -83,13 +96,21 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentKubeResourcesResponseBodyDataMetadata extends TeaModel {
+        /**
+         * <p>The annotations.</p>
+         */
         @NameInMap("Annotations")
         public java.util.Map<String, String> annotations;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
         /**
+         * <p>The resource name.</p>
+         * 
          * <strong>example:</strong>
          * <p>arms-prometheus-ack-arms-prometheus-c577b6cc8-mvdwd</p>
          */
@@ -97,6 +118,8 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>arms-prom</p>
          */
@@ -144,6 +167,8 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
 
     public static class ListEnvironmentKubeResourcesResponseBodyData extends TeaModel {
         /**
+         * <p>The version number of the API.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -151,16 +176,23 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
         public String apiVersion;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Pod</p>
          */
         @NameInMap("Kind")
         public String kind;
 
+        /**
+         * <p>The metadata.</p>
+         */
         @NameInMap("Metadata")
         public ListEnvironmentKubeResourcesResponseBodyDataMetadata metadata;
 
         /**
+         * <p>The resource specifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *         &quot;dnsPolicy&quot;: &quot;ClusterFirst&quot;,
@@ -181,6 +213,8 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
         public Object spec;
 
         /**
+         * <p>The status of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>run</p>
          */

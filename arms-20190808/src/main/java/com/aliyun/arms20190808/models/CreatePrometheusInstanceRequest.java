@@ -77,6 +77,9 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     @NameInMap("GrafanaInstanceId")
     public String grafanaInstanceId;
 
+    /**
+     * <p>The billing mode. Valid values: POSTPAY: charges fees based on the amount of reported metric data. POSTPAY_GB: charges fees based on the amount of written metric data. Empty value: The user-defined default billing mode is used. If no such a billing mode is available, you are charged based on the amount of reported metric data.</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
