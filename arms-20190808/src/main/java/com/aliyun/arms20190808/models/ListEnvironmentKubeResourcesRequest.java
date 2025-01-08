@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentKubeResourcesRequest extends TeaModel {
     /**
+     * <p>The environment ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListEnvironmentKubeResourcesRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The resource type. Valid values: Pod, Deployment, and Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,15 @@ public class ListEnvironmentKubeResourcesRequest extends TeaModel {
     @NameInMap("Kind")
     public String kind;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("LabelSelectors")
     public java.util.Map<String, String> labelSelectors;
 
     /**
+     * <p>The namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -33,6 +40,8 @@ public class ListEnvironmentKubeResourcesRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

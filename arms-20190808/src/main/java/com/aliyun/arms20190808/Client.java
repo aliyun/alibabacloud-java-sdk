@@ -6002,6 +6002,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public DoInsightsActionResponse doInsightsActionWithOptions(DoInsightsActionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.data)) {
             body.put("Data", request.data);
@@ -6012,6 +6017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -9654,7 +9660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>环境的告警组列表</p>
+     * <p>Queries the alert groups of an environment instance.</p>
      * 
      * @param request ListEnvironmentAlertRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9698,7 +9704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>环境的告警组列表</p>
+     * <p>Queries the alert groups of an environment instance.</p>
      * 
      * @param request ListEnvironmentAlertRulesRequest
      * @return ListEnvironmentAlertRulesResponse
@@ -9818,7 +9824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>环境中的kube资源列表</p>
+     * <p>Queries the Kubernetes resources of an environment.</p>
      * 
      * @param tmpReq ListEnvironmentKubeResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9872,7 +9878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>环境中的kube资源列表</p>
+     * <p>Queries the Kubernetes resources of an environment.</p>
      * 
      * @param request ListEnvironmentKubeResourcesRequest
      * @return ListEnvironmentKubeResourcesResponse
@@ -9884,7 +9890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>环境指标target列表</p>
+     * <p>Queries the targets of an environment.</p>
      * 
      * @param request ListEnvironmentMetricTargetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9924,7 +9930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>环境指标target列表</p>
+     * <p>Queries the targets of an environment.</p>
      * 
      * @param request ListEnvironmentMetricTargetsRequest
      * @return ListEnvironmentMetricTargetsResponse

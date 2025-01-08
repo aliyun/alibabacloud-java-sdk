@@ -68,6 +68,9 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     @NameInMap("EnableAuthToken")
     public Boolean enableAuthToken;
 
+    /**
+     * <p>The billing mode. Valid values: POSTPAY: charges fees based on the amount of reported metric data. POSTPAY_GB: charges fees based on the amount of written metric data.</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 

@@ -564,13 +564,13 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public Long alertGroup;
 
         /**
-         * <p>The ID of the alert rule.</p>
+         * <p>The alert rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5510445</p>
          */
         @NameInMap("AlertId")
-        public Float alertId;
+        public Long alertId;
 
         /**
          * <p>The name of the alert rule.</p>
@@ -806,11 +806,11 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             return this.alertGroup;
         }
 
-        public CreateOrUpdateAlertRuleResponseBodyAlertRule setAlertId(Float alertId) {
+        public CreateOrUpdateAlertRuleResponseBodyAlertRule setAlertId(Long alertId) {
             this.alertId = alertId;
             return this;
         }
-        public Float getAlertId() {
+        public Long getAlertId() {
             return this.alertId;
         }
 

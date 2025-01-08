@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentAlertRulesRequest extends TeaModel {
     /**
+     * <p>The name of the add-on. You must specify AddonName or Scene.</p>
+     * 
      * <strong>example:</strong>
      * <p>mysql</p>
      */
@@ -12,6 +14,7 @@ public class ListEnvironmentAlertRulesRequest extends TeaModel {
     public String addonName;
 
     /**
+     * <p>The environment ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListEnvironmentAlertRulesRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -28,6 +33,8 @@ public class ListEnvironmentAlertRulesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The scenario of the add-on. You must specify AddonName or Scene.</p>
+     * 
      * <strong>example:</strong>
      * <p>database</p>
      */

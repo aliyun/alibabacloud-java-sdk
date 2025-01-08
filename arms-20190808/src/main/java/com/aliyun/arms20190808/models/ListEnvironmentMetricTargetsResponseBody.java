@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
     /**
+     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The struct returned.</p>
+     */
     @NameInMap("Data")
     public ListEnvironmentMetricTargetsResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16AF921B-8187-489F-9913-43C808B4****</p>
@@ -31,6 +38,12 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -83,10 +96,15 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentMetricTargetsResponseBodyDataActiveTargets extends TeaModel {
+        /**
+         * <p>The tags used for service discovery.</p>
+         */
         @NameInMap("DiscoveredLabels")
         public java.util.Map<String, String> discoveredLabels;
 
         /**
+         * <p>The URL of the target.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx">http://xxx</a></p>
          */
@@ -94,16 +112,23 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         public String globalUrl;
 
         /**
+         * <p>The health status.</p>
+         * 
          * <strong>example:</strong>
          * <p>up</p>
          */
         @NameInMap("Health")
         public String health;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
         /**
+         * <p>The last error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Get \&quot;<a href="http://172.16.0.86:9104/metrics%5C%5C">http://172.16.0.86:9104/metrics\\</a>&quot;: dial tcp 172.16.0.86:9104: connect: connection refused</p>
          */
@@ -111,6 +136,8 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         public String lastError;
 
         /**
+         * <p>The last collection time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-10-12T07:15:47.306691514Z</p>
          */
@@ -118,6 +145,8 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         public String lastScrape;
 
         /**
+         * <p>The duration of the last collection.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.00127593</p>
          */
@@ -125,6 +154,8 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         public Double lastScrapeDuration;
 
         /**
+         * <p>The amount of metrics in the last collection.</p>
+         * 
          * <strong>example:</strong>
          * <p>122</p>
          */
@@ -132,6 +163,8 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         public Long lastScrapeSeries;
 
         /**
+         * <p>The name of the collection.</p>
+         * 
          * <strong>example:</strong>
          * <p>arms-prom/mysql-exporter-mysql-1694429267986-sm/0&quot;</p>
          */
@@ -139,6 +172,8 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         public String scrapePool;
 
         /**
+         * <p>The URL of the collection.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxxx">http://xxxx</a></p>
          */
@@ -233,10 +268,15 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentMetricTargetsResponseBodyDataDroppedTargets extends TeaModel {
+        /**
+         * <p>The tags used for service discovery.</p>
+         */
         @NameInMap("DiscoveredLabels")
         public java.util.Map<String, String> discoveredLabels;
 
         /**
+         * <p>The URL of the target.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx">http://xxx</a></p>
          */
@@ -244,16 +284,23 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         public String globalUrl;
 
         /**
+         * <p>The health status.</p>
+         * 
          * <strong>example:</strong>
          * <p>up</p>
          */
         @NameInMap("Health")
         public String health;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
         /**
+         * <p>The last error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Get \&quot;<a href="http://172.16.0.86:9104/metrics%5C%5C">http://172.16.0.86:9104/metrics\\</a>&quot;: dial tcp 172.16.0.86:9104: connect: connection refused</p>
          */
@@ -261,6 +308,8 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         public String lastError;
 
         /**
+         * <p>The last collection time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-10-12T07:15:47.306691514Z</p>
          */
@@ -268,6 +317,8 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         public String lastScrape;
 
         /**
+         * <p>The duration of the last collection.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.00127593</p>
          */
@@ -275,6 +326,8 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         public Double lastScrapeDuration;
 
         /**
+         * <p>The amount of metrics in the last collection.</p>
+         * 
          * <strong>example:</strong>
          * <p>122</p>
          */
@@ -282,6 +335,8 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         public Long lastScrapeSeries;
 
         /**
+         * <p>The name of the collection.</p>
+         * 
          * <strong>example:</strong>
          * <p>arms-prom/mysql-exporter-mysql-1694429267986-sm/0&quot;</p>
          */
@@ -289,6 +344,8 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         public String scrapePool;
 
         /**
+         * <p>The URL of the collection.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxxx">http://xxxx</a></p>
          */
@@ -383,9 +440,15 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentMetricTargetsResponseBodyData extends TeaModel {
+        /**
+         * <p>The active targets.</p>
+         */
         @NameInMap("ActiveTargets")
         public java.util.List<ListEnvironmentMetricTargetsResponseBodyDataActiveTargets> activeTargets;
 
+        /**
+         * <p>The deleted targets.</p>
+         */
         @NameInMap("DroppedTargets")
         public java.util.List<ListEnvironmentMetricTargetsResponseBodyDataDroppedTargets> droppedTargets;
 

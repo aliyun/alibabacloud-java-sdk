@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
     /**
+     * <p>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The struct returned.</p>
+     */
     @NameInMap("Data")
     public ListEnvironmentAlertRulesResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>message</p>
      */
@@ -22,7 +29,7 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4C518054-852F-4023-ABC1-4AF95FF7****</p>
@@ -31,6 +38,12 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +97,8 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
 
     public static class ListEnvironmentAlertRulesResponseBodyDataRules extends TeaModel {
         /**
+         * <p>The ID of the alert rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>9502571</p>
          */
@@ -91,6 +106,8 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
         public Long alertId;
 
         /**
+         * <p>The name of the alert rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql-CS-MySQLInnoDBLogWaits_lu</p>
          */
@@ -121,13 +138,21 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentAlertRulesResponseBodyData extends TeaModel {
+        /**
+         * <p>The queried alert groups.</p>
+         */
         @NameInMap("Groups")
         public java.util.List<String> groups;
 
+        /**
+         * <p>The queried rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<ListEnvironmentAlertRulesResponseBodyDataRules> rules;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>26</p>
          */

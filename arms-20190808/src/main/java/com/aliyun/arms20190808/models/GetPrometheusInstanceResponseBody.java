@@ -14,7 +14,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Data")
     public GetPrometheusInstanceResponseBodyData data;
@@ -278,6 +278,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("PaymentType")
         public String paymentType;
 
+        /**
+         * <p>The time when the billing method was modified.</p>
+         */
         @NameInMap("PaymentTypeUpdateTime")
         public String paymentTypeUpdateTime;
 

@@ -142,6 +142,9 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsDependencies extends TeaModel {
+        /**
+         * <p>The cluster type.</p>
+         */
         @NameInMap("ClusterTypes")
         public java.util.List<String> clusterTypes;
 
@@ -189,6 +192,9 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsPoliciesMetricCheckRule extends TeaModel {
+        /**
+         * <p>The PromQL statements.</p>
+         */
         @NameInMap("PromQL")
         public java.util.List<String> promQL;
 
@@ -302,12 +308,27 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         @NameInMap("DefaultInstall")
         public Boolean defaultInstall;
 
+        /**
+         * <p>Indicates whether a service account is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableServiceAccount")
         public Boolean enableServiceAccount;
 
+        /**
+         * <p>The metric check rule.</p>
+         */
         @NameInMap("MetricCheckRule")
         public ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsPoliciesMetricCheckRule metricCheckRule;
 
+        /**
+         * <p>Indicates whether a restart is required after the installation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NeedRestartAfterIntegration")
         public Boolean needRestartAfterIntegration;
 
