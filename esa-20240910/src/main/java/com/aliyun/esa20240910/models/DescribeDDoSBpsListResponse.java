@@ -3,7 +3,7 @@ package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class ChangeResourceGroupResponse extends TeaModel {
+public class DescribeDDoSBpsListResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ChangeResourceGroupResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ChangeResourceGroupResponseBody body;
+    public DescribeDDoSBpsListResponseBody body;
 
-    public static ChangeResourceGroupResponse build(java.util.Map<String, ?> map) throws Exception {
-        ChangeResourceGroupResponse self = new ChangeResourceGroupResponse();
+    public static DescribeDDoSBpsListResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDDoSBpsListResponse self = new DescribeDDoSBpsListResponse();
         return TeaModel.build(map, self);
     }
 
-    public ChangeResourceGroupResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeDDoSBpsListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ChangeResourceGroupResponse extends TeaModel {
         return this.headers;
     }
 
-    public ChangeResourceGroupResponse setStatusCode(Integer statusCode) {
+    public DescribeDDoSBpsListResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ChangeResourceGroupResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ChangeResourceGroupResponse setBody(ChangeResourceGroupResponseBody body) {
+    public DescribeDDoSBpsListResponse setBody(DescribeDDoSBpsListResponseBody body) {
         this.body = body;
         return this;
     }
-    public ChangeResourceGroupResponseBody getBody() {
+    public DescribeDDoSBpsListResponseBody getBody() {
         return this.body;
     }
 

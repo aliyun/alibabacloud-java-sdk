@@ -818,62 +818,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves a website from one resource group to another.</p>
-     * 
-     * @param request ChangeResourceGroupRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ChangeResourceGroupResponse
-     */
-    public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
-            query.put("SecurityToken", request.securityToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
-            query.put("SiteId", request.siteId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ChangeResourceGroup"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Moves a website from one resource group to another.</p>
-     * 
-     * @param request ChangeResourceGroupRequest
-     * @return ChangeResourceGroupResponse
-     */
-    public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.changeResourceGroupWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Checks whether a specified website name is available.</p>
      * 
      * @param request CheckSiteNameRequest
@@ -4042,6 +3986,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDDoSAllEventListResponse describeDDoSAllEventList(DescribeDDoSAllEventListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDDoSAllEventListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询DCDN DDoS用户bps、pps数据</p>
+     * 
+     * @param request DescribeDDoSBpsListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDDoSBpsListResponse
+     */
+    public DescribeDDoSBpsListResponse describeDDoSBpsListWithOptions(DescribeDDoSBpsListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDDoSBpsList"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDDoSBpsListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询DCDN DDoS用户bps、pps数据</p>
+     * 
+     * @param request DescribeDDoSBpsListRequest
+     * @return DescribeDDoSBpsListResponse
+     */
+    public DescribeDDoSBpsListResponse describeDDoSBpsList(DescribeDDoSBpsListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDDoSBpsListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ddos分析七层qps走势图接口</p>
+     * 
+     * @param request DescribeDDoSL7QpsListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDDoSL7QpsListResponse
+     */
+    public DescribeDDoSL7QpsListResponse describeDDoSL7QpsListWithOptions(DescribeDDoSL7QpsListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDDoSL7QpsList"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDDoSL7QpsListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ddos分析七层qps走势图接口</p>
+     * 
+     * @param request DescribeDDoSL7QpsListRequest
+     * @return DescribeDDoSL7QpsListResponse
+     */
+    public DescribeDDoSL7QpsListResponse describeDDoSL7QpsList(DescribeDDoSL7QpsListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDDoSL7QpsListWithOptions(request, runtime);
     }
 
     /**

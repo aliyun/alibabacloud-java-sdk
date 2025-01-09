@@ -110,7 +110,7 @@ public class GetCertificateResponseBody extends TeaModel {
 
     public static class GetCertificateResponseBodyResultDCV extends TeaModel {
         /**
-         * <p>DCV ID。</p>
+         * <p>DCV ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bababf7cdd1546a2ad04c0def1f4c980</p>
