@@ -223,6 +223,13 @@ public class SearchRequest extends TeaModel {
         @NameInMap("airline_prefer_list")
         public java.util.List<String> airlinePreferList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A1</p>
+         */
+        @NameInMap("service_quality")
+        public String serviceQuality;
+
         public static SearchRequestSearchControlOptions build(java.util.Map<String, ?> map) throws Exception {
             SearchRequestSearchControlOptions self = new SearchRequestSearchControlOptions();
             return TeaModel.build(map, self);
@@ -242,6 +249,14 @@ public class SearchRequest extends TeaModel {
         }
         public java.util.List<String> getAirlinePreferList() {
             return this.airlinePreferList;
+        }
+
+        public SearchRequestSearchControlOptions setServiceQuality(String serviceQuality) {
+            this.serviceQuality = serviceQuality;
+            return this;
+        }
+        public String getServiceQuality() {
+            return this.serviceQuality;
         }
 
     }
