@@ -654,6 +654,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>身份二要素有效期核验</p>
+     * 
+     * @param request Id2MetaPeriodVerifyIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return Id2MetaPeriodVerifyIntlResponse
+     */
+    public Id2MetaPeriodVerifyIntlResponse id2MetaPeriodVerifyIntlWithOptions(Id2MetaPeriodVerifyIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.docName)) {
+            body.put("DocName", request.docName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docNo)) {
+            body.put("DocNo", request.docNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docType)) {
+            body.put("DocType", request.docType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            body.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantUserId)) {
+            body.put("MerchantUserId", request.merchantUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
+            body.put("SceneCode", request.sceneCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityEndDate)) {
+            body.put("ValidityEndDate", request.validityEndDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityStartDate)) {
+            body.put("ValidityStartDate", request.validityStartDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Id2MetaPeriodVerifyIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new Id2MetaPeriodVerifyIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>身份二要素有效期核验</p>
+     * 
+     * @param request Id2MetaPeriodVerifyIntlRequest
+     * @return Id2MetaPeriodVerifyIntlResponse
+     */
+    public Id2MetaPeriodVerifyIntlResponse id2MetaPeriodVerifyIntl(Id2MetaPeriodVerifyIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.id2MetaPeriodVerifyIntlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>身份二要素国际版接口</p>
      * 
      * @param request Id2MetaVerifyIntlRequest
