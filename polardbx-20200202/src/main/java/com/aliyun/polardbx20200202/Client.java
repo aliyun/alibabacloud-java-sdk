@@ -2033,6 +2033,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取GDN实例列表</p>
+     * 
+     * @param request DescribeGdnInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeGdnInstancesResponse
+     */
+    public DescribeGdnInstancesResponse describeGdnInstancesWithOptions(DescribeGdnInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterType)) {
+            query.put("FilterType", request.filterType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterValue)) {
+            query.put("FilterValue", request.filterValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.GDNId)) {
+            query.put("GDNId", request.GDNId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeGdnInstances"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGdnInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取GDN实例列表</p>
+     * 
+     * @param request DescribeGdnInstancesRequest
+     * @return DescribeGdnInstancesResponse
+     */
+    public DescribeGdnInstancesResponse describeGdnInstances(DescribeGdnInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeGdnInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>开放商业备份集</p>
      * 
      * @param request DescribeOpenBackupSetRequest
@@ -3594,6 +3658,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SwitchDBInstanceHAResponse switchDBInstanceHA(SwitchDBInstanceHARequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.switchDBInstanceHAWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GDN主备切换</p>
+     * 
+     * @param request SwitchGdnMemberRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SwitchGdnMemberRoleResponse
+     */
+    public SwitchGdnMemberRoleResponse switchGdnMemberRoleWithOptions(SwitchGdnMemberRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.switchMode)) {
+            query.put("SwitchMode", request.switchMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SwitchGdnMemberRole"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SwitchGdnMemberRoleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GDN主备切换</p>
+     * 
+     * @param request SwitchGdnMemberRoleRequest
+     * @return SwitchGdnMemberRoleResponse
+     */
+    public SwitchGdnMemberRoleResponse switchGdnMemberRole(SwitchGdnMemberRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.switchGdnMemberRoleWithOptions(request, runtime);
     }
 
     /**
