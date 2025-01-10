@@ -75,6 +75,7 @@ public class GetStoryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public GetStoryRequest setCoverImageThumbnailProcess(String coverImageThumbnailProcess) {
         this.coverImageThumbnailProcess = coverImageThumbnailProcess;
         return this;
@@ -83,6 +84,7 @@ public class GetStoryRequest extends TeaModel {
         return this.coverImageThumbnailProcess;
     }
 
+    @Deprecated
     public GetStoryRequest setCoverVideoThumbnailProcess(String coverVideoThumbnailProcess) {
         this.coverVideoThumbnailProcess = coverVideoThumbnailProcess;
         return this;
@@ -99,6 +101,7 @@ public class GetStoryRequest extends TeaModel {
         return this.driveId;
     }
 
+    @Deprecated
     public GetStoryRequest setImageThumbnailProcess(String imageThumbnailProcess) {
         this.imageThumbnailProcess = imageThumbnailProcess;
         return this;
@@ -107,6 +110,7 @@ public class GetStoryRequest extends TeaModel {
         return this.imageThumbnailProcess;
     }
 
+    @Deprecated
     public GetStoryRequest setImageUrlProcess(String imageUrlProcess) {
         this.imageUrlProcess = imageUrlProcess;
         return this;
@@ -123,6 +127,7 @@ public class GetStoryRequest extends TeaModel {
         return this.storyId;
     }
 
+    @Deprecated
     public GetStoryRequest setUrlExpireSec(Long urlExpireSec) {
         this.urlExpireSec = urlExpireSec;
         return this;
@@ -131,6 +136,7 @@ public class GetStoryRequest extends TeaModel {
         return this.urlExpireSec;
     }
 
+    @Deprecated
     public GetStoryRequest setVideoThumbnailProcess(String videoThumbnailProcess) {
         this.videoThumbnailProcess = videoThumbnailProcess;
         return this;

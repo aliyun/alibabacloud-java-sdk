@@ -55,6 +55,7 @@ public class SearchSimilarImageClustersRequest extends TeaModel {
         return this.driveId;
     }
 
+    @Deprecated
     public SearchSimilarImageClustersRequest setImageThumbnailProcess(String imageThumbnailProcess) {
         this.imageThumbnailProcess = imageThumbnailProcess;
         return this;

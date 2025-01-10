@@ -47,6 +47,7 @@ public class FaceThumbnail extends TeaModel {
         return this.faceId;
     }
 
+    @Deprecated
     public FaceThumbnail setFaceThumbnail(String faceThumbnail) {
         this.faceThumbnail = faceThumbnail;
         return this;

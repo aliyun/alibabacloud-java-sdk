@@ -61,6 +61,7 @@ public class CreateCustomizedStoryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public CreateCustomizedStoryRequest setCustomLabels(java.util.Map<String, String> customLabels) {
         this.customLabels = customLabels;
         return this;

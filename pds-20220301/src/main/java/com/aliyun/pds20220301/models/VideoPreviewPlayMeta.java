@@ -17,6 +17,12 @@ public class VideoPreviewPlayMeta extends TeaModel {
     @NameInMap("meta")
     public VideoPreviewPlayMetaMeta meta;
 
+    @NameInMap("offline_video_transcoding_list")
+    public java.util.List<VideoPreviewPlayMetaOfflineVideoTranscodingList> offlineVideoTranscodingList;
+
+    @NameInMap("quick_video_list")
+    public java.util.List<VideoPreviewPlayMetaQuickVideoList> quickVideoList;
+
     public static VideoPreviewPlayMeta build(java.util.Map<String, ?> map) throws Exception {
         VideoPreviewPlayMeta self = new VideoPreviewPlayMeta();
         return TeaModel.build(map, self);
@@ -46,10 +52,34 @@ public class VideoPreviewPlayMeta extends TeaModel {
         return this.meta;
     }
 
+    public VideoPreviewPlayMeta setOfflineVideoTranscodingList(java.util.List<VideoPreviewPlayMetaOfflineVideoTranscodingList> offlineVideoTranscodingList) {
+        this.offlineVideoTranscodingList = offlineVideoTranscodingList;
+        return this;
+    }
+    public java.util.List<VideoPreviewPlayMetaOfflineVideoTranscodingList> getOfflineVideoTranscodingList() {
+        return this.offlineVideoTranscodingList;
+    }
+
+    public VideoPreviewPlayMeta setQuickVideoList(java.util.List<VideoPreviewPlayMetaQuickVideoList> quickVideoList) {
+        this.quickVideoList = quickVideoList;
+        return this;
+    }
+    public java.util.List<VideoPreviewPlayMetaQuickVideoList> getQuickVideoList() {
+        return this.quickVideoList;
+    }
+
     public static class VideoPreviewPlayMetaLiveTranscodingTaskList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("keep_original_resolution")
         public Boolean keepOriginalResolution;
 
+        /**
+         * <strong>example:</strong>
+         * <p>finished</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -140,6 +170,97 @@ public class VideoPreviewPlayMeta extends TeaModel {
         }
         public Long getWidth() {
             return this.width;
+        }
+
+    }
+
+    public static class VideoPreviewPlayMetaOfflineVideoTranscodingList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("keep_original_resolution")
+        public String keepOriginalResolution;
+
+        /**
+         * <strong>example:</strong>
+         * <p>finished</p>
+         */
+        @NameInMap("status")
+        public String status;
+
+        /**
+         * <strong>example:</strong>
+         * <p>264_720p</p>
+         */
+        @NameInMap("template_id")
+        public String templateId;
+
+        public static VideoPreviewPlayMetaOfflineVideoTranscodingList build(java.util.Map<String, ?> map) throws Exception {
+            VideoPreviewPlayMetaOfflineVideoTranscodingList self = new VideoPreviewPlayMetaOfflineVideoTranscodingList();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoPreviewPlayMetaOfflineVideoTranscodingList setKeepOriginalResolution(String keepOriginalResolution) {
+            this.keepOriginalResolution = keepOriginalResolution;
+            return this;
+        }
+        public String getKeepOriginalResolution() {
+            return this.keepOriginalResolution;
+        }
+
+        public VideoPreviewPlayMetaOfflineVideoTranscodingList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public VideoPreviewPlayMetaOfflineVideoTranscodingList setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+    }
+
+    public static class VideoPreviewPlayMetaQuickVideoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>finished</p>
+         */
+        @NameInMap("status")
+        public String status;
+
+        /**
+         * <strong>example:</strong>
+         * <p>264_720p</p>
+         */
+        @NameInMap("template_id")
+        public String templateId;
+
+        public static VideoPreviewPlayMetaQuickVideoList build(java.util.Map<String, ?> map) throws Exception {
+            VideoPreviewPlayMetaQuickVideoList self = new VideoPreviewPlayMetaQuickVideoList();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoPreviewPlayMetaQuickVideoList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public VideoPreviewPlayMetaQuickVideoList setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
         }
 
     }

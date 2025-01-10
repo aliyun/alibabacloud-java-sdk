@@ -93,6 +93,7 @@ public class CreateStoryRequest extends TeaModel {
         return this.address;
     }
 
+    @Deprecated
     public CreateStoryRequest setCustomLabels(java.util.Map<String, String> customLabels) {
         this.customLabels = customLabels;
         return this;
