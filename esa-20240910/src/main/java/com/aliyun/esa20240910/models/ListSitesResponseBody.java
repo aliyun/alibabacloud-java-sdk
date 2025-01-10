@@ -243,6 +243,8 @@ public class ListSitesResponseBody extends TeaModel {
         public String verifyCode;
 
         /**
+         * <p>null</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-12-24T02:01:11Z</p>
          */

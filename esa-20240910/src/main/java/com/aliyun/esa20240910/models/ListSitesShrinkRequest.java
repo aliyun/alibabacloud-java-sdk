@@ -41,6 +41,12 @@ public class ListSitesShrinkRequest extends TeaModel {
     public Boolean onlyEnterprise;
 
     /**
+     * <p>null</p>
+     * <ul>
+     * <li>null</li>
+     * <li>null</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>visitTime</p>
      */
@@ -57,7 +63,7 @@ public class ListSitesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>500</strong>.</p>
+     * <p>The number of entries per page. Default value: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -103,7 +109,7 @@ public class ListSitesShrinkRequest extends TeaModel {
      * <ul>
      * <li><strong>prefix</strong>: match by prefix.</li>
      * <li><strong>suffix</strong>: match by suffix.</li>
-     * <li><strong>exact</strong>: exact match.</li>
+     * <li><strong>null</strong></li>
      * <li><strong>fuzzy</strong>: fuzzy match.</li>
      * </ul>
      * 

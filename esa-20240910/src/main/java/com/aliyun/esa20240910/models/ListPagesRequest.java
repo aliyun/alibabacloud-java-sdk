@@ -22,6 +22,9 @@ public class ListPagesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("QueryArgs")
+    public ListPagesRequestQueryArgs queryArgs;
+
     public static ListPagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPagesRequest self = new ListPagesRequest();
         return TeaModel.build(map, self);
@@ -41,6 +44,33 @@ public class ListPagesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListPagesRequest setQueryArgs(ListPagesRequestQueryArgs queryArgs) {
+        this.queryArgs = queryArgs;
+        return this;
+    }
+    public ListPagesRequestQueryArgs getQueryArgs() {
+        return this.queryArgs;
+    }
+
+    public static class ListPagesRequestQueryArgs extends TeaModel {
+        @NameInMap("NameDescriptionLike")
+        public String nameDescriptionLike;
+
+        public static ListPagesRequestQueryArgs build(java.util.Map<String, ?> map) throws Exception {
+            ListPagesRequestQueryArgs self = new ListPagesRequestQueryArgs();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPagesRequestQueryArgs setNameDescriptionLike(String nameDescriptionLike) {
+            this.nameDescriptionLike = nameDescriptionLike;
+            return this;
+        }
+        public String getNameDescriptionLike() {
+            return this.nameDescriptionLike;
+        }
+
     }
 
 }

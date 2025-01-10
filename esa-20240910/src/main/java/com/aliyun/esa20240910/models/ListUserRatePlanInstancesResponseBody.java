@@ -190,6 +190,9 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         @NameInMap("BotInstanceLevel")
         public String botInstanceLevel;
 
+        @NameInMap("BotRequest")
+        public String botRequest;
+
         /**
          * <p>The service locations for the websites that can be associated with the plan. Multiple values are separated by commas (,). Valid values:</p>
          * <ul>
@@ -343,6 +346,14 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         }
         public String getBotInstanceLevel() {
             return this.botInstanceLevel;
+        }
+
+        public ListUserRatePlanInstancesResponseBodyInstanceInfo setBotRequest(String botRequest) {
+            this.botRequest = botRequest;
+            return this;
+        }
+        public String getBotRequest() {
+            return this.botRequest;
         }
 
         public ListUserRatePlanInstancesResponseBodyInstanceInfo setCoverages(String coverages) {

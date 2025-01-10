@@ -4,6 +4,9 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class SetCertificateResponseBody extends TeaModel {
+    @NameInMap("Id")
+    public String id;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -16,6 +19,14 @@ public class SetCertificateResponseBody extends TeaModel {
     public static SetCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetCertificateResponseBody self = new SetCertificateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SetCertificateResponseBody setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public SetCertificateResponseBody setRequestId(String requestId) {

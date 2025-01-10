@@ -39,7 +39,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The website information. Valid values of he number of website IDs: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>The website ID.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
