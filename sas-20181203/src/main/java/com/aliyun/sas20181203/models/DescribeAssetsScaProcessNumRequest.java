@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetsScaProcessNumRequest extends TeaModel {
+    @NameInMap("BizType")
+    public String bizType;
+
     /**
      * <p>The UUIDs of the servers.</p>
      * <p>This parameter is required.</p>
@@ -14,6 +17,14 @@ public class DescribeAssetsScaProcessNumRequest extends TeaModel {
     public static DescribeAssetsScaProcessNumRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAssetsScaProcessNumRequest self = new DescribeAssetsScaProcessNumRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAssetsScaProcessNumRequest setBizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public String getBizType() {
+        return this.bizType;
     }
 
     public DescribeAssetsScaProcessNumRequest setUuidList(java.util.List<String> uuidList) {

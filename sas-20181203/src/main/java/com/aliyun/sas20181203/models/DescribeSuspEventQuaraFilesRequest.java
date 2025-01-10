@@ -106,6 +106,7 @@ public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
         return this.from;
     }
 
+    @Deprecated
     public DescribeSuspEventQuaraFilesRequest setGroupId(String groupId) {
         this.groupId = groupId;
         return this;

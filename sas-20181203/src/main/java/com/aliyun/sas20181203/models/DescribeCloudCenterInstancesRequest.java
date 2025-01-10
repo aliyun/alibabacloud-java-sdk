@@ -247,6 +247,7 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    @Deprecated
     public DescribeCloudCenterInstancesRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
