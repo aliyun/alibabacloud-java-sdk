@@ -6968,12 +6968,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Lists all custom error pages that you created. You can define the page number and the number of entries per page to display the response.</p>
      * 
-     * @param request ListPagesRequest
+     * @param tmpReq ListPagesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPagesResponse
      */
-    public ListPagesResponse listPagesWithOptions(ListPagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListPagesResponse listPagesWithOptions(ListPagesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListPagesShrinkRequest request = new ListPagesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.queryArgs)) {
+            request.queryArgsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queryArgs, "QueryArgs", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
@@ -6981,6 +6987,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryArgsShrink)) {
+            query.put("QueryArgs", request.queryArgsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -9489,10 +9499,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you change the DNS setup of a website from NS to CNAME, take note of the following items:</p>
+     * <p>When you change the DNS setup of a website from NS to CNAME, note the following prerequisites:</p>
      * <ul>
-     * <li>Make sure that the website has only proxied A/AAAA and CNAME records.</li>
-     * <li>Make sure that ESA proxy is not disabled for the website and custom nameservers are not configured.</li>
+     * <li>The website only has proxied A/AAAA and CNAME records.</li>
+     * <li>The DNS passthrough mode and custom nameserver features are not enabled for the website.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9532,10 +9542,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you change the DNS setup of a website from NS to CNAME, take note of the following items:</p>
+     * <p>When you change the DNS setup of a website from NS to CNAME, note the following prerequisites:</p>
      * <ul>
-     * <li>Make sure that the website has only proxied A/AAAA and CNAME records.</li>
-     * <li>Make sure that ESA proxy is not disabled for the website and custom nameservers are not configured.</li>
+     * <li>The website only has proxied A/AAAA and CNAME records.</li>
+     * <li>The DNS passthrough mode and custom nameserver features are not enabled for the website.</li>
      * </ul>
      * 
      * <b>summary</b> : 
