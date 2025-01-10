@@ -45,6 +45,9 @@ public class NearbySearchNovaRequest extends TeaModel {
     @NameInMap("size")
     public Integer size;
 
+    @NameInMap("sortRule")
+    public String sortRule;
+
     /**
      * <strong>example:</strong>
      * <p>GAS_STATION|RESTAURANT|HOTEL|ATTRACTION</p>
@@ -111,6 +114,14 @@ public class NearbySearchNovaRequest extends TeaModel {
     }
     public Integer getSize() {
         return this.size;
+    }
+
+    public NearbySearchNovaRequest setSortRule(String sortRule) {
+        this.sortRule = sortRule;
+        return this;
+    }
+    public String getSortRule() {
+        return this.sortRule;
     }
 
     public NearbySearchNovaRequest setTypes(String types) {

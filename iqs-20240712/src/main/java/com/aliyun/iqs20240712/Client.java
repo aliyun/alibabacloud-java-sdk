@@ -403,6 +403,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("size", request.size);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sortRule)) {
+            query.put("sortRule", request.sortRule);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.types)) {
             query.put("types", request.types);
         }
