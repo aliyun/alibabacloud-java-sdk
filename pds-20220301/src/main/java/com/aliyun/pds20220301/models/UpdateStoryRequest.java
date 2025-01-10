@@ -56,6 +56,7 @@ public class UpdateStoryRequest extends TeaModel {
         return this.cover;
     }
 
+    @Deprecated
     public UpdateStoryRequest setCustomLabels(java.util.Map<String, String> customLabels) {
         this.customLabels = customLabels;
         return this;

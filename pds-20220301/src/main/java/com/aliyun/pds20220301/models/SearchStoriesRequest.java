@@ -129,6 +129,7 @@ public class SearchStoriesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public SearchStoriesRequest setCoverImageThumbnailProcess(String coverImageThumbnailProcess) {
         this.coverImageThumbnailProcess = coverImageThumbnailProcess;
         return this;
@@ -137,6 +138,7 @@ public class SearchStoriesRequest extends TeaModel {
         return this.coverImageThumbnailProcess;
     }
 
+    @Deprecated
     public SearchStoriesRequest setCoverVideoThumbnailProcess(String coverVideoThumbnailProcess) {
         this.coverVideoThumbnailProcess = coverVideoThumbnailProcess;
         return this;
@@ -153,6 +155,7 @@ public class SearchStoriesRequest extends TeaModel {
         return this.createTimeRange;
     }
 
+    @Deprecated
     public SearchStoriesRequest setCustomLabels(String customLabels) {
         this.customLabels = customLabels;
         return this;
@@ -249,6 +252,7 @@ public class SearchStoriesRequest extends TeaModel {
         return this.storyType;
     }
 
+    @Deprecated
     public SearchStoriesRequest setUrlExpireSec(Long urlExpireSec) {
         this.urlExpireSec = urlExpireSec;
         return this;

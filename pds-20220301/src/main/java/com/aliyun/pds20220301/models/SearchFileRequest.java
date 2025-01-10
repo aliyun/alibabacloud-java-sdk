@@ -102,6 +102,7 @@ public class SearchFileRequest extends TeaModel {
         return this.driveId;
     }
 
+    @Deprecated
     public SearchFileRequest setFields(String fields) {
         this.fields = fields;
         return this;

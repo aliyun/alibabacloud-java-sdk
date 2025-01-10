@@ -11,6 +11,9 @@ public class VideoPreviewPlayInfo extends TeaModel {
     @NameInMap("category")
     public String category;
 
+    @NameInMap("live_transcoding_subtitle_task_list")
+    public java.util.List<VideoPreviewSubtitleInfo> liveTranscodingSubtitleTaskList;
+
     @NameInMap("live_transcoding_task_list")
     public java.util.List<VideoPreviewPlayInfoLiveTranscodingTaskList> liveTranscodingTaskList;
 
@@ -23,6 +26,15 @@ public class VideoPreviewPlayInfo extends TeaModel {
     @NameInMap("offline_video_transcoding_list")
     public java.util.List<VideoPreviewPlayInfoOfflineVideoTranscodingList> offlineVideoTranscodingList;
 
+    @NameInMap("offline_video_transcoding_subtitle_list")
+    public java.util.List<VideoPreviewSubtitleInfo> offlineVideoTranscodingSubtitleList;
+
+    @NameInMap("quick_video_list")
+    public java.util.List<VideoPreviewPlayInfoQuickVideoList> quickVideoList;
+
+    @NameInMap("quick_video_subtitle_list")
+    public java.util.List<VideoPreviewSubtitleInfo> quickVideoSubtitleList;
+
     public static VideoPreviewPlayInfo build(java.util.Map<String, ?> map) throws Exception {
         VideoPreviewPlayInfo self = new VideoPreviewPlayInfo();
         return TeaModel.build(map, self);
@@ -34,6 +46,14 @@ public class VideoPreviewPlayInfo extends TeaModel {
     }
     public String getCategory() {
         return this.category;
+    }
+
+    public VideoPreviewPlayInfo setLiveTranscodingSubtitleTaskList(java.util.List<VideoPreviewSubtitleInfo> liveTranscodingSubtitleTaskList) {
+        this.liveTranscodingSubtitleTaskList = liveTranscodingSubtitleTaskList;
+        return this;
+    }
+    public java.util.List<VideoPreviewSubtitleInfo> getLiveTranscodingSubtitleTaskList() {
+        return this.liveTranscodingSubtitleTaskList;
     }
 
     public VideoPreviewPlayInfo setLiveTranscodingTaskList(java.util.List<VideoPreviewPlayInfoLiveTranscodingTaskList> liveTranscodingTaskList) {
@@ -66,6 +86,30 @@ public class VideoPreviewPlayInfo extends TeaModel {
     }
     public java.util.List<VideoPreviewPlayInfoOfflineVideoTranscodingList> getOfflineVideoTranscodingList() {
         return this.offlineVideoTranscodingList;
+    }
+
+    public VideoPreviewPlayInfo setOfflineVideoTranscodingSubtitleList(java.util.List<VideoPreviewSubtitleInfo> offlineVideoTranscodingSubtitleList) {
+        this.offlineVideoTranscodingSubtitleList = offlineVideoTranscodingSubtitleList;
+        return this;
+    }
+    public java.util.List<VideoPreviewSubtitleInfo> getOfflineVideoTranscodingSubtitleList() {
+        return this.offlineVideoTranscodingSubtitleList;
+    }
+
+    public VideoPreviewPlayInfo setQuickVideoList(java.util.List<VideoPreviewPlayInfoQuickVideoList> quickVideoList) {
+        this.quickVideoList = quickVideoList;
+        return this;
+    }
+    public java.util.List<VideoPreviewPlayInfoQuickVideoList> getQuickVideoList() {
+        return this.quickVideoList;
+    }
+
+    public VideoPreviewPlayInfo setQuickVideoSubtitleList(java.util.List<VideoPreviewSubtitleInfo> quickVideoSubtitleList) {
+        this.quickVideoSubtitleList = quickVideoSubtitleList;
+        return this;
+    }
+    public java.util.List<VideoPreviewSubtitleInfo> getQuickVideoSubtitleList() {
+        return this.quickVideoSubtitleList;
     }
 
     public static class VideoPreviewPlayInfoLiveTranscodingTaskList extends TeaModel {
@@ -204,6 +248,47 @@ public class VideoPreviewPlayInfo extends TeaModel {
         }
 
         public VideoPreviewPlayInfoOfflineVideoTranscodingList setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class VideoPreviewPlayInfoQuickVideoList extends TeaModel {
+        @NameInMap("status")
+        public String status;
+
+        @NameInMap("template_id")
+        public String templateId;
+
+        @NameInMap("url")
+        public String url;
+
+        public static VideoPreviewPlayInfoQuickVideoList build(java.util.Map<String, ?> map) throws Exception {
+            VideoPreviewPlayInfoQuickVideoList self = new VideoPreviewPlayInfoQuickVideoList();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoPreviewPlayInfoQuickVideoList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public VideoPreviewPlayInfoQuickVideoList setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        public VideoPreviewPlayInfoQuickVideoList setUrl(String url) {
             this.url = url;
             return this;
         }

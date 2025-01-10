@@ -2790,7 +2790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户认证方式详情</p>
+     * <p>Queries the information about an account.</p>
      * 
      * @param request GetLinkInfoRequest
      * @param headers map
@@ -2832,7 +2832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户认证方式详情</p>
+     * <p>Queries the information about an account.</p>
      * 
      * @param request GetLinkInfoRequest
      * @return GetLinkInfoResponse
