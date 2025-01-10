@@ -101,6 +101,9 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         @NameInMap("AdjustAmount")
         public Float adjustAmount;
 
+        @NameInMap("AfterDiscountAmount")
+        public String afterDiscountAmount;
+
         /**
          * <p>The ID of the account to which the bill belongs.</p>
          * 
@@ -532,6 +535,14 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         }
         public Float getAdjustAmount() {
             return this.adjustAmount;
+        }
+
+        public DescribeInstanceBillResponseBodyDataItems setAfterDiscountAmount(String afterDiscountAmount) {
+            this.afterDiscountAmount = afterDiscountAmount;
+            return this;
+        }
+        public String getAfterDiscountAmount() {
+            return this.afterDiscountAmount;
         }
 
         public DescribeInstanceBillResponseBodyDataItems setBillAccountID(String billAccountID) {
