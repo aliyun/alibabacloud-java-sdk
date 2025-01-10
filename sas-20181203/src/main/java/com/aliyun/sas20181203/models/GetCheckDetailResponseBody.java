@@ -77,6 +77,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         return this.description;
     }
 
+    @Deprecated
     public GetCheckDetailResponseBody setRepairReset(String repairReset) {
         this.repairReset = repairReset;
         return this;
@@ -93,6 +94,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         return this.repairSetting;
     }
 
+    @Deprecated
     public GetCheckDetailResponseBody setRepairSupportType(Integer repairSupportType) {
         this.repairSupportType = repairSupportType;
         return this;

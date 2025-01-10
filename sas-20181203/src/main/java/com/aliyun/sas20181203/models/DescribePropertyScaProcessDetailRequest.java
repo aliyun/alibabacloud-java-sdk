@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyScaProcessDetailRequest extends TeaModel {
+    @NameInMap("BizType")
+    public String bizType;
+
+    @NameInMap("Cmdline")
+    public String cmdline;
+
     /**
      * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
@@ -58,6 +64,22 @@ public class DescribePropertyScaProcessDetailRequest extends TeaModel {
     public static DescribePropertyScaProcessDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePropertyScaProcessDetailRequest self = new DescribePropertyScaProcessDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePropertyScaProcessDetailRequest setBizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public String getBizType() {
+        return this.bizType;
+    }
+
+    public DescribePropertyScaProcessDetailRequest setCmdline(String cmdline) {
+        this.cmdline = cmdline;
+        return this;
+    }
+    public String getCmdline() {
+        return this.cmdline;
     }
 
     public DescribePropertyScaProcessDetailRequest setCurrentPage(Integer currentPage) {

@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class SetImageSensitiveFileStatusShrinkRequest extends TeaModel {
+    /**
+     * <p>The IDs of the sensitive files.</p>
+     */
     @NameInMap("IdList")
     public java.util.List<Long> idList;
 
@@ -16,6 +19,9 @@ public class SetImageSensitiveFileStatusShrinkRequest extends TeaModel {
     @NameInMap("ImageUuids")
     public String imageUuids;
 
+    /**
+     * <p>The types of the assets that are scanned.</p>
+     */
     @NameInMap("ScanRange")
     public String scanRangeShrink;
 
