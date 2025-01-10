@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class GetErRouteEntryResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Content")
     public GetErRouteEntryResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>code: 400, Request was denied due to request throttling. request id: 7D177459-C1CF-5690-BB23-321D208B37D5</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID of the current request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1F38A2E6-CB47-5369-95D2-96D0C287B4A5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,33 +75,102 @@ public class GetErRouteEntryResponseBody extends TeaModel {
     }
 
     public static class GetErRouteEntryResponseBodyContent extends TeaModel {
+        /**
+         * <p>Destination CIDR Block</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.0.0.0/16</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>Lingjun HUB Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-aueyxxsy</p>
+         */
         @NameInMap("ErId")
         public String erId;
 
+        /**
+         * <p>The ID of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-rte-4q0jbylz</p>
+         */
         @NameInMap("ErRouteEntryId")
         public String erRouteEntryId;
 
+        /**
+         * <p>The time when the cluster was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1666677783000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>Next Hop Instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcc-cn-209300qha01</p>
+         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
+        /**
+         * <p>Next Hop Instance Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VCC</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzb3n5lgk2ieq</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>Route type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
+         */
         @NameInMap("RouteType")
         public String routeType;
 
+        /**
+         * <p>The status of the intervention entry. Valid value:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655449505171</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
@@ -143,6 +233,14 @@ public class GetErRouteEntryResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetErRouteEntryResponseBodyContent setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetErRouteEntryResponseBodyContent setRouteType(String routeType) {

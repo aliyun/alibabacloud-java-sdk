@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class ListErRouteEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Content")
     public ListErRouteEntriesResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID of the current request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A88DFED5-24B7-5A3E-87DE-380BF06F3C90</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,36 +75,115 @@ public class ListErRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class ListErRouteEntriesResponseBodyContentData extends TeaModel {
+        /**
+         * <p>Destination CIDR Block</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.64.1.100/32</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>Lingjun HUB Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-kkopgtne</p>
+         */
         @NameInMap("ErId")
         public String erId;
 
+        /**
+         * <p>The ID of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-rte-maysfadg</p>
+         */
         @NameInMap("ErRouteEntryId")
         public String erRouteEntryId;
 
+        /**
+         * <p>The time when the cluster was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640930901000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>Next Hop Instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcc-cn-209300qha01</p>
+         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
+        /**
+         * <p>Next Hop Instance Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VCC</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzb3n5lgk2ieq</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The ID of the tenant to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111156667137893</p>
+         */
         @NameInMap("ResourceTenantId")
         public String resourceTenantId;
 
+        /**
+         * <p>Route type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VCC</p>
+         */
         @NameInMap("RouteType")
         public String routeType;
 
+        /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Synchronizing</li>
+         * <li>Available</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111156667137893</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
@@ -148,6 +248,14 @@ public class ListErRouteEntriesResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListErRouteEntriesResponseBodyContentData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListErRouteEntriesResponseBodyContentData setResourceTenantId(String resourceTenantId) {
             this.resourceTenantId = resourceTenantId;
             return this;
@@ -183,9 +291,18 @@ public class ListErRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class ListErRouteEntriesResponseBodyContent extends TeaModel {
+        /**
+         * <p>Lingjun HUB Route Entry Information List</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListErRouteEntriesResponseBodyContentData> data;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Total")
         public Long total;
 

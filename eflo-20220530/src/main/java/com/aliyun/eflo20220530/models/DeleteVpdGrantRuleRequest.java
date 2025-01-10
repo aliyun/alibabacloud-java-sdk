@@ -4,18 +4,50 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class DeleteVpdGrantRuleRequest extends TeaModel {
+    /**
+     * <p>Lingjun HUB ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-kkopgtne</p>
+     */
     @NameInMap("ErId")
     public String erId;
 
+    /**
+     * <p>Authorization Entry ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>grant-rule-9rgxqazb</p>
+     */
     @NameInMap("GrantRuleId")
     public String grantRuleId;
 
+    /**
+     * <p>Authorized Tenant ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1013666993027780</p>
+     */
     @NameInMap("GrantTenantId")
     public String grantTenantId;
 
+    /**
+     * <p>Network Instance ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpd-8rgvqazb</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

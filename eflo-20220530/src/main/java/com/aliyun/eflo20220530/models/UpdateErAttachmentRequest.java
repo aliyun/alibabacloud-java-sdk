@@ -4,15 +4,42 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class UpdateErAttachmentRequest extends TeaModel {
+    /**
+     * <p>The connection ID of the Lingjun HUB network instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-attachment-i1ioibyf</p>
+     */
     @NameInMap("ErAttachmentId")
     public String erAttachmentId;
 
+    /**
+     * <p>Lingjun HUB Network Instance Connection Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-attachment-wulanchabu-main</p>
+     */
     @NameInMap("ErAttachmentName")
     public String erAttachmentName;
 
+    /**
+     * <p>Lingjun HUB ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-kkopgtne</p>
+     */
     @NameInMap("ErId")
     public String erId;
 
+    /**
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

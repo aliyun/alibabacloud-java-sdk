@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class GetVccRouteEntryResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Content")
     public GetVccRouteEntryResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID of the current request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BDBCC783-84CA-5733-8EEA-645C88B9009C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,33 +75,111 @@ public class GetVccRouteEntryResponseBody extends TeaModel {
     }
 
     public static class GetVccRouteEntryResponseBodyContent extends TeaModel {
+        /**
+         * <p>Destination CIDR Block</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>The time when the agent was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1648085472000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        /**
+         * <p>Next Hop Instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local</p>
+         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
+        /**
+         * <p>Next Hop Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VCC</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2l4sq6l7u***</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>Route type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
+         */
         @NameInMap("RouteType")
         public String routeType;
 
+        /**
+         * <p>The status of the intervention entry. Valid value:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655449505171</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>The ID of the Lingjun connection instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcc-cn-zvp2w222001</p>
+         */
         @NameInMap("VccId")
         public String vccId;
 
+        /**
+         * <p>The ID of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcc-rte-31ocvdhq</p>
+         */
         @NameInMap("VccRouteEntryId")
         public String vccRouteEntryId;
 
@@ -105,6 +204,14 @@ public class GetVccRouteEntryResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
+        public GetVccRouteEntryResponseBodyContent setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
         public GetVccRouteEntryResponseBodyContent setNextHopId(String nextHopId) {
             this.nextHopId = nextHopId;
             return this;
@@ -127,6 +234,14 @@ public class GetVccRouteEntryResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetVccRouteEntryResponseBodyContent setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetVccRouteEntryResponseBodyContent setRouteType(String routeType) {

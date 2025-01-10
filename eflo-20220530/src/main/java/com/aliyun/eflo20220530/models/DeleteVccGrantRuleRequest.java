@@ -4,15 +4,41 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class DeleteVccGrantRuleRequest extends TeaModel {
+    /**
+     * <p>Lingjun HUB ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-kkopgtne</p>
+     */
     @NameInMap("ErId")
     public String erId;
 
+    /**
+     * <p>Authorization Entry ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>grant-rule-jaj34d75h01</p>
+     */
     @NameInMap("GrantRuleId")
     public String grantRuleId;
 
+    /**
+     * <p>Network Instance ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vcc-cn-jaj34d75h01</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class ListNetworkInterfacesResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Content")
     public ListNetworkInterfacesResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>039C3C3A-3C37-5672-80D5-D8CD48C676D1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,24 +75,71 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class ListNetworkInterfacesResponseBodyContentDataPrivateIpAddressMacGroup extends TeaModel {
+        /**
+         * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>Secondary private MAC address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:25:9d:00:20:20</p>
+         */
         @NameInMap("IpAddressMac")
         public String ipAddressMac;
 
+        /**
+         * <p>The unique IP identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sip-1asjd3xg</p>
+         */
         @NameInMap("IpName")
         public String ipName;
 
+        /**
+         * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The secondary private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.14</p>
+         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
+        /**
+         * <p>The status of the cache reserve instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
         public static ListNetworkInterfacesResponseBodyContentDataPrivateIpAddressMacGroup build(java.util.Map<String, ?> map) throws Exception {
             ListNetworkInterfacesResponseBodyContentDataPrivateIpAddressMacGroup self = new ListNetworkInterfacesResponseBodyContentDataPrivateIpAddressMacGroup();
             return TeaModel.build(map, self);
+        }
+
+        public ListNetworkInterfacesResponseBodyContentDataPrivateIpAddressMacGroup setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListNetworkInterfacesResponseBodyContentDataPrivateIpAddressMacGroup setIpAddressMac(String ipAddressMac) {
@@ -117,15 +185,45 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class ListNetworkInterfacesResponseBodyContentDataSubnetBaseInfo extends TeaModel {
+        /**
+         * <p>The network segment of the Subnet.</p>
+         * <ul>
+         * <li>The network segment of the subnet must be a proper subset of the network segment of Lingjun to which it belongs, and the mask must be between 16 bits and 29 bits, which can provide 8 to 65536 addresses. For example, the CIDR block of the Lingjun CIDR block is 192.168.0.0/16, and the CIDR blocks of the subnets under the Lingjun CIDR block are 192.168.0.0/17 to 192.168.0.0/29.</li>
+         * <li>The first and last three IP addresses of each subnet segment are reserved by the system. For example, the CIDR blocks of the subnet are 192.168.1.0/24,192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</li>
+         * </ul>
+         * <p>For more information about CIDR blocks, see the <a href="https://www.alibabacloud.com/help/doc-detail/40637.htm#title-gu4-uzk-12r">What is CIDR?</a> section in the &quot;Network FAQ&quot; topic.</p>
+         * <p>This parameter is left empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
+         */
         @NameInMap("Cidr")
         public String cidr;
 
+        /**
+         * <p>The time when the activation code was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1623656472000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the Subnet instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subnet-yjnqn5ef</p>
+         */
         @NameInMap("SubnetId")
         public String subnetId;
 
+        /**
+         * <p>The name of the Subnet instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subnet-1</p>
+         */
         @NameInMap("SubnetName")
         public String subnetName;
 
@@ -169,15 +267,43 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class ListNetworkInterfacesResponseBodyContentDataVpdBaseInfo extends TeaModel {
+        /**
+         * <p>The network segment of Lingjun network segment (VPD).</p>
+         * <ul>
+         * <li>We recommend that you use an RFC private endpoint as the Lingjun CIDR block, such as 10.0.0.0/8,172.16.0.0/12,192.168.0.0/16. In scenarios where the Doringjun CIDR block is connected to each other or where the Lingjun CIDR block is connected to a VPC, make sure that the addresses do not conflict with each other.</li>
+         * <li>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, or 169.254.0.0/16 and their subnets as the primary IPv4 CIDR block of the VPD. This parameter is left empty by default.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/16</p>
+         */
         @NameInMap("Cidr")
         public String cidr;
 
+        /**
+         * <p>The time when the activation code was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1668158213000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the VPD instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-d3isyds4</p>
+         */
         @NameInMap("VpdId")
         public String vpdId;
 
+        /**
+         * <p>The name of the VPD instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-1</p>
+         */
         @NameInMap("VpdName")
         public String vpdName;
 
@@ -221,54 +347,153 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class ListNetworkInterfacesResponseBodyContentData extends TeaModel {
+        /**
+         * <p>The time when the activation code was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1669734207000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The port number of the AD server.</p>
+         */
         @NameInMap("Ethernet")
         public java.util.List<String> ethernet;
 
+        /**
+         * <p>The gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.253</p>
+         */
         @NameInMap("Gateway")
         public String gateway;
 
+        /**
+         * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.13</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The NC type.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CUSTOM_LNI_INTEGRATION: two-network one-in-one architecture Lingjun hosting network interface controller.</li>
+         * <li>CPU: CPU machine.</li>
+         * <li>ELASTIC_6.2: Machine</li>
+         * <li>GPU: GPU machine.</li>
+         * <li>DEFAULT: the old CPU machine.</li>
+         * <li>CUSTOM_LNI: two network separation architecture Lingjun hosting network interface controller.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GPU</p>
+         */
         @NameInMap("NcType")
         public String ncType;
 
+        /**
+         * <p>Lingjun network interface controller ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lni-2ze50voovmtswn328ogm</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        /**
+         * <p>The port name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bond0</p>
+         */
         @NameInMap("NetworkInterfaceName")
         public String networkInterfaceName;
 
+        /**
+         * <p>The ID of the machine to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2d53f5c204e7476dae69177e7fa6f19c</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>Secondary Private IP\&amp;MAC Address Collection</p>
+         */
         @NameInMap("PrivateIpAddressMacGroup")
         public java.util.List<ListNetworkInterfacesResponseBodyContentDataPrivateIpAddressMacGroup> privateIpAddressMacGroup;
 
+        /**
+         * <p>network interface controller private secondary IP quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("Quota")
         public Integer quota;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The address of the service network interface controller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00-ff-84-15-ba-67</p>
+         */
         @NameInMap("ServiceMac")
         public String serviceMac;
 
+        /**
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Lingjun subnet (Subnet) basic information.</p>
+         */
         @NameInMap("SubnetBaseInfo")
         public ListNetworkInterfacesResponseBodyContentDataSubnetBaseInfo subnetBaseInfo;
 
+        /**
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620939556166279</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>Lingjun network segment (VPD) basic information.</p>
+         */
         @NameInMap("VpdBaseInfo")
         public ListNetworkInterfacesResponseBodyContentDataVpdBaseInfo vpdBaseInfo;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu-b</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -416,9 +641,18 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class ListNetworkInterfacesResponseBodyContent extends TeaModel {
+        /**
+         * <p>The response parameters.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListNetworkInterfacesResponseBodyContentData> data;
 
+        /**
+         * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Total")
         public Long total;
 

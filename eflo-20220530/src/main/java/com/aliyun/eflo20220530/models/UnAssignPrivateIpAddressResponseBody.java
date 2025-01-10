@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class UnAssignPrivateIpAddressResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Content")
     public UnAssignPrivateIpAddressResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You don\&quot;t have the permission to do this operation.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID of the current request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A88DFED5-24B7-5A3E-87DE-380BF06F3C90</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +75,21 @@ public class UnAssignPrivateIpAddressResponseBody extends TeaModel {
     }
 
     public static class UnAssignPrivateIpAddressResponseBodyContent extends TeaModel {
+        /**
+         * <p>IP unique identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sip-xxxxx</p>
+         */
         @NameInMap("IpName")
         public String ipName;
 
+        /**
+         * <p>Lingjun network interface controller ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lni-bp164jwjpdq4lnsy83s5</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 

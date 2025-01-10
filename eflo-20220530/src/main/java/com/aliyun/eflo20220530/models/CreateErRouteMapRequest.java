@@ -4,39 +4,133 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class CreateErRouteMapRequest extends TeaModel {
+    /**
+     * <p>Policy description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>terraform-example</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Destination CIDR Block</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.0.0.0/0</p>
+     */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
+    /**
+     * <p>Lingjun HUB ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-aueyxxsy</p>
+     */
     @NameInMap("ErId")
     public String erId;
 
+    /**
+     * <p>The ID of the destination instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpd-xlhsvdvt</p>
+     */
     @NameInMap("ReceptionInstanceId")
     public String receptionInstanceId;
 
+    /**
+     * <p>The tenant to which the route receiving instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1620939556166277</p>
+     */
     @NameInMap("ReceptionInstanceOwner")
     public String receptionInstanceOwner;
 
+    /**
+     * <p>The type of the destination instance. Valid values:</p>
+     * <ul>
+     * <li><strong>VPD</strong>: Lingjun network segment.</li>
+     * <li><strong>VCC</strong>: Lingjun Connection.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPD</p>
+     */
     @NameInMap("ReceptionInstanceType")
     public String receptionInstanceType;
 
+    /**
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Policy behavior; optional values:</p>
+     * <ul>
+     * <li><strong>permit</strong>: Allow</li>
+     * <li><strong>deny</strong>: Rejected</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>permit</p>
+     */
     @NameInMap("RouteMapAction")
     public String routeMapAction;
 
+    /**
+     * <p>The ID of the policy.</p>
+     * <p>A smaller sequence number indicates a lower priority. When a route is matched, a policy with a higher priority is preferentially matched.</p>
+     * <p><strong>Valid values: 1001 to 2000</strong></p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("RouteMapNum")
     public Integer routeMapNum;
 
+    /**
+     * <p>The ID of the source instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpd-xlsjsdvt</p>
+     */
     @NameInMap("TransmissionInstanceId")
     public String transmissionInstanceId;
 
+    /**
+     * <p>The tenant to which the route publish instance belongs</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1620939556166277</p>
+     */
     @NameInMap("TransmissionInstanceOwner")
     public String transmissionInstanceOwner;
 
+    /**
+     * <p>The type of the source instance. Valid values:</p>
+     * <ul>
+     * <li><strong>VPD</strong>: Lingjun network segment.</li>
+     * <li><strong>VCC</strong>: Lingjun Connection.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPD</p>
+     */
     @NameInMap("TransmissionInstanceType")
     public String transmissionInstanceType;
 

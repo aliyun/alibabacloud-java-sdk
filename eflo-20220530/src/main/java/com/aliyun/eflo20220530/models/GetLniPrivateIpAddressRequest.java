@@ -4,12 +4,33 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class GetLniPrivateIpAddressRequest extends TeaModel {
+    /**
+     * <p>IP unique identifier</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sip-xxxxx</p>
+     */
     @NameInMap("IpName")
     public String ipName;
 
+    /**
+     * <p>Lingjun network interface controller ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lni-bp18exxqa2rvfn45e5pz</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
+    /**
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

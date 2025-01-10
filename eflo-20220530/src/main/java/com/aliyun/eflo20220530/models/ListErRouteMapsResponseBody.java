@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class ListErRouteMapsResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Content")
     public ListErRouteMapsResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0901F411-28FA-5B9C-BAEE-7776463FF0DC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,63 +75,212 @@ public class ListErRouteMapsResponseBody extends TeaModel {
     }
 
     public static class ListErRouteMapsResponseBodyContentData extends TeaModel {
+        /**
+         * <p>Policy behavior; optional values:</p>
+         * <ul>
+         * <li><strong>permit</strong>: Allow</li>
+         * <li><strong>deny</strong>: Prohibited</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>permit</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The time when the data address was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1601176751000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Policy description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Destination CIDR Block</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>Lingjun HUB ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-kkopgtne</p>
+         */
         @NameInMap("ErId")
         public String erId;
 
+        /**
+         * <p>routing policy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-rmap-uwglhzom</p>
+         */
         @NameInMap("ErRouteMapId")
         public String erRouteMapId;
 
+        /**
+         * <p>The time when the agent was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1601176751000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Receive Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-9rgxqazc</p>
+         */
         @NameInMap("ReceptionInstanceId")
         public String receptionInstanceId;
 
+        /**
+         * <p>Receive Instance Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-reception</p>
+         */
         @NameInMap("ReceptionInstanceName")
         public String receptionInstanceName;
 
+        /**
+         * <p>The tenant to which the receiving instance belongs</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620939556166277</p>
+         */
         @NameInMap("ReceptionInstanceOwner")
         public String receptionInstanceOwner;
 
+        /**
+         * <p>The type of the received instance. Possible values:</p>
+         * <ul>
+         * <li><strong>VPD</strong>: Lingjun network segment.</li>
+         * <li><strong>VCC</strong>: Lingjun Connection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPD</p>
+         */
         @NameInMap("ReceptionInstanceType")
         public String receptionInstanceType;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2l4sq6l7unhi</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The ID of the policy.</p>
+         * <p>A smaller sequence number indicates a lower priority. When a route is matched, a policy with a higher priority is preferentially matched.</p>
+         * <p><strong>Valid values: 1001 to 2000</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("RouteMapNum")
         public Integer routeMapNum;
 
+        /**
+         * <p>Status The status of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Not Available</strong>: Unavailable</li>
+         * <li><strong>Executing</strong>: Executing</li>
+         * <li><strong>Deleting</strong>: The node is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655449505171</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>Release Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-8rgvqazb</p>
+         */
         @NameInMap("TransmissionInstanceId")
         public String transmissionInstanceId;
 
+        /**
+         * <p>Release Instance Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-transmit</p>
+         */
         @NameInMap("TransmissionInstanceName")
         public String transmissionInstanceName;
 
+        /**
+         * <p>The tenant to which the published instance belongs</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620939556166277</p>
+         */
         @NameInMap("TransmissionInstanceOwner")
         public String transmissionInstanceOwner;
 
+        /**
+         * <p>The type of the published instance. Possible values:</p>
+         * <ul>
+         * <li><strong>VPD</strong>: Lingjun network segment.</li>
+         * <li><strong>VCC</strong>: Lingjun Connection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPD</p>
+         */
         @NameInMap("TransmissionInstanceType")
         public String transmissionInstanceType;
 
@@ -223,6 +393,14 @@ public class ListErRouteMapsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListErRouteMapsResponseBodyContentData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListErRouteMapsResponseBodyContentData setRouteMapNum(Integer routeMapNum) {
             this.routeMapNum = routeMapNum;
             return this;
@@ -282,9 +460,18 @@ public class ListErRouteMapsResponseBody extends TeaModel {
     }
 
     public static class ListErRouteMapsResponseBodyContent extends TeaModel {
+        /**
+         * <p>routing policy information list</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListErRouteMapsResponseBodyContentData> data;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Total")
         public Long total;
 

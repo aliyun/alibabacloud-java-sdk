@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class ListLniPrivateIpAddressResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Content")
     public ListLniPrivateIpAddressResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You don\&quot;t have the permission to do this operation.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A88DFED5-24B7-5A3E-87DE-380BF06F3C90</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,33 +75,98 @@ public class ListLniPrivateIpAddressResponseBody extends TeaModel {
     }
 
     public static class ListLniPrivateIpAddressResponseBodyContentData extends TeaModel {
+        /**
+         * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The time when the data address was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651734291000</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>MAC address of the secondary private network</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00-ff-84-15-ba-67</p>
+         */
         @NameInMap("IpAddressMac")
         public String ipAddressMac;
 
+        /**
+         * <p>IP unique identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sip-1hq1ql7vz</p>
+         */
         @NameInMap("IpName")
         public String ipName;
 
+        /**
+         * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Lingjun network interface controller ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lni-bp11hq1ql7vza3k4xz7q</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        /**
+         * <p>Secondary private IP address of Lingjun network interface controller</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.42.5.92</p>
+         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The status of the intervention entry. Valid value:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
         public static ListLniPrivateIpAddressResponseBodyContentData build(java.util.Map<String, ?> map) throws Exception {
             ListLniPrivateIpAddressResponseBodyContentData self = new ListLniPrivateIpAddressResponseBodyContentData();
             return TeaModel.build(map, self);
+        }
+
+        public ListLniPrivateIpAddressResponseBodyContentData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListLniPrivateIpAddressResponseBodyContentData setGmtCreate(String gmtCreate) {
@@ -150,9 +236,18 @@ public class ListLniPrivateIpAddressResponseBody extends TeaModel {
     }
 
     public static class ListLniPrivateIpAddressResponseBodyContent extends TeaModel {
+        /**
+         * <p>The returned result.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListLniPrivateIpAddressResponseBodyContentData> data;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Total")
         public Long total;
 

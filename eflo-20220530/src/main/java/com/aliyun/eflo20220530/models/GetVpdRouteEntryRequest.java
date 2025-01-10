@@ -4,12 +4,33 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class GetVpdRouteEntryRequest extends TeaModel {
+    /**
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Lingjun CIDR block instance ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpd-iv2zm1qf</p>
+     */
     @NameInMap("VpdId")
     public String vpdId;
 
+    /**
+     * <p>The ID of the route entry instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpd-rte-toekyqel</p>
+     */
     @NameInMap("VpdRouteEntryId")
     public String vpdRouteEntryId;
 

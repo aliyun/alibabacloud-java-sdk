@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class ListVpdRouteEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Content")
     public ListVpdRouteEntriesResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID of the current request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>039C3C3A-3C37-5672-80D5-D8CD48C676D1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,36 +75,111 @@ public class ListVpdRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class ListVpdRouteEntriesResponseBodyContentData extends TeaModel {
+        /**
+         * <p>Destination CIDR block</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>The time when the cluster was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678273219000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>Next Hop Instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-bmlqiym1</p>
+         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
+        /**
+         * <p>Next Hop Instance Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ER</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxhucx5ewuwy</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The ID of the tenant to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655449505171</p>
+         */
         @NameInMap("ResourceTenantId")
         public String resourceTenantId;
 
+        /**
+         * <p>Route type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
+         */
         @NameInMap("RouteType")
         public String routeType;
 
+        /**
+         * <p>The status of the intervention entry. Valid value:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655449505171</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>Lingjun CIDR block instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-eoiy88ju</p>
+         */
         @NameInMap("VpdId")
         public String vpdId;
 
+        /**
+         * <p>The ID of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-rte-toekyqel</p>
+         */
         @NameInMap("VpdRouteEntryId")
         public String vpdRouteEntryId;
 
@@ -130,6 +226,14 @@ public class ListVpdRouteEntriesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListVpdRouteEntriesResponseBodyContentData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListVpdRouteEntriesResponseBodyContentData setResourceTenantId(String resourceTenantId) {
@@ -183,9 +287,18 @@ public class ListVpdRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class ListVpdRouteEntriesResponseBodyContent extends TeaModel {
+        /**
+         * <p>Lingjun CIDR block route entry list</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListVpdRouteEntriesResponseBodyContentData> data;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Total")
         public Long total;
 

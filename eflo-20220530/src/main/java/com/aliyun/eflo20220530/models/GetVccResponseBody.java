@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class GetVccResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Content")
     public GetVccResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID of the current request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CAD09E47-B651-5206-B2DC-3AB78C8EB446</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +75,57 @@ public class GetVccResponseBody extends TeaModel {
     }
 
     public static class GetVccResponseBodyContentAliyunRouterInfo extends TeaModel {
+        /**
+         * <p>IPv4 address of Alibaba Cloud-side interconnection</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169.254.248.30</p>
+         */
         @NameInMap("LocalGatewayIp")
         public String localGatewayIp;
 
+        /**
+         * <p>Masking</p>
+         * 
+         * <strong>example:</strong>
+         * <p>255.255.255.248</p>
+         */
         @NameInMap("Mask")
         public String mask;
 
+        /**
+         * <p>Express Connect circuit ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-0jlof4bphlsnxbdztkvad</p>
+         */
         @NameInMap("PcId")
         public String pcId;
 
+        /**
+         * <p>Lingjun Side Interconnection IPv4 Address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169.254.248.28</p>
+         */
         @NameInMap("PeerGatewayIp")
         public String peerGatewayIp;
 
+        /**
+         * <p>The ID of the VBR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-2ze4i85p6vb9nwcan5xt0</p>
+         */
         @NameInMap("VbrId")
         public String vbrId;
 
+        /**
+         * <p>VLAN ID of the VBR</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1042</p>
+         */
         @NameInMap("VlanId")
         public String vlanId;
 
@@ -128,23 +185,56 @@ public class GetVccResponseBody extends TeaModel {
     }
 
     public static class GetVccResponseBodyContentCisRouterInfoCcInfos extends TeaModel {
+        /**
+         * <p>Leased Line ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-73aeex5o</p>
+         */
         @NameInMap("CcId")
         public String ccId;
 
+        /**
+         * <p>Lingjun Side Interconnection IPv4 Address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169.254.248.26</p>
+         */
         @NameInMap("LocalGatewayIp")
         public String localGatewayIp;
 
+        /**
+         * <p>Lingjun Side Interconnection IPv4 Address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169.254.248.30</p>
+         */
         @NameInMap("RemoteGatewayIp")
         public String remoteGatewayIp;
 
+        /**
+         * <p>The state of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Established</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Subnet mask</p>
+         * 
+         * <strong>example:</strong>
+         * <p>255.255.255.248</p>
+         */
         @NameInMap("SubnetMask")
         public String subnetMask;
 
         /**
-         * <p>vlanid</p>
+         * <p>Vlan ID of the leased line</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ethernet1042</p>
          */
         @NameInMap("VlanId")
         public String vlanId;
@@ -205,9 +295,18 @@ public class GetVccResponseBody extends TeaModel {
     }
 
     public static class GetVccResponseBodyContentCisRouterInfo extends TeaModel {
+        /**
+         * <p>Leased Line Information List</p>
+         */
         @NameInMap("CcInfos")
         public java.util.List<GetVccResponseBodyContentCisRouterInfoCcInfos> ccInfos;
 
+        /**
+         * <p>The ID of the on-cloud router instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccr-1ms84am0</p>
+         */
         @NameInMap("CcrId")
         public String ccrId;
 
@@ -235,39 +334,111 @@ public class GetVccResponseBody extends TeaModel {
     }
 
     public static class GetVccResponseBodyContentErInfos extends TeaModel {
+        /**
+         * <p>Connections</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Connections")
         public Long connections;
 
+        /**
+         * <p>The time when the data address was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678379917000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is test.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Lingjun HUB ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-p68b0jwn</p>
+         */
         @NameInMap("ErId")
         public String erId;
 
+        /**
+         * <p>Lingjun HUB Instance Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-1</p>
+         */
         @NameInMap("ErName")
         public String erName;
 
+        /**
+         * <p>The time when the agent was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678379917000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>Primary Zone</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu-b</p>
+         */
         @NameInMap("MasterZoneId")
         public String masterZoneId;
 
+        /**
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test message</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Lingjun HUB Region Information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Number of routing policy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RouteMaps")
         public Long routeMaps;
 
+        /**
+         * <p>The status of the intervention entry. Valid value:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620939556166277</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
@@ -375,9 +546,25 @@ public class GetVccResponseBody extends TeaModel {
     }
 
     public static class GetVccResponseBodyContentTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * <p>You cannot specify an empty string as a tag key. It can be up to 64 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>You can specify at most 20 tag keys in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-vcc</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag that is added to the resource.</p>
+         * <p>The tag value can be empty or a string of up to 128 characters. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+         * <p>Each key-value pair must be unique. You can specify values for at most 20 tag keys in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcc-group-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -404,16 +591,257 @@ public class GetVccResponseBody extends TeaModel {
 
     }
 
+    public static class GetVccResponseBodyContentVbrInfosVbrBgpPeers extends TeaModel {
+        /**
+         * <p>BGP Group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bgpg-2ze2sit2vakrkapvy****</p>
+         */
+        @NameInMap("BgpGroupId")
+        public String bgpGroupId;
+
+        /**
+         * <p>BGP peer ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bgp-uf6heugif9enu48rj****</p>
+         */
+        @NameInMap("BgpPeerId")
+        public String bgpPeerId;
+
+        /**
+         * <p>Peer AS No.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98765****</p>
+         */
+        @NameInMap("PeerAsn")
+        public String peerAsn;
+
+        /**
+         * <p>BGP peer IP address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169.254.****</p>
+         */
+        @NameInMap("PeerIpAddress")
+        public String peerIpAddress;
+
+        /**
+         * <p>The status of the BGP peer. Valid values:</p>
+         * <ul>
+         * <li>Pending: pending</li>
+         * <li>Available: The route is available.</li>
+         * <li>Modifying: being modified</li>
+         * <li>Deleting: The IPv4 gateway is being deleted.</li>
+         * <li>Deleted</li>
+         * <li>Not Available</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        public static GetVccResponseBodyContentVbrInfosVbrBgpPeers build(java.util.Map<String, ?> map) throws Exception {
+            GetVccResponseBodyContentVbrInfosVbrBgpPeers self = new GetVccResponseBodyContentVbrInfosVbrBgpPeers();
+            return TeaModel.build(map, self);
+        }
+
+        public GetVccResponseBodyContentVbrInfosVbrBgpPeers setBgpGroupId(String bgpGroupId) {
+            this.bgpGroupId = bgpGroupId;
+            return this;
+        }
+        public String getBgpGroupId() {
+            return this.bgpGroupId;
+        }
+
+        public GetVccResponseBodyContentVbrInfosVbrBgpPeers setBgpPeerId(String bgpPeerId) {
+            this.bgpPeerId = bgpPeerId;
+            return this;
+        }
+        public String getBgpPeerId() {
+            return this.bgpPeerId;
+        }
+
+        public GetVccResponseBodyContentVbrInfosVbrBgpPeers setPeerAsn(String peerAsn) {
+            this.peerAsn = peerAsn;
+            return this;
+        }
+        public String getPeerAsn() {
+            return this.peerAsn;
+        }
+
+        public GetVccResponseBodyContentVbrInfosVbrBgpPeers setPeerIpAddress(String peerIpAddress) {
+            this.peerIpAddress = peerIpAddress;
+            return this;
+        }
+        public String getPeerIpAddress() {
+            return this.peerIpAddress;
+        }
+
+        public GetVccResponseBodyContentVbrInfosVbrBgpPeers setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class GetVccResponseBodyContentVbrInfos extends TeaModel {
+        /**
+         * <p>CEN ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-cx0qua8q6cm4z9****</p>
+         */
+        @NameInMap("CenId")
+        public String cenId;
+
+        /**
+         * <p>The time when the data address was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683250981000</p>
+         */
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
+
+        /**
+         * <p>The time when the agent was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1673578603000</p>
+         */
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
+        /**
+         * <p>The status of the VBR. Valid values:</p>
+         * <ul>
+         * <li>unconfirmed</li>
+         * <li>active: The VPN gateway is in a normal state.</li>
+         * <li>terminating: The connection is being terminated.</li>
+         * <li>terminated: The connection is terminated.</li>
+         * <li>recovering: The task is being recovered.</li>
+         * <li>deleting: The GDN is being deleted.</li>
+         * <li>Available: The service is available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>BGP neighbor information list</p>
+         */
+        @NameInMap("VbrBgpPeers")
+        public java.util.List<GetVccResponseBodyContentVbrInfosVbrBgpPeers> vbrBgpPeers;
+
+        /**
+         * <p>The ID of the border router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-wz96agu9h3d50z****</p>
+         */
+        @NameInMap("VbrId")
+        public String vbrId;
+
+        public static GetVccResponseBodyContentVbrInfos build(java.util.Map<String, ?> map) throws Exception {
+            GetVccResponseBodyContentVbrInfos self = new GetVccResponseBodyContentVbrInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public GetVccResponseBodyContentVbrInfos setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
+        }
+
+        public GetVccResponseBodyContentVbrInfos setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public GetVccResponseBodyContentVbrInfos setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public GetVccResponseBodyContentVbrInfos setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetVccResponseBodyContentVbrInfos setVbrBgpPeers(java.util.List<GetVccResponseBodyContentVbrInfosVbrBgpPeers> vbrBgpPeers) {
+            this.vbrBgpPeers = vbrBgpPeers;
+            return this;
+        }
+        public java.util.List<GetVccResponseBodyContentVbrInfosVbrBgpPeers> getVbrBgpPeers() {
+            return this.vbrBgpPeers;
+        }
+
+        public GetVccResponseBodyContentVbrInfos setVbrId(String vbrId) {
+            this.vbrId = vbrId;
+            return this;
+        }
+        public String getVbrId() {
+            return this.vbrId;
+        }
+
+    }
+
     public static class GetVccResponseBodyContentVpdBaseInfo extends TeaModel {
+        /**
+         * <p>Network address segment</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.18.0.0/24</p>
+         */
         @NameInMap("Cidr")
         public String cidr;
 
+        /**
+         * <p>The time when the data address was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678379917000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Lingjun CIDR block instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-ppdunxzc</p>
+         */
         @NameInMap("VpdId")
         public String vpdId;
 
+        /**
+         * <p>Lingjun CIDR block instance name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yzp-rg-test3</p>
+         */
         @NameInMap("VpdName")
         public String vpdName;
 
@@ -457,105 +885,362 @@ public class GetVccResponseBody extends TeaModel {
     }
 
     public static class GetVccResponseBodyContent extends TeaModel {
+        /**
+         * <p>Express Connect circuit access point ID:</p>
+         * <ul>
+         * <li><strong>ap-cn-wulanchabu-jn-ts-A</strong>: Ulanqab-Jining-A</li>
+         * <li><strong>ap-cn-heyuan-yc-ts-SA127</strong>: Heyuan-Yuancheng-A</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-cn-wulanchabu-jn-ts-A</p>
+         */
         @NameInMap("AccessPointId")
         public String accessPointId;
 
+        /**
+         * <p>Alibaba Cloud route information list</p>
+         */
         @NameInMap("AliyunRouterInfo")
         public java.util.List<GetVccResponseBodyContentAliyunRouterInfo> aliyunRouterInfo;
 
+        /**
+         * <p>Whether Lingjun HUB has been bound to a network instance</p>
+         * <ul>
+         * <li><strong>true</strong>: Bound</li>
+         * <li><strong>false</strong>: unbound</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AttachErStatus")
         public Boolean attachErStatus;
 
+        /**
+         * <p>The bandwidth of the port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1G</p>
+         */
         @NameInMap("BandwidthStr")
         public String bandwidthStr;
 
+        /**
+         * <p>BGP AS number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45644</p>
+         */
+        @NameInMap("BgpAsn")
+        public String bgpAsn;
+
+        /**
+         * <p>BGP CIDR block</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.4.0.0/24</p>
+         */
         @NameInMap("BgpCidr")
         public String bgpCidr;
 
+        /**
+         * <p>The ID of the CEN instance; <a href="https://help.aliyun.com/document_detail/181681.html">What is the CEN?</a></p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/468215.htm">DescribeCens</a> to query the information of CEN instances under the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-m2iskbojlvda5w65fp</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <p>Account to which the CEN belongs</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620939556166279</p>
+         */
+        @NameInMap("CenOwnerId")
+        public String cenOwnerId;
+
+        /**
+         * <p>Lingjun Network Routing Information List</p>
+         */
         @NameInMap("CisRouterInfo")
         public java.util.List<GetVccResponseBodyContentCisRouterInfo> cisRouterInfo;
 
+        /**
+         * <p>Commodity code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bccluster_cloudconnectionpre_public_cn</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The connection mode. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>CENTR</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CENTR</p>
+         */
         @NameInMap("ConnectionType")
         public String connectionType;
 
+        /**
+         * <p>The time when the data address was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1648085472000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Current Node</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-xxx-node-x</p>
+         */
         @NameInMap("CurrentNode")
         public String currentNode;
 
+        /**
+         * <p>Cycle</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>List of bound Lingjun HUB information</p>
+         */
         @NameInMap("ErInfos")
         public java.util.List<GetVccResponseBodyContentErInfos> erInfos;
 
+        /**
+         * <p>The time when the application expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678379917000</p>
+         */
         @NameInMap("ExpirationDate")
         public String expirationDate;
 
+        /**
+         * <p>The time when the agent was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1648085472000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The billing method for network usage.</p>
+         * <ul>
+         * <li><strong>PayByTraffic</strong>: pay-by-traffic</li>
+         * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
+         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
+        /**
+         * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+         * <ul>
+         * <li><strong>CO</strong>: other connectivity providers in the Chinese mainland</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CO</p>
+         */
         @NameInMap("LineOperator")
         public String lineOperator;
 
+        /**
+         * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You don\&quot;t have the permission of this operation, action=eflo:GetVcc, arn=acs:eflo:cn-heyuan:1263399219805497:vcc/vcc-cn-fhh3yxjwe01, resourceGroup=null</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PREPAY</strong>: subscription</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePay</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The port type of the Express Connect circuit. Valid values:</p>
+         * <ul>
+         * <li><strong>100GBase-LR</strong>: 100,000 megabytes of single-mode optical port (10 km)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100GBase-LR</p>
+         */
         @NameInMap("PortType")
         public String portType;
 
+        /**
+         * <p>The billing cycle. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong>: Billed on a monthly basis</li>
+         * <li><strong>Year</strong>: Billed on an annual basis</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of your Alibaba Cloud resource group.</p>
+         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.htm">Resource groups</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2l4sq6l7unhi</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Specification; value:</p>
+         * <ul>
+         * <li><strong>Large</strong>: Large</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Large</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
+        /**
+         * <p>The status of the cache reserve instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Available</strong>: Normal.</li>
+         * <li><strong>Not Available</strong>: Not available.</li>
+         * <li><strong>Executing</strong>: The task is being executed.</li>
+         * <li><strong>Deleting</strong>: The account is being deleted</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tag information.</p>
+         * <p>You can specify up to 20 tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetVccResponseBodyContentTags> tags;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620939556166279</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>The ID of the vSwitch. <a href="https://help.aliyun.com/document_detail/100380.html">Virtual Private Cloud VSwitch</a>.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query created vSwitches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6u8473r84e6n1n19he5</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>Information list of border routers</p>
+         */
+        @NameInMap("VbrInfos")
+        public java.util.List<GetVccResponseBodyContentVbrInfos> vbrInfos;
+
+        /**
+         * <p>The ID of the Lingjun connection instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcc-cn-cqf2xh40101</p>
+         */
         @NameInMap("VccId")
         public String vccId;
 
+        /**
+         * <p>The name of the Lingjun connection instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcc-heyuan-backup</p>
+         */
         @NameInMap("VccName")
         public String vccName;
 
+        /**
+         * <p>Virtual Private Cloud IDs; <a href="https://help.aliyun.com/document_detail/34217.html">What is Virtual Private Cloud</a></p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/35739.html#demo-0">DescribeVpcs</a> operation to query the specified VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-j6ctp4n75306phv5tmpsm</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>Lingjun network segment information (applicable to the scene where the old version of Lingjun connection is directly bound to Lingjun network segment)</p>
+         */
         @NameInMap("VpdBaseInfo")
         public GetVccResponseBodyContentVpdBaseInfo vpdBaseInfo;
 
+        /**
+         * <p>Lingjun CIDR block instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-d3isyds4</p>
+         */
         @NameInMap("VpdId")
         public String vpdId;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu-b</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -596,6 +1281,14 @@ public class GetVccResponseBody extends TeaModel {
             return this.bandwidthStr;
         }
 
+        public GetVccResponseBodyContent setBgpAsn(String bgpAsn) {
+            this.bgpAsn = bgpAsn;
+            return this;
+        }
+        public String getBgpAsn() {
+            return this.bgpAsn;
+        }
+
         public GetVccResponseBodyContent setBgpCidr(String bgpCidr) {
             this.bgpCidr = bgpCidr;
             return this;
@@ -610,6 +1303,14 @@ public class GetVccResponseBody extends TeaModel {
         }
         public String getCenId() {
             return this.cenId;
+        }
+
+        public GetVccResponseBodyContent setCenOwnerId(String cenOwnerId) {
+            this.cenOwnerId = cenOwnerId;
+            return this;
+        }
+        public String getCenOwnerId() {
+            return this.cenOwnerId;
         }
 
         public GetVccResponseBodyContent setCisRouterInfo(java.util.List<GetVccResponseBodyContentCisRouterInfo> cisRouterInfo) {
@@ -786,6 +1487,14 @@ public class GetVccResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public GetVccResponseBodyContent setVbrInfos(java.util.List<GetVccResponseBodyContentVbrInfos> vbrInfos) {
+            this.vbrInfos = vbrInfos;
+            return this;
+        }
+        public java.util.List<GetVccResponseBodyContentVbrInfos> getVbrInfos() {
+            return this.vbrInfos;
         }
 
         public GetVccResponseBodyContent setVccId(String vccId) {

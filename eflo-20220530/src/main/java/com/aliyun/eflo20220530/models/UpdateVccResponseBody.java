@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class UpdateVccResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Content")
     public UpdateVccResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F906C4D3-7444-58E2-9819-E3D8563571A3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +75,12 @@ public class UpdateVccResponseBody extends TeaModel {
     }
 
     public static class UpdateVccResponseBodyContent extends TeaModel {
+        /**
+         * <p>The ID of the Lingjun connection instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcc-cn-2r42v22cn03</p>
+         */
         @NameInMap("VccId")
         public String vccId;
 

@@ -4,12 +4,33 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class GetVccRouteEntryRequest extends TeaModel {
+    /**
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Lingjun Connection ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vcc-cn-zvp2w222001</p>
+     */
     @NameInMap("VccId")
     public String vccId;
 
+    /**
+     * <p>The ID of the route entry.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vcc-rte-31ocvdhq</p>
+     */
     @NameInMap("VccRouteEntryId")
     public String vccRouteEntryId;
 

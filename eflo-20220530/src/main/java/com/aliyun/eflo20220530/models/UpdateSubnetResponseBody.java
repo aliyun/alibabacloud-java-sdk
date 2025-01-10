@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class UpdateSubnetResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response content.</p>
+     */
     @NameInMap("Content")
     public UpdateSubnetResponseBodyContent content;
 
+    /**
+     * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3D9D6E7B-365B-5200-BFA6-9B79E269058C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +75,12 @@ public class UpdateSubnetResponseBody extends TeaModel {
     }
 
     public static class UpdateSubnetResponseBodyContent extends TeaModel {
+        /**
+         * <p>The subnet instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subnet-yuvn29bn</p>
+         */
         @NameInMap("SubnetId")
         public String subnetId;
 

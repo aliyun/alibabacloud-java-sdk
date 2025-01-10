@@ -4,15 +4,43 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class DeleteSubnetResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Response content (if the resource has dependent resources, the existing dependent resources will be returned)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;nc&quot;: [
+     *             {}
+     *       ]
+     * }</p>
+     */
     @NameInMap("Content")
     public Object content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A56F7D3C-8850-5AF4-A342-2D71C9A9D1CC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
