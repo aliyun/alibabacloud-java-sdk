@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class CreateVpdResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Content")
     public CreateVpdResponseBodyContent content;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBAD15D6-3F47-5B36-8A92-57C2919D13D0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +75,18 @@ public class CreateVpdResponseBody extends TeaModel {
     }
 
     public static class CreateVpdResponseBodyContent extends TeaModel {
+        /**
+         * <p>Lingjun subnet ID list</p>
+         */
         @NameInMap("SubnetIds")
         public java.util.List<String> subnetIds;
 
+        /**
+         * <p>Lingjun CIDR block instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-eoiy88ju</p>
+         */
         @NameInMap("VpdId")
         public String vpdId;
 

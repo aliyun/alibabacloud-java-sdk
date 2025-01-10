@@ -4,15 +4,43 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class CreateVpdGrantRuleRequest extends TeaModel {
+    /**
+     * <p>Lingjun HUB ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-kkopgtne</p>
+     */
     @NameInMap("ErId")
     public String erId;
 
+    /**
+     * <p>Authorized Tenant ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1013666993027780</p>
+     */
     @NameInMap("GrantTenantId")
     public String grantTenantId;
 
+    /**
+     * <p>Network Instance ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpd-8rgvqazb</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

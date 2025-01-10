@@ -4,12 +4,33 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class GetNetworkInterfaceRequest extends TeaModel {
+    /**
+     * <p>Lingjun network interface controller ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lni-bp18exxqa2rvfn45e5pz</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
+    /**
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Subnet of Lingjun</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>subnet-f3zfzmnc</p>
+     */
     @NameInMap("SubnetId")
     public String subnetId;
 

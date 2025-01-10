@@ -4,15 +4,39 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class DeleteVpdGrantRuleResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Response body</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Content")
     public Object content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID of the current request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0901F411-28FA-5B9C-BAEE-7776463FF0DC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

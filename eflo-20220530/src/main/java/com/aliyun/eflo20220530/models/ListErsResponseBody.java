@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class ListErsResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Content")
     public ListErsResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is displayed.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AC8C713A-A9F4-5984-A5E1-76496DF35153</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,39 +75,120 @@ public class ListErsResponseBody extends TeaModel {
     }
 
     public static class ListErsResponseBodyContentData extends TeaModel {
+        /**
+         * <p>The number of connections to the Lingjun HUB network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Connections")
         public Long connections;
 
+        /**
+         * <p>The time when the activation code was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640930671000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the Lingjun HUB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-kkopgtne</p>
+         */
         @NameInMap("ErId")
         public String erId;
 
+        /**
+         * <p>The name of the Lingjun HUB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-wulanchabu-main</p>
+         */
         @NameInMap("ErName")
         public String erName;
 
+        /**
+         * <p>The time when the O\&amp;M task was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640930671000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The primary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu-b</p>
+         */
         @NameInMap("MasterZoneId")
         public String masterZoneId;
 
+        /**
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmv2m2w43japa</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>Number of Lingjun HUB routing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RouteMaps")
         public Long routeMaps;
 
+        /**
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655449505171</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
@@ -167,6 +269,14 @@ public class ListErsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListErsResponseBodyContentData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListErsResponseBodyContentData setRouteMaps(Long routeMaps) {
             this.routeMaps = routeMaps;
             return this;
@@ -194,9 +304,18 @@ public class ListErsResponseBody extends TeaModel {
     }
 
     public static class ListErsResponseBodyContent extends TeaModel {
+        /**
+         * <p>lingjun hub information list.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListErsResponseBodyContentData> data;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Long total;
 

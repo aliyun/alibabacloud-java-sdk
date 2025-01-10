@@ -4,12 +4,30 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class DeleteErRouteMapRequest extends TeaModel {
+    /**
+     * <p>Lingjun HUB ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-kkopgtne</p>
+     */
     @NameInMap("ErId")
     public String erId;
 
+    /**
+     * <p>routing policy Instance ID List</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ErRouteMapIds")
     public java.util.List<String> erRouteMapIds;
 
+    /**
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

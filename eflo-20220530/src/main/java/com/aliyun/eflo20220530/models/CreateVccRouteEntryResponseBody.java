@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class CreateVccRouteEntryResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Content")
     public CreateVccRouteEntryResponseBodyContent content;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>039C3C3A-3C37-5672-80D5-D8CD48C676D1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +75,12 @@ public class CreateVccRouteEntryResponseBody extends TeaModel {
     }
 
     public static class CreateVccRouteEntryResponseBodyContent extends TeaModel {
+        /**
+         * <p>The ID of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcc-rte-5cey1sap</p>
+         */
         @NameInMap("VccRouteEntryId")
         public String vccRouteEntryId;
 

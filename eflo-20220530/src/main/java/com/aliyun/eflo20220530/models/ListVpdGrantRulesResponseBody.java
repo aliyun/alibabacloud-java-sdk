@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class ListVpdGrantRulesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Content")
     public ListVpdGrantRulesResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID of the current request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A56F7D3C-8850-5AF4-A342-2D71C9A9D1CC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,33 +75,107 @@ public class ListVpdGrantRulesResponseBody extends TeaModel {
     }
 
     public static class ListVpdGrantRulesResponseBodyContentData extends TeaModel {
+        /**
+         * <p>The time when the data address was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1643013506000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The current network sample is authorized to the specified Lingjun HUB sample ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-kkopgtne</p>
+         */
         @NameInMap("ErId")
         public String erId;
 
+        /**
+         * <p>Authorization Entry ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grant-rule-8rgvqazb</p>
+         */
         @NameInMap("GrantRuleId")
         public String grantRuleId;
 
+        /**
+         * <p>The ID of the tenant to which the current instance is authorized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672372231790</p>
+         */
         @NameInMap("GrantTenantId")
         public String grantTenantId;
 
+        /**
+         * <p>Lingjun CIDR block instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-8rgvqazb</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the ECU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-1</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The type of the authorized product. Valid values:</p>
+         * <ul>
+         * <li><strong>VPD</strong>: indicates a VPD instance of the Lingjun network segment.</li>
+         * <li><strong>VCC</strong>: indicates that Lingjun connects to the VCC instance.</li>
+         * </ul>
+         * <p>The caller does not need to specify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPD</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2l4sq6l7unhi</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655449505171</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>Whether the current authorized instance has been bound</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Used")
         public Boolean used;
 
@@ -153,6 +248,14 @@ public class ListVpdGrantRulesResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListVpdGrantRulesResponseBodyContentData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListVpdGrantRulesResponseBodyContentData setTenantId(String tenantId) {
             this.tenantId = tenantId;
             return this;
@@ -172,9 +275,18 @@ public class ListVpdGrantRulesResponseBody extends TeaModel {
     }
 
     public static class ListVpdGrantRulesResponseBodyContent extends TeaModel {
+        /**
+         * <p>Lingjun CIDR block authorization information list</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListVpdGrantRulesResponseBodyContentData> data;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Total")
         public Long total;
 

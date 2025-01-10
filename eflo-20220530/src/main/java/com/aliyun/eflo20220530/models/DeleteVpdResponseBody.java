@@ -4,15 +4,53 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class DeleteVpdResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters. (If a dependent resource exists, the existing dependent resource is returned.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;subnet&quot;: [
+     *             {
+     *                   &quot;tenantId&quot;: &quot;1620939556166277&quot;,
+     *                   &quot;regionId&quot;: &quot;cn-wulanchabu&quot;,
+     *                   &quot;zoneId&quot;: &quot;cn&quot;,
+     *                   &quot;type&quot;: null,
+     *                   &quot;subnetId&quot;: &quot;subnet-zqebaxa0&quot;,
+     *                   &quot;name&quot;: &quot;lql_testVPD&quot;
+     *             }
+     *       ],
+     *       &quot;nc&quot;: [
+     *             {}
+     *       ]
+     * }</p>
+     */
     @NameInMap("Content")
     public Object content;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BDBCC783-84CA-5733-8EEA-645C88B9009C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

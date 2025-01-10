@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class UpdateVpdResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Content")
     public UpdateVpdResponseBodyContent content;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AC8C713A-A9F4-5984-A5E1-76496DF35153</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +75,12 @@ public class UpdateVpdResponseBody extends TeaModel {
     }
 
     public static class UpdateVpdResponseBodyContent extends TeaModel {
+        /**
+         * <p>The ID of the VPD instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-lg4dppgi</p>
+         */
         @NameInMap("VpdId")
         public String vpdId;
 

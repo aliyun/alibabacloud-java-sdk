@@ -4,15 +4,41 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class UpdateErRequest extends TeaModel {
+    /**
+     * <p>The description of the document.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Lingjun HUB Instance ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-kkopgtne</p>
+     */
     @NameInMap("ErId")
     public String erId;
 
+    /**
+     * <p>Parameter</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-wulanchabu-main</p>
+     */
     @NameInMap("ErName")
     public String erName;
 
+    /**
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

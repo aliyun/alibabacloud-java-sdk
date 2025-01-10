@@ -4,15 +4,43 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class DeleteSubnetRequest extends TeaModel {
+    /**
+     * <p>The region ID of the disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Lingjun subnet ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>subnet-f3zfzmnc</p>
+     */
     @NameInMap("SubnetId")
     public String subnetId;
 
+    /**
+     * <p>Lingjun CIDR block ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpd-iv2zm1qf</p>
+     */
     @NameInMap("VpdId")
     public String vpdId;
 
+    /**
+     * <p>Zone</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu-b</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

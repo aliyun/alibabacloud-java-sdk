@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class CreateErRouteMapResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Content")
     public CreateErRouteMapResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>039C3C3A-3C37-5672-80D5-D8CD48C676D1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +75,12 @@ public class CreateErRouteMapResponseBody extends TeaModel {
     }
 
     public static class CreateErRouteMapResponseBodyContent extends TeaModel {
+        /**
+         * <p>routing policy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-rmap-uwglhzom</p>
+         */
         @NameInMap("ErRouteMapId")
         public String erRouteMapId;
 

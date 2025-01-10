@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class InitializeVccResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Content")
     public InitializeVccResponseBodyContent content;
 
+    /**
+     * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E30DA7CB-03D0-51EB-8F18-856B99987E18</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +75,21 @@ public class InitializeVccResponseBody extends TeaModel {
     }
 
     public static class InitializeVccResponseBodyContent extends TeaModel {
+        /**
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E30DA7CB-03D0-51EB-8F18-856B99987E18</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <p>Linked Role of Lingjun Connection Instance (AliyunServiceRoleForEfloVcc)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudConnectionOperationRole</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 

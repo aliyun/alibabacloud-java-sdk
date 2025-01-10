@@ -4,15 +4,39 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class DeleteVccRouteEntryRequest extends TeaModel {
+    /**
+     * <p>Destination CIDR block</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.199.128/25</p>
+     */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the Lingjun connection instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vcc-cn-zvp2w222001</p>
+     */
     @NameInMap("VccId")
     public String vccId;
 
+    /**
+     * <p>The ID of the route entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vcc-rte-5cey1sap</p>
+     */
     @NameInMap("VccRouteEntryId")
     public String vccRouteEntryId;
 

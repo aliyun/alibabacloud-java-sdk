@@ -4,15 +4,36 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class GetErResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Content")
     public GetErResponseBodyContent content;
 
+    /**
+     * <p>Information returned when the call fails</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID of the current request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>308DE9D2-03A6-5B44-A369-67B75D1EE091</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,48 +75,152 @@ public class GetErResponseBody extends TeaModel {
     }
 
     public static class GetErResponseBodyContentErAttachments extends TeaModel {
+        /**
+         * <p>Cross-account</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Across")
         public Boolean across;
 
+        /**
+         * <p>Receive all routes automatically</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoReceiveAllRoute")
         public Boolean autoReceiveAllRoute;
 
+        /**
+         * <p>The time when the data address was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1644283112720</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The connection ID of the Lingjun HUB network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-attachment-f32hxfsu</p>
+         */
         @NameInMap("ErAttachmentId")
         public String erAttachmentId;
 
+        /**
+         * <p>Network Instance Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fudan-egpu</p>
+         */
         @NameInMap("ErAttachmentName")
         public String erAttachmentName;
 
+        /**
+         * <p>Lingjun HUB Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-kkopgtne</p>
+         */
         @NameInMap("ErId")
         public String erId;
 
+        /**
+         * <p>The time when the agent was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649303733000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-kkopgtne</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the ECU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhijiao</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>Instance type: VPD and VCC</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>VCC: Lingjun Connection.</li>
+         * <li>VPD: Lingjun network segment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPD</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The synchronized region where the ECS instances are deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzzka6bnjvbi</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The ID of the tenant to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxx</p>
+         */
         @NameInMap("ResourceTenantId")
         public String resourceTenantId;
 
+        /**
+         * <p>The status of the intervention entry. Valid value:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620939556166277</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
@@ -200,6 +325,14 @@ public class GetErResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public GetErResponseBodyContentErAttachments setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public GetErResponseBodyContentErAttachments setResourceTenantId(String resourceTenantId) {
             this.resourceTenantId = resourceTenantId;
             return this;
@@ -227,36 +360,111 @@ public class GetErResponseBody extends TeaModel {
     }
 
     public static class GetErResponseBodyContentErRouteEntrys extends TeaModel {
+        /**
+         * <p>Destination CIDR Block</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/9</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>Lingjun HUB Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-kkopgtne</p>
+         */
         @NameInMap("ErId")
         public String erId;
 
+        /**
+         * <p>The ID of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-rte-xnmsd2kl</p>
+         */
         @NameInMap("ErRouteEntryId")
         public String erRouteEntryId;
 
+        /**
+         * <p>The time when the cluster was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1623317089000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>Next Hop Instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcc-xxkmggkw</p>
+         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
+        /**
+         * <p>Next Hop Instance Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VCC</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyoj5mg3w54y</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The ID of the tenant to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620939556166277</p>
+         */
         @NameInMap("ResourceTenantId")
         public String resourceTenantId;
 
+        /**
+         * <p>Route type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
+         */
         @NameInMap("RouteType")
         public String routeType;
 
+        /**
+         * <p>The status of the intervention entry. Valid value:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620939556166277</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
@@ -321,6 +529,14 @@ public class GetErResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public GetErResponseBodyContentErRouteEntrys setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public GetErResponseBodyContentErRouteEntrys setResourceTenantId(String resourceTenantId) {
             this.resourceTenantId = resourceTenantId;
             return this;
@@ -356,66 +572,206 @@ public class GetErResponseBody extends TeaModel {
     }
 
     public static class GetErResponseBodyContentErRouteMaps extends TeaModel {
+        /**
+         * <p>Policy behavior</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>deny: rejects the.</li>
+         * <li>permit: The allows.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>permit</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The time when the data address was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1645766599809</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Policy description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Destination CIDR Block</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>Lingjun HUB ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-kkopgtne</p>
+         */
         @NameInMap("ErId")
         public String erId;
 
+        /**
+         * <p>routing policy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-rmap-xkslnmsr</p>
+         */
         @NameInMap("ErRouteMapId")
         public String erRouteMapId;
 
+        /**
+         * <p>The name of the routing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>route-map-name</p>
+         */
         @NameInMap("ErRouteMapName")
         public String erRouteMapName;
 
+        /**
+         * <p>The time when the agent was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1623899444000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-sdkd2gkx</p>
+         */
         @NameInMap("ReceptionInstanceId")
         public String receptionInstanceId;
 
+        /**
+         * <p>The name of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reception-name</p>
+         */
         @NameInMap("ReceptionInstanceName")
         public String receptionInstanceName;
 
+        /**
+         * <p>The tenant to which the destination instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620939556166277</p>
+         */
         @NameInMap("ReceptionInstanceOwner")
         public String receptionInstanceOwner;
 
+        /**
+         * <p>The type of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPD</p>
+         */
         @NameInMap("ReceptionInstanceType")
         public String receptionInstanceType;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzaq3ypaqkdy</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>Policy sequence number (1001-2000)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("RouteMapNum")
         public Integer routeMapNum;
 
+        /**
+         * <p>The status of the intervention entry. Valid value:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXQGPROD-zh_CN</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>The ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-xmglsymg</p>
+         */
         @NameInMap("TransmissionInstanceId")
         public String transmissionInstanceId;
 
+        /**
+         * <p>Source instance name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-transmission</p>
+         */
         @NameInMap("TransmissionInstanceName")
         public String transmissionInstanceName;
 
+        /**
+         * <p>The tenant to which the source instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620939556166277</p>
+         */
         @NameInMap("TransmissionInstanceOwner")
         public String transmissionInstanceOwner;
 
+        /**
+         * <p>The type of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPD</p>
+         */
         @NameInMap("TransmissionInstanceType")
         public String transmissionInstanceType;
 
@@ -536,6 +892,14 @@ public class GetErResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public GetErResponseBodyContentErRouteMaps setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public GetErResponseBodyContentErRouteMaps setRouteMapNum(Integer routeMapNum) {
             this.routeMapNum = routeMapNum;
             return this;
@@ -595,42 +959,120 @@ public class GetErResponseBody extends TeaModel {
     }
 
     public static class GetErResponseBodyContent extends TeaModel {
+        /**
+         * <p>The time when the data address was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1644283112720</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Network instance information list</p>
+         */
         @NameInMap("ErAttachments")
         public java.util.List<GetErResponseBodyContentErAttachments> erAttachments;
 
+        /**
+         * <p>Lingjun HUB Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-aueyxxsy</p>
+         */
         @NameInMap("ErId")
         public String erId;
 
+        /**
+         * <p>Lingjun HUB Instance Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-heyuan-main</p>
+         */
         @NameInMap("ErName")
         public String erName;
 
+        /**
+         * <p>The list of route entry information.</p>
+         */
         @NameInMap("ErRouteEntrys")
         public java.util.List<GetErResponseBodyContentErRouteEntrys> erRouteEntrys;
 
+        /**
+         * <p>routing policy information list</p>
+         */
         @NameInMap("ErRouteMaps")
         public java.util.List<GetErResponseBodyContentErRouteMaps> erRouteMaps;
 
+        /**
+         * <p>The time when the agent was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1627545952000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>Primary Zone</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu-b</p>
+         */
         @NameInMap("MasterZoneId")
         public String masterZoneId;
 
+        /**
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzlki4ehfse4y</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The status of the intervention entry. Valid value:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620939556166277</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
@@ -725,6 +1167,14 @@ public class GetErResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetErResponseBodyContent setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetErResponseBodyContent setStatus(String status) {

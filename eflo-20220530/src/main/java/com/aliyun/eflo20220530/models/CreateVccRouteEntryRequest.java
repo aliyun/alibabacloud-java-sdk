@@ -4,12 +4,30 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class CreateVccRouteEntryRequest extends TeaModel {
+    /**
+     * <p>Destination CIDR block</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.98.112/28</p>
+     */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the Lingjun connection instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vcc-cn-zvp2w222001</p>
+     */
     @NameInMap("VccId")
     public String vccId;
 

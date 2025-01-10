@@ -4,12 +4,33 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class GetErRouteEntryRequest extends TeaModel {
+    /**
+     * <p>Lingjun HUB ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-kkopgtne</p>
+     */
     @NameInMap("ErId")
     public String erId;
 
+    /**
+     * <p>The ID of the route entry.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-rte-4q0jbylz</p>
+     */
     @NameInMap("ErRouteEntryId")
     public String erRouteEntryId;
 
+    /**
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,12 +4,33 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class DeleteErAttachmentRequest extends TeaModel {
+    /**
+     * <p>The ID of the network connection instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-attachment-5n3nsmvl</p>
+     */
     @NameInMap("ErAttachmentId")
     public String erAttachmentId;
 
+    /**
+     * <p>Lingjun HUB Id</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>er-opy1wrfv</p>
+     */
     @NameInMap("ErId")
     public String erId;
 
+    /**
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
