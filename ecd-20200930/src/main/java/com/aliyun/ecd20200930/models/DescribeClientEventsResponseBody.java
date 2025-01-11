@@ -112,6 +112,9 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         @NameInMap("ClientVersion")
         public String clientVersion;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The desktop group ID.</p>
          * 
@@ -327,6 +330,14 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         }
         public String getClientVersion() {
             return this.clientVersion;
+        }
+
+        public DescribeClientEventsResponseBodyEvents setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeClientEventsResponseBodyEvents setDesktopGroupId(String desktopGroupId) {
