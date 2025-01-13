@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class CreateIngressRequest extends TeaModel {
+    @NameInMap("AddressType")
+    public String addressType;
+
     /**
      * <p>The ID of the certificate that is associated with the <strong>CLB</strong> instance.</p>
      * <ul>
@@ -116,6 +119,9 @@ public class CreateIngressRequest extends TeaModel {
     @NameInMap("LoadBalanceType")
     public String loadBalanceType;
 
+    @NameInMap("LoadBalancerEdition")
+    public String loadBalancerEdition;
+
     /**
      * <p>The ID of the namespace where the application is located. Currently, cross-namespace applications are not supported.</p>
      * <p>This parameter is required.</p>
@@ -171,7 +177,6 @@ public class CreateIngressRequest extends TeaModel {
      * <blockquote>
      * <p> The SLB instance can be a Classic Load Balancer (CLB) instance or an Application Load Balancer (ALB) instance.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-uf6hucc7inlqrtcq5****</p>
@@ -179,9 +184,20 @@ public class CreateIngressRequest extends TeaModel {
     @NameInMap("SlbId")
     public String slbId;
 
+    @NameInMap("ZoneMappings")
+    public String zoneMappings;
+
     public static CreateIngressRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIngressRequest self = new CreateIngressRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateIngressRequest setAddressType(String addressType) {
+        this.addressType = addressType;
+        return this;
+    }
+    public String getAddressType() {
+        return this.addressType;
     }
 
     public CreateIngressRequest setCertId(String certId) {
@@ -288,6 +304,14 @@ public class CreateIngressRequest extends TeaModel {
         return this.loadBalanceType;
     }
 
+    public CreateIngressRequest setLoadBalancerEdition(String loadBalancerEdition) {
+        this.loadBalancerEdition = loadBalancerEdition;
+        return this;
+    }
+    public String getLoadBalancerEdition() {
+        return this.loadBalancerEdition;
+    }
+
     public CreateIngressRequest setNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
@@ -326,6 +350,14 @@ public class CreateIngressRequest extends TeaModel {
     }
     public String getSlbId() {
         return this.slbId;
+    }
+
+    public CreateIngressRequest setZoneMappings(String zoneMappings) {
+        this.zoneMappings = zoneMappings;
+        return this;
+    }
+    public String getZoneMappings() {
+        return this.zoneMappings;
     }
 
 }

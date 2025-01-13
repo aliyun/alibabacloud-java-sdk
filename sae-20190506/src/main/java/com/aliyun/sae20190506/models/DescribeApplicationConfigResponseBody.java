@@ -817,6 +817,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("EnableNewArms")
         public Boolean enableNewArms;
 
+        @NameInMap("Enabledle")
+        public Boolean enabledle;
+
         /**
          * <p>The environment variables. Variable description:</p>
          * <ul>
@@ -1250,6 +1253,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Replicas")
         public Integer replicas;
 
+        @NameInMap("ResourceType")
+        public String resourceType;
+
         @NameInMap("SecretMountDesc")
         public java.util.List<DescribeApplicationConfigResponseBodyDataSecretMountDesc> secretMountDesc;
 
@@ -1572,6 +1578,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.enableNewArms;
         }
 
+        public DescribeApplicationConfigResponseBodyData setEnabledle(Boolean enabledle) {
+            this.enabledle = enabledle;
+            return this;
+        }
+        public Boolean getEnabledle() {
+            return this.enabledle;
+        }
+
         public DescribeApplicationConfigResponseBodyData setEnvs(String envs) {
             this.envs = envs;
             return this;
@@ -1890,6 +1904,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public Integer getReplicas() {
             return this.replicas;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         public DescribeApplicationConfigResponseBodyData setSecretMountDesc(java.util.List<DescribeApplicationConfigResponseBodyDataSecretMountDesc> secretMountDesc) {
