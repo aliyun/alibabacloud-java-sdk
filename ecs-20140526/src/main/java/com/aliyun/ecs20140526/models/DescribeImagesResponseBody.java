@@ -261,6 +261,10 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("Device")
         public String device;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
@@ -449,6 +453,10 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("CpuOnlineUpgrade")
         public String cpuOnlineUpgrade;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v2</p>
+         */
         @NameInMap("ImdsSupport")
         public String imdsSupport;
 

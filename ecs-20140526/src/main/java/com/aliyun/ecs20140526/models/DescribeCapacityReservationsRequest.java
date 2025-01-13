@@ -22,7 +22,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance type.</p>
+     * <p>The instance type of the capacity reservation. You can specify this parameter to query only effective capacity reservations. To query capacity reservations that are released, you must specify PrivatePoolOptions.Ids.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
@@ -100,16 +100,16 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The state of the capacity reservation. Valid values:</p>
+     * <p>The status of the capacity reservation. Valid values:</p>
      * <ul>
      * <li>All: All states.</li>
      * <li>Pending: The capacity reservation is being initialized. Scheduled capacity reservations enter the Pending state after they are created.</li>
      * <li>Preparing: The capacity reservation is being prepared. Scheduled capacity reservations are in the Preparing state while resources are being provisioned.</li>
      * <li>Prepared: The capacity reservation is to take effect. After resources are provisioned, scheduled capacity reservations remain in the Prepared state until they take effect.</li>
      * <li>Active: The capacity reservation is in effect.</li>
-     * <li>Released: The capacity reservation has been released manually or automatically when it expired.</li>
+     * <li>Released: The capacity reservation is manually or automatically released when it expires.</li>
      * </ul>
-     * <p>Default value: Active.</p>
+     * <p>If you do not specify this parameter, capacity reservations in states other than Pending and Released are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -118,7 +118,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the capacity reservation.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeCapacityReservationsRequestTag> tag;
@@ -284,8 +284,8 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
 
     public static class DescribeCapacityReservationsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20.</p>
-         * <p>If you specify a single tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources with the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>The key of tag N of the capacity reservation. Valid values of N: 1 to 20.</p>
+         * <p>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -294,7 +294,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N of the capacity reservation. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

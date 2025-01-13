@@ -143,6 +143,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork extends TeaModel {
+        @NameInMap("RssSupport")
+        public Boolean rssSupport;
+
         /**
          * <blockquote>
          * <p> This parameter is not publicly available.</p>
@@ -168,6 +171,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork setRssSupport(Boolean rssSupport) {
+            this.rssSupport = rssSupport;
+            return this;
+        }
+        public Boolean getRssSupport() {
+            return this.rssSupport;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork setSriovSupport(Boolean sriovSupport) {

@@ -26,6 +26,11 @@ public class DetachDiskRequest extends TeaModel {
 
     /**
      * <p>The ID of the disk that you want to detach.</p>
+     * <ul>
+     * <li>The disk that you want to detach must be attached to an ECS instance and in the In Use (<code>In_use</code>) state.</li>
+     * <li>The instance from which you want to detach a data disk must be in the <code>Running</code> or <code>Stopped</code> state.</li>
+     * <li>The instance from which you want to detach the system disk must be in the <code>Stopped</code> state.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -329,7 +329,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice price;
 
         /**
-         * <p>The promotion rules.</p>
+         * <p>The information about the promotion rules.</p>
          */
         @NameInMap("Rules")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoRules rules;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeregisterManagedInstanceResponseBody extends TeaModel {
     /**
-     * <p>The managed instance.</p>
+     * <p>Details of the managed instances.</p>
      */
     @NameInMap("Instance")
     public DeregisterManagedInstanceResponseBodyInstance instance;

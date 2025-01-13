@@ -999,6 +999,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork extends TeaModel {
+        @NameInMap("EnableRss")
+        public Boolean enableRss;
+
         /**
          * <p>This parameter is not publicly available.</p>
          * 
@@ -1011,6 +1014,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public static DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork self = new DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork setEnableRss(Boolean enableRss) {
+            this.enableRss = enableRss;
+            return this;
+        }
+        public Boolean getEnableRss() {
+            return this.enableRss;
         }
 
         public DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork setEnableSriov(Boolean enableSriov) {

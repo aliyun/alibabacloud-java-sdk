@@ -253,8 +253,8 @@ public class DescribeImagesRequest extends TeaModel {
      * <li>Waiting: The image is waiting to be processed.</li>
      * <li>Available: The image is available.</li>
      * <li>UnAvailable: The image is unavailable.</li>
-     * <li>CreateFailed: The image failed to be created.</li>
-     * <li>Deprecated: The image is deprecated.</li>
+     * <li>CreateFailed: The image fails to be created.</li>
+     * <li>Deprecated: The image is no longer used.</li>
      * </ul>
      * <p>Default value: Available. You can specify multiple values for this parameter. Separate the values with commas (,).</p>
      * 

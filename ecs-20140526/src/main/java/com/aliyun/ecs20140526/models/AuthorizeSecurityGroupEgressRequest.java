@@ -120,7 +120,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The security group rules. Valid values of N: 1 to 100.</p>
+     * <p>An array of security group rules. You can specify 1 to 100 security group rules.</p>
      */
     @NameInMap("Permissions")
     public java.util.List<AuthorizeSecurityGroupEgressRequestPermissions> permissions;
@@ -214,6 +214,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.clientToken;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -222,6 +223,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.description;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setDestCidrIp(String destCidrIp) {
         this.destCidrIp = destCidrIp;
         return this;
@@ -230,6 +232,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.destCidrIp;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setDestGroupId(String destGroupId) {
         this.destGroupId = destGroupId;
         return this;
@@ -238,6 +241,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.destGroupId;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setDestGroupOwnerAccount(String destGroupOwnerAccount) {
         this.destGroupOwnerAccount = destGroupOwnerAccount;
         return this;
@@ -246,6 +250,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.destGroupOwnerAccount;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setDestGroupOwnerId(Long destGroupOwnerId) {
         this.destGroupOwnerId = destGroupOwnerId;
         return this;
@@ -254,6 +259,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.destGroupOwnerId;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setDestPrefixListId(String destPrefixListId) {
         this.destPrefixListId = destPrefixListId;
         return this;
@@ -262,6 +268,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.destPrefixListId;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -270,6 +277,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.ipProtocol;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setIpv6DestCidrIp(String ipv6DestCidrIp) {
         this.ipv6DestCidrIp = ipv6DestCidrIp;
         return this;
@@ -278,6 +286,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.ipv6DestCidrIp;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setIpv6SourceCidrIp(String ipv6SourceCidrIp) {
         this.ipv6SourceCidrIp = ipv6SourceCidrIp;
         return this;
@@ -286,6 +295,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.ipv6SourceCidrIp;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setNicType(String nicType) {
         this.nicType = nicType;
         return this;
@@ -318,6 +328,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.permissions;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -326,6 +337,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.policy;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setPortRange(String portRange) {
         this.portRange = portRange;
         return this;
@@ -334,6 +346,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.portRange;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setPriority(String priority) {
         this.priority = priority;
         return this;
@@ -374,6 +387,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.securityGroupId;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setSourceCidrIp(String sourceCidrIp) {
         this.sourceCidrIp = sourceCidrIp;
         return this;
@@ -382,6 +396,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.sourceCidrIp;
     }
 
+    @Deprecated
     public AuthorizeSecurityGroupEgressRequest setSourcePortRange(String sourcePortRange) {
         this.sourcePortRange = sourcePortRange;
         return this;
@@ -415,11 +430,6 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
          * <li>You must specify at least one of the following parameters: <code>DestGroupId</code>, <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, and <code>DestPrefixListId</code>.</li>
          * <li>If you specify <code>DestGroupId</code> but do not specify <code>DestCidrIp</code>, you must set <code>NicType</code> to intranet.</li>
          * <li>If you specify both <code>DestGroupId</code> and <code>DestCidrIp</code>, <code>DestCidrIp</code> takes precedence.</li>
-         * </ul>
-         * <p>When you specify this parameter, take note of the following items:</p>
-         * <ul>
-         * <li>Advanced security groups do not support security group rules that reference security groups as authorization objects.</li>
-         * <li>Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -498,7 +508,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String ipv6DestCidrIp;
 
         /**
-         * <p>The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
+         * <p>The source IPv6 CIDR block or IPv6 address.</p>
          * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * <blockquote>
          * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>

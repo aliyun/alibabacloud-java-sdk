@@ -90,9 +90,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public String status;
 
     /**
-     * <blockquote>
-     * <p>This parameter is not publicly available.</p>
-     * </blockquote>
+     * <p>The tags of the image creation task.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeImagePipelineExecutionsRequestTag> tag;
@@ -192,9 +190,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
 
     public static class DescribeImagePipelineExecutionsRequestTag extends TeaModel {
         /**
-         * <blockquote>
-         * <p>This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The key of tag N of the image creation task. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -203,9 +199,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
         public String key;
 
         /**
-         * <blockquote>
-         * <p>This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The value of tag N of the image creation task. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>

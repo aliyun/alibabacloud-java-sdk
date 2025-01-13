@@ -92,13 +92,14 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the elasticity assurances. Valid values:</p>
+     * <p>The status of the elasticity assurance. Valid values:</p>
      * <ul>
-     * <li>All</li>
-     * <li>Preparing</li>
-     * <li>Prepared</li>
-     * <li>Active</li>
-     * <li>Released</li>
+     * <li>All: All states.</li>
+     * <li>Deactivated: The elasticity assurance is pending activation. This state is in invitational preview.</li>
+     * <li>Preparing: The elasticity assurance is being prepared.</li>
+     * <li>Prepared: The elasticity assurance is to take effect.</li>
+     * <li>Active: The elasticity assurance is in effect.</li>
+     * <li>Released: The elasticity assurance is released.</li>
      * </ul>
      * <p>Default value: Active.</p>
      * 

@@ -42,7 +42,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String baseImageType;
 
     /**
-     * <p>The content of the image template. The content cannot exceed 16 KB in size and can contain up to 127 commands. For more information about the commands that are supported, see the &quot;Usage notes&quot; section of this topic.</p>
+     * <p>The build content in the image template. The content cannot exceed 16 KB in size. For information about the commands supported by Image Builder, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>FROM IMAGE:m-bp67acfmxazb4p****</p>
@@ -86,9 +86,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String description;
 
     /**
-     * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
-     * </blockquote>
+     * <p>The image family. The image family name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https:// and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -155,8 +153,30 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The repair mode of the image template.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>Standard: the standard mode.</p>
+     * <p>Supported check items in Linux operating systems:</p>
+     * <ul>
+     * <li>GUESTOS.CloudInit</li>
+     * <li>GUESTOS.Dhcp</li>
+     * <li>GUESTOS.Virtio</li>
+     * <li>GUESTOS.OnlineResizeFS</li>
+     * <li>GUESTOS.Grub</li>
+     * <li>GUESTOS.Fstab</li>
+     * </ul>
+     * <p>Supported check items in Windows operating systems:</p>
+     * <ul>
+     * <li>GUESTOS.Virtio</li>
+     * <li>GUESTOS.Updat</li>
+     * <li>GUESTOS.Hotfix</li>
+     * <li>GUESTOS.Server</li>
+     * </ul>
+     * </li>
+     * </ul>
      * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * <p> As the check and repair capabilities continue to improve, the number of check items may increase. For more information about check items, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview of image check</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -197,9 +217,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public java.util.List<CreateImagePipelineRequestTag> tag;
 
     /**
-     * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
-     * </blockquote>
+     * <p>The test content in the image template. The content cannot exceed 16 KB in size. For information about the commands supported by Image Builder, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>

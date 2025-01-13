@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachInstanceRamRoleRequest extends TeaModel {
     /**
-     * <p>The IDs of the instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</p>
+     * <p>The IDs of ECS instances. You can specify 1 to 100 ECS instances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class AttachInstanceRamRoleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The policy. The policy document must be 1 to 1,024 characters in length. When you attach an instance RAM role to one or more instances, you can specify an additional policy to further limit the permissions of the role. For more information, see <a href="https://help.aliyun.com/document_detail/93732.html">Policy overview</a>.</p>
+     * <p>The additional policy. When you attach an instance RAM role to instances, you can specify an additional policy to further limit the permissions of the role. For more information, see <a href="https://help.aliyun.com/document_detail/93732.html">Policy overview</a>. The value of this parameter must be 1 to 1,024 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Statement&quot;: [{&quot;Action&quot;: [&quot;<em>&quot;],&quot;Effect&quot;: &quot;Allow&quot;,&quot;Resource&quot;: [&quot;</em>&quot;]}],&quot;Version&quot;:&quot;1&quot;}</p>

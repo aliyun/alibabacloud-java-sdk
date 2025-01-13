@@ -292,6 +292,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
         return this.ownerId;
     }
 
+    @Deprecated
     public DescribeNetworkInterfacesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -300,6 +301,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
         return this.pageNumber;
     }
 
+    @Deprecated
     public DescribeNetworkInterfacesRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;

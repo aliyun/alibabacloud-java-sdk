@@ -464,6 +464,10 @@ public class CreateImageRequest extends TeaModel {
     }
 
     public static class CreateImageRequestFeatures extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>v2</p>
+         */
         @NameInMap("ImdsSupport")
         public String imdsSupport;
 

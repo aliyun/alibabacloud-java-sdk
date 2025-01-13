@@ -44,7 +44,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         /**
          * <p>The device name of the disk. Example: /dev/xvdb.</p>
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * <p> This parameter will be removed in the future. To ensure compatibility, we recommend that you use other parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String device;
 
         /**
-         * <p>The format of the image.</p>
+         * <p>The image format.</p>
          * 
          * <strong>example:</strong>
          * <p>qcow2</p>
@@ -72,7 +72,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String importOSSBucket;
 
         /**
-         * <p>The OSS object corresponding to the imported image file.</p>
+         * <p>The OSS object to which the imported image belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>imageImport</p>
@@ -90,7 +90,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String size;
 
         /**
-         * <p>The ID of the snapshot.</p>
+         * <p>The snapshot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bp17ot2q7x72ggtw****</p>
@@ -99,7 +99,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The type of the image.</p>
+         * <p>The image type.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>
@@ -191,7 +191,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
 
     public static class DescribeImageFromFamilyResponseBodyImageTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the image.</p>
+         * <p>The tag key of the custom image.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -200,7 +200,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the image.</p>
+         * <p>The tag value of the custom image.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -252,7 +252,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
 
     public static class DescribeImageFromFamilyResponseBodyImage extends TeaModel {
         /**
-         * <p>The image architecture. Valid values:</p>
+         * <p>The architecture of the image. Valid values:</p>
          * <ul>
          * <li>i386</li>
          * <li>x86_64</li>
@@ -274,7 +274,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The description of the image.</p>
+         * <p>The description of the volume.</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -283,7 +283,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The mappings between the disks and snapshots under the image.</p>
+         * <p>The mappings between the disk and the snapshot in the image.</p>
          */
         @NameInMap("DiskDeviceMappings")
         public DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings diskDeviceMappings;
@@ -298,7 +298,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String imageFamily;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-bp1g7004ksh0oeuc****</p>
@@ -331,7 +331,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String imageOwnerAlias;
 
         /**
-         * <p>The version of the image.</p>
+         * <p>The image version.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -349,7 +349,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public Boolean isCopied;
 
         /**
-         * <p>Indicates whether the image has been shared to other Alibaba Cloud accounts.</p>
+         * <p>Indicates whether the custom image was shared to other Alibaba Cloud accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -358,7 +358,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String isSelfShared;
 
         /**
-         * <p>Indicates whether you have subscribed to the image corresponding to the specified product code.</p>
+         * <p>Indicates whether you have subscribed to the service terms of the image product corresponding to the image product code.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -367,7 +367,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public Boolean isSubscribed;
 
         /**
-         * <p>Indicates whether the image supports cloud-init.</p>
+         * <p>Indicates whether cloud-init is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -385,7 +385,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public Boolean isSupportIoOptimized;
 
         /**
-         * <p>The name of the operating system.</p>
+         * <p>The display name of the operating system in Chinese.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud Linux 2.1903</p>
@@ -407,7 +407,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String OSType;
 
         /**
-         * <p>The platform of the operating system.</p>
+         * <p>The operating system.</p>
          * 
          * <strong>example:</strong>
          * <p>Aliyun</p>
@@ -425,7 +425,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The image creation progress. Unit: percent (%).</p>
+         * <p>The image creation progress in percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -443,12 +443,12 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The status of the image. Valid values:</p>
+         * <p>The state of the image. Valid values:</p>
          * <ul>
-         * <li>UnAvailable: The image is unavailable.</li>
-         * <li>Available: The image is available.</li>
-         * <li>Creating: The image is being created.</li>
-         * <li>CreateFailed: The image failed to be created.</li>
+         * <li>UnAvailable</li>
+         * <li>Available</li>
+         * <li>Creating</li>
+         * <li>CreateFailed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -458,7 +458,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>An array that consists of Tag data.</p>
+         * <p>The tags of the image.</p>
          */
         @NameInMap("Tags")
         public DescribeImageFromFamilyResponseBodyImageTags tags;
@@ -466,8 +466,8 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the image has been used to create ECS instances. Valid values:</p>
          * <ul>
-         * <li>instance: The image has been used to create one or more ECS instances.</li>
-         * <li>none: The image has not been used to create ECS instances.</li>
+         * <li>instance: The image was used to create one or more ECS instances.</li>
+         * <li>none: The image was not used to create ECS instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
