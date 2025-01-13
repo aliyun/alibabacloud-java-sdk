@@ -529,6 +529,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Replicas", request.replicas);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.saeVersion)) {
             query.put("SaeVersion", request.saeVersion);
         }
@@ -902,6 +906,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateIngressResponse createIngressWithOptions(CreateIngressRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addressType)) {
+            query.put("AddressType", request.addressType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.certId)) {
             query.put("CertId", request.certId);
         }
@@ -954,6 +962,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LoadBalanceType", request.loadBalanceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerEdition)) {
+            query.put("LoadBalancerEdition", request.loadBalancerEdition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             query.put("NamespaceId", request.namespaceId);
         }
@@ -968,6 +980,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.slbId)) {
             query.put("SlbId", request.slbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneMappings)) {
+            query.put("ZoneMappings", request.zoneMappings);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4657,6 +4673,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.containerName)) {
+            query.put("ContainerName", request.containerName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.podName)) {

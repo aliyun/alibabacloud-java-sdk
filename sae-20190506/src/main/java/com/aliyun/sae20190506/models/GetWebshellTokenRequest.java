@@ -13,6 +13,9 @@ public class GetWebshellTokenRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("ContainerName")
+    public String containerName;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -33,6 +36,14 @@ public class GetWebshellTokenRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public GetWebshellTokenRequest setContainerName(String containerName) {
+        this.containerName = containerName;
+        return this;
+    }
+    public String getContainerName() {
+        return this.containerName;
     }
 
     public GetWebshellTokenRequest setPodName(String podName) {

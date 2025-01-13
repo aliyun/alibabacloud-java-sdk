@@ -1,3 +1,14 @@
+2025-01-13 Version: 1.25.4
+- Update API CreateApplication: add param ResourceType.
+- Update API CreateIngress: add param AddressType.
+- Update API CreateIngress: add param LoadBalancerEdition.
+- Update API CreateIngress: add param ZoneMappings.
+- Update API CreateIngress: update param SlbId.
+- Update API DescribeApplicationConfig: update response param.
+- Update API DescribeIngress: update response param.
+- Update API GetWebshellToken: add param ContainerName.
+
+
 2024-12-26 Version: 1.25.3
 - Update API CreateApplication: add param CustomImageNetworkType.
 - Update API DeployApplication: add param CustomImageNetworkType.

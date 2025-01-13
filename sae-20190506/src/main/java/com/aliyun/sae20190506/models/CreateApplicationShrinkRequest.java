@@ -433,6 +433,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("Replicas")
     public Integer replicas;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     @NameInMap("SaeVersion")
     public String saeVersion;
 
@@ -977,6 +980,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public Integer getReplicas() {
         return this.replicas;
+    }
+
+    public CreateApplicationShrinkRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public CreateApplicationShrinkRequest setSaeVersion(String saeVersion) {

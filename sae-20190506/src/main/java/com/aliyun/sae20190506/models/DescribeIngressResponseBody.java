@@ -378,6 +378,9 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("CertIds")
         public String certIds;
 
+        @NameInMap("CreatedBySae")
+        public Boolean createdBySae;
+
         /**
          * <p>The forwarding rules.</p>
          */
@@ -538,6 +541,14 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
         public String getCertIds() {
             return this.certIds;
+        }
+
+        public DescribeIngressResponseBodyData setCreatedBySae(Boolean createdBySae) {
+            this.createdBySae = createdBySae;
+            return this;
+        }
+        public Boolean getCreatedBySae() {
+            return this.createdBySae;
         }
 
         public DescribeIngressResponseBodyData setDefaultRule(DescribeIngressResponseBodyDataDefaultRule defaultRule) {
