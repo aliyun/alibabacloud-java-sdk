@@ -110,6 +110,211 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions extends TeaModel {
+        @NameInMap("RetainCloudAssistant")
+        public Boolean retainCloudAssistant;
+
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions setRetainCloudAssistant(Boolean retainCloudAssistant) {
+            this.retainCloudAssistant = retainCloudAssistant;
+            return this;
+        }
+        public Boolean getRetainCloudAssistant() {
+            return this.retainCloudAssistant;
+        }
+
+    }
+
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
+        @NameInMap("DiskImageSize")
+        public Integer diskImageSize;
+
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("OSSBucket")
+        public String OSSBucket;
+
+        @NameInMap("OSSObject")
+        public String OSSObject;
+
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping setDiskImageSize(Integer diskImageSize) {
+            this.diskImageSize = diskImageSize;
+            return this;
+        }
+        public Integer getDiskImageSize() {
+            return this.diskImageSize;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping setOSSBucket(String OSSBucket) {
+            this.OSSBucket = OSSBucket;
+            return this;
+        }
+        public String getOSSBucket() {
+            return this.OSSBucket;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping setOSSObject(String OSSObject) {
+            this.OSSObject = OSSObject;
+            return this;
+        }
+        public String getOSSObject() {
+            return this.OSSObject;
+        }
+
+    }
+
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings extends TeaModel {
+        @NameInMap("DiskDeviceMapping")
+        public java.util.List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping> diskDeviceMapping;
+
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings setDiskDeviceMapping(java.util.List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping> diskDeviceMapping) {
+            this.diskDeviceMapping = diskDeviceMapping;
+            return this;
+        }
+        public java.util.List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping> getDiskDeviceMapping() {
+            return this.diskDeviceMapping;
+        }
+
+    }
+
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures extends TeaModel {
+        @NameInMap("NvmeSupport")
+        public String nvmeSupport;
+
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures setNvmeSupport(String nvmeSupport) {
+            this.nvmeSupport = nvmeSupport;
+            return this;
+        }
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
+    }
+
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions extends TeaModel {
+        @NameInMap("Architecture")
+        public String architecture;
+
+        @NameInMap("BootMode")
+        public String bootMode;
+
+        @NameInMap("DiskDeviceMappings")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings diskDeviceMappings;
+
+        @NameInMap("Features")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures features;
+
+        @NameInMap("LicenseType")
+        public String licenseType;
+
+        @NameInMap("OSType")
+        public String OSType;
+
+        @NameInMap("Platform")
+        public String platform;
+
+        @NameInMap("RetainImportedImage")
+        public Boolean retainImportedImage;
+
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setArchitecture(String architecture) {
+            this.architecture = architecture;
+            return this;
+        }
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setBootMode(String bootMode) {
+            this.bootMode = bootMode;
+            return this;
+        }
+        public String getBootMode() {
+            return this.bootMode;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setDiskDeviceMappings(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings diskDeviceMappings) {
+            this.diskDeviceMappings = diskDeviceMappings;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings getDiskDeviceMappings() {
+            return this.diskDeviceMappings;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setFeatures(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures features) {
+            this.features = features;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures getFeatures() {
+            return this.features;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setLicenseType(String licenseType) {
+            this.licenseType = licenseType;
+            return this;
+        }
+        public String getLicenseType() {
+            return this.licenseType;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setOSType(String OSType) {
+            this.OSType = OSType;
+            return this;
+        }
+        public String getOSType() {
+            return this.OSType;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setRetainImportedImage(Boolean retainImportedImage) {
+            this.retainImportedImage = retainImportedImage;
+            return this;
+        }
+        public Boolean getRetainImportedImage() {
+            return this.retainImportedImage;
+        }
+
+    }
+
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
@@ -196,6 +401,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
          */
         @NameInMap("AddAccounts")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts addAccounts;
+
+        @NameInMap("AdvancedOptions")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions advancedOptions;
 
         /**
          * <p>The source image.</p>
@@ -286,6 +494,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("ImagePipelineId")
         public String imagePipelineId;
 
+        @NameInMap("ImportImageOptions")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions importImageOptions;
+
         /**
          * <p>The instance type.</p>
          * 
@@ -312,6 +523,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("NvmeSupport")
+        public String nvmeSupport;
 
         /**
          * <p>The repair mode of the image template.</p>
@@ -387,6 +601,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.addAccounts;
         }
 
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setAdvancedOptions(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions advancedOptions) {
+            this.advancedOptions = advancedOptions;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions getAdvancedOptions() {
+            return this.advancedOptions;
+        }
+
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setBaseImage(String baseImage) {
             this.baseImage = baseImage;
             return this;
@@ -459,6 +681,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.imagePipelineId;
         }
 
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImportImageOptions(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions importImageOptions) {
+            this.importImageOptions = importImageOptions;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions getImportImageOptions() {
+            return this.importImageOptions;
+        }
+
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
@@ -481,6 +711,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setNvmeSupport(String nvmeSupport) {
+            this.nvmeSupport = nvmeSupport;
+            return this;
+        }
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
         }
 
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setRepairMode(String repairMode) {

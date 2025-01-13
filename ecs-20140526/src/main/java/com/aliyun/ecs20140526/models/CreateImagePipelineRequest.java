@@ -13,13 +13,15 @@ public class CreateImagePipelineRequest extends TeaModel {
     @NameInMap("AddAccount")
     public java.util.List<Long> addAccount;
 
+    @NameInMap("AdvancedOptions")
+    public CreateImagePipelineRequestAdvancedOptions advancedOptions;
+
     /**
      * <p>The source image.</p>
      * <ul>
      * <li>If you set <code>BaseImageType</code> to IMAGE, set the BaseImage parameter to the ID of a custom image.</li>
      * <li>If you set <code>BaseImageType</code> to IMAGE_FAMILY, set the BaseImage parameter to the name of an image family.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>m-bp67acfmxazb4p****</p>
@@ -104,6 +106,9 @@ public class CreateImagePipelineRequest extends TeaModel {
     @NameInMap("ImageName")
     public String imageName;
 
+    @NameInMap("ImportImageOptions")
+    public CreateImagePipelineRequestImportImageOptions importImageOptions;
+
     /**
      * <p>The instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query instance types.</p>
      * <p>If you do not configure this parameter, an instance type that provides the fewest vCPUs and memory resources is automatically selected. This configuration is subject to resource availability of instance types. For example, the ecs.g6.large instance type is automatically selected. If available ecs.g6.large resources are insufficient, the ecs.g6.xlarge instance type is selected.</p>
@@ -135,6 +140,9 @@ public class CreateImagePipelineRequest extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("NvmeSupport")
+    public String nvmeSupport;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -258,6 +266,14 @@ public class CreateImagePipelineRequest extends TeaModel {
         return this.addAccount;
     }
 
+    public CreateImagePipelineRequest setAdvancedOptions(CreateImagePipelineRequestAdvancedOptions advancedOptions) {
+        this.advancedOptions = advancedOptions;
+        return this;
+    }
+    public CreateImagePipelineRequestAdvancedOptions getAdvancedOptions() {
+        return this.advancedOptions;
+    }
+
     public CreateImagePipelineRequest setBaseImage(String baseImage) {
         this.baseImage = baseImage;
         return this;
@@ -322,6 +338,14 @@ public class CreateImagePipelineRequest extends TeaModel {
         return this.imageName;
     }
 
+    public CreateImagePipelineRequest setImportImageOptions(CreateImagePipelineRequestImportImageOptions importImageOptions) {
+        this.importImageOptions = importImageOptions;
+        return this;
+    }
+    public CreateImagePipelineRequestImportImageOptions getImportImageOptions() {
+        return this.importImageOptions;
+    }
+
     public CreateImagePipelineRequest setInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -344,6 +368,14 @@ public class CreateImagePipelineRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateImagePipelineRequest setNvmeSupport(String nvmeSupport) {
+        this.nvmeSupport = nvmeSupport;
+        return this;
+    }
+    public String getNvmeSupport() {
+        return this.nvmeSupport;
     }
 
     public CreateImagePipelineRequest setOwnerAccount(String ownerAccount) {
@@ -440,6 +472,192 @@ public class CreateImagePipelineRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class CreateImagePipelineRequestAdvancedOptions extends TeaModel {
+        @NameInMap("RetainCloudAssistant")
+        public Boolean retainCloudAssistant;
+
+        public static CreateImagePipelineRequestAdvancedOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateImagePipelineRequestAdvancedOptions self = new CreateImagePipelineRequestAdvancedOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImagePipelineRequestAdvancedOptions setRetainCloudAssistant(Boolean retainCloudAssistant) {
+            this.retainCloudAssistant = retainCloudAssistant;
+            return this;
+        }
+        public Boolean getRetainCloudAssistant() {
+            return this.retainCloudAssistant;
+        }
+
+    }
+
+    public static class CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings extends TeaModel {
+        @NameInMap("DiskImageSize")
+        public Integer diskImageSize;
+
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("OSSBucket")
+        public String OSSBucket;
+
+        @NameInMap("OSSObject")
+        public String OSSObject;
+
+        public static CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings build(java.util.Map<String, ?> map) throws Exception {
+            CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings self = new CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings setDiskImageSize(Integer diskImageSize) {
+            this.diskImageSize = diskImageSize;
+            return this;
+        }
+        public Integer getDiskImageSize() {
+            return this.diskImageSize;
+        }
+
+        public CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings setOSSBucket(String OSSBucket) {
+            this.OSSBucket = OSSBucket;
+            return this;
+        }
+        public String getOSSBucket() {
+            return this.OSSBucket;
+        }
+
+        public CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings setOSSObject(String OSSObject) {
+            this.OSSObject = OSSObject;
+            return this;
+        }
+        public String getOSSObject() {
+            return this.OSSObject;
+        }
+
+    }
+
+    public static class CreateImagePipelineRequestImportImageOptionsFeatures extends TeaModel {
+        @NameInMap("NvmeSupport")
+        public String nvmeSupport;
+
+        public static CreateImagePipelineRequestImportImageOptionsFeatures build(java.util.Map<String, ?> map) throws Exception {
+            CreateImagePipelineRequestImportImageOptionsFeatures self = new CreateImagePipelineRequestImportImageOptionsFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImagePipelineRequestImportImageOptionsFeatures setNvmeSupport(String nvmeSupport) {
+            this.nvmeSupport = nvmeSupport;
+            return this;
+        }
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
+    }
+
+    public static class CreateImagePipelineRequestImportImageOptions extends TeaModel {
+        @NameInMap("Architecture")
+        public String architecture;
+
+        @NameInMap("BootMode")
+        public String bootMode;
+
+        @NameInMap("DiskDeviceMappings")
+        public java.util.List<CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings> diskDeviceMappings;
+
+        @NameInMap("Features")
+        public CreateImagePipelineRequestImportImageOptionsFeatures features;
+
+        @NameInMap("LicenseType")
+        public String licenseType;
+
+        @NameInMap("OSType")
+        public String OSType;
+
+        @NameInMap("Platform")
+        public String platform;
+
+        @NameInMap("RetainImportedImage")
+        public Boolean retainImportedImage;
+
+        public static CreateImagePipelineRequestImportImageOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateImagePipelineRequestImportImageOptions self = new CreateImagePipelineRequestImportImageOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setArchitecture(String architecture) {
+            this.architecture = architecture;
+            return this;
+        }
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setBootMode(String bootMode) {
+            this.bootMode = bootMode;
+            return this;
+        }
+        public String getBootMode() {
+            return this.bootMode;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setDiskDeviceMappings(java.util.List<CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings> diskDeviceMappings) {
+            this.diskDeviceMappings = diskDeviceMappings;
+            return this;
+        }
+        public java.util.List<CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings> getDiskDeviceMappings() {
+            return this.diskDeviceMappings;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setFeatures(CreateImagePipelineRequestImportImageOptionsFeatures features) {
+            this.features = features;
+            return this;
+        }
+        public CreateImagePipelineRequestImportImageOptionsFeatures getFeatures() {
+            return this.features;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setLicenseType(String licenseType) {
+            this.licenseType = licenseType;
+            return this;
+        }
+        public String getLicenseType() {
+            return this.licenseType;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setOSType(String OSType) {
+            this.OSType = OSType;
+            return this;
+        }
+        public String getOSType() {
+            return this.OSType;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setRetainImportedImage(Boolean retainImportedImage) {
+            this.retainImportedImage = retainImportedImage;
+            return this;
+        }
+        public Boolean getRetainImportedImage() {
+            return this.retainImportedImage;
+        }
+
     }
 
     public static class CreateImagePipelineRequestTag extends TeaModel {
