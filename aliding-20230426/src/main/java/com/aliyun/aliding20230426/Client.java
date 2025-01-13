@@ -10896,6 +10896,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>调用AI技能</p>
+     * 
+     * @param tmpReq InvokeSkillRequest
+     * @param tmpHeader InvokeSkillHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InvokeSkillResponse
+     */
+    public InvokeSkillResponse invokeSkillWithOptions(InvokeSkillRequest tmpReq, InvokeSkillHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        InvokeSkillShrinkRequest request = new InvokeSkillShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        InvokeSkillShrinkHeaders headers = new InvokeSkillShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.params)) {
+            request.paramsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.params, "Params", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.paramsShrink)) {
+            body.put("Params", request.paramsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
+            body.put("SkillId", request.skillId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InvokeSkill"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ai/v1/skill/invoke"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InvokeSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>调用AI技能</p>
+     * 
+     * @param request InvokeSkillRequest
+     * @return InvokeSkillResponse
+     */
+    public InvokeSkillResponse invokeSkill(InvokeSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        InvokeSkillHeaders headers = new InvokeSkillHeaders();
+        return this.invokeSkillWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询宜搭应用列表</p>
      * 
      * @param request ListApplicationRequest
