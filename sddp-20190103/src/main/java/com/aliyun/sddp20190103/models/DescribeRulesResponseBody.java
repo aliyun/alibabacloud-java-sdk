@@ -242,6 +242,9 @@ public class DescribeRulesResponseBody extends TeaModel {
         @NameInMap("MatchType")
         public Integer matchType;
 
+        @NameInMap("ModelRuleIds")
+        public String modelRuleIds;
+
         /**
          * <p>The name of the sensitive data detection rule.</p>
          * 
@@ -345,6 +348,9 @@ public class DescribeRulesResponseBody extends TeaModel {
          */
         @NameInMap("Target")
         public String target;
+
+        @NameInMap("TemplateRuleIds")
+        public String templateRuleIds;
 
         /**
          * <p>The ID of the account that is used to create the sensitive data detection rule.</p>
@@ -494,6 +500,14 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.matchType;
         }
 
+        public DescribeRulesResponseBodyItems setModelRuleIds(String modelRuleIds) {
+            this.modelRuleIds = modelRuleIds;
+            return this;
+        }
+        public String getModelRuleIds() {
+            return this.modelRuleIds;
+        }
+
         public DescribeRulesResponseBodyItems setName(String name) {
             this.name = name;
             return this;
@@ -564,6 +578,14 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
         public String getTarget() {
             return this.target;
+        }
+
+        public DescribeRulesResponseBodyItems setTemplateRuleIds(String templateRuleIds) {
+            this.templateRuleIds = templateRuleIds;
+            return this;
+        }
+        public String getTemplateRuleIds() {
+            return this.templateRuleIds;
         }
 
         public DescribeRulesResponseBodyItems setUserId(Long userId) {

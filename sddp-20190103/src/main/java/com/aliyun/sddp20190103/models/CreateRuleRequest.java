@@ -71,6 +71,9 @@ public class CreateRuleRequest extends TeaModel {
     @NameInMap("MatchType")
     public Integer matchType;
 
+    @NameInMap("ModelRuleIds")
+    public String modelRuleIds;
+
     /**
      * <p>The name of the sensitive data detection rule.</p>
      * <p>This parameter is required.</p>
@@ -187,6 +190,9 @@ public class CreateRuleRequest extends TeaModel {
     @NameInMap("Target")
     public String target;
 
+    @NameInMap("TemplateRuleIds")
+    public String templateRuleIds;
+
     /**
      * <p>The risk level of the alert that is triggered. Valid values:</p>
      * <ul>
@@ -252,6 +258,14 @@ public class CreateRuleRequest extends TeaModel {
     }
     public Integer getMatchType() {
         return this.matchType;
+    }
+
+    public CreateRuleRequest setModelRuleIds(String modelRuleIds) {
+        this.modelRuleIds = modelRuleIds;
+        return this;
+    }
+    public String getModelRuleIds() {
+        return this.modelRuleIds;
     }
 
     public CreateRuleRequest setName(String name) {
@@ -332,6 +346,14 @@ public class CreateRuleRequest extends TeaModel {
     }
     public String getTarget() {
         return this.target;
+    }
+
+    public CreateRuleRequest setTemplateRuleIds(String templateRuleIds) {
+        this.templateRuleIds = templateRuleIds;
+        return this;
+    }
+    public String getTemplateRuleIds() {
+        return this.templateRuleIds;
     }
 
     public CreateRuleRequest setWarnLevel(Integer warnLevel) {
