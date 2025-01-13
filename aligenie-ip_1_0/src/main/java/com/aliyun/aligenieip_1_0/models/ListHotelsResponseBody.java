@@ -4,9 +4,17 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListHotelsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -60,30 +68,66 @@ public class ListHotelsResponseBody extends TeaModel {
         @NameInMap("AccountNames")
         public java.util.List<String> accountNames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1654568802000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>酒店地址</p>
+         */
         @NameInMap("HotelAddress")
         public String hotelAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>73ab1b03018d4da69b5bef17095f569b</p>
+         */
         @NameInMap("HotelId")
         public String hotelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>酒店名称</p>
+         */
         @NameInMap("HotelName")
         public String hotelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>酒店</p>
+         */
         @NameInMap("IndustryType")
         public String industryType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13312340987</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试产品</p>
+         */
         @NameInMap("RelatedProductName")
         public String relatedProductName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("RoomNum")
         public Integer roomNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -178,15 +222,31 @@ public class ListHotelsResponseBody extends TeaModel {
         @NameInMap("HasNext")
         public Boolean hasNext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalPage")
         public Integer totalPage;
 

@@ -4,24 +4,60 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class CreateHotelShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>333566791</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-10-1 00:00:00</p>
+     */
     @NameInMap("EstOpenTime")
     public String estOpenTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HotelAddress")
     public String hotelAddress;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@hotel.com">test@hotel.com</a></p>
+     */
     @NameInMap("HotelEmail")
     public String hotelEmail;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HotelName")
     public String hotelName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13xxxxxxxx</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jTO****Rw</p>
+     */
     @NameInMap("RelatedPk")
     public String relatedPk;
 
@@ -31,12 +67,28 @@ public class CreateHotelShrinkRequest extends TeaModel {
     @NameInMap("RelatedPks")
     public String relatedPksShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("RoomNum")
     public Integer roomNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAEV***E3d3Z2ETwh</p>
+     */
     @NameInMap("TbOpenId")
     public String tbOpenId;
 

@@ -6,10 +6,18 @@ import com.aliyun.tea.*;
 public class GetHotelSceneItemDetailRequest extends TeaModel {
     /**
      * <p>hotelID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80d84ea8ed9e422fbad52715c8fc56f1</p>
      */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10336</p>
+     */
     @NameInMap("ItemId")
     public Long itemId;
 

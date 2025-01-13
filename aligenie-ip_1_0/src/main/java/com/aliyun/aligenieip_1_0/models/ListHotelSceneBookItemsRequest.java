@@ -6,13 +6,26 @@ import com.aliyun.tea.*;
 public class ListHotelSceneBookItemsRequest extends TeaModel {
     /**
      * <p>hotelID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80d84ea8ed9e422fbad52715c8fc56f1</p>
      */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Page")
     public ListHotelSceneBookItemsRequestPage page;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FOOD</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -46,9 +59,21 @@ public class ListHotelSceneBookItemsRequest extends TeaModel {
     }
 
     public static class ListHotelSceneBookItemsRequestPage extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 

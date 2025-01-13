@@ -4,12 +4,21 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class PushVoiceBoxCommandsShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Commands")
     public String commandsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoomNo")
     public String roomNo;
 

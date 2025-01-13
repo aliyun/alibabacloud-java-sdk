@@ -4,6 +4,9 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetHotelOrderDetailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Payload")
     public GetHotelOrderDetailRequestPayload payload;
 
@@ -21,6 +24,12 @@ public class GetHotelOrderDetailRequest extends TeaModel {
     }
 
     public static class GetHotelOrderDetailRequestPayload extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20220714150702000168270112410630</p>
+         */
         @NameInMap("OrderNo")
         public String orderNo;
 

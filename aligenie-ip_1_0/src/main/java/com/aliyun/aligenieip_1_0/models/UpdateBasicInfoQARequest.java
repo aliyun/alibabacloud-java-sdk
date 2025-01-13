@@ -4,15 +4,36 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class UpdateBasicInfoQARequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11:11</p>
+     */
     @NameInMap("CheckInTime")
     public String checkInTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11:11</p>
+     */
     @NameInMap("CheckOutTime")
     public String checkOutTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HotelAddress")
     public String hotelAddress;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af7***536</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
@@ -25,18 +46,36 @@ public class UpdateBasicInfoQARequest extends TeaModel {
     @NameInMap("HotelService")
     public String hotelService;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ParkingExpenses")
     public String parkingExpenses;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ParkingPosition")
     public String parkingPosition;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123***</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WifiName")
     public String wifiName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WifiPassword")
     public String wifiPassword;
 

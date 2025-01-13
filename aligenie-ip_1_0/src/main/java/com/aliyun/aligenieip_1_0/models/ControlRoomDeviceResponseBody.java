@@ -7,9 +7,17 @@ public class ControlRoomDeviceResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7***726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +62,10 @@ public class ControlRoomDeviceResponseBody extends TeaModel {
     }
 
     public static class ControlRoomDeviceResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Message")
         public String message;
 

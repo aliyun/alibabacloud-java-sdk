@@ -4,15 +4,31 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class CreateHotelAlarmShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cf2446fc9d144c85aaee4f9ae20a96e7</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DOU_YIN</p>
+     */
     @NameInMap("MusicType")
     public String musicType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Rooms")
     public String roomsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScheduleInfo")
     public String scheduleInfoShrink;
 

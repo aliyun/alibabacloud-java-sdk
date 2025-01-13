@@ -4,36 +4,78 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListTicketsShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-09-14 14:23:00</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af7***536</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsDesc")
     public Boolean isDesc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsNeedCallback")
     public Boolean isNeedCallback;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsNeedCharges")
     public Boolean isNeedCharges;
 
     @NameInMap("Page")
     public String pageShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1211</p>
+     */
     @NameInMap("RoomNo")
     public String roomNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gmtCalled</p>
+     */
     @NameInMap("SortField")
     public String sortField;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-08 09:39:00</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>waiting</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("Type")
     public String type;
 

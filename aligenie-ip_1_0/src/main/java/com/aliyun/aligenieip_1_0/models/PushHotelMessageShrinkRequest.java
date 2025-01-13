@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class PushHotelMessageShrinkRequest extends TeaModel {
     /**
      * <p>pushHotelMessageReq</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PushHotelMessageReq")
     public String pushHotelMessageReqShrink;

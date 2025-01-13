@@ -4,18 +4,30 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListTicketsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Page")
     public ListTicketsResponseBodyPage page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7***726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListTicketsResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -65,12 +77,24 @@ public class ListTicketsResponseBody extends TeaModel {
     }
 
     public static class ListTicketsResponseBodyPage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
@@ -136,63 +160,135 @@ public class ListTicketsResponseBody extends TeaModel {
     }
 
     public static class ListTicketsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Action")
         public Boolean action;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("AssignedHandler")
         public String assignedHandler;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ChargesRemark")
         public String chargesRemark;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("CompleteRemark")
         public String completeRemark;
 
         @NameInMap("Dialogs")
         public java.util.List<ListTicketsResponseBodyResultDialogs> dialogs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-09 00:00:00</p>
+         */
         @NameInMap("GmtCalled")
         public String gmtCalled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-09 00:00:00</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-09 00:00:00</p>
+         */
         @NameInMap("GmtDelayed")
         public String gmtDelayed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-09 00:00:00</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023***93975</p>
+         */
         @NameInMap("GroupKey")
         public String groupKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>45</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsAcceptedCharges")
         public Boolean isAcceptedCharges;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDelayed")
         public Boolean isDelayed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsNeedCallback")
         public Boolean isNeedCallback;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsNeedCharges")
         public Boolean isNeedCharges;
 
         @NameInMap("Operations")
         public java.util.List<java.util.Map<String, ?>> operations;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
         @NameInMap("RoomNo")
         public String roomNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>waiting</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -10,12 +10,20 @@ public class ListHotelAlarmResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>43***881</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListHotelAlarmResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -65,18 +73,38 @@ public class ListHotelAlarmResponseBody extends TeaModel {
     }
 
     public static class ListHotelAlarmResponseBodyResultScheduleInfoOnce extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Day")
         public Integer day;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("Month")
         public Integer month;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022</p>
+         */
         @NameInMap("Year")
         public Integer year;
 
@@ -131,9 +159,17 @@ public class ListHotelAlarmResponseBody extends TeaModel {
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
@@ -174,6 +210,9 @@ public class ListHotelAlarmResponseBody extends TeaModel {
 
         /**
          * <p>ONCE, WEEKLY</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONCE</p>
          */
         @NameInMap("Type")
         public String type;
@@ -213,15 +252,27 @@ public class ListHotelAlarmResponseBody extends TeaModel {
     }
 
     public static class ListHotelAlarmResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5039</p>
+         */
         @NameInMap("AlarmId")
         public Long alarmId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PvkB****VVTA==</p>
+         */
         @NameInMap("DeviceOpenId")
         public String deviceOpenId;
 
         @NameInMap("ScheduleInfo")
         public ListHotelAlarmResponseBodyResultScheduleInfo scheduleInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mgw/k***HQd</p>
+         */
         @NameInMap("UserOpenId")
         public String userOpenId;
 

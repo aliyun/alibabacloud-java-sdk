@@ -4,15 +4,39 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class RemoveChildAccountAuthRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30**53</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tbxxxx</p>
+     */
     @NameInMap("ChildAccountName")
     public String childAccountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af7***536</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAEV***E3d3Z2ETwh</p>
+     */
     @NameInMap("TbOpenId")
     public String tbOpenId;
 

@@ -4,18 +4,30 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListCustomQAResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Page")
     public ListCustomQAResponseBodyPage page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7***726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListCustomQAResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -65,12 +77,24 @@ public class ListCustomQAResponseBody extends TeaModel {
     }
 
     public static class ListCustomQAResponseBodyPage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
@@ -106,30 +130,66 @@ public class ListCustomQAResponseBody extends TeaModel {
     }
 
     public static class ListCustomQAResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>22;11</p>
+         */
         @NameInMap("Answers")
         public String answers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-10 10:01:59</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("CustomQAId")
         public String customQAId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a7***83</p>
+         */
         @NameInMap("HotelId")
         public String hotelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22;11</p>
+         */
         @NameInMap("KeyWords")
         public String keyWords;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("MajorQuestion")
         public String majorQuestion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22;11</p>
+         */
         @NameInMap("SupplementaryQuestion")
         public String supplementaryQuestion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-10 10:01:59</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

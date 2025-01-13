@@ -7,6 +7,10 @@ public class AddOrUpdateHotelSettingRequest extends TeaModel {
     @NameInMap("HotelDeviceModeList")
     public java.util.List<String> hotelDeviceModeList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a7a3***013</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
@@ -16,6 +20,10 @@ public class AddOrUpdateHotelSettingRequest extends TeaModel {
     @NameInMap("NightMode")
     public AddOrUpdateHotelSettingRequestNightMode nightMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SCREENSAVER</p>
+     */
     @NameInMap("SettingType")
     public String settingType;
 
@@ -76,9 +84,17 @@ public class AddOrUpdateHotelSettingRequest extends TeaModel {
     }
 
     public static class AddOrUpdateHotelSettingRequestHotelScreenSaver extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://a****jpg">https://a****jpg</a></p>
+         */
         @NameInMap("ScreenSaverPicUrl")
         public String screenSaverPicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>common-weather</p>
+         */
         @NameInMap("ScreenSaverStyle")
         public String screenSaverStyle;
 
@@ -112,15 +128,31 @@ public class AddOrUpdateHotelSettingRequest extends TeaModel {
         @NameInMap("DefaultVolume")
         public String defaultVolume;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22:00</p>
+         */
         @NameInMap("End")
         public String end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>screenoff</p>
+         */
         @NameInMap("StandbyAction")
         public String standbyAction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7:00</p>
+         */
         @NameInMap("Start")
         public String start;
 

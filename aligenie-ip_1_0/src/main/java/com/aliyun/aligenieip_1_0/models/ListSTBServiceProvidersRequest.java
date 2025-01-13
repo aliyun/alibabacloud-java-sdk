@@ -4,9 +4,15 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListSTBServiceProvidersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("City")
     public String city;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Province")
     public String province;
 

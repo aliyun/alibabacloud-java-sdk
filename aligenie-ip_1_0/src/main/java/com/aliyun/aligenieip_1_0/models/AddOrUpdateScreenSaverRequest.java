@@ -4,9 +4,18 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class AddOrUpdateScreenSaverRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a7a3***013</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HotelScreenSaver")
     public AddOrUpdateScreenSaverRequestHotelScreenSaver hotelScreenSaver;
 
@@ -32,9 +41,17 @@ public class AddOrUpdateScreenSaverRequest extends TeaModel {
     }
 
     public static class AddOrUpdateScreenSaverRequestHotelScreenSaver extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxx.png</p>
+         */
         @NameInMap("ScreenSaverPicUrl")
         public String screenSaverPicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>common-weather</p>
+         */
         @NameInMap("ScreenSaverStyle")
         public String screenSaverStyle;
 

@@ -4,18 +4,42 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class HotelQrBindRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>freuisghrtiesnvfkdsvbfuidslnvfs</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a7***83</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1211</p>
+     */
     @NameInMap("RoomNo")
     public String roomNo;
 

@@ -7,12 +7,27 @@ public class ImportRoomControlDevicesShrinkRequest extends TeaModel {
     @NameInMap("EnableInfraredDeviceImport")
     public String enableInfraredDeviceImport;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vdgrefds</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LocationDevices")
     public String locationDevicesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1211</p>
+     */
     @NameInMap("RoomNo")
     public String roomNo;
 

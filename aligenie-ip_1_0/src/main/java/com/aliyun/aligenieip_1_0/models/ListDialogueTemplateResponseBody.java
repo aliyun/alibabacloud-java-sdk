@@ -4,14 +4,25 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListDialogueTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>RequestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0EC7*726E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,12 +68,24 @@ public class ListDialogueTemplateResponseBody extends TeaModel {
     }
 
     public static class ListDialogueTemplateResponseBodyResultTemplateDetailFirstDialogueTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>${goodsName}${price}元，请问需要服务员送来吗？</p>
+         */
         @NameInMap("NonzeroPriceYesAnswer")
         public String nonzeroPriceYesAnswer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>对不起，暂时不提供此物品。</p>
+         */
         @NameInMap("ZeroPriceNoAnswer")
         public String zeroPriceNoAnswer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>好的，服务员会尽快送来。</p>
+         */
         @NameInMap("ZeroPriceYesAnswer")
         public String zeroPriceYesAnswer;
 
@@ -98,9 +121,17 @@ public class ListDialogueTemplateResponseBody extends TeaModel {
     }
 
     public static class ListDialogueTemplateResponseBodyResultTemplateDetailSecondDialogueTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>好的，已取消。</p>
+         */
         @NameInMap("NonzeroPriceNoAnswer")
         public String nonzeroPriceNoAnswer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>好的，服务员会尽快送来${goodsName}</p>
+         */
         @NameInMap("NonzeroPriceYesAnswer")
         public String nonzeroPriceYesAnswer;
 
@@ -161,12 +192,24 @@ public class ListDialogueTemplateResponseBody extends TeaModel {
         @NameInMap("TemplateDetail")
         public ListDialogueTemplateResponseBodyResultTemplateDetail templateDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>物品多轮模板</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GOODS</p>
+         */
         @NameInMap("Type")
         public String type;
 

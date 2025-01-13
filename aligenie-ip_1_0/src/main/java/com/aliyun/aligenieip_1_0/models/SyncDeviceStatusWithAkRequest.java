@@ -7,27 +7,63 @@ public class SyncDeviceStatusWithAkRequest extends TeaModel {
     @NameInMap("CategoryCnName")
     public String categoryCnName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>light</p>
+     */
     @NameInMap("CategoryEnName")
     public String categoryEnName;
 
     @NameInMap("DeviceName")
     public String deviceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af7***536</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>room</p>
+     */
     @NameInMap("Location")
     public String location;
 
     @NameInMap("LocationCnName")
     public String locationCnName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bedLight</p>
+     */
     @NameInMap("Number")
     public String number;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1211</p>
+     */
     @NameInMap("RoomNo")
     public String roomNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Switch")
     public Integer _switch;
 

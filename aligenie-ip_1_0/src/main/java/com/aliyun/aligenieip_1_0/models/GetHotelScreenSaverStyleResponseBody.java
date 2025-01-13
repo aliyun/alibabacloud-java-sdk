@@ -4,15 +4,27 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetHotelScreenSaverStyleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>73C67**6FA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<GetHotelScreenSaverStyleResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -57,12 +69,24 @@ public class GetHotelScreenSaverStyleResponseBody extends TeaModel {
         @NameInMap("CnName")
         public String cnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>common-weather</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>common-weather</p>
+         */
         @NameInMap("EnName")
         public String enName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.***.png">https://img.***.png</a></p>
+         */
         @NameInMap("PicUrl")
         public String picUrl;
 

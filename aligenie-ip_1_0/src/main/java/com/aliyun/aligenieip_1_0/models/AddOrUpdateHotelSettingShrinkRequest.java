@@ -7,6 +7,10 @@ public class AddOrUpdateHotelSettingShrinkRequest extends TeaModel {
     @NameInMap("HotelDeviceModeList")
     public String hotelDeviceModeListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a7a3***013</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
@@ -16,6 +20,10 @@ public class AddOrUpdateHotelSettingShrinkRequest extends TeaModel {
     @NameInMap("NightMode")
     public String nightModeShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SCREENSAVER</p>
+     */
     @NameInMap("SettingType")
     public String settingType;
 

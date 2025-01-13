@@ -7,12 +7,26 @@ public class UpdateServiceQARequest extends TeaModel {
     @NameInMap("Answer")
     public String answer;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af7***536</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ServiceQAId")
     public Long serviceQAId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("isActive")
     public Boolean isActive;
 

@@ -4,12 +4,24 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class QueryRoomControlDevicesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fdsgfdscvre</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -176,9 +188,17 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         @NameInMap("MultiKeySwitchExt")
         public QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExt multiKeySwitchExt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>light</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>night_light</p>
+         */
         @NameInMap("Number")
         public String number;
 
@@ -268,6 +288,10 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         @NameInMap("Devices")
         public java.util.List<QueryRoomControlDevicesResponseBodyResultDevices> devices;
 
+        /**
+         * <strong>example:</strong>
+         * <p>room</p>
+         */
         @NameInMap("Location")
         public String location;
 

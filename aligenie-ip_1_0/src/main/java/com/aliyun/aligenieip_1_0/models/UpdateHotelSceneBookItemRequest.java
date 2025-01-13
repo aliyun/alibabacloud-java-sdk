@@ -6,12 +6,17 @@ import com.aliyun.tea.*;
 public class UpdateHotelSceneBookItemRequest extends TeaModel {
     /**
      * <p>hotelID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80d84ea8ed9e422fbad52715c8fc56f1</p>
      */
     @NameInMap("HotelId")
     public String hotelId;
 
     /**
      * <p>updateHotelSceneBookReq</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateHotelSceneBookReq")
     public UpdateHotelSceneBookItemRequestUpdateHotelSceneBookReq updateHotelSceneBookReq;
@@ -40,16 +45,34 @@ public class UpdateHotelSceneBookItemRequest extends TeaModel {
     public static class UpdateHotelSceneBookItemRequestUpdateHotelSceneBookReq extends TeaModel {
         /**
          * <p>icon</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://ailabs.alibabausercontent.com/platform/28d7a91e3c05db3855725fc39e0387e7/welcome_audios/aa918294b6ca3aa115c51135bf9b80cb/l9f996sq.png">https://ailabs.alibabausercontent.com/platform/28d7a91e3c05db3855725fc39e0387e7/welcome_audios/aa918294b6ca3aa115c51135bf9b80cb/l9f996sq.png</a></p>
          */
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>青椒肉丝</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1250</p>
+         */
         @NameInMap("Price")
         public Long price;
 

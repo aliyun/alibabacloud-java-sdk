@@ -7,12 +7,21 @@ public class ListInfraredRemoteControllersRequest extends TeaModel {
     @NameInMap("Brand")
     public String brand;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Category")
     public String category;
 
     @NameInMap("City")
     public String city;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af7***536</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 

@@ -4,9 +4,15 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class SubmitHotelOrderRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Payload")
     public SubmitHotelOrderRequestPayload payload;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public SubmitHotelOrderRequestUserInfo userInfo;
 
@@ -32,9 +38,21 @@ public class SubmitHotelOrderRequest extends TeaModel {
     }
 
     public static class SubmitHotelOrderRequestPayloadItemList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>152860</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Quantity")
         public Long quantity;
 
@@ -62,9 +80,18 @@ public class SubmitHotelOrderRequest extends TeaModel {
     }
 
     public static class SubmitHotelOrderRequestPayload extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ItemList")
         public java.util.List<SubmitHotelOrderRequestPayloadItemList> itemList;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GOODS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -92,15 +119,39 @@ public class SubmitHotelOrderRequest extends TeaModel {
     }
 
     public static class SubmitHotelOrderRequestUserInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1248494721591392955</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROJECT_ID</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mFU6VtVU+pgA8lx6rYMo7SPl11t+8b+8ALrn10MIPEdpK/HI9wELAEppYhPI1cYRDa4og8AMjAEBZKbLUwFjFA==</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 

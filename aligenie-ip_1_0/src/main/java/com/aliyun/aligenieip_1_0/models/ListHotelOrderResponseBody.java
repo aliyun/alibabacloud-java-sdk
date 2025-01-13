@@ -4,15 +4,27 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListHotelOrderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Page")
     public ListHotelOrderResponseBodyPage page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>07F61FDA-606F-10A0-8ED0-C6CE62710A48</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -68,15 +80,31 @@ public class ListHotelOrderResponseBody extends TeaModel {
         @NameInMap("HasNext")
         public Boolean hasNext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("TotalPage")
         public Integer totalPage;
 
@@ -128,30 +156,66 @@ public class ListHotelOrderResponseBody extends TeaModel {
     }
 
     public static class ListHotelOrderResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>21.5</p>
+         */
         @NameInMap("ApplyAmt")
         public Long applyAmt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1659952892000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20220808180132000114508555527711</p>
+         */
         @NameInMap("OrderNo")
         public String orderNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Quantity")
         public Long quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2001</p>
+         */
         @NameInMap("RoomNo")
         public String roomNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INIT</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>REPAIR</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ailabsaicloudservice.alicdn.com/hotel/icon/changjingfenlei/shebeiweixiu.png">https://ailabsaicloudservice.alicdn.com/hotel/icon/changjingfenlei/shebeiweixiu.png</a></p>
+         */
         @NameInMap("TypeIconUrl")
         public String typeIconUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>设备维修</p>
+         */
         @NameInMap("TypeName")
         public String typeName;
 

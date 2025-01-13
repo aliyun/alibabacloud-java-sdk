@@ -7,6 +7,12 @@ public class UpdateMessageTemplateRequest extends TeaModel {
     @NameInMap("TemplateDetail")
     public String templateDetail;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123123</p>
+     */
     @NameInMap("TemplateId")
     public Long templateId;
 

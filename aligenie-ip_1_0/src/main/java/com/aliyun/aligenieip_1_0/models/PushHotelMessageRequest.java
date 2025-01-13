@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class PushHotelMessageRequest extends TeaModel {
     /**
      * <p>pushHotelMessageReq</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PushHotelMessageReq")
     public PushHotelMessageRequestPushHotelMessageReq pushHotelMessageReq;
@@ -24,15 +25,33 @@ public class PushHotelMessageRequest extends TeaModel {
     }
 
     public static class PushHotelMessageRequestPushHotelMessageReq extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e6dd44fd16084db8a60d69fd625d9f0f</p>
+         */
         @NameInMap("HotelId")
         public String hotelId;
 
         @NameInMap("ParamMap")
         public java.util.Map<String, String> paramMap;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102</p>
+         */
         @NameInMap("RoomNo")
         public String roomNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 

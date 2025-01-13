@@ -4,15 +4,34 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class PushWelcomeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af7***536</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1211</p>
+     */
     @NameInMap("RoomNo")
     public String roomNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://ailabsaicloudservice.alicdn.com/tmp/a.wav">http://ailabsaicloudservice.alicdn.com/tmp/a.wav</a></p>
+     */
     @NameInMap("WelcomeMusicUrl")
     public String welcomeMusicUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WelcomeText")
     public String welcomeText;
 

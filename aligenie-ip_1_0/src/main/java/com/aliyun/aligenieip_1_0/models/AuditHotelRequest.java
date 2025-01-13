@@ -4,6 +4,9 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class AuditHotelRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuditHotelReq")
     public AuditHotelRequestAuditHotelReq auditHotelReq;
 
@@ -21,12 +24,28 @@ public class AuditHotelRequest extends TeaModel {
     }
 
     public static class AuditHotelRequestAuditHotelReq extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>同意</p>
+         */
         @NameInMap("AuditOpinion")
         public String auditOpinion;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80d84ea8ed9e422fbad52715c8fc56f1</p>
+         */
         @NameInMap("HotelId")
         public String hotelId;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

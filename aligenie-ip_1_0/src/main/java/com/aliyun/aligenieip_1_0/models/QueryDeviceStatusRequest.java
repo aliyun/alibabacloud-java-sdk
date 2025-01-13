@@ -32,12 +32,24 @@ public class QueryDeviceStatusRequest extends TeaModel {
     }
 
     public static class QueryDeviceStatusRequestPayloadLocationDevices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>night_light</p>
+         */
         @NameInMap("DeviceNumber")
         public String deviceNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>light</p>
+         */
         @NameInMap("DeviceType")
         public String deviceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>room</p>
+         */
         @NameInMap("Location")
         public String location;
 
@@ -103,18 +115,46 @@ public class QueryDeviceStatusRequest extends TeaModel {
     }
 
     public static class QueryDeviceStatusRequestUserInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HOTEL</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rV/XSgPuxZjx/hN3iw8U+e8ou***lk1r43LWcVW6fvY1Rr4sEPFodpnA==</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

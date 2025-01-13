@@ -7,12 +7,27 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
     @NameInMap("EnableInfraredDeviceImport")
     public String enableInfraredDeviceImport;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vdgrefds</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LocationDevices")
     public java.util.List<ImportRoomControlDevicesRequestLocationDevices> locationDevices;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1211</p>
+     */
     @NameInMap("RoomNo")
     public String roomNo;
 
@@ -148,6 +163,9 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
         @NameInMap("ConnectType")
         public String connectType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
@@ -166,9 +184,19 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
         @NameInMap("MultiKeySwitchExt")
         public ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExt multiKeySwitchExt;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>night_light</p>
+         */
         @NameInMap("Number")
         public String number;
 
@@ -312,6 +340,12 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
         @NameInMap("Devices")
         public java.util.List<ImportRoomControlDevicesRequestLocationDevicesDevices> devices;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>room</p>
+         */
         @NameInMap("Location")
         public String location;
 

@@ -6,12 +6,17 @@ import com.aliyun.tea.*;
 public class ListHotelSceneItemsRequest extends TeaModel {
     /**
      * <p>hotelID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80d84ea8ed9e422fbad52715c8fc56f1</p>
      */
     @NameInMap("HotelId")
     public String hotelId;
 
     /**
      * <p>ListHotelSceneReq</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListHotelSceneReq")
     public ListHotelSceneItemsRequestListHotelSceneReq listHotelSceneReq;
@@ -38,9 +43,17 @@ public class ListHotelSceneItemsRequest extends TeaModel {
     }
 
     public static class ListHotelSceneItemsRequestListHotelSceneReqPage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
@@ -68,18 +81,39 @@ public class ListHotelSceneItemsRequest extends TeaModel {
     }
 
     public static class ListHotelSceneItemsRequestListHotelSceneReq extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>客用品类</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>棉签</p>
+         */
         @NameInMap("Keywords")
         public String keywords;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Page")
         public ListHotelSceneItemsRequestListHotelSceneReqPage page;
 
+        /**
+         * <strong>example:</strong>
+         * <p>已添加</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GOODS</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,9 +4,17 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListHotelMessageTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -54,18 +62,38 @@ public class ListHotelMessageTemplateResponseBody extends TeaModel {
     }
 
     public static class ListHotelMessageTemplateResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>不通过</p>
+         */
         @NameInMap("AuditMark")
         public String auditMark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>COMMIT</p>
+         */
         @NameInMap("AuditStatus")
         public String auditStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>这是${hotel}的一个测试模板</p>
+         */
         @NameInMap("TemplateDetail")
         public String templateDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试模板</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
