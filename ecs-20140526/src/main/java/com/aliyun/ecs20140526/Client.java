@@ -4983,6 +4983,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AddAccount", request.addAccount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.advancedOptions)) {
+            query.put("AdvancedOptions", request.advancedOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.baseImage)) {
             query.put("BaseImage", request.baseImage);
         }
@@ -5015,6 +5019,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ImageName", request.imageName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.importImageOptions)) {
+            query.put("ImportImageOptions", request.importImageOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
             query.put("InstanceType", request.instanceType);
         }
@@ -5025,6 +5033,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nvmeSupport)) {
+            query.put("NvmeSupport", request.nvmeSupport);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
