@@ -291,6 +291,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String nodeName;
 
         /**
+         * <p>The owner of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -307,6 +309,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String paramValues;
 
         /**
+         * <p>The sequence number of the cycle. This parameter indicates the sequence number of the cycle of the instance on the current day.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

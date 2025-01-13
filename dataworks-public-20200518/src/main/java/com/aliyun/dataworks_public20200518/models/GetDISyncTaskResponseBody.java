@@ -61,6 +61,195 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList extends TeaModel {
+        @NameInMap("Aggregator")
+        public String aggregator;
+
+        @NameInMap("Comparator")
+        public String comparator;
+
+        @NameInMap("Duration")
+        public Long duration;
+
+        @NameInMap("Level")
+        public String level;
+
+        @NameInMap("Threshold")
+        public Long threshold;
+
+        public static GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList build(java.util.Map<String, ?> map) throws Exception {
+            GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList self = new GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList setAggregator(String aggregator) {
+            this.aggregator = aggregator;
+            return this;
+        }
+        public String getAggregator() {
+            return this.aggregator;
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList setComparator(String comparator) {
+            this.comparator = comparator;
+            return this;
+        }
+        public String getComparator() {
+            return this.comparator;
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList setThreshold(Long threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public Long getThreshold() {
+            return this.threshold;
+        }
+
+    }
+
+    public static class GetDISyncTaskResponseBodyDataAlarmListNotifyRule extends TeaModel {
+        @NameInMap("Critical")
+        public java.util.List<String> critical;
+
+        @NameInMap("Interval")
+        public Long interval;
+
+        @NameInMap("Warning")
+        public java.util.List<String> warning;
+
+        public static GetDISyncTaskResponseBodyDataAlarmListNotifyRule build(java.util.Map<String, ?> map) throws Exception {
+            GetDISyncTaskResponseBodyDataAlarmListNotifyRule self = new GetDISyncTaskResponseBodyDataAlarmListNotifyRule();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmListNotifyRule setCritical(java.util.List<String> critical) {
+            this.critical = critical;
+            return this;
+        }
+        public java.util.List<String> getCritical() {
+            return this.critical;
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmListNotifyRule setInterval(Long interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Long getInterval() {
+            return this.interval;
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmListNotifyRule setWarning(java.util.List<String> warning) {
+            this.warning = warning;
+            return this;
+        }
+        public java.util.List<String> getWarning() {
+            return this.warning;
+        }
+
+    }
+
+    public static class GetDISyncTaskResponseBodyDataAlarmList extends TeaModel {
+        @NameInMap("AlarmRuleList")
+        public java.util.List<GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList> alarmRuleList;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Metric")
+        public String metric;
+
+        @NameInMap("NotifyRule")
+        public GetDISyncTaskResponseBodyDataAlarmListNotifyRule notifyRule;
+
+        @NameInMap("RuleName")
+        public String ruleName;
+
+        public static GetDISyncTaskResponseBodyDataAlarmList build(java.util.Map<String, ?> map) throws Exception {
+            GetDISyncTaskResponseBodyDataAlarmList self = new GetDISyncTaskResponseBodyDataAlarmList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmList setAlarmRuleList(java.util.List<GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList> alarmRuleList) {
+            this.alarmRuleList = alarmRuleList;
+            return this;
+        }
+        public java.util.List<GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList> getAlarmRuleList() {
+            return this.alarmRuleList;
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmList setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmList setMetric(String metric) {
+            this.metric = metric;
+            return this;
+        }
+        public String getMetric() {
+            return this.metric;
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmList setNotifyRule(GetDISyncTaskResponseBodyDataAlarmListNotifyRule notifyRule) {
+            this.notifyRule = notifyRule;
+            return this;
+        }
+        public GetDISyncTaskResponseBodyDataAlarmListNotifyRule getNotifyRule() {
+            return this.notifyRule;
+        }
+
+        public GetDISyncTaskResponseBodyDataAlarmList setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+    }
+
     public static class GetDISyncTaskResponseBodyDataSolutionDetail extends TeaModel {
         /**
          * <p>The creator of the data synchronization solution.</p>
@@ -269,6 +458,9 @@ public class GetDISyncTaskResponseBody extends TeaModel {
     }
 
     public static class GetDISyncTaskResponseBodyData extends TeaModel {
+        @NameInMap("AlarmList")
+        public java.util.List<GetDISyncTaskResponseBodyDataAlarmList> alarmList;
+
         /**
          * <ul>
          * <li>If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization task are returned.</li>
@@ -313,6 +505,14 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         public static GetDISyncTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDISyncTaskResponseBodyData self = new GetDISyncTaskResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetDISyncTaskResponseBodyData setAlarmList(java.util.List<GetDISyncTaskResponseBodyDataAlarmList> alarmList) {
+            this.alarmList = alarmList;
+            return this;
+        }
+        public java.util.List<GetDISyncTaskResponseBodyDataAlarmList> getAlarmList() {
+            return this.alarmList;
         }
 
         public GetDISyncTaskResponseBodyData setCode(String code) {
