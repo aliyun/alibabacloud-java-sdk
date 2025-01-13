@@ -65,6 +65,9 @@ public class ModifyRuleRequest extends TeaModel {
     @NameInMap("MatchType")
     public Integer matchType;
 
+    @NameInMap("ModelRuleIds")
+    public String modelRuleIds;
+
     /**
      * <p>The name of the sensitive data detection rule.</p>
      * <p>You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain the rule name.</p>
@@ -138,6 +141,9 @@ public class ModifyRuleRequest extends TeaModel {
     @NameInMap("SupportForm")
     public Integer supportForm;
 
+    @NameInMap("TemplateRuleIds")
+    public String templateRuleIds;
+
     /**
      * <p>The risk level of the alert that is triggered by the sensitive data detection rule. Valid values:</p>
      * <ul>
@@ -197,6 +203,14 @@ public class ModifyRuleRequest extends TeaModel {
         return this.matchType;
     }
 
+    public ModifyRuleRequest setModelRuleIds(String modelRuleIds) {
+        this.modelRuleIds = modelRuleIds;
+        return this;
+    }
+    public String getModelRuleIds() {
+        return this.modelRuleIds;
+    }
+
     public ModifyRuleRequest setName(String name) {
         this.name = name;
         return this;
@@ -243,6 +257,14 @@ public class ModifyRuleRequest extends TeaModel {
     }
     public Integer getSupportForm() {
         return this.supportForm;
+    }
+
+    public ModifyRuleRequest setTemplateRuleIds(String templateRuleIds) {
+        this.templateRuleIds = templateRuleIds;
+        return this;
+    }
+    public String getTemplateRuleIds() {
+        return this.templateRuleIds;
     }
 
     public ModifyRuleRequest setWarnLevel(Integer warnLevel) {
