@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeImageFromFamilyRequest extends TeaModel {
     /**
-     * <p>The name of the image family. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with http://, https://, acs:, or aliyun.</p>
+     * <p>The family name of the image that you want to use to create the instances.</p>
+     * <p>You can configure image families for custom images, public images, community images, and shared images. For more information, see <a href="https://help.aliyun.com/document_detail/174241.html">Overview of image families</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +22,7 @@ public class DescribeImageFromFamilyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region in which to create the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -63,8 +63,8 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
         /**
          * <p>The auto-renewal status of the reserved instance. Valid values:</p>
          * <ul>
-         * <li>AutoRenewal: The reserved instance is automatically renewed.</li>
-         * <li>Normal: You must manually renew the reserved instance.</li>
+         * <li>AutoRenewal: automatically renews the reserved instance.</li>
+         * <li>Normal: manually renews the reserved instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>

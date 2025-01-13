@@ -50,7 +50,7 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is deprecated.</p>
+     * <p> This parameter is deprecated.</p>
      * </blockquote>
      */
     @NameInMap("TemplateTag")
@@ -126,6 +126,7 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
         return this.tag;
     }
 
+    @Deprecated
     public StartImagePipelineExecutionRequest setTemplateTag(java.util.List<StartImagePipelineExecutionRequestTemplateTag> templateTag) {
         this.templateTag = templateTag;
         return this;
@@ -135,9 +136,17 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     }
 
     public static class StartImagePipelineExecutionRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -167,7 +176,7 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     public static class StartImagePipelineExecutionRequestTemplateTag extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is deprecated.</p>
+         * <p> This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -178,7 +187,7 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is deprecated.</p>
+         * <p> This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

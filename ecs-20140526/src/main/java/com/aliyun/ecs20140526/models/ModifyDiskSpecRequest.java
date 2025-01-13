@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskSpecRequest extends TeaModel {
+    @NameInMap("DestinationZoneId")
+    public String destinationZoneId;
+
     /**
      * <p>The new disk category of the cloud disk. Valid values:</p>
      * <ul>
@@ -99,6 +102,14 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public static ModifyDiskSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDiskSpecRequest self = new ModifyDiskSpecRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDiskSpecRequest setDestinationZoneId(String destinationZoneId) {
+        this.destinationZoneId = destinationZoneId;
+        return this;
+    }
+    public String getDestinationZoneId() {
+        return this.destinationZoneId;
     }
 
     public ModifyDiskSpecRequest setDiskCategory(String diskCategory) {

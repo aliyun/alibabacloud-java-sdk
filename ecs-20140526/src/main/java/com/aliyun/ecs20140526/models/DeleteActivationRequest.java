@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteActivationRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the unused activation code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,8 @@ public class DeleteActivationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the activation code.</p>
+     * <p>The region ID of the activation code. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -7,15 +7,12 @@ public class ModifyImageAttributeRequest extends TeaModel {
     /**
      * <p>The new boot mode of the image. Valid values:</p>
      * <ul>
-     * <li>BIOS: Basic Input/Output System (BIOS)</li>
-     * <li>UEFI: Unified Extensible Firmware Interface (UEFI)</li>
-     * <li>UEFI-Preferred: BIOS and UEFI</li>
+     * <li>BIOS: BIOS mode</li>
+     * <li>UEFI: Unified Extensible Firmware Interface (UEFI) mode</li>
+     * <li>UEFI-Preferred: BIOS mode and UEFI mode</li>
      * </ul>
      * <blockquote>
-     * <p> Before you change the boot mode, we recommend that you obtain the boot modes supported by the image. If you specify an unsupported boot mode for the image, ECS instances that use the image cannot start as expected. If you do not know which boot modes are supported by the image, we recommend that you use the image check feature to perform a check. For information about the image check feature, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview</a>.</p>
-     * </blockquote>
-     * <blockquote>
-     * <p> For information about the UEFI-Preferred boot mode, see <a href="https://help.aliyun.com/document_detail/2244655.html">Best practices for ECS instance boot modes</a>.</p>
+     * <p> Before you change this parameter, make sure that you are familiar with the boot modes supported by the image. If you specify a boot mode that is not supported by the image, ECS instances created from the image cannot start as expected. For information about the boot modes of images, see the <a href="~~2244655#b9caa9b8bb1wf~~">Boot modes of custom images</a> section of the &quot;Best practices for ECS instance boot modes&quot; topic.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -231,14 +228,28 @@ public class ModifyImageAttributeRequest extends TeaModel {
     }
 
     public static class ModifyImageAttributeRequestFeatures extends TeaModel {
+        /**
+         * <p>The image metadata access mode. Valid values:</p>
+         * <ul>
+         * <li><p>v1: You cannot set the image metadata access mode to security hardening when you create instances from the image.</p>
+         * </li>
+         * <li><p>v2: You can set the image metadata access mode to security hardening when you create instances from the image.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> You cannot change the value of ImdsSupport from v2 to v1 for an image. To change the value of ImdsSupport from v2 to v1 for an image, use the snapshots associated with the image to create an image and set ImdsSupport to v1 for the new image.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
+         */
         @NameInMap("ImdsSupport")
         public String imdsSupport;
 
         /**
-         * <p>Specifies whether to support the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
+         * <p>Specifies whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
          * <ul>
-         * <li>supported: The image supports NVMe. Instances created from this image also support NVMe.</li>
-         * <li>unsupported: The image does not support NVMe. Instances created from this image do not support NVMe.</li>
+         * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
+         * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>

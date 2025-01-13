@@ -19,7 +19,10 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String allocationType;
 
     /**
-     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * <p>The instance type of the reserved instance. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+     * <blockquote>
+     * <p> Specify the instance type that you selected when you purchased the reserved instance. If the reserved instance is a regional reserved instance, it can be used to offset the bills of instance types that belong to the same instance family as the specified instance type, regardless of instance specifications.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ecs.g5.large</p>
@@ -28,7 +31,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * <p>The instance family of the reserved instance. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g5</p>
@@ -110,6 +113,9 @@ public class DescribeReservedInstancesRequest extends TeaModel {
 
     /**
      * <p>The name of the reserved instance.</p>
+     * <blockquote>
+     * <p> Only exact search is supported.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>testReservedInstanceName</p>
@@ -124,12 +130,11 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scope of the reserved instance. Valid values:</p>
+     * <p>The scope level of the reserved instance. Valid values:</p>
      * <ul>
      * <li>Region: regional</li>
      * <li>Zone: zonal</li>
      * </ul>
-     * <p>Default value: Region.</p>
      * 
      * <strong>example:</strong>
      * <p>Region</p>
@@ -138,7 +143,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The statuses of the reserved instances.</p>
+     * <p>The status of the reserved instances.</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -153,7 +158,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public java.util.List<DescribeReservedInstancesRequestTag> tag;
 
     /**
-     * <p>The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>The zone ID of the reserved instance. This parameter is valid and required if you set Scope to Zone. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-z</p>

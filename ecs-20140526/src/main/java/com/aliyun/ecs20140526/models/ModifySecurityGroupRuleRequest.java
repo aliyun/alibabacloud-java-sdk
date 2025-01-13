@@ -75,7 +75,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String ipv6SourceCidrIp;
 
     /**
-     * <p>The network interface controller (NIC) type.</p>
+     * <p>The type of the network interface controller (NIC).</p>
      * <blockquote>
      * <p> You cannot modify this parameter when you modify a security group rule by specifying the ID of the rule. If you want to change the NIC type of a security group rule, you can create a security group rule of a desired NIC type and delete the existing rule.</p>
      * </blockquote>

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ReInitDiskRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically start the instance after the disk is re-initialized.</p>
+     * <p>Specifies whether to automatically start the instance after the disk is re-initialized. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyHpcClusterAttributeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The <strong>ClientToken</strong> value must contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <strong>The token can contain only ASCII characters and cannot exceed 64 characters in length.</strong> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the HPC cluster. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description of the HPC cluster. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
      * <p>This parameter is empty by default.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
     public String hpcClusterId;
 
     /**
-     * <p>The name of the HPC cluster. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The name of the HPC cluster. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, underscores (_), and hyphens (-).</p>
      * <p>This parameter is empty by default.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +51,8 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
     public String ownerAccount;
 
     /**
+     * <p>RAM用户的虚拟账号ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */
@@ -58,7 +60,7 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the HPC cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +70,8 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>资源主账号的账号名称。</p>
+     * 
      * <strong>example:</strong>
      * <p>EcsforCloud</p>
      */
@@ -75,6 +79,8 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
+     * <p>资源主账号的ID，亦即UID。</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */

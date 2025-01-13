@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     /**
-     * <p>Details of the image creation task.</p>
+     * <p>Details of the image creation tasks.</p>
      */
     @NameInMap("ImagePipelineExecution")
     public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecution imagePipelineExecution;
@@ -93,9 +93,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
     public static class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag extends TeaModel {
         /**
-         * <blockquote>
-         * <p>This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The tag key of the image creation task.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -104,9 +102,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <blockquote>
-         * <p>This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The tag value of the image creation task.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -223,13 +219,18 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         /**
          * <p>The status of the image creation task. Valid values:</p>
          * <ul>
-         * <li>BUILDING</li>
-         * <li>DISTRIBUTING</li>
-         * <li>RELEASING</li>
-         * <li>SUCCESS</li>
-         * <li>FAILED</li>
-         * <li>CANCELLING</li>
-         * <li>CANCELLED</li>
+         * <li>PREPARING: Resources, such as intermediate instances, are being created.</li>
+         * <li>REPAIRING: The source image is being repaired.</li>
+         * <li>BUILDING: The user-defined commands are being run and an image is being created.</li>
+         * <li>TESTING: The user-defined test commands are being run.</li>
+         * <li>DISTRIBUTING: The created image is being copied and shared.</li>
+         * <li>RELEASING: The temporary resources generated during the image creation process are being released.</li>
+         * <li>SUCCESS The image creation task is completed.</li>
+         * <li>PARTITION_SUCCESS: The image creation task is partially completed. The image is created, but exceptions may occur when the image was copied or shared or when temporary resources were released.</li>
+         * <li>FAILED: The image creation task fails.</li>
+         * <li>TEST_FAILED: The image is created, but the test fails.</li>
+         * <li>CANCELLING: The image creation task is being canceled.</li>
+         * <li>CANCELLED: The image creation task is canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,9 +240,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <blockquote>
-         * <p>This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The tags of the image creation task.</p>
          */
         @NameInMap("Tags")
         public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTags tags;

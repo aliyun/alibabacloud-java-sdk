@@ -359,6 +359,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     }
 
     public static class ModifyNetworkInterfaceAttributeRequestEnhancedNetwork extends TeaModel {
+        @NameInMap("EnableRss")
+        public Boolean enableRss;
+
         /**
          * <p>This parameter is not publicly available.</p>
          * 
@@ -371,6 +374,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         public static ModifyNetworkInterfaceAttributeRequestEnhancedNetwork build(java.util.Map<String, ?> map) throws Exception {
             ModifyNetworkInterfaceAttributeRequestEnhancedNetwork self = new ModifyNetworkInterfaceAttributeRequestEnhancedNetwork();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork setEnableRss(Boolean enableRss) {
+            this.enableRss = enableRss;
+            return this;
+        }
+        public Boolean getEnableRss() {
+            return this.enableRss;
         }
 
         public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork setEnableSriov(Boolean enableSriov) {

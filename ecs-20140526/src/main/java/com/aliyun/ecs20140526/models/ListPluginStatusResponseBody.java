@@ -11,7 +11,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
     public ListPluginStatusResponseBodyInstancePluginStatusSet instancePluginStatusSet;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>

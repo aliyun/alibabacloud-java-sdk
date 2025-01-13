@@ -10,41 +10,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-hangzhou", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "ecs.aliyuncs.com"),
-            new TeaPair("ap-northeast-2-pop", "ecs.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-pop", "ecs.aliyuncs.com"),
-            new TeaPair("cn-beijing-gov-1", "ecs.aliyuncs.com"),
-            new TeaPair("cn-beijing-nu16-b01", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-edge-1", "ecs.cn-qingdao-nebula.aliyuncs.com"),
-            new TeaPair("cn-fujian", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-haidian-cm12-c01", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-bj-b01", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "ecs.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-prod-1", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-1", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-2", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-3", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-test-306", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-hongkong-finance-pop", "ecs.aliyuncs.com"),
-            new TeaPair("cn-huhehaote-nebula-1", "ecs.cn-qingdao-nebula.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et15-b01", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et2-b01", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-shanghai-inner", "ecs.aliyuncs.com"),
-            new TeaPair("cn-shanghai-internal-test-1", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-inner", "ecs.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-st4-d01", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-su18-b01", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-wuhan", "ecs.aliyuncs.com"),
-            new TeaPair("cn-yushanfang", "ecs.aliyuncs.com"),
-            new TeaPair("cn-zhangbei", "ecs.aliyuncs.com"),
-            new TeaPair("cn-zhangbei-na61-b01", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou-na62-a01", "ecs.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-nebula-1", "ecs.cn-qingdao-nebula.aliyuncs.com"),
-            new TeaPair("eu-west-1-oxs", "ecs.cn-shenzhen-cloudstone.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "ecs.aliyuncs.com")
+            new TeaPair("'cn-hangzhou'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-shanghai-finance-1'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-shenzhen-finance-1'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-north-2-gov-1'", "ecs.aliyuncs.com"),
+            new TeaPair("'ap-northeast-2-pop'", "ecs.aliyuncs.com"),
+            new TeaPair("'cn-beijing-finance-pop'", "ecs.aliyuncs.com"),
+            new TeaPair("'cn-beijing-gov-1'", "ecs.aliyuncs.com"),
+            new TeaPair("'cn-beijing-nu16-b01'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-edge-1'", "ecs.cn-qingdao-nebula.aliyuncs.com"),
+            new TeaPair("'cn-fujian'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-haidian-cm12-c01'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-hangzhou-bj-b01'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-hangzhou-finance'", "ecs.aliyuncs.com"),
+            new TeaPair("'cn-hangzhou-internal-prod-1'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-hangzhou-internal-test-1'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-hangzhou-internal-test-2'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-hangzhou-internal-test-3'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-hangzhou-test-306'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-hongkong-finance-pop'", "ecs.aliyuncs.com"),
+            new TeaPair("'cn-huhehaote-nebula-1'", "ecs.cn-qingdao-nebula.aliyuncs.com"),
+            new TeaPair("'cn-shanghai-et15-b01'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-shanghai-et2-b01'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-shanghai-inner'", "ecs.aliyuncs.com"),
+            new TeaPair("'cn-shanghai-internal-test-1'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-shenzhen-inner'", "ecs.aliyuncs.com"),
+            new TeaPair("'cn-shenzhen-st4-d01'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-shenzhen-su18-b01'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-wuhan'", "ecs.aliyuncs.com"),
+            new TeaPair("'cn-yushanfang'", "ecs.aliyuncs.com"),
+            new TeaPair("'cn-zhangbei'", "ecs.aliyuncs.com"),
+            new TeaPair("'cn-zhangbei-na61-b01'", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-zhangjiakou-na62-a01'", "ecs.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("'cn-zhengzhou-nebula-1'", "ecs.cn-qingdao-nebula.aliyuncs.com"),
+            new TeaPair("'eu-west-1-oxs'", "ecs.cn-shenzhen-cloudstone.aliyuncs.com"),
+            new TeaPair("'rus-west-1-pop'", "ecs.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ecs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -908,7 +908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Assigns one or more secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch connected to the ENI. You can also specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.</p>
+     * <p>Assigns secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that is connected to the ENI. Alternatively, you can specify the number of private IP addresses that are automatically assigned from the CIDR block of the vSwitch to the ENI.</p>
      * 
      * @param request AssignPrivateIpAddressesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -993,7 +993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Assigns one or more secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch connected to the ENI. You can also specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.</p>
+     * <p>Assigns secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that is connected to the ENI. Alternatively, you can specify the number of private IP addresses that are automatically assigned from the CIDR block of the vSwitch to the ENI.</p>
      * 
      * @param request AssignPrivateIpAddressesRequest
      * @return AssignPrivateIpAddressesResponse
@@ -1367,7 +1367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2679686.html">DescribeInstanceRamRole</a> operation to query the instance RAM roles that are attached to ECS instances.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2679686.html">DescribeInstanceRamRole</a> operation to query the <a href="https://help.aliyun.com/document_detail/61175.html">instance RAM roles</a> that are attached to ECS instances.</p>
      * <blockquote>
      * <p> If an ECS instance already has an instance RAM role, an error is returned when you attach another instance RAM role to the instance.</p>
      * </blockquote>
@@ -1429,7 +1429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2679686.html">DescribeInstanceRamRole</a> operation to query the instance RAM roles that are attached to ECS instances.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2679686.html">DescribeInstanceRamRole</a> operation to query the <a href="https://help.aliyun.com/document_detail/61175.html">instance RAM roles</a> that are attached to ECS instances.</p>
      * <blockquote>
      * <p> If an ECS instance already has an instance RAM role, an error is returned when you attach another instance RAM role to the instance.</p>
      * </blockquote>
@@ -1655,53 +1655,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <h3><a href="#"></a>Limits</h3>
      * <ul>
-     * <li>The total number of outbound and inbound rules in each security group cannot exceed 200. For more information, see the &quot;Security group limits&quot; section in <a href="~~25412#SecurityGroupQuota1~~">Limits</a>.</li>
-     * <li>The valid values of Priority range from 1 to 100. A smaller value indicates a higher priority.</li>
-     * <li>When multiple security group rules have the same priority, drop rules take precedence.</li>
-     * <li>The source can be a CIDR block that is specified by SourceCidrIp, Ipv6SourceCidrIp, or SourcePrefixListId. The source can also be Elastic Compute Service (ECS) instances in a security group that is specified by SourceGroupId.</li>
-     * <li>You cannot reference security groups as sources or destinations in the rules of advanced security groups.</li>
-     * <li>You can reference up to 20 security groups as sources or destinations in the rules of each basic security group.</li>
-     * <li>If the specified security group rule already exists in the security group, the call is successful but no security group rule is created.</li>
-     * <li>Parameters and their <code>Permissions.N</code>-prefixed counterparts cannot be specified at the same time. We recommend that you use the <code>Permissions.N</code>-prefixed parameters.</li>
-     * <li>You can determine a security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.<ul>
-     * <li>Parameters used to specify an inbound security group rule that controls access from a specific CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and SourceCidrIp. For a security group of the Virtual Private Cloud (VPC) type, you must set NicType to intranet. For a security group of the classic network type, you can set NicType to either internet or intranet. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;Permissions.1.SourceCidrIp=10.0.0.0/8
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Accept
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to determine an inbound security group rule that controls access from a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceGroupOwnerAccount, and SourceGroupId. In this case, you must set NicType to intranet. For mutual access between security groups in the classic network, you can allow or deny another security group within the same region access to your security group. The security group that is allowed access to your security group can belong to your own Alibaba Cloud account or another Alibaba Cloud account specified by SourceGroupOwnerAccount. For mutual access between security groups in VPCs, you can allow or deny another security group within the same VPC access to your security group. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;Permissions.1.SourceGroupId=sg-1651FBB**
-     * &amp;Permissions.1.SourceGroupOwnerAccount=<a href="mailto:test@aliyun.com">test@aliyun.com</a>
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Drop
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to determine an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and SourcePrefixListId. In this case, prefix lists support only security groups in VPCs. NicType must be set to intranet. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy****
-     * &amp;Permissions.1.SourceGroupOwnerAccount=<a href="mailto:test@aliyun.com">test@aliyun.com</a>
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Drop
-     * &amp;<Common request parameters></li>
+     * <li><strong>Quantity limit</strong>: The total number of inbound security group rules in each security group cannot exceed 200. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
+     * <li><strong>Rule types</strong>: For inbound security group rules, you can set Policy to accept or drop to specify whether to allow or deny access.</li>
+     * <li><strong>Rule priorities</strong>: For inbound security group rules, the valid values of Priority range from 1 to 100. A smaller value indicates a higher priority. When multiple security group rules have the same priority, drop rules take precedence.</li>
      * </ul>
+     * <h3><a href="#"></a>Considerations</h3>
+     * <ul>
+     * <li>If the security group rule that you call the AuthorizeSecurityGroup operation to create exists in the security group, the call is successful but no security group rule is created.</li>
+     * </ul>
+     * <h3><a href="#"></a>Parameters that define a security group rule</h3>
+     * <p>Define an inbound security group rule by configuring the following parameters together:</p>
+     * <ul>
+     * <li>Source: You can specify one parameter from SourceCidrIp (IPv4 address), Ipv6SourceCidrIp (IPv6 address), SourcetPrefixListId (prefix list ID), and SourceGroupId (source security group ID).</li>
+     * <li>PortRange: specifies the range of destination port numbers.</li>
+     * <li>IpProtocol: specifies the protocol.</li>
+     * <li>Policy: specifies the action.<blockquote>
+     * <p> Advanced security groups do not support security group rules that reference security groups as authorization objects. Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</p>
+     * </blockquote>
      * </li>
-     * <li>For information about examples on security group rule settings, see <a href="https://help.aliyun.com/document_detail/25475.html">Security groups for different use cases</a> and <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</li>
+     * </ul>
+     * <h3><a href="#"></a>Sample requests</h3>
+     * <p>Sample requests to create inbound security group rules that control access to different sources in a security group in the China (Hangzhou) region:---to different sources or from different sources?</p>
+     * <ul>
+     * <li>Sample request to create an inbound security group rule that controls access to a specific CIDR block: to or from?
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, // The region ID.
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,   // The ID of the security group.&quot;Permissions&quot;:[
+     *      {
+     *        &quot;SourceCidrIp&quot;:&quot;10.0.0.0/8&quot;, // The source IPv4 CIDR block.       &quot;PortRange&quot;:&quot;22/22&quot; // The port range.
+     *        &quot;IpProtocol&quot;:&quot;TCP&quot;, //The protocol.
+     *        &quot;IpProtocol&quot;:&quot;TCP&quot;, //The action.
+     *      }
+     * ]</li>
+     * <li>Sample request to create an inbound security group rule that controls access to a security group and an inbound security group rule that controls access to a prefix list:----to or from?
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,
+     * &quot;Permissions&quot;:[
+     *      {
+     *        &quot;SourceGroupId&quot;:&quot;sg-bp17vs63txqxbd****&quot;, // The source security group.
+     *        &quot;PortRange&quot;:&quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     *        &quot;Policy&quot;:&quot;Drop&quot;
+     *      },{
+     *        &quot;SourcePrefixListId&quot;:&quot;pl-x1j1k5ykzqlixdcy****&quot;, //The ID of the source prefix list.
+     *        &quot;PortRange&quot;:&quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     *        &quot;Policy&quot;:&quot;Drop&quot;
+     *      }
+     * ]</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates inbound rules in a security group. You can use the created rules to allow or deny inbound traffic from other hosts to instances in the security group.</p>
+     * <p>Creates inbound security group rules in a security group. You can use the created rules to allow or deny inbound traffic from other objects to Elastic Compute Service (ECS) instances in the security group for fine-grained network access control.</p>
      * 
      * @param request AuthorizeSecurityGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1837,53 +1843,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <h3><a href="#"></a>Limits</h3>
      * <ul>
-     * <li>The total number of outbound and inbound rules in each security group cannot exceed 200. For more information, see the &quot;Security group limits&quot; section in <a href="~~25412#SecurityGroupQuota1~~">Limits</a>.</li>
-     * <li>The valid values of Priority range from 1 to 100. A smaller value indicates a higher priority.</li>
-     * <li>When multiple security group rules have the same priority, drop rules take precedence.</li>
-     * <li>The source can be a CIDR block that is specified by SourceCidrIp, Ipv6SourceCidrIp, or SourcePrefixListId. The source can also be Elastic Compute Service (ECS) instances in a security group that is specified by SourceGroupId.</li>
-     * <li>You cannot reference security groups as sources or destinations in the rules of advanced security groups.</li>
-     * <li>You can reference up to 20 security groups as sources or destinations in the rules of each basic security group.</li>
-     * <li>If the specified security group rule already exists in the security group, the call is successful but no security group rule is created.</li>
-     * <li>Parameters and their <code>Permissions.N</code>-prefixed counterparts cannot be specified at the same time. We recommend that you use the <code>Permissions.N</code>-prefixed parameters.</li>
-     * <li>You can determine a security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.<ul>
-     * <li>Parameters used to specify an inbound security group rule that controls access from a specific CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and SourceCidrIp. For a security group of the Virtual Private Cloud (VPC) type, you must set NicType to intranet. For a security group of the classic network type, you can set NicType to either internet or intranet. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;Permissions.1.SourceCidrIp=10.0.0.0/8
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Accept
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to determine an inbound security group rule that controls access from a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceGroupOwnerAccount, and SourceGroupId. In this case, you must set NicType to intranet. For mutual access between security groups in the classic network, you can allow or deny another security group within the same region access to your security group. The security group that is allowed access to your security group can belong to your own Alibaba Cloud account or another Alibaba Cloud account specified by SourceGroupOwnerAccount. For mutual access between security groups in VPCs, you can allow or deny another security group within the same VPC access to your security group. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;Permissions.1.SourceGroupId=sg-1651FBB**
-     * &amp;Permissions.1.SourceGroupOwnerAccount=<a href="mailto:test@aliyun.com">test@aliyun.com</a>
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Drop
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to determine an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and SourcePrefixListId. In this case, prefix lists support only security groups in VPCs. NicType must be set to intranet. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy****
-     * &amp;Permissions.1.SourceGroupOwnerAccount=<a href="mailto:test@aliyun.com">test@aliyun.com</a>
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Drop
-     * &amp;<Common request parameters></li>
+     * <li><strong>Quantity limit</strong>: The total number of inbound security group rules in each security group cannot exceed 200. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
+     * <li><strong>Rule types</strong>: For inbound security group rules, you can set Policy to accept or drop to specify whether to allow or deny access.</li>
+     * <li><strong>Rule priorities</strong>: For inbound security group rules, the valid values of Priority range from 1 to 100. A smaller value indicates a higher priority. When multiple security group rules have the same priority, drop rules take precedence.</li>
      * </ul>
+     * <h3><a href="#"></a>Considerations</h3>
+     * <ul>
+     * <li>If the security group rule that you call the AuthorizeSecurityGroup operation to create exists in the security group, the call is successful but no security group rule is created.</li>
+     * </ul>
+     * <h3><a href="#"></a>Parameters that define a security group rule</h3>
+     * <p>Define an inbound security group rule by configuring the following parameters together:</p>
+     * <ul>
+     * <li>Source: You can specify one parameter from SourceCidrIp (IPv4 address), Ipv6SourceCidrIp (IPv6 address), SourcetPrefixListId (prefix list ID), and SourceGroupId (source security group ID).</li>
+     * <li>PortRange: specifies the range of destination port numbers.</li>
+     * <li>IpProtocol: specifies the protocol.</li>
+     * <li>Policy: specifies the action.<blockquote>
+     * <p> Advanced security groups do not support security group rules that reference security groups as authorization objects. Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</p>
+     * </blockquote>
      * </li>
-     * <li>For information about examples on security group rule settings, see <a href="https://help.aliyun.com/document_detail/25475.html">Security groups for different use cases</a> and <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</li>
+     * </ul>
+     * <h3><a href="#"></a>Sample requests</h3>
+     * <p>Sample requests to create inbound security group rules that control access to different sources in a security group in the China (Hangzhou) region:---to different sources or from different sources?</p>
+     * <ul>
+     * <li>Sample request to create an inbound security group rule that controls access to a specific CIDR block: to or from?
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, // The region ID.
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,   // The ID of the security group.&quot;Permissions&quot;:[
+     *      {
+     *        &quot;SourceCidrIp&quot;:&quot;10.0.0.0/8&quot;, // The source IPv4 CIDR block.       &quot;PortRange&quot;:&quot;22/22&quot; // The port range.
+     *        &quot;IpProtocol&quot;:&quot;TCP&quot;, //The protocol.
+     *        &quot;IpProtocol&quot;:&quot;TCP&quot;, //The action.
+     *      }
+     * ]</li>
+     * <li>Sample request to create an inbound security group rule that controls access to a security group and an inbound security group rule that controls access to a prefix list:----to or from?
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,
+     * &quot;Permissions&quot;:[
+     *      {
+     *        &quot;SourceGroupId&quot;:&quot;sg-bp17vs63txqxbd****&quot;, // The source security group.
+     *        &quot;PortRange&quot;:&quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     *        &quot;Policy&quot;:&quot;Drop&quot;
+     *      },{
+     *        &quot;SourcePrefixListId&quot;:&quot;pl-x1j1k5ykzqlixdcy****&quot;, //The ID of the source prefix list.
+     *        &quot;PortRange&quot;:&quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     *        &quot;Policy&quot;:&quot;Drop&quot;
+     *      }
+     * ]</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates inbound rules in a security group. You can use the created rules to allow or deny inbound traffic from other hosts to instances in the security group.</p>
+     * <p>Creates inbound security group rules in a security group. You can use the created rules to allow or deny inbound traffic from other objects to Elastic Compute Service (ECS) instances in the security group for fine-grained network access control.</p>
      * 
      * @param request AuthorizeSecurityGroupRequest
      * @return AuthorizeSecurityGroupResponse
@@ -1904,10 +1916,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3><a href="#"></a>Considerations</h3>
      * <ul>
      * <li>If the security group rule that you call the AuthorizeSecurityGroupEgress operation to create exists in the security group, the call is successful but no security group rule is created.</li>
-     * <li>Parameters and their <code>Permissions.N</code>-prefixed counterparts cannot be specified in the same request. We recommend that you use the <code>Permissions.N</code>-prefixed parameters.</li>
      * </ul>
      * <h3><a href="#"></a>Parameters that define a security group rule</h3>
-     * <p>Define a security group rule by configuring the following parameters together:</p>
+     * <p>Define an outbound security group rule by configuring the following parameters together:</p>
      * <ul>
      * <li>One of the following parameters: DestCidrIp, Ipv6DestCidrIp, DestPrefixListId, and DestGroupId. DestCidrIp specifies the destination IPv4 CIDR block. Ipv6DestCidrIp specifies the destination IPv6 CIDR block. DestPrefixListId specifies the ID of the destination prefix list. DestGroupId specifies the destination security group.</li>
      * <li>PortRange: specifies the range of destination port numbers.</li>
@@ -1920,15 +1931,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3><a href="#"></a>Sample requests</h3>
      * <p>Sample requests to create outbound security group rules that control access to different destinations in a security group in the China (Hangzhou) region:</p>
      * <ul>
-     * <li>Sample request to create an outbound security group rule that controls access to a specific CIDR block:
-     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,  //The region ID of the source security group.
+     * <li>Sample request to create an outbound security group rule that controls access to a specified CIDR block:
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The region ID.
      * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;, //The ID of the source security group.
      * &quot;Permissions&quot;:[
      *      {
-     *        &quot;DestCidrIp&quot;: &quot;10.0.0.0/8&quot;, //The destination IPv4 CIDR block.
-     *        &quot;PortRange&quot;: &quot;-1/-1&quot;, //The range of destination port numbers.
-     *        &quot;IpProtocol&quot;: &quot;ICMP&quot;, //The protocol.
-     *        &quot;Policy&quot;: &quot;Accept&quot; //The action.
+     *        &quot;DestCidrIp&quot;:&quot;10.0.0.0/8&quot;, //The destination IPv4 CIDR block.
+     *        &quot;PortRange&quot;:&quot;-1/-1&quot;, //The range of destination port numbers.
+     *        &quot;IpProtocol&quot;:&quot;ICMP&quot;, //The protocol.       &quot;Policy&quot;:&quot;Accept&quot; //The action.
      *      }
      * ]</li>
      * <li>Sample request to create an outbound security group rule that controls access to a security group and an outbound security group rule that controls access to a prefix list:
@@ -1936,15 +1946,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;,
      * &quot;Permissions&quot;:[
      *      {
-     *        &quot;DestGroupId&quot;: &quot;sg-bp67acfmxazb4pi***&quot;, //The ID of the destination security group.
-     *        &quot;PortRange&quot;: &quot;22/22&quot;,
-     *        &quot;IpProtocol&quot;: &quot;TCP&quot;,
-     *        &quot;Policy&quot;: &quot;Drop&quot;
+     *        &quot;DestGroupId&quot;:&quot;sg-bp67acfmxazb4pi***&quot;, //The ID of the destination security group.
+     *        &quot;PortRange&quot;:&quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     *        &quot;Policy&quot;:&quot;Drop&quot;
      *      },{
-     *        &quot;DestPrefixListId&quot;: &quot;pl-x1j1k5ykzqlixdcy****&quot;, //The ID of the destination prefix list.
-     *        &quot;PortRange&quot;: &quot;22/22&quot;,
-     *        &quot;IpProtocol&quot;: &quot;TCP&quot;,
-     *        &quot;Policy&quot;: &quot;Drop&quot;
+     *        &quot;DestPrefixListId&quot;:&quot;pl-x1j1k5ykzqlixdcy****&quot;, //The ID of the destination prefix list.
+     *        &quot;PortRange&quot;:&quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     *        &quot;Policy&quot;:&quot;Drop&quot;
      *      }
      * ]</li>
      * </ul>
@@ -2095,10 +2105,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3><a href="#"></a>Considerations</h3>
      * <ul>
      * <li>If the security group rule that you call the AuthorizeSecurityGroupEgress operation to create exists in the security group, the call is successful but no security group rule is created.</li>
-     * <li>Parameters and their <code>Permissions.N</code>-prefixed counterparts cannot be specified in the same request. We recommend that you use the <code>Permissions.N</code>-prefixed parameters.</li>
      * </ul>
      * <h3><a href="#"></a>Parameters that define a security group rule</h3>
-     * <p>Define a security group rule by configuring the following parameters together:</p>
+     * <p>Define an outbound security group rule by configuring the following parameters together:</p>
      * <ul>
      * <li>One of the following parameters: DestCidrIp, Ipv6DestCidrIp, DestPrefixListId, and DestGroupId. DestCidrIp specifies the destination IPv4 CIDR block. Ipv6DestCidrIp specifies the destination IPv6 CIDR block. DestPrefixListId specifies the ID of the destination prefix list. DestGroupId specifies the destination security group.</li>
      * <li>PortRange: specifies the range of destination port numbers.</li>
@@ -2111,15 +2120,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3><a href="#"></a>Sample requests</h3>
      * <p>Sample requests to create outbound security group rules that control access to different destinations in a security group in the China (Hangzhou) region:</p>
      * <ul>
-     * <li>Sample request to create an outbound security group rule that controls access to a specific CIDR block:
-     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,  //The region ID of the source security group.
+     * <li>Sample request to create an outbound security group rule that controls access to a specified CIDR block:
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The region ID.
      * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;, //The ID of the source security group.
      * &quot;Permissions&quot;:[
      *      {
-     *        &quot;DestCidrIp&quot;: &quot;10.0.0.0/8&quot;, //The destination IPv4 CIDR block.
-     *        &quot;PortRange&quot;: &quot;-1/-1&quot;, //The range of destination port numbers.
-     *        &quot;IpProtocol&quot;: &quot;ICMP&quot;, //The protocol.
-     *        &quot;Policy&quot;: &quot;Accept&quot; //The action.
+     *        &quot;DestCidrIp&quot;:&quot;10.0.0.0/8&quot;, //The destination IPv4 CIDR block.
+     *        &quot;PortRange&quot;:&quot;-1/-1&quot;, //The range of destination port numbers.
+     *        &quot;IpProtocol&quot;:&quot;ICMP&quot;, //The protocol.       &quot;Policy&quot;:&quot;Accept&quot; //The action.
      *      }
      * ]</li>
      * <li>Sample request to create an outbound security group rule that controls access to a security group and an outbound security group rule that controls access to a prefix list:
@@ -2127,15 +2135,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;,
      * &quot;Permissions&quot;:[
      *      {
-     *        &quot;DestGroupId&quot;: &quot;sg-bp67acfmxazb4pi***&quot;, //The ID of the destination security group.
-     *        &quot;PortRange&quot;: &quot;22/22&quot;,
-     *        &quot;IpProtocol&quot;: &quot;TCP&quot;,
-     *        &quot;Policy&quot;: &quot;Drop&quot;
+     *        &quot;DestGroupId&quot;:&quot;sg-bp67acfmxazb4pi***&quot;, //The ID of the destination security group.
+     *        &quot;PortRange&quot;:&quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     *        &quot;Policy&quot;:&quot;Drop&quot;
      *      },{
-     *        &quot;DestPrefixListId&quot;: &quot;pl-x1j1k5ykzqlixdcy****&quot;, //The ID of the destination prefix list.
-     *        &quot;PortRange&quot;: &quot;22/22&quot;,
-     *        &quot;IpProtocol&quot;: &quot;TCP&quot;,
-     *        &quot;Policy&quot;: &quot;Drop&quot;
+     *        &quot;DestPrefixListId&quot;:&quot;pl-x1j1k5ykzqlixdcy****&quot;, //The ID of the destination prefix list.
+     *        &quot;PortRange&quot;:&quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     *        &quot;Policy&quot;:&quot;Drop&quot;
      *      }
      * ]</li>
      * </ul>
@@ -2291,10 +2299,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the image build task to be canceled is in the BUILDING, DISTRIBUTING, or RELEASING state.</p>
+     * <p>Before you call the CancelImagePipelineExecution operation, make sure that the image building task to be canceled is in the BUILDING, PREPARING, or REPAIRING state.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to cancel an image build task.</p>
+     * <p>Cancels an image building task.</p>
      * 
      * @param request CancelImagePipelineExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2354,10 +2362,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the image build task to be canceled is in the BUILDING, DISTRIBUTING, or RELEASING state.</p>
+     * <p>Before you call the CancelImagePipelineExecution operation, make sure that the image building task to be canceled is in the BUILDING, PREPARING, or REPAIRING state.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to cancel an image build task.</p>
+     * <p>Cancels an image building task.</p>
      * 
      * @param request CancelImagePipelineExecutionRequest
      * @return CancelImagePipelineExecutionResponse
@@ -2511,7 +2519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The region ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Cancels a running task. You can cancel the running tasks generated by the ImportImage or ExportImage operation.</p>
      * 
      * @param request CancelTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2559,7 +2567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The region ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Cancels a running task. You can cancel the running tasks generated by the ImportImage or ExportImage operation.</p>
      * 
      * @param request CancelTaskRequest
      * @return CancelTaskResponse
@@ -3291,17 +3299,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>When you call this operation to create an automatic snapshot policy, you can specify the days of the week on which to create automatic snapshots, the retention period of the automatic snapshots, and whether to enable cross-region replication for the snapshots in the policy to meet your diverse data backup requirements. After the automatic snapshot policy is created, call the <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> operation to apply the policy to disks. If you want to modify the automatic snapshot policy, call the <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a> operation.
+     * <p>Before you call this operation, learn about how to <a href="https://help.aliyun.com/document_detail/127767.html">create an automatic snapshot policy</a>.
      * Take note of the following items:</p>
      * <ul>
-     * <li>You can create up to 100 automatic snapshot policies per region for a single Alibaba Cloud account.</li>
-     * <li>If an automatic snapshot is being created when the time scheduled for creating another automatic snapshot is due, the new snapshot task is skipped. This may occur when a disk contains a large volume of data. For example, you have scheduled snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a disk. The system starts to create a snapshot for the disk at 09:00:00. The process takes 80 minutes to complete because the disk contains a large volume of data and ends at 10:20:00. In this case, the system does not create a snapshot at 10:00, but creates a snapshot at 11:00.</li>
-     * <li>For information about how to copy a snapshot from one region to another region, see the &quot;Background information&quot; section in <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.</li>
+     * <li>You can create up to 100 automatic snapshot policies per region for a single Alibaba Cloud account. If the maximum number of automatic snapshots for a disk is reached and a new snapshot creation task is created, the system deletes the oldest automatic snapshot of the disk.</li>
+     * <li>If the instance to which a disk is attached is being stopped or restarted, the system cannot create snapshots for the disk based on the associated automatic snapshot policy.</li>
+     * <li>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied to the destination region and snapshot copies are encrypted by using the service key of the destination region. For more information about the limits on cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
+     * After the automatic snapshot policy is created, call the <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> operation to apply the policy to disks. If you want to modify the automatic snapshot policy, call the <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an automatic snapshot policy in a specific region. Automatic snapshot policies allow Elastic Compute Service (ECS) to create snapshots for system disks or data disks on a regular basis to back up disk data. If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied to the destination region and snapshot copies are encrypted by using the service key of the destination region.</p>
+     * <p>Creates an automatic snapshot policy in a specific region. You can specify the schedule on which to create automatic snapshots, the retention period of the automatic snapshots, and whether to enable cross-region replication for the snapshots in the automatic snapshot policy. The automatic snapshot policy can be applied to create snapshots for system disks or data disks to back up disk data.</p>
      * 
      * @param request CreateAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3389,17 +3397,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>When you call this operation to create an automatic snapshot policy, you can specify the days of the week on which to create automatic snapshots, the retention period of the automatic snapshots, and whether to enable cross-region replication for the snapshots in the policy to meet your diverse data backup requirements. After the automatic snapshot policy is created, call the <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> operation to apply the policy to disks. If you want to modify the automatic snapshot policy, call the <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a> operation.
+     * <p>Before you call this operation, learn about how to <a href="https://help.aliyun.com/document_detail/127767.html">create an automatic snapshot policy</a>.
      * Take note of the following items:</p>
      * <ul>
-     * <li>You can create up to 100 automatic snapshot policies per region for a single Alibaba Cloud account.</li>
-     * <li>If an automatic snapshot is being created when the time scheduled for creating another automatic snapshot is due, the new snapshot task is skipped. This may occur when a disk contains a large volume of data. For example, you have scheduled snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a disk. The system starts to create a snapshot for the disk at 09:00:00. The process takes 80 minutes to complete because the disk contains a large volume of data and ends at 10:20:00. In this case, the system does not create a snapshot at 10:00, but creates a snapshot at 11:00.</li>
-     * <li>For information about how to copy a snapshot from one region to another region, see the &quot;Background information&quot; section in <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.</li>
+     * <li>You can create up to 100 automatic snapshot policies per region for a single Alibaba Cloud account. If the maximum number of automatic snapshots for a disk is reached and a new snapshot creation task is created, the system deletes the oldest automatic snapshot of the disk.</li>
+     * <li>If the instance to which a disk is attached is being stopped or restarted, the system cannot create snapshots for the disk based on the associated automatic snapshot policy.</li>
+     * <li>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied to the destination region and snapshot copies are encrypted by using the service key of the destination region. For more information about the limits on cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
+     * After the automatic snapshot policy is created, call the <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> operation to apply the policy to disks. If you want to modify the automatic snapshot policy, call the <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an automatic snapshot policy in a specific region. Automatic snapshot policies allow Elastic Compute Service (ECS) to create snapshots for system disks or data disks on a regular basis to back up disk data. If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied to the destination region and snapshot copies are encrypted by using the service key of the destination region.</p>
+     * <p>Creates an automatic snapshot policy in a specific region. You can specify the schedule on which to create automatic snapshots, the retention period of the automatic snapshots, and whether to enable cross-region replication for the snapshots in the automatic snapshot policy. The automatic snapshot policy can be applied to create snapshots for system disks or data disks to back up disk data.</p>
      * 
      * @param request CreateAutoSnapshotPolicyRequest
      * @return CreateAutoSnapshotPolicyResponse
@@ -4829,10 +4837,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Take note of the following items:</p>
      * <ul>
      * <li>You can create only custom image components.</li>
-     * <li>Only Linux operating systems are supported. Set <code>SystemType</code> to Linux.</li>
-     * <li>Only image build components are supported. Set <code>ComponentType</code> to Build.</li>
-     * <li>You can use Dockerfile to edit the content of image components and pass the edited content into the <code>Content</code> parameter. The content size can be up to 16 KB. <code>FROM</code> commands cannot be used in image components. An image component supports up to 127 commands. For information about the supported commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.
-     * You can use image components to create image templates in the Elastic Compute Service (ECS) console, but cannot call API operations to create image templates from image components. For more information, see <a href="https://help.aliyun.com/document_detail/197410.html">What is Image Builder</a>.</li>
+     * <li>Each version number of an image component must be unique. When you add a version of an image component to an image template, you can specify the component by its name and version number.</li>
+     * <li>The content size of an image component cannot exceed 16 KB. For information about the commands supported by Image Builder, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/197410.html">Image Builder</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4932,10 +4939,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Take note of the following items:</p>
      * <ul>
      * <li>You can create only custom image components.</li>
-     * <li>Only Linux operating systems are supported. Set <code>SystemType</code> to Linux.</li>
-     * <li>Only image build components are supported. Set <code>ComponentType</code> to Build.</li>
-     * <li>You can use Dockerfile to edit the content of image components and pass the edited content into the <code>Content</code> parameter. The content size can be up to 16 KB. <code>FROM</code> commands cannot be used in image components. An image component supports up to 127 commands. For information about the supported commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.
-     * You can use image components to create image templates in the Elastic Compute Service (ECS) console, but cannot call API operations to create image templates from image components. For more information, see <a href="https://help.aliyun.com/document_detail/197410.html">What is Image Builder</a>.</li>
+     * <li>Each version number of an image component must be unique. When you add a version of an image component to an image template, you can specify the component by its name and version number.</li>
+     * <li>The content size of an image component cannot exceed 16 KB. For information about the commands supported by Image Builder, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/197410.html">Image Builder</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4955,13 +4961,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can use image templates to customize image content and create images across regions and accounts. Take note of the following items:</p>
      * <ul>
      * <li>You can create only custom image templates.</li>
-     * <li>You can configure only public, custom, or shared Linux images or image families as the source images when you create image templates.</li>
-     * <li>When you create an image from an image template, an intermediate Elastic Compute Service (ECS) instance that uses the pay-as-you-go billing method is created. You are charged for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/40653.html">Pay-as-you-go</a>.
-     * When you use the <code>BuildContent</code> parameter to specify the content of the image template, take note of the following items:</li>
-     * <li>If the <code>BuildContent</code> value contains <code>FROM</code> commands, the <code>FROM</code> commands override the values of <code>BaseImageType</code> that specifies the type of the source image and <code>BaseImage</code> that specifies the source image.</li>
-     * <li>If the <code>BuildContent</code> value does not contain <code>FROM</code> commands, the system creates a <code>FROM</code> command that consists of the <code>BaseImageType</code> and <code>BaseImage</code> values in the format of <code>&lt;BaseImageType&gt;:&lt;BaseImage&gt;</code> and adds the command to the first line of the template content.</li>
-     * <li>You can use Dockerfile to edit the content of the image template and then pass the edited content into the <code>BuildContent</code> parameter. The content cannot be greater than 16 KB in size and can contain up to 127 commands. For information about commands supported by image templates, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.
-     * You can use image components to create image templates in the ECS console, but cannot call API operations to use image components to create image templates. For more information, see <a href="https://help.aliyun.com/document_detail/197410.html">What is Image Builder</a>.</li>
+     * <li>You can specify only a public image, a custom image, a shared image, or an image family as the source image when you create an image template.</li>
+     * <li>When you use an image template to create an image, multiple intermediate instances are created. You are charged for the intermediate instances on a pay-as-you-go basis. For more information, see <a href="https://help.aliyun.com/document_detail/40653.html">Pay-as-you-go</a>.
+     * When you use <code>BuildContent</code> to specify the build content in an image template, take note of the following items:</li>
+     * <li>The <code>FROM</code> command is deprecated. Regardless of whether you specify the <code>FROM</code> command in <code>BuildContent</code>, the system uses the source image specified by <code>BaseImageType</code> and <code>BaseImage</code>. BaseImageType specifies the type of the source image and BaseImage specifies the source image.</li>
+     * <li>The size of BuildContent cannot exceed 16 KB. For information about the commands supported by Image Builder, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/197410.html">Image Builder</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5101,13 +5106,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can use image templates to customize image content and create images across regions and accounts. Take note of the following items:</p>
      * <ul>
      * <li>You can create only custom image templates.</li>
-     * <li>You can configure only public, custom, or shared Linux images or image families as the source images when you create image templates.</li>
-     * <li>When you create an image from an image template, an intermediate Elastic Compute Service (ECS) instance that uses the pay-as-you-go billing method is created. You are charged for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/40653.html">Pay-as-you-go</a>.
-     * When you use the <code>BuildContent</code> parameter to specify the content of the image template, take note of the following items:</li>
-     * <li>If the <code>BuildContent</code> value contains <code>FROM</code> commands, the <code>FROM</code> commands override the values of <code>BaseImageType</code> that specifies the type of the source image and <code>BaseImage</code> that specifies the source image.</li>
-     * <li>If the <code>BuildContent</code> value does not contain <code>FROM</code> commands, the system creates a <code>FROM</code> command that consists of the <code>BaseImageType</code> and <code>BaseImage</code> values in the format of <code>&lt;BaseImageType&gt;:&lt;BaseImage&gt;</code> and adds the command to the first line of the template content.</li>
-     * <li>You can use Dockerfile to edit the content of the image template and then pass the edited content into the <code>BuildContent</code> parameter. The content cannot be greater than 16 KB in size and can contain up to 127 commands. For information about commands supported by image templates, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.
-     * You can use image components to create image templates in the ECS console, but cannot call API operations to use image components to create image templates. For more information, see <a href="https://help.aliyun.com/document_detail/197410.html">What is Image Builder</a>.</li>
+     * <li>You can specify only a public image, a custom image, a shared image, or an image family as the source image when you create an image template.</li>
+     * <li>When you use an image template to create an image, multiple intermediate instances are created. You are charged for the intermediate instances on a pay-as-you-go basis. For more information, see <a href="https://help.aliyun.com/document_detail/40653.html">Pay-as-you-go</a>.
+     * When you use <code>BuildContent</code> to specify the build content in an image template, take note of the following items:</li>
+     * <li>The <code>FROM</code> command is deprecated. Regardless of whether you specify the <code>FROM</code> command in <code>BuildContent</code>, the system uses the source image specified by <code>BaseImageType</code> and <code>BaseImage</code>. BaseImageType specifies the type of the source image and BaseImage specifies the source image.</li>
+     * <li>The size of BuildContent cannot exceed 16 KB. For information about the commands supported by Image Builder, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/197410.html">Image Builder</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7947,11 +7951,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>$.parameters[4].schema.description</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Before you call this operation to delete an activation code, make sure that no managed instances are registered with the activation code.</p>
      * 
      * <b>summary</b> : 
-     * <h2>Description</h2>
-     * <p>Before you call this operation to delete an activation code, make sure that the activation code has never been used to register managed instances.</p>
+     * <p>Deletes an unused activation code.</p>
      * 
      * @param request DeleteActivationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8007,11 +8011,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>$.parameters[4].schema.description</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Before you call this operation to delete an activation code, make sure that no managed instances are registered with the activation code.</p>
      * 
      * <b>summary</b> : 
-     * <h2>Description</h2>
-     * <p>Before you call this operation to delete an activation code, make sure that the activation code has never been used to register managed instances.</p>
+     * <p>Deletes an unused activation code.</p>
      * 
      * @param request DeleteActivationRequest
      * @return DeleteActivationResponse
@@ -8091,7 +8095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to delete an automatic snapshot policy. After you delete an automatic snapshot policy, the policy will no longer be applied to the disks that it previously took effect on.</p>
+     * <p>Deletes an automatic snapshot policy. After you delete an automatic snapshot policy, the policy is no longer applied to the disks on which it previously took effect.</p>
      * 
      * @param request DeleteAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8139,7 +8143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to delete an automatic snapshot policy. After you delete an automatic snapshot policy, the policy will no longer be applied to the disks that it previously took effect on.</p>
+     * <p>Deletes an automatic snapshot policy. After you delete an automatic snapshot policy, the policy is no longer applied to the disks on which it previously took effect.</p>
      * 
      * @param request DeleteAutoSnapshotPolicyRequest
      * @return DeleteAutoSnapshotPolicyResponse
@@ -8833,7 +8837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除hpc集群</p>
+     * <p>Deletes a high performance computing (HPC) cluster.</p>
      * 
      * @param request DeleteHpcClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8893,7 +8897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除hpc集群</p>
+     * <p>Deletes a high performance computing (HPC) cluster.</p>
      * 
      * @param request DeleteHpcClusterRequest
      * @return DeleteHpcClusterResponse
@@ -9128,20 +9132,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Warning</strong> After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</li>
-     * <li><strong>Precautions</strong>
-     * When you release an instance, manual snapshots of the cloud disks are retained. The settings configured during the creation of the instance determine whether the cloud disks attached to the instance and automatic snapshots are released. Before you release the instance, you can call the <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> operation to query the parameter settings for the cloud disks attached to the instance and the automatic snapshots.<ul>
+     * <li><strong>Warning</strong> After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.
+     * After you release an instance, the manual snapshots of the cloud disks attached to the instance are retained. Whether the cloud disks and the automatic snapshots of the disks are released is determined by the options that you configured when you created the instance and disks. Before you release the instance, you can call the <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> operation to query the parameter settings for the cloud disks attached to the instance and the automatic snapshots.</li>
      * <li>The cloud disks for which <code>DeleteWithInstance</code> is set to false are retained as pay-as-you-go disks after the instance is released. The cloud disks for which DeleteWithInstance is set to true are released along with the instance.</li>
-     * <li>If <code>DeleteAutoSnapshot</code> is set to false for a cloud disk attached to the instance, the automatic snapshots of the cloud disk are retained when the instance is released. If DeleteAutoSnapshot is set to true for the cloud disk, the cloud disk is released along with the instance.<blockquote>
+     * <li>If <code>DeleteAutoSnapshot</code> is set to false for a cloud disk attached to the instance, the automatic snapshots of the cloud disk are retained when the instance is released. If DeleteAutoSnapshot is set to true for the cloud disk, the automatic snapshots of the disk are released along with the instance.<blockquote>
      * <p> When you release an instance that is locked for security reasons, the cloud disks attached to the instance are released even if DeleteWithInstance is set to false.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * </li>
-     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a pay-as-you-go Elastic Compute Service (ECS) instance or an expired subscription ECS instance. You can configure parameters to specify whether to release the disks attached to the instance or retain the disks as pay-as-you-go disks.</p>
+     * <p>Deletes or releases a pay-as-you-go Elastic Compute Service (ECS) instance or an expired subscription ECS instance. You can configure parameters to specify whether to release the disks attached to the instance or retain the disks as pay-as-you-go disks.</p>
      * 
      * @param request DeleteInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9202,20 +9203,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Warning</strong> After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</li>
-     * <li><strong>Precautions</strong>
-     * When you release an instance, manual snapshots of the cloud disks are retained. The settings configured during the creation of the instance determine whether the cloud disks attached to the instance and automatic snapshots are released. Before you release the instance, you can call the <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> operation to query the parameter settings for the cloud disks attached to the instance and the automatic snapshots.<ul>
+     * <li><strong>Warning</strong> After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.
+     * After you release an instance, the manual snapshots of the cloud disks attached to the instance are retained. Whether the cloud disks and the automatic snapshots of the disks are released is determined by the options that you configured when you created the instance and disks. Before you release the instance, you can call the <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> operation to query the parameter settings for the cloud disks attached to the instance and the automatic snapshots.</li>
      * <li>The cloud disks for which <code>DeleteWithInstance</code> is set to false are retained as pay-as-you-go disks after the instance is released. The cloud disks for which DeleteWithInstance is set to true are released along with the instance.</li>
-     * <li>If <code>DeleteAutoSnapshot</code> is set to false for a cloud disk attached to the instance, the automatic snapshots of the cloud disk are retained when the instance is released. If DeleteAutoSnapshot is set to true for the cloud disk, the cloud disk is released along with the instance.<blockquote>
+     * <li>If <code>DeleteAutoSnapshot</code> is set to false for a cloud disk attached to the instance, the automatic snapshots of the cloud disk are retained when the instance is released. If DeleteAutoSnapshot is set to true for the cloud disk, the automatic snapshots of the disk are released along with the instance.<blockquote>
      * <p> When you release an instance that is locked for security reasons, the cloud disks attached to the instance are released even if DeleteWithInstance is set to false.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * </li>
-     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a pay-as-you-go Elastic Compute Service (ECS) instance or an expired subscription ECS instance. You can configure parameters to specify whether to release the disks attached to the instance or retain the disks as pay-as-you-go disks.</p>
+     * <p>Deletes or releases a pay-as-you-go Elastic Compute Service (ECS) instance or an expired subscription ECS instance. You can configure parameters to specify whether to release the disks attached to the instance or retain the disks as pay-as-you-go disks.</p>
      * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -10849,10 +10847,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
      * <p>You can use one of the following methods to check the responses:</p>
      * <ul>
-     * <li>Method 1: When you call the DescribeActivations operation to retrieve the first page of results during a paged query, use MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the DescribeActivations operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and use MaxResults to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use PageSize to specify the number of entries to return on each page, and then use PageNumber to specify the number of the page to return. You can use only one of the preceding methods. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.</li>
+     * <li>Method 1: During a paged query, when you call the DescribeActivations operation to retrieve the first page of results, use <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the DescribeActivations operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
+     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page, and then use <code>PageNumber</code> to specify the number of the page to return. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -10940,10 +10939,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
      * <p>You can use one of the following methods to check the responses:</p>
      * <ul>
-     * <li>Method 1: When you call the DescribeActivations operation to retrieve the first page of results during a paged query, use MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the DescribeActivations operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and use MaxResults to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use PageSize to specify the number of entries to return on each page, and then use PageNumber to specify the number of the page to return. You can use only one of the preceding methods. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.</li>
+     * <li>Method 1: During a paged query, when you call the DescribeActivations operation to retrieve the first page of results, use <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the DescribeActivations operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
+     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page, and then use <code>PageNumber</code> to specify the number of the page to return. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -11199,7 +11199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries existing automatic snapshot policies in a region.</p>
+     * <p>Queries the details of automatic snapshot policies that are created in a specific region.</p>
      * 
      * @param request DescribeAutoSnapshotPolicyExRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11271,7 +11271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries existing automatic snapshot policies in a region.</p>
+     * <p>Queries the details of automatic snapshot policies that are created in a specific region.</p>
      * 
      * @param request DescribeAutoSnapshotPolicyExRequest
      * @return DescribeAutoSnapshotPolicyExResponse
@@ -11779,7 +11779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries Elastic Compute Service (ECS) instances that reside in the classic network and have established ClassicLink connections with virtual private clouds (VPCs).</p>
+     * <p>Queries instances located in the classic network that have established ClassicLink connections with virtual private clouds (VPCs).</p>
      * 
      * @param request DescribeClassicLinkInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11847,7 +11847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries Elastic Compute Service (ECS) instances that reside in the classic network and have established ClassicLink connections with virtual private clouds (VPCs).</p>
+     * <p>Queries instances located in the classic network that have established ClassicLink connections with virtual private clouds (VPCs).</p>
      * 
      * @param request DescribeClassicLinkInstancesRequest
      * @return DescribeClassicLinkInstancesResponse
@@ -11926,11 +11926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
      * <li>Before you run commands on or send files to instances, especially new instances, we recommend that you query the status of Cloud Assistant on the instances by calling this operation and checking the return value of CloudAssistantStatus. Run commands on or send files to the instances only when the return value is true.</li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: During a paged query, when you call the DescribeCloudAssistantStatus operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeCloudAssistantStatus operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page and then use <code>PageNumber</code> to specify the number of the page to return. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
-     * </li>
+     * <li>During a paged query, when you call the DescribeCloudAssistantStatus operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeCloudAssistantStatus operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -12013,11 +12009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
      * <li>Before you run commands on or send files to instances, especially new instances, we recommend that you query the status of Cloud Assistant on the instances by calling this operation and checking the return value of CloudAssistantStatus. Run commands on or send files to the instances only when the return value is true.</li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: During a paged query, when you call the DescribeCloudAssistantStatus operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeCloudAssistantStatus operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page and then use <code>PageNumber</code> to specify the number of the page to return. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
-     * </li>
+     * <li>During a paged query, when you call the DescribeCloudAssistantStatus operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeCloudAssistantStatus operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -12098,11 +12090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
      * <li>If you specify only <code>Action</code> and <code>RegionId</code>, all available commands (<code>CommandId</code>) that you created in the specified region are queried by default.</li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: During a paged query, when you call the DescribeCommands operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeCommands operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page and then use <code>PageNumber</code> to specify the number of the page to return. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
-     * </li>
+     * <li>During a paged query, when you call the DescribeCommands operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeCommands operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -12213,11 +12201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
      * <li>If you specify only <code>Action</code> and <code>RegionId</code>, all available commands (<code>CommandId</code>) that you created in the specified region are queried by default.</li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: During a paged query, when you call the DescribeCommands operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeCommands operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page and then use <code>PageNumber</code> to specify the number of the page to return. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
-     * </li>
+     * <li>During a paged query, when you call the DescribeCommands operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeCommands operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -14449,14 +14433,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <ul>
-     * <li>This API operation only returns the available custom images that are newly created in the specified image family. Public images, Alibaba Cloud Marketplace images, community images, or shared images are not queried.</li>
-     * <li>If no available custom images exist in the specified image family, the response is empty.</li>
-     * </ul>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>If no available image exists in a specific image family, the response is empty.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询镜像族系内可用镜像</p>
+     * <p>Queries available custom images that are most recently created in a specific image family.</p>
      * 
      * @param request DescribeImageFromFamilyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14508,14 +14489,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <ul>
-     * <li>This API operation only returns the available custom images that are newly created in the specified image family. Public images, Alibaba Cloud Marketplace images, community images, or shared images are not queried.</li>
-     * <li>If no available custom images exist in the specified image family, the response is empty.</li>
-     * </ul>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>If no available image exists in a specific image family, the response is empty.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询镜像族系内可用镜像</p>
+     * <p>Queries available custom images that are most recently created in a specific image family.</p>
      * 
      * @param request DescribeImageFromFamilyRequest
      * @return DescribeImageFromFamilyResponse
@@ -15117,7 +15095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of an Elastic Compute Service (ECS) instance.</p>
+     * <p>Queries the attributes of a specific Elastic Compute Service (ECS) instance.</p>
      * 
      * @param request DescribeInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15165,7 +15143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of an Elastic Compute Service (ECS) instance.</p>
+     * <p>Queries the attributes of a specific Elastic Compute Service (ECS) instance.</p>
      * 
      * @param request DescribeInstanceAttributeRequest
      * @return DescribeInstanceAttributeResponse
@@ -15177,9 +15155,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you configure auto-renewal or manual renewal for subscription instances, you can query the auto-renewal status of the instances.</p>
+     * <p>  Only subscription instances are supported. If you call this operation for a pay-as-you-go instance, an error is returned.</p>
      * <ul>
-     * <li>This operation is applicable to only subscription instances. An error is returned if you call this operation on pay-as-you-go instances.</li>
+     * <li>Before you configure auto-renewal or manual renewal for subscription instances, you can query the auto-renewal status of the instances.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -15247,9 +15225,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you configure auto-renewal or manual renewal for subscription instances, you can query the auto-renewal status of the instances.</p>
+     * <p>  Only subscription instances are supported. If you call this operation for a pay-as-you-go instance, an error is returned.</p>
      * <ul>
-     * <li>This operation is applicable to only subscription instances. An error is returned if you call this operation on pay-as-you-go instances.</li>
+     * <li>Before you configure auto-renewal or manual renewal for subscription instances, you can query the auto-renewal status of the instances.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -16688,11 +16666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>After you run a command, the command may fail to run or may return unexpected results. You can call this operation to query the execution results.</li>
      * <li>You can query information about command executions within the last four weeks. Up to 100,000 pieces of execution information can be retained.</li>
      * <li>You can <a href="https://help.aliyun.com/document_detail/2669130.html">subscribe to Cloud Assistant task status events</a> to obtain command execution results from the events. This helps you reduce the number of times to poll API operations and improve efficiency.</li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: During a paged query, when you call the DescribeInvocationResults operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeInvocationResults operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries per page, and then use <code>PageNumber</code> to specify the page number. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
-     * </li>
+     * <li>During a paged query, when you call the DescribeInvocationResults operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeInvocationResults operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
      * <li>Comparison between the <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code> operations:<ul>
      * <li>Scenario in which the <code>RunCommand</code> or <code>InvokeCommand</code> operation is called to run a Cloud Assistant command on multiple instances:<ul>
      * <li>The <code>DescribeInvocations</code> operation queries the execution status of the command on each instance and the overall execution status of the command on all instances.</li>
@@ -16815,11 +16789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>After you run a command, the command may fail to run or may return unexpected results. You can call this operation to query the execution results.</li>
      * <li>You can query information about command executions within the last four weeks. Up to 100,000 pieces of execution information can be retained.</li>
      * <li>You can <a href="https://help.aliyun.com/document_detail/2669130.html">subscribe to Cloud Assistant task status events</a> to obtain command execution results from the events. This helps you reduce the number of times to poll API operations and improve efficiency.</li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: During a paged query, when you call the DescribeInvocationResults operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeInvocationResults operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries per page, and then use <code>PageNumber</code> to specify the page number. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
-     * </li>
+     * <li>During a paged query, when you call the DescribeInvocationResults operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeInvocationResults operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
      * <li>Comparison between the <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code> operations:<ul>
      * <li>Scenario in which the <code>RunCommand</code> or <code>InvokeCommand</code> operation is called to run a Cloud Assistant command on multiple instances:<ul>
      * <li>The <code>DescribeInvocations</code> operation queries the execution status of the command on each instance and the overall execution status of the command on all instances.</li>
@@ -17355,12 +17325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>You can use one of the following methods to check the responses:</p>
-     * <ul>
-     * <li>Method 1: During a paged query, when you call the DescribeManagedInstances operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeManagedInstances operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page and then use <code>PageNumber</code> to specify the number of the page to return. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
+     * <p>During a paged query, when you call the DescribeManagedInstances operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeManagedInstances operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries managed instances.</p>
@@ -17459,12 +17424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>You can use one of the following methods to check the responses:</p>
-     * <ul>
-     * <li>Method 1: During a paged query, when you call the DescribeManagedInstances operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeManagedInstances operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page and then use <code>PageNumber</code> to specify the number of the page to return. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
+     * <p>During a paged query, when you call the DescribeManagedInstances operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeManagedInstances operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries managed instances.</p>
@@ -19571,15 +19531,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
-     * <ul>
-     * <li>A security group can be referenced by the inbound or outbound rules of other security groups.</li>
-     * <li>Up to 100 entries can be returned each time.</li>
-     * <li>If a security group cannot be deleted by calling the <a href="https://help.aliyun.com/document_detail/25558.html">DeleteSecurityGroup</a> operation, you can call the DescribeSecurityGroupReferences operation to check whether the security group is referenced by the rules of other security groups. If the security group is referenced by the rules of other security groups, you must remove the reference before you can delete the security group.</li>
-     * </ul>
+     * <p>  If you cannot delete a security group by calling the <a href="https://help.aliyun.com/document_detail/25558.html">DeleteSecurityGroup</a> operation, call the DescribeSecurityGroupReferences operation to check whether the security group is referenced by the rules of other security groups. If the security group is referenced by the rules of other security groups, you must call the <a href="https://help.aliyun.com/document_detail/2679855.html">RevokeSecurityGroup</a> and <a href="https://help.aliyun.com/document_detail/2679856.html">RevokeSecurityGroupEgress</a> operations to remove the references before you can delete the security group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the security groups that are referencing specific security groups. When you call this operation, you can specify SecurityGroupId.</p>
+     * <p>Queries the security groups whose rules reference security groups as authorization objects.</p>
      * 
      * @param request DescribeSecurityGroupReferencesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19631,15 +19586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
-     * <ul>
-     * <li>A security group can be referenced by the inbound or outbound rules of other security groups.</li>
-     * <li>Up to 100 entries can be returned each time.</li>
-     * <li>If a security group cannot be deleted by calling the <a href="https://help.aliyun.com/document_detail/25558.html">DeleteSecurityGroup</a> operation, you can call the DescribeSecurityGroupReferences operation to check whether the security group is referenced by the rules of other security groups. If the security group is referenced by the rules of other security groups, you must remove the reference before you can delete the security group.</li>
-     * </ul>
+     * <p>  If you cannot delete a security group by calling the <a href="https://help.aliyun.com/document_detail/25558.html">DeleteSecurityGroup</a> operation, call the DescribeSecurityGroupReferences operation to check whether the security group is referenced by the rules of other security groups. If the security group is referenced by the rules of other security groups, you must call the <a href="https://help.aliyun.com/document_detail/2679855.html">RevokeSecurityGroup</a> and <a href="https://help.aliyun.com/document_detail/2679856.html">RevokeSecurityGroupEgress</a> operations to remove the references before you can delete the security group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the security groups that are referencing specific security groups. When you call this operation, you can specify SecurityGroupId.</p>
+     * <p>Queries the security groups whose rules reference security groups as authorization objects.</p>
      * 
      * @param request DescribeSecurityGroupReferencesRequest
      * @return DescribeSecurityGroupReferencesResponse
@@ -19793,15 +19743,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes:</h2>
+     * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
      * <li>When you send a file, the file may fail to be sent to specific Elastic Compute Service (ECS) instances. You can call this operation to check the file sending results.</li>
      * <li>You can call this operation to query the file sending records within the last six weeks.</li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: During a paged query, when you call the DescribeSendFileResults operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeSendFileResults operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page and then use <code>PageNumber</code> to specify the number of the page to return. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
-     * </li>
+     * <li>During a paged query, when you call the DescribeSendFileResults operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeSendFileResults operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -19897,15 +19843,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes:</h2>
+     * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
      * <li>When you send a file, the file may fail to be sent to specific Elastic Compute Service (ECS) instances. You can call this operation to check the file sending results.</li>
      * <li>You can call this operation to query the file sending records within the last six weeks.</li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: During a paged query, when you call the DescribeSendFileResults operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeSendFileResults operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page and then use <code>PageNumber</code> to specify the number of the page to return. You can use only one of the preceding methods. If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
-     * </ul>
-     * </li>
+     * <li>During a paged query, when you call the DescribeSendFileResults operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeSendFileResults operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -20211,8 +20153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The number of the page to return. Pages start from page 1.
-     * Default value: 1.</p>
+     * <p>Queries the Object Storage Service (OSS) storage plans that you purchased in an Alibaba Cloud region. OSS storage plans can be used to offset the storage fees for standard snapshots instead of local snapshots.</p>
      * 
      * @param request DescribeSnapshotPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20268,8 +20209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The number of the page to return. Pages start from page 1.
-     * Default value: 1.</p>
+     * <p>Queries the Object Storage Service (OSS) storage plans that you purchased in an Alibaba Cloud region. OSS storage plans can be used to offset the storage fees for standard snapshots instead of local snapshots.</p>
      * 
      * @param request DescribeSnapshotPackageRequest
      * @return DescribeSnapshotPackageResponse
@@ -20739,7 +20679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of one or more SCUs.</p>
+     * <p>Queries the details of storage capacity units (SCUs). In the request, you can specify the name, status, or capacity of each SCU.</p>
      * 
      * @param request DescribeStorageCapacityUnitsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20819,7 +20759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of one or more SCUs.</p>
+     * <p>Queries the details of storage capacity units (SCUs). In the request, you can specify the name, status, or capacity of each SCU.</p>
      * 
      * @param request DescribeStorageCapacityUnitsRequest
      * @return DescribeStorageCapacityUnitsResponse
@@ -21157,7 +21097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://api.aliyun.com/#product=Ecs%5C&api=DescribeTasks%5C&type=RPC%5C&version=2014-05-26">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the progress of one or more asynchronous requests.</p>
+     * <p>Queries the progress of one or more asynchronous tasks.</p>
      * 
      * @param request DescribeTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21241,7 +21181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://api.aliyun.com/#product=Ecs%5C&api=DescribeTasks%5C&type=RPC%5C&version=2014-05-26">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the progress of one or more asynchronous requests.</p>
+     * <p>Queries the progress of one or more asynchronous tasks.</p>
      * 
      * @param request DescribeTasksRequest
      * @return DescribeTasksResponse
@@ -21937,7 +21877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to unlink a classic network-type instance from a virtual private cloud (VPC) by removing the ClassicLink connection between them. After the instance is unlinked from the VPC, it can no longer communicate with instances in the VPC.</p>
+     * <p>Unlinks an Elastic Compute Service (ECS) instance that resides in the classic network from a virtual private cloud (VPC) by closing the ClassicLink connection between the instance and the VPC. After the instance is unlinked from the VPC, the instance can no longer communicate with instances in the VPC.</p>
      * 
      * @param request DetachClassicLinkVpcRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21989,7 +21929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to unlink a classic network-type instance from a virtual private cloud (VPC) by removing the ClassicLink connection between them. After the instance is unlinked from the VPC, it can no longer communicate with instances in the VPC.</p>
+     * <p>Unlinks an Elastic Compute Service (ECS) instance that resides in the classic network from a virtual private cloud (VPC) by closing the ClassicLink connection between the instance and the VPC. After the instance is unlinked from the VPC, the instance can no longer communicate with instances in the VPC.</p>
      * 
      * @param request DetachClassicLinkVpcRequest
      * @return DetachClassicLinkVpcResponse
@@ -22003,11 +21943,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>The disk that you want to detach must be attached to an ECS instance and in the In Use (<code>In_use</code>) state.</li>
-     * <li>The instance from which you want to detach a data disk must be in the <strong>Running</strong> (<code>Running</code>) or <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
-     * <li>The instance from which you want to detach a system disk must be in the <strong>Stopped</strong> state.``</li>
-     * <li>If the <code>OperationLocks</code> parameter in the response contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> when you query the instance information, the instance is locked for security reasons and all operations are prohibited on the instance.</li>
-     * <li>DetachDisk is an asynchronous operation. After you call the operation to detach a disk from an ECS instance, the disk is detached in approximately 1 minute.</li>
+     * <li>This operation is an asynchronous operation. After you call the operation to detach a disk from an ECS instance, the disk is detached in approximately 1 minute.</li>
+     * <li>If <code>OperationLocks</code> in the response contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> when you query information about an instance, the instance is locked for security reasons and all operations are prohibited on the instance.</li>
      * <li>If you want to attach an elastic ephemeral disk that you detached from an instance, you can attach the disk only to the instance.</li>
      * </ul>
      * 
@@ -22070,11 +22007,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>The disk that you want to detach must be attached to an ECS instance and in the In Use (<code>In_use</code>) state.</li>
-     * <li>The instance from which you want to detach a data disk must be in the <strong>Running</strong> (<code>Running</code>) or <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
-     * <li>The instance from which you want to detach a system disk must be in the <strong>Stopped</strong> state.``</li>
-     * <li>If the <code>OperationLocks</code> parameter in the response contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> when you query the instance information, the instance is locked for security reasons and all operations are prohibited on the instance.</li>
-     * <li>DetachDisk is an asynchronous operation. After you call the operation to detach a disk from an ECS instance, the disk is detached in approximately 1 minute.</li>
+     * <li>This operation is an asynchronous operation. After you call the operation to detach a disk from an ECS instance, the disk is detached in approximately 1 minute.</li>
+     * <li>If <code>OperationLocks</code> in the response contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> when you query information about an instance, the instance is locked for security reasons and all operations are prohibited on the instance.</li>
      * <li>If you want to attach an elastic ephemeral disk that you detached from an instance, you can attach the disk only to the instance.</li>
      * </ul>
      * 
@@ -22339,8 +22273,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-     * You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>To prevent an activation code from being leaked, you can call the DisableActivation operation to disable the activation code. Disabled activation codes cannot be used to register new managed instances. However, managed instances that are already registered are not affected.</p>
      * 
      * <b>summary</b> : 
      * <p>To prevent an activation code from being leaked, you can call the DisableActivation operation to disable the activation code. Disabled activation codes cannot be used to register new managed instances. However, managed instances that are already registered are not affected.</p>
@@ -22399,8 +22333,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-     * You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>To prevent an activation code from being leaked, you can call the DisableActivation operation to disable the activation code. Disabled activation codes cannot be used to register new managed instances. However, managed instances that are already registered are not affected.</p>
      * 
      * <b>summary</b> : 
      * <p>To prevent an activation code from being leaked, you can call the DisableActivation operation to disable the activation code. Disabled activation codes cannot be used to register new managed instances. However, managed instances that are already registered are not affected.</p>
@@ -22836,6 +22770,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>将快照导出到指定的对象存储</p>
+     * 
      * @deprecated OpenAPI ExportSnapshot is deprecated
      * 
      * @param request ExportSnapshotRequest
@@ -22893,6 +22830,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>将快照导出到指定的对象存储</p>
+     * 
      * @deprecated OpenAPI ExportSnapshot is deprecated
      * 
      * @param request ExportSnapshotRequest
@@ -23422,7 +23362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports the public key of a Rivest–Shamir–Adleman (RSA)-encrypted key pair that is generated by a third-party tool. After the key pair is imported, Alibaba Cloud stores the public key. You must securely lock away the private key.</p>
+     * <p>Imports the public key of a Rivest-Shamir-Adleman (RSA) key pair that is generated by a third-party tool. After the key pair is imported, Alibaba Cloud stores the public key. You must securely lock away the private key.</p>
      * 
      * @param request ImportKeyPairRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23503,7 +23443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports the public key of a Rivest–Shamir–Adleman (RSA)-encrypted key pair that is generated by a third-party tool. After the key pair is imported, Alibaba Cloud stores the public key. You must securely lock away the private key.</p>
+     * <p>Imports the public key of a Rivest-Shamir-Adleman (RSA) key pair that is generated by a third-party tool. After the key pair is imported, Alibaba Cloud stores the public key. You must securely lock away the private key.</p>
      * 
      * @param request ImportKeyPairRequest
      * @return ImportKeyPairResponse
@@ -24057,18 +23997,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <p>  Before you call this operation to query the status of Cloud Assistant plug-ins on ECS instances, make sure that the versions of Cloud Assistant Agent on the instances are not earlier than the following ones:
+     *     *   2.2.3.344 for Linux instances
+     *     *   2.1.3.344 for Windows instances</p>
      * <ul>
-     * <li>Before you call this operation to query the status of Cloud Assistant plug-ins on ECS instances, make sure that the versions of Cloud Assistant Agent on the instances are not earlier than the following ones:<ul>
-     * <li>2.2.3.344 for Linux instances</li>
-     * <li>2.1.3.344 for Windows instances</li>
-     * </ul>
-     * </li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: When you call the ListPluginStatus operation to retrieve the first page of results during a paged query, use MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the ListPluginStatus operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and use MaxResults to specify the maximum number of entries to return in this call. </li>
-     * <li>Method 2: Use PageSize to specify the number of entries to return on each page, and then use PageNumber to specify the number of the page to return. You can use only one of the preceding methods. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.</li>
-     * </ul>
-     * </li>
+     * <li>During a paged query, when you call the ListPluginStatus operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the ListPluginStatus operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -24148,18 +24081,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <p>  Before you call this operation to query the status of Cloud Assistant plug-ins on ECS instances, make sure that the versions of Cloud Assistant Agent on the instances are not earlier than the following ones:
+     *     *   2.2.3.344 for Linux instances
+     *     *   2.1.3.344 for Windows instances</p>
      * <ul>
-     * <li>Before you call this operation to query the status of Cloud Assistant plug-ins on ECS instances, make sure that the versions of Cloud Assistant Agent on the instances are not earlier than the following ones:<ul>
-     * <li>2.2.3.344 for Linux instances</li>
-     * <li>2.1.3.344 for Windows instances</li>
-     * </ul>
-     * </li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: When you call the ListPluginStatus operation to retrieve the first page of results during a paged query, use MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the ListPluginStatus operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and use MaxResults to specify the maximum number of entries to return in this call. </li>
-     * <li>Method 2: Use PageSize to specify the number of entries to return on each page, and then use PageNumber to specify the number of the page to return. You can use only one of the preceding methods. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.</li>
-     * </ul>
-     * </li>
+     * <li>During a paged query, when you call the ListPluginStatus operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the ListPluginStatus operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -26058,6 +25984,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDiskSpecResponse modifyDiskSpecWithOptions(ModifyDiskSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationZoneId)) {
+            query.put("DestinationZoneId", request.destinationZoneId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.diskCategory)) {
             query.put("DiskCategory", request.diskCategory);
         }
@@ -26459,7 +26389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改hpc集群属性</p>
+     * <p>Modifies the description of a high performance computing (HPC) cluster.</p>
      * 
      * @param request ModifyHpcClusterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26527,7 +26457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改hpc集群属性</p>
+     * <p>Modifies the description of a high performance computing (HPC) cluster.</p>
      * 
      * @param request ModifyHpcClusterAttributeRequest
      * @return ModifyHpcClusterAttributeResponse
@@ -26919,38 +26849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query the information of the instance, the instance is locked for security reasons and no operations are allowed on the instance.
-     * Take note of the following items:</p>
-     * <ul>
-     * <li>If you change the hostname (<code>HostName</code>), restart the instance in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the new hostname to take effect. For information about how to restart an instance in the ECS console, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>. The new hostname may not take effect if you restart the instance from within the operating system.</li>
-     * <li>If you reset the password (<code>Password</code>), take note of the following items:<ul>
-     * <li>The instance cannot be in the <strong>Starting</strong> (<code>Starting</code>) state.</li>
-     * <li>After you reset the password, restart the instance in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the new password to take effect. For information about how to restart an instance in the ECS console, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>. The new password does not take effect if you restart the instance from within the operating system.</li>
-     * </ul>
-     * </li>
-     * <li>If you modify user data (<code>UserData</code>), take note of the following items: The instance must meet the limits for user data. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Instance user data</a>.
-     * **
-     * <strong>Note</strong> After you restart the instance, the new user data is displayed but not run as scripts.</li>
-     * <li>If you change the security groups (<code>SecurityGroupIds.N</code>), take note of the following items:<ul>
-     * <li>You can move the instance to a security group of a different type. If you want to move the instance to a security group of a different type, you must familiarize yourself with the differences between the rule configurations of the two security group types to prevent impacts on the instance network.</li>
-     * <li>Security groups of instances in the classic network cannot be changed. For more information, see the description of <code>SecurityGroupIds.N</code>.</li>
-     * </ul>
-     * </li>
-     * <li>If you change the number of queues supported by the primary elastic network interface (ENI) (<code>NetworkInterfaceQueueNumber</code>), take note of the following items:<ul>
-     * <li>The instance must be in the Stopped (<code>Stopped</code>) state.</li>
-     * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ENI.</li>
-     * <li>The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and view the values of the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> response parameters.</li>
-     * <li>If you set this parameter to -1, the value is reset to the default value for the instance type. To query the default number of queues supported per primary ENI for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and view the value of the <code>PrimaryEniQueueNumber</code> response parameter.</li>
-     * </ul>
-     * </li>
-     * <li>If you enable or disable the Jumbo Frames feature (<code>EnableJumboFrame</code>), take note of the following items. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.<ul>
-     * <li>The instance must be in the Running (<code>Running</code>) or Stopped (<code>Stopped</code>) state.</li>
-     * <li>The instance must reside in a virtual private cloud (VPC).</li>
-     * <li>After the Jumbo Frames feature is enabled, the MTU value of the instance is set to 8500. After the Jumbo Frames feature is disabled, the MTU value of the instance is set to 1500.</li>
-     * </ul>
-     * </li>
-     * </ul>
+     * <p>You cannot call this operation to modify the attributes of the ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the attributes of an Elastic Compute Service (ECS) instance, such as the password, name, description, hostname, security groups, maximum transmission unit (MTU), and user data of the instance.</p>
@@ -27057,38 +26956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query the information of the instance, the instance is locked for security reasons and no operations are allowed on the instance.
-     * Take note of the following items:</p>
-     * <ul>
-     * <li>If you change the hostname (<code>HostName</code>), restart the instance in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the new hostname to take effect. For information about how to restart an instance in the ECS console, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>. The new hostname may not take effect if you restart the instance from within the operating system.</li>
-     * <li>If you reset the password (<code>Password</code>), take note of the following items:<ul>
-     * <li>The instance cannot be in the <strong>Starting</strong> (<code>Starting</code>) state.</li>
-     * <li>After you reset the password, restart the instance in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the new password to take effect. For information about how to restart an instance in the ECS console, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>. The new password does not take effect if you restart the instance from within the operating system.</li>
-     * </ul>
-     * </li>
-     * <li>If you modify user data (<code>UserData</code>), take note of the following items: The instance must meet the limits for user data. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Instance user data</a>.
-     * **
-     * <strong>Note</strong> After you restart the instance, the new user data is displayed but not run as scripts.</li>
-     * <li>If you change the security groups (<code>SecurityGroupIds.N</code>), take note of the following items:<ul>
-     * <li>You can move the instance to a security group of a different type. If you want to move the instance to a security group of a different type, you must familiarize yourself with the differences between the rule configurations of the two security group types to prevent impacts on the instance network.</li>
-     * <li>Security groups of instances in the classic network cannot be changed. For more information, see the description of <code>SecurityGroupIds.N</code>.</li>
-     * </ul>
-     * </li>
-     * <li>If you change the number of queues supported by the primary elastic network interface (ENI) (<code>NetworkInterfaceQueueNumber</code>), take note of the following items:<ul>
-     * <li>The instance must be in the Stopped (<code>Stopped</code>) state.</li>
-     * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ENI.</li>
-     * <li>The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and view the values of the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> response parameters.</li>
-     * <li>If you set this parameter to -1, the value is reset to the default value for the instance type. To query the default number of queues supported per primary ENI for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and view the value of the <code>PrimaryEniQueueNumber</code> response parameter.</li>
-     * </ul>
-     * </li>
-     * <li>If you enable or disable the Jumbo Frames feature (<code>EnableJumboFrame</code>), take note of the following items. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.<ul>
-     * <li>The instance must be in the Running (<code>Running</code>) or Stopped (<code>Stopped</code>) state.</li>
-     * <li>The instance must reside in a virtual private cloud (VPC).</li>
-     * <li>After the Jumbo Frames feature is enabled, the MTU value of the instance is set to 8500. After the Jumbo Frames feature is disabled, the MTU value of the instance is set to 1500.</li>
-     * </ul>
-     * </li>
-     * </ul>
+     * <p>You cannot call this operation to modify the attributes of the ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the attributes of an Elastic Compute Service (ECS) instance, such as the password, name, description, hostname, security groups, maximum transmission unit (MTU), and user data of the instance.</p>
@@ -28421,11 +28289,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-     * You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>The ModifyManagedInstance operation can be called to change only the name of a single managed instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call the ModifyManagedInstance operation to change only the name of a managed instance.</p>
+     * <p>Modifies the information of a managed instance.</p>
      * 
      * @param request ModifyManagedInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28485,11 +28353,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-     * You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>The ModifyManagedInstance operation can be called to change only the name of a single managed instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call the ModifyManagedInstance operation to change only the name of a managed instance.</p>
+     * <p>Modifies the information of a managed instance.</p>
      * 
      * @param request ModifyManagedInstanceRequest
      * @return ModifyManagedInstanceResponse
@@ -29051,7 +28919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the auto-renewal attributes of reserved instances. You can disable the auto-renewal feature for reserved instances.</p>
+     * <p>Modifies the auto-renewal attributes of reserved instances. You can cancel or disable the auto-renewal feature for reserved instances.</p>
      * 
      * @param request ModifyReservedInstanceAutoRenewAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29115,7 +28983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the auto-renewal attributes of reserved instances. You can disable the auto-renewal feature for reserved instances.</p>
+     * <p>Modifies the auto-renewal attributes of reserved instances. You can cancel or disable the auto-renewal feature for reserved instances.</p>
      * 
      * @param request ModifyReservedInstanceAutoRenewAttributeRequest
      * @return ModifyReservedInstanceAutoRenewAttributeResponse
@@ -29127,9 +28995,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is an asynchronous operation. After you call this operation to modify a reserved instance, the operation starts the modification process and returns the ID of the resulting new reserved instance. The original reserved instance enters the Updating state and then the Inactive state. At the same time, the resulting new reserved instance is generated and enters the Creating state and then the Active state. You can call the <a href="https://help.aliyun.com/document_detail/2679781.html">DescribeReservedInstances</a> operation to query the states of the reserved instance.</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to modify a reserved instance, the operation starts the modification process and returns the ID of the resulting new reserved instance. The original reserved instance enters the <code>Updating</code> state and then the <code>Inactive</code> state. At the same time, the resulting new reserved instance is generated and enters the Creating state and then the Active state. You can call the <a href="https://help.aliyun.com/document_detail/2679781.html">DescribeReservedInstances</a> operation to query the states of the reserved instance.</p>
      * <ul>
-     * <li>You can modify the configurations of a reserved instance only when the reserved instance is in the <strong>Active</strong> state.</li>
+     * <li>You can modify the configurations of a reserved instance only if the reserved instance is in the <strong>Active</strong> state.</li>
      * <li>Make sure that the <a href="~~140660#2742f3844abzz~~">computing power</a> of the reserved instance remains unchanged before and after the modification. Otherwise, the modification fails.</li>
      * <li>You cannot split, merge, or change the scope of a reserved instance at the same time.
      * For more information, see <a href="https://help.aliyun.com/document_detail/100375.html">Split, merge, or modify reserved instances</a>.</li>
@@ -29153,7 +29021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * &quot;InstanceAmount&quot;:1
      *   }
      * ]</li>
-     * <li><strong>Sample request to merge reserved instance:</strong>: Merge two zonal reserved instances that are scoped to Hangzhou Zone H and can match four pay-as-you-go instances of the ecs.g5.xlarge instance type into one zonal reserved instance that is scoped to Hangzhou Zone H and can match two pay-as-you-go instance of the ecs.g5.4xlarge instance type:<!---->
+     * <li><strong>Sample request to merge reserved instance:</strong>: Merge two zonal reserved instances that are scoped to Hangzhou Zone H and can match four pay-as-you-go instances of the ecs.g5.xlarge instance type into one zonal reserved instance that is scoped to Hangzhou Zone H and can match two pay-as-you-go instances of the ecs.g5.4xlarge instance type:<!---->
      * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The ID of the region.
      * &quot;ReservedInstanceId&quot;:[&quot;ecsri-bp1hd03e9uv16b75****&quot;,&quot;&quot;ecsri-bp1hd03e9uv16b76****&quot;&quot;], //The IDs of the reserved instances that you want to merge.
      * &quot;Configuration&quot;:[
@@ -29235,9 +29103,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is an asynchronous operation. After you call this operation to modify a reserved instance, the operation starts the modification process and returns the ID of the resulting new reserved instance. The original reserved instance enters the Updating state and then the Inactive state. At the same time, the resulting new reserved instance is generated and enters the Creating state and then the Active state. You can call the <a href="https://help.aliyun.com/document_detail/2679781.html">DescribeReservedInstances</a> operation to query the states of the reserved instance.</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to modify a reserved instance, the operation starts the modification process and returns the ID of the resulting new reserved instance. The original reserved instance enters the <code>Updating</code> state and then the <code>Inactive</code> state. At the same time, the resulting new reserved instance is generated and enters the Creating state and then the Active state. You can call the <a href="https://help.aliyun.com/document_detail/2679781.html">DescribeReservedInstances</a> operation to query the states of the reserved instance.</p>
      * <ul>
-     * <li>You can modify the configurations of a reserved instance only when the reserved instance is in the <strong>Active</strong> state.</li>
+     * <li>You can modify the configurations of a reserved instance only if the reserved instance is in the <strong>Active</strong> state.</li>
      * <li>Make sure that the <a href="~~140660#2742f3844abzz~~">computing power</a> of the reserved instance remains unchanged before and after the modification. Otherwise, the modification fails.</li>
      * <li>You cannot split, merge, or change the scope of a reserved instance at the same time.
      * For more information, see <a href="https://help.aliyun.com/document_detail/100375.html">Split, merge, or modify reserved instances</a>.</li>
@@ -29261,7 +29129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * &quot;InstanceAmount&quot;:1
      *   }
      * ]</li>
-     * <li><strong>Sample request to merge reserved instance:</strong>: Merge two zonal reserved instances that are scoped to Hangzhou Zone H and can match four pay-as-you-go instances of the ecs.g5.xlarge instance type into one zonal reserved instance that is scoped to Hangzhou Zone H and can match two pay-as-you-go instance of the ecs.g5.4xlarge instance type:<!---->
+     * <li><strong>Sample request to merge reserved instance:</strong>: Merge two zonal reserved instances that are scoped to Hangzhou Zone H and can match four pay-as-you-go instances of the ecs.g5.xlarge instance type into one zonal reserved instance that is scoped to Hangzhou Zone H and can match two pay-as-you-go instances of the ecs.g5.4xlarge instance type:<!---->
      * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The ID of the region.
      * &quot;ReservedInstanceId&quot;:[&quot;ecsri-bp1hd03e9uv16b75****&quot;,&quot;&quot;ecsri-bp1hd03e9uv16b76****&quot;&quot;], //The IDs of the reserved instances that you want to merge.
      * &quot;Configuration&quot;:[
@@ -29546,7 +29414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Take note of the following items:</p>
      * <ul>
      * <li>An authorization object in a security group rule can be of one of the following types: IPv4 CIDR block or address, IPv6 CIDR block or address, security group, or prefix list. You cannot call this operation to change the type of an existing authorization object. For example, if an authorization object is an IPv4 CIDR block, you can change the authorization object to a different IPv4 CIDR block or an IPv4 address, but you cannot change the authorization object to an IPv6 CIDR block or address, a security group, or a prefix list.</li>
-     * <li>You cannot delete the value of a non-empty parameter. If you want to delete the values of non-empty parameters, we recommend that you create a security group rule and delete the original security group rule.</li>
+     * <li>You cannot delete the value of a non-empty parameter. If you want to delete the values of non-empty parameters, we recommend that you create another rule and delete the original rule.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -29677,7 +29545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Take note of the following items:</p>
      * <ul>
      * <li>An authorization object in a security group rule can be of one of the following types: IPv4 CIDR block or address, IPv6 CIDR block or address, security group, or prefix list. You cannot call this operation to change the type of an existing authorization object. For example, if an authorization object is an IPv4 CIDR block, you can change the authorization object to a different IPv4 CIDR block or an IPv4 address, but you cannot change the authorization object to an IPv6 CIDR block or address, a security group, or a prefix list.</li>
-     * <li>You cannot delete the value of a non-empty parameter. If you want to delete the values of non-empty parameters, we recommend that you create a security group rule and delete the original security group rule.</li>
+     * <li>You cannot delete the value of a non-empty parameter. If you want to delete the values of non-empty parameters, we recommend that you create another rule and delete the original rule.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -31065,22 +30933,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>The disk that you want to re-initialize must be in the <strong>In Use</strong> (In_use) state and the instance to which the disk is attached must be in the <strong>Stopped</strong> (Stopped) state.</li>
+     * <li>The disk that you want to re-initialize must be in the <strong>In Use</strong> (<code>In_use</code>) state and the instance to which the disk is attached must be in the <strong>Stopped</strong> (<code>Stoppe</code>) state.</li>
      * <li>If an instance has never been started since it was created, the disks attached to it cannot be re-initialized.</li>
      * <li>If a local snapshot has been created for a disk, the disk cannot be re-initialized.</li>
      * <li>If a system disk is re-initialized, the disk is restored to the state of the image from which it was created. If the image has been deleted, the disk cannot be re-initialized.</li>
-     * <li>If a separately created data disk is re-initialized, the disk is restored to an empty data disk.</li>
-     * <li>If a data disk that was created from a snapshot is re-initialized, the disk is restored to the state of the snapshot.<blockquote>
-     * <p> If the source snapshot is deleted, the disk cannot be re-initialized and an error is returned.</p>
-     * </blockquote>
-     * </li>
+     * <li>For a data disk that was created from scratch, the disk is initialized to the empty disk state. For a data disk that is created from a snapshot, the disk is initialized to the snapshot state. If the snapshots were deleted, the disks cannot be re-initialized and an error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Re-initializes a disk to the state that it was in when it was created.</p>
+     * <p>Re-initializes a cloud disk to the state when the cloud disk was created.</p>
      * 
      * @param request ReInitDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31144,22 +31007,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>The disk that you want to re-initialize must be in the <strong>In Use</strong> (In_use) state and the instance to which the disk is attached must be in the <strong>Stopped</strong> (Stopped) state.</li>
+     * <li>The disk that you want to re-initialize must be in the <strong>In Use</strong> (<code>In_use</code>) state and the instance to which the disk is attached must be in the <strong>Stopped</strong> (<code>Stoppe</code>) state.</li>
      * <li>If an instance has never been started since it was created, the disks attached to it cannot be re-initialized.</li>
      * <li>If a local snapshot has been created for a disk, the disk cannot be re-initialized.</li>
      * <li>If a system disk is re-initialized, the disk is restored to the state of the image from which it was created. If the image has been deleted, the disk cannot be re-initialized.</li>
-     * <li>If a separately created data disk is re-initialized, the disk is restored to an empty data disk.</li>
-     * <li>If a data disk that was created from a snapshot is re-initialized, the disk is restored to the state of the snapshot.<blockquote>
-     * <p> If the source snapshot is deleted, the disk cannot be re-initialized and an error is returned.</p>
-     * </blockquote>
-     * </li>
+     * <li>For a data disk that was created from scratch, the disk is initialized to the empty disk state. For a data disk that is created from a snapshot, the disk is initialized to the snapshot state. If the snapshots were deleted, the disks cannot be re-initialized and an error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Re-initializes a disk to the state that it was in when it was created.</p>
+     * <p>Re-initializes a cloud disk to the state when the cloud disk was created.</p>
      * 
      * @param request ReInitDiskRequest
      * @return ReInitDiskResponse
@@ -31171,13 +31029,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is an asynchronous operation. After you call this operation to restart an ECS instance, the operation sets the status of the ECS instance to <code>Starting</code> and begins the restart process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Running</code>, the instance is restarted.</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to restart an ECS instance, the operation sets the status of the ECS instance to <code>Starting</code> and begins the restart process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. When the status of the ECS instance changes to <code>Running</code>, the instance is restarted.</p>
+     * <h3><a href="#"></a>Considerations</h3>
      * <ul>
-     * <li><strong>Notes</strong><ul>
      * <li>You cannot call this operation to restart an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
      * <li>The ECS instance that you want to restart must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
-     * </ul>
-     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -31237,13 +31093,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is an asynchronous operation. After you call this operation to restart an ECS instance, the operation sets the status of the ECS instance to <code>Starting</code> and begins the restart process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Running</code>, the instance is restarted.</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to restart an ECS instance, the operation sets the status of the ECS instance to <code>Starting</code> and begins the restart process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. When the status of the ECS instance changes to <code>Running</code>, the instance is restarted.</p>
+     * <h3><a href="#"></a>Considerations</h3>
      * <ul>
-     * <li><strong>Notes</strong><ul>
      * <li>You cannot call this operation to restart an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
      * <li>The ECS instance that you want to restart must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
-     * </ul>
-     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -31895,7 +31749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放公网IP</p>
+     * <p>Disassociates a public IP address from an Elastic Compute Service (ECS) instance.</p>
      * 
      * @deprecated OpenAPI ReleasePublicIpAddress is deprecated
      * 
@@ -31943,7 +31797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放公网IP</p>
+     * <p>Disassociates a public IP address from an Elastic Compute Service (ECS) instance.</p>
      * 
      * @deprecated OpenAPI ReleasePublicIpAddress is deprecated
      * 
@@ -32033,7 +31887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes one or more tags from a resource such as an instance, disk, snapshot, image, or security group.</p>
+     * <p>Removes tags from a resource, such as an Elastic Compute Service (ECS) instance, disk, snapshot, image, or security group.</p>
      * 
      * @deprecated OpenAPI RemoveTags is deprecated, please use Ecs::2014-05-26::UntagResources instead.
      * 
@@ -32093,7 +31947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes one or more tags from a resource such as an instance, disk, snapshot, image, or security group.</p>
+     * <p>Removes tags from a resource, such as an Elastic Compute Service (ECS) instance, disk, snapshot, image, or security group.</p>
      * 
      * @deprecated OpenAPI RemoveTags is deprecated, please use Ecs::2014-05-26::UntagResources instead.
      * 
@@ -32465,16 +32319,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
+     * <p>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25436.html">Replace the operating system (system disk) of an instance</a>.
+     * When you call this operation for an ECS instance, take note of the following items:</p>
      * <ul>
-     * <li>The category of the system disk cannot be changed.</li>
      * <li>The billing method of the system disk cannot be changed.</li>
+     * <li>The category of the system disk cannot be changed.</li>
+     * <li>Make sure that no unpaid orders are associated with the instance.</li>
      * <li>The instance must be in the <code>Stopped</code> state.
      * **
-     * <strong>Note</strong> The operation is applicable only to instances of the Virtual Private Cloud (VPC) type. If the instance is a pay-as-you-go instance and economical mode is enabled by default for the instance, you must disable economical mode and enable standard mode when you stop the instance. This prevents the instance from being unable to restart due to insufficient ECS resources after the system disk is replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</li>
-     * <li>The ECS instance cannot be locked for security reasons. If the value of <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot;: &quot;security&quot;</code> for an instance, the instance is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
-     * <li>No unpaid orders are associated with the instance.</li>
+     * <strong>Note</strong> The operation is applicable only to instances of the Virtual Private Cloud (VPC) type. If the instance is a pay-as-you-go instance and default economical mode is enabled, enable standard mode when you stop the instance. This prevents the instance from being unable to restart due to insufficient ECS resources after the system disk is replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</li>
+     * <li>The instance cannot be locked for security reasons. If the value of <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot;: &quot;security&quot;</code> for an instance, the instance is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
      * <li>You can configure <code>SystemDisk.Size</code> to specify the capacity of the new system disk.
      * After you call the ReplaceSystemDisk operation, you can use one of the following methods to check whether the system disk is replaced:</li>
      * <li>Call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query the status of the new system disk. If the new system disk is in the In Use state, the system disk is replaced.</li>
@@ -32482,7 +32336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Replaces the operating system of an Elastic Compute Service (ECS) instance. After you perform an operating system replacement operation, the original disk is released and a new system disk is created. This causes the ID of the system disk to change.</p>
+     * <p>Replaces the operating system of an Elastic Compute Service (ECS) instance. After the operating system of the ECS instance is replaced, the original system disk of the instance is released and a new system disk is generated for the instance. This causes the ID of the system disk to change.</p>
      * 
      * @param request ReplaceSystemDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32590,16 +32444,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
+     * <p>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25436.html">Replace the operating system (system disk) of an instance</a>.
+     * When you call this operation for an ECS instance, take note of the following items:</p>
      * <ul>
-     * <li>The category of the system disk cannot be changed.</li>
      * <li>The billing method of the system disk cannot be changed.</li>
+     * <li>The category of the system disk cannot be changed.</li>
+     * <li>Make sure that no unpaid orders are associated with the instance.</li>
      * <li>The instance must be in the <code>Stopped</code> state.
      * **
-     * <strong>Note</strong> The operation is applicable only to instances of the Virtual Private Cloud (VPC) type. If the instance is a pay-as-you-go instance and economical mode is enabled by default for the instance, you must disable economical mode and enable standard mode when you stop the instance. This prevents the instance from being unable to restart due to insufficient ECS resources after the system disk is replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</li>
-     * <li>The ECS instance cannot be locked for security reasons. If the value of <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot;: &quot;security&quot;</code> for an instance, the instance is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
-     * <li>No unpaid orders are associated with the instance.</li>
+     * <strong>Note</strong> The operation is applicable only to instances of the Virtual Private Cloud (VPC) type. If the instance is a pay-as-you-go instance and default economical mode is enabled, enable standard mode when you stop the instance. This prevents the instance from being unable to restart due to insufficient ECS resources after the system disk is replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</li>
+     * <li>The instance cannot be locked for security reasons. If the value of <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot;: &quot;security&quot;</code> for an instance, the instance is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
      * <li>You can configure <code>SystemDisk.Size</code> to specify the capacity of the new system disk.
      * After you call the ReplaceSystemDisk operation, you can use one of the following methods to check whether the system disk is replaced:</li>
      * <li>Call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query the status of the new system disk. If the new system disk is in the In Use state, the system disk is replaced.</li>
@@ -32607,7 +32461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Replaces the operating system of an Elastic Compute Service (ECS) instance. After you perform an operating system replacement operation, the original disk is released and a new system disk is created. This causes the ID of the system disk to change.</p>
+     * <p>Replaces the operating system of an Elastic Compute Service (ECS) instance. After the operating system of the ECS instance is replaced, the original system disk of the instance is released and a new system disk is generated for the instance. This causes the ID of the system disk to change.</p>
      * 
      * @param request ReplaceSystemDiskRequest
      * @return ReplaceSystemDiskResponse
@@ -32715,12 +32569,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>Take note of the following items:</p>
      * <ul>
-     * <li>The disk must be in the In Use (In_Use) or Unattached (Available) state.</li>
-     * <li>The Elastic Compute Service (ECS) instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> operation to stop an instance.</li>
-     * <li>The snapshot specified by the SnapshotId parameter must be created from the disk specified by the DiskId parameter.</li>
-     * <li>When you call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query instance information and the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code>, then this indicates that the instance is locked for security reasons and no operations can be performed on the instance.</li>
+     * <li>The cloud disk that you want to roll back must be in the In Use (<code>In_use</code>) or Unattached (<code>Available</code>) state.</li>
+     * <li>The instance to which the cloud disk is attached must be in the <code>Stopped</code> state. You can call the <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> operation to stop the instance.</li>
+     * <li>The snapshot specified by <code>SnapshotId</code> must be created from the disk specified by <code>DiskId</code>.</li>
+     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query information about an instance by calling the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation, the instance is locked for security reasons and no operations can be performed on the instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -32780,12 +32634,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>Take note of the following items:</p>
      * <ul>
-     * <li>The disk must be in the In Use (In_Use) or Unattached (Available) state.</li>
-     * <li>The Elastic Compute Service (ECS) instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> operation to stop an instance.</li>
-     * <li>The snapshot specified by the SnapshotId parameter must be created from the disk specified by the DiskId parameter.</li>
-     * <li>When you call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query instance information and the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code>, then this indicates that the instance is locked for security reasons and no operations can be performed on the instance.</li>
+     * <li>The cloud disk that you want to roll back must be in the In Use (<code>In_use</code>) or Unattached (<code>Available</code>) state.</li>
+     * <li>The instance to which the cloud disk is attached must be in the <code>Stopped</code> state. You can call the <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> operation to stop the instance.</li>
+     * <li>The snapshot specified by <code>SnapshotId</code> must be created from the disk specified by <code>DiskId</code>.</li>
+     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query information about an instance by calling the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation, the instance is locked for security reasons and no operations can be performed on the instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -33049,52 +32903,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.
+     * <blockquote>
+     * <p> Alibaba Cloud modified verification rules for the RevokeSecurityGroup operation on July 8, 2024. When you use the RevokeSecurityGroup operation to delete a security group rule that does not exist, the &quot;InvalidSecurityGroupRule.RuleNotExist&quot; error code is returned instead of a success response. Update the RevokeSecurityGroup operation to use the new verification rules with the new error code based on your business requirements.
      * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:</p>
+     * </blockquote>
      * <ul>
-     * <li>Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and their Permissions.N-prefixed counterparts at the same time. - Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;SecurityGroupRuleId.1=sgr-bpdfmk****
-     * &amp;SecurityGroupRuleId.2=sgr-bpdfmg****
-     * &amp;<Common request parameters></li>
-     * <li>Parameters that are prefixed with Permissions.N.<ul>
+     * <li>Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules.<ul>
+     * <li>If a security group rule ID that you specify does not exist, an error is reported.</li>
+     * </ul>
+     * </li>
+     * <li>Parameters that start with Permissions.<ul>
      * <li>If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rules are deleted.</li>
-     * <li>You cannot specify SecurityGroupRuleId.N or the parameters that are not prefixed with Permissions.N.</li>
-     * <li>You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine an inbound security group rule by specifying only one parameter.</li>
-     * <li>Parameters used to determine an inbound security group rule that controls access from a CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceCidrIp. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;Permissions.1.SourceCidrIp=10.0.0.0/8
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=80/80
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=accept
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to determine an inbound security group rule that controls access from another security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceGroupId. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;Permissions.1.SourceGroupId=sg-bp67acfmxa123b****
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=80/80
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=accept
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to determine an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourcePrefixListId. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy****
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=80/80
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=accept
-     * &amp;<Common request parameters></li>
+     * <li>Define an inbound security group rule by configuring the following parameters together:<ul>
+     * <li>Source: You can specify one parameter from SourceCidrIp (IPv4 address), Ipv6SourceCidrIp (IPv6 address), SourcePrefixListId (prefix list ID), and SourceGroupId (source security group ID).</li>
+     * <li>PortRange: specifies the range of destination port numbers.</li>
+     * <li>IpProtocol: specifies the protocol.</li>
+     * <li>Policy: specifies the action.</li>
      * </ul>
      * </li>
      * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You cannot specify the security group rule IDs and the parameters that start with Permissions in the same request.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>Sample requests</h3>
+     * <ul>
+     * <li>Delete security group rules by specifying their IDs.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;, // The security group ID.
+     * &quot;SecurityGroupRuleId&quot;:[&quot;sgr-bpdfmk****&quot;,&quot;sgr-bpdfmg****&quot;] // The IDs of the security group rules.</li>
+     * <li>Delete security group rules by specifying a CIDR block.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,
+     * &quot;Permissions&quot;:[
+     *   {
+     * &quot;SourceCidrIp&quot;:&quot;10.0.0.0/8&quot;, // The source IPv4 CIDR block.
+     * &quot;IpProtocol&quot;:&quot;TCP&quot;, // The protocol.
+     * &quot;PortRange&quot;:&quot;80/80&quot;, // The range of destination port numbers.    &quot;Policy&quot;:&quot;accept&quot; // The action.  }
+     * ]</li>
+     * <li>Delete security group rules in which a security group is specified.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,
+     * &quot;Permissions&quot;:[
+     *   {
+     * &quot;SourceGroupId&quot;:&quot;sg-bp67acfmxa123b****&quot;, // The ID of the source security group.    &quot;IpProtocol&quot;:&quot;TCP,&quot;
+     * &quot;PortRange&quot;:&quot;80/80&quot;,
+     * &quot;Policy&quot;:&quot;accept&quot;
+     *   ]
+     * }</li>
+     * <li>Delete security group rules in which a prefix list is specified.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,
+     * &quot;Permissions&quot;:[
+     *   {
+     *    &quot;SourcePrefixListId&quot;:&quot;pl-x1j1k5ykzqlixdcy****&quot;, // The ID of the source prefix list.    &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     * &quot;PortRange&quot;:&quot;80/80&quot;,
+     * &quot;Policy&quot;:&quot;accept&quot;
+     *   }
+     * ]</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes one or more inbound security group rules.</p>
+     * <p>Deletes inbound security group rules from a specific security group.</p>
      * 
      * @param request RevokeSecurityGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33230,52 +33097,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.
+     * <blockquote>
+     * <p> Alibaba Cloud modified verification rules for the RevokeSecurityGroup operation on July 8, 2024. When you use the RevokeSecurityGroup operation to delete a security group rule that does not exist, the &quot;InvalidSecurityGroupRule.RuleNotExist&quot; error code is returned instead of a success response. Update the RevokeSecurityGroup operation to use the new verification rules with the new error code based on your business requirements.
      * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:</p>
+     * </blockquote>
      * <ul>
-     * <li>Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and their Permissions.N-prefixed counterparts at the same time. - Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;SecurityGroupRuleId.1=sgr-bpdfmk****
-     * &amp;SecurityGroupRuleId.2=sgr-bpdfmg****
-     * &amp;<Common request parameters></li>
-     * <li>Parameters that are prefixed with Permissions.N.<ul>
+     * <li>Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules.<ul>
+     * <li>If a security group rule ID that you specify does not exist, an error is reported.</li>
+     * </ul>
+     * </li>
+     * <li>Parameters that start with Permissions.<ul>
      * <li>If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rules are deleted.</li>
-     * <li>You cannot specify SecurityGroupRuleId.N or the parameters that are not prefixed with Permissions.N.</li>
-     * <li>You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine an inbound security group rule by specifying only one parameter.</li>
-     * <li>Parameters used to determine an inbound security group rule that controls access from a CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceCidrIp. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;Permissions.1.SourceCidrIp=10.0.0.0/8
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=80/80
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=accept
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to determine an inbound security group rule that controls access from another security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceGroupId. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;Permissions.1.SourceGroupId=sg-bp67acfmxa123b****
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=80/80
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=accept
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to determine an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourcePrefixListId. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy****
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=80/80
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=accept
-     * &amp;<Common request parameters></li>
+     * <li>Define an inbound security group rule by configuring the following parameters together:<ul>
+     * <li>Source: You can specify one parameter from SourceCidrIp (IPv4 address), Ipv6SourceCidrIp (IPv6 address), SourcePrefixListId (prefix list ID), and SourceGroupId (source security group ID).</li>
+     * <li>PortRange: specifies the range of destination port numbers.</li>
+     * <li>IpProtocol: specifies the protocol.</li>
+     * <li>Policy: specifies the action.</li>
      * </ul>
      * </li>
      * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You cannot specify the security group rule IDs and the parameters that start with Permissions in the same request.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>Sample requests</h3>
+     * <ul>
+     * <li>Delete security group rules by specifying their IDs.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;, // The security group ID.
+     * &quot;SecurityGroupRuleId&quot;:[&quot;sgr-bpdfmk****&quot;,&quot;sgr-bpdfmg****&quot;] // The IDs of the security group rules.</li>
+     * <li>Delete security group rules by specifying a CIDR block.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,
+     * &quot;Permissions&quot;:[
+     *   {
+     * &quot;SourceCidrIp&quot;:&quot;10.0.0.0/8&quot;, // The source IPv4 CIDR block.
+     * &quot;IpProtocol&quot;:&quot;TCP&quot;, // The protocol.
+     * &quot;PortRange&quot;:&quot;80/80&quot;, // The range of destination port numbers.    &quot;Policy&quot;:&quot;accept&quot; // The action.  }
+     * ]</li>
+     * <li>Delete security group rules in which a security group is specified.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,
+     * &quot;Permissions&quot;:[
+     *   {
+     * &quot;SourceGroupId&quot;:&quot;sg-bp67acfmxa123b****&quot;, // The ID of the source security group.    &quot;IpProtocol&quot;:&quot;TCP,&quot;
+     * &quot;PortRange&quot;:&quot;80/80&quot;,
+     * &quot;Policy&quot;:&quot;accept&quot;
+     *   ]
+     * }</li>
+     * <li>Delete security group rules in which a prefix list is specified.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,
+     * &quot;Permissions&quot;:[
+     *   {
+     *    &quot;SourcePrefixListId&quot;:&quot;pl-x1j1k5ykzqlixdcy****&quot;, // The ID of the source prefix list.    &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     * &quot;PortRange&quot;:&quot;80/80&quot;,
+     * &quot;Policy&quot;:&quot;accept&quot;
+     *   }
+     * ]</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes one or more inbound security group rules.</p>
+     * <p>Deletes inbound security group rules from a specific security group.</p>
      * 
      * @param request RevokeSecurityGroupRequest
      * @return RevokeSecurityGroupResponse
@@ -33287,54 +33167,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.
-     * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:</p>
+     * <blockquote>
+     * <p> Alibaba Cloud modified verification rules for the RevokeSecurityGroupEgress operation on July 8, 2024. When you use the RevokeSecurityGroupEgress operation to delete a security group rule that does not exist, the &quot;InvalidSecurityGroupRule.RuleNotExist&quot; error code is returned instead of a success response. Update the RevokeSecurityGroupEgress operation to use the new verification rules with the new error code based on your business requirements.
+     * You can use one of the following methods to delete a security group rule:</p>
+     * </blockquote>
      * <ul>
-     * <li>Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and their Permissions.N-prefixed counterparts at the same time. - Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;SecurityGroupRuleId.1=sgr-bpdfmk****
-     * &amp;SecurityGroupRuleId.2=sgr-bpdfmg****
-     * &amp;<Common request parameters></li>
-     * <li>Parameters that are prefixed with Permissions.N.<ul>
-     * <li>If no security group rule matches the specified parameters, the call to RevokeSecurityGroupEgress is successful but no security group rules are deleted.</li>
-     * <li>You cannot specify SecurityGroupRuleId.N or the parameters that are not prefixed with Permissions.N.</li>
-     * <li>You can determine a security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.<ul>
-     * <li>Parameters used to determine an outbound security group rule that controls access to a CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestCidrIp. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.DestCidrIp=10.0.0.0/8
-     * &amp;Permissions.1.PortRange=-22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=accept
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to determine an outbound security group rule that controls access to another security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestGroupId. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.DestGroupId=sg-bp67acfmxa123b****
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=accept
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to determine an outbound security group rule that controls access to a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestPrefixListId. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy****
-     * &amp;Permissions.1.PortRange=-22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=accept
-     * &amp;<Common request parameters></li>
+     * <li>Delete a rule by specifying the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules.<ul>
+     * <li>If a security group rule ID that you specify does not exist, an error is reported.</li>
+     * </ul>
+     * </li>
+     * <li>Delete a rule by specifying the Permissions parameter.<ul>
+     * <li>If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rules are deleted.</li>
+     * <li>Delete a security group rule by configuring the following parameters together:<ul>
+     * <li>One of the following parameters: DestCidrIp, Ipv6DestCidrIp, DestPrefixListId, and DestGroupId. DestCidrIp specifies the destination IPv4 CIDR block. Ipv6DestCidrIp specifies the destination IPv6 CIDR block. DestPrefixListId specifies the ID of the destination prefix list. DestGroupId specifies the destination security group.</li>
+     * <li>PortRange: specifies the range of destination port numbers.</li>
+     * <li>IpProtocol: specifies the protocol.</li>
+     * <li>Policy: specifies the action.</li>
      * </ul>
      * </li>
      * </ul>
      * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You cannot set the security group rule ID and the Permissions parameter at the same time.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>Sample requests</h3>
+     * <ul>
+     * <li>Delete a security group rule.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;, //The security group ID.
+     * &quot;SecurityGroupRuleId&quot;:[&quot;sgr-bpdfmk****&quot;,&quot;sgr-bpdfmg****&quot;]  //The ID of the security group rule.</li>
+     * <li>Delete a security group rule based on the CIDR block.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4ph***&quot;,
+     * &quot;Permissions&quot;:[
+     *   {
+     * &quot;IpProtocol&quot;:&quot;TCP&quot;, //The protocol.
+     *    &quot;DestCidrIp&quot;:&quot;10.0.0.0/8&quot;, //The destination IPv4 CIDR block.
+     * &quot;PortRange&quot;:&quot;22/22&quot;, //The destination port range.
+     *    &quot;Policy&quot;:&quot;accept&quot; //The action.  }
+     * ]</li>
+     * <li>Delete a security group rule based on the ID of the destination security group.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4ph***&quot;,
+     * &quot;Permissions&quot;:[
+     *   {
+     * &quot;DestGroupId&quot;:&quot;sg-bp67acfmxa123b****&quot;, //Set the ID of the target security group.
+     * &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     * &quot;PortRange&quot;:&quot;22/22&quot;,
+     * &quot;Policy&quot;:&quot;accept&quot;
+     *   }
+     * ]</li>
+     * <li>Delete a security group rule based on a specified prefix list.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4ph***&quot;,
+     * &quot;Permissions&quot;:[
+     *   {
+     * &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     *    &quot;DestPrefixListId&quot;:&quot;pl-x1j1k5ykzqlixdcy****&quot;, //The ID of the destination prefix list.    &quot;PortRange&quot;:&quot;22/22&quot;,
+     * &quot;Policy&quot;:&quot;accept&quot;,
+     *   }
+     * ]</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes outbound security group rules.</p>
+     * <p>Deletes outbound security group rules from a specified security group.</p>
      * 
      * @param request RevokeSecurityGroupEgressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33474,54 +33367,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.
-     * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:</p>
+     * <blockquote>
+     * <p> Alibaba Cloud modified verification rules for the RevokeSecurityGroupEgress operation on July 8, 2024. When you use the RevokeSecurityGroupEgress operation to delete a security group rule that does not exist, the &quot;InvalidSecurityGroupRule.RuleNotExist&quot; error code is returned instead of a success response. Update the RevokeSecurityGroupEgress operation to use the new verification rules with the new error code based on your business requirements.
+     * You can use one of the following methods to delete a security group rule:</p>
+     * </blockquote>
      * <ul>
-     * <li>Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and their Permissions.N-prefixed counterparts at the same time. - Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4p****
-     * &amp;SecurityGroupRuleId.1=sgr-bpdfmk****
-     * &amp;SecurityGroupRuleId.2=sgr-bpdfmg****
-     * &amp;<Common request parameters></li>
-     * <li>Parameters that are prefixed with Permissions.N.<ul>
-     * <li>If no security group rule matches the specified parameters, the call to RevokeSecurityGroupEgress is successful but no security group rules are deleted.</li>
-     * <li>You cannot specify SecurityGroupRuleId.N or the parameters that are not prefixed with Permissions.N.</li>
-     * <li>You can determine a security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.<ul>
-     * <li>Parameters used to determine an outbound security group rule that controls access to a CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestCidrIp. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.DestCidrIp=10.0.0.0/8
-     * &amp;Permissions.1.PortRange=-22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=accept
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to determine an outbound security group rule that controls access to another security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestGroupId. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.DestGroupId=sg-bp67acfmxa123b****
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=accept
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to determine an outbound security group rule that controls access to a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestPrefixListId. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy****
-     * &amp;Permissions.1.PortRange=-22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=accept
-     * &amp;<Common request parameters></li>
+     * <li>Delete a rule by specifying the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules.<ul>
+     * <li>If a security group rule ID that you specify does not exist, an error is reported.</li>
+     * </ul>
+     * </li>
+     * <li>Delete a rule by specifying the Permissions parameter.<ul>
+     * <li>If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rules are deleted.</li>
+     * <li>Delete a security group rule by configuring the following parameters together:<ul>
+     * <li>One of the following parameters: DestCidrIp, Ipv6DestCidrIp, DestPrefixListId, and DestGroupId. DestCidrIp specifies the destination IPv4 CIDR block. Ipv6DestCidrIp specifies the destination IPv6 CIDR block. DestPrefixListId specifies the ID of the destination prefix list. DestGroupId specifies the destination security group.</li>
+     * <li>PortRange: specifies the range of destination port numbers.</li>
+     * <li>IpProtocol: specifies the protocol.</li>
+     * <li>Policy: specifies the action.</li>
      * </ul>
      * </li>
      * </ul>
      * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You cannot set the security group rule ID and the Permissions parameter at the same time.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>Sample requests</h3>
+     * <ul>
+     * <li>Delete a security group rule.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;, //The security group ID.
+     * &quot;SecurityGroupRuleId&quot;:[&quot;sgr-bpdfmk****&quot;,&quot;sgr-bpdfmg****&quot;]  //The ID of the security group rule.</li>
+     * <li>Delete a security group rule based on the CIDR block.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4ph***&quot;,
+     * &quot;Permissions&quot;:[
+     *   {
+     * &quot;IpProtocol&quot;:&quot;TCP&quot;, //The protocol.
+     *    &quot;DestCidrIp&quot;:&quot;10.0.0.0/8&quot;, //The destination IPv4 CIDR block.
+     * &quot;PortRange&quot;:&quot;22/22&quot;, //The destination port range.
+     *    &quot;Policy&quot;:&quot;accept&quot; //The action.  }
+     * ]</li>
+     * <li>Delete a security group rule based on the ID of the destination security group.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4ph***&quot;,
+     * &quot;Permissions&quot;:[
+     *   {
+     * &quot;DestGroupId&quot;:&quot;sg-bp67acfmxa123b****&quot;, //Set the ID of the target security group.
+     * &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     * &quot;PortRange&quot;:&quot;22/22&quot;,
+     * &quot;Policy&quot;:&quot;accept&quot;
+     *   }
+     * ]</li>
+     * <li>Delete a security group rule based on a specified prefix list.<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4ph***&quot;,
+     * &quot;Permissions&quot;:[
+     *   {
+     * &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     *    &quot;DestPrefixListId&quot;:&quot;pl-x1j1k5ykzqlixdcy****&quot;, //The ID of the destination prefix list.    &quot;PortRange&quot;:&quot;22/22&quot;,
+     * &quot;Policy&quot;:&quot;accept&quot;,
+     *   }
+     * ]</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes outbound security group rules.</p>
+     * <p>Deletes outbound security group rules from a specified security group.</p>
      * 
      * @param request RevokeSecurityGroupEgressRequest
      * @return RevokeSecurityGroupEgressResponse

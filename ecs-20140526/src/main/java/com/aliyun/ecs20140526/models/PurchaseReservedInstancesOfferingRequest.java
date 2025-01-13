@@ -128,7 +128,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region in which to purchase a reserved instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -176,9 +176,9 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The time when the reserved instance takes effect. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <code>yyyy-MM-ddTHHZ</code> format. The time must be in UTC.</p>
+     * <p>The time when you want the reserved instance to take effect. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <code>yyyy-MM-ddTHHZ</code> format. The time must be in UTC.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the reserved instance takes effect starting on the hour when the reserved instance is purchased. For example, if you purchased a reserved instance at 13:45:35 on November 1, 2024, the instance took effect starting 13:00:00 on November 1, 2024.</p>
+     * <p> If you do not specify this parameter, the reserved instance takes effect starting on the hour when the reserved instance is purchased. For example, if you purchase a reserved instance at 13:45:35 on November 1, 2024, the reserved instance takes effect starting 13:00:00 on November 1, 2024.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public java.util.List<PurchaseReservedInstancesOfferingRequestTag> tag;
 
     /**
-     * <p>The ID of the zone in which to purchase the reserved instance. This parameter is required when <code>Scope</code> is set to <code>Zone</code>. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>The ID of the zone in which to purchase the reserved instance. This parameter takes effect and is required only if you set <code>Scope</code> to <code>Zone</code>. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-g</p>

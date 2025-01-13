@@ -14,7 +14,7 @@ public class ModifySnapshotGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The new name of the snapshot-consistent group. The name must be 2 to 128 characters in length. The name can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:). The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The new name of the snapshot-consistent group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with a <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:).</p>
      * 
      * <strong>example:</strong>
      * <p>testName02</p>

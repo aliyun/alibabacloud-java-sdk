@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the task.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class DescribeTasksResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -119,7 +119,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The time when the task was completed.</p>
+         * <p>The time when the task ended.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-24T12:50Z</p>
@@ -128,7 +128,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String finishedTime;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-bp1i8huqm5u7****</p>
@@ -146,7 +146,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String supportCancel;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The name of the operation that generates the task.</p>
          * 
          * <strong>example:</strong>
          * <p>ImportImage</p>
@@ -155,7 +155,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskAction;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-bp1hvgwromzv32iq****</p>
@@ -164,7 +164,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The state of the task.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>Finished</p>

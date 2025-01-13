@@ -42,7 +42,7 @@ public class CreateImageComponentRequest extends TeaModel {
     public String componentVersion;
 
     /**
-     * <p>The content of the image component. The content consists of up to 127 commands.</p>
+     * <p>The content of the image component. The image component consists of multiple commands. The command content cannot exceed 16 KB in size. For information about the commands supported by Image Builder and the formats of the commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>RUN yum update -y</p>

@@ -15,7 +15,7 @@ public class ModifyManagedInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The new name of the managed instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with a special character or a digit. The name can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:) and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,8 @@ public class ModifyManagedInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the managed instance.</p>
+     * <p>The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

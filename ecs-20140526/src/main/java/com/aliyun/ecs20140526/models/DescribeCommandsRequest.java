@@ -90,9 +90,9 @@ public class DescribeCommandsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1.</p>
-     * <p>Default value: 1.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -101,9 +101,9 @@ public class DescribeCommandsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 50.</p>
-     * <p>Default value: 10.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10</p>

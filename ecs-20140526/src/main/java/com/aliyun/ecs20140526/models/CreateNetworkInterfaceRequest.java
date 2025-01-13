@@ -702,6 +702,9 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceRequestEnhancedNetwork extends TeaModel {
+        @NameInMap("EnableRss")
+        public Boolean enableRss;
+
         /**
          * <blockquote>
          * <p> This parameter is not publicly available.</p>
@@ -716,6 +719,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         public static CreateNetworkInterfaceRequestEnhancedNetwork build(java.util.Map<String, ?> map) throws Exception {
             CreateNetworkInterfaceRequestEnhancedNetwork self = new CreateNetworkInterfaceRequestEnhancedNetwork();
             return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkInterfaceRequestEnhancedNetwork setEnableRss(Boolean enableRss) {
+            this.enableRss = enableRss;
+            return this;
+        }
+        public Boolean getEnableRss() {
+            return this.enableRss;
         }
 
         public CreateNetworkInterfaceRequestEnhancedNetwork setEnableSriov(Boolean enableSriov) {

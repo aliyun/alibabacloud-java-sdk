@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotPackageResponseBody extends TeaModel {
     /**
-     * <p>Details about the OSS storage plans.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The total number of returned OSS storage plans.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -32,13 +32,13 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The time when the OSS storage plan expires. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>Details about the OSS storage plans.</p>
      */
     @NameInMap("SnapshotPackages")
     public DescribeSnapshotPackageResponseBodySnapshotPackages snapshotPackages;
 
     /**
-     * <p>The name of the OSS storage plan.</p>
+     * <p>The total number of OSS storage plans.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
 
     public static class DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage extends TeaModel {
         /**
-         * <p>The time when the OSS storage plan was purchased. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The name of the OSS storage plan.</p>
          * 
          * <strong>example:</strong>
          * <p>testDisplayName</p>
@@ -102,7 +102,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The maximum storage capacity offered by the OSS storage plan.</p>
+         * <p>The time when the OSS storage plan expires. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-11-30T06:32:31Z</p>
@@ -111,6 +111,8 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The maximum storage capacity offered by the OSS storage plan.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -118,7 +120,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         public Long initCapacity;
 
         /**
-         * <p>DescribeSnapshotPackage</p>
+         * <p>The time when the OSS storage plan was purchased. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-30T06:32:31Z</p>
