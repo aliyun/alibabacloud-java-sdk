@@ -15,6 +15,10 @@ public class UpdateFileRequest extends TeaModel {
     @NameInMap("AdvancedSettings")
     public String advancedSettings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ApplyScheduleImmediately")
     public Boolean applyScheduleImmediately;
 
@@ -115,7 +119,7 @@ public class UpdateFileRequest extends TeaModel {
     public String dependentNodeIdList;
 
     /**
-     * <p>The type of the cross-cycle scheduling dependency of the node that corresponds to the file. Valid values:</p>
+     * <p>The type of the cross-cycle scheduling dependency of the node. Valid values:</p>
      * <ul>
      * <li>SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.</li>
      * <li>CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.</li>
@@ -289,7 +293,7 @@ public class UpdateFileRequest extends TeaModel {
      * <li>NORMAL: The node is an auto triggered node.</li>
      * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.</li>
      * <li>PAUSE: The node is a paused node.</li>
-     * <li>SKIP: The inner node is a dry-run node. Dry-run nodes are started as scheduled but the scheduling system sets the status of the nodes to succeeded when the scheduling system starts to run the nodes.</li>
+     * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -336,6 +340,10 @@ public class UpdateFileRequest extends TeaModel {
     @NameInMap("Stop")
     public Boolean stop;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 

@@ -10,30 +10,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("ap-northeast-1", "dataworks.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "dataworks.ap-south-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "dataworks.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "dataworks.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "dataworks.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "dataworks.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("cn-beijing", "dataworks.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "dataworks.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "dataworks.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "dataworks.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "dataworks.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "dataworks.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "dataworks.aliyuncs.com"),
-            new TeaPair("eu-central-1", "dataworks.eu-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "dataworks.eu-west-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "dataworks.me-east-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "dataworks.us-east-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "dataworks.aliyuncs.com")
+            new TeaPair("'ap-northeast-1'", "dataworks.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("'ap-south-1'", "dataworks.ap-south-1.aliyuncs.com"),
+            new TeaPair("'ap-southeast-1'", "dataworks.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("'ap-southeast-2'", "dataworks.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("'ap-southeast-3'", "dataworks.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("'ap-southeast-5'", "dataworks.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("'cn-beijing'", "dataworks.cn-beijing.aliyuncs.com"),
+            new TeaPair("'cn-chengdu'", "dataworks.cn-chengdu.aliyuncs.com"),
+            new TeaPair("'cn-hangzhou'", "dataworks.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-hongkong'", "dataworks.cn-hongkong.aliyuncs.com"),
+            new TeaPair("'cn-huhehaote'", "dataworks.aliyuncs.com"),
+            new TeaPair("'cn-qingdao'", "dataworks.aliyuncs.com"),
+            new TeaPair("'cn-shanghai'", "dataworks.cn-shanghai.aliyuncs.com"),
+            new TeaPair("'cn-shenzhen'", "dataworks.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("'cn-zhangjiakou'", "dataworks.aliyuncs.com"),
+            new TeaPair("'eu-central-1'", "dataworks.eu-central-1.aliyuncs.com"),
+            new TeaPair("'eu-west-1'", "dataworks.eu-west-1.aliyuncs.com"),
+            new TeaPair("'me-east-1'", "dataworks.me-east-1.aliyuncs.com"),
+            new TeaPair("'us-east-1'", "dataworks.us-east-1.aliyuncs.com"),
+            new TeaPair("'us-west-1'", "dataworks.us-west-1.aliyuncs.com"),
+            new TeaPair("'cn-hangzhou-finance'", "dataworks.aliyuncs.com"),
+            new TeaPair("'cn-shenzhen-finance-1'", "dataworks.aliyuncs.com"),
+            new TeaPair("'cn-shanghai-finance-1'", "dataworks.aliyuncs.com"),
+            new TeaPair("'cn-north-2-gov-1'", "dataworks.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dataworks-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -16594,7 +16594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新基线</p>
+     * <p>Updates a baseline.</p>
      * 
      * @param tmpReq UpdateBaselineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16684,7 +16684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新基线</p>
+     * <p>Updates a baseline.</p>
      * 
      * @param request UpdateBaselineRequest
      * @return UpdateBaselineResponse

@@ -270,7 +270,7 @@ public class UpdateBaselineRequest extends TeaModel {
 
     public static class UpdateBaselineRequestAlertSettings extends TeaModel {
         /**
-         * <p>The interval at which an event alert notification is sent. Unit: seconds. Minimum value: 900.</p>
+         * <p>The interval at which an event alert notification is sent. Unit: minutes. Minimum value: 5. Maximum value: 1,440.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
