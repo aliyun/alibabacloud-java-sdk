@@ -4,12 +4,24 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListHotelServiceCategoryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5373C821-65D2-1764-B9F9-951914937FF5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +66,38 @@ public class ListHotelServiceCategoryResponseBody extends TeaModel {
     }
 
     public static class ListHotelServiceCategoryResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>GOODS</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>生活及洗漱用品</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ailabsaicloudservice.alicdn.com/hotel/icon/changjingfenlei/wupintianjia.png">https://ailabsaicloudservice.alicdn.com/hotel/icon/changjingfenlei/wupintianjia.png</a></p>
+         */
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>物品添加</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HOTEL_SERVICE</p>
+         */
         @NameInMap("Type")
         public String type;
 

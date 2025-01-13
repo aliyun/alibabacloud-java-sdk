@@ -16,6 +16,10 @@ public class ListHotelInfoResponseBody extends TeaModel {
     @NameInMap("Result")
     public java.util.List<ListHotelInfoResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -65,6 +69,10 @@ public class ListHotelInfoResponseBody extends TeaModel {
     }
 
     public static class ListHotelInfoResponseBodyResultAuthAccount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>leetest</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -90,6 +98,10 @@ public class ListHotelInfoResponseBody extends TeaModel {
         @NameInMap("HotelAddress")
         public String hotelAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cf2446fc9d144c85aaee4f9ae20a96e7</p>
+         */
         @NameInMap("HotelId")
         public String hotelId;
 

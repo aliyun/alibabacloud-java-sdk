@@ -4,15 +4,27 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class AddCustomQAV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FAFCD152-4791-5F2F-B0BE-2DC06FD4F05B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public AddCustomQAV2ResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -57,15 +69,27 @@ public class AddCustomQAV2ResponseBody extends TeaModel {
         @NameInMap("Answers")
         public String answers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-10 10:01:59</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a7***83</p>
+         */
         @NameInMap("HotelId")
         public String hotelId;
 
         @NameInMap("KeyWords")
         public String keyWords;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8xxx9</p>
+         */
         @NameInMap("LastOperator")
         public String lastOperator;
 
@@ -74,16 +98,27 @@ public class AddCustomQAV2ResponseBody extends TeaModel {
 
         /**
          * <p>qaID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("QaId")
         public String qaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
         @NameInMap("SupplementaryQuestion")
         public String supplementaryQuestion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-10 10:01:59</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

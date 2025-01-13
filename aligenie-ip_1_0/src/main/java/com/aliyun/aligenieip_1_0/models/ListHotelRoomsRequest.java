@@ -4,9 +4,19 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListHotelRoomsRequest extends TeaModel {
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HotelAdminRoom")
     public ListHotelRoomsRequestHotelAdminRoom hotelAdminRoom;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e6dd44fd16084db8a60d69fd625d9f0f</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 

@@ -4,9 +4,18 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class BatchAddHotelRoomRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e6dd44fd16084db8a60d69fd625d9f0f</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoomNoList")
     public java.util.List<String> roomNoList;
 

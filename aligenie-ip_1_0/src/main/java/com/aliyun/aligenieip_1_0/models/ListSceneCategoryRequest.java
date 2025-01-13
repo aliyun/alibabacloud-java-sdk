@@ -6,10 +6,20 @@ import com.aliyun.tea.*;
 public class ListSceneCategoryRequest extends TeaModel {
     /**
      * <p>hotelId</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80d84ea8ed9e422fbad52715c8fc56f1</p>
      */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REPAIR</p>
+     */
     @NameInMap("Type")
     public String type;
 

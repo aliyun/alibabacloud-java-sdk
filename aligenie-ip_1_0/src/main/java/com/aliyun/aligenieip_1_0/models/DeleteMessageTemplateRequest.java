@@ -4,6 +4,10 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class DeleteMessageTemplateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>234</p>
+     */
     @NameInMap("TemplateId")
     public Long templateId;
 

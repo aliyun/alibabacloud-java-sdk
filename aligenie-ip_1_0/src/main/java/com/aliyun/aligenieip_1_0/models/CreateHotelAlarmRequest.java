@@ -4,15 +4,31 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class CreateHotelAlarmRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cf2446fc9d144c85aaee4f9ae20a96e7</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DOU_YIN</p>
+     */
     @NameInMap("MusicType")
     public String musicType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Rooms")
     public java.util.List<String> rooms;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScheduleInfo")
     public CreateHotelAlarmRequestScheduleInfo scheduleInfo;
 
@@ -54,18 +70,38 @@ public class CreateHotelAlarmRequest extends TeaModel {
     }
 
     public static class CreateHotelAlarmRequestScheduleInfoOnce extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Day")
         public Integer day;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("Month")
         public Integer month;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022</p>
+         */
         @NameInMap("Year")
         public Integer year;
 
@@ -120,9 +156,17 @@ public class CreateHotelAlarmRequest extends TeaModel {
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
@@ -163,6 +207,7 @@ public class CreateHotelAlarmRequest extends TeaModel {
 
         /**
          * <p>ONCE, WEEKLY</p>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Type")
         public String type;

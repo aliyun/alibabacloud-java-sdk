@@ -4,6 +4,12 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ResetWelcomeTextAndMusicRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af7***536</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 

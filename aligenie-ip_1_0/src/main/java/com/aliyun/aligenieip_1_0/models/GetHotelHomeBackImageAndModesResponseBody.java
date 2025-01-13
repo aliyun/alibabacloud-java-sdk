@@ -4,12 +4,24 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetHotelHomeBackImageAndModesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>394450FC-9035-1B7C-8829-BC88832473FC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +66,24 @@ public class GetHotelHomeBackImageAndModesResponseBody extends TeaModel {
     }
 
     public static class GetHotelHomeBackImageAndModesResponseBodyResultModeList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>浪漫模式</p>
+         */
         @NameInMap("CnName")
         public String cnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>romantic</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ailabsaicloudservice.alicdn.com/hotel/icon/changjingmoshi/langman.png">https://ailabsaicloudservice.alicdn.com/hotel/icon/changjingmoshi/langman.png</a></p>
+         */
         @NameInMap("Icon")
         public String icon;
 
@@ -95,9 +119,17 @@ public class GetHotelHomeBackImageAndModesResponseBody extends TeaModel {
     }
 
     public static class GetHotelHomeBackImageAndModesResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ailabs.alibabausercontent.com/platform/3d4fe6d66ec49d9789635f66627f0339/welcome_audios/976210a6532150f49c2677a8b7dbc105/l6fspbhn.jpg">https://ailabs.alibabausercontent.com/platform/3d4fe6d66ec49d9789635f66627f0339/welcome_audios/976210a6532150f49c2677a8b7dbc105/l6fspbhn.jpg</a></p>
+         */
         @NameInMap("BackgroundImage")
         public String backgroundImage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>宣雍测试橙蜂酒店</p>
+         */
         @NameInMap("HotelName")
         public String hotelName;
 

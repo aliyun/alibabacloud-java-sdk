@@ -4,12 +4,30 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class AddCartoonRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>520a0***eb</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40c804***697</p>
+     */
     @NameInMap("StartVideoMd5")
     public String startVideoMd5;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>https://***.mp4</p>
+     */
     @NameInMap("StartVideoUrl")
     public String startVideoUrl;
 

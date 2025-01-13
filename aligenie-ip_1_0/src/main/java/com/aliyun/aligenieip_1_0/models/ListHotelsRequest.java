@@ -4,12 +4,25 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListHotelsRequest extends TeaModel {
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HotelRequest")
     public ListHotelsRequestHotelRequest hotelRequest;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Page")
     public ListHotelsRequestPage page;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
@@ -62,9 +75,21 @@ public class ListHotelsRequest extends TeaModel {
     }
 
     public static class ListHotelsRequestPage extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 

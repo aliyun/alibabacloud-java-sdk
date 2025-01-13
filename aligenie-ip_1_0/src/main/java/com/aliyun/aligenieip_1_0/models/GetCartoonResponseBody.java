@@ -4,15 +4,27 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetCartoonResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7*726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public GetCartoonResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -54,9 +66,17 @@ public class GetCartoonResponseBody extends TeaModel {
     }
 
     public static class GetCartoonResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ai***.mp4">https://ai***.mp4</a></p>
+         */
         @NameInMap("StartVideoMd5")
         public String startVideoMd5;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40c8***97</p>
+         */
         @NameInMap("StartVideoUrl")
         public String startVideoUrl;
 

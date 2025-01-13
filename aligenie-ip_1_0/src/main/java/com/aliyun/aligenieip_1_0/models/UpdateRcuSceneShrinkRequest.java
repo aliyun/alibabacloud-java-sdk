@@ -4,12 +4,27 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class UpdateRcuSceneShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>520a0c0***5eb</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yoga</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SceneRelationExtDTO")
     public String sceneRelationExtDTOShrink;
 

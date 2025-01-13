@@ -4,6 +4,12 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetHotelContactByNumberShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101</p>
+     */
     @NameInMap("Number")
     public String number;
 

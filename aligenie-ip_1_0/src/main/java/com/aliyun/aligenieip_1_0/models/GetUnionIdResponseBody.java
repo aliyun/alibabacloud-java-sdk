@@ -4,15 +4,27 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetUnionIdResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7*726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<GetUnionIdResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -54,9 +66,17 @@ public class GetUnionIdResponseBody extends TeaModel {
     }
 
     public static class GetUnionIdResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4325***765</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8bh2****8s8</p>
+         */
         @NameInMap("UnionId")
         public String unionId;
 

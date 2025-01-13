@@ -7,18 +7,30 @@ public class PageGetHotelRoomDevicesResponseBody extends TeaModel {
     @NameInMap("Extentions")
     public java.util.Map<String, ?> extentions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Page")
     public PageGetHotelRoomDevicesResponseBodyPage page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4EFBDDF4-B19D-526C-8C3D-CD8AB51974EE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<PageGetHotelRoomDevicesResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -76,24 +88,52 @@ public class PageGetHotelRoomDevicesResponseBody extends TeaModel {
     }
 
     public static class PageGetHotelRoomDevicesResponseBodyPage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("End")
         public Integer end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("HasNext")
         public Boolean hasNext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Start")
         public Integer start;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalPage")
         public Integer totalPage;
 
@@ -161,21 +201,45 @@ public class PageGetHotelRoomDevicesResponseBody extends TeaModel {
     }
 
     public static class PageGetHotelRoomDevicesResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>V21.10.00.313</p>
+         */
         @NameInMap("FirmwareVersion")
         public String firmwareVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a7***83</p>
+         */
         @NameInMap("HotelId")
         public String hotelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b4:xx:xx:xx:65:2b</p>
+         */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OnlineStatus")
         public Integer onlineStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2001</p>
+         */
         @NameInMap("RoomNo")
         public String roomNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1200xxx048</p>
+         */
         @NameInMap("Sn")
         public String sn;
 

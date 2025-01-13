@@ -4,15 +4,27 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListHotelSceneItemResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Page")
     public ListHotelSceneItemResponseBodyPage page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CEADB586-51CB-1B6B-95BD-AB85A7A08E97</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -68,15 +80,31 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
         @NameInMap("HasNext")
         public Boolean hasNext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("TotalPage")
         public Integer totalPage;
 
@@ -128,27 +156,55 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
     }
 
     public static class ListHotelSceneItemResponseBodyResultSecondCategoryListItemList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>客用品类</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ailabsaicloudservice.alicdn.com/hotel/icon/jiudianmianban_fuwushangpintu/wupin/keyongpinlei/mianqian.png">https://ailabsaicloudservice.alicdn.com/hotel/icon/jiudianmianban_fuwushangpintu/wupin/keyongpinlei/mianqian.png</a></p>
+         */
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>152860</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>棉签</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Price")
         public Long price;
 
         @NameInMap("ResidueLimit")
         public Long residueLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>已添加</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GOODS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -227,6 +283,10 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
         @NameInMap("ItemList")
         public java.util.List<ListHotelSceneItemResponseBodyResultSecondCategoryListItemList> itemList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>客用品类</p>
+         */
         @NameInMap("SecondCategoryName")
         public String secondCategoryName;
 

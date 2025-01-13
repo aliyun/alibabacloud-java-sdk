@@ -4,9 +4,17 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetHotelSettingRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>af7***536</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SCREENSAVER</p>
+     */
     @NameInMap("SettingType")
     public String settingType;
 

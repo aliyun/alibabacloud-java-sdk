@@ -4,12 +4,26 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListServiceQAShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Active")
     public Boolean active;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a7***83</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("Keyword")
     public String keyword;
 

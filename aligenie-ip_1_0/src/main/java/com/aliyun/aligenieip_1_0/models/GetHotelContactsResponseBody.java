@@ -4,15 +4,27 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetHotelContactsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7*726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<GetHotelContactsResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -54,27 +66,55 @@ public class GetHotelContactsResponseBody extends TeaModel {
     }
 
     public static class GetHotelContactsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1649472283046</p>
+         */
         @NameInMap("ExpireAt")
         public String expireAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cf24***96e7</p>
+         */
         @NameInMap("HotelId")
         public String hotelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx.icon</p>
+         */
         @NameInMap("Icon")
         public String icon;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>group</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0862***A809</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

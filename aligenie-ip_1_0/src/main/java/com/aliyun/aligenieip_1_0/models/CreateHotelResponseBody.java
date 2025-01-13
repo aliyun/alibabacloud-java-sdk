@@ -7,15 +7,31 @@ public class CreateHotelResponseBody extends TeaModel {
     @NameInMap("Extentions")
     public java.util.Map<String, ?> extentions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>73C67BD9-175A-1324-8202-9FAABBB3E6FA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5abfd9***2c38661</p>
+     */
     @NameInMap("Result")
     public String result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 

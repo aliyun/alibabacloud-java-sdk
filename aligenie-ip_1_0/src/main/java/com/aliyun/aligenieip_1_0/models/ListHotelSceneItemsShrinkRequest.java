@@ -6,12 +6,17 @@ import com.aliyun.tea.*;
 public class ListHotelSceneItemsShrinkRequest extends TeaModel {
     /**
      * <p>hotelID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80d84ea8ed9e422fbad52715c8fc56f1</p>
      */
     @NameInMap("HotelId")
     public String hotelId;
 
     /**
      * <p>ListHotelSceneReq</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListHotelSceneReq")
     public String listHotelSceneReqShrink;

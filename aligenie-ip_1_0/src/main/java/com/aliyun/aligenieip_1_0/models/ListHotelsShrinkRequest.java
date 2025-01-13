@@ -4,12 +4,25 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListHotelsShrinkRequest extends TeaModel {
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HotelRequest")
     public String hotelRequestShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Page")
     public String pageShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

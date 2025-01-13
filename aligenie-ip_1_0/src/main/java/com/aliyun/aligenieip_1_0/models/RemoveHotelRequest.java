@@ -6,13 +6,29 @@ import com.aliyun.tea.*;
 public class RemoveHotelRequest extends TeaModel {
     /**
      * <p>appkey</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30193305</p>
      */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e6dd44fd16084db8a60d69fd625d9f0f</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAEVK***UE3d3Z2ETwh</p>
+     */
     @NameInMap("TbOpenId")
     public String tbOpenId;
 

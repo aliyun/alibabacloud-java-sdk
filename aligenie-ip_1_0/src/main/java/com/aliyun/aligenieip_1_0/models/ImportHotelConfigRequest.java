@@ -4,9 +4,18 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ImportHotelConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a7***83</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ImportHotelConfig")
     public ImportHotelConfigRequestImportHotelConfig importHotelConfig;
 
@@ -32,6 +41,9 @@ public class ImportHotelConfigRequest extends TeaModel {
     }
 
     public static class ImportHotelConfigRequestImportHotelConfigRcuCustomScenes extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("CorpusList")
         public java.util.List<String> corpusList;
 
@@ -41,9 +53,15 @@ public class ImportHotelConfigRequest extends TeaModel {
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 

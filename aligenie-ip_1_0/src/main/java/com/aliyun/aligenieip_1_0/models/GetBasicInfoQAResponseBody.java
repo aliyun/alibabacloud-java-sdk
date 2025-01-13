@@ -4,15 +4,27 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetBasicInfoQAResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7***726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public GetBasicInfoQAResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -54,9 +66,17 @@ public class GetBasicInfoQAResponseBody extends TeaModel {
     }
 
     public static class GetBasicInfoQAResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>11:11</p>
+         */
         @NameInMap("CheckInTime")
         public String checkInTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11:11</p>
+         */
         @NameInMap("CheckOutTime")
         public String checkOutTime;
 
@@ -78,6 +98,10 @@ public class GetBasicInfoQAResponseBody extends TeaModel {
         @NameInMap("ParkingPosition")
         public String parkingPosition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123***</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 

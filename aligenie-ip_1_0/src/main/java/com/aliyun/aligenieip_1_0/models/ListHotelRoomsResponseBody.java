@@ -4,9 +4,17 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListHotelRoomsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -54,9 +62,17 @@ public class ListHotelRoomsResponseBody extends TeaModel {
     }
 
     public static class ListHotelRoomsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>e6dd44fd16084db8a60d69fd625d9f0f</p>
+         */
         @NameInMap("HotelId")
         public String hotelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>102</p>
+         */
         @NameInMap("RoomNo")
         public String roomNo;
 

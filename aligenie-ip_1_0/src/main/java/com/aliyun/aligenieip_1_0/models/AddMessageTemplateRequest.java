@@ -4,9 +4,21 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class AddMessageTemplateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是${hotel}的一个测试模板</p>
+     */
     @NameInMap("TemplateDetail")
     public String templateDetail;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试模板</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

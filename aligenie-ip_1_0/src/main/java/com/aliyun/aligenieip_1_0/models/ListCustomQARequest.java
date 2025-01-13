@@ -4,12 +4,25 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListCustomQARequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>520a0c0***5eb</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Page")
     public ListCustomQARequestPage page;
 
@@ -43,9 +56,21 @@ public class ListCustomQARequest extends TeaModel {
     }
 
     public static class ListCustomQARequestPage extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 

@@ -4,12 +4,21 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class PushVoiceBoxCommandsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Commands")
     public java.util.List<PushVoiceBoxCommandsRequestCommands> commands;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoomNo")
     public String roomNo;
 
@@ -43,9 +52,15 @@ public class PushVoiceBoxCommandsRequest extends TeaModel {
     }
 
     public static class PushVoiceBoxCommandsRequestCommands extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("CommandDomain")
         public String commandDomain;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("CommandName")
         public String commandName;
 

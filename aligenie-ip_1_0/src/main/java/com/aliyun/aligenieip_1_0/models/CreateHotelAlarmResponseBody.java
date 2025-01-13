@@ -10,12 +10,20 @@ public class CreateHotelAlarmResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>43***86881</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<CreateHotelAlarmResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -65,18 +73,34 @@ public class CreateHotelAlarmResponseBody extends TeaModel {
     }
 
     public static class CreateHotelAlarmResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>94</p>
+         */
         @NameInMap("AlarmId")
         public Long alarmId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Pvk***TA==</p>
+         */
         @NameInMap("DeviceOpenId")
         public String deviceOpenId;
 
         @NameInMap("FailMsg")
         public String failMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
         @NameInMap("RoomNo")
         public String roomNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mg***Qd</p>
+         */
         @NameInMap("UserOpenId")
         public String userOpenId;
 

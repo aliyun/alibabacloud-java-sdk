@@ -4,15 +4,27 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class QueryHotelRoomDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7*726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public QueryHotelRoomDetailResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -57,6 +69,10 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-01 12:00:00</p>
+         */
         @NameInMap("AuthTime")
         public String authTime;
 
@@ -84,24 +100,48 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
     }
 
     public static class QueryHotelRoomDetailResponseBodyResultDeviceInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-01 12:00:00</p>
+         */
         @NameInMap("ActiveTime")
         public String activeTime;
 
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6.1.8-RS-20230425.1806</p>
+         */
         @NameInMap("FirmwareVersion")
         public String firmwareVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fa:03:23:58:c3:00</p>
+         */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OnlineStatus")
         public Integer onlineStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sag42dlz4qf</p>
+         */
         @NameInMap("Sn")
         public String sn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>41c95c18a0a643bcb58edf438877def5</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -169,9 +209,17 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
     }
 
     public static class QueryHotelRoomDetailResponseBodyResultOtherService extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OpenCall")
         public Boolean openCall;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("UnhandleTickets")
         public Integer unhandleTickets;
 
@@ -199,36 +247,68 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
     }
 
     public static class QueryHotelRoomDetailResponseBodyResultRoomControlInfoDeviceInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>light</p>
+         */
         @NameInMap("CategoryEnName")
         public String categoryEnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
         @NameInMap("CategoryName")
         public String categoryName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rcu</p>
+         */
         @NameInMap("DeviceConnectType")
         public String deviceConnectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("DeviceCount")
         public Integer deviceCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>readLight</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>room</p>
+         */
         @NameInMap("LocationEnName")
         public String locationEnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LocationId")
         public Long locationId;
 
         @NameInMap("LocationName")
         public String locationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a1ueWGP6W2L</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
@@ -328,18 +408,34 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
     }
 
     public static class QueryHotelRoomDetailResponseBodyResultRoomControlInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>78</p>
+         */
         @NameInMap("AppId")
         public Long appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>app</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
         @NameInMap("DeviceInfos")
         public java.util.List<QueryHotelRoomDetailResponseBodyResultRoomControlInfoDeviceInfos> deviceInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.xxx.com">http://www.xxx.com</a></p>
+         */
         @NameInMap("RcuUrl")
         public String rcuUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1170</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 
@@ -402,15 +498,31 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
     }
 
     public static class QueryHotelRoomDetailResponseBodyResultRoomServiceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BookServiceCnt")
         public Integer bookServiceCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("GoodsServiceCnt")
         public Integer goodsServiceCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("RepairServiceCnt")
         public Integer repairServiceCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("RoomServiceCnt")
         public Integer roomServiceCnt;
 
@@ -457,6 +569,10 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         @NameInMap("AuthAccounts")
         public java.util.List<QueryHotelRoomDetailResponseBodyResultAuthAccounts> authAccounts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rcu</p>
+         */
         @NameInMap("ConnectType")
         public String connectType;
 
@@ -466,6 +582,10 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         @NameInMap("DeviceInfos")
         public java.util.List<QueryHotelRoomDetailResponseBodyResultDeviceInfos> deviceInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a7***83</p>
+         */
         @NameInMap("HotelId")
         public String hotelId;
 
@@ -478,6 +598,10 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         @NameInMap("RoomControlInfo")
         public QueryHotelRoomDetailResponseBodyResultRoomControlInfo roomControlInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2001</p>
+         */
         @NameInMap("RoomNo")
         public String roomNo;
 

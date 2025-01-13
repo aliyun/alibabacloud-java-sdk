@@ -7,12 +7,22 @@ public class AddCustomQARequest extends TeaModel {
     @NameInMap("Answers")
     public java.util.List<String> answers;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a7a3***013</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
     @NameInMap("KeyWords")
     public java.util.List<String> keyWords;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("MajorQuestion")
     public String majorQuestion;
 

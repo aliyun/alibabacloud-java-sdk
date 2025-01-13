@@ -4,12 +4,24 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetHotelRoomDeviceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vrehvuifdsgrts</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +66,45 @@ public class GetHotelRoomDeviceResponseBody extends TeaModel {
     }
 
     public static class GetHotelRoomDeviceResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.0.0-release</p>
+         */
         @NameInMap("FirmwareVersion")
         public String firmwareVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>af7***536</p>
+         */
         @NameInMap("HotelId")
         public String hotelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aa:aa:aa:aa:aa:aa</p>
+         */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OnlineStatus")
         public Integer onlineStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1211</p>
+         */
         @NameInMap("RoomNo")
         public String roomNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dsfdsfrgreg</p>
+         */
         @NameInMap("Sn")
         public String sn;
 

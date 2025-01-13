@@ -4,6 +4,9 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListHotelServiceCategoryRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Payload")
     public ListHotelServiceCategoryRequestPayload payload;
 
@@ -21,6 +24,12 @@ public class ListHotelServiceCategoryRequest extends TeaModel {
     }
 
     public static class ListHotelServiceCategoryRequestPayload extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HOTEL_SERVICE</p>
+         */
         @NameInMap("Type")
         public String type;
 

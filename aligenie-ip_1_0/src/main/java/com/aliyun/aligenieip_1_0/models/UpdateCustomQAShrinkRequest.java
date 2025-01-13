@@ -7,15 +7,31 @@ public class UpdateCustomQAShrinkRequest extends TeaModel {
     @NameInMap("Answers")
     public String answersShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CustomQAId")
     public String customQAId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af7***536</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
     @NameInMap("KeyWords")
     public String keyWordsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("MajorQuestion")
     public String majorQuestion;
 

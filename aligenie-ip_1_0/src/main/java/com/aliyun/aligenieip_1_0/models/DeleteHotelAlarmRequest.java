@@ -4,9 +4,18 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class DeleteHotelAlarmRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Alarms")
     public java.util.List<DeleteHotelAlarmRequestAlarms> alarms;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a7***83</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
@@ -32,15 +41,37 @@ public class DeleteHotelAlarmRequest extends TeaModel {
     }
 
     public static class DeleteHotelAlarmRequestAlarms extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5029</p>
+         */
         @NameInMap("AlarmId")
         public Long alarmId;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PvkB***TA==</p>
+         */
         @NameInMap("DeviceOpenId")
         public String deviceOpenId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
         @NameInMap("RoomNo")
         public String roomNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mgw/k***HQd</p>
+         */
         @NameInMap("UserOpenId")
         public String userOpenId;
 

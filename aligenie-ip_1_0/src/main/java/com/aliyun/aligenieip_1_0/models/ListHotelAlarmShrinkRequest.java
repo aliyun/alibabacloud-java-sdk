@@ -4,6 +4,10 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListHotelAlarmShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>a7a3***013</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 

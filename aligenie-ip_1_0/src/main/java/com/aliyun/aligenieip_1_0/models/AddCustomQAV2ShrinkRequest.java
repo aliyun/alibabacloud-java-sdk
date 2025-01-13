@@ -4,9 +4,18 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class AddCustomQAV2ShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Answers")
     public String answersShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>520a0c0***5eb</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 

@@ -4,18 +4,30 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListServiceQAResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Page")
     public ListServiceQAResponseBodyPage page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7***726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListServiceQAResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -65,12 +77,24 @@ public class ListServiceQAResponseBody extends TeaModel {
     }
 
     public static class ListServiceQAResponseBodyPage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
@@ -106,18 +130,34 @@ public class ListServiceQAResponseBody extends TeaModel {
     }
 
     public static class ListServiceQAResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Answer")
         public String answer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-27 14:06:27</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         @NameInMap("Question")
         public String question;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ServiceQAId")
         public Long serviceQAId;
 

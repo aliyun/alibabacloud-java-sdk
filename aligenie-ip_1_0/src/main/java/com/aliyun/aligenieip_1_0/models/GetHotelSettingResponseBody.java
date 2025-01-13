@@ -4,15 +4,27 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetHotelSettingResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F7E2****B7C94</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public GetHotelSettingResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -54,9 +66,17 @@ public class GetHotelSettingResponseBody extends TeaModel {
     }
 
     public static class GetHotelSettingResponseBodyResultHotelScreenSaver extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://a***png">https://a***png</a></p>
+         */
         @NameInMap("ScreenSaverPicUrl")
         public String screenSaverPicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>common-weather</p>
+         */
         @NameInMap("ScreenSaverStyle")
         public String screenSaverStyle;
 
@@ -96,15 +116,31 @@ public class GetHotelSettingResponseBody extends TeaModel {
         @NameInMap("DefaultVolume")
         public String defaultVolume;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22:00</p>
+         */
         @NameInMap("End")
         public String end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>screenoff</p>
+         */
         @NameInMap("StandbyAction")
         public String standbyAction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>07:00</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -164,15 +200,27 @@ public class GetHotelSettingResponseBody extends TeaModel {
     }
 
     public static class GetHotelSettingResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DeleteToken")
         public Long deleteToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ExtInfo")
         public String extInfo;
 
         @NameInMap("HotelDeviceModeList")
         public java.util.List<String> hotelDeviceModeList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>af7***536</p>
+         */
         @NameInMap("HotelId")
         public String hotelId;
 
@@ -182,6 +230,10 @@ public class GetHotelSettingResponseBody extends TeaModel {
         @NameInMap("NightMode")
         public GetHotelSettingResponseBodyResultNightMode nightMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SCREENSAVER</p>
+         */
         @NameInMap("SettingType")
         public String settingType;
 

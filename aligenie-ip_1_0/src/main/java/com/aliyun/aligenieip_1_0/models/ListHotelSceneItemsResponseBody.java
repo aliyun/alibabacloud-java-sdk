@@ -4,12 +4,24 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListHotelSceneItemsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7*726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +66,38 @@ public class ListHotelSceneItemsResponseBody extends TeaModel {
     }
 
     public static class ListHotelSceneItemsResponseBodyResultPage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("HasNext")
         public Boolean hasNext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalPage")
         public Integer totalPage;
 
@@ -120,17 +152,28 @@ public class ListHotelSceneItemsResponseBody extends TeaModel {
         @NameInMap("BeyondLimitReply")
         public String beyondLimitReply;
 
+        /**
+         * <strong>example:</strong>
+         * <p>客用品类</p>
+         */
         @NameInMap("Category")
         public String category;
 
         @NameInMap("DeliveryMethod")
         public String deliveryMethod;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ailabsaicloudservice.alicdn.com/hotel/icon/jiudianmianban_fuwushangpintu/wupin/keyongpinlei/mianqian.png">https://ailabsaicloudservice.alicdn.com/hotel/icon/jiudianmianban_fuwushangpintu/wupin/keyongpinlei/mianqian.png</a></p>
+         */
         @NameInMap("Icon")
         public String icon;
 
         /**
          * <p>id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10336</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -141,24 +184,44 @@ public class ListHotelSceneItemsResponseBody extends TeaModel {
         @NameInMap("LimitSwitch")
         public Integer limitSwitch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>棉签</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("PaymentMethod")
         public String paymentMethod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>160</p>
+         */
         @NameInMap("Price")
         public Long price;
 
         @NameInMap("RobotName")
         public String robotName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>已添加</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GOODS</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1666163226</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

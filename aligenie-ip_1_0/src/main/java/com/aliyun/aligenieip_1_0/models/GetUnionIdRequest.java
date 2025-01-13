@@ -4,15 +4,39 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetUnionIdRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>125****0946</p>
+     */
     @NameInMap("EncodeKey")
     public String encodeKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HOTEL</p>
+     */
     @NameInMap("EncodeType")
     public String encodeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>62a319****abdc</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEVICE_ID</p>
+     */
     @NameInMap("IdType")
     public String idType;
 

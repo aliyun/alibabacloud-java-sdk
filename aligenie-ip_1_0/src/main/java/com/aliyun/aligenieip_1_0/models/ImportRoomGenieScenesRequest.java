@@ -4,9 +4,21 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ImportRoomGenieScenesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a7a3***013</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1211</p>
+     */
     @NameInMap("RoomNo")
     public String roomNo;
 
@@ -43,9 +55,21 @@ public class ImportRoomGenieScenesRequest extends TeaModel {
     }
 
     public static class ImportRoomGenieScenesRequestSceneListActionsAttributeValues extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>powerstate</p>
+         */
         @NameInMap("AttributeName")
         public String attributeName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AttributeValue")
         public String attributeValue;
 
@@ -73,15 +97,35 @@ public class ImportRoomGenieScenesRequest extends TeaModel {
     }
 
     public static class ImportRoomGenieScenesRequestSceneListActionsDevice extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DeviceIndex")
         public Integer deviceIndex;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3c5d2ab8f9ec</p>
+         */
         @NameInMap("DeviceNumber")
         public String deviceNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
@@ -177,9 +221,15 @@ public class ImportRoomGenieScenesRequest extends TeaModel {
     }
 
     public static class ImportRoomGenieScenesRequestSceneListTriggersAttributeValues extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("AttributeName")
         public String attributeName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("AttributeValue")
         public String attributeValue;
 
@@ -207,12 +257,18 @@ public class ImportRoomGenieScenesRequest extends TeaModel {
     }
 
     public static class ImportRoomGenieScenesRequestSceneListTriggersDevice extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Category")
         public String category;
 
         @NameInMap("DeviceIndex")
         public String deviceIndex;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("DeviceNumber")
         public String deviceNumber;
 
@@ -257,6 +313,12 @@ public class ImportRoomGenieScenesRequest extends TeaModel {
         @NameInMap("Device")
         public ImportRoomGenieScenesRequestSceneListTriggersDevice device;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
@@ -300,24 +362,49 @@ public class ImportRoomGenieScenesRequest extends TeaModel {
     }
 
     public static class ImportRoomGenieScenesRequestSceneList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Actions")
         public java.util.List<ImportRoomGenieScenesRequestSceneListActions> actions;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Display")
         public Boolean display;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx.com/yyy.png">http://xxx.com/yyy.png</a></p>
+         */
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TriggerLogical")
         public Integer triggerLogical;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Triggers")
         public java.util.List<ImportRoomGenieScenesRequestSceneListTriggers> triggers;
 

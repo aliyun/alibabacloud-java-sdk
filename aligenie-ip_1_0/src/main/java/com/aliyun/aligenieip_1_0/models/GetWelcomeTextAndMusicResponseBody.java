@@ -7,15 +7,27 @@ public class GetWelcomeTextAndMusicResponseBody extends TeaModel {
     @NameInMap("Extentions")
     public java.util.Map<String, ?> extentions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EC7*726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public GetWelcomeTextAndMusicResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public Integer statusCode;
 
@@ -65,9 +77,17 @@ public class GetWelcomeTextAndMusicResponseBody extends TeaModel {
     }
 
     public static class GetWelcomeTextAndMusicResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>a7***83</p>
+         */
         @NameInMap("HotelId")
         public String hotelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://ailabsaicloudservice.alicdn.com/tmp/a.wav">http://ailabsaicloudservice.alicdn.com/tmp/a.wav</a></p>
+         */
         @NameInMap("MusicUrl")
         public String musicUrl;
 

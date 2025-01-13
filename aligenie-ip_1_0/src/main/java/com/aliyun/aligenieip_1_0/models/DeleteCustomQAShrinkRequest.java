@@ -7,6 +7,12 @@ public class DeleteCustomQAShrinkRequest extends TeaModel {
     @NameInMap("CustomQAIds")
     public String customQAIdsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a7a3***013</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 

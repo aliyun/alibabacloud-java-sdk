@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class UpdateHotelSceneItemRequest extends TeaModel {
     /**
      * <p>hotelID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80d84ea8ed9e422fbad52715c8fc56f1</p>
      */
     @NameInMap("HotelId")
     public String hotelId;
 
     /**
      * <p>updateHotelSceneReq</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateHotelSceneOperateReq")
     public UpdateHotelSceneItemRequestUpdateHotelSceneOperateReq updateHotelSceneOperateReq;
 
     /**
      * <p>UpdateHotelSceneReq</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateHotelSceneReq")
     public UpdateHotelSceneItemRequestUpdateHotelSceneReq updateHotelSceneReq;
@@ -52,9 +58,21 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
     }
 
     public static class UpdateHotelSceneItemRequestUpdateHotelSceneOperateReq extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsUseTemplateAnswer")
         public Boolean isUseTemplateAnswer;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN</p>
+         */
         @NameInMap("OperateType")
         public String operateType;
 
@@ -82,15 +100,31 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
     }
 
     public static class UpdateHotelSceneItemRequestUpdateHotelSceneReqDialogueList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>335</p>
+         */
         @NameInMap("DialogueId")
         public String dialogueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>对不起，暂时不提供此物品</p>
+         */
         @NameInMap("NoAnswer")
         public String noAnswer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("NoAnswerTemplate")
         public String noAnswerTemplate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Process")
         public Integer process;
 
@@ -99,13 +133,24 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
 
         /**
          * <p>itemId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10337</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>纸巾1.5元，请问需要么？</p>
+         */
         @NameInMap("YesAnswer")
         public String yesAnswer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("YesAnswerTemplate")
         public String yesAnswerTemplate;
 
@@ -187,17 +232,27 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
         @NameInMap("DeliveryMethod")
         public String deliveryMethod;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("DialogueList")
         public java.util.List<UpdateHotelSceneItemRequestUpdateHotelSceneReqDialogueList> dialogueList;
 
         /**
          * <p>icon</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://ailabsaicloudservice.alicdn.com/hotel/icon/jiudianmianban_fuwushangpintu/wupin/keyongpinlei/mianqian.png">https://ailabsaicloudservice.alicdn.com/hotel/icon/jiudianmianban_fuwushangpintu/wupin/keyongpinlei/mianqian.png</a></p>
          */
         @NameInMap("Icon")
         public String icon;
 
         /**
          * <p>itemID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10337</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -214,12 +269,24 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
         @NameInMap("PaymentMethod")
         public String paymentMethod;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>165</p>
+         */
         @NameInMap("Price")
         public Long price;
 
         @NameInMap("RobotName")
         public String robotName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>已添加</p>
+         */
         @NameInMap("Status")
         public String status;
 
