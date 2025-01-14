@@ -1,3 +1,7 @@
+2025-01-14 Version: 6.4.2
+- Update API ReleaseService: update param body.
+
+
 2025-01-14 Version: 6.4.1
 - Update API ReleaseService: update param body.
 

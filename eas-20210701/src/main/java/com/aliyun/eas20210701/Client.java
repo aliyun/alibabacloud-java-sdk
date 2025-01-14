@@ -10,21 +10,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("'cn-beijing'", "pai-eas.cn-beijing.aliyuncs.com"),
-            new TeaPair("'cn-zhangjiakou'", "pai-eas.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("'cn-hangzhou'", "pai-eas.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-shanghai'", "pai-eas.cn-shanghai.aliyuncs.com"),
-            new TeaPair("'cn-shenzhen'", "pai-eas.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("'cn-hongkong'", "pai-eas.cn-hongkong.aliyuncs.com"),
-            new TeaPair("'ap-southeast-1'", "pai-eas.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("'ap-southeast-5'", "pai-eas.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("'us-east-1'", "pai-eas.us-east-1.aliyuncs.com"),
-            new TeaPair("'us-west-1'", "pai-eas.us-west-1.aliyuncs.com"),
-            new TeaPair("'eu-central-1'", "pai-eas.eu-central-1.aliyuncs.com"),
-            new TeaPair("'ap-south-1'", "pai-eas.ap-south-1.aliyuncs.com"),
-            new TeaPair("'cn-shanghai-finance-1'", "pai-eas.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("'cn-north-2-gov-1'", "pai-eas.cn-north-2-gov-1.aliyuncs.com"),
-            new TeaPair("'cn-chengdu'", "pai-eas.cn-chengdu.aliyuncs.com")
+            new TeaPair("cn-beijing", "pai-eas.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "pai-eas.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "pai-eas.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "pai-eas.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "pai-eas.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "pai-eas.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "pai-eas.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "pai-eas.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("us-east-1", "pai-eas.us-east-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "pai-eas.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "pai-eas.eu-central-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "pai-eas.ap-south-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "pai-eas.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "pai-eas.cn-north-2-gov-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "pai-eas.cn-chengdu.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
