@@ -288,6 +288,7 @@ public class Instance extends TeaModel {
         return this.role;
     }
 
+    @Deprecated
     public Instance setStartAt(String startAt) {
         this.startAt = startAt;
         return this;
