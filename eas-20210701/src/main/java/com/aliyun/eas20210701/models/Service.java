@@ -124,6 +124,9 @@ public class Service extends TeaModel {
     @NameInMap("TotalInstance")
     public Integer totalInstance;
 
+    @NameInMap("TrafficState")
+    public String trafficState;
+
     @NameInMap("UpdateTime")
     public String updateTime;
 
@@ -456,6 +459,14 @@ public class Service extends TeaModel {
     }
     public Integer getTotalInstance() {
         return this.totalInstance;
+    }
+
+    public Service setTrafficState(String trafficState) {
+        this.trafficState = trafficState;
+        return this;
+    }
+    public String getTrafficState() {
+        return this.trafficState;
     }
 
     public Service setUpdateTime(String updateTime) {

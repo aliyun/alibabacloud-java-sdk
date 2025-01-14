@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceSignedUrlRequest extends TeaModel {
     /**
+     * <p>The period of time for which the URL expires.</p>
+     * 
      * <strong>example:</strong>
      * <p>43200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeServiceSignedUrlRequest extends TeaModel {
     public Long expire;
 
     /**
+     * <p>Specifies whether to use the VPC connection.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +23,13 @@ public class DescribeServiceSignedUrlRequest extends TeaModel {
     public Boolean internal;
 
     /**
+     * <p>The page type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>webview</li>
+     * <li>monitor</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>webview</p>
      */

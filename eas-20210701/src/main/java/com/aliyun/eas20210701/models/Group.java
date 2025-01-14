@@ -25,6 +25,9 @@ public class Group extends TeaModel {
     @NameInMap("QueueService")
     public String queueService;
 
+    @NameInMap("TrafficMode")
+    public String trafficMode;
+
     @NameInMap("UpdateTime")
     public String updateTime;
 
@@ -87,6 +90,14 @@ public class Group extends TeaModel {
     }
     public String getQueueService() {
         return this.queueService;
+    }
+
+    public Group setTrafficMode(String trafficMode) {
+        this.trafficMode = trafficMode;
+        return this;
+    }
+    public String getTrafficMode() {
+        return this.trafficMode;
     }
 
     public Group setUpdateTime(String updateTime) {
