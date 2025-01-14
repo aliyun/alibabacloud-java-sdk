@@ -2521,7 +2521,7 @@ public class RunInstancesRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The type of ENI N. The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</p>
+         * <p>The type of ENI N. The value of the first N in this parameter cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>Primary</li>
@@ -2577,7 +2577,8 @@ public class RunInstancesRequest extends TeaModel {
         public Integer networkCardIndex;
 
         /**
-         * <p>The ID of ENI N to attach to the instance.</p>
+         * <p>The ID of the ENI to attach to the instance.</p>
+         * <p>If you specify this parameter, you must set <code>Amount</code> to 1.</p>
          * <blockquote>
          * <p> This parameter takes effect only for secondary ENIs. After you specify an existing secondary ENI, you cannot specify other ENI creation parameters.</p>
          * </blockquote>
@@ -2629,7 +2630,7 @@ public class RunInstancesRequest extends TeaModel {
          * <li>If you specify this parameter, set <code>Amount</code> to a numeric value greater than 1, and set NetworkInterface.N.InstanceType to Primary, you cannot set <code>NetworkInterface.2.InstanceType</code> to Secondary to attach a secondary ENI.</li>
          * </ul>
          * </li>
-         * <li><p>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, this parameter is equivalent to <code>PrivateIpAddress</code>. You cannot specify both this parameter and <code>PrivateIpAddress</code> in the same request.</p>
+         * <li><p>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, this parameter is equivalent to <code>PrivateIpAddress</code>. You cannot specify this parameter and <code>PrivateIpAddress</code> in the same request.</p>
          * </li>
          * <li><p>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.</p>
          * </li>
@@ -2703,8 +2704,8 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>The IDs of security groups to which to assign ENI N.</p>
          * <ul>
-         * <li>The value of the first N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
-         * <li>The second N indicates that one or more security group IDs can be specified. The valid values of the second N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
+         * <li>The value of the first N in this parameter cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
+         * <li>The second N in this parameter indicates that one or more security group IDs can be specified. The valid values of the second N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
          * </ul>
          * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>

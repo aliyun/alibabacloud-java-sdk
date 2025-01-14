@@ -177,7 +177,7 @@ public class CreateImagePipelineRequest extends TeaModel {
      * <p>Supported check items in Windows operating systems:</p>
      * <ul>
      * <li>GUESTOS.Virtio</li>
-     * <li>GUESTOS.Updat</li>
+     * <li>GUESTOS.Update</li>
      * <li>GUESTOS.Hotfix</li>
      * <li>GUESTOS.Server</li>
      * </ul>

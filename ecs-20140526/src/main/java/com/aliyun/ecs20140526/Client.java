@@ -10,41 +10,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("'cn-hangzhou'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-shanghai-finance-1'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-shenzhen-finance-1'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-north-2-gov-1'", "ecs.aliyuncs.com"),
-            new TeaPair("'ap-northeast-2-pop'", "ecs.aliyuncs.com"),
-            new TeaPair("'cn-beijing-finance-pop'", "ecs.aliyuncs.com"),
-            new TeaPair("'cn-beijing-gov-1'", "ecs.aliyuncs.com"),
-            new TeaPair("'cn-beijing-nu16-b01'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-edge-1'", "ecs.cn-qingdao-nebula.aliyuncs.com"),
-            new TeaPair("'cn-fujian'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-haidian-cm12-c01'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-hangzhou-bj-b01'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-hangzhou-finance'", "ecs.aliyuncs.com"),
-            new TeaPair("'cn-hangzhou-internal-prod-1'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-hangzhou-internal-test-1'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-hangzhou-internal-test-2'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-hangzhou-internal-test-3'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-hangzhou-test-306'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-hongkong-finance-pop'", "ecs.aliyuncs.com"),
-            new TeaPair("'cn-huhehaote-nebula-1'", "ecs.cn-qingdao-nebula.aliyuncs.com"),
-            new TeaPair("'cn-shanghai-et15-b01'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-shanghai-et2-b01'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-shanghai-inner'", "ecs.aliyuncs.com"),
-            new TeaPair("'cn-shanghai-internal-test-1'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-shenzhen-inner'", "ecs.aliyuncs.com"),
-            new TeaPair("'cn-shenzhen-st4-d01'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-shenzhen-su18-b01'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-wuhan'", "ecs.aliyuncs.com"),
-            new TeaPair("'cn-yushanfang'", "ecs.aliyuncs.com"),
-            new TeaPair("'cn-zhangbei'", "ecs.aliyuncs.com"),
-            new TeaPair("'cn-zhangbei-na61-b01'", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("'cn-zhangjiakou-na62-a01'", "ecs.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("'cn-zhengzhou-nebula-1'", "ecs.cn-qingdao-nebula.aliyuncs.com"),
-            new TeaPair("'eu-west-1-oxs'", "ecs.cn-shenzhen-cloudstone.aliyuncs.com"),
-            new TeaPair("'rus-west-1-pop'", "ecs.aliyuncs.com")
+            new TeaPair("cn-hangzhou", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "ecs.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "ecs.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "ecs.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "ecs.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "ecs.cn-qingdao-nebula.aliyuncs.com"),
+            new TeaPair("cn-fujian", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "ecs.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "ecs.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "ecs.cn-qingdao-nebula.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "ecs.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "ecs.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "ecs.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "ecs.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "ecs.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "ecs-cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "ecs.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "ecs.cn-qingdao-nebula.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "ecs.cn-shenzhen-cloudstone.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "ecs.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ecs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -22612,6 +22612,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>关闭会话数据连接</p>
+     * 
+     * @param request EndTerminalSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EndTerminalSessionResponse
+     */
+    public EndTerminalSessionResponse endTerminalSessionWithOptions(EndTerminalSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EndTerminalSession"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EndTerminalSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关闭会话数据连接</p>
+     * 
+     * @param request EndTerminalSessionRequest
+     * @return EndTerminalSessionResponse
+     */
+    public EndTerminalSessionResponse endTerminalSession(EndTerminalSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.endTerminalSessionWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Take note of the following items:</p>
      * <ul>
@@ -33667,15 +33731,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you call this operation, familiarize yourself with the billing rules and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</em>*
+     * <p><em>Before you call this operation, familiarize yourself with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</em>*
      * This operation is an asynchronous operation. After a request to create ECS instances is sent, ECS instance IDs are returned but the creation and startup of the instances may be incomplete. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instances. When the status of an instance is <code>Running</code> in the DescribeInstanceStatus response, the instance is created and started.</p>
      * <h3><a href="#"></a>Considerations</h3>
      * <ul>
-     * <li>Make sure that the number of ECS instances you create or the number of vCPUs on ECS instances of all instance types you create does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
+     * <li>Make sure that the number of ECS instances you created or the number of vCPUs on ECS instances of all instance types you created does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
      * <li>Before you create ECS instances of the Virtual Private Cloud (VPC) type in a region, create a VPC in the region. For more information, see <a href="https://help.aliyun.com/document_detail/65430.html">Create a VPC</a>.</li>
      * </ul>
      * <h3><a href="#"></a>Precautions</h3>
      * <ul>
+     * <li>If you create a subscription instance (<code>PrePaid</code>), available coupons in your account are used by default.</li>
      * <li>You can call the RunInstances operation to create up to 100 ECS instances at a time. To create more than 100 ECS instances, we recommend that you initiate multiple requests in batches or concurrently.</li>
      * <li>If you set <code>InternetMaxBandwidthOut</code> to a value greater than 0, public IP addresses are automatically assigned to the ECS instances to be created.<blockquote>
      * <p> For the limits on the sum of maximum public bandwidths of ECS instances that use the pay-by-bandwidth billing method for network usage per region per Alibaba Cloud account, see the <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a> section of the &quot;Limits&quot; topic.</p>
@@ -33693,39 +33758,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h2><a href="#"></a>Sample requests</h2>
      * <p>Use a specific image to create ECS instances of a specific instance type in the China (Hangzhou) region. The instances use disks with a specific capacity as the system disk and data disks and are automatically assigned public IP addresses. The instances have user-defined names and logon passwords. The instances are assigned to a specific security group and connected to a specific vSwitch. Request parameters:
-     *     RegionId: Set the region ID to cn-hangzhou, which indicates the China (Hangzhou) region.
-     *     ImageId: Set the image ID to aliyun_3_x64_20G_alibase_20221102.vhd.
-     *     InstanceType: Set the instance type to ecs.g7.large.SecurityGroupId: Set the security group ID to sg-bp150uqocpf9jj70****.
-     *     VSwitchId: Set the vSwitch ID to vsw-bp1qo7s91cbch5i4l****.
-     *     SystemDisk.Category: Set the system disk category to cloud_essd, which specifies the Enterprise SSD (ESSD) category.
-     *     SystemDisk.Size: Set the system disk size to 40. Unit: GiB.
-     *     DataDisk.Category: Set the data disk category to cloud_essd, which specifies the ESSD category.
-     *     DataDisk.Size: Set the data disk size to 100. Unit: GiB.
-     *     HostName: Set the instance hostname to ECS-test.
-     *     Password: Set the logon password to ECS@test1234.
-     *     InternetMaxBandwidthOut: Set the outbound public bandwidth to 10. Unit: Mbit/s.
+     *     RegionId:&quot;cn-hangzhou&quot;, //Set the region ID to cn-hangzhou, which specifies the China (Hangzhou) region.
+     *     ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, //Set the image ID to aliyun_3_x64_20G_alibase_20221102.vhd.
+     *     InstanceType:&quot;ecs.g7.large&quot;, //Set the instance type to ecs.g7.large.
+     *     SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, //Set the security group ID to sg-bp150uqocpf9jj70****.
+     *     VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, //Set the vSwitch ID to vsw-bp1qo7s91cbch5i4l****.
+     *     SystemDisk:{
+     *       Category:&quot;cloud_essd&quot;, //Set the system disk category to cloud_essd, which specifies the Enterprise SSD (ESSD) category.
+     *       Size:40, //Set the system disk size to 40. Unit: GiB.
+     *     },
+     *     DataDisk:[
+     *       {
+     *         Category:&quot;cloud_essd&quot;, //Set the data disk category to cloud_essd, which specifies the ESSD category.
+     *         Size:100, //Set the data disk size to 100. Unit: GiB.
+     *       }
+     *     ],
+     *     HostName:&quot;ECS-test&quot;, //Set the instance hostname to ECS-test.
+     *     Password:&quot;ECS@test1234&quot;, //Set the logon password to ECS@test1234.
+     *     InternetMaxBandwidthOut:10 //Set the outbound public bandwidth to 10. Unit: Mbit/s.
      * Examples on how to create instances of different types based on the preceding parameters:
      * <strong>Example: Create five subscription ECS instances for which auto-renewal is enabled</strong>
-     *     Amount: Set the number of ECS instances that you want to create to 5.
-     *     InstanceChargeType: Set the billing method to PrePaid, which specifies the subscription billing method.
-     *     PeriodUnit: Set the period unit to Month.
-     *     Period: Set the subscription period to 1. The unit is specified by PeriodUnit, which is Month in this example.
-     *     AutoRenew: Set this parameter to true to enable auto-renewal.
-     *     AutoRenewPeriod: Set the renewal period to 1. The unit is specified by PeriodUnit, which is Month in this example.
+     *     Amount:5, //Set the number of ECS instances that you want to create to 5.
+     *     InstanceChargeType:&quot;PrePaid&quot;, //Set the billing method to PrePaid, which specifies the subscription billing method.
+     *     PeriodUnit:&quot;Month&quot;, //Set the subscription period unit to Month.
+     *     Period:1, //Set the subscription period to 1. The unit is specified by PeriodUnit, which is Month in this example.
+     *     AutoRenew:true, //Set this parameter to true to enable auto-renewal.
+     *     AutoRenewPeriod:1 //Set the renewal period to 1. The unit is specified by PeriodUnit, which is Month in this example.
      * <strong>Example: Create 10 pay-as-you-go ECS instances</strong>
-     *     Amount: Set the number of ECS instances that you want to create to 10.
-     *     InstanceChargeType: Set the billing method to PostPaid, which specifies the pay-as-you-go billing method.
-     *     SpotStrategy: Set this parameter to NoSpot, which is the default value and specifies that the instances are created as pay-as-you-go instances.
-     * <strong>Example: Create 20 preemptible instances that have a specified bidding policy and a protection period</strong>
-     *     Amount: Set the number of ECS instances that you want to create to 20.
-     *     InstanceChargeType: Set the billing method to PostPaid, which specifies the pay-as-you-go billing method.
-     *     SpotStrategy: Set the bidding policy to SpotAsPriceGo, which specifies that the instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bid price.
-     *     SpotDuration: Set the protection period of the preemptible instances to 1. Unit: hours.
-     * Call the <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> operation to create a launch template. Then, use the launch template to create ECS instances in the China (Hangzhou) region. Sample request:
+     *     Amount:10, //Set the number of ECS instances that you want to create to 10.
+     *     InstanceChargeType:&quot;PostPaid&quot;, //Set the billing method to PostPaid, which specifies the pay-as-you-go billing method.
+     *     SpotStrategy:&quot;NoSpot&quot; //Set this parameter to NoSpot, which is the default value and specifies that the instances are created as pay-as-you-go instances.
+     * <strong>Example: Create 20 preemptible instances that use a specified bidding policy and a protection period</strong>
+     *     Amount:20, //Set the number of ECS instances that you want to create to 20.
+     *     InstanceChargeType:&quot;PostPaid&quot;,
+     *     SpotStrategy:&quot;SpotAsPriceGo&quot;, //Set the bidding policy to SpotAsPriceGo, which specifies that the instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bid price.
+     *     SpotDuration:1 //Set the protection period of the preemptible instances to 1. Unit: hours.
+     * Call the <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> operation to create a launch template. Then, use the launch template to create ECS instances in the China (Hangzhou) region. Examples:
      * <strong>Example: Create 10 ECS instances based on a launch template</strong>
-     *     RegionId: Set RegionId to cn-hangzhou, which indicates the China (Hangzhou) region.
-     *     Amount: Set the number of ECS instances that you want to create to 10.
-     *     LaunchTemplateId: Set the launch template ID to lt-bp14xczpoxvb6rre****.</p>
+     *     RegionId:&quot;cn-hangzhou&quot;, //Set the region ID to cn-hangzhou, which specifies the China (Hangzhou) region.
+     *     Amount:10, //Set the number of ECS instances that you want to create to 10.
+     *     LaunchTemplateId:&quot;lt-bp14xczpoxvb6rre****&quot; //Set the launch template ID to lt-bp14xczpoxvb6rre****.</p>
      * <blockquote>
      * <p> If a parameter is specified both in the launch template that you reference in a request and in the instance parameters of the same request, the value specified in the instance parameters takes precedence. For example, if you set InstanceChargeType in the launch template to PrePaid (subscription) and set InstanceChargeType in the instance parameters to PostPaid (pay-as-you-go), the created instances are pay-as-you-go instances.</p>
      * </blockquote>
@@ -34071,15 +34143,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you call this operation, familiarize yourself with the billing rules and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</em>*
+     * <p><em>Before you call this operation, familiarize yourself with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</em>*
      * This operation is an asynchronous operation. After a request to create ECS instances is sent, ECS instance IDs are returned but the creation and startup of the instances may be incomplete. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instances. When the status of an instance is <code>Running</code> in the DescribeInstanceStatus response, the instance is created and started.</p>
      * <h3><a href="#"></a>Considerations</h3>
      * <ul>
-     * <li>Make sure that the number of ECS instances you create or the number of vCPUs on ECS instances of all instance types you create does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
+     * <li>Make sure that the number of ECS instances you created or the number of vCPUs on ECS instances of all instance types you created does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
      * <li>Before you create ECS instances of the Virtual Private Cloud (VPC) type in a region, create a VPC in the region. For more information, see <a href="https://help.aliyun.com/document_detail/65430.html">Create a VPC</a>.</li>
      * </ul>
      * <h3><a href="#"></a>Precautions</h3>
      * <ul>
+     * <li>If you create a subscription instance (<code>PrePaid</code>), available coupons in your account are used by default.</li>
      * <li>You can call the RunInstances operation to create up to 100 ECS instances at a time. To create more than 100 ECS instances, we recommend that you initiate multiple requests in batches or concurrently.</li>
      * <li>If you set <code>InternetMaxBandwidthOut</code> to a value greater than 0, public IP addresses are automatically assigned to the ECS instances to be created.<blockquote>
      * <p> For the limits on the sum of maximum public bandwidths of ECS instances that use the pay-by-bandwidth billing method for network usage per region per Alibaba Cloud account, see the <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a> section of the &quot;Limits&quot; topic.</p>
@@ -34097,39 +34170,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h2><a href="#"></a>Sample requests</h2>
      * <p>Use a specific image to create ECS instances of a specific instance type in the China (Hangzhou) region. The instances use disks with a specific capacity as the system disk and data disks and are automatically assigned public IP addresses. The instances have user-defined names and logon passwords. The instances are assigned to a specific security group and connected to a specific vSwitch. Request parameters:
-     *     RegionId: Set the region ID to cn-hangzhou, which indicates the China (Hangzhou) region.
-     *     ImageId: Set the image ID to aliyun_3_x64_20G_alibase_20221102.vhd.
-     *     InstanceType: Set the instance type to ecs.g7.large.SecurityGroupId: Set the security group ID to sg-bp150uqocpf9jj70****.
-     *     VSwitchId: Set the vSwitch ID to vsw-bp1qo7s91cbch5i4l****.
-     *     SystemDisk.Category: Set the system disk category to cloud_essd, which specifies the Enterprise SSD (ESSD) category.
-     *     SystemDisk.Size: Set the system disk size to 40. Unit: GiB.
-     *     DataDisk.Category: Set the data disk category to cloud_essd, which specifies the ESSD category.
-     *     DataDisk.Size: Set the data disk size to 100. Unit: GiB.
-     *     HostName: Set the instance hostname to ECS-test.
-     *     Password: Set the logon password to ECS@test1234.
-     *     InternetMaxBandwidthOut: Set the outbound public bandwidth to 10. Unit: Mbit/s.
+     *     RegionId:&quot;cn-hangzhou&quot;, //Set the region ID to cn-hangzhou, which specifies the China (Hangzhou) region.
+     *     ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, //Set the image ID to aliyun_3_x64_20G_alibase_20221102.vhd.
+     *     InstanceType:&quot;ecs.g7.large&quot;, //Set the instance type to ecs.g7.large.
+     *     SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, //Set the security group ID to sg-bp150uqocpf9jj70****.
+     *     VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, //Set the vSwitch ID to vsw-bp1qo7s91cbch5i4l****.
+     *     SystemDisk:{
+     *       Category:&quot;cloud_essd&quot;, //Set the system disk category to cloud_essd, which specifies the Enterprise SSD (ESSD) category.
+     *       Size:40, //Set the system disk size to 40. Unit: GiB.
+     *     },
+     *     DataDisk:[
+     *       {
+     *         Category:&quot;cloud_essd&quot;, //Set the data disk category to cloud_essd, which specifies the ESSD category.
+     *         Size:100, //Set the data disk size to 100. Unit: GiB.
+     *       }
+     *     ],
+     *     HostName:&quot;ECS-test&quot;, //Set the instance hostname to ECS-test.
+     *     Password:&quot;ECS@test1234&quot;, //Set the logon password to ECS@test1234.
+     *     InternetMaxBandwidthOut:10 //Set the outbound public bandwidth to 10. Unit: Mbit/s.
      * Examples on how to create instances of different types based on the preceding parameters:
      * <strong>Example: Create five subscription ECS instances for which auto-renewal is enabled</strong>
-     *     Amount: Set the number of ECS instances that you want to create to 5.
-     *     InstanceChargeType: Set the billing method to PrePaid, which specifies the subscription billing method.
-     *     PeriodUnit: Set the period unit to Month.
-     *     Period: Set the subscription period to 1. The unit is specified by PeriodUnit, which is Month in this example.
-     *     AutoRenew: Set this parameter to true to enable auto-renewal.
-     *     AutoRenewPeriod: Set the renewal period to 1. The unit is specified by PeriodUnit, which is Month in this example.
+     *     Amount:5, //Set the number of ECS instances that you want to create to 5.
+     *     InstanceChargeType:&quot;PrePaid&quot;, //Set the billing method to PrePaid, which specifies the subscription billing method.
+     *     PeriodUnit:&quot;Month&quot;, //Set the subscription period unit to Month.
+     *     Period:1, //Set the subscription period to 1. The unit is specified by PeriodUnit, which is Month in this example.
+     *     AutoRenew:true, //Set this parameter to true to enable auto-renewal.
+     *     AutoRenewPeriod:1 //Set the renewal period to 1. The unit is specified by PeriodUnit, which is Month in this example.
      * <strong>Example: Create 10 pay-as-you-go ECS instances</strong>
-     *     Amount: Set the number of ECS instances that you want to create to 10.
-     *     InstanceChargeType: Set the billing method to PostPaid, which specifies the pay-as-you-go billing method.
-     *     SpotStrategy: Set this parameter to NoSpot, which is the default value and specifies that the instances are created as pay-as-you-go instances.
-     * <strong>Example: Create 20 preemptible instances that have a specified bidding policy and a protection period</strong>
-     *     Amount: Set the number of ECS instances that you want to create to 20.
-     *     InstanceChargeType: Set the billing method to PostPaid, which specifies the pay-as-you-go billing method.
-     *     SpotStrategy: Set the bidding policy to SpotAsPriceGo, which specifies that the instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bid price.
-     *     SpotDuration: Set the protection period of the preemptible instances to 1. Unit: hours.
-     * Call the <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> operation to create a launch template. Then, use the launch template to create ECS instances in the China (Hangzhou) region. Sample request:
+     *     Amount:10, //Set the number of ECS instances that you want to create to 10.
+     *     InstanceChargeType:&quot;PostPaid&quot;, //Set the billing method to PostPaid, which specifies the pay-as-you-go billing method.
+     *     SpotStrategy:&quot;NoSpot&quot; //Set this parameter to NoSpot, which is the default value and specifies that the instances are created as pay-as-you-go instances.
+     * <strong>Example: Create 20 preemptible instances that use a specified bidding policy and a protection period</strong>
+     *     Amount:20, //Set the number of ECS instances that you want to create to 20.
+     *     InstanceChargeType:&quot;PostPaid&quot;,
+     *     SpotStrategy:&quot;SpotAsPriceGo&quot;, //Set the bidding policy to SpotAsPriceGo, which specifies that the instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bid price.
+     *     SpotDuration:1 //Set the protection period of the preemptible instances to 1. Unit: hours.
+     * Call the <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> operation to create a launch template. Then, use the launch template to create ECS instances in the China (Hangzhou) region. Examples:
      * <strong>Example: Create 10 ECS instances based on a launch template</strong>
-     *     RegionId: Set RegionId to cn-hangzhou, which indicates the China (Hangzhou) region.
-     *     Amount: Set the number of ECS instances that you want to create to 10.
-     *     LaunchTemplateId: Set the launch template ID to lt-bp14xczpoxvb6rre****.</p>
+     *     RegionId:&quot;cn-hangzhou&quot;, //Set the region ID to cn-hangzhou, which specifies the China (Hangzhou) region.
+     *     Amount:10, //Set the number of ECS instances that you want to create to 10.
+     *     LaunchTemplateId:&quot;lt-bp14xczpoxvb6rre****&quot; //Set the launch template ID to lt-bp14xczpoxvb6rre****.</p>
      * <blockquote>
      * <p> If a parameter is specified both in the launch template that you reference in a request and in the instance parameters of the same request, the value specified in the instance parameters takes precedence. For example, if you set InstanceChargeType in the launch template to PrePaid (subscription) and set InstanceChargeType in the instance parameters to PostPaid (pay-as-you-go), the created instances are pay-as-you-go instances.</p>
      * </blockquote>

@@ -1,3 +1,13 @@
+2025-01-14 Version: 6.1.0
+- Support API EndTerminalSession.
+- Update API CreateImagePipeline: add param AdvancedOptions.
+- Update API CreateImagePipeline: add param ImportImageOptions.
+- Update API CreateImagePipeline: add param NvmeSupport.
+- Update API CreateImagePipeline: update param BaseImage.
+- Update API CreateKeyPair: update response param.
+- Update API DescribeImagePipelines: update response param.
+
+
 2025-01-13 Version: 6.0.2
 - Update API CreateImagePipeline: add param AdvancedOptions.
 - Update API CreateImagePipeline: add param ImportImageOptions.

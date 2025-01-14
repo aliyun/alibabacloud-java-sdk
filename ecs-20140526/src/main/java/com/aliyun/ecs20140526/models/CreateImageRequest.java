@@ -75,6 +75,9 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("DiskDeviceMapping")
     public java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping;
 
+    /**
+     * <p>The attributes of the custom image.</p>
+     */
     @NameInMap("Features")
     public CreateImageRequestFeatures features;
 
@@ -465,6 +468,13 @@ public class CreateImageRequest extends TeaModel {
 
     public static class CreateImageRequestFeatures extends TeaModel {
         /**
+         * <p>The image metadata access mode. Valid values:</p>
+         * <ul>
+         * <li>v1: You cannot set the image metadata access mode to security hardening when you create instances from the image.</li>
+         * <li>v2: You can set the image metadata access mode to security hardening when you create instances from the image.</li>
+         * </ul>
+         * <p>When you use a snapshot to create instances, the default value is set to 1. If you use an instance to create an image, the value of the ImdsSupport parameter is used by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>v2</p>
          */
