@@ -174,7 +174,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
          * <p>543218872620113XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The name of the variable.</p>
@@ -246,11 +246,11 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             return this.artifactType;
         }
 
-        public ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariables setId(String id) {
+        public ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariables setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -438,7 +438,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
          * <p>543217824470354XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The name of the variable.</p>
@@ -510,11 +510,11 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             return this.artifactType;
         }
 
-        public ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariables setId(String id) {
+        public ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariables setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -668,7 +668,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
          * <p>853573334108680XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The script path.</p>
@@ -690,11 +690,11 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListNodeDependenciesResponseBodyPagingInfoNodesScript setId(String id) {
+        public ListNodeDependenciesResponseBodyPagingInfoNodesScript setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -877,7 +877,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
          * <p>543680677872062XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The start time of the validity period of the scheduling. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
@@ -933,11 +933,11 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public ListNodeDependenciesResponseBodyPagingInfoNodesTrigger setId(String id) {
+        public ListNodeDependenciesResponseBodyPagingInfoNodesTrigger setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -996,7 +996,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
          * <p>723932906364267XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The input of the node.</p>
@@ -1041,7 +1041,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
          * <p>65133</p>
          */
         @NameInMap("ProjectId")
-        public String projectId;
+        public Long projectId;
 
         /**
          * <p>The scheduling type.</p>
@@ -1089,7 +1089,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
          * <p>580667964888595XXXX</p>
          */
         @NameInMap("TaskId")
-        public String taskId;
+        public Long taskId;
 
         /**
          * <p>The trigger.</p>
@@ -1126,11 +1126,11 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListNodeDependenciesResponseBodyPagingInfoNodes setId(String id) {
+        public ListNodeDependenciesResponseBodyPagingInfoNodes setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -1174,11 +1174,11 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             return this.owner;
         }
 
-        public ListNodeDependenciesResponseBodyPagingInfoNodes setProjectId(String projectId) {
+        public ListNodeDependenciesResponseBodyPagingInfoNodes setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 
@@ -1222,11 +1222,11 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             return this.tags;
         }
 
-        public ListNodeDependenciesResponseBodyPagingInfoNodes setTaskId(String taskId) {
+        public ListNodeDependenciesResponseBodyPagingInfoNodes setTaskId(Long taskId) {
             this.taskId = taskId;
             return this;
         }
-        public String getTaskId() {
+        public Long getTaskId() {
             return this.taskId;
         }
 

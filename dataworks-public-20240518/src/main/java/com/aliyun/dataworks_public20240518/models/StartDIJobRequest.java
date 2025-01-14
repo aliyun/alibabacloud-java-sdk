@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class StartDIJobRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>This parameter is deprecated. Use the Id parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
     @NameInMap("DIJobId")
+    @Deprecated
     public Long DIJobId;
 
     /**
@@ -20,6 +21,15 @@ public class StartDIJobRequest extends TeaModel {
     @NameInMap("ForceToRerun")
     public Boolean forceToRerun;
 
+    /**
+     * <p>The ID of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
+    @NameInMap("Id")
+    public Long id;
+
     @NameInMap("RealtimeStartSettings")
     public StartDIJobRequestRealtimeStartSettings realtimeStartSettings;
 
@@ -28,6 +38,7 @@ public class StartDIJobRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public StartDIJobRequest setDIJobId(Long DIJobId) {
         this.DIJobId = DIJobId;
         return this;
@@ -44,6 +55,14 @@ public class StartDIJobRequest extends TeaModel {
         return this.forceToRerun;
     }
 
+    public StartDIJobRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
+    }
+
     public StartDIJobRequest setRealtimeStartSettings(StartDIJobRequestRealtimeStartSettings realtimeStartSettings) {
         this.realtimeStartSettings = realtimeStartSettings;
         return this;
@@ -58,6 +77,7 @@ public class StartDIJobRequest extends TeaModel {
          * <p>10</p>
          */
         @NameInMap("Interval")
+        @Deprecated
         public Long interval;
 
         /**
@@ -65,6 +85,7 @@ public class StartDIJobRequest extends TeaModel {
          * <p>30</p>
          */
         @NameInMap("UpperLimit")
+        @Deprecated
         public Long upperLimit;
 
         public static StartDIJobRequestRealtimeStartSettingsFailoverSettings build(java.util.Map<String, ?> map) throws Exception {
@@ -72,6 +93,7 @@ public class StartDIJobRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public StartDIJobRequestRealtimeStartSettingsFailoverSettings setInterval(Long interval) {
             this.interval = interval;
             return this;
@@ -80,6 +102,7 @@ public class StartDIJobRequest extends TeaModel {
             return this.interval;
         }
 
+        @Deprecated
         public StartDIJobRequestRealtimeStartSettingsFailoverSettings setUpperLimit(Long upperLimit) {
             this.upperLimit = upperLimit;
             return this;
@@ -92,6 +115,7 @@ public class StartDIJobRequest extends TeaModel {
 
     public static class StartDIJobRequestRealtimeStartSettings extends TeaModel {
         @NameInMap("FailoverSettings")
+        @Deprecated
         public StartDIJobRequestRealtimeStartSettingsFailoverSettings failoverSettings;
 
         /**
@@ -106,6 +130,7 @@ public class StartDIJobRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public StartDIJobRequestRealtimeStartSettings setFailoverSettings(StartDIJobRequestRealtimeStartSettingsFailoverSettings failoverSettings) {
             this.failoverSettings = failoverSettings;
             return this;

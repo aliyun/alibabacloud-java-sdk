@@ -6,10 +6,16 @@ import com.aliyun.tea.*;
 public class CreateResourceGroupRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>rg-aek2kqofrgXXXXX</p>
      */
-    @NameInMap("AutoRenew")
-    public Boolean autoRenew;
+    @NameInMap("AliyunResourceGroupId")
+    public String aliyunResourceGroupId;
+
+    @NameInMap("AliyunResourceTags")
+    public java.util.List<CreateResourceGroupRequestAliyunResourceTags> aliyunResourceTags;
+
+    @NameInMap("AutoRenewEnabled")
+    public Boolean autoRenewEnabled;
 
     /**
      * <p>This parameter is required.</p>
@@ -91,12 +97,28 @@ public class CreateResourceGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateResourceGroupRequest setAutoRenew(Boolean autoRenew) {
-        this.autoRenew = autoRenew;
+    public CreateResourceGroupRequest setAliyunResourceGroupId(String aliyunResourceGroupId) {
+        this.aliyunResourceGroupId = aliyunResourceGroupId;
         return this;
     }
-    public Boolean getAutoRenew() {
-        return this.autoRenew;
+    public String getAliyunResourceGroupId() {
+        return this.aliyunResourceGroupId;
+    }
+
+    public CreateResourceGroupRequest setAliyunResourceTags(java.util.List<CreateResourceGroupRequestAliyunResourceTags> aliyunResourceTags) {
+        this.aliyunResourceTags = aliyunResourceTags;
+        return this;
+    }
+    public java.util.List<CreateResourceGroupRequestAliyunResourceTags> getAliyunResourceTags() {
+        return this.aliyunResourceTags;
+    }
+
+    public CreateResourceGroupRequest setAutoRenewEnabled(Boolean autoRenewEnabled) {
+        this.autoRenewEnabled = autoRenewEnabled;
+        return this;
+    }
+    public Boolean getAutoRenewEnabled() {
+        return this.autoRenewEnabled;
     }
 
     public CreateResourceGroupRequest setClientToken(String clientToken) {
@@ -169,6 +191,44 @@ public class CreateResourceGroupRequest extends TeaModel {
     }
     public String getVswitchId() {
         return this.vswitchId;
+    }
+
+    public static class CreateResourceGroupRequestAliyunResourceTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateResourceGroupRequestAliyunResourceTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateResourceGroupRequestAliyunResourceTags self = new CreateResourceGroupRequestAliyunResourceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateResourceGroupRequestAliyunResourceTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateResourceGroupRequestAliyunResourceTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

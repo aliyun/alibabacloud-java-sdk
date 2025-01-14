@@ -4,8 +4,8 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListNetworksResponseBody extends TeaModel {
-    @NameInMap("NetworkList")
-    public java.util.List<ListNetworksResponseBodyNetworkList> networkList;
+    @NameInMap("PagingInfo")
+    public ListNetworksResponseBodyPagingInfo pagingInfo;
 
     /**
      * <strong>example:</strong>
@@ -26,12 +26,12 @@ public class ListNetworksResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListNetworksResponseBody setNetworkList(java.util.List<ListNetworksResponseBodyNetworkList> networkList) {
-        this.networkList = networkList;
+    public ListNetworksResponseBody setPagingInfo(ListNetworksResponseBodyPagingInfo pagingInfo) {
+        this.pagingInfo = pagingInfo;
         return this;
     }
-    public java.util.List<ListNetworksResponseBodyNetworkList> getNetworkList() {
-        return this.networkList;
+    public ListNetworksResponseBodyPagingInfo getPagingInfo() {
+        return this.pagingInfo;
     }
 
     public ListNetworksResponseBody setRequestId(String requestId) {
@@ -50,7 +50,7 @@ public class ListNetworksResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListNetworksResponseBodyNetworkList extends TeaModel {
+    public static class ListNetworksResponseBodyPagingInfoNetworkList extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>1727055811000</p>
@@ -107,12 +107,12 @@ public class ListNetworksResponseBody extends TeaModel {
         @NameInMap("VswitchId")
         public String vswitchId;
 
-        public static ListNetworksResponseBodyNetworkList build(java.util.Map<String, ?> map) throws Exception {
-            ListNetworksResponseBodyNetworkList self = new ListNetworksResponseBodyNetworkList();
+        public static ListNetworksResponseBodyPagingInfoNetworkList build(java.util.Map<String, ?> map) throws Exception {
+            ListNetworksResponseBodyPagingInfoNetworkList self = new ListNetworksResponseBodyPagingInfoNetworkList();
             return TeaModel.build(map, self);
         }
 
-        public ListNetworksResponseBodyNetworkList setCreateTime(Long createTime) {
+        public ListNetworksResponseBodyPagingInfoNetworkList setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -120,7 +120,7 @@ public class ListNetworksResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListNetworksResponseBodyNetworkList setCreateUser(String createUser) {
+        public ListNetworksResponseBodyPagingInfoNetworkList setCreateUser(String createUser) {
             this.createUser = createUser;
             return this;
         }
@@ -128,7 +128,7 @@ public class ListNetworksResponseBody extends TeaModel {
             return this.createUser;
         }
 
-        public ListNetworksResponseBodyNetworkList setId(Long id) {
+        public ListNetworksResponseBodyPagingInfoNetworkList setId(Long id) {
             this.id = id;
             return this;
         }
@@ -136,7 +136,7 @@ public class ListNetworksResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListNetworksResponseBodyNetworkList setResourceGroupId(String resourceGroupId) {
+        public ListNetworksResponseBodyPagingInfoNetworkList setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -144,7 +144,7 @@ public class ListNetworksResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public ListNetworksResponseBodyNetworkList setSecurityGroupId(String securityGroupId) {
+        public ListNetworksResponseBodyPagingInfoNetworkList setSecurityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
@@ -152,7 +152,7 @@ public class ListNetworksResponseBody extends TeaModel {
             return this.securityGroupId;
         }
 
-        public ListNetworksResponseBodyNetworkList setStatus(String status) {
+        public ListNetworksResponseBodyPagingInfoNetworkList setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -160,7 +160,7 @@ public class ListNetworksResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListNetworksResponseBodyNetworkList setVpcId(String vpcId) {
+        public ListNetworksResponseBodyPagingInfoNetworkList setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -168,12 +168,76 @@ public class ListNetworksResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public ListNetworksResponseBodyNetworkList setVswitchId(String vswitchId) {
+        public ListNetworksResponseBodyPagingInfoNetworkList setVswitchId(String vswitchId) {
             this.vswitchId = vswitchId;
             return this;
         }
         public String getVswitchId() {
             return this.vswitchId;
+        }
+
+    }
+
+    public static class ListNetworksResponseBodyPagingInfo extends TeaModel {
+        @NameInMap("NetworkList")
+        public java.util.List<ListNetworksResponseBodyPagingInfoNetworkList> networkList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("PageNumber")
+        public Integer pageNumber;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
+        public static ListNetworksResponseBodyPagingInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListNetworksResponseBodyPagingInfo self = new ListNetworksResponseBodyPagingInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListNetworksResponseBodyPagingInfo setNetworkList(java.util.List<ListNetworksResponseBodyPagingInfoNetworkList> networkList) {
+            this.networkList = networkList;
+            return this;
+        }
+        public java.util.List<ListNetworksResponseBodyPagingInfoNetworkList> getNetworkList() {
+            return this.networkList;
+        }
+
+        public ListNetworksResponseBodyPagingInfo setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public ListNetworksResponseBodyPagingInfo setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListNetworksResponseBodyPagingInfo setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteDataSourceRequest extends TeaModel {
     /**
      * <p>The data source ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>

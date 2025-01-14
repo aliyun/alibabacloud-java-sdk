@@ -57,7 +57,7 @@ public class GetNodeResponseBody extends TeaModel {
          * <p>860438872620113XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The time when the node was last modified. This value is a UNIX timestamp.</p>
@@ -90,7 +90,7 @@ public class GetNodeResponseBody extends TeaModel {
          * <p>10000</p>
          */
         @NameInMap("ProjectId")
-        public String projectId;
+        public Long projectId;
 
         /**
          * <p>The FlowSpec field information about this node. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow">FlowSpec</a>.</p>
@@ -111,11 +111,11 @@ public class GetNodeResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetNodeResponseBodyNode setId(String id) {
+        public GetNodeResponseBodyNode setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -143,11 +143,11 @@ public class GetNodeResponseBody extends TeaModel {
             return this.owner;
         }
 
-        public GetNodeResponseBodyNode setProjectId(String projectId) {
+        public GetNodeResponseBodyNode setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 

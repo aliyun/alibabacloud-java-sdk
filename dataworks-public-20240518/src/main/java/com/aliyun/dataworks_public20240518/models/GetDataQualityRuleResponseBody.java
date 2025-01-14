@@ -544,13 +544,6 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         @NameInMap("TemplateCode")
         public String templateCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>228248921215042</p>
-         */
-        @NameInMap("TenantId")
-        public Long tenantId;
-
         public static GetDataQualityRuleResponseBodyDataQualityRule build(java.util.Map<String, ?> map) throws Exception {
             GetDataQualityRuleResponseBodyDataQualityRule self = new GetDataQualityRuleResponseBodyDataQualityRule();
             return TeaModel.build(map, self);
@@ -642,14 +635,6 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         }
         public String getTemplateCode() {
             return this.templateCode;
-        }
-
-        public GetDataQualityRuleResponseBodyDataQualityRule setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
         }
 
     }

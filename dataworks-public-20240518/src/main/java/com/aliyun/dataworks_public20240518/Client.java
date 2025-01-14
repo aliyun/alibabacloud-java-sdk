@@ -10,30 +10,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("ap-northeast-1", "dataworks.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "dataworks.ap-south-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "dataworks.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "dataworks.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "dataworks.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "dataworks.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("cn-beijing", "dataworks.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "dataworks.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "dataworks.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "dataworks.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "dataworks.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "dataworks.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "dataworks.aliyuncs.com"),
-            new TeaPair("eu-central-1", "dataworks.eu-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "dataworks.eu-west-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "dataworks.me-east-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "dataworks.us-east-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "dataworks.aliyuncs.com")
+            new TeaPair("'ap-northeast-1'", "dataworks.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("'ap-south-1'", "dataworks.ap-south-1.aliyuncs.com"),
+            new TeaPair("'ap-southeast-1'", "dataworks.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("'ap-southeast-2'", "dataworks.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("'ap-southeast-3'", "dataworks.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("'ap-southeast-5'", "dataworks.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("'cn-beijing'", "dataworks.cn-beijing.aliyuncs.com"),
+            new TeaPair("'cn-chengdu'", "dataworks.cn-chengdu.aliyuncs.com"),
+            new TeaPair("'cn-hangzhou'", "dataworks.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("'cn-hongkong'", "dataworks.cn-hongkong.aliyuncs.com"),
+            new TeaPair("'cn-huhehaote'", "dataworks.aliyuncs.com"),
+            new TeaPair("'cn-qingdao'", "dataworks.aliyuncs.com"),
+            new TeaPair("'cn-shanghai'", "dataworks.cn-shanghai.aliyuncs.com"),
+            new TeaPair("'cn-shenzhen'", "dataworks.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("'cn-zhangjiakou'", "dataworks.aliyuncs.com"),
+            new TeaPair("'eu-central-1'", "dataworks.eu-central-1.aliyuncs.com"),
+            new TeaPair("'eu-west-1'", "dataworks.eu-west-1.aliyuncs.com"),
+            new TeaPair("'me-east-1'", "dataworks.me-east-1.aliyuncs.com"),
+            new TeaPair("'us-east-1'", "dataworks.us-east-1.aliyuncs.com"),
+            new TeaPair("'us-west-1'", "dataworks.us-west-1.aliyuncs.com"),
+            new TeaPair("'cn-hangzhou-finance'", "dataworks.aliyuncs.com"),
+            new TeaPair("'cn-shenzhen-finance-1'", "dataworks.aliyuncs.com"),
+            new TeaPair("'cn-shanghai-finance-1'", "dataworks.aliyuncs.com"),
+            new TeaPair("'cn-north-2-gov-1'", "dataworks.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dataworks-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -411,6 +411,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a new-version synchronization task.</p>
      * 
@@ -465,6 +468,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a new-version synchronization task.</p>
      * 
@@ -478,7 +484,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建DataWorks数据质量监控</p>
+     * <p>创建标签</p>
+     * 
+     * @param tmpReq CreateDataAssetTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataAssetTagResponse
+     */
+    public CreateDataAssetTagResponse createDataAssetTagWithOptions(CreateDataAssetTagRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDataAssetTagShrinkRequest request = new CreateDataAssetTagShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.managers)) {
+            request.managersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.managers, "Managers", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.values)) {
+            request.valuesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.values, "Values", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
+            query.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managersShrink)) {
+            query.put("Managers", request.managersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.valueType)) {
+            query.put("ValueType", request.valueType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.valuesShrink)) {
+            query.put("Values", request.valuesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataAssetTag"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataAssetTagResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建标签</p>
+     * 
+     * @param request CreateDataAssetTagRequest
+     * @return CreateDataAssetTagResponse
+     */
+    public CreateDataAssetTagResponse createDataAssetTag(CreateDataAssetTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataAssetTagWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is supported in all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a monitor in DataWorks Data Quality.</p>
      * 
      * @param tmpReq CreateDataQualityEvaluationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -567,8 +646,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is supported in all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建DataWorks数据质量监控</p>
+     * <p>Creates a monitor in DataWorks Data Quality.</p>
      * 
      * @param request CreateDataQualityEvaluationTaskRequest
      * @return CreateDataQualityEvaluationTaskResponse
@@ -1305,8 +1387,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Adds a member to a workspace.</p>
+     * <p>Adds a workspace member and assigns a workspace-level role to the member.</p>
      * 
      * @param tmpReq CreateProjectMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1351,8 +1436,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Adds a member to a workspace.</p>
+     * <p>Adds a workspace member and assigns a workspace-level role to the member.</p>
      * 
      * @param request CreateProjectMemberRequest
      * @return CreateProjectMemberResponse
@@ -1424,21 +1512,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ol>
      * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/zh/dataworks/product-overview/new-resource-group-overview?spm=a2c4g.11186623.0.i1">pricing</a> of serverless resource groups.</li>
+     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</li>
      * </ol>
      * 
      * <b>summary</b> : 
      * <p>Creates a serverless resource group.</p>
      * 
-     * @param request CreateResourceGroupRequest
+     * @param tmpReq CreateResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateResourceGroupResponse
      */
-    public CreateResourceGroupResponse createResourceGroupWithOptions(CreateResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateResourceGroupResponse createResourceGroupWithOptions(CreateResourceGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateResourceGroupShrinkRequest request = new CreateResourceGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.aliyunResourceTags)) {
+            request.aliyunResourceTagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.aliyunResourceTags, "AliyunResourceTags", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
-            body.put("AutoRenew", request.autoRenew);
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunResourceGroupId)) {
+            body.put("AliyunResourceGroupId", request.aliyunResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunResourceTagsShrink)) {
+            body.put("AliyunResourceTags", request.aliyunResourceTagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenewEnabled)) {
+            body.put("AutoRenewEnabled", request.autoRenewEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -1498,7 +1600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ol>
      * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/zh/dataworks/product-overview/new-resource-group-overview?spm=a2c4g.11186623.0.i1">pricing</a> of serverless resource groups.</li>
+     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -1709,6 +1811,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a new-version synchronization task.</p>
      * 
@@ -1737,6 +1842,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a new-version synchronization task.</p>
      * 
@@ -1746,6 +1854,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDIJobResponse deleteDIJob(DeleteDIJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDIJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除标签</p>
+     * 
+     * @param tmpReq DeleteDataAssetTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataAssetTagResponse
+     */
+    public DeleteDataAssetTagResponse deleteDataAssetTagWithOptions(DeleteDataAssetTagRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteDataAssetTagShrinkRequest request = new DeleteDataAssetTagShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.values)) {
+            request.valuesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.values, "Values", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
+            query.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.valuesShrink)) {
+            query.put("Values", request.valuesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataAssetTag"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataAssetTagResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除标签</p>
+     * 
+     * @param request DeleteDataAssetTagRequest
+     * @return DeleteDataAssetTagResponse
+     */
+    public DeleteDataAssetTagResponse deleteDataAssetTag(DeleteDataAssetTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataAssetTagWithOptions(request, runtime);
     }
 
     /**
@@ -2179,6 +2341,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a DataWorks workspace.</p>
      * 
@@ -2211,6 +2376,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a DataWorks workspace.</p>
      * 
@@ -2223,8 +2391,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Removes a member from a workspace.</p>
+     * <p>Removes a workspace member and the workspace-level roles that are assigned to the member.</p>
      * 
      * @param request DeleteProjectMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2259,8 +2430,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Removes a member from a workspace.</p>
+     * <p>Removes a workspace member and the workspace-level roles that are assigned to the member.</p>
      * 
      * @param request DeleteProjectMemberRequest
      * @return DeleteProjectMemberResponse
@@ -2332,7 +2506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ol>
      * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/zh/dataworks/product-overview/new-resource-group-overview?spm=a2c4g.11186623.0.i1">pricing</a> of serverless resource groups.</li>
+     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -2370,7 +2544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ol>
      * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/zh/dataworks/product-overview/new-resource-group-overview?spm=a2c4g.11186623.0.i1">pricing</a> of serverless resource groups.</li>
+     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -2777,6 +2951,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a synchronization task.</p>
      * 
@@ -2805,6 +2982,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a synchronization task.</p>
      * 
@@ -2817,6 +2997,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Obtains logs generated for a synchronization task.</p>
      * 
@@ -2845,6 +3028,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Obtains logs generated for a synchronization task.</p>
      * 
@@ -3293,6 +3479,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a DataWorks workspace.</p>
      * 
@@ -3321,6 +3510,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a DataWorks workspace.</p>
      * 
@@ -3613,6 +3805,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about an instance.</p>
      * 
@@ -3641,6 +3836,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about an instance.</p>
      * 
@@ -3981,6 +4179,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries events for a synchronization task.</p>
      * 
@@ -4009,6 +4210,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries events for a synchronization task.</p>
      * 
@@ -4021,6 +4225,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries metrics for a synchronization task.</p>
      * 
@@ -4055,6 +4262,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries metrics for a synchronization task.</p>
      * 
@@ -4067,6 +4277,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the running information about a synchronization task.</p>
      * 
@@ -4095,6 +4308,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the running information about a synchronization task.</p>
      * 
@@ -4107,6 +4323,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of synchronization tasks.</p>
      * 
@@ -4135,6 +4354,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of synchronization tasks.</p>
      * 
@@ -4144,6 +4366,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDIJobsResponse listDIJobs(ListDIJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDIJobsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询标签列表</p>
+     * 
+     * @param request ListDataAssetTagsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataAssetTagsResponse
+     */
+    public ListDataAssetTagsResponse listDataAssetTagsWithOptions(ListDataAssetTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataAssetTags"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataAssetTagsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询标签列表</p>
+     * 
+     * @param request ListDataAssetTagsRequest
+     * @return ListDataAssetTagsResponse
+     */
+    public ListDataAssetTagsResponse listDataAssetTags(ListDataAssetTagsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataAssetTagsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListDataAssets</p>
+     * 
+     * @param tmpReq ListDataAssetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataAssetsResponse
+     */
+    public ListDataAssetsResponse listDataAssetsWithOptions(ListDataAssetsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListDataAssetsShrinkRequest request = new ListDataAssetsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataAssetIds)) {
+            request.dataAssetIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataAssetIds, "DataAssetIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataAssets"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataAssetsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListDataAssets</p>
+     * 
+     * @param request ListDataAssetsRequest
+     * @return ListDataAssetsResponse
+     */
+    public ListDataAssetsResponse listDataAssets(ListDataAssetsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataAssetsWithOptions(request, runtime);
     }
 
     /**
@@ -4280,20 +4592,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of data quality monitoring rule templates.</p>
+     * <p>查询质量规则模版列表</p>
      * 
-     * @param request ListDataQualityRuleTemplateRequest
+     * @param request ListDataQualityRuleTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
-     * @return ListDataQualityRuleTemplateResponse
+     * @return ListDataQualityRuleTemplatesResponse
      */
-    public ListDataQualityRuleTemplateResponse listDataQualityRuleTemplateWithOptions(ListDataQualityRuleTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListDataQualityRuleTemplatesResponse listDataQualityRuleTemplatesWithOptions(ListDataQualityRuleTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListDataQualityRuleTemplate"),
+            new TeaPair("action", "ListDataQualityRuleTemplates"),
             new TeaPair("version", "2024-05-18"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
@@ -4303,19 +4615,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataQualityRuleTemplateResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataQualityRuleTemplatesResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of data quality monitoring rule templates.</p>
+     * <p>查询质量规则模版列表</p>
      * 
-     * @param request ListDataQualityRuleTemplateRequest
-     * @return ListDataQualityRuleTemplateResponse
+     * @param request ListDataQualityRuleTemplatesRequest
+     * @return ListDataQualityRuleTemplatesResponse
      */
-    public ListDataQualityRuleTemplateResponse listDataQualityRuleTemplate(ListDataQualityRuleTemplateRequest request) throws Exception {
+    public ListDataQualityRuleTemplatesResponse listDataQualityRuleTemplates(ListDataQualityRuleTemplatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listDataQualityRuleTemplateWithOptions(request, runtime);
+        return this.listDataQualityRuleTemplatesWithOptions(request, runtime);
     }
 
     /**
@@ -4527,6 +4839,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of descendant instances of an instance by page.</p>
      * 
@@ -4555,6 +4870,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of descendant instances of an instance by page.</p>
      * 
@@ -5034,6 +5352,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListResourceGroupsShrinkRequest request = new ListResourceGroupsShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.aliyunResourceTags)) {
+            request.aliyunResourceTagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.aliyunResourceTags, "AliyunResourceTags", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceGroupTypes)) {
             request.resourceGroupTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceGroupTypes, "ResourceGroupTypes", "json");
         }
@@ -5207,6 +5529,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of instances. You can also specify filter conditions to query specific instances.</p>
      * 
@@ -5321,6 +5646,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of instances. You can also specify filter conditions to query specific instances.</p>
      * 
@@ -5509,6 +5837,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of ancestor tasks of a task by page.</p>
      * 
@@ -5537,6 +5868,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of ancestor tasks of a task by page.</p>
      * 
@@ -6179,6 +6513,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Revokes roles that are assigned to a member in a workspace.</p>
      * 
@@ -6225,6 +6562,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Revokes roles that are assigned to a member in a workspace.</p>
      * 
@@ -6291,6 +6631,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Starts a new-version synchronization task.</p>
      * 
@@ -6325,6 +6668,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Starts a new-version synchronization task.</p>
      * 
@@ -6337,6 +6683,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Stops a synchronization task.</p>
      * 
@@ -6365,6 +6714,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Stops a synchronization task.</p>
      * 
@@ -6485,6 +6837,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>为资产绑定标签</p>
+     * 
+     * @param tmpReq TagDataAssetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagDataAssetsResponse
+     */
+    public TagDataAssetsResponse tagDataAssetsWithOptions(TagDataAssetsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TagDataAssetsShrinkRequest request = new TagDataAssetsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataAssetIds)) {
+            request.dataAssetIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataAssetIds, "DataAssetIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoTraceEnabled)) {
+            query.put("AutoTraceEnabled", request.autoTraceEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataAssetIdsShrink)) {
+            query.put("DataAssetIds", request.dataAssetIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataAssetType)) {
+            query.put("DataAssetType", request.dataAssetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
+            query.put("EnvType", request.envType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TagDataAssets"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagDataAssetsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为资产绑定标签</p>
+     * 
+     * @param request TagDataAssetsRequest
+     * @return TagDataAssetsResponse
+     */
+    public TagDataAssetsResponse tagDataAssets(TagDataAssetsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.tagDataAssetsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -6497,6 +6923,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public TriggerSchedulerTaskInstanceResponse triggerSchedulerTaskInstanceWithOptions(TriggerSchedulerTaskInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
+            query.put("EnvType", request.envType);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             body.put("TaskId", request.taskId);
@@ -6507,6 +6938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -6536,6 +6968,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TriggerSchedulerTaskInstanceResponse triggerSchedulerTaskInstance(TriggerSchedulerTaskInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.triggerSchedulerTaskInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为资产解绑标签关系</p>
+     * 
+     * @param tmpReq UnTagDataAssetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnTagDataAssetsResponse
+     */
+    public UnTagDataAssetsResponse unTagDataAssetsWithOptions(UnTagDataAssetsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UnTagDataAssetsShrinkRequest request = new UnTagDataAssetsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataAssetIds)) {
+            request.dataAssetIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataAssetIds, "DataAssetIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataAssetIdsShrink)) {
+            query.put("DataAssetIds", request.dataAssetIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataAssetType)) {
+            query.put("DataAssetType", request.dataAssetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
+            query.put("EnvType", request.envType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnTagDataAssets"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnTagDataAssetsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为资产解绑标签关系</p>
+     * 
+     * @param request UnTagDataAssetsRequest
+     * @return UnTagDataAssetsResponse
+     */
+    public UnTagDataAssetsResponse unTagDataAssets(UnTagDataAssetsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.unTagDataAssetsWithOptions(request, runtime);
     }
 
     /**
@@ -6663,6 +7165,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates a synchronization task.</p>
      * 
@@ -6709,6 +7214,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates a synchronization task.</p>
      * 
@@ -6722,7 +7230,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据质量校验任务</p>
+     * <p>更新标签</p>
+     * 
+     * @param tmpReq UpdateDataAssetTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDataAssetTagResponse
+     */
+    public UpdateDataAssetTagResponse updateDataAssetTagWithOptions(UpdateDataAssetTagRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateDataAssetTagShrinkRequest request = new UpdateDataAssetTagShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.managers)) {
+            request.managersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.managers, "Managers", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.values)) {
+            request.valuesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.values, "Values", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
+            query.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managersShrink)) {
+            query.put("Managers", request.managersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.valuesShrink)) {
+            query.put("Values", request.valuesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDataAssetTag"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDataAssetTagResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新标签</p>
+     * 
+     * @param request UpdateDataAssetTagRequest
+     * @return UpdateDataAssetTagResponse
+     */
+    public UpdateDataAssetTagResponse updateDataAssetTag(UpdateDataAssetTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDataAssetTagWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is supported in all DataWorks editions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a monitor.</p>
      * 
      * @param tmpReq UpdateDataQualityEvaluationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6815,8 +7392,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is supported in all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新数据质量校验任务</p>
+     * <p>Updates a monitor.</p>
      * 
      * @param request UpdateDataQualityEvaluationTaskRequest
      * @return UpdateDataQualityEvaluationTaskResponse
@@ -7322,6 +7902,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateResourceGroupResponse updateResourceGroupWithOptions(UpdateResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunResourceGroupId)) {
+            body.put("AliyunResourceGroupId", request.aliyunResourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             body.put("Id", request.id);
         }

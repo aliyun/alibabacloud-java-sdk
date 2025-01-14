@@ -164,7 +164,7 @@ public class GetProjectResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>Indicates whether scheduling of Platform for AI (PAI) tasks is enabled. Valid values:</p>
+         * <p>Indicates whether scheduling of PAI tasks is enabled. Valid values:</p>
          * <ul>
          * <li>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
          * <li>false: Scheduling of PAI tasks is disabled.</li>
@@ -188,19 +188,6 @@ public class GetProjectResponseBody extends TeaModel {
          * <li>Frozen</li>
          * <li>Updating</li>
          * <li>UpdateFailed</li>
-         * </ul>
-         * <!---->
-         * 
-         * <ul>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * <li></li>
          * </ul>
          * 
          * <strong>example:</strong>

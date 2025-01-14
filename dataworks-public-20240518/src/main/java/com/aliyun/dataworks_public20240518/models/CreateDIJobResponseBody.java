@@ -5,13 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateDIJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the synchronization task.</p>
+     * <p>This parameter is deprecated and is replaced by the Id parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>11792</p>
      */
     @NameInMap("DIJobId")
+    @Deprecated
     public Long DIJobId;
+
+    /**
+     * <p>The ID of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11792</p>
+     */
+    @NameInMap("Id")
+    public Long id;
 
     /**
      * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
@@ -27,12 +37,21 @@ public class CreateDIJobResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public CreateDIJobResponseBody setDIJobId(Long DIJobId) {
         this.DIJobId = DIJobId;
         return this;
     }
     public Long getDIJobId() {
         return this.DIJobId;
+    }
+
+    public CreateDIJobResponseBody setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public CreateDIJobResponseBody setRequestId(String requestId) {

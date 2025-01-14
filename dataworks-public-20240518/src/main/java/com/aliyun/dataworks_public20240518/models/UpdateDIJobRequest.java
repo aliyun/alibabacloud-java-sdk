@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateDIJobRequest extends TeaModel {
     /**
-     * <p>The ID of the synchronization task.</p>
-     * <p>This parameter is required.</p>
+     * <p>This parameter is deprecated. Use the Id parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>11588</p>
      */
     @NameInMap("DIJobId")
+    @Deprecated
     public Long DIJobId;
 
     /**
@@ -21,14 +21,21 @@ public class UpdateDIJobRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11588</p>
+     */
+    @NameInMap("Id")
+    public Long id;
+
+    /**
      * <p>The settings for the dimension of the synchronization task. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.</p>
      */
     @NameInMap("JobSettings")
     public UpdateDIJobRequestJobSettings jobSettings;
 
     /**
-     * <p>DataWorks工作空间ID。您可以通过<a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a>接口获取工作空间ID。</p>
-     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
@@ -58,6 +65,7 @@ public class UpdateDIJobRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public UpdateDIJobRequest setDIJobId(Long DIJobId) {
         this.DIJobId = DIJobId;
         return this;
@@ -72,6 +80,14 @@ public class UpdateDIJobRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateDIJobRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public UpdateDIJobRequest setJobSettings(UpdateDIJobRequestJobSettings jobSettings) {

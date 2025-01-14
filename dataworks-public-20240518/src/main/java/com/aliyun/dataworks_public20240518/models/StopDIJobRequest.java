@@ -5,13 +5,23 @@ import com.aliyun.tea.*;
 
 public class StopDIJobRequest extends TeaModel {
     /**
-     * <p>The ID of the synchronization task.</p>
+     * <p>This parameter is deprecated and is replaced by the Id parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>11668</p>
      */
     @NameInMap("DIJobId")
+    @Deprecated
     public Long DIJobId;
+
+    /**
+     * <p>The ID of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11668</p>
+     */
+    @NameInMap("Id")
+    public Long id;
 
     /**
      * <p>The instance ID.</p>
@@ -27,12 +37,21 @@ public class StopDIJobRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public StopDIJobRequest setDIJobId(Long DIJobId) {
         this.DIJobId = DIJobId;
         return this;
     }
     public Long getDIJobId() {
         return this.DIJobId;
+    }
+
+    public StopDIJobRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public StopDIJobRequest setInstanceId(Long instanceId) {

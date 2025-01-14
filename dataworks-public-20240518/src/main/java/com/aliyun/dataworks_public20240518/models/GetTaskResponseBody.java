@@ -675,6 +675,9 @@ public class GetTaskResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnvType")
+        public String envType;
+
         /**
          * <p>The task ID.</p>
          * 
@@ -738,6 +741,7 @@ public class GetTaskResponseBody extends TeaModel {
          * <p>Prod</p>
          */
         @NameInMap("ProjectEnv")
+        @Deprecated
         public String projectEnv;
 
         /**
@@ -875,6 +879,14 @@ public class GetTaskResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetTaskResponseBodyTaskSubTasksSubTasks setEnvType(String envType) {
+            this.envType = envType;
+            return this;
+        }
+        public String getEnvType() {
+            return this.envType;
+        }
+
         public GetTaskResponseBodyTaskSubTasksSubTasks setId(Long id) {
             this.id = id;
             return this;
@@ -923,6 +935,7 @@ public class GetTaskResponseBody extends TeaModel {
             return this.priority;
         }
 
+        @Deprecated
         public GetTaskResponseBodyTaskSubTasksSubTasks setProjectEnv(String projectEnv) {
             this.projectEnv = projectEnv;
             return this;
@@ -1253,6 +1266,9 @@ public class GetTaskResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnvType")
+        public String envType;
+
         /**
          * <p>The instance ID.</p>
          * 
@@ -1264,6 +1280,9 @@ public class GetTaskResponseBody extends TeaModel {
 
         /**
          * <p>The input information.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>false</p>
          */
         @NameInMap("Inputs")
         public GetTaskResponseBodyTaskInputs inputs;
@@ -1339,6 +1358,7 @@ public class GetTaskResponseBody extends TeaModel {
          * <p>Prod</p>
          */
         @NameInMap("ProjectEnv")
+        @Deprecated
         public String projectEnv;
 
         /**
@@ -1502,6 +1522,14 @@ public class GetTaskResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetTaskResponseBodyTask setEnvType(String envType) {
+            this.envType = envType;
+            return this;
+        }
+        public String getEnvType() {
+            return this.envType;
+        }
+
         public GetTaskResponseBodyTask setId(Long id) {
             this.id = id;
             return this;
@@ -1574,6 +1602,7 @@ public class GetTaskResponseBody extends TeaModel {
             return this.priority;
         }
 
+        @Deprecated
         public GetTaskResponseBodyTask setProjectEnv(String projectEnv) {
             this.projectEnv = projectEnv;
             return this;

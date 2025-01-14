@@ -174,7 +174,7 @@ public class ListNodesResponseBody extends TeaModel {
          * <p>543211286945488XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The name of the variable.</p>
@@ -246,11 +246,11 @@ public class ListNodesResponseBody extends TeaModel {
             return this.artifactType;
         }
 
-        public ListNodesResponseBodyPagingInfoNodesInputsVariables setId(String id) {
+        public ListNodesResponseBodyPagingInfoNodesInputsVariables setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -438,7 +438,7 @@ public class ListNodesResponseBody extends TeaModel {
          * <p>623731286945488XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The name of the variable.</p>
@@ -510,11 +510,11 @@ public class ListNodesResponseBody extends TeaModel {
             return this.artifactType;
         }
 
-        public ListNodesResponseBodyPagingInfoNodesOutputsVariables setId(String id) {
+        public ListNodesResponseBodyPagingInfoNodesOutputsVariables setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -668,7 +668,7 @@ public class ListNodesResponseBody extends TeaModel {
          * <p>853573334108680XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The script path.</p>
@@ -690,11 +690,11 @@ public class ListNodesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListNodesResponseBodyPagingInfoNodesScript setId(String id) {
+        public ListNodesResponseBodyPagingInfoNodesScript setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -877,7 +877,7 @@ public class ListNodesResponseBody extends TeaModel {
          * <p>543680677872062XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The start time of the validity period of the trigger.</p>
@@ -940,11 +940,11 @@ public class ListNodesResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public ListNodesResponseBodyPagingInfoNodesTrigger setId(String id) {
+        public ListNodesResponseBodyPagingInfoNodesTrigger setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -1003,7 +1003,7 @@ public class ListNodesResponseBody extends TeaModel {
          * <p>860438872620113XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The input of the node.</p>
@@ -1051,7 +1051,7 @@ public class ListNodesResponseBody extends TeaModel {
          * <p>33233</p>
          */
         @NameInMap("ProjectId")
-        public String projectId;
+        public Long projectId;
 
         /**
          * <p>The scheduling type.</p>
@@ -1099,7 +1099,7 @@ public class ListNodesResponseBody extends TeaModel {
          * <p>88888888888</p>
          */
         @NameInMap("TaskId")
-        public String taskId;
+        public Long taskId;
 
         /**
          * <p>The trigger.</p>
@@ -1136,11 +1136,11 @@ public class ListNodesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListNodesResponseBodyPagingInfoNodes setId(String id) {
+        public ListNodesResponseBodyPagingInfoNodes setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -1184,11 +1184,11 @@ public class ListNodesResponseBody extends TeaModel {
             return this.owner;
         }
 
-        public ListNodesResponseBodyPagingInfoNodes setProjectId(String projectId) {
+        public ListNodesResponseBodyPagingInfoNodes setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 
@@ -1232,11 +1232,11 @@ public class ListNodesResponseBody extends TeaModel {
             return this.tags;
         }
 
-        public ListNodesResponseBodyPagingInfoNodes setTaskId(String taskId) {
+        public ListNodesResponseBodyPagingInfoNodes setTaskId(Long taskId) {
             this.taskId = taskId;
             return this;
         }
-        public String getTaskId() {
+        public Long getTaskId() {
             return this.taskId;
         }
 

@@ -140,7 +140,7 @@ public class ListFunctionsResponseBody extends TeaModel {
          * <p>652567824470354XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The script path.</p>
@@ -159,11 +159,11 @@ public class ListFunctionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListFunctionsResponseBodyPagingInfoFunctionsScript setId(String id) {
+        public ListFunctionsResponseBodyPagingInfoFunctionsScript setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -305,7 +305,7 @@ public class ListFunctionsResponseBody extends TeaModel {
          * <p>580667964888595XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The time when the UDF was last modified. This value is a UNIX timestamp.</p>
@@ -344,7 +344,7 @@ public class ListFunctionsResponseBody extends TeaModel {
          * <p>307XXX</p>
          */
         @NameInMap("ProjectId")
-        public String projectId;
+        public Long projectId;
 
         /**
          * <p>The description of the return value.</p>
@@ -483,11 +483,11 @@ public class ListFunctionsResponseBody extends TeaModel {
             return this.fileResource;
         }
 
-        public ListFunctionsResponseBodyPagingInfoFunctions setId(String id) {
+        public ListFunctionsResponseBodyPagingInfoFunctions setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -523,11 +523,11 @@ public class ListFunctionsResponseBody extends TeaModel {
             return this.parameterDescription;
         }
 
-        public ListFunctionsResponseBodyPagingInfoFunctions setProjectId(String projectId) {
+        public ListFunctionsResponseBodyPagingInfoFunctions setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 

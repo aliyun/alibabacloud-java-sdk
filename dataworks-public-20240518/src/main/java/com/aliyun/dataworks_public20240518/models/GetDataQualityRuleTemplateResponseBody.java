@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The information about the template.</p>
+     */
     @NameInMap("DataQualityRuleTemplate")
     public GetDataQualityRuleTemplateResponseBodyDataQualityRuleTemplate dataQualityRuleTemplate;
 
@@ -156,13 +159,6 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>195820716552192</p>
-         */
-        @NameInMap("TenantId")
-        public Long tenantId;
-
-        /**
-         * <strong>example:</strong>
          * <p>Project</p>
          */
         @NameInMap("VisibleScope")
@@ -219,14 +215,6 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         }
         public GetDataQualityRuleTemplateResponseBodyDataQualityRuleTemplateSamplingConfig getSamplingConfig() {
             return this.samplingConfig;
-        }
-
-        public GetDataQualityRuleTemplateResponseBodyDataQualityRuleTemplate setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
         }
 
         public GetDataQualityRuleTemplateResponseBodyDataQualityRuleTemplate setVisibleScope(String visibleScope) {

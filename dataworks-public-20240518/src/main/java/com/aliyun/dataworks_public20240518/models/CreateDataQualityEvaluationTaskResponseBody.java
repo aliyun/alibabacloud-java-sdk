@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityEvaluationTaskResponseBody extends TeaModel {
     /**
+     * <p>The ID of the new monitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>10001</p>
      */

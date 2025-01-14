@@ -239,7 +239,7 @@ public class GetDeploymentResponseBody extends TeaModel {
          * <p>56160</p>
          */
         @NameInMap("ProjectId")
-        public String projectId;
+        public Long projectId;
 
         /**
          * <p>The information about stages in the process.</p>
@@ -310,11 +310,11 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.modifyTime;
         }
 
-        public GetDeploymentResponseBodyPipeline setProjectId(String projectId) {
+        public GetDeploymentResponseBodyPipeline setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 

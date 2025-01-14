@@ -142,6 +142,14 @@ public class ListTaskInstancesRequest extends TeaModel {
     public String taskType;
 
     /**
+     * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Pause</li>
+     * <li>Skip</li>
+     * <li>Normal</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
@@ -149,6 +157,13 @@ public class ListTaskInstancesRequest extends TeaModel {
     public String triggerRecurrence;
 
     /**
+     * <p>The trigger type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Scheduler: scheduling cycle-based trigger</li>
+     * <li>Manual: manual trigger</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */

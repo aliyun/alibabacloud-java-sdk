@@ -41,7 +41,7 @@ public class CreateAlertRuleShrinkRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The conditions for triggering the alert.</p>
+     * <p>The alert triggering condition.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TriggerCondition")

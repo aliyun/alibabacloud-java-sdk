@@ -134,7 +134,11 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
          * <p>5</p>
          */
         @NameInMap("InhibitionInterval")
+        @Deprecated
         public Long inhibitionInterval;
+
+        @NameInMap("MuteInterval")
+        public Long muteInterval;
 
         /**
          * <p>The alert notification methods.</p>
@@ -153,12 +157,21 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesNotificationSettings setInhibitionInterval(Long inhibitionInterval) {
             this.inhibitionInterval = inhibitionInterval;
             return this;
         }
         public Long getInhibitionInterval() {
             return this.inhibitionInterval;
+        }
+
+        public ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesNotificationSettings setMuteInterval(Long muteInterval) {
+            this.muteInterval = muteInterval;
+            return this;
+        }
+        public Long getMuteInterval() {
+            return this.muteInterval;
         }
 
         public ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesNotificationSettings setNotificationChannels(java.util.List<ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesNotificationSettingsNotificationChannels> notificationChannels) {
@@ -184,7 +197,11 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
          * <p>The types of DDL operations for which the alert rule takes effect. This parameter is returned only if the MetricType parameter is set to DdlReport.</p>
          */
         @NameInMap("DdlReportTags")
+        @Deprecated
         public java.util.List<String> ddlReportTags;
+
+        @NameInMap("DdlTypes")
+        public java.util.List<String> ddlTypes;
 
         /**
          * <p>The time interval for alert calculation. Unit: minutes.</p>
@@ -227,12 +244,21 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesTriggerConditions setDdlReportTags(java.util.List<String> ddlReportTags) {
             this.ddlReportTags = ddlReportTags;
             return this;
         }
         public java.util.List<String> getDdlReportTags() {
             return this.ddlReportTags;
+        }
+
+        public ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesTriggerConditions setDdlTypes(java.util.List<String> ddlTypes) {
+            this.ddlTypes = ddlTypes;
+            return this;
+        }
+        public java.util.List<String> getDdlTypes() {
+            return this.ddlTypes;
         }
 
         public ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesTriggerConditions setDuration(Long duration) {
@@ -263,12 +289,13 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
 
     public static class ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRules extends TeaModel {
         /**
-         * <p>The ID of the alert rule.</p>
+         * <p>This parameter is deprecated. Use the Id parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>72402</p>
          */
         @NameInMap("DIAlarmRuleId")
+        @Deprecated
         public Long DIAlarmRuleId;
 
         /**
@@ -297,6 +324,15 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
          */
         @NameInMap("Enabled")
         public Boolean enabled;
+
+        /**
+         * <p>The ID of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72402</p>
+         */
+        @NameInMap("Id")
+        public Long id;
 
         /**
          * <p>The metric type in the alert rule. Valid values:</p>
@@ -340,6 +376,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRules setDIAlarmRuleId(Long DIAlarmRuleId) {
             this.DIAlarmRuleId = DIAlarmRuleId;
             return this;
@@ -370,6 +407,14 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         }
         public Boolean getEnabled() {
             return this.enabled;
+        }
+
+        public ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRules setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRules setMetricType(String metricType) {

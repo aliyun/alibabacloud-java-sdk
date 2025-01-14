@@ -14,7 +14,7 @@ public class CreateNodeRequest extends TeaModel {
      * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
      */
     @NameInMap("ContainerId")
-    public String containerId;
+    public Long containerId;
 
     /**
      * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
@@ -25,7 +25,7 @@ public class CreateNodeRequest extends TeaModel {
      * <p>123456</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     /**
      * <p>The scene of the node. This parameter determines the location (the DataStudio pane or the Manual pane) of the node. You can set this parameter to DATAWORKS_MANUAL_WORKFLOW only if the ContainerId parameter is configured and the container specified by ContainerId is a manually triggered workflow.</p>
@@ -55,19 +55,19 @@ public class CreateNodeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateNodeRequest setContainerId(String containerId) {
+    public CreateNodeRequest setContainerId(Long containerId) {
         this.containerId = containerId;
         return this;
     }
-    public String getContainerId() {
+    public Long getContainerId() {
         return this.containerId;
     }
 
-    public CreateNodeRequest setProjectId(String projectId) {
+    public CreateNodeRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

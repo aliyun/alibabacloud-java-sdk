@@ -12,7 +12,7 @@ public class DeleteWorkflowDefinitionRequest extends TeaModel {
      * <p>860438872620113XXXX</p>
      */
     @NameInMap("Id")
-    public String id;
+    public Long id;
 
     /**
      * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
@@ -22,26 +22,26 @@ public class DeleteWorkflowDefinitionRequest extends TeaModel {
      * <p>10000</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     public static DeleteWorkflowDefinitionRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteWorkflowDefinitionRequest self = new DeleteWorkflowDefinitionRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteWorkflowDefinitionRequest setId(String id) {
+    public DeleteWorkflowDefinitionRequest setId(Long id) {
         this.id = id;
         return this;
     }
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public DeleteWorkflowDefinitionRequest setProjectId(String projectId) {
+    public DeleteWorkflowDefinitionRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

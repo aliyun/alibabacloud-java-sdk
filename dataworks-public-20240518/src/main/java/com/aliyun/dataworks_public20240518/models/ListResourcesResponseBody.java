@@ -115,7 +115,7 @@ public class ListResourcesResponseBody extends TeaModel {
          * <p>123348864897630XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The script path.</p>
@@ -137,11 +137,11 @@ public class ListResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListResourcesResponseBodyPagingInfoResourcesScript setId(String id) {
+        public ListResourcesResponseBodyPagingInfoResourcesScript setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -186,7 +186,7 @@ public class ListResourcesResponseBody extends TeaModel {
          * <p>631478864897630XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The times when the file resource was last modified. This value is a UNIX timestamp.</p>
@@ -222,7 +222,7 @@ public class ListResourcesResponseBody extends TeaModel {
          * <p>344247</p>
          */
         @NameInMap("ProjectId")
-        public String projectId;
+        public Long projectId;
 
         /**
          * <p>The script information.</p>
@@ -314,11 +314,11 @@ public class ListResourcesResponseBody extends TeaModel {
             return this.dataSource;
         }
 
-        public ListResourcesResponseBodyPagingInfoResources setId(String id) {
+        public ListResourcesResponseBodyPagingInfoResources setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -346,11 +346,11 @@ public class ListResourcesResponseBody extends TeaModel {
             return this.owner;
         }
 
-        public ListResourcesResponseBodyPagingInfoResources setProjectId(String projectId) {
+        public ListResourcesResponseBodyPagingInfoResources setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 

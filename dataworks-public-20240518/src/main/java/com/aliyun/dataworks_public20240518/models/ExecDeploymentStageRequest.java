@@ -33,7 +33,7 @@ public class ExecDeploymentStageRequest extends TeaModel {
      * <p>10000</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     public static ExecDeploymentStageRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecDeploymentStageRequest self = new ExecDeploymentStageRequest();
@@ -56,11 +56,11 @@ public class ExecDeploymentStageRequest extends TeaModel {
         return this.id;
     }
 
-    public ExecDeploymentStageRequest setProjectId(String projectId) {
+    public ExecDeploymentStageRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

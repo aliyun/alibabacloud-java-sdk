@@ -23,7 +23,7 @@ public class AbolishDeploymentRequest extends TeaModel {
      * <p>10000</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     public static AbolishDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {
         AbolishDeploymentRequest self = new AbolishDeploymentRequest();
@@ -38,11 +38,11 @@ public class AbolishDeploymentRequest extends TeaModel {
         return this.id;
     }
 
-    public AbolishDeploymentRequest setProjectId(String projectId) {
+    public AbolishDeploymentRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

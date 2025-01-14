@@ -11,7 +11,7 @@ public class CreateResourceResponseBody extends TeaModel {
      * <p>631478864897630XXXX</p>
      */
     @NameInMap("Id")
-    public String id;
+    public Long id;
 
     /**
      * <p>The request ID.</p>
@@ -27,11 +27,11 @@ public class CreateResourceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateResourceResponseBody setId(String id) {
+    public CreateResourceResponseBody setId(Long id) {
         this.id = id;
         return this;
     }
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 

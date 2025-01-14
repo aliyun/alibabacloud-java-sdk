@@ -57,7 +57,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
          * <p>463497880880954XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The time when the workflow was last modified. This value is a UNIX timestamp.</p>
@@ -90,7 +90,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
          * <p>307XXX</p>
          */
         @NameInMap("ProjectId")
-        public String projectId;
+        public Long projectId;
 
         /**
          * <p>The FlowSpec field information about the workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
@@ -111,11 +111,11 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetWorkflowDefinitionResponseBodyWorkflowDefinition setId(String id) {
+        public GetWorkflowDefinitionResponseBodyWorkflowDefinition setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -143,11 +143,11 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             return this.owner;
         }
 
-        public GetWorkflowDefinitionResponseBodyWorkflowDefinition setProjectId(String projectId) {
+        public GetWorkflowDefinitionResponseBodyWorkflowDefinition setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 

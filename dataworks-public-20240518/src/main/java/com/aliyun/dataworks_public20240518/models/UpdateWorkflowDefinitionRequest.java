@@ -12,7 +12,7 @@ public class UpdateWorkflowDefinitionRequest extends TeaModel {
      * <p>652567824470354XXXX</p>
      */
     @NameInMap("Id")
-    public String id;
+    public Long id;
 
     /**
      * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
@@ -22,7 +22,7 @@ public class UpdateWorkflowDefinitionRequest extends TeaModel {
      * <p>10001</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     /**
      * <p>The FlowSpec field information about the workflow. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
@@ -36,19 +36,19 @@ public class UpdateWorkflowDefinitionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateWorkflowDefinitionRequest setId(String id) {
+    public UpdateWorkflowDefinitionRequest setId(Long id) {
         this.id = id;
         return this;
     }
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public UpdateWorkflowDefinitionRequest setProjectId(String projectId) {
+    public UpdateWorkflowDefinitionRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

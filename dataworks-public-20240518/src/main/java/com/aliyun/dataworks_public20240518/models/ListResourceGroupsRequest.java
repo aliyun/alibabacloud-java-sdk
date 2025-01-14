@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupsRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>rg-aek2kqofrgXXXXX</p>
+     */
+    @NameInMap("AliyunResourceGroupId")
+    public String aliyunResourceGroupId;
+
+    @NameInMap("AliyunResourceTags")
+    public java.util.List<ListResourceGroupsRequestAliyunResourceTags> aliyunResourceTags;
+
+    /**
      * <p>The name of a resource group, which is used for fuzzy match.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +24,24 @@ public class ListResourceGroupsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The billing method of resource groups. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</p>
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <ul>
+     * <li></li>
+     * <li></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -31,15 +58,16 @@ public class ListResourceGroupsRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
-    /**
-     * <p>The types of resource groups to query. If you do not configure this parameter, only serverless resource groups are returned by default.</p>
-     */
     @NameInMap("ResourceGroupTypes")
     public java.util.List<String> resourceGroupTypes;
 
     /**
-     * <p>The statuses of resource groups.</p>
+     * <strong>example:</strong>
+     * <p>CreateTime Asc</p>
      */
+    @NameInMap("SortBy")
+    public String sortBy;
+
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
 
@@ -48,12 +76,44 @@ public class ListResourceGroupsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListResourceGroupsRequest setAliyunResourceGroupId(String aliyunResourceGroupId) {
+        this.aliyunResourceGroupId = aliyunResourceGroupId;
+        return this;
+    }
+    public String getAliyunResourceGroupId() {
+        return this.aliyunResourceGroupId;
+    }
+
+    public ListResourceGroupsRequest setAliyunResourceTags(java.util.List<ListResourceGroupsRequestAliyunResourceTags> aliyunResourceTags) {
+        this.aliyunResourceTags = aliyunResourceTags;
+        return this;
+    }
+    public java.util.List<ListResourceGroupsRequestAliyunResourceTags> getAliyunResourceTags() {
+        return this.aliyunResourceTags;
+    }
+
     public ListResourceGroupsRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public ListResourceGroupsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListResourceGroupsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListResourceGroupsRequest setPaymentType(String paymentType) {
@@ -80,12 +140,58 @@ public class ListResourceGroupsRequest extends TeaModel {
         return this.resourceGroupTypes;
     }
 
+    public ListResourceGroupsRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
     public ListResourceGroupsRequest setStatuses(java.util.List<String> statuses) {
         this.statuses = statuses;
         return this;
     }
     public java.util.List<String> getStatuses() {
         return this.statuses;
+    }
+
+    public static class ListResourceGroupsRequestAliyunResourceTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListResourceGroupsRequestAliyunResourceTags build(java.util.Map<String, ?> map) throws Exception {
+            ListResourceGroupsRequestAliyunResourceTags self = new ListResourceGroupsRequestAliyunResourceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourceGroupsRequestAliyunResourceTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListResourceGroupsRequestAliyunResourceTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

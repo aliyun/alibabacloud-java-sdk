@@ -12,7 +12,7 @@ public class CreateFunctionRequest extends TeaModel {
      * <p>12345</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     /**
      * <p>The FlowSpec field information about the UDF. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
@@ -26,11 +26,11 @@ public class CreateFunctionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateFunctionRequest setProjectId(String projectId) {
+    public CreateFunctionRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDIJobLogRequest extends TeaModel {
     /**
-     * <p>The ID of the synchronization task.</p>
-     * <p>This parameter is required.</p>
+     * <p>This parameter is deprecated. Use the Id parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
     @NameInMap("DIJobId")
+    @Deprecated
     public Long DIJobId;
 
     /**
@@ -22,6 +22,15 @@ public class GetDIJobLogRequest extends TeaModel {
      */
     @NameInMap("FailoverId")
     public Long failoverId;
+
+    /**
+     * <p>The ID of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
+    @NameInMap("Id")
+    public Long id;
 
     /**
      * <p>The instance ID.</p>
@@ -37,6 +46,7 @@ public class GetDIJobLogRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public GetDIJobLogRequest setDIJobId(Long DIJobId) {
         this.DIJobId = DIJobId;
         return this;
@@ -51,6 +61,14 @@ public class GetDIJobLogRequest extends TeaModel {
     }
     public Long getFailoverId() {
         return this.failoverId;
+    }
+
+    public GetDIJobLogRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public GetDIJobLogRequest setInstanceId(Long instanceId) {

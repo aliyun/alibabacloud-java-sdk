@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateProjectResponseBody extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
+    @NameInMap("Id")
+    public Long id;
+
+    /**
      * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
     @NameInMap("ProjectId")
+    @Deprecated
     public Long projectId;
 
     /**
@@ -27,6 +35,15 @@ public class CreateProjectResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateProjectResponseBody setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
+    }
+
+    @Deprecated
     public CreateProjectResponseBody setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;

@@ -6,17 +6,17 @@ import com.aliyun.tea.*;
 public class CreateRouteResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>1000</p>
+     */
+    @NameInMap("Id")
+    public Long id;
+
+    /**
+     * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
-
-    /**
-     * <strong>example:</strong>
-     * <p>1000</p>
-     */
-    @NameInMap("RouteId")
-    public Long routeId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
@@ -32,20 +32,20 @@ public class CreateRouteResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateRouteResponseBody setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
+    }
+
     public CreateRouteResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateRouteResponseBody setRouteId(Long routeId) {
-        this.routeId = routeId;
-        return this;
-    }
-    public Long getRouteId() {
-        return this.routeId;
     }
 
     public CreateRouteResponseBody setSuccess(Boolean success) {

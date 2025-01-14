@@ -12,7 +12,7 @@ public class CreateWorkflowDefinitionRequest extends TeaModel {
      * <p>10000</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     /**
      * <p>The FlowSpec field information about the workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
@@ -26,11 +26,11 @@ public class CreateWorkflowDefinitionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateWorkflowDefinitionRequest setProjectId(String projectId) {
+    public CreateWorkflowDefinitionRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

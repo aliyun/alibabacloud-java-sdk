@@ -15,7 +15,7 @@ public class GrantMemberProjectRolesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The codes of the roles in the workspace. You can call the <a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-listprojectroles?spm=a2c4g.11186623.0.0.43841daeywTtF3">ListProjectRoles</a> operation to query the codes of all roles in the workspace.</p>
+     * <p>The codes of the roles in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> operation to query the codes of all roles in the workspace.</p>
      * <p>You must configure this parameter to specify the roles that you want to assign to members in the workspace.</p>
      * <p>This parameter is required.</p>
      */

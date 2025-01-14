@@ -12,7 +12,7 @@ public class RenameWorkflowDefinitionRequest extends TeaModel {
      * <p>463497880880954XXXX</p>
      */
     @NameInMap("Id")
-    public String id;
+    public Long id;
 
     /**
      * <p>The new name.</p>
@@ -29,18 +29,18 @@ public class RenameWorkflowDefinitionRequest extends TeaModel {
      * <p>10000</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     public static RenameWorkflowDefinitionRequest build(java.util.Map<String, ?> map) throws Exception {
         RenameWorkflowDefinitionRequest self = new RenameWorkflowDefinitionRequest();
         return TeaModel.build(map, self);
     }
 
-    public RenameWorkflowDefinitionRequest setId(String id) {
+    public RenameWorkflowDefinitionRequest setId(Long id) {
         this.id = id;
         return this;
     }
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 
@@ -52,11 +52,11 @@ public class RenameWorkflowDefinitionRequest extends TeaModel {
         return this.name;
     }
 
-    public RenameWorkflowDefinitionRequest setProjectId(String projectId) {
+    public RenameWorkflowDefinitionRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

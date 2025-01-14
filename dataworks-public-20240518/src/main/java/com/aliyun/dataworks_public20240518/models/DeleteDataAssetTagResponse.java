@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class ListDataQualityRuleTemplateResponse extends TeaModel {
+public class DeleteDataAssetTagResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListDataQualityRuleTemplateResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListDataQualityRuleTemplateResponseBody body;
+    public DeleteDataAssetTagResponseBody body;
 
-    public static ListDataQualityRuleTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListDataQualityRuleTemplateResponse self = new ListDataQualityRuleTemplateResponse();
+    public static DeleteDataAssetTagResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteDataAssetTagResponse self = new DeleteDataAssetTagResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListDataQualityRuleTemplateResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteDataAssetTagResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListDataQualityRuleTemplateResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListDataQualityRuleTemplateResponse setStatusCode(Integer statusCode) {
+    public DeleteDataAssetTagResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListDataQualityRuleTemplateResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListDataQualityRuleTemplateResponse setBody(ListDataQualityRuleTemplateResponseBody body) {
+    public DeleteDataAssetTagResponse setBody(DeleteDataAssetTagResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListDataQualityRuleTemplateResponseBody getBody() {
+    public DeleteDataAssetTagResponseBody getBody() {
         return this.body;
     }
 

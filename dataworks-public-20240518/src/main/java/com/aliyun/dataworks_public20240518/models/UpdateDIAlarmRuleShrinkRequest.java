@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the alert rule.</p>
-     * <p>This parameter is required.</p>
+     * <p>This parameter is deprecated. Use the Id parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>34982</p>
      */
     @NameInMap("DIAlarmRuleId")
+    @Deprecated
     public Long DIAlarmRuleId;
 
     /**
@@ -37,6 +37,13 @@ public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
      */
     @NameInMap("Enabled")
     public Boolean enabled;
+
+    /**
+     * <strong>example:</strong>
+     * <p>34982</p>
+     */
+    @NameInMap("Id")
+    public Long id;
 
     /**
      * <p>The metric type in the alert rule. Valid values:</p>
@@ -80,6 +87,7 @@ public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public UpdateDIAlarmRuleShrinkRequest setDIAlarmRuleId(Long DIAlarmRuleId) {
         this.DIAlarmRuleId = DIAlarmRuleId;
         return this;
@@ -110,6 +118,14 @@ public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
     }
     public Boolean getEnabled() {
         return this.enabled;
+    }
+
+    public UpdateDIAlarmRuleShrinkRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public UpdateDIAlarmRuleShrinkRequest setMetricType(String metricType) {

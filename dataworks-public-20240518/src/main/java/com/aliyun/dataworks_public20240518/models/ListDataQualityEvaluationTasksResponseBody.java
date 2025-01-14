@@ -437,15 +437,6 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTarget target;
 
         /**
-         * <p>The DataWorks tenant ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
-        @NameInMap("TenantId")
-        public Long tenantId;
-
-        /**
          * <p>The trigger configuration of the task.</p>
          */
         @NameInMap("Trigger")
@@ -518,14 +509,6 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         }
         public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTarget getTarget() {
             return this.target;
-        }
-
-        public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
         }
 
         public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks setTrigger(ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTrigger trigger) {
