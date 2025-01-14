@@ -11,7 +11,7 @@ public class CreateNodeResponseBody extends TeaModel {
      * <p>860438872620113XXXX</p>
      */
     @NameInMap("Id")
-    public String id;
+    public Long id;
 
     /**
      * <p>The request ID.</p>
@@ -27,11 +27,11 @@ public class CreateNodeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateNodeResponseBody setId(String id) {
+    public CreateNodeResponseBody setId(Long id) {
         this.id = id;
         return this;
     }
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 

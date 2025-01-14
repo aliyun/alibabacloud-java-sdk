@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupsShrinkRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>rg-aek2kqofrgXXXXX</p>
+     */
+    @NameInMap("AliyunResourceGroupId")
+    public String aliyunResourceGroupId;
+
+    @NameInMap("AliyunResourceTags")
+    public String aliyunResourceTagsShrink;
+
+    /**
      * <p>The name of a resource group, which is used for fuzzy match.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +24,24 @@ public class ListResourceGroupsShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The billing method of resource groups. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</p>
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <ul>
+     * <li></li>
+     * <li></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -31,15 +58,16 @@ public class ListResourceGroupsShrinkRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
-    /**
-     * <p>The types of resource groups to query. If you do not configure this parameter, only serverless resource groups are returned by default.</p>
-     */
     @NameInMap("ResourceGroupTypes")
     public String resourceGroupTypesShrink;
 
     /**
-     * <p>The statuses of resource groups.</p>
+     * <strong>example:</strong>
+     * <p>CreateTime Asc</p>
      */
+    @NameInMap("SortBy")
+    public String sortBy;
+
     @NameInMap("Statuses")
     public String statusesShrink;
 
@@ -48,12 +76,44 @@ public class ListResourceGroupsShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListResourceGroupsShrinkRequest setAliyunResourceGroupId(String aliyunResourceGroupId) {
+        this.aliyunResourceGroupId = aliyunResourceGroupId;
+        return this;
+    }
+    public String getAliyunResourceGroupId() {
+        return this.aliyunResourceGroupId;
+    }
+
+    public ListResourceGroupsShrinkRequest setAliyunResourceTagsShrink(String aliyunResourceTagsShrink) {
+        this.aliyunResourceTagsShrink = aliyunResourceTagsShrink;
+        return this;
+    }
+    public String getAliyunResourceTagsShrink() {
+        return this.aliyunResourceTagsShrink;
+    }
+
     public ListResourceGroupsShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public ListResourceGroupsShrinkRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListResourceGroupsShrinkRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListResourceGroupsShrinkRequest setPaymentType(String paymentType) {
@@ -78,6 +138,14 @@ public class ListResourceGroupsShrinkRequest extends TeaModel {
     }
     public String getResourceGroupTypesShrink() {
         return this.resourceGroupTypesShrink;
+    }
+
+    public ListResourceGroupsShrinkRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
     }
 
     public ListResourceGroupsShrinkRequest setStatusesShrink(String statusesShrink) {

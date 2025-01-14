@@ -73,7 +73,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
          * <p>698002781368644XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The script path.</p>
@@ -92,11 +92,11 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScript setId(String id) {
+        public ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScript setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -141,7 +141,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
          * <p>463497880880954XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The times when the workflow was last modified. This value is a UNIX timestamp.</p>
@@ -175,7 +175,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
          * <p>4710</p>
          */
         @NameInMap("ProjectId")
-        public String projectId;
+        public Long projectId;
 
         /**
          * <p>The script information.</p>
@@ -218,11 +218,11 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitions setId(String id) {
+        public ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitions setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -250,11 +250,11 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             return this.owner;
         }
 
-        public ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitions setProjectId(String projectId) {
+        public ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitions setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 

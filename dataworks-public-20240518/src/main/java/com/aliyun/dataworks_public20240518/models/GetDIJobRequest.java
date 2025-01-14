@@ -5,17 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetDIJobRequest extends TeaModel {
     /**
-     * <p>The ID of the synchronization task.</p>
+     * <p>This parameter is deprecated. Use the Id parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>11588</p>
      */
     @NameInMap("DIJobId")
+    @Deprecated
     public Long DIJobId;
 
     /**
-     * <p>DataWorks工作空间ID。您可以通过ListProjects接口获取工作空间ID。</p>
+     * <p>The ID of the synchronization task.</p>
      * 
+     * <strong>example:</strong>
+     * <p>11588</p>
+     */
+    @NameInMap("Id")
+    public Long id;
+
+    /**
      * <strong>example:</strong>
      * <p>10000</p>
      */
@@ -36,12 +44,21 @@ public class GetDIJobRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public GetDIJobRequest setDIJobId(Long DIJobId) {
         this.DIJobId = DIJobId;
         return this;
     }
     public Long getDIJobId() {
         return this.DIJobId;
+    }
+
+    public GetDIJobRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public GetDIJobRequest setProjectId(Long projectId) {

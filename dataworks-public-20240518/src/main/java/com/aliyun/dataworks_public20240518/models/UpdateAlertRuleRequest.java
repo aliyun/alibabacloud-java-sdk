@@ -344,10 +344,10 @@ public class UpdateAlertRuleRequest extends TeaModel {
          * <p>Specifies whether to trigger an alert if a batch synchronization task is automatically rerun upon a failure.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
-        @NameInMap("AutoRerunAlert")
-        public Boolean autoRerunAlert;
+        @NameInMap("AutoRerunAlertEnabled")
+        public Boolean autoRerunAlertEnabled;
 
         /**
          * <p>The IDs of the real-time computing tasks. This parameter is required when you monitor real-time computing tasks.</p>
@@ -360,12 +360,12 @@ public class UpdateAlertRuleRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public UpdateAlertRuleRequestTriggerConditionExtensionError setAutoRerunAlert(Boolean autoRerunAlert) {
-            this.autoRerunAlert = autoRerunAlert;
+        public UpdateAlertRuleRequestTriggerConditionExtensionError setAutoRerunAlertEnabled(Boolean autoRerunAlertEnabled) {
+            this.autoRerunAlertEnabled = autoRerunAlertEnabled;
             return this;
         }
-        public Boolean getAutoRerunAlert() {
-            return this.autoRerunAlert;
+        public Boolean getAutoRerunAlertEnabled() {
+            return this.autoRerunAlertEnabled;
         }
 
         public UpdateAlertRuleRequestTriggerConditionExtensionError setStreamTaskIds(java.util.List<Long> streamTaskIds) {
@@ -477,7 +477,7 @@ public class UpdateAlertRuleRequest extends TeaModel {
 
     public static class UpdateAlertRuleRequestTriggerConditionExtensionTimeout extends TeaModel {
         /**
-         * <p>The timeout period. Unit: minutes. Valid values: [1, 21600].</p>
+         * <p>The timeout period. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -649,7 +649,7 @@ public class UpdateAlertRuleRequest extends TeaModel {
          * <ul>
          * <li>Task: node</li>
          * <li>Baseline: baseline</li>
-         * <li>Project: workspace</li>
+         * <li>project: workspace</li>
          * <li>BizProcess: workflow</li>
          * </ul>
          * 
@@ -707,7 +707,7 @@ public class UpdateAlertRuleRequest extends TeaModel {
          * <p>The alert type. Valid values:</p>
          * <ul>
          * <li>Finished: An instance is successfully run.</li>
-         * <li>UnFinished:An instance does not finish running before a specified point in time.</li>
+         * <li>UnFinished: An instance does not finish running before a specified point in time.</li>
          * <li>Error: An error occurs on an instance.</li>
          * <li>CycleUnfinished: An instance does not finish running as expected within a specific cycle.</li>
          * <li>Timeout: An instance times out.</li>

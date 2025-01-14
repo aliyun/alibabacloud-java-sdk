@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
+    /**
+     * <p>The details of the monitor.</p>
+     */
     @NameInMap("DataQualityEvaluationTask")
     public GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTask dataQualityEvaluationTask;
 
@@ -48,7 +51,14 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
         public String condition;
 
         /**
-         * <p>Hook类型</p>
+         * <p>The hook type. Only one hook type is supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>BlockTaskInstance: Blocks the running of scheduling tasks. A monitor is triggered by scheduling tasks. After a monitor finishes running, the monitor determines whether to block the running of scheduling tasks based on the hook condition.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>BlockTaskInstance</p>
@@ -81,7 +91,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
 
     public static class GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTaskNotificationsNotificationsNotificationChannels extends TeaModel {
         /**
-         * <p>通知方式</p>
+         * <p>The alert notification method.</p>
          */
         @NameInMap("Channels")
         public java.util.List<String> channels;
@@ -112,7 +122,18 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
         public String extension;
 
         /**
-         * <p>告警接收人类型</p>
+         * <p>The additional parameters that are required when alerts are sent. The parameters are JSON-formatted strings. The following keys are supported:</p>
+         * <ul>
+         * <li>atAll: specifies that all members in a group are mentioned when alerts are sent by using DingTalk. This parameter is valid only if you set ReceiverType to DingdingUrl.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>WebhookUrl</li>
+         * <li>FeishuUrl</li>
+         * <li>DingdingUrl</li>
+         * <li>WeixinUrl</li>
+         * <li>AliUid</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DingdingUrl</p>
@@ -159,13 +180,13 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
 
     public static class GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTaskNotificationsNotifications extends TeaModel {
         /**
-         * <p>通知方式</p>
+         * <p>The alert notification method.</p>
          */
         @NameInMap("NotificationChannels")
         public java.util.List<GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTaskNotificationsNotificationsNotificationChannels> notificationChannels;
 
         /**
-         * <p>告警接收人设置</p>
+         * <p>The configurations of alert recipients.</p>
          */
         @NameInMap("NotificationReceivers")
         public java.util.List<GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTaskNotificationsNotificationsNotificationReceivers> notificationReceivers;
@@ -204,7 +225,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
         public String condition;
 
         /**
-         * <p>具体的消息通知设置</p>
+         * <p>The configurations of the alert notification.</p>
          */
         @NameInMap("Notifications")
         public java.util.List<GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTaskNotificationsNotifications> notifications;
@@ -234,7 +255,17 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
 
     public static class GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTaskTarget extends TeaModel {
         /**
-         * <p>表所属的数据库类型</p>
+         * <p>The type of the database to which the table belongs.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>maxcompute</li>
+         * <li>hologres</li>
+         * <li>cdh</li>
+         * <li>analyticdb_for_mysql</li>
+         * <li>starrocks</li>
+         * <li>emr</li>
+         * <li>analyticdb_for_postgresql</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>maxcompute</p>
@@ -314,7 +345,17 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
         public java.util.List<Long> taskIds;
 
         /**
-         * <p>何种事件可以触发质量校验任务执行</p>
+         * <p>The trigger type of the monitor.</p>
+         * <ul>
+         * <li></li>
+         * <li></li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ByManual (default): The monitor is manually triggered.</li>
+         * <li>ByScheduledTaskInstance: The monitor is triggered by associated scheduling tasks.</li>
+         * <li>ByQualityNode: The monitor is triggered by created data quality monitoring nodes.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ByScheduledTaskInstance</p>
@@ -353,7 +394,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>数据质量校验任务实例生命周期中的回调设置，目前只支持一个阻塞调度任务的Hook</p>
+         * <p>The hook.</p>
          */
         @NameInMap("Hooks")
         public java.util.List<GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTaskHooks> hooks;
@@ -375,7 +416,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>数据质量校验任务通知订阅配置</p>
+         * <p>The configurations of alert notifications.</p>
          */
         @NameInMap("Notifications")
         public GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTaskNotifications notifications;
@@ -399,13 +440,13 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
         public String runtimeConf;
 
         /**
-         * <p>参看 DataQualityTarget示例	数据质量校验任务的监控对象，参考 DataQualityTarget</p>
+         * <p>The monitored object of the monitor.</p>
          */
         @NameInMap("Target")
         public GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTaskTarget target;
 
         /**
-         * <p>数据质量校验任务的触发配置</p>
+         * <p>The trigger configuration of the monitor.</p>
          */
         @NameInMap("Trigger")
         public GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTaskTrigger trigger;

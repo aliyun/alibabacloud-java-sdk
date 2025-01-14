@@ -40,7 +40,7 @@ public class ListDeploymentsRequest extends TeaModel {
      * <p>10000</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     /**
      * <p>The status of the processes. This parameter specifies a filter condition.</p>
@@ -89,11 +89,11 @@ public class ListDeploymentsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListDeploymentsRequest setProjectId(String projectId) {
+    public ListDeploymentsRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

@@ -4,18 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListRoutesResponseBody extends TeaModel {
+    @NameInMap("PagingInfo")
+    public ListRoutesResponseBodyPagingInfo pagingInfo;
+
     /**
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
-
-    /**
-     * <p>The routes.</p>
-     */
-    @NameInMap("RouteList")
-    public java.util.List<ListRoutesResponseBodyRouteList> routeList;
 
     /**
      * <p>Indicates whether the request was successful.</p>
@@ -31,20 +28,20 @@ public class ListRoutesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListRoutesResponseBody setPagingInfo(ListRoutesResponseBodyPagingInfo pagingInfo) {
+        this.pagingInfo = pagingInfo;
+        return this;
+    }
+    public ListRoutesResponseBodyPagingInfo getPagingInfo() {
+        return this.pagingInfo;
+    }
+
     public ListRoutesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ListRoutesResponseBody setRouteList(java.util.List<ListRoutesResponseBodyRouteList> routeList) {
-        this.routeList = routeList;
-        return this;
-    }
-    public java.util.List<ListRoutesResponseBodyRouteList> getRouteList() {
-        return this.routeList;
     }
 
     public ListRoutesResponseBody setSuccess(Boolean success) {
@@ -55,7 +52,7 @@ public class ListRoutesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListRoutesResponseBodyRouteList extends TeaModel {
+    public static class ListRoutesResponseBodyPagingInfoRouteList extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>1727055811000</p>
@@ -78,8 +75,6 @@ public class ListRoutesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The network ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -100,12 +95,12 @@ public class ListRoutesResponseBody extends TeaModel {
         @NameInMap("ResourceId")
         public String resourceId;
 
-        public static ListRoutesResponseBodyRouteList build(java.util.Map<String, ?> map) throws Exception {
-            ListRoutesResponseBodyRouteList self = new ListRoutesResponseBodyRouteList();
+        public static ListRoutesResponseBodyPagingInfoRouteList build(java.util.Map<String, ?> map) throws Exception {
+            ListRoutesResponseBodyPagingInfoRouteList self = new ListRoutesResponseBodyPagingInfoRouteList();
             return TeaModel.build(map, self);
         }
 
-        public ListRoutesResponseBodyRouteList setCreateTime(Long createTime) {
+        public ListRoutesResponseBodyPagingInfoRouteList setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -113,7 +108,7 @@ public class ListRoutesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListRoutesResponseBodyRouteList setDestinationCidr(String destinationCidr) {
+        public ListRoutesResponseBodyPagingInfoRouteList setDestinationCidr(String destinationCidr) {
             this.destinationCidr = destinationCidr;
             return this;
         }
@@ -121,7 +116,7 @@ public class ListRoutesResponseBody extends TeaModel {
             return this.destinationCidr;
         }
 
-        public ListRoutesResponseBodyRouteList setId(Long id) {
+        public ListRoutesResponseBodyPagingInfoRouteList setId(Long id) {
             this.id = id;
             return this;
         }
@@ -129,7 +124,7 @@ public class ListRoutesResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListRoutesResponseBodyRouteList setNetworkId(Long networkId) {
+        public ListRoutesResponseBodyPagingInfoRouteList setNetworkId(Long networkId) {
             this.networkId = networkId;
             return this;
         }
@@ -137,7 +132,7 @@ public class ListRoutesResponseBody extends TeaModel {
             return this.networkId;
         }
 
-        public ListRoutesResponseBodyRouteList setResourceGroupId(String resourceGroupId) {
+        public ListRoutesResponseBodyPagingInfoRouteList setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -145,12 +140,76 @@ public class ListRoutesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public ListRoutesResponseBodyRouteList setResourceId(String resourceId) {
+        public ListRoutesResponseBodyPagingInfoRouteList setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
         public String getResourceId() {
             return this.resourceId;
+        }
+
+    }
+
+    public static class ListRoutesResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("PageNumber")
+        public Integer pageNumber;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("RouteList")
+        public java.util.List<ListRoutesResponseBodyPagingInfoRouteList> routeList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
+        public static ListRoutesResponseBodyPagingInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListRoutesResponseBodyPagingInfo self = new ListRoutesResponseBodyPagingInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRoutesResponseBodyPagingInfo setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public ListRoutesResponseBodyPagingInfo setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListRoutesResponseBodyPagingInfo setRouteList(java.util.List<ListRoutesResponseBodyPagingInfoRouteList> routeList) {
+            this.routeList = routeList;
+            return this;
+        }
+        public java.util.List<ListRoutesResponseBodyPagingInfoRouteList> getRouteList() {
+            return this.routeList;
+        }
+
+        public ListRoutesResponseBodyPagingInfo setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

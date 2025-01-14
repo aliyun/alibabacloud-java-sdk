@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class TriggerSchedulerTaskInstanceRequest extends TeaModel {
+    @NameInMap("EnvType")
+    public String envType;
+
     /**
      * <p>The task ID.</p>
      * <p>This parameter is required.</p>
@@ -27,6 +30,14 @@ public class TriggerSchedulerTaskInstanceRequest extends TeaModel {
     public static TriggerSchedulerTaskInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         TriggerSchedulerTaskInstanceRequest self = new TriggerSchedulerTaskInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TriggerSchedulerTaskInstanceRequest setEnvType(String envType) {
+        this.envType = envType;
+        return this;
+    }
+    public String getEnvType() {
+        return this.envType;
     }
 
     public TriggerSchedulerTaskInstanceRequest setTaskId(Long taskId) {

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateDIAlarmRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the alert rule.</p>
-     * <p>This parameter is required.</p>
+     * <p>This parameter is deprecated. Use the Id parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>34982</p>
      */
     @NameInMap("DIAlarmRuleId")
+    @Deprecated
     public Long DIAlarmRuleId;
 
     /**
@@ -37,6 +37,13 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
      */
     @NameInMap("Enabled")
     public Boolean enabled;
+
+    /**
+     * <strong>example:</strong>
+     * <p>34982</p>
+     */
+    @NameInMap("Id")
+    public Long id;
 
     /**
      * <p>The metric type in the alert rule. Valid values:</p>
@@ -80,6 +87,7 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public UpdateDIAlarmRuleRequest setDIAlarmRuleId(Long DIAlarmRuleId) {
         this.DIAlarmRuleId = DIAlarmRuleId;
         return this;
@@ -110,6 +118,14 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
     }
     public Boolean getEnabled() {
         return this.enabled;
+    }
+
+    public UpdateDIAlarmRuleRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public UpdateDIAlarmRuleRequest setMetricType(String metricType) {
@@ -244,7 +260,11 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
          * <p>5</p>
          */
         @NameInMap("InhibitionInterval")
+        @Deprecated
         public Long inhibitionInterval;
+
+        @NameInMap("MuteInterval")
+        public Long muteInterval;
 
         /**
          * <p>The alert notification methods.</p>
@@ -263,12 +283,21 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public UpdateDIAlarmRuleRequestNotificationSettings setInhibitionInterval(Long inhibitionInterval) {
             this.inhibitionInterval = inhibitionInterval;
             return this;
         }
         public Long getInhibitionInterval() {
             return this.inhibitionInterval;
+        }
+
+        public UpdateDIAlarmRuleRequestNotificationSettings setMuteInterval(Long muteInterval) {
+            this.muteInterval = muteInterval;
+            return this;
+        }
+        public Long getMuteInterval() {
+            return this.muteInterval;
         }
 
         public UpdateDIAlarmRuleRequestNotificationSettings setNotificationChannels(java.util.List<UpdateDIAlarmRuleRequestNotificationSettingsNotificationChannels> notificationChannels) {
@@ -294,7 +323,11 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
          * <p>The types of DDL operations for which the alert rule takes effect.</p>
          */
         @NameInMap("DdlReportTags")
+        @Deprecated
         public java.util.List<String> ddlReportTags;
+
+        @NameInMap("DdlTypes")
+        public java.util.List<String> ddlTypes;
 
         /**
          * <p>The time interval for alert calculation. Unit: minutes.</p>
@@ -337,12 +370,21 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public UpdateDIAlarmRuleRequestTriggerConditions setDdlReportTags(java.util.List<String> ddlReportTags) {
             this.ddlReportTags = ddlReportTags;
             return this;
         }
         public java.util.List<String> getDdlReportTags() {
             return this.ddlReportTags;
+        }
+
+        public UpdateDIAlarmRuleRequestTriggerConditions setDdlTypes(java.util.List<String> ddlTypes) {
+            this.ddlTypes = ddlTypes;
+            return this;
+        }
+        public java.util.List<String> getDdlTypes() {
+            return this.ddlTypes;
         }
 
         public UpdateDIAlarmRuleRequestTriggerConditions setDuration(Long duration) {

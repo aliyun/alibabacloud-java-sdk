@@ -40,7 +40,7 @@ public class ListWorkflowDefinitionsRequest extends TeaModel {
      * <p>10000</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     /**
      * <p>The workflow type. This parameter specifies a filter condition.</p>
@@ -85,11 +85,11 @@ public class ListWorkflowDefinitionsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListWorkflowDefinitionsRequest setProjectId(String projectId) {
+    public ListWorkflowDefinitionsRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

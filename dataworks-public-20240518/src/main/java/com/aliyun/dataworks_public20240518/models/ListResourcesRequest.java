@@ -40,7 +40,7 @@ public class ListResourcesRequest extends TeaModel {
      * <p>10002</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     /**
      * <p>The resource type. This parameter specifies a filter condition.</p>
@@ -87,11 +87,11 @@ public class ListResourcesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListResourcesRequest setProjectId(String projectId) {
+    public ListResourcesRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

@@ -888,12 +888,13 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The ID of the synchronization task.</p>
+         * <p>This parameter is deprecated. Use the Id parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>32601</p>
          */
         @NameInMap("DIJobId")
+        @Deprecated
         public String DIJobId;
 
         /**
@@ -921,6 +922,15 @@ public class GetDIJobResponseBody extends TeaModel {
         public String destinationDataSourceType;
 
         /**
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32601</p>
+         */
+        @NameInMap("Id")
+        public Long id;
+
+        /**
          * <p>The name of the synchronization task.</p>
          * 
          * <strong>example:</strong>
@@ -936,17 +946,6 @@ public class GetDIJobResponseBody extends TeaModel {
         public GetDIJobResponseBodyPagingInfoJobSettings jobSettings;
 
         /**
-         * <p>任务状态。
-         * 同步状态，取值范围：</p>
-         * <ul>
-         * <li>Finished：运行成功已结束</li>
-         * <li>Failed：运行失败</li>
-         * <li>Running：运行中</li>
-         * <li>Initialized：初始化完成(未启动）</li>
-         * <li>Stopping：停止中</li>
-         * <li>Stop：停止</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -1017,6 +1016,7 @@ public class GetDIJobResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public GetDIJobResponseBodyPagingInfo setDIJobId(String DIJobId) {
             this.DIJobId = DIJobId;
             return this;
@@ -1047,6 +1047,14 @@ public class GetDIJobResponseBody extends TeaModel {
         }
         public String getDestinationDataSourceType() {
             return this.destinationDataSourceType;
+        }
+
+        public GetDIJobResponseBodyPagingInfo setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public GetDIJobResponseBodyPagingInfo setJobName(String jobName) {

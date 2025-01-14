@@ -12,7 +12,7 @@ public class RenameFunctionRequest extends TeaModel {
      * <p>543217824470354XXXX</p>
      */
     @NameInMap("Id")
-    public String id;
+    public Long id;
 
     /**
      * <p>The new name.</p>
@@ -29,18 +29,18 @@ public class RenameFunctionRequest extends TeaModel {
      * <p>10002</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     public static RenameFunctionRequest build(java.util.Map<String, ?> map) throws Exception {
         RenameFunctionRequest self = new RenameFunctionRequest();
         return TeaModel.build(map, self);
     }
 
-    public RenameFunctionRequest setId(String id) {
+    public RenameFunctionRequest setId(Long id) {
         this.id = id;
         return this;
     }
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 
@@ -52,11 +52,11 @@ public class RenameFunctionRequest extends TeaModel {
         return this.name;
     }
 
-    public RenameFunctionRequest setProjectId(String projectId) {
+    public RenameFunctionRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

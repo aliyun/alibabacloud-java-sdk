@@ -42,12 +42,13 @@ public class ListDIJobsResponseBody extends TeaModel {
 
     public static class ListDIJobsResponseBodyPagingInfoDIJobs extends TeaModel {
         /**
-         * <p>The ID of the synchronization task.</p>
+         * <p>This parameter is deprecated. Use the Id parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>32599</p>
          */
         @NameInMap("DIJobId")
+        @Deprecated
         public Long DIJobId;
 
         /**
@@ -58,6 +59,15 @@ public class ListDIJobsResponseBody extends TeaModel {
          */
         @NameInMap("DestinationDataSourceType")
         public String destinationDataSourceType;
+
+        /**
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32599</p>
+         */
+        @NameInMap("Id")
+        public Long id;
 
         /**
          * <p>The name of the synchronization task.</p>
@@ -124,6 +134,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public ListDIJobsResponseBodyPagingInfoDIJobs setDIJobId(Long DIJobId) {
             this.DIJobId = DIJobId;
             return this;
@@ -138,6 +149,14 @@ public class ListDIJobsResponseBody extends TeaModel {
         }
         public String getDestinationDataSourceType() {
             return this.destinationDataSourceType;
+        }
+
+        public ListDIJobsResponseBodyPagingInfoDIJobs setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public ListDIJobsResponseBodyPagingInfoDIJobs setJobName(String jobName) {

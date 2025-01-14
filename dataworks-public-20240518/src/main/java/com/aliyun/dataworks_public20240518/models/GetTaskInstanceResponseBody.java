@@ -573,6 +573,8 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The sequence number of the cycle. This parameter indicates the cycle of the task instance on the current day.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -720,6 +722,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The timeout period of task running. Unit: seconds.</p>
+         * <p>Note: The value of this parameter is rounded up by hour.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

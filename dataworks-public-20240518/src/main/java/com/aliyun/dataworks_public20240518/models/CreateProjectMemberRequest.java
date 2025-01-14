@@ -16,15 +16,15 @@ public class CreateProjectMemberRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The codes of the roles in the workspace. You can call the <a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-listprojectroles?spm=a2c4g.11186623.0.0.43841daeywTtF3">ListProjectRoles</a> operation to query the codes of all roles in the workspace.</p>
-     * <p>You must configure this parameter to specify the roles that you want to assign to the member.</p>
+     * <p>The codes of the roles in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> operation to query the codes of all roles in the workspace.</p>
+     * <p>This parameter specifies the roles that you can assign to a member when you add the member.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RoleCodes")
     public java.util.List<String> roleCodes;
 
     /**
-     * <p>The ID of the account that you want to add to the workspace as a member. You can log on to the <a href="https://workbench.data.aliyun.com/console?spm=openapi-amp.newDocPublishment.0.0.7159281fJ97yfv">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click Tenant Members and Roles. On the Tenant Members and Roles page, view the ID of the account that you want to add to the workspace as a member.</p>
+     * <p>The ID of the account that you want to add to the workspace as a member. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click <strong>Tenant Members and Roles</strong>. On the Tenant Members and Roles page, view the ID of the account that you want to add to the workspace as a member.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -76,6 +76,8 @@ public class ListDataQualityResultsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

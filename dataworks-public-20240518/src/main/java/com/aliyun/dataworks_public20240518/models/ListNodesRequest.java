@@ -11,7 +11,7 @@ public class ListNodesRequest extends TeaModel {
      * <p>860438872620113XXXX</p>
      */
     @NameInMap("ContainerId")
-    public String containerId;
+    public Long containerId;
 
     /**
      * <p>The page number.</p>
@@ -39,7 +39,7 @@ public class ListNodesRequest extends TeaModel {
      * <p>12345</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     /**
      * <strong>example:</strong>
@@ -82,11 +82,11 @@ public class ListNodesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListNodesRequest setContainerId(String containerId) {
+    public ListNodesRequest setContainerId(Long containerId) {
         this.containerId = containerId;
         return this;
     }
-    public String getContainerId() {
+    public Long getContainerId() {
         return this.containerId;
     }
 
@@ -106,11 +106,11 @@ public class ListNodesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListNodesRequest setProjectId(String projectId) {
+    public ListNodesRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

@@ -11,7 +11,7 @@ public class CreateWorkflowDefinitionResponseBody extends TeaModel {
      * <p>463497880880954XXXX</p>
      */
     @NameInMap("Id")
-    public String id;
+    public Long id;
 
     /**
      * <p>The request ID.</p>
@@ -27,11 +27,11 @@ public class CreateWorkflowDefinitionResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateWorkflowDefinitionResponseBody setId(String id) {
+    public CreateWorkflowDefinitionResponseBody setId(Long id) {
         this.id = id;
         return this;
     }
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 

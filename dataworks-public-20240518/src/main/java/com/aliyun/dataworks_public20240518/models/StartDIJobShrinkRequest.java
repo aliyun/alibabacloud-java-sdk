@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class StartDIJobShrinkRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>This parameter is deprecated. Use the Id parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
     @NameInMap("DIJobId")
+    @Deprecated
     public Long DIJobId;
 
     /**
@@ -20,6 +21,15 @@ public class StartDIJobShrinkRequest extends TeaModel {
     @NameInMap("ForceToRerun")
     public Boolean forceToRerun;
 
+    /**
+     * <p>The ID of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
+    @NameInMap("Id")
+    public Long id;
+
     @NameInMap("RealtimeStartSettings")
     public String realtimeStartSettingsShrink;
 
@@ -28,6 +38,7 @@ public class StartDIJobShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public StartDIJobShrinkRequest setDIJobId(Long DIJobId) {
         this.DIJobId = DIJobId;
         return this;
@@ -42,6 +53,14 @@ public class StartDIJobShrinkRequest extends TeaModel {
     }
     public Boolean getForceToRerun() {
         return this.forceToRerun;
+    }
+
+    public StartDIJobShrinkRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public StartDIJobShrinkRequest setRealtimeStartSettingsShrink(String realtimeStartSettingsShrink) {

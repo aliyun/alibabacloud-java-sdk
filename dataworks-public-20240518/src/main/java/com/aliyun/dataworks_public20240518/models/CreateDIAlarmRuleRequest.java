@@ -248,7 +248,11 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
          * <p>5</p>
          */
         @NameInMap("InhibitionInterval")
+        @Deprecated
         public Integer inhibitionInterval;
+
+        @NameInMap("MuteInterval")
+        public Integer muteInterval;
 
         /**
          * <p>The alert notification methods.</p>
@@ -267,12 +271,21 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public CreateDIAlarmRuleRequestNotificationSettings setInhibitionInterval(Integer inhibitionInterval) {
             this.inhibitionInterval = inhibitionInterval;
             return this;
         }
         public Integer getInhibitionInterval() {
             return this.inhibitionInterval;
+        }
+
+        public CreateDIAlarmRuleRequestNotificationSettings setMuteInterval(Integer muteInterval) {
+            this.muteInterval = muteInterval;
+            return this;
+        }
+        public Integer getMuteInterval() {
+            return this.muteInterval;
         }
 
         public CreateDIAlarmRuleRequestNotificationSettings setNotificationChannels(java.util.List<CreateDIAlarmRuleRequestNotificationSettingsNotificationChannels> notificationChannels) {
@@ -298,7 +311,11 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
          * <p>The types of DDL operations for which the alert rule takes effect.</p>
          */
         @NameInMap("DdlReportTags")
+        @Deprecated
         public java.util.List<String> ddlReportTags;
+
+        @NameInMap("DdlTypes")
+        public java.util.List<String> ddlTypes;
 
         /**
          * <p>The time interval for alert calculation. Unit: minutes.</p>
@@ -341,12 +358,21 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public CreateDIAlarmRuleRequestTriggerConditions setDdlReportTags(java.util.List<String> ddlReportTags) {
             this.ddlReportTags = ddlReportTags;
             return this;
         }
         public java.util.List<String> getDdlReportTags() {
             return this.ddlReportTags;
+        }
+
+        public CreateDIAlarmRuleRequestTriggerConditions setDdlTypes(java.util.List<String> ddlTypes) {
+            this.ddlTypes = ddlTypes;
+            return this;
+        }
+        public java.util.List<String> getDdlTypes() {
+            return this.ddlTypes;
         }
 
         public CreateDIAlarmRuleRequestTriggerConditions setDuration(Long duration) {

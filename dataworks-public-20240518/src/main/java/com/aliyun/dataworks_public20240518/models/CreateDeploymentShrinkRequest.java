@@ -29,7 +29,7 @@ public class CreateDeploymentShrinkRequest extends TeaModel {
      * <p>10000</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     /**
      * <p>Specifies whether to deploy or undeploy the entity. Valid values:</p>
@@ -66,11 +66,11 @@ public class CreateDeploymentShrinkRequest extends TeaModel {
         return this.objectIdsShrink;
     }
 
-    public CreateDeploymentShrinkRequest setProjectId(String projectId) {
+    public CreateDeploymentShrinkRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

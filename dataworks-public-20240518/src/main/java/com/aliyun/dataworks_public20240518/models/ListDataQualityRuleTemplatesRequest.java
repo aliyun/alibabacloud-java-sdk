@@ -3,19 +3,17 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class ListDataQualityRuleTemplateRequest extends TeaModel {
+public class ListDataQualityRuleTemplatesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>System</p>
+     */
     @NameInMap("CreationSource")
     public String creationSource;
 
-    /**
-     * <p>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</p>
-     */
     @NameInMap("DirectoryPath")
     public String directoryPath;
 
-    /**
-     * <p>The name of the template. If you want to query a system template, set this parameter to the name of the system template. Fuzzy match is supported.</p>
-     */
     @NameInMap("Name")
     public String name;
 
@@ -38,7 +36,7 @@ public class ListDataQualityRuleTemplateRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The DataWorks workspace ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -46,12 +44,12 @@ public class ListDataQualityRuleTemplateRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
-    public static ListDataQualityRuleTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListDataQualityRuleTemplateRequest self = new ListDataQualityRuleTemplateRequest();
+    public static ListDataQualityRuleTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListDataQualityRuleTemplatesRequest self = new ListDataQualityRuleTemplatesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListDataQualityRuleTemplateRequest setCreationSource(String creationSource) {
+    public ListDataQualityRuleTemplatesRequest setCreationSource(String creationSource) {
         this.creationSource = creationSource;
         return this;
     }
@@ -59,7 +57,7 @@ public class ListDataQualityRuleTemplateRequest extends TeaModel {
         return this.creationSource;
     }
 
-    public ListDataQualityRuleTemplateRequest setDirectoryPath(String directoryPath) {
+    public ListDataQualityRuleTemplatesRequest setDirectoryPath(String directoryPath) {
         this.directoryPath = directoryPath;
         return this;
     }
@@ -67,7 +65,7 @@ public class ListDataQualityRuleTemplateRequest extends TeaModel {
         return this.directoryPath;
     }
 
-    public ListDataQualityRuleTemplateRequest setName(String name) {
+    public ListDataQualityRuleTemplatesRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -75,7 +73,7 @@ public class ListDataQualityRuleTemplateRequest extends TeaModel {
         return this.name;
     }
 
-    public ListDataQualityRuleTemplateRequest setPageNumber(Integer pageNumber) {
+    public ListDataQualityRuleTemplatesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -83,7 +81,7 @@ public class ListDataQualityRuleTemplateRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListDataQualityRuleTemplateRequest setPageSize(Integer pageSize) {
+    public ListDataQualityRuleTemplatesRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -91,7 +89,7 @@ public class ListDataQualityRuleTemplateRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListDataQualityRuleTemplateRequest setProjectId(Long projectId) {
+    public ListDataQualityRuleTemplatesRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }

@@ -53,6 +53,44 @@ public class GetResourceGroupResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetResourceGroupResponseBodyResourceGroupAliyunResourceTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static GetResourceGroupResponseBodyResourceGroupAliyunResourceTags build(java.util.Map<String, ?> map) throws Exception {
+            GetResourceGroupResponseBodyResourceGroupAliyunResourceTags self = new GetResourceGroupResponseBodyResourceGroupAliyunResourceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResourceGroupResponseBodyResourceGroupAliyunResourceTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetResourceGroupResponseBodyResourceGroupAliyunResourceTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetResourceGroupResponseBodyResourceGroupSpec extends TeaModel {
         /**
          * <p>The number of resources in the resource group.</p>
@@ -94,6 +132,16 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
 
     public static class GetResourceGroupResponseBodyResourceGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>rg-aek2kqofrgXXXXX</p>
+         */
+        @NameInMap("AliyunResourceGroupId")
+        public String aliyunResourceGroupId;
+
+        @NameInMap("AliyunResourceTags")
+        public java.util.List<GetResourceGroupResponseBodyResourceGroupAliyunResourceTags> aliyunResourceTags;
+
         /**
          * <strong>example:</strong>
          * <p>1727055811000</p>
@@ -202,6 +250,22 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public static GetResourceGroupResponseBodyResourceGroup build(java.util.Map<String, ?> map) throws Exception {
             GetResourceGroupResponseBodyResourceGroup self = new GetResourceGroupResponseBodyResourceGroup();
             return TeaModel.build(map, self);
+        }
+
+        public GetResourceGroupResponseBodyResourceGroup setAliyunResourceGroupId(String aliyunResourceGroupId) {
+            this.aliyunResourceGroupId = aliyunResourceGroupId;
+            return this;
+        }
+        public String getAliyunResourceGroupId() {
+            return this.aliyunResourceGroupId;
+        }
+
+        public GetResourceGroupResponseBodyResourceGroup setAliyunResourceTags(java.util.List<GetResourceGroupResponseBodyResourceGroupAliyunResourceTags> aliyunResourceTags) {
+            this.aliyunResourceTags = aliyunResourceTags;
+            return this;
+        }
+        public java.util.List<GetResourceGroupResponseBodyResourceGroupAliyunResourceTags> getAliyunResourceTags() {
+            return this.aliyunResourceTags;
         }
 
         public GetResourceGroupResponseBodyResourceGroup setCreateTime(Long createTime) {

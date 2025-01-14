@@ -12,7 +12,7 @@ public class GetNodeRequest extends TeaModel {
      * <p>860438872620113XXXX</p>
      */
     @NameInMap("Id")
-    public String id;
+    public Long id;
 
     /**
      * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
@@ -22,26 +22,26 @@ public class GetNodeRequest extends TeaModel {
      * <p>10000</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     public static GetNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         GetNodeRequest self = new GetNodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetNodeRequest setId(String id) {
+    public GetNodeRequest setId(Long id) {
         this.id = id;
         return this;
     }
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public GetNodeRequest setProjectId(String projectId) {
+    public GetNodeRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

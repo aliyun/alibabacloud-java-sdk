@@ -28,13 +28,13 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String destinationDataSourceType;
 
     /**
-     * <p>The name of the synchronization task.</p>
-     * <p>This parameter is required.</p>
+     * <p>This parameter is deprecated and is replaced by the Name parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql_to_holo_sync_8772</p>
      */
     @NameInMap("JobName")
+    @Deprecated
     public String jobName;
 
     /**
@@ -59,6 +59,15 @@ public class CreateDIJobShrinkRequest extends TeaModel {
      */
     @NameInMap("MigrationType")
     public String migrationType;
+
+    /**
+     * <p>The name of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql_to_holo_sync_8772</p>
+     */
+    @NameInMap("Name")
+    public String name;
 
     /**
      * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
@@ -136,6 +145,7 @@ public class CreateDIJobShrinkRequest extends TeaModel {
         return this.destinationDataSourceType;
     }
 
+    @Deprecated
     public CreateDIJobShrinkRequest setJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -158,6 +168,14 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     }
     public String getMigrationType() {
         return this.migrationType;
+    }
+
+    public CreateDIJobShrinkRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public CreateDIJobShrinkRequest setProjectId(Long projectId) {

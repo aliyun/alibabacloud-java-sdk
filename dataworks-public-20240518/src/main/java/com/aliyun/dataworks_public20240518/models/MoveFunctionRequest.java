@@ -12,7 +12,7 @@ public class MoveFunctionRequest extends TeaModel {
      * <p>543217824470354XXXX</p>
      */
     @NameInMap("Id")
-    public String id;
+    public Long id;
 
     /**
      * <p>The path to which you want to move the UDF. You do not need to specify a UDF name in the path.</p>
@@ -34,18 +34,18 @@ public class MoveFunctionRequest extends TeaModel {
      * <p>12345</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     public static MoveFunctionRequest build(java.util.Map<String, ?> map) throws Exception {
         MoveFunctionRequest self = new MoveFunctionRequest();
         return TeaModel.build(map, self);
     }
 
-    public MoveFunctionRequest setId(String id) {
+    public MoveFunctionRequest setId(Long id) {
         this.id = id;
         return this;
     }
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 
@@ -57,11 +57,11 @@ public class MoveFunctionRequest extends TeaModel {
         return this.path;
     }
 
-    public MoveFunctionRequest setProjectId(String projectId) {
+    public MoveFunctionRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteDIAlarmRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the alert rule.</p>
+     * <p>This parameter is deprecated. Use the Id parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("DIAlarmRuleId")
+    @Deprecated
     public Long DIAlarmRuleId;
 
     /**
@@ -22,11 +23,19 @@ public class DeleteDIAlarmRuleRequest extends TeaModel {
     @NameInMap("DIJobId")
     public Long DIJobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("Id")
+    public Long id;
+
     public static DeleteDIAlarmRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDIAlarmRuleRequest self = new DeleteDIAlarmRuleRequest();
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public DeleteDIAlarmRuleRequest setDIAlarmRuleId(Long DIAlarmRuleId) {
         this.DIAlarmRuleId = DIAlarmRuleId;
         return this;
@@ -41,6 +50,14 @@ public class DeleteDIAlarmRuleRequest extends TeaModel {
     }
     public Long getDIJobId() {
         return this.DIJobId;
+    }
+
+    public DeleteDIAlarmRuleRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
 }

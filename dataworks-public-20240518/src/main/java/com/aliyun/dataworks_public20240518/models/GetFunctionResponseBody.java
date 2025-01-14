@@ -57,7 +57,7 @@ public class GetFunctionResponseBody extends TeaModel {
          * <p>860438872620113XXXX</p>
          */
         @NameInMap("Id")
-        public String id;
+        public Long id;
 
         /**
          * <p>The time when the UDF was last modified. This value is a UNIX timestamp.</p>
@@ -90,7 +90,7 @@ public class GetFunctionResponseBody extends TeaModel {
          * <p>10000</p>
          */
         @NameInMap("ProjectId")
-        public String projectId;
+        public Long projectId;
 
         /**
          * <p>The FlowSpec field information about the UDF. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
@@ -111,11 +111,11 @@ public class GetFunctionResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetFunctionResponseBodyFunction setId(String id) {
+        public GetFunctionResponseBodyFunction setId(Long id) {
             this.id = id;
             return this;
         }
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -143,11 +143,11 @@ public class GetFunctionResponseBody extends TeaModel {
             return this.owner;
         }
 
-        public GetFunctionResponseBodyFunction setProjectId(String projectId) {
+        public GetFunctionResponseBodyFunction setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 

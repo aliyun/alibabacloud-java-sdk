@@ -275,14 +275,8 @@ public class GetAlertRuleResponseBody extends TeaModel {
     }
 
     public static class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionError extends TeaModel {
-        /**
-         * <p>Indicates whether an alert is triggered if a batch synchronization task is automatically rerun upon a failure.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
-        @NameInMap("AutoRerunAlert")
-        public Boolean autoRerunAlert;
+        @NameInMap("AutoRerunAlertEnabled")
+        public Boolean autoRerunAlertEnabled;
 
         /**
          * <p>The IDs of the real-time computing tasks. This parameter is required when you monitor real-time computing tasks.</p>
@@ -295,12 +289,12 @@ public class GetAlertRuleResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionError setAutoRerunAlert(Boolean autoRerunAlert) {
-            this.autoRerunAlert = autoRerunAlert;
+        public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionError setAutoRerunAlertEnabled(Boolean autoRerunAlertEnabled) {
+            this.autoRerunAlertEnabled = autoRerunAlertEnabled;
             return this;
         }
-        public Boolean getAutoRerunAlert() {
-            return this.autoRerunAlert;
+        public Boolean getAutoRerunAlertEnabled() {
+            return this.autoRerunAlertEnabled;
         }
 
         public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionError setStreamTaskIds(java.util.List<Long> streamTaskIds) {

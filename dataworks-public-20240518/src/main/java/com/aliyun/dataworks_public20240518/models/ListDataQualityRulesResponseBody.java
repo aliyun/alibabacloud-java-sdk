@@ -656,15 +656,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         @NameInMap("TemplateCode")
         public String templateCode;
 
-        /**
-         * <p>The ID of the DataWorks tenant.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100001</p>
-         */
-        @NameInMap("TenantId")
-        public Long tenantId;
-
         public static ListDataQualityRulesResponseBodyPagingInfoDataQualityRules build(java.util.Map<String, ?> map) throws Exception {
             ListDataQualityRulesResponseBodyPagingInfoDataQualityRules self = new ListDataQualityRulesResponseBodyPagingInfoDataQualityRules();
             return TeaModel.build(map, self);
@@ -756,14 +747,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         }
         public String getTemplateCode() {
             return this.templateCode;
-        }
-
-        public ListDataQualityRulesResponseBodyPagingInfoDataQualityRules setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
         }
 
     }

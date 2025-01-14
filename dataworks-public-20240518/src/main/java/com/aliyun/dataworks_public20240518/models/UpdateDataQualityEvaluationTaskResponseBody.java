@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDataQualityEvaluationTaskResponseBody extends TeaModel {
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDataQualityEvaluationTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -6,6 +6,15 @@ import com.aliyun.tea.*;
 public class UpdateResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2kqofrgXXXXX</p>
+     */
+    @NameInMap("AliyunResourceGroupId")
+    public String aliyunResourceGroupId;
+
+    /**
+     * <p>The ID of the resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +44,14 @@ public class UpdateResourceGroupRequest extends TeaModel {
     public static UpdateResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateResourceGroupRequest self = new UpdateResourceGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateResourceGroupRequest setAliyunResourceGroupId(String aliyunResourceGroupId) {
+        this.aliyunResourceGroupId = aliyunResourceGroupId;
+        return this;
+    }
+    public String getAliyunResourceGroupId() {
+        return this.aliyunResourceGroupId;
     }
 
     public UpdateResourceGroupRequest setId(String id) {

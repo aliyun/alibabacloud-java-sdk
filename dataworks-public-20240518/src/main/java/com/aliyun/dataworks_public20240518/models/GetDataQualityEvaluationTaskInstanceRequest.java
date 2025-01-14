@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDataQualityEvaluationTaskInstanceRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>7227550902</p>
      */

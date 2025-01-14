@@ -12,7 +12,7 @@ public class ListNodeDependenciesRequest extends TeaModel {
      * <p>860438872620113XXXX</p>
      */
     @NameInMap("Id")
-    public String id;
+    public Long id;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
@@ -41,18 +41,18 @@ public class ListNodeDependenciesRequest extends TeaModel {
      * <p>10001</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     public static ListNodeDependenciesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNodeDependenciesRequest self = new ListNodeDependenciesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListNodeDependenciesRequest setId(String id) {
+    public ListNodeDependenciesRequest setId(Long id) {
         this.id = id;
         return this;
     }
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 
@@ -72,11 +72,11 @@ public class ListNodeDependenciesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListNodeDependenciesRequest setProjectId(String projectId) {
+    public ListNodeDependenciesRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

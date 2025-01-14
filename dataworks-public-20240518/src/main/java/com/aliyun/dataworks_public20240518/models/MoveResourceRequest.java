@@ -12,7 +12,7 @@ public class MoveResourceRequest extends TeaModel {
      * <p>652567824470354XXXX</p>
      */
     @NameInMap("Id")
-    public String id;
+    public Long id;
 
     /**
      * <p>The path to which you want to move the file resource. You do not need to specify a file resource name in the path.</p>
@@ -34,18 +34,18 @@ public class MoveResourceRequest extends TeaModel {
      * <p>10000</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     public static MoveResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         MoveResourceRequest self = new MoveResourceRequest();
         return TeaModel.build(map, self);
     }
 
-    public MoveResourceRequest setId(String id) {
+    public MoveResourceRequest setId(Long id) {
         this.id = id;
         return this;
     }
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 
@@ -57,11 +57,11 @@ public class MoveResourceRequest extends TeaModel {
         return this.path;
     }
 
-    public MoveResourceRequest setProjectId(String projectId) {
+    public MoveResourceRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

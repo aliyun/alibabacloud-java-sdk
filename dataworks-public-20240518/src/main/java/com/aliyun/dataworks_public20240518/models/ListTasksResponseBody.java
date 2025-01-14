@@ -281,10 +281,6 @@ public class ListTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>实例生成模式。</p>
-         * <p>T+1（第二天生成）</p>
-         * <p>Immediately（立即生成）</p>
-         * 
          * <strong>example:</strong>
          * <p>T+1</p>
          */
@@ -394,6 +390,9 @@ public class ListTasksResponseBody extends TeaModel {
          */
         @NameInMap("RuntimeResource")
         public ListTasksResponseBodyPagingInfoTasksRuntimeResource runtimeResource;
+
+        @NameInMap("ScriptParameters")
+        public String scriptParameters;
 
         /**
          * <p>The tenant ID.</p>
@@ -584,6 +583,14 @@ public class ListTasksResponseBody extends TeaModel {
         }
         public ListTasksResponseBodyPagingInfoTasksRuntimeResource getRuntimeResource() {
             return this.runtimeResource;
+        }
+
+        public ListTasksResponseBodyPagingInfoTasks setScriptParameters(String scriptParameters) {
+            this.scriptParameters = scriptParameters;
+            return this;
+        }
+        public String getScriptParameters() {
+            return this.scriptParameters;
         }
 
         public ListTasksResponseBodyPagingInfoTasks setTenantId(Long tenantId) {

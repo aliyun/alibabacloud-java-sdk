@@ -40,7 +40,7 @@ public class ListFunctionsRequest extends TeaModel {
      * <p>12345</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     /**
      * <p>The UDF type. This parameter specifies a filter condition.</p>
@@ -89,11 +89,11 @@ public class ListFunctionsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListFunctionsRequest setProjectId(String projectId) {
+    public ListFunctionsRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

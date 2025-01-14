@@ -12,7 +12,7 @@ public class MoveWorkflowDefinitionRequest extends TeaModel {
      * <p>543217824470354XXXX</p>
      */
     @NameInMap("Id")
-    public String id;
+    public Long id;
 
     /**
      * <p>The path to which you want to move the workflow. You do not need to specify a workflow name in the path.</p>
@@ -33,18 +33,18 @@ public class MoveWorkflowDefinitionRequest extends TeaModel {
      * <p>10001</p>
      */
     @NameInMap("ProjectId")
-    public String projectId;
+    public Long projectId;
 
     public static MoveWorkflowDefinitionRequest build(java.util.Map<String, ?> map) throws Exception {
         MoveWorkflowDefinitionRequest self = new MoveWorkflowDefinitionRequest();
         return TeaModel.build(map, self);
     }
 
-    public MoveWorkflowDefinitionRequest setId(String id) {
+    public MoveWorkflowDefinitionRequest setId(Long id) {
         this.id = id;
         return this;
     }
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 
@@ -56,11 +56,11 @@ public class MoveWorkflowDefinitionRequest extends TeaModel {
         return this.path;
     }
 
-    public MoveWorkflowDefinitionRequest setProjectId(String projectId) {
+    public MoveWorkflowDefinitionRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 

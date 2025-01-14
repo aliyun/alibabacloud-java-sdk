@@ -8,8 +8,8 @@ public class CreateNetworkResponseBody extends TeaModel {
      * <strong>example:</strong>
      * <p>1000</p>
      */
-    @NameInMap("NetworkId")
-    public Long networkId;
+    @NameInMap("Id")
+    public Long id;
 
     /**
      * <strong>example:</strong>
@@ -30,12 +30,12 @@ public class CreateNetworkResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateNetworkResponseBody setNetworkId(Long networkId) {
-        this.networkId = networkId;
+    public CreateNetworkResponseBody setId(Long id) {
+        this.id = id;
         return this;
     }
-    public Long getNetworkId() {
-        return this.networkId;
+    public Long getId() {
+        return this.id;
     }
 
     public CreateNetworkResponseBody setRequestId(String requestId) {
