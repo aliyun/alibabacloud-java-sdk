@@ -945,6 +945,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("PrimaryId")
         public Long primaryId;
 
+        @NameInMap("Progress")
+        public Integer progress;
+
         /**
          * <p>Indicates whether the application protection feature is supported. Valid values:</p>
          * <ul>
@@ -1280,6 +1283,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public Long getPrimaryId() {
             return this.primaryId;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setProgress(Integer progress) {
+            this.progress = progress;
+            return this;
+        }
+        public Integer getProgress() {
+            return this.progress;
         }
 
         public DescribeVulListResponseBodyVulRecords setRaspDefend(Integer raspDefend) {
