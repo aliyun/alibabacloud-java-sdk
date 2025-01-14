@@ -3,7 +3,7 @@ package com.aliyun.quanmiaolightapp20240801.models;
 
 import com.aliyun.tea.*;
 
-public class RunVideoAnalysisShrinkRequest extends TeaModel {
+public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
     @NameInMap("frameSampleMethod")
     public String frameSampleMethodShrink;
 
@@ -12,7 +12,7 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>english</p>
+     * <p>chinese</p>
      */
     @NameInMap("language")
     public String language;
@@ -36,20 +36,10 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>a3d1c2ac-f086-4a21-9069-f5631542f5ax</p>
+     * <p>2</p>
      */
-    @NameInMap("originalSessionId")
-    public String originalSessionId;
-
     @NameInMap("snapshotInterval")
     public Double snapshotInterval;
-
-    /**
-     * <strong>example:</strong>
-     * <p>a3d1c2ac-f086-4a21-9069-f5631542f5a2</p>
-     */
-    @NameInMap("taskId")
-    public String taskId;
 
     @NameInMap("videoExtraInfo")
     public String videoExtraInfo;
@@ -59,7 +49,7 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>qwen-vl-max</p>
+     * <p>qwen-vl-max-latest</p>
      */
     @NameInMap("videoModelId")
     public String videoModelId;
@@ -68,18 +58,20 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
     public String videoRolesShrink;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xxxx.mp4">http://xxxx.mp4</a></p>
      */
     @NameInMap("videoUrl")
     public String videoUrl;
 
-    public static RunVideoAnalysisShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        RunVideoAnalysisShrinkRequest self = new RunVideoAnalysisShrinkRequest();
+    public static SubmitVideoAnalysisTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        SubmitVideoAnalysisTaskShrinkRequest self = new SubmitVideoAnalysisTaskShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public RunVideoAnalysisShrinkRequest setFrameSampleMethodShrink(String frameSampleMethodShrink) {
+    public SubmitVideoAnalysisTaskShrinkRequest setFrameSampleMethodShrink(String frameSampleMethodShrink) {
         this.frameSampleMethodShrink = frameSampleMethodShrink;
         return this;
     }
@@ -87,7 +79,7 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
         return this.frameSampleMethodShrink;
     }
 
-    public RunVideoAnalysisShrinkRequest setGenerateOptionsShrink(String generateOptionsShrink) {
+    public SubmitVideoAnalysisTaskShrinkRequest setGenerateOptionsShrink(String generateOptionsShrink) {
         this.generateOptionsShrink = generateOptionsShrink;
         return this;
     }
@@ -95,7 +87,7 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
         return this.generateOptionsShrink;
     }
 
-    public RunVideoAnalysisShrinkRequest setLanguage(String language) {
+    public SubmitVideoAnalysisTaskShrinkRequest setLanguage(String language) {
         this.language = language;
         return this;
     }
@@ -103,7 +95,7 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
         return this.language;
     }
 
-    public RunVideoAnalysisShrinkRequest setModelCustomPromptTemplate(String modelCustomPromptTemplate) {
+    public SubmitVideoAnalysisTaskShrinkRequest setModelCustomPromptTemplate(String modelCustomPromptTemplate) {
         this.modelCustomPromptTemplate = modelCustomPromptTemplate;
         return this;
     }
@@ -111,7 +103,7 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
         return this.modelCustomPromptTemplate;
     }
 
-    public RunVideoAnalysisShrinkRequest setModelCustomPromptTemplateId(String modelCustomPromptTemplateId) {
+    public SubmitVideoAnalysisTaskShrinkRequest setModelCustomPromptTemplateId(String modelCustomPromptTemplateId) {
         this.modelCustomPromptTemplateId = modelCustomPromptTemplateId;
         return this;
     }
@@ -119,7 +111,7 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
         return this.modelCustomPromptTemplateId;
     }
 
-    public RunVideoAnalysisShrinkRequest setModelId(String modelId) {
+    public SubmitVideoAnalysisTaskShrinkRequest setModelId(String modelId) {
         this.modelId = modelId;
         return this;
     }
@@ -127,15 +119,7 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
         return this.modelId;
     }
 
-    public RunVideoAnalysisShrinkRequest setOriginalSessionId(String originalSessionId) {
-        this.originalSessionId = originalSessionId;
-        return this;
-    }
-    public String getOriginalSessionId() {
-        return this.originalSessionId;
-    }
-
-    public RunVideoAnalysisShrinkRequest setSnapshotInterval(Double snapshotInterval) {
+    public SubmitVideoAnalysisTaskShrinkRequest setSnapshotInterval(Double snapshotInterval) {
         this.snapshotInterval = snapshotInterval;
         return this;
     }
@@ -143,15 +127,7 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
         return this.snapshotInterval;
     }
 
-    public RunVideoAnalysisShrinkRequest setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    public RunVideoAnalysisShrinkRequest setVideoExtraInfo(String videoExtraInfo) {
+    public SubmitVideoAnalysisTaskShrinkRequest setVideoExtraInfo(String videoExtraInfo) {
         this.videoExtraInfo = videoExtraInfo;
         return this;
     }
@@ -159,7 +135,7 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
         return this.videoExtraInfo;
     }
 
-    public RunVideoAnalysisShrinkRequest setVideoModelCustomPromptTemplate(String videoModelCustomPromptTemplate) {
+    public SubmitVideoAnalysisTaskShrinkRequest setVideoModelCustomPromptTemplate(String videoModelCustomPromptTemplate) {
         this.videoModelCustomPromptTemplate = videoModelCustomPromptTemplate;
         return this;
     }
@@ -167,7 +143,7 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
         return this.videoModelCustomPromptTemplate;
     }
 
-    public RunVideoAnalysisShrinkRequest setVideoModelId(String videoModelId) {
+    public SubmitVideoAnalysisTaskShrinkRequest setVideoModelId(String videoModelId) {
         this.videoModelId = videoModelId;
         return this;
     }
@@ -175,7 +151,7 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
         return this.videoModelId;
     }
 
-    public RunVideoAnalysisShrinkRequest setVideoRolesShrink(String videoRolesShrink) {
+    public SubmitVideoAnalysisTaskShrinkRequest setVideoRolesShrink(String videoRolesShrink) {
         this.videoRolesShrink = videoRolesShrink;
         return this;
     }
@@ -183,7 +159,7 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
         return this.videoRolesShrink;
     }
 
-    public RunVideoAnalysisShrinkRequest setVideoUrl(String videoUrl) {
+    public SubmitVideoAnalysisTaskShrinkRequest setVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
         return this;
     }
