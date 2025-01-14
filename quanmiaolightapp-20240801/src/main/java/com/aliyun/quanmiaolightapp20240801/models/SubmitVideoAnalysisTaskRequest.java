@@ -3,16 +3,16 @@ package com.aliyun.quanmiaolightapp20240801.models;
 
 import com.aliyun.tea.*;
 
-public class RunVideoAnalysisRequest extends TeaModel {
+public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     @NameInMap("frameSampleMethod")
-    public RunVideoAnalysisRequestFrameSampleMethod frameSampleMethod;
+    public SubmitVideoAnalysisTaskRequestFrameSampleMethod frameSampleMethod;
 
     @NameInMap("generateOptions")
     public java.util.List<String> generateOptions;
 
     /**
      * <strong>example:</strong>
-     * <p>english</p>
+     * <p>chinese</p>
      */
     @NameInMap("language")
     public String language;
@@ -36,20 +36,10 @@ public class RunVideoAnalysisRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>a3d1c2ac-f086-4a21-9069-f5631542f5ax</p>
+     * <p>2</p>
      */
-    @NameInMap("originalSessionId")
-    public String originalSessionId;
-
     @NameInMap("snapshotInterval")
     public Double snapshotInterval;
-
-    /**
-     * <strong>example:</strong>
-     * <p>a3d1c2ac-f086-4a21-9069-f5631542f5a2</p>
-     */
-    @NameInMap("taskId")
-    public String taskId;
 
     @NameInMap("videoExtraInfo")
     public String videoExtraInfo;
@@ -59,35 +49,37 @@ public class RunVideoAnalysisRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>qwen-vl-max</p>
+     * <p>qwen-vl-max-latest</p>
      */
     @NameInMap("videoModelId")
     public String videoModelId;
 
     @NameInMap("videoRoles")
-    public java.util.List<RunVideoAnalysisRequestVideoRoles> videoRoles;
+    public java.util.List<SubmitVideoAnalysisTaskRequestVideoRoles> videoRoles;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xxxx.mp4">http://xxxx.mp4</a></p>
      */
     @NameInMap("videoUrl")
     public String videoUrl;
 
-    public static RunVideoAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
-        RunVideoAnalysisRequest self = new RunVideoAnalysisRequest();
+    public static SubmitVideoAnalysisTaskRequest build(java.util.Map<String, ?> map) throws Exception {
+        SubmitVideoAnalysisTaskRequest self = new SubmitVideoAnalysisTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public RunVideoAnalysisRequest setFrameSampleMethod(RunVideoAnalysisRequestFrameSampleMethod frameSampleMethod) {
+    public SubmitVideoAnalysisTaskRequest setFrameSampleMethod(SubmitVideoAnalysisTaskRequestFrameSampleMethod frameSampleMethod) {
         this.frameSampleMethod = frameSampleMethod;
         return this;
     }
-    public RunVideoAnalysisRequestFrameSampleMethod getFrameSampleMethod() {
+    public SubmitVideoAnalysisTaskRequestFrameSampleMethod getFrameSampleMethod() {
         return this.frameSampleMethod;
     }
 
-    public RunVideoAnalysisRequest setGenerateOptions(java.util.List<String> generateOptions) {
+    public SubmitVideoAnalysisTaskRequest setGenerateOptions(java.util.List<String> generateOptions) {
         this.generateOptions = generateOptions;
         return this;
     }
@@ -95,7 +87,7 @@ public class RunVideoAnalysisRequest extends TeaModel {
         return this.generateOptions;
     }
 
-    public RunVideoAnalysisRequest setLanguage(String language) {
+    public SubmitVideoAnalysisTaskRequest setLanguage(String language) {
         this.language = language;
         return this;
     }
@@ -103,7 +95,7 @@ public class RunVideoAnalysisRequest extends TeaModel {
         return this.language;
     }
 
-    public RunVideoAnalysisRequest setModelCustomPromptTemplate(String modelCustomPromptTemplate) {
+    public SubmitVideoAnalysisTaskRequest setModelCustomPromptTemplate(String modelCustomPromptTemplate) {
         this.modelCustomPromptTemplate = modelCustomPromptTemplate;
         return this;
     }
@@ -111,7 +103,7 @@ public class RunVideoAnalysisRequest extends TeaModel {
         return this.modelCustomPromptTemplate;
     }
 
-    public RunVideoAnalysisRequest setModelCustomPromptTemplateId(String modelCustomPromptTemplateId) {
+    public SubmitVideoAnalysisTaskRequest setModelCustomPromptTemplateId(String modelCustomPromptTemplateId) {
         this.modelCustomPromptTemplateId = modelCustomPromptTemplateId;
         return this;
     }
@@ -119,7 +111,7 @@ public class RunVideoAnalysisRequest extends TeaModel {
         return this.modelCustomPromptTemplateId;
     }
 
-    public RunVideoAnalysisRequest setModelId(String modelId) {
+    public SubmitVideoAnalysisTaskRequest setModelId(String modelId) {
         this.modelId = modelId;
         return this;
     }
@@ -127,15 +119,7 @@ public class RunVideoAnalysisRequest extends TeaModel {
         return this.modelId;
     }
 
-    public RunVideoAnalysisRequest setOriginalSessionId(String originalSessionId) {
-        this.originalSessionId = originalSessionId;
-        return this;
-    }
-    public String getOriginalSessionId() {
-        return this.originalSessionId;
-    }
-
-    public RunVideoAnalysisRequest setSnapshotInterval(Double snapshotInterval) {
+    public SubmitVideoAnalysisTaskRequest setSnapshotInterval(Double snapshotInterval) {
         this.snapshotInterval = snapshotInterval;
         return this;
     }
@@ -143,15 +127,7 @@ public class RunVideoAnalysisRequest extends TeaModel {
         return this.snapshotInterval;
     }
 
-    public RunVideoAnalysisRequest setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    public RunVideoAnalysisRequest setVideoExtraInfo(String videoExtraInfo) {
+    public SubmitVideoAnalysisTaskRequest setVideoExtraInfo(String videoExtraInfo) {
         this.videoExtraInfo = videoExtraInfo;
         return this;
     }
@@ -159,7 +135,7 @@ public class RunVideoAnalysisRequest extends TeaModel {
         return this.videoExtraInfo;
     }
 
-    public RunVideoAnalysisRequest setVideoModelCustomPromptTemplate(String videoModelCustomPromptTemplate) {
+    public SubmitVideoAnalysisTaskRequest setVideoModelCustomPromptTemplate(String videoModelCustomPromptTemplate) {
         this.videoModelCustomPromptTemplate = videoModelCustomPromptTemplate;
         return this;
     }
@@ -167,7 +143,7 @@ public class RunVideoAnalysisRequest extends TeaModel {
         return this.videoModelCustomPromptTemplate;
     }
 
-    public RunVideoAnalysisRequest setVideoModelId(String videoModelId) {
+    public SubmitVideoAnalysisTaskRequest setVideoModelId(String videoModelId) {
         this.videoModelId = videoModelId;
         return this;
     }
@@ -175,15 +151,15 @@ public class RunVideoAnalysisRequest extends TeaModel {
         return this.videoModelId;
     }
 
-    public RunVideoAnalysisRequest setVideoRoles(java.util.List<RunVideoAnalysisRequestVideoRoles> videoRoles) {
+    public SubmitVideoAnalysisTaskRequest setVideoRoles(java.util.List<SubmitVideoAnalysisTaskRequestVideoRoles> videoRoles) {
         this.videoRoles = videoRoles;
         return this;
     }
-    public java.util.List<RunVideoAnalysisRequestVideoRoles> getVideoRoles() {
+    public java.util.List<SubmitVideoAnalysisTaskRequestVideoRoles> getVideoRoles() {
         return this.videoRoles;
     }
 
-    public RunVideoAnalysisRequest setVideoUrl(String videoUrl) {
+    public SubmitVideoAnalysisTaskRequest setVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
         return this;
     }
@@ -191,22 +167,34 @@ public class RunVideoAnalysisRequest extends TeaModel {
         return this.videoUrl;
     }
 
-    public static class RunVideoAnalysisRequestFrameSampleMethod extends TeaModel {
+    public static class SubmitVideoAnalysisTaskRequestFrameSampleMethod extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("interval")
         public Double interval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
         @NameInMap("methodName")
         public String methodName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>768</p>
+         */
         @NameInMap("pixel")
         public Integer pixel;
 
-        public static RunVideoAnalysisRequestFrameSampleMethod build(java.util.Map<String, ?> map) throws Exception {
-            RunVideoAnalysisRequestFrameSampleMethod self = new RunVideoAnalysisRequestFrameSampleMethod();
+        public static SubmitVideoAnalysisTaskRequestFrameSampleMethod build(java.util.Map<String, ?> map) throws Exception {
+            SubmitVideoAnalysisTaskRequestFrameSampleMethod self = new SubmitVideoAnalysisTaskRequestFrameSampleMethod();
             return TeaModel.build(map, self);
         }
 
-        public RunVideoAnalysisRequestFrameSampleMethod setInterval(Double interval) {
+        public SubmitVideoAnalysisTaskRequestFrameSampleMethod setInterval(Double interval) {
             this.interval = interval;
             return this;
         }
@@ -214,7 +202,7 @@ public class RunVideoAnalysisRequest extends TeaModel {
             return this.interval;
         }
 
-        public RunVideoAnalysisRequestFrameSampleMethod setMethodName(String methodName) {
+        public SubmitVideoAnalysisTaskRequestFrameSampleMethod setMethodName(String methodName) {
             this.methodName = methodName;
             return this;
         }
@@ -222,7 +210,7 @@ public class RunVideoAnalysisRequest extends TeaModel {
             return this.methodName;
         }
 
-        public RunVideoAnalysisRequestFrameSampleMethod setPixel(Integer pixel) {
+        public SubmitVideoAnalysisTaskRequestFrameSampleMethod setPixel(Integer pixel) {
             this.pixel = pixel;
             return this;
         }
@@ -232,7 +220,7 @@ public class RunVideoAnalysisRequest extends TeaModel {
 
     }
 
-    public static class RunVideoAnalysisRequestVideoRoles extends TeaModel {
+    public static class SubmitVideoAnalysisTaskRequestVideoRoles extends TeaModel {
         @NameInMap("roleInfo")
         public String roleInfo;
 
@@ -242,12 +230,12 @@ public class RunVideoAnalysisRequest extends TeaModel {
         @NameInMap("urls")
         public java.util.List<String> urls;
 
-        public static RunVideoAnalysisRequestVideoRoles build(java.util.Map<String, ?> map) throws Exception {
-            RunVideoAnalysisRequestVideoRoles self = new RunVideoAnalysisRequestVideoRoles();
+        public static SubmitVideoAnalysisTaskRequestVideoRoles build(java.util.Map<String, ?> map) throws Exception {
+            SubmitVideoAnalysisTaskRequestVideoRoles self = new SubmitVideoAnalysisTaskRequestVideoRoles();
             return TeaModel.build(map, self);
         }
 
-        public RunVideoAnalysisRequestVideoRoles setRoleInfo(String roleInfo) {
+        public SubmitVideoAnalysisTaskRequestVideoRoles setRoleInfo(String roleInfo) {
             this.roleInfo = roleInfo;
             return this;
         }
@@ -255,7 +243,7 @@ public class RunVideoAnalysisRequest extends TeaModel {
             return this.roleInfo;
         }
 
-        public RunVideoAnalysisRequestVideoRoles setRoleName(String roleName) {
+        public SubmitVideoAnalysisTaskRequestVideoRoles setRoleName(String roleName) {
             this.roleName = roleName;
             return this;
         }
@@ -263,7 +251,7 @@ public class RunVideoAnalysisRequest extends TeaModel {
             return this.roleName;
         }
 
-        public RunVideoAnalysisRequestVideoRoles setUrls(java.util.List<String> urls) {
+        public SubmitVideoAnalysisTaskRequestVideoRoles setUrls(java.util.List<String> urls) {
             this.urls = urls;
             return this;
         }

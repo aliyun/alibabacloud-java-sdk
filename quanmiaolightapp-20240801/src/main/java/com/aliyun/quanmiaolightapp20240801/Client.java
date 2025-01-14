@@ -144,6 +144,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>视频理解-获取配置</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoAnalysisConfigResponse
+     */
+    public GetVideoAnalysisConfigResponse getVideoAnalysisConfigWithOptions(String workspaceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoAnalysisConfig"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/videoAnalysis/getVideoAnalysisConfig"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoAnalysisConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>视频理解-获取配置</p>
+     * @return GetVideoAnalysisConfigResponse
+     */
+    public GetVideoAnalysisConfigResponse getVideoAnalysisConfig(String workspaceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getVideoAnalysisConfigWithOptions(workspaceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轻应用-获取视频理解异步任务结果</p>
+     * 
+     * @param request GetVideoAnalysisTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoAnalysisTaskResponse
+     */
+    public GetVideoAnalysisTaskResponse getVideoAnalysisTaskWithOptions(String workspaceId, GetVideoAnalysisTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoAnalysisTask"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/videoAnalysis/getVideoAnalysisTask"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoAnalysisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轻应用-获取视频理解异步任务结果</p>
+     * 
+     * @param request GetVideoAnalysisTaskRequest
+     * @return GetVideoAnalysisTaskResponse
+     */
+    public GetVideoAnalysisTaskResponse getVideoAnalysisTask(String workspaceId, GetVideoAnalysisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getVideoAnalysisTaskWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>轻应用-新闻播报-获取热点话题摘要列表</p>
      * 
      * @param request ListHotTopicSummariesRequest
@@ -800,13 +884,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         RunVideoAnalysisShrinkRequest request = new RunVideoAnalysisShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.frameSampleMethod)) {
+            request.frameSampleMethodShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.frameSampleMethod, "frameSampleMethod", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.generateOptions)) {
             request.generateOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.generateOptions, "generateOptions", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoRoles)) {
+            request.videoRolesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoRoles, "videoRoles", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.frameSampleMethodShrink)) {
+            body.put("frameSampleMethod", request.frameSampleMethodShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.generateOptionsShrink)) {
             body.put("generateOptions", request.generateOptionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            body.put("language", request.language);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelCustomPromptTemplate)) {
@@ -845,6 +945,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("videoModelId", request.videoModelId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.videoRolesShrink)) {
+            body.put("videoRoles", request.videoRolesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.videoUrl)) {
             body.put("videoUrl", request.videoUrl);
         }
@@ -878,5 +982,157 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.runVideoAnalysisWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轻应用-提交视频理解任务</p>
+     * 
+     * @param tmpReq SubmitVideoAnalysisTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitVideoAnalysisTaskResponse
+     */
+    public SubmitVideoAnalysisTaskResponse submitVideoAnalysisTaskWithOptions(String workspaceId, SubmitVideoAnalysisTaskRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitVideoAnalysisTaskShrinkRequest request = new SubmitVideoAnalysisTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.frameSampleMethod)) {
+            request.frameSampleMethodShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.frameSampleMethod, "frameSampleMethod", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.generateOptions)) {
+            request.generateOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.generateOptions, "generateOptions", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoRoles)) {
+            request.videoRolesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoRoles, "videoRoles", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.frameSampleMethodShrink)) {
+            body.put("frameSampleMethod", request.frameSampleMethodShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.generateOptionsShrink)) {
+            body.put("generateOptions", request.generateOptionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            body.put("language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCustomPromptTemplate)) {
+            body.put("modelCustomPromptTemplate", request.modelCustomPromptTemplate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCustomPromptTemplateId)) {
+            body.put("modelCustomPromptTemplateId", request.modelCustomPromptTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotInterval)) {
+            body.put("snapshotInterval", request.snapshotInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoExtraInfo)) {
+            body.put("videoExtraInfo", request.videoExtraInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoModelCustomPromptTemplate)) {
+            body.put("videoModelCustomPromptTemplate", request.videoModelCustomPromptTemplate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoModelId)) {
+            body.put("videoModelId", request.videoModelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoRolesShrink)) {
+            body.put("videoRoles", request.videoRolesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoUrl)) {
+            body.put("videoUrl", request.videoUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitVideoAnalysisTask"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/videoAnalysis/submitVideoAnalysisTask"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitVideoAnalysisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轻应用-提交视频理解任务</p>
+     * 
+     * @param request SubmitVideoAnalysisTaskRequest
+     * @return SubmitVideoAnalysisTaskResponse
+     */
+    public SubmitVideoAnalysisTaskResponse submitVideoAnalysisTask(String workspaceId, SubmitVideoAnalysisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitVideoAnalysisTaskWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>视频理解-更新配置</p>
+     * 
+     * @param request UpdateVideoAnalysisConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVideoAnalysisConfigResponse
+     */
+    public UpdateVideoAnalysisConfigResponse updateVideoAnalysisConfigWithOptions(String workspaceId, UpdateVideoAnalysisConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncConcurrency)) {
+            body.put("asyncConcurrency", request.asyncConcurrency);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVideoAnalysisConfig"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/videoAnalysis/updateVideoAnalysisConfig"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVideoAnalysisConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>视频理解-更新配置</p>
+     * 
+     * @param request UpdateVideoAnalysisConfigRequest
+     * @return UpdateVideoAnalysisConfigResponse
+     */
+    public UpdateVideoAnalysisConfigResponse updateVideoAnalysisConfig(String workspaceId, UpdateVideoAnalysisConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateVideoAnalysisConfigWithOptions(workspaceId, request, headers, runtime);
     }
 }
