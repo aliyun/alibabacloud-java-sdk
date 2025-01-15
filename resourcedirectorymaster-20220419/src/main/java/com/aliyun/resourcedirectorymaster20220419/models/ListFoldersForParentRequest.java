@@ -44,6 +44,9 @@ public class ListFoldersForParentRequest extends TeaModel {
     @NameInMap("QueryKeyword")
     public String queryKeyword;
 
+    /**
+     * <p>The tags. This parameter specifies a filter condition.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListFoldersForParentRequestTag> tag;
 
@@ -93,9 +96,21 @@ public class ListFoldersForParentRequest extends TeaModel {
     }
 
     public static class ListFoldersForParentRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("Value")
         public String value;
 

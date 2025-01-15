@@ -49,6 +49,9 @@ public class CreateControlPolicyRequest extends TeaModel {
     @NameInMap("PolicyName")
     public String policyName;
 
+    /**
+     * <p>The tag to add to the access control policy.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateControlPolicyRequestTag> tag;
 
@@ -98,9 +101,21 @@ public class CreateControlPolicyRequest extends TeaModel {
     }
 
     public static class CreateControlPolicyRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFoldersForParentResponseBody extends TeaModel {
     /**
-     * <p>The information of the folders.</p>
+     * <p>The folders.</p>
      */
     @NameInMap("Folders")
     public ListFoldersForParentResponseBodyFolders folders;
@@ -92,9 +92,21 @@ public class ListFoldersForParentResponseBody extends TeaModel {
     }
 
     public static class ListFoldersForParentResponseBodyFoldersFolderTagsTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -168,6 +180,9 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         @NameInMap("FolderName")
         public String folderName;
 
+        /**
+         * <p>The tags added to the folder.</p>
+         */
         @NameInMap("Tags")
         public ListFoldersForParentResponseBodyFoldersFolderTags tags;
 

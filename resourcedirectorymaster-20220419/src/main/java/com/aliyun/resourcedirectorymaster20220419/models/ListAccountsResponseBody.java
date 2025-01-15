@@ -10,6 +10,9 @@ public class ListAccountsResponseBody extends TeaModel {
     @NameInMap("Accounts")
     public ListAccountsResponseBodyAccounts accounts;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The page number of the returned page.</p>
      * 
@@ -57,6 +60,14 @@ public class ListAccountsResponseBody extends TeaModel {
     }
     public ListAccountsResponseBodyAccounts getAccounts() {
         return this.accounts;
+    }
+
+    public ListAccountsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListAccountsResponseBody setPageNumber(Integer pageNumber) {

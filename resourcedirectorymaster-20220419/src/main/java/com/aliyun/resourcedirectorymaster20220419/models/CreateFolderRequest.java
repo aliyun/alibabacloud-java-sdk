@@ -24,6 +24,9 @@ public class CreateFolderRequest extends TeaModel {
     @NameInMap("ParentFolderId")
     public String parentFolderId;
 
+    /**
+     * <p>The tag to add to the folder.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateFolderRequestTag> tag;
 
@@ -57,9 +60,21 @@ public class CreateFolderRequest extends TeaModel {
     }
 
     public static class CreateFolderRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("Value")
         public String value;
 
