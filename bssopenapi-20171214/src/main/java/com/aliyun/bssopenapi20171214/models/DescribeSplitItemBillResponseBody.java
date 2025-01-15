@@ -102,7 +102,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         public Float adjustAmount;
 
         @NameInMap("AfterDiscountAmount")
-        public String afterDiscountAmount;
+        public Float afterDiscountAmount;
 
         /**
          * <p>The ID of the account to which the bill belongs.</p>
@@ -594,11 +594,11 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.adjustAmount;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setAfterDiscountAmount(String afterDiscountAmount) {
+        public DescribeSplitItemBillResponseBodyDataItems setAfterDiscountAmount(Float afterDiscountAmount) {
             this.afterDiscountAmount = afterDiscountAmount;
             return this;
         }
-        public String getAfterDiscountAmount() {
+        public Float getAfterDiscountAmount() {
             return this.afterDiscountAmount;
         }
 
