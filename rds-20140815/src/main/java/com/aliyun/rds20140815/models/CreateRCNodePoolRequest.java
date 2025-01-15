@@ -451,6 +451,9 @@ public class CreateRCNodePoolRequest extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
         @NameInMap("Size")
         public Integer size;
 
@@ -465,6 +468,14 @@ public class CreateRCNodePoolRequest extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public CreateRCNodePoolRequestSystemDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
         }
 
         public CreateRCNodePoolRequestSystemDisk setSize(Integer size) {

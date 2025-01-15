@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class AssociateEipAddressWithRCInstanceRequest extends TeaModel {
     /**
+     * <p>The EIP ID.</p>
+     * <blockquote>
+     * <p> If no EIP is available, create an EIP. For more information, see <a href="https://help.aliyun.com/document_detail/292841.html">Create an EIP</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>eip-bp166out2x4bpcf******</p>
      */
@@ -12,6 +17,8 @@ public class AssociateEipAddressWithRCInstanceRequest extends TeaModel {
     public String allocationId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rc-i322y2t562oh7o******</p>
      */
@@ -19,6 +26,8 @@ public class AssociateEipAddressWithRCInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

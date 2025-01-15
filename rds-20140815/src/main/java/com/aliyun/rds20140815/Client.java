@@ -522,8 +522,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <p>If the RDS Custom instance uses a public IP address, the public IP address is automatically released after you associate an EIP with the instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>绑定弹性网卡到RDS Custom实例</p>
+     * <p>Associates an elastic IP address (EIP) with an RDS Custom for SQL Server instance.</p>
      * 
      * @param request AssociateEipAddressWithRCInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -562,8 +570,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <p>If the RDS Custom instance uses a public IP address, the public IP address is automatically released after you associate an EIP with the instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>绑定弹性网卡到RDS Custom实例</p>
+     * <p>Associates an elastic IP address (EIP) with an RDS Custom for SQL Server instance.</p>
      * 
      * @param request AssociateEipAddressWithRCInstanceRequest
      * @return AssociateEipAddressWithRCInstanceResponse
@@ -23400,8 +23416,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you want to enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</p>
+     * <ul>
+     * <li>The RDS instance runs MySQL 5.7.</li>
+     * <li>The RDS instance runs RDS Basic Edition.</li>
+     * <li>The RDS instance uses the pay-as-you-go or subscription billing method.</li>
+     * <li>The RDS instance runs a minor engine version of 20240930 or later.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/2856530.html">Enable the native replication feature</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改数据库复制</p>
+     * <p>Enables or disables the native replication feature of ApsaraDB RDS for MySQL.</p>
      * 
      * @param request ModifyDBInstanceReplicationSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23448,8 +23474,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you want to enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</p>
+     * <ul>
+     * <li>The RDS instance runs MySQL 5.7.</li>
+     * <li>The RDS instance runs RDS Basic Edition.</li>
+     * <li>The RDS instance uses the pay-as-you-go or subscription billing method.</li>
+     * <li>The RDS instance runs a minor engine version of 20240930 or later.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/2856530.html">Enable the native replication feature</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改数据库复制</p>
+     * <p>Enables or disables the native replication feature of ApsaraDB RDS for MySQL.</p>
      * 
      * @param request ModifyDBInstanceReplicationSwitchRequest
      * @return ModifyDBInstanceReplicationSwitchResponse

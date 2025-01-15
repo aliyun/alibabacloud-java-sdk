@@ -211,6 +211,9 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         @NameInMap("OSType")
         public String OSType;
 
+        @NameInMap("Platform")
+        public String platform;
+
         /**
          * <p>The image size. Unit: GiB.</p>
          * 
@@ -339,6 +342,14 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         }
         public String getOSType() {
             return this.OSType;
+        }
+
+        public DescribeRCImageListResponseBodyImages setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
         }
 
         public DescribeRCImageListResponseBodyImages setSize(Long size) {
