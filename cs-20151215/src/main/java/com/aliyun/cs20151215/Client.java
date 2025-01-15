@@ -637,6 +637,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("min_replica_count", request.minReplicaCount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.priorities)) {
+            body.put("priorities", request.priorities);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.recycleNodeDeletionEnabled)) {
             body.put("recycle_node_deletion_enabled", request.recycleNodeDeletionEnabled);
         }
@@ -5200,7 +5204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the auto O\&amp;M schedules of a cluster.</p>
+     * <p>Queries the automated maintenance schedules of a cluster.</p>
      * 
      * @param request ListOperationPlansRequest
      * @param headers map
@@ -5238,7 +5242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the auto O\&amp;M schedules of a cluster.</p>
+     * <p>Queries the automated maintenance schedules of a cluster.</p>
      * 
      * @param request ListOperationPlansRequest
      * @return ListOperationPlansResponse
@@ -7189,7 +7193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.aliyun.com/price/product#/sls/detail/sls">Simple Log Service</a> (SLS).</p>
+     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a> (SLS).</p>
      * 
      * <b>summary</b> : 
      * <p>You can call the UpdateClusterAuditLogConfig operation to enable or disable the audit log feature in a Container Service for Kubernetes (ACK) cluster and update the audit log configuration. This operation also allows you to record requests to the Kubernetes API and the responses, which can be used to trace cluster operation history and troubleshoot cluster issues.</p>
@@ -7230,7 +7234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.aliyun.com/price/product#/sls/detail/sls">Simple Log Service</a> (SLS).</p>
+     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a> (SLS).</p>
      * 
      * <b>summary</b> : 
      * <p>You can call the UpdateClusterAuditLogConfig operation to enable or disable the audit log feature in a Container Service for Kubernetes (ACK) cluster and update the audit log configuration. This operation also allows you to record requests to the Kubernetes API and the responses, which can be used to trace cluster operation history and troubleshoot cluster issues.</p>

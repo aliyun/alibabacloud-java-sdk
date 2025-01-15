@@ -276,6 +276,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
             return this.policyAction;
         }
 
+        @Deprecated
         public DescribePolicyInstancesResponseBody setCreated(String created) {
             this.created = created;
             return this;
@@ -284,6 +285,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
             return this.created;
         }
 
+        @Deprecated
         public DescribePolicyInstancesResponseBody setUpdated(String updated) {
             this.updated = updated;
             return this;
@@ -292,6 +294,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
             return this.updated;
         }
 
+        @Deprecated
         public DescribePolicyInstancesResponseBody setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
@@ -300,6 +303,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
             return this.resourceId;
         }
 
+        @Deprecated
         public DescribePolicyInstancesResponseBody setTotalViolations(Long totalViolations) {
             this.totalViolations = totalViolations;
             return this;
@@ -308,6 +312,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
             return this.totalViolations;
         }
 
+        @Deprecated
         public DescribePolicyInstancesResponseBody setIsDeleted(Long isDeleted) {
             this.isDeleted = isDeleted;
             return this;

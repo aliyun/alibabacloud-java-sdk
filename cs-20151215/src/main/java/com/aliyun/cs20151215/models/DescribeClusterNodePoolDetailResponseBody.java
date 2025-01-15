@@ -1704,6 +1704,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             return this.autoRenewPeriod;
         }
 
+        @Deprecated
         public DescribeClusterNodePoolDetailResponseBodyScalingGroup setCisEnabled(Boolean cisEnabled) {
             this.cisEnabled = cisEnabled;
             return this;

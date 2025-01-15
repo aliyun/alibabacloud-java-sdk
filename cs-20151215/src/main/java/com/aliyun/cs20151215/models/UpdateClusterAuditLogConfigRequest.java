@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterAuditLogConfigRequest extends TeaModel {
     /**
-     * <p>Enable or disable the audit log feature.</p>
+     * <p>Enable or disable audit logging.</p>
      * <ul>
-     * <li>false: enables the audit log feature or updates the audit log configuration.</li>
-     * <li>true: disables the audit log feature.</li>
+     * <li>false: enables audit logging or updates the audit logging configurations.</li>
+     * <li>true: disables audit logging.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class UpdateClusterAuditLogConfigRequest extends TeaModel {
     public Boolean disable;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/zh/sls/product-overview/project?spm=a2c4g.11186623.0.i3">SLS project</a> to which the <a href="https://help.aliyun.com/zh/sls/product-overview/logstore?spm=a2c4g.11186623.0.0.48287ce0jAUWWM">Logstore</a> belongs.</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/48873.html">Simple Log Service project</a> to which the <a href="https://help.aliyun.com/document_detail/48873.html">Logstore</a> that stores the cluster audit logs belongs.</p>
      * <ul>
      * <li>Default value: k8s-log-{clusterid}.</li>
      * <li>After the cluster audit log feature is enabled, a Logstore is created in the specified SLS project to store the cluster audit logs.</li>
-     * <li>If you want to change the project after the cluster audit log feature is enabled, you can use this parameter to specify another SLS project. You can perform this operation only in ACK managed clusters.</li>
+     * <li>If you want to change the project after audit logging is enabled for the cluster, you can use this parameter to specify another project. You can perform this operation only in ACK managed clusters.</li>
      * </ul>
      * 
      * <strong>example:</strong>

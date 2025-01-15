@@ -655,6 +655,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.state;
     }
 
+    @Deprecated
     public DescribeClusterDetailResponseBody setSubnetCidr(String subnetCidr) {
         this.subnetCidr = subnetCidr;
         return this;
@@ -695,6 +696,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.vpcId;
     }
 
+    @Deprecated
     public DescribeClusterDetailResponseBody setVswitchId(String vswitchId) {
         this.vswitchId = vswitchId;
         return this;

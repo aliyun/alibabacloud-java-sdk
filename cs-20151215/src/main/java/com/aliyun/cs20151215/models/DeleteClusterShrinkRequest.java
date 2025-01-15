@@ -58,6 +58,7 @@ public class DeleteClusterShrinkRequest extends TeaModel {
         return this.deleteOptionsShrink;
     }
 
+    @Deprecated
     public DeleteClusterShrinkRequest setKeepSlb(Boolean keepSlb) {
         this.keepSlb = keepSlb;
         return this;

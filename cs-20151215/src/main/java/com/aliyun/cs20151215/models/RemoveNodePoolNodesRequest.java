@@ -85,6 +85,7 @@ public class RemoveNodePoolNodesRequest extends TeaModel {
         return this.instanceIds;
     }
 
+    @Deprecated
     public RemoveNodePoolNodesRequest setNodes(java.util.List<String> nodes) {
         this.nodes = nodes;
         return this;

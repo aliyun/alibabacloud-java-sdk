@@ -222,6 +222,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public ModifyClusterNodePoolRequestAutoScaling setEipBandwidth(Long eipBandwidth) {
             this.eipBandwidth = eipBandwidth;
             return this;
@@ -230,6 +231,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
             return this.eipBandwidth;
         }
 
+        @Deprecated
         public ModifyClusterNodePoolRequestAutoScaling setEipInternetChargeType(String eipInternetChargeType) {
             this.eipInternetChargeType = eipInternetChargeType;
             return this;
@@ -246,6 +248,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
             return this.enable;
         }
 
+        @Deprecated
         public ModifyClusterNodePoolRequestAutoScaling setIsBondEip(Boolean isBondEip) {
             this.isBondEip = isBondEip;
             return this;
@@ -270,6 +273,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
             return this.minInstances;
         }
 
+        @Deprecated
         public ModifyClusterNodePoolRequestAutoScaling setType(String type) {
             this.type = type;
             return this;
@@ -644,6 +648,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public ModifyClusterNodePoolRequestManagementUpgradeConfig setAutoUpgrade(Boolean autoUpgrade) {
             this.autoUpgrade = autoUpgrade;
             return this;
@@ -819,6 +824,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
             return this.enable;
         }
 
+        @Deprecated
         public ModifyClusterNodePoolRequestManagement setUpgradeConfig(ModifyClusterNodePoolRequestManagementUpgradeConfig upgradeConfig) {
             this.upgradeConfig = upgradeConfig;
             return this;
@@ -1516,6 +1522,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
             return this.periodUnit;
         }
 
+        @Deprecated
         public ModifyClusterNodePoolRequestScalingGroup setPlatform(String platform) {
             this.platform = platform;
             return this;
