@@ -26,6 +26,20 @@ public class KubeletConfig extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("containerLogMaxWorkers")
+    public Integer containerLogMaxWorkers;
+
+    /**
+     * <strong>example:</strong>
+     * <p>10s</p>
+     */
+    @NameInMap("containerLogMonitorInterval")
+    public String containerLogMonitorInterval;
+
+    /**
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("cpuCFSQuota")
@@ -202,6 +216,22 @@ public class KubeletConfig extends TeaModel {
     }
     public String getContainerLogMaxSize() {
         return this.containerLogMaxSize;
+    }
+
+    public KubeletConfig setContainerLogMaxWorkers(Integer containerLogMaxWorkers) {
+        this.containerLogMaxWorkers = containerLogMaxWorkers;
+        return this;
+    }
+    public Integer getContainerLogMaxWorkers() {
+        return this.containerLogMaxWorkers;
+    }
+
+    public KubeletConfig setContainerLogMonitorInterval(String containerLogMonitorInterval) {
+        this.containerLogMonitorInterval = containerLogMonitorInterval;
+        return this;
+    }
+    public String getContainerLogMonitorInterval() {
+        return this.containerLogMonitorInterval;
     }
 
     public KubeletConfig setCpuCFSQuota(Boolean cpuCFSQuota) {

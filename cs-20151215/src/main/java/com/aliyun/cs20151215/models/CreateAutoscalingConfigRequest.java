@@ -68,6 +68,9 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     @NameInMap("min_replica_count")
     public Integer minReplicaCount;
 
+    @NameInMap("priorities")
+    public java.util.Map<String, java.util.List<String>> priorities;
+
     /**
      * <p>Specifies whether to delete the corresponding Kubernetes node objects after nodes are removed in swift mode. For more information about the swift mode, see <a href="https://help.aliyun.com/document_detail/119099.html">Scaling mode</a>. Default value: false Valid values:</p>
      * <ul>
@@ -219,6 +222,14 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     }
     public Integer getMinReplicaCount() {
         return this.minReplicaCount;
+    }
+
+    public CreateAutoscalingConfigRequest setPriorities(java.util.Map<String, java.util.List<String>> priorities) {
+        this.priorities = priorities;
+        return this;
+    }
+    public java.util.Map<String, java.util.List<String>> getPriorities() {
+        return this.priorities;
     }
 
     public CreateAutoscalingConfigRequest setRecycleNodeDeletionEnabled(Boolean recycleNodeDeletionEnabled) {

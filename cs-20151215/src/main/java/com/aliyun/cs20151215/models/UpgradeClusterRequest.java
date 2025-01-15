@@ -57,6 +57,7 @@ public class UpgradeClusterRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public UpgradeClusterRequest setComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -89,6 +90,7 @@ public class UpgradeClusterRequest extends TeaModel {
         return this.rollingPolicy;
     }
 
+    @Deprecated
     public UpgradeClusterRequest setVersion(String version) {
         this.version = version;
         return this;

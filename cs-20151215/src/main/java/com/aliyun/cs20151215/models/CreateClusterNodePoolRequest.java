@@ -128,6 +128,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         return this.autoScaling;
     }
 
+    @Deprecated
     public CreateClusterNodePoolRequest setCount(Long count) {
         this.count = count;
         return this;
@@ -144,6 +145,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         return this.hostNetwork;
     }
 
+    @Deprecated
     public CreateClusterNodePoolRequest setInterconnectConfig(CreateClusterNodePoolRequestInterconnectConfig interconnectConfig) {
         this.interconnectConfig = interconnectConfig;
         return this;
@@ -184,6 +186,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         return this.management;
     }
 
+    @Deprecated
     public CreateClusterNodePoolRequest setMaxNodes(Long maxNodes) {
         this.maxNodes = maxNodes;
         return this;
@@ -330,6 +333,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public CreateClusterNodePoolRequestAutoScaling setEipBandwidth(Long eipBandwidth) {
             this.eipBandwidth = eipBandwidth;
             return this;
@@ -338,6 +342,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.eipBandwidth;
         }
 
+        @Deprecated
         public CreateClusterNodePoolRequestAutoScaling setEipInternetChargeType(String eipInternetChargeType) {
             this.eipInternetChargeType = eipInternetChargeType;
             return this;
@@ -354,6 +359,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.enable;
         }
 
+        @Deprecated
         public CreateClusterNodePoolRequestAutoScaling setIsBondEip(Boolean isBondEip) {
             this.isBondEip = isBondEip;
             return this;
@@ -879,6 +885,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public CreateClusterNodePoolRequestManagementUpgradeConfig setAutoUpgrade(Boolean autoUpgrade) {
             this.autoUpgrade = autoUpgrade;
             return this;
@@ -1056,6 +1063,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.enable;
         }
 
+        @Deprecated
         public CreateClusterNodePoolRequestManagement setUpgradeConfig(CreateClusterNodePoolRequestManagementUpgradeConfig upgradeConfig) {
             this.upgradeConfig = upgradeConfig;
             return this;
@@ -1825,6 +1833,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.autoRenewPeriod;
         }
 
+        @Deprecated
         public CreateClusterNodePoolRequestScalingGroup setCisEnabled(Boolean cisEnabled) {
             this.cisEnabled = cisEnabled;
             return this;
@@ -1985,6 +1994,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.periodUnit;
         }
 
+        @Deprecated
         public CreateClusterNodePoolRequestScalingGroup setPlatform(String platform) {
             this.platform = platform;
             return this;
@@ -2025,6 +2035,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.scalingPolicy;
         }
 
+        @Deprecated
         public CreateClusterNodePoolRequestScalingGroup setSecurityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;

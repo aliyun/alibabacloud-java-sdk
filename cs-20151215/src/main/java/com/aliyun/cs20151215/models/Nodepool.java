@@ -64,6 +64,7 @@ public class Nodepool extends TeaModel {
         return this.autoScaling;
     }
 
+    @Deprecated
     public Nodepool setCount(Long count) {
         this.count = count;
         return this;
@@ -72,6 +73,7 @@ public class Nodepool extends TeaModel {
         return this.count;
     }
 
+    @Deprecated
     public Nodepool setInterconnectConfig(NodepoolInterconnectConfig interconnectConfig) {
         this.interconnectConfig = interconnectConfig;
         return this;
@@ -208,6 +210,7 @@ public class Nodepool extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public NodepoolAutoScaling setEipBandwidth(Long eipBandwidth) {
             this.eipBandwidth = eipBandwidth;
             return this;
@@ -216,6 +219,7 @@ public class Nodepool extends TeaModel {
             return this.eipBandwidth;
         }
 
+        @Deprecated
         public NodepoolAutoScaling setEipInternetChargeType(String eipInternetChargeType) {
             this.eipInternetChargeType = eipInternetChargeType;
             return this;
@@ -232,6 +236,7 @@ public class Nodepool extends TeaModel {
             return this.enable;
         }
 
+        @Deprecated
         public NodepoolAutoScaling setIsBondEip(Boolean isBondEip) {
             this.isBondEip = isBondEip;
             return this;
@@ -312,6 +317,7 @@ public class Nodepool extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public NodepoolInterconnectConfig setBandwidth(Long bandwidth) {
             this.bandwidth = bandwidth;
             return this;
@@ -320,6 +326,7 @@ public class Nodepool extends TeaModel {
             return this.bandwidth;
         }
 
+        @Deprecated
         public NodepoolInterconnectConfig setCcnId(String ccnId) {
             this.ccnId = ccnId;
             return this;
@@ -328,6 +335,7 @@ public class Nodepool extends TeaModel {
             return this.ccnId;
         }
 
+        @Deprecated
         public NodepoolInterconnectConfig setCcnRegionId(String ccnRegionId) {
             this.ccnRegionId = ccnRegionId;
             return this;
@@ -336,6 +344,7 @@ public class Nodepool extends TeaModel {
             return this.ccnRegionId;
         }
 
+        @Deprecated
         public NodepoolInterconnectConfig setCenId(String cenId) {
             this.cenId = cenId;
             return this;
@@ -344,6 +353,7 @@ public class Nodepool extends TeaModel {
             return this.cenId;
         }
 
+        @Deprecated
         public NodepoolInterconnectConfig setImprovedPeriod(String improvedPeriod) {
             this.improvedPeriod = improvedPeriod;
             return this;
@@ -733,6 +743,7 @@ public class Nodepool extends TeaModel {
             return this.enable;
         }
 
+        @Deprecated
         public NodepoolManagement setUpgradeConfig(NodepoolManagementUpgradeConfig upgradeConfig) {
             this.upgradeConfig = upgradeConfig;
             return this;
@@ -1348,6 +1359,7 @@ public class Nodepool extends TeaModel {
             return this.periodUnit;
         }
 
+        @Deprecated
         public NodepoolScalingGroup setPlatform(String platform) {
             this.platform = platform;
             return this;

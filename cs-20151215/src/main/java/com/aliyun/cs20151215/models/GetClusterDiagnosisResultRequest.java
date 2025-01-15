@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClusterDiagnosisResultRequest extends TeaModel {
     /**
-     * <p>查询语言。</p>
+     * <p>The query language.</p>
      * 
      * <strong>example:</strong>
      * <p>zh_CN</p>

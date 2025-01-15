@@ -85,6 +85,7 @@ public class RemoveNodePoolNodesShrinkRequest extends TeaModel {
         return this.instanceIdsShrink;
     }
 
+    @Deprecated
     public RemoveNodePoolNodesShrinkRequest setNodesShrink(String nodesShrink) {
         this.nodesShrink = nodesShrink;
         return this;

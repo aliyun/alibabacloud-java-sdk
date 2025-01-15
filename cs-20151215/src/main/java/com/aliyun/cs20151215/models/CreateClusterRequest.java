@@ -1167,6 +1167,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.apiAudiences;
     }
 
+    @Deprecated
     public CreateClusterRequest setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
@@ -1175,6 +1176,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.autoRenew;
     }
 
+    @Deprecated
     public CreateClusterRequest setAutoRenewPeriod(Long autoRenewPeriod) {
         this.autoRenewPeriod = autoRenewPeriod;
         return this;
@@ -1183,6 +1185,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.autoRenewPeriod;
     }
 
+    @Deprecated
     public CreateClusterRequest setChargeType(String chargeType) {
         this.chargeType = chargeType;
         return this;
@@ -1191,6 +1194,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.chargeType;
     }
 
+    @Deprecated
     public CreateClusterRequest setCisEnabled(Boolean cisEnabled) {
         this.cisEnabled = cisEnabled;
         return this;
@@ -1199,6 +1203,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.cisEnabled;
     }
 
+    @Deprecated
     public CreateClusterRequest setCloudMonitorFlags(Boolean cloudMonitorFlags) {
         this.cloudMonitorFlags = cloudMonitorFlags;
         return this;
@@ -1271,6 +1276,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.controlplaneLogTtl;
     }
 
+    @Deprecated
     public CreateClusterRequest setCpuPolicy(String cpuPolicy) {
         this.cpuPolicy = cpuPolicy;
         return this;
@@ -1295,6 +1301,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.deletionProtection;
     }
 
+    @Deprecated
     public CreateClusterRequest setDisableRollback(Boolean disableRollback) {
         this.disableRollback = disableRollback;
         return this;
@@ -1327,6 +1334,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.endpointPublicAccess;
     }
 
+    @Deprecated
     public CreateClusterRequest setFormatDisk(Boolean formatDisk) {
         this.formatDisk = formatDisk;
         return this;
@@ -1335,6 +1343,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.formatDisk;
     }
 
+    @Deprecated
     public CreateClusterRequest setImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -1343,6 +1352,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.imageId;
     }
 
+    @Deprecated
     public CreateClusterRequest setImageType(String imageType) {
         this.imageType = imageType;
         return this;
@@ -1351,6 +1361,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.imageType;
     }
 
+    @Deprecated
     public CreateClusterRequest setInstances(java.util.List<String> instances) {
         this.instances = instances;
         return this;
@@ -1375,6 +1386,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.isEnterpriseSecurityGroup;
     }
 
+    @Deprecated
     public CreateClusterRequest setKeepInstanceName(Boolean keepInstanceName) {
         this.keepInstanceName = keepInstanceName;
         return this;
@@ -1383,6 +1395,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.keepInstanceName;
     }
 
+    @Deprecated
     public CreateClusterRequest setKeyPair(String keyPair) {
         this.keyPair = keyPair;
         return this;
@@ -1407,6 +1420,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.loadBalancerId;
     }
 
+    @Deprecated
     public CreateClusterRequest setLoadBalancerSpec(String loadBalancerSpec) {
         this.loadBalancerSpec = loadBalancerSpec;
         return this;
@@ -1423,6 +1437,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.loggingType;
     }
 
+    @Deprecated
     public CreateClusterRequest setLoginPassword(String loginPassword) {
         this.loginPassword = loginPassword;
         return this;
@@ -1439,6 +1454,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.maintenanceWindow;
     }
 
+    @Deprecated
     public CreateClusterRequest setMasterAutoRenew(Boolean masterAutoRenew) {
         this.masterAutoRenew = masterAutoRenew;
         return this;
@@ -1447,6 +1463,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.masterAutoRenew;
     }
 
+    @Deprecated
     public CreateClusterRequest setMasterAutoRenewPeriod(Long masterAutoRenewPeriod) {
         this.masterAutoRenewPeriod = masterAutoRenewPeriod;
         return this;
@@ -1455,6 +1472,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.masterAutoRenewPeriod;
     }
 
+    @Deprecated
     public CreateClusterRequest setMasterCount(Long masterCount) {
         this.masterCount = masterCount;
         return this;
@@ -1463,6 +1481,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.masterCount;
     }
 
+    @Deprecated
     public CreateClusterRequest setMasterInstanceChargeType(String masterInstanceChargeType) {
         this.masterInstanceChargeType = masterInstanceChargeType;
         return this;
@@ -1471,6 +1490,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.masterInstanceChargeType;
     }
 
+    @Deprecated
     public CreateClusterRequest setMasterInstanceTypes(java.util.List<String> masterInstanceTypes) {
         this.masterInstanceTypes = masterInstanceTypes;
         return this;
@@ -1479,6 +1499,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.masterInstanceTypes;
     }
 
+    @Deprecated
     public CreateClusterRequest setMasterPeriod(Long masterPeriod) {
         this.masterPeriod = masterPeriod;
         return this;
@@ -1487,6 +1508,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.masterPeriod;
     }
 
+    @Deprecated
     public CreateClusterRequest setMasterPeriodUnit(String masterPeriodUnit) {
         this.masterPeriodUnit = masterPeriodUnit;
         return this;
@@ -1495,6 +1517,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.masterPeriodUnit;
     }
 
+    @Deprecated
     public CreateClusterRequest setMasterSystemDiskCategory(String masterSystemDiskCategory) {
         this.masterSystemDiskCategory = masterSystemDiskCategory;
         return this;
@@ -1503,6 +1526,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.masterSystemDiskCategory;
     }
 
+    @Deprecated
     public CreateClusterRequest setMasterSystemDiskPerformanceLevel(String masterSystemDiskPerformanceLevel) {
         this.masterSystemDiskPerformanceLevel = masterSystemDiskPerformanceLevel;
         return this;
@@ -1511,6 +1535,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.masterSystemDiskPerformanceLevel;
     }
 
+    @Deprecated
     public CreateClusterRequest setMasterSystemDiskSize(Long masterSystemDiskSize) {
         this.masterSystemDiskSize = masterSystemDiskSize;
         return this;
@@ -1519,6 +1544,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.masterSystemDiskSize;
     }
 
+    @Deprecated
     public CreateClusterRequest setMasterSystemDiskSnapshotPolicyId(String masterSystemDiskSnapshotPolicyId) {
         this.masterSystemDiskSnapshotPolicyId = masterSystemDiskSnapshotPolicyId;
         return this;
@@ -1527,6 +1553,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.masterSystemDiskSnapshotPolicyId;
     }
 
+    @Deprecated
     public CreateClusterRequest setMasterVswitchIds(java.util.List<String> masterVswitchIds) {
         this.masterVswitchIds = masterVswitchIds;
         return this;
@@ -1559,6 +1586,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.nodeCidrMask;
     }
 
+    @Deprecated
     public CreateClusterRequest setNodeNameMode(String nodeNameMode) {
         this.nodeNameMode = nodeNameMode;
         return this;
@@ -1583,6 +1611,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.nodepools;
     }
 
+    @Deprecated
     public CreateClusterRequest setNumOfNodes(Long numOfNodes) {
         this.numOfNodes = numOfNodes;
         return this;
@@ -1599,6 +1628,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.operationPolicy;
     }
 
+    @Deprecated
     public CreateClusterRequest setOsType(String osType) {
         this.osType = osType;
         return this;
@@ -1607,6 +1637,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.osType;
     }
 
+    @Deprecated
     public CreateClusterRequest setPeriod(Long period) {
         this.period = period;
         return this;
@@ -1615,6 +1646,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.period;
     }
 
+    @Deprecated
     public CreateClusterRequest setPeriodUnit(String periodUnit) {
         this.periodUnit = periodUnit;
         return this;
@@ -1623,6 +1655,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.periodUnit;
     }
 
+    @Deprecated
     public CreateClusterRequest setPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -1655,6 +1688,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.proxyMode;
     }
 
+    @Deprecated
     public CreateClusterRequest setRdsInstances(java.util.List<String> rdsInstances) {
         this.rdsInstances = rdsInstances;
         return this;
@@ -1695,6 +1729,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.securityGroupId;
     }
 
+    @Deprecated
     public CreateClusterRequest setSecurityHardeningOs(Boolean securityHardeningOs) {
         this.securityHardeningOs = securityHardeningOs;
         return this;
@@ -1735,6 +1770,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.snatEntry;
     }
 
+    @Deprecated
     public CreateClusterRequest setSocEnabled(Boolean socEnabled) {
         this.socEnabled = socEnabled;
         return this;
@@ -1759,6 +1795,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.tags;
     }
 
+    @Deprecated
     public CreateClusterRequest setTaints(java.util.List<Taint> taints) {
         this.taints = taints;
         return this;
@@ -1767,6 +1804,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.taints;
     }
 
+    @Deprecated
     public CreateClusterRequest setTimeoutMins(Long timeoutMins) {
         this.timeoutMins = timeoutMins;
         return this;
@@ -1815,6 +1853,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.vswitchIds;
     }
 
+    @Deprecated
     public CreateClusterRequest setWorkerAutoRenew(Boolean workerAutoRenew) {
         this.workerAutoRenew = workerAutoRenew;
         return this;
@@ -1823,6 +1862,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.workerAutoRenew;
     }
 
+    @Deprecated
     public CreateClusterRequest setWorkerAutoRenewPeriod(Long workerAutoRenewPeriod) {
         this.workerAutoRenewPeriod = workerAutoRenewPeriod;
         return this;
@@ -1831,6 +1871,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.workerAutoRenewPeriod;
     }
 
+    @Deprecated
     public CreateClusterRequest setWorkerDataDisks(java.util.List<CreateClusterRequestWorkerDataDisks> workerDataDisks) {
         this.workerDataDisks = workerDataDisks;
         return this;
@@ -1839,6 +1880,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.workerDataDisks;
     }
 
+    @Deprecated
     public CreateClusterRequest setWorkerInstanceChargeType(String workerInstanceChargeType) {
         this.workerInstanceChargeType = workerInstanceChargeType;
         return this;
@@ -1847,6 +1889,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.workerInstanceChargeType;
     }
 
+    @Deprecated
     public CreateClusterRequest setWorkerInstanceTypes(java.util.List<String> workerInstanceTypes) {
         this.workerInstanceTypes = workerInstanceTypes;
         return this;
@@ -1855,6 +1898,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.workerInstanceTypes;
     }
 
+    @Deprecated
     public CreateClusterRequest setWorkerPeriod(Long workerPeriod) {
         this.workerPeriod = workerPeriod;
         return this;
@@ -1863,6 +1907,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.workerPeriod;
     }
 
+    @Deprecated
     public CreateClusterRequest setWorkerPeriodUnit(String workerPeriodUnit) {
         this.workerPeriodUnit = workerPeriodUnit;
         return this;
@@ -1871,6 +1916,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.workerPeriodUnit;
     }
 
+    @Deprecated
     public CreateClusterRequest setWorkerSystemDiskCategory(String workerSystemDiskCategory) {
         this.workerSystemDiskCategory = workerSystemDiskCategory;
         return this;
@@ -1879,6 +1925,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.workerSystemDiskCategory;
     }
 
+    @Deprecated
     public CreateClusterRequest setWorkerSystemDiskPerformanceLevel(String workerSystemDiskPerformanceLevel) {
         this.workerSystemDiskPerformanceLevel = workerSystemDiskPerformanceLevel;
         return this;
@@ -1887,6 +1934,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.workerSystemDiskPerformanceLevel;
     }
 
+    @Deprecated
     public CreateClusterRequest setWorkerSystemDiskSize(Long workerSystemDiskSize) {
         this.workerSystemDiskSize = workerSystemDiskSize;
         return this;
@@ -1895,6 +1943,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.workerSystemDiskSize;
     }
 
+    @Deprecated
     public CreateClusterRequest setWorkerSystemDiskSnapshotPolicyId(String workerSystemDiskSnapshotPolicyId) {
         this.workerSystemDiskSnapshotPolicyId = workerSystemDiskSnapshotPolicyId;
         return this;
@@ -1903,6 +1952,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.workerSystemDiskSnapshotPolicyId;
     }
 
+    @Deprecated
     public CreateClusterRequest setWorkerVswitchIds(java.util.List<String> workerVswitchIds) {
         this.workerVswitchIds = workerVswitchIds;
         return this;
@@ -1911,6 +1961,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.workerVswitchIds;
     }
 
+    @Deprecated
     public CreateClusterRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
