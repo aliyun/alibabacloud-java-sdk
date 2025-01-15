@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AssociateEipAddressWithRCInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EFFC7565-B3CF-5CFA-9E1F-164DD1E1F498</p>
      */

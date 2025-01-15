@@ -22,6 +22,9 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     @NameInMap("BackupDataSize")
     public Long backupDataSize;
 
+    @NameInMap("BackupEcsSnapshotSize")
+    public String backupEcsSnapshotSize;
+
     /**
      * <p>The storage that is occupied by log backup files, excluding archived backup files, on the instance. Unit: bytes.</p>
      * 
@@ -158,6 +161,14 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     }
     public Long getBackupDataSize() {
         return this.backupDataSize;
+    }
+
+    public DescribeResourceUsageResponseBody setBackupEcsSnapshotSize(String backupEcsSnapshotSize) {
+        this.backupEcsSnapshotSize = backupEcsSnapshotSize;
+        return this;
+    }
+    public String getBackupEcsSnapshotSize() {
+        return this.backupEcsSnapshotSize;
     }
 
     public DescribeResourceUsageResponseBody setBackupLogSize(Long backupLogSize) {

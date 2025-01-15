@@ -98,6 +98,9 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
         @NameInMap("Size")
         public Integer size;
 
@@ -112,6 +115,14 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public DescribeRCNodePoolResponseBodyNodePoolListSystemDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
         }
 
         public DescribeRCNodePoolResponseBodyNodePoolListSystemDisk setSize(Integer size) {

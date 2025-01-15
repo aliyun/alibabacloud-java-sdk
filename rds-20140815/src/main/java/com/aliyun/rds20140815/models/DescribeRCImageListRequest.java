@@ -23,6 +23,9 @@ public class DescribeRCImageListRequest extends TeaModel {
     @NameInMap("ImageName")
     public String imageName;
 
+    @NameInMap("InstanceType")
+    public String instanceType;
+
     /**
      * <p>The page number.</p>
      * 
@@ -87,6 +90,14 @@ public class DescribeRCImageListRequest extends TeaModel {
     }
     public String getImageName() {
         return this.imageName;
+    }
+
+    public DescribeRCImageListRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public DescribeRCImageListRequest setPageNumber(Integer pageNumber) {

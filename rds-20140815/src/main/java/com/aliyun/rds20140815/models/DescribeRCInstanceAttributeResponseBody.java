@@ -351,6 +351,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("StoppedMode")
     public String stoppedMode;
 
+    @NameInMap("SystemDisk")
+    public DescribeRCInstanceAttributeResponseBodySystemDisk systemDisk;
+
     @NameInMap("Tags")
     public DescribeRCInstanceAttributeResponseBodyTags tags;
 
@@ -699,6 +702,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
     public String getStoppedMode() {
         return this.stoppedMode;
+    }
+
+    public DescribeRCInstanceAttributeResponseBody setSystemDisk(DescribeRCInstanceAttributeResponseBodySystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public DescribeRCInstanceAttributeResponseBodySystemDisk getSystemDisk() {
+        return this.systemDisk;
     }
 
     public DescribeRCInstanceAttributeResponseBody setTags(DescribeRCInstanceAttributeResponseBodyTags tags) {
@@ -1082,6 +1093,69 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
         public java.util.List<String> getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+    }
+
+    public static class DescribeRCInstanceAttributeResponseBodySystemDisk extends TeaModel {
+        @NameInMap("DeleteWithInstance")
+        public Boolean deleteWithInstance;
+
+        @NameInMap("Encrypted")
+        public String encrypted;
+
+        @NameInMap("SystemDiskCategory")
+        public String systemDiskCategory;
+
+        @NameInMap("SystemDiskPerformanceLevel")
+        public String systemDiskPerformanceLevel;
+
+        @NameInMap("SystemDiskSize")
+        public Long systemDiskSize;
+
+        public static DescribeRCInstanceAttributeResponseBodySystemDisk build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCInstanceAttributeResponseBodySystemDisk self = new DescribeRCInstanceAttributeResponseBodySystemDisk();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRCInstanceAttributeResponseBodySystemDisk setDeleteWithInstance(Boolean deleteWithInstance) {
+            this.deleteWithInstance = deleteWithInstance;
+            return this;
+        }
+        public Boolean getDeleteWithInstance() {
+            return this.deleteWithInstance;
+        }
+
+        public DescribeRCInstanceAttributeResponseBodySystemDisk setEncrypted(String encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public String getEncrypted() {
+            return this.encrypted;
+        }
+
+        public DescribeRCInstanceAttributeResponseBodySystemDisk setSystemDiskCategory(String systemDiskCategory) {
+            this.systemDiskCategory = systemDiskCategory;
+            return this;
+        }
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        public DescribeRCInstanceAttributeResponseBodySystemDisk setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+            this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+            return this;
+        }
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
+        }
+
+        public DescribeRCInstanceAttributeResponseBodySystemDisk setSystemDiskSize(Long systemDiskSize) {
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+        public Long getSystemDiskSize() {
+            return this.systemDiskSize;
         }
 
     }

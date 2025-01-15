@@ -241,7 +241,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         public String sourceDiskType;
 
         /**
-         * <p>The type of the original disk.</p>
+         * <p>The type of the source disk.</p>
          * <blockquote>
          * <p> This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
          * </blockquote>

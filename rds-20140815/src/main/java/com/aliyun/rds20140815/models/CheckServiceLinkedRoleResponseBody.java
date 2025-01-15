@@ -22,6 +22,9 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("RequireServiceLinkedRole")
+    public String requireServiceLinkedRole;
+
     public static CheckServiceLinkedRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckServiceLinkedRoleResponseBody self = new CheckServiceLinkedRoleResponseBody();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CheckServiceLinkedRoleResponseBody setRequireServiceLinkedRole(String requireServiceLinkedRole) {
+        this.requireServiceLinkedRole = requireServiceLinkedRole;
+        return this;
+    }
+    public String getRequireServiceLinkedRole() {
+        return this.requireServiceLinkedRole;
     }
 
 }
