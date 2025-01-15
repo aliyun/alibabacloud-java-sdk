@@ -7,6 +7,9 @@ public class SyncRemoteTablesRequest extends TeaModel {
     @NameInMap("keepTableNames")
     public java.util.List<String> keepTableNames;
 
+    @NameInMap("noModifiedTableNames")
+    public java.util.List<String> noModifiedTableNames;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -40,6 +43,14 @@ public class SyncRemoteTablesRequest extends TeaModel {
     }
     public java.util.List<String> getKeepTableNames() {
         return this.keepTableNames;
+    }
+
+    public SyncRemoteTablesRequest setNoModifiedTableNames(java.util.List<String> noModifiedTableNames) {
+        this.noModifiedTableNames = noModifiedTableNames;
+        return this;
+    }
+    public java.util.List<String> getNoModifiedTableNames() {
+        return this.noModifiedTableNames;
     }
 
     public SyncRemoteTablesRequest setPullSamples(Boolean pullSamples) {
