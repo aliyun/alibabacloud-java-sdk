@@ -92,6 +92,9 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
     }
 
     public static class DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems extends TeaModel {
+        @NameInMap("AfterDiscountAmount")
+        public Double afterDiscountAmount;
+
         /**
          * <p>The allocation month. Format: YYYYMM.</p>
          * 
@@ -167,6 +170,9 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
          */
         @NameInMap("ConsumePeriod")
         public String consumePeriod;
+
+        @NameInMap("CurrentAmortizationAfterDiscountAmount")
+        public Double currentAmortizationAfterDiscountAmount;
 
         /**
          * <p>The amount deducted by using vouchers and allocated to the current allocation month.</p>
@@ -303,6 +309,9 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         @NameInMap("PretaxGrossAmount")
         public Double pretaxGrossAmount;
 
+        @NameInMap("PreviouslyAmortizedAfterDiscountAmount")
+        public Double previouslyAmortizedAfterDiscountAmount;
+
         /**
          * <p>The amount deducted by using vouchers and allocated before the current allocation month.</p>
          * 
@@ -411,6 +420,9 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         @NameInMap("ProductName")
         public String productName;
 
+        @NameInMap("RemainingAmortizationAfterDiscountAmount")
+        public Double remainingAmortizationAfterDiscountAmount;
+
         /**
          * <p>The amount deducted by using vouchers and to be allocated to one or more future allocation months.</p>
          * 
@@ -510,6 +522,14 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             return TeaModel.build(map, self);
         }
 
+        public DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems setAfterDiscountAmount(Double afterDiscountAmount) {
+            this.afterDiscountAmount = afterDiscountAmount;
+            return this;
+        }
+        public Double getAfterDiscountAmount() {
+            return this.afterDiscountAmount;
+        }
+
         public DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems setAmortizationPeriod(String amortizationPeriod) {
             this.amortizationPeriod = amortizationPeriod;
             return this;
@@ -572,6 +592,14 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
         public String getConsumePeriod() {
             return this.consumePeriod;
+        }
+
+        public DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems setCurrentAmortizationAfterDiscountAmount(Double currentAmortizationAfterDiscountAmount) {
+            this.currentAmortizationAfterDiscountAmount = currentAmortizationAfterDiscountAmount;
+            return this;
+        }
+        public Double getCurrentAmortizationAfterDiscountAmount() {
+            return this.currentAmortizationAfterDiscountAmount;
         }
 
         public DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems setCurrentAmortizationDeductedByCashCoupons(Double currentAmortizationDeductedByCashCoupons) {
@@ -694,6 +722,14 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             return this.pretaxGrossAmount;
         }
 
+        public DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems setPreviouslyAmortizedAfterDiscountAmount(Double previouslyAmortizedAfterDiscountAmount) {
+            this.previouslyAmortizedAfterDiscountAmount = previouslyAmortizedAfterDiscountAmount;
+            return this;
+        }
+        public Double getPreviouslyAmortizedAfterDiscountAmount() {
+            return this.previouslyAmortizedAfterDiscountAmount;
+        }
+
         public DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems setPreviouslyAmortizedDeductedByCashCoupons(Double previouslyAmortizedDeductedByCashCoupons) {
             this.previouslyAmortizedDeductedByCashCoupons = previouslyAmortizedDeductedByCashCoupons;
             return this;
@@ -788,6 +824,14 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
         public String getProductName() {
             return this.productName;
+        }
+
+        public DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems setRemainingAmortizationAfterDiscountAmount(Double remainingAmortizationAfterDiscountAmount) {
+            this.remainingAmortizationAfterDiscountAmount = remainingAmortizationAfterDiscountAmount;
+            return this;
+        }
+        public Double getRemainingAmortizationAfterDiscountAmount() {
+            return this.remainingAmortizationAfterDiscountAmount;
         }
 
         public DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems setRemainingAmortizationDeductedByCashCoupons(Double remainingAmortizationDeductedByCashCoupons) {
