@@ -1009,6 +1009,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunVideoAnalysisResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>http://</p>
+         */
+        @NameInMap("resultJsonFileUrl")
+        public String resultJsonFileUrl;
+
         @NameInMap("videoAnalysisResult")
         public RunVideoAnalysisResponseBodyPayloadOutputVideoAnalysisResult videoAnalysisResult;
 
@@ -1030,6 +1037,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         public static RunVideoAnalysisResponseBodyPayloadOutput build(java.util.Map<String, ?> map) throws Exception {
             RunVideoAnalysisResponseBodyPayloadOutput self = new RunVideoAnalysisResponseBodyPayloadOutput();
             return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutput setResultJsonFileUrl(String resultJsonFileUrl) {
+            this.resultJsonFileUrl = resultJsonFileUrl;
+            return this;
+        }
+        public String getResultJsonFileUrl() {
+            return this.resultJsonFileUrl;
         }
 
         public RunVideoAnalysisResponseBodyPayloadOutput setVideoAnalysisResult(RunVideoAnalysisResponseBodyPayloadOutputVideoAnalysisResult videoAnalysisResult) {
