@@ -1006,6 +1006,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keep)) {
+            body.put("keep", request.keep);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tableIdKey)) {
             body.put("tableIdKey", request.tableIdKey);
         }
@@ -1307,6 +1311,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.keepTableNames)) {
             body.put("keepTableNames", request.keepTableNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noModifiedTableNames)) {
+            body.put("noModifiedTableNames", request.noModifiedTableNames);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pullSamples)) {

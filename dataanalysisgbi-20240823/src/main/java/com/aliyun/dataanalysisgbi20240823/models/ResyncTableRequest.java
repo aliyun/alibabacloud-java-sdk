@@ -4,6 +4,9 @@ package com.aliyun.dataanalysisgbi20240823.models;
 import com.aliyun.tea.*;
 
 public class ResyncTableRequest extends TeaModel {
+    @NameInMap("keep")
+    public Boolean keep;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -25,6 +28,14 @@ public class ResyncTableRequest extends TeaModel {
     public static ResyncTableRequest build(java.util.Map<String, ?> map) throws Exception {
         ResyncTableRequest self = new ResyncTableRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ResyncTableRequest setKeep(Boolean keep) {
+        this.keep = keep;
+        return this;
+    }
+    public Boolean getKeep() {
+        return this.keep;
     }
 
     public ResyncTableRequest setTableIdKey(String tableIdKey) {
