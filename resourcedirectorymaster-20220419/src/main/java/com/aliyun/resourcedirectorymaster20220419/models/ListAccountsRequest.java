@@ -17,6 +17,12 @@ public class ListAccountsRequest extends TeaModel {
     @NameInMap("IncludeTags")
     public Boolean includeTags;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The number of the page to return.</p>
      * <p>Pages start from page 1. Default value: 1.</p>
@@ -64,6 +70,22 @@ public class ListAccountsRequest extends TeaModel {
     }
     public Boolean getIncludeTags() {
         return this.includeTags;
+    }
+
+    public ListAccountsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListAccountsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListAccountsRequest setPageNumber(Integer pageNumber) {
