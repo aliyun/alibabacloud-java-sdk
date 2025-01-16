@@ -77,6 +77,9 @@ public class ScorePageItem extends TeaModel {
     @NameInMap("mainText")
     public String mainText;
 
+    @NameInMap("markdownText")
+    public String markdownText;
+
     /**
      * <strong>example:</strong>
      * <p>text/html</p>
@@ -194,6 +197,14 @@ public class ScorePageItem extends TeaModel {
     }
     public String getMainText() {
         return this.mainText;
+    }
+
+    public ScorePageItem setMarkdownText(String markdownText) {
+        this.markdownText = markdownText;
+        return this;
+    }
+    public String getMarkdownText() {
+        return this.markdownText;
     }
 
     public ScorePageItem setMime(String mime) {
