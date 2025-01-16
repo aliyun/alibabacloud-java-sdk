@@ -128,6 +128,9 @@ public class GetTaskResultResponseBody extends TeaModel {
         @NameInMap("asrResult")
         public java.util.List<GetTaskResultResponseBodyDataAsrResult> asrResult;
 
+        @NameInMap("extra")
+        public String extra;
+
         @NameInMap("taskErrorMessage")
         public String taskErrorMessage;
 
@@ -159,6 +162,14 @@ public class GetTaskResultResponseBody extends TeaModel {
         }
         public java.util.List<GetTaskResultResponseBodyDataAsrResult> getAsrResult() {
             return this.asrResult;
+        }
+
+        public GetTaskResultResponseBodyData setExtra(String extra) {
+            this.extra = extra;
+            return this;
+        }
+        public String getExtra() {
+            return this.extra;
         }
 
         public GetTaskResultResponseBodyData setTaskErrorMessage(String taskErrorMessage) {
