@@ -456,6 +456,9 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestTranscription extends TeaModel {
+        @NameInMap("asrModelCode")
+        public String asrModelCode;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -478,6 +481,9 @@ public class CreateTaskRequest extends TeaModel {
          */
         @NameInMap("fileName")
         public String fileName;
+
+        @NameInMap("level")
+        public String level;
 
         /**
          * <strong>example:</strong>
@@ -503,6 +509,14 @@ public class CreateTaskRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateTaskRequestTranscription setAsrModelCode(String asrModelCode) {
+            this.asrModelCode = asrModelCode;
+            return this;
+        }
+        public String getAsrModelCode() {
+            return this.asrModelCode;
+        }
+
         public CreateTaskRequestTranscription setAutoSplit(Integer autoSplit) {
             this.autoSplit = autoSplit;
             return this;
@@ -525,6 +539,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public String getFileName() {
             return this.fileName;
+        }
+
+        public CreateTaskRequestTranscription setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
         }
 
         public CreateTaskRequestTranscription setServiceChannel(Integer serviceChannel) {
