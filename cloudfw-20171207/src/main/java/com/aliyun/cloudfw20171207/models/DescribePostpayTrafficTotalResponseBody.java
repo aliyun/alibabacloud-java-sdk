@@ -67,6 +67,12 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     @NameInMap("TotalNatTraffic")
     public Long totalNatTraffic;
 
+    @NameInMap("TotalSdlBillTraffic")
+    public Long totalSdlBillTraffic;
+
+    @NameInMap("TotalSdlFreeTraffic")
+    public Long totalSdlFreeTraffic;
+
     /**
      * <p>The total volume of traffic. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic. Unit: bytes.</p>
      * 
@@ -153,6 +159,22 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     }
     public Long getTotalNatTraffic() {
         return this.totalNatTraffic;
+    }
+
+    public DescribePostpayTrafficTotalResponseBody setTotalSdlBillTraffic(Long totalSdlBillTraffic) {
+        this.totalSdlBillTraffic = totalSdlBillTraffic;
+        return this;
+    }
+    public Long getTotalSdlBillTraffic() {
+        return this.totalSdlBillTraffic;
+    }
+
+    public DescribePostpayTrafficTotalResponseBody setTotalSdlFreeTraffic(Long totalSdlFreeTraffic) {
+        this.totalSdlFreeTraffic = totalSdlFreeTraffic;
+        return this;
+    }
+    public Long getTotalSdlFreeTraffic() {
+        return this.totalSdlFreeTraffic;
     }
 
     public DescribePostpayTrafficTotalResponseBody setTotalTraffic(Long totalTraffic) {

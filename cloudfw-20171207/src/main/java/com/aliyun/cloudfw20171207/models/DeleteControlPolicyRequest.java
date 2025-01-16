@@ -82,6 +82,7 @@ public class DeleteControlPolicyRequest extends TeaModel {
         return this.lang;
     }
 
+    @Deprecated
     public DeleteControlPolicyRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

@@ -165,6 +165,7 @@ public class AddAddressBookRequest extends TeaModel {
         return this.lang;
     }
 
+    @Deprecated
     public AddAddressBookRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

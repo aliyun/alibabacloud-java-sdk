@@ -74,6 +74,7 @@ public class BatchCopyVpcFirewallControlPolicyRequest extends TeaModel {
         return this.lang;
     }
 
+    @Deprecated
     public BatchCopyVpcFirewallControlPolicyRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

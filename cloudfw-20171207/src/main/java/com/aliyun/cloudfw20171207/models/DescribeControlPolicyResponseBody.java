@@ -662,6 +662,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             return this.direction;
         }
 
+        @Deprecated
         public DescribeControlPolicyResponseBodyPolicys setDnsResult(String dnsResult) {
             this.dnsResult = dnsResult;
             return this;

@@ -159,6 +159,7 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends TeaModel {
         return this.runMode;
     }
 
+    @Deprecated
     public ModifyVpcFirewallDefaultIPSConfigRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

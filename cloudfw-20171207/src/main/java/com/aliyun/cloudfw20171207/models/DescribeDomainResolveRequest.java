@@ -80,6 +80,7 @@ public class DescribeDomainResolveRequest extends TeaModel {
         return this.lang;
     }
 
+    @Deprecated
     public DescribeDomainResolveRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;
