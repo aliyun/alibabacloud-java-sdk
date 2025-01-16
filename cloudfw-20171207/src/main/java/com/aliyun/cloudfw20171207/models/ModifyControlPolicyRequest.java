@@ -11,7 +11,6 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <li><strong>drop</strong>: denies the traffic.</li>
      * <li><strong>log</strong>: monitors the traffic.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>accept</p>
@@ -61,6 +60,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <p>HTTP</p>
      */
     @NameInMap("ApplicationName")
+    @Deprecated
     public String applicationName;
 
     /**
@@ -74,7 +74,6 @@ public class ModifyControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the access control policy.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -121,7 +120,6 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <li>If <strong>DestinationType</strong> is set to domain, the value of <strong>Destination</strong> is a domain name. Example: \*.aliyuncs.com.</li>
      * <li>If <strong>DestinationType</strong> is set to location, the value of <strong>Destination</strong> is a location. For more information about the location codes, see the &quot;AddControlPolicy&quot; topic. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX/24</p>
@@ -137,7 +135,6 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <li><strong>domain</strong>: domain name</li>
      * <li><strong>location</strong>: location</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>net</p>
@@ -151,7 +148,6 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <li><strong>in</strong>: inbound traffic</li>
      * <li><strong>out</strong>: outbound traffic</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>in</p>
@@ -212,7 +208,6 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <blockquote>
      * <p> If the traffic direction is outbound and the destination address is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto to TCP or ANY. If you set Proto to TCP, you can set ApplicationName to HTTP, HTTPS, SMTP, SMTPS, and SSL. If you set Proto to ANY, you can set ApplicationName to ANY.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>TCP</p>
@@ -299,7 +294,6 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <li>If <strong>SourceType</strong> is set to group, the value of <strong>Source</strong> is an address book. Example: db_group.</li>
      * <li>If <strong>SourceType</strong> is set to location, the value of <strong>Source</strong> is a location. For more information about the location codes, see the &quot;AddControlPolicy&quot; topic. Example: [&quot;BJ11&quot;, &quot;ZB&quot;]</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX/24</p>
@@ -314,7 +308,6 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <li><strong>group</strong>: address book</li>
      * <li><strong>location</strong>: location</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>net</p>
@@ -355,6 +348,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
         return this.aclUuid;
     }
 
+    @Deprecated
     public ModifyControlPolicyRequest setApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;

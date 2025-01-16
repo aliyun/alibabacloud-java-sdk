@@ -12,7 +12,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <li><strong>drop</strong>: blocks the traffic.</li>
      * <li><strong>log</strong>: monitors the traffic.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>accept</p>
@@ -56,6 +55,7 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>HTTP</p>
      */
     @NameInMap("ApplicationName")
+    @Deprecated
     public String applicationName;
 
     /**
@@ -66,7 +66,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the access control policy.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -118,7 +117,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>Example: \*.aliyuncs.com</p>
      * </li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10.2.X.X/XX</p>
@@ -134,7 +132,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <li><strong>group</strong>: address book</li>
      * <li><strong>domain</strong>: domain name</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>net</p>
@@ -191,7 +188,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <li>UDP</li>
      * <li>ICMP</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>TCP</p>
@@ -282,7 +278,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>Example: db_group</p>
      * </li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10.2.X.X/XX</p>
@@ -297,7 +292,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <li><strong>net</strong>: CIDR block</li>
      * <li><strong>group</strong>: address book</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>net</p>
@@ -356,6 +350,7 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
         return this.aclUuid;
     }
 
+    @Deprecated
     public ModifyVpcFirewallControlPolicyRequest setApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
