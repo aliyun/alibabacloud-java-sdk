@@ -198,7 +198,7 @@ public class UpdateAndPublishAgentSelectiveRequest extends TeaModel {
         public Boolean enableSearch;
 
         @NameInMap("enableWebSearch")
-        public String enableWebSearch;
+        public Boolean enableWebSearch;
 
         @NameInMap("fixedReplyDetail")
         public String fixedReplyDetail;
@@ -253,11 +253,11 @@ public class UpdateAndPublishAgentSelectiveRequest extends TeaModel {
             return this.enableSearch;
         }
 
-        public UpdateAndPublishAgentSelectiveRequestApplicationConfigRagConfig setEnableWebSearch(String enableWebSearch) {
+        public UpdateAndPublishAgentSelectiveRequestApplicationConfigRagConfig setEnableWebSearch(Boolean enableWebSearch) {
             this.enableWebSearch = enableWebSearch;
             return this;
         }
-        public String getEnableWebSearch() {
+        public Boolean getEnableWebSearch() {
             return this.enableWebSearch;
         }
 
