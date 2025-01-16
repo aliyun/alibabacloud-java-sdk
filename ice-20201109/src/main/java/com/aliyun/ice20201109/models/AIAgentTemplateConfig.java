@@ -118,6 +118,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("VoiceId")
         public String voiceId;
 
+        @NameInMap("VoiceIdList")
+        public java.util.List<String> voiceIdList;
+
         @NameInMap("VoiceprintId")
         public String voiceprintId;
 
@@ -255,6 +258,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.voiceId;
         }
 
+        public AIAgentTemplateConfigAvatarChat3D setVoiceIdList(java.util.List<String> voiceIdList) {
+            this.voiceIdList = voiceIdList;
+            return this;
+        }
+        public java.util.List<String> getVoiceIdList() {
+            return this.voiceIdList;
+        }
+
         public AIAgentTemplateConfigAvatarChat3D setVoiceprintId(String voiceprintId) {
             this.voiceprintId = voiceprintId;
             return this;
@@ -361,6 +372,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @NameInMap("VoiceId")
         public String voiceId;
+
+        @NameInMap("VoiceIdList")
+        public java.util.List<String> voiceIdList;
 
         @NameInMap("VoiceprintId")
         public String voiceprintId;
@@ -491,6 +505,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.voiceId;
         }
 
+        public AIAgentTemplateConfigVisionChat setVoiceIdList(java.util.List<String> voiceIdList) {
+            this.voiceIdList = voiceIdList;
+            return this;
+        }
+        public java.util.List<String> getVoiceIdList() {
+            return this.voiceIdList;
+        }
+
         public AIAgentTemplateConfigVisionChat setVoiceprintId(String voiceprintId) {
             this.voiceprintId = voiceprintId;
             return this;
@@ -603,6 +625,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @NameInMap("VoiceId")
         public String voiceId;
+
+        @NameInMap("VoiceIdList")
+        public java.util.List<String> voiceIdList;
 
         @NameInMap("VoiceprintId")
         public String voiceprintId;
@@ -747,6 +772,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public String getVoiceId() {
             return this.voiceId;
+        }
+
+        public AIAgentTemplateConfigVoiceChat setVoiceIdList(java.util.List<String> voiceIdList) {
+            this.voiceIdList = voiceIdList;
+            return this;
+        }
+        public java.util.List<String> getVoiceIdList() {
+            return this.voiceIdList;
         }
 
         public AIAgentTemplateConfigVoiceChat setVoiceprintId(String voiceprintId) {
