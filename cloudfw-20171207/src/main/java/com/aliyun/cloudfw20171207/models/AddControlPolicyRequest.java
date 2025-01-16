@@ -560,6 +560,7 @@ public class AddControlPolicyRequest extends TeaModel {
         return this.source;
     }
 
+    @Deprecated
     public AddControlPolicyRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

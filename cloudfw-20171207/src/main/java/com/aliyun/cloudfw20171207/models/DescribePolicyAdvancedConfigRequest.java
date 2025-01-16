@@ -40,6 +40,7 @@ public class DescribePolicyAdvancedConfigRequest extends TeaModel {
         return this.lang;
     }
 
+    @Deprecated
     public DescribePolicyAdvancedConfigRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

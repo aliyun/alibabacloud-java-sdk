@@ -59,6 +59,7 @@ public class DeleteAddressBookRequest extends TeaModel {
         return this.lang;
     }
 
+    @Deprecated
     public DeleteAddressBookRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

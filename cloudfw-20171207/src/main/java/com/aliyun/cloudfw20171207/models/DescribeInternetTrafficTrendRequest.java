@@ -139,6 +139,7 @@ public class DescribeInternetTrafficTrendRequest extends TeaModel {
         return this.sourceCode;
     }
 
+    @Deprecated
     public DescribeInternetTrafficTrendRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

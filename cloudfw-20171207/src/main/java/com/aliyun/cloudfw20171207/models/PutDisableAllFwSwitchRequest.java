@@ -57,6 +57,7 @@ public class PutDisableAllFwSwitchRequest extends TeaModel {
         return this.lang;
     }
 
+    @Deprecated
     public PutDisableAllFwSwitchRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

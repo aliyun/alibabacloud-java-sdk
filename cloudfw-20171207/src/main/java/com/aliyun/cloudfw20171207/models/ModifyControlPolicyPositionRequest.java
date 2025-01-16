@@ -101,6 +101,7 @@ public class ModifyControlPolicyPositionRequest extends TeaModel {
         return this.oldOrder;
     }
 
+    @Deprecated
     public ModifyControlPolicyPositionRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

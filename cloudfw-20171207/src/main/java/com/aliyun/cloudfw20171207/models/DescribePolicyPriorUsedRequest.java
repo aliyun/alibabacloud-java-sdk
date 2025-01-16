@@ -86,6 +86,7 @@ public class DescribePolicyPriorUsedRequest extends TeaModel {
         return this.lang;
     }
 
+    @Deprecated
     public DescribePolicyPriorUsedRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

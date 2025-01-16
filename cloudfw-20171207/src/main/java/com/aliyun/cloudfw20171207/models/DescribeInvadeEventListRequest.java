@@ -270,6 +270,7 @@ public class DescribeInvadeEventListRequest extends TeaModel {
         return this.riskLevel;
     }
 
+    @Deprecated
     public DescribeInvadeEventListRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;
