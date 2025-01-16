@@ -43,6 +43,7 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>HTTP</p>
      */
     @NameInMap("ApplicationName")
+    @Deprecated
     public String applicationName;
 
     /**
@@ -345,6 +346,7 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
         return this.aclAction;
     }
 
+    @Deprecated
     public CreateVpcFirewallControlPolicyRequest setApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;

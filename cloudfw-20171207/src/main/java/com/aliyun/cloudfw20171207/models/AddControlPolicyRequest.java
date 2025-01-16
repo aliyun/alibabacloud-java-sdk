@@ -47,6 +47,7 @@ public class AddControlPolicyRequest extends TeaModel {
      * <p>ANY</p>
      */
     @NameInMap("ApplicationName")
+    @Deprecated
     public String applicationName;
 
     /**
@@ -392,6 +393,7 @@ public class AddControlPolicyRequest extends TeaModel {
         return this.aclAction;
     }
 
+    @Deprecated
     public AddControlPolicyRequest setApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
