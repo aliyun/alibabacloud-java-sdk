@@ -4643,6 +4643,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询工程导出任务</p>
+     * 
+     * @param request GetProjectExportJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProjectExportJobResponse
+     */
+    public GetProjectExportJobResponse getProjectExportJobWithOptions(GetProjectExportJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProjectExportJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProjectExportJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询工程导出任务</p>
+     * 
+     * @param request GetProjectExportJobRequest
+     * @return GetProjectExportJobResponse
+     */
+    public GetProjectExportJobResponse getProjectExportJob(GetProjectExportJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getProjectExportJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取公共媒资内容信息</p>
      * 
      * @param request GetPublicMediaInfoRequest
@@ -11401,6 +11445,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitPackageJobResponse submitPackageJob(SubmitPackageJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitPackageJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交工程导出任务</p>
+     * 
+     * @param request SubmitProjectExportJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitProjectExportJobResponse
+     */
+    public SubmitProjectExportJobResponse submitProjectExportJobWithOptions(SubmitProjectExportJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.exportType)) {
+            query.put("ExportType", request.exportType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputMediaConfig)) {
+            query.put("OutputMediaConfig", request.outputMediaConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.timeline)) {
+            body.put("Timeline", request.timeline);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitProjectExportJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitProjectExportJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交工程导出任务</p>
+     * 
+     * @param request SubmitProjectExportJobRequest
+     * @return SubmitProjectExportJobResponse
+     */
+    public SubmitProjectExportJobResponse submitProjectExportJob(SubmitProjectExportJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitProjectExportJobWithOptions(request, runtime);
     }
 
     /**
