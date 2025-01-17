@@ -4,12 +4,24 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class CreateDocTranslateTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D3920BC3-A395-4CAD-9E84-7C39EB07507B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ready</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0586df512c8b4bb382d7d9a6a01b5854</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

@@ -4,29 +4,50 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class TranslateImageBatchRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>my_awesome_task_1</p>
+     */
     @NameInMap("CustomTaskId")
     public String customTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;needEditorData&quot;: &quot;false&quot;, &quot;ignoreEntityRecognize&quot;: &quot;true&quot;}</p>
+     */
     @NameInMap("Ext")
     public String ext;
 
+    /**
+     * <strong>example:</strong>
+     * <p>general</p>
+     */
     @NameInMap("Field")
     public String field;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/1.jpg,https://example.com/2.jpg,https://example.com/3.jpg">https://example.com/1.jpg,https://example.com/2.jpg,https://example.com/3.jpg</a></p>
      */
     @NameInMap("ImageUrls")
     public String imageUrls;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("TargetLanguage")
     public String targetLanguage;

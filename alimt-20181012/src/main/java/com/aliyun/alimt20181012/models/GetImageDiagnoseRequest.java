@@ -4,11 +4,18 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetImageDiagnoseRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{   &quot;product_id&quot;: &quot;1&quot;,   &quot;platform&quot;: &quot;ae&quot; }</p>
+     */
     @NameInMap("Extra")
     public String extra;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://xxxxx.oss-cn-shenzhen.aliyuncs.com/jd/41209/xxxxx.jpg">http://xxxxx.oss-cn-shenzhen.aliyuncs.com/jd/41209/xxxxx.jpg</a></p>
      */
     @NameInMap("Url")
     public String url;

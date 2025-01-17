@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAsyncTranslateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>77056ab7-7be1-4c2a-91a1-f20f63894048</p>
      */
     @NameInMap("JobId")
     public String jobId;

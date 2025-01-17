@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetImageTranslateTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
      */
     @NameInMap("TaskId")
     public String taskId;

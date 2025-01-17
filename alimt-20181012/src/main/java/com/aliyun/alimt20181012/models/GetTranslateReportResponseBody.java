@@ -4,15 +4,31 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetTranslateReportResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;result&quot;:[{&quot;time&quot;:&quot;2021-10-21 00:00:00&quot;,&quot;total&quot;:100}]}</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86D18195-D89C-4C8C-9DC4-5FCE789CE6D5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

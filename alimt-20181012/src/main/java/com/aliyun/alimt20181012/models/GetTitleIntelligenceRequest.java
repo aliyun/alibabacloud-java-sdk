@@ -6,24 +6,41 @@ import com.aliyun.tea.*;
 public class GetTitleIntelligenceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
      */
     @NameInMap("CatLevelThreeId")
     public Long catLevelThreeId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>222</p>
      */
     @NameInMap("CatLevelTwoId")
     public Long catLevelTwoId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;product_id&quot;:&quot;1212&quot;}</p>
+     */
     @NameInMap("Extra")
     public String extra;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hello,apple</p>
+     */
     @NameInMap("Keywords")
     public String keywords;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ae</p>
      */
     @NameInMap("Platform")
     public String platform;

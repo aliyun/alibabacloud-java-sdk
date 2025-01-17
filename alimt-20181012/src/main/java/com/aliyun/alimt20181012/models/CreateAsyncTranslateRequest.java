@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class CreateAsyncTranslateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>translate_standard</p>
      */
     @NameInMap("ApiType")
     public String apiType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text</p>
      */
     @NameInMap("FormatType")
     public String formatType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>general</p>
      */
     @NameInMap("Scene")
     public String scene;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Opinion: We have finally gotten some relief at the pump. But it may not last long</p>
      */
     @NameInMap("SourceText")
     public String sourceText;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("TargetLanguage")
     public String targetLanguage;

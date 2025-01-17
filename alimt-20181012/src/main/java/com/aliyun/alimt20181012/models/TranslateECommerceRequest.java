@@ -4,35 +4,54 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class TranslateECommerceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>context信息</p>
+     */
     @NameInMap("Context")
     public String context;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text</p>
      */
     @NameInMap("FormatType")
     public String formatType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>social</p>
      */
     @NameInMap("Scene")
     public String scene;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello</p>
      */
     @NameInMap("SourceText")
     public String sourceText;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("TargetLanguage")
     public String targetLanguage;

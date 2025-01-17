@@ -7,6 +7,10 @@ public class TranslateCertificateResponseBody extends TeaModel {
     @NameInMap("Data")
     public TranslateCertificateResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6640DE48-201C-4110-AE87-FB8FA34412B9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,12 +39,20 @@ public class TranslateCertificateResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("KeyTranslation")
         public String keyTranslation;
 
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Solemn</p>
+         */
         @NameInMap("ValueTranslation")
         public String valueTranslation;
 

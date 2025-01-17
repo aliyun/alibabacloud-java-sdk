@@ -7,6 +7,10 @@ public class OpenAlimtServiceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>id</p>
+     */
     @NameInMap("Type")
     public String type;
 

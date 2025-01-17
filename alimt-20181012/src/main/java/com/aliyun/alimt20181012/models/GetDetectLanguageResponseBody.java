@@ -4,12 +4,20 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetDetectLanguageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("DetectedLanguage")
     public String detectedLanguage;
 
     @NameInMap("LanguageProbabilities")
     public String languageProbabilities;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0C5EC1EC-1A06-4D60-97E6-4D41350945E4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

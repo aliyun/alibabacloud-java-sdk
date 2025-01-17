@@ -84,8 +84,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 大文本异步翻译，支持5000-50000字翻译
-     *
+     * <b>summary</b> : 
+     * <p>大文本异步翻译，支持5000-50000字翻译</p>
+     * 
      * @param request CreateAsyncTranslateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAsyncTranslateResponse
@@ -135,8 +136,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 大文本异步翻译，支持5000-50000字翻译
-     *
+     * <b>summary</b> : 
+     * <p>大文本异步翻译，支持5000-50000字翻译</p>
+     * 
      * @param request CreateAsyncTranslateRequest
      * @return CreateAsyncTranslateResponse
      */
@@ -333,8 +335,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 大文本异步翻译，支持5000-50000字翻译
-     *
+     * <b>summary</b> : 
+     * <p>大文本异步翻译，支持5000-50000字翻译</p>
+     * 
      * @param request GetAsyncTranslateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAsyncTranslateResponse
@@ -364,8 +367,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 大文本异步翻译，支持5000-50000字翻译
-     *
+     * <b>summary</b> : 
+     * <p>大文本异步翻译，支持5000-50000字翻译</p>
+     * 
      * @param request GetAsyncTranslateRequest
      * @return GetAsyncTranslateResponse
      */
@@ -433,8 +437,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetBatchTranslateByVPC
-     *
+     * <b>summary</b> : 
+     * <p>GetBatchTranslateByVPC</p>
+     * 
      * @param request GetBatchTranslateByVPCRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetBatchTranslateByVPCResponse
@@ -484,8 +489,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetBatchTranslateByVPC
-     *
+     * <b>summary</b> : 
+     * <p>GetBatchTranslateByVPC</p>
+     * 
      * @param request GetBatchTranslateByVPCRequest
      * @return GetBatchTranslateByVPCResponse
      */
@@ -495,8 +501,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 语种识别
-     *
+     * <b>summary</b> : 
+     * <p>语种识别</p>
+     * 
      * @param request GetDetectLanguageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDetectLanguageResponse
@@ -526,8 +533,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 语种识别
-     *
+     * <b>summary</b> : 
+     * <p>语种识别</p>
+     * 
      * @param request GetDetectLanguageRequest
      * @return GetDetectLanguageResponse
      */
@@ -871,8 +879,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取图片批量翻译结果
-     *
+     * <b>summary</b> : 
+     * <p>获取图片批量翻译结果</p>
+     * 
      * @param request GetTranslateImageBatchResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTranslateImageBatchResultResponse
@@ -902,8 +911,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取图片批量翻译结果
-     *
+     * <b>summary</b> : 
+     * <p>获取图片批量翻译结果</p>
+     * 
      * @param request GetTranslateImageBatchResultRequest
      * @return GetTranslateImageBatchResultResponse
      */
@@ -963,8 +973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 开通服务
-     *
+     * <b>summary</b> : 
+     * <p>开通服务</p>
+     * 
      * @param request OpenAlimtServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OpenAlimtServiceResponse
@@ -998,8 +1009,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 开通服务
-     *
+     * <b>summary</b> : 
+     * <p>开通服务</p>
+     * 
      * @param request OpenAlimtServiceRequest
      * @return OpenAlimtServiceResponse
      */
@@ -1199,11 +1211,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * @deprecated OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
-     *
+     * 
      * @param request TranslateECommerceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TranslateECommerceResponse
      */
+    @Deprecated
     // Deprecated
     public TranslateECommerceResponse translateECommerceWithOptions(TranslateECommerceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1253,10 +1266,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * @deprecated OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
-     *
+     * 
      * @param request TranslateECommerceRequest
      * @return TranslateECommerceResponse
      */
+    @Deprecated
     // Deprecated
     public TranslateECommerceResponse translateECommerce(TranslateECommerceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1324,8 +1338,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary TranslateGeneralVpc
-     *
+     * <b>summary</b> : 
+     * <p>TranslateGeneralVpc</p>
+     * 
      * @param request TranslateGeneralVpcRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TranslateGeneralVpcResponse
@@ -1377,8 +1392,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary TranslateGeneralVpc
-     *
+     * <b>summary</b> : 
+     * <p>TranslateGeneralVpc</p>
+     * 
      * @param request TranslateGeneralVpcRequest
      * @return TranslateGeneralVpcResponse
      */
@@ -1388,8 +1404,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 公有云图片翻译产品API
-     *
+     * <b>summary</b> : 
+     * <p>公有云图片翻译产品API</p>
+     * 
      * @param request TranslateImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TranslateImageResponse
@@ -1439,8 +1456,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 公有云图片翻译产品API
-     *
+     * <b>summary</b> : 
+     * <p>公有云图片翻译产品API</p>
+     * 
      * @param request TranslateImageRequest
      * @return TranslateImageResponse
      */
@@ -1450,8 +1468,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量图片翻译接口
-     *
+     * <b>summary</b> : 
+     * <p>批量图片翻译接口</p>
+     * 
      * @param request TranslateImageBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TranslateImageBatchResponse
@@ -1501,13 +1520,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量图片翻译接口
-     *
+     * <b>summary</b> : 
+     * <p>批量图片翻译接口</p>
+     * 
      * @param request TranslateImageBatchRequest
      * @return TranslateImageBatchResponse
      */
     public TranslateImageBatchResponse translateImageBatch(TranslateImageBatchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.translateImageBatchWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>搜索翻译</p>
+     * 
+     * @param request TranslateSearchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TranslateSearchResponse
+     */
+    public TranslateSearchResponse translateSearchWithOptions(TranslateSearchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.formatType)) {
+            body.put("FormatType", request.formatType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            body.put("Scene", request.scene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLanguage)) {
+            body.put("SourceLanguage", request.sourceLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceText)) {
+            body.put("SourceText", request.sourceText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetLanguage)) {
+            body.put("TargetLanguage", request.targetLanguage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TranslateSearch"),
+            new TeaPair("version", "2018-10-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TranslateSearchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>搜索翻译</p>
+     * 
+     * @param request TranslateSearchRequest
+     * @return TranslateSearchResponse
+     */
+    public TranslateSearchResponse translateSearch(TranslateSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.translateSearchWithOptions(request, runtime);
     }
 }

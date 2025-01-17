@@ -4,15 +4,27 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetTitleIntelligenceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public GetTitleIntelligenceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D70487B4-8891-4D24-BB64-8788E53671FB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,10 @@ public class GetTitleIntelligenceResponseBody extends TeaModel {
     }
 
     public static class GetTitleIntelligenceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Custom Hello Kitty PVC Cartoon Apple for Home Garden Complete Apple Bath Shower</p>
+         */
         @NameInMap("Titles")
         public String titles;
 

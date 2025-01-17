@@ -4,35 +4,59 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetTitleGenerateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{2:&quot;None&quot;,10:&quot;Plastic&quot;}</p>
+     */
     @NameInMap("Attributes")
     public String attributes;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127896018</p>
      */
     @NameInMap("CategoryId")
     public String categoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{   &quot;product_id&quot;: &quot;1&quot;,   &quot;platform&quot;: &quot;ae&quot; }</p>
+     */
     @NameInMap("Extra")
     public String extra;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None,Plastic</p>
+     */
     @NameInMap("HotWords")
     public String hotWords;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ae</p>
      */
     @NameInMap("Platform")
     public String platform;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10pcs 80ml Kitchen Disposable</p>
      */
     @NameInMap("Title")
     public String title;

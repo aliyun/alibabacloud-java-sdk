@@ -4,26 +4,43 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class CreateImageTranslateTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;have_ocr&quot;:&quot;false&quot;,&quot;without_text&quot;:&quot;false&quot;,&quot;have_psd&quot;:&quot;true&quot;,&quot;ignore_entity&quot;:&quot;false&quot;}</p>
+     */
     @NameInMap("Extra")
     public String extra;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("TargetLanguage")
     public String targetLanguage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://xxx,http://yyy">http://xxx,http://yyy</a></p>
      */
     @NameInMap("UrlList")
     public String urlList;

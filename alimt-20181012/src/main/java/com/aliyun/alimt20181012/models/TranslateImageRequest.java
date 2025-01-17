@@ -4,21 +4,45 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class TranslateImageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;needEditorData&quot;: &quot;false&quot;, &quot;ignoreEntityRecognize&quot;: &quot;true&quot;}</p>
+     */
     @NameInMap("Ext")
     public String ext;
 
+    /**
+     * <strong>example:</strong>
+     * <p>general</p>
+     */
     @NameInMap("Field")
     public String field;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/9j/4...H/9k=</p>
+     */
     @NameInMap("ImageBase64")
     public String imageBase64;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/example.jpg">https://example.com/example.jpg</a></p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("TargetLanguage")
     public String targetLanguage;
 
