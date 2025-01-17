@@ -17,6 +17,9 @@ public class SetSecurityPreferenceShrinkRequest extends TeaModel {
     @NameInMap("AllowUserToChangePassword")
     public Boolean allowUserToChangePassword;
 
+    @NameInMap("AllowUserToLoginWithPasskey")
+    public Boolean allowUserToLoginWithPasskey;
+
     /**
      * <p>Specifies whether RAM users can manage their AccessKey pairs. Valid values:</p>
      * <ul>
@@ -139,6 +142,14 @@ public class SetSecurityPreferenceShrinkRequest extends TeaModel {
     }
     public Boolean getAllowUserToChangePassword() {
         return this.allowUserToChangePassword;
+    }
+
+    public SetSecurityPreferenceShrinkRequest setAllowUserToLoginWithPasskey(Boolean allowUserToLoginWithPasskey) {
+        this.allowUserToLoginWithPasskey = allowUserToLoginWithPasskey;
+        return this;
+    }
+    public Boolean getAllowUserToLoginWithPasskey() {
+        return this.allowUserToLoginWithPasskey;
     }
 
     public SetSecurityPreferenceShrinkRequest setAllowUserToManageAccessKeys(Boolean allowUserToManageAccessKeys) {

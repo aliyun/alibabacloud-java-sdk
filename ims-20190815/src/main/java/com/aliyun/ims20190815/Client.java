@@ -3093,6 +3093,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AllowUserToChangePassword", request.allowUserToChangePassword);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.allowUserToLoginWithPasskey)) {
+            query.put("AllowUserToLoginWithPasskey", request.allowUserToLoginWithPasskey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.allowUserToManageAccessKeys)) {
             query.put("AllowUserToManageAccessKeys", request.allowUserToManageAccessKeys);
         }
@@ -3163,6 +3167,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>设置用户SSO身份提供商信息</p>
+     * 
      * @param request SetUserSsoSettingsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetUserSsoSettingsResponse
@@ -3204,6 +3211,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>设置用户SSO身份提供商信息</p>
+     * 
      * @param request SetUserSsoSettingsRequest
      * @return SetUserSsoSettingsResponse
      */

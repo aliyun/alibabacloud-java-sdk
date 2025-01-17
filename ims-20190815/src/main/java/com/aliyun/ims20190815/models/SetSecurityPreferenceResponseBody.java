@@ -75,6 +75,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         @NameInMap("AllowUserToChangePassword")
         public Boolean allowUserToChangePassword;
 
+        @NameInMap("AllowUserToLoginWithPasskey")
+        public Boolean allowUserToLoginWithPasskey;
+
         /**
          * <p>Indicates whether RAM users can remember the MFA devices for seven days.</p>
          * 
@@ -131,6 +134,14 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         }
         public Boolean getAllowUserToChangePassword() {
             return this.allowUserToChangePassword;
+        }
+
+        public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setAllowUserToLoginWithPasskey(Boolean allowUserToLoginWithPasskey) {
+            this.allowUserToLoginWithPasskey = allowUserToLoginWithPasskey;
+            return this;
+        }
+        public Boolean getAllowUserToLoginWithPasskey() {
+            return this.allowUserToLoginWithPasskey;
         }
 
         public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setEnableSaveMFATicket(Boolean enableSaveMFATicket) {
