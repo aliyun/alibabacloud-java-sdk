@@ -4,6 +4,9 @@ package com.aliyun.iqs20240712.models;
 import com.aliyun.tea.*;
 
 public class NearbySearchNovaResponseBody extends TeaModel {
+    @NameInMap("code")
+    public String code;
+
     @NameInMap("data")
     public java.util.List<NearbySearchNovaResponseBodyData> data;
 
@@ -21,6 +24,9 @@ public class NearbySearchNovaResponseBody extends TeaModel {
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("requestId")
     public String requestId;
 
@@ -34,6 +40,14 @@ public class NearbySearchNovaResponseBody extends TeaModel {
     public static NearbySearchNovaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         NearbySearchNovaResponseBody self = new NearbySearchNovaResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public NearbySearchNovaResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public NearbySearchNovaResponseBody setData(java.util.List<NearbySearchNovaResponseBodyData> data) {
@@ -58,6 +72,14 @@ public class NearbySearchNovaResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public NearbySearchNovaResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public NearbySearchNovaResponseBody setRequestId(String requestId) {
