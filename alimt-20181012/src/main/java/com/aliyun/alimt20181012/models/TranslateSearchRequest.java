@@ -3,26 +3,24 @@ package com.aliyun.alimt20181012.models;
 
 import com.aliyun.tea.*;
 
-public class TranslateGeneralRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>{\&quot;appName\&quot;:\&quot;alynx\&quot;}</p>
-     */
-    @NameInMap("Context")
-    public String context;
-
+public class TranslateSearchRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("FormatType")
     public String formatType;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
-     * <p>general</p>
+     * <p>query</p>
      */
     @NameInMap("Scene")
     public String scene;
@@ -32,12 +30,18 @@ public class TranslateGeneralRequest extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>zh</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>今天天气不错</p>
      */
     @NameInMap("SourceText")
     public String sourceText;
@@ -51,20 +55,12 @@ public class TranslateGeneralRequest extends TeaModel {
     @NameInMap("TargetLanguage")
     public String targetLanguage;
 
-    public static TranslateGeneralRequest build(java.util.Map<String, ?> map) throws Exception {
-        TranslateGeneralRequest self = new TranslateGeneralRequest();
+    public static TranslateSearchRequest build(java.util.Map<String, ?> map) throws Exception {
+        TranslateSearchRequest self = new TranslateSearchRequest();
         return TeaModel.build(map, self);
     }
 
-    public TranslateGeneralRequest setContext(String context) {
-        this.context = context;
-        return this;
-    }
-    public String getContext() {
-        return this.context;
-    }
-
-    public TranslateGeneralRequest setFormatType(String formatType) {
+    public TranslateSearchRequest setFormatType(String formatType) {
         this.formatType = formatType;
         return this;
     }
@@ -72,7 +68,7 @@ public class TranslateGeneralRequest extends TeaModel {
         return this.formatType;
     }
 
-    public TranslateGeneralRequest setScene(String scene) {
+    public TranslateSearchRequest setScene(String scene) {
         this.scene = scene;
         return this;
     }
@@ -80,7 +76,7 @@ public class TranslateGeneralRequest extends TeaModel {
         return this.scene;
     }
 
-    public TranslateGeneralRequest setSourceLanguage(String sourceLanguage) {
+    public TranslateSearchRequest setSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
     }
@@ -88,7 +84,7 @@ public class TranslateGeneralRequest extends TeaModel {
         return this.sourceLanguage;
     }
 
-    public TranslateGeneralRequest setSourceText(String sourceText) {
+    public TranslateSearchRequest setSourceText(String sourceText) {
         this.sourceText = sourceText;
         return this;
     }
@@ -96,7 +92,7 @@ public class TranslateGeneralRequest extends TeaModel {
         return this.sourceText;
     }
 
-    public TranslateGeneralRequest setTargetLanguage(String targetLanguage) {
+    public TranslateSearchRequest setTargetLanguage(String targetLanguage) {
         this.targetLanguage = targetLanguage;
         return this;
     }

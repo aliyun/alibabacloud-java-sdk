@@ -4,15 +4,27 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetTranslateImageBatchResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public GetTranslateImageBatchResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DACD263C-C068-5116-83EC-117245AA35CF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,24 +66,52 @@ public class GetTranslateImageBatchResultResponseBody extends TeaModel {
     }
 
     public static class GetTranslateImageBatchResultResponseBodyDataResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/example.jpg">https://example.com/example.jpg</a></p>
+         */
         @NameInMap("FinalImageUrl")
         public String finalImageUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/example.jpg">https://example.com/example.jpg</a></p>
+         */
         @NameInMap("InPaintingUrl")
         public String inPaintingUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/example.jpg">https://example.com/example.jpg</a></p>
+         */
         @NameInMap("SourceImageUrl")
         public String sourceImageUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;TemplateJson&quot;: &quot;Editor Template Json String	&quot;}</p>
+         */
         @NameInMap("TemplateJson")
         public String templateJson;
 
@@ -142,6 +182,10 @@ public class GetTranslateImageBatchResultResponseBody extends TeaModel {
         @NameInMap("Result")
         public java.util.List<GetTranslateImageBatchResultResponseBodyDataResult> result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>finished</p>
+         */
         @NameInMap("Status")
         public String status;
 

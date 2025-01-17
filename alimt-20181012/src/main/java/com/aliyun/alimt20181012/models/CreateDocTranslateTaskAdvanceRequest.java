@@ -4,29 +4,50 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class CreateDocTranslateTaskAdvanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://callbackUrl">http://callbackUrl</a></p>
+     */
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>token</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://fileUrl">http://fileUrl</a></p>
      */
     @NameInMap("FileUrl")
     public java.io.InputStream fileUrlObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>general</p>
+     */
     @NameInMap("Scene")
     public String scene;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("TargetLanguage")
     public String targetLanguage;

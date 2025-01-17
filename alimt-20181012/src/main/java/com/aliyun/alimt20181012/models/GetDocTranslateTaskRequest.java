@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetDocTranslateTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0586df512c8b4bb382d7d9a6a01b5854</p>
      */
     @NameInMap("TaskId")
     public String taskId;

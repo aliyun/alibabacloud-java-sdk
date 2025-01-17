@@ -4,15 +4,27 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class CreateAsyncTranslateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public CreateAsyncTranslateResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DC2DCCC9-C3DF-4F59-8D8E-78185729F16D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -56,12 +68,18 @@ public class CreateAsyncTranslateResponseBody extends TeaModel {
     public static class CreateAsyncTranslateResponseBodyData extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98bbb007-71bb-448b-bab0-2695ce8f8599</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ready</p>
          */
         @NameInMap("Status")
         public String status;

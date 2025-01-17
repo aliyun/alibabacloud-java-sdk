@@ -4,15 +4,27 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetTitleDiagnoseResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public GetTitleDiagnoseResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DC2DCCC9-C3DF-4F59-8D8E-78185729F16D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,33 +66,73 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
     }
 
     public static class GetTitleDiagnoseResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Boy</p>
+         */
         @NameInMap("AllUppercaseWords")
         public String allUppercaseWords;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ContainCoreClasses")
         public String containCoreClasses;
 
+        /**
+         * <strong>example:</strong>
+         * <p>baba</p>
+         */
         @NameInMap("DisableWords")
         public String disableWords;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hi</p>
+         */
         @NameInMap("DuplicateWords")
         public String duplicateWords;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("LanguageQualityScore")
         public String languageQualityScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>no</p>
+         */
         @NameInMap("NoFirstUppercaseList")
         public String noFirstUppercaseList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("OverLengthLimit")
         public String overLengthLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalScore")
         public String totalScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("WordCount")
         public String wordCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ahk</p>
+         */
         @NameInMap("WordSpelledCorrectError")
         public String wordSpelledCorrectError;
 

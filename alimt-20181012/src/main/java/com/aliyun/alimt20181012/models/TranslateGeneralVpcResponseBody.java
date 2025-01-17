@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class TranslateGeneralVpcResponseBody extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -13,11 +16,18 @@ public class TranslateGeneralVpcResponseBody extends TeaModel {
     @NameInMap("Data")
     public TranslateGeneralVpcResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>translate from source to target not support</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC2DCCC9-C3DF-4F59-8D8E-78185729F16D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -60,12 +70,24 @@ public class TranslateGeneralVpcResponseBody extends TeaModel {
     }
 
     public static class TranslateGeneralVpcResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>zh</p>
+         */
         @NameInMap("DetectedLanguage")
         public String detectedLanguage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Hello</p>
+         */
         @NameInMap("Translated")
         public String translated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("WordCount")
         public String wordCount;
 

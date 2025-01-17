@@ -4,9 +4,17 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class OpenAlimtServiceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx-xxxxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

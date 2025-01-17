@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class GetBatchTranslateByVPCRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>translate_standard</p>
      */
     @NameInMap("ApiType")
     public String apiType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text</p>
      */
     @NameInMap("FormatType")
     public String formatType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>general</p>
      */
     @NameInMap("Scene")
     public String scene;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
@@ -36,6 +48,9 @@ public class GetBatchTranslateByVPCRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("TargetLanguage")
     public String targetLanguage;

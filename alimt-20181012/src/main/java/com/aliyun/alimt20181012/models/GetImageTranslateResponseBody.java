@@ -4,15 +4,27 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetImageTranslateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public GetImageTranslateResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A41F6E25-8520-4AF0-90EF-AF7E32840108</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -60,6 +72,10 @@ public class GetImageTranslateResponseBody extends TeaModel {
         @NameInMap("PictureEditor")
         public String pictureEditor;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ae01.alicdn.com/kf/xxxxx.jpeg">https://ae01.alicdn.com/kf/xxxxx.jpeg</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

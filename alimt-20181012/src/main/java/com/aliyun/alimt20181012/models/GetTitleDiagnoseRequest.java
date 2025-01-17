@@ -6,27 +6,43 @@ import com.aliyun.tea.*;
 public class GetTitleDiagnoseRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("CategoryId")
     public String categoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{   &quot;product_id&quot;: &quot;1&quot;,   &quot;platform&quot;: &quot;ae&quot; }</p>
+     */
     @NameInMap("Extra")
     public String extra;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ae</p>
      */
     @NameInMap("Platform")
     public String platform;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Amroe Japan Comic Theme Uzumaki Naruto Namikaze Minato 3D Visual Cartoon 7 Color USB Touch</p>
      */
     @NameInMap("Title")
     public String title;

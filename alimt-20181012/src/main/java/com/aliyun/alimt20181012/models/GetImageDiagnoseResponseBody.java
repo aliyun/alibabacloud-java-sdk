@@ -4,15 +4,27 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetImageDiagnoseResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public GetImageDiagnoseResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DC2DCCC9-C3DF-4F59-8D8E-78185729F16D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,10 @@ public class GetImageDiagnoseResponseBody extends TeaModel {
     }
 
     public static class GetImageDiagnoseResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>zh</p>
+         */
         @NameInMap("Language")
         public String language;
 

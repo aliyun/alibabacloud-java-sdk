@@ -12,12 +12,18 @@ public class GetTranslateReportRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-03-01 00:00:00</p>
      */
     @NameInMap("BeginTime")
     public String beginTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-03-01 23:59:59</p>
      */
     @NameInMap("EndTime")
     public String endTime;

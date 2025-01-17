@@ -4,12 +4,24 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetBatchTranslateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86D18195-D89C-4C8C-9DC4-5FCE789CE6D5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

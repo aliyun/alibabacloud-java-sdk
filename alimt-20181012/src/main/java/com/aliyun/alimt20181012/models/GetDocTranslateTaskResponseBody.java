@@ -4,24 +4,52 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetDocTranslateTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageCount")
     public Integer pageCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12952E92-FDF3-4D3C-88E3-242D72BA7150</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>translated</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0586df512c8b4bb382d7d9a6a01b5854</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Error</p>
+     */
     @NameInMap("TranslateErrorCode")
     public String translateErrorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Fail to get the page number of document.</p>
+     */
     @NameInMap("TranslateErrorMessage")
     public String translateErrorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://translateFileUrl">http://translateFileUrl</a></p>
+     */
     @NameInMap("TranslateFileUrl")
     public String translateFileUrl;
 
