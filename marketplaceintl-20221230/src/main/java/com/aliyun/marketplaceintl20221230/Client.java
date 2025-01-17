@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>国际云市场推送计量数据</p>
+     * 
+     * @param request PushMeteringDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PushMeteringDataResponse
+     */
     public PushMeteringDataResponse pushMeteringDataWithOptions(PushMeteringDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -54,6 +62,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PushMeteringDataResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>国际云市场推送计量数据</p>
+     * 
+     * @param request PushMeteringDataRequest
+     * @return PushMeteringDataResponse
+     */
     public PushMeteringDataResponse pushMeteringData(PushMeteringDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.pushMeteringDataWithOptions(request, runtime);
