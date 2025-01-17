@@ -4,6 +4,9 @@ package com.aliyun.iqs20240712.models;
 import com.aliyun.tea.*;
 
 public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
+    @NameInMap("code")
+    public String code;
+
     @NameInMap("data")
     public ElectrobikeDirectionNovaResponseBodyData data;
 
@@ -21,6 +24,9 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("requestId")
     public String requestId;
 
@@ -34,6 +40,14 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
     public static ElectrobikeDirectionNovaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ElectrobikeDirectionNovaResponseBody self = new ElectrobikeDirectionNovaResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ElectrobikeDirectionNovaResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public ElectrobikeDirectionNovaResponseBody setData(ElectrobikeDirectionNovaResponseBodyData data) {
@@ -58,6 +72,14 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public ElectrobikeDirectionNovaResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ElectrobikeDirectionNovaResponseBody setRequestId(String requestId) {

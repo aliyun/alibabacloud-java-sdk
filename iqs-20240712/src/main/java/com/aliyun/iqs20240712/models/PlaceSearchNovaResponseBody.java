@@ -4,6 +4,9 @@ package com.aliyun.iqs20240712.models;
 import com.aliyun.tea.*;
 
 public class PlaceSearchNovaResponseBody extends TeaModel {
+    @NameInMap("code")
+    public String code;
+
     @NameInMap("data")
     public java.util.List<PlaceSearchNovaResponseBodyData> data;
 
@@ -21,6 +24,9 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("requestId")
     public String requestId;
 
@@ -34,6 +40,14 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
     public static PlaceSearchNovaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PlaceSearchNovaResponseBody self = new PlaceSearchNovaResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public PlaceSearchNovaResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public PlaceSearchNovaResponseBody setData(java.util.List<PlaceSearchNovaResponseBodyData> data) {
@@ -58,6 +72,14 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public PlaceSearchNovaResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public PlaceSearchNovaResponseBody setRequestId(String requestId) {

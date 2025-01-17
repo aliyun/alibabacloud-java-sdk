@@ -4,6 +4,9 @@ package com.aliyun.iqs20240712.models;
 import com.aliyun.tea.*;
 
 public class GeoCodeResponseBody extends TeaModel {
+    @NameInMap("code")
+    public String code;
+
     @NameInMap("data")
     public java.util.List<GeoCodeResponseBodyData> data;
 
@@ -21,6 +24,9 @@ public class GeoCodeResponseBody extends TeaModel {
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("requestId")
     public String requestId;
 
@@ -34,6 +40,14 @@ public class GeoCodeResponseBody extends TeaModel {
     public static GeoCodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GeoCodeResponseBody self = new GeoCodeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GeoCodeResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GeoCodeResponseBody setData(java.util.List<GeoCodeResponseBodyData> data) {
@@ -58,6 +72,14 @@ public class GeoCodeResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public GeoCodeResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GeoCodeResponseBody setRequestId(String requestId) {
