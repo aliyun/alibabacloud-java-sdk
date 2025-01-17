@@ -4306,6 +4306,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取 MediaConvert 任务详情</p>
+     * 
+     * @param request GetMediaConvertJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMediaConvertJobResponse
+     */
+    public GetMediaConvertJobResponse getMediaConvertJobWithOptions(GetMediaConvertJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMediaConvertJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMediaConvertJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取 MediaConvert 任务详情</p>
+     * 
+     * @param request GetMediaConvertJobRequest
+     * @return GetMediaConvertJobResponse
+     */
+    public GetMediaConvertJobResponse getMediaConvertJob(GetMediaConvertJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMediaConvertJobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified.</p>
      * 
@@ -11165,6 +11209,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitMediaCensorJobResponse submitMediaCensorJob(SubmitMediaCensorJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitMediaCensorJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交媒体处理任务</p>
+     * 
+     * @param request SubmitMediaConvertJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitMediaConvertJobResponse
+     */
+    public SubmitMediaConvertJobResponse submitMediaConvertJobWithOptions(SubmitMediaConvertJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            query.put("Config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineId)) {
+            query.put("PipelineId", request.pipelineId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitMediaConvertJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitMediaConvertJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交媒体处理任务</p>
+     * 
+     * @param request SubmitMediaConvertJobRequest
+     * @return SubmitMediaConvertJobResponse
+     */
+    public SubmitMediaConvertJobResponse submitMediaConvertJob(SubmitMediaConvertJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitMediaConvertJobWithOptions(request, runtime);
     }
 
     /**
