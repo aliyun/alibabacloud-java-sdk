@@ -22,6 +22,9 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     @NameInMap("NodePool")
     public String nodePoolShrink;
 
+    @NameInMap("PerSessionPerApp")
+    public Boolean perSessionPerApp;
+
     @NameInMap("PreOpenAppId")
     public String preOpenAppId;
 
@@ -85,6 +88,14 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     }
     public String getNodePoolShrink() {
         return this.nodePoolShrink;
+    }
+
+    public ModifyAppInstanceGroupAttributeShrinkRequest setPerSessionPerApp(Boolean perSessionPerApp) {
+        this.perSessionPerApp = perSessionPerApp;
+        return this;
+    }
+    public Boolean getPerSessionPerApp() {
+        return this.perSessionPerApp;
     }
 
     public ModifyAppInstanceGroupAttributeShrinkRequest setPreOpenAppId(String preOpenAppId) {

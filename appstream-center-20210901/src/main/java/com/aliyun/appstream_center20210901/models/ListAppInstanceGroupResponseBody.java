@@ -638,6 +638,12 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("AppPolicyId")
         public String appPolicyId;
 
+        @NameInMap("AppPolicyImageCheck")
+        public Boolean appPolicyImageCheck;
+
+        @NameInMap("AppPolicyVersion")
+        public String appPolicyVersion;
+
         @NameInMap("Apps")
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> apps;
 
@@ -687,6 +693,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
         @NameInMap("NodePool")
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool> nodePool;
+
+        @NameInMap("OfficeSiteId")
+        public String officeSiteId;
 
         /**
          * <strong>example:</strong>
@@ -842,6 +851,22 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             return this.appPolicyId;
         }
 
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setAppPolicyImageCheck(Boolean appPolicyImageCheck) {
+            this.appPolicyImageCheck = appPolicyImageCheck;
+            return this;
+        }
+        public Boolean getAppPolicyImageCheck() {
+            return this.appPolicyImageCheck;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setAppPolicyVersion(String appPolicyVersion) {
+            this.appPolicyVersion = appPolicyVersion;
+            return this;
+        }
+        public String getAppPolicyVersion() {
+            return this.appPolicyVersion;
+        }
+
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setApps(java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> apps) {
             this.apps = apps;
             return this;
@@ -904,6 +929,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool> getNodePool() {
             return this.nodePool;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setOfficeSiteId(String officeSiteId) {
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
         }
 
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setOsType(String osType) {

@@ -22,6 +22,9 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     @NameInMap("NodePool")
     public ModifyAppInstanceGroupAttributeRequestNodePool nodePool;
 
+    @NameInMap("PerSessionPerApp")
+    public Boolean perSessionPerApp;
+
     @NameInMap("PreOpenAppId")
     public String preOpenAppId;
 
@@ -85,6 +88,14 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     }
     public ModifyAppInstanceGroupAttributeRequestNodePool getNodePool() {
         return this.nodePool;
+    }
+
+    public ModifyAppInstanceGroupAttributeRequest setPerSessionPerApp(Boolean perSessionPerApp) {
+        this.perSessionPerApp = perSessionPerApp;
+        return this;
+    }
+    public Boolean getPerSessionPerApp() {
+        return this.perSessionPerApp;
     }
 
     public ModifyAppInstanceGroupAttributeRequest setPreOpenAppId(String preOpenAppId) {
@@ -260,9 +271,42 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
 
     }
 
+    public static class ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow extends TeaModel {
+        @NameInMap("FileSystemId")
+        public String fileSystemId;
+
+        @NameInMap("ProfileFollowSwitch")
+        public Boolean profileFollowSwitch;
+
+        public static ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow build(java.util.Map<String, ?> map) throws Exception {
+            ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow self = new ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow setFileSystemId(String fileSystemId) {
+            this.fileSystemId = fileSystemId;
+            return this;
+        }
+        public String getFileSystemId() {
+            return this.fileSystemId;
+        }
+
+        public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow setProfileFollowSwitch(Boolean profileFollowSwitch) {
+            this.profileFollowSwitch = profileFollowSwitch;
+            return this;
+        }
+        public Boolean getProfileFollowSwitch() {
+            return this.profileFollowSwitch;
+        }
+
+    }
+
     public static class ModifyAppInstanceGroupAttributeRequestStoragePolicy extends TeaModel {
         @NameInMap("StorageTypeList")
         public java.util.List<String> storageTypeList;
+
+        @NameInMap("UserProfileFollow")
+        public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow userProfileFollow;
 
         public static ModifyAppInstanceGroupAttributeRequestStoragePolicy build(java.util.Map<String, ?> map) throws Exception {
             ModifyAppInstanceGroupAttributeRequestStoragePolicy self = new ModifyAppInstanceGroupAttributeRequestStoragePolicy();
@@ -275,6 +319,14 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
         }
         public java.util.List<String> getStorageTypeList() {
             return this.storageTypeList;
+        }
+
+        public ModifyAppInstanceGroupAttributeRequestStoragePolicy setUserProfileFollow(ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow userProfileFollow) {
+            this.userProfileFollow = userProfileFollow;
+            return this;
+        }
+        public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow getUserProfileFollow() {
+            return this.userProfileFollow;
         }
 
     }

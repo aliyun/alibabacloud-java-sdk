@@ -13,6 +13,15 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    @NameInMap("Cpu")
+    public Float cpu;
+
+    @NameInMap("Gpu")
+    public Float gpu;
+
+    @NameInMap("GpuMemory")
+    public Integer gpuMemory;
+
     /**
      * <p>语言类型。</p>
      * 
@@ -22,12 +31,21 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    @NameInMap("Memory")
+    public Integer memory;
+
     /**
      * <strong>example:</strong>
      * <p>appstreaming.vgpu.4c8g.2g</p>
      */
     @NameInMap("NodeInstanceType")
     public String nodeInstanceType;
+
+    @NameInMap("NodeInstanceTypeFamily")
+    public String nodeInstanceTypeFamily;
+
+    @NameInMap("OrderBy")
+    public String orderBy;
 
     /**
      * <p>支持的操作系统类型。</p>
@@ -65,6 +83,9 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    @NameInMap("SortType")
+    public String sortType;
+
     public static ListNodeInstanceTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNodeInstanceTypeRequest self = new ListNodeInstanceTypeRequest();
         return TeaModel.build(map, self);
@@ -78,6 +99,30 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
         return this.bizRegionId;
     }
 
+    public ListNodeInstanceTypeRequest setCpu(Float cpu) {
+        this.cpu = cpu;
+        return this;
+    }
+    public Float getCpu() {
+        return this.cpu;
+    }
+
+    public ListNodeInstanceTypeRequest setGpu(Float gpu) {
+        this.gpu = gpu;
+        return this;
+    }
+    public Float getGpu() {
+        return this.gpu;
+    }
+
+    public ListNodeInstanceTypeRequest setGpuMemory(Integer gpuMemory) {
+        this.gpuMemory = gpuMemory;
+        return this;
+    }
+    public Integer getGpuMemory() {
+        return this.gpuMemory;
+    }
+
     public ListNodeInstanceTypeRequest setLanguage(String language) {
         this.language = language;
         return this;
@@ -86,12 +131,36 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
         return this.language;
     }
 
+    public ListNodeInstanceTypeRequest setMemory(Integer memory) {
+        this.memory = memory;
+        return this;
+    }
+    public Integer getMemory() {
+        return this.memory;
+    }
+
     public ListNodeInstanceTypeRequest setNodeInstanceType(String nodeInstanceType) {
         this.nodeInstanceType = nodeInstanceType;
         return this;
     }
     public String getNodeInstanceType() {
         return this.nodeInstanceType;
+    }
+
+    public ListNodeInstanceTypeRequest setNodeInstanceTypeFamily(String nodeInstanceTypeFamily) {
+        this.nodeInstanceTypeFamily = nodeInstanceTypeFamily;
+        return this;
+    }
+    public String getNodeInstanceTypeFamily() {
+        return this.nodeInstanceTypeFamily;
+    }
+
+    public ListNodeInstanceTypeRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     public ListNodeInstanceTypeRequest setOsType(String osType) {
@@ -124,6 +193,14 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     }
     public String getProductType() {
         return this.productType;
+    }
+
+    public ListNodeInstanceTypeRequest setSortType(String sortType) {
+        this.sortType = sortType;
+        return this;
+    }
+    public String getSortType() {
+        return this.sortType;
     }
 
 }

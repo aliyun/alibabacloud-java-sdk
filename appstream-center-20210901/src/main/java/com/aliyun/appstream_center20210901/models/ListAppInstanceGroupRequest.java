@@ -31,6 +31,9 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     @NameInMap("NodeInstanceType")
     public String nodeInstanceType;
 
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,6 +113,14 @@ public class ListAppInstanceGroupRequest extends TeaModel {
         return this.nodeInstanceType;
     }
 
+    public ListAppInstanceGroupRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
     public ListAppInstanceGroupRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -134,6 +145,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
         return this.productType;
     }
 
+    @Deprecated
     public ListAppInstanceGroupRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;

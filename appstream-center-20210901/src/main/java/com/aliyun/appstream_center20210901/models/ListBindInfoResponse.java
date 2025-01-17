@@ -3,7 +3,7 @@ package com.aliyun.appstream_center20210901.models;
 
 import com.aliyun.tea.*;
 
-public class AskSessionPackageRenewPriceResponse extends TeaModel {
+public class ListBindInfoResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class AskSessionPackageRenewPriceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public AskSessionPackageRenewPriceResponseBody body;
+    public ListBindInfoResponseBody body;
 
-    public static AskSessionPackageRenewPriceResponse build(java.util.Map<String, ?> map) throws Exception {
-        AskSessionPackageRenewPriceResponse self = new AskSessionPackageRenewPriceResponse();
+    public static ListBindInfoResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListBindInfoResponse self = new ListBindInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public AskSessionPackageRenewPriceResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListBindInfoResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class AskSessionPackageRenewPriceResponse extends TeaModel {
         return this.headers;
     }
 
-    public AskSessionPackageRenewPriceResponse setStatusCode(Integer statusCode) {
+    public ListBindInfoResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class AskSessionPackageRenewPriceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AskSessionPackageRenewPriceResponse setBody(AskSessionPackageRenewPriceResponseBody body) {
+    public ListBindInfoResponse setBody(ListBindInfoResponseBody body) {
         this.body = body;
         return this;
     }
-    public AskSessionPackageRenewPriceResponseBody getBody() {
+    public ListBindInfoResponseBody getBody() {
         return this.body;
     }
 
