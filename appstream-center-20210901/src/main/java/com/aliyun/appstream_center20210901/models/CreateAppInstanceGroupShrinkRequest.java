@@ -13,11 +13,11 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("AppCenterImageId")
     public String appCenterImageId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
+
+    @NameInMap("AppPolicyId")
+    public String appPolicyId;
 
     /**
      * <strong>example:</strong>
@@ -153,6 +153,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     }
     public String getAppInstanceGroupName() {
         return this.appInstanceGroupName;
+    }
+
+    public CreateAppInstanceGroupShrinkRequest setAppPolicyId(String appPolicyId) {
+        this.appPolicyId = appPolicyId;
+        return this;
+    }
+    public String getAppPolicyId() {
+        return this.appPolicyId;
     }
 
     public CreateAppInstanceGroupShrinkRequest setAutoPay(Boolean autoPay) {

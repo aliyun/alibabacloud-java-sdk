@@ -28,6 +28,9 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     @NameInMap("UnAuthorizeUserIds")
     public java.util.List<String> unAuthorizeUserIds;
 
+    @NameInMap("UserMeta")
+    public AuthorizeInstanceGroupRequestUserMeta userMeta;
+
     public static AuthorizeInstanceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AuthorizeInstanceGroupRequest self = new AuthorizeInstanceGroupRequest();
         return TeaModel.build(map, self);
@@ -63,6 +66,44 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     }
     public java.util.List<String> getUnAuthorizeUserIds() {
         return this.unAuthorizeUserIds;
+    }
+
+    public AuthorizeInstanceGroupRequest setUserMeta(AuthorizeInstanceGroupRequestUserMeta userMeta) {
+        this.userMeta = userMeta;
+        return this;
+    }
+    public AuthorizeInstanceGroupRequestUserMeta getUserMeta() {
+        return this.userMeta;
+    }
+
+    public static class AuthorizeInstanceGroupRequestUserMeta extends TeaModel {
+        @NameInMap("AdDomain")
+        public String adDomain;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static AuthorizeInstanceGroupRequestUserMeta build(java.util.Map<String, ?> map) throws Exception {
+            AuthorizeInstanceGroupRequestUserMeta self = new AuthorizeInstanceGroupRequestUserMeta();
+            return TeaModel.build(map, self);
+        }
+
+        public AuthorizeInstanceGroupRequestUserMeta setAdDomain(String adDomain) {
+            this.adDomain = adDomain;
+            return this;
+        }
+        public String getAdDomain() {
+            return this.adDomain;
+        }
+
+        public AuthorizeInstanceGroupRequestUserMeta setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
 }

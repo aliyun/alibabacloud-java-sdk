@@ -13,11 +13,11 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     @NameInMap("AppCenterImageId")
     public String appCenterImageId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
+
+    @NameInMap("AppPolicyId")
+    public String appPolicyId;
 
     /**
      * <strong>example:</strong>
@@ -153,6 +153,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
     public String getAppInstanceGroupName() {
         return this.appInstanceGroupName;
+    }
+
+    public CreateAppInstanceGroupRequest setAppPolicyId(String appPolicyId) {
+        this.appPolicyId = appPolicyId;
+        return this;
+    }
+    public String getAppPolicyId() {
+        return this.appPolicyId;
     }
 
     public CreateAppInstanceGroupRequest setAutoPay(Boolean autoPay) {
@@ -394,6 +402,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         @NameInMap("IpExpireMinutes")
         public Integer ipExpireMinutes;
 
+        @NameInMap("OfficeSiteId")
+        public String officeSiteId;
+
         @NameInMap("Routes")
         public java.util.List<CreateAppInstanceGroupRequestNetworkRoutes> routes;
 
@@ -403,6 +414,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
          */
         @NameInMap("StrategyType")
         public String strategyType;
+
+        @NameInMap("VSwitchIds")
+        public java.util.List<String> vSwitchIds;
 
         public static CreateAppInstanceGroupRequestNetwork build(java.util.Map<String, ?> map) throws Exception {
             CreateAppInstanceGroupRequestNetwork self = new CreateAppInstanceGroupRequestNetwork();
@@ -425,6 +439,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
             return this.ipExpireMinutes;
         }
 
+        public CreateAppInstanceGroupRequestNetwork setOfficeSiteId(String officeSiteId) {
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
+        }
+
         public CreateAppInstanceGroupRequestNetwork setRoutes(java.util.List<CreateAppInstanceGroupRequestNetworkRoutes> routes) {
             this.routes = routes;
             return this;
@@ -439,6 +461,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         }
         public String getStrategyType() {
             return this.strategyType;
+        }
+
+        public CreateAppInstanceGroupRequestNetwork setVSwitchIds(java.util.List<String> vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
         }
 
     }

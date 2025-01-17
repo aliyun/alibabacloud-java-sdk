@@ -634,6 +634,9 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("NodePool")
         public java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool> nodePool;
 
+        @NameInMap("OfficeSiteId")
+        public String officeSiteId;
+
         /**
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -713,6 +716,9 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
          */
         @NameInMap("SessionTimeout")
         public String sessionTimeout;
+
+        @NameInMap("SessionType")
+        public String sessionType;
 
         /**
          * <strong>example:</strong>
@@ -868,6 +874,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             return this.nodePool;
         }
 
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setOfficeSiteId(String officeSiteId) {
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
+        }
+
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setOsType(String osType) {
             this.osType = osType;
             return this;
@@ -962,6 +976,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
         public String getSessionTimeout() {
             return this.sessionTimeout;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setSessionType(String sessionType) {
+            this.sessionType = sessionType;
+            return this;
+        }
+        public String getSessionType() {
+            return this.sessionType;
         }
 
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setSkipUserAuthCheck(Boolean skipUserAuthCheck) {
