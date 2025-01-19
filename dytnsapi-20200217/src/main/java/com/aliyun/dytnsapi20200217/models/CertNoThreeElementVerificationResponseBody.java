@@ -4,18 +4,36 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class CertNoThreeElementVerificationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public CertNoThreeElementVerificationResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>68A40250-50CD-034C-B728-0BD******177</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,7 +85,7 @@ public class CertNoThreeElementVerificationResponseBody extends TeaModel {
     public static class CertNoThreeElementVerificationResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>1</p>
          */
         @NameInMap("IsConsistent")
         public String isConsistent;

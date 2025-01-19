@@ -8,7 +8,7 @@ public class CertNoThreeElementVerificationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>QASDW@#**</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
@@ -26,7 +26,7 @@ public class CertNoThreeElementVerificationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>3***************0</p>
      */
     @NameInMap("CertNo")
     public String certNo;
@@ -35,7 +35,7 @@ public class CertNoThreeElementVerificationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>iVBOFMKODOFNDFP123DFSMOO...</p>
      */
     @NameInMap("CertPicture")
     public String certPicture;
