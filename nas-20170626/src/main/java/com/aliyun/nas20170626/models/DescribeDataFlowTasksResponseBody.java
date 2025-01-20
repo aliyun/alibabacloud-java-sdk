@@ -651,6 +651,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             return this.progressStats;
         }
 
+        @Deprecated
         public DescribeDataFlowTasksResponseBodyTaskInfoTask setReportPath(String reportPath) {
             this.reportPath = reportPath;
             return this;
