@@ -32,10 +32,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>The rule is in the <code>INACTIVE</code> state.</p>
-     * <h3><a href="#"></a>Description</h3>
-     * <p>This topic provides an example on how to enable the <code>cr-5772ba41209e007b****</code> rule in the <code>ca-a4e5626622af0079****</code> account group.</p>
+     * <p>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</p>
@@ -78,10 +75,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>The rule is in the <code>INACTIVE</code> state.</p>
-     * <h3><a href="#"></a>Description</h3>
-     * <p>This topic provides an example on how to enable the <code>cr-5772ba41209e007b****</code> rule in the <code>ca-a4e5626622af0079****</code> account group.</p>
+     * <p>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</p>
@@ -1289,6 +1283,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourceTypesScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceTypesScope, "ResourceTypesScope", "simple");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
@@ -1384,6 +1387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             com.aliyun.openapiutil.Client.query(bodyFlat)
         );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2405,6 +2409,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ResourceEvaluateItems", request.resourceEvaluateItemsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypeFormat)) {
+            body.put("ResourceTypeFormat", request.resourceTypeFormat);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -3139,14 +3147,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This example shows how to query the details of the <code>cr-7f7d626622af0041****</code> rule in the <code>ca-7f00626622af0041****</code> account group.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取账号组规则详情</p>
+     * <p>Queries the details of a rule in an account group.</p>
      * 
-     * @param request GetAggregateConfigRuleRequest
+     * @param tmpReq GetAggregateConfigRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateConfigRuleResponse
      */
-    public GetAggregateConfigRuleResponse getAggregateConfigRuleWithOptions(GetAggregateConfigRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetAggregateConfigRuleResponse getAggregateConfigRuleWithOptions(GetAggregateConfigRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetAggregateConfigRuleShrinkRequest request = new GetAggregateConfigRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
             query.put("AggregatorId", request.aggregatorId);
@@ -3154,6 +3168,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.configRuleId)) {
             query.put("ConfigRuleId", request.configRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3178,7 +3196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This example shows how to query the details of the <code>cr-7f7d626622af0041****</code> rule in the <code>ca-7f00626622af0041****</code> account group.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取账号组规则详情</p>
+     * <p>Queries the details of a rule in an account group.</p>
      * 
      * @param request GetAggregateConfigRuleRequest
      * @return GetAggregateConfigRuleResponse
@@ -4145,15 +4163,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the details of a rule.</p>
      * 
-     * @param request GetConfigRuleRequest
+     * @param tmpReq GetConfigRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConfigRuleResponse
      */
-    public GetConfigRuleResponse getConfigRuleWithOptions(GetConfigRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetConfigRuleResponse getConfigRuleWithOptions(GetConfigRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetConfigRuleShrinkRequest request = new GetConfigRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.configRuleId)) {
             query.put("ConfigRuleId", request.configRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -5052,7 +5080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This example shows how to ignore the <code>lb-hp3a3b4ztyfm2plgm****</code> incompliant resource that is evaluated by using the <code>cr-7e72626622af0051***</code> rule in the <code>120886317861****</code> member account of the <code>ca-5b6c626622af008f****</code> account group. The ID of the region where the resource resides is <code>cn-beijing</code>, and the type of the resource is <code>ACS::SLB::LoadBalancer</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Ignores the compliance evaluation results of one or more non-compliant resources that are evaluated based on a rule in an account group.</p>
+     * <p>Ignores the evaluation results of some resources in an account group based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</p>
      * 
      * @param tmpReq IgnoreAggregateEvaluationResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5110,7 +5138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This example shows how to ignore the <code>lb-hp3a3b4ztyfm2plgm****</code> incompliant resource that is evaluated by using the <code>cr-7e72626622af0051***</code> rule in the <code>120886317861****</code> member account of the <code>ca-5b6c626622af008f****</code> account group. The ID of the region where the resource resides is <code>cn-beijing</code>, and the type of the resource is <code>ACS::SLB::LoadBalancer</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Ignores the compliance evaluation results of one or more non-compliant resources that are evaluated based on a rule in an account group.</p>
+     * <p>Ignores the evaluation results of some resources in an account group based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</p>
      * 
      * @param request IgnoreAggregateEvaluationResultsRequest
      * @return IgnoreAggregateEvaluationResultsResponse
@@ -5126,7 +5154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This example shows how to ignore the <code>lb-hp3a3b4ztyfm2plgm****</code> resource that is evaluated as incompliant by using the <code>cr-7e72626622af0051****</code> rule in the <code>100931896542****</code> account. The ID of the region in which the resource resides is <code>cn-beijing</code>, and the type of the resource is <code>ACS::SLB::LoadBalancer</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Ignores one or more resources that are evaluated as non-compliant by using a rule.</p>
+     * <p>Ignores the evaluation results of some resources based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</p>
      * 
      * @param tmpReq IgnoreEvaluationResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5180,7 +5208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This example shows how to ignore the <code>lb-hp3a3b4ztyfm2plgm****</code> resource that is evaluated as incompliant by using the <code>cr-7e72626622af0051****</code> rule in the <code>100931896542****</code> account. The ID of the region in which the resource resides is <code>cn-beijing</code>, and the type of the resource is <code>ACS::SLB::LoadBalancer</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Ignores one or more resources that are evaluated as non-compliant by using a rule.</p>
+     * <p>Ignores the evaluation results of some resources based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</p>
      * 
      * @param request IgnoreEvaluationResultsRequest
      * @return IgnoreEvaluationResultsResponse
@@ -6277,12 +6305,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the rules of the current account.</p>
      * 
-     * @param request ListConfigRulesRequest
+     * @param tmpReq ListConfigRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConfigRulesResponse
      */
-    public ListConfigRulesResponse listConfigRulesWithOptions(ListConfigRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListConfigRulesResponse listConfigRulesWithOptions(ListConfigRulesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListConfigRulesShrinkRequest request = new ListConfigRulesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.compliancePackId)) {
             query.put("CompliancePackId", request.compliancePackId);
@@ -6318,6 +6352,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
             query.put("RiskLevel", request.riskLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6477,8 +6515,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Background information</h3>
-     * <p>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.</p>
-     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>For more information about how to define, execute, and integrate a managed rule, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and execution of rules</a>.</p>
+     * <h3><a href="#"></a>Description</h3>
      * <p>This topic provides an example on how to query all managed rules whose keyword is <code>CDN</code>. The response shows that 21 managed rules exist.</p>
      * 
      * <b>summary</b> : 
@@ -6531,8 +6569,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Background information</h3>
-     * <p>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.</p>
-     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>For more information about how to define, execute, and integrate a managed rule, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and execution of rules</a>.</p>
+     * <h3><a href="#"></a>Description</h3>
      * <p>This topic provides an example on how to query all managed rules whose keyword is <code>CDN</code>. The response shows that 21 managed rules exist.</p>
      * 
      * <b>summary</b> : 
@@ -6866,7 +6904,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance within the current Alibaba Cloud account.</p>
+     * <p>For information about the Alibaba Cloud services and resource types supported by Cloud Config, see <a href="https://help.aliyun.com/document_detail/127411.html">Alibaba Cloud services and resource types supported by Cloud Config</a>.
+     * This topic provides an example on how to query the information about the disks that are attached to an Elastic Compute Service (ECS) instance named <code>i-j6cajg9yrfoh4sas****</code> that is created by the current Alibaba Cloud account in the China (Shanghai) region.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of resources that associate with a specific resource.</p>
@@ -6929,7 +6968,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance within the current Alibaba Cloud account.</p>
+     * <p>For information about the Alibaba Cloud services and resource types supported by Cloud Config, see <a href="https://help.aliyun.com/document_detail/127411.html">Alibaba Cloud services and resource types supported by Cloud Config</a>.
+     * This topic provides an example on how to query the information about the disks that are attached to an Elastic Compute Service (ECS) instance named <code>i-j6cajg9yrfoh4sas****</code> that is created by the current Alibaba Cloud account in the China (Shanghai) region.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of resources that associate with a specific resource.</p>
@@ -8536,6 +8576,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.resourceTypesScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceTypesScope, "ResourceTypesScope", "simple");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
@@ -8627,6 +8676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             com.aliyun.openapiutil.Client.query(bodyFlat)
         );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(

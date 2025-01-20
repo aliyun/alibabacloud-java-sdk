@@ -27,6 +27,9 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
     /**
      * <p>The name of the rule.</p>
      * <p>For more information about how to query the name of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The name of the rule.</p>
      */
     @NameInMap("ConfigRuleName")
     public String configRuleName;
@@ -49,13 +52,28 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the rule. You can enter up to 500 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The description of the rule.</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The IDs of the regions excluded from the compliance evaluations performed by the rule. Separate multiple region IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("ExcludeRegionIdsScope")
     public String excludeRegionIdsScope;
 
+    /**
+     * <p>The IDs of the resource groups excluded from the compliance evaluations performed by the rule. Separate multiple resource group IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bnczc6r7rml****</p>
+     */
     @NameInMap("ExcludeResourceGroupIdsScope")
     public String excludeResourceGroupIdsScope;
 
@@ -71,10 +89,18 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("ExcludeResourceIdsScope")
     public String excludeResourceIdsScope;
 
+    /**
+     * <p>The scope of the tag that is excluded.</p>
+     */
     @NameInMap("ExcludeTagsScope")
     public java.util.List<UpdateConfigRuleShrinkRequestExcludeTagsScope> excludeTagsScope;
 
     /**
+     * <p>Optional. The extended content of the resource. This parameter can be used together with the MaximumExecutionFrequency parameter when the MaximumExecutionFrequency parameter is set to TwentyFour_Hours to specify the trigger time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;fixedHour&quot;:&quot;12&quot;}</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -91,16 +117,16 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
     public String inputParametersShrink;
 
     /**
-     * <p>The intervals at which the rule is triggered. Valid values:</p>
+     * <p>The interval at which the rule is triggered. Valid values:</p>
      * <ul>
-     * <li>One_Hour: 1 hour.</li>
-     * <li>Three_Hours: 3 hours.</li>
-     * <li>Six_Hours: 6 hours.</li>
-     * <li>Twelve_Hours: 12 hours.</li>
-     * <li>TwentyFour_Hours (default): 24 hours.</li>
+     * <li>One_Hour</li>
+     * <li>Three_Hours</li>
+     * <li>Six_Hours</li>
+     * <li>Twelve_Hours</li>
+     * <li>TwentyFour_Hours (default)</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required if you set the <code>ConfigRuleTriggerTypes</code> parameter to <code>ScheduledNotification</code>.</p>
+     * <p> This parameter is required if the <code>ConfigRuleTriggerTypes</code> parameter is set to <code>ScheduledNotification</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -133,6 +159,12 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("ResourceGroupIdsScope")
     public String resourceGroupIdsScope;
 
+    /**
+     * <p>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5cmbowstbkss9ta03****</p>
+     */
     @NameInMap("ResourceIdsScope")
     public String resourceIdsScope;
 
@@ -146,11 +178,11 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
     public String resourceTypesScopeShrink;
 
     /**
-     * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+     * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
      * <ul>
-     * <li>1: high risk level</li>
-     * <li>2: medium risk level</li>
-     * <li>3: low risk level</li>
+     * <li>1: high</li>
+     * <li>2: medium</li>
+     * <li>3: low</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -158,6 +190,13 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
      */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
+
+    /**
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
+     */
+    @NameInMap("Tag")
+    public String tagShrink;
 
     /**
      * <p>The logical relationship among the tag keys if you specify multiple tag keys for the <code>TagKeyScope</code> parameter. For example, if you set the <code>TagKeyScope</code> parameter to <code>ECS,OSS</code> and the TagKeyLogicScope parameter to <code>AND</code>, the rule applies to resources with both the <code>ECS</code> and <code>OSS</code> tag keys. Valid values:</p>
@@ -196,6 +235,9 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    /**
+     * <p>The tag scope.</p>
+     */
     @NameInMap("TagsScope")
     public java.util.List<UpdateConfigRuleShrinkRequestTagsScope> tagsScope;
 
@@ -340,6 +382,14 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
         return this.riskLevel;
     }
 
+    public UpdateConfigRuleShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
+        return this;
+    }
+    public String getTagShrink() {
+        return this.tagShrink;
+    }
+
     public UpdateConfigRuleShrinkRequest setTagKeyLogicScope(String tagKeyLogicScope) {
         this.tagKeyLogicScope = tagKeyLogicScope;
         return this;
@@ -373,9 +423,21 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
     }
 
     public static class UpdateConfigRuleShrinkRequestExcludeTagsScope extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-2</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-2</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -403,9 +465,21 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
     }
 
     public static class UpdateConfigRuleShrinkRequestTagsScope extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

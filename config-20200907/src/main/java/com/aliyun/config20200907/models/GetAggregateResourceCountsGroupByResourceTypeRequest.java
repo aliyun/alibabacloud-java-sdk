@@ -87,6 +87,7 @@ public class GetAggregateResourceCountsGroupByResourceTypeRequest extends TeaMod
         return this.resourceAccountId;
     }
 
+    @Deprecated
     public GetAggregateResourceCountsGroupByResourceTypeRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;

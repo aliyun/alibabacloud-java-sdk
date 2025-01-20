@@ -1,3 +1,17 @@
+2025-01-20 Version: 3.0.6
+- Update API CreateConfigRule: add param Tag.
+- Update API EvaluatePreConfigRules: add param ResourceTypeFormat.
+- Update API EvaluatePreConfigRules: update param EnableManagedRules.
+- Update API GetAggregateConfigRule: add param Tag.
+- Update API GetAggregateConfigRule: update response param.
+- Update API GetConfigRule: add param Tag.
+- Update API GetConfigRule: update response param.
+- Update API ListAggregateConfigRules: update param Keyword.
+- Update API ListConfigRules: add param Tag.
+- Update API ListConfigRules: update param Keyword.
+- Update API UpdateConfigRule: add param Tag.
+
+
 2024-12-18 Version: 3.0.5
 - Update API ActiveAggregateConfigRules: add param CompliancePackId.
 - Update API ActiveAggregateConfigRules: update param ConfigRuleIds.

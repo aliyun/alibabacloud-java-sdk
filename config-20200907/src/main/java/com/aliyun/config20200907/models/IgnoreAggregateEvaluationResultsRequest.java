@@ -40,6 +40,9 @@ public class IgnoreAggregateEvaluationResultsRequest extends TeaModel {
 
     /**
      * <p>The reason why you ignore the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The reason why you ignore the resource.</p>
      */
     @NameInMap("Reason")
     public String reason;

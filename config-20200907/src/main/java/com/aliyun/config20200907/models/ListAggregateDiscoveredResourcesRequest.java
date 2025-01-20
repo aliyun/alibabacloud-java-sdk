@@ -176,6 +176,7 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
         return this.resourceId;
     }
 
+    @Deprecated
     public ListAggregateDiscoveredResourcesRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;

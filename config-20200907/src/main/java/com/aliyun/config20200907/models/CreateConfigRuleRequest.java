@@ -210,6 +210,12 @@ public class CreateConfigRuleRequest extends TeaModel {
     public String sourceOwner;
 
     /**
+     * <p>rule attached tags</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<CreateConfigRuleRequestTag> tag;
+
+    /**
      * <p>The logical relationship among the tag keys if you specify multiple tag keys for <code>TagKeyScope</code>. For example, if you set <code>TagKeyScope</code> to <code>ECS,OSS</code> and set TagKeyLogicScope to <code>AND</code>, the rule applies to resources with both the <code>ECS</code> and <code>OSS</code> tag keys. Valid values:</p>
      * <ul>
      * <li>AND</li>
@@ -401,6 +407,14 @@ public class CreateConfigRuleRequest extends TeaModel {
         return this.sourceOwner;
     }
 
+    public CreateConfigRuleRequest setTag(java.util.List<CreateConfigRuleRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateConfigRuleRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateConfigRuleRequest setTagKeyLogicScope(String tagKeyLogicScope) {
         this.tagKeyLogicScope = tagKeyLogicScope;
         return this;
@@ -471,6 +485,51 @@ public class CreateConfigRuleRequest extends TeaModel {
         }
         public String getTagValue() {
             return this.tagValue;
+        }
+
+    }
+
+    public static class CreateConfigRuleRequestTag extends TeaModel {
+        /**
+         * <p>The tag keys.</p>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length. The tag keys cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify at most 20 tag keys in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateConfigRuleRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateConfigRuleRequestTag self = new CreateConfigRuleRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateConfigRuleRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateConfigRuleRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

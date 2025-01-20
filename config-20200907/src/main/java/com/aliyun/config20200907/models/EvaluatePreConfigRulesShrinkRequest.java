@@ -27,6 +27,9 @@ public class EvaluatePreConfigRulesShrinkRequest extends TeaModel {
     @NameInMap("ResourceEvaluateItems")
     public String resourceEvaluateItemsShrink;
 
+    @NameInMap("ResourceTypeFormat")
+    public String resourceTypeFormat;
+
     public static EvaluatePreConfigRulesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         EvaluatePreConfigRulesShrinkRequest self = new EvaluatePreConfigRulesShrinkRequest();
         return TeaModel.build(map, self);
@@ -46,6 +49,14 @@ public class EvaluatePreConfigRulesShrinkRequest extends TeaModel {
     }
     public String getResourceEvaluateItemsShrink() {
         return this.resourceEvaluateItemsShrink;
+    }
+
+    public EvaluatePreConfigRulesShrinkRequest setResourceTypeFormat(String resourceTypeFormat) {
+        this.resourceTypeFormat = resourceTypeFormat;
+        return this;
+    }
+    public String getResourceTypeFormat() {
+        return this.resourceTypeFormat;
     }
 
 }

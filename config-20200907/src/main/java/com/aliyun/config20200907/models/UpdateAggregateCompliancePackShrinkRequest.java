@@ -61,9 +61,21 @@ public class UpdateAggregateCompliancePackShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The IDs of the regions to which the rule not applies. Separate multiple region IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("ExcludeRegionIdsScope")
     public String excludeRegionIdsScope;
 
+    /**
+     * <p>ExcludeResourceGroupIdsScope. Separate multiple resource group IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bnczc6r7rml****</p>
+     */
     @NameInMap("ExcludeResourceGroupIdsScope")
     public String excludeResourceGroupIdsScope;
 
@@ -76,6 +88,9 @@ public class UpdateAggregateCompliancePackShrinkRequest extends TeaModel {
     @NameInMap("ExcludeResourceIdsScope")
     public String excludeResourceIdsScope;
 
+    /**
+     * <p>ExcludeTagsScope</p>
+     */
     @NameInMap("ExcludeTagsScope")
     public java.util.List<UpdateAggregateCompliancePackShrinkRequestExcludeTagsScope> excludeTagsScope;
 
@@ -97,15 +112,21 @@ public class UpdateAggregateCompliancePackShrinkRequest extends TeaModel {
     @NameInMap("ResourceGroupIdsScope")
     public String resourceGroupIdsScope;
 
+    /**
+     * <p>The IDs of the resources included from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5cmbowstbkss9ta03****</p>
+     */
     @NameInMap("ResourceIdsScope")
     public String resourceIdsScope;
 
     /**
      * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
      * <ul>
-     * <li>1: high</li>
-     * <li>2: medium</li>
-     * <li>3: low</li>
+     * <li>1: high risk level</li>
+     * <li>2: medium risk level</li>
+     * <li>3: low risk level</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,6 +156,9 @@ public class UpdateAggregateCompliancePackShrinkRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    /**
+     * <p>TagsScope</p>
+     */
     @NameInMap("TagsScope")
     public java.util.List<UpdateAggregateCompliancePackShrinkRequestTagsScope> tagsScope;
 
@@ -280,9 +304,21 @@ public class UpdateAggregateCompliancePackShrinkRequest extends TeaModel {
     }
 
     public static class UpdateAggregateCompliancePackShrinkRequestExcludeTagsScope extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-2</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-2</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -310,9 +346,21 @@ public class UpdateAggregateCompliancePackShrinkRequest extends TeaModel {
     }
 
     public static class UpdateAggregateCompliancePackShrinkRequestTagsScope extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

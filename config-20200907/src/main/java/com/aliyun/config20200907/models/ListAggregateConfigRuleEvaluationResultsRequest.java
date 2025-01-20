@@ -186,6 +186,7 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
         return this.resourceGroupIds;
     }
 
+    @Deprecated
     public ListAggregateConfigRuleEvaluationResultsRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;

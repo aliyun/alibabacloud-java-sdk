@@ -94,6 +94,7 @@ public class GetAggregateResourceComplianceByConfigRuleRequest extends TeaModel 
         return this.resourceAccountId;
     }
 
+    @Deprecated
     public GetAggregateResourceComplianceByConfigRuleRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;

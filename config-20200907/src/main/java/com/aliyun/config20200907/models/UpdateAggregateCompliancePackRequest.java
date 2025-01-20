@@ -61,9 +61,21 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The IDs of the regions to which the rule not applies. Separate multiple region IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("ExcludeRegionIdsScope")
     public String excludeRegionIdsScope;
 
+    /**
+     * <p>ExcludeResourceGroupIdsScope. Separate multiple resource group IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bnczc6r7rml****</p>
+     */
     @NameInMap("ExcludeResourceGroupIdsScope")
     public String excludeResourceGroupIdsScope;
 
@@ -76,6 +88,9 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     @NameInMap("ExcludeResourceIdsScope")
     public String excludeResourceIdsScope;
 
+    /**
+     * <p>ExcludeTagsScope</p>
+     */
     @NameInMap("ExcludeTagsScope")
     public java.util.List<UpdateAggregateCompliancePackRequestExcludeTagsScope> excludeTagsScope;
 
@@ -97,15 +112,21 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     @NameInMap("ResourceGroupIdsScope")
     public String resourceGroupIdsScope;
 
+    /**
+     * <p>The IDs of the resources included from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5cmbowstbkss9ta03****</p>
+     */
     @NameInMap("ResourceIdsScope")
     public String resourceIdsScope;
 
     /**
      * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
      * <ul>
-     * <li>1: high</li>
-     * <li>2: medium</li>
-     * <li>3: low</li>
+     * <li>1: high risk level</li>
+     * <li>2: medium risk level</li>
+     * <li>3: low risk level</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,6 +156,9 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    /**
+     * <p>TagsScope</p>
+     */
     @NameInMap("TagsScope")
     public java.util.List<UpdateAggregateCompliancePackRequestTagsScope> tagsScope;
 
@@ -282,7 +306,7 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     public static class UpdateAggregateCompliancePackRequestConfigRulesConfigRuleParameters extends TeaModel {
         /**
          * <p>The name of the input parameter.</p>
-         * <p>You must configure the <code>ParameterName</code> and <code>ParameterValue</code> parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
+         * <p>You must specify both <code>ParameterName</code> and <code>ParameterValue</code> or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>bandwidth</p>
@@ -292,7 +316,7 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
 
         /**
          * <p>The value of the input parameter.</p>
-         * <p>You must configure the <code>ParameterName</code> and <code>ParameterValue</code> parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
+         * <p>You must specify both <code>ParameterName</code> and <code>ParameterValue</code> or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -325,8 +349,8 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
 
     public static class UpdateAggregateCompliancePackRequestConfigRules extends TeaModel {
         /**
-         * <p>The rule ID. If you configure this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.</p>
-         * <p>You need to only configure the <code>ManagedRuleIdentifier</code> or <code>ConfigRuleId</code> parameter. If you configure both parameters, the value of the <code>ConfigRuleId</code> parameter takes precedence. For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+         * <p>The rule ID. If you specify this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.</p>
+         * <p>You only need to configure the <code>ManagedRuleIdentifier</code> or <code>ConfigRuleId</code> parameter. If you configure both parameters, the value of the <code>ConfigRuleId</code> parameter takes precedence. For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cr-e918626622af000f****</p>
@@ -344,13 +368,13 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
         public String configRuleName;
 
         /**
-         * <p>The input parameters of the rule.</p>
+         * <p>The details of the input parameter of the rule.</p>
          */
         @NameInMap("ConfigRuleParameters")
         public java.util.List<UpdateAggregateCompliancePackRequestConfigRulesConfigRuleParameters> configRuleParameters;
 
         /**
-         * <p>The description of the rule.</p>
+         * <p>The rule description.</p>
          * 
          * <strong>example:</strong>
          * <p>The description of the test rule.</p>
@@ -371,9 +395,9 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
         /**
          * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
          * <ul>
-         * <li>1: high</li>
-         * <li>2: medium</li>
-         * <li>3: low</li>
+         * <li>1: high risk level</li>
+         * <li>2: medium risk level</li>
+         * <li>3: low risk level</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -438,9 +462,21 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     }
 
     public static class UpdateAggregateCompliancePackRequestExcludeTagsScope extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-2</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-2</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -468,9 +504,21 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     }
 
     public static class UpdateAggregateCompliancePackRequestTagsScope extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
