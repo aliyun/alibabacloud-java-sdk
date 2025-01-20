@@ -108,7 +108,6 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
          * <li>To obtain the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
          * <li>To obtain the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1860****</p>
@@ -116,13 +115,15 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
         @NameInMap("DbId")
         public Long dbId;
 
+        @NameInMap("InstanceId")
+        public Long instanceId;
+
         /**
          * <p>Specifies whether the database is a logical database. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: The database is a logical database.</li>
          * <li><strong>false</strong>: The database is a physical database.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -141,6 +142,14 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
         }
         public Long getDbId() {
             return this.dbId;
+        }
+
+        public CreateDataCorrectOrderRequestParamDbItemList setInstanceId(Long instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public Long getInstanceId() {
+            return this.instanceId;
         }
 
         public CreateDataCorrectOrderRequestParamDbItemList setLogic(Boolean logic) {
