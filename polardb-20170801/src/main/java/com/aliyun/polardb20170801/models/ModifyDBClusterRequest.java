@@ -105,6 +105,9 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("ImciAutoIndex")
     public String imciAutoIndex;
 
+    @NameInMap("ModifyRowCompression")
+    public String modifyRowCompression;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -154,6 +157,9 @@ public class ModifyDBClusterRequest extends TeaModel {
      */
     @NameInMap("StorageUpperBound")
     public Long storageUpperBound;
+
+    @NameInMap("TableMeta")
+    public String tableMeta;
 
     public static ModifyDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterRequest self = new ModifyDBClusterRequest();
@@ -216,6 +222,14 @@ public class ModifyDBClusterRequest extends TeaModel {
         return this.imciAutoIndex;
     }
 
+    public ModifyDBClusterRequest setModifyRowCompression(String modifyRowCompression) {
+        this.modifyRowCompression = modifyRowCompression;
+        return this;
+    }
+    public String getModifyRowCompression() {
+        return this.modifyRowCompression;
+    }
+
     public ModifyDBClusterRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -270,6 +284,14 @@ public class ModifyDBClusterRequest extends TeaModel {
     }
     public Long getStorageUpperBound() {
         return this.storageUpperBound;
+    }
+
+    public ModifyDBClusterRequest setTableMeta(String tableMeta) {
+        this.tableMeta = tableMeta;
+        return this;
+    }
+    public String getTableMeta() {
+        return this.tableMeta;
     }
 
 }

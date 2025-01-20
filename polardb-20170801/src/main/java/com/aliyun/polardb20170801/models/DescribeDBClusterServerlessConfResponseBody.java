@@ -41,7 +41,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Maximum limit for the number of read-only column storage nodes. Range: 0~7.</p>
+     * <p>The maximum number of read-only column store nodes. Valid values: 0 to 15.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String scaleApRoNumMax;
 
     /**
-     * <p>Minimum limit for the number of read-only column storage nodes. Range: 0~7.</p>
+     * <p>The minimum number of read-only column store nodes. Valid values: 0 to 15.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

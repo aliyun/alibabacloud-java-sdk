@@ -302,6 +302,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("ImciAutoIndex")
     public String imciAutoIndex;
 
+    @NameInMap("ImperceptibleSwitch")
+    public String imperceptibleSwitch;
+
     /**
      * <p>Maximum number of inodes in the file system.</p>
      * 
@@ -519,6 +522,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     @NameInMap("RestoreType")
     public String restoreType;
+
+    @NameInMap("RowCompression")
+    public String rowCompression;
 
     /**
      * <p>Storage amount of SQL, in bytes. If the value is -1, it indicates no data.</p>
@@ -917,6 +923,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         return this.imciAutoIndex;
     }
 
+    public DescribeDBClusterAttributeResponseBody setImperceptibleSwitch(String imperceptibleSwitch) {
+        this.imperceptibleSwitch = imperceptibleSwitch;
+        return this;
+    }
+    public String getImperceptibleSwitch() {
+        return this.imperceptibleSwitch;
+    }
+
     public DescribeDBClusterAttributeResponseBody setInodeTotal(Long inodeTotal) {
         this.inodeTotal = inodeTotal;
         return this;
@@ -1067,6 +1081,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getRestoreType() {
         return this.restoreType;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setRowCompression(String rowCompression) {
+        this.rowCompression = rowCompression;
+        return this;
+    }
+    public String getRowCompression() {
+        return this.rowCompression;
     }
 
     public DescribeDBClusterAttributeResponseBody setSQLSize(Long SQLSize) {
