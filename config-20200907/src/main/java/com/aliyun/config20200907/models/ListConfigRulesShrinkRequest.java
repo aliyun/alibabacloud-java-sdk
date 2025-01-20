@@ -3,20 +3,13 @@ package com.aliyun.config20200907.models;
 
 import com.aliyun.tea.*;
 
-public class ListAggregateConfigRulesRequest extends TeaModel {
-    /**
-     * <p>The ID of the account group.</p>
-     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ca-f632626622af0079****</p>
-     */
-    @NameInMap("AggregatorId")
-    public String aggregatorId;
-
+public class ListConfigRulesShrinkRequest extends TeaModel {
     /**
      * <p>The compliance package ID.</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/606968.html">ListCompliancePacks</a>.</p>
+     * <blockquote>
+     * <p> You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cp-fe416457e0d90022****</p>
@@ -25,12 +18,12 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     public String compliancePackId;
 
     /**
-     * <p>The compliance evaluation result. Valid values:</p>
+     * <p>The compliance evaluation result of the rule. Valid values:</p>
      * <ul>
      * <li>COMPLIANT: The resources are evaluated as compliant.</li>
      * <li>NON_COMPLIANT: The resources are evaluated as non-compliant.</li>
      * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
-     * <li>INSUFFICIENT_DATA: No data is available.</li>
+     * <li>INSUFFICIENT_DATA: No resource data is available.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,9 +44,9 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     /**
      * <p>The status of the rule. Valid values:</p>
      * <ul>
-     * <li>ACTIVE: The rule is being used to monitor resource configurations.</li>
+     * <li>ACTIVE: The rule is enabled.</li>
      * <li>DELETING: The rule is being deleted.</li>
-     * <li>EVALUATING: The rule is triggered and is being used to monitor resource configurations.</li>
+     * <li>EVALUATING: The rule is being used to evaluate resource configurations.</li>
      * <li>INACTIVE: The rule is disabled.</li>
      * </ul>
      * 
@@ -64,7 +57,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     public String configRuleState;
 
     /**
-     * <p>The keyword that is used for queries.</p>
+     * <p>The query keyword.</p>
      * <p>You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +68,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1</p>
+     * <p>Page numbers start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -85,7 +78,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10</p>
+     * <p>Valid values: 1 to 100. A minimum of 1 entry can be returned per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -94,7 +87,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Resource type for the rule to evaluate.</p>
+     * <p>The type of the resources to be evaluated based on the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>ACS::ECS::Instance</p>
@@ -103,7 +96,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     public String resourceTypes;
 
     /**
-     * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+     * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
      * <ul>
      * <li>1: high</li>
      * <li>2: medium</li>
@@ -116,20 +109,19 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
-    public static ListAggregateConfigRulesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListAggregateConfigRulesRequest self = new ListAggregateConfigRulesRequest();
+    /**
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
+     */
+    @NameInMap("Tag")
+    public String tagShrink;
+
+    public static ListConfigRulesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListConfigRulesShrinkRequest self = new ListConfigRulesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListAggregateConfigRulesRequest setAggregatorId(String aggregatorId) {
-        this.aggregatorId = aggregatorId;
-        return this;
-    }
-    public String getAggregatorId() {
-        return this.aggregatorId;
-    }
-
-    public ListAggregateConfigRulesRequest setCompliancePackId(String compliancePackId) {
+    public ListConfigRulesShrinkRequest setCompliancePackId(String compliancePackId) {
         this.compliancePackId = compliancePackId;
         return this;
     }
@@ -137,7 +129,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.compliancePackId;
     }
 
-    public ListAggregateConfigRulesRequest setComplianceType(String complianceType) {
+    public ListConfigRulesShrinkRequest setComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
     }
@@ -145,7 +137,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.complianceType;
     }
 
-    public ListAggregateConfigRulesRequest setConfigRuleName(String configRuleName) {
+    public ListConfigRulesShrinkRequest setConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
     }
@@ -153,7 +145,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.configRuleName;
     }
 
-    public ListAggregateConfigRulesRequest setConfigRuleState(String configRuleState) {
+    public ListConfigRulesShrinkRequest setConfigRuleState(String configRuleState) {
         this.configRuleState = configRuleState;
         return this;
     }
@@ -161,7 +153,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.configRuleState;
     }
 
-    public ListAggregateConfigRulesRequest setKeyword(String keyword) {
+    public ListConfigRulesShrinkRequest setKeyword(String keyword) {
         this.keyword = keyword;
         return this;
     }
@@ -169,7 +161,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.keyword;
     }
 
-    public ListAggregateConfigRulesRequest setPageNumber(Integer pageNumber) {
+    public ListConfigRulesShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -177,7 +169,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListAggregateConfigRulesRequest setPageSize(Integer pageSize) {
+    public ListConfigRulesShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -185,7 +177,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListAggregateConfigRulesRequest setResourceTypes(String resourceTypes) {
+    public ListConfigRulesShrinkRequest setResourceTypes(String resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
@@ -193,12 +185,20 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.resourceTypes;
     }
 
-    public ListAggregateConfigRulesRequest setRiskLevel(Integer riskLevel) {
+    public ListConfigRulesShrinkRequest setRiskLevel(Integer riskLevel) {
         this.riskLevel = riskLevel;
         return this;
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
+    }
+
+    public ListConfigRulesShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
+        return this;
+    }
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
 }

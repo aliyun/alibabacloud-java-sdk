@@ -123,7 +123,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The information about the member accounts in the account group.</p>
+         * <p>The ID of the folder.</p>
          * 
          * <strong>example:</strong>
          * <p>r-BU****</p>
@@ -212,7 +212,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
 
     public static class ListAggregatorsResponseBodyAggregatorsResult extends TeaModel {
         /**
-         * <p>The information about the account groups.</p>
+         * <p>The list of the account groups.</p>
          */
         @NameInMap("Aggregators")
         public java.util.List<ListAggregatorsResponseBodyAggregatorsResultAggregators> aggregators;

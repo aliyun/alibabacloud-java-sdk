@@ -27,6 +27,9 @@ public class EvaluatePreConfigRulesRequest extends TeaModel {
     @NameInMap("ResourceEvaluateItems")
     public java.util.List<EvaluatePreConfigRulesRequestResourceEvaluateItems> resourceEvaluateItems;
 
+    @NameInMap("ResourceTypeFormat")
+    public String resourceTypeFormat;
+
     public static EvaluatePreConfigRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         EvaluatePreConfigRulesRequest self = new EvaluatePreConfigRulesRequest();
         return TeaModel.build(map, self);
@@ -46,6 +49,14 @@ public class EvaluatePreConfigRulesRequest extends TeaModel {
     }
     public java.util.List<EvaluatePreConfigRulesRequestResourceEvaluateItems> getResourceEvaluateItems() {
         return this.resourceEvaluateItems;
+    }
+
+    public EvaluatePreConfigRulesRequest setResourceTypeFormat(String resourceTypeFormat) {
+        this.resourceTypeFormat = resourceTypeFormat;
+        return this;
+    }
+    public String getResourceTypeFormat() {
+        return this.resourceTypeFormat;
     }
 
     public static class EvaluatePreConfigRulesRequestResourceEvaluateItemsRules extends TeaModel {

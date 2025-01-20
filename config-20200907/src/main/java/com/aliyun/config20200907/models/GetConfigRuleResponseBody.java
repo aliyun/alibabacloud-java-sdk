@@ -713,6 +713,48 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     }
 
+    public static class GetConfigRuleResponseBodyConfigRuleTags extends TeaModel {
+        /**
+         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetConfigRuleResponseBodyConfigRuleTags build(java.util.Map<String, ?> map) throws Exception {
+            GetConfigRuleResponseBodyConfigRuleTags self = new GetConfigRuleResponseBodyConfigRuleTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetConfigRuleResponseBodyConfigRuleTagsScope extends TeaModel {
         /**
          * <p>TagKey</p>
@@ -1040,6 +1082,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
         public String tagValueScope;
 
         /**
+         * <p>The tag list.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<GetConfigRuleResponseBodyConfigRuleTags> tags;
+
+        /**
          * <p>TagsScope</p>
          */
         @NameInMap("TagsScope")
@@ -1288,6 +1336,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
         }
         public String getTagValueScope() {
             return this.tagValueScope;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setTags(java.util.List<GetConfigRuleResponseBodyConfigRuleTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetConfigRuleResponseBodyConfigRuleTags> getTags() {
+            return this.tags;
         }
 
         public GetConfigRuleResponseBodyConfigRule setTagsScope(java.util.List<GetConfigRuleResponseBodyConfigRuleTagsScope> tagsScope) {

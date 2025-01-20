@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAggregateConfigRuleResponseBody extends TeaModel {
     /**
-     * <p>The details of the rule.</p>
+     * <p>The rules.</p>
      */
     @NameInMap("ConfigRule")
     public GetAggregateConfigRuleResponseBodyConfigRule configRule;
@@ -266,6 +266,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The name of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the compliance package.</p>
          */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
@@ -361,9 +364,21 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetAggregateConfigRuleResponseBodyConfigRuleExcludeTagsScope extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-2</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-2</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -475,6 +490,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The description of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the managed rule.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -496,6 +514,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The name of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ram-user-mfa-check</p>
          */
         @NameInMap("ManagedRuleName")
         public String managedRuleName;
@@ -715,10 +736,64 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     }
 
-    public static class GetAggregateConfigRuleResponseBodyConfigRuleTagsScope extends TeaModel {
+    public static class GetAggregateConfigRuleResponseBodyConfigRuleTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetAggregateConfigRuleResponseBodyConfigRuleTags build(java.util.Map<String, ?> map) throws Exception {
+            GetAggregateConfigRuleResponseBodyConfigRuleTags self = new GetAggregateConfigRuleResponseBodyConfigRuleTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAggregateConfigRuleResponseBodyConfigRuleTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetAggregateConfigRuleResponseBodyConfigRuleTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class GetAggregateConfigRuleResponseBodyConfigRuleTagsScope extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -755,6 +830,12 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The IDs of the members to which the rule applies. Separate multiple member IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120886317861****</p>
+         */
         @NameInMap("AccountIdsScope")
         public String accountIdsScope;
 
@@ -790,6 +871,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The name of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the rule.</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -839,6 +923,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The description of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the managed rule.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -870,9 +957,21 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         @NameInMap("ExcludeFolderIdsScope")
         public String excludeFolderIdsScope;
 
+        /**
+         * <p>The IDs of the regions excluded from the compliance evaluations performed by the rule. Separate multiple region IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("ExcludeRegionIdsScope")
         public String excludeRegionIdsScope;
 
+        /**
+         * <p>The IDs of the resource groups excluded from the compliance evaluations performed by the rule. Separate multiple resource group IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzdibsjjc****</p>
+         */
         @NameInMap("ExcludeResourceGroupIdsScope")
         public String excludeResourceGroupIdsScope;
 
@@ -885,9 +984,18 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         @NameInMap("ExcludeResourceIdsScope")
         public String excludeResourceIdsScope;
 
+        /**
+         * <p>The scope of the tag that is excluded.</p>
+         */
         @NameInMap("ExcludeTagsScope")
         public java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleExcludeTagsScope> excludeTagsScope;
 
+        /**
+         * <p>The extended content, which is temporarily only used to configure the trigger time with a 24-hour cycle trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;fixedHour&quot;:&quot;12&quot;}</p>
+         */
         @NameInMap("ExtendContent")
         public String extendContent;
 
@@ -964,6 +1072,12 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         @NameInMap("ResourceGroupIdsScope")
         public String resourceGroupIdsScope;
 
+        /**
+         * <p>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-8vbf3x310fn56ijfd****</p>
+         */
         @NameInMap("ResourceIdsScope")
         public String resourceIdsScope;
 
@@ -1027,6 +1141,15 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         @NameInMap("TagValueScope")
         public String tagValueScope;
 
+        /**
+         * <p>The list of tags.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleTags> tags;
+
+        /**
+         * <p>The tag scope.</p>
+         */
         @NameInMap("TagsScope")
         public java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleTagsScope> tagsScope;
 
@@ -1297,6 +1420,14 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         }
         public String getTagValueScope() {
             return this.tagValueScope;
+        }
+
+        public GetAggregateConfigRuleResponseBodyConfigRule setTags(java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleTags> getTags() {
+            return this.tags;
         }
 
         public GetAggregateConfigRuleResponseBodyConfigRule setTagsScope(java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleTagsScope> tagsScope) {

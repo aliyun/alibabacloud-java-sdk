@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceRelationsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return for a single request. Valid values: 1 to 1000.</p>
+     * <p>The maximum number of entries to return in a request. Valid values: 1 to 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

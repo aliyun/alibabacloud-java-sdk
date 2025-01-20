@@ -79,6 +79,7 @@ public class GetAggregateResourceCountsGroupByRegionRequest extends TeaModel {
         return this.resourceAccountId;
     }
 
+    @Deprecated
     public GetAggregateResourceCountsGroupByRegionRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;

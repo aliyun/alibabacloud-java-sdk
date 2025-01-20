@@ -115,6 +115,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the rule.</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -126,6 +129,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> configRuleParameters;
 
         /**
+         * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
          * <p>The description of the rule.</p>
          */
         @NameInMap("Description")
@@ -227,9 +233,21 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
     }
 
     public static class GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-2</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-2</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -257,9 +275,21 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
     }
 
     public static class GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -287,9 +317,21 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
     }
 
     public static class GetAggregateCompliancePackResponseBodyCompliancePackScope extends TeaModel {
+        /**
+         * <p>The IDs of regions that are excluded. Separate multiple region IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("ExcludeRegionIdsScope")
         public String excludeRegionIdsScope;
 
+        /**
+         * <p>The IDs of the resource groups whose resources you do not want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzc7r7rhx****</p>
+         */
         @NameInMap("ExcludeResourceGroupIdsScope")
         public String excludeResourceGroupIdsScope;
 
@@ -302,6 +344,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         @NameInMap("ExcludeResourceIdsScope")
         public String excludeResourceIdsScope;
 
+        /**
+         * <p>The scope of the tag that is excluded.</p>
+         */
         @NameInMap("ExcludeTagsScope")
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope> excludeTagsScope;
 
@@ -323,6 +368,12 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         @NameInMap("ResourceGroupIdsScope")
         public String resourceGroupIdsScope;
 
+        /**
+         * <p>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-8vbf3x310fn56ijfd****</p>
+         */
         @NameInMap("ResourceIdsScope")
         public String resourceIdsScope;
 
@@ -344,6 +395,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         @NameInMap("TagValueScope")
         public String tagValueScope;
 
+        /**
+         * <p>The tag scope.</p>
+         */
         @NameInMap("TagsScope")
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope> tagsScope;
 
@@ -464,6 +518,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
         /**
          * <p>The name of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the compliance package.</p>
          */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
@@ -493,6 +550,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
+         * <p>The description of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
          * <p>The description of the compliance package.</p>
          */
         @NameInMap("Description")
@@ -533,6 +593,34 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
         /**
          * <p>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;configRuleTemplates&quot;: [
+         *     {
+         *       &quot;configRuleName&quot;: &quot;OSS-test-name&quot;,
+         *       &quot;scope&quot;: {
+         *         &quot;complianceResourceTypes&quot;: [
+         *           &quot;ACS::OSS::Bucket&quot;
+         *         ]
+         *       },
+         *       &quot;description&quot;: &quot;test-description&quot;,
+         *       &quot;source&quot;: {
+         *         &quot;owner&quot;: &quot;ALIYUN&quot;,
+         *         &quot;identifier&quot;: &quot;oss-bucket-referer-xxx&quot;,
+         *         &quot;sourceDetails&quot;: [
+         *           {
+         *             &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
+         *           }
+         *         ]
+         *       },
+         *       &quot;inputParameters&quot;: {
+         *         &quot;allowEmptyReferer&quot;: &quot;true&quot;,
+         *         &quot;allowReferers&quot;: &quot;<a href="http://www.aliyun.com">http://www.aliyun.com</a>&quot;
+         *       }
+         *     }
+         *   ]
+         * }</p>
          */
         @NameInMap("TemplateContent")
         public String templateContent;

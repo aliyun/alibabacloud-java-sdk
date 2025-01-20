@@ -158,6 +158,7 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
         return this.resourceId;
     }
 
+    @Deprecated
     public GetAggregateResourceConfigurationTimelineRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;

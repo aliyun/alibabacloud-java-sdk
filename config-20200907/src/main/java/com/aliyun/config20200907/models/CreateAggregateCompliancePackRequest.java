@@ -75,9 +75,21 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The IDs of the regions excluded from the compliance evaluations performed by the compliance package. Separate multiple region IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("ExcludeRegionIdsScope")
     public String excludeRegionIdsScope;
 
+    /**
+     * <p>The IDs of the resource groups excluded from the compliance evaluations performed by the rule. Separate multiple resource group IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bnczc6r7rml****</p>
+     */
     @NameInMap("ExcludeResourceGroupIdsScope")
     public String excludeResourceGroupIdsScope;
 
@@ -90,6 +102,9 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     @NameInMap("ExcludeResourceIdsScope")
     public String excludeResourceIdsScope;
 
+    /**
+     * <p>The tags that are excluded.</p>
+     */
     @NameInMap("ExcludeTagsScope")
     public java.util.List<CreateAggregateCompliancePackRequestExcludeTagsScope> excludeTagsScope;
 
@@ -111,11 +126,17 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     @NameInMap("ResourceGroupIdsScope")
     public String resourceGroupIdsScope;
 
+    /**
+     * <p>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5cmbowstbkss9ta03****</p>
+     */
     @NameInMap("ResourceIdsScope")
     public String resourceIdsScope;
 
     /**
-     * <p>The risk level of the compliance package. Valid values:</p>
+     * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
      * <ul>
      * <li>1: high</li>
      * <li>2 (default): medium</li>
@@ -149,6 +170,9 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    /**
+     * <p>The tag scope.</p>
+     */
     @NameInMap("TagsScope")
     public java.util.List<CreateAggregateCompliancePackRequestTagsScope> tagsScope;
 
@@ -480,9 +504,21 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     }
 
     public static class CreateAggregateCompliancePackRequestExcludeTagsScope extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -510,9 +546,21 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     }
 
     public static class CreateAggregateCompliancePackRequestTagsScope extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagKey1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagValue1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
