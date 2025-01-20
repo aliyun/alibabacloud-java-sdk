@@ -42,6 +42,9 @@ public class SaveAvatarProjectRequest extends TeaModel {
     @NameInMap("resSpecType")
     public String resSpecType;
 
+    @NameInMap("resolution")
+    public String resolution;
+
     /**
      * <strong>example:</strong>
      * <p>9:16</p>
@@ -100,6 +103,14 @@ public class SaveAvatarProjectRequest extends TeaModel {
     }
     public String getResSpecType() {
         return this.resSpecType;
+    }
+
+    public SaveAvatarProjectRequest setResolution(String resolution) {
+        this.resolution = resolution;
+        return this;
+    }
+    public String getResolution() {
+        return this.resolution;
     }
 
     public SaveAvatarProjectRequest setScaleType(String scaleType) {

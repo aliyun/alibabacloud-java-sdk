@@ -45,8 +45,8 @@ public class TextTask extends TeaModel {
     @NameInMap("referenceTag")
     public ReferenceTag referenceTag;
 
-    @NameInMap("relatedRagId")
-    public Integer relatedRagId;
+    @NameInMap("relatedRagIds")
+    public java.util.List<Long> relatedRagIds;
 
     /**
      * <p>This parameter is required.</p>
@@ -162,12 +162,12 @@ public class TextTask extends TeaModel {
         return this.referenceTag;
     }
 
-    public TextTask setRelatedRagId(Integer relatedRagId) {
-        this.relatedRagId = relatedRagId;
+    public TextTask setRelatedRagIds(java.util.List<Long> relatedRagIds) {
+        this.relatedRagIds = relatedRagIds;
         return this;
     }
-    public Integer getRelatedRagId() {
-        return this.relatedRagId;
+    public java.util.List<Long> getRelatedRagIds() {
+        return this.relatedRagIds;
     }
 
     public TextTask setStyle(String style) {
