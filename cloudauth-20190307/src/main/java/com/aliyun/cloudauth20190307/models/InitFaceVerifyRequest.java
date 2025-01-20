@@ -19,6 +19,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
+    @NameInMap("CameraSelection")
+    public String cameraSelection;
+
     @NameInMap("CertName")
     public String certName;
 
@@ -215,6 +218,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getCallbackUrl() {
         return this.callbackUrl;
+    }
+
+    public InitFaceVerifyRequest setCameraSelection(String cameraSelection) {
+        this.cameraSelection = cameraSelection;
+        return this;
+    }
+    public String getCameraSelection() {
+        return this.cameraSelection;
     }
 
     public InitFaceVerifyRequest setCertName(String certName) {
