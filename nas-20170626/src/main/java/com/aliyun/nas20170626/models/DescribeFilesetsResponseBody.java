@@ -58,6 +58,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         return this.entries;
     }
 
+    @Deprecated
     public DescribeFilesetsResponseBody setFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;

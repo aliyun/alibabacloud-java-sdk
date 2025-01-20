@@ -46,6 +46,12 @@ public class DescribeFilesetsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("OrderByField")
+    public String orderByField;
+
+    @NameInMap("SortOrder")
+    public String sortOrder;
+
     public static DescribeFilesetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFilesetsRequest self = new DescribeFilesetsRequest();
         return TeaModel.build(map, self);
@@ -81,6 +87,22 @@ public class DescribeFilesetsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeFilesetsRequest setOrderByField(String orderByField) {
+        this.orderByField = orderByField;
+        return this;
+    }
+    public String getOrderByField() {
+        return this.orderByField;
+    }
+
+    public DescribeFilesetsRequest setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    public String getSortOrder() {
+        return this.sortOrder;
     }
 
     public static class DescribeFilesetsRequestFilters extends TeaModel {
