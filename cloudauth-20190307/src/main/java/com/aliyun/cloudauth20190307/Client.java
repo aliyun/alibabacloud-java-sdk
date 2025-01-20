@@ -1532,6 +1532,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CallbackUrl", request.callbackUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cameraSelection)) {
+            query.put("CameraSelection", request.cameraSelection);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.certName)) {
             query.put("CertName", request.certName);
         }
