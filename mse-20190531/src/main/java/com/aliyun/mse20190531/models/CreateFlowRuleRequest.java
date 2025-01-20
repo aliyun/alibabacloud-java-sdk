@@ -76,6 +76,9 @@ public class CreateFlowRuleRequest extends TeaModel {
     @NameInMap("Enable")
     public Boolean enable;
 
+    @NameInMap("LimitApp")
+    public String limitApp;
+
     /**
      * <p>The timeout period. Unit: milliseconds. This value is required if the ControlBehavior parameter is set to 2.</p>
      * 
@@ -170,6 +173,14 @@ public class CreateFlowRuleRequest extends TeaModel {
     }
     public Boolean getEnable() {
         return this.enable;
+    }
+
+    public CreateFlowRuleRequest setLimitApp(String limitApp) {
+        this.limitApp = limitApp;
+        return this;
+    }
+    public String getLimitApp() {
+        return this.limitApp;
     }
 
     public CreateFlowRuleRequest setMaxQueueingTimeMs(Integer maxQueueingTimeMs) {

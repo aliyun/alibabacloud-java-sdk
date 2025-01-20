@@ -121,6 +121,7 @@ public class ListAnsInstancesRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
+    @Deprecated
     public ListAnsInstancesRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;

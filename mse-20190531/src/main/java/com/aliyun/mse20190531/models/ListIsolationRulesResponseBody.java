@@ -124,6 +124,9 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         @NameInMap("FallbackObject")
         public String fallbackObject;
 
+        @NameInMap("LimitApp")
+        public String limitApp;
+
         /**
          * <strong>example:</strong>
          * <p>default</p>
@@ -194,6 +197,14 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         }
         public String getFallbackObject() {
             return this.fallbackObject;
+        }
+
+        public ListIsolationRulesResponseBodyDataResult setLimitApp(String limitApp) {
+            this.limitApp = limitApp;
+            return this;
+        }
+        public String getLimitApp() {
+            return this.limitApp;
         }
 
         public ListIsolationRulesResponseBodyDataResult setNamespace(String namespace) {

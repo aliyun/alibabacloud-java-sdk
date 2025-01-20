@@ -111,6 +111,7 @@ public class ExportNacosConfigRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
+    @Deprecated
     public ExportNacosConfigRequest setAppName(String appName) {
         this.appName = appName;
         return this;
@@ -119,6 +120,7 @@ public class ExportNacosConfigRequest extends TeaModel {
         return this.appName;
     }
 
+    @Deprecated
     public ExportNacosConfigRequest setDataId(String dataId) {
         this.dataId = dataId;
         return this;
@@ -135,6 +137,7 @@ public class ExportNacosConfigRequest extends TeaModel {
         return this.dataIds;
     }
 
+    @Deprecated
     public ExportNacosConfigRequest setGroup(String group) {
         this.group = group;
         return this;
@@ -143,6 +146,7 @@ public class ExportNacosConfigRequest extends TeaModel {
         return this.group;
     }
 
+    @Deprecated
     public ExportNacosConfigRequest setIds(String ids) {
         this.ids = ids;
         return this;

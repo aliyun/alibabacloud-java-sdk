@@ -109,6 +109,9 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("LimitApp")
+        public String limitApp;
+
         /**
          * <strong>example:</strong>
          * <p>default</p>
@@ -165,6 +168,14 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public UpdateIsolationRuleResponseBodyData setLimitApp(String limitApp) {
+            this.limitApp = limitApp;
+            return this;
+        }
+        public String getLimitApp() {
+            return this.limitApp;
         }
 
         public UpdateIsolationRuleResponseBodyData setNamespace(String namespace) {

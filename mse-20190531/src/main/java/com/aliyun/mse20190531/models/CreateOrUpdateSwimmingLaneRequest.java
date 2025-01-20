@@ -142,6 +142,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.enableRules;
     }
 
+    @Deprecated
     public CreateOrUpdateSwimmingLaneRequest setEntryRule(String entryRule) {
         this.entryRule = entryRule;
         return this;

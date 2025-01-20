@@ -71,6 +71,7 @@ public class AddGatewayRouteRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("EnableWaf")
+    @Deprecated
     public Boolean enableWaf;
 
     /**
@@ -214,6 +215,7 @@ public class AddGatewayRouteRequest extends TeaModel {
         return this.domainIdListJSON;
     }
 
+    @Deprecated
     public AddGatewayRouteRequest setEnableWaf(Boolean enableWaf) {
         this.enableWaf = enableWaf;
         return this;

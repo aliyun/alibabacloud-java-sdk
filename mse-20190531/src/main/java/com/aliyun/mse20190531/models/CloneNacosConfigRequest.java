@@ -101,6 +101,7 @@ public class CloneNacosConfigRequest extends TeaModel {
         return this.dataIds;
     }
 
+    @Deprecated
     public CloneNacosConfigRequest setIds(String ids) {
         this.ids = ids;
         return this;

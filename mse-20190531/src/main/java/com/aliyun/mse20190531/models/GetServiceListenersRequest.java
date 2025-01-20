@@ -139,6 +139,7 @@ public class GetServiceListenersRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
+    @Deprecated
     public GetServiceListenersRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;

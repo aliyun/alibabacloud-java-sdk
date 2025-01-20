@@ -41,6 +41,9 @@ public class CloneSentinelRuleFromAhasRequest extends TeaModel {
     @NameInMap("IsAHASPublicRegion")
     public Boolean isAHASPublicRegion;
 
+    @NameInMap("MseAppName")
+    public String mseAppName;
+
     /**
      * <p>The namespace.</p>
      * <p>This parameter is required.</p>
@@ -86,6 +89,14 @@ public class CloneSentinelRuleFromAhasRequest extends TeaModel {
     }
     public Boolean getIsAHASPublicRegion() {
         return this.isAHASPublicRegion;
+    }
+
+    public CloneSentinelRuleFromAhasRequest setMseAppName(String mseAppName) {
+        this.mseAppName = mseAppName;
+        return this;
+    }
+    public String getMseAppName() {
+        return this.mseAppName;
     }
 
     public CloneSentinelRuleFromAhasRequest setNamespace(String namespace) {

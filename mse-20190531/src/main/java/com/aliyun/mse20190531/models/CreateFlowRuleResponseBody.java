@@ -186,6 +186,9 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("LimitApp")
+        public String limitApp;
+
         /**
          * <p>The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.</p>
          * 
@@ -274,6 +277,14 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public CreateFlowRuleResponseBodyData setLimitApp(String limitApp) {
+            this.limitApp = limitApp;
+            return this;
+        }
+        public String getLimitApp() {
+            return this.limitApp;
         }
 
         public CreateFlowRuleResponseBodyData setMaxQueueingTimeMs(Integer maxQueueingTimeMs) {

@@ -90,6 +90,7 @@ public class GetApplicationInstanceListRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
+    @Deprecated
     public GetApplicationInstanceListRequest setAppId(String appId) {
         this.appId = appId;
         return this;

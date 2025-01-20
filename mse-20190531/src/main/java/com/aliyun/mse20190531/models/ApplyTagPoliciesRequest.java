@@ -95,6 +95,7 @@ public class ApplyTagPoliciesRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
+    @Deprecated
     public ApplyTagPoliciesRequest setAppId(String appId) {
         this.appId = appId;
         return this;

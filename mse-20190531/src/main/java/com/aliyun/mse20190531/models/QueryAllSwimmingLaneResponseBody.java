@@ -385,6 +385,9 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         @NameInMap("CanaryModel")
         public Integer canaryModel;
 
+        @NameInMap("Condition")
+        public String condition;
+
         @NameInMap("Conditions")
         public java.util.List<QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions> conditions;
 
@@ -429,6 +432,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
         public Integer getCanaryModel() {
             return this.canaryModel;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute setCondition(String condition) {
+            this.condition = condition;
+            return this;
+        }
+        public String getCondition() {
+            return this.condition;
         }
 
         public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute setConditions(java.util.List<QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions> conditions) {
@@ -502,6 +513,9 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
         @NameInMap("GatewaySwimmingLaneRoute")
         public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute gatewaySwimmingLaneRoute;
+
+        @NameInMap("GatewaySwimmingLaneRouteJson")
+        public String gatewaySwimmingLaneRouteJson;
 
         @NameInMap("GroupId")
         public String groupId;
@@ -596,6 +610,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
         public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute getGatewaySwimmingLaneRoute() {
             return this.gatewaySwimmingLaneRoute;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyData setGatewaySwimmingLaneRouteJson(String gatewaySwimmingLaneRouteJson) {
+            this.gatewaySwimmingLaneRouteJson = gatewaySwimmingLaneRouteJson;
+            return this;
+        }
+        public String getGatewaySwimmingLaneRouteJson() {
+            return this.gatewaySwimmingLaneRouteJson;
         }
 
         public QueryAllSwimmingLaneResponseBodyData setGroupId(String groupId) {
