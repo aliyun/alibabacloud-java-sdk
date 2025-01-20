@@ -14,6 +14,9 @@ public class SkipDataCorrectRowCheckRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <p>The reason for skipping the verification on the number of rows in the precheck for data change.</p>
      * <p>This parameter is required.</p>
@@ -44,6 +47,14 @@ public class SkipDataCorrectRowCheckRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public SkipDataCorrectRowCheckRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public SkipDataCorrectRowCheckRequest setReason(String reason) {

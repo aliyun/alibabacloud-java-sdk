@@ -14,6 +14,9 @@ public class RetryDataCorrectPreCheckRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
      * 
@@ -34,6 +37,14 @@ public class RetryDataCorrectPreCheckRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public RetryDataCorrectPreCheckRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public RetryDataCorrectPreCheckRequest setTid(Long tid) {

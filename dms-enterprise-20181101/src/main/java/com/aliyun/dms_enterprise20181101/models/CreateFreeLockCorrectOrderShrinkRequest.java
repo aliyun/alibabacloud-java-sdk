@@ -30,6 +30,9 @@ public class CreateFreeLockCorrectOrderShrinkRequest extends TeaModel {
     @NameInMap("Param")
     public String paramShrink;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <p>The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
      */
@@ -72,6 +75,14 @@ public class CreateFreeLockCorrectOrderShrinkRequest extends TeaModel {
     }
     public String getParamShrink() {
         return this.paramShrink;
+    }
+
+    public CreateFreeLockCorrectOrderShrinkRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public CreateFreeLockCorrectOrderShrinkRequest setRelatedUserListShrink(String relatedUserListShrink) {

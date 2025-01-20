@@ -30,6 +30,9 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
     @NameInMap("Param")
     public CreateFreeLockCorrectOrderRequestParam param;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <p>The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
      */
@@ -72,6 +75,14 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
     }
     public CreateFreeLockCorrectOrderRequestParam getParam() {
         return this.param;
+    }
+
+    public CreateFreeLockCorrectOrderRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public CreateFreeLockCorrectOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {

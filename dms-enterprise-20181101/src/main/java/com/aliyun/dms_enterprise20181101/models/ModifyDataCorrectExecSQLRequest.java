@@ -24,6 +24,9 @@ public class ModifyDataCorrectExecSQLRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
      * 
@@ -52,6 +55,14 @@ public class ModifyDataCorrectExecSQLRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public ModifyDataCorrectExecSQLRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public ModifyDataCorrectExecSQLRequest setTid(Long tid) {
