@@ -19,11 +19,11 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>This parameter is required for a PolarDB for MySQL cluster.</p>
+     * <li><p>This parameter is required for PolarDB for MySQL clusters.</p>
      * </li>
-     * <li><p>This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.</p>
+     * <li><p>This parameter is not required for PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle) clusters. By default, SSL encryption is enabled for all endpoints of the clusters.</p>
      * </li>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/153414.html">DescribeDBClusterSSL</a> operation to view the details of the endpoint.</p>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/2319159.html">DescribeDBClusterSSL</a> operation to view the details of the endpoint.</p>
      * </li>
      * </ul>
      * 

@@ -4660,7 +4660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query serverless configuration.</p>
+     * <p>Queries the serverless configurations of a serverless cluster.</p>
      * 
      * @param request DescribeDBClusterServerlessConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4708,7 +4708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query serverless configuration.</p>
+     * <p>Queries the serverless configurations of a serverless cluster.</p>
      * 
      * @param request DescribeDBClusterServerlessConfRequest
      * @return DescribeDBClusterServerlessConfResponse
@@ -8431,6 +8431,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ImciAutoIndex", request.imciAutoIndex);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyRowCompression)) {
+            query.put("ModifyRowCompression", request.modifyRowCompression);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -8457,6 +8461,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageUpperBound)) {
             query.put("StorageUpperBound", request.storageUpperBound);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableMeta)) {
+            query.put("TableMeta", request.tableMeta);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -9470,7 +9478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables Secure Sockets Layer (SSL) encryption or updates the Certificate Authorities (CA) certificate for a specified PolarDB cluster.</p>
+     * <p>Enables or disables the SSL encryption feature for a PolarDB cluster, or updates the CA certificate of the cluster.</p>
      * 
      * @param request ModifyDBClusterSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9534,7 +9542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables Secure Sockets Layer (SSL) encryption or updates the Certificate Authorities (CA) certificate for a specified PolarDB cluster.</p>
+     * <p>Enables or disables the SSL encryption feature for a PolarDB cluster, or updates the CA certificate of the cluster.</p>
      * 
      * @param request ModifyDBClusterSSLRequest
      * @return ModifyDBClusterSSLResponse
@@ -9666,6 +9674,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDBClusterServerlessConfResponse modifyDBClusterServerlessConf(ModifyDBClusterServerlessConfRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBClusterServerlessConfWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改存储性能</p>
+     * 
+     * @param request ModifyDBClusterStoragePerformanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDBClusterStoragePerformanceResponse
+     */
+    public ModifyDBClusterStoragePerformanceResponse modifyDBClusterStoragePerformanceWithOptions(ModifyDBClusterStoragePerformanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.burstingEnabled)) {
+            query.put("BurstingEnabled", request.burstingEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyType)) {
+            query.put("ModifyType", request.modifyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provisionedIops)) {
+            query.put("ProvisionedIops", request.provisionedIops);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDBClusterStoragePerformance"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBClusterStoragePerformanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改存储性能</p>
+     * 
+     * @param request ModifyDBClusterStoragePerformanceRequest
+     * @return ModifyDBClusterStoragePerformanceResponse
+     */
+    public ModifyDBClusterStoragePerformanceResponse modifyDBClusterStoragePerformance(ModifyDBClusterStoragePerformanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDBClusterStoragePerformanceWithOptions(request, runtime);
     }
 
     /**

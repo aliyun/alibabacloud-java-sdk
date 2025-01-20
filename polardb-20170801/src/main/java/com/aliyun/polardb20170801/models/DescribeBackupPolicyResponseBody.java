@@ -29,7 +29,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      * <p>Indicates whether backups are retained when you delete a cluster. Valid values:</p>
      * <ul>
      * <li><strong>ALL</strong>: permanently retains all backups.</li>
-     * <li><strong>LATEST</strong>: permanently retains only the last backup.</li>
+     * <li><strong>LATEST</strong>: permanently retains the most recent backup.</li>
      * <li><strong>NONE</strong>: does not retain backups.</li>
      * </ul>
      * 
@@ -123,10 +123,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      * <ul>
      * <li><strong>0</strong>: The cross-region level-2 backup feature is disabled.</li>
      * <li><strong>30 to 7300</strong>: Cross-region level-2 backups are retained for 30 to 7,300 days.</li>
-     * <li><strong>1</strong>: Cross-region level-2 backups are permanently retained.</li>
+     * <li><strong>1</strong>: Cross-region level-2 backups are retained for a long period of time.</li>
      * </ul>
      * <blockquote>
-     * <p>The default value is <strong>0</strong>. By default, the level-2 backup feature is disabled when you create a cluster.</p>
+     * <p> The default value of the parameter is <strong>0</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -165,10 +165,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      * <ul>
      * <li>0: The level-2 backup feature is disabled.</li>
      * <li>30 to 7300: Level-2 backups are retained for 30 to 7,300 days.</li>
-     * <li>\-1: Level-2 backups are permanently retained.</li>
+     * <li>\-1: Level-2 backups are retained for a long period of time.</li>
      * </ul>
      * <blockquote>
-     * <p>The default value is <strong>0</strong>. By default, the level-2 backup feature is disabled when you create a cluster.</p>
+     * <p> The default value of this parameter is <strong>0</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
