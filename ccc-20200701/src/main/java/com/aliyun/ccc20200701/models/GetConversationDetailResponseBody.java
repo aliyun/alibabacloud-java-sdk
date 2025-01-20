@@ -91,6 +91,9 @@ public class GetConversationDetailResponseBody extends TeaModel {
         @NameInMap("End")
         public Integer end;
 
+        @NameInMap("Finished")
+        public Boolean finished;
+
         /**
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
@@ -123,6 +126,14 @@ public class GetConversationDetailResponseBody extends TeaModel {
         }
         public Integer getEnd() {
             return this.end;
+        }
+
+        public GetConversationDetailResponseBodyPhrases setFinished(Boolean finished) {
+            this.finished = finished;
+            return this;
+        }
+        public Boolean getFinished() {
+            return this.finished;
         }
 
         public GetConversationDetailResponseBodyPhrases setIdentity(String identity) {

@@ -104,6 +104,7 @@ public class ListVoicemailsRequest extends TeaModel {
         return this.instanceId;
     }
 
+    @Deprecated
     public ListVoicemailsRequest setName(String name) {
         this.name = name;
         return this;
