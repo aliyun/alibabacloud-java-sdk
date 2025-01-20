@@ -1,3 +1,7 @@
+2025-01-20 Version: 1.19.0
+- Support API RunSearchSimilarArticles.
+
+
 2025-01-03 Version: 1.18.0
 - Support API RunBookIntroduction.
 - Support API RunBookSmartCard.
