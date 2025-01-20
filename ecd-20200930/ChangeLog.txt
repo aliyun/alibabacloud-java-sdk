@@ -1,3 +1,23 @@
+2025-01-20 Version: 4.3.0
+- Support API BindConfigGroup.
+- Support API CreateConfigGroup.
+- Support API DeleteConfigGroup.
+- Support API DescribeConfigGroup.
+- Support API DescribeTimerGroup.
+- Support API ModifyConfigGroup.
+- Support API ModifyTimerGroup.
+- Support API UnbindConfigGroup.
+- Update API ApplyAutoSnapshotPolicy: update param DesktopId.
+- Update API DescribeAclEntries: add param OfficeSiteId.
+- Update API DescribeBundles: update response param.
+- Update API DescribeOfficeSites: update response param.
+- Update API DescribePolicyGroups: add param ExternalPolicyGroupIds.
+- Update API DescribePolicyGroups: update response param.
+- Update API DescribeRecordings: add param StandardEndTime.
+- Update API DescribeRecordings: add param StandardStartTime.
+- Update API DescribeSnapshots: update response param.
+
+
 2025-01-11 Version: 4.2.8
 - Update API CreateDesktops: update param BundleId.
 - Update API DescribeClientEvents: update response param.

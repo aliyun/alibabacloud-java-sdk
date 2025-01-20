@@ -877,6 +877,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("EndUserGroupCoordinate")
         public String endUserGroupCoordinate;
 
+        @NameInMap("FileTransfer")
+        public String fileTransfer;
+
         /**
          * <p>Indicates whether the image quality feature is enabled for Graphics cloud desktops. If you have high requirements for desktop performance and user experience, we recommend that you enable this feature. For example, you can enable this feature in professional graphic design scenarios.</p>
          * <p>Valid values:</p>
@@ -1137,6 +1140,15 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("RecordContentExpires")
         public Long recordContentExpires;
 
+        @NameInMap("RecordEventDuration")
+        public Integer recordEventDuration;
+
+        @NameInMap("RecordEventFilePaths")
+        public java.util.List<String> recordEventFilePaths;
+
+        @NameInMap("RecordEventRegisters")
+        public java.util.List<String> recordEventRegisters;
+
         /**
          * <p>Indicates whether the screen recording feature is enabled.</p>
          * <p>Valid values:</p>
@@ -1247,6 +1259,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("RemoteCoordinate")
         public String remoteCoordinate;
+
+        @NameInMap("ResetDesktop")
+        public String resetDesktop;
 
         @NameInMap("ResourceGroupCount")
         public Integer resourceGroupCount;
@@ -1692,6 +1707,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.endUserGroupCoordinate;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setFileTransfer(String fileTransfer) {
+            this.fileTransfer = fileTransfer;
+            return this;
+        }
+        public String getFileTransfer() {
+            return this.fileTransfer;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setGpuAcceleration(String gpuAcceleration) {
             this.gpuAcceleration = gpuAcceleration;
             return this;
@@ -1900,6 +1923,30 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.recordContentExpires;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordEventDuration(Integer recordEventDuration) {
+            this.recordEventDuration = recordEventDuration;
+            return this;
+        }
+        public Integer getRecordEventDuration() {
+            return this.recordEventDuration;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordEventFilePaths(java.util.List<String> recordEventFilePaths) {
+            this.recordEventFilePaths = recordEventFilePaths;
+            return this;
+        }
+        public java.util.List<String> getRecordEventFilePaths() {
+            return this.recordEventFilePaths;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordEventRegisters(java.util.List<String> recordEventRegisters) {
+            this.recordEventRegisters = recordEventRegisters;
+            return this;
+        }
+        public java.util.List<String> getRecordEventRegisters() {
+            return this.recordEventRegisters;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecording(String recording) {
             this.recording = recording;
             return this;
@@ -1978,6 +2025,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getRemoteCoordinate() {
             return this.remoteCoordinate;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setResetDesktop(String resetDesktop) {
+            this.resetDesktop = resetDesktop;
+            return this;
+        }
+        public String getResetDesktop() {
+            return this.resetDesktop;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setResourceGroupCount(Integer resourceGroupCount) {

@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyGroupsRequest extends TeaModel {
+    @NameInMap("ExternalPolicyGroupIds")
+    public java.util.List<String> externalPolicyGroupIds;
+
     /**
      * <p>The number of entries per page.</p>
      * <ul>
@@ -63,6 +66,14 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public static DescribePolicyGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePolicyGroupsRequest self = new DescribePolicyGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePolicyGroupsRequest setExternalPolicyGroupIds(java.util.List<String> externalPolicyGroupIds) {
+        this.externalPolicyGroupIds = externalPolicyGroupIds;
+        return this;
+    }
+    public java.util.List<String> getExternalPolicyGroupIds() {
+        return this.externalPolicyGroupIds;
     }
 
     public DescribePolicyGroupsRequest setMaxResults(Integer maxResults) {

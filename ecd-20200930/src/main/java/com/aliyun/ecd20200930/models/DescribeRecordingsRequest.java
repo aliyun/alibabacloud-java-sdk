@@ -62,6 +62,12 @@ public class DescribeRecordingsRequest extends TeaModel {
     @NameInMap("SignedUrlExpireMinutes")
     public Integer signedUrlExpireMinutes;
 
+    @NameInMap("StandardEndTime")
+    public String standardEndTime;
+
+    @NameInMap("StandardStartTime")
+    public String standardStartTime;
+
     /**
      * <strong>example:</strong>
      * <p>20230424000000</p>
@@ -136,6 +142,22 @@ public class DescribeRecordingsRequest extends TeaModel {
     }
     public Integer getSignedUrlExpireMinutes() {
         return this.signedUrlExpireMinutes;
+    }
+
+    public DescribeRecordingsRequest setStandardEndTime(String standardEndTime) {
+        this.standardEndTime = standardEndTime;
+        return this;
+    }
+    public String getStandardEndTime() {
+        return this.standardEndTime;
+    }
+
+    public DescribeRecordingsRequest setStandardStartTime(String standardStartTime) {
+        this.standardStartTime = standardStartTime;
+        return this;
+    }
+    public String getStandardStartTime() {
+        return this.standardStartTime;
     }
 
     public DescribeRecordingsRequest setStartTime(String startTime) {

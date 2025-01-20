@@ -291,6 +291,9 @@ public class DescribeBundlesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("DataDiskCategory")
+        public String dataDiskCategory;
+
         /**
          * <p>The description of the cloud computer template.</p>
          * 
@@ -487,6 +490,9 @@ public class DescribeBundlesResponseBody extends TeaModel {
         @NameInMap("StockState")
         public String stockState;
 
+        @NameInMap("SystemDiskCategory")
+        public String systemDiskCategory;
+
         /**
          * <p>Indicates whether disk encryption is enabled.</p>
          * 
@@ -540,6 +546,14 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeBundlesResponseBodyBundles setDataDiskCategory(String dataDiskCategory) {
+            this.dataDiskCategory = dataDiskCategory;
+            return this;
+        }
+        public String getDataDiskCategory() {
+            return this.dataDiskCategory;
         }
 
         public DescribeBundlesResponseBodyBundles setDescription(String description) {
@@ -652,6 +666,14 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
         public String getStockState() {
             return this.stockState;
+        }
+
+        public DescribeBundlesResponseBodyBundles setSystemDiskCategory(String systemDiskCategory) {
+            this.systemDiskCategory = systemDiskCategory;
+            return this;
+        }
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
         }
 
         public DescribeBundlesResponseBodyBundles setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {

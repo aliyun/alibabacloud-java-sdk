@@ -316,6 +316,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("ADConnectors")
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesADConnectors> ADConnectors;
 
+        @NameInMap("AcceleratorId")
+        public String acceleratorId;
+
         /**
          * <p>The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.</p>
          * 
@@ -837,6 +840,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesADConnectors> getADConnectors() {
             return this.ADConnectors;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setAcceleratorId(String acceleratorId) {
+            this.acceleratorId = acceleratorId;
+            return this;
+        }
+        public String getAcceleratorId() {
+            return this.acceleratorId;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setAdHostname(String adHostname) {

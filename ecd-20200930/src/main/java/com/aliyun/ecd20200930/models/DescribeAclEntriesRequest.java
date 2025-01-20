@@ -23,6 +23,9 @@ public class DescribeAclEntriesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
     /**
      * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
@@ -75,6 +78,14 @@ public class DescribeAclEntriesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeAclEntriesRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
     }
 
     public DescribeAclEntriesRequest setRegionId(String regionId) {
