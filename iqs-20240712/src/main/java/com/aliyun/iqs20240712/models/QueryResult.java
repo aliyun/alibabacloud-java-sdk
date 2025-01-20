@@ -7,6 +7,9 @@ public class QueryResult extends TeaModel {
     @NameInMap("data")
     public java.util.List<QueryResultData> data;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     public static QueryResult build(java.util.Map<String, ?> map) throws Exception {
         QueryResult self = new QueryResult();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class QueryResult extends TeaModel {
     }
     public java.util.List<QueryResultData> getData() {
         return this.data;
+    }
+
+    public QueryResult setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class QueryResultDataImages extends TeaModel {
@@ -51,6 +62,9 @@ public class QueryResult extends TeaModel {
     }
 
     public static class QueryResultDataMetadata extends TeaModel {
+        @NameInMap("averageSpend")
+        public String averageSpend;
+
         @NameInMap("businessArea")
         public String businessArea;
 
@@ -72,6 +86,14 @@ public class QueryResult extends TeaModel {
         public static QueryResultDataMetadata build(java.util.Map<String, ?> map) throws Exception {
             QueryResultDataMetadata self = new QueryResultDataMetadata();
             return TeaModel.build(map, self);
+        }
+
+        public QueryResultDataMetadata setAverageSpend(String averageSpend) {
+            this.averageSpend = averageSpend;
+            return this;
+        }
+        public String getAverageSpend() {
+            return this.averageSpend;
         }
 
         public QueryResultDataMetadata setBusinessArea(String businessArea) {
@@ -133,6 +155,9 @@ public class QueryResult extends TeaModel {
 
         @NameInMap("cityName")
         public String cityName;
+
+        @NameInMap("distanceMeter")
+        public String distanceMeter;
 
         @NameInMap("districtCode")
         public String districtCode;
@@ -197,6 +222,14 @@ public class QueryResult extends TeaModel {
         }
         public String getCityName() {
             return this.cityName;
+        }
+
+        public QueryResultData setDistanceMeter(String distanceMeter) {
+            this.distanceMeter = distanceMeter;
+            return this;
+        }
+        public String getDistanceMeter() {
+            return this.distanceMeter;
         }
 
         public QueryResultData setDistrictCode(String districtCode) {

@@ -69,7 +69,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new BicyclingDirectionNovaResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new BicyclingDirectionNovaResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new BicyclingDirectionNovaResponse());
+        }
+
     }
 
     /**
@@ -111,7 +116,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CommonQueryBySceneResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CommonQueryBySceneResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CommonQueryBySceneResponse());
+        }
+
     }
 
     /**
@@ -178,7 +188,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DrivingDirectionNovaResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DrivingDirectionNovaResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DrivingDirectionNovaResponse());
+        }
+
     }
 
     /**
@@ -237,7 +252,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ElectrobikeDirectionNovaResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ElectrobikeDirectionNovaResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ElectrobikeDirectionNovaResponse());
+        }
+
     }
 
     /**
@@ -288,7 +308,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GeoCodeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GeoCodeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GeoCodeResponse());
+        }
+
     }
 
     /**
@@ -367,7 +392,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new NearbySearchNovaResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new NearbySearchNovaResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new NearbySearchNovaResponse());
+        }
+
     }
 
     /**
@@ -434,7 +464,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new PlaceSearchNovaResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new PlaceSearchNovaResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new PlaceSearchNovaResponse());
+        }
+
     }
 
     /**
@@ -448,6 +483,288 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.placeSearchNovaWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>景点查询</p>
+     * 
+     * @param request QueryAttractionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAttractionsResponse
+     */
+    public QueryAttractionsResponse queryAttractionsWithOptions(QueryAttractionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAttractions"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/amap-function-call-agent/iqs-agent-service/v1/nl/attractions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAttractionsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryAttractionsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>景点查询</p>
+     * 
+     * @param request QueryAttractionsRequest
+     * @return QueryAttractionsResponse
+     */
+    public QueryAttractionsResponse queryAttractions(QueryAttractionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryAttractionsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>景点查询</p>
+     * 
+     * @param request QueryAttractionsNlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAttractionsNlResponse
+     */
+    public QueryAttractionsNlResponse queryAttractionsNlWithOptions(QueryAttractionsNlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAttractionsNl"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/amap-function-call-agent/iqs-agent-service/v2/nl/attractions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAttractionsNlResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryAttractionsNlResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>景点查询</p>
+     * 
+     * @param request QueryAttractionsNlRequest
+     * @return QueryAttractionsNlResponse
+     */
+    public QueryAttractionsNlResponse queryAttractionsNl(QueryAttractionsNlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryAttractionsNlWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>酒店查询</p>
+     * 
+     * @param request QueryHotelsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryHotelsResponse
+     */
+    public QueryHotelsResponse queryHotelsWithOptions(QueryHotelsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryHotels"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/amap-function-call-agent/iqs-agent-service/v1/nl/hotels"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryHotelsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryHotelsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>酒店查询</p>
+     * 
+     * @param request QueryHotelsRequest
+     * @return QueryHotelsResponse
+     */
+    public QueryHotelsResponse queryHotels(QueryHotelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryHotelsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>酒店查询</p>
+     * 
+     * @param request QueryHotelsNlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryHotelsNlResponse
+     */
+    public QueryHotelsNlResponse queryHotelsNlWithOptions(QueryHotelsNlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryHotelsNl"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/amap-function-call-agent/iqs-agent-service/v2/nl/hotels"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryHotelsNlResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryHotelsNlResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>酒店查询</p>
+     * 
+     * @param request QueryHotelsNlRequest
+     * @return QueryHotelsNlResponse
+     */
+    public QueryHotelsNlResponse queryHotelsNl(QueryHotelsNlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryHotelsNlWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>餐厅查询</p>
+     * 
+     * @param request QueryRestaurantsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryRestaurantsResponse
+     */
+    public QueryRestaurantsResponse queryRestaurantsWithOptions(QueryRestaurantsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryRestaurants"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/amap-function-call-agent/iqs-agent-service/v1/nl/restaurants"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRestaurantsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryRestaurantsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>餐厅查询</p>
+     * 
+     * @param request QueryRestaurantsRequest
+     * @return QueryRestaurantsResponse
+     */
+    public QueryRestaurantsResponse queryRestaurants(QueryRestaurantsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryRestaurantsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>餐厅查询</p>
+     * 
+     * @param request QueryRestaurantsNlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryRestaurantsNlResponse
+     */
+    public QueryRestaurantsNlResponse queryRestaurantsNlWithOptions(QueryRestaurantsNlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryRestaurantsNl"),
+            new TeaPair("version", "2024-07-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/amap-function-call-agent/iqs-agent-service/v2/nl/restaurants"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRestaurantsNlResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryRestaurantsNlResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>餐厅查询</p>
+     * 
+     * @param request QueryRestaurantsNlRequest
+     * @return QueryRestaurantsNlResponse
+     */
+    public QueryRestaurantsNlResponse queryRestaurantsNl(QueryRestaurantsNlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryRestaurantsNlWithOptions(request, headers, runtime);
     }
 
     /**
@@ -485,7 +802,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RgeoCodeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RgeoCodeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RgeoCodeResponse());
+        }
+
     }
 
     /**
@@ -552,7 +874,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TransitIntegratedDirectionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new TransitIntegratedDirectionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new TransitIntegratedDirectionResponse());
+        }
+
     }
 
     /**
@@ -611,7 +938,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new WalkingDirectionNovaResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new WalkingDirectionNovaResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new WalkingDirectionNovaResponse());
+        }
+
     }
 
     /**
