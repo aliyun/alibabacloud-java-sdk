@@ -83,6 +83,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>批量发布剧本任务</p>
+     * 
+     * @param request BatchCreateAICoachTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchCreateAICoachTaskResponse
+     */
+    public BatchCreateAICoachTaskResponse batchCreateAICoachTaskWithOptions(BatchCreateAICoachTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("requestId", request.requestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptRecordId)) {
+            body.put("scriptRecordId", request.scriptRecordId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.studentIds)) {
+            body.put("studentIds", request.studentIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchCreateAICoachTask"),
+            new TeaPair("version", "2024-03-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/aicoach/batchCreateTask"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCreateAICoachTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量发布剧本任务</p>
+     * 
+     * @param request BatchCreateAICoachTaskRequest
+     * @return BatchCreateAICoachTaskResponse
+     */
+    public BatchCreateAICoachTaskResponse batchCreateAICoachTask(BatchCreateAICoachTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchCreateAICoachTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>批量查询项目信息</p>
      * 
      * @param tmpReq BatchGetProjectTaskRequest
@@ -1433,6 +1488,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAICoachScriptPageResponse listAICoachScriptPageWithOptions(ListAICoachScriptPageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("pageNumber", request.pageNumber);
         }
@@ -1443,6 +1502,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2190,6 +2253,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("resSpecType", request.resSpecType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resolution)) {
+            body.put("resolution", request.resolution);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scaleType)) {
             body.put("scaleType", request.scaleType);
         }
@@ -2443,8 +2510,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartAvatarSessionResponse startAvatarSessionWithOptions(StartAvatarSessionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelToken)) {
+            body.put("channelToken", request.channelToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.customPushUrl)) {
             body.put("customPushUrl", request.customPushUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customUserId)) {
+            body.put("customUserId", request.customUserId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {

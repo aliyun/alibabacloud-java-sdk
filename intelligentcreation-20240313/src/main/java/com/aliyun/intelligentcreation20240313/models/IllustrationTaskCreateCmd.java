@@ -32,6 +32,9 @@ public class IllustrationTaskCreateCmd extends TeaModel {
     @NameInMap("idempotentId")
     public String idempotentId;
 
+    @NameInMap("imageUrls")
+    public java.util.List<String> imageUrls;
+
     /**
      * <strong>example:</strong>
      * <p>4</p>
@@ -80,6 +83,14 @@ public class IllustrationTaskCreateCmd extends TeaModel {
     }
     public String getIdempotentId() {
         return this.idempotentId;
+    }
+
+    public IllustrationTaskCreateCmd setImageUrls(java.util.List<String> imageUrls) {
+        this.imageUrls = imageUrls;
+        return this;
+    }
+    public java.util.List<String> getImageUrls() {
+        return this.imageUrls;
     }
 
     public IllustrationTaskCreateCmd setNums(Integer nums) {

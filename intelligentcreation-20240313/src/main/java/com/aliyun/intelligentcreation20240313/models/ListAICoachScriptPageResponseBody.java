@@ -199,6 +199,15 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @NameInMap("expressiveness")
         public Integer expressiveness;
 
+        @NameInMap("expressivenessEnabled")
+        public Boolean expressivenessEnabled;
+
+        @NameInMap("pointDeductionRule")
+        public Integer pointDeductionRule;
+
+        @NameInMap("pointDeductionRuleEnabled")
+        public Boolean pointDeductionRuleEnabled;
+
         /**
          * <strong>example:</strong>
          * <p>20</p>
@@ -234,6 +243,30 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             return this.expressiveness;
         }
 
+        public ListAICoachScriptPageResponseBodyListWeights setExpressivenessEnabled(Boolean expressivenessEnabled) {
+            this.expressivenessEnabled = expressivenessEnabled;
+            return this;
+        }
+        public Boolean getExpressivenessEnabled() {
+            return this.expressivenessEnabled;
+        }
+
+        public ListAICoachScriptPageResponseBodyListWeights setPointDeductionRule(Integer pointDeductionRule) {
+            this.pointDeductionRule = pointDeductionRule;
+            return this;
+        }
+        public Integer getPointDeductionRule() {
+            return this.pointDeductionRule;
+        }
+
+        public ListAICoachScriptPageResponseBodyListWeights setPointDeductionRuleEnabled(Boolean pointDeductionRuleEnabled) {
+            this.pointDeductionRuleEnabled = pointDeductionRuleEnabled;
+            return this;
+        }
+        public Boolean getPointDeductionRuleEnabled() {
+            return this.pointDeductionRuleEnabled;
+        }
+
         public ListAICoachScriptPageResponseBodyListWeights setStandard(Integer standard) {
             this.standard = standard;
             return this;
@@ -253,6 +286,12 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
     }
 
     public static class ListAICoachScriptPageResponseBodyList extends TeaModel {
+        @NameInMap("appendQuestionFlag")
+        public String appendQuestionFlag;
+
+        @NameInMap("assessmentScope")
+        public String assessmentScope;
+
         @NameInMap("completeStrategy")
         public ListAICoachScriptPageResponseBodyListCompleteStrategy completeStrategy;
 
@@ -262,6 +301,12 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
          */
         @NameInMap("coverUrl")
         public String coverUrl;
+
+        @NameInMap("dialogueTipFlag")
+        public Boolean dialogueTipFlag;
+
+        @NameInMap("evaluateReportFlag")
+        public Boolean evaluateReportFlag;
 
         @NameInMap("expressiveness")
         public java.util.Map<String, String> expressiveness;
@@ -304,6 +349,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("orderAckFlag")
+        public Boolean orderAckFlag;
+
         @NameInMap("sampleDialogueList")
         public java.util.List<ListAICoachScriptPageResponseBodyListSampleDialogueList> sampleDialogueList;
 
@@ -314,6 +362,12 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @NameInMap("scriptRecordId")
         public String scriptRecordId;
 
+        @NameInMap("sparringTipContent")
+        public String sparringTipContent;
+
+        @NameInMap("sparringTipTitle")
+        public String sparringTipTitle;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -321,12 +375,34 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @NameInMap("status")
         public Integer status;
 
+        @NameInMap("studentThinkTimeFlag")
+        public Boolean studentThinkTimeFlag;
+
+        @NameInMap("type")
+        public Integer type;
+
         @NameInMap("weights")
         public ListAICoachScriptPageResponseBodyListWeights weights;
 
         public static ListAICoachScriptPageResponseBodyList build(java.util.Map<String, ?> map) throws Exception {
             ListAICoachScriptPageResponseBodyList self = new ListAICoachScriptPageResponseBodyList();
             return TeaModel.build(map, self);
+        }
+
+        public ListAICoachScriptPageResponseBodyList setAppendQuestionFlag(String appendQuestionFlag) {
+            this.appendQuestionFlag = appendQuestionFlag;
+            return this;
+        }
+        public String getAppendQuestionFlag() {
+            return this.appendQuestionFlag;
+        }
+
+        public ListAICoachScriptPageResponseBodyList setAssessmentScope(String assessmentScope) {
+            this.assessmentScope = assessmentScope;
+            return this;
+        }
+        public String getAssessmentScope() {
+            return this.assessmentScope;
         }
 
         public ListAICoachScriptPageResponseBodyList setCompleteStrategy(ListAICoachScriptPageResponseBodyListCompleteStrategy completeStrategy) {
@@ -343,6 +419,22 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
         public String getCoverUrl() {
             return this.coverUrl;
+        }
+
+        public ListAICoachScriptPageResponseBodyList setDialogueTipFlag(Boolean dialogueTipFlag) {
+            this.dialogueTipFlag = dialogueTipFlag;
+            return this;
+        }
+        public Boolean getDialogueTipFlag() {
+            return this.dialogueTipFlag;
+        }
+
+        public ListAICoachScriptPageResponseBodyList setEvaluateReportFlag(Boolean evaluateReportFlag) {
+            this.evaluateReportFlag = evaluateReportFlag;
+            return this;
+        }
+        public Boolean getEvaluateReportFlag() {
+            return this.evaluateReportFlag;
         }
 
         public ListAICoachScriptPageResponseBodyList setExpressiveness(java.util.Map<String, String> expressiveness) {
@@ -401,6 +493,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListAICoachScriptPageResponseBodyList setOrderAckFlag(Boolean orderAckFlag) {
+            this.orderAckFlag = orderAckFlag;
+            return this;
+        }
+        public Boolean getOrderAckFlag() {
+            return this.orderAckFlag;
+        }
+
         public ListAICoachScriptPageResponseBodyList setSampleDialogueList(java.util.List<ListAICoachScriptPageResponseBodyListSampleDialogueList> sampleDialogueList) {
             this.sampleDialogueList = sampleDialogueList;
             return this;
@@ -417,12 +517,44 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             return this.scriptRecordId;
         }
 
+        public ListAICoachScriptPageResponseBodyList setSparringTipContent(String sparringTipContent) {
+            this.sparringTipContent = sparringTipContent;
+            return this;
+        }
+        public String getSparringTipContent() {
+            return this.sparringTipContent;
+        }
+
+        public ListAICoachScriptPageResponseBodyList setSparringTipTitle(String sparringTipTitle) {
+            this.sparringTipTitle = sparringTipTitle;
+            return this;
+        }
+        public String getSparringTipTitle() {
+            return this.sparringTipTitle;
+        }
+
         public ListAICoachScriptPageResponseBodyList setStatus(Integer status) {
             this.status = status;
             return this;
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public ListAICoachScriptPageResponseBodyList setStudentThinkTimeFlag(Boolean studentThinkTimeFlag) {
+            this.studentThinkTimeFlag = studentThinkTimeFlag;
+            return this;
+        }
+        public Boolean getStudentThinkTimeFlag() {
+            return this.studentThinkTimeFlag;
+        }
+
+        public ListAICoachScriptPageResponseBodyList setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
         }
 
         public ListAICoachScriptPageResponseBodyList setWeights(ListAICoachScriptPageResponseBodyListWeights weights) {
