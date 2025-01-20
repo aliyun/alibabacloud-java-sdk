@@ -327,6 +327,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.connectionType;
     }
 
+    @Deprecated
     public CreateClusterRequest setDiskType(String diskType) {
         this.diskType = diskType;
         return this;
@@ -375,6 +376,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.netType;
     }
 
+    @Deprecated
     public CreateClusterRequest setPrivateSlbSpecification(String privateSlbSpecification) {
         this.privateSlbSpecification = privateSlbSpecification;
         return this;
@@ -391,6 +393,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.pubNetworkFlow;
     }
 
+    @Deprecated
     public CreateClusterRequest setPubSlbSpecification(String pubSlbSpecification) {
         this.pubSlbSpecification = pubSlbSpecification;
         return this;

@@ -143,6 +143,7 @@ public class UpdatePluginConfigRequest extends TeaModel {
         return this.enable;
     }
 
+    @Deprecated
     public UpdatePluginConfigRequest setGatewayId(Long gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -159,6 +160,7 @@ public class UpdatePluginConfigRequest extends TeaModel {
         return this.gatewayUniqueId;
     }
 
+    @Deprecated
     public UpdatePluginConfigRequest setGmtCreate(String gmtCreate) {
         this.gmtCreate = gmtCreate;
         return this;
@@ -167,6 +169,7 @@ public class UpdatePluginConfigRequest extends TeaModel {
         return this.gmtCreate;
     }
 
+    @Deprecated
     public UpdatePluginConfigRequest setGmtModified(String gmtModified) {
         this.gmtModified = gmtModified;
         return this;

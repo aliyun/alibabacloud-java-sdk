@@ -199,6 +199,7 @@ public class ListGatewayRouteRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public ListGatewayRouteRequestFilterParams setDefaultServiceId(Long defaultServiceId) {
             this.defaultServiceId = defaultServiceId;
             return this;

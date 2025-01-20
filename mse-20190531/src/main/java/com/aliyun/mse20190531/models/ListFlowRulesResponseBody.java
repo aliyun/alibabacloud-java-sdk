@@ -207,6 +207,9 @@ public class ListFlowRulesResponseBody extends TeaModel {
         @NameInMap("FallbackObject")
         public String fallbackObject;
 
+        @NameInMap("LimitApp")
+        public String limitApp;
+
         /**
          * <p>The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.</p>
          * 
@@ -325,6 +328,14 @@ public class ListFlowRulesResponseBody extends TeaModel {
         }
         public String getFallbackObject() {
             return this.fallbackObject;
+        }
+
+        public ListFlowRulesResponseBodyDataResult setLimitApp(String limitApp) {
+            this.limitApp = limitApp;
+            return this;
+        }
+        public String getLimitApp() {
+            return this.limitApp;
         }
 
         public ListFlowRulesResponseBodyDataResult setMaxQueueingTimeMs(Integer maxQueueingTimeMs) {

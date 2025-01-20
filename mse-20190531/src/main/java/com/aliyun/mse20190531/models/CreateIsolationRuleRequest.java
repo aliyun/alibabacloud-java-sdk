@@ -36,6 +36,9 @@ public class CreateIsolationRuleRequest extends TeaModel {
     @NameInMap("Enable")
     public Boolean enable;
 
+    @NameInMap("LimitApp")
+    public String limitApp;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -105,6 +108,14 @@ public class CreateIsolationRuleRequest extends TeaModel {
     }
     public Boolean getEnable() {
         return this.enable;
+    }
+
+    public CreateIsolationRuleRequest setLimitApp(String limitApp) {
+        this.limitApp = limitApp;
+        return this;
+    }
+    public String getLimitApp() {
+        return this.limitApp;
     }
 
     public CreateIsolationRuleRequest setNamespace(String namespace) {

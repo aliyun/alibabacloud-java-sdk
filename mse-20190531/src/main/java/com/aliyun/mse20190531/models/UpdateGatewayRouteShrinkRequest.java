@@ -55,6 +55,7 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("EnableWaf")
+    @Deprecated
     public Boolean enableWaf;
 
     /**
@@ -181,6 +182,7 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
         return this.domainIdListJSON;
     }
 
+    @Deprecated
     public UpdateGatewayRouteShrinkRequest setEnableWaf(Boolean enableWaf) {
         this.enableWaf = enableWaf;
         return this;
@@ -229,6 +231,7 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
         return this.id;
     }
 
+    @Deprecated
     public UpdateGatewayRouteShrinkRequest setName(String name) {
         this.name = name;
         return this;
