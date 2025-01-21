@@ -1,3 +1,6 @@
+2025-01-21 Version: 1.0.19
+- Generated java 2020-06-30 for cas.
+
 2024-07-09 Version: 1.0.18
 - Update API DescribeCACertificate: update response param.
 

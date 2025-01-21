@@ -4,10 +4,15 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class DescribeClientCertificateStatusResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the status information about the certificates.</p>
+     */
     @NameInMap("CertificateStatus")
     public java.util.List<DescribeClientCertificateStatusResponseBodyCertificateStatus> certificateStatus;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
      */
@@ -37,6 +42,11 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
 
     public static class DescribeClientCertificateStatusResponseBodyCertificateStatus extends TeaModel {
         /**
+         * <p>The date on which the certificate was revoked.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the value of the <strong>Status</strong> parameter is <strong>revoked</strong>. The value revoked indicates that the certificate is revoked.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-01T00:00Z</p>
          */
@@ -44,6 +54,8 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
         public Long revokeTime;
 
         /**
+         * <p>The serial number of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>b67e53ebcea9b77d65b0c3236646d715****</p>
          */
@@ -51,6 +63,13 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
         public String serialNumber;
 
         /**
+         * <p>The status of the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>good</strong>: The certificate is not revoked.</li>
+         * <li><strong>revoked</strong>: The certificate is revoked.</li>
+         * <li><strong>unknown</strong>: The server cannot determine the status of the certificate.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>good</p>
          */

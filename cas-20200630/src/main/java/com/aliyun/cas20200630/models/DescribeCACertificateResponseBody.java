@@ -166,6 +166,12 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("CountryCode")
         public String countryCode;
 
+        /**
+         * <p>CRL validity period: 1-365 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
         @NameInMap("CrlDay")
         public Integer crlDay;
 
