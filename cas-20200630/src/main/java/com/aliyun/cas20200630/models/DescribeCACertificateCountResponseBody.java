@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCACertificateCountResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCACertificateCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of created CA certificates, which includes root CA certificates and intermediate CA certificates.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

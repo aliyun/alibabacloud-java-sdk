@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateRevokeClientCertificateRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the client certificate or server certificate that you want to revoke.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> operation to query the unique identifiers of all client certificates and server certificates.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

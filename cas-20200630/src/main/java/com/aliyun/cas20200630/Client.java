@@ -177,7 +177,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateClientCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateClientCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateClientCertificateResponse());
+        }
+
     }
 
     /**
@@ -299,7 +304,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateClientCertificateWithCsrResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateClientCertificateWithCsrResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateClientCertificateWithCsrResponse());
+        }
+
     }
 
     /**
@@ -387,7 +397,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateCustomCertificateResponse());
+        }
+
     }
 
     /**
@@ -422,6 +437,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After a client certificate or a server certificate is revoked, the client or the server on which the certificate is installed cannot establish HTTPS connections with other devices.
+     * After a client certificate or a server certificate is revoked, you can call the <a href="https://help.aliyun.com/document_detail/330880.html">DeleteClientCertificate</a> operation to permanently delete the certificate.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes a client certificate or a server certificate.</p>
+     * 
      * @param request CreateRevokeClientCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateRevokeClientCertificateResponse
@@ -447,10 +471,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRevokeClientCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRevokeClientCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRevokeClientCertificateResponse());
+        }
+
     }
 
     /**
+     * <b>description</b> :
+     * <p>After a client certificate or a server certificate is revoked, the client or the server on which the certificate is installed cannot establish HTTPS connections with other devices.
+     * After a client certificate or a server certificate is revoked, you can call the <a href="https://help.aliyun.com/document_detail/330880.html">DeleteClientCertificate</a> operation to permanently delete the certificate.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes a client certificate or a server certificate.</p>
+     * 
      * @param request CreateRevokeClientCertificateRequest
      * @return CreateRevokeClientCertificateResponse
      */
@@ -522,7 +560,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRootCACertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRootCACertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRootCACertificateResponse());
+        }
+
     }
 
     /**
@@ -637,7 +680,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServerCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServerCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateServerCertificateResponse());
+        }
+
     }
 
     /**
@@ -754,7 +802,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServerCertificateWithCsrResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServerCertificateWithCsrResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateServerCertificateWithCsrResponse());
+        }
+
     }
 
     /**
@@ -856,7 +909,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSubCACertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSubCACertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateSubCACertificateResponse());
+        }
+
     }
 
     /**
@@ -878,6 +936,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/330876.html">CreateRevokeClientCertificate</a> operation to revoke a client certificate or a server certificate.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a client certificate or a server certificate that is revoked.</p>
+     * 
      * @param request DeleteClientCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteClientCertificateResponse
@@ -903,10 +969,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClientCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClientCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteClientCertificateResponse());
+        }
+
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/330876.html">CreateRevokeClientCertificate</a> operation to revoke a client certificate or a server certificate.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a client certificate or a server certificate that is revoked.</p>
+     * 
      * @param request DeleteClientCertificateRequest
      * @return DeleteClientCertificateResponse
      */
@@ -950,7 +1029,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCACertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCACertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeCACertificateResponse());
+        }
+
     }
 
     /**
@@ -972,6 +1056,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the DescribeCACertificateCount operation to query the number of created CA certificates, which includes root CA certificates and intermediate CA certificates.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of certificate authority (CA) certificates that you create.</p>
+     * 
      * @param request DescribeCACertificateCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCACertificateCountResponse
@@ -989,10 +1081,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCACertificateCountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCACertificateCountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeCACertificateCountResponse());
+        }
+
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the DescribeCACertificateCount operation to query the number of created CA certificates, which includes root CA certificates and intermediate CA certificates.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of certificate authority (CA) certificates that you create.</p>
      * @return DescribeCACertificateCountResponse
      */
     public DescribeCACertificateCountResponse describeCACertificateCount() throws Exception {
@@ -1042,7 +1146,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCACertificateListResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCACertificateListResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeCACertificateListResponse());
+        }
+
     }
 
     /**
@@ -1112,7 +1221,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCertificatePrivateKeyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCertificatePrivateKeyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeCertificatePrivateKeyResponse());
+        }
+
     }
 
     /**
@@ -1187,7 +1301,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClientCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClientCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeClientCertificateResponse());
+        }
+
     }
 
     /**
@@ -1217,6 +1336,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the DescribeClientCertificateStatus operation to query the status information about multiple client certificates or server certificates at a time by using the unique identifiers of the certificates. For example, you can check whether a certificate is revoked.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status information about client certificates and server certificates by using the unique identifiers of the certificates.</p>
+     * 
      * @param request DescribeClientCertificateStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeClientCertificateStatusResponse
@@ -1242,10 +1369,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClientCertificateStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClientCertificateStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeClientCertificateStatusResponse());
+        }
+
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the DescribeClientCertificateStatus operation to query the status information about multiple client certificates or server certificates at a time by using the unique identifiers of the certificates. For example, you can check whether a certificate is revoked.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status information about client certificates and server certificates by using the unique identifiers of the certificates.</p>
+     * 
      * @param request DescribeClientCertificateStatusRequest
      * @return DescribeClientCertificateStatusResponse
      */
@@ -1292,7 +1432,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCAInstanceStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetCAInstanceStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetCAInstanceStatusResponse());
+        }
+
     }
 
     /**
@@ -1354,7 +1499,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListClientCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListClientCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListClientCertificateResponse());
+        }
+
     }
 
     /**
@@ -1412,7 +1562,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRevokeCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRevokeCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRevokeCertificateResponse());
+        }
+
     }
 
     /**
@@ -1471,7 +1626,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCACertificateStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCACertificateStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateCACertificateStatusResponse());
+        }
+
     }
 
     /**
