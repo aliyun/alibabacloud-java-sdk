@@ -4,6 +4,12 @@ package com.aliyun.oosops20190601.models;
 import com.aliyun.tea.*;
 
 public class ListPublicParametersRequest extends TeaModel {
+    @NameInMap("CreatedDateAfter")
+    public String createdDateAfter;
+
+    @NameInMap("CreatedDateBefore")
+    public String createdDateBefore;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -34,6 +40,22 @@ public class ListPublicParametersRequest extends TeaModel {
     public static ListPublicParametersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPublicParametersRequest self = new ListPublicParametersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPublicParametersRequest setCreatedDateAfter(String createdDateAfter) {
+        this.createdDateAfter = createdDateAfter;
+        return this;
+    }
+    public String getCreatedDateAfter() {
+        return this.createdDateAfter;
+    }
+
+    public ListPublicParametersRequest setCreatedDateBefore(String createdDateBefore) {
+        this.createdDateBefore = createdDateBefore;
+        return this;
+    }
+    public String getCreatedDateBefore() {
+        return this.createdDateBefore;
     }
 
     public ListPublicParametersRequest setMaxResults(Integer maxResults) {
