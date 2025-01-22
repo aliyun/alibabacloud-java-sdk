@@ -37,6 +37,13 @@ public class JobSettings extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("EnableCPUAffinity")
+    public Boolean enableCPUAffinity;
+
+    /**
+     * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("EnableErrorMonitoringInAIMaster")
@@ -158,6 +165,14 @@ public class JobSettings extends TeaModel {
     }
     public String getDriver() {
         return this.driver;
+    }
+
+    public JobSettings setEnableCPUAffinity(Boolean enableCPUAffinity) {
+        this.enableCPUAffinity = enableCPUAffinity;
+        return this;
+    }
+    public Boolean getEnableCPUAffinity() {
+        return this.enableCPUAffinity;
     }
 
     public JobSettings setEnableErrorMonitoringInAIMaster(Boolean enableErrorMonitoringInAIMaster) {

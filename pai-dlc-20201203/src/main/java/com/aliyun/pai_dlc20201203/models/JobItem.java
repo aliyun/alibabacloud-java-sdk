@@ -310,7 +310,7 @@ public class JobItem extends TeaModel {
      * <p>vpc-1</p>
      */
     @NameInMap("UserVpc")
-    public String userVpc;
+    public JobItemUserVpc userVpc;
 
     /**
      * <strong>example:</strong>
@@ -753,11 +753,11 @@ public class JobItem extends TeaModel {
         return this.userScript;
     }
 
-    public JobItem setUserVpc(String userVpc) {
+    public JobItem setUserVpc(JobItemUserVpc userVpc) {
         this.userVpc = userVpc;
         return this;
     }
-    public String getUserVpc() {
+    public JobItemUserVpc getUserVpc() {
         return this.userVpc;
     }
 
@@ -895,6 +895,69 @@ public class JobItem extends TeaModel {
         }
         public String getMountPath() {
             return this.mountPath;
+        }
+
+    }
+
+    public static class JobItemUserVpc extends TeaModel {
+        @NameInMap("DefaultRoute")
+        public String defaultRoute;
+
+        @NameInMap("ExtendedCidrs")
+        public java.util.List<String> extendedCidrs;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("SwitchId")
+        public String switchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static JobItemUserVpc build(java.util.Map<String, ?> map) throws Exception {
+            JobItemUserVpc self = new JobItemUserVpc();
+            return TeaModel.build(map, self);
+        }
+
+        public JobItemUserVpc setDefaultRoute(String defaultRoute) {
+            this.defaultRoute = defaultRoute;
+            return this;
+        }
+        public String getDefaultRoute() {
+            return this.defaultRoute;
+        }
+
+        public JobItemUserVpc setExtendedCidrs(java.util.List<String> extendedCidrs) {
+            this.extendedCidrs = extendedCidrs;
+            return this;
+        }
+        public java.util.List<String> getExtendedCidrs() {
+            return this.extendedCidrs;
+        }
+
+        public JobItemUserVpc setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public JobItemUserVpc setSwitchId(String switchId) {
+            this.switchId = switchId;
+            return this;
+        }
+        public String getSwitchId() {
+            return this.switchId;
+        }
+
+        public JobItemUserVpc setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

@@ -52,6 +52,7 @@ public class JobSpec extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("UseSpotInstance")
+    @Deprecated
     public Boolean useSpotInstance;
 
     public static JobSpec build(java.util.Map<String, ?> map) throws Exception {
@@ -131,6 +132,7 @@ public class JobSpec extends TeaModel {
         return this.type;
     }
 
+    @Deprecated
     public JobSpec setUseSpotInstance(Boolean useSpotInstance) {
         this.useSpotInstance = useSpotInstance;
         return this;

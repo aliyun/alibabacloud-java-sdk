@@ -80,6 +80,9 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PaymentType")
+    public String paymentType;
+
     /**
      * <strong>example:</strong>
      * <p>flow-*******</p>
@@ -240,6 +243,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListJobsRequest setPaymentType(String paymentType) {
+        this.paymentType = paymentType;
+        return this;
+    }
+    public String getPaymentType() {
+        return this.paymentType;
     }
 
     public ListJobsRequest setPipelineId(String pipelineId) {
