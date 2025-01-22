@@ -168,6 +168,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
         @NameInMap("DlpStatus")
         public String dlpStatus;
 
+        @NameInMap("EdrStatus")
+        public String edrStatus;
+
         /**
          * <strong>example:</strong>
          * <p>win10-64bit</p>
@@ -358,6 +361,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
         public String getDlpStatus() {
             return this.dlpStatus;
+        }
+
+        public ListUserDevicesResponseBodyDevices setEdrStatus(String edrStatus) {
+            this.edrStatus = edrStatus;
+            return this;
+        }
+        public String getEdrStatus() {
+            return this.edrStatus;
         }
 
         public ListUserDevicesResponseBodyDevices setHostname(String hostname) {

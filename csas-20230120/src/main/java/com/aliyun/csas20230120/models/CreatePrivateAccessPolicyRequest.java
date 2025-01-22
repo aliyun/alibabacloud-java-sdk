@@ -70,6 +70,9 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
 
+    @NameInMap("TriggerTemplateId")
+    public String triggerTemplateId;
+
     @NameInMap("UserGroupIds")
     public java.util.List<String> userGroupIds;
 
@@ -178,6 +181,14 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
     }
     public java.util.List<String> getTagIds() {
         return this.tagIds;
+    }
+
+    public CreatePrivateAccessPolicyRequest setTriggerTemplateId(String triggerTemplateId) {
+        this.triggerTemplateId = triggerTemplateId;
+        return this;
+    }
+    public String getTriggerTemplateId() {
+        return this.triggerTemplateId;
     }
 
     public CreatePrivateAccessPolicyRequest setUserGroupIds(java.util.List<String> userGroupIds) {

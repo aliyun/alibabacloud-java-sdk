@@ -188,18 +188,38 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
     }
 
     public static class CreateWmEmbedTaskRequestCsvControl extends TeaModel {
+        @NameInMap("EmbedBitsNumberInEachTime")
+        public Long embedBitsNumberInEachTime;
+
         @NameInMap("EmbedColumn")
         public Long embedColumn;
+
+        @NameInMap("EmbedDensity")
+        public String embedDensity;
 
         @NameInMap("EmbedPrecision")
         public Long embedPrecision;
 
+        @NameInMap("EmbedTimePosition")
+        public String embedTimePosition;
+
         @NameInMap("Method")
         public String method;
+
+        @NameInMap("TimeFormat")
+        public String timeFormat;
 
         public static CreateWmEmbedTaskRequestCsvControl build(java.util.Map<String, ?> map) throws Exception {
             CreateWmEmbedTaskRequestCsvControl self = new CreateWmEmbedTaskRequestCsvControl();
             return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestCsvControl setEmbedBitsNumberInEachTime(Long embedBitsNumberInEachTime) {
+            this.embedBitsNumberInEachTime = embedBitsNumberInEachTime;
+            return this;
+        }
+        public Long getEmbedBitsNumberInEachTime() {
+            return this.embedBitsNumberInEachTime;
         }
 
         public CreateWmEmbedTaskRequestCsvControl setEmbedColumn(Long embedColumn) {
@@ -210,6 +230,14 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
             return this.embedColumn;
         }
 
+        public CreateWmEmbedTaskRequestCsvControl setEmbedDensity(String embedDensity) {
+            this.embedDensity = embedDensity;
+            return this;
+        }
+        public String getEmbedDensity() {
+            return this.embedDensity;
+        }
+
         public CreateWmEmbedTaskRequestCsvControl setEmbedPrecision(Long embedPrecision) {
             this.embedPrecision = embedPrecision;
             return this;
@@ -218,12 +246,28 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
             return this.embedPrecision;
         }
 
+        public CreateWmEmbedTaskRequestCsvControl setEmbedTimePosition(String embedTimePosition) {
+            this.embedTimePosition = embedTimePosition;
+            return this;
+        }
+        public String getEmbedTimePosition() {
+            return this.embedTimePosition;
+        }
+
         public CreateWmEmbedTaskRequestCsvControl setMethod(String method) {
             this.method = method;
             return this;
         }
         public String getMethod() {
             return this.method;
+        }
+
+        public CreateWmEmbedTaskRequestCsvControl setTimeFormat(String timeFormat) {
+            this.timeFormat = timeFormat;
+            return this;
+        }
+        public String getTimeFormat() {
+            return this.timeFormat;
         }
 
     }
