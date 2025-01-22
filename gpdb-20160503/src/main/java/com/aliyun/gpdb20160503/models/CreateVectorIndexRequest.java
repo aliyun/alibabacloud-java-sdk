@@ -58,6 +58,9 @@ public class CreateVectorIndexRequest extends TeaModel {
     @NameInMap("ExternalStorage")
     public Integer externalStorage;
 
+    @NameInMap("HnswEfConstruction")
+    public Integer hnswEfConstruction;
+
     /**
      * <p>The maximum number of neighbors in the HNSW algorithm, ranging from 1 to 1000. The API will automatically set this value based on the vector dimension, and it generally does not need to be manually set.</p>
      * <blockquote>
@@ -186,6 +189,14 @@ public class CreateVectorIndexRequest extends TeaModel {
     }
     public Integer getExternalStorage() {
         return this.externalStorage;
+    }
+
+    public CreateVectorIndexRequest setHnswEfConstruction(Integer hnswEfConstruction) {
+        this.hnswEfConstruction = hnswEfConstruction;
+        return this;
+    }
+    public Integer getHnswEfConstruction() {
+        return this.hnswEfConstruction;
     }
 
     public CreateVectorIndexRequest setHnswM(Integer hnswM) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCollectionResponseBody extends TeaModel {
     /**
-     * <p>Return message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>create successfully</p>
