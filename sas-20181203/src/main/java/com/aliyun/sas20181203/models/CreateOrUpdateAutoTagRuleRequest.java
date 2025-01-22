@@ -19,7 +19,6 @@ public class CreateOrUpdateAutoTagRuleRequest extends TeaModel {
 
     /**
      * <p>The expression of the rule.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;groups&quot;:&quot;0&quot;,&quot;fieldValueType&quot;:&quot;string&quot;,&quot;field&quot;:&quot;internetIp&quot;,&quot;operator&quot;:&quot;equals&quot;,&quot;value&quot;:&quot;12.0.0.1&quot;}]</p>
@@ -64,7 +63,6 @@ public class CreateOrUpdateAutoTagRuleRequest extends TeaModel {
      * <li>If TagType is set to group, set this parameter to {&quot;groupId&quot;:XXX}. XXX specifies the ID of the group. You can call the <a href="~~DescribeGroupStruct~~">DescribeGroupStruct</a> operation to query the ID.</li>
      * <li>If TagType is set to tag, set this parameter to {&quot;tagId&quot;:XXX}. XXX specifies the ID of the tag. You can call the <a href="~~DescribeGroupedTags~~">DescribeGroupedTags</a> operation to query the ID.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;tagId&quot;:7804789}</p>

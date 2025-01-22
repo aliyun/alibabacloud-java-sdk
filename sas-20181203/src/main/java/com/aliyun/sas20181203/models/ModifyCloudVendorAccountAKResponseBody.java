@@ -255,6 +255,9 @@ public class ModifyCloudVendorAccountAKResponseBody extends TeaModel {
         @NameInMap("Vendor")
         public String vendor;
 
+        @NameInMap("VendorAuthAlias")
+        public String vendorAuthAlias;
+
         public static ModifyCloudVendorAccountAKResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ModifyCloudVendorAccountAKResponseBodyData self = new ModifyCloudVendorAccountAKResponseBodyData();
             return TeaModel.build(map, self);
@@ -322,6 +325,14 @@ public class ModifyCloudVendorAccountAKResponseBody extends TeaModel {
         }
         public String getVendor() {
             return this.vendor;
+        }
+
+        public ModifyCloudVendorAccountAKResponseBodyData setVendorAuthAlias(String vendorAuthAlias) {
+            this.vendorAuthAlias = vendorAuthAlias;
+            return this;
+        }
+        public String getVendorAuthAlias() {
+            return this.vendorAuthAlias;
         }
 
     }

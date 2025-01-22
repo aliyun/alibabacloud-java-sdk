@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageRepoDetailListResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about image repositories.</p>
+     * <p>The information about image repositories.</p>
      */
     @NameInMap("ImageRepoResponses")
     public java.util.List<DescribeImageRepoDetailListResponseBodyImageRepoResponses> imageRepoResponses;
@@ -105,6 +105,12 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         @NameInMap("Endpoints")
         public String endpoints;
 
+        /**
+         * <p>The number of the images on which risks are detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("HasRiskImageCount")
         public Integer hasRiskImageCount;
 

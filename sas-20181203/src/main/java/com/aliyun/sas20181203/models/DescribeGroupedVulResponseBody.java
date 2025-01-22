@@ -128,6 +128,9 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         @NameInMap("HandledCount")
         public Integer handledCount;
 
+        @NameInMap("LanguageType")
+        public String languageType;
+
         /**
          * <p>The number of vulnerabilities that have the <strong>medium</strong> priority.</p>
          * 
@@ -258,6 +261,14 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
         public Integer getHandledCount() {
             return this.handledCount;
+        }
+
+        public DescribeGroupedVulResponseBodyGroupedVulItems setLanguageType(String languageType) {
+            this.languageType = languageType;
+            return this;
+        }
+        public String getLanguageType() {
+            return this.languageType;
         }
 
         public DescribeGroupedVulResponseBodyGroupedVulItems setLaterCount(Integer laterCount) {

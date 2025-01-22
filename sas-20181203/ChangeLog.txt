@@ -1,3 +1,18 @@
+2025-01-22 Version: 4.0.4
+- Update API AddCloudVendorAccountAK: add param VendorAuthAlias.
+- Update API AddCloudVendorAccountAK: update response param.
+- Update API CreateOrUpdateAutoTagRule: update param Expression.
+- Update API CreateOrUpdateAutoTagRule: update param TagContext.
+- Update API DescribeCloudVendorAccountAKList: add param VendorAuthAlias.
+- Update API DescribeCloudVendorAccountAKList: update response param.
+- Update API DescribeGroupedVul: update response param.
+- Update API DescribeOnceTaskLeafRecordPage: update response param.
+- Update API DescribeVulList: update response param.
+- Update API GetAssetDetailByUuid: update response param.
+- Update API ModifyCloudVendorAccountAK: add param VendorAuthAlias.
+- Update API ModifyCloudVendorAccountAK: update response param.
+
+
 2025-01-14 Version: 4.0.2
 - Update API DescribeVulList: update response param.
 
