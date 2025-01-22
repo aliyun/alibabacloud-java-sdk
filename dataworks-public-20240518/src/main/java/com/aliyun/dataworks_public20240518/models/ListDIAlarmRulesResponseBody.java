@@ -137,6 +137,12 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         @Deprecated
         public Long inhibitionInterval;
 
+        /**
+         * <p>The duration of the alert suppression interval. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("MuteInterval")
         public Long muteInterval;
 
@@ -200,6 +206,9 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         @Deprecated
         public java.util.List<String> ddlReportTags;
 
+        /**
+         * <p>The types of DDL operations for which the alert rule takes effect. This parameter is returned only if the MetricType parameter is set to DdlReport.</p>
+         */
         @NameInMap("DdlTypes")
         public java.util.List<String> ddlTypes;
 
@@ -453,7 +462,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
 
     public static class ListDIAlarmRulesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The alert rules returned.</p>
+         * <p>The alert rules.</p>
          */
         @NameInMap("DIJobAlarmRules")
         public java.util.List<ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRules> DIJobAlarmRules;

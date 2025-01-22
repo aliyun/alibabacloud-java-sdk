@@ -20,7 +20,7 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable the rule.</p>
+     * <p>Specifies whether to enable the monitoring rule.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -58,7 +58,7 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     public String samplingConfigShrink;
 
     /**
-     * <p>The strength of the rule. Valid values:</p>
+     * <p>The strength of the rule.</p>
      * <ul>
      * <li>Normal</li>
      * <li>High</li>

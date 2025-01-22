@@ -25,6 +25,9 @@ public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The description of the alert rule.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -39,6 +42,8 @@ public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>The alert rule Id</p>
+     * 
      * <strong>example:</strong>
      * <p>34982</p>
      */

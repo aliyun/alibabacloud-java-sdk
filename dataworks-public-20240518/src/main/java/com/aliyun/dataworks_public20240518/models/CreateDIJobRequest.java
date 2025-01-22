@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateDIJobRequest extends TeaModel {
     /**
      * <p>The description of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The description of the synchronization task.</p>
      */
     @NameInMap("Description")
     public String description;

@@ -946,6 +946,8 @@ public class GetDIJobResponseBody extends TeaModel {
         public GetDIJobResponseBodyPagingInfoJobSettings jobSettings;
 
         /**
+         * <p>The status of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */

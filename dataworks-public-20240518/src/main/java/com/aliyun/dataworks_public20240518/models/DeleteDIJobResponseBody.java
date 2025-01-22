@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDIJobResponseBody extends TeaModel {
     /**
+     * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D33D4A51-5845-579A-B4BA-FAADD0F83D53</p>
      */
@@ -12,6 +14,8 @@ public class DeleteDIJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>true</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

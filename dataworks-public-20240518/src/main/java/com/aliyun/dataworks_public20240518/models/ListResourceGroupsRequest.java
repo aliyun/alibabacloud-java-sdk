@@ -24,6 +24,8 @@ public class ListResourceGroupsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -31,6 +33,8 @@ public class ListResourceGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -38,9 +42,10 @@ public class ListResourceGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The billing method of resource groups. Valid values:</p>
      * <ul>
-     * <li></li>
-     * <li></li>
+     * <li>PrePaid</li>
+     * <li>PostPaid</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,16 +63,35 @@ public class ListResourceGroupsRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The types of resource groups to query. If you do not configure this parameter, only serverless resource groups are returned by default.</p>
+     */
     @NameInMap("ResourceGroupTypes")
     public java.util.List<String> resourceGroupTypes;
 
     /**
+     * <p>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+     * <ul>
+     * <li>Id (Desc/Asc): the resource group ID</li>
+     * <li>Name (Desc/Asc): the name of the resource group</li>
+     * <li>Remark (Desc/Asc): the remarks of the resource group</li>
+     * <li>Type (Desc/Asc): the type of the resource group</li>
+     * <li>Status (Desc/Asc): the status of the resource group</li>
+     * <li>Spec (Desc/Asc): the specifications of the resource group</li>
+     * <li>CreateUser (Desc/Asc): the creator of the resource group</li>
+     * <li>CreateTime (Desc/Asc): the time when the route is created</li>
+     * </ul>
+     * <p>Default value: CreateTime Asc</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime Asc</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>The statuses of resource groups.</p>
+     */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
 

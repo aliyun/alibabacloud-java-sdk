@@ -499,15 +499,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         public String databaseType;
 
         /**
-         * <p>The configuration of the partitioned table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ds=$[yyyymmdd-1]</p>
-         */
-        @NameInMap("PartitionSpec")
-        public String partitionSpec;
-
-        /**
          * <p>The ID of the table that is limited by the rule in Data Map.</p>
          * 
          * <strong>example:</strong>
@@ -539,14 +530,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         }
         public String getDatabaseType() {
             return this.databaseType;
-        }
-
-        public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesTarget setPartitionSpec(String partitionSpec) {
-            this.partitionSpec = partitionSpec;
-            return this;
-        }
-        public String getPartitionSpec() {
-            return this.partitionSpec;
         }
 
         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesTarget setTableGuid(String tableGuid) {

@@ -15,6 +15,8 @@ public class StartDIJobShrinkRequest extends TeaModel {
     public Long DIJobId;
 
     /**
+     * <p>Deprecated</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -30,6 +32,9 @@ public class StartDIJobShrinkRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The settings for starting real-time synchronization.</p>
+     */
     @NameInMap("RealtimeStartSettings")
     public String realtimeStartSettingsShrink;
 

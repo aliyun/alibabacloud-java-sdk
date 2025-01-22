@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartDIJobResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>999431B2-6013-577F-B684-36F7433C753B</p>
      */
@@ -12,6 +14,12 @@ public class StartDIJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

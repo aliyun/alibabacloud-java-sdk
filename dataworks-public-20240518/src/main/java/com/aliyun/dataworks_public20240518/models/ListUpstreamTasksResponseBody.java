@@ -428,15 +428,6 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public String stepType;
 
         /**
-         * <p>The tenant ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("TenantId")
-        public Long tenantId;
-
-        /**
          * <p>The timeout period of task running. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -633,14 +624,6 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         }
         public String getStepType() {
             return this.stepType;
-        }
-
-        public ListUpstreamTasksResponseBodyPagingInfoTasks setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
         }
 
         public ListUpstreamTasksResponseBodyPagingInfoTasks setTimeout(Integer timeout) {
@@ -887,9 +870,6 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         @NameInMap("RuntimeResource")
         public ListUpstreamTasksResponseBodyPagingInfoUpstreamTasksTaskRuntimeResource runtimeResource;
 
-        @NameInMap("TenantId")
-        public Long tenantId;
-
         /**
          * <p>The timeout period of task running. Unit: seconds.</p>
          */
@@ -1058,14 +1038,6 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         }
         public ListUpstreamTasksResponseBodyPagingInfoUpstreamTasksTaskRuntimeResource getRuntimeResource() {
             return this.runtimeResource;
-        }
-
-        public ListUpstreamTasksResponseBodyPagingInfoUpstreamTasksTask setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
         }
 
         public ListUpstreamTasksResponseBodyPagingInfoUpstreamTasksTask setTimeout(Integer timeout) {

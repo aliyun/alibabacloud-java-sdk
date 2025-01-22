@@ -188,6 +188,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
     }
 
     public static class UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical extends TeaModel {
+        @NameInMap("Expression")
+        public String expression;
+
         /**
          * <p>The comparison operator. Valid values:</p>
          * <ul>
@@ -229,6 +232,14 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
         public UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical setOperator(String operator) {
             this.operator = operator;
             return this;
@@ -248,6 +259,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
     }
 
     public static class UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected extends TeaModel {
+        @NameInMap("Expression")
+        public String expression;
+
         /**
          * <p>The comparison operator. Valid values:</p>
          * <ul>
@@ -288,6 +302,14 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
         public UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected setOperator(String operator) {
             this.operator = operator;
             return this;
@@ -307,6 +329,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
     }
 
     public static class UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned extends TeaModel {
+        @NameInMap("Expression")
+        public String expression;
+
         /**
          * <p>The comparison operator. Valid values:</p>
          * <ul>
@@ -346,6 +371,14 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
         public static UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned build(java.util.Map<String, ?> map) throws Exception {
             UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned self = new UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
         }
 
         public UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned setOperator(String operator) {

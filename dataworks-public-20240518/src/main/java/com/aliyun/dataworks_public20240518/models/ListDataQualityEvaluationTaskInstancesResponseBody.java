@@ -423,15 +423,6 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public Long projectId;
 
         /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
-        @NameInMap("RegionId")
-        public String regionId;
-
-        /**
          * <p>The configuration of the data source. The value of the queue field is default, and that of the sqlEngine field can be set to SPARK_SQL, KYUUBI, PRESTO_SQL, or HIVE_SQL. The value default indicates the YARN queue for E-MapReduce (EMR) tasks.</p>
          * 
          * <strong>example:</strong>
@@ -503,14 +494,6 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         }
         public Long getProjectId() {
             return this.projectId;
-        }
-
-        public ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTask setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
         public ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTask setRuntimeConf(String runtimeConf) {

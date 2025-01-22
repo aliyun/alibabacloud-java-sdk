@@ -16,6 +16,9 @@ public class UpdateDIJobShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The description of the synchronization task.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -36,6 +39,9 @@ public class UpdateDIJobShrinkRequest extends TeaModel {
     public String jobSettingsShrink;
 
     /**
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+     * <p>You must configure this parameter to specify the DataWorks workspace to which the operation is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */

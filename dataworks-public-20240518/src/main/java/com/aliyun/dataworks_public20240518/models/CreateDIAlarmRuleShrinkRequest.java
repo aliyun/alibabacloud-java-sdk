@@ -25,6 +25,9 @@ public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The description of the alert rule.</p>
      */
     @NameInMap("Description")
     public String description;

@@ -63,7 +63,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
     public UpdateDataQualityRuleRequestSamplingConfig samplingConfig;
 
     /**
-     * <p>The strength of the rule. Valid values:</p>
+     * <p>The strength of the rule.</p>
      * <ul>
      * <li>Normal</li>
      * <li>High</li>
@@ -74,12 +74,6 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
      */
     @NameInMap("Severity")
     public String severity;
-
-    /**
-     * <p>The monitored object of the rule.</p>
-     */
-    @NameInMap("Target")
-    public UpdateDataQualityRuleRequestTarget target;
 
     /**
      * <p>The ID of the template used by the rule.</p>
@@ -167,14 +161,6 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
         return this.severity;
     }
 
-    public UpdateDataQualityRuleRequest setTarget(UpdateDataQualityRuleRequestTarget target) {
-        this.target = target;
-        return this;
-    }
-    public UpdateDataQualityRuleRequestTarget getTarget() {
-        return this.target;
-    }
-
     public UpdateDataQualityRuleRequest setTemplateCode(String templateCode) {
         this.templateCode = templateCode;
         return this;
@@ -185,15 +171,6 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
 
     public static class UpdateDataQualityRuleRequestCheckingConfigThresholdsCritical extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
-         * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
-         * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
-         * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.05</p>
          */
@@ -260,15 +237,6 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
 
     public static class UpdateDataQualityRuleRequestCheckingConfigThresholdsExpected extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
-         * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
-         * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
-         * 
          * <strong>example:</strong>
          * <p>$checkValue &lt;= 0.01</p>
          */
@@ -335,15 +303,6 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
 
     public static class UpdateDataQualityRuleRequestCheckingConfigThresholdsWarned extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
-         * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
-         * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
-         * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
          */
@@ -657,94 +616,6 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
         }
         public String getSettingConfig() {
             return this.settingConfig;
-        }
-
-    }
-
-    public static class UpdateDataQualityRuleRequestTarget extends TeaModel {
-        /**
-         * <p>The type of the database to which the table belongs. Valid values:</p>
-         * <ul>
-         * <li>maxcompute</li>
-         * <li>emr</li>
-         * <li>cdh</li>
-         * <li>hologres</li>
-         * <li>analyticdb_for_postgresql</li>
-         * <li>analyticdb_for_mysql</li>
-         * <li>starrocks</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>maxcompute</p>
-         */
-        @NameInMap("DatabaseType")
-        public String databaseType;
-
-        /**
-         * <p>The configuration of the partitioned table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ds=$[yyyymmdd-1]</p>
-         */
-        @NameInMap("PartitionSpec")
-        public String partitionSpec;
-
-        /**
-         * <p>The ID of the table that is limited by the rule in Data Map.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>odps.unit_test.tb_unit_test</p>
-         */
-        @NameInMap("TableGuid")
-        public String tableGuid;
-
-        /**
-         * <p>The type of the monitored object. Valid values:</p>
-         * <ul>
-         * <li>Table</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Table</p>
-         */
-        @NameInMap("Type")
-        public String type;
-
-        public static UpdateDataQualityRuleRequestTarget build(java.util.Map<String, ?> map) throws Exception {
-            UpdateDataQualityRuleRequestTarget self = new UpdateDataQualityRuleRequestTarget();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateDataQualityRuleRequestTarget setDatabaseType(String databaseType) {
-            this.databaseType = databaseType;
-            return this;
-        }
-        public String getDatabaseType() {
-            return this.databaseType;
-        }
-
-        public UpdateDataQualityRuleRequestTarget setPartitionSpec(String partitionSpec) {
-            this.partitionSpec = partitionSpec;
-            return this;
-        }
-        public String getPartitionSpec() {
-            return this.partitionSpec;
-        }
-
-        public UpdateDataQualityRuleRequestTarget setTableGuid(String tableGuid) {
-            this.tableGuid = tableGuid;
-            return this;
-        }
-        public String getTableGuid() {
-            return this.tableGuid;
-        }
-
-        public UpdateDataQualityRuleRequestTarget setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
     }

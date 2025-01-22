@@ -391,17 +391,12 @@ public class ListTasksResponseBody extends TeaModel {
         @NameInMap("RuntimeResource")
         public ListTasksResponseBodyPagingInfoTasksRuntimeResource runtimeResource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>para1=$bizdate para2=$[yyyymmdd]</p>
+         */
         @NameInMap("ScriptParameters")
         public String scriptParameters;
-
-        /**
-         * <p>The tenant ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("TenantId")
-        public Long tenantId;
 
         /**
          * <p>The timeout period of task running. Unit: seconds.</p>
@@ -591,14 +586,6 @@ public class ListTasksResponseBody extends TeaModel {
         }
         public String getScriptParameters() {
             return this.scriptParameters;
-        }
-
-        public ListTasksResponseBodyPagingInfoTasks setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
         }
 
         public ListTasksResponseBodyPagingInfoTasks setTimeout(Integer timeout) {

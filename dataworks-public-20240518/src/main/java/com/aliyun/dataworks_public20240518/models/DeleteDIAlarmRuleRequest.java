@@ -24,6 +24,8 @@ public class DeleteDIAlarmRuleRequest extends TeaModel {
     public Long DIJobId;
 
     /**
+     * <p>The ID of the synchronization task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

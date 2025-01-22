@@ -15,6 +15,8 @@ public class StartDIJobRequest extends TeaModel {
     public Long DIJobId;
 
     /**
+     * <p>Deprecated</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -30,6 +32,9 @@ public class StartDIJobRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The settings for starting real-time synchronization.</p>
+     */
     @NameInMap("RealtimeStartSettings")
     public StartDIJobRequestRealtimeStartSettings realtimeStartSettings;
 
@@ -73,6 +78,8 @@ public class StartDIJobRequest extends TeaModel {
 
     public static class StartDIJobRequestRealtimeStartSettingsFailoverSettings extends TeaModel {
         /**
+         * <p>The failover interval. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -81,6 +88,8 @@ public class StartDIJobRequest extends TeaModel {
         public Long interval;
 
         /**
+         * <p>The maximum number of failovers allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -114,11 +123,16 @@ public class StartDIJobRequest extends TeaModel {
     }
 
     public static class StartDIJobRequestRealtimeStartSettings extends TeaModel {
+        /**
+         * <p>The failover settings.</p>
+         */
         @NameInMap("FailoverSettings")
         @Deprecated
         public StartDIJobRequestRealtimeStartSettingsFailoverSettings failoverSettings;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1671516776</p>
          */

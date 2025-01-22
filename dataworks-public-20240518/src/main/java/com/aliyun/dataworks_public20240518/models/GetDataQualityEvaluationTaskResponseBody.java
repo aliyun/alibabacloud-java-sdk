@@ -387,6 +387,9 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
     }
 
     public static class GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTask extends TeaModel {
+        @NameInMap("DataSourceId")
+        public Long dataSourceId;
+
         /**
          * <p>质量监控任务描述</p>
          */
@@ -454,6 +457,14 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
         public static GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTask build(java.util.Map<String, ?> map) throws Exception {
             GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTask self = new GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTask();
             return TeaModel.build(map, self);
+        }
+
+        public GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTask setDataSourceId(Long dataSourceId) {
+            this.dataSourceId = dataSourceId;
+            return this;
+        }
+        public Long getDataSourceId() {
+            return this.dataSourceId;
         }
 
         public GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTask setDescription(String description) {
