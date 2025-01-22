@@ -25,6 +25,9 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
 
     /**
      * <p>The description of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The description of the alert rule.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -251,6 +254,12 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
         @Deprecated
         public Integer inhibitionInterval;
 
+        /**
+         * <p>告警抑制间隔时长，单位分钟，默认5分钟。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("MuteInterval")
         public Integer muteInterval;
 
@@ -314,6 +323,9 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
         @Deprecated
         public java.util.List<String> ddlReportTags;
 
+        /**
+         * <p>在DDL通知的时候才生效，需要生效的DDL列表。</p>
+         */
         @NameInMap("DdlTypes")
         public java.util.List<String> ddlTypes;
 

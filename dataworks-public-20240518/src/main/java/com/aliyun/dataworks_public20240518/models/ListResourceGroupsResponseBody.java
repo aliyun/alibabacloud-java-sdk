@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListResourceGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListResourceGroupsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -150,6 +153,8 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public String orderInstanceId;
 
         /**
+         * <p>The billing method of the resource group. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</p>
+         * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
          */
@@ -164,6 +169,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <p>The type of the resource group. Valid values:</p>
+         * <ul>
+         * <li>CommonV2: serverless resource group</li>
+         * <li>ExclusiveDataIntegration: exclusive resource group for Data Integration</li>
+         * <li>ExclusiveScheduler: exclusive resource group for scheduling</li>
+         * <li>ExclusiveDataService: exclusive resource group for DataService Studio</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CommonV2</p>
          */
@@ -174,6 +187,20 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public ListResourceGroupsResponseBodyPagingInfoResourceGroupListSpec spec;
 
         /**
+         * <p>The status of the resource group. Valid values:</p>
+         * <ul>
+         * <li>Normal: The resource group is running or in use.</li>
+         * <li>Stop: The resource group is expired.</li>
+         * <li>Deleted: The resource group is released or destroyed.</li>
+         * <li>Creating: The resource group is being started.</li>
+         * <li>CreateFailed: The resource group fails to be started.</li>
+         * <li>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</li>
+         * <li>UpdateFailed: The resource group fails to be scaled out or upgraded.</li>
+         * <li>Deleting: The resource group is being released or destroyed.</li>
+         * <li>DeleteFailed: The resource group fails to be released or destroyed.</li>
+         * <li>Timeout: The operations that are performed on the resource group time out.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -293,6 +320,8 @@ public class ListResourceGroupsResponseBody extends TeaModel {
 
     public static class ListResourceGroupsResponseBodyPagingInfo extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -300,12 +329,17 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The resource groups returned.</p>
+         */
         @NameInMap("ResourceGroupList")
         public java.util.List<ListResourceGroupsResponseBodyPagingInfoResourceGroupList> resourceGroupList;
 

@@ -63,7 +63,7 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     public String samplingConfigShrink;
 
     /**
-     * <p>The strength of the rule. Valid values:</p>
+     * <p>The strength of the rule.</p>
      * <ul>
      * <li>Normal</li>
      * <li>High</li>
@@ -74,12 +74,6 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
      */
     @NameInMap("Severity")
     public String severity;
-
-    /**
-     * <p>The monitored object of the rule.</p>
-     */
-    @NameInMap("Target")
-    public String targetShrink;
 
     /**
      * <p>The ID of the template used by the rule.</p>
@@ -165,14 +159,6 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     }
     public String getSeverity() {
         return this.severity;
-    }
-
-    public UpdateDataQualityRuleShrinkRequest setTargetShrink(String targetShrink) {
-        this.targetShrink = targetShrink;
-        return this;
-    }
-    public String getTargetShrink() {
-        return this.targetShrink;
     }
 
     public UpdateDataQualityRuleShrinkRequest setTemplateCode(String templateCode) {

@@ -712,15 +712,6 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The tenant ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("TenantId")
-        public Long tenantId;
-
-        /**
          * <p>The timeout period of task running. Unit: seconds.</p>
          * <p>Note: The value of this parameter is rounded up by hour.</p>
          * 
@@ -1034,14 +1025,6 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         }
         public String getTaskType() {
             return this.taskType;
-        }
-
-        public GetTaskInstanceResponseBodyTaskInstance setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
         }
 
         public GetTaskInstanceResponseBodyTaskInstance setTimeout(Integer timeout) {

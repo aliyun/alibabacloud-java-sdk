@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
+    @NameInMap("Ids")
+    public java.util.List<Long> ids;
+
     /**
      * <p>The name of the task. Fuzzy match is supported.</p>
      */
@@ -138,6 +141,14 @@ public class ListTasksRequest extends TeaModel {
     public static ListTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTasksRequest self = new ListTasksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTasksRequest setIds(java.util.List<Long> ids) {
+        this.ids = ids;
+        return this;
+    }
+    public java.util.List<Long> getIds() {
+        return this.ids;
     }
 
     public ListTasksRequest setName(String name) {

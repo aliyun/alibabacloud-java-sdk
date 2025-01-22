@@ -4,6 +4,10 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class CreateDataQualityRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>19715</p>
+     */
     @NameInMap("Id")
     public Long id;
 

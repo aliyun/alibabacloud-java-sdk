@@ -11,7 +11,7 @@ public class ListDIJobEventsResponseBody extends TeaModel {
     public ListDIJobEventsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>645F6D68-9C29-5961-80B1-BDD4B794C22D</p>
@@ -70,6 +70,9 @@ public class ListDIJobEventsResponseBody extends TeaModel {
 
         /**
          * <p>The alert details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aggregator:avg [**] for 5 minutes, service maybe abnormal</p>
          */
         @NameInMap("Detail")
         public String detail;

@@ -24,7 +24,7 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C636A747-7E4E-594D-94CD-2B4F8A9A9A63</p>

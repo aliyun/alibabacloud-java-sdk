@@ -25,6 +25,9 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
 
     /**
      * <p>The description of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The description of the alert rule.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -39,6 +42,8 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>The alert rule Id</p>
+     * 
      * <strong>example:</strong>
      * <p>34982</p>
      */
@@ -263,6 +268,12 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
         @Deprecated
         public Long inhibitionInterval;
 
+        /**
+         * <p>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("MuteInterval")
         public Long muteInterval;
 
@@ -326,6 +337,9 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
         @Deprecated
         public java.util.List<String> ddlReportTags;
 
+        /**
+         * <p>The types of DDL operations for which the alert rule takes effect.</p>
+         */
         @NameInMap("DdlTypes")
         public java.util.List<String> ddlTypes;
 

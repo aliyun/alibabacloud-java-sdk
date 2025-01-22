@@ -793,15 +793,6 @@ public class GetTaskResponseBody extends TeaModel {
         public GetTaskResponseBodyTaskSubTasksSubTasksRuntimeResource runtimeResource;
 
         /**
-         * <p>The tenant ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("TenantId")
-        public Long tenantId;
-
-        /**
          * <p>The timeout period of task running. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -982,14 +973,6 @@ public class GetTaskResponseBody extends TeaModel {
         }
         public GetTaskResponseBodyTaskSubTasksSubTasksRuntimeResource getRuntimeResource() {
             return this.runtimeResource;
-        }
-
-        public GetTaskResponseBodyTaskSubTasksSubTasks setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
         }
 
         public GetTaskResponseBodyTaskSubTasksSubTasks setTimeout(Integer timeout) {
@@ -1428,15 +1411,6 @@ public class GetTaskResponseBody extends TeaModel {
         public java.util.List<GetTaskResponseBodyTaskTags> tags;
 
         /**
-         * <p>The tenant ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("TenantId")
-        public Long tenantId;
-
-        /**
          * <p>The timeout period of task running. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -1673,14 +1647,6 @@ public class GetTaskResponseBody extends TeaModel {
         }
         public java.util.List<GetTaskResponseBodyTaskTags> getTags() {
             return this.tags;
-        }
-
-        public GetTaskResponseBodyTask setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
         }
 
         public GetTaskResponseBodyTask setTimeout(Integer timeout) {

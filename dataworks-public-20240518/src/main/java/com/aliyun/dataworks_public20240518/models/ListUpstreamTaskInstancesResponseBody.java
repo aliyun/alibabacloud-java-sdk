@@ -402,15 +402,6 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The tenant ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("TenantId")
-        public Long tenantId;
-
-        /**
          * <p>The timeout period of task running. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -713,14 +704,6 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             return this.taskType;
         }
 
-        public ListUpstreamTaskInstancesResponseBodyPagingInfoTaskInstances setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
-        }
-
         public ListUpstreamTaskInstancesResponseBodyPagingInfoTaskInstances setTimeout(Integer timeout) {
             this.timeout = timeout;
             return this;
@@ -959,9 +942,6 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         @NameInMap("TaskType")
         public String taskType;
 
-        @NameInMap("TenantId")
-        public Long tenantId;
-
         @NameInMap("Timeout")
         public Integer timeout;
 
@@ -1181,14 +1161,6 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         }
         public String getTaskType() {
             return this.taskType;
-        }
-
-        public ListUpstreamTaskInstancesResponseBodyPagingInfoUpstreamTaskInstancesTaskInstance setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
         }
 
         public ListUpstreamTaskInstancesResponseBodyPagingInfoUpstreamTaskInstancesTaskInstance setTimeout(Integer timeout) {

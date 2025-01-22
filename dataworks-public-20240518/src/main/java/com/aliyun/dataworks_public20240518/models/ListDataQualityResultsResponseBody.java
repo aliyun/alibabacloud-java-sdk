@@ -103,6 +103,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsCritical extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>$checkValue &gt; 0.01</p>
+         */
+        @NameInMap("Expression")
+        public String expression;
+
+        /**
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
@@ -131,6 +138,14 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsCritical setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsCritical setOperator(String operator) {
             this.operator = operator;
             return this;
@@ -150,6 +165,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
     }
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsExpected extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>$checkValue &gt; 0.01</p>
+         */
+        @NameInMap("Expression")
+        public String expression;
+
         /**
          * <ul>
          * <li>\&gt;</li>
@@ -179,6 +201,14 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsExpected setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsExpected setOperator(String operator) {
             this.operator = operator;
             return this;
@@ -198,6 +228,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
     }
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsWarned extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>$checkValue &gt; 0.01</p>
+         */
+        @NameInMap("Expression")
+        public String expression;
+
         /**
          * <ul>
          * <li>\&gt;</li>
@@ -227,6 +264,14 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsWarned setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsWarned setOperator(String operator) {
             this.operator = operator;
             return this;
@@ -246,12 +291,21 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
     }
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholds extends TeaModel {
+        /**
+         * <p>The threshold settings for critical alerts.</p>
+         */
         @NameInMap("Critical")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsCritical critical;
 
+        /**
+         * <p>The expected threshold setting.</p>
+         */
         @NameInMap("Expected")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsExpected expected;
 
+        /**
+         * <p>The threshold settings for normal alerts.</p>
+         */
         @NameInMap("Warned")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsWarned warned;
 
@@ -294,6 +348,9 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         @NameInMap("ReferencedSamplesFilter")
         public String referencedSamplesFilter;
 
+        /**
+         * <p>The threshold settings.</p>
+         */
         @NameInMap("Thresholds")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholds thresholds;
 
@@ -496,13 +553,6 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>ds=$[yyyymmdd-1]</p>
-         */
-        @NameInMap("PartitionSpec")
-        public String partitionSpec;
-
-        /**
-         * <strong>example:</strong>
          * <p>odps.unit_test.tb_unit_test</p>
          */
         @NameInMap("TableGuid")
@@ -531,14 +581,6 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         }
         public String getDatabaseType() {
             return this.databaseType;
-        }
-
-        public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleTarget setPartitionSpec(String partitionSpec) {
-            this.partitionSpec = partitionSpec;
-            return this;
-        }
-        public String getPartitionSpec() {
-            return this.partitionSpec;
         }
 
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleTarget setTableGuid(String tableGuid) {

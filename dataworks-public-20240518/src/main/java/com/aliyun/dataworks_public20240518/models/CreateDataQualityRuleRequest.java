@@ -20,7 +20,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable the rule.</p>
+     * <p>Specifies whether to enable the monitoring rule.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -58,7 +58,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
     public CreateDataQualityRuleRequestSamplingConfig samplingConfig;
 
     /**
-     * <p>The strength of the rule. Valid values:</p>
+     * <p>The strength of the rule.</p>
      * <ul>
      * <li>Normal</li>
      * <li>High</li>
@@ -172,15 +172,6 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestCheckingConfigThresholdsCritical extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
-         * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
-         * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
-         * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.05</p>
          */
@@ -247,15 +238,6 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestCheckingConfigThresholdsExpected extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
-         * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
-         * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
-         * 
          * <strong>example:</strong>
          * <p>$checkValue &lt;= 0.01</p>
          */
@@ -322,15 +304,6 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestCheckingConfigThresholdsWarned extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
-         * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
-         * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
-         * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
          */
