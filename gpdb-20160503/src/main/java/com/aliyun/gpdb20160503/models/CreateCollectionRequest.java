@@ -59,13 +59,16 @@ public class CreateCollectionRequest extends TeaModel {
     public Integer externalStorage;
 
     /**
-     * <p>Fields used for full-text search, separated by commas (,). These fields must be keys defined in Metadata.</p>
+     * <p>The fields used for full-text search. Separate multiple fields with commas (,). These fields must be keys defined in Metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>title,content</p>
      */
     @NameInMap("FullTextRetrievalFields")
     public String fullTextRetrievalFields;
+
+    @NameInMap("HnswEfConstruction")
+    public String hnswEfConstruction;
 
     /**
      * <p>The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. Valid values: 1 to 1000. In most cases, this parameter is automatically configured based on the value of the Dimension parameter. You do not need to configure this parameter.</p>
@@ -127,16 +130,21 @@ public class CreateCollectionRequest extends TeaModel {
     @NameInMap("Metadata")
     public String metadata;
 
+    /**
+     * <p>The scalar index fields. Separate multiple fields with commas (,). These fields must be keys defined in Metadata.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>title</p>
+     */
     @NameInMap("MetadataIndices")
     public String metadataIndices;
 
     /**
-     * <p>Method used when building the vector index.</p>
-     * <p>Value description:</p>
+     * <p>The method that is used to create vector indexes. Valid values:</p>
      * <ul>
-     * <li><strong>l2</strong>: Euclidean distance.</li>
-     * <li><strong>ip</strong>: Inner product (dot product) distance.</li>
-     * <li><strong>cosine</strong> (default): Cosine similarity.</li>
+     * <li>l2: Euclidean distance.</li>
+     * <li>ip: inner product distance.</li>
+     * <li>cosine: cosine similarity.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -244,6 +252,14 @@ public class CreateCollectionRequest extends TeaModel {
     }
     public String getFullTextRetrievalFields() {
         return this.fullTextRetrievalFields;
+    }
+
+    public CreateCollectionRequest setHnswEfConstruction(String hnswEfConstruction) {
+        this.hnswEfConstruction = hnswEfConstruction;
+        return this;
+    }
+    public String getHnswEfConstruction() {
+        return this.hnswEfConstruction;
     }
 
     public CreateCollectionRequest setHnswM(Integer hnswM) {
