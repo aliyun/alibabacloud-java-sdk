@@ -369,6 +369,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("DataSourceId")
         public String dataSourceId;
 
+        @NameInMap("DataSourceVersion")
+        public String dataSourceVersion;
+
         /**
          * <strong>example:</strong>
          * <p>/root/data</p>
@@ -397,6 +400,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getDataSourceId() {
             return this.dataSourceId;
+        }
+
+        public CreateJobRequestDataSources setDataSourceVersion(String dataSourceVersion) {
+            this.dataSourceVersion = dataSourceVersion;
+            return this;
+        }
+        public String getDataSourceVersion() {
+            return this.dataSourceVersion;
         }
 
         public CreateJobRequestDataSources setMountPath(String mountPath) {

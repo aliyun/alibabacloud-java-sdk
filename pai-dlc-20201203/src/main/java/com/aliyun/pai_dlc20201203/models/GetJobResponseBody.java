@@ -222,6 +222,9 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
+    @NameInMap("UserVpc")
+    public GetJobResponseBodyUserVpc userVpc;
+
     /**
      * <strong>example:</strong>
      * <p>268</p>
@@ -543,6 +546,14 @@ public class GetJobResponseBody extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public GetJobResponseBody setUserVpc(GetJobResponseBodyUserVpc userVpc) {
+        this.userVpc = userVpc;
+        return this;
+    }
+    public GetJobResponseBodyUserVpc getUserVpc() {
+        return this.userVpc;
     }
 
     public GetJobResponseBody setWorkspaceId(String workspaceId) {
@@ -1005,6 +1016,81 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class GetJobResponseBodyUserVpc extends TeaModel {
+        @NameInMap("DefaultRoute")
+        public String defaultRoute;
+
+        @NameInMap("ExtendedCidrs")
+        public java.util.List<String> extendedCidrs;
+
+        /**
+         * <strong>example:</strong>
+         * <p>sg-abcdef****</p>
+         */
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>vs-abcdef****</p>
+         */
+        @NameInMap("SwitchId")
+        public String switchId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-abcdef****</p>
+         */
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static GetJobResponseBodyUserVpc build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyUserVpc self = new GetJobResponseBodyUserVpc();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyUserVpc setDefaultRoute(String defaultRoute) {
+            this.defaultRoute = defaultRoute;
+            return this;
+        }
+        public String getDefaultRoute() {
+            return this.defaultRoute;
+        }
+
+        public GetJobResponseBodyUserVpc setExtendedCidrs(java.util.List<String> extendedCidrs) {
+            this.extendedCidrs = extendedCidrs;
+            return this;
+        }
+        public java.util.List<String> getExtendedCidrs() {
+            return this.extendedCidrs;
+        }
+
+        public GetJobResponseBodyUserVpc setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public GetJobResponseBodyUserVpc setSwitchId(String switchId) {
+            this.switchId = switchId;
+            return this;
+        }
+        public String getSwitchId() {
+            return this.switchId;
+        }
+
+        public GetJobResponseBodyUserVpc setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

@@ -7,6 +7,9 @@ public class SpotSpec extends TeaModel {
     @NameInMap("SpotDiscountLimit")
     public Float spotDiscountLimit;
 
+    @NameInMap("SpotPriceLimit")
+    public Float spotPriceLimit;
+
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
@@ -21,6 +24,14 @@ public class SpotSpec extends TeaModel {
     }
     public Float getSpotDiscountLimit() {
         return this.spotDiscountLimit;
+    }
+
+    public SpotSpec setSpotPriceLimit(Float spotPriceLimit) {
+        this.spotPriceLimit = spotPriceLimit;
+        return this;
+    }
+    public Float getSpotPriceLimit() {
+        return this.spotPriceLimit;
     }
 
     public SpotSpec setSpotStrategy(String spotStrategy) {
