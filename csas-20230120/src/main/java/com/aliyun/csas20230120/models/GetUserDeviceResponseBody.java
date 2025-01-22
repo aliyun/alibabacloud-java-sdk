@@ -187,6 +187,9 @@ public class GetUserDeviceResponseBody extends TeaModel {
         @NameInMap("DlpStatus")
         public String dlpStatus;
 
+        @NameInMap("EdrStatus")
+        public String edrStatus;
+
         @NameInMap("HistoryUsers")
         public java.util.List<GetUserDeviceResponseBodyDeviceHistoryUsers> historyUsers;
 
@@ -380,6 +383,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
         }
         public String getDlpStatus() {
             return this.dlpStatus;
+        }
+
+        public GetUserDeviceResponseBodyDevice setEdrStatus(String edrStatus) {
+            this.edrStatus = edrStatus;
+            return this;
+        }
+        public String getEdrStatus() {
+            return this.edrStatus;
         }
 
         public GetUserDeviceResponseBodyDevice setHistoryUsers(java.util.List<GetUserDeviceResponseBodyDeviceHistoryUsers> historyUsers) {

@@ -132,18 +132,35 @@ public class CreateWmExtractTaskRequest extends TeaModel {
     }
 
     public static class CreateWmExtractTaskRequestCsvControl extends TeaModel {
+        @NameInMap("EmbedBitsNumberInEachTime")
+        public Long embedBitsNumberInEachTime;
+
         @NameInMap("EmbedColumn")
         public Long embedColumn;
 
         @NameInMap("EmbedPrecision")
         public Long embedPrecision;
 
+        @NameInMap("EmbedTimePosition")
+        public String embedTimePosition;
+
         @NameInMap("Method")
         public String method;
+
+        @NameInMap("TimeFormat")
+        public String timeFormat;
 
         public static CreateWmExtractTaskRequestCsvControl build(java.util.Map<String, ?> map) throws Exception {
             CreateWmExtractTaskRequestCsvControl self = new CreateWmExtractTaskRequestCsvControl();
             return TeaModel.build(map, self);
+        }
+
+        public CreateWmExtractTaskRequestCsvControl setEmbedBitsNumberInEachTime(Long embedBitsNumberInEachTime) {
+            this.embedBitsNumberInEachTime = embedBitsNumberInEachTime;
+            return this;
+        }
+        public Long getEmbedBitsNumberInEachTime() {
+            return this.embedBitsNumberInEachTime;
         }
 
         public CreateWmExtractTaskRequestCsvControl setEmbedColumn(Long embedColumn) {
@@ -162,12 +179,28 @@ public class CreateWmExtractTaskRequest extends TeaModel {
             return this.embedPrecision;
         }
 
+        public CreateWmExtractTaskRequestCsvControl setEmbedTimePosition(String embedTimePosition) {
+            this.embedTimePosition = embedTimePosition;
+            return this;
+        }
+        public String getEmbedTimePosition() {
+            return this.embedTimePosition;
+        }
+
         public CreateWmExtractTaskRequestCsvControl setMethod(String method) {
             this.method = method;
             return this;
         }
         public String getMethod() {
             return this.method;
+        }
+
+        public CreateWmExtractTaskRequestCsvControl setTimeFormat(String timeFormat) {
+            this.timeFormat = timeFormat;
+            return this;
+        }
+        public String getTimeFormat() {
+            return this.timeFormat;
         }
 
     }

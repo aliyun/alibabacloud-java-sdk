@@ -7,6 +7,9 @@ public class ListUserDevicesRequest extends TeaModel {
     @NameInMap("AppStatuses")
     public java.util.List<String> appStatuses;
 
+    @NameInMap("AppVersions")
+    public java.util.List<String> appVersions;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -104,6 +107,14 @@ public class ListUserDevicesRequest extends TeaModel {
     }
     public java.util.List<String> getAppStatuses() {
         return this.appStatuses;
+    }
+
+    public ListUserDevicesRequest setAppVersions(java.util.List<String> appVersions) {
+        this.appVersions = appVersions;
+        return this;
+    }
+    public java.util.List<String> getAppVersions() {
+        return this.appVersions;
     }
 
     public ListUserDevicesRequest setCurrentPage(Long currentPage) {
