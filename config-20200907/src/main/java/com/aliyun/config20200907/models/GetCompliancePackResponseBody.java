@@ -490,6 +490,36 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
     }
 
+    public static class GetCompliancePackResponseBodyCompliancePackTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetCompliancePackResponseBodyCompliancePackTags build(java.util.Map<String, ?> map) throws Exception {
+            GetCompliancePackResponseBodyCompliancePackTags self = new GetCompliancePackResponseBodyCompliancePackTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCompliancePackResponseBodyCompliancePackTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetCompliancePackResponseBodyCompliancePackTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetCompliancePackResponseBodyCompliancePack extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the compliance package belongs.</p>
@@ -583,6 +613,9 @@ public class GetCompliancePackResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<GetCompliancePackResponseBodyCompliancePackTags> tags;
 
         /**
          * <p>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</p>
@@ -705,6 +738,14 @@ public class GetCompliancePackResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetCompliancePackResponseBodyCompliancePack setTags(java.util.List<GetCompliancePackResponseBodyCompliancePackTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetCompliancePackResponseBodyCompliancePackTags> getTags() {
+            return this.tags;
         }
 
         public GetCompliancePackResponseBodyCompliancePack setTemplateContent(String templateContent) {

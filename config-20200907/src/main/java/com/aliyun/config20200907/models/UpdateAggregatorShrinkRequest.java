@@ -56,6 +56,9 @@ public class UpdateAggregatorShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Tag")
+    public String tagShrink;
+
     public static UpdateAggregatorShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAggregatorShrinkRequest self = new UpdateAggregatorShrinkRequest();
         return TeaModel.build(map, self);
@@ -99,6 +102,14 @@ public class UpdateAggregatorShrinkRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateAggregatorShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
+        return this;
+    }
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
 }

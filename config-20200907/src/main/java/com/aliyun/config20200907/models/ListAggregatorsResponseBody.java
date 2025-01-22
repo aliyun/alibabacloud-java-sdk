@@ -40,6 +40,36 @@ public class ListAggregatorsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListAggregatorsResponseBodyAggregatorsResultAggregatorsTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListAggregatorsResponseBodyAggregatorsResultAggregatorsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAggregatorsResponseBodyAggregatorsResultAggregatorsTags self = new ListAggregatorsResponseBodyAggregatorsResultAggregatorsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAggregatorsResponseBodyAggregatorsResultAggregatorsTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListAggregatorsResponseBodyAggregatorsResultAggregatorsTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListAggregatorsResponseBodyAggregatorsResultAggregators extends TeaModel {
         /**
          * <p>The ID of the management account that is used to create the account group.</p>
@@ -131,6 +161,9 @@ public class ListAggregatorsResponseBody extends TeaModel {
         @NameInMap("FolderId")
         public String folderId;
 
+        @NameInMap("Tags")
+        public java.util.List<ListAggregatorsResponseBodyAggregatorsResultAggregatorsTags> tags;
+
         public static ListAggregatorsResponseBodyAggregatorsResultAggregators build(java.util.Map<String, ?> map) throws Exception {
             ListAggregatorsResponseBodyAggregatorsResultAggregators self = new ListAggregatorsResponseBodyAggregatorsResultAggregators();
             return TeaModel.build(map, self);
@@ -206,6 +239,14 @@ public class ListAggregatorsResponseBody extends TeaModel {
         }
         public String getFolderId() {
             return this.folderId;
+        }
+
+        public ListAggregatorsResponseBodyAggregatorsResultAggregators setTags(java.util.List<ListAggregatorsResponseBodyAggregatorsResultAggregatorsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListAggregatorsResponseBodyAggregatorsResultAggregatorsTags> getTags() {
+            return this.tags;
         }
 
     }

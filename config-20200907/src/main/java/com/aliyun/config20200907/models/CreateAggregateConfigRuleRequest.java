@@ -272,6 +272,9 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     @NameInMap("SourceOwner")
     public String sourceOwner;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateAggregateConfigRuleRequestTag> tag;
+
     /**
      * <p>The logical relationship among the tag keys if you specify multiple tag keys for the <code>TagKeyScope</code> parameter. For example, if you set the <code>TagKeyScope</code> parameter to <code>ECS,OSS</code> and the TagKeyLogicScope parameter to <code>AND</code>, the rule applies to resources with both the <code>ECS</code> and <code>OSS</code> tag keys. Valid values:</p>
      * <ul>
@@ -504,6 +507,14 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
         return this.sourceOwner;
     }
 
+    public CreateAggregateConfigRuleRequest setTag(java.util.List<CreateAggregateConfigRuleRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateAggregateConfigRuleRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateAggregateConfigRuleRequest setTagKeyLogicScope(String tagKeyLogicScope) {
         this.tagKeyLogicScope = tagKeyLogicScope;
         return this;
@@ -574,6 +585,36 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
         }
         public String getTagValue() {
             return this.tagValue;
+        }
+
+    }
+
+    public static class CreateAggregateConfigRuleRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateAggregateConfigRuleRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateAggregateConfigRuleRequestTag self = new CreateAggregateConfigRuleRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAggregateConfigRuleRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAggregateConfigRuleRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

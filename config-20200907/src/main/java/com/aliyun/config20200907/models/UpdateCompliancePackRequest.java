@@ -124,6 +124,9 @@ public class UpdateCompliancePackRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
+    @NameInMap("Tag")
+    public java.util.List<UpdateCompliancePackRequestTag> tag;
+
     /**
      * <p>The tag key of the resource that you want to evaluate by using the compliance package.</p>
      * 
@@ -258,6 +261,14 @@ public class UpdateCompliancePackRequest extends TeaModel {
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
+    }
+
+    public UpdateCompliancePackRequest setTag(java.util.List<UpdateCompliancePackRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<UpdateCompliancePackRequestTag> getTag() {
+        return this.tag;
     }
 
     public UpdateCompliancePackRequest setTagKeyScope(String tagKeyScope) {
@@ -480,6 +491,36 @@ public class UpdateCompliancePackRequest extends TeaModel {
         }
         public String getTagValue() {
             return this.tagValue;
+        }
+
+    }
+
+    public static class UpdateCompliancePackRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateCompliancePackRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            UpdateCompliancePackRequestTag self = new UpdateCompliancePackRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateCompliancePackRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public UpdateCompliancePackRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

@@ -78,6 +78,9 @@ public class CreateAggregatorShrinkRequest extends TeaModel {
     @NameInMap("FolderId")
     public String folderId;
 
+    @NameInMap("Tag")
+    public String tagShrink;
+
     public static CreateAggregatorShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAggregatorShrinkRequest self = new CreateAggregatorShrinkRequest();
         return TeaModel.build(map, self);
@@ -129,6 +132,14 @@ public class CreateAggregatorShrinkRequest extends TeaModel {
     }
     public String getFolderId() {
         return this.folderId;
+    }
+
+    public CreateAggregatorShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
+        return this;
+    }
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
 }

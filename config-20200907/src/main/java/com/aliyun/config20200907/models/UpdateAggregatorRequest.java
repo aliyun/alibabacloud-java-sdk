@@ -56,6 +56,9 @@ public class UpdateAggregatorRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Tag")
+    public java.util.List<UpdateAggregatorRequestTag> tag;
+
     public static UpdateAggregatorRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAggregatorRequest self = new UpdateAggregatorRequest();
         return TeaModel.build(map, self);
@@ -99,6 +102,14 @@ public class UpdateAggregatorRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateAggregatorRequest setTag(java.util.List<UpdateAggregatorRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<UpdateAggregatorRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class UpdateAggregatorRequestAggregatorAccounts extends TeaModel {
@@ -167,6 +178,36 @@ public class UpdateAggregatorRequest extends TeaModel {
         }
         public String getAccountType() {
             return this.accountType;
+        }
+
+    }
+
+    public static class UpdateAggregatorRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateAggregatorRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            UpdateAggregatorRequestTag self = new UpdateAggregatorRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateAggregatorRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public UpdateAggregatorRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

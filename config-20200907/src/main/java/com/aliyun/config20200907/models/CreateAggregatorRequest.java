@@ -78,6 +78,9 @@ public class CreateAggregatorRequest extends TeaModel {
     @NameInMap("FolderId")
     public String folderId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateAggregatorRequestTag> tag;
+
     public static CreateAggregatorRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAggregatorRequest self = new CreateAggregatorRequest();
         return TeaModel.build(map, self);
@@ -129,6 +132,14 @@ public class CreateAggregatorRequest extends TeaModel {
     }
     public String getFolderId() {
         return this.folderId;
+    }
+
+    public CreateAggregatorRequest setTag(java.util.List<CreateAggregatorRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateAggregatorRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class CreateAggregatorRequestAggregatorAccounts extends TeaModel {
@@ -186,6 +197,36 @@ public class CreateAggregatorRequest extends TeaModel {
         }
         public String getAccountType() {
             return this.accountType;
+        }
+
+    }
+
+    public static class CreateAggregatorRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateAggregatorRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateAggregatorRequestTag self = new CreateAggregatorRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAggregatorRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAggregatorRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

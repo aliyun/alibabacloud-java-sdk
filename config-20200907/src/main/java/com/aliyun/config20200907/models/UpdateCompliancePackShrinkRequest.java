@@ -124,6 +124,9 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
+    @NameInMap("Tag")
+    public String tagShrink;
+
     /**
      * <p>The tag key of the resource that you want to evaluate by using the compliance package.</p>
      * 
@@ -258,6 +261,14 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
+    }
+
+    public UpdateCompliancePackShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
+        return this;
+    }
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
     public UpdateCompliancePackShrinkRequest setTagKeyScope(String tagKeyScope) {

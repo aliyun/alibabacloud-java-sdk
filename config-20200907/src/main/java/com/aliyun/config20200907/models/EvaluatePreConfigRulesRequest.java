@@ -27,6 +27,12 @@ public class EvaluatePreConfigRulesRequest extends TeaModel {
     @NameInMap("ResourceEvaluateItems")
     public java.util.List<EvaluatePreConfigRulesRequestResourceEvaluateItems> resourceEvaluateItems;
 
+    /**
+     * <p>下一个查询开始Token</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ros</p>
+     */
     @NameInMap("ResourceTypeFormat")
     public String resourceTypeFormat;
 

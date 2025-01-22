@@ -488,6 +488,36 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     }
 
+    public static class GetAggregateCompliancePackResponseBodyCompliancePackTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetAggregateCompliancePackResponseBodyCompliancePackTags build(java.util.Map<String, ?> map) throws Exception {
+            GetAggregateCompliancePackResponseBodyCompliancePackTags self = new GetAggregateCompliancePackResponseBodyCompliancePackTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAggregateCompliancePackResponseBodyCompliancePackTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetAggregateCompliancePackResponseBodyCompliancePackTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetAggregateCompliancePackResponseBodyCompliancePack extends TeaModel {
         /**
          * <p>The ID of the management account to which the compliance package belongs.</p>
@@ -590,6 +620,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackTags> tags;
 
         /**
          * <p>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</p>
@@ -716,6 +749,14 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetAggregateCompliancePackResponseBodyCompliancePack setTags(java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackTags> getTags() {
+            return this.tags;
         }
 
         public GetAggregateCompliancePackResponseBodyCompliancePack setTemplateContent(String templateContent) {

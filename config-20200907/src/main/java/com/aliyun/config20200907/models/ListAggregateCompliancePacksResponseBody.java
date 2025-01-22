@@ -40,6 +40,36 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags self = new ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks extends TeaModel {
         /**
          * <p>The ID of the management account to which the compliance package belongs.</p>
@@ -131,6 +161,9 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public java.util.List<ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags> tags;
+
         public static ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks build(java.util.Map<String, ?> map) throws Exception {
             ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks self = new ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks();
             return TeaModel.build(map, self);
@@ -206,6 +239,14 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setTags(java.util.List<ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags> getTags() {
+            return this.tags;
         }
 
     }
