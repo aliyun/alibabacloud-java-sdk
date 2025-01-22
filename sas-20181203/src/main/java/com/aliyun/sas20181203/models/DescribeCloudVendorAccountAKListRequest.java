@@ -66,6 +66,9 @@ public class DescribeCloudVendorAccountAKListRequest extends TeaModel {
     @NameInMap("SubAccountName")
     public String subAccountName;
 
+    @NameInMap("VendorAuthAlias")
+    public String vendorAuthAlias;
+
     public static DescribeCloudVendorAccountAKListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCloudVendorAccountAKListRequest self = new DescribeCloudVendorAccountAKListRequest();
         return TeaModel.build(map, self);
@@ -117,6 +120,14 @@ public class DescribeCloudVendorAccountAKListRequest extends TeaModel {
     }
     public String getSubAccountName() {
         return this.subAccountName;
+    }
+
+    public DescribeCloudVendorAccountAKListRequest setVendorAuthAlias(String vendorAuthAlias) {
+        this.vendorAuthAlias = vendorAuthAlias;
+        return this;
+    }
+    public String getVendorAuthAlias() {
+        return this.vendorAuthAlias;
     }
 
 }

@@ -166,6 +166,9 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("RegistryType")
+        public String registryType;
+
         /**
          * <p>The ID of the image repository.</p>
          * 
@@ -302,6 +305,14 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeOnceTaskLeafRecordPageResponseBodyOnceTasksTaskImageInfo setRegistryType(String registryType) {
+            this.registryType = registryType;
+            return this;
+        }
+        public String getRegistryType() {
+            return this.registryType;
         }
 
         public DescribeOnceTaskLeafRecordPageResponseBodyOnceTasksTaskImageInfo setRepoId(String repoId) {

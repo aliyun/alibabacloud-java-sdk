@@ -4,6 +4,16 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetsScaProcessNumRequest extends TeaModel {
+    /**
+     * <p>The type of the application process. Default value: java. Valid values:</p>
+     * <ul>
+     * <li><strong>java</strong></li>
+     * <li><strong>php</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>java</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 

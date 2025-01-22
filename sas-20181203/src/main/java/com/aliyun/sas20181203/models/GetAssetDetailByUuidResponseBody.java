@@ -165,11 +165,11 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         /**
          * <p>The edition of Security Center that is authorized to protect the server. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Basic edition (Unauthorized)</li>
-         * <li><strong>6</strong>: Anti-virus edition</li>
-         * <li><strong>5</strong>: Advanced edition</li>
-         * <li><strong>3</strong>: Enterprise edition</li>
-         * <li><strong>7</strong>: Ultimate edition</li>
+         * <li><strong>1</strong>: Basic (Unauthorized).</li>
+         * <li><strong>6</strong>: Anti-virus.</li>
+         * <li><strong>5</strong>: Advanced.</li>
+         * <li><strong>3</strong>: Enterprise.</li>
+         * <li><strong>7</strong>: Ultimate.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,6 +205,19 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         @NameInMap("ClientStatus")
         public String clientStatus;
 
+        /**
+         * <p>The sub-status of the Security Center agent on the server. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong>: The Security Center agent on the asset is <strong>enabled</strong>.</li>
+         * <li><strong>offline</strong>: The Security Center agent on the asset is <strong>disabled</strong>.</li>
+         * <li><strong>pause</strong>: The Security Center agent is <strong>suspended</strong>.</li>
+         * <li><strong>uninstalled</strong>: The Security Center agent is <strong>not installed</strong>.</li>
+         * <li><strong>stopped</strong>: The asset is <strong>shut down</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
+         */
         @NameInMap("ClientSubStatus")
         public String clientSubStatus;
 
@@ -445,6 +458,9 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
          */
         @NameInMap("Uuid")
         public String uuid;
+
+        @NameInMap("VendorAuthAlias")
+        public String vendorAuthAlias;
 
         /**
          * <p>The ID of the virtual private cloud (VPC) in which the server resides.</p>
@@ -722,6 +738,14 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         }
         public String getUuid() {
             return this.uuid;
+        }
+
+        public GetAssetDetailByUuidResponseBodyAssetDetail setVendorAuthAlias(String vendorAuthAlias) {
+            this.vendorAuthAlias = vendorAuthAlias;
+            return this;
+        }
+        public String getVendorAuthAlias() {
+            return this.vendorAuthAlias;
         }
 
         public GetAssetDetailByUuidResponseBodyAssetDetail setVpcInstanceId(String vpcInstanceId) {

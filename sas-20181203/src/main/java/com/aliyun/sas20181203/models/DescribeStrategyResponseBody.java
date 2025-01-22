@@ -215,6 +215,12 @@ public class DescribeStrategyResponseBody extends TeaModel {
         @NameInMap("PassRate")
         public Integer passRate;
 
+        /**
+         * <p>The progress of the baseline check by using the baseline. This parameter is returned only if the value of the ExecStatus parameter is 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50%</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
@@ -258,6 +264,12 @@ public class DescribeStrategyResponseBody extends TeaModel {
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <p>The time when the baseline check policy was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-07 10:46:43</p>
+         */
         @NameInMap("UserModifyTime")
         public Long userModifyTime;
 

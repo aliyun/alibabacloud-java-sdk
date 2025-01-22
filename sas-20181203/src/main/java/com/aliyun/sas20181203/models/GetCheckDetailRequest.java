@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetCheckDetailRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,8 +20,8 @@ public class GetCheckDetailRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +31,10 @@ public class GetCheckDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the region in which the server resides.</p>
+     * <p>The region ID of the instance.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> operation to query the region ID.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

@@ -22,19 +22,38 @@ public class GetCheckDetailResponseBody extends TeaModel {
     @NameInMap("Description")
     public GetCheckDetailResponseBodyDescription description;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("RepairReset")
     @Deprecated
     public String repairReset;
 
+    /**
+     * <p>The fixing parameter configurations of the check item.</p>
+     */
     @NameInMap("RepairSetting")
     public GetCheckDetailResponseBodyRepairSetting repairSetting;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RepairSupportType")
     @Deprecated
     public Integer repairSupportType;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15A6ED6A-DBFE-5255-A248-289907809BEC</p>
@@ -193,7 +212,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
-         * <p>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</p>
+         * <p>The name of the custom configuration item, which is unique in a check item.</p>
          * 
          * <strong>example:</strong>
          * <p>SessionTimeMax</p>
@@ -202,7 +221,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The keyword that identifies the custom configuration item for internationalization.</p>
+         * <p>The display name of the custom configuration item for internationalization.</p>
          * 
          * <strong>example:</strong>
          * <p>Maximum session time</p>
@@ -286,7 +305,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         public String link;
 
         /**
-         * <p>The type of the description of the check item. The value is fixed as text.</p>
+         * <p>The description type of the check item. The value is fixed as text.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -335,9 +354,21 @@ public class GetCheckDetailResponseBody extends TeaModel {
     }
 
     public static class GetCheckDetailResponseBodyRepairSettingFlowStep extends TeaModel {
+        /**
+         * <p>The text description of the fixing step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The first step is to open the calling interface.</p>
+         */
         @NameInMap("ShowText")
         public String showText;
 
+        /**
+         * <p>The sequence number of the fixing step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Step")
         public String step;
 
@@ -365,39 +396,132 @@ public class GetCheckDetailResponseBody extends TeaModel {
     }
 
     public static class GetCheckDetailResponseBodyRepairSettingRepairConfigs extends TeaModel {
+        /**
+         * <p>Indicates whether the value of the parameter is displayed in the console. Valid values:</p>
+         * <ul>
+         * <li>0: The historical value and real-time value of the parameter are displayed.</li>
+         * <li>1: Only the real-time value of the parameter is displayed.</li>
+         * <li>2: The value of the parameter is not displayed in the console.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ConsoleParamType")
         public String consoleParamType;
 
+        /**
+         * <p>Indicates whether custom configurations of the fixing parameters are supported. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CustomFlag")
         public Boolean customFlag;
 
+        /**
+         * <p>Indicates whether data needs to be encrypted during transmission. Valid values:</p>
+         * <ul>
+         * <li>0: Data does not need to be encrypted during transmission.</li>
+         * <li>1: Data needs to be encrypted during transmission.</li>
+         * <li>2: Data needs to be encrypted during transmission, and the user must perform secondary confirmation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DataTransformType")
         public String dataTransformType;
 
+        /**
+         * <p>The default value of the parameter. The value is a string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>Indicates whether this parameter is specified by the user. Valid values:</p>
+         * <ul>
+         * <li>0: The default value is used.</li>
+         * <li>1: This parameter is required, and no default value is specified.</li>
+         * <li>2: This parameter can be left empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EmptyParamSwitch")
         public String emptyParamSwitch;
 
+        /**
+         * <p>The fixing parameters that are not compatible with this parameter.</p>
+         */
         @NameInMap("ExclusiveName")
         public java.util.List<String> exclusiveName;
 
+        /**
+         * <p>The ID of the fixing workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64312d3ee19d470a9b54393dab****</p>
+         */
         @NameInMap("FlowId")
         public String flowId;
 
+        /**
+         * <p>The name of the parameter. The name must be unique within the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>navicat</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The display name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
+        /**
+         * <p>The type of the parameter. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;type\&quot;:\&quot;NUMBER\&quot;,\&quot;range\&quot;:[1,24]}</p>
+         */
         @NameInMap("TypeDefine")
         public String typeDefine;
 
+        /**
+         * <p>The type of the parameter. Valid values:</p>
+         * <ul>
+         * <li>1: asset parameters that are required during fixing.</li>
+         * <li>2: user-provided parameters that are required during fixing.</li>
+         * <li>3: parameters that are temporarily provided by the user.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UsageType")
         public String usageType;
 
+        /**
+         * <p>The user-configured value of the parameter. The value is a string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -505,18 +629,55 @@ public class GetCheckDetailResponseBody extends TeaModel {
     }
 
     public static class GetCheckDetailResponseBodyRepairSetting extends TeaModel {
+        /**
+         * <p>The description of the fixing workflow.</p>
+         */
         @NameInMap("FlowStep")
         public java.util.List<GetCheckDetailResponseBodyRepairSettingFlowStep> flowStep;
 
+        /**
+         * <p>The configurations of the fixing parameters.</p>
+         */
         @NameInMap("RepairConfigs")
         public java.util.List<GetCheckDetailResponseBodyRepairSettingRepairConfigs> repairConfigs;
 
+        /**
+         * <p>Indicates whether a restart is required after the fixing. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("RepairReset")
         public Boolean repairReset;
 
+        /**
+         * <p>Indicates whether the check item supports the quick fix feature. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("RepairSupport")
         public Boolean repairSupport;
 
+        /**
+         * <p>The fixing type that is supported. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The fixing and rollback are supported.</li>
+         * <li><strong>2</strong>: The fixing is supported, but the rollback is not supported.</li>
+         * <li><strong>3</strong>: The fixing must be performed on a third-party platform.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RepairSupportType")
         public Integer repairSupportType;
 
