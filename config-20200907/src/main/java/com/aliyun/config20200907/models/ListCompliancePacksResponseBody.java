@@ -40,6 +40,36 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags build(java.util.Map<String, ?> map) throws Exception {
+            ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags self = new ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacks extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the compliance package belongs.</p>
@@ -122,6 +152,9 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public java.util.List<ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags> tags;
+
         public static ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacks build(java.util.Map<String, ?> map) throws Exception {
             ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacks self = new ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacks();
             return TeaModel.build(map, self);
@@ -189,6 +222,14 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setTags(java.util.List<ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags> getTags() {
+            return this.tags;
         }
 
     }

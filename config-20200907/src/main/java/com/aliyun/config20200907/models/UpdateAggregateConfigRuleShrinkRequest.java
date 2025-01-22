@@ -246,6 +246,13 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public Integer riskLevel;
 
     /**
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
+     */
+    @NameInMap("Tag")
+    public String tagShrink;
+
+    /**
      * <p>The logical relationship among the tag keys if you specify multiple tag keys for the <code>TagKeyScope</code> parameter. For example, if you set the <code>TagKeyScope</code> parameter to <code>ECS,OSS</code> and the TagKeyLogicScope parameter to <code>AND</code>, the rule applies to resources with both the <code>ECS</code> and <code>OSS</code> tag keys. Valid values:</p>
      * <ul>
      * <li>AND</li>
@@ -459,6 +466,14 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
+    }
+
+    public UpdateAggregateConfigRuleShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
+        return this;
+    }
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
     public UpdateAggregateConfigRuleShrinkRequest setTagKeyLogicScope(String tagKeyLogicScope) {

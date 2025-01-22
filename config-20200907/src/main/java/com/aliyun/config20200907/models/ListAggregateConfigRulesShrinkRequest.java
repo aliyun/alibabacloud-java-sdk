@@ -3,7 +3,7 @@ package com.aliyun.config20200907.models;
 
 import com.aliyun.tea.*;
 
-public class ListAggregateConfigRulesRequest extends TeaModel {
+public class ListAggregateConfigRulesShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
@@ -117,14 +117,14 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     public Integer riskLevel;
 
     @NameInMap("Tag")
-    public java.util.List<ListAggregateConfigRulesRequestTag> tag;
+    public String tagShrink;
 
-    public static ListAggregateConfigRulesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListAggregateConfigRulesRequest self = new ListAggregateConfigRulesRequest();
+    public static ListAggregateConfigRulesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListAggregateConfigRulesShrinkRequest self = new ListAggregateConfigRulesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListAggregateConfigRulesRequest setAggregatorId(String aggregatorId) {
+    public ListAggregateConfigRulesShrinkRequest setAggregatorId(String aggregatorId) {
         this.aggregatorId = aggregatorId;
         return this;
     }
@@ -132,7 +132,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.aggregatorId;
     }
 
-    public ListAggregateConfigRulesRequest setCompliancePackId(String compliancePackId) {
+    public ListAggregateConfigRulesShrinkRequest setCompliancePackId(String compliancePackId) {
         this.compliancePackId = compliancePackId;
         return this;
     }
@@ -140,7 +140,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.compliancePackId;
     }
 
-    public ListAggregateConfigRulesRequest setComplianceType(String complianceType) {
+    public ListAggregateConfigRulesShrinkRequest setComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
     }
@@ -148,7 +148,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.complianceType;
     }
 
-    public ListAggregateConfigRulesRequest setConfigRuleName(String configRuleName) {
+    public ListAggregateConfigRulesShrinkRequest setConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
     }
@@ -156,7 +156,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.configRuleName;
     }
 
-    public ListAggregateConfigRulesRequest setConfigRuleState(String configRuleState) {
+    public ListAggregateConfigRulesShrinkRequest setConfigRuleState(String configRuleState) {
         this.configRuleState = configRuleState;
         return this;
     }
@@ -164,7 +164,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.configRuleState;
     }
 
-    public ListAggregateConfigRulesRequest setKeyword(String keyword) {
+    public ListAggregateConfigRulesShrinkRequest setKeyword(String keyword) {
         this.keyword = keyword;
         return this;
     }
@@ -172,7 +172,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.keyword;
     }
 
-    public ListAggregateConfigRulesRequest setPageNumber(Integer pageNumber) {
+    public ListAggregateConfigRulesShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -180,7 +180,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListAggregateConfigRulesRequest setPageSize(Integer pageSize) {
+    public ListAggregateConfigRulesShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -188,7 +188,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListAggregateConfigRulesRequest setResourceTypes(String resourceTypes) {
+    public ListAggregateConfigRulesShrinkRequest setResourceTypes(String resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
@@ -196,7 +196,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.resourceTypes;
     }
 
-    public ListAggregateConfigRulesRequest setRiskLevel(Integer riskLevel) {
+    public ListAggregateConfigRulesShrinkRequest setRiskLevel(Integer riskLevel) {
         this.riskLevel = riskLevel;
         return this;
     }
@@ -204,42 +204,12 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
         return this.riskLevel;
     }
 
-    public ListAggregateConfigRulesRequest setTag(java.util.List<ListAggregateConfigRulesRequestTag> tag) {
-        this.tag = tag;
+    public ListAggregateConfigRulesShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
         return this;
     }
-    public java.util.List<ListAggregateConfigRulesRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public static class ListAggregateConfigRulesRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListAggregateConfigRulesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListAggregateConfigRulesRequestTag self = new ListAggregateConfigRulesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListAggregateConfigRulesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListAggregateConfigRulesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
 }

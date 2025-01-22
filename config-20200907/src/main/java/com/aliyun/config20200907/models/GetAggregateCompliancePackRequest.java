@@ -26,6 +26,9 @@ public class GetAggregateCompliancePackRequest extends TeaModel {
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
+    @NameInMap("Tag")
+    public java.util.List<GetAggregateCompliancePackRequestTag> tag;
+
     public static GetAggregateCompliancePackRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAggregateCompliancePackRequest self = new GetAggregateCompliancePackRequest();
         return TeaModel.build(map, self);
@@ -45,6 +48,44 @@ public class GetAggregateCompliancePackRequest extends TeaModel {
     }
     public String getCompliancePackId() {
         return this.compliancePackId;
+    }
+
+    public GetAggregateCompliancePackRequest setTag(java.util.List<GetAggregateCompliancePackRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<GetAggregateCompliancePackRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class GetAggregateCompliancePackRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetAggregateCompliancePackRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            GetAggregateCompliancePackRequestTag self = new GetAggregateCompliancePackRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAggregateCompliancePackRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetAggregateCompliancePackRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

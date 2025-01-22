@@ -125,6 +125,36 @@ public class GetAggregatorResponseBody extends TeaModel {
 
     }
 
+    public static class GetAggregatorResponseBodyAggregatorTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetAggregatorResponseBodyAggregatorTags build(java.util.Map<String, ?> map) throws Exception {
+            GetAggregatorResponseBodyAggregatorTags self = new GetAggregatorResponseBodyAggregatorTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAggregatorResponseBodyAggregatorTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetAggregatorResponseBodyAggregatorTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetAggregatorResponseBodyAggregator extends TeaModel {
         /**
          * <p>The ID of the management account that is used to create the account group.</p>
@@ -223,6 +253,9 @@ public class GetAggregatorResponseBody extends TeaModel {
         @NameInMap("FolderId")
         public String folderId;
 
+        @NameInMap("Tags")
+        public java.util.List<GetAggregatorResponseBodyAggregatorTags> tags;
+
         public static GetAggregatorResponseBodyAggregator build(java.util.Map<String, ?> map) throws Exception {
             GetAggregatorResponseBodyAggregator self = new GetAggregatorResponseBodyAggregator();
             return TeaModel.build(map, self);
@@ -306,6 +339,14 @@ public class GetAggregatorResponseBody extends TeaModel {
         }
         public String getFolderId() {
             return this.folderId;
+        }
+
+        public GetAggregatorResponseBodyAggregator setTags(java.util.List<GetAggregatorResponseBodyAggregatorTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetAggregatorResponseBodyAggregatorTags> getTags() {
+            return this.tags;
         }
 
     }

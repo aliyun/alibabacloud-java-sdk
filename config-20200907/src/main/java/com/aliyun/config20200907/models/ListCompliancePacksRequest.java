@@ -37,6 +37,9 @@ public class ListCompliancePacksRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tag")
+    public java.util.List<ListCompliancePacksRequestTag> tag;
+
     public static ListCompliancePacksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCompliancePacksRequest self = new ListCompliancePacksRequest();
         return TeaModel.build(map, self);
@@ -64,6 +67,44 @@ public class ListCompliancePacksRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListCompliancePacksRequest setTag(java.util.List<ListCompliancePacksRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListCompliancePacksRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListCompliancePacksRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListCompliancePacksRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListCompliancePacksRequestTag self = new ListCompliancePacksRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCompliancePacksRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListCompliancePacksRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

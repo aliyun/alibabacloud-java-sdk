@@ -3,7 +3,7 @@ package com.aliyun.config20200907.models;
 
 import com.aliyun.tea.*;
 
-public class ListAggregateCompliancePacksRequest extends TeaModel {
+public class ListAggregateCompliancePacksShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
@@ -49,14 +49,14 @@ public class ListAggregateCompliancePacksRequest extends TeaModel {
     public String status;
 
     @NameInMap("Tag")
-    public java.util.List<ListAggregateCompliancePacksRequestTag> tag;
+    public String tagShrink;
 
-    public static ListAggregateCompliancePacksRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListAggregateCompliancePacksRequest self = new ListAggregateCompliancePacksRequest();
+    public static ListAggregateCompliancePacksShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListAggregateCompliancePacksShrinkRequest self = new ListAggregateCompliancePacksShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListAggregateCompliancePacksRequest setAggregatorId(String aggregatorId) {
+    public ListAggregateCompliancePacksShrinkRequest setAggregatorId(String aggregatorId) {
         this.aggregatorId = aggregatorId;
         return this;
     }
@@ -64,7 +64,7 @@ public class ListAggregateCompliancePacksRequest extends TeaModel {
         return this.aggregatorId;
     }
 
-    public ListAggregateCompliancePacksRequest setPageNumber(Integer pageNumber) {
+    public ListAggregateCompliancePacksShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -72,7 +72,7 @@ public class ListAggregateCompliancePacksRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListAggregateCompliancePacksRequest setPageSize(Integer pageSize) {
+    public ListAggregateCompliancePacksShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -80,7 +80,7 @@ public class ListAggregateCompliancePacksRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListAggregateCompliancePacksRequest setStatus(String status) {
+    public ListAggregateCompliancePacksShrinkRequest setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -88,42 +88,12 @@ public class ListAggregateCompliancePacksRequest extends TeaModel {
         return this.status;
     }
 
-    public ListAggregateCompliancePacksRequest setTag(java.util.List<ListAggregateCompliancePacksRequestTag> tag) {
-        this.tag = tag;
+    public ListAggregateCompliancePacksShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
         return this;
     }
-    public java.util.List<ListAggregateCompliancePacksRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public static class ListAggregateCompliancePacksRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListAggregateCompliancePacksRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListAggregateCompliancePacksRequestTag self = new ListAggregateCompliancePacksRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListAggregateCompliancePacksRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListAggregateCompliancePacksRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
 }

@@ -136,6 +136,13 @@ public class UpdateAggregateCompliancePackShrinkRequest extends TeaModel {
     public Integer riskLevel;
 
     /**
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
+     */
+    @NameInMap("Tag")
+    public String tagShrink;
+
+    /**
      * <p>The tag key of the resource that you want to evaluate by using the compliance package.</p>
      * 
      * <strong>example:</strong>
@@ -277,6 +284,14 @@ public class UpdateAggregateCompliancePackShrinkRequest extends TeaModel {
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
+    }
+
+    public UpdateAggregateCompliancePackShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
+        return this;
+    }
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
     public UpdateAggregateCompliancePackShrinkRequest setTagKeyScope(String tagKeyScope) {

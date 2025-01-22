@@ -23,6 +23,9 @@ public class ListAggregatorsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("Tag")
+    public java.util.List<ListAggregatorsRequestTag> tag;
+
     public static ListAggregatorsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAggregatorsRequest self = new ListAggregatorsRequest();
         return TeaModel.build(map, self);
@@ -42,6 +45,44 @@ public class ListAggregatorsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListAggregatorsRequest setTag(java.util.List<ListAggregatorsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListAggregatorsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListAggregatorsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAggregatorsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListAggregatorsRequestTag self = new ListAggregatorsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAggregatorsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAggregatorsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

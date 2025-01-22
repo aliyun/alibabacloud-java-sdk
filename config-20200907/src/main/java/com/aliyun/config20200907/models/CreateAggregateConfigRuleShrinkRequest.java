@@ -272,6 +272,9 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("SourceOwner")
     public String sourceOwner;
 
+    @NameInMap("Tag")
+    public String tagShrink;
+
     /**
      * <p>The logical relationship among the tag keys if you specify multiple tag keys for the <code>TagKeyScope</code> parameter. For example, if you set the <code>TagKeyScope</code> parameter to <code>ECS,OSS</code> and the TagKeyLogicScope parameter to <code>AND</code>, the rule applies to resources with both the <code>ECS</code> and <code>OSS</code> tag keys. Valid values:</p>
      * <ul>
@@ -502,6 +505,14 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     }
     public String getSourceOwner() {
         return this.sourceOwner;
+    }
+
+    public CreateAggregateConfigRuleShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
+        return this;
+    }
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
     public CreateAggregateConfigRuleShrinkRequest setTagKeyLogicScope(String tagKeyLogicScope) {
