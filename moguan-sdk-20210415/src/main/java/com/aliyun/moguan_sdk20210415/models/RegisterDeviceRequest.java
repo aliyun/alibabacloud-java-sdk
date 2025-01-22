@@ -4,18 +4,48 @@ package com.aliyun.moguan_sdk20210415.models;
 import com.aliyun.tea.*;
 
 public class RegisterDeviceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NWTtS623eqo6s070</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99daf4a623f2b623ae08e79d6d4bf686</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Extend")
     public java.util.Map<String, ?> extend;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SDKCodeTest01</p>
+     */
     @NameInMap("SdkCode")
     public String sdkCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D001</p>
+     */
     @NameInMap("UserDeviceId")
     public String userDeviceId;
 
