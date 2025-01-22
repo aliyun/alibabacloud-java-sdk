@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>注册设备</p>
+     * 
+     * @param tmpReq RegisterDeviceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RegisterDeviceResponse
+     */
     public RegisterDeviceResponse registerDeviceWithOptions(RegisterDeviceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         RegisterDeviceShrinkRequest request = new RegisterDeviceShrinkRequest();
@@ -69,9 +77,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterDeviceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterDeviceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RegisterDeviceResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>注册设备</p>
+     * 
+     * @param request RegisterDeviceRequest
+     * @return RegisterDeviceResponse
+     */
     public RegisterDeviceResponse registerDevice(RegisterDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.registerDeviceWithOptions(request, runtime);
