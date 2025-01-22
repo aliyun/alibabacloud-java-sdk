@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitDynamicChartJobRequest extends TeaModel {
     /**
+     * <p>The axis configurations. If XAxisFontInterval is set to 0 or left empty, the system automatically determines an optimal interval.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;,&quot;XAxisFontSize&quot;:&quot;30&quot;,&quot;YAxisFontSize&quot;:&quot;30&quot;,&quot;XAxisFontInterval&quot;:&quot;30&quot;,&quot;AxisColor&quot;:&quot;30&quot;}</p>
      */
@@ -12,6 +14,8 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     public String axisParams;
 
     /**
+     * <p>The chart background.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Color&quot;:&quot;#000000&quot;,&quot;ImageUrl&quot;:&quot;<a href="http://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.jpg%22%7D">http://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.jpg&quot;}</a></p>
      */
@@ -19,16 +23,28 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     public String background;
 
     /**
+     * <p>The chart configurations.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Style&quot;:&quot;Normal&quot;,&quot;TitleStartTime&quot;:&quot;3000&quot;,&quot;ChartStartTime&quot;:&quot;3000&quot;,&quot;VideoDuration&quot;:&quot;15000&quot;}</p>
      */
     @NameInMap("ChartConfig")
     public String chartConfig;
 
+    /**
+     * <p>The chart title.</p>
+     */
     @NameInMap("ChartTitle")
     public String chartTitle;
 
     /**
+     * <p>The chart type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Line: line chart</li>
+     * <li>Histogram: bar chart</li>
+     * <li>Pie: pie chart</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,13 +53,20 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     @NameInMap("ChartType")
     public String chartType;
 
+    /**
+     * <p>The data source.</p>
+     */
     @NameInMap("DataSource")
     public String dataSource;
 
+    /**
+     * <p>The job description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The input data for the chart.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +76,7 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     public String input;
 
     /**
+     * <p>The output configurations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,16 +85,27 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     @NameInMap("OutputConfig")
     public String outputConfig;
 
+    /**
+     * <p>The subtitle.</p>
+     */
     @NameInMap("Subtitle")
     public String subtitle;
 
+    /**
+     * <p>The job title.</p>
+     */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <p>Unit</p>
+     */
     @NameInMap("Unit")
     public String unit;
 
     /**
+     * <p>The custom data in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;user&quot;:&quot;data&quot;}</p>
      */

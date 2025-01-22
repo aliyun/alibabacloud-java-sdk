@@ -1,3 +1,28 @@
+2025-01-22 Version: 3.12.0
+- Support API AddMediaConnectFlowInput.
+- Support API AddMediaConnectFlowOutput.
+- Support API CreateLivePackageChannel.
+- Support API CreateLivePackageChannelGroup.
+- Support API CreateLivePackageOriginEndpoint.
+- Support API CreateMediaConnectFlow.
+- Support API DeleteLivePackageChannel.
+- Support API DeleteLivePackageChannelGroup.
+- Support API DeleteLivePackageOriginEndpoint.
+- Support API DeleteMediaConnectFlow.
+- Support API GetLivePackageChannel.
+- Support API GetLivePackageChannelGroup.
+- Support API GetLivePackageOriginEndpoint.
+- Support API GetMediaConnectFlow.
+- Support API ListLivePackageChannelGroups.
+- Support API ListLivePackageChannels.
+- Support API ListLivePackageOriginEndpoints.
+- Support API UpdateLivePackageChannel.
+- Support API UpdateLivePackageChannelCredentials.
+- Support API UpdateLivePackageChannelGroup.
+- Support API UpdateLivePackageOriginEndpoint.
+- Support API UpdateMediaConnectFlowStatus.
+
+
 2025-01-17 Version: 3.11.0
 - Support API GetMediaConvertJob.
 - Support API SubmitMediaConvertJob.
