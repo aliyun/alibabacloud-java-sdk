@@ -65,6 +65,36 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules extends TeaModel {
+        @NameInMap("RuleType")
+        public String ruleType;
+
+        @NameInMap("Target")
+        public String target;
+
+        public static ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules build(java.util.Map<String, ?> map) throws Exception {
+            ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules self = new ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules setRuleType(String ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules setTarget(String target) {
+            this.target = target;
+            return this;
+        }
+        public String getTarget() {
+            return this.target;
+        }
+
+    }
+
     public static class ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy extends TeaModel {
         @NameInMap("CustomProxy")
         public String customProxy;
@@ -86,6 +116,9 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
         @NameInMap("ProxyUserName")
         public String proxyUserName;
+
+        @NameInMap("Rules")
+        public java.util.List<ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules> rules;
 
         public static ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy build(java.util.Map<String, ?> map) throws Exception {
             ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy self = new ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy();
@@ -148,6 +181,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             return this.proxyUserName;
         }
 
+        public ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy setRules(java.util.List<ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules> rules) {
+            this.rules = rules;
+            return this;
+        }
+        public java.util.List<ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules> getRules() {
+            return this.rules;
+        }
+
     }
 
     public static class ListPolicyGroupsResponseBodyPolicyGroupModel extends TeaModel {
@@ -207,14 +248,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
          * <p>1080</p>
          */
         @NameInMap("SessionResolutionHeight")
-        public String sessionResolutionHeight;
+        public Integer sessionResolutionHeight;
 
         /**
          * <strong>example:</strong>
          * <p>1920</p>
          */
         @NameInMap("SessionResolutionWidth")
-        public String sessionResolutionWidth;
+        public Integer sessionResolutionWidth;
 
         public static ListPolicyGroupsResponseBodyPolicyGroupModel build(java.util.Map<String, ?> map) throws Exception {
             ListPolicyGroupsResponseBodyPolicyGroupModel self = new ListPolicyGroupsResponseBodyPolicyGroupModel();
@@ -293,19 +334,19 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             return this.policyGroupName;
         }
 
-        public ListPolicyGroupsResponseBodyPolicyGroupModel setSessionResolutionHeight(String sessionResolutionHeight) {
+        public ListPolicyGroupsResponseBodyPolicyGroupModel setSessionResolutionHeight(Integer sessionResolutionHeight) {
             this.sessionResolutionHeight = sessionResolutionHeight;
             return this;
         }
-        public String getSessionResolutionHeight() {
+        public Integer getSessionResolutionHeight() {
             return this.sessionResolutionHeight;
         }
 
-        public ListPolicyGroupsResponseBodyPolicyGroupModel setSessionResolutionWidth(String sessionResolutionWidth) {
+        public ListPolicyGroupsResponseBodyPolicyGroupModel setSessionResolutionWidth(Integer sessionResolutionWidth) {
             this.sessionResolutionWidth = sessionResolutionWidth;
             return this;
         }
-        public String getSessionResolutionWidth() {
+        public Integer getSessionResolutionWidth() {
             return this.sessionResolutionWidth;
         }
 

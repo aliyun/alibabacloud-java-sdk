@@ -274,6 +274,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("RenderingType")
         public String renderingType;
 
+        @NameInMap("SessionStatus")
+        public String sessionStatus;
+
         @NameInMap("Tags")
         public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelTags> tags;
 
@@ -504,6 +507,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getRenderingType() {
             return this.renderingType;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setSessionStatus(String sessionStatus) {
+            this.sessionStatus = sessionStatus;
+            return this;
+        }
+        public String getSessionStatus() {
+            return this.sessionStatus;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setTags(java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelTags> tags) {
