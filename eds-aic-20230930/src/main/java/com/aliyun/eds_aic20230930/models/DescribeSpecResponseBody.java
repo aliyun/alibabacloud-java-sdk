@@ -80,6 +80,12 @@ public class DescribeSpecResponseBody extends TeaModel {
         @NameInMap("Memory")
         public Integer memory;
 
+        @NameInMap("PhoneCount")
+        public String phoneCount;
+
+        @NameInMap("Resolution")
+        public String resolution;
+
         /**
          * <strong>example:</strong>
          * <p>acp.basic.small</p>
@@ -127,6 +133,22 @@ public class DescribeSpecResponseBody extends TeaModel {
         }
         public Integer getMemory() {
             return this.memory;
+        }
+
+        public DescribeSpecResponseBodySpecInfoModel setPhoneCount(String phoneCount) {
+            this.phoneCount = phoneCount;
+            return this;
+        }
+        public String getPhoneCount() {
+            return this.phoneCount;
+        }
+
+        public DescribeSpecResponseBodySpecInfoModel setResolution(String resolution) {
+            this.resolution = resolution;
+            return this;
+        }
+        public String getResolution() {
+            return this.resolution;
         }
 
         public DescribeSpecResponseBodySpecInfoModel setSpecId(String specId) {

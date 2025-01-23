@@ -96,8 +96,6 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>pg-b7bxrrwxkijjh****</p>
      */

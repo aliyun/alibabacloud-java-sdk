@@ -7,6 +7,9 @@ public class DescribeSpecRequest extends TeaModel {
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    @NameInMap("MatrixSpec")
+    public String matrixSpec;
+
     /**
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,6 +23,9 @@ public class DescribeSpecRequest extends TeaModel {
      */
     @NameInMap("NextToken")
     public String nextToken;
+
+    @NameInMap("SaleMode")
+    public String saleMode;
 
     @NameInMap("SpecIds")
     public java.util.List<String> specIds;
@@ -51,6 +57,14 @@ public class DescribeSpecRequest extends TeaModel {
         return this.bizRegionId;
     }
 
+    public DescribeSpecRequest setMatrixSpec(String matrixSpec) {
+        this.matrixSpec = matrixSpec;
+        return this;
+    }
+    public String getMatrixSpec() {
+        return this.matrixSpec;
+    }
+
     public DescribeSpecRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -65,6 +79,14 @@ public class DescribeSpecRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeSpecRequest setSaleMode(String saleMode) {
+        this.saleMode = saleMode;
+        return this;
+    }
+    public String getSaleMode() {
+        return this.saleMode;
     }
 
     public DescribeSpecRequest setSpecIds(java.util.List<String> specIds) {

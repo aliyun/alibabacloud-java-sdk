@@ -54,6 +54,12 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("NodeId")
+    public String nodeId;
+
+    @NameInMap("NodeName")
+    public String nodeName;
+
     /**
      * <strong>example:</strong>
      * <p>standard</p>
@@ -154,6 +160,22 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeAndroidInstancesRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    public DescribeAndroidInstancesRequest setNodeName(String nodeName) {
+        this.nodeName = nodeName;
+        return this;
+    }
+    public String getNodeName() {
+        return this.nodeName;
     }
 
     public DescribeAndroidInstancesRequest setSaleMode(String saleMode) {

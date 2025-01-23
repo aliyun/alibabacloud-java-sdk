@@ -14,6 +14,9 @@ public class DescribeImageListRequest extends TeaModel {
     @NameInMap("ImageName")
     public String imageName;
 
+    @NameInMap("ImagePackageType")
+    public String imagePackageType;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -66,6 +69,14 @@ public class DescribeImageListRequest extends TeaModel {
     }
     public String getImageName() {
         return this.imageName;
+    }
+
+    public DescribeImageListRequest setImagePackageType(String imagePackageType) {
+        this.imagePackageType = imagePackageType;
+        return this;
+    }
+    public String getImagePackageType() {
+        return this.imagePackageType;
     }
 
     public DescribeImageListRequest setImageType(String imageType) {
