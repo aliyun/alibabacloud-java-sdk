@@ -4,24 +4,21 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class RunStyleWritingShrinkRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("learningSamples")
     public String learningSamplesShrink;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
+    @NameInMap("processStage")
+    public String processStage;
+
     @NameInMap("referenceMaterials")
     public String referenceMaterialsShrink;
 
     @NameInMap("styleFeature")
     public String styleFeature;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
+    @NameInMap("useSearch")
+    public Boolean useSearch;
+
     @NameInMap("writingTheme")
     public String writingTheme;
 
@@ -38,6 +35,14 @@ public class RunStyleWritingShrinkRequest extends TeaModel {
         return this.learningSamplesShrink;
     }
 
+    public RunStyleWritingShrinkRequest setProcessStage(String processStage) {
+        this.processStage = processStage;
+        return this;
+    }
+    public String getProcessStage() {
+        return this.processStage;
+    }
+
     public RunStyleWritingShrinkRequest setReferenceMaterialsShrink(String referenceMaterialsShrink) {
         this.referenceMaterialsShrink = referenceMaterialsShrink;
         return this;
@@ -52,6 +57,14 @@ public class RunStyleWritingShrinkRequest extends TeaModel {
     }
     public String getStyleFeature() {
         return this.styleFeature;
+    }
+
+    public RunStyleWritingShrinkRequest setUseSearch(Boolean useSearch) {
+        this.useSearch = useSearch;
+        return this;
+    }
+    public Boolean getUseSearch() {
+        return this.useSearch;
     }
 
     public RunStyleWritingShrinkRequest setWritingTheme(String writingTheme) {
