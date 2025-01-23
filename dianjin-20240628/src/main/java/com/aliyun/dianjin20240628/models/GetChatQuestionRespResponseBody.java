@@ -136,6 +136,9 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
+        @NameInMap("oriContent")
+        public String oriContent;
+
         @NameInMap("reply")
         public String reply;
 
@@ -182,6 +185,14 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         }
         public String getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        public GetChatQuestionRespResponseBodyDataQuestionList setOriContent(String oriContent) {
+            this.oriContent = oriContent;
+            return this;
+        }
+        public String getOriContent() {
+            return this.oriContent;
         }
 
         public GetChatQuestionRespResponseBodyDataQuestionList setReply(String reply) {
