@@ -52,7 +52,7 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
     public UpdateDIAlarmRuleRequestNotificationSettings notificationSettings;
 
     /**
-     * <p>The conditions that can trigger the alert rule.</p>
+     * <p>The conditions that are used to trigger the alert rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TriggerConditions")
@@ -158,8 +158,8 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
         /**
          * <p>The recipient type.</p>
          * <ul>
-         * <li>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</li>
-         * <li>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</li>
+         * <li>If the alert notification method is Mail, Phone, or Sms, the recipient type is the Alibaba Cloud account ID.</li>
+         * <li>If the alert notification method is Ding, the recipient type is the DingTalk chatbot token.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
         public java.util.List<UpdateDIAlarmRuleRequestNotificationSettingsNotificationChannels> notificationChannels;
 
         /**
-         * <p>The alert notification recipients.</p>
+         * <p>The settings of alert notification recipients.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("NotificationReceivers")
@@ -279,8 +279,8 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
          * <p>The alert threshold.</p>
          * <ul>
          * <li>If the alert rule is for task status, you do not need to specify a threshold.</li>
-         * <li>If the alert rule is for failovers, specify the number of failovers.</li>
-         * <li>If the alert rule is for latency, specify the latency duration, in seconds.</li>
+         * <li>If the alert rule is for failovers, you must specify the number of failovers.</li>
+         * <li>If the alert rule is for latency, you must specify the latency duration, in seconds.</li>
          * </ul>
          * 
          * <strong>example:</strong>

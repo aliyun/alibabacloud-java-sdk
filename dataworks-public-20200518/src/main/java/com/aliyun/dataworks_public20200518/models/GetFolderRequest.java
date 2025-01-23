@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFolderRequest extends TeaModel {
     /**
-     * <p>The ID of the folder. You can call the <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a> operation to query the ID.</p>
-     * <p>You must specify either this parameter or the FolderPath parameter.</p>
+     * <p>The ID of the folder. You must configure either this parameter or the FolderPath parameter. You can call the <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a> operation to query the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>273****</p>
@@ -15,14 +14,16 @@ public class GetFolderRequest extends TeaModel {
     public String folderId;
 
     /**
-     * <p>The path of the folder. You can call the <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a> operation to query the path.</p>
-     * <p>You must specify either this parameter or the FolderId parameter.</p>
+     * <p>The path of the folder. You must configure either this parameter or the FolderId parameter. You can call the <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a> operation to query the path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
      */
     @NameInMap("FolderPath")
     public String folderPath;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID. You must specify either this parameter or ProjectIdentifier to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

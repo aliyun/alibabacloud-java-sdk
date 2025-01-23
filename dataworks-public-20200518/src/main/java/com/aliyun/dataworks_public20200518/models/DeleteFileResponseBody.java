@@ -14,6 +14,8 @@ public class DeleteFileResponseBody extends TeaModel {
     public Long deploymentId;
 
     /**
+     * <p>The ID of the file. You can use the ListFiles interface to query the ID of the corresponding file.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
      */

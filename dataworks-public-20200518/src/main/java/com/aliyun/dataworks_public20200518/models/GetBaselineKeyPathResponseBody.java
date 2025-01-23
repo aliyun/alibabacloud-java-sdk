@@ -11,6 +11,8 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
     public java.util.List<GetBaselineKeyPathResponseBodyData> data;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>1031203110005</p>
      */
@@ -18,6 +20,8 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified parameters are invalid.</p>
      */
@@ -34,6 +38,8 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The unique ID of the call. After an error occurs, you can troubleshoot the problem based on the ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
      */
@@ -41,6 +47,8 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -340,7 +348,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         public Integer inGroupId;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -359,6 +367,9 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node name</p>
          */
         @NameInMap("NodeName")
         public String nodeName;

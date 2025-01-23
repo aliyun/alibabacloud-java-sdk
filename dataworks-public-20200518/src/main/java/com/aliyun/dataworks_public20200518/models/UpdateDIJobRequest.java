@@ -139,6 +139,10 @@ public class UpdateDIJobRequest extends TeaModel {
     }
 
     public static class UpdateDIJobRequestJobSettingsCycleScheduleSettings extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>bizdate=$bizdate</p>
+         */
         @NameInMap("ScheduleParameters")
         public String scheduleParameters;
 
@@ -266,6 +270,10 @@ public class UpdateDIJobRequest extends TeaModel {
     }
 
     public static class UpdateDIJobRequestJobSettings extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;structInfo&quot;:&quot;MANAGED&quot;,&quot;storageType&quot;:&quot;TEXTFILE&quot;,&quot;writeMode&quot;:&quot;APPEND&quot;,&quot;partitionColumns&quot;:[{&quot;columnName&quot;:&quot;pt&quot;,&quot;columnType&quot;:&quot;STRING&quot;,&quot;comment&quot;:&quot;&quot;}],&quot;fieldDelimiter&quot;:&quot;&quot;}</p>
+         */
         @NameInMap("ChannelSettings")
         public String channelSettings;
 
@@ -400,6 +408,10 @@ public class UpdateDIJobRequest extends TeaModel {
         @NameInMap("RealtimeResourceSettings")
         public UpdateDIJobRequestResourceSettingsRealtimeResourceSettings realtimeResourceSettings;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("RequestedCu")
         public Float requestedCu;
 

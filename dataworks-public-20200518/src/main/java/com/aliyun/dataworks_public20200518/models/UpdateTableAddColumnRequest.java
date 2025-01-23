@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTableAddColumnRequest extends TeaModel {
     /**
-     * <p>The list of fields.</p>
+     * <p>The fields.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Column")
@@ -55,6 +55,9 @@ public class UpdateTableAddColumnRequest extends TeaModel {
 
         /**
          * <p>The display name of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chinese</p>
          */
         @NameInMap("ColumnNameCn")
         public String columnNameCn;
@@ -71,6 +74,9 @@ public class UpdateTableAddColumnRequest extends TeaModel {
 
         /**
          * <p>The comment of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Remarks</p>
          */
         @NameInMap("Comment")
         public String comment;

@@ -16,6 +16,9 @@ public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql synchronizes to hologres heartbeat alert</p>
      */
     @NameInMap("Description")
     public String description;
@@ -52,7 +55,7 @@ public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
     public String notificationSettingsShrink;
 
     /**
-     * <p>The conditions that can trigger the alert rule.</p>
+     * <p>The conditions that are used to trigger the alert rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TriggerConditions")

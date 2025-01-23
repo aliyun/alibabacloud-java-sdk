@@ -15,7 +15,7 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
     public DeployDISyncTaskResponseBodyData data;
 
     /**
-     * <p>The result of deploying the real-time synchronization node or data synchronization solution.</p>
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc1411515937635973****</p>
@@ -63,6 +63,9 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
 
     public static class DeployDISyncTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The reason for the failure to publish a data integration synchronization task.</p>
+         * <p>If the data integration synchronization task is published successfully, the return value of this parameter is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>submit and deploy fail.</p>
          */

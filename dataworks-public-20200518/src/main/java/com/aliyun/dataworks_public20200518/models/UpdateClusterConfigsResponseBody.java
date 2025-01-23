@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterConfigsResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the update was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +46,12 @@ public class UpdateClusterConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

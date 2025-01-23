@@ -78,6 +78,12 @@ public class CreateFileRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>If the directory specified in the parameter (FileFolderPath) does not exist in the system, whether the directory is automatically created. The values are as follows:</p>
+     * <ul>
+     * <li>true: If the directory does not exist, the directory is automatically created.</li>
+     * <li>false: If the directory does not exist, the call fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -156,12 +162,18 @@ public class CreateFileRequest extends TeaModel {
 
     /**
      * <p>The description of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Here is the file description</p>
      */
     @NameInMap("FileDescription")
     public String fileDescription;
 
     /**
      * <p>The path of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Business_process/First_Business_Process/MaxCompute/Folder_1/Folder_2</p>
      */
     @NameInMap("FileFolderPath")
     public String fileFolderPath;
@@ -169,6 +181,9 @@ public class CreateFileRequest extends TeaModel {
     /**
      * <p>The name of the file.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>File name</p>
      */
     @NameInMap("FileName")
     public String fileName;
@@ -185,6 +200,12 @@ public class CreateFileRequest extends TeaModel {
     public Integer fileType;
 
     /**
+     * <p>Whether to use the last cycle empty run attribute. The values are as follows:</p>
+     * <ul>
+     * <li>true: The empty run attribute of the previous cycle is used.</li>
+     * <li>false: The empty run attribute of the previous cycle is not used.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

@@ -38,12 +38,15 @@ public class DsgQuerySensResultRequest extends TeaModel {
 
     /**
      * <p>The name of a data category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Personal information</p>
      */
     @NameInMap("NodeName")
     public String nodeName;
 
     /**
-     * <p>The sorting method.</p>
+     * <p>The sorting method. Valid values:</p>
      * <ul>
      * <li>DESC</li>
      * <li>ASC</li>
@@ -128,6 +131,9 @@ public class DsgQuerySensResultRequest extends TeaModel {
 
     /**
      * <p>The name of the sensitive field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("SensitiveName")
     public String sensitiveName;

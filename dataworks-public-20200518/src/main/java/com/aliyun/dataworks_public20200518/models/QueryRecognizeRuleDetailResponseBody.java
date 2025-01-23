@@ -35,7 +35,7 @@ public class QueryRecognizeRuleDetailResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>

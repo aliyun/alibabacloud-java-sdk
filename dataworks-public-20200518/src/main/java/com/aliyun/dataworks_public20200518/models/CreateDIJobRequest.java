@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateDIJobRequest extends TeaModel {
     /**
      * <p>The description of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Synchronize mysql to hologres</p>
      */
     @NameInMap("Description")
     public String description;
@@ -17,7 +20,7 @@ public class CreateDIJobRequest extends TeaModel {
     public java.util.List<CreateDIJobRequestDestinationDataSourceSettings> destinationDataSourceSettings;
 
     /**
-     * <p>The type of the destination. Valid values: Hologres and Hive.</p>
+     * <p>The destination type. Valid values: Hologres and Hive.</p>
      * 
      * <strong>example:</strong>
      * <p>Hologres</p>
@@ -78,7 +81,7 @@ public class CreateDIJobRequest extends TeaModel {
     public java.util.List<CreateDIJobRequestSourceDataSourceSettings> sourceDataSourceSettings;
 
     /**
-     * <p>The type of the source. Set the value to MySQL.</p>
+     * <p>The source type. Set this parameter to MySQL.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -102,7 +105,7 @@ public class CreateDIJobRequest extends TeaModel {
     public java.util.List<CreateDIJobRequestTableMappings> tableMappings;
 
     /**
-     * <p>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</p>
+     * <p>The list of transformation rules that you want to apply to the synchronization objects selected from the source. Each entry in the list defines a transformation rule.</p>
      */
     @NameInMap("TransformationRules")
     public java.util.List<CreateDIJobRequestTransformationRules> transformationRules;
@@ -257,7 +260,7 @@ public class CreateDIJobRequest extends TeaModel {
 
     public static class CreateDIJobRequestJobSettingsColumnDataTypeSettings extends TeaModel {
         /**
-         * <p>The data type of a destination field.</p>
+         * <p>The data type of the destination field.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -266,7 +269,7 @@ public class CreateDIJobRequest extends TeaModel {
         public String destinationDataType;
 
         /**
-         * <p>The data type of a source field.</p>
+         * <p>The data type of the source field.</p>
          * 
          * <strong>example:</strong>
          * <p>bigint</p>
@@ -345,7 +348,7 @@ public class CreateDIJobRequest extends TeaModel {
 
     public static class CreateDIJobRequestJobSettingsDdlHandlingSettings extends TeaModel {
         /**
-         * <p>The processing policy for DDL messages. Valid values:</p>
+         * <p>The processing policy. Valid values:</p>
          * <ul>
          * <li>Ignore: ignores a DDL message.</li>
          * <li>Critical: reports an error for a DDL message.</li>
@@ -445,14 +448,14 @@ public class CreateDIJobRequest extends TeaModel {
         /**
          * <p>The name of the configuration item. Valid values:</p>
          * <ul>
-         * <li>runtime.offline.speed.limit.mb: indicates the maximum transmission rate that is allowed for a batch synchronization task. This configuration item takes effect only when runtime.offline.speed.limit.enable is set to true.</li>
-         * <li>runtime.offline.speed.limit.enable: indicates whether throttling is enabled for a batch synchronization task.</li>
-         * <li>dst.offline.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a batch synchronization task.</li>
-         * <li>runtime.offline.concurrent: indicates the maximum number of parallel threads that are allowed for a batch synchronization task.</li>
-         * <li>dst.realtime.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a real-time synchronization task.</li>
-         * <li>runtime.enable.auto.create.schema: indicates whether schemas are automatically created in the destination of a synchronization task.</li>
-         * <li>src.offline.datasource.max.connection: indicates the maximum number of connections that are allowed for reading data from the source of a batch synchronization task.</li>
-         * <li>runtime.realtime.concurrent: indicates the maximum number of parallel threads that are allowed for a real-time synchronization task.</li>
+         * <li>runtime.offline.speed.limit.mb: specifies the maximum transmission rate that is allowed for a batch synchronization task. This configuration item takes effect only when runtime.offline.speed.limit.enable is set to true.</li>
+         * <li>runtime.offline.speed.limit.enable: specifies whether throttling is enabled for a batch synchronization task.</li>
+         * <li>dst.offline.connection.max: specifies the maximum number of connections that are allowed for writing data to the destination of a batch synchronization task.</li>
+         * <li>runtime.offline.concurrent: specifies the maximum number of parallel threads that are allowed for a batch synchronization task.</li>
+         * <li>dst.realtime.connection.max: specifies the maximum number of connections that are allowed for writing data to the destination of a real-time synchronization task.</li>
+         * <li>runtime.enable.auto.create.schema: specifies whether schemas are automatically created in the destination of a synchronization task.</li>
+         * <li>src.offline.datasource.max.connection: specifies the maximum number of connections that are allowed for reading data from the source of a batch synchronization task.</li>
+         * <li>runtime.realtime.concurrent: specifies the maximum number of parallel threads that are allowed for a real-time synchronization task.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -651,6 +654,12 @@ public class CreateDIJobRequest extends TeaModel {
         @NameInMap("RealtimeResourceSettings")
         public CreateDIJobRequestResourceSettingsRealtimeResourceSettings realtimeResourceSettings;
 
+        /**
+         * <p>The number of compute units (CUs) in the resource group that are used for incremental and full synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("RequestedCu")
         public Float requestedCu;
 
@@ -735,7 +744,7 @@ public class CreateDIJobRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The type of the object. Valid values:</p>
+         * <p>The object type. Valid values:</p>
          * <ul>
          * <li>Table</li>
          * <li>Database</li>
@@ -772,7 +781,7 @@ public class CreateDIJobRequest extends TeaModel {
 
     public static class CreateDIJobRequestTableMappingsTransformationRules extends TeaModel {
         /**
-         * <p>The type of the action. Valid values:</p>
+         * <p>The action type. Valid values:</p>
          * <ul>
          * <li>DefinePrimaryKey</li>
          * <li>Rename</li>
@@ -845,13 +854,13 @@ public class CreateDIJobRequest extends TeaModel {
 
     public static class CreateDIJobRequestTableMappings extends TeaModel {
         /**
-         * <p>The rule used to select synchronization objects in the source. You can configure multiple rules.</p>
+         * <p>The rules used to select synchronization objects in the source.</p>
          */
         @NameInMap("SourceObjectSelectionRules")
         public java.util.List<CreateDIJobRequestTableMappingsSourceObjectSelectionRules> sourceObjectSelectionRules;
 
         /**
-         * <p>The transformation rules applied to the selected synchronization objects.</p>
+         * <p>The list of transformation rules that you want to apply to the synchronization objects selected from the source.</p>
          */
         @NameInMap("TransformationRules")
         public java.util.List<CreateDIJobRequestTableMappingsTransformationRules> transformationRules;
@@ -881,7 +890,7 @@ public class CreateDIJobRequest extends TeaModel {
 
     public static class CreateDIJobRequestTransformationRules extends TeaModel {
         /**
-         * <p>The type of the action. Valid values:</p>
+         * <p>The action type. Valid values:</p>
          * <ul>
          * <li>DefinePrimaryKey</li>
          * <li>Rename</li>
@@ -909,7 +918,7 @@ public class CreateDIJobRequest extends TeaModel {
          * <p>Example of a rule used to add a specific field to the destination and assign a value to the field: {&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}</p>
          * <ul>
          * <li>If you do not configure such a rule, no fields are added to the destination and no values are assigned by default.</li>
-         * <li>columnName: the name of the field that you want to add.</li>
+         * <li>columnName: the name of the field that is added.</li>
          * <li>columnValueType: the type of the value of the field. Valid values: Constant and Variable.</li>
          * <li>columnValue: the value of the field that you want to add. If you set the valueType parameter to Constant, set the columnValue parameter to a custom constant of the STRING type. If you set the valueType parameter to Variable, set the columnValue to a built-in variable. The following built-in variables are supported: EXECUTE_TIME (LONG data type), DB_NAME_SRC (STRING data type), DATASOURCE_NAME_SRC (STRING data type), TABLE_NAME_SRC (STRING data type), DB_NAME_DEST (STRING data type), DATASOURCE_NAME_DEST (STRING data type), TABLE_NAME_DEST (STRING data type), and DB_NAME_SRC_TRANSED (STRING data type). EXECUTE_TIME specifies the execution time. DB_NAME_SRC specifies the name of a source database. DATASOURCE_NAME_SRC specifies the name of the source. TABLE_NAME_SRC specifies the name of a source table. DB_NAME_DEST specifies the name of a destination database. DATASOURCE_NAME_DEST specifies the name of the destination. TABLE_NAME_DEST specifies the name of a destination table. DB_NAME_SRC_TRANSED specifies the database name obtained after a transformation.</li>
          * </ul>

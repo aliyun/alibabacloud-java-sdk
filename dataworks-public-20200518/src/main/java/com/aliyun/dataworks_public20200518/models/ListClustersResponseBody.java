@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
+    /**
+     * <p>The returns data.</p>
+     */
     @NameInMap("Data")
     public ListClustersResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>101011005</p>
      */
@@ -15,6 +20,8 @@ public class ListClustersResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Cluster.ClusterNotFound</p>
      */
@@ -22,6 +29,8 @@ public class ListClustersResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListClustersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-E****</p>
      */
@@ -36,6 +47,12 @@ public class ListClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,10 +113,15 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyData extends TeaModel {
+        /**
+         * <p>List of cluster information.</p>
+         */
         @NameInMap("Clusters")
         public java.util.List<Cluster> clusters;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -107,6 +129,8 @@ public class ListClustersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -114,6 +138,8 @@ public class ListClustersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

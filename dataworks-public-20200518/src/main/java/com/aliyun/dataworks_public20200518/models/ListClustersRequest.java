@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
     /**
+     * <p>The type of the cluster. Valid values:</p>
+     * <ul>
+     * <li>CDH: CDH cluster</li>
+     * <li>EMR: EMR cluster</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,8 @@ public class ListClustersRequest extends TeaModel {
     public String clusterType;
 
     /**
+     * <p>The page number. Pages start from page 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +28,8 @@ public class ListClustersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

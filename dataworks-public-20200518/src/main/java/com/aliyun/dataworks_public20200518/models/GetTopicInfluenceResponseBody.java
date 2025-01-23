@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetTopicInfluenceResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetTopicInfluenceResponseBodyData data;
 
@@ -97,6 +100,8 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
 
     public static class GetTopicInfluenceResponseBodyDataInfluences extends TeaModel {
         /**
+         * <p>The baseline ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -235,6 +240,9 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
     }
 
     public static class GetTopicInfluenceResponseBodyData extends TeaModel {
+        /**
+         * <p>The affected baseline instances.</p>
+         */
         @NameInMap("Influences")
         public java.util.List<GetTopicInfluenceResponseBodyDataInfluences> influences;
 

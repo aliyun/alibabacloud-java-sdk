@@ -52,7 +52,7 @@ public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
     public String notificationSettingsShrink;
 
     /**
-     * <p>The conditions that can trigger the alert rule.</p>
+     * <p>The conditions that are used to trigger the alert rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TriggerConditions")

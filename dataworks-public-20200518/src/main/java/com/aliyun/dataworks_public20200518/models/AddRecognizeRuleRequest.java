@@ -79,6 +79,9 @@ public class AddRecognizeRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the sensitivity level. You can call the <a href="https://help.aliyun.com/document_detail/2743948.html">QueryDefaultTemplate</a> operation to obtain the name of the sensitivity level in the related template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Confidential</p>
      */
     @NameInMap("LevelName")
     public String levelName;
@@ -96,6 +99,9 @@ public class AddRecognizeRuleRequest extends TeaModel {
     /**
      * <p>The information about the parent data category of the current data category. You can call the <a href="https://help.aliyun.com/document_detail/2746850.html">QuerySensClassification</a> operation to obtain the ID of a data category.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Customer/personal/personal_Natural _Information/personal basic_profile_information</p>
      */
     @NameInMap("NodeParent")
     public String nodeParent;
@@ -140,6 +146,9 @@ public class AddRecognizeRuleRequest extends TeaModel {
 
     /**
      * <p>The description of the sensitive field. Enter a string that is less than 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a sensitive field that identifies the name.</p>
      */
     @NameInMap("SensitiveDescription")
     public String sensitiveDescription;
@@ -147,6 +156,9 @@ public class AddRecognizeRuleRequest extends TeaModel {
     /**
      * <p>The name of the custom sensitive field. Enter a string that is less than 128 characters in length.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("SensitiveName")
     public String sensitiveName;

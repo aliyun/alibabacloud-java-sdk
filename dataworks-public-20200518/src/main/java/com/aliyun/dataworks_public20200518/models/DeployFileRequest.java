@@ -6,13 +6,15 @@ import com.aliyun.tea.*;
 public class DeployFileRequest extends TeaModel {
     /**
      * <p>The description of the deployment operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>First release task</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID.</p>
-     * <p>You must configure either the FileId parameter or the NodeId parameter.</p>
+     * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the file ID. You must configure either this parameter or the NodeId parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>

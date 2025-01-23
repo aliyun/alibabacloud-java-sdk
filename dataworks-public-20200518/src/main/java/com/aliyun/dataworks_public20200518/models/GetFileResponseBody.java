@@ -229,6 +229,9 @@ public class GetFileResponseBody extends TeaModel {
 
         /**
          * <p>The description of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My first DataWorks file</p>
          */
         @NameInMap("FileDescription")
         public String fileDescription;
@@ -243,6 +246,8 @@ public class GetFileResponseBody extends TeaModel {
         public String fileFolderId;
 
         /**
+         * <p>The ID of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000001</p>
          */
@@ -834,6 +839,8 @@ public class GetFileResponseBody extends TeaModel {
         public Long endEffectDate;
 
         /**
+         * <p>Scheduling configuration-&gt; previous cycle-&gt; whether to skip the upstream empty run attribute</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -951,6 +958,8 @@ public class GetFileResponseBody extends TeaModel {
         public Boolean stop;
 
         /**
+         * <p>Scheduling configuration timeout definition</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1134,6 +1143,8 @@ public class GetFileResponseBody extends TeaModel {
 
     public static class GetFileResponseBodyDataResourceDownloadLink extends TeaModel {
         /**
+         * <p>Resource download address link</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xx">http://xx</a></p>
          */
@@ -1168,6 +1179,9 @@ public class GetFileResponseBody extends TeaModel {
         @NameInMap("NodeConfiguration")
         public GetFileResponseBodyDataNodeConfiguration nodeConfiguration;
 
+        /**
+         * <p>Resource download address</p>
+         */
         @NameInMap("ResourceDownloadLink")
         public GetFileResponseBodyDataResourceDownloadLink resourceDownloadLink;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBaselineConfigsResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListBaselineConfigsResponseBodyData data;
@@ -353,7 +353,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
 
     public static class ListBaselineConfigsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of baselines.</p>
+         * <p>The baselines.</p>
          */
         @NameInMap("Baselines")
         public java.util.List<ListBaselineConfigsResponseBodyDataBaselines> baselines;

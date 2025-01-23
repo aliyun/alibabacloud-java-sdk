@@ -7,6 +7,9 @@ public class CreateDataServiceApiRequest extends TeaModel {
     /**
      * <p>The description of the API.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test API description</p>
      */
     @NameInMap("ApiDescription")
     public String apiDescription;
@@ -24,6 +27,9 @@ public class CreateDataServiceApiRequest extends TeaModel {
     /**
      * <p>The name of the API. The name must be 4 to 50 characters in length. The name can contain letters, digits, and underscores (_) and must start with a letter.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test API name</p>
      */
     @NameInMap("ApiName")
     public String apiName;
@@ -50,6 +56,9 @@ public class CreateDataServiceApiRequest extends TeaModel {
     /**
      * <p>The business process ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Business process ID</p>
      */
     @NameInMap("GroupId")
     public String groupId;

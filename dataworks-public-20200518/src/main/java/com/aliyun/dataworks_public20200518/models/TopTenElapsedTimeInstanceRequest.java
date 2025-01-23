@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TopTenElapsedTimeInstanceRequest extends TeaModel {
     /**
-     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace ID.</p>
+     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

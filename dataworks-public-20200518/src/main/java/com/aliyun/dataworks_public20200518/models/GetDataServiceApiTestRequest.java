@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceApiTestRequest extends TeaModel {
     /**
+     * <p>The Id of the test. TestDataServiceApi is executed asynchronously after the API is called and the test Id is returned. You can also use ListDataServiceApiTest to obtain the latest test Id.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

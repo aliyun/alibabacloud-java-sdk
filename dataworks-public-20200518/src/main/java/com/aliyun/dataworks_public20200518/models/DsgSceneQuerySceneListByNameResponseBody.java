@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The data entries returned.</p>
      */
     @NameInMap("Data")
     public java.util.List<DsgSceneQuerySceneListByNameResponseBodyData> data;
@@ -185,6 +185,9 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
 
         /**
          * <p>The description of the data masking scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test scenarios</p>
          */
         @NameInMap("Desc")
         public String desc;
