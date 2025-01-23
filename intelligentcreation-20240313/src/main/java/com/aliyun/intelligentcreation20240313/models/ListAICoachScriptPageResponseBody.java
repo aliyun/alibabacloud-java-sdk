@@ -184,6 +184,36 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
 
     }
 
+    public static class ListAICoachScriptPageResponseBodyListScoreConfig extends TeaModel {
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        @NameInMap("passScore")
+        public Integer passScore;
+
+        public static ListAICoachScriptPageResponseBodyListScoreConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListAICoachScriptPageResponseBodyListScoreConfig self = new ListAICoachScriptPageResponseBodyListScoreConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAICoachScriptPageResponseBodyListScoreConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ListAICoachScriptPageResponseBodyListScoreConfig setPassScore(Integer passScore) {
+            this.passScore = passScore;
+            return this;
+        }
+        public Integer getPassScore() {
+            return this.passScore;
+        }
+
+    }
+
     public static class ListAICoachScriptPageResponseBodyListWeights extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -302,6 +332,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @NameInMap("coverUrl")
         public String coverUrl;
 
+        @NameInMap("dialogueTextFlag")
+        public Boolean dialogueTextFlag;
+
         @NameInMap("dialogueTipFlag")
         public Boolean dialogueTipFlag;
 
@@ -354,6 +387,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
 
         @NameInMap("sampleDialogueList")
         public java.util.List<ListAICoachScriptPageResponseBodyListSampleDialogueList> sampleDialogueList;
+
+        @NameInMap("scoreConfig")
+        public ListAICoachScriptPageResponseBodyListScoreConfig scoreConfig;
 
         /**
          * <strong>example:</strong>
@@ -419,6 +455,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
         public String getCoverUrl() {
             return this.coverUrl;
+        }
+
+        public ListAICoachScriptPageResponseBodyList setDialogueTextFlag(Boolean dialogueTextFlag) {
+            this.dialogueTextFlag = dialogueTextFlag;
+            return this;
+        }
+        public Boolean getDialogueTextFlag() {
+            return this.dialogueTextFlag;
         }
 
         public ListAICoachScriptPageResponseBodyList setDialogueTipFlag(Boolean dialogueTipFlag) {
@@ -507,6 +551,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
         public java.util.List<ListAICoachScriptPageResponseBodyListSampleDialogueList> getSampleDialogueList() {
             return this.sampleDialogueList;
+        }
+
+        public ListAICoachScriptPageResponseBodyList setScoreConfig(ListAICoachScriptPageResponseBodyListScoreConfig scoreConfig) {
+            this.scoreConfig = scoreConfig;
+            return this;
+        }
+        public ListAICoachScriptPageResponseBodyListScoreConfig getScoreConfig() {
+            return this.scoreConfig;
         }
 
         public ListAICoachScriptPageResponseBodyList setScriptRecordId(String scriptRecordId) {
