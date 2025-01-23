@@ -818,6 +818,9 @@ public class DescribeVulListResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p> The value of this parameter is returned only if you use the Ultimate edition of Security Center that can protect container assets.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>c863dc93bed3843de9934d4346dc4****</p>
@@ -827,6 +830,9 @@ public class DescribeVulListResponseBody extends TeaModel {
 
         /**
          * <p>The namespace.</p>
+         * <blockquote>
+         * <p> If you use the Ultimate edition of Security Center, the value of this parameter is queried from container assets. If you do not use the Ultimate edition, the value of this parameter is queried from the Security Center agent.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -836,6 +842,9 @@ public class DescribeVulListResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the node.</p>
+         * <blockquote>
+         * <p> The value of this parameter is returned only if you use the Ultimate edition of Security Center that can protect container assets.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>i-bp1ifm6suw9mnbsr****</p>
@@ -845,6 +854,9 @@ public class DescribeVulListResponseBody extends TeaModel {
 
         /**
          * <p>The name of the node.</p>
+         * <blockquote>
+         * <p> The value of this parameter is returned only if you use the Ultimate edition of Security Center that can protect container assets.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>deployment-riskai-7b67d68975-m****</p>
@@ -854,6 +866,9 @@ public class DescribeVulListResponseBody extends TeaModel {
 
         /**
          * <p>The name of the pod.</p>
+         * <blockquote>
+         * <p> The value of this parameter is returned only if you use the Ultimate edition of Security Center that can protect container assets.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>deployment-riskai-7b67d68975-m****</p>
@@ -945,6 +960,12 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("PrimaryId")
         public Long primaryId;
 
+        /**
+         * <p>The progress of the vulnerability fixing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 

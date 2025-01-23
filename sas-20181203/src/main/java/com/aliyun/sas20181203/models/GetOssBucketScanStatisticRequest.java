@@ -10,6 +10,16 @@ public class GetOssBucketScanStatisticRequest extends TeaModel {
     @NameInMap("BucketNameList")
     public java.util.List<String> bucketNameList;
 
+    /**
+     * <p>The source of the data. Valid values:</p>
+     * <ul>
+     * <li><strong>API</strong></li>
+     * <li><strong>OSS</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>API</p>
+     */
     @NameInMap("Source")
     public String source;
 
