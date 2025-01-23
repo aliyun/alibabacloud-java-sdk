@@ -18,6 +18,9 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
     @NameInMap("endTime")
     public String endTime;
 
+    @NameInMap("evaluationRating")
+    public String evaluationRating;
+
     /**
      * <strong>example:</strong>
      * <p>{}</p>
@@ -74,6 +77,14 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public GetAICoachTaskSessionReportResponseBody setEvaluationRating(String evaluationRating) {
+        this.evaluationRating = evaluationRating;
+        return this;
+    }
+    public String getEvaluationRating() {
+        return this.evaluationRating;
     }
 
     public GetAICoachTaskSessionReportResponseBody setEvaluationResult(String evaluationResult) {
