@@ -7,8 +7,8 @@ public class UpdateQualityRuleRequest extends TeaModel {
     /**
      * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
      * <ul>
-     * <li>1: The monitoring rule is a strong rule.</li>
-     * <li>0: The monitoring rule is a weak rule. You can specify the strength of a monitoring rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</li>
+     * <li>1: indicates that the monitoring rule is a strong rule.</li>
+     * <li>0: indicates that the monitoring rule is a weak rule. You can specify whether a monitoring rule is a strong rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and nodes that are associated with the rule are blocked from running.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,6 +28,9 @@ public class UpdateQualityRuleRequest extends TeaModel {
 
     /**
      * <p>The description of the monitoring rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Verify the number of table rows</p>
      */
     @NameInMap("Comment")
     public String comment;

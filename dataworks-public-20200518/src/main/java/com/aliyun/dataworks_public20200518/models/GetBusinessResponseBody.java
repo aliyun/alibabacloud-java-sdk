@@ -120,12 +120,18 @@ public class GetBusinessResponseBody extends TeaModel {
 
         /**
          * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The first business process</p>
          */
         @NameInMap("BusinessName")
         public String businessName;
 
         /**
          * <p>The description of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is my first business process.</p>
          */
         @NameInMap("Description")
         public String description;

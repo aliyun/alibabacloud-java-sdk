@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterConfigsShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the cluster associated with DataWorks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class UpdateClusterConfigsShrinkRequest extends TeaModel {
     public Long clusterId;
 
     /**
+     * <p>The configuration type of the cluster. Valid values:</p>
+     * <ul>
+     * <li>SPARK_CONF: SPARK parameters</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateQualityRuleRequest extends TeaModel {
     /**
-     * <p>The strength type of the monitoring rule. Valid values: 0 and 1. The value 0 indicates that the monitoring rule is a weak rule. The value 1 indicates that the monitoring rule is a strong rule.</p>
+     * <p>The strength type of the monitoring rule. Valid values:</p>
+     * <ul>
+     * <li>0: The monitoring rule is a weak rule.</li>
+     * <li>1: The monitoring rule is a strong rule.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +29,9 @@ public class CreateQualityRuleRequest extends TeaModel {
 
     /**
      * <p>The description of the monitoring rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Verification</p>
      */
     @NameInMap("Comment")
     public String comment;

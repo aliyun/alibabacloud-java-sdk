@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDeploymentResponseBody extends TeaModel {
     /**
-     * <p>The data about the deployment task.</p>
+     * <p>The details of the deployment package.</p>
      */
     @NameInMap("Data")
     public GetDeploymentResponseBodyData data;
@@ -110,6 +110,8 @@ public class GetDeploymentResponseBody extends TeaModel {
 
     public static class GetDeploymentResponseBodyDataDeployedItems extends TeaModel {
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>507642378</p>
          */
@@ -117,6 +119,8 @@ public class GetDeploymentResponseBody extends TeaModel {
         public Long fileId;
 
         /**
+         * <p>The version of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -124,6 +128,16 @@ public class GetDeploymentResponseBody extends TeaModel {
         public Long fileVersion;
 
         /**
+         * <ul>
+         * <li>UNPUBLISHED(0): not published</li>
+         * <li>SUCCESS(1): Published</li>
+         * <li>ERROR(2): Publishing failed</li>
+         * <li>CLONED(3): successfully CLONED</li>
+         * <li>DEPLOY_ERROR(4): Publishing failed</li>
+         * <li>CLONING(5): CLONING</li>
+         * <li>REJECT(6): release rejected</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -195,6 +209,9 @@ public class GetDeploymentResponseBody extends TeaModel {
 
         /**
          * <p>The error message that was returned when the deployment task failed. In this case, the value of the Status parameter is 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -341,6 +358,9 @@ public class GetDeploymentResponseBody extends TeaModel {
     }
 
     public static class GetDeploymentResponseBodyData extends TeaModel {
+        /**
+         * <p>The deployed items.</p>
+         */
         @NameInMap("DeployedItems")
         public java.util.List<GetDeploymentResponseBodyDataDeployedItems> deployedItems;
 

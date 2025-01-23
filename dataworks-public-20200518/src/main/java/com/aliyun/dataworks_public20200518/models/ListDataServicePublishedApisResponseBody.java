@@ -977,7 +977,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
 
     public static class ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardConnection extends TeaModel {
         /**
-         * <p>The data source ID.</p>
+         * <p>The ID of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

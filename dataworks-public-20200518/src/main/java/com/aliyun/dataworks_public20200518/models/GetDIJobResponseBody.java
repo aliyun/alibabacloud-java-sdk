@@ -123,6 +123,12 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyDataJobSettingsCycleScheduleSettings extends TeaModel {
         /**
+         * <p>The synchronization type that requires periodic scheduling. Valid values:</p>
+         * <ul>
+         * <li>Full: full synchronization</li>
+         * <li>OfflineIncremental: batch incremental synchronization</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Full</p>
          */
@@ -130,6 +136,8 @@ public class GetDIJobResponseBody extends TeaModel {
         public String cycleMigrationType;
 
         /**
+         * <p>The scheduling parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>bizdate=$bizdate</p>
          */
@@ -161,7 +169,7 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyDataJobSettingsDdlHandlingSettings extends TeaModel {
         /**
-         * <p>The processing policy for DDL messages. Valid values:</p>
+         * <p>The processing policy. Valid values:</p>
          * <ul>
          * <li>Ignore: ignores a DDL message.</li>
          * <li>Critical: reports an error for a DDL message.</li>
@@ -269,6 +277,8 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyDataJobSettings extends TeaModel {
         /**
+         * <p>The channel control settings for the synchronization task. The value of this parameter is a JSON string.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;structInfo&quot;:&quot;MANAGED&quot;,&quot;storageType&quot;:&quot;TEXTFILE&quot;,&quot;writeMode&quot;:&quot;APPEND&quot;,&quot;partitionColumns&quot;:[{&quot;columnName&quot;:&quot;pt&quot;,&quot;columnType&quot;:&quot;STRING&quot;,&quot;comment&quot;:&quot;&quot;}],&quot;fieldDelimiter&quot;:&quot;&quot;}</p>
          */
@@ -281,6 +291,9 @@ public class GetDIJobResponseBody extends TeaModel {
         @NameInMap("ColumnDataTypeSettings")
         public java.util.List<GetDIJobResponseBodyDataJobSettingsColumnDataTypeSettings> columnDataTypeSettings;
 
+        /**
+         * <p>The settings for periodic scheduling.</p>
+         */
         @NameInMap("CycleScheduleSettings")
         public GetDIJobResponseBodyDataJobSettingsCycleScheduleSettings cycleScheduleSettings;
 
@@ -406,6 +419,12 @@ public class GetDIJobResponseBody extends TeaModel {
         @NameInMap("RealtimeResourceSettings")
         public GetDIJobResponseBodyDataResourceSettingsRealtimeResourceSettings realtimeResourceSettings;
 
+        /**
+         * <p>The number of compute units (CUs) in the resource group that are used for incremental and full synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("RequestedCu")
         public Float requestedCu;
 
@@ -490,7 +509,7 @@ public class GetDIJobResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>The type of the object. Valid values:</p>
+         * <p>The object type. Valid values:</p>
          * <ul>
          * <li>Table</li>
          * <li>Database</li>
@@ -527,12 +546,16 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyDataTableMappingsTransformationRules extends TeaModel {
         /**
-         * <p>The type of the action. Valid values:</p>
+         * <p>The action type. Valid values:</p>
          * <ul>
          * <li>DefinePrimaryKey</li>
          * <li>Rename</li>
          * <li>AddColumn</li>
          * <li>HandleDml</li>
+         * <li>DefineIncrementalCondition</li>
+         * <li>DefineCycleScheduleSettings</li>
+         * <li>DefineRuntimeSettings</li>
+         * <li>DefinePartitionKey</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -596,13 +619,13 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyDataTableMappings extends TeaModel {
         /**
-         * <p>The rule used to select synchronization objects in the source. Multiple rules may be returned.</p>
+         * <p>The list of rules used to select synchronization objects in the source.</p>
          */
         @NameInMap("SourceObjectSelectionRules")
         public java.util.List<GetDIJobResponseBodyDataTableMappingsSourceObjectSelectionRules> sourceObjectSelectionRules;
 
         /**
-         * <p>The transformation rules that are applied to the selected synchronization objects.</p>
+         * <p>The list of transformation rules that are applied to the synchronization objects selected from the source.</p>
          */
         @NameInMap("TransformationRules")
         public java.util.List<GetDIJobResponseBodyDataTableMappingsTransformationRules> transformationRules;
@@ -632,12 +655,16 @@ public class GetDIJobResponseBody extends TeaModel {
 
     public static class GetDIJobResponseBodyDataTransformationRules extends TeaModel {
         /**
-         * <p>The type of the action. Valid values:</p>
+         * <p>The action type. Valid values:</p>
          * <ul>
          * <li>DefinePrimaryKey</li>
          * <li>Rename</li>
          * <li>AddColumn</li>
          * <li>HandleDml</li>
+         * <li>DefineIncrementalCondition</li>
+         * <li>DefineCycleScheduleSettings</li>
+         * <li>DefineRuntimeSettings</li>
+         * <li>DefinePartitionKey</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -648,11 +675,55 @@ public class GetDIJobResponseBody extends TeaModel {
 
         /**
          * <p>The expression of the rule. The expression is a JSON string.</p>
-         * <p>Example of a renaming rule: {&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;,&quot;variables&quot;:[{&quot;variableName&quot;:&quot;srcDatabaseName&quot;,&quot;variableRules&quot;:[{&quot;from&quot;:&quot;fromdb&quot;,&quot;to&quot;:&quot;todb&quot;}]}]}</p>
-         * <p>expression: the expression of the renaming rule. The expression may contain the following variables: ${srcDatasourceName}, ${srcDatabaseName}, and ${srcTableName}. ${srcDatasourceName} indicates the name of the source. ${srcDatabaseName} indicates the name of a source database. ${srcTableName} indicates the name of a source table. variables: the generation rule for a variable used in the expression of the renaming rule. The default value of the specified variable is the original value of the object indicated by the variable. A group of string replacement rules used to change the original values may be returned. variableName: the name of the variable. The variable name is not enclosed in ${}. variableRules: the string replacement rules for variables. The system runs the string replacement rules in sequence for string replacement. from indicates the original string. to indicates the new string. Example of a rule used to add a specific field to the destination and assign a value to the field: {&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}</p>
-         * <p>If no rule of this type is configured, no fields are added to the destination and no values are assigned by default. columnName: the name of the field that is added. columnValueType: the value type of the field. Valid values: Constant and Variable. columnValue: the value of the field that is added. If the valueType parameter is set to Constant, the value of the columnValue parameter must be a constant of the STRING type. If the valueType parameter is set to Variable, the value of the columnValue parameter must be a built-in variable. The following built-in variables are supported: EXECUTE_TIME (LONG data type), DB_NAME_SRC (STRING data type), DATASOURCE_NAME_SRC (STRING data type), TABLE_NAME_SRC (STRING data type), DB_NAME_DEST (STRING data type), DATASOURCE_NAME_DEST (STRING data type), TABLE_NAME_DEST (STRING data type), and DB_NAME_SRC_TRANSED (STRING data type). EXECUTE_TIME indicates the execution time. DB_NAME_SRC indicates the name of a source database. DATASOURCE_NAME_SRC indicates the name of the source. TABLE_NAME_SRC indicates the name of a source table. DB_NAME_DEST indicates the name of a destination database. DATASOURCE_NAME_DEST indicates the name of the destination. TABLE_NAME_DEST indicates the name of a destination table. DB_NAME_SRC_TRANSED indicates the database name obtained after a transformation. Example of a rule used to specify primary key fields for a destination table: {&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}</p>
-         * <p>If no rule of this type is configured, the primary key fields in the mapped source table are used for the destination table by default. If the destination table is an existing table, Data Integration does not modify the schema of the destination table. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run. If the destination table is automatically created by the system, Data Integration automatically creates the schema of the destination table. The schema contains the primary key fields that you specify. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run. Example of a rule used to process DML messages: {&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}</p>
-         * <p>If no rule of this type is configured, the default processing policy for messages generated for insert, update, and delete operations is Normal. dmlType: the DML operation. Valid values: Insert, Update, and Delete. dmlAction: the processing policy for DML messages. Valid values: Normal, Ignore, Filter, and LogicalDelete. Filter indicates conditional processing. The value Filter is returned for the dmlAction parameter only when the dmlType parameter is set to Update or Delete. filterCondition: the condition used to filter DML messages. This parameter is returned only when the dmlAction parameter is set to Filter.</p>
+         * <ul>
+         * <li><p>Example of a renaming rule: <code>{&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;,&quot;variables&quot;:[{&quot;variableName&quot;:&quot;srcDatabaseName&quot;,&quot;variableRules&quot;:[{&quot;from&quot;:&quot;fromdb&quot;,&quot;to&quot;:&quot;todb&quot;}\\]}\\]}</code>.</p>
+         * <ul>
+         * <li><p>expression: the expression of the renaming rule. The expression may contain the following variables:</p>
+         * <ul>
+         * <li>${srcDatasourceName}</li>
+         * <li>${srcDatabaseName}</li>
+         * <li>${srcTableName}</li>
+         * </ul>
+         * </li>
+         * <li><p>variables: the generation rule for a variable used in the expression of the renaming rule. The default value of the specified variable is the original value of the object indicated by the variable. A group of string replacement rules used to change the original values may be returned.</p>
+         * <ul>
+         * <li>variableName: the name of the variable. The variable name is not enclosed in ${}.</li>
+         * <li>variableRules: the string replacement rules for variables. The system runs the string replacement rules in sequence. from indicates the original string. to indicates the new string.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>Example of a rule used to add a specific field to the destination and assign a value to the field: <code>{&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}\\]}</code>.</p>
+         * <p>If no rule of this type is configured, no fields are added to the destination and no values are assigned by default.</p>
+         * <ul>
+         * <li><p>columnName: the name of the field that is added.</p>
+         * </li>
+         * <li><p>columnValueType: the value type of the field. Valid values: Constant and Variable.</p>
+         * </li>
+         * <li><p>columnValue: the value of the field.</p>
+         * <ul>
+         * <li>If the value of the columnValueType parameter is Constant, the value of the columnValue parameter is a constant of the STRING data type.</li>
+         * <li>If the value of the columnValueType parameter is Variable, the value of the columnValue parameter is a built-in variable. The following built-in variables are supported: EXECUTE_TIME (LONG data type), DB_NAME_SRC (STRING data type), DATASOURCE_NAME_SRC (STRING data type), TABLE_NAME_SRC (STRING data type), DB_NAME_DEST (STRING data type), DATASOURCE_NAME_DEST (STRING data type), TABLE_NAME_DEST (STRING data type), and DB_NAME_SRC_TRANSED (STRING data type). EXECUTE_TIME indicates the execution time. DB_NAME_SRC indicates the name of a source database. DATASOURCE_NAME_SRC indicates the name of the source. TABLE_NAME_SRC indicates the name of a source table. DB_NAME_DEST indicates the name of a destination database. DATASOURCE_NAME_DEST indicates the name of the destination. TABLE_NAME_DEST indicates the name of a destination table. DB_NAME_SRC_TRANSED indicates the database name obtained after a transformation.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>Example of a rule used to specify primary key fields for a destination table: <code>{&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;\\]}</code>.</p>
+         * <p>If no rule of this type is configured, the primary key fields in the mapped source table are used for the destination table by default.</p>
+         * <ul>
+         * <li>If the destination table is an existing table, Data Integration does not modify the schema of the destination table. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run.</li>
+         * <li>If the destination table is automatically created by the system, Data Integration automatically creates the schema of the destination table. The schema contains the primary key fields that you specify. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run.</li>
+         * </ul>
+         * </li>
+         * <li><p>Example of a rule used to process DML messages: <code>{&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}\\]}</code>.</p>
+         * <p>If no rule of this type is configured, the default processing policy for messages generated for insert, update, and delete operations is Normal.</p>
+         * <ul>
+         * <li>dmlType: the DML operation. Valid values: Insert, Update, and Delete.</li>
+         * <li>dmlAction: the processing policy for DML messages. Valid values: Normal, Ignore, Filter, and LogicalDelete. Filter indicates conditional processing. The value Filter is returned for the dmlAction parameter only when the value of the dmlType parameter is Update or Delete.</li>
+         * <li>filterCondition: the condition used to filter DML messages. This parameter is returned only when the value of the dmlAction parameter is Filter.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}</p>
@@ -751,6 +822,9 @@ public class GetDIJobResponseBody extends TeaModel {
 
         /**
          * <p>The description of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Synchronize mysql to hologres</p>
          */
         @NameInMap("Description")
         public String description;
@@ -762,7 +836,7 @@ public class GetDIJobResponseBody extends TeaModel {
         public java.util.List<GetDIJobResponseBodyDataDestinationDataSourceSettings> destinationDataSourceSettings;
 
         /**
-         * <p>The type of the destination. The value Hologres is returned.</p>
+         * <p>The destination type. Valid values: Hologres and Hive.</p>
          * 
          * <strong>example:</strong>
          * <p>Hologres</p>
@@ -795,7 +869,7 @@ public class GetDIJobResponseBody extends TeaModel {
         public GetDIJobResponseBodyDataJobSettings jobSettings;
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The status of the synchronization task. Valid values:</p>
          * <ul>
          * <li>Finished</li>
          * <li>Initialized</li>
@@ -816,7 +890,9 @@ public class GetDIJobResponseBody extends TeaModel {
          * <ul>
          * <li>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</li>
          * <li>RealtimeIncremental: real-time incremental synchronization</li>
-         * <li>Full: one-time full synchronization</li>
+         * <li>Full: full synchronization</li>
+         * <li>OfflineIncremental: batch incremental synchronization</li>
+         * <li>FullAndOfflineIncremental: one-time full synchronization and batch incremental synchronization</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -853,7 +929,7 @@ public class GetDIJobResponseBody extends TeaModel {
         public java.util.List<GetDIJobResponseBodyDataSourceDataSourceSettings> sourceDataSourceSettings;
 
         /**
-         * <p>The type of the source. The value MySQL is returned.</p>
+         * <p>The source type. The value MySQL is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -886,7 +962,7 @@ public class GetDIJobResponseBody extends TeaModel {
         public java.util.List<GetDIJobResponseBodyDataTableMappings> tableMappings;
 
         /**
-         * <p>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</p>
+         * <p>The list of transformation rules that are applied to the synchronization objects selected from the source. Each entry in the list defines a transformation rule.</p>
          */
         @NameInMap("TransformationRules")
         public java.util.List<GetDIJobResponseBodyDataTransformationRules> transformationRules;

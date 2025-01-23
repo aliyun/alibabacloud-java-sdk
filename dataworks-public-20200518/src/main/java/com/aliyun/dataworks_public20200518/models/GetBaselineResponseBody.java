@@ -11,6 +11,8 @@ public class GetBaselineResponseBody extends TeaModel {
     public GetBaselineResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>1031203110005</p>
      */
@@ -18,6 +20,8 @@ public class GetBaselineResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified parameters are invalid</p>
      */
@@ -25,6 +29,8 @@ public class GetBaselineResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -32,6 +38,8 @@ public class GetBaselineResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecb967ec-c137-48a5-860****</p>
      */
@@ -39,6 +47,12 @@ public class GetBaselineResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -100,7 +114,7 @@ public class GetBaselineResponseBody extends TeaModel {
 
     public static class GetBaselineResponseBodyDataAlertSettingsDingRobots extends TeaModel {
         /**
-         * <p>Indicates whether all members were reminded by using the at sign (@).</p>
+         * <p>Whether @ everyone.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -109,7 +123,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public Boolean atAll;
 
         /**
-         * <p>The webhook URL of the DingTalk chatbot.</p>
+         * <p>DingTalk robot address</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></p>
@@ -142,7 +156,7 @@ public class GetBaselineResponseBody extends TeaModel {
 
     public static class GetBaselineResponseBodyDataAlertSettings extends TeaModel {
         /**
-         * <p>The interval at which an event alert notification is sent. Unit: seconds.</p>
+         * <p>The event alert interval, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -151,7 +165,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public Integer alertInterval;
 
         /**
-         * <p>The maximum number of times an event alert notification is sent.</p>
+         * <p>The maximum number of event alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,18 +174,16 @@ public class GetBaselineResponseBody extends TeaModel {
         public Integer alertMaximum;
 
         /**
-         * <p>The alert notification methods.</p>
+         * <p>Alert method list</p>
          */
         @NameInMap("AlertMethods")
         public java.util.List<String> alertMethods;
 
         /**
-         * <p>The details of the alert recipient.</p>
-         * <ul>
-         * <li>If the value of AlertRecipientType is OWNER, this parameter is left empty.</li>
-         * <li>If the value of AlertRecipientType is SHIFT_SCHEDULE, the value of this parameter is the ID of a shift schedule.</li>
-         * <li>If the value of AlertRecipientType is OTHER, the value of this parameter is the UIDs of specified personnel. Multiple UIDs are separated by commas (,).</li>
-         * </ul>
+         * <p>Alert recipient details.</p>
+         * <p>AlertRecipientType is OWNER: empty
+         * AlertRecipientType is SHIFT_SCHEDULE: duty table uid
+         * AlertRecipientType is OTHER: uid list, multiple UIDs are in English, split</p>
          * 
          * <strong>example:</strong>
          * <p>123123</p>
@@ -180,11 +192,11 @@ public class GetBaselineResponseBody extends TeaModel {
         public String alertRecipient;
 
         /**
-         * <p>The type of the alert recipient. Valid values:</p>
+         * <p>The type of alert recipient.</p>
          * <ul>
-         * <li>OWNER: indicates the node owner.</li>
-         * <li>OTHER: indicates specified personnel.</li>
-         * <li>SHIFT_SCHEDULE: indicates personnel in a shift schedule.</li>
+         * <li>OWNER: task owner</li>
+         * <li>OTHER: designated person</li>
+         * <li>SHIFT: SCHEDULE-duty table</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,10 +206,10 @@ public class GetBaselineResponseBody extends TeaModel {
         public String alertRecipientType;
 
         /**
-         * <p>The type of the alert. Valid values:</p>
+         * <p>Alert type</p>
          * <ul>
-         * <li>BASELINE: indicates a baseline alert.</li>
-         * <li>TOPIC: indicates an event alert.</li>
+         * <li>BASELINE: baseline</li>
+         * <li>TOPIC: event</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +219,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public String alertType;
 
         /**
-         * <p>Indicates whether the baseline alerting feature is enabled. The feature is specific to baselines. Valid values:</p>
+         * <p>The baseline alarm switch.</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -220,13 +232,13 @@ public class GetBaselineResponseBody extends TeaModel {
         public Boolean baselineAlertEnabled;
 
         /**
-         * <p>The DingTalk chatbots.</p>
+         * <p>DingTalk robot list.</p>
          */
         @NameInMap("DingRobots")
         public java.util.List<GetBaselineResponseBodyDataAlertSettingsDingRobots> dingRobots;
 
         /**
-         * <p>The end of the time range for silence. The time is in the HH:mm:ss format.</p>
+         * <p>The end time of the silence. The format is HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
@@ -235,7 +247,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public String silenceEndTime;
 
         /**
-         * <p>The beginning of the time range for silence. The time is in the HH:mm:ss format.</p>
+         * <p>The start time of the silence. Format: HH:mm:ss</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
@@ -244,13 +256,13 @@ public class GetBaselineResponseBody extends TeaModel {
         public String silenceStartTime;
 
         /**
-         * <p>The types of event alerts, which are event-specific configurations.</p>
+         * <p>The list of Event Alert types.</p>
          */
         @NameInMap("TopicTypes")
         public java.util.List<String> topicTypes;
 
         /**
-         * <p>The webhook URLs.</p>
+         * <p>webhook list.</p>
          */
         @NameInMap("Webhooks")
         public java.util.List<String> webhooks;
@@ -360,7 +372,7 @@ public class GetBaselineResponseBody extends TeaModel {
 
     public static class GetBaselineResponseBodyDataOverTimeSettings extends TeaModel {
         /**
-         * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, the value of this parameter is 1. For an hour-level baseline, the value of this parameter cannot exceed 24.</p>
+         * <p>The period corresponding to the commitment time. The space-based line is 1, and the hourly baseline can be configured for up to 24 cycles.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -369,7 +381,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public Integer cycle;
 
         /**
-         * <p>The committed completion time in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+         * <p>承诺时间，hh:mm格式，hh的取值范围为[0,47]，mm的取值范围为[0,59]。</p>
          * 
          * <strong>example:</strong>
          * <p>00:00</p>
@@ -402,6 +414,12 @@ public class GetBaselineResponseBody extends TeaModel {
 
     public static class GetBaselineResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the alerting feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -409,6 +427,8 @@ public class GetBaselineResponseBody extends TeaModel {
         public Boolean alertEnabled;
 
         /**
+         * <p>The alert margin threshold. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -422,16 +442,30 @@ public class GetBaselineResponseBody extends TeaModel {
         public java.util.List<GetBaselineResponseBodyDataAlertSettings> alertSettings;
 
         /**
+         * <p>The baseline ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
 
+        /**
+         * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test baseline</p>
+         */
         @NameInMap("BaselineName")
         public String baselineName;
 
         /**
+         * <p>The type of the baseline. Valid values:</p>
+         * <ul>
+         * <li>DAILY</li>
+         * <li>HOURLY</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DAILY</p>
          */
@@ -439,19 +473,29 @@ public class GetBaselineResponseBody extends TeaModel {
         public String baselineType;
 
         /**
+         * <p>Indicates whether the baseline is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The node IDs.</p>
+         */
         @NameInMap("NodeIds")
         public java.util.List<Long> nodeIds;
 
+        /**
+         * <p>The settings of the committed completion time of the baseline.</p>
+         */
         @NameInMap("OverTimeSettings")
         public java.util.List<GetBaselineResponseBodyDataOverTimeSettings> overTimeSettings;
 
         /**
+         * <p>The owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>9527952****</p>
          */
@@ -459,6 +503,8 @@ public class GetBaselineResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The priority of the baseline. Valid values: 1, 3, 5, 7, and 8.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -466,6 +512,8 @@ public class GetBaselineResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */

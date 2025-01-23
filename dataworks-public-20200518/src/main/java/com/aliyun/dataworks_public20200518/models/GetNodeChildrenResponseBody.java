@@ -209,6 +209,16 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         @NameInMap("SchedulerType")
         public String schedulerType;
 
+        /**
+         * <p>The scheduling dependency type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: same-cycle scheduling dependency</li>
+         * <li><strong>3</strong>: cross-cycle scheduling dependency</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StepType")
         public String stepType;
 
@@ -309,7 +319,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
 
     public static class GetNodeChildrenResponseBodyData extends TeaModel {
         /**
-         * <p>The list of descendant nodes.</p>
+         * <p>The descendant nodes.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<GetNodeChildrenResponseBodyDataNodes> nodes;

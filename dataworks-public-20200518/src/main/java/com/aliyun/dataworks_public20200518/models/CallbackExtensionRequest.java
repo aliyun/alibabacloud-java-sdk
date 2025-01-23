@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CallbackExtensionRequest extends TeaModel {
     /**
      * <p>The check message of the extension point event. If CheckResult is set to FAIL, you must provide the failure cause.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The xxx rule is hit. Modify it and try again.</p>
      */
     @NameInMap("CheckMessage")
     public String checkMessage;

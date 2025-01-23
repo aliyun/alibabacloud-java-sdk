@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNodeParentsResponseBody extends TeaModel {
     /**
-     * <p>The information about the ancestor nodes.</p>
+     * <p>The ancestor nodes.</p>
      */
     @NameInMap("Data")
     public GetNodeParentsResponseBodyData data;
@@ -38,7 +38,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. You can troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>asfasdfs-adfasdf-asfas-dfasdf-asdf</p>
@@ -209,6 +209,16 @@ public class GetNodeParentsResponseBody extends TeaModel {
         @NameInMap("SchedulerType")
         public String schedulerType;
 
+        /**
+         * <p>The scheduling dependency type.</p>
+         * <ul>
+         * <li><strong>0</strong>: same-cycle scheduling dependency</li>
+         * <li><strong>3</strong>: cross-cycle scheduling dependency</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StepType")
         public String stepType;
 

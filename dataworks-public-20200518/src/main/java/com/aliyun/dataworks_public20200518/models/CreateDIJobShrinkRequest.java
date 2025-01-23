@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateDIJobShrinkRequest extends TeaModel {
     /**
      * <p>The description of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Synchronize mysql to hologres</p>
      */
     @NameInMap("Description")
     public String description;
@@ -17,7 +20,7 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String destinationDataSourceSettingsShrink;
 
     /**
-     * <p>The type of the destination. Valid values: Hologres and Hive.</p>
+     * <p>The destination type. Valid values: Hologres and Hive.</p>
      * 
      * <strong>example:</strong>
      * <p>Hologres</p>
@@ -78,7 +81,7 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String sourceDataSourceSettingsShrink;
 
     /**
-     * <p>The type of the source. Set the value to MySQL.</p>
+     * <p>The source type. Set this parameter to MySQL.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -102,7 +105,7 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String tableMappingsShrink;
 
     /**
-     * <p>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</p>
+     * <p>The list of transformation rules that you want to apply to the synchronization objects selected from the source. Each entry in the list defines a transformation rule.</p>
      */
     @NameInMap("TransformationRules")
     public String transformationRulesShrink;

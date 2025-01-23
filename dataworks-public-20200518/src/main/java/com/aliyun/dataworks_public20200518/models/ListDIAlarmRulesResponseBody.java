@@ -85,10 +85,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
 
     public static class ListDIAlarmRulesResponseBodyDIAlarmRulePagingDIJobAlarmRulesNotificationSettingsNotificationReceivers extends TeaModel {
         /**
-         * <p>The recipient type.</p>
+         * <p>The recipient type. Valid values: AliyunUid and DingToken.</p>
          * <ul>
-         * <li>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</li>
-         * <li>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</li>
+         * <li>If the alert notification method is Mail, Phone, or Sms, the value of this parameter is <strong>AliyunUid</strong>, which indicates the Alibaba Cloud account ID.</li>
+         * <li>If the alert notification method is Ding, the value of this parameter is <strong>DingToken</strong>, which indicates the DingTalk chatbot token.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public java.util.List<ListDIAlarmRulesResponseBodyDIAlarmRulePagingDIJobAlarmRulesNotificationSettingsNotificationChannels> notificationChannels;
 
         /**
-         * <p>The alert notification recipients.</p>
+         * <p>The settings of alert notification recipients.</p>
          */
         @NameInMap("NotificationReceivers")
         public java.util.List<ListDIAlarmRulesResponseBodyDIAlarmRulePagingDIJobAlarmRulesNotificationSettingsNotificationReceivers> notificationReceivers;
@@ -302,7 +302,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public ListDIAlarmRulesResponseBodyDIAlarmRulePagingDIJobAlarmRulesNotificationSettings notificationSettings;
 
         /**
-         * <p>The conditions that can trigger the alert rule.</p>
+         * <p>The conditions that are used to trigger the alert rule.</p>
          */
         @NameInMap("TriggerConditions")
         public java.util.List<ListDIAlarmRulesResponseBodyDIAlarmRulePagingDIJobAlarmRulesTriggerConditions> triggerConditions;
@@ -372,7 +372,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
 
     public static class ListDIAlarmRulesResponseBodyDIAlarmRulePaging extends TeaModel {
         /**
-         * <p>The list of alert rules.</p>
+         * <p>The alert rules.</p>
          */
         @NameInMap("DIJobAlarmRules")
         public java.util.List<ListDIAlarmRulesResponseBodyDIAlarmRulePagingDIJobAlarmRules> DIJobAlarmRules;

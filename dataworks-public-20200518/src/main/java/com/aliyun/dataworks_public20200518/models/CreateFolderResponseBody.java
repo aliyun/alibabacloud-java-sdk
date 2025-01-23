@@ -14,6 +14,8 @@ public class CreateFolderResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
      */

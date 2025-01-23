@@ -91,6 +91,9 @@ public class DsgSceneAddOrUpdateSceneRequest extends TeaModel {
     public static class DsgSceneAddOrUpdateSceneRequestScenes extends TeaModel {
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test scenarios</p>
          */
         @NameInMap("desc")
         public String desc;

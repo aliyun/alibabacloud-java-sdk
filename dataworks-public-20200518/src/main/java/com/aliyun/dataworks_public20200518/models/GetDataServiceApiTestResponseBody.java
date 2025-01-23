@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDataServiceApiTestResponseBody extends TeaModel {
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("Data")
     public GetDataServiceApiTestResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>adssdsewe</p>
      */
@@ -37,6 +42,8 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
 
     public static class GetDataServiceApiTestResponseBodyData extends TeaModel {
         /**
+         * <p>Test API Id</p>
+         * 
          * <strong>example:</strong>
          * <p>12343</p>
          */
@@ -44,6 +51,8 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         public Long apiId;
 
         /**
+         * <p>Time consuming</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -51,6 +60,8 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         public String costTime;
 
         /**
+         * <p>Debug information</p>
+         * 
          * <strong>example:</strong>
          * <p>[&lt;span style=\&quot;color: #92D581;\&quot;&gt;INFO</span>] [16:15:13.240] resource group is 498774069027041[&lt;span style=\&quot;color: #92D581;\&quot;&gt;INFO</span>]</p>
          */
@@ -58,6 +69,8 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         public String debugInfo;
 
         /**
+         * <p>Node Debug information</p>
+         * 
          * <strong>example:</strong>
          * <p>[&lt;span style=\&quot;color: #92D581;\&quot;&gt;INFO</span>] [16:15:13.240] resource group is 498774069027041[&lt;span style=\&quot;color: #92D581;\&quot;&gt;INFO</span>]</p>
          */
@@ -65,6 +78,8 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         public String nodesDebugInfo;
 
         /**
+         * <p>Test API request parameters</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;name&quot;:&quot;test&quot;}</p>
          */
@@ -72,6 +87,8 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         public String paramMap;
 
         /**
+         * <p>The test API returns the code. If it is not completed, the data is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -79,6 +96,8 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         public Long retCode;
 
         /**
+         * <p>Return data</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;id&quot;:2}</p>
          */
@@ -86,6 +105,8 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         public String retResult;
 
         /**
+         * <p>Whether the task has been completed, including: RUNNING,FINISHED</p>
+         * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
          */

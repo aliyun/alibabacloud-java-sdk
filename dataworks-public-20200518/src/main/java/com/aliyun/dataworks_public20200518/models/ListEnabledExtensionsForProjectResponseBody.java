@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
     /**
-     * <p>The details of the extension.</p>
+     * <p>The extensions.</p>
      */
     @NameInMap("Extensions")
     public java.util.List<ListEnabledExtensionsForProjectResponseBodyExtensions> extensions;

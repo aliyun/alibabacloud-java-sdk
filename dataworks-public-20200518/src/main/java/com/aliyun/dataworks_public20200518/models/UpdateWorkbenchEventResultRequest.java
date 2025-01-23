@@ -18,7 +18,7 @@ public class UpdateWorkbenchEventResultRequest extends TeaModel {
      * <p>The cause of the check failure.</p>
      * 
      * <strong>example:</strong>
-     * <p>注意节点有效期</p>
+     * <p>SQL is too long</p>
      */
     @NameInMap("CheckResultTip")
     public String checkResultTip;

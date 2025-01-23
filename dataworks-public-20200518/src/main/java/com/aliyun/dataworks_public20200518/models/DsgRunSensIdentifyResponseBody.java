@@ -24,6 +24,9 @@ public class DsgRunSensIdentifyResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Missing parameter</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;

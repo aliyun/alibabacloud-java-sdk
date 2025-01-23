@@ -52,6 +52,9 @@ public class GetExtensionResponseBody extends TeaModel {
 
         /**
          * <p>The name of the extension point event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>File submission pre-event</p>
          */
         @NameInMap("EventName")
         public String eventName;
@@ -91,6 +94,9 @@ public class GetExtensionResponseBody extends TeaModel {
 
         /**
          * <p>The name of the event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>File change event</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
@@ -151,12 +157,18 @@ public class GetExtensionResponseBody extends TeaModel {
 
         /**
          * <p>The description of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description</p>
          */
         @NameInMap("ExtensionDesc")
         public String extensionDesc;
 
         /**
          * <p>The name of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Extension name</p>
          */
         @NameInMap("ExtensionName")
         public String extensionName;
@@ -172,6 +184,9 @@ public class GetExtensionResponseBody extends TeaModel {
 
         /**
          * <p>The options defined for the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Option configuration</p>
          */
         @NameInMap("OptionSetting")
         public String optionSetting;

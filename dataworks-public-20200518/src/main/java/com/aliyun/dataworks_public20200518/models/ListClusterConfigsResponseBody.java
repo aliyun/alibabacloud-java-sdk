@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListClusterConfigsResponseBody extends TeaModel {
+    /**
+     * <p>A list of configurations of cluster modules.</p>
+     */
     @NameInMap("ClusterConfigs")
     public java.util.List<ClusterConfig> clusterConfigs;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>101011005</p>
      */
@@ -15,6 +20,8 @@ public class ListClusterConfigsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Cluster.ClusterNotFound</p>
      */
@@ -22,6 +29,8 @@ public class ListClusterConfigsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListClusterConfigsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-E****</p>
      */
@@ -36,6 +47,12 @@ public class ListClusterConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

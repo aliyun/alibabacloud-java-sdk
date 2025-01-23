@@ -13,7 +13,12 @@ public class ListCheckProcessesRequest extends TeaModel {
     @NameInMap("EventCode")
     public String eventCode;
 
+    @NameInMap("MessageId")
+    public String messageId;
+
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123333232</p>
      */
@@ -59,6 +64,14 @@ public class ListCheckProcessesRequest extends TeaModel {
     }
     public String getEventCode() {
         return this.eventCode;
+    }
+
+    public ListCheckProcessesRequest setMessageId(String messageId) {
+        this.messageId = messageId;
+        return this;
+    }
+    public String getMessageId() {
+        return this.messageId;
     }
 
     public ListCheckProcessesRequest setOperator(String operator) {

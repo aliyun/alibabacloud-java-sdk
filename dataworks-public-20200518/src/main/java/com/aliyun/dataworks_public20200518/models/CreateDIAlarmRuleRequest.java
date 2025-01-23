@@ -16,6 +16,9 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
 
     /**
      * <p>The description of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql synchronizes to hologres heartbeat alert</p>
      */
     @NameInMap("Description")
     public String description;
@@ -52,7 +55,7 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
     public CreateDIAlarmRuleRequestNotificationSettings notificationSettings;
 
     /**
-     * <p>The conditions that can trigger the alert rule.</p>
+     * <p>The conditions that are used to trigger the alert rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TriggerConditions")
@@ -119,8 +122,7 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
         public java.util.List<String> channels;
 
         /**
-         * <p>The severity level.</p>
-         * <p>Valid values:</p>
+         * <p>The severity level. Valid values:</p>
          * <ul>
          * <li>Warning</li>
          * <li>Critical</li>
@@ -157,10 +159,10 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
 
     public static class CreateDIAlarmRuleRequestNotificationSettingsNotificationReceivers extends TeaModel {
         /**
-         * <p>The recipient type.</p>
+         * <p>The recipient type. Valid values: AliyunUid and DingToken.</p>
          * <ul>
-         * <li>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</li>
-         * <li>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</li>
+         * <li>If the alert notification method is Mail, Phone, or Sms, set this parameter to <strong>AliyunUid</strong>, which specifies the Alibaba Cloud account ID.</li>
+         * <li>If the alert notification method is Ding, set this parameter to <strong>DingToken</strong>, which indicates the DingTalk chatbot token.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,7 +218,7 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
         public java.util.List<CreateDIAlarmRuleRequestNotificationSettingsNotificationChannels> notificationChannels;
 
         /**
-         * <p>The alert notification recipients.</p>
+         * <p>The settings of alert notification recipients.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("NotificationReceivers")

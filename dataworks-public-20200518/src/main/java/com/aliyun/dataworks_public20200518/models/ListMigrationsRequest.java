@@ -27,7 +27,7 @@ public class ListMigrationsRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number. Default value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class ListMigrationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

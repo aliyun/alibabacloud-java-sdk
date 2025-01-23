@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySensClassificationRequest extends TeaModel {
     /**
-     * <p>The ID of the template defined by Data Security Guard. You can call the <a href="https://help.aliyun.com/document_detail/2743948.html">QueryDefaultTemplate</a> operation to obtain the template ID.</p>
+     * <p>The ID of the template defined by Data Security Guard. You can call the <a href="https://help.aliyun.com/document_detail/2743948.html">QueryDefaultTemplate</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

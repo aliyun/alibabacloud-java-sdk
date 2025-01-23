@@ -120,6 +120,9 @@ public class GetBaselineConfigResponseBody extends TeaModel {
 
         /**
          * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline name</p>
          */
         @NameInMap("BaselineName")
         public String baselineName;
@@ -197,7 +200,7 @@ public class GetBaselineConfigResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
