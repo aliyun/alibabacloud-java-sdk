@@ -22,11 +22,16 @@ public class UpdateArtifactShrinkRequest extends TeaModel {
 
     /**
      * <p>The properties of the deployment package.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ArtifactProperty")
     public String artifactPropertyShrink;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10CM943JP0EN9D51H</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -40,6 +45,17 @@ public class UpdateArtifactShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Permission fields are applicable to container image artifact and Helm Chart artifact. They can only change from Automatic to Public. Options:</p>
+     * <p>Public</p>
+     * <p>Automatic</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Public</p>
+     */
+    @NameInMap("PermissionType")
+    public String permissionType;
+
+    /**
      * <p>The IDs of the regions that support the deployment package.</p>
      */
     @NameInMap("SupportRegionIds")
@@ -47,7 +63,6 @@ public class UpdateArtifactShrinkRequest extends TeaModel {
 
     /**
      * <p>The version name of the deployment package.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -98,6 +113,14 @@ public class UpdateArtifactShrinkRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateArtifactShrinkRequest setPermissionType(String permissionType) {
+        this.permissionType = permissionType;
+        return this;
+    }
+    public String getPermissionType() {
+        return this.permissionType;
     }
 
     public UpdateArtifactShrinkRequest setSupportRegionIds(java.util.List<String> supportRegionIds) {

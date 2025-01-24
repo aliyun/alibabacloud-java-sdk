@@ -128,6 +128,16 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The type of the repository. Valid values:</p>
+         * <ul>
+         * <li><code>Private</code>: a private repository</li>
+         * <li><code>Public</code>: a public repository</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
+         */
         @NameInMap("RepoType")
         public String repoType;
 
