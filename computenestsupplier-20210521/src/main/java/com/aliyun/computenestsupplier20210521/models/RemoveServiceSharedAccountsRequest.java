@@ -48,6 +48,7 @@ public class RemoveServiceSharedAccountsRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>Whitelist accounts for service sharing.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserAliUids")

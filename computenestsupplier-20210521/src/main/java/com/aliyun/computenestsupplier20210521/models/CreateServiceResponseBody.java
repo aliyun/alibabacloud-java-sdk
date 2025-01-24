@@ -4,6 +4,9 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceResponseBody extends TeaModel {
+    /**
+     * <p>The dry run result.</p>
+     */
     @NameInMap("DryRunResult")
     public CreateServiceResponseBodyDryRunResult dryRunResult;
 
@@ -89,12 +92,29 @@ public class CreateServiceResponseBody extends TeaModel {
     }
 
     public static class CreateServiceResponseBodyDryRunResultRolePolicyMissingPolicy extends TeaModel {
+        /**
+         * <p>The Actions.</p>
+         */
         @NameInMap("Action")
         public java.util.List<String> action;
 
+        /**
+         * <p>Resource in ram policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Resource")
         public String resource;
 
+        /**
+         * <p>The service name in ram policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
@@ -130,9 +150,33 @@ public class CreateServiceResponseBody extends TeaModel {
     }
 
     public static class CreateServiceResponseBodyDryRunResultRolePolicy extends TeaModel {
+        /**
+         * <p>The missing ram policy for deploying role.</p>
+         */
         @NameInMap("MissingPolicy")
         public java.util.List<CreateServiceResponseBodyDryRunResultRolePolicyMissingPolicy> missingPolicy;
 
+        /**
+         * <p>The required ram policy for deploying role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;Statement&quot;: [{
+         *         &quot;Action&quot;: [&quot;oos:CancelExecutions&quot;, &quot;oos:DeleteExecutions&quot;, &quot;oos:GetTemplate&quot;, &quot;oos:ListExecutions&quot;, &quot;oos:ListTemplates&quot;, &quot;oos:NotifyExecution&quot;, &quot;oos:StartExecution&quot;],
+         *         &quot;Effect&quot;: &quot;Allow&quot;,
+         *         &quot;Resource&quot;: &quot;<em>&quot;
+         *     }, {
+         *         &quot;Action&quot;: [&quot;ram:PassRole&quot;],
+         *         &quot;Effect&quot;: &quot;Allow&quot;,
+         *         &quot;Resource&quot;: &quot;</em>&quot;
+         *     }, {
+         *         &quot;Action&quot;: [&quot;ros:CreateStack&quot;, &quot;ros:GetStack&quot;, &quot;ros:UpdateStack&quot;, &quot;ros:ListStackEvents&quot;, &quot;ros:ListStackResources&quot;, &quot;ros:ListStackResources&quot;, &quot;ros:DeleteStack&quot;, &quot;ram:GetRole&quot;],
+         *         &quot;Effect&quot;: &quot;Allow&quot;,
+         *         &quot;Resource&quot;: &quot;*&quot;
+         *     }],
+         *     &quot;Version&quot;: &quot;1&quot;
+         * }</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
@@ -160,6 +204,9 @@ public class CreateServiceResponseBody extends TeaModel {
     }
 
     public static class CreateServiceResponseBodyDryRunResult extends TeaModel {
+        /**
+         * <p>The required ram policy for deploying role.</p>
+         */
         @NameInMap("RolePolicy")
         public CreateServiceResponseBodyDryRunResultRolePolicy rolePolicy;
 

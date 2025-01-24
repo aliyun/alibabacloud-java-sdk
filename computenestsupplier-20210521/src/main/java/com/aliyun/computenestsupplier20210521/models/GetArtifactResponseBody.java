@@ -95,6 +95,19 @@ public class GetArtifactResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>Permission fields are applicable to container image artifact and Helm Chart artifact They can only change from Automatic to Public. Options:</p>
+     * <ul>
+     * <li>Public</li>
+     * <li>Automatic</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Public</p>
+     */
+    @NameInMap("PermissionType")
+    public String permissionType;
+
+    /**
      * <p>The distribution progress of the deployment package.</p>
      * 
      * <strong>example:</strong>
@@ -246,6 +259,14 @@ public class GetArtifactResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public GetArtifactResponseBody setPermissionType(String permissionType) {
+        this.permissionType = permissionType;
+        return this;
+    }
+    public String getPermissionType() {
+        return this.permissionType;
     }
 
     public GetArtifactResponseBody setProgress(String progress) {

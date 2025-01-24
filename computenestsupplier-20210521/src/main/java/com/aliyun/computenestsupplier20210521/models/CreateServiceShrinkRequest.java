@@ -60,6 +60,9 @@ public class CreateServiceShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Compliance check metadata.</p>
+     */
     @NameInMap("ComplianceMetadata")
     public String complianceMetadataShrink;
 
@@ -92,6 +95,16 @@ public class CreateServiceShrinkRequest extends TeaModel {
     @NameInMap("DeployType")
     public String deployType;
 
+    /**
+     * <p>Specifies whether to perform only a dry run for the request to check information. Valid values:</p>
+     * <ul>
+     * <li>true: performs a dry run for the request, but does not create a service.</li>
+     * <li>false: performs a dry run for the request, and create a service if the request passes the dry run.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -566,9 +579,21 @@ public class CreateServiceShrinkRequest extends TeaModel {
     }
 
     public static class CreateServiceShrinkRequestServiceInfoSoftwares extends TeaModel {
+        /**
+         * <p>The name of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The version of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.7</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -653,6 +678,9 @@ public class CreateServiceShrinkRequest extends TeaModel {
         @NameInMap("ShortDescription")
         public String shortDescription;
 
+        /**
+         * <p>The list of the software in the service.</p>
+         */
         @NameInMap("Softwares")
         public java.util.List<CreateServiceShrinkRequestServiceInfoSoftwares> softwares;
 

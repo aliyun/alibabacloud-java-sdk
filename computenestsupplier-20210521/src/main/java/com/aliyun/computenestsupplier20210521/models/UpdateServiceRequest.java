@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceRequest extends TeaModel {
     /**
-     * <p>Is need to update the artifacts</p>
+     * <p>The alert configurations of the service.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when you specify an alert policy for <strong>PolicyNames</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;CmsTemplateId\&quot;:1162921,\&quot;TemplateUrl\&quot;:\&quot;<a href="https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1760465342xxxxxx/template/c072ef50-6c03-4d9c-8f0e-d1c440xxxxxx.json%5C%5C%22%7D">https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1760465342xxxxxx/template/c072ef50-6c03-4d9c-8f0e-d1c440xxxxxx.json\\&quot;}</a></p>
@@ -14,12 +17,10 @@ public class UpdateServiceRequest extends TeaModel {
     public String alarmMetadata;
 
     /**
-     * <p>The service type. Valid values:</p>
+     * <p>The approval type of the service usage application. Valid values:</p>
      * <ul>
-     * <li>private: The service is a private service and is deployed within the account of a customer.</li>
-     * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
-     * <li>operation: The service is a hosted O\&amp;M service.</li>
-     * <li>poc: The service is a trial service.</li>
+     * <li>Manual: The application is manually approved.</li>
+     * <li>AutoPass: The application is automatically approved.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +30,7 @@ public class UpdateServiceRequest extends TeaModel {
     public String approvalType;
 
     /**
-     * <p>The options for update the service.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>788E7CP0EN9D51P</p>
@@ -38,7 +39,7 @@ public class UpdateServiceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>This parameter is not publicly accessible.</p>
+     * <p>The commodity details.</p>
      */
     @NameInMap("Commodity")
     public UpdateServiceRequestCommodity commodity;
@@ -50,7 +51,7 @@ public class UpdateServiceRequest extends TeaModel {
     public UpdateServiceRequestComplianceMetadata complianceMetadata;
 
     /**
-     * <p>The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O\&amp;M policies are supported.</p>
+     * <p>The deployment configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;EstimateTime\&quot;:null,\&quot;SupplierDeployMetadata\&quot;:{\&quot;DeployTimeout\&quot;:7200},\&quot;EnableVnc\&quot;:false}</p>
@@ -59,7 +60,12 @@ public class UpdateServiceRequest extends TeaModel {
     public String deployMetadata;
 
     /**
-     * <p>WB01286039</p>
+     * <p>The deployment type of the service. Valid values:</p>
+     * <p>ros: The service is deployed by using Resource Orchestration Service (ROS).
+     * terraform: The service is deployed by using Terraform.
+     * ack: The service is deployed by using Container Service for Kubernetes (ACK).
+     * spi: The service is deployed by calling a service provider interface (SPI).
+     * operation: The service is deployed by using a hosted O&amp;M service.</p>
      * 
      * <strong>example:</strong>
      * <p>ros</p>
@@ -81,15 +87,7 @@ public class UpdateServiceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The deployment type of the service. Valid values:</p>
-     * <ul>
-     * <li>ros: The service is deployed by using Resource Orchestration Service (ROS).</li>
-     * <li>terraform: The service is deployed by using Terraform.</li>
-     * <li>spi: The service is deployed by calling a service provider interface (SPI).</li>
-     * <li>operation: The service is deployed by using a hosted O\&amp;M service.</li>
-     * <li>container: The service is deployed by using a container.</li>
-     * <li>pkg: The service is deployed by using a package.</li>
-     * </ul>
+     * <p>The duration for which hosted O\&amp;M is implemented. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>259200</p>
@@ -98,7 +96,14 @@ public class UpdateServiceRequest extends TeaModel {
     public Long duration;
 
     /**
-     * <p>The version name.</p>
+     * <p>Specifies whether to enable the hosted O\&amp;M feature for the service. Default value: false. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required if you set <strong>ServiceType</strong> to <strong>private</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -107,7 +112,7 @@ public class UpdateServiceRequest extends TeaModel {
     public Boolean isSupportOperated;
 
     /**
-     * <p>The duration for which hosted O\&amp;M is implemented. Unit: seconds.</p>
+     * <p>The license metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>Metering Item Configuration Information (Cloud Marketplace - Pay-As-You-Go Use)</p>
@@ -116,7 +121,7 @@ public class UpdateServiceRequest extends TeaModel {
     public String licenseMetadata;
 
     /**
-     * <p>This parameter is not publicly accessible.</p>
+     * <p>The logging configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>Specifies whether to support distribution. Valid values:</p>
@@ -129,7 +134,7 @@ public class UpdateServiceRequest extends TeaModel {
     public String logMetadata;
 
     /**
-     * <p>{\&quot;RetentionDays\&quot;:3}</p>
+     * <p>The hosted O\&amp;M configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;PrometheusConfigMap\&quot;:{\&quot;Custom_Image_Ecs\&quot;:{\&quot;EnablePrometheus\&quot;:false}}}</p>
@@ -138,7 +143,7 @@ public class UpdateServiceRequest extends TeaModel {
     public String operationMetadata;
 
     /**
-     * <p>The package name.</p>
+     * <p>The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O\&amp;M policies are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>policyName1, policyName2</p>
@@ -147,44 +152,122 @@ public class UpdateServiceRequest extends TeaModel {
     public String policyNames;
 
     /**
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Whether resell is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Resellable")
     public Boolean resellable;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service-1dda29c3eca648xxxxxx</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The service details.</p>
+     */
     @NameInMap("ServiceInfo")
     public java.util.List<UpdateServiceRequestServiceInfo> serviceInfo;
 
+    /**
+     * <p>The service type. Valid values:</p>
+     * <ul>
+     * <li>private: The service is a private service and is deployed within the account of a customer.</li>
+     * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
+     * <li>operation: The service is a hosted O\&amp;M service.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>private</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
+    /**
+     * <p>The service version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    /**
+     * <p>The permission type of the deployment URL. Valid values:</p>
+     * <ul>
+     * <li>Public: All users can go to the URL to create a service instance or a trial service instance.</li>
+     * <li>Restricted: Only users in the whitelist can go to the URL to create a service instance or a trial service instance.</li>
+     * <li>OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a service instance.</li>
+     * <li>OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.</li>
+     * <li>Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Public</p>
+     */
     @NameInMap("ShareType")
     public String shareType;
 
+    /**
+     * <p>The type of the tenant. Valid values:</p>
+     * <ul>
+     * <li>SingleTenant</li>
+     * <li>MultiTenant</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SingleTenant</p>
+     */
     @NameInMap("TenantType")
     public String tenantType;
 
+    /**
+     * <p>The trial duration. Unit: day. The maximum trial duration cannot exceed 30 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("TrialDuration")
     public Integer trialDuration;
 
+    /**
+     * <p>The update option.</p>
+     */
     @NameInMap("UpdateOption")
     public UpdateServiceRequestUpdateOption updateOption;
 
+    /**
+     * <p>The metadata about the upgrade.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;Description\&quot;:\&quot;xxx\&quot;,\&quot;SupportRollback\&quot;:true,\&quot;SupportUpgradeFromVersions\&quot;:[],\&quot;UpgradeComponents\&quot;:[\&quot;Configuration\&quot;]}</p>
+     */
     @NameInMap("UpgradeMetadata")
     public String upgradeMetadata;
 
+    /**
+     * <p>The version name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Draft</p>
+     */
     @NameInMap("VersionName")
     public String versionName;
 
@@ -403,20 +486,16 @@ public class UpdateServiceRequest extends TeaModel {
 
     public static class UpdateServiceRequestCommodityComponentsMappings extends TeaModel {
         /**
-         * <p>The language of the service. Valid values:</p>
-         * <ul>
-         * <li>zh-CN: Chinese</li>
-         * <li>en-US: English</li>
-         * </ul>
+         * <p>This parameter is not available to the public.</p>
          */
         @NameInMap("Mappings")
         public java.util.Map<String, String> mappings;
 
         /**
-         * <p>{ &quot;Logstores&quot;: [ { &quot;LogstoreName&quot;: &quot;access-log&quot;, &quot;LogPath&quot;: &quot;/home/admin/app/logs&quot;, # This parameter is not required for containers. Configure the parameter in the YAML file. &quot;FilePattern&quot;: &quot;access.log\*&quot; # This parameter is not required for containers. Configure the parameter in the YAML file. } ] }</p>
+         * <p>This parameter is not available to the public.</p>
          * 
          * <strong>example:</strong>
-         * <p>此参数不对外开放</p>
+         * <p>This parameter is not available to the public.</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
@@ -446,7 +525,7 @@ public class UpdateServiceRequest extends TeaModel {
 
     public static class UpdateServiceRequestCommodityMeteringEntityExtraInfos extends TeaModel {
         /**
-         * <p>The description of the service.</p>
+         * <p>Metering entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cmgj0006xxxx-Memory-1</p>
@@ -455,7 +534,7 @@ public class UpdateServiceRequest extends TeaModel {
         public String entityId;
 
         /**
-         * <p>Metering Item Configuration Information (Cloud Marketplace - Pay-As-You-Go Use)</p>
+         * <p>Metric name, required when type is ComputeNestBill or ComputeNestPrometheus.</p>
          * 
          * <strong>example:</strong>
          * <p>VirtualCpu/ecs.InstanceType</p>
@@ -464,7 +543,7 @@ public class UpdateServiceRequest extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The service details.</p>
+         * <p>Promql statement.</p>
          * 
          * <strong>example:</strong>
          * <p>avg_over_time(sum(rate(container_cpu_usage_seconds_total{namespace=~&quot;ALIYUN::StackName&quot;}[2m]))[1h:10s])</p>
@@ -473,7 +552,13 @@ public class UpdateServiceRequest extends TeaModel {
         public String promql;
 
         /**
-         * <p>Product Specifications and Template/specification mapping Relationships (Cloud Marketplace - Pay-As-You-Go Use)</p>
+         * <p>Type. Valid values:</p>
+         * <ul>
+         * <li>Custom</li>
+         * <li>ComputeNestBill</li>
+         * <li>ComputeNestPrometheus</li>
+         * <li>ComputeNestTime</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -522,13 +607,13 @@ public class UpdateServiceRequest extends TeaModel {
 
     public static class UpdateServiceRequestCommodityMeteringEntityMappings extends TeaModel {
         /**
-         * <p>计量项ID</p>
+         * <p>Metering entity IDs.</p>
          */
         @NameInMap("EntityIds")
         public java.util.List<String> entityIds;
 
         /**
-         * <p>套餐名称</p>
+         * <p>The specification name.</p>
          * 
          * <strong>example:</strong>
          * <p>This parameter is not publicly accessible.</p>
@@ -537,7 +622,7 @@ public class UpdateServiceRequest extends TeaModel {
         public String specificationName;
 
         /**
-         * <p>模板名称</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>The service ID.</p>
@@ -578,7 +663,7 @@ public class UpdateServiceRequest extends TeaModel {
 
     public static class UpdateServiceRequestCommoditySpecificationMappings extends TeaModel {
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>Specification code.</p>
          * 
          * <strong>example:</strong>
          * <p>yuncode5767800001</p>
@@ -587,7 +672,7 @@ public class UpdateServiceRequest extends TeaModel {
         public String specificationCode;
 
         /**
-         * <p>套餐名称</p>
+         * <p>The name of the package specification.</p>
          * 
          * <strong>example:</strong>
          * <p>Type, value：</p>
@@ -602,7 +687,7 @@ public class UpdateServiceRequest extends TeaModel {
         public String specificationName;
 
         /**
-         * <p>模板名称</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>Product Specifications and Template/specification mapping Relationships (Cloud Marketplace - Subscription/Permanent Use)</p>
@@ -643,25 +728,25 @@ public class UpdateServiceRequest extends TeaModel {
 
     public static class UpdateServiceRequestCommodity extends TeaModel {
         /**
-         * <p>The ID of the entity.</p>
+         * <p>This parameter is not available to the public.</p>
          */
         @NameInMap("ComponentsMappings")
         public java.util.List<UpdateServiceRequestCommodityComponentsMappings> componentsMappings;
 
         /**
-         * <p>This parameter is not publicly accessible.</p>
+         * <p>Metering entity extra information.</p>
          */
         @NameInMap("MeteringEntityExtraInfos")
         public java.util.List<UpdateServiceRequestCommodityMeteringEntityExtraInfos> meteringEntityExtraInfos;
 
         /**
-         * <p>The template name.</p>
+         * <p>Binding relationship between templates/specifications and metering dimensions (marketplace - PayAsYouGo)</p>
          */
         @NameInMap("MeteringEntityMappings")
         public java.util.List<UpdateServiceRequestCommodityMeteringEntityMappings> meteringEntityMappings;
 
         /**
-         * <p>SaaS Boost配置信息</p>
+         * <p>SaaS Boost configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -670,7 +755,7 @@ public class UpdateServiceRequest extends TeaModel {
         public String saasBoostConfig;
 
         /**
-         * <p>avg_over_time(sum(rate(container_cpu_usage_seconds_total{namespace=~&quot;ALIYUN::StackName&quot;}[2m]))[1h:10s])</p>
+         * <p>Product specifications and template/package mappings (Used in marketplace - subscription scenario)</p>
          */
         @NameInMap("SpecificationMappings")
         public java.util.List<UpdateServiceRequestCommoditySpecificationMappings> specificationMappings;
@@ -724,7 +809,7 @@ public class UpdateServiceRequest extends TeaModel {
 
     public static class UpdateServiceRequestComplianceMetadata extends TeaModel {
         /**
-         * <p>The compliance package is selected.</p>
+         * <p>The compliance pack.</p>
          */
         @NameInMap("CompliancePacks")
         public java.util.List<String> compliancePacks;
@@ -745,9 +830,21 @@ public class UpdateServiceRequest extends TeaModel {
     }
 
     public static class UpdateServiceRequestServiceInfoAgreements extends TeaModel {
+        /**
+         * <p>Protocol name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Protocol url.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyun.com/xxxxxxxx.html">https://aliyun.com/xxxxxxxx.html</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -775,9 +872,21 @@ public class UpdateServiceRequest extends TeaModel {
     }
 
     public static class UpdateServiceRequestServiceInfoSoftwares extends TeaModel {
+        /**
+         * <p>The name of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The version of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.7</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -805,24 +914,64 @@ public class UpdateServiceRequest extends TeaModel {
     }
 
     public static class UpdateServiceRequestServiceInfo extends TeaModel {
+        /**
+         * <p>Protocol document information about the service.</p>
+         */
         @NameInMap("Agreements")
         public java.util.List<UpdateServiceRequestServiceInfoAgreements> agreements;
 
+        /**
+         * <p>The URL of the service icon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://img.tidb.oss.url">http://img.tidb.oss.url</a></p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <p>The language of the service. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
+         */
         @NameInMap("Locale")
         public String locale;
 
+        /**
+         * <p>The URL of the detailed description of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://description.tidb.oss.url">http://description.tidb.oss.url</a></p>
+         */
         @NameInMap("LongDescriptionUrl")
         public String longDescriptionUrl;
 
+        /**
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Metric Name, filled in when Type is ComputeNestBill or ComputeNestPrometheus</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The description of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The URL of the detailed description of the service.</p>
+         */
         @NameInMap("ShortDescription")
         public String shortDescription;
 
+        /**
+         * <p>The list of the software in the service.</p>
+         */
         @NameInMap("Softwares")
         public java.util.List<UpdateServiceRequestServiceInfoSoftwares> softwares;
 
@@ -890,9 +1039,25 @@ public class UpdateServiceRequest extends TeaModel {
     }
 
     public static class UpdateServiceRequestUpdateOption extends TeaModel {
+        /**
+         * <p>Whether to update artifact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("UpdateArtifact")
         public Boolean updateArtifact;
 
+        /**
+         * <p>Update from. Valid values:</p>
+         * <ul>
+         * <li>CODE</li>
+         * <li>PARAMETERS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PARAMETERS</p>
+         */
         @NameInMap("UpdateFrom")
         public String updateFrom;
 

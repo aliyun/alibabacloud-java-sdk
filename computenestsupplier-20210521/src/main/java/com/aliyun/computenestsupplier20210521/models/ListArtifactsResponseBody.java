@@ -135,6 +135,15 @@ public class ListArtifactsResponseBody extends TeaModel {
 
     public static class ListArtifactsResponseBodyArtifacts extends TeaModel {
         /**
+         * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;CodeRepo\&quot;:{\&quot;Owner\&quot;:\&quot;wenle\&quot;,\&quot;Platform\&quot;:\&quot;github\&quot;,\&quot;Branch\&quot;:\&quot;main\&quot;,\&quot;RepoName\&quot;:\&quot;aliyun-computenest/java-springboot-demo\&quot;}}</p>
+         */
+        @NameInMap("ArtifactBuildProperty")
+        public String artifactBuildProperty;
+
+        /**
          * <p>The ID of the deployment package.</p>
          * 
          * <strong>example:</strong>
@@ -223,6 +232,14 @@ public class ListArtifactsResponseBody extends TeaModel {
         public static ListArtifactsResponseBodyArtifacts build(java.util.Map<String, ?> map) throws Exception {
             ListArtifactsResponseBodyArtifacts self = new ListArtifactsResponseBodyArtifacts();
             return TeaModel.build(map, self);
+        }
+
+        public ListArtifactsResponseBodyArtifacts setArtifactBuildProperty(String artifactBuildProperty) {
+            this.artifactBuildProperty = artifactBuildProperty;
+            return this;
+        }
+        public String getArtifactBuildProperty() {
+            return this.artifactBuildProperty;
         }
 
         public ListArtifactsResponseBodyArtifacts setArtifactId(String artifactId) {
