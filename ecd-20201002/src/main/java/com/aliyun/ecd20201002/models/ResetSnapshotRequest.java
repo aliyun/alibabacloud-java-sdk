@@ -50,6 +50,9 @@ public class ResetSnapshotRequest extends TeaModel {
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    @NameInMap("StopDesktop")
+    public Boolean stopDesktop;
+
     public static ResetSnapshotRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetSnapshotRequest self = new ResetSnapshotRequest();
         return TeaModel.build(map, self);
@@ -101,6 +104,14 @@ public class ResetSnapshotRequest extends TeaModel {
     }
     public String getSnapshotId() {
         return this.snapshotId;
+    }
+
+    public ResetSnapshotRequest setStopDesktop(Boolean stopDesktop) {
+        this.stopDesktop = stopDesktop;
+        return this;
+    }
+    public Boolean getStopDesktop() {
+        return this.stopDesktop;
     }
 
 }

@@ -86,6 +86,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("RemainTime")
         public Integer remainTime;
 
+        @NameInMap("RestorePointId")
+        public String restorePointId;
+
+        @NameInMap("RestorePointName")
+        public String restorePointName;
+
         /**
          * <strong>example:</strong>
          * <p>s-2zeipxmnhej803x7****</p>
@@ -171,6 +177,22 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
         public Integer getRemainTime() {
             return this.remainTime;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setRestorePointId(String restorePointId) {
+            this.restorePointId = restorePointId;
+            return this;
+        }
+        public String getRestorePointId() {
+            return this.restorePointId;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setRestorePointName(String restorePointName) {
+            this.restorePointName = restorePointName;
+            return this;
+        }
+        public String getRestorePointName() {
+            return this.restorePointName;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setSnapshotId(String snapshotId) {
