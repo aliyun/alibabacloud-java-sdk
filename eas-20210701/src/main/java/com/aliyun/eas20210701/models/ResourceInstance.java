@@ -64,6 +64,9 @@ public class ResourceInstance extends TeaModel {
     @NameInMap("InstanceUsedMemory")
     public String instanceUsedMemory;
 
+    @NameInMap("Labels")
+    public java.util.List<ResourceInstanceLabels> labels;
+
     @NameInMap("Region")
     public String region;
 
@@ -238,6 +241,14 @@ public class ResourceInstance extends TeaModel {
         return this.instanceUsedMemory;
     }
 
+    public ResourceInstance setLabels(java.util.List<ResourceInstanceLabels> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.List<ResourceInstanceLabels> getLabels() {
+        return this.labels;
+    }
+
     public ResourceInstance setRegion(String region) {
         this.region = region;
         return this;
@@ -260,6 +271,36 @@ public class ResourceInstance extends TeaModel {
     }
     public String getZone() {
         return this.zone;
+    }
+
+    public static class ResourceInstanceLabels extends TeaModel {
+        @NameInMap("LabelKey")
+        public String labelKey;
+
+        @NameInMap("LabelValue")
+        public String labelValue;
+
+        public static ResourceInstanceLabels build(java.util.Map<String, ?> map) throws Exception {
+            ResourceInstanceLabels self = new ResourceInstanceLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public ResourceInstanceLabels setLabelKey(String labelKey) {
+            this.labelKey = labelKey;
+            return this;
+        }
+        public String getLabelKey() {
+            return this.labelKey;
+        }
+
+        public ResourceInstanceLabels setLabelValue(String labelValue) {
+            this.labelValue = labelValue;
+            return this;
+        }
+        public String getLabelValue() {
+            return this.labelValue;
+        }
+
     }
 
 }

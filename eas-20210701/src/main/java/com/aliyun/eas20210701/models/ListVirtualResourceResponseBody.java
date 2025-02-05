@@ -101,6 +101,9 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("ServiceCount")
+        public Integer serviceCount;
+
         /**
          * <p>The time when the virtual resource group was last updated.</p>
          * 
@@ -139,6 +142,14 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListVirtualResourceResponseBodyVirtualResources setServiceCount(Integer serviceCount) {
+            this.serviceCount = serviceCount;
+            return this;
+        }
+        public Integer getServiceCount() {
+            return this.serviceCount;
         }
 
         public ListVirtualResourceResponseBodyVirtualResources setUpdateTime(String updateTime) {

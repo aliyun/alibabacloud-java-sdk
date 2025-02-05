@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateVirtualResourceRequest extends TeaModel {
+    @NameInMap("DisableSpotProtectionPeriod")
+    public Boolean disableSpotProtectionPeriod;
+
     /**
      * <p>The list of resources in the virtual resource group.</p>
      */
@@ -22,6 +25,14 @@ public class CreateVirtualResourceRequest extends TeaModel {
     public static CreateVirtualResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVirtualResourceRequest self = new CreateVirtualResourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVirtualResourceRequest setDisableSpotProtectionPeriod(Boolean disableSpotProtectionPeriod) {
+        this.disableSpotProtectionPeriod = disableSpotProtectionPeriod;
+        return this;
+    }
+    public Boolean getDisableSpotProtectionPeriod() {
+        return this.disableSpotProtectionPeriod;
     }
 
     public CreateVirtualResourceRequest setResources(java.util.List<CreateVirtualResourceRequestResources> resources) {

@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
+    @NameInMap("Order")
+    public String order;
+
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
@@ -40,6 +43,9 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("ResourceName")
     public String resourceName;
 
+    @NameInMap("ResourceStatus")
+    public String resourceStatus;
+
     /**
      * <p>The type of the resource group. Valid values:</p>
      * <ul>
@@ -53,9 +59,20 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("Sort")
+    public String sort;
+
     public static ListResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourcesRequest self = new ListResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListResourcesRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
     }
 
     public ListResourcesRequest setPageNumber(Integer pageNumber) {
@@ -90,12 +107,28 @@ public class ListResourcesRequest extends TeaModel {
         return this.resourceName;
     }
 
+    public ListResourcesRequest setResourceStatus(String resourceStatus) {
+        this.resourceStatus = resourceStatus;
+        return this;
+    }
+    public String getResourceStatus() {
+        return this.resourceStatus;
+    }
+
     public ListResourcesRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public ListResourcesRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
     }
 
 }

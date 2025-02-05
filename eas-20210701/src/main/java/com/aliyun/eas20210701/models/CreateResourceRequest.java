@@ -57,6 +57,9 @@ public class CreateResourceRequest extends TeaModel {
     @NameInMap("EcsInstanceType")
     public String ecsInstanceType;
 
+    @NameInMap("Labels")
+    public java.util.Map<String, String> labels;
+
     /**
      * <p>The type of the resource group. Valid values:</p>
      * <ul>
@@ -132,6 +135,14 @@ public class CreateResourceRequest extends TeaModel {
     }
     public String getEcsInstanceType() {
         return this.ecsInstanceType;
+    }
+
+    public CreateResourceRequest setLabels(java.util.Map<String, String> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.Map<String, String> getLabels() {
+        return this.labels;
     }
 
     public CreateResourceRequest setResourceType(String resourceType) {

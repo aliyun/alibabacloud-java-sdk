@@ -3,7 +3,7 @@ package com.aliyun.eas20210701.models;
 
 import com.aliyun.tea.*;
 
-public class ListResourceInstancesRequest extends TeaModel {
+public class ListResourceInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
@@ -140,7 +140,7 @@ public class ListResourceInstancesRequest extends TeaModel {
     public String instanceStatus;
 
     @NameInMap("Label")
-    public java.util.Map<String, String> label;
+    public String labelShrink;
 
     /**
      * <p>The sorting order.</p>
@@ -241,12 +241,12 @@ public class ListResourceInstancesRequest extends TeaModel {
     @NameInMap("Sort")
     public String sort;
 
-    public static ListResourceInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListResourceInstancesRequest self = new ListResourceInstancesRequest();
+    public static ListResourceInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListResourceInstancesShrinkRequest self = new ListResourceInstancesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListResourceInstancesRequest setChargeType(String chargeType) {
+    public ListResourceInstancesShrinkRequest setChargeType(String chargeType) {
         this.chargeType = chargeType;
         return this;
     }
@@ -254,7 +254,7 @@ public class ListResourceInstancesRequest extends TeaModel {
         return this.chargeType;
     }
 
-    public ListResourceInstancesRequest setFilter(String filter) {
+    public ListResourceInstancesShrinkRequest setFilter(String filter) {
         this.filter = filter;
         return this;
     }
@@ -262,7 +262,7 @@ public class ListResourceInstancesRequest extends TeaModel {
         return this.filter;
     }
 
-    public ListResourceInstancesRequest setInstanceIP(String instanceIP) {
+    public ListResourceInstancesShrinkRequest setInstanceIP(String instanceIP) {
         this.instanceIP = instanceIP;
         return this;
     }
@@ -270,7 +270,7 @@ public class ListResourceInstancesRequest extends TeaModel {
         return this.instanceIP;
     }
 
-    public ListResourceInstancesRequest setInstanceId(String instanceId) {
+    public ListResourceInstancesShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -278,7 +278,7 @@ public class ListResourceInstancesRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListResourceInstancesRequest setInstanceName(String instanceName) {
+    public ListResourceInstancesShrinkRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
@@ -286,7 +286,7 @@ public class ListResourceInstancesRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public ListResourceInstancesRequest setInstanceStatus(String instanceStatus) {
+    public ListResourceInstancesShrinkRequest setInstanceStatus(String instanceStatus) {
         this.instanceStatus = instanceStatus;
         return this;
     }
@@ -294,15 +294,15 @@ public class ListResourceInstancesRequest extends TeaModel {
         return this.instanceStatus;
     }
 
-    public ListResourceInstancesRequest setLabel(java.util.Map<String, String> label) {
-        this.label = label;
+    public ListResourceInstancesShrinkRequest setLabelShrink(String labelShrink) {
+        this.labelShrink = labelShrink;
         return this;
     }
-    public java.util.Map<String, String> getLabel() {
-        return this.label;
+    public String getLabelShrink() {
+        return this.labelShrink;
     }
 
-    public ListResourceInstancesRequest setOrder(String order) {
+    public ListResourceInstancesShrinkRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -310,7 +310,7 @@ public class ListResourceInstancesRequest extends TeaModel {
         return this.order;
     }
 
-    public ListResourceInstancesRequest setPageNumber(Integer pageNumber) {
+    public ListResourceInstancesShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -318,7 +318,7 @@ public class ListResourceInstancesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListResourceInstancesRequest setPageSize(Integer pageSize) {
+    public ListResourceInstancesShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -326,7 +326,7 @@ public class ListResourceInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListResourceInstancesRequest setSort(String sort) {
+    public ListResourceInstancesShrinkRequest setSort(String sort) {
         this.sort = sort;
         return this;
     }
