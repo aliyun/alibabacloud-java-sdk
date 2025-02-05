@@ -13,6 +13,9 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("DisableSpotProtectionPeriod")
+    public Boolean disableSpotProtectionPeriod;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -27,6 +30,9 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
      */
     @NameInMap("Resources")
     public java.util.List<DescribeVirtualResourceResponseBodyResources> resources;
+
+    @NameInMap("ServiceCount")
+    public Integer serviceCount;
 
     /**
      * <p>The time when the virtual resource group was last updated.</p>
@@ -68,6 +74,14 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         return this.createTime;
     }
 
+    public DescribeVirtualResourceResponseBody setDisableSpotProtectionPeriod(Boolean disableSpotProtectionPeriod) {
+        this.disableSpotProtectionPeriod = disableSpotProtectionPeriod;
+        return this;
+    }
+    public Boolean getDisableSpotProtectionPeriod() {
+        return this.disableSpotProtectionPeriod;
+    }
+
     public DescribeVirtualResourceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -82,6 +96,14 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     }
     public java.util.List<DescribeVirtualResourceResponseBodyResources> getResources() {
         return this.resources;
+    }
+
+    public DescribeVirtualResourceResponseBody setServiceCount(Integer serviceCount) {
+        this.serviceCount = serviceCount;
+        return this;
+    }
+    public Integer getServiceCount() {
+        return this.serviceCount;
     }
 
     public DescribeVirtualResourceResponseBody setUpdateTime(String updateTime) {

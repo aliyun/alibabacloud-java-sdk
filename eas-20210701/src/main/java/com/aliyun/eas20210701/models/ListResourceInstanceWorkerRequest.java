@@ -22,6 +22,9 @@ public class ListResourceInstanceWorkerRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("WorkerName")
+    public String workerName;
+
     public static ListResourceInstanceWorkerRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceInstanceWorkerRequest self = new ListResourceInstanceWorkerRequest();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class ListResourceInstanceWorkerRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListResourceInstanceWorkerRequest setWorkerName(String workerName) {
+        this.workerName = workerName;
+        return this;
+    }
+    public String getWorkerName() {
+        return this.workerName;
     }
 
 }

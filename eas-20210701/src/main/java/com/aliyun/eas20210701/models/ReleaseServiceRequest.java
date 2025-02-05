@@ -18,7 +18,7 @@ public class ReleaseServiceRequest extends TeaModel {
     public String trafficState;
 
     /**
-     * <p>The weight of the canary release. Valid values: 0 to 100.</p>
+     * <p>The weight of the service. Valid values: [-1, 1000].</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

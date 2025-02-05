@@ -51,6 +51,9 @@ public class CreateResourceInstancesRequest extends TeaModel {
     @NameInMap("EcsInstanceType")
     public String ecsInstanceType;
 
+    @NameInMap("Labels")
+    public java.util.Map<String, String> labels;
+
     /**
      * <p>The size of the system disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</p>
      * 
@@ -113,6 +116,14 @@ public class CreateResourceInstancesRequest extends TeaModel {
     }
     public String getEcsInstanceType() {
         return this.ecsInstanceType;
+    }
+
+    public CreateResourceInstancesRequest setLabels(java.util.Map<String, String> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.Map<String, String> getLabels() {
+        return this.labels;
     }
 
     public CreateResourceInstancesRequest setSystemDiskSize(Integer systemDiskSize) {
