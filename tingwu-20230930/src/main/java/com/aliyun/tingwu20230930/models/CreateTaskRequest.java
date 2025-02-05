@@ -229,6 +229,77 @@ public class CreateTaskRequest extends TeaModel {
 
     }
 
+    public static class CreateTaskRequestParametersContentExtractionExtractionContents extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Title")
+        public String title;
+
+        public static CreateTaskRequestParametersContentExtractionExtractionContents build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestParametersContentExtractionExtractionContents self = new CreateTaskRequestParametersContentExtractionExtractionContents();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersContentExtractionExtractionContents setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public CreateTaskRequestParametersContentExtractionExtractionContents setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class CreateTaskRequestParametersContentExtraction extends TeaModel {
+        @NameInMap("ExtractionContents")
+        public java.util.List<CreateTaskRequestParametersContentExtractionExtractionContents> extractionContents;
+
+        @NameInMap("SceneIntroduction")
+        public String sceneIntroduction;
+
+        @NameInMap("SpeakerMap")
+        public java.util.Map<String, ?> speakerMap;
+
+        public static CreateTaskRequestParametersContentExtraction build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestParametersContentExtraction self = new CreateTaskRequestParametersContentExtraction();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersContentExtraction setExtractionContents(java.util.List<CreateTaskRequestParametersContentExtractionExtractionContents> extractionContents) {
+            this.extractionContents = extractionContents;
+            return this;
+        }
+        public java.util.List<CreateTaskRequestParametersContentExtractionExtractionContents> getExtractionContents() {
+            return this.extractionContents;
+        }
+
+        public CreateTaskRequestParametersContentExtraction setSceneIntroduction(String sceneIntroduction) {
+            this.sceneIntroduction = sceneIntroduction;
+            return this;
+        }
+        public String getSceneIntroduction() {
+            return this.sceneIntroduction;
+        }
+
+        public CreateTaskRequestParametersContentExtraction setSpeakerMap(java.util.Map<String, ?> speakerMap) {
+            this.speakerMap = speakerMap;
+            return this;
+        }
+        public java.util.Map<String, ?> getSpeakerMap() {
+            return this.speakerMap;
+        }
+
+    }
+
     public static class CreateTaskRequestParametersCustomPromptContents extends TeaModel {
         @NameInMap("Model")
         public String model;
@@ -726,6 +797,12 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("AutoChaptersEnabled")
         public Boolean autoChaptersEnabled;
 
+        @NameInMap("ContentExtraction")
+        public CreateTaskRequestParametersContentExtraction contentExtraction;
+
+        @NameInMap("ContentExtractionEnabled")
+        public Boolean contentExtractionEnabled;
+
         @NameInMap("CustomPrompt")
         public CreateTaskRequestParametersCustomPrompt customPrompt;
 
@@ -794,6 +871,22 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getAutoChaptersEnabled() {
             return this.autoChaptersEnabled;
+        }
+
+        public CreateTaskRequestParameters setContentExtraction(CreateTaskRequestParametersContentExtraction contentExtraction) {
+            this.contentExtraction = contentExtraction;
+            return this;
+        }
+        public CreateTaskRequestParametersContentExtraction getContentExtraction() {
+            return this.contentExtraction;
+        }
+
+        public CreateTaskRequestParameters setContentExtractionEnabled(Boolean contentExtractionEnabled) {
+            this.contentExtractionEnabled = contentExtractionEnabled;
+            return this;
+        }
+        public Boolean getContentExtractionEnabled() {
+            return this.contentExtractionEnabled;
         }
 
         public CreateTaskRequestParameters setCustomPrompt(CreateTaskRequestParametersCustomPrompt customPrompt) {
