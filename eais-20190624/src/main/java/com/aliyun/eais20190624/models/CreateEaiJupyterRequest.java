@@ -47,6 +47,9 @@ public class CreateEaiJupyterRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateEaiJupyterRequestTag> tag;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -117,6 +120,14 @@ public class CreateEaiJupyterRequest extends TeaModel {
         return this.securityGroupId;
     }
 
+    public CreateEaiJupyterRequest setTag(java.util.List<CreateEaiJupyterRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateEaiJupyterRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateEaiJupyterRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -154,6 +165,36 @@ public class CreateEaiJupyterRequest extends TeaModel {
         }
 
         public CreateEaiJupyterRequestEnvironmentVar setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEaiJupyterRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEaiJupyterRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateEaiJupyterRequestTag self = new CreateEaiJupyterRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEaiJupyterRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateEaiJupyterRequestTag setValue(String value) {
             this.value = value;
             return this;
         }

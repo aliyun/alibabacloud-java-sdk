@@ -55,6 +55,9 @@ public class CreateEaiEciRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateEaiEciRequestTag> tag;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -123,6 +126,14 @@ public class CreateEaiEciRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public CreateEaiEciRequest setTag(java.util.List<CreateEaiEciRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateEaiEciRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateEaiEciRequest setVSwitchId(String vSwitchId) {
@@ -291,6 +302,36 @@ public class CreateEaiEciRequest extends TeaModel {
         }
         public String getVolume() {
             return this.volume;
+        }
+
+    }
+
+    public static class CreateEaiEciRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEaiEciRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateEaiEciRequestTag self = new CreateEaiEciRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEaiEciRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateEaiEciRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

@@ -49,6 +49,9 @@ public class CreateEaiRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateEaiRequestTag> tag;
+
     /**
      * <strong>example:</strong>
      * <p>vsw-uf6h3rbwbm90urjwa****</p>
@@ -117,12 +120,50 @@ public class CreateEaiRequest extends TeaModel {
         return this.securityGroupId;
     }
 
+    public CreateEaiRequest setTag(java.util.List<CreateEaiRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateEaiRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateEaiRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class CreateEaiRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEaiRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateEaiRequestTag self = new CreateEaiRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEaiRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateEaiRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
