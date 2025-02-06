@@ -52,6 +52,9 @@ public class CreateEaisEiRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateEaisEiRequestTag> tag;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -114,12 +117,50 @@ public class CreateEaisEiRequest extends TeaModel {
         return this.securityGroupId;
     }
 
+    public CreateEaisEiRequest setTag(java.util.List<CreateEaisEiRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateEaisEiRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateEaisEiRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class CreateEaisEiRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEaisEiRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateEaisEiRequestTag self = new CreateEaisEiRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEaisEiRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateEaisEiRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

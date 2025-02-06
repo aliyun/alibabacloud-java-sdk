@@ -55,6 +55,9 @@ public class CreateEaiEcsShrinkRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateEaiEcsShrinkRequestTag> tag;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -125,12 +128,50 @@ public class CreateEaiEcsShrinkRequest extends TeaModel {
         return this.securityGroupId;
     }
 
+    public CreateEaiEcsShrinkRequest setTag(java.util.List<CreateEaiEcsShrinkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateEaiEcsShrinkRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateEaiEcsShrinkRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class CreateEaiEcsShrinkRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEaiEcsShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateEaiEcsShrinkRequestTag self = new CreateEaiEcsShrinkRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEaiEcsShrinkRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateEaiEcsShrinkRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
