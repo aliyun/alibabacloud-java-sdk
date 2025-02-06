@@ -134,6 +134,12 @@ public class GetAsrVocabResponseBody extends TeaModel {
     }
 
     public static class GetAsrVocabResponseBodyData extends TeaModel {
+        @NameInMap("AsrVersion")
+        public Integer asrVersion;
+
+        @NameInMap("ModelCustomizationId")
+        public String modelCustomizationId;
+
         /**
          * <strong>example:</strong>
          * <p>test</p>
@@ -147,6 +153,22 @@ public class GetAsrVocabResponseBody extends TeaModel {
         public static GetAsrVocabResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAsrVocabResponseBodyData self = new GetAsrVocabResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetAsrVocabResponseBodyData setAsrVersion(Integer asrVersion) {
+            this.asrVersion = asrVersion;
+            return this;
+        }
+        public Integer getAsrVersion() {
+            return this.asrVersion;
+        }
+
+        public GetAsrVocabResponseBodyData setModelCustomizationId(String modelCustomizationId) {
+            this.modelCustomizationId = modelCustomizationId;
+            return this;
+        }
+        public String getModelCustomizationId() {
+            return this.modelCustomizationId;
         }
 
         public GetAsrVocabResponseBodyData setName(String name) {

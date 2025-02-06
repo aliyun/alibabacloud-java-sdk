@@ -81,6 +81,9 @@ public class ListAsrVocabResponseBody extends TeaModel {
     }
 
     public static class ListAsrVocabResponseBodyDataAsrVocab extends TeaModel {
+        @NameInMap("AsrVersion")
+        public Integer asrVersion;
+
         /**
          * <strong>example:</strong>
          * <p>2019-04-15T14:57Z</p>
@@ -94,6 +97,9 @@ public class ListAsrVocabResponseBody extends TeaModel {
          */
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("ModelCustomizationId")
+        public String modelCustomizationId;
 
         @NameInMap("Name")
         public String name;
@@ -117,6 +123,14 @@ public class ListAsrVocabResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListAsrVocabResponseBodyDataAsrVocab setAsrVersion(Integer asrVersion) {
+            this.asrVersion = asrVersion;
+            return this;
+        }
+        public Integer getAsrVersion() {
+            return this.asrVersion;
+        }
+
         public ListAsrVocabResponseBodyDataAsrVocab setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -131,6 +145,14 @@ public class ListAsrVocabResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public ListAsrVocabResponseBodyDataAsrVocab setModelCustomizationId(String modelCustomizationId) {
+            this.modelCustomizationId = modelCustomizationId;
+            return this;
+        }
+        public String getModelCustomizationId() {
+            return this.modelCustomizationId;
         }
 
         public ListAsrVocabResponseBodyDataAsrVocab setName(String name) {
