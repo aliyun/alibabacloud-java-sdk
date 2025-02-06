@@ -31,11 +31,17 @@ public class CreateDBNodesRequest extends TeaModel {
     public java.util.List<CreateDBNodesRequestDBNode> DBNode;
 
     /**
-     * <p>The type of the node. Valid values:</p>
+     * <p>The node type. Valid values:</p>
      * <ul>
      * <li>RO</li>
      * <li>STANDBY</li>
      * <li>DLNode</li>
+     * </ul>
+     * <p>Enumerated values:</p>
+     * <ul>
+     * <li>DLNode: AI node</li>
+     * <li>STANDBY: standby node</li>
+     * <li>RO: read-only node</li>
      * </ul>
      * 
      * <strong>example:</strong>

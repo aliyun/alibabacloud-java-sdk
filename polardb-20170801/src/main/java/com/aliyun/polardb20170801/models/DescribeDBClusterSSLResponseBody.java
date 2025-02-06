@@ -74,6 +74,10 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         @NameInMap("DBEndpointId")
         public String DBEndpointId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
         @NameInMap("SSLAutoRotate")
         public String SSLAutoRotate;
 

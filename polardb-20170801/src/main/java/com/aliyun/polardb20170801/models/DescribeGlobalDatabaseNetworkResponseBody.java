@@ -459,7 +459,18 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
     public static class DescribeGlobalDatabaseNetworkResponseBodyDBClusters extends TeaModel {
         /**
-         * <p>The edition of the cluster.</p>
+         * <p>The edition of the cluster. Valid values:</p>
+         * <p>Normal: Cluster Edition Basic: Single Node Edition Archive: X-Engine Edition NormalMultimaster: Multi-master Cluster Edition SENormal: Standard Edition</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>PolarDB for PostgreSQL clusters that run the PostgreSQL 11 database engine do not support Single Node Edition.</p>
+         * </li>
+         * <li><p>PolarDB for MySQL 8.0 and 5.7 clusters, and PolarDB for PostgreSQL clusters that run the PostgreSQL 14 database engine support Standard Edition.</p>
+         * </li>
+         * <li><p>PolarDB for MySQL 8.0 clusters support X-Engine Edition and Multi-master Cluster Edition.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>

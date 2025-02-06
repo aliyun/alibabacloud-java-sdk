@@ -14,6 +14,13 @@ public class DescribeActivationCodesRequest extends TeaModel {
     @NameInMap("AliyunOrderId")
     public String aliyunOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aa:bb:cc:dd:ee:ff</p>
+     */
+    @NameInMap("MacAddress")
+    public String macAddress;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -44,6 +51,13 @@ public class DescribeActivationCodesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3312548696141831911</p>
+     */
+    @NameInMap("SystemIdentifier")
+    public String systemIdentifier;
+
     public static DescribeActivationCodesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeActivationCodesRequest self = new DescribeActivationCodesRequest();
         return TeaModel.build(map, self);
@@ -55,6 +69,14 @@ public class DescribeActivationCodesRequest extends TeaModel {
     }
     public String getAliyunOrderId() {
         return this.aliyunOrderId;
+    }
+
+    public DescribeActivationCodesRequest setMacAddress(String macAddress) {
+        this.macAddress = macAddress;
+        return this;
+    }
+    public String getMacAddress() {
+        return this.macAddress;
     }
 
     public DescribeActivationCodesRequest setOwnerAccount(String ownerAccount) {
@@ -103,6 +125,14 @@ public class DescribeActivationCodesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeActivationCodesRequest setSystemIdentifier(String systemIdentifier) {
+        this.systemIdentifier = systemIdentifier;
+        return this;
+    }
+    public String getSystemIdentifier() {
+        return this.systemIdentifier;
     }
 
 }

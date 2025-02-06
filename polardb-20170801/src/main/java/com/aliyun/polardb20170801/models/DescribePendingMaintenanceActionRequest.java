@@ -25,7 +25,7 @@ public class DescribePendingMaintenanceActionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value of this parameter must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * <p>The number of the page to return. Specify the parameter to a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,7 +34,7 @@ public class DescribePendingMaintenanceActionRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, or <strong>100</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
      * <p>Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>

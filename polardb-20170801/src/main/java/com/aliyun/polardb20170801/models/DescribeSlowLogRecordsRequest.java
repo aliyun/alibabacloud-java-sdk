@@ -55,8 +55,8 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Page number, with a range greater than 0 and not exceeding the maximum value of Integer.</p>
-     * <p>The default value is <strong>1</strong>.</p>
+     * <p>The page number. The value must be an integer that is greater than 0.</p>
+     * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,13 +65,13 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of records per page, with the following options:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
      * <li><strong>30</strong></li>
      * <li><strong>50</strong></li>
      * <li><strong>100</strong></li>
      * </ul>
-     * <p>The default value is <strong>30</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

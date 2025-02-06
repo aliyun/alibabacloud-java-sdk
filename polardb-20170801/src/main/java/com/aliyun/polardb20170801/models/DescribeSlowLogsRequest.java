@@ -40,7 +40,7 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Pages start from 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
