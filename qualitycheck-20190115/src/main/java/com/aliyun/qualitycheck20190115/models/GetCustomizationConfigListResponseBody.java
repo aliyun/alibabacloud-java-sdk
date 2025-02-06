@@ -81,6 +81,9 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
     }
 
     public static class GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo extends TeaModel {
+        @NameInMap("AsrVersion")
+        public Integer asrVersion;
+
         /**
          * <strong>example:</strong>
          * <p>2019-01-08</p>
@@ -122,6 +125,14 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         public static GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo build(java.util.Map<String, ?> map) throws Exception {
             GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo self = new GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo();
             return TeaModel.build(map, self);
+        }
+
+        public GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo setAsrVersion(Integer asrVersion) {
+            this.asrVersion = asrVersion;
+            return this;
+        }
+        public Integer getAsrVersion() {
+            return this.asrVersion;
         }
 
         public GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo setCreateTime(String createTime) {

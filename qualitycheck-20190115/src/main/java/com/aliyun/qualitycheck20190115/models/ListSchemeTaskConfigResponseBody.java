@@ -491,6 +491,9 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         @NameInMap("AsrTaskPriority")
         public Integer asrTaskPriority;
 
+        @NameInMap("AsrVersion")
+        public Integer asrVersion;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -653,6 +656,14 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         }
         public Integer getAsrTaskPriority() {
             return this.asrTaskPriority;
+        }
+
+        public ListSchemeTaskConfigResponseBodyDataData setAsrVersion(Integer asrVersion) {
+            this.asrVersion = asrVersion;
+            return this;
+        }
+        public Integer getAsrVersion() {
+            return this.asrVersion;
         }
 
         public ListSchemeTaskConfigResponseBodyDataData setAssignType(Integer assignType) {
