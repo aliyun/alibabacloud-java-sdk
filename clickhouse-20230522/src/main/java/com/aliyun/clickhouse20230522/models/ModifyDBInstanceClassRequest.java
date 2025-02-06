@@ -28,6 +28,8 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public Long scaleMax;
 
     /**
+     * <p>The minimum capacity for auto scaling.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

@@ -21,6 +21,8 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The code of the cloud service.</p>
+     * 
      * <strong>example:</strong>
      * <p>clickhouse</p>
      */

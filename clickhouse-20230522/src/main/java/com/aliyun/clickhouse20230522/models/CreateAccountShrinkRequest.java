@@ -14,6 +14,11 @@ public class CreateAccountShrinkRequest extends TeaModel {
     public String account;
 
     /**
+     * <p>The type of the database account. Valid values:</p>
+     * <ul>
+     * <li><strong>NormalAccount</strong>: standard account</li>
+     * <li><strong>SuperAccount</strong>: privileged account</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +39,9 @@ public class CreateAccountShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The information about permissions.</p>
+     */
     @NameInMap("DmlAuthSetting")
     public String dmlAuthSettingShrink;
 
@@ -47,6 +55,8 @@ public class CreateAccountShrinkRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The code of the cloud service.</p>
+     * 
      * <strong>example:</strong>
      * <p>clickhouse</p>
      */

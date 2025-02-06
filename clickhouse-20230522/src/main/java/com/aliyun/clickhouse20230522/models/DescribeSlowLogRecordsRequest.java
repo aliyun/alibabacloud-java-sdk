@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-09-15 16:00:00</p>
      */
@@ -21,6 +24,8 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,13 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li>30 (default)</li>
+     * <li>50</li>
+     * <li>100</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -35,6 +47,8 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3000</p>
      */
@@ -42,6 +56,8 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String queryDurationMs;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -49,6 +65,8 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-09-11 16:00:00</p>
      */

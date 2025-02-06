@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class KillProcessRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class KillProcessRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The query ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class KillProcessRequest extends TeaModel {
     public String initialQueryId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProcessListRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeProcessListRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The query ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class DescribeProcessListRequest extends TeaModel {
     public String initialQueryId;
 
     /**
+     * <p>The user who executes the query statement.</p>
+     * 
      * <strong>example:</strong>
      * <p>testuser</p>
      */
@@ -28,6 +33,8 @@ public class DescribeProcessListRequest extends TeaModel {
     public String initialUser;
 
     /**
+     * <p>The keyword of the query statement.</p>
+     * 
      * <strong>example:</strong>
      * <p>SELECT</p>
      */
@@ -35,6 +42,8 @@ public class DescribeProcessListRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +51,8 @@ public class DescribeProcessListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -49,6 +60,8 @@ public class DescribeProcessListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The execution duration of slow SQL queries. Minimum value: 1000. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -56,6 +69,13 @@ public class DescribeProcessListRequest extends TeaModel {
     public String queryDurationMs;
 
     /**
+     * <p>Specifies the columns by which the query results are sorted in descending order.</p>
+     * <ul>
+     * <li>0: The query results are sorted by the query_duration_ms column.</li>
+     * <li>1: The query results are sorted by the query_duration_ms and query_start_time columns.</li>
+     * <li>2: The query results are sorted by the query_duration_ms, query_start_time, and user columns.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>id</p>
      */
@@ -63,6 +83,8 @@ public class DescribeProcessListRequest extends TeaModel {
     public Long queryOrder;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

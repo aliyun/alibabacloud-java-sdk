@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceAttributeRequest extends TeaModel {
     /**
+     * <p>The configuration that you want to modify.</p>
+     * <ul>
+     * <li>MaintainTime: the O\&amp;M time</li>
+     * <li>DBInstanceDescription: the cluster name</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +37,8 @@ public class ModifyDBInstanceAttributeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The code of the cloud service.</p>
+     * 
      * <strong>example:</strong>
      * <p>clickhouse</p>
      */

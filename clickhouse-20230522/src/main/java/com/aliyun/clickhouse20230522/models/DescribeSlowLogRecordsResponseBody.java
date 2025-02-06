@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeSlowLogRecordsResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DF203CC8-5F68-5E3F-8050-3C77DD65731A</p>
      */
@@ -37,6 +42,8 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     public static class DescribeSlowLogRecordsResponseBodyDataResultSet extends TeaModel {
         /**
+         * <p>The address to which the query statement is sent.</p>
+         * 
          * <strong>example:</strong>
          * <p>0:0:0:0:0:ffff:1edd65ea</p>
          */
@@ -44,6 +51,8 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String initialAddress;
 
         /**
+         * <p>The query ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>\&quot;ae915a3ad30e77e67a7215d05b658cc6\&quot;</p>
          */
@@ -51,6 +60,8 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String initialQueryId;
 
         /**
+         * <p>The user who executes the query statement.</p>
+         * 
          * <strong>example:</strong>
          * <p>bany</p>
          */
@@ -58,6 +69,8 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String initialUser;
 
         /**
+         * <p>The peak memory usage for the query. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>4941696</p>
          */
@@ -65,6 +78,8 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long memoryUsage;
 
         /**
+         * <p>The query statement that is running.</p>
+         * 
          * <strong>example:</strong>
          * <p>select * from test</p>
          */
@@ -72,6 +87,8 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String query;
 
         /**
+         * <p>The execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3000</p>
          */
@@ -79,6 +96,8 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long queryDurationMs;
 
         /**
+         * <p>The beginning of the time range to query. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-09-11 16:00:00</p>
          */
@@ -86,6 +105,8 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String queryStartTime;
 
         /**
+         * <p>The size of the data that is scanned. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>4507128020832</p>
          */
@@ -93,6 +114,8 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long readBytes;
 
         /**
+         * <p>The number of read rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -100,6 +123,8 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long readRows;
 
         /**
+         * <p>The size of the result data. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -107,6 +132,8 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long resultBytes;
 
         /**
+         * <p>The type of the slow query logs.</p>
+         * 
          * <strong>example:</strong>
          * <p>ExceptionWhileProcessing</p>
          */
@@ -210,19 +237,29 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     public static class DescribeSlowLogRecordsResponseBodyData extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z32****</p>
          */
         @NameInMap("DBInstanceID")
         public Integer DBInstanceID;
 
+        /**
+         * <p>The cluster name.</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <p>The result sets.</p>
+         */
         @NameInMap("ResultSet")
         public java.util.List<DescribeSlowLogRecordsResponseBodyDataResultSet> resultSet;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

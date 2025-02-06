@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class StopDBInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public StopDBInstanceResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2FED790E-FB61-4721-8C1C-07C627FA5A19</p>
      */
@@ -37,16 +42,23 @@ public class StopDBInstanceResponseBody extends TeaModel {
 
     public static class StopDBInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****</p>
          */
         @NameInMap("DBInstanceID")
         public Long DBInstanceID;
 
+        /**
+         * <p>The cluster name.</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000785</p>
          */

@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The result returned.</p>
+     */
     @NameInMap("Data")
     public DescribeDBInstanceAttributeResponseBodyData data;
 
@@ -43,6 +46,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("NodeStatus")
         public String nodeStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -153,6 +160,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DisabledPorts")
+        public String disabledPorts;
+
         /**
          * <strong>example:</strong>
          * <p>clickhouse</p>
@@ -181,6 +191,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23.8.1.41495_6</p>
+         */
         @NameInMap("LatestEngineMinorVersion")
         public String latestEngineMinorVersion;
 
@@ -356,6 +370,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyData setDisabledPorts(String disabledPorts) {
+            this.disabledPorts = disabledPorts;
+            return this;
+        }
+        public String getDisabledPorts() {
+            return this.disabledPorts;
         }
 
         public DescribeDBInstanceAttributeResponseBodyData setEngine(String engine) {

@@ -32,6 +32,8 @@ public class ResetAccountPasswordRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The name of the service.</p>
+     * 
      * <strong>example:</strong>
      * <p>clickhouse</p>
      */
