@@ -54,6 +54,10 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
     @NameInMap("EncryptionKeyStatus")
     public String encryptionKeyStatus;
 

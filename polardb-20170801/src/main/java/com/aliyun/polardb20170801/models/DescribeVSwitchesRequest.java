@@ -32,7 +32,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Maximum value: 50. Default value: 50.</p>
+     * <p>The number of entries to return on each page. Maximum value: 50. The default value is 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -41,7 +41,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the vSwitch belongs.</p>
+     * <p>The ID of the region where the vSwitch is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

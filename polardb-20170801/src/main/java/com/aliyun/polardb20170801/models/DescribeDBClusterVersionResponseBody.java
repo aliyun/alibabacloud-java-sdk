@@ -386,7 +386,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Stable</p>
+         * <p>LTS</p>
          */
         @NameInMap("ReleaseType")
         public String releaseType;

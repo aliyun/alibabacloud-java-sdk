@@ -41,7 +41,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The details of the vSwitch.</p>
+     * <p>The vSwitches.</p>
      */
     @NameInMap("VSwitchs")
     public java.util.List<DescribeVSwitchesResponseBodyVSwitchs> vSwitchs;
@@ -111,7 +111,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>The descriptions of the vSwitch.</p>
+         * <p>The description of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vSwitchDescription</p>

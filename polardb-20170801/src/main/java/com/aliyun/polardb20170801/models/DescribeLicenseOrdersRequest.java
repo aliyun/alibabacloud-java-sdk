@@ -20,7 +20,7 @@ public class DescribeLicenseOrdersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The type of the package. Valid values:</p>
+     * <p>The plan type. Valid values:</p>
      * <ul>
      * <li>single_node_subscribe: Single-node Edition (Subscription).</li>
      * <li>single_node_long_term: Single-node Edition (Long-term).</li>

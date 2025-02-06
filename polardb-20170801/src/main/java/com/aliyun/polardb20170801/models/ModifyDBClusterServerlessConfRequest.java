@@ -176,8 +176,7 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
      * <p>Elastic sensitivity. Values: - normal: standard - flexible: sensitive</p>
      * 
      * <strong>example:</strong>
-     * <p>normal
-     * flexible</p>
+     * <p>normal</p>
      */
     @NameInMap("ServerlessRuleMode")
     public String serverlessRuleMode;
