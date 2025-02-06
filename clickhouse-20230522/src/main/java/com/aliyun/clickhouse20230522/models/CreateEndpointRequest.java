@@ -21,6 +21,8 @@ public class CreateEndpointRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The network type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Public</p>
      */

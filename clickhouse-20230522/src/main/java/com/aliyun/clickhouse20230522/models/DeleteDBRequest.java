@@ -14,6 +14,7 @@ public class DeleteDBRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +24,7 @@ public class DeleteDBRequest extends TeaModel {
     public String DBName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

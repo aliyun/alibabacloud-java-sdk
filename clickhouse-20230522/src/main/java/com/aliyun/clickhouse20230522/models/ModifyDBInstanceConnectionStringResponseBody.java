@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ModifyDBInstanceConnectionStringResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxx-xxx</p>
      */
@@ -37,6 +42,8 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
 
     public static class ModifyDBInstanceConnectionStringResponseBodyData extends TeaModel {
         /**
+         * <p>The endpoint of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</p>
          */
@@ -44,6 +51,8 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         public String connectionString;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-xxxxx</p>
          */
@@ -51,11 +60,16 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         public Integer DBInstanceID;
 
         /**
+         * <p>The cluster name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-xxxxx</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
+
+        @NameInMap("DisabledPorts")
+        public String disabledPorts;
 
         public static ModifyDBInstanceConnectionStringResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ModifyDBInstanceConnectionStringResponseBodyData self = new ModifyDBInstanceConnectionStringResponseBodyData();
@@ -84,6 +98,14 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         }
         public String getDBInstanceName() {
             return this.DBInstanceName;
+        }
+
+        public ModifyDBInstanceConnectionStringResponseBodyData setDisabledPorts(String disabledPorts) {
+            this.disabledPorts = disabledPorts;
+            return this;
+        }
+        public String getDisabledPorts() {
+            return this.disabledPorts;
         }
 
     }

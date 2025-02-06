@@ -14,7 +14,12 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    @NameInMap("DeploySchema")
+    public String deploySchema;
+
     /**
+     * <p>The engine type.</p>
+     * 
      * <strong>example:</strong>
      * <p>clickhouse</p>
      */
@@ -96,6 +101,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getDBInstanceDescription() {
         return this.DBInstanceDescription;
+    }
+
+    public CreateDBInstanceRequest setDeploySchema(String deploySchema) {
+        this.deploySchema = deploySchema;
+        return this;
+    }
+    public String getDeploySchema() {
+        return this.deploySchema;
     }
 
     public CreateDBInstanceRequest setEngine(String engine) {

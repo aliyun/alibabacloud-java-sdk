@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountAuthorityRequest extends TeaModel {
     /**
+     * <p>The name of the database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +24,14 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The information about permissions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DmlAuthSetting")
     public ModifyAccountAuthorityRequestDmlAuthSetting dmlAuthSetting;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,13 +78,24 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
     }
 
     public static class ModifyAccountAuthorityRequestDmlAuthSetting extends TeaModel {
+        /**
+         * <p>The databases on which you want to grant permissions. Separate multiple databases with commas (,).</p>
+         */
         @NameInMap("AllowDatabases")
         public java.util.List<String> allowDatabases;
 
+        /**
+         * <p>The dictionaries on which you want to grant permissions. Separate multiple dictionaries with commas (,).</p>
+         */
         @NameInMap("AllowDictionaries")
         public java.util.List<String> allowDictionaries;
 
         /**
+         * <p>Specifies whether to grant the DDL permissions to the database account. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The account has the permissions to execute DDL statements.</li>
+         * <li><strong>false</strong>: The account does not have the permissions to execute DDL statements.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -91,6 +105,12 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
         public Boolean ddlAuthority;
 
         /**
+         * <p>Specifies whether to grant the DML permissions to the database account. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</li>
+         * <li><strong>1</strong>: The account only has the permissions to read data from the database.</li>
+         * <li><strong>2</strong>: The account only has the permissions to read data from the database and modify the settings of the database.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

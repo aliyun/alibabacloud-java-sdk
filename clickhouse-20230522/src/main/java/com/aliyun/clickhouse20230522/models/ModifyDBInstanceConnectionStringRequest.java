@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
+     * <p>The endpoint of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</p>
      */
@@ -12,6 +14,8 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String connectionString;
 
     /**
+     * <p>The prefix of the endpoint that is used to connect to the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>cc-****-clickhouse</p>
      */
@@ -19,6 +23,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +32,12 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DisablePorts")
+    public String disablePorts;
+
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -61,6 +71,14 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setDisablePorts(String disablePorts) {
+        this.disablePorts = disablePorts;
+        return this;
+    }
+    public String getDisablePorts() {
+        return this.disablePorts;
     }
 
     public ModifyDBInstanceConnectionStringRequest setRegionId(String regionId) {

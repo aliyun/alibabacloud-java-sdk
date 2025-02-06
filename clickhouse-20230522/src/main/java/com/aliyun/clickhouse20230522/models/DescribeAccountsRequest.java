@@ -28,6 +28,8 @@ public class DescribeAccountsRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The code of the cloud service.</p>
+     * 
      * <strong>example:</strong>
      * <p>clickhouse</p>
      */

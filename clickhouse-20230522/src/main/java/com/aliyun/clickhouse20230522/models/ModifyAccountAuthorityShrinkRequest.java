@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountAuthorityShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +24,14 @@ public class ModifyAccountAuthorityShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The information about permissions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DmlAuthSetting")
     public String dmlAuthSettingShrink;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

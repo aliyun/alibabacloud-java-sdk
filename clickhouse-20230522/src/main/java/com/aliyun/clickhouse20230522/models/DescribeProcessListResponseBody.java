@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeProcessListResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeProcessListResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxx-xxx</p>
      */
@@ -37,6 +42,8 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     public static class DescribeProcessListResponseBodyDataResultSet extends TeaModel {
         /**
+         * <p>The address to which the query statement is sent.</p>
+         * 
          * <strong>example:</strong>
          * <p>0:0:0:0:0:ffff:1edd65ea</p>
          */
@@ -44,6 +51,8 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String initialAddress;
 
         /**
+         * <p>The query ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>\&quot;79f7e40b-87e2-4ef4-b6df-21889a3a030e\&quot;</p>
          */
@@ -51,6 +60,8 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String initialQueryId;
 
         /**
+         * <p>The user who executes the query statement.</p>
+         * 
          * <strong>example:</strong>
          * <p>bany</p>
          */
@@ -58,6 +69,8 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String initialUser;
 
         /**
+         * <p>The query statement that is running.</p>
+         * 
          * <strong>example:</strong>
          * <p>select * from test</p>
          */
@@ -65,6 +78,8 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String query;
 
         /**
+         * <p>The minimum query duration. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -72,6 +87,8 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public Long queryDurationMs;
 
         /**
+         * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-23T10:13:23Z</p>
          */
@@ -135,19 +152,29 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     public static class DescribeProcessListResponseBodyData extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-xxxx</p>
          */
         @NameInMap("DBInstanceID")
         public Integer DBInstanceID;
 
+        /**
+         * <p>The cluster name.</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <p>The result sets.</p>
+         */
         @NameInMap("ResultSet")
         public java.util.List<DescribeProcessListResponseBodyDataResultSet> resultSet;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

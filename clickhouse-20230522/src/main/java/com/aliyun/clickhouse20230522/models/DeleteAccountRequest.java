@@ -23,6 +23,8 @@ public class DeleteAccountRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The code of the cloud service.</p>
+     * 
      * <strong>example:</strong>
      * <p>clickhouse</p>
      */

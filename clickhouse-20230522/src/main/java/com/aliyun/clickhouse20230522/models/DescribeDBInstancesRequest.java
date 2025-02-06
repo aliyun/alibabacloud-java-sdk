@@ -26,6 +26,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +35,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */

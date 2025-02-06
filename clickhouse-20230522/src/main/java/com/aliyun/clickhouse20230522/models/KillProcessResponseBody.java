@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class KillProcessResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public KillProcessResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxx-xxx</p>
      */
@@ -37,6 +42,8 @@ public class KillProcessResponseBody extends TeaModel {
 
     public static class KillProcessResponseBodyData extends TeaModel {
         /**
+         * <p>The number of queries that are terminated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -44,6 +51,8 @@ public class KillProcessResponseBody extends TeaModel {
         public Long count;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-xxxxxxx</p>
          */
@@ -51,6 +60,8 @@ public class KillProcessResponseBody extends TeaModel {
         public Integer DBInstanceID;
 
         /**
+         * <p>The cluster name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-xxxxxxx</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityIPListResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeSecurityIPListResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
      */
@@ -37,6 +42,8 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
 
     public static class DescribeSecurityIPListResponseBodyDataGroupItems extends TeaModel {
         /**
+         * <p>The name of the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -44,6 +51,8 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The tag of the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -51,6 +60,8 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         public String groupTag;
 
         /**
+         * <p>The IP addresses and CIDR blocks in the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>127.0.XX.XX</p>
          */
@@ -58,6 +69,8 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         public String securityIPList;
 
         /**
+         * <p>The IP address type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipv4</p>
          */
@@ -65,6 +78,8 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         public String securityIPType;
 
         /**
+         * <p>The network type of the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>mix</p>
          */
@@ -120,15 +135,23 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
 
     public static class DescribeSecurityIPListResponseBodyData extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****</p>
          */
         @NameInMap("DBInstanceID")
         public Integer DBInstanceID;
 
+        /**
+         * <p>The cluster name.</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <p>The details about the whitelists.</p>
+         */
         @NameInMap("GroupItems")
         public java.util.List<DescribeSecurityIPListResponseBodyDataGroupItems> groupItems;
 
