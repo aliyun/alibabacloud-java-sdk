@@ -109,6 +109,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("AccountType")
         public String accountType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SQL</p>
+         */
         @NameInMap("ConfigType")
         public String configType;
 

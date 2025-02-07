@@ -27,6 +27,8 @@ public class DescribeAccountsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The number of pages to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -34,6 +36,13 @@ public class DescribeAccountsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return per page. Valid values:</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */

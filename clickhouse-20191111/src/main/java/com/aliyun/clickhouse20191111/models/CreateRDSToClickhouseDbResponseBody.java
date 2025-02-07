@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
     /**
-     * <p>If -1 is returned for the <strong>Status</strong> parameter, the cause of the creation failure is returned.</p>
+     * <p>If the value of the <strong>Status</strong> parameter is -1, the cause of the creation failure is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>ClickHouse exception, code: 49, host: 100.100.79.102, port: 14540; Code: 49, e.displayText() = DB::Exception: Logical error: there is no global context (version 20.8.17.25)n</p>

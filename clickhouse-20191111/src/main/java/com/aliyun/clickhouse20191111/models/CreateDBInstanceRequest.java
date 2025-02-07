@@ -54,26 +54,22 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The specifications of the cluster.</p>
      * <ul>
-     * <li><p>Valid values when the cluster is of Single-replica Edition: </p>
+     * <li><p>Valid values for a Single-replica Edition cluster:</p>
      * <ul>
-     * <li><strong>S4</strong>: 4 CPU cores and 16 GB of memory </li>
-     * <li><strong>S8</strong>: 8 CPU cores and 32 GB of memory</li>
-     * <li><strong>S16</strong>: 16 CPU cores and 64 GB of memory</li>
-     * </ul>
-     * <ul>
-     * <li><strong>S32</strong>: 32 CPU cores and 128 GB of memory</li>
-     * <li><strong>S64</strong>: 64 CPU cores and 256 GB of memory</li>
-     * <li><strong>S104</strong>: 104 CPU cores and 384 GB of memory</li>
+     * <li><strong>S8</strong>: 8 cores and 32 GB of memory</li>
+     * <li><strong>S16</strong>: 16 cores and 64 GB of memory</li>
+     * <li><strong>S32</strong>: 32 cores and 128 GB of memory</li>
+     * <li><strong>S64</strong>: 64 cores and 256 GB of memory</li>
+     * <li><strong>S104</strong>: 104 cores and 384 GB of memory</li>
      * </ul>
      * </li>
-     * <li><p>Valid values when the cluster is of Double-replica Edition: </p>
+     * <li><p>Valid values for a Double-replica Edition cluster:</p>
      * <ul>
-     * <li><strong>C4</strong>: 4 CPU cores and 16 GB of memory </li>
-     * <li><strong>C8</strong>: 8 CPU cores and 32 GB of memory </li>
-     * <li><strong>C16</strong>: 16 CPU cores and 64 GB of memory </li>
-     * <li><strong>C32</strong>: 32 CPU cores and 128 GB of memory </li>
-     * <li><strong>C64</strong>: 64 CPU cores and 256 GB of memory </li>
-     * <li><strong>C104</strong>: 104 CPU cores and 384 GB of memory</li>
+     * <li><strong>C8</strong>: 8 cores and 32 GB of memory</li>
+     * <li><strong>C16</strong>: 16 cores and 64 GB of memory</li>
+     * <li><strong>C32</strong>: 32 cores and 128 GB of memory</li>
+     * <li><strong>C64</strong>: 64 cores and 256 GB of memory</li>
+     * <li><strong>C104</strong>: 104 cores and 384 GB of memory</li>
      * </ul>
      * </li>
      * </ul>
@@ -207,8 +203,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit of the subscription duration. This parameter is required when PayType is set to Prepaid.</p>
-     * <p>Valid values:</p>
+     * <p>The unit of the subscription duration for the cluster. Valid values:</p>
+     * <blockquote>
+     * <p> This parameter is required only when PayType is set to Prepaid.</p>
+     * </blockquote>
      * <ul>
      * <li><strong>Year</strong></li>
      * <li><strong>Month</strong></li>
@@ -258,11 +256,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String sourceDBClusterId;
 
     /**
-     * <p>The subscription duration of the subscription cluster. This parameter is required when PayType is set to Prepaid.</p>
-     * <p>Valid values:</p>
+     * <p>The subscription duration of the subscription cluster.</p>
+     * <blockquote>
+     * <p> This parameter is required only when PayType is set to Prepaid.</p>
+     * </blockquote>
      * <ul>
-     * <li>If Period is set to Year, the value of UsedTime must be an integer that ranges from 1 to 3.</li>
-     * <li>If Period is set to Month, the value of UsedTime must be an integer that ranges from 1 to 9.</li>
+     * <li>Valid values when Period is set to Year: 1 to 3 (integer)</li>
+     * <li>Valid values when Period is set to Month: 1 to 9 (integer)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -310,7 +310,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>Secondary zone 2.</p>
+     * <p>The secondary zone 2 of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-j</p>

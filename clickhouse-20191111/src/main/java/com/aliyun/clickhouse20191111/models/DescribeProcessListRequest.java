@@ -72,7 +72,7 @@ public class DescribeProcessListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
      * <li><strong>30</strong> (default)</li>
      * <li><strong>50</strong></li>

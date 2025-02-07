@@ -73,6 +73,10 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("DBNodeStorage")
     public String DBNodeStorage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CloudESSD</p>
+     */
     @NameInMap("DbNodeStorageType")
     public String dbNodeStorageType;
 

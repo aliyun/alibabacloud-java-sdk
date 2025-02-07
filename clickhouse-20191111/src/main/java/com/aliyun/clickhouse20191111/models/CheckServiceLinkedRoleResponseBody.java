@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     /**
-     * <p>The role.</p>
+     * <p>Indicates whether a service-linked role is created for ApsaraDB for ClickHouse.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx</p>
