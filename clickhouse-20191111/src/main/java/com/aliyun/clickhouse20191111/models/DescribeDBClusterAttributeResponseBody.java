@@ -168,6 +168,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("AppointmentRestartTime")
         public String appointmentRestartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;MajorVersion&quot;:&quot;MinorVersion&quot;}</p>
+         */
         @NameInMap("AvailableUpgradeMajorVersion")
         public java.util.Map<String, ?> availableUpgradeMajorVersion;
 

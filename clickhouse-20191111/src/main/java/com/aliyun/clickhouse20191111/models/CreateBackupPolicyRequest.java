@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The retention period for the backup data. By default, the backup data is retained for seven days. Valid values: 7 to 730. Unit: day.</p>
+     * <p>The backup retention period. The default retention period is seven days. Valid values: 7 to 730. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>

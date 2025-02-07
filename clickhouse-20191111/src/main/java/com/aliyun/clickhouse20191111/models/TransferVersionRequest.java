@@ -72,6 +72,9 @@ public class TransferVersionRequest extends TeaModel {
     @NameInMap("SourceAccount")
     public String sourceAccount;
 
+    @NameInMap("SourceClusterName")
+    public String sourceClusterName;
+
     /**
      * <p>The password that corresponds to the database account for logging on to the database in the source ApsaraDB for ClickHouse cluster.</p>
      * <p>This parameter is required.</p>
@@ -81,6 +84,9 @@ public class TransferVersionRequest extends TeaModel {
      */
     @NameInMap("SourcePassword")
     public String sourcePassword;
+
+    @NameInMap("SourceShards")
+    public String sourceShards;
 
     /**
      * <p>The database account that is used to log on to the database in the destination ApsaraDB for ClickHouse cluster.</p>
@@ -197,12 +203,28 @@ public class TransferVersionRequest extends TeaModel {
         return this.sourceAccount;
     }
 
+    public TransferVersionRequest setSourceClusterName(String sourceClusterName) {
+        this.sourceClusterName = sourceClusterName;
+        return this;
+    }
+    public String getSourceClusterName() {
+        return this.sourceClusterName;
+    }
+
     public TransferVersionRequest setSourcePassword(String sourcePassword) {
         this.sourcePassword = sourcePassword;
         return this;
     }
     public String getSourcePassword() {
         return this.sourcePassword;
+    }
+
+    public TransferVersionRequest setSourceShards(String sourceShards) {
+        this.sourceShards = sourceShards;
+        return this;
+    }
+    public String getSourceShards() {
+        return this.sourceShards;
     }
 
     public TransferVersionRequest setTargetAccount(String targetAccount) {

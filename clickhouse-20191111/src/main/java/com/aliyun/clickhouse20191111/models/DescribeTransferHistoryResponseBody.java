@@ -41,12 +41,18 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail extends TeaModel {
+        @NameInMap("BytesPerMinute")
+        public Long bytesPerMinute;
+
         /**
          * <strong>if can be null:</strong>
          * <p>false</p>
          */
         @NameInMap("DisableWriteWindows")
         public String disableWriteWindows;
+
+        @NameInMap("PartsPerMinute")
+        public Double partsPerMinute;
 
         /**
          * <p>The progress of the data migration.</p>
@@ -82,6 +88,12 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("SubJob")
+        public String subJob;
+
+        @NameInMap("SubJobStatus")
+        public String subJobStatus;
+
         @NameInMap("TargetControlVersion")
         public String targetControlVersion;
 
@@ -94,9 +106,23 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         @NameInMap("TargetDBCluster")
         public String targetDBCluster;
 
+        @NameInMap("UnsyncedBytes")
+        public Long unsyncedBytes;
+
+        @NameInMap("UnsyncedParts")
+        public Long unsyncedParts;
+
         public static DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail self = new DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setBytesPerMinute(Long bytesPerMinute) {
+            this.bytesPerMinute = bytesPerMinute;
+            return this;
+        }
+        public Long getBytesPerMinute() {
+            return this.bytesPerMinute;
         }
 
         public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setDisableWriteWindows(String disableWriteWindows) {
@@ -105,6 +131,14 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         }
         public String getDisableWriteWindows() {
             return this.disableWriteWindows;
+        }
+
+        public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setPartsPerMinute(Double partsPerMinute) {
+            this.partsPerMinute = partsPerMinute;
+            return this;
+        }
+        public Double getPartsPerMinute() {
+            return this.partsPerMinute;
         }
 
         public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setProgress(String progress) {
@@ -139,6 +173,22 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             return this.status;
         }
 
+        public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setSubJob(String subJob) {
+            this.subJob = subJob;
+            return this;
+        }
+        public String getSubJob() {
+            return this.subJob;
+        }
+
+        public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setSubJobStatus(String subJobStatus) {
+            this.subJobStatus = subJobStatus;
+            return this;
+        }
+        public String getSubJobStatus() {
+            return this.subJobStatus;
+        }
+
         public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setTargetControlVersion(String targetControlVersion) {
             this.targetControlVersion = targetControlVersion;
             return this;
@@ -153,6 +203,22 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         }
         public String getTargetDBCluster() {
             return this.targetDBCluster;
+        }
+
+        public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setUnsyncedBytes(Long unsyncedBytes) {
+            this.unsyncedBytes = unsyncedBytes;
+            return this;
+        }
+        public Long getUnsyncedBytes() {
+            return this.unsyncedBytes;
+        }
+
+        public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setUnsyncedParts(Long unsyncedParts) {
+            this.unsyncedParts = unsyncedParts;
+            return this;
+        }
+        public Long getUnsyncedParts() {
+            return this.unsyncedParts;
         }
 
     }
