@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnInstallClusterAddonsRequest extends TeaModel {
     /**
-     * <p>The components that you want to uninstall. The list is an array.</p>
+     * <p>The list of components that you want to uninstall. The list is an array.</p>
      */
     @NameInMap("addons")
     public java.util.List<UnInstallClusterAddonsRequestAddons> addons;
@@ -25,7 +25,11 @@ public class UnInstallClusterAddonsRequest extends TeaModel {
 
     public static class UnInstallClusterAddonsRequestAddons extends TeaModel {
         /**
-         * <p>Specifies whether to release cloud resources.</p>
+         * <p>Specifies whether to clear cloud resources.</p>
+         * <ul>
+         * <li>true: clears the data and cloud resources.</li>
+         * <li>false: retains the data and cloud resources.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -34,7 +38,7 @@ public class UnInstallClusterAddonsRequest extends TeaModel {
         public Boolean cleanupCloudResources;
 
         /**
-         * <p>The component name.</p>
+         * <p>The name of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>ack-node-problem-detector</p>
