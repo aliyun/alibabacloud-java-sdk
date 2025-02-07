@@ -44,7 +44,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOpenStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetOpenStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetOpenStatusResponse());
+        }
+
     }
 
     /**
@@ -56,6 +61,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取在线license列表</p>
+     * 
      * @param request GetOrderInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOrderInfoResponse
@@ -89,10 +97,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOrderInfoResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetOrderInfoResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetOrderInfoResponse());
+        }
+
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取在线license列表</p>
+     * 
      * @param request GetOrderInfoRequest
      * @return GetOrderInfoResponse
      */
@@ -139,7 +155,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOrderUsageResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetOrderUsageResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetOrderUsageResponse());
+        }
+
     }
 
     /**

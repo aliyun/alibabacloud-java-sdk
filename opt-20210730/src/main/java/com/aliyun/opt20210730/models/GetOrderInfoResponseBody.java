@@ -4,18 +4,38 @@ package com.aliyun.opt20210730.models;
 import com.aliyun.tea.*;
 
 public class GetOrderInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;licenseKey&quot;:&quot;eems7ri3b1u5nui*****&quot;,&quot;currentConcurrency&quot;:2,&quot;instanceId&quot;:&quot;opt_mplicense_public_cn-****&quot;,&quot;totalDays&quot;:124,&quot;currentDays&quot;:103}</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetOrderInfoResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5D6653C5-CA2B-14EC-9CF0-50AA0FF49C31</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -77,6 +97,9 @@ public class GetOrderInfoResponseBody extends TeaModel {
         @NameInMap("instanceId")
         public String instanceId;
 
+        @NameInMap("isReleased")
+        public Boolean isReleased;
+
         @NameInMap("licenseKey")
         public String licenseKey;
 
@@ -121,6 +144,14 @@ public class GetOrderInfoResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetOrderInfoResponseBodyData setIsReleased(Boolean isReleased) {
+            this.isReleased = isReleased;
+            return this;
+        }
+        public Boolean getIsReleased() {
+            return this.isReleased;
         }
 
         public GetOrderInfoResponseBodyData setLicenseKey(String licenseKey) {

@@ -9,12 +9,18 @@ public class GetOrderInfoRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MP</p>
      */
     @NameInMap("RelService")
     public String relService;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ResourceType")
     public Integer resourceType;
