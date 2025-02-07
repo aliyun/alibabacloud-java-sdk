@@ -107,7 +107,7 @@ public class CreateSecurityPolicyRequest extends TeaModel {
     public String securityPolicyName;
 
     /**
-     * <p>标签列表。</p>
+     * <p>The tags.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -193,8 +193,8 @@ public class CreateSecurityPolicyRequest extends TeaModel {
 
     public static class CreateSecurityPolicyRequestTag extends TeaModel {
         /**
-         * <p>标签键。最多支持128个字符，不能以<code>aliyun</code>或<code>acs:</code>开头，不能包含<code>http://</code>或<code>https://</code>。</p>
-         * <p>一次调用最多支持添加20个标签。</p>
+         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>KeyTest</p>
@@ -203,8 +203,8 @@ public class CreateSecurityPolicyRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>标签值。最多支持128个字符，不能以<code>aliyun</code>或<code>acs:</code>开头，不能包含<code>http://</code>或<code>https://</code>。</p>
-         * <p>一次调用最多支持添加20个标签。</p>
+         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ValueTest</p>

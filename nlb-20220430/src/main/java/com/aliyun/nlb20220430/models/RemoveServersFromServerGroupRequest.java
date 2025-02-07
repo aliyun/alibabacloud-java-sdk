@@ -51,7 +51,7 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
     public String serverGroupId;
 
     /**
-     * <p>The backend servers that you want to add to the server group. You can specify up to 40 servers in each call.</p>
+     * <p>The server groups. You can specify at most 200 server groups in each call.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Servers")
@@ -116,10 +116,10 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The backend server ID.</p>
+         * <p>The ID of the server group.</p>
          * <ul>
-         * <li>If the server group type is <strong>Instance</strong>, set this parameter to the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance. The backend servers are specified by <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong>.</li>
-         * <li>If the server group type is <strong>Ip</strong>, set this parameter to an IP address.</li>
+         * <li>If the server group is of the <strong>Instance</strong> type, set this parameter to the IDs of <strong>Elastic Compute Service (ECS) instances</strong>, <strong>elastic network interfaces (ENIs)</strong>, or <strong>elastic container instances</strong>.</li>
+         * <li>If the server group is of the <strong>Ip</strong> type, set this parameter to IP addresses.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -130,7 +130,7 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The IP address of the backend server. If the server group type is <strong>Ip</strong>, you must specify an IP address.</p>
+         * <p>The IP addresses of servers. If the server group type is <strong>Ip</strong>, set the ServerId parameter to IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.6.6</p>
@@ -139,7 +139,7 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         public String serverIp;
 
         /**
-         * <p>The type of the backend server. Valid values:</p>
+         * <p>The type of backend server. Valid values:</p>
          * <ul>
          * <li><strong>Ecs</strong>: ECS instance</li>
          * <li><strong>Eni</strong>: ENI</li>

@@ -111,7 +111,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
 
     public static class ListListenerCertificatesResponseBodyCertificates extends TeaModel {
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The ID of the certificate. Only one server certificate is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>12315790343_166f8204689_1714763408_70998****</p>
@@ -121,10 +121,6 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
 
         /**
          * <p>The type of the certificate.</p>
-         * <ul>
-         * <li>Server</li>
-         * <li>Ca</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Server</p>

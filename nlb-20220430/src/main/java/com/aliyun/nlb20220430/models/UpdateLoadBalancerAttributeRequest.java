@@ -18,7 +18,7 @@ public class UpdateLoadBalancerAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The maximum number of connections that can be created per second on the NLB instance. Valid values: <strong>1</strong> to <strong>1000000</strong>.</p>
+     * <p>The maximum number of new connections per second supported by the NLB instance in each zone (virtual IP address). Valid values: <strong>1</strong> to <strong>1000000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

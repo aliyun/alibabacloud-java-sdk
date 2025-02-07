@@ -5,15 +5,6 @@ import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the asynchronous task.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
-     */
-    @NameInMap("JobId")
-    public String jobId;
-
-    /**
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
@@ -25,14 +16,6 @@ public class TagResourcesResponseBody extends TeaModel {
     public static TagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TagResourcesResponseBody self = new TagResourcesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public TagResourcesResponseBody setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
     }
 
     public TagResourcesResponseBody setRequestId(String requestId) {

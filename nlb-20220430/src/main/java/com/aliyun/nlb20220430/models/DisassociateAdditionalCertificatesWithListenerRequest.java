@@ -38,11 +38,11 @@ public class DisassociateAdditionalCertificatesWithListenerRequest extends TeaMo
     public Boolean dryRun;
 
     /**
-     * <p>The listener ID. You must specify the ID of a listener that uses SSL over TCP.</p>
+     * <p>The listener ID. Only TCP/SSL listener IDs are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lsr-bp1bpn0kn908w4nbw****</p>
+     * <p>lsn-bpn0kn908w4nbw****@80</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;

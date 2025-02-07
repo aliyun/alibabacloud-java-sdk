@@ -7,15 +7,27 @@ public class ListListenerCertificatesRequest extends TeaModel {
     /**
      * <p>The type of the certificate. Valid values:</p>
      * <ul>
-     * <li><strong>Server</strong>: a server certificate.</li>
-     * <li><strong>Ca</strong>: Certificate Authority Certificate</li>
+     * <li><strong>Ca</strong>: CA certificate.</li>
+     * <li><strong>Server</strong>: server certificate</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Server</p>
+     * <p>Ca</p>
      */
     @NameInMap("CertType")
     public String certType;
+
+    /**
+     * <p>The server certificates. Only one server certificate is supported.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * </blockquote>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("CertificateIds")
+    public java.util.List<String> certificateIds;
 
     /**
      * <p>The ID of the listener. Specify the ID of a listener that uses SSL over TCP.</p>
@@ -70,6 +82,14 @@ public class ListListenerCertificatesRequest extends TeaModel {
     }
     public String getCertType() {
         return this.certType;
+    }
+
+    public ListListenerCertificatesRequest setCertificateIds(java.util.List<String> certificateIds) {
+        this.certificateIds = certificateIds;
+        return this;
+    }
+    public java.util.List<String> getCertificateIds() {
+        return this.certificateIds;
     }
 
     public ListListenerCertificatesRequest setListenerId(String listenerId) {

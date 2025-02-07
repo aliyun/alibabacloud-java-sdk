@@ -79,7 +79,7 @@ public class CreateServerGroupRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The configurations of the health check feature.</p>
+     * <p>The configuration of health checks.</p>
      */
     @NameInMap("HealthCheckConfig")
     public CreateServerGroupRequestHealthCheckConfig healthCheckConfig;
@@ -87,9 +87,12 @@ public class CreateServerGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable client IP preservation. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong> (default)</li>
+     * <li><strong>false</strong></li>
      * </ul>
+     * <blockquote>
+     * <p> If you set the value to <strong>true</strong> and <strong>Protocol</strong> to <strong>TCP</strong>, the server group cannot be associated with <strong>TCPSSL</strong> listeners.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -101,12 +104,20 @@ public class CreateServerGroupRequest extends TeaModel {
     public Boolean preserveClientIpEnabled;
 
     /**
-     * <p>The protocol used to forward requests to the backend servers. Valid values:</p>
+     * <p>The protocol between the NLB instance and backend servers. Valid values:</p>
      * <ul>
      * <li><strong>TCP</strong> (default)</li>
      * <li><strong>UDP</strong></li>
-     * <li><strong>TCPSSL</strong></li>
+     * <li><strong>TCP_UDP</strong></li>
      * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>If you set the value to <strong>UDP</strong>, you can associate the server group only with <strong>UDP</strong> listeners.</li>
+     * <li>If you set the value to <strong>TCP</strong> and <strong>PreserveClientIpEnabled</strong> to <strong>true</strong>, you can associate the server group only with <strong>TCP</strong> listeners.</li>
+     * <li>If you set the value to <strong>TCP</strong> and <strong>PreserveClientIpEnabled</strong> to <strong>false</strong>, you can associate the server group with <strong>TCP/SSL</strong> and <strong>TCP</strong> listeners.</li>
+     * <li>If you set the value to <strong>TCP_UDP</strong>, you can associate the server group with <strong>TCP</strong> and <strong>UDP</strong> listeners.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>TCP</p>
@@ -142,6 +153,9 @@ public class CreateServerGroupRequest extends TeaModel {
      * <li><strong>tch:</strong> Four-element hashing is used. It specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are forwarded to the same backend server.</li>
      * <li><strong>qch</strong>: QUIC ID hashing. Requests that contain the same QUIC ID are forwarded to the same backend server.</li>
      * </ul>
+     * <blockquote>
+     * <p>QUIC ID hashing is supported only when the backend protocol is set to UDP.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Wrr</p>
@@ -163,8 +177,8 @@ public class CreateServerGroupRequest extends TeaModel {
     /**
      * <p>The type of server group. Valid values:</p>
      * <ul>
-     * <li><strong>Instance</strong>: allows you to add servers of the <strong>Ecs</strong>, <strong>Ens</strong>, or <strong>Eci</strong> type. This is the default value.</li>
-     * <li><strong>Ip</strong>: allows you to add servers by specifying IP addresses.</li>
+     * <li><strong>Instance</strong> (default): allows you to specify servers of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
+     * <li><strong>Ip</strong>: allows you to add servers of by specifying IP addresses.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -332,7 +346,7 @@ public class CreateServerGroupRequest extends TeaModel {
         /**
          * <p>The port that you want to use for health checks on backend servers.</p>
          * <p>Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-         * <p>Default value: <strong>0</strong>. If you set the value to 0, the port of the backend server is used for health checks.</p>
+         * <p>Default value: <strong>0</strong>. If you set the value to 0, the port of a backend server is used for health checks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -350,13 +364,13 @@ public class CreateServerGroupRequest extends TeaModel {
         public Integer healthCheckConnectTimeout;
 
         /**
-         * <p>The domain name that you want to use for health checks. Valid values:</p>
+         * <p>The domain name that is used for health checks. Valid values:</p>
          * <ul>
-         * <li><strong>$SERVER_IP</strong>: the private IP address of a backend server.</li>
-         * <li><strong>domain</strong>: a specified domain name. The domain name must be 1 to 80 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.).</li>
+         * <li><strong>$SERVER_IP</strong>: the internal IP address of a backend server.</li>
+         * <li><strong>domain</strong>: a domain name. The domain name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), and periods (.).</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter takes effect only when <strong>HealthCheckType</strong> is set to <strong>HTTP</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -378,13 +392,19 @@ public class CreateServerGroupRequest extends TeaModel {
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
+        /**
+         * <p>The request string for UDP listener health checks. The string must be 1 to 64 characters in length and can contain only letters and digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("HealthCheckExp")
         public String healthCheckExp;
 
         /**
          * <p>The HTTP status codes to return for health checks. Separate multiple HTTP status codes with commas (,). Valid values: <strong>http_2xx</strong> (default), <strong>http_3xx</strong>, <strong>http_4xx</strong>, and <strong>http_5xx</strong>.</p>
          * <blockquote>
-         * <p>This parameter takes effect only when <strong>HealthCheckType</strong> is set to <strong>HTTP</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
          * </blockquote>
          */
         @NameInMap("HealthCheckHttpCode")
@@ -392,7 +412,7 @@ public class CreateServerGroupRequest extends TeaModel {
 
         /**
          * <p>The interval at which health checks are performed. Unit: seconds.</p>
-         * <p>Valid values: <strong>5</strong> to <strong>50</strong>.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
          * <p>Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -401,11 +421,22 @@ public class CreateServerGroupRequest extends TeaModel {
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
+        /**
+         * <p>The request string for UDP listener health checks. The string must be 1 to 64 characters in length and can contain only letters and digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("HealthCheckReq")
         public String healthCheckReq;
 
         /**
-         * <p>The protocol that you want to use for health checks. Valid values: <strong>TCP</strong> (default) and <strong>HTTP</strong>.</p>
+         * <p>The protocol that is used for health checks. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>HTTP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -414,10 +445,10 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckType;
 
         /**
-         * <p>The path to which health check requests are sent.</p>
-         * <p>The path must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <code>- / . % ? # &amp;</code>. It must start with a forward slash (/).</p>
+         * <p>The URL that is used for health checks.</p>
+         * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <code>- / . % ? # &amp; </code>. The URL must start with a forward slash (/).</p>
          * <blockquote>
-         * <p>This parameter takes effect only when <strong>HealthCheckType</strong> is set to <strong>HTTP</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -440,7 +471,7 @@ public class CreateServerGroupRequest extends TeaModel {
         /**
          * <p>The HTTP method that is used for health checks. Valid values: <strong>GET</strong> (default) and <strong>HEAD</strong>.</p>
          * <blockquote>
-         * <p>This parameter takes effect only when <strong>HealthCheckType</strong> is set to <strong>HTTP</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

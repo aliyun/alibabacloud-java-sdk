@@ -42,16 +42,16 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
 
     public static class ListSystemSecurityPolicyResponseBodySecurityPolicies extends TeaModel {
         /**
-         * <p>The cipher suites.</p>
+         * <p>The cipher suite.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECDHE-ECDSA-AES128-SHA</p>
+         * <p>ECDHE-ECDSA-AES128-GCM-SHA256,ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256,ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES128-GCM-SHA256,ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-SHA256,ECDHE-RSA-AES256-SHA384,AES128-GCM-SHA256,AES256-GCM-SHA384,AES128-SHA256,AES256-SHA256,ECDHE-ECDSA-AES128-SHA,ECDHE-ECDSA-AES256-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA,AES128-SHA,AES256-SHA,DES-CBC3-SHA</p>
          */
         @NameInMap("Ciphers")
         public String ciphers;
 
         /**
-         * <p>The TLS policy ID.</p>
+         * <p>The ID of the TLS security policy.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-3fdab6dkkke10s****</p>
@@ -60,7 +60,7 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
         public String securityPolicyId;
 
         /**
-         * <p>The TLS policy name.</p>
+         * <p>The name of the TLS security policy.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -69,7 +69,7 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
         public String securityPolicyName;
 
         /**
-         * <p>The version of the TLS protocol.</p>
+         * <p>The TLS version.</p>
          * 
          * <strong>example:</strong>
          * <p>TLSv1.0</p>

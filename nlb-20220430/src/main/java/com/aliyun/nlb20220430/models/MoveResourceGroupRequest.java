@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the new resource group.</p>
-     * <p>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> to view resource group IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +16,6 @@ public class MoveResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The region ID of the NLB instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,10 +25,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the bastion host for which you want to change the resource group.</p>
-     * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
-     * </blockquote>
+     * <p>The ID of the resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

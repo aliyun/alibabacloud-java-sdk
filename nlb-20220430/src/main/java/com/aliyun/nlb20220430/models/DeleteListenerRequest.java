@@ -31,11 +31,11 @@ public class DeleteListenerRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the listener.</p>
+     * <p>The listener ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lsn-bp1bpn0kn908w4nbw****</p>
+     * <p>lsn-bp1bpn0kn908w4nbw****@80</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;

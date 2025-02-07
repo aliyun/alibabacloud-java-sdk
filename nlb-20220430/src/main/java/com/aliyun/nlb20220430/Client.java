@@ -76,7 +76,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AddServersToServerGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AddServersToServerGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AddServersToServerGroupResponse());
+        }
+
     }
 
     /**
@@ -143,7 +148,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateAdditionalCertificatesWithListenerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateAdditionalCertificatesWithListenerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AssociateAdditionalCertificatesWithListenerResponse());
+        }
+
     }
 
     /**
@@ -167,7 +177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定带宽包</p>
+     * <p>Associates an Internet Shared Bandwidth instance with a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request AttachCommonBandwidthPackageToLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -210,12 +220,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachCommonBandwidthPackageToLoadBalancerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AttachCommonBandwidthPackageToLoadBalancerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AttachCommonBandwidthPackageToLoadBalancerResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>绑定带宽包</p>
+     * <p>Associates an Internet Shared Bandwidth instance with a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request AttachCommonBandwidthPackageToLoadBalancerRequest
      * @return AttachCommonBandwidthPackageToLoadBalancerResponse
@@ -273,7 +288,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelShiftLoadBalancerZonesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CancelShiftLoadBalancerZonesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CancelShiftLoadBalancerZonesResponse());
+        }
+
     }
 
     /**
@@ -414,7 +434,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateListenerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateListenerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateListenerResponse());
+        }
+
     }
 
     /**
@@ -529,7 +554,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLoadBalancerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLoadBalancerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateLoadBalancerResponse());
+        }
+
     }
 
     /**
@@ -556,7 +586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom security policy for a Network Load Balancer (NLB) instance.</p>
+     * <p>Creates a custom security policy for a TCP/SSL listener.</p>
      * 
      * @param request CreateSecurityPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -611,12 +641,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSecurityPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSecurityPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateSecurityPolicyResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom security policy for a Network Load Balancer (NLB) instance.</p>
+     * <p>Creates a custom security policy for a TCP/SSL listener.</p>
      * 
      * @param request CreateSecurityPolicyRequest
      * @return CreateSecurityPolicyResponse
@@ -731,7 +766,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServerGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServerGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateServerGroupResponse());
+        }
+
     }
 
     /**
@@ -759,7 +799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除监听</p>
+     * <p>Deletes a Network Load Balancer (NLB) listener.</p>
      * 
      * @param request DeleteListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -798,12 +838,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteListenerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteListenerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteListenerResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>删除监听</p>
+     * <p>Deletes a Network Load Balancer (NLB) listener.</p>
      * 
      * @param request DeleteListenerRequest
      * @return DeleteListenerResponse
@@ -815,7 +860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除负载均衡</p>
+     * <p>Deletes a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request DeleteLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -854,12 +899,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLoadBalancerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLoadBalancerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteLoadBalancerResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>删除负载均衡</p>
+     * <p>Deletes a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request DeleteLoadBalancerRequest
      * @return DeleteLoadBalancerResponse
@@ -871,7 +921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除安全策略</p>
+     * <p>Deletes a custom TLS security policy from a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request DeleteSecurityPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -910,12 +960,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSecurityPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSecurityPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteSecurityPolicyResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>删除安全策略</p>
+     * <p>Deletes a custom TLS security policy from a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request DeleteSecurityPolicyRequest
      * @return DeleteSecurityPolicyResponse
@@ -930,7 +985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can delete server groups that are not associated with listeners.</p>
      * 
      * <b>summary</b> : 
-     * <p>DeleteServerGroup</p>
+     * <p>Deletes a Network Load Balancer (NLB) server group.</p>
      * 
      * @param request DeleteServerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -969,7 +1024,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServerGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServerGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteServerGroupResponse());
+        }
+
     }
 
     /**
@@ -977,7 +1037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can delete server groups that are not associated with listeners.</p>
      * 
      * <b>summary</b> : 
-     * <p>DeleteServerGroup</p>
+     * <p>Deletes a Network Load Balancer (NLB) server group.</p>
      * 
      * @param request DeleteServerGroupRequest
      * @return DeleteServerGroupResponse
@@ -1016,7 +1076,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHdMonitorRegionConfigResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHdMonitorRegionConfigResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeHdMonitorRegionConfigResponse());
+        }
+
     }
 
     /**
@@ -1070,7 +1135,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeRegionsResponse());
+        }
+
     }
 
     /**
@@ -1087,7 +1157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries zones in a region that supports Network Load Balancer (NLB).</p>
+     * <p>Queries the zones of a region in which a Network Load Balancer (NLB) instance is deployed.</p>
      * 
      * @param request DescribeZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1126,12 +1196,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeZonesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeZonesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeZonesResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Queries zones in a region that supports Network Load Balancer (NLB).</p>
+     * <p>Queries the zones of a region in which a Network Load Balancer (NLB) instance is deployed.</p>
      * 
      * @param request DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -1143,7 +1218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑带宽包</p>
+     * <p>Disassociates a Network Load Balancer (NLB) instance from an Internet Shared Bandwidth instance.</p>
      * 
      * @param request DetachCommonBandwidthPackageFromLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1186,12 +1261,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachCommonBandwidthPackageFromLoadBalancerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DetachCommonBandwidthPackageFromLoadBalancerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DetachCommonBandwidthPackageFromLoadBalancerResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>解绑带宽包</p>
+     * <p>Disassociates a Network Load Balancer (NLB) instance from an Internet Shared Bandwidth instance.</p>
      * 
      * @param request DetachCommonBandwidthPackageFromLoadBalancerRequest
      * @return DetachCommonBandwidthPackageFromLoadBalancerResponse
@@ -1203,7 +1283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the network type of an IPv6 Network Load Balancer (NLB) instance from Internet-facing to internal-facing.</p>
+     * <p>Changes the public IPv6 address of a dual-stack Network Load Balancer (NLB) instance to a private IPv6 address.</p>
      * 
      * @param request DisableLoadBalancerIpv6InternetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1242,12 +1322,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableLoadBalancerIpv6InternetResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DisableLoadBalancerIpv6InternetResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DisableLoadBalancerIpv6InternetResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the network type of an IPv6 Network Load Balancer (NLB) instance from Internet-facing to internal-facing.</p>
+     * <p>Changes the public IPv6 address of a dual-stack Network Load Balancer (NLB) instance to a private IPv6 address.</p>
      * 
      * @param request DisableLoadBalancerIpv6InternetRequest
      * @return DisableLoadBalancerIpv6InternetResponse
@@ -1309,7 +1394,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DisassociateAdditionalCertificatesWithListenerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DisassociateAdditionalCertificatesWithListenerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DisassociateAdditionalCertificatesWithListenerResponse());
+        }
+
     }
 
     /**
@@ -1372,7 +1462,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableLoadBalancerIpv6InternetResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new EnableLoadBalancerIpv6InternetResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new EnableLoadBalancerIpv6InternetResponse());
+        }
+
     }
 
     /**
@@ -1389,7 +1484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流状态</p>
+     * <p>Queries the result of an asynchronous operation performed on a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request GetJobStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1420,12 +1515,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetJobStatusResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流状态</p>
+     * <p>Queries the result of an asynchronous operation performed on a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request GetJobStatusRequest
      * @return GetJobStatusResponse
@@ -1476,7 +1576,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetListenerAttributeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetListenerAttributeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetListenerAttributeResponse());
+        }
+
     }
 
     /**
@@ -1493,7 +1598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the health check status of a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the health check status of a Network Load Balancer (NLB) listener.</p>
      * 
      * @param request GetListenerHealthStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1504,14 +1609,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.listenerId)) {
             query.put("ListenerId", request.listenerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
-            query.put("MaxResults", request.maxResults);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
-            query.put("NextToken", request.nextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -1532,12 +1629,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetListenerHealthStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetListenerHealthStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetListenerHealthStatusResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the health check status of a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the health check status of a Network Load Balancer (NLB) listener.</p>
      * 
      * @param request GetListenerHealthStatusRequest
      * @return GetListenerHealthStatusResponse
@@ -1588,7 +1690,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLoadBalancerAttributeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetLoadBalancerAttributeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetLoadBalancerAttributeResponse());
+        }
+
     }
 
     /**
@@ -1605,7 +1712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables deletion protection and the configuration read-only mode for a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the server certificate of a TCP/SSL listener.</p>
      * 
      * @param request ListListenerCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1616,6 +1723,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.certType)) {
             body.put("CertType", request.certType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certificateIds)) {
+            body.put("CertificateIds", request.certificateIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.listenerId)) {
@@ -1648,12 +1759,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListListenerCertificatesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListListenerCertificatesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListListenerCertificatesResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables deletion protection and the configuration read-only mode for a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the server certificate of a TCP/SSL listener.</p>
      * 
      * @param request ListListenerCertificatesRequest
      * @return ListListenerCertificatesResponse
@@ -1720,7 +1836,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListListenersResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListListenersResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListListenersResponse());
+        }
+
     }
 
     /**
@@ -1737,7 +1858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Network Load Balancer (NLB) instances in a region based on specified conditions.</p>
+     * <p>Queries the basic information about a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1824,12 +1945,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLoadBalancersResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListLoadBalancersResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListLoadBalancersResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Network Load Balancer (NLB) instances in a region based on specified conditions.</p>
+     * <p>Queries the basic information about a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @return ListLoadBalancersResponse
@@ -1894,7 +2020,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSecurityPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListSecurityPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListSecurityPolicyResponse());
+        }
+
     }
 
     /**
@@ -1911,7 +2042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backend servers in a specified server group.</p>
+     * <p>Queries servers in a server group of a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request ListServerGroupServersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1958,12 +2089,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServerGroupServersResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListServerGroupServersResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListServerGroupServersResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backend servers in a specified server group.</p>
+     * <p>Queries servers in a server group of a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request ListServerGroupServersRequest
      * @return ListServerGroupServersResponse
@@ -2036,7 +2172,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServerGroupsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListServerGroupsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListServerGroupsResponse());
+        }
+
     }
 
     /**
@@ -2080,7 +2221,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSystemSecurityPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListSystemSecurityPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListSystemSecurityPolicyResponse());
+        }
+
     }
 
     /**
@@ -2149,7 +2295,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagResourcesResponse());
+        }
+
     }
 
     /**
@@ -2221,7 +2372,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new LoadBalancerJoinSecurityGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new LoadBalancerJoinSecurityGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new LoadBalancerJoinSecurityGroupResponse());
+        }
+
     }
 
     /**
@@ -2257,7 +2413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a security group from a Network Load Balancer (NLB) instance.</p>
+     * <p>Disassociates a Network Load Balancer (NLB) instance from a security group.</p>
      * 
      * @param request LoadBalancerLeaveSecurityGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2300,7 +2456,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new LoadBalancerLeaveSecurityGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new LoadBalancerLeaveSecurityGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new LoadBalancerLeaveSecurityGroupResponse());
+        }
+
     }
 
     /**
@@ -2312,7 +2473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a security group from a Network Load Balancer (NLB) instance.</p>
+     * <p>Disassociates a Network Load Balancer (NLB) instance from a security group.</p>
      * 
      * @param request LoadBalancerLeaveSecurityGroupRequest
      * @return LoadBalancerLeaveSecurityGroupResponse
@@ -2363,7 +2524,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new MoveResourceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new MoveResourceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new MoveResourceGroupResponse());
+        }
+
     }
 
     /**
@@ -2380,7 +2546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes backend servers from a server group of a Network Load Balancer (NLB) instance.</p>
+     * <p>Deletes server groups from a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request RemoveServersFromServerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2423,12 +2589,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveServersFromServerGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveServersFromServerGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RemoveServersFromServerGroupResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Removes backend servers from a server group of a Network Load Balancer (NLB) instance.</p>
+     * <p>Deletes server groups from a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request RemoveServersFromServerGroupRequest
      * @return RemoveServersFromServerGroupResponse
@@ -2475,7 +2646,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SetHdMonitorRegionConfigResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SetHdMonitorRegionConfigResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SetHdMonitorRegionConfigResponse());
+        }
+
     }
 
     /**
@@ -2492,7 +2668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables a listener for a Network Load Balancer (NLB) instance.</p>
+     * <p>Enables a Network Load Balancer (NLB) listener.</p>
      * 
      * @param request StartListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2531,12 +2707,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartListenerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StartListenerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StartListenerResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Enables a listener for a Network Load Balancer (NLB) instance.</p>
+     * <p>Enables a Network Load Balancer (NLB) listener.</p>
      * 
      * @param request StartListenerRequest
      * @return StartListenerResponse
@@ -2553,7 +2734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Removes an elastic IP address (EIP) or a virtual IP address (VIP) of a zone from a DNS record.</p>
+     * <p>Removes the elastic IP address (EIP) or virtual IP address (VIP) from a zone.</p>
      * 
      * @param request StartShiftLoadBalancerZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2596,7 +2777,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartShiftLoadBalancerZonesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StartShiftLoadBalancerZonesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StartShiftLoadBalancerZonesResponse());
+        }
+
     }
 
     /**
@@ -2606,7 +2792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Removes an elastic IP address (EIP) or a virtual IP address (VIP) of a zone from a DNS record.</p>
+     * <p>Removes the elastic IP address (EIP) or virtual IP address (VIP) from a zone.</p>
      * 
      * @param request StartShiftLoadBalancerZonesRequest
      * @return StartShiftLoadBalancerZonesResponse
@@ -2618,7 +2804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a listener for a Network Load Balancer (NLB) instance.</p>
+     * <p>Stops a listener of a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request StopListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2657,12 +2843,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StopListenerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StopListenerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StopListenerResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a listener for a Network Load Balancer (NLB) instance.</p>
+     * <p>Stops a listener of a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request StopListenerRequest
      * @return StopListenerResponse
@@ -2726,7 +2917,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new TagResourcesResponse());
+        }
+
     }
 
     /**
@@ -2799,7 +2995,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UntagResourcesResponse());
+        }
+
     }
 
     /**
@@ -2917,7 +3118,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateListenerAttributeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateListenerAttributeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateListenerAttributeResponse());
+        }
+
     }
 
     /**
@@ -2945,7 +3151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the network type of the IPv4 address of a Network Load Balancer (NLB) instance.</p>
+     * <p>Changes the network type of the IPv4 address for a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request UpdateLoadBalancerAddressTypeConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2992,7 +3198,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerAddressTypeConfigResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerAddressTypeConfigResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateLoadBalancerAddressTypeConfigResponse());
+        }
+
     }
 
     /**
@@ -3008,7 +3219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the network type of the IPv4 address of a Network Load Balancer (NLB) instance.</p>
+     * <p>Changes the network type of the IPv4 address for a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request UpdateLoadBalancerAddressTypeConfigRequest
      * @return UpdateLoadBalancerAddressTypeConfigResponse
@@ -3071,7 +3282,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerAttributeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerAttributeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateLoadBalancerAttributeResponse());
+        }
+
     }
 
     /**
@@ -3093,7 +3309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables deletion protection and the configuration read-only mode for a Network Load Balancer (NLB) instance.</p>
+     * <p>Enables or disables the deletion protection feature.</p>
      * 
      * @param request UpdateLoadBalancerProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3148,7 +3364,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerProtectionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerProtectionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateLoadBalancerProtectionResponse());
+        }
+
     }
 
     /**
@@ -3158,7 +3379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables deletion protection and the configuration read-only mode for a Network Load Balancer (NLB) instance.</p>
+     * <p>Enables or disables the deletion protection feature.</p>
      * 
      * @param request UpdateLoadBalancerProtectionRequest
      * @return UpdateLoadBalancerProtectionResponse
@@ -3226,7 +3447,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerZonesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerZonesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateLoadBalancerZonesResponse());
+        }
+
     }
 
     /**
@@ -3307,7 +3533,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSecurityPolicyAttributeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSecurityPolicyAttributeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateSecurityPolicyAttributeResponse());
+        }
+
     }
 
     /**
@@ -3324,7 +3555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a server group of Network Load Balancer (NLB).</p>
+     * <p>Modifies the configurations of a Network Load Balancer (NLB) server group.</p>
      * 
      * @param request UpdateServerGroupAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3392,12 +3623,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServerGroupAttributeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServerGroupAttributeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateServerGroupAttributeResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a server group of Network Load Balancer (NLB).</p>
+     * <p>Modifies the configurations of a Network Load Balancer (NLB) server group.</p>
      * 
      * @param request UpdateServerGroupAttributeRequest
      * @return UpdateServerGroupAttributeResponse
@@ -3424,7 +3660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of backend servers in a server group, such as the weight and description.</p>
+     * <p>Modifies the weights and descriptions of backend servers in a server group of a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request UpdateServerGroupServersAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3467,7 +3703,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServerGroupServersAttributeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServerGroupServersAttributeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateServerGroupServersAttributeResponse());
+        }
+
     }
 
     /**
@@ -3487,7 +3728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of backend servers in a server group, such as the weight and description.</p>
+     * <p>Modifies the weights and descriptions of backend servers in a server group of a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request UpdateServerGroupServersAttributeRequest
      * @return UpdateServerGroupServersAttributeResponse
