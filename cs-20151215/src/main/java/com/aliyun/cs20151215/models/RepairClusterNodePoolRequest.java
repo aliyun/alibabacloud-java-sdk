@@ -19,6 +19,9 @@ public class RepairClusterNodePoolRequest extends TeaModel {
     @NameInMap("nodes")
     public java.util.List<String> nodes;
 
+    /**
+     * <p>The repair operation to be performed. If not specified, all repair operations will be executed by default. Generally, there is no need to specify this in most scenarios.</p>
+     */
     @NameInMap("operations")
     public java.util.List<RepairClusterNodePoolRequestOperations> operations;
 
@@ -52,9 +55,18 @@ public class RepairClusterNodePoolRequest extends TeaModel {
     }
 
     public static class RepairClusterNodePoolRequestOperations extends TeaModel {
+        /**
+         * <p>List of repair operation parameters.</p>
+         */
         @NameInMap("args")
         public java.util.List<String> args;
 
+        /**
+         * <p>Repair operation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remove.containerdContainer</p>
+         */
         @NameInMap("operation_id")
         public String operationId;
 

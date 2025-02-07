@@ -47,6 +47,9 @@ public class InstancePatterns extends TeaModel {
     @NameInMap("instance_family_level")
     public String instanceFamilyLevel;
 
+    @NameInMap("instance_type_families")
+    public java.util.List<String> instanceTypeFamilies;
+
     /**
      * <strong>example:</strong>
      * <p>8</p>
@@ -69,6 +72,9 @@ public class InstancePatterns extends TeaModel {
     @Deprecated
     public Float maxPrice;
 
+    @NameInMap("maximum_gpu_amount")
+    public Long maximumGpuAmount;
+
     /**
      * <strong>example:</strong>
      * <p>8</p>
@@ -89,6 +95,15 @@ public class InstancePatterns extends TeaModel {
      */
     @NameInMap("min_memory_size")
     public Float minMemorySize;
+
+    @NameInMap("minimum_eni_ipv6_address_quantity")
+    public Long minimumEniIpv6AddressQuantity;
+
+    @NameInMap("minimum_eni_private_ip_address_quantity")
+    public Long minimumEniPrivateIpAddressQuantity;
+
+    @NameInMap("minimum_eni_quantity")
+    public Long minimumEniQuantity;
 
     public static InstancePatterns build(java.util.Map<String, ?> map) throws Exception {
         InstancePatterns self = new InstancePatterns();
@@ -162,6 +177,14 @@ public class InstancePatterns extends TeaModel {
         return this.instanceFamilyLevel;
     }
 
+    public InstancePatterns setInstanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
+        this.instanceTypeFamilies = instanceTypeFamilies;
+        return this;
+    }
+    public java.util.List<String> getInstanceTypeFamilies() {
+        return this.instanceTypeFamilies;
+    }
+
     public InstancePatterns setMaxCpuCores(Long maxCpuCores) {
         this.maxCpuCores = maxCpuCores;
         return this;
@@ -187,6 +210,14 @@ public class InstancePatterns extends TeaModel {
         return this.maxPrice;
     }
 
+    public InstancePatterns setMaximumGpuAmount(Long maximumGpuAmount) {
+        this.maximumGpuAmount = maximumGpuAmount;
+        return this;
+    }
+    public Long getMaximumGpuAmount() {
+        return this.maximumGpuAmount;
+    }
+
     public InstancePatterns setMemory(Float memory) {
         this.memory = memory;
         return this;
@@ -209,6 +240,30 @@ public class InstancePatterns extends TeaModel {
     }
     public Float getMinMemorySize() {
         return this.minMemorySize;
+    }
+
+    public InstancePatterns setMinimumEniIpv6AddressQuantity(Long minimumEniIpv6AddressQuantity) {
+        this.minimumEniIpv6AddressQuantity = minimumEniIpv6AddressQuantity;
+        return this;
+    }
+    public Long getMinimumEniIpv6AddressQuantity() {
+        return this.minimumEniIpv6AddressQuantity;
+    }
+
+    public InstancePatterns setMinimumEniPrivateIpAddressQuantity(Long minimumEniPrivateIpAddressQuantity) {
+        this.minimumEniPrivateIpAddressQuantity = minimumEniPrivateIpAddressQuantity;
+        return this;
+    }
+    public Long getMinimumEniPrivateIpAddressQuantity() {
+        return this.minimumEniPrivateIpAddressQuantity;
+    }
+
+    public InstancePatterns setMinimumEniQuantity(Long minimumEniQuantity) {
+        this.minimumEniQuantity = minimumEniQuantity;
+        return this;
+    }
+    public Long getMinimumEniQuantity() {
+        return this.minimumEniQuantity;
     }
 
 }

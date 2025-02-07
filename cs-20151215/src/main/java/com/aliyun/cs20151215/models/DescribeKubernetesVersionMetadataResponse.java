@@ -216,6 +216,12 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
     public static class DescribeKubernetesVersionMetadataResponseBody extends TeaModel {
         /**
          * <p>Features of the queried Kubernetes version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;AnyAZ&quot;: true,
+         *       &quot;ChargeType&quot;: &quot;PostPaid&quot;
+         * }</p>
          */
         @NameInMap("capabilities")
         public java.util.Map<String, ?> capabilities;
@@ -228,12 +234,19 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
 
         /**
          * <p>The metadata of the Kubernetes version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;KubernetesVersion&quot;: &quot;1.31.1-aliyun.1&quot;,
+         *       &quot;SubClass&quot;: &quot;default&quot;,
+         *       &quot;ServiceCIDR&quot;: &quot;&quot;
+         * }</p>
          */
         @NameInMap("meta_data")
         public java.util.Map<String, ?> metaData;
 
         /**
-         * <p>Details of the supported container runtimes.</p>
+         * <p>The container runtime configurations.</p>
          */
         @NameInMap("runtimes")
         public java.util.List<Runtime> runtimes;

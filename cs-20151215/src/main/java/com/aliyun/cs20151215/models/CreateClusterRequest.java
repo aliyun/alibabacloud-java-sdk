@@ -47,6 +47,7 @@ public class CreateClusterRequest extends TeaModel {
     public String apiAudiences;
 
     /**
+     * <p><strong>This parameter is deprecated.</strong></p>
      * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
      * <ul>
      * <li><code>true</code>: enables auto-renewal.</li>
@@ -63,8 +64,9 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p><strong>This parameter is deprecated.</strong></p>
      * <p>The auto-renewal duration. This parameter takes effect only if charge_type is set to PrePaid and auto_renew is set to true. If you set <code>period_unit</code> to Month, the valid values of auto_renew_period are 1, 2, 3, 6, and 12.</p>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
      * 
      * <strong>example:</strong>
@@ -75,13 +77,20 @@ public class CreateClusterRequest extends TeaModel {
     public Long autoRenewPeriod;
 
     /**
-     * <p>The billing method of the resource. The following resources are billed on a subscription basis:</p>
-     * <p>The internal-facing SLB instance used by the API server.</p>
-     * <p>Valid values:</p>
-     * <p>PrePaid: subscription</p>
-     * <p>PostPaid: pay-as-you-go</p>
-     * <p>Default value: PostPaid.</p>
-     * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+     * <p>The billing method of the Classic Load Balancer (CLB) instance that is used by the API server. Default value: PostPaid. Valid values:</p>
+     * <ul>
+     * <li>PostPaid: pay-as-you-go</li>
+     * <li>PrePaid: subscription. The newly created billing method for the CLB instance is not supported.</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+     * </li>
+     * <li><p>Starting from December 1, 2024, new CLB instances no longer support the subscription billing method and will be charged for the instances.</p>
+     * </li>
+     * </ul>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2839797.html">CLB billing adjustments</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -165,6 +174,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("container_cidr")
     public String containerCidr;
 
+    /**
+     * <p>The control plane configurations of an ACK dedicated cluster.</p>
+     */
     @NameInMap("control_plane_config")
     public CreateClusterRequestControlPlaneConfig controlPlaneConfig;
 
@@ -476,7 +488,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for master nodes.</p>
      * <p>Valid values: 1, 2, 3, 6, and 12.</p>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -499,8 +511,8 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The billing method of master nodes. Valid values:</p>
      * <ul>
-     * <li><code>PrePaid</code>: subscription.</li>
-     * <li><code>PostPaid</code>: the pay-as-you-go.</li>
+     * <li><code>PrePaid</code>: subscription</li>
+     * <li><code>PostPaid</code>: the pay-as-you-go</li>
      * </ul>
      * <p>Default value: <code>PostPaid</code></p>
      * 
@@ -521,7 +533,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The subscription duration of master nodes. This parameter takes effect and is required only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
      * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -545,8 +557,8 @@ public class CreateClusterRequest extends TeaModel {
      * <p>The system disk type of master nodes. Valid values:</p>
      * <ul>
      * <li><code>cloud_efficiency</code>: ultra disk</li>
-     * <li><code>cloud_ssd</code>: standard SSD.</li>
-     * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
+     * <li><code>cloud_ssd</code>: standard SSD</li>
+     * <li><code>cloud_essd</code>: Enterprise SSD (ESSD)</li>
      * </ul>
      * <p>Default value: <code>cloud_ssd</code>. The default value may vary in different zones.</p>
      * 
@@ -690,9 +702,10 @@ public class CreateClusterRequest extends TeaModel {
     public String osType;
 
     /**
+     * <p><strong>This parameter is deprecated.</strong></p>
      * <p>The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.</p>
      * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
      * 
      * <strong>example:</strong>
@@ -703,6 +716,7 @@ public class CreateClusterRequest extends TeaModel {
     public Long period;
 
     /**
+     * <p><strong>This parameter is deprecated.</strong></p>
      * <p>The billing cycle. This parameter is required if charge_type is set to PrePaid.</p>
      * <p>Valid value: Month, which indicates that resources are billed only on a monthly basis.</p>
      * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
@@ -918,7 +932,7 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<Tag> tags;
 
     /**
-     * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
+     * <p>The taint. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
      */
     @NameInMap("taints")
     @Deprecated
@@ -1013,8 +1027,8 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The billing method of worker nodes. Valid values:</p>
      * <ul>
-     * <li><code>PrePaid</code>: subscription.</li>
-     * <li><code>PostPaid</code>: the pay-as-you-go.</li>
+     * <li><code>PrePaid</code>: subscription</li>
+     * <li><code>PostPaid</code>: the pay-as-you-go</li>
      * </ul>
      * <p>Default value: PostPaid.</p>
      * 
@@ -1035,7 +1049,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The subscription duration of worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
      * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -1059,10 +1073,10 @@ public class CreateClusterRequest extends TeaModel {
      * <p>The system disk category of worker nodes. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Elastic Block Storage devices</a>.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><code>cloud_efficiency</code>: ultra disk.</li>
-     * <li><code>cloud_ssd</code>: standard SSD.</li>
+     * <li><code>cloud_efficiency</code>: ultra disk</li>
+     * <li><code>cloud_ssd</code>: standard SSD</li>
      * </ul>
-     * <p>Default value: <code>cloud_ssd</code>.</p>
+     * <p>Default value: <code>cloud_ssd</code></p>
      * 
      * <strong>example:</strong>
      * <p>cloud_efficiency</p>
@@ -1980,6 +1994,8 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestControlPlaneConfig extends TeaModel {
         /**
+         * <p>Indicates whether auto-renewal is enabled for the control plane node.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1987,6 +2003,8 @@ public class CreateClusterRequest extends TeaModel {
         public Boolean autoRenew;
 
         /**
+         * <p>The auto-renewal duration for the control plane node.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1994,6 +2012,8 @@ public class CreateClusterRequest extends TeaModel {
         public Long autoRenewPeriod;
 
         /**
+         * <p>The billing method of the control plane node.</p>
+         * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
          */
@@ -2001,6 +2021,8 @@ public class CreateClusterRequest extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>Indicates whether to install CloudMonitor for the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -2008,6 +2030,8 @@ public class CreateClusterRequest extends TeaModel {
         public Boolean cloudMonitorFlags;
 
         /**
+         * <p>The CPU management policy of nodes in the node pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>none</p>
          */
@@ -2015,6 +2039,8 @@ public class CreateClusterRequest extends TeaModel {
         public String cpuPolicy;
 
         /**
+         * <p>The ID of the deployment set.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds-bp10b35imuam5amw****</p>
          */
@@ -2022,6 +2048,8 @@ public class CreateClusterRequest extends TeaModel {
         public String deploymentsetId;
 
         /**
+         * <p>The ID of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun_3_x64_20G_alibase_20240819.vhd</p>
          */
@@ -2029,16 +2057,23 @@ public class CreateClusterRequest extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The type of the OS image.</p>
+         * 
          * <strong>example:</strong>
          * <p>AliyunLinux3</p>
          */
         @NameInMap("image_type")
         public String imageType;
 
+        /**
+         * <p>The instance type of the node.</p>
+         */
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
         /**
+         * <p>The name of the key pair. You must set key_pair or login_password.</p>
+         * 
          * <strong>example:</strong>
          * <p>ack</p>
          */
@@ -2046,6 +2081,8 @@ public class CreateClusterRequest extends TeaModel {
         public String keyPair;
 
         /**
+         * <p>The SSH logon password. The password must be 8 to 30 characters in length and contain a minimum of three of the following character types: uppercase letters, lowercase letters, digits, and special characters. You must set login_password or key_pair.</p>
+         * 
          * <strong>example:</strong>
          * <p>ack@Test</p>
          */
@@ -2053,6 +2090,8 @@ public class CreateClusterRequest extends TeaModel {
         public String loginPassword;
 
         /**
+         * <p>The node port range.</p>
+         * 
          * <strong>example:</strong>
          * <p>30000-32767</p>
          */
@@ -2060,6 +2099,8 @@ public class CreateClusterRequest extends TeaModel {
         public String nodePortRange;
 
         /**
+         * <p>The subscription duration of the control plane node.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -2067,6 +2108,8 @@ public class CreateClusterRequest extends TeaModel {
         public Long period;
 
         /**
+         * <p>The unit of the subscription duration of the control plane node.</p>
+         * 
          * <strong>example:</strong>
          * <p>Month</p>
          */
@@ -2074,6 +2117,8 @@ public class CreateClusterRequest extends TeaModel {
         public String periodUnit;
 
         /**
+         * <p>The runtime.</p>
+         * 
          * <strong>example:</strong>
          * <p>containerd</p>
          */
@@ -2081,6 +2126,8 @@ public class CreateClusterRequest extends TeaModel {
         public String runtime;
 
         /**
+         * <p>Indicates whether to enable Alibaba Cloud Linux Security Hardening.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -2088,6 +2135,8 @@ public class CreateClusterRequest extends TeaModel {
         public Boolean securityHardeningOs;
 
         /**
+         * <p>The number of control plane nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -2095,6 +2144,8 @@ public class CreateClusterRequest extends TeaModel {
         public Long size;
 
         /**
+         * <p>Indicates whether to enable MLPS security hardening.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -2102,6 +2153,8 @@ public class CreateClusterRequest extends TeaModel {
         public Boolean socEnabled;
 
         /**
+         * <p>Indicates whether to enable the burst feature for the system disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -2109,6 +2162,8 @@ public class CreateClusterRequest extends TeaModel {
         public Boolean systemDiskBurstingEnabled;
 
         /**
+         * <p>The category of the system disk for nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
          */
@@ -2116,6 +2171,8 @@ public class CreateClusterRequest extends TeaModel {
         public String systemDiskCategory;
 
         /**
+         * <p>The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for ESSDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>PL1</p>
          */
@@ -2123,6 +2180,8 @@ public class CreateClusterRequest extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
+         * <p>The preset read/write IOPS of the system disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -2130,6 +2189,8 @@ public class CreateClusterRequest extends TeaModel {
         public Long systemDiskProvisionedIops;
 
         /**
+         * <p>The system disk size of the node. The value must be at least 40 GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */
@@ -2137,6 +2198,8 @@ public class CreateClusterRequest extends TeaModel {
         public Long systemDiskSize;
 
         /**
+         * <p>The automatic snapshot policy of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>sp-2zej1nogjvovnz4z****</p>
          */

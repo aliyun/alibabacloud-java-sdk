@@ -14,7 +14,7 @@ public class RunClusterCheckResponseBody extends TeaModel {
     public String checkId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F04DF81D-5C12-1524-B36A-86E02526****</p>

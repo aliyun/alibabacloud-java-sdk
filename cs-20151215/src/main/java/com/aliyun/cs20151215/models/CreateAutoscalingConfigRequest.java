@@ -68,6 +68,9 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     @NameInMap("min_replica_count")
     public Integer minReplicaCount;
 
+    /**
+     * <p>Auto-scaling priority configuration. After creating a node pool with elasticity enabled, you can choose whether to configure a priority strategy and priority settings through <a href="https://help.aliyun.com/document_detail/119099.html">Enabling Node Auto-scaling</a>. This allows you to set priorities for the specified auto-scaling node pool scaling group. The priority value range is [1, 100] and must be a positive integer.</p>
+     */
     @NameInMap("priorities")
     public java.util.Map<String, java.util.List<String>> priorities;
 
@@ -111,8 +114,14 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public Boolean scaleUpFromZero;
 
     /**
+     * <p>Elastic component type, default is goatscaler for cluster version 1.24 and above, and cluster-autoscaler below that. Values:</p>
+     * <ul>
+     * <li><code>goatscaler</code>: Instant elasticity. </li>
+     * <li><code>cluster-autoscaler</code>: Auto-scaling.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cluster-autoscaler</p>
+     * <p>goatscaler</p>
      */
     @NameInMap("scaler_type")
     public String scalerType;
