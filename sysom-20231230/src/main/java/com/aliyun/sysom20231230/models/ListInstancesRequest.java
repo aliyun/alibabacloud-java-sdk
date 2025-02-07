@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class ListInstancesRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>xxxxx</p>
+     */
+    @NameInMap("cluster_id")
+    public String clusterId;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("current")
@@ -38,6 +45,14 @@ public class ListInstancesRequest extends TeaModel {
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public ListInstancesRequest setCurrent(Long current) {
