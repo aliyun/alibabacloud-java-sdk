@@ -8,7 +8,11 @@ public class GetTopicAttributesRequest extends TeaModel {
     public java.util.List<GetTopicAttributesRequestTag> tag;
 
     /**
+     * <p>The name of the topic.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo-topic</p>
      */
     @NameInMap("TopicName")
     public String topicName;
@@ -35,9 +39,17 @@ public class GetTopicAttributesRequest extends TeaModel {
     }
 
     public static class GetTopicAttributesRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 

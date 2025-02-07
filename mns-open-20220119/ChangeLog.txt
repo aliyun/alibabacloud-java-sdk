@@ -1,3 +1,14 @@
+2025-02-07 Version: 1.1.0
+- Support API AuthorizeEndpointAcl.
+- Support API DisableEndpoint.
+- Support API EnableEndpoint.
+- Support API GetEndpointAttribute.
+- Support API RevokeEndpointAcl.
+- Update API GetSubscriptionAttributes: update response param.
+- Update API ListSubscriptionByTopic: update param TopicName.
+- Update API ListSubscriptionByTopic: update response param.
+
+
 2024-05-27 Version: 1.0.3
 - Update API CreateQueue: add param Tag.
 - Update API CreateTopic: add param Tag.

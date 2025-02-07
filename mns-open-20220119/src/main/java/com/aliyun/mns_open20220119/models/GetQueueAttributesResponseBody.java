@@ -4,21 +4,54 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class GetQueueAttributesResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetQueueAttributesResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06273500-249F-5863-121D-74D51123****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The response status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +109,17 @@ public class GetQueueAttributesResponseBody extends TeaModel {
     }
 
     public static class GetQueueAttributesResponseBodyDataTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -106,42 +147,118 @@ public class GetQueueAttributesResponseBody extends TeaModel {
     }
 
     public static class GetQueueAttributesResponseBodyData extends TeaModel {
+        /**
+         * <p>The total number of messages that are in the Active state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("ActiveMessages")
         public Long activeMessages;
 
+        /**
+         * <p>The time when the queue was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1250700999</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The total number of messages that are in the Delayed state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DelayMessages")
         public Long delayMessages;
 
+        /**
+         * <p>The period after which all messages sent to the queue are consumed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("DelaySeconds")
         public Long delaySeconds;
 
+        /**
+         * <p>The total number of messages that are in the Inactive state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("InactiveMessages")
         public Long inactiveMessages;
 
+        /**
+         * <p>The time when the queue was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1250700999</p>
+         */
         @NameInMap("LastModifyTime")
         public Long lastModifyTime;
 
+        /**
+         * <p>Indicates whether the logging feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>True</li>
+         * <li>False</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("LoggingEnabled")
         public Boolean loggingEnabled;
 
+        /**
+         * <p>The maximum length of the message that is sent to the queue. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65536</p>
+         */
         @NameInMap("MaximumMessageSize")
         public Long maximumMessageSize;
 
+        /**
+         * <p>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65536</p>
+         */
         @NameInMap("MessageRetentionPeriod")
         public Long messageRetentionPeriod;
 
+        /**
+         * <p>The maximum duration for which long polling requests are held after the ReceiveMessage operation is called. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PollingWaitSeconds")
         public Long pollingWaitSeconds;
 
+        /**
+         * <p>The name of the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-queue</p>
+         */
         @NameInMap("QueueName")
         public String queueName;
 
         @NameInMap("Tags")
         public java.util.List<GetQueueAttributesResponseBodyDataTags> tags;
 
+        /**
+         * <p>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("VisibilityTimeout")
         public Long visibilityTimeout;
 

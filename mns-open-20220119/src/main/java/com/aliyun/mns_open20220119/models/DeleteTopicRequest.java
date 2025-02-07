@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteTopicRequest extends TeaModel {
     /**
+     * <p>The name of the topic that you want to delete.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tf-testAccMNSTopic-112965059402264645</p>
      */
     @NameInMap("TopicName")
     public String topicName;
