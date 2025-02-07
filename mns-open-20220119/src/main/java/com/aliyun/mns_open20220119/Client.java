@@ -27,8 +27,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary CreateQueue
-     *
+     * <b>summary</b> : 
+     * <p>Adds one or more ACLrules for an endpoint of a specified type.</p>
+     * 
+     * @param tmpReq AuthorizeEndpointAclRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AuthorizeEndpointAclResponse
+     */
+    public AuthorizeEndpointAclResponse authorizeEndpointAclWithOptions(AuthorizeEndpointAclRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AuthorizeEndpointAclShrinkRequest request = new AuthorizeEndpointAclShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cidrList)) {
+            request.cidrListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cidrList, "CidrList", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclStrategy)) {
+            query.put("AclStrategy", request.aclStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cidrListShrink)) {
+            query.put("CidrList", request.cidrListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointType)) {
+            query.put("EndpointType", request.endpointType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeEndpointAcl"),
+            new TeaPair("version", "2022-01-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AuthorizeEndpointAclResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AuthorizeEndpointAclResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds one or more ACLrules for an endpoint of a specified type.</p>
+     * 
+     * @param request AuthorizeEndpointAclRequest
+     * @return AuthorizeEndpointAclResponse
+     */
+    public AuthorizeEndpointAclResponse authorizeEndpointAcl(AuthorizeEndpointAclRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.authorizeEndpointAclWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a queue.</p>
+     * 
      * @param request CreateQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateQueueResponse
@@ -82,12 +146,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateQueueResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateQueueResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateQueueResponse());
+        }
+
     }
 
     /**
-     * @summary CreateQueue
-     *
+     * <b>summary</b> : 
+     * <p>Creates a queue.</p>
+     * 
      * @param request CreateQueueRequest
      * @return CreateQueueResponse
      */
@@ -97,8 +167,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary CreateTopic
-     *
+     * <b>summary</b> : 
+     * <p>Creates a topic.</p>
+     * 
      * @param request CreateTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTopicResponse
@@ -138,12 +209,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTopicResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTopicResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateTopicResponse());
+        }
+
     }
 
     /**
-     * @summary CreateTopic
-     *
+     * <b>summary</b> : 
+     * <p>Creates a topic.</p>
+     * 
      * @param request CreateTopicRequest
      * @return CreateTopicResponse
      */
@@ -153,8 +230,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DeleteQueue
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a queue.</p>
+     * 
      * @param request DeleteQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteQueueResponse
@@ -180,12 +258,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteQueueResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteQueueResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteQueueResponse());
+        }
+
     }
 
     /**
-     * @summary DeleteQueue
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a queue.</p>
+     * 
      * @param request DeleteQueueRequest
      * @return DeleteQueueResponse
      */
@@ -195,8 +279,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除订阅主题
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a topic.</p>
+     * 
      * @param request DeleteTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTopicResponse
@@ -222,12 +307,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTopicResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTopicResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteTopicResponse());
+        }
+
     }
 
     /**
-     * @summary 删除订阅主题
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a topic.</p>
+     * 
      * @param request DeleteTopicRequest
      * @return DeleteTopicResponse
      */
@@ -237,8 +328,156 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetQueueAttributes
-     *
+     * <b>summary</b> : 
+     * <p>You can call this operation to disable an endpoint of a specified type. After the endpoint is disabled, requests from the endpoint are blocked and an error is returned.</p>
+     * 
+     * @param request DisableEndpointRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableEndpointResponse
+     */
+    public DisableEndpointResponse disableEndpointWithOptions(DisableEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointType)) {
+            query.put("EndpointType", request.endpointType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableEndpoint"),
+            new TeaPair("version", "2022-01-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DisableEndpointResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DisableEndpointResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>You can call this operation to disable an endpoint of a specified type. After the endpoint is disabled, requests from the endpoint are blocked and an error is returned.</p>
+     * 
+     * @param request DisableEndpointRequest
+     * @return DisableEndpointResponse
+     */
+    public DisableEndpointResponse disableEndpoint(DisableEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableEndpointWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>You can call this operation to enable an endpoint of a specified type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</p>
+     * 
+     * @param request EnableEndpointRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableEndpointResponse
+     */
+    public EnableEndpointResponse enableEndpointWithOptions(EnableEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointType)) {
+            query.put("EndpointType", request.endpointType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableEndpoint"),
+            new TeaPair("version", "2022-01-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new EnableEndpointResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new EnableEndpointResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>You can call this operation to enable an endpoint of a specified type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</p>
+     * 
+     * @param request EnableEndpointRequest
+     * @return EnableEndpointResponse
+     */
+    public EnableEndpointResponse enableEndpoint(EnableEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableEndpointWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetEndpointAttribute</p>
+     * 
+     * @param request GetEndpointAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEndpointAttributeResponse
+     */
+    public GetEndpointAttributeResponse getEndpointAttributeWithOptions(GetEndpointAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointType)) {
+            query.put("EndpointType", request.endpointType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEndpointAttribute"),
+            new TeaPair("version", "2022-01-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetEndpointAttributeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetEndpointAttributeResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetEndpointAttribute</p>
+     * 
+     * @param request GetEndpointAttributeRequest
+     * @return GetEndpointAttributeResponse
+     */
+    public GetEndpointAttributeResponse getEndpointAttribute(GetEndpointAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEndpointAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the attributes of an existing queue.</p>
+     * 
      * @param request GetQueueAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetQueueAttributesResponse
@@ -268,12 +507,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQueueAttributesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetQueueAttributesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetQueueAttributesResponse());
+        }
+
     }
 
     /**
-     * @summary GetQueueAttributes
-     *
+     * <b>summary</b> : 
+     * <p>Queries the attributes of an existing queue.</p>
+     * 
      * @param request GetQueueAttributesRequest
      * @return GetQueueAttributesResponse
      */
@@ -283,8 +528,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetSubscription
-     *
+     * <b>summary</b> : 
+     * <p>Queries the attributes of a subscription.</p>
+     * 
      * @param request GetSubscriptionAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSubscriptionAttributesResponse
@@ -314,12 +560,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSubscriptionAttributesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetSubscriptionAttributesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetSubscriptionAttributesResponse());
+        }
+
     }
 
     /**
-     * @summary GetSubscription
-     *
+     * <b>summary</b> : 
+     * <p>Queries the attributes of a subscription.</p>
+     * 
      * @param request GetSubscriptionAttributesRequest
      * @return GetSubscriptionAttributesResponse
      */
@@ -329,8 +581,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询主题
-     *
+     * <b>summary</b> : 
+     * <p>Queries the attributes of a topic.</p>
+     * 
      * @param request GetTopicAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTopicAttributesResponse
@@ -360,12 +613,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTopicAttributesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetTopicAttributesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetTopicAttributesResponse());
+        }
+
     }
 
     /**
-     * @summary 查询主题
-     *
+     * <b>summary</b> : 
+     * <p>Queries the attributes of a topic.</p>
+     * 
      * @param request GetTopicAttributesRequest
      * @return GetTopicAttributesResponse
      */
@@ -375,8 +634,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListQueue
-     *
+     * <b>summary</b> : 
+     * <p>Queries all queues that belong to an Alibaba Cloud account. The queues are displayed by page.</p>
+     * 
      * @param request ListQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListQueueResponse
@@ -414,12 +674,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListQueueResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListQueueResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListQueueResponse());
+        }
+
     }
 
     /**
-     * @summary ListQueue
-     *
+     * <b>summary</b> : 
+     * <p>Queries all queues that belong to an Alibaba Cloud account. The queues are displayed by page.</p>
+     * 
      * @param request ListQueueRequest
      * @return ListQueueResponse
      */
@@ -429,8 +695,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListSubscription
-     *
+     * <b>summary</b> : 
+     * <p>Queries all subscriptions to a topic. The subscriptions are displayed by page.</p>
+     * 
      * @param request ListSubscriptionByTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSubscriptionByTopicResponse
@@ -468,12 +735,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSubscriptionByTopicResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListSubscriptionByTopicResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListSubscriptionByTopicResponse());
+        }
+
     }
 
     /**
-     * @summary ListSubscription
-     *
+     * <b>summary</b> : 
+     * <p>Queries all subscriptions to a topic. The subscriptions are displayed by page.</p>
+     * 
      * @param request ListSubscriptionByTopicRequest
      * @return ListSubscriptionByTopicResponse
      */
@@ -483,8 +756,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListTopic
-     *
+     * <b>summary</b> : 
+     * <p>Queries the topics that belong to an Alibaba Cloud account. The topics are displayed by page.</p>
+     * 
      * @param request ListTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTopicResponse
@@ -522,12 +796,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTopicResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTopicResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTopicResponse());
+        }
+
     }
 
     /**
-     * @summary ListTopic
-     *
+     * <b>summary</b> : 
+     * <p>Queries the topics that belong to an Alibaba Cloud account. The topics are displayed by page.</p>
+     * 
      * @param request ListTopicRequest
      * @return ListTopicResponse
      */
@@ -537,8 +817,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary SetQueueAttributes
-     *
+     * <b>summary</b> : 
+     * <p>Deletes one or more ACLs from an endpoint of a specified type.</p>
+     * 
+     * @param tmpReq RevokeEndpointAclRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeEndpointAclResponse
+     */
+    public RevokeEndpointAclResponse revokeEndpointAclWithOptions(RevokeEndpointAclRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RevokeEndpointAclShrinkRequest request = new RevokeEndpointAclShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cidrList)) {
+            request.cidrListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cidrList, "CidrList", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclStrategy)) {
+            query.put("AclStrategy", request.aclStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cidrListShrink)) {
+            query.put("CidrList", request.cidrListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointType)) {
+            query.put("EndpointType", request.endpointType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeEndpointAcl"),
+            new TeaPair("version", "2022-01-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeEndpointAclResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RevokeEndpointAclResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes one or more ACLs from an endpoint of a specified type.</p>
+     * 
+     * @param request RevokeEndpointAclRequest
+     * @return RevokeEndpointAclResponse
+     */
+    public RevokeEndpointAclResponse revokeEndpointAcl(RevokeEndpointAclRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokeEndpointAclWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a queue.</p>
+     * 
      * @param request SetQueueAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetQueueAttributesResponse
@@ -588,12 +932,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SetQueueAttributesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SetQueueAttributesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SetQueueAttributesResponse());
+        }
+
     }
 
     /**
-     * @summary SetQueueAttributes
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a queue.</p>
+     * 
      * @param request SetQueueAttributesRequest
      * @return SetQueueAttributesResponse
      */
@@ -603,8 +953,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ModifySubscription
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the attributes of a subscription.</p>
+     * 
      * @param request SetSubscriptionAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetSubscriptionAttributesResponse
@@ -638,12 +989,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SetSubscriptionAttributesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SetSubscriptionAttributesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SetSubscriptionAttributesResponse());
+        }
+
     }
 
     /**
-     * @summary ModifySubscription
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the attributes of a subscription.</p>
+     * 
      * @param request SetSubscriptionAttributesRequest
      * @return SetSubscriptionAttributesResponse
      */
@@ -653,8 +1010,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 编辑订阅主题
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the attributes of a topic.</p>
+     * 
      * @param request SetTopicAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetTopicAttributesResponse
@@ -688,12 +1046,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SetTopicAttributesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SetTopicAttributesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SetTopicAttributesResponse());
+        }
+
     }
 
     /**
-     * @summary 编辑订阅主题
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the attributes of a topic.</p>
+     * 
      * @param request SetTopicAttributesRequest
      * @return SetTopicAttributesResponse
      */
@@ -703,8 +1067,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary CreateSubscription
-     *
+     * <b>summary</b> : 
+     * <p>Creates a subscription to a topic.</p>
+     * 
      * @param request SubscribeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubscribeResponse
@@ -754,12 +1119,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SubscribeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SubscribeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SubscribeResponse());
+        }
+
     }
 
     /**
-     * @summary CreateSubscription
-     *
+     * <b>summary</b> : 
+     * <p>Creates a subscription to a topic.</p>
+     * 
      * @param request SubscribeRequest
      * @return SubscribeResponse
      */
@@ -769,8 +1140,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DeleteSubscription
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a subscription.</p>
+     * 
      * @param request UnsubscribeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnsubscribeResponse
@@ -800,12 +1172,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UnsubscribeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UnsubscribeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UnsubscribeResponse());
+        }
+
     }
 
     /**
-     * @summary DeleteSubscription
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a subscription.</p>
+     * 
      * @param request UnsubscribeRequest
      * @return UnsubscribeResponse
      */

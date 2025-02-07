@@ -3,7 +3,7 @@ package com.aliyun.mns_open20220119.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteTopicResponseBody extends TeaModel {
+public class RevokeEndpointAclResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
      * 
@@ -14,13 +14,7 @@ public class DeleteTopicResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The returned data.</p>
-     */
-    @NameInMap("Data")
-    public java.util.Map<String, ?> data;
-
-    /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success</p>
@@ -55,12 +49,12 @@ public class DeleteTopicResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static DeleteTopicResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteTopicResponseBody self = new DeleteTopicResponseBody();
+    public static RevokeEndpointAclResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RevokeEndpointAclResponseBody self = new RevokeEndpointAclResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteTopicResponseBody setCode(Long code) {
+    public RevokeEndpointAclResponseBody setCode(Long code) {
         this.code = code;
         return this;
     }
@@ -68,15 +62,7 @@ public class DeleteTopicResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteTopicResponseBody setData(java.util.Map<String, ?> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
-    }
-
-    public DeleteTopicResponseBody setMessage(String message) {
+    public RevokeEndpointAclResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -84,7 +70,7 @@ public class DeleteTopicResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteTopicResponseBody setRequestId(String requestId) {
+    public RevokeEndpointAclResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -92,7 +78,7 @@ public class DeleteTopicResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteTopicResponseBody setStatus(String status) {
+    public RevokeEndpointAclResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -100,7 +86,7 @@ public class DeleteTopicResponseBody extends TeaModel {
         return this.status;
     }
 
-    public DeleteTopicResponseBody setSuccess(Boolean success) {
+    public RevokeEndpointAclResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

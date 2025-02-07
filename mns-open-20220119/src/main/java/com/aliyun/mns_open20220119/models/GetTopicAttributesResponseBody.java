@@ -4,21 +4,54 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class GetTopicAttributesResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetTopicAttributesResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06273500-249F-5863-121D-74D51123****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The response status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +109,21 @@ public class GetTopicAttributesResponseBody extends TeaModel {
     }
 
     public static class GetTopicAttributesResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -106,27 +151,76 @@ public class GetTopicAttributesResponseBody extends TeaModel {
     }
 
     public static class GetTopicAttributesResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the topic was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1449554277</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The time when the topic was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1449554460</p>
+         */
         @NameInMap("LastModifyTime")
         public Long lastModifyTime;
 
+        /**
+         * <p>Indicates whether the logging feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>True</li>
+         * <li>False</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("LoggingEnabled")
         public Boolean loggingEnabled;
 
+        /**
+         * <p>The maximum length of the message that is sent to the topic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65536</p>
+         */
         @NameInMap("MaxMessageSize")
         public Long maxMessageSize;
 
+        /**
+         * <p>The number of messages in the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MessageCount")
         public Long messageCount;
 
+        /**
+         * <p>The maximum duration for which a message is retained in the topic. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
+         */
         @NameInMap("MessageRetentionPeriod")
         public Long messageRetentionPeriod;
 
+        /**
+         * <p>The tags added to the resources.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetTopicAttributesResponseBodyDataTags> tags;
 
+        /**
+         * <p>The name of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-topic</p>
+         */
         @NameInMap("TopicName")
         public String topicName;
 
