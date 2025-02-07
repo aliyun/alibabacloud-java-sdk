@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateLoginProfileResponseBody extends TeaModel {
     /**
-     * <p>The logon information.</p>
+     * <p>The console logon configurations.</p>
      */
     @NameInMap("LoginProfile")
     public UpdateLoginProfileResponseBodyLoginProfile loginProfile;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BCDB6A7F-2199-41D9-B577-4FA536A5ADE1</p>
@@ -41,6 +41,10 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
     }
 
     public static class UpdateLoginProfileResponseBodyLoginProfile extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoDisableLoginStatus")
         public String autoDisableLoginStatus;
 
@@ -54,7 +58,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         public Boolean MFABindRequired;
 
         /**
-         * <p>Indicates whether the RAM user must reset the password at the next logon.</p>
+         * <p>Indicates whether the RAM user is required to reset the password upon the next logon.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -63,7 +67,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         public Boolean passwordResetRequired;
 
         /**
-         * <p>The status of password-based logon.</p>
+         * <p>Indicates whether to enable password-based logons to the console.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -72,7 +76,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-14T07:48:41Z</p>

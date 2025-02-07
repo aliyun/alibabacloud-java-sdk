@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetUserSsoSettingsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>87F2E3F6-28A0-43F3-A77F-F7760E62F61E</p>
@@ -68,6 +68,17 @@ public class SetUserSsoSettingsResponseBody extends TeaModel {
         @NameInMap("SsoEnabled")
         public Boolean ssoEnabled;
 
+        /**
+         * <p>Indicates whether the SAML SSO requires a domain name in the <code>&lt;saml:NameID&gt;</code> element of the SAML response. If yes, the username specified by the IdP for SSO must have a domain name as the suffix.</p>
+         * <ul>
+         * <li>If the value of the parameter is <code>true</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username@domain</code> format. You can set <code>domain</code> to the default domain name or the configured domain alias.</li>
+         * <li>If the value of the parameter is <code>false</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username</code> format and <strong>cannot</strong> contain the <code>domain</code> suffix.</li>
+         * </ul>
+         * <p>The default value is <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SsoLoginWithDomain")
         public Boolean ssoLoginWithDomain;
 

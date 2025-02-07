@@ -66,7 +66,7 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>The scope of application permissions.</p>
-     * <p>For more information about the application permission scope, see <a href="https://help.aliyun.com/document_detail/93693.html">Open authorization scope</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to obtain the permission scopes supported by different types of applications.</p>
+     * <p>For more information about the application permission scope, see <a href="https://help.aliyun.com/document_detail/93693.html">Open authorization scope</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to query the permissions that are supported by different types of applications.</p>
      * <p>If you enter multiple permission scopes, separate them with semicolons (;).</p>
      * 
      * <strong>example:</strong>
@@ -103,9 +103,9 @@ public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>The required permission.</p>
      * <p>You can specify one or more permissions for the <code>RequiredScopes</code> parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.</p>
-     * <p>If you enter multiple permissions, separate them with semicolons (;).</p>
+     * <p>If you enter multiple permission scopes, separate them with semicolons (;).</p>
      * <blockquote>
-     * <p> If the permission that you specify for the <code>RequiredScopes</code> parameter is not included in value of the <code>PredefinedScopes</code> parameter, the permission does not take effect.</p>
+     * <p> If the permission that you specify for the <code>RequiredScopes</code> parameter is not included in the value of the <code>PredefinedScopes</code> parameter, the permission does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

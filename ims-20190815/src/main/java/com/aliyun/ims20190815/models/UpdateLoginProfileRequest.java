@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateLoginProfileRequest extends TeaModel {
     /**
-     * <p>Specifies whether multi-factor authentication (MFA) must be enabled. Valid values:</p>
+     * <p>Specifies whether to forcefully enable multi-factor authentication (MFA) for the RAM user. Valid values:</p>
      * <ul>
-     * <li>true. The value true indicates that the RAM user must bind an MFA device at the next logon.</li>
-     * <li>false.</li>
+     * <li>true: forcefully enables MFA for the RAM user. The RAM user must bind an MFA device upon the next logon.</li>
+     * <li>false: does not forcefully enable MFA for the RAM user.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class UpdateLoginProfileRequest extends TeaModel {
 
     /**
      * <p>The new password that is used to log on to the console.</p>
-     * <p>The password must meet the complexity requirements.</p>
+     * <p>The new password must meet the complexity requirements.</p>
      * 
      * <strong>example:</strong>
      * <p>mypassword</p>
@@ -28,7 +28,7 @@ public class UpdateLoginProfileRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>Specifies whether the RAM user must reset the password at the next logon. Valid values:</p>
+     * <p>Specifies whether the RAM user is required to reset the password upon the next logon. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -41,10 +41,10 @@ public class UpdateLoginProfileRequest extends TeaModel {
     public Boolean passwordResetRequired;
 
     /**
-     * <p>The status of password-based logon. Valid values:</p>
+     * <p>Specifies whether to enable password-based logons to the console. Valid values:</p>
      * <ul>
-     * <li>Active</li>
-     * <li>Inactive</li>
+     * <li>Active: enables password-based logons to the console.</li>
+     * <li>Inactive: disables password-based logons to the console.</li>
      * </ul>
      * 
      * <strong>example:</strong>

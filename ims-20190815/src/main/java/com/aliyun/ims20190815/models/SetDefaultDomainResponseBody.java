@@ -14,7 +14,7 @@ public class SetDefaultDomainResponseBody extends TeaModel {
     public String defaultDomainName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>66815255-7CCE-4759-AC37-9755794C3626</p>

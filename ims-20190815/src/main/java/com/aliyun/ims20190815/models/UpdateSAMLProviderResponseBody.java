@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSAMLProviderResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E5EDDFD2-3654-4F9F-9780-4AE7D81823EF</p>

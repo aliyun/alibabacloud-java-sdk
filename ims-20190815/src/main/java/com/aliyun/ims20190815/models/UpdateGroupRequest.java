@@ -15,7 +15,7 @@ public class UpdateGroupRequest extends TeaModel {
 
     /**
      * <p>The new description.</p>
-     * <p>The value can be up to 128 characters in length.</p>
+     * <p>The description can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Test-Team</p>

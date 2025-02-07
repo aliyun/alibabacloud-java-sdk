@@ -212,9 +212,17 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>730</p>
+         */
         @NameInMap("MaxIdleDaysForAccessKeys")
         public Integer maxIdleDaysForAccessKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>730</p>
+         */
         @NameInMap("MaxIdleDaysForUsers")
         public Integer maxIdleDaysForUsers;
 

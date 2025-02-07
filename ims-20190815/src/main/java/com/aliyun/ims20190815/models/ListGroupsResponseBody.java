@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
     /**
-     * <p>The information of the RAM user groups.</p>
+     * <p>The information about the RAM user groups.</p>
      */
     @NameInMap("Groups")
     public ListGroupsResponseBodyGroups groups;
@@ -33,7 +33,7 @@ public class ListGroupsResponseBody extends TeaModel {
     public String marker;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>065527AA-2F2E-AD7C-7484-F2626CFE4934</p>
