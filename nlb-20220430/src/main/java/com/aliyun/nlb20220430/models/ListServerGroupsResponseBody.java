@@ -145,6 +145,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
+        /**
+         * <p>The response string of UDP health checks. The string must be 1 to 64 characters in length, and can contain letters and digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("HealthCheckExp")
         public String healthCheckExp;
 
@@ -167,11 +173,22 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
+        /**
+         * <p>The request string of UDP health checks. The string must be 1 to 64 characters in length, and can contain letters and digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("HealthCheckReq")
         public String healthCheckReq;
 
         /**
-         * <p>The protocol that is used for health checks. Valid values: <strong>TCP</strong> and <strong>HTTP</strong>.</p>
+         * <p>The protocol that is used for health checks. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>HTTP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -459,7 +476,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Boolean preserveClientIpEnabled;
 
         /**
-         * <p>The protocol used to forward requests to the backend servers. Valid values: <strong>TCP</strong>, <strong>UDP</strong>, and <strong>TCPSSL</strong>.</p>
+         * <p>The backend protocol. Valid values: <strong>TCP</strong> and <strong>UDP</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>

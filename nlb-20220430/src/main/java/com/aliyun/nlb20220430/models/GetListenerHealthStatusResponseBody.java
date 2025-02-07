@@ -289,7 +289,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
          * <p>The ID of the listener of the NLB instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>lsn-agkd9gmjx8nd85jjs0****</p>
+         * <p>lsn-bp1bpn0kn908w4nbw****@80</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;

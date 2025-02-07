@@ -18,17 +18,20 @@ public class CreateListenerRequest extends TeaModel {
     public Boolean alpnEnabled;
 
     /**
-     * <p>The ALPN policy.</p>
-     * <p>Valid values:</p>
+     * <p>The ALPN policy. Valid values:</p>
      * <ul>
-     * <li>HTTP1Only</li>
-     * <li>HTTP2Only</li>
-     * <li>HTTP2Preferred</li>
-     * <li>HTTP2Optional</li>
+     * <li>HTTP1Only: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</li>
+     * <li>HTTP2Only: uses only HTTP 2.0.</li>
+     * <li>HTTP2Preferred: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.
+     * Note</li>
+     * <li>HTTP2Optional: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.</li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter is required if AlpnEnabled is set to true.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>ALPN</p>
+     * <p>HTTP1Only</p>
      */
     @NameInMap("AlpnPolicy")
     public String alpnPolicy;
@@ -78,7 +81,7 @@ public class CreateListenerRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The maximum number of connections that can be created per second on the NLB instance. Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> specifies that the number of connections is unlimited.</p>
+     * <p>The maximum number of new connections per second supported by the listener in each zone (virtual IP address). Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> indicates that the number of connections is unlimited.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -112,7 +115,11 @@ public class CreateListenerRequest extends TeaModel {
     public Integer endPort;
 
     /**
-     * <p>The timeout period of idle connections. Unit: seconds. Valid values: <strong>1</strong> to <strong>900</strong>. Default value: <strong>900</strong>.</p>
+     * <p>The timeout period of idle connections. Unit: seconds</p>
+     * <ul>
+     * <li>If you set <strong>ListenerProtocol</strong> to <strong>TCP</strong> or <strong>TCPSSL</strong>, the timeout period of idle connections can be set to <strong>10</strong> to <strong>900</strong> seconds. Default value: <strong>900</strong>.</li>
+     * <li>If <strong>ListenerProtocol</strong> is set to <strong>UDP</strong>, the timeout period of idle connections can be set to <strong>10</strong> to <strong>20</strong> seconds. Default value: <strong>20</strong>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>900</p>
@@ -217,7 +224,18 @@ public class CreateListenerRequest extends TeaModel {
 
     /**
      * <p>The security policy ID. System security policies and custom security policies are supported.</p>
-     * <p>Valid values: <strong>tls_cipher_policy_1_0</strong> (default), <strong>tls_cipher_policy_1_1</strong>, <strong>tls_cipher_policy_1_2</strong>, <strong>tls_cipher_policy_1_2_strict</strong>, and <strong>tls_cipher_policy_1_2_strict_with_1_3</strong>.</p>
+     * <ul>
+     * <li><p>Valid values: <strong>tls_cipher_policy_1_0</strong> (default), <strong>tls_cipher_policy_1_1</strong>, <strong>tls_cipher_policy_1_2</strong>, <strong>tls_cipher_policy_1_2_strict</strong>, and <strong>tls_cipher_policy_1_2_strict_with_1_3</strong>.</p>
+     * </li>
+     * <li><p>Custom security policy: the ID of the custom security policy.</p>
+     * <ul>
+     * <li><p>For more information about how to create a custom security policy, see <a href="https://help.aliyun.com/document_detail/2399231.html">CreateSecurityPolicy</a> .</p>
+     * </li>
+     * <li><p>For more information about how to query security policies, see <a href="https://help.aliyun.com/document_detail/2399234.html">ListSecurityPolicy</a> .</p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * <blockquote>
      * <p>This parameter takes effect only for listeners that use SSL over TCP.</p>
      * </blockquote>
@@ -230,6 +248,13 @@ public class CreateListenerRequest extends TeaModel {
 
     /**
      * <p>The server group ID.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you set <strong>ListenerProtocol</strong> to <strong>TCP</strong>, you can associate the listener with server groups whose backend protocol is <strong>TCP</strong> or <strong>TCP_UDP</strong>. You cannot associate the listener with server groups whose backend protocol is <strong>UDP</strong>.</li>
+     * <li>If you set <strong>ListenerProtocol</strong> to <strong>UDP</strong>, you can associate the listener with server groups whose backend protocol is <strong>UDP</strong> or <strong>TCP_UDP</strong>. You cannot associate the listener with server groups whose backend protocol is <strong>TCP</strong>.</li>
+     * <li>If you set <strong>ListenerProtocol</strong> to <strong>TCPSSL</strong>, you can associate the listener with server groups whose backend protocol is <strong>TCP</strong> and have <strong>client IP preservation disabled</strong>. You cannot associate the listener with server groups whose backend protocol is <strong>TCP</strong> and have <strong>client IP preservation enabled</strong> or server groups whose backend protocol is <strong>UDP</strong> or <strong>TCP_UDP</strong>.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

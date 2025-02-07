@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListListenersResponseBody extends TeaModel {
     /**
-     * <p>A list of listeners.</p>
+     * <p>The listeners.</p>
      */
     @NameInMap("Listeners")
     public java.util.List<ListListenersResponseBodyListeners> listeners;
@@ -269,7 +269,7 @@ public class ListListenersResponseBody extends TeaModel {
         public java.util.List<String> certificateIds;
 
         /**
-         * <p>The maximum number of connections that can be created per second on the NLB instance. Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> indicates that the number of connections is unlimited.</p>
+         * <p>The maximum number of new connections per second supported by the listener in each zone (virtual IP address). Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> indicates that the number of connections is unlimited.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>

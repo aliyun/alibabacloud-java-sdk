@@ -378,7 +378,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public String privateIPv4Address;
 
         /**
-         * <p>The health check status of the private IPv4 address.</p>
+         * <p>The health status of the private IPv4 address of the NLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Healthy</strong></li>
+         * <li><strong>Unhealthy</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only when the Status of the zone is Active.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Healthy</p>
@@ -387,7 +394,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public String privateIPv4HcStatus;
 
         /**
-         * <p>The health check status of the private IPv6 address.</p>
+         * <p>The health status of the IPv6 address of the NLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Healthy</strong></li>
+         * <li><strong>Unhealthy</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only when the Status of the zone is Active.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Healthy</p>
@@ -475,10 +489,18 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersZoneMappingsLoadBalancerAddresses> loadBalancerAddresses;
 
         /**
-         * <p>The state of the task. Valid values:</p>
+         * <p>The zone status. Valid values:</p>
          * <ul>
-         * <li><strong>Succeeded</strong>: The task is successful.</li>
-         * <li><strong>processing</strong>: The ticket is being executed.</li>
+         * <li><p><strong>Active</strong>: The zone is available.</p>
+         * </li>
+         * <li><p><strong>Stopped</strong>: The zone is disabled. You can set the zone to this status only by using Cloud Architect Design Tools (CADT).</p>
+         * </li>
+         * <li><p><strong>Shifted</strong>: The DNS record is removed.</p>
+         * </li>
+         * <li><p><strong>Starting</strong>: The zone is being enabled. You can set the zone to this status only by using CADT.</p>
+         * </li>
+         * <li><p><strong>Stopping</strong> You can set the zone to this status only by using CADT.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

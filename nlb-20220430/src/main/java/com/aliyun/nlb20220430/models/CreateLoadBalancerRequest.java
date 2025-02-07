@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerRequest extends TeaModel {
     /**
-     * <p>The protocol version. Valid values:</p>
+     * <p>The version of the protocol. Valid values:</p>
      * <ul>
-     * <li><strong>ipv4:</strong> IPv4. This is the default value.</li>
-     * <li><strong>DualStack:</strong> dual stack.</li>
+     * <li><strong>ipv4</strong> (default)</li>
+     * <li><strong>DualStack</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String addressIpVersion;
 
     /**
-     * <p>The type of IPv4 address used by the NLB instance. Valid values:</p>
+     * <p>The network type of the IPv4 address used by the NLB instance. Valid values:</p>
      * <ul>
-     * <li><strong>Internet</strong>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</li>
-     * <li><strong>Intranet</strong>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the virtual private cloud (VPC) where the NLB instance is deployed.</li>
+     * <li><strong>Internet</strong>: The NLB instance is assigned a public IP address. The domain name is resolved to the public IP address. The NLB instance is accessible over the Internet.</li>
+     * <li><strong>Intranet</strong>: The NLB instance is assigned only a private IP address. The domain name is resolved to the private IP address. The NLB instance is accessible only within the VPC of the NLB instance.</li>
      * </ul>
      * <blockquote>
-     * <p> To enable a public IPv6 address for an NLB instance, call the <a href="https://help.aliyun.com/document_detail/445878.html">EnableLoadBalancerIpv6Internet</a> operation.</p>
+     * <p> To enable a public IPv6 address for a dual-stack NLB instance, call the <a href="https://help.aliyun.com/document_detail/445878.html">EnableLoadBalancerIpv6Internet</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -63,10 +63,10 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public CreateLoadBalancerRequestDeletionProtectionConfig deletionProtectionConfig;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: performs a dry run and sends the request. This is the default value. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -454,12 +454,24 @@ public class CreateLoadBalancerRequest extends TeaModel {
         @NameInMap("AllocationId")
         public String allocationId;
 
+        /**
+         * <p>The IPv4 link-local addresses. The IP addresses that the NLB instance uses to communicate with the backend servers. The number of IP addresses must be an even number, which must be at least 2 and at most 8.</p>
+         */
         @NameInMap("Ipv4LocalAddresses")
         public java.util.List<String> ipv4LocalAddresses;
 
+        /**
+         * <p>The IPv6 address. The IPv6 address that the NLB instance uses to provide external services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:400a:d5:3080:b409:840a:ca:e8e5</p>
+         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
+        /**
+         * <p>The IPv6 link-local addresses. The IP addresses that the NLB instance uses to communicate with the backend servers. The number of IP addresses must be an even number, which must be at least 2 and at most 8.</p>
+         */
         @NameInMap("Ipv6LocalAddresses")
         public java.util.List<String> ipv6LocalAddresses;
 

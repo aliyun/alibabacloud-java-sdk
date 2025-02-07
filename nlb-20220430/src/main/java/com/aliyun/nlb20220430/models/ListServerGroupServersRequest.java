@@ -46,13 +46,13 @@ public class ListServerGroupServersRequest extends TeaModel {
     public String serverGroupId;
 
     /**
-     * <p>The IDs of the servers.</p>
+     * <p>The server IDs. You can specify at most 40 servers in each call.</p>
      */
     @NameInMap("ServerIds")
     public java.util.List<String> serverIds;
 
     /**
-     * <p>The IP addresses of the servers.</p>
+     * <p>A list of server IP addresses. You can specify at most 40 servers in each call.</p>
      */
     @NameInMap("ServerIps")
     public java.util.List<String> serverIps;

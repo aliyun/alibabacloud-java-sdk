@@ -36,7 +36,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of backend servers.</p>
+     * <p>The backend servers.</p>
      */
     @NameInMap("Servers")
     public java.util.List<ListServerGroupServersResponseBodyServers> servers;
@@ -106,7 +106,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The port used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -124,7 +124,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public String serverGroupId;
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The ID of the server group.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs-bp67acfmxazb4p****</p>
@@ -142,12 +142,12 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public String serverIp;
 
         /**
-         * <p>The type of the backend server. Valid values:</p>
+         * <p>The type of backend server. Valid values:</p>
          * <ul>
-         * <li><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance</li>
-         * <li><strong>Eni</strong>: an elastic network interface (ENI)</li>
-         * <li><strong>Eci</strong>: an elastic container instance</li>
-         * <li><strong>Ip</strong>: an IP address</li>
+         * <li><strong>Ecs</strong>: Elastic Compute Service (ECS) instance</li>
+         * <li><strong>Eni</strong>: elastic network interface (ENI)</li>
+         * <li><strong>Eci</strong>: elastic container instance</li>
+         * <li><strong>Ip</strong>: IP address</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,12 +157,12 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public String serverType;
 
         /**
-         * <p>Indicates the status of the backend server. Valid values:</p>
+         * <p>The status of the backend server. Valid values:</p>
          * <ul>
-         * <li><strong>Adding</strong>: The backend server is being added.</li>
-         * <li><strong>Available</strong>: The backend server is added.</li>
-         * <li><strong>Configuring</strong>: The backend server is being configured.</li>
-         * <li><strong>Removing</strong>: The backend server is being removed.</li>
+         * <li><strong>Adding</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Configuring</strong></li>
+         * <li><strong>Removing</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

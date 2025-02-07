@@ -14,7 +14,7 @@ public class DescribeZonesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of zones.</p>
+     * <p>A list of zones.</p>
      */
     @NameInMap("Zones")
     public java.util.List<DescribeZonesResponseBodyZones> zones;
@@ -42,7 +42,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     public static class DescribeZonesResponseBodyZones extends TeaModel {
         /**
-         * <p>The name of the zone.</p>
+         * <p>The zone name.</p>
          * 
          * <strong>example:</strong>
          * <p>ap_southeast_2</p>
@@ -51,7 +51,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         public String localName;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>

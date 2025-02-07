@@ -51,7 +51,10 @@ public class AddServersToServerGroupRequest extends TeaModel {
     public String serverGroupId;
 
     /**
-     * <p>A list of backend servers.</p>
+     * <p>The backend servers.</p>
+     * <blockquote>
+     * <p> You can add at most 200 backend servers in each call.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Servers")
@@ -104,11 +107,8 @@ public class AddServersToServerGroupRequest extends TeaModel {
 
     public static class AddServersToServerGroupRequestServers extends TeaModel {
         /**
-         * <p>The description of the servers.</p>
-         * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
-         * <blockquote>
-         * <p> You can specify at most 40 servers in each call.</p>
-         * </blockquote>
+         * <p>The description of the backend server.</p>
+         * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at sings (@), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>
@@ -117,10 +117,8 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The port used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
-         * <blockquote>
-         * <p> You can specify at most 40 servers in each call.</p>
-         * </blockquote>
+         * <p>The port that is used by the backend server. Valid values: <strong>0 to 65535</strong>. If you do not specify a port, the default value <strong>0</strong> is used.</p>
+         * <p>If you enable all-port forwarding, you do not need to specify a port when you add a backend server. The default port is port 0. NLB forwards requests to the requested ports. To determine whether all-port forwarding is enabled, call the <a href="https://help.aliyun.com/document_detail/445895.html">ListServerGroups</a> API operation and check the value of the <strong>AnyPortEnabled</strong> parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>443</p>
@@ -129,24 +127,21 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the server. You can specify at most 40 server IDs in each call.</p>
+         * <p>The ID of the server group.</p>
          * <ul>
-         * <li>If the server group type is <strong>Instance</strong>, set the ServerId parameter to the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance. These backend servers are specified by <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong>.</li>
-         * <li>If the server group type is <strong>Ip</strong>, set the ServerId parameter to an IP address.</li>
+         * <li>If the server group is of the <strong>Instance</strong> type, set this parameter to the IDs of <strong>Elastic Compute Service (ECS) instances</strong>, <strong>elastic network interfaces (ENIs)</strong>, or <strong>elastic container instances</strong>.</li>
+         * <li>If the server group is of the <strong>Ip</strong> type, set this parameter to IP addresses.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecs-bp67acfmxazb4p****</p>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The IP address of the server. If the server group type is <strong>Ip</strong>, set the ServerId parameter to an IP address.</p>
-         * <blockquote>
-         * <p> You can specify at most 40 server IP addresses in each call.</p>
-         * </blockquote>
+         * <p>The IP addresses of servers. If the server group type is <strong>Ip</strong>, set the ServerId parameter to IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.6.6</p>
@@ -157,14 +152,11 @@ public class AddServersToServerGroupRequest extends TeaModel {
         /**
          * <p>The type of the backend server. Valid values:</p>
          * <ul>
-         * <li><strong>Ecs</strong>: an ECS instance</li>
-         * <li><strong>Eni</strong>: an ENI</li>
-         * <li><strong>Eci</strong>: an elastic container instance</li>
-         * <li><strong>Ip</strong>: an IP address</li>
+         * <li><strong>Ecs</strong>: ECS instance</li>
+         * <li><strong>Eni</strong>: ENI</li>
+         * <li><strong>Eci</strong>: elastic container instance</li>
+         * <li><strong>Ip</strong>: IP address</li>
          * </ul>
-         * <blockquote>
-         * <p> You can specify at most 40 servers in each call.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,10 +166,7 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public String serverType;
 
         /**
-         * <p>The weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the weight of a backend server is set to <strong>0</strong>, no requests are forwarded to the backend server.</p>
-         * <blockquote>
-         * <p> You can specify at most 40 servers in each call.</p>
-         * </blockquote>
+         * <p>The weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the value is set to <strong>0</strong>, no requests are forwarded to the server.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

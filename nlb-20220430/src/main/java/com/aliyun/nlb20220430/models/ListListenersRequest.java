@@ -42,7 +42,7 @@ public class ListListenersRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>NextToken	FFmyTO70tTpLG6I3FmYAXGKPd****</p>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -57,6 +57,16 @@ public class ListListenersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to enable fine-grained monitoring. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SecSensorEnabled")
     public String secSensorEnabled;
 

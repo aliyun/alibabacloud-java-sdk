@@ -64,7 +64,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     public java.util.List<String> certificateIds;
 
     /**
-     * <p>The maximum number of connections that can be created per second on the NLB instance. Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> specifies that the number of connections is unlimited.</p>
+     * <p>The maximum number of new connections per second supported by the listener in each zone (virtual IP address). Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> indicates that the number of connections is unlimited.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -104,7 +104,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
      * <p>The ID of the listener.</p>
      * 
      * <strong>example:</strong>
-     * <p>lsn-ga6sjjcll6ou34l1et****</p>
+     * <p>lsn-bp1bpn0kn908w4nbw****@233</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
@@ -219,7 +219,18 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the security policy. System security policies and custom security policies are supported.</p>
-     * <p>Valid values: <strong>tls_cipher_policy_1_0</strong>, <strong>tls_cipher_policy_1_1</strong>, <strong>tls_cipher_policy_1_2</strong>, <strong>tls_cipher_policy_1_2_strict</strong>, and <strong>tls_cipher_policy_1_2_strict_with_1_3</strong>.</p>
+     * <ul>
+     * <li><p>Valid values: <strong>tls_cipher_policy_1_0</strong>, <strong>tls_cipher_policy_1_1</strong>, <strong>tls_cipher_policy_1_2</strong>, <strong>tls_cipher_policy_1_2_strict</strong>, and <strong>tls_cipher_policy_1_2_strict_with_1_3</strong>.</p>
+     * </li>
+     * <li><p>Custom security policy: the ID of the custom security policy.</p>
+     * <ul>
+     * <li><p>For more information about how to create a custom security policy, see <a href="https://help.aliyun.com/document_detail/2399231.html">CreateSecurityPolicy</a> .</p>
+     * </li>
+     * <li><p>For more information about how to query security policies, see <a href="https://help.aliyun.com/document_detail/2399234.html">ListSecurityPolicy</a> .</p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * <blockquote>
      * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
      * </blockquote>

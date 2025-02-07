@@ -30,7 +30,7 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>ALPN</p>
+     * <p>HTTP1Only</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -80,7 +80,7 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The maximum number of connections that can be created per second on the NLB instance. Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> specifies that the number of connections is unlimited.</p>
+     * <p>The maximum number of new connections per second supported by the listener in each zone (virtual IP address). Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> indicates that the number of connections is unlimited.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -102,7 +102,11 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: <strong>1</strong> to <strong>900</strong>.</p>
+     * <p>The timeout period of idle connections. Unit: seconds</p>
+     * <ul>
+     * <li>If the listener uses <strong>TCP</strong> or <strong>TCPSSL</strong>, you can set the timeout period of idle connections to <strong>10</strong> to <strong>900</strong> seconds. Default value: <strong>900</strong>.</li>
+     * <li>If the listener uses <strong>UDP</strong>, you can set the timeout period of idle connections to <strong>10</strong> to <strong>20</strong> seconds. Default value: <strong>20</strong>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>900</p>
@@ -125,7 +129,7 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lsn-bp1bpn0kn908w4nbw****</p>
+     * <p>lsn-bp1bpn0kn908w4nbw****@443</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
@@ -195,6 +199,13 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the server group.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you set <strong>ListenerProtocol</strong> to <strong>TCP</strong>, you can associate the listener with server groups whose backend protocol is <strong>TCP</strong> or <strong>TCP_UDP</strong>. You cannot associate the listener with server groups whose backend protocol is <strong>UDP</strong>.</li>
+     * <li>If you set <strong>ListenerProtocol</strong> to <strong>UDP</strong>, you can associate the listener with server groups whose backend protocol is <strong>UDP</strong> or <strong>TCP_UDP</strong>. You cannot associate the listener with server groups whose backend protocol is <strong>TCP</strong>.</li>
+     * <li>If you set <strong>ListenerProtocol</strong> to <strong>TCPSSL</strong>, you can associate the listener with server groups whose backend protocol is <strong>TCP</strong> and have <strong>client IP preservation disabled</strong>. You cannot associate the listener with server groups whose backend protocol is <strong>TCP</strong> and have <strong>client IP preservation enabled</strong> or server groups whose backend protocol is <strong>UDP</strong> or <strong>TCP_UDP</strong>.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>sgp-ppdpc14gdm3x4o****</p>

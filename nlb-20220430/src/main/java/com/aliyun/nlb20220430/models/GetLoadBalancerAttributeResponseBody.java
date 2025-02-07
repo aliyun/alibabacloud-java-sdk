@@ -40,7 +40,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>The maximum number of connections per second that can be created on the NLB instance. Valid values: <strong>0</strong> to <strong>1000000</strong>.</p>
+     * <p>The maximum number of new connections per second supported by the NLB instance in each zone (virtual IP address). Valid values: <strong>0</strong> to <strong>1000000</strong>.</p>
      * <p><strong>0</strong> indicates that the number of connections is unlimited.</p>
      * 
      * <strong>example:</strong>
@@ -692,6 +692,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("EniId")
         public String eniId;
 
+        /**
+         * <p>The IPv4 link-local addresses. The IP addresses that the NLB instance uses to communicate with the backend servers.</p>
+         */
         @NameInMap("Ipv4LocalAddresses")
         public java.util.List<String> ipv4LocalAddresses;
 
@@ -704,6 +707,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
+        /**
+         * <p>The IPv6 link-local addresses. The IP addresses that the NLB instance uses to communicate with the backend servers.</p>
+         */
         @NameInMap("Ipv6LocalAddresses")
         public java.util.List<String> ipv6LocalAddresses;
 

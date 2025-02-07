@@ -36,7 +36,7 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of TLS security policies.</p>
+     * <p>The TLS security policies.</p>
      */
     @NameInMap("SecurityPolicies")
     public java.util.List<ListSecurityPolicyResponseBodySecurityPolicies> securityPolicies;
@@ -100,7 +100,7 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
          * <p>The listener ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>lsn-bp1bpn0kn908w4nbw****</p>
+         * <p>lsn-bp1bpn0kn908w4nbw****@443</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
