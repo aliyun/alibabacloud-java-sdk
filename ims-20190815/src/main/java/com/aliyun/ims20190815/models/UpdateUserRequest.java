@@ -52,7 +52,7 @@ public class UpdateUserRequest extends TeaModel {
     /**
      * <p>The new logon name of the RAM user.</p>
      * <p>The name is in the format of <code>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</code>. <code>&lt;username&gt;</code> indicates the name of the RAM user. <code>&lt;AccountAlias&gt;.onaliyun.com</code> indicates the default domain name.</p>
-     * <p>The value of <code>UserPrincipalName</code> must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <code>&lt;username&gt;</code> must be 1 to 64 characters in length.</p>
+     * <p>The value of <code>NewUserPrincipalName</code> must be <code>1 to 128</code> characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <code>&lt;username&gt;</code> must be <code>1 to 64</code> characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:new@example.onaliyun.com">new@example.onaliyun.com</a></p>

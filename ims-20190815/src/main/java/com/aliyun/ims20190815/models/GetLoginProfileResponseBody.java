@@ -41,6 +41,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
     }
 
     public static class GetLoginProfileResponseBodyLoginProfile extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoDisableLoginStatus")
         public String autoDisableLoginStatus;
 

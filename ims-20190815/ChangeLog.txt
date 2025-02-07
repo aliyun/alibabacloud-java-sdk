@@ -1,3 +1,9 @@
+2025-02-07 Version: 3.2.0
+- Support API DeletePasskey.
+- Support API ListPasskeys.
+- Support API UpdatePasskey.
+
+
 2025-01-17 Version: 3.1.5
 - Update API GetSecurityPreference: update response param.
 - Update API SetSecurityPreference: add param AllowUserToLoginWithPasskey.

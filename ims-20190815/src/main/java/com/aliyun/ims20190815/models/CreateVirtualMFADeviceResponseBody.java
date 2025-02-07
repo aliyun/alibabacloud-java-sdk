@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVirtualMFADeviceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C609CC97-10FE-43EB-BE32-BDC219D8F1E4</p>
@@ -14,7 +14,7 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the MFA device.</p>
+     * <p>The information about the MFA device.</p>
      */
     @NameInMap("VirtualMFADevice")
     public CreateVirtualMFADeviceResponseBodyVirtualMFADevice virtualMFADevice;

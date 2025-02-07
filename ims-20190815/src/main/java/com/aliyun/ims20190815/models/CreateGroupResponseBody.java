@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateGroupResponseBody extends TeaModel {
     /**
-     * <p>The information of the RAM user group.</p>
+     * <p>The information about the RAM user group.</p>
      */
     @NameInMap("Group")
     public CreateGroupResponseBodyGroup group;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3C38192B-7BF8-45DA-8F0A-E670EA51426C</p>

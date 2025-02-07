@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
     /**
-     * <p>The information of the security report for the Alibaba Cloud account.</p>
+     * <p>The information about the security report for the Alibaba Cloud account.</p>
      */
     @NameInMap("AccountSecurityPracticeInfo")
     public GetAccountSecurityPracticeReportResponseBodyAccountSecurityPracticeInfo accountSecurityPracticeInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABA822EE-85C2-4418-9577-A1831FC8466D</p>
@@ -42,7 +42,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
 
     public static class GetAccountSecurityPracticeReportResponseBodyAccountSecurityPracticeInfoAccountSecurityPracticeUserInfo extends TeaModel {
         /**
-         * <p>Indicates whether MFA is enabled. Valid values:</p>
+         * <p>Indicates whether multi-factor authentication (MFA) is enabled. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -114,7 +114,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
         public Integer subUserWithOldAccessKey;
 
         /**
-         * <p>The number of RAM users that have no AccessKey pairs.</p>
+         * <p>The number of Resource Access Management (RAM) users that have unused AccessKey pairs.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -212,7 +212,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
 
     public static class GetAccountSecurityPracticeReportResponseBodyAccountSecurityPracticeInfo extends TeaModel {
         /**
-         * <p>The information of the security report for the Alibaba Cloud account.</p>
+         * <p>The information about the security report for the Alibaba Cloud account.</p>
          */
         @NameInMap("AccountSecurityPracticeUserInfo")
         public GetAccountSecurityPracticeReportResponseBodyAccountSecurityPracticeInfoAccountSecurityPracticeUserInfo accountSecurityPracticeUserInfo;

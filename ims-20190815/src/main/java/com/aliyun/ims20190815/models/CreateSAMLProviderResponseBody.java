@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSAMLProviderResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A95A763D-F6B7-5242-83EB-AB45CE67F358</p>
@@ -14,7 +14,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the IdP.</p>
+     * <p>The information about the IdP.</p>
      */
     @NameInMap("SAMLProvider")
     public CreateSAMLProviderResponseBodySAMLProvider SAMLProvider;
@@ -51,7 +51,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
         public String arn;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-22T02:37:05Z</p>
@@ -78,7 +78,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
         public String SAMLProviderName;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-22T02:51:20Z</p>

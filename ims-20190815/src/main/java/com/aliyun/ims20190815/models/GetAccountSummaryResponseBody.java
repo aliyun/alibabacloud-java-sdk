@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccountSummaryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>81313F5E-3C85-478F-BCC9-E1B70E4556DB</p>
@@ -42,7 +42,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
 
     public static class GetAccountSummaryResponseBodySummaryMap extends TeaModel {
         /**
-         * <p>The maximum number of AccessKey pairs that a RAM user can have.</p>
+         * <p>The maximum number of AccessKey pairs that a Resource Access Management (RAM) user can have.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -104,6 +104,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         @NameInMap("AttachedSystemPoliciesPerUserQuota")
         public Integer attachedSystemPoliciesPerUserQuota;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("ConditionsPerAKPolicyQuota")
         public Integer conditionsPerAKPolicyQuota;
 
@@ -134,6 +138,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         @NameInMap("GroupsQuota")
         public Integer groupsQuota;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("IPItemsPerAKPolicyQuota")
         public Integer IPItemsPerAKPolicyQuota;
 

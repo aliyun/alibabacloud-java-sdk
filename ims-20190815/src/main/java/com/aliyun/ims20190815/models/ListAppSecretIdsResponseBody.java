@@ -11,7 +11,7 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
     public ListAppSecretIdsResponseBodyAppSecrets appSecrets;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5F2FD500-7173-47D6-BD2F-EB60879B4F16</p>

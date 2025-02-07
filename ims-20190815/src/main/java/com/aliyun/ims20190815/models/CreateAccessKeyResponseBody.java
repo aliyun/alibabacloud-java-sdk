@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAccessKeyResponseBody extends TeaModel {
     /**
-     * <p>The information of the AccessKey pair.</p>
+     * <p>The information about the AccessKey pair.</p>
      */
     @NameInMap("AccessKey")
     public CreateAccessKeyResponseBodyAccessKey accessKey;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>19DDD9F7-AFCC-4D72-8CBA-CCE5A142E7AB</p>
@@ -42,7 +42,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
 
     public static class CreateAccessKeyResponseBodyAccessKey extends TeaModel {
         /**
-         * <p>The AccessKey ID provided to you by Alibaba Cloud.</p>
+         * <p>The AccessKey ID.</p>
          * 
          * <strong>example:</strong>
          * <p>LTAI4G3HaMmeHpay2gcq****</p>
@@ -51,7 +51,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
-         * <p>The AccessKey secret provided to you by Alibaba Cloud.</p>
+         * <p>The AccessKey secret.</p>
          * 
          * <strong>example:</strong>
          * <p>Y3MSLE6OgizS4qrz5LVFDoyZEL****</p>

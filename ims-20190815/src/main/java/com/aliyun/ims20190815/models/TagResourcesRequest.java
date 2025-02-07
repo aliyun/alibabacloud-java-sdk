@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The ID of resource N.</p>
-     * <p>Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.</p>
+     * <p>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource ID is the ID of the RAM user.</p>
      * <blockquote>
-     * <p>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     * <p> You must specify only one of the following parameters: <code>ResourceId</code> and <code>ResourcePrincipalName</code>.</p>
      * </blockquote>
      */
     @NameInMap("ResourceId")
@@ -16,9 +16,9 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The name of resource N.</p>
-     * <p>Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.</p>
+     * <p>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource name is the name of the RAM user.</p>
      * <blockquote>
-     * <p>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     * <p> You must specify only one of the following parameters: <code>ResourceId</code> and <code>ResourcePrincipalName</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid value:</p>
      * <ul>
-     * <li>user: a RAM user</li>
+     * <li>user: a Resource Access Management (RAM) user.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,8 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag value.</p>
+     * <p>The key of tag N.</p>
+     * <p>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length. The tag key cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -85,7 +86,7 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
-         * <p>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>operator</p>
@@ -95,7 +96,7 @@ public class TagResourcesRequest extends TeaModel {
 
         /**
          * <p>The value of tag N.</p>
-         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be a up to128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
