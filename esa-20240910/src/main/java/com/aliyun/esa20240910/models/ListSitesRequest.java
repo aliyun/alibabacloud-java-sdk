@@ -20,9 +20,9 @@ public class ListSitesRequest extends TeaModel {
     /**
      * <p>The service location. Valid values:</p>
      * <ul>
-     * <li><strong>domestic</strong>: the Chinese mainland</li>
-     * <li><strong>global</strong>: global</li>
-     * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+     * <li><strong>domestic</strong>: the Chinese Mainland</li>
+     * <li><strong>global</strong>: global (including the Chinese Mainland)</li>
+     * <li><strong>overseas</strong>: outside the Chinese Mainland</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class ListSitesRequest extends TeaModel {
     /**
      * <p>The plan type. Valid values:</p>
      * <ul>
-     * <li><strong>basicplan</strong>: Entrance (coming soon)</li>
+     * <li><strong>basicplan</strong>: Entrance</li>
      * <li><strong>standardplan</strong>: Pro</li>
      * <li><strong>advancedplan</strong>: Premium</li>
      * <li><strong>enterpriseplan</strong>: Enterprise</li>
