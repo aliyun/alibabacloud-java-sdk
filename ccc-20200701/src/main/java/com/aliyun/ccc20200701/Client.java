@@ -1938,6 +1938,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request CreateChatMediaUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateChatMediaUrlResponse
+     */
+    public CreateChatMediaUrlResponse createChatMediaUrlWithOptions(CreateChatMediaUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mimeType)) {
+            body.put("MimeType", request.mimeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("RequestId", request.requestId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateChatMediaUrl"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateChatMediaUrlResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateChatMediaUrlResponse());
+        }
+
+    }
+
+    /**
+     * @param request CreateChatMediaUrlRequest
+     * @return CreateChatMediaUrlResponse
+     */
+    public CreateChatMediaUrlResponse createChatMediaUrl(CreateChatMediaUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createChatMediaUrlWithOptions(request, runtime);
+    }
+
+    /**
      * @param request CreateContactFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateContactFlowResponse
@@ -11110,6 +11161,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ProcessAliMeCallbackOfStagingResponse processAliMeCallbackOfStaging(ProcessAliMeCallbackOfStagingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.processAliMeCallbackOfStagingWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ProcessCustomIMCallbackRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ProcessCustomIMCallbackResponse
+     */
+    public ProcessCustomIMCallbackResponse processCustomIMCallbackWithOptions(ProcessCustomIMCallbackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessChannelId)) {
+            body.put("AccessChannelId", request.accessChannelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conversationId)) {
+            body.put("ConversationId", request.conversationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageContent)) {
+            body.put("MessageContent", request.messageContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("RequestId", request.requestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.senderAvatarMediaId)) {
+            body.put("SenderAvatarMediaId", request.senderAvatarMediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.senderId)) {
+            body.put("SenderId", request.senderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.senderName)) {
+            body.put("SenderName", request.senderName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ProcessCustomIMCallback"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ProcessCustomIMCallbackResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ProcessCustomIMCallbackResponse());
+        }
+
+    }
+
+    /**
+     * @param request ProcessCustomIMCallbackRequest
+     * @return ProcessCustomIMCallbackResponse
+     */
+    public ProcessCustomIMCallbackResponse processCustomIMCallback(ProcessCustomIMCallbackRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.processCustomIMCallbackWithOptions(request, runtime);
     }
 
     /**
