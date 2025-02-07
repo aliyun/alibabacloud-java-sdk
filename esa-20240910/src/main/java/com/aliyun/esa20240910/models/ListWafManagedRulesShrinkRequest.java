@@ -27,7 +27,7 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
     public Integer attackType;
 
     /**
-     * <p>The ID of the WAF rule, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850237.html">ListWafRules</a> operation.</p>
+     * <p>The ID of the WAF rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
