@@ -7,12 +7,24 @@ public class GetOrderUsageResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<java.util.Map<String, ?>> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5D6653C5-CA2B-14EC-9CF0-50AA0FF49C31</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
