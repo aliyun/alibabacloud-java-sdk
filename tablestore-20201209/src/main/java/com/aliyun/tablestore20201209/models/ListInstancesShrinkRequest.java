@@ -48,17 +48,15 @@ public class ListInstancesShrinkRequest extends TeaModel {
 
     /**
      * <p>The instance status.</p>
-     * <ul>
-     * <li>normal: The instance is running as expected.</li>
-     * <li>forbidden: The instance is disabled.</li>
-     * <li>Deleting: The instance is being deleted.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("Tag")
+    public String tagShrink;
 
     public static ListInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesShrinkRequest self = new ListInstancesShrinkRequest();
@@ -111,6 +109,14 @@ public class ListInstancesShrinkRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListInstancesShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
+        return this;
+    }
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
 }
