@@ -1,3 +1,20 @@
+2025-02-08 Version: 1.2.0
+- Support API AuthorizeEndpointAcl.
+- Support API DisableEndpoint.
+- Support API EnableEndpoint.
+- Support API GetEndpointAttribute.
+- Support API RevokeEndpointAcl.
+- Update API CreateQueue: add param DlqPolicy.
+- Update API GetQueueAttributes: update response param.
+- Update API GetSubscriptionAttributes: update response param.
+- Update API ListQueue: update response param.
+- Update API ListSubscriptionByTopic: update param TopicName.
+- Update API ListSubscriptionByTopic: update response param.
+- Update API SetQueueAttributes: add param DlqPolicy.
+- Update API SetSubscriptionAttributes: add param DlqPolicy.
+- Update API Subscribe: add param DlqPolicy.
+
+
 2025-02-07 Version: 1.1.0
 - Support API AuthorizeEndpointAcl.
 - Support API DisableEndpoint.

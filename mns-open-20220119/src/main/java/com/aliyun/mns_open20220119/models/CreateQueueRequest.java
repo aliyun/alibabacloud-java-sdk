@@ -13,6 +13,9 @@ public class CreateQueueRequest extends TeaModel {
     @NameInMap("DelaySeconds")
     public Long delaySeconds;
 
+    @NameInMap("DlqPolicy")
+    public CreateQueueRequestDlqPolicy dlqPolicy;
+
     /**
      * <p>Specifies whether to enable the log management feature. Valid values:</p>
      * <ul>
@@ -89,6 +92,14 @@ public class CreateQueueRequest extends TeaModel {
         return this.delaySeconds;
     }
 
+    public CreateQueueRequest setDlqPolicy(CreateQueueRequestDlqPolicy dlqPolicy) {
+        this.dlqPolicy = dlqPolicy;
+        return this;
+    }
+    public CreateQueueRequestDlqPolicy getDlqPolicy() {
+        return this.dlqPolicy;
+    }
+
     public CreateQueueRequest setEnableLogging(Boolean enableLogging) {
         this.enableLogging = enableLogging;
         return this;
@@ -143,6 +154,47 @@ public class CreateQueueRequest extends TeaModel {
     }
     public Long getVisibilityTimeout() {
         return this.visibilityTimeout;
+    }
+
+    public static class CreateQueueRequestDlqPolicy extends TeaModel {
+        @NameInMap("DeadLetterTargetQueue")
+        public String deadLetterTargetQueue;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("MaxReceiveCount")
+        public Integer maxReceiveCount;
+
+        public static CreateQueueRequestDlqPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateQueueRequestDlqPolicy self = new CreateQueueRequestDlqPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateQueueRequestDlqPolicy setDeadLetterTargetQueue(String deadLetterTargetQueue) {
+            this.deadLetterTargetQueue = deadLetterTargetQueue;
+            return this;
+        }
+        public String getDeadLetterTargetQueue() {
+            return this.deadLetterTargetQueue;
+        }
+
+        public CreateQueueRequestDlqPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public CreateQueueRequestDlqPolicy setMaxReceiveCount(Integer maxReceiveCount) {
+            this.maxReceiveCount = maxReceiveCount;
+            return this;
+        }
+        public Integer getMaxReceiveCount() {
+            return this.maxReceiveCount;
+        }
+
     }
 
     public static class CreateQueueRequestTag extends TeaModel {

@@ -3,9 +3,9 @@ package com.aliyun.mns_open20220119.models;
 
 import com.aliyun.tea.*;
 
-public class SubscribeRequest extends TeaModel {
+public class SubscribeShrinkRequest extends TeaModel {
     @NameInMap("DlqPolicy")
-    public SubscribeRequestDlqPolicy dlqPolicy;
+    public String dlqPolicyShrink;
 
     /**
      * <p>The receiver endpoint. The format of the endpoint varies based on the terminal type.</p>
@@ -98,20 +98,20 @@ public class SubscribeRequest extends TeaModel {
     @NameInMap("TopicName")
     public String topicName;
 
-    public static SubscribeRequest build(java.util.Map<String, ?> map) throws Exception {
-        SubscribeRequest self = new SubscribeRequest();
+    public static SubscribeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        SubscribeShrinkRequest self = new SubscribeShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public SubscribeRequest setDlqPolicy(SubscribeRequestDlqPolicy dlqPolicy) {
-        this.dlqPolicy = dlqPolicy;
+    public SubscribeShrinkRequest setDlqPolicyShrink(String dlqPolicyShrink) {
+        this.dlqPolicyShrink = dlqPolicyShrink;
         return this;
     }
-    public SubscribeRequestDlqPolicy getDlqPolicy() {
-        return this.dlqPolicy;
+    public String getDlqPolicyShrink() {
+        return this.dlqPolicyShrink;
     }
 
-    public SubscribeRequest setEndpoint(String endpoint) {
+    public SubscribeShrinkRequest setEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
@@ -119,7 +119,7 @@ public class SubscribeRequest extends TeaModel {
         return this.endpoint;
     }
 
-    public SubscribeRequest setMessageTag(String messageTag) {
+    public SubscribeShrinkRequest setMessageTag(String messageTag) {
         this.messageTag = messageTag;
         return this;
     }
@@ -127,7 +127,7 @@ public class SubscribeRequest extends TeaModel {
         return this.messageTag;
     }
 
-    public SubscribeRequest setNotifyContentFormat(String notifyContentFormat) {
+    public SubscribeShrinkRequest setNotifyContentFormat(String notifyContentFormat) {
         this.notifyContentFormat = notifyContentFormat;
         return this;
     }
@@ -135,7 +135,7 @@ public class SubscribeRequest extends TeaModel {
         return this.notifyContentFormat;
     }
 
-    public SubscribeRequest setNotifyStrategy(String notifyStrategy) {
+    public SubscribeShrinkRequest setNotifyStrategy(String notifyStrategy) {
         this.notifyStrategy = notifyStrategy;
         return this;
     }
@@ -143,7 +143,7 @@ public class SubscribeRequest extends TeaModel {
         return this.notifyStrategy;
     }
 
-    public SubscribeRequest setPushType(String pushType) {
+    public SubscribeShrinkRequest setPushType(String pushType) {
         this.pushType = pushType;
         return this;
     }
@@ -151,7 +151,7 @@ public class SubscribeRequest extends TeaModel {
         return this.pushType;
     }
 
-    public SubscribeRequest setSubscriptionName(String subscriptionName) {
+    public SubscribeShrinkRequest setSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
     }
@@ -159,42 +159,12 @@ public class SubscribeRequest extends TeaModel {
         return this.subscriptionName;
     }
 
-    public SubscribeRequest setTopicName(String topicName) {
+    public SubscribeShrinkRequest setTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     public String getTopicName() {
         return this.topicName;
-    }
-
-    public static class SubscribeRequestDlqPolicy extends TeaModel {
-        @NameInMap("DeadLetterTargetQueue")
-        public String deadLetterTargetQueue;
-
-        @NameInMap("Enabled")
-        public Boolean enabled;
-
-        public static SubscribeRequestDlqPolicy build(java.util.Map<String, ?> map) throws Exception {
-            SubscribeRequestDlqPolicy self = new SubscribeRequestDlqPolicy();
-            return TeaModel.build(map, self);
-        }
-
-        public SubscribeRequestDlqPolicy setDeadLetterTargetQueue(String deadLetterTargetQueue) {
-            this.deadLetterTargetQueue = deadLetterTargetQueue;
-            return this;
-        }
-        public String getDeadLetterTargetQueue() {
-            return this.deadLetterTargetQueue;
-        }
-
-        public SubscribeRequestDlqPolicy setEnabled(Boolean enabled) {
-            this.enabled = enabled;
-            return this;
-        }
-        public Boolean getEnabled() {
-            return this.enabled;
-        }
-
     }
 
 }

@@ -108,6 +108,47 @@ public class ListQueueResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListQueueResponseBodyDataPageDataDlqPolicy extends TeaModel {
+        @NameInMap("DeadLetterTargetQueue")
+        public String deadLetterTargetQueue;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("MaxReceiveCount")
+        public String maxReceiveCount;
+
+        public static ListQueueResponseBodyDataPageDataDlqPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ListQueueResponseBodyDataPageDataDlqPolicy self = new ListQueueResponseBodyDataPageDataDlqPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ListQueueResponseBodyDataPageDataDlqPolicy setDeadLetterTargetQueue(String deadLetterTargetQueue) {
+            this.deadLetterTargetQueue = deadLetterTargetQueue;
+            return this;
+        }
+        public String getDeadLetterTargetQueue() {
+            return this.deadLetterTargetQueue;
+        }
+
+        public ListQueueResponseBodyDataPageDataDlqPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ListQueueResponseBodyDataPageDataDlqPolicy setMaxReceiveCount(String maxReceiveCount) {
+            this.maxReceiveCount = maxReceiveCount;
+            return this;
+        }
+        public String getMaxReceiveCount() {
+            return this.maxReceiveCount;
+        }
+
+    }
+
     public static class ListQueueResponseBodyDataPageDataTags extends TeaModel {
         /**
          * <p>The tag key.</p>
@@ -186,6 +227,9 @@ public class ListQueueResponseBody extends TeaModel {
          */
         @NameInMap("DelaySeconds")
         public Long delaySeconds;
+
+        @NameInMap("DlqPolicy")
+        public ListQueueResponseBodyDataPageDataDlqPolicy dlqPolicy;
 
         /**
          * <p>The total number of messages that are in the Inactive state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
@@ -304,6 +348,14 @@ public class ListQueueResponseBody extends TeaModel {
         }
         public Long getDelaySeconds() {
             return this.delaySeconds;
+        }
+
+        public ListQueueResponseBodyDataPageData setDlqPolicy(ListQueueResponseBodyDataPageDataDlqPolicy dlqPolicy) {
+            this.dlqPolicy = dlqPolicy;
+            return this;
+        }
+        public ListQueueResponseBodyDataPageDataDlqPolicy getDlqPolicy() {
+            return this.dlqPolicy;
         }
 
         public ListQueueResponseBodyDataPageData setInactiveMessages(Long inactiveMessages) {

@@ -3,7 +3,7 @@ package com.aliyun.mns_open20220119.models;
 
 import com.aliyun.tea.*;
 
-public class SetQueueAttributesRequest extends TeaModel {
+public class CreateQueueShrinkRequest extends TeaModel {
     /**
      * <p>The period after which all messages sent to the queue are consumed. Valid values: 0 to 604800. Unit: seconds. Default value: 0</p>
      * 
@@ -14,17 +14,18 @@ public class SetQueueAttributesRequest extends TeaModel {
     public Long delaySeconds;
 
     @NameInMap("DlqPolicy")
-    public SetQueueAttributesRequestDlqPolicy dlqPolicy;
+    public String dlqPolicyShrink;
 
     /**
      * <p>Specifies whether to enable the log management feature. Valid values:</p>
      * <ul>
      * <li>true: enabled.</li>
-     * <li>false: disabled. Default value: false.</li>
+     * <li>false: disabled.</li>
      * </ul>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>true</p>
      */
     @NameInMap("EnableLogging")
     public Boolean enableLogging;
@@ -33,7 +34,7 @@ public class SetQueueAttributesRequest extends TeaModel {
      * <p>The maximum length of the message that is sent to the queue. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
      * 
      * <strong>example:</strong>
-     * <p>1024</p>
+     * <p>65536</p>
      */
     @NameInMap("MaximumMessageSize")
     public Long maximumMessageSize;
@@ -42,7 +43,7 @@ public class SetQueueAttributesRequest extends TeaModel {
      * <p>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</p>
      * 
      * <strong>example:</strong>
-     * <p>120</p>
+     * <p>345600</p>
      */
     @NameInMap("MessageRetentionPeriod")
     public Long messageRetentionPeriod;
@@ -61,10 +62,13 @@ public class SetQueueAttributesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>testqueue</p>
+     * <p>06273500-249F-5863-121D-74D51123****</p>
      */
     @NameInMap("QueueName")
     public String queueName;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateQueueShrinkRequestTag> tag;
 
     /**
      * <p>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
@@ -75,12 +79,12 @@ public class SetQueueAttributesRequest extends TeaModel {
     @NameInMap("VisibilityTimeout")
     public Long visibilityTimeout;
 
-    public static SetQueueAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
-        SetQueueAttributesRequest self = new SetQueueAttributesRequest();
+    public static CreateQueueShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateQueueShrinkRequest self = new CreateQueueShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetQueueAttributesRequest setDelaySeconds(Long delaySeconds) {
+    public CreateQueueShrinkRequest setDelaySeconds(Long delaySeconds) {
         this.delaySeconds = delaySeconds;
         return this;
     }
@@ -88,15 +92,15 @@ public class SetQueueAttributesRequest extends TeaModel {
         return this.delaySeconds;
     }
 
-    public SetQueueAttributesRequest setDlqPolicy(SetQueueAttributesRequestDlqPolicy dlqPolicy) {
-        this.dlqPolicy = dlqPolicy;
+    public CreateQueueShrinkRequest setDlqPolicyShrink(String dlqPolicyShrink) {
+        this.dlqPolicyShrink = dlqPolicyShrink;
         return this;
     }
-    public SetQueueAttributesRequestDlqPolicy getDlqPolicy() {
-        return this.dlqPolicy;
+    public String getDlqPolicyShrink() {
+        return this.dlqPolicyShrink;
     }
 
-    public SetQueueAttributesRequest setEnableLogging(Boolean enableLogging) {
+    public CreateQueueShrinkRequest setEnableLogging(Boolean enableLogging) {
         this.enableLogging = enableLogging;
         return this;
     }
@@ -104,7 +108,7 @@ public class SetQueueAttributesRequest extends TeaModel {
         return this.enableLogging;
     }
 
-    public SetQueueAttributesRequest setMaximumMessageSize(Long maximumMessageSize) {
+    public CreateQueueShrinkRequest setMaximumMessageSize(Long maximumMessageSize) {
         this.maximumMessageSize = maximumMessageSize;
         return this;
     }
@@ -112,7 +116,7 @@ public class SetQueueAttributesRequest extends TeaModel {
         return this.maximumMessageSize;
     }
 
-    public SetQueueAttributesRequest setMessageRetentionPeriod(Long messageRetentionPeriod) {
+    public CreateQueueShrinkRequest setMessageRetentionPeriod(Long messageRetentionPeriod) {
         this.messageRetentionPeriod = messageRetentionPeriod;
         return this;
     }
@@ -120,7 +124,7 @@ public class SetQueueAttributesRequest extends TeaModel {
         return this.messageRetentionPeriod;
     }
 
-    public SetQueueAttributesRequest setPollingWaitSeconds(Long pollingWaitSeconds) {
+    public CreateQueueShrinkRequest setPollingWaitSeconds(Long pollingWaitSeconds) {
         this.pollingWaitSeconds = pollingWaitSeconds;
         return this;
     }
@@ -128,7 +132,7 @@ public class SetQueueAttributesRequest extends TeaModel {
         return this.pollingWaitSeconds;
     }
 
-    public SetQueueAttributesRequest setQueueName(String queueName) {
+    public CreateQueueShrinkRequest setQueueName(String queueName) {
         this.queueName = queueName;
         return this;
     }
@@ -136,7 +140,15 @@ public class SetQueueAttributesRequest extends TeaModel {
         return this.queueName;
     }
 
-    public SetQueueAttributesRequest setVisibilityTimeout(Long visibilityTimeout) {
+    public CreateQueueShrinkRequest setTag(java.util.List<CreateQueueShrinkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateQueueShrinkRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public CreateQueueShrinkRequest setVisibilityTimeout(Long visibilityTimeout) {
         this.visibilityTimeout = visibilityTimeout;
         return this;
     }
@@ -144,43 +156,40 @@ public class SetQueueAttributesRequest extends TeaModel {
         return this.visibilityTimeout;
     }
 
-    public static class SetQueueAttributesRequestDlqPolicy extends TeaModel {
-        @NameInMap("DeadLetterTargetQueue")
-        public String deadLetterTargetQueue;
+    public static class CreateQueueShrinkRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
+        @NameInMap("Key")
+        public String key;
 
-        @NameInMap("Enabled")
-        public Boolean enabled;
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Value")
+        public String value;
 
-        @NameInMap("MaxReceiveCount")
-        public Integer maxReceiveCount;
-
-        public static SetQueueAttributesRequestDlqPolicy build(java.util.Map<String, ?> map) throws Exception {
-            SetQueueAttributesRequestDlqPolicy self = new SetQueueAttributesRequestDlqPolicy();
+        public static CreateQueueShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateQueueShrinkRequestTag self = new CreateQueueShrinkRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public SetQueueAttributesRequestDlqPolicy setDeadLetterTargetQueue(String deadLetterTargetQueue) {
-            this.deadLetterTargetQueue = deadLetterTargetQueue;
+        public CreateQueueShrinkRequestTag setKey(String key) {
+            this.key = key;
             return this;
         }
-        public String getDeadLetterTargetQueue() {
-            return this.deadLetterTargetQueue;
+        public String getKey() {
+            return this.key;
         }
 
-        public SetQueueAttributesRequestDlqPolicy setEnabled(Boolean enabled) {
-            this.enabled = enabled;
+        public CreateQueueShrinkRequestTag setValue(String value) {
+            this.value = value;
             return this;
         }
-        public Boolean getEnabled() {
-            return this.enabled;
-        }
-
-        public SetQueueAttributesRequestDlqPolicy setMaxReceiveCount(Integer maxReceiveCount) {
-            this.maxReceiveCount = maxReceiveCount;
-            return this;
-        }
-        public Integer getMaxReceiveCount() {
-            return this.maxReceiveCount;
+        public String getValue() {
+            return this.value;
         }
 
     }
