@@ -16,6 +16,8 @@ public class UpdateFileRequest extends TeaModel {
     public String advancedSettings;
 
     /**
+     * <p>Whether the scheduling configuration takes effect immediately after the release.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -145,12 +147,18 @@ public class UpdateFileRequest extends TeaModel {
 
     /**
      * <p>The description of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Here is the file description</p>
      */
     @NameInMap("FileDescription")
     public String fileDescription;
 
     /**
      * <p>The path of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Business_process/First_Business_Process/data_integration/Folder_1/Folder_2</p>
      */
     @NameInMap("FileFolderPath")
     public String fileFolderPath;
@@ -176,11 +184,16 @@ public class UpdateFileRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>Scheduling configuration-&gt; previous cycle-&gt; whether to skip the upstream empty run attribute.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IgnoreParentSkipRunningProperty")
     public Boolean ignoreParentSkipRunningProperty;
+
+    @NameInMap("ImageId")
+    public String imageId;
 
     /**
      * <p>The output name of the parent file on which the current file depends. If you specify multiple output names, separate them with commas (,).</p>
@@ -495,6 +508,14 @@ public class UpdateFileRequest extends TeaModel {
     }
     public Boolean getIgnoreParentSkipRunningProperty() {
         return this.ignoreParentSkipRunningProperty;
+    }
+
+    public UpdateFileRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
     }
 
     public UpdateFileRequest setInputList(String inputList) {

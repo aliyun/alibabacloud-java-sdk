@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
     /**
-     * <p>The data entries returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<DsgSceneQuerySceneListByNameResponseBodyData> data;

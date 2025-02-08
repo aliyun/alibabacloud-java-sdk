@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QuerySensNodeInfoResponseBody extends TeaModel {
     /**
      * <p>The returned business data in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;success&quot;: true, &quot;httpStatusCode&quot;: 200, &quot;data&quot;: { &quot;result&quot;: [ { &quot;sensitiveName&quot;: &quot;certificate expiration date&quot;, &quot;sensitiveId&quot;: &quot;fd4ff5a2-9537-43d1-8e4f-1d0b5ffaac12&quot;, &quot;status&quot;: 0, &quot;templateName&quot;: &quot;built-in classification and grading template&quot;, &quot;keyRuleId&quot;: &quot;228248921215042 certificate expiration date&quot;} ], &quot;totalCount&quot;: 1, &quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10 }, &quot;requestId&quot;: 10000001}</p>
      */
     @NameInMap("Data")
     public Object data;
@@ -21,6 +24,9 @@ public class QuerySensNodeInfoResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Missing parameter</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;

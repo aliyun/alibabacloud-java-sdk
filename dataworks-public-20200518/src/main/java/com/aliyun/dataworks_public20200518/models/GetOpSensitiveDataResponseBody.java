@@ -14,6 +14,9 @@ public class GetOpSensitiveDataResponseBody extends TeaModel {
      * <li>opAccount: the account that is used to perform the operation.</li>
      * <li>opTime: the time when the operation was performed.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;opSensDatas&quot;: [       {         &quot;sensLevel&quot;: &quot;L4&quot;,         &quot;opTime&quot;: &quot;2021-02-07 00:14:51&quot;,         &quot;opAccount&quot;: &quot;ALIYUN$dsg_test&quot;,         &quot;sensType&quot;: &quot;Mobile phone number&quot;,         &quot;sql&quot;: &quot;select * from dsg_demo.tbl_phonebook where phone_no = &#39;1331111****&#39;;&quot;       }     ],     &quot;totalCount&quot;: 6</p>
      */
     @NameInMap("OpSensitiveData")
     public String opSensitiveData;

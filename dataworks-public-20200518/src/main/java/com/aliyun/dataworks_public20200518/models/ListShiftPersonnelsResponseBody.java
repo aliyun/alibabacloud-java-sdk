@@ -61,6 +61,9 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the on-duty engineer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhang San</p>
          */
         @NameInMap("ShiftPersonName")
         public String shiftPersonName;

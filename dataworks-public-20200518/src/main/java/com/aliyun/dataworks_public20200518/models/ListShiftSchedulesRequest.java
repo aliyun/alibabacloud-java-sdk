@@ -33,6 +33,9 @@ public class ListShiftSchedulesRequest extends TeaModel {
 
     /**
      * <p>The keyword used to perform a fuzzy search on shift schedules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Duty table name keyword</p>
      */
     @NameInMap("ShiftScheduleName")
     public String shiftScheduleName;

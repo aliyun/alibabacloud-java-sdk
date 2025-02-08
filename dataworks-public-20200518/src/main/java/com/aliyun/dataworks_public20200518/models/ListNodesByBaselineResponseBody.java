@@ -120,6 +120,9 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node name</p>
          */
         @NameInMap("NodeName")
         public String nodeName;

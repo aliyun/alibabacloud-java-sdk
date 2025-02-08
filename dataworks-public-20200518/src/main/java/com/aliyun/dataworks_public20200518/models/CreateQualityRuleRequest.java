@@ -28,7 +28,7 @@ public class CreateQualityRuleRequest extends TeaModel {
     public Integer checker;
 
     /**
-     * <p>The description of the monitoring rule.</p>
+     * <p>The description of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>Verification</p>

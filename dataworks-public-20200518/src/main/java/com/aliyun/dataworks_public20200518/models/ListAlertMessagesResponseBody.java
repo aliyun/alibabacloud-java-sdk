@@ -129,6 +129,9 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node name</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
@@ -210,6 +213,9 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node name</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
@@ -283,6 +289,9 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline name</p>
          */
         @NameInMap("BaselineName")
         public String baselineName;
@@ -425,6 +434,9 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527 error</p>
          */
         @NameInMap("TopicName")
         public String topicName;
@@ -550,6 +562,9 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
         /**
          * <p>The content of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node error</p>
          */
         @NameInMap("Content")
         public String content;
@@ -581,6 +596,9 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom monitoring rule name</p>
          */
         @NameInMap("RemindName")
         public String remindName;

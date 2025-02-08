@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTopicInfluenceRequest extends TeaModel {
     /**
+     * <p>The ID of the event.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -32,7 +32,7 @@ public class ListNodesRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The page number. Minimum value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class ListNodesRequest extends TeaModel {
     public String programType;
 
     /**
-     * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The environment in which the node runs. Valid values: DEV and PROD.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,6 +78,17 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The scheduling type. Valid values:</p>
+     * <ul>
+     * <li>NORMAL: Nodes are scheduled as expected.</li>
+     * <li>PAUSE: Nodes are paused.</li>
+     * <li>SKIP: Nodes are dry-run. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("SchedulerType")
     public String schedulerType;
 

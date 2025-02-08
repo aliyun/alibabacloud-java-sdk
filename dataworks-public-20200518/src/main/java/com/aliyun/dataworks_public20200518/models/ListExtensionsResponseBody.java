@@ -52,6 +52,9 @@ public class ListExtensionsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>File submission pre-event</p>
          */
         @NameInMap("EventName")
         public String eventName;
@@ -88,18 +91,27 @@ public class ListExtensionsResponseBody extends TeaModel {
 
         /**
          * <p>The unique code of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Extension Code</p>
          */
         @NameInMap("ExtensionCode")
         public String extensionCode;
 
         /**
          * <p>The description of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description</p>
          */
         @NameInMap("ExtensionDesc")
         public String extensionDesc;
 
         /**
          * <p>The name of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Extension name</p>
          */
         @NameInMap("ExtensionName")
         public String extensionName;

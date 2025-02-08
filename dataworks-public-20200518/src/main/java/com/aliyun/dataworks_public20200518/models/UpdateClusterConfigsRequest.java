@@ -28,12 +28,14 @@ public class UpdateClusterConfigsRequest extends TeaModel {
     public String configType;
 
     /**
+     * <p>The configuration information of the cluster submodule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigValues")
     public java.util.List<ClusterConfig> configValues;
 
     /**
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -61,12 +61,18 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
 
         /**
          * <p>The description of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS SQL compatible Spark engine detection</p>
          */
         @NameInMap("ExtensionDesc")
         public String extensionDesc;
 
         /**
          * <p>The name of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>max_pt function is not allowed.</p>
          */
         @NameInMap("ExtensionName")
         public String extensionName;

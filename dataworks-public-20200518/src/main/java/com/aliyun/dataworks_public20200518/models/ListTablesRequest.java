@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTablesRequest extends TeaModel {
     /**
+     * <p>The type of the data source. Valid values: ODPS, emr, mysql, holo, analyticdb_for_mysql, oracle, postgresql, sqlserver, clickhouse, and starrocks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,8 @@ public class ListTablesRequest extends TeaModel {
     public String dataSourceType;
 
     /**
+     * <p>Pagination information, which specifies the starting point of this read.</p>
+     * 
      * <strong>example:</strong>
      * <p>12222</p>
      */
@@ -24,6 +27,8 @@ public class ListTablesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of entries displayed on each page. The default value is 10 and the maximum value is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

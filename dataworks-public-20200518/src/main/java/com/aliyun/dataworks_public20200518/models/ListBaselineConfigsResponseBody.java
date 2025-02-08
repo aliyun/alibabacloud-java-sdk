@@ -120,6 +120,9 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline name</p>
          */
         @NameInMap("BaselineName")
         public String baselineName;

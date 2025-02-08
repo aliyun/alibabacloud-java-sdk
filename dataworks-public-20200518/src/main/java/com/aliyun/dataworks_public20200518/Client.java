@@ -1982,6 +1982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("IgnoreParentSkipRunningProperty", request.ignoreParentSkipRunningProperty);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inputList)) {
             body.put("InputList", request.inputList);
         }
@@ -9225,8 +9229,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Invoke the GetMetaTableFullInfo interface to obtain the complete information of a table (including field information).</p>
+     * <p>Queries the complete information about a table, including information about fields in the table.</p>
      * 
      * @param request GetMetaTableFullInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9258,8 +9265,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Invoke the GetMetaTableFullInfo interface to obtain the complete information of a table (including field information).</p>
+     * <p>Queries the complete information about a table, including information about fields in the table.</p>
      * 
      * @param request GetMetaTableFullInfoRequest
      * @return GetMetaTableFullInfoResponse
@@ -10530,6 +10540,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the subscribers of a partition filter expression.</p>
+     * 
      * @param request GetQualityFollowerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetQualityFollowerResponse
@@ -10572,6 +10585,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the subscribers of a partition filter expression.</p>
+     * 
      * @param request GetQualityFollowerRequest
      * @return GetQualityFollowerResponse
      */
@@ -10852,6 +10868,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Debugging</h2>
+     * <p><a href="https://api.aliyun.com/#product=dataworks-public%5C&api=GetTopicInfluence%5C&type=RPC%5C&version=2020-05-18">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries baseline instances affected by an event.</p>
+     * 
      * @param request GetTopicInfluenceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTopicInfluenceResponse
@@ -10886,6 +10909,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Debugging</h2>
+     * <p><a href="https://api.aliyun.com/#product=dataworks-public%5C&api=GetTopicInfluence%5C&type=RPC%5C&version=2020-05-18">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries baseline instances affected by an event.</p>
+     * 
      * @param request GetTopicInfluenceRequest
      * @return GetTopicInfluenceResponse
      */
@@ -11417,7 +11447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询扩展事件的检查列表</p>
+     * <p>Queries the check results of extension point events.</p>
      * 
      * @param request ListCheckProcessesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11478,7 +11508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询扩展事件的检查列表</p>
+     * <p>Queries the check results of extension point events.</p>
      * 
      * @param request ListCheckProcessesRequest
      * @return ListCheckProcessesResponse
@@ -12845,6 +12875,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of file versions.</p>
+     * 
      * @param request ListFileVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFileVersionsResponse
@@ -12895,6 +12928,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of file versions.</p>
+     * 
      * @param request ListFileVersionsRequest
      * @return ListFileVersionsResponse
      */
@@ -12904,6 +12940,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of files.</p>
+     * 
      * @param request ListFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFilesResponse
@@ -12990,6 +13029,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of files.</p>
+     * 
      * @param request ListFilesRequest
      * @return ListFilesResponse
      */
@@ -13248,7 +13290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the directed acyclic graph (DAG). You can set this parameter to the value of the DagId parameter returned by the <a href="https://help.aliyun.com/document_detail/212961.html">RunCycleDagNodes</a>, <a href="https://help.aliyun.com/document_detail/212949.html">RunSmokeTest</a>, or <a href="https://help.aliyun.com/document_detail/212830.html">RunManualDagNodes</a> operation based on your business requirements. The RunManualDagNodes operation is used to backfill data, the RunSmokeTest operation is used to perform smoke testing, and the RunManualDagNodes operation is used to run nodes in a manually triggered workflow.</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param request ListInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13341,7 +13383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the directed acyclic graph (DAG). You can set this parameter to the value of the DagId parameter returned by the <a href="https://help.aliyun.com/document_detail/212961.html">RunCycleDagNodes</a>, <a href="https://help.aliyun.com/document_detail/212949.html">RunSmokeTest</a>, or <a href="https://help.aliyun.com/document_detail/212830.html">RunManualDagNodes</a> operation based on your business requirements. The RunManualDagNodes operation is used to backfill data, the RunSmokeTest operation is used to perform smoke testing, and the RunManualDagNodes operation is used to run nodes in a manually triggered workflow.</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -18213,7 +18255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新集群的配置信息</p>
+     * <p>Updates the configurations of submodules in a workspace. You can configure SPARK parameters.</p>
      * 
      * @param tmpReq UpdateClusterConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18270,7 +18312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新集群的配置信息</p>
+     * <p>Updates the configurations of submodules in a workspace. You can configure SPARK parameters.</p>
      * 
      * @param request UpdateClusterConfigsRequest
      * @return UpdateClusterConfigsResponse
@@ -18903,6 +18945,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ignoreParentSkipRunningProperty)) {
             body.put("IgnoreParentSkipRunningProperty", request.ignoreParentSkipRunningProperty);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputList)) {

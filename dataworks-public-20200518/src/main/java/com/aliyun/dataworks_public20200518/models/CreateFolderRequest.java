@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFolderRequest extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The path of the folder.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -52,6 +52,9 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the shift schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Duty table name</p>
          */
         @NameInMap("ShiftScheduleName")
         public String shiftScheduleName;

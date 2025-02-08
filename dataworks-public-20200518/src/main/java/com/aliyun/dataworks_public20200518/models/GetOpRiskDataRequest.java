@@ -53,11 +53,14 @@ public class GetOpRiskDataRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The method that you use to identify risks. Valid values:</p>
+     * <p>The method that you use to identify risks.</p>
      * <ul>
      * <li>You can manually identify risks.</li>
      * <li>You can also use a sensitive data identification rule to identify risks. You can log on to the DataWorks console and go to the Risk Identification Rules page in Data Security Guard to obtain the name of the rule.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Manual identification</p>
      */
     @NameInMap("RiskType")
     public String riskType;

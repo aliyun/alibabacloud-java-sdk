@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListDataServiceApisRequest extends TeaModel {
     /**
      * <p>The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>My API name</p>
      */
     @NameInMap("ApiNameKeyword")
     public String apiNameKeyword;

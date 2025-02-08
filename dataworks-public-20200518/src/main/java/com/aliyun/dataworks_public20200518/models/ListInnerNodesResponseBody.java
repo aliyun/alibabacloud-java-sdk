@@ -204,6 +204,9 @@ public class ListInnerNodesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default Resource Group</p>
          */
         @NameInMap("ResGroupName")
         public String resGroupName;

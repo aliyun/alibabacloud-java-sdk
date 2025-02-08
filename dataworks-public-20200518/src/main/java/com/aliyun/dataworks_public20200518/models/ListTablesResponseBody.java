@@ -42,6 +42,8 @@ public class ListTablesResponseBody extends TeaModel {
 
     public static class ListTablesResponseBodyDataTableEntityListEntityContent extends TeaModel {
         /**
+         * <p>The unique identifier of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>accountId:cn-shanghai:odps:project</p>
          */
@@ -49,6 +51,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String dataSourceQualifiedName;
 
         /**
+         * <p>The unique ID of the data source identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>e70f92239d491057f6a2563b545bdaf8cc6b537d9dc55ec84c55f7cfefg</p>
          */
@@ -56,6 +60,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String dataSourceUniqueId;
 
         /**
+         * <p>The name of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>database</p>
          */
@@ -63,6 +69,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String databaseName;
 
         /**
+         * <p>The ID of the data source instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-uf6rn0123</p>
          */
@@ -70,6 +78,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the ODPS project.</p>
+         * 
          * <strong>example:</strong>
          * <p>project</p>
          */
@@ -77,6 +87,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The name of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>table</p>
          */
@@ -139,10 +151,15 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyDataTableEntityList extends TeaModel {
+        /**
+         * <p>Table entity information.</p>
+         */
         @NameInMap("EntityContent")
         public ListTablesResponseBodyDataTableEntityListEntityContent entityContent;
 
         /**
+         * <p>The unique identifier of the table entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>maxcompute-table.project.table</p>
          */
@@ -174,16 +191,23 @@ public class ListTablesResponseBody extends TeaModel {
 
     public static class ListTablesResponseBodyData extends TeaModel {
         /**
+         * <p>Pagination information, which specifies the starting point of the next read.</p>
+         * 
          * <strong>example:</strong>
          * <p>AAAAAVY3rYiv9VoUJQSiCitgjgSwg+byk0FIjirFkm4zfM4G0xYwM/FQvOhgrTHsCPIZ5yqXYu2NG6qRCRC52HvwbOA=</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>Entity array.</p>
+         */
         @NameInMap("TableEntityList")
         public java.util.List<ListTablesResponseBodyDataTableEntityList> tableEntityList;
 
         /**
+         * <p>The total number.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

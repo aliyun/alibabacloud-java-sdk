@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCheckProcessesRequest extends TeaModel {
     /**
+     * <p>Extension point event encoding.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,12 @@ public class ListCheckProcessesRequest extends TeaModel {
     @NameInMap("EventCode")
     public String eventCode;
 
+    /**
+     * <p>The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>03400b03-b721-4c34-8727-2****1</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 
@@ -26,6 +33,8 @@ public class ListCheckProcessesRequest extends TeaModel {
     public String operator;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +42,8 @@ public class ListCheckProcessesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +51,8 @@ public class ListCheckProcessesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>123465</p>
      */
@@ -47,6 +60,13 @@ public class ListCheckProcessesRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The check status of the extension. Valid values:</p>
+     * <ul>
+     * <li>CHECKING</li>
+     * <li>PASSED</li>
+     * <li>BLOCKED</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

@@ -71,6 +71,9 @@ public class RunManualDagNodesRequest extends TeaModel {
     /**
      * <p>The environment type of Operation Center. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD or DEV</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

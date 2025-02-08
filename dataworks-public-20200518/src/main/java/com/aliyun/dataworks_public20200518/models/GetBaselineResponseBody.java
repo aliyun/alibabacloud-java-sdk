@@ -381,7 +381,7 @@ public class GetBaselineResponseBody extends TeaModel {
         public Integer cycle;
 
         /**
-         * <p>承诺时间，hh:mm格式，hh的取值范围为[0,47]，mm的取值范围为[0,59]。</p>
+         * <p>Commitment time, hh:mm format, hh value range is [0,47],mm value range is [0,59].</p>
          * 
          * <strong>example:</strong>
          * <p>00:00</p>

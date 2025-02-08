@@ -24,10 +24,10 @@ public class CreateUdfFileRequest extends TeaModel {
     public String cmdDescription;
 
     /**
-     * <p>If the directory specified in the parameter (FileFolderPath) does not exist in the system, whether the directory is automatically created. The values are as follows:</p>
+     * <p>Specifies whether to automatically create the directory that is specified by the FileFolderPath parameter if the directory does not exist. Valid values:</p>
      * <ul>
-     * <li>true: If the directory does not exist, the directory is automatically created.</li>
-     * <li>false: If the directory does not exist, the call fails.</li>
+     * <li>true: The system automatically creates the directory if the directory does not exist.</li>
+     * <li>false: The system does not automatically create the directory if the directory does not exist. In this case, the call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class CreateUdfFileRequest extends TeaModel {
     public String returnValue;
 
     /**
-     * <p>The description of the function. This parameter corresponds to the Description parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
+     * <p>The description of the function. This parameter corresponds to the Description parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
      * 
      * <strong>example:</strong>
      * <p>Concatenate several strings to generate a new string</p>

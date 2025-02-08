@@ -68,6 +68,9 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
     public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList extends TeaModel {
         /**
          * <p>The description of the column on which you request permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Field description</p>
          */
         @NameInMap("ColumnComment")
         public String columnComment;

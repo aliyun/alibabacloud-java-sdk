@@ -15,7 +15,7 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
     public Long DIJobId;
 
     /**
-     * <p>The description of the alert rule.</p>
+     * <p>The description of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql synchronizes to hologres heartbeat alert</p>

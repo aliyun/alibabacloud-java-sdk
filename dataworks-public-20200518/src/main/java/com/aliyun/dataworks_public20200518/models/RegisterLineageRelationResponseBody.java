@@ -38,7 +38,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
     public RegisterLineageRelationResponseBodyLineageRelation lineageRelation;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE50E05E-028C-182B-9xxx</p>

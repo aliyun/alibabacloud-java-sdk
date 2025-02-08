@@ -136,6 +136,12 @@ public class GetNodeResponseBody extends TeaModel {
         @NameInMap("Connection")
         public String connection;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1727280000000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
@@ -148,6 +154,12 @@ public class GetNodeResponseBody extends TeaModel {
         @NameInMap("CronExpress")
         public String cronExpress;
 
+        /**
+         * <p>The deployment date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1727280000000</p>
+         */
         @NameInMap("DeployDate")
         public Long deployDate;
 
@@ -178,15 +190,39 @@ public class GetNodeResponseBody extends TeaModel {
         @NameInMap("DqcType")
         public Integer dqcType;
 
+        /**
+         * <p>The ID of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("FileId")
         public Long fileId;
 
+        /**
+         * <p>The file type. Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node collection</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("FileType")
         public Integer fileType;
 
+        /**
+         * <p>The version of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FileVersion")
         public Integer fileVersion;
 
+        /**
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1727280000000</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
@@ -277,6 +313,12 @@ public class GetNodeResponseBody extends TeaModel {
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
+        /**
+         * <p>Rerun mode. 0 indicates that you can rerun only if you fail, 1 indicates that you can rerun in all cases, and 2 indicates that you cannot rerun in all cases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RepeatMode")
         public Integer repeatMode;
 
@@ -289,6 +331,12 @@ public class GetNodeResponseBody extends TeaModel {
         @NameInMap("Repeatability")
         public String repeatability;
 
+        /**
+         * <p>The unique identifier of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_123</p>
+         */
         @NameInMap("ResGroupIdentifier")
         public String resGroupIdentifier;
 

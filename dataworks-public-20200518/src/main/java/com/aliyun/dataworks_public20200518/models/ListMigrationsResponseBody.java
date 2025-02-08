@@ -91,6 +91,9 @@ public class ListMigrationsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated Test creation</p>
          */
         @NameInMap("Description")
         public String description;

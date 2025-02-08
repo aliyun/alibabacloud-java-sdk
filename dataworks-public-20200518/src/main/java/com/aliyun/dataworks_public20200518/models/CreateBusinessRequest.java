@@ -51,10 +51,10 @@ public class CreateBusinessRequest extends TeaModel {
     public String projectIdentifier;
 
     /**
-     * <p>The module to which the business process belongs. Valid values:</p>
+     * <p>The module to which the workflow belongs. Valid values:</p>
      * <ul>
-     * <li>NORMAL: The business process is initiated automatically.</li>
-     * <li>MANUAL_BIZ: The business process requires manual initiation.</li>
+     * <li>NORMAL: The workflow belongs to auto triggered workflows.</li>
+     * <li>MANUAL_BIZ: The workflow belongs to manually triggered workflows.</li>
      * </ul>
      * 
      * <strong>example:</strong>

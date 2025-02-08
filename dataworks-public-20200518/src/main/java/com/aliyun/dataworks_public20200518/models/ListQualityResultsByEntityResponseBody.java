@@ -363,6 +363,9 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
 
         /**
          * <p>The description of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the rule.</p>
          */
         @NameInMap("Comment")
         public String comment;
@@ -559,6 +562,9 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
 
         /**
          * <p>The name of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the rule.</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
@@ -598,6 +604,9 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
 
         /**
          * <p>The name of the monitoring template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Expected value verification</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

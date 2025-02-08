@@ -78,10 +78,10 @@ public class CreateFileRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>If the directory specified in the parameter (FileFolderPath) does not exist in the system, whether the directory is automatically created. The values are as follows:</p>
+     * <p>Specifies whether to automatically create the directory that is specified by the FileFolderPath parameter if the directory does not exist. Valid values:</p>
      * <ul>
-     * <li>true: If the directory does not exist, the directory is automatically created.</li>
-     * <li>false: If the directory does not exist, the call fails.</li>
+     * <li>true: The system automatically creates the directory if the directory does not exist.</li>
+     * <li>false: The system does not automatically create the directory if the directory does not exist. In this case, the call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -211,6 +211,9 @@ public class CreateFileRequest extends TeaModel {
      */
     @NameInMap("IgnoreParentSkipRunningProperty")
     public Boolean ignoreParentSkipRunningProperty;
+
+    @NameInMap("ImageId")
+    public String imageId;
 
     /**
      * <p>The output name of the parent file on which the current file depends. If you specify multiple output names, separate them with commas (,).</p>
@@ -524,6 +527,14 @@ public class CreateFileRequest extends TeaModel {
     }
     public Boolean getIgnoreParentSkipRunningProperty() {
         return this.ignoreParentSkipRunningProperty;
+    }
+
+    public CreateFileRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
     }
 
     public CreateFileRequest setInputList(String inputList) {

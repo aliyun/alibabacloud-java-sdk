@@ -38,7 +38,7 @@ public class GetRemindResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFGH-IJKLMNOPQ</p>
@@ -120,6 +120,9 @@ public class GetRemindResponseBody extends TeaModel {
 
         /**
          * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline name</p>
          */
         @NameInMap("BaselineName")
         public String baselineName;
@@ -159,6 +162,9 @@ public class GetRemindResponseBody extends TeaModel {
 
         /**
          * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business process name</p>
          */
         @NameInMap("BizProcessName")
         public String bizProcessName;
@@ -198,6 +204,9 @@ public class GetRemindResponseBody extends TeaModel {
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node name</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
@@ -285,10 +294,20 @@ public class GetRemindResponseBody extends TeaModel {
     }
 
     public static class GetRemindResponseBodyDataReceivers extends TeaModel {
+        /**
+         * <p>The alert recipient.</p>
+         */
         @NameInMap("AlertTargets")
         public java.util.List<String> alertTargets;
 
         /**
+         * <p>The type of the alert recipient. For more information about alert recipients, see the Receivers parameter. Valid values:</p>
+         * <ul>
+         * <li>OWNER: indicate the task owner.</li>
+         * <li>OTHER: indicates specified personnel.</li>
+         * <li>SHIFT_SCHEDULE: indicates personnel in a shift schedule.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OWNER</p>
          */
@@ -371,19 +390,24 @@ public class GetRemindResponseBody extends TeaModel {
         public Integer alertInterval;
 
         /**
-         * <p>The alert notification method.</p>
+         * <p>The notification method.</p>
          */
         @NameInMap("AlertMethods")
         public java.util.List<String> alertMethods;
 
         /**
-         * <p>The description of the alert recipient.</p>
+         * <p>The description of the alert recipient. For more information about alert recipients, see the Receivers parameter.</p>
          */
         @NameInMap("AlertTargets")
         public java.util.List<String> alertTargets;
 
         /**
-         * <p>The recipient of the alert. Valid values: OWNER and OTHER. The value OWNER indicates the node owner. The value OTHER indicates a specified user.</p>
+         * <p>The type of the alert recipient. For more information about alert recipient types, see the Receivers parameter. Valid values:</p>
+         * <ul>
+         * <li>OWNER: the task owner</li>
+         * <li>OTHER: specified personnel</li>
+         * <li>SHIFT_SCHEDULE: personnel in a shift schedule</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>OWNER</p>
@@ -391,6 +415,9 @@ public class GetRemindResponseBody extends TeaModel {
         @NameInMap("AlertUnit")
         public String alertUnit;
 
+        /**
+         * <p>The IDs of the nodes that are added to a whitelist.</p>
+         */
         @NameInMap("AllowNodes")
         public java.util.List<Long> allowNodes;
 
@@ -469,6 +496,9 @@ public class GetRemindResponseBody extends TeaModel {
         @NameInMap("Projects")
         public java.util.List<GetRemindResponseBodyDataProjects> projects;
 
+        /**
+         * <p>The information about the alert recipients.</p>
+         */
         @NameInMap("Receivers")
         public java.util.List<GetRemindResponseBodyDataReceivers> receivers;
 
@@ -483,6 +513,9 @@ public class GetRemindResponseBody extends TeaModel {
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule name</p>
          */
         @NameInMap("RemindName")
         public String remindName;
@@ -521,7 +554,7 @@ public class GetRemindResponseBody extends TeaModel {
         public Boolean useflag;
 
         /**
-         * <p>The information about the webhook URL.</p>
+         * <p>WebHook URL</p>
          */
         @NameInMap("Webhooks")
         public java.util.List<String> webhooks;
