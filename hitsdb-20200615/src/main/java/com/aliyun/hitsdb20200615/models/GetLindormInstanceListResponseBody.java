@@ -210,6 +210,9 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         @NameInMap("EnableMessage")
         public Boolean enableMessage;
 
+        @NameInMap("EnableRow")
+        public Boolean enableRow;
+
         /**
          * <p>Indicates whether the Lindorm streaming engine is activated for the instance. Valid values:</p>
          * <ul>
@@ -471,6 +474,14 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
         public Boolean getEnableMessage() {
             return this.enableMessage;
+        }
+
+        public GetLindormInstanceListResponseBodyInstanceList setEnableRow(Boolean enableRow) {
+            this.enableRow = enableRow;
+            return this;
+        }
+        public Boolean getEnableRow() {
+            return this.enableRow;
         }
 
         public GetLindormInstanceListResponseBodyInstanceList setEnableStream(Boolean enableStream) {
