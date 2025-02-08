@@ -18,6 +18,8 @@ public class UpdateClusterConfigsResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>101011005</p>
      */
@@ -25,6 +27,8 @@ public class UpdateClusterConfigsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Cluster.ClusterNotFound</p>
      */
@@ -32,6 +36,8 @@ public class UpdateClusterConfigsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -39,6 +45,8 @@ public class UpdateClusterConfigsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-E****</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListFilesRequest extends TeaModel {
     /**
+     * <p>The exact matching file name. The file name of the query result is exactly the same as this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>ods_create.sql</p>
      */
@@ -13,11 +15,16 @@ public class ListFilesRequest extends TeaModel {
 
     /**
      * <p>The path of the files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
      */
     @NameInMap("FileFolderPath")
     public String fileFolderPath;
 
     /**
+     * <p>The file ID list. The File ID set of the query result can only be a subset of the list. You can specify up to 50 fileids at a time.</p>
+     * 
      * <strong>example:</strong>
      * <p>78237,816123</p>
      */
@@ -44,6 +51,8 @@ public class ListFilesRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>Whether the query result contains the path of the folder where the file is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -51,6 +60,8 @@ public class ListFilesRequest extends TeaModel {
     public Boolean needAbsoluteFolderPath;
 
     /**
+     * <p>Whether the query results contain file content (for files with more content, there may be a long network transmission delay).</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

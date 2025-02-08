@@ -115,7 +115,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String returnValue;
 
     /**
-     * <p>The description of the function. This parameter corresponds to the Description parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
+     * <p>The description of the function. This parameter corresponds to the Description parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
      * 
      * <strong>example:</strong>
      * <p>Concatenate several strings to generate a new string</p>

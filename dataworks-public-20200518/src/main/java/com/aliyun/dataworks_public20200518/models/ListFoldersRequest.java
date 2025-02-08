@@ -27,6 +27,9 @@ public class ListFoldersRequest extends TeaModel {
     /**
      * <p>The path of the parent folder.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Business_process/my_first_business_process/MaxCompute</p>
      */
     @NameInMap("ParentFolderPath")
     public String parentFolderPath;

@@ -7,6 +7,9 @@ public class QueryRecognizeRuleDetailRequest extends TeaModel {
     /**
      * <p>The name of the sensitive field. To obtain the name of the sensitive field, call the <a href="https://help.aliyun.com/document_detail/2747189.html">QuerySensNodeInfo</a> operation or log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Data Category and Sensitivity Level page.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Name</p>
      */
     @NameInMap("SensitiveName")
     public String sensitiveName;

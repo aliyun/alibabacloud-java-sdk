@@ -64,6 +64,9 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
     public static class TestNetworkConnectionResponseBodyTaskList extends TeaModel {
         /**
          * <p>The reason why the data source and resource group failed the connectivity test. If data source and the resource group passed the connectivity test, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Connectable</p>
          */
         @NameInMap("ConnectMessage")
         public String connectMessage;

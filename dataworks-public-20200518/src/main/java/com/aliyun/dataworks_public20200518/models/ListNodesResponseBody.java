@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the associated workflow.</p>
+     * <p>The nodes.</p>
      */
     @NameInMap("Data")
     public ListNodesResponseBodyData data;
@@ -136,6 +136,12 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("Connection")
         public String connection;
 
+        /**
+         * <p>The timestamp when the node was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593879116000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
@@ -148,6 +154,12 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("CronExpress")
         public String cronExpress;
 
+        /**
+         * <p>The timestamp when the node was deployed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1734537600000</p>
+         */
         @NameInMap("DeployDate")
         public Long deployDate;
 
@@ -178,15 +190,40 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("DqcType")
         public Integer dqcType;
 
+        /**
+         * <p>The file ID. You can call the ListFiles operation to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("FileId")
         public Long fileId;
 
+        /**
+         * <p>Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node collection</a>.
+         * You can also call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> interface to query the code type of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("FileType")
         public Integer fileType;
 
+        /**
+         * <p>The latest version number of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("FileVersion")
         public Integer fileVersion;
 
+        /**
+         * <p>The timestamp when the node was modified. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593879116000</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
@@ -271,6 +308,12 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
+        /**
+         * <p>The rerun mode. The value 0 indicates that rerun can be performed only if a failure occurs. The value 1 indicates that rerun can be performed in all cases. The value 2 indicates that rerun cannot be performed in all cases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RepeatMode")
         public Integer repeatMode;
 
@@ -283,6 +326,12 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("Repeatability")
         public Boolean repeatability;
 
+        /**
+         * <p>The identifier of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_123</p>
+         */
         @NameInMap("ResGroupIdentifier")
         public String resGroupIdentifier;
 
@@ -529,13 +578,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyData extends TeaModel {
         /**
-         * <p>The scheduling type of the node. Valid values:</p>
-         * <ul>
-         * <li>NORMAL: indicates that the node is a normal auto triggered node.</li>
-         * <li>MANUAL: indicates that the node is a manually triggered node.</li>
-         * <li>PAUSE: indicates that the node is a paused node.</li>
-         * <li>SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</li>
-         * </ul>
+         * <p>The information about the nodes.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<ListNodesResponseBodyDataNodes> nodes;

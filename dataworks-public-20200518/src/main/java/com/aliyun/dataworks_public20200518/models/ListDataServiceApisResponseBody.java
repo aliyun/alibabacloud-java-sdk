@@ -1314,6 +1314,9 @@ public class ListDataServiceApisResponseBody extends TeaModel {
 
         /**
          * <p>The name of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My API name</p>
          */
         @NameInMap("ApiName")
         public String apiName;
@@ -1347,6 +1350,9 @@ public class ListDataServiceApisResponseBody extends TeaModel {
 
         /**
          * <p>The description of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test API description</p>
          */
         @NameInMap("Description")
         public String description;

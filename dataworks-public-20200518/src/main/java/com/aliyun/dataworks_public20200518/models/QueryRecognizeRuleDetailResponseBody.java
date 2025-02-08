@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryRecognizeRuleDetailResponseBody extends TeaModel {
     /**
      * <p>The details of the sensitive field in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;nodeName&quot;:&quot;basic unit overview&quot;,&quot;gmtModified&quot;:1709017449000,&quot;hitThreshold&quot;:30,&quot;sensitiveName&quot;:&quot;mobile-yinni&quot;,&quot;templateId&quot;:&quot;8222abeb-9784-4417-b420-0322926d5cbf&quot;,&quot;recognizeRulesType&quot;:2,&quot;delete&quot;:false,&quot;bydAccuracy&quot;:1,&quot;colScan&quot;:&quot;,&quot; defineType &quot;:1,&quot;: ydAccuracy &quot;:{&quot; contentRule &quot;:)),&quot; operationType &quot;:0},&quot; nodeParent &quot;:&quot; unit/unit basic information/unit basic overview &quot;,&quot; level &quot;:6,&quot; keyRuleId &quot;:&quot; 228248921215042mobile-yinni &quot;,&quot; isDelete &quot;:false,&quot; levelName &quot;:&quot; 6level &quot;,&quot; sensitive &quot;:false,&quot; operationType &quot;:0,&quot; sourceName &quot;: dsg-test-zuoyue&quot;,&quot;nodeId&quot;:&quot;bea2fc81-90c9-45f3-b7a9-26d534208a0d&quot;,&quot;status&quot;:1}</p>
      */
     @NameInMap("Data")
     public Object data;
@@ -21,6 +24,9 @@ public class QueryRecognizeRuleDetailResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Missing parameter</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;

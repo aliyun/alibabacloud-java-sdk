@@ -113,6 +113,12 @@ public class ListFilesResponseBody extends TeaModel {
     }
 
     public static class ListFilesResponseBodyDataFiles extends TeaModel {
+        /**
+         * <p>The path of the folder where the file is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
+         */
         @NameInMap("AbsoluteFolderPath")
         public String absoluteFolderPath;
 

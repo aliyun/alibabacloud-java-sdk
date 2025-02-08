@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetTopicInfluenceResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The list of baseline instances affected by the event.</p>
      */
     @NameInMap("Data")
     public GetTopicInfluenceResponseBodyData data;
 
     /**
+     * <p>The error code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1031203110005</p>
      */
@@ -18,6 +20,8 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified parameters are invalid.</p>
      */
@@ -25,6 +29,8 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -32,6 +38,8 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
      */
@@ -39,6 +47,8 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -100,18 +110,26 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
 
     public static class GetTopicInfluenceResponseBodyDataInfluences extends TeaModel {
         /**
-         * <p>The baseline ID.</p>
+         * <p>The ID of the baseline.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234</p>
+         * <p>12345</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
 
+        /**
+         * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline name</p>
+         */
         @NameInMap("BaselineName")
         public String baselineName;
 
         /**
+         * <p>The data timestamp of the baseline instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1553356800000</p>
          */
@@ -119,6 +137,8 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         public Long bizdate;
 
         /**
+         * <p>The margin of the baseline instance. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>360</p>
          */
@@ -126,6 +146,8 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         public Long buffer;
 
         /**
+         * <p>The ID of the cycle of the baseline instance. For a baseline instance that is scheduled by day, the field value is 1. For a baseline instance that is scheduled by hour, the field value ranges from 1 to 24.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -133,6 +155,8 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         public Integer inGroupId;
 
         /**
+         * <p>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>952795****</p>
          */
@@ -140,6 +164,8 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The priority of the baseline. Valid values: 1, 2, 5, 7, and 8.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -147,6 +173,8 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The ID of the workspace to which the baseline belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -154,6 +182,8 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGROUS indicates that nodes are still running after the alert duration ends but the committed time does not arrive. The value OVER indicates that nodes are still running after the committed time.</p>
+         * 
          * <strong>example:</strong>
          * <p>SAFE</p>
          */
@@ -241,12 +271,14 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
 
     public static class GetTopicInfluenceResponseBodyData extends TeaModel {
         /**
-         * <p>The affected baseline instances.</p>
+         * <p>The list of affected baseline instances.</p>
          */
         @NameInMap("Influences")
         public java.util.List<GetTopicInfluenceResponseBodyDataInfluences> influences;
 
         /**
+         * <p>The ID of the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */

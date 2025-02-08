@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SubmitFileRequest extends TeaModel {
     /**
      * <p>The description of the commit operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Submit a task for the first time</p>
      */
     @NameInMap("Comment")
     public String comment;

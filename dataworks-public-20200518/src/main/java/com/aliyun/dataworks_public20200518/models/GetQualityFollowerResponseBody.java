@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetQualityFollowerResponseBody extends TeaModel {
+    /**
+     * <p>The information about the subscription relationship.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetQualityFollowerResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
@@ -15,6 +20,8 @@ public class GetQualityFollowerResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>You have no permission.</p>
      */
@@ -22,6 +29,8 @@ public class GetQualityFollowerResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class GetQualityFollowerResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>38cbdef0-f6cf-49</p>
      */
@@ -36,6 +47,8 @@ public class GetQualityFollowerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,16 +110,32 @@ public class GetQualityFollowerResponseBody extends TeaModel {
 
     public static class GetQualityFollowerResponseBodyData extends TeaModel {
         /**
+         * <p>The alert mode. The value is as follows:</p>
+         * <ul>
+         * <li>1 (Mail)</li>
+         * <li>2 (email and SMS)</li>
+         * <li>4 (DingTalk groups of robots or hook)</li>
+         * <li>5 (DingTalk groups of robots @ ALL)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("AlarmMode")
         public Integer alarmMode;
 
+        /**
+         * <p>The time when the data quality rule subscription configuration was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1541576644000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
+         * <p>The ID of the partition expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -114,6 +143,8 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         public String entityId;
 
         /**
+         * <p>The subscriber to receive alert information.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -121,6 +152,8 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         public String follower;
 
         /**
+         * <p>The Alibaba Cloud account name of the subscriber.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -128,16 +161,26 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         public String followerAccountName;
 
         /**
+         * <p>The ID of the subscription relationship.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The update time of the data quality rule subscription configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1541576644000</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
         /**
+         * <p>The name of the engine or data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>autotest</p>
          */
@@ -145,6 +188,8 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The name of the partitioned table.</p>
+         * 
          * <strong>example:</strong>
          * <p>dual</p>
          */

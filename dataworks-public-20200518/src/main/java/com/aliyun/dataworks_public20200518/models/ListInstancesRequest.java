@@ -71,6 +71,16 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("NodeName")
     public String nodeName;
 
+    /**
+     * <p>The sorting rule of the instances to be returned. Valid values:</p>
+     * <ul>
+     * <li>CREATE_TIME_DESC: The instances are sorted in descending order of their creation time.</li>
+     * <li>INSTANCE_ID_DESC (default): The instances are sorted in descending order of their IDs.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE_ID_DESC</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
@@ -111,7 +121,7 @@ public class ListInstancesRequest extends TeaModel {
     public String programType;
 
     /**
-     * <p>The time when the node was last modified.</p>
+     * <p>The environment in which the node runs. Valid values: DEV and PROD.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,7 +141,17 @@ public class ListInstancesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The time when the instance started to wait to be scheduled.</p>
+     * <p>The status of the node. Valid values:</p>
+     * <ul>
+     * <li>NOT_RUN: The node is not run.</li>
+     * <li>WAIT_TIME: The node is waiting for the scheduling time to arrive.</li>
+     * <li>WAIT_RESOURCE: The node is waiting for resources.</li>
+     * <li>RUNNING: The node is running.</li>
+     * <li>CHECKING: Data quality is being checked for the node.</li>
+     * <li>CHECKING_CONDITION: Branch conditions are being checked for the node.</li>
+     * <li>FAILURE: The node fails to run.</li>
+     * <li>SUCCESS: The node is successfully run.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>NOT_RUN</p>

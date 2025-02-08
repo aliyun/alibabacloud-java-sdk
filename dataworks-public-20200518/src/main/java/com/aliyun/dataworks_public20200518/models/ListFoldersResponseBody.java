@@ -120,6 +120,9 @@ public class ListFoldersResponseBody extends TeaModel {
 
         /**
          * <p>The path of the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
          */
         @NameInMap("FolderPath")
         public String folderPath;

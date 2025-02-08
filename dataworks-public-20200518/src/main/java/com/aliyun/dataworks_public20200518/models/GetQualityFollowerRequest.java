@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQualityFollowerRequest extends TeaModel {
     /**
+     * <p>The ID of the partition filter expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class GetQualityFollowerRequest extends TeaModel {
     @NameInMap("EntityId")
     public Long entityId;
 
+    /**
+     * <p>The ID of the DataWorks workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
+     * <p>The name of the engine or data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

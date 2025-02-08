@@ -137,6 +137,9 @@ public class ListQualityRulesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the system defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Verify table rules</p>
          */
         @NameInMap("Comment")
         public String comment;
@@ -328,6 +331,9 @@ public class ListQualityRulesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the monitoring template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of SQL task table rows, 1, 7, and 30 days wave detection</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

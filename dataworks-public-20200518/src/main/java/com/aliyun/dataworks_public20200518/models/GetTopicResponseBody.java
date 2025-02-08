@@ -165,6 +165,9 @@ public class GetTopicResponseBody extends TeaModel {
 
         /**
          * <p>The name of the baseline to which the worst baseline instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline name</p>
          */
         @NameInMap("BaselineName")
         public String baselineName;
@@ -252,6 +255,9 @@ public class GetTopicResponseBody extends TeaModel {
 
         /**
          * <p>The name of the node that triggered the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node name</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
@@ -285,6 +291,9 @@ public class GetTopicResponseBody extends TeaModel {
 
         /**
          * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234 error</p>
          */
         @NameInMap("TopicName")
         public String topicName;

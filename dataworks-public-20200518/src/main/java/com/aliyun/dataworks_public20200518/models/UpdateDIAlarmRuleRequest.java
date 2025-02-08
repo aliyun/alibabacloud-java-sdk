@@ -16,6 +16,9 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
 
     /**
      * <p>The description of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql synchronizes to hologres heartbeat alert</p>
      */
     @NameInMap("Description")
     public String description;

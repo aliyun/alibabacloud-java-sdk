@@ -839,13 +839,16 @@ public class GetFileResponseBody extends TeaModel {
         public Long endEffectDate;
 
         /**
-         * <p>Scheduling configuration-&gt; previous cycle-&gt; whether to skip the upstream empty run attribute</p>
+         * <p>Indicates whether to skip the dry-run property of the ancestor nodes of the node that corresponds to the file. This parameter corresponds to the Skip the dry-run property of the ancestor node parameter that is displayed after you configure the Depend On parameter in the Dependencies section of the Properties tab in the DataWorks console.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IgnoreParentSkipRunningProperty")
         public String ignoreParentSkipRunningProperty;
+
+        @NameInMap("ImageId")
+        public String imageId;
 
         /**
          * <p>The output names of the parent files on which the current file depends.</p>
@@ -958,7 +961,7 @@ public class GetFileResponseBody extends TeaModel {
         public Boolean stop;
 
         /**
-         * <p>Scheduling configuration timeout definition</p>
+         * <p>The timeout period.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1041,6 +1044,14 @@ public class GetFileResponseBody extends TeaModel {
         }
         public String getIgnoreParentSkipRunningProperty() {
             return this.ignoreParentSkipRunningProperty;
+        }
+
+        public GetFileResponseBodyDataNodeConfiguration setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
         }
 
         public GetFileResponseBodyDataNodeConfiguration setInputList(java.util.List<GetFileResponseBodyDataNodeConfigurationInputList> inputList) {
@@ -1143,7 +1154,7 @@ public class GetFileResponseBody extends TeaModel {
 
     public static class GetFileResponseBodyDataResourceDownloadLink extends TeaModel {
         /**
-         * <p>Resource download address link</p>
+         * <p>The download URL of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xx">http://xx</a></p>
@@ -1180,7 +1191,7 @@ public class GetFileResponseBody extends TeaModel {
         public GetFileResponseBodyDataNodeConfiguration nodeConfiguration;
 
         /**
-         * <p>Resource download address</p>
+         * <p>The download URL of the resource.</p>
          */
         @NameInMap("ResourceDownloadLink")
         public GetFileResponseBodyDataResourceDownloadLink resourceDownloadLink;

@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableFullInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the EMR cluster. You can log in to the EMR management console to obtain the cluster ID.</p>
+     * <p>The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
+     * <p>You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to query the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C-010A704DA760****</p>
@@ -14,7 +15,7 @@ public class GetMetaTableFullInfoRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Data type, currently only supports the value <code>emr</code>.</p>
+     * <p>The type of the data source. Set the value to emr.</p>
      * 
      * <strong>example:</strong>
      * <p>emr</p>
@@ -23,7 +24,8 @@ public class GetMetaTableFullInfoRequest extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The name of the EMR database. You can obtain the database name by calling the <a href="https://help.aliyun.com/document_detail/185662.html">ListMetaDB</a> interface.</p>
+     * <p>The name of the database. This parameter is required only if you set the DataSourceType parameter to emr.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/185662.html">ListMetaDB</a> operation to query the database name.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -50,7 +52,7 @@ public class GetMetaTableFullInfoRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The unique identifier of the table. You can obtain the unique identifier by calling the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> interface.</p>
+     * <p>The unique identifier of the table. You can call the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> operation to query the unique identifier of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>odps.engine_name.table_name</p>
@@ -59,7 +61,8 @@ public class GetMetaTableFullInfoRequest extends TeaModel {
     public String tableGuid;
 
     /**
-     * <p>The name of the EMR table. You can obtain the table name by calling the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> interface.</p>
+     * <p>The name of the table in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> operation to query the table name.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>

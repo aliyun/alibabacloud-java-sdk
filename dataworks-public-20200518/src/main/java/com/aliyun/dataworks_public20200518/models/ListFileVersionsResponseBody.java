@@ -120,6 +120,9 @@ public class ListFileVersionsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the file version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Second version submission</p>
          */
         @NameInMap("Comment")
         public String comment;
