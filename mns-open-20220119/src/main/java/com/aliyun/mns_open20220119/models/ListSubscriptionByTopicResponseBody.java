@@ -108,6 +108,36 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy extends TeaModel {
+        @NameInMap("DeadLetterTargetQueue")
+        public String deadLetterTargetQueue;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        public static ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy self = new ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy setDeadLetterTargetQueue(String deadLetterTargetQueue) {
+            this.deadLetterTargetQueue = deadLetterTargetQueue;
+            return this;
+        }
+        public String getDeadLetterTargetQueue() {
+            return this.deadLetterTargetQueue;
+        }
+
+        public ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
     public static class ListSubscriptionByTopicResponseBodyDataPageData extends TeaModel {
         /**
          * <p>The time when the subscription was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
@@ -117,6 +147,9 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("DlqPolicy")
+        public ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy dlqPolicy;
 
         /**
          * <p>The endpoint to which the messages are pushed.</p>
@@ -210,6 +243,14 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public ListSubscriptionByTopicResponseBodyDataPageData setDlqPolicy(ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy dlqPolicy) {
+            this.dlqPolicy = dlqPolicy;
+            return this;
+        }
+        public ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy getDlqPolicy() {
+            return this.dlqPolicy;
         }
 
         public ListSubscriptionByTopicResponseBodyDataPageData setEndpoint(String endpoint) {

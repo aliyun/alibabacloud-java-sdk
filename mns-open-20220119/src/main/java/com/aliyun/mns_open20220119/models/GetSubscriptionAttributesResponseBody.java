@@ -108,6 +108,36 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetSubscriptionAttributesResponseBodyDataDlqPolicy extends TeaModel {
+        @NameInMap("DeadLetterTargetQueue")
+        public String deadLetterTargetQueue;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        public static GetSubscriptionAttributesResponseBodyDataDlqPolicy build(java.util.Map<String, ?> map) throws Exception {
+            GetSubscriptionAttributesResponseBodyDataDlqPolicy self = new GetSubscriptionAttributesResponseBodyDataDlqPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSubscriptionAttributesResponseBodyDataDlqPolicy setDeadLetterTargetQueue(String deadLetterTargetQueue) {
+            this.deadLetterTargetQueue = deadLetterTargetQueue;
+            return this;
+        }
+        public String getDeadLetterTargetQueue() {
+            return this.deadLetterTargetQueue;
+        }
+
+        public GetSubscriptionAttributesResponseBodyDataDlqPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
     public static class GetSubscriptionAttributesResponseBodyData extends TeaModel {
         /**
          * <p>The time when the subscription was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
@@ -117,6 +147,9 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("DlqPolicy")
+        public GetSubscriptionAttributesResponseBodyDataDlqPolicy dlqPolicy;
 
         /**
          * <p>The endpoint to which the messages are pushed.</p>
@@ -210,6 +243,14 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public GetSubscriptionAttributesResponseBodyData setDlqPolicy(GetSubscriptionAttributesResponseBodyDataDlqPolicy dlqPolicy) {
+            this.dlqPolicy = dlqPolicy;
+            return this;
+        }
+        public GetSubscriptionAttributesResponseBodyDataDlqPolicy getDlqPolicy() {
+            return this.dlqPolicy;
         }
 
         public GetSubscriptionAttributesResponseBodyData setEndpoint(String endpoint) {

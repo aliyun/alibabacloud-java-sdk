@@ -93,15 +93,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a queue.</p>
      * 
-     * @param request CreateQueueRequest
+     * @param tmpReq CreateQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateQueueResponse
      */
-    public CreateQueueResponse createQueueWithOptions(CreateQueueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateQueueResponse createQueueWithOptions(CreateQueueRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateQueueShrinkRequest request = new CreateQueueShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dlqPolicy)) {
+            request.dlqPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dlqPolicy, "DlqPolicy", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.delaySeconds)) {
             query.put("DelaySeconds", request.delaySeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dlqPolicyShrink)) {
+            query.put("DlqPolicy", request.dlqPolicyShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableLogging)) {
@@ -883,15 +893,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Modifies a queue.</p>
      * 
-     * @param request SetQueueAttributesRequest
+     * @param tmpReq SetQueueAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetQueueAttributesResponse
      */
-    public SetQueueAttributesResponse setQueueAttributesWithOptions(SetQueueAttributesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public SetQueueAttributesResponse setQueueAttributesWithOptions(SetQueueAttributesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SetQueueAttributesShrinkRequest request = new SetQueueAttributesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dlqPolicy)) {
+            request.dlqPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dlqPolicy, "DlqPolicy", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.delaySeconds)) {
             query.put("DelaySeconds", request.delaySeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dlqPolicyShrink)) {
+            query.put("DlqPolicy", request.dlqPolicyShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableLogging)) {
@@ -956,13 +976,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Modifies the attributes of a subscription.</p>
      * 
-     * @param request SetSubscriptionAttributesRequest
+     * @param tmpReq SetSubscriptionAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetSubscriptionAttributesResponse
      */
-    public SetSubscriptionAttributesResponse setSubscriptionAttributesWithOptions(SetSubscriptionAttributesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public SetSubscriptionAttributesResponse setSubscriptionAttributesWithOptions(SetSubscriptionAttributesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SetSubscriptionAttributesShrinkRequest request = new SetSubscriptionAttributesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dlqPolicy)) {
+            request.dlqPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dlqPolicy, "DlqPolicy", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dlqPolicyShrink)) {
+            query.put("DlqPolicy", request.dlqPolicyShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.notifyStrategy)) {
             query.put("NotifyStrategy", request.notifyStrategy);
         }
@@ -1070,13 +1100,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a subscription to a topic.</p>
      * 
-     * @param request SubscribeRequest
+     * @param tmpReq SubscribeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubscribeResponse
      */
-    public SubscribeResponse subscribeWithOptions(SubscribeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public SubscribeResponse subscribeWithOptions(SubscribeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubscribeShrinkRequest request = new SubscribeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dlqPolicy)) {
+            request.dlqPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dlqPolicy, "DlqPolicy", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dlqPolicyShrink)) {
+            query.put("DlqPolicy", request.dlqPolicyShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endpoint)) {
             query.put("Endpoint", request.endpoint);
         }

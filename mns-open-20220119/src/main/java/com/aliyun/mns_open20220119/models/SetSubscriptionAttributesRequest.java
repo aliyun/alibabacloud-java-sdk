@@ -4,6 +4,9 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class SetSubscriptionAttributesRequest extends TeaModel {
+    @NameInMap("DlqPolicy")
+    public SetSubscriptionAttributesRequestDlqPolicy dlqPolicy;
+
     /**
      * <p>The retry policy that is applied if an error occurs when Message Service (MNS) pushes messages to the endpoint. Valid values:</p>
      * <ul>
@@ -42,6 +45,14 @@ public class SetSubscriptionAttributesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SetSubscriptionAttributesRequest setDlqPolicy(SetSubscriptionAttributesRequestDlqPolicy dlqPolicy) {
+        this.dlqPolicy = dlqPolicy;
+        return this;
+    }
+    public SetSubscriptionAttributesRequestDlqPolicy getDlqPolicy() {
+        return this.dlqPolicy;
+    }
+
     public SetSubscriptionAttributesRequest setNotifyStrategy(String notifyStrategy) {
         this.notifyStrategy = notifyStrategy;
         return this;
@@ -64,6 +75,36 @@ public class SetSubscriptionAttributesRequest extends TeaModel {
     }
     public String getTopicName() {
         return this.topicName;
+    }
+
+    public static class SetSubscriptionAttributesRequestDlqPolicy extends TeaModel {
+        @NameInMap("DeadLetterTargetQueue")
+        public String deadLetterTargetQueue;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        public static SetSubscriptionAttributesRequestDlqPolicy build(java.util.Map<String, ?> map) throws Exception {
+            SetSubscriptionAttributesRequestDlqPolicy self = new SetSubscriptionAttributesRequestDlqPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public SetSubscriptionAttributesRequestDlqPolicy setDeadLetterTargetQueue(String deadLetterTargetQueue) {
+            this.deadLetterTargetQueue = deadLetterTargetQueue;
+            return this;
+        }
+        public String getDeadLetterTargetQueue() {
+            return this.deadLetterTargetQueue;
+        }
+
+        public SetSubscriptionAttributesRequestDlqPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
     }
 
 }
