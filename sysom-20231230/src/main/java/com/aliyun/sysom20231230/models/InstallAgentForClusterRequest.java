@@ -25,6 +25,9 @@ public class InstallAgentForClusterRequest extends TeaModel {
     @NameInMap("cluster_id")
     public String clusterId;
 
+    @NameInMap("grayscale_config")
+    public String grayscaleConfig;
+
     public static InstallAgentForClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         InstallAgentForClusterRequest self = new InstallAgentForClusterRequest();
         return TeaModel.build(map, self);
@@ -52,6 +55,14 @@ public class InstallAgentForClusterRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public InstallAgentForClusterRequest setGrayscaleConfig(String grayscaleConfig) {
+        this.grayscaleConfig = grayscaleConfig;
+        return this;
+    }
+    public String getGrayscaleConfig() {
+        return this.grayscaleConfig;
     }
 
 }
