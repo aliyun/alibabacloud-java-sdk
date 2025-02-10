@@ -4,9 +4,18 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
+    /**
+     * <p>The statistics on the DNS requests.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribePdnsRequestStatisticResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,42 +41,120 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
     }
 
     public static class DescribePdnsRequestStatisticResponseBodyData extends TeaModel {
+        /**
+         * <p>The total number of DoH requests, including HTTP and HTTPS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DohTotalCount")
         public Long dohTotalCount;
 
+        /**
+         * <p>The number of HTTP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("HttpCount")
         public Long httpCount;
 
+        /**
+         * <p>The number of HTTPS requests. On the Traffic Analysis tab of the Public DNS console, the value of this parameter includes the number of DNS over HTTPs (DoH) requests. Therefore, the number of DoH requests is not separately displayed in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("HttpsCount")
         public Long httpsCount;
 
+        /**
+         * <p>The number of source IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("IpCount")
         public Long ipCount;
 
+        /**
+         * <p>The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1706716800000</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <p>The total number of UDP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("UdpTotalCount")
         public Long udpTotalCount;
 
+        /**
+         * <p>The number of IPv4-based requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("V4Count")
         public Long v4Count;
 
+        /**
+         * <p>The number of IPv4-based HTTP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("V4HttpCount")
         public Long v4HttpCount;
 
+        /**
+         * <p>The number of IPv4-based HTTPS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("V4HttpsCount")
         public Long v4HttpsCount;
 
+        /**
+         * <p>The number of IPv6-based requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("V6Count")
         public Long v6Count;
 
+        /**
+         * <p>The number of IPv6-based HTTP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("V6HttpCount")
         public Long v6HttpCount;
 
+        /**
+         * <p>The number of IPv6-based HTTPS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("V6HttpsCount")
         public Long v6HttpsCount;
 

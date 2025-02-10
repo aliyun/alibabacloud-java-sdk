@@ -16,6 +16,12 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The top-level domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com</p>
+     */
     @NameInMap("ParentDomainName")
     public String parentDomainName;
 

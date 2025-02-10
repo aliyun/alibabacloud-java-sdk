@@ -56,7 +56,7 @@ public class UpdateDomainRecordRequest extends TeaModel {
     public String recordId;
 
     /**
-     * <p>The time to live (TTL) value of the Domain Name System (DNS) record. Default value: 600. Unit: seconds.</p>
+     * <p>The time to live (TTL) period of the Alibaba Cloud DNS (DNS) record. Default value: 600. Unit: seconds.</p>
      * <p>For more information, see</p>
      * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29806.htm">TTL definition</a>.</p>
      * 
