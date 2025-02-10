@@ -12,6 +12,8 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String adaptiveRoutingShrink;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
      */
@@ -22,6 +24,8 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -29,6 +33,8 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public Long fallbackPool;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>order</p>
      */
@@ -82,6 +88,8 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>ip</p>
      */

@@ -108,7 +108,40 @@ public class PurgeCachesRequest extends TeaModel {
         return this.type;
     }
 
+    public static class PurgeCachesRequestContentCacheKeys extends TeaModel {
+        @NameInMap("Headers")
+        public java.util.Map<String, String> headers;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static PurgeCachesRequestContentCacheKeys build(java.util.Map<String, ?> map) throws Exception {
+            PurgeCachesRequestContentCacheKeys self = new PurgeCachesRequestContentCacheKeys();
+            return TeaModel.build(map, self);
+        }
+
+        public PurgeCachesRequestContentCacheKeys setHeaders(java.util.Map<String, String> headers) {
+            this.headers = headers;
+            return this;
+        }
+        public java.util.Map<String, String> getHeaders() {
+            return this.headers;
+        }
+
+        public PurgeCachesRequestContentCacheKeys setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
     public static class PurgeCachesRequestContent extends TeaModel {
+        @NameInMap("CacheKeys")
+        public java.util.List<PurgeCachesRequestContentCacheKeys> cacheKeys;
+
         /**
          * <p>The cache tags that are used to purge the cache. This parameter is required if Type is set to cachetag.</p>
          */
@@ -151,6 +184,14 @@ public class PurgeCachesRequest extends TeaModel {
         public static PurgeCachesRequestContent build(java.util.Map<String, ?> map) throws Exception {
             PurgeCachesRequestContent self = new PurgeCachesRequestContent();
             return TeaModel.build(map, self);
+        }
+
+        public PurgeCachesRequestContent setCacheKeys(java.util.List<PurgeCachesRequestContentCacheKeys> cacheKeys) {
+            this.cacheKeys = cacheKeys;
+            return this;
+        }
+        public java.util.List<PurgeCachesRequestContentCacheKeys> getCacheKeys() {
+            return this.cacheKeys;
         }
 
         public PurgeCachesRequestContent setCacheTags(java.util.List<String> cacheTags) {
