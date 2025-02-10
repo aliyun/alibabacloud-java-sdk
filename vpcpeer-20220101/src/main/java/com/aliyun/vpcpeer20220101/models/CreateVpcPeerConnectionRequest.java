@@ -90,6 +90,23 @@ public class CreateVpcPeerConnectionRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The link type of the VPC peering connection that you want to create. Valid values:</p>
+     * <ul>
+     * <li><p>Platinum.</p>
+     * </li>
+     * <li><p>Gold: default value.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>If you need to specify this parameter, ensure that the VPC peering connection is an inter-region connection.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Gold</p>
+     */
     @NameInMap("LinkType")
     public String linkType;
 

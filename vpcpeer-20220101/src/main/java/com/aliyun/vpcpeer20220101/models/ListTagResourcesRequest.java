@@ -90,6 +90,7 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.regionId;
     }
 
+    @Deprecated
     public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -106,6 +107,7 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.resourceType;
     }
 
+    @Deprecated
     public ListTagResourcesRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
