@@ -271,6 +271,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ConnectSting")
         public String connectSting;
 
+        @NameInMap("ConnectString")
+        public String connectString;
+
         /**
          * <p>The minor version of the current MongoDB kernel.</p>
          * 
@@ -403,6 +406,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getConnectSting() {
             return this.connectSting;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceMongosListMongosAttribute setConnectString(String connectString) {
+            this.connectString = connectString;
+            return this;
+        }
+        public String getConnectString() {
+            return this.connectString;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceMongosListMongosAttribute setCurrentKernelVersion(String currentKernelVersion) {

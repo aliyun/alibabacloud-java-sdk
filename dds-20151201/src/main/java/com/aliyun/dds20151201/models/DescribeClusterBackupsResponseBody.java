@@ -472,6 +472,20 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         @NameInMap("ClusterBackupStatus")
         public String clusterBackupStatus;
 
+        /**
+         * <p>Version of the backuped instance.</p>
+         * <ul>
+         * <li><strong>6.0</strong></li>
+         * <li><strong>5.0</strong></li>
+         * <li><strong>4.4</strong></li>
+         * <li><strong>4.2</strong></li>
+         * <li><strong>4.0</strong></li>
+         * <li><strong>3.4</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4.2</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 

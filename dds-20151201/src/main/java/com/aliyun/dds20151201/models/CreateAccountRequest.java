@@ -24,6 +24,9 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    @NameInMap("CharacterType")
+    public String characterType;
+
     /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
@@ -65,6 +68,14 @@ public class CreateAccountRequest extends TeaModel {
     }
     public String getAccountPassword() {
         return this.accountPassword;
+    }
+
+    public CreateAccountRequest setCharacterType(String characterType) {
+        this.characterType = characterType;
+        return this;
+    }
+    public String getCharacterType() {
+        return this.characterType;
     }
 
     public CreateAccountRequest setDBInstanceId(String DBInstanceId) {
