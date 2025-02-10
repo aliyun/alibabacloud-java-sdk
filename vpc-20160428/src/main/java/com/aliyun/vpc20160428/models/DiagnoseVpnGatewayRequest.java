@@ -18,10 +18,10 @@ public class DiagnoseVpnGatewayRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The configuration when you check the connectivity of the IPsec-VPN connection. Valid values:</p>
+     * <p>Check the connectivity of the destination address. Valid values:</p>
      * <ul>
-     * <li><strong>PrivateSourceIp</strong>: the source IP address used when you check the connectivity of the IPsec-VPN connection. The source IP address must be on the VPC side.</li>
-     * <li><strong>PrivateDestinationIp</strong>: the destination IP address used when you check the connectivity of the IPsec-VPN connection. The destination IP address must be on the data center side.</li>
+     * <li><strong>PrivateSourceIp</strong>: the source IP address. The source IP address must be on the VPC side.</li>
+     * <li><strong>PrivateDestinationIp</strong>: the destination IP address. The destination IP address must be on the data center side.</li>
      * </ul>
      * 
      * <strong>example:</strong>

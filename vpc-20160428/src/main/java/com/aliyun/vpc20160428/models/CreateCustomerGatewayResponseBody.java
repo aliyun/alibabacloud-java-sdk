@@ -33,7 +33,7 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The public IP address of the gateway device in the data center.</p>
+     * <p>The static IP address of the gateway device in the on-premises data center.</p>
      * 
      * <strong>example:</strong>
      * <p>101.12.XX.XX</p>

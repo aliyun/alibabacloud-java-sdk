@@ -54,7 +54,7 @@ public class ModifyVcoRouteEntryWeightRequest extends TeaModel {
     public String ownerAccount;
 
     /**
-     * <p>The ID of the region where the IPsec-VPN connection is established.</p>
+     * <p>The region ID of the IPsec-VPN connection.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 

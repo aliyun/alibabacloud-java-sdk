@@ -41,7 +41,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The information about the IPsec-VPN connection.</p>
+     * <p>The information about the IPsec-VPN connections.</p>
      */
     @NameInMap("VpnConnections")
     public DescribeVpnConnectionsResponseBodyVpnConnections vpnConnections;
@@ -871,6 +871,19 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         @NameInMap("TunnelIkeConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig tunnelIkeConfig;
 
+        /**
+         * <p>The order in which the tunnel is created.</p>
+         * <ul>
+         * <li><strong>1</strong>: Tunnel 1.</li>
+         * <li><strong>2</strong>: Tunnel 2.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only if the IPsec-VPN connection is associated with a transit router.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TunnelIndex")
         public Integer tunnelIndex;
 
@@ -1566,8 +1579,8 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String transitRouterName;
 
         /**
-         * <p>The tunnel configuration of the IPsec-VPN connection.</p>
-         * <p>Parameters in <strong>TunnelOptionsSpecification</strong> are returned only if you query IPsec-VPN connections in dual-tunnel mode.</p>
+         * <p>The tunnel configurations of the IPsec-VPN connection.</p>
+         * <p>Parameters in <strong>TunnelOptionsSpecification</strong> are returned only if you query an IPsec-VPN connection in dual-tunnel mode.</p>
          */
         @NameInMap("TunnelOptionsSpecification")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecification tunnelOptionsSpecification;

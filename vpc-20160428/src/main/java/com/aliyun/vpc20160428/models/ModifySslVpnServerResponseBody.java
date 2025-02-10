@@ -14,7 +14,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public String cipher;
 
     /**
-     * <p>The client IP address pool.</p>
+     * <p>The client CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>10.30.30.0/24</p>
@@ -63,6 +63,8 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public Boolean enableMultiFactorAuth;
 
     /**
+     * <p>The ID of the IDaaS application.</p>
+     * 
      * <strong>example:</strong>
      * <p>app_my6g4qmvnwxzj2f****</p>
      */
@@ -70,7 +72,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public String IDaaSApplicationId;
 
     /**
-     * <p>The ID of the IDaaS instance.</p>
+     * <p>The ID of the IDaaS EIAM instance.</p>
      * 
      * <strong>example:</strong>
      * <p>idaas-cn-hangzhou-****</p>
@@ -79,6 +81,12 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public String IDaaSInstanceId;
 
     /**
+     * <p>The version of the IDaaS EIAM instance.</p>
+     * <ul>
+     * <li>This parameter is returned only if the SSL server is associated with an IDaaS EIAM 2.0 instance. Only <strong>EIAM 2.0</strong> is returned.</li>
+     * <li>If the SSL server is associated with an IDaaS EIAM 1.0 instance, no value is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>EIAM 2.0</p>
      */
@@ -95,7 +103,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public String internetIp;
 
     /**
-     * <p>The CIDR block of the client.</p>
+     * <p>The local CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>10.20.20.0/24</p>

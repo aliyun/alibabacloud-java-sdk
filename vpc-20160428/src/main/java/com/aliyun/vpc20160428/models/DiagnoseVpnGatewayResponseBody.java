@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DiagnoseVpnGatewayResponseBody extends TeaModel {
     /**
-     * <p>The ID of the diagnostic.</p>
+     * <p>The diagnostic ID.</p>
+     * <p>After a diagnostic ID is returned, you can call <a href="https://help.aliyun.com/document_detail/2521963.html">GetVpnGatewayDiagnoseResult</a> to query the diagnostic report.</p>
      * 
      * <strong>example:</strong>
      * <p>vpndgn-uf6kuxbe3iv028k3s****</p>

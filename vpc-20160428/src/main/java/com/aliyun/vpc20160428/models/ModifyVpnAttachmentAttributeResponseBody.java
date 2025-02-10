@@ -39,6 +39,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the customer gateway associated with the IPsec-VPN connection.</p>
+     * <p>This parameter is returned only for single-tunnel IPsec-VPN connections.</p>
      * 
      * <strong>example:</strong>
      * <p>cgw-p0w2jemrcj5u61un8****</p>
@@ -69,11 +70,12 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     public Boolean effectImmediately;
 
     /**
-     * <p>Indicates whether the DPD feature is enabled for the IPsec-VPN connection. Valid values:</p>
+     * <p>Indicates whether the DPD feature is enabled for the IPsec-VPN connection.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The feature is enabled.</li>
+     * <li><strong>false</strong>: The feature is disabled.</li>
      * </ul>
+     * <p>This parameter is returned only for single-tunnel IPsec-VPN connections.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -82,11 +84,12 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     public Boolean enableDpd;
 
     /**
-     * <p>Indicates whether NAT traversal is enabled for the IPsec-VPN connection. Valid values:</p>
+     * <p>Specifies whether to enable NAT traversal for the IPsec-VPN connection.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The feature is enabled.</li>
+     * <li><strong>false</strong>: The feature is disabled.</li>
      * </ul>
+     * <p>This parameter is returned only for single-tunnel IPsec-VPN connections.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -94,23 +97,36 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     @NameInMap("EnableNatTraversal")
     public Boolean enableNatTraversal;
 
+    /**
+     * <p>Specifies whether to enable Border Gateway Protocol (BGP) for tunnels.</p>
+     * <ul>
+     * <li><strong>true</strong>: The feature is enabled.</li>
+     * <li><strong>false</strong>: The feature is disabled.</li>
+     * </ul>
+     * <p>This parameter is returned only by dual-tunnel IPsec-VPN connections.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableTunnelsBgp")
     public Boolean enableTunnelsBgp;
 
     /**
      * <p>The configuration of Phase 1 negotiations.</p>
+     * <p><strong>IkeConfig</strong> parameters are returned only for single-tunnel IPsec-VPN connections.</p>
      */
     @NameInMap("IkeConfig")
     public ModifyVpnAttachmentAttributeResponseBodyIkeConfig ikeConfig;
 
     /**
      * <p>The configuration of Phase 2 negotiations.</p>
+     * <p><strong>IpsecConfig</strong> parameters are returned only for single-tunnel IPsec-VPN connections.</p>
      */
     @NameInMap("IpsecConfig")
     public ModifyVpnAttachmentAttributeResponseBodyIpsecConfig ipsecConfig;
 
     /**
-     * <p>The CIDR block of the VPC with which the data center can communicate.</p>
+     * <p>The CIDR block on the Alibaba Cloud side that communicates with the on-premises data center is required, such as CIDR blocks of VPCs.</p>
      * 
      * <strong>example:</strong>
      * <p>10.1.1.0/24,10.1.2.0/24</p>
@@ -141,7 +157,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The CIDR block of the data center with which the VPC can communicate.</p>
+     * <p>The CIDR block of the on-premises data center that communicates with Alibaba Cloud is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10.1.3.0/24,10.1.4.0/24</p>
@@ -193,17 +209,23 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tunnel configurations of the IPsec-VPN connection.</p>
+     * <p><strong>TunnelOptionsSpecification</strong> parameters are returned only for dual-tunnel IPsec-VPN connections.</p>
+     */
     @NameInMap("TunnelOptionsSpecification")
     public java.util.List<ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification> tunnelOptionsSpecification;
 
     /**
-     * <p>The health check configuration of the IPsec-VPN connection.</p>
+     * <p>The health check configurations of the IPsec-VPN connection.</p>
+     * <p><strong>VcoHealthCheck</strong> parameters are returned only for single-tunnel IPsec-VPC connections.</p>
      */
     @NameInMap("VcoHealthCheck")
     public ModifyVpnAttachmentAttributeResponseBodyVcoHealthCheck vcoHealthCheck;
 
     /**
-     * <p>The BGP configuration of the IPsec-VPN connection.</p>
+     * <p>The BGP configurations of the IPsec-VPN connection.</p>
+     * <p><strong>VpnBgpConfig</strong> parameters are returned only for single-tunnel IPsec-VPN connections.</p>
      */
     @NameInMap("VpnBgpConfig")
     public ModifyVpnAttachmentAttributeResponseBodyVpnBgpConfig vpnBgpConfig;
@@ -218,7 +240,8 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     public String vpnConnectionId;
 
     /**
-     * <p>The ID of the VPN gateway associated with the IPsec-VPN connection.</p>
+     * <p>The ID of the VPN gateway that is associated with the IPsec-VPN connection.</p>
+     * <p><strong>vpn-not-exist</strong>: The IPsec-VPN connection is not associated with a VPN Gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>vpn-p0wa1c1018pmeb6cu****</p>
@@ -452,7 +475,11 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         public Long ikeLifetime;
 
         /**
-         * <p>The negotiation mode.</p>
+         * <p>The IKE negotiation mode.</p>
+         * <ul>
+         * <li><strong>main:</strong> This mode offers higher security during negotiations.</li>
+         * <li><strong>aggressive</strong>: This mode is faster with a higher success rate.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -471,6 +498,11 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The version of the IKE protocol.</p>
+         * <ul>
+         * <li><strong>ikev1</strong></li>
+         * <li><strong>ikev2</strong></li>
+         * </ul>
+         * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for scenarios with multiple CIDR blocks.</p>
          * 
          * <strong>example:</strong>
          * <p>ikev1</p>
@@ -488,9 +520,9 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         public String localId;
 
         /**
-         * <p>The pre-shared key that is used for identity authentication between the VPN gateway and the data center.</p>
+         * <p>Enter a pre-shared key that is used for identity authentication between Alibaba Cloud and the data center.</p>
          * <blockquote>
-         * <p> The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the data center. Otherwise, you cannot establish a connection between the data center and the VPN gateway.</p>
+         * <p> The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the on-premises data center. Otherwise, connections between the on-premises data center and Alibaba Cloud cannot be established.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -664,18 +696,48 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     }
 
     public static class ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig extends TeaModel {
+        /**
+         * <p>The ASN on the Alibaba Cloud side.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65530</p>
+         */
         @NameInMap("LocalAsn")
         public Long localAsn;
 
+        /**
+         * <p>The BGP IP address of the tunnel on the Alibaba Cloud side.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169.254.10.1</p>
+         */
         @NameInMap("LocalBgpIp")
         public String localBgpIp;
 
+        /**
+         * <p>The ASN of the tunnel peer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65531</p>
+         */
         @NameInMap("PeerAsn")
         public Long peerAsn;
 
+        /**
+         * <p>The BGP IP address of the tunnel peer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169.254.10.2</p>
+         */
         @NameInMap("PeerBgpIp")
         public String peerBgpIp;
 
+        /**
+         * <p>The BGP CIDR block of the tunnel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169.254.10.0/30</p>
+         */
         @NameInMap("TunnelCidr")
         public String tunnelCidr;
 
@@ -727,30 +789,88 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     }
 
     public static class ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig extends TeaModel {
+        /**
+         * <p>The authentication algorithm in the IKE phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha1</p>
+         */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
+        /**
+         * <p>The encryption algorithm in the IKE phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aes</p>
+         */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
+        /**
+         * <p>The lifetime in the IKE phase. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
+         */
         @NameInMap("IkeLifetime")
         public Long ikeLifetime;
 
+        /**
+         * <p>The negotiation mode of IKE. Valid values:</p>
+         * <ul>
+         * <li><strong>main:</strong> This mode offers higher security during negotiations.</li>
+         * <li><strong>aggressive</strong>: This mode is faster with a higher success rate.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
+         */
         @NameInMap("IkeMode")
         public String ikeMode;
 
+        /**
+         * <p>The Diffie-Hellman (DH) group in the IKE phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group2</p>
+         */
         @NameInMap("IkePfs")
         public String ikePfs;
 
+        /**
+         * <p>The version of the IKE protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ikev2</p>
+         */
         @NameInMap("IkeVersion")
         public String ikeVersion;
 
+        /**
+         * <p>The identifier of the tunnel on the Alibaba Cloud side.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.XX.XX.1</p>
+         */
         @NameInMap("LocalId")
         public String localId;
 
+        /**
+         * <p>The pre-shared key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
+         */
         @NameInMap("Psk")
         public String psk;
 
+        /**
+         * <p>The peer identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.XX.XX.2</p>
+         */
         @NameInMap("RemoteId")
         public String remoteId;
 
@@ -834,15 +954,39 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     }
 
     public static class ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIpsecConfig extends TeaModel {
+        /**
+         * <p>The authentication algorithm in the IPsec phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha1</p>
+         */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
+        /**
+         * <p>The encryption algorithm in the IPsec phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aes</p>
+         */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
+        /**
+         * <p>The lifetime in the IPsec phase. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
+         */
         @NameInMap("IpsecLifetime")
         public Long ipsecLifetime;
 
+        /**
+         * <p>The DH group in the IPsec phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group2</p>
+         */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
 
@@ -886,36 +1030,114 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     }
 
     public static class ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecification extends TeaModel {
+        /**
+         * <p>The ID of the customer gateway that is associated with the tunnel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cgw-p0w2jemrcj5u61un8****</p>
+         */
         @NameInMap("CustomerGatewayId")
         public String customerGatewayId;
 
+        /**
+         * <p>Whether the DPD feature is enabled for the tunnel.</p>
+         * <ul>
+         * <li><strong>true</strong>: The feature is enabled.</li>
+         * <li><strong>false</strong>: The feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableDpd")
         public Boolean enableDpd;
 
+        /**
+         * <p>Indicates whether traversal feature is enabled for the tunnel. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The feature is enabled.</li>
+         * <li><strong>false</strong>: The feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableNatTraversal")
         public Boolean enableNatTraversal;
 
+        /**
+         * <p>The IP address on the Alibaba Cloud side.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.XX.XX.66</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The tunnel role. Valid values:</p>
+         * <ul>
+         * <li><strong>master</strong>: The tunnel is an active tunnel.</li>
+         * <li><strong>slave</strong>: The tunnel is a standby tunnel.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The status of the tunnel. Valid values:</p>
+         * <ul>
+         * <li><strong>active</strong>: The tunnel is active.</li>
+         * <li><strong>updating</strong>: The tunnel is being updated.</li>
+         * <li><strong>deleting:</strong> The tunnel is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>BGP configuration.</p>
+         */
         @NameInMap("TunnelBgpConfig")
         public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelBgpConfig tunnelBgpConfig;
 
+        /**
+         * <p>The tunnel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tun-0jod7plwf2a0o9lvu****</p>
+         */
         @NameInMap("TunnelId")
         public String tunnelId;
 
+        /**
+         * <p>The configurations of Phase 1 negotiations.</p>
+         */
         @NameInMap("TunnelIkeConfig")
         public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIkeConfig tunnelIkeConfig;
 
+        /**
+         * <p>The order in which the tunnel was created.</p>
+         * <ul>
+         * <li><strong>1</strong>: Tunnel 1.</li>
+         * <li><strong>2</strong>: Tunnel 2.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TunnelIndex")
         public Integer tunnelIndex;
 
+        /**
+         * <p>The configurations of Phase 2 negotiations.</p>
+         */
         @NameInMap("TunnelIpsecConfig")
         public ModifyVpnAttachmentAttributeResponseBodyTunnelOptionsSpecificationTunnelIpsecConfig tunnelIpsecConfig;
 

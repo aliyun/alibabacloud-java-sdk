@@ -48,6 +48,7 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
         return this.publicIpAddressPoolId;
     }
 
+    @Deprecated
     public CreatePublicIpAddressPoolResponseBody setPulbicIpAddressPoolId(String pulbicIpAddressPoolId) {
         this.pulbicIpAddressPoolId = pulbicIpAddressPoolId;
         return this;

@@ -352,6 +352,16 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
     }
 
     public static class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6Address extends TeaModel {
+        /**
+         * <p>The type of IPv6 address. Valid values:</p>
+         * <ul>
+         * <li>IPv6Address (default): indicates a single IPv6 IP.</li>
+         * <li>IPv6Prefix: indicates IPv6 CIDR.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv6Address</p>
+         */
         @NameInMap("AddressType")
         public String addressType;
 

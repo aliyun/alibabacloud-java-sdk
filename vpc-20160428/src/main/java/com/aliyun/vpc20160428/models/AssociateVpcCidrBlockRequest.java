@@ -100,6 +100,15 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     @NameInMap("SecondaryCidrBlock")
     public String secondaryCidrBlock;
 
+    /**
+     * <p>Add secondary CIDR blocks to the VPC from the IPAM pool by entering a mask.</p>
+     * <blockquote>
+     * <p>To add a secondary CIDR block to the VPC using the specified IPAM pool, you must specify at least one of the parameters, SecondaryCidrBlock or SecondaryCidrMask.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("SecondaryCidrMask")
     public Integer secondaryCidrMask;
 

@@ -14,8 +14,7 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>An array of strings.</p>
-     * <p>Each item in the array is a log entry.</p>
+     * <p>Log information list.</p>
      */
     @NameInMap("Data")
     public java.util.List<String> data;

@@ -92,9 +92,21 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags extends TeaModel {
+        /**
+         * <p>The tag key of the IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -171,9 +183,24 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The system tags of the IPsec-VPN connection.</p>
+         * <p>You can check whether an IPsec-VPN connection supports BGP based on the system tags.</p>
+         * <p><strong>BGPSupport</strong>: indicates whether the IPsec-VPN connection supports BGP.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;description\&quot;:\&quot;forwarding 1.7.22\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;BGPSupport\&quot;:\&quot;true\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The list of tags to be added to the IPsec-VPN connection.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags> tags;
 
