@@ -40,7 +40,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
 
     public static class DescribeSupportLinesResponseBodyRecordLinesRecordLine extends TeaModel {
         /**
-         * <p>The code of the parent line. This parameter is not returned if the line has no parent line.</p>
+         * <p>The code of the parent line. Currently, no data is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>unicom</p>
@@ -49,7 +49,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         public String fatherCode;
 
         /**
-         * <p>The code of the line.</p>
+         * <p>The code of the child line.</p>
          * 
          * <strong>example:</strong>
          * <p>cn_unicom_shanxi</p>
@@ -58,7 +58,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         public String lineCode;
 
         /**
-         * <p>The display name of the parent line.</p>
+         * <p>The display name of the line.</p>
          * 
          * <strong>example:</strong>
          * <p>China Unicom</p>
@@ -67,7 +67,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         public String lineDisplayName;
 
         /**
-         * <p>The display name of the line.</p>
+         * <p>The name of the child line.</p>
          * 
          * <strong>example:</strong>
          * <p>China Unicom_Shanxi</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTxtRecordForVerifyRequest extends TeaModel {
     /**
-     * <p>The domain name.</p>
+     * <p>The ID of the Domain Name System (DNS) record. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomainrecords?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainRecords</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -14,7 +14,11 @@ public class GetTxtRecordForVerifyRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -25,8 +29,8 @@ public class GetTxtRecordForVerifyRequest extends TeaModel {
     /**
      * <p>The feature verified by using the TXT record. Valid values:</p>
      * <ul>
-     * <li>ADD_SUB_DOMAIN</li>
-     * <li>RETRIEVAL</li>
+     * <li>ADD_SUB_DOMAIN: add a subdomain for verification.</li>
+     * <li>RETRIEVAL: add other subdomains for verification</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

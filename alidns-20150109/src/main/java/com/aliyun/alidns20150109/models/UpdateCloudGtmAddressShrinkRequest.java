@@ -18,7 +18,7 @@ public class UpdateCloudGtmAddressShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Modified IP address or domain name.</p>
+     * <p>The IP address or domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>223.5.XX.XX</p>
@@ -55,7 +55,7 @@ public class UpdateCloudGtmAddressShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The condition for determining the health status of the address. This parameter is required when HealthTasks is specified. Valid values:</p>
+     * <p>The new condition for determining the health state of the address. Valid values:</p>
      * <ul>
      * <li>any_ok: The health check results of at least one health check template are normal.</li>
      * <li>p30_ok: The health check results of at least 30% of health check templates are normal.</li>
@@ -77,7 +77,7 @@ public class UpdateCloudGtmAddressShrinkRequest extends TeaModel {
     public String healthTasksShrink;
 
     /**
-     * <p>Modified address name.</p>
+     * <p>The name of the address.</p>
      * 
      * <strong>example:</strong>
      * <p>Address-1</p>

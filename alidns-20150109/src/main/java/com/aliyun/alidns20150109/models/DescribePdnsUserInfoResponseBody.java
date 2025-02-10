@@ -32,6 +32,9 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
     }
 
     public static class DescribePdnsUserInfoResponseBodyUserInfo extends TeaModel {
+        @NameInMap("AvailableAccessSecurityType")
+        public String availableAccessSecurityType;
+
         @NameInMap("AvailableService")
         public String availableService;
 
@@ -56,6 +59,14 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         public static DescribePdnsUserInfoResponseBodyUserInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribePdnsUserInfoResponseBodyUserInfo self = new DescribePdnsUserInfoResponseBodyUserInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePdnsUserInfoResponseBodyUserInfo setAvailableAccessSecurityType(String availableAccessSecurityType) {
+            this.availableAccessSecurityType = availableAccessSecurityType;
+            return this;
+        }
+        public String getAvailableAccessSecurityType() {
+            return this.availableAccessSecurityType;
         }
 
         public DescribePdnsUserInfoResponseBodyUserInfo setAvailableService(String availableService) {

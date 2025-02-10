@@ -4,18 +4,45 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The statistics on the DNS requests.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribePdnsRequestStatisticsResponseBodyData> data;
 
+    /**
+     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: <strong>20</strong>. Valid values: <strong>1 to 100</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,9 +92,25 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribePdnsRequestStatisticsResponseBodyDataThreatInfo extends TeaModel {
+        /**
+         * <p>The current version does not support this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("ThreatLevel")
         public String threatLevel;
 
+        /**
+         * <p>The current version does not support this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("ThreatType")
         public String threatType;
 
@@ -95,54 +138,157 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribePdnsRequestStatisticsResponseBodyData extends TeaModel {
+        /**
+         * <p>The total number of DoH requests, including the HTTP and HTTPS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DohTotalCount")
         public Long dohTotalCount;
 
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The number of HTTP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("HttpCount")
         public Long httpCount;
 
+        /**
+         * <p>The number of HTTPS requests. On the Traffic Analysis tab of the public DNS console, the value of this parameter includes the number of DNS over HTTPs (DoH) requests. Therefore, the number of DoH requests is not separately displayed in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("HttpsCount")
         public Long httpsCount;
 
+        /**
+         * <p>The number of source IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("IpCount")
         public Long ipCount;
 
+        /**
+         * <p>The current version does not support this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("MaxThreatLevel")
         public String maxThreatLevel;
 
+        /**
+         * <p>The subdomain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("SubDomain")
         public String subDomain;
 
+        /**
+         * <p>The current version does not support this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("ThreatCount")
         public Long threatCount;
 
+        /**
+         * <p>The current version does not support this parameter.</p>
+         */
         @NameInMap("ThreatInfo")
         public java.util.List<DescribePdnsRequestStatisticsResponseBodyDataThreatInfo> threatInfo;
 
+        /**
+         * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <p>The total number of UDP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("UdpTotalCount")
         public Long udpTotalCount;
 
+        /**
+         * <p>The number of IPv4-based requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("V4Count")
         public Long v4Count;
 
+        /**
+         * <p>The number of IPv4-based HTTP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("V4HttpCount")
         public Long v4HttpCount;
 
+        /**
+         * <p>The number of IPv4-based HTTPS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("V4HttpsCount")
         public Long v4HttpsCount;
 
+        /**
+         * <p>The number of IPv6-based requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("V6Count")
         public Long v6Count;
 
+        /**
+         * <p>The number of IPv6-based HTTP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("V6HttpCount")
         public Long v6HttpCount;
 
+        /**
+         * <p>The number of IPv6-based HTTPS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("V6HttpsCount")
         public Long v6HttpsCount;
 

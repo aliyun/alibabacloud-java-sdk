@@ -1,3 +1,8 @@
+2025-02-10 Version: 3.4.6
+- Update API DescribeIspFlushCacheTask: update param TaskId.
+- Update API DescribePdnsUserInfo: update response param.
+
+
 2024-10-18 Version: 3.4.5
 - Update API DescribePdnsRequestStatistic: add param Type.
 
