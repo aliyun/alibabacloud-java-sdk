@@ -138,6 +138,9 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointServicesResponseBodyServices extends TeaModel {
+        @NameInMap("AddressIpVersion")
+        public String addressIpVersion;
+
         /**
          * <p>Indicates whether endpoint connection requests are automatically accepted. Valid values:</p>
          * <ul>
@@ -307,6 +310,7 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
          * <p>false</p>
          */
         @NameInMap("ServiceSupportIPv6")
+        @Deprecated
         public Boolean serviceSupportIPv6;
 
         /**
@@ -343,6 +347,14 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         public static ListVpcEndpointServicesResponseBodyServices build(java.util.Map<String, ?> map) throws Exception {
             ListVpcEndpointServicesResponseBodyServices self = new ListVpcEndpointServicesResponseBodyServices();
             return TeaModel.build(map, self);
+        }
+
+        public ListVpcEndpointServicesResponseBodyServices setAddressIpVersion(String addressIpVersion) {
+            this.addressIpVersion = addressIpVersion;
+            return this;
+        }
+        public String getAddressIpVersion() {
+            return this.addressIpVersion;
         }
 
         public ListVpcEndpointServicesResponseBodyServices setAutoAcceptEnabled(Boolean autoAcceptEnabled) {
@@ -465,6 +477,7 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
             return this.serviceStatus;
         }
 
+        @Deprecated
         public ListVpcEndpointServicesResponseBodyServices setServiceSupportIPv6(Boolean serviceSupportIPv6) {
             this.serviceSupportIPv6 = serviceSupportIPv6;
             return this;

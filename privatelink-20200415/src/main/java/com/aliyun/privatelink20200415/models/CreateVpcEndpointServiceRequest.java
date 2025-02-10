@@ -4,6 +4,9 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcEndpointServiceRequest extends TeaModel {
+    @NameInMap("AddressIpVersion")
+    public String addressIpVersion;
+
     /**
      * <p>Specifies whether to automatically accept endpoint connection requests. Valid values:</p>
      * <ul>
@@ -41,14 +44,11 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The payer of the endpoint service. Valid values:</p>
+     * <p>The payer. Valid values:</p>
      * <ul>
-     * <li><strong>Endpoint</strong>: the service consumer</li>
-     * <li><strong>EndpointService</strong>: the service provider</li>
+     * <li><strong>Endpoint</strong>: service consumer</li>
+     * <li><strong>EndpointService</strong>: service provider</li>
      * </ul>
-     * <blockquote>
-     * <p>By default, the feature of allowing the service provider to pay is unavailable. To use this feature, log on to the <a href="https://quotas.console.aliyun.com/white-list-products/privatelink/quotas">Quota Center console</a> and click Privileges in the left-side navigation pane. On the <strong>Privileges</strong> page, enter the quota ID <code>privatelink_whitelist/epsvc_payer_mode</code>, and click Apply in the Actions column.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Endpoint</p>
@@ -94,10 +94,13 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     /**
      * <p>The type of the service resource. Valid values:</p>
      * <ul>
-     * <li><strong>slb</strong>: a Classic Load Balancer (CLB) instance</li>
-     * <li><strong>alb</strong>: an Application Load Balancer (ALB) instance</li>
-     * <li><strong>nlb</strong>: a Network Load Balancer (NLB) instance</li>
+     * <li><strong>slb</strong>: Classic Load Balancer (CLB) instance</li>
+     * <li><strong>alb</strong>: Application Load Balancer (ALB) instance</li>
+     * <li><strong>nlb</strong>: Network Load Balancer (NLB) instance</li>
      * </ul>
+     * <blockquote>
+     * <p> You cannot access TCP/SSL listeners configured for NLB instances.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>slb</p>
@@ -116,6 +119,7 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("ServiceSupportIPv6")
+    @Deprecated
     public Boolean serviceSupportIPv6;
 
     /**
@@ -140,6 +144,14 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     public static CreateVpcEndpointServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVpcEndpointServiceRequest self = new CreateVpcEndpointServiceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVpcEndpointServiceRequest setAddressIpVersion(String addressIpVersion) {
+        this.addressIpVersion = addressIpVersion;
+        return this;
+    }
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     public CreateVpcEndpointServiceRequest setAutoAcceptEnabled(Boolean autoAcceptEnabled) {
@@ -214,6 +226,7 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
         return this.serviceResourceType;
     }
 
+    @Deprecated
     public CreateVpcEndpointServiceRequest setServiceSupportIPv6(Boolean serviceSupportIPv6) {
         this.serviceSupportIPv6 = serviceSupportIPv6;
         return this;
@@ -251,12 +264,12 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
         /**
          * <p>The type of the service resource that is added to the endpoint service. You can add up to 20 service resources to the endpoint service. Valid values:</p>
          * <ul>
-         * <li><strong>slb</strong>: Classic Load Balancer (CLB) instance</li>
-         * <li><strong>alb</strong>: Application Load Balancer (ALB) instance</li>
-         * <li><strong>nlb</strong>: Network Load Balancer (NLB) instance</li>
+         * <li><strong>slb</strong>: CLB instance</li>
+         * <li><strong>alb</strong>: ALB instance</li>
+         * <li><strong>nlb</strong>: NLB instance</li>
          * </ul>
          * <blockquote>
-         * <p> In regions where PrivateLink is supported, CLB instances deployed in virtual private clouds (VPCs) can serve as the service resources of the endpoint service.</p>
+         * <p> In regions where PrivateLink is supported, CLB instances deployed in virtual private clouds (VPCs) can serve as the service resources of the endpoint service. You cannot access TCP/SSL listeners configured for NLB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -266,7 +279,7 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The ID of the zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-huhehaote-a</p>

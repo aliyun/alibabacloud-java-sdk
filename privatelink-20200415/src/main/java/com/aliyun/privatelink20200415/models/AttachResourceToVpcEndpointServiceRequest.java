@@ -51,10 +51,13 @@ public class AttachResourceToVpcEndpointServiceRequest extends TeaModel {
     /**
      * <p>The type of the service resource. Valid values:</p>
      * <ul>
-     * <li><strong>slb</strong>: a Classic Load Balancer (CLB) instance</li>
-     * <li><strong>alb</strong>: an Application Load Balancer (ALB) instance</li>
-     * <li><strong>nlb</strong>: a Network Load Balancer (NLB) instance</li>
+     * <li><strong>slb</strong>: Classic Load Balancer (CLB) instance</li>
+     * <li><strong>alb</strong>: Application Load Balancer (ALB) instance</li>
+     * <li><strong>nlb</strong>: Network Load Balancer (NLB) instance</li>
      * </ul>
+     * <blockquote>
+     * <p> You cannot access TCP/SSL listeners configured for NLB instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

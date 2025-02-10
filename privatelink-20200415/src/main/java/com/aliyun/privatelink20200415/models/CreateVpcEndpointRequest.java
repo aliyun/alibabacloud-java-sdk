@@ -4,6 +4,9 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcEndpointRequest extends TeaModel {
+    @NameInMap("AddressIpVersion")
+    public String addressIpVersion;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
@@ -48,8 +51,14 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String endpointName;
 
     /**
-     * <p>The type of the endpoint.</p>
-     * <p>Set the value to <strong>Interface</strong>. Then, you can specify Application Load Balancer (ALB) and Classic Load Balancer (CLB) instances as service resources for the endpoint service.</p>
+     * <p>The endpoint type. Valid values:</p>
+     * <ul>
+     * <li><strong>Interface</strong> You can specify an Application Load Balancer (ALB) instance, a Classic Load Balancer (CLB) instance, or a Network Load Balancer (NLB) instance.</li>
+     * <li><strong>Reverse</strong> You can specify a Virtual Private Cloud (VPC) NAT gateway.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Services that support reverse endpoints are provided by Alibaba Cloud or Alibaba Cloud partners. To create such a service on your own, contact your account manager.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Interface</p>
@@ -57,6 +66,30 @@ public class CreateVpcEndpointRequest extends TeaModel {
     @NameInMap("EndpointType")
     public String endpointType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;Version&quot;: &quot;1&quot;,
+     *   &quot;Statement&quot;: [
+     *     {
+     *       &quot;Effect&quot;: &quot;Allow&quot;,
+     *       &quot;Action&quot;: [
+     *         &quot;oss:List*&quot;,
+     *         &quot;oss:PutObject&quot;,
+     *         &quot;oss:GetObject&quot;
+     *       ],
+     *       &quot;Resource&quot;: [
+     *         &quot;acs:oss:oss-<em>:</em>:pvl-policy-test/policy-test.txt&quot;
+     *       ],
+     *       &quot;Principal&quot;: {
+     *         &quot;RAM&quot;: [
+     *           &quot;acs:ram::14199xxxxxx:*&quot;
+     *         ]
+     *       }
+     *     }
+     *   ]
+     * }</p>
+     */
     @NameInMap("PolicyDocument")
     public String policyDocument;
 
@@ -154,6 +187,14 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public static CreateVpcEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVpcEndpointRequest self = new CreateVpcEndpointRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVpcEndpointRequest setAddressIpVersion(String addressIpVersion) {
+        this.addressIpVersion = addressIpVersion;
+        return this;
+    }
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     public CreateVpcEndpointRequest setClientToken(String clientToken) {
@@ -327,6 +368,9 @@ public class CreateVpcEndpointRequest extends TeaModel {
     }
 
     public static class CreateVpcEndpointRequestZone extends TeaModel {
+        @NameInMap("Ipv6Address")
+        public String ipv6Address;
+
         /**
          * <p>The ID of the vSwitch where you want to create the endpoint ENI in the zone. You can specify up to 10 vSwitch IDs.</p>
          * 
@@ -359,6 +403,14 @@ public class CreateVpcEndpointRequest extends TeaModel {
         public static CreateVpcEndpointRequestZone build(java.util.Map<String, ?> map) throws Exception {
             CreateVpcEndpointRequestZone self = new CreateVpcEndpointRequestZone();
             return TeaModel.build(map, self);
+        }
+
+        public CreateVpcEndpointRequestZone setIpv6Address(String ipv6Address) {
+            this.ipv6Address = ipv6Address;
+            return this;
+        }
+        public String getIpv6Address() {
+            return this.ipv6Address;
         }
 
         public CreateVpcEndpointRequestZone setVSwitchId(String vSwitchId) {

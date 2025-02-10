@@ -49,13 +49,13 @@ public class DisableVpcEndpointZoneConnectionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to disconnect the endpoint from the previous connection after the service resource is smoothly migrated. Valid values:</p>
+     * <p>Specifies whether to close connections in the endpoint zone after migration. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong> (default): no</li>
      * </ul>
      * <blockquote>
-     * <p>Set the value to true if you want to disconnect the endpoint from the previous connection in the zone after the service resource is smoothly migrated.</p>
+     * <p> Set the value to true if you want to close connections in the endpoint zone after migration.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

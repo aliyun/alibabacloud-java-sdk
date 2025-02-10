@@ -37,6 +37,9 @@ public class AddZoneToVpcEndpointRequest extends TeaModel {
     @NameInMap("EndpointId")
     public String endpointId;
 
+    @NameInMap("Ipv6Address")
+    public String ipv6Address;
+
     /**
      * <p>The region ID of the endpoint.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
@@ -104,6 +107,14 @@ public class AddZoneToVpcEndpointRequest extends TeaModel {
     }
     public String getEndpointId() {
         return this.endpointId;
+    }
+
+    public AddZoneToVpcEndpointRequest setIpv6Address(String ipv6Address) {
+        this.ipv6Address = ipv6Address;
+        return this;
+    }
+    public String getIpv6Address() {
+        return this.ipv6Address;
     }
 
     public AddZoneToVpcEndpointRequest setRegionId(String regionId) {

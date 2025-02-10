@@ -4,6 +4,9 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointServicesRequest extends TeaModel {
+    @NameInMap("AddressIpVersion")
+    public String addressIpVersion;
+
     /**
      * <p>Specifies whether to automatically accept endpoint connection requests. Valid values:</p>
      * <ul>
@@ -149,6 +152,14 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
     public static ListVpcEndpointServicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVpcEndpointServicesRequest self = new ListVpcEndpointServicesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListVpcEndpointServicesRequest setAddressIpVersion(String addressIpVersion) {
+        this.addressIpVersion = addressIpVersion;
+        return this;
+    }
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     public ListVpcEndpointServicesRequest setAutoAcceptEnabled(Boolean autoAcceptEnabled) {

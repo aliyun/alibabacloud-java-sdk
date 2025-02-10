@@ -5,6 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     /**
+     * <p>The protocol. Valid values:</p>
+     * <ul>
+     * <li><strong>IPv4</strong></li>
+     * <li><strong>DualStack</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
+    @NameInMap("AddressIpVersion")
+    public String addressIpVersion;
+
+    /**
      * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
@@ -126,6 +139,30 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     @NameInMap("Payer")
     public String payer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;Version&quot;: &quot;1&quot;,
+     *   &quot;Statement&quot;: [
+     *     {
+     *       &quot;Effect&quot;: &quot;Allow&quot;,
+     *       &quot;Action&quot;: [
+     *         &quot;oss:List*&quot;,
+     *         &quot;oss:PutObject&quot;,
+     *         &quot;oss:GetObject&quot;
+     *       ],
+     *       &quot;Resource&quot;: [
+     *         &quot;acs:oss:oss-<em>:</em>:pvl-policy-test/policy-test.txt&quot;
+     *       ],
+     *       &quot;Principal&quot;: {
+     *         &quot;RAM&quot;: [
+     *           &quot;acs:ram::14199xxxxxx:*&quot;
+     *         ]
+     *       }
+     *     }
+     *   ]
+     * }</p>
+     */
     @NameInMap("PolicyDocument")
     public String policyDocument;
 
@@ -221,6 +258,14 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     public static GetVpcEndpointAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVpcEndpointAttributeResponseBody self = new GetVpcEndpointAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetVpcEndpointAttributeResponseBody setAddressIpVersion(String addressIpVersion) {
+        this.addressIpVersion = addressIpVersion;
+        return this;
+    }
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     public GetVpcEndpointAttributeResponseBody setBandwidth(Integer bandwidth) {

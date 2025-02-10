@@ -4,6 +4,9 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcEndpointResponseBody extends TeaModel {
+    @NameInMap("AddressIpVersion")
+    public String addressIpVersion;
+
     /**
      * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
      * 
@@ -142,6 +145,14 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     public static CreateVpcEndpointResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateVpcEndpointResponseBody self = new CreateVpcEndpointResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVpcEndpointResponseBody setAddressIpVersion(String addressIpVersion) {
+        this.addressIpVersion = addressIpVersion;
+        return this;
+    }
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     public CreateVpcEndpointResponseBody setBandwidth(Long bandwidth) {

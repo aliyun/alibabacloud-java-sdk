@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

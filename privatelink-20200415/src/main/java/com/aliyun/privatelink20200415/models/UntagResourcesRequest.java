@@ -7,11 +7,11 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the resource. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: removes all tags from the resource.</li>
-     * <li><strong>false</strong>: does not remove all tags from the resource.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * <blockquote>
-     * <p> If you specify both this parameter and <strong>TagKey</strong>, this parameter is invalid.</p>
+     * <p> If you specify both the All and TagKey.N parameters, the All parameter does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The keys of the tags that you want to remove from the resource. You can specify up to 20 tag keys.</p>
+     * <p>The keys of the tags that you want to remove from the resources. You can specify up to 20 tag keys.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
