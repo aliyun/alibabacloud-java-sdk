@@ -612,6 +612,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("SegmentInstanceId")
         public String segmentInstanceId;
 
+        @NameInMap("ServiceID")
+        public Long serviceID;
+
         /**
          * <p>Indicates whether the resource is created by the service account. Valid values:</p>
          * <ul>
@@ -961,6 +964,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
         public String getSegmentInstanceId() {
             return this.segmentInstanceId;
+        }
+
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setServiceID(Long serviceID) {
+            this.serviceID = serviceID;
+            return this;
+        }
+        public Long getServiceID() {
+            return this.serviceID;
         }
 
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setServiceManaged(Integer serviceManaged) {

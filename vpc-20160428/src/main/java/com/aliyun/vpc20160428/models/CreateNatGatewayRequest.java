@@ -388,6 +388,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    @Deprecated
     public CreateNatGatewayRequest setSecurityProtectionEnabled(Boolean securityProtectionEnabled) {
         this.securityProtectionEnabled = securityProtectionEnabled;
         return this;

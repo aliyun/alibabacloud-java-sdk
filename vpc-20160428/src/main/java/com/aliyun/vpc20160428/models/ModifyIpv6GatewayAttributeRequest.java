@@ -4,11 +4,22 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the IPv6 gateway.</p>
+     * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6description</p>
@@ -16,6 +27,16 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong>: sends the API request. After the request passes the check, a 2XX HTTP status code is returned and the gateway endpoint is associated with the route table. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -31,7 +52,7 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>The name of the IPv6 gateway.</p>
-     * <p>It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6name</p>

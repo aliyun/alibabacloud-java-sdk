@@ -50,9 +50,8 @@ public class DescribeSslVpnServersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the SSL server belongs.</p>
-     * <p>The SSL server has the same resource group as its associated VPN gateway instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the ID of the resource group to which the VPN gateway instance belongs.</p>
+     * <p>The resource group ID of the SSL server.</p>
+     * <p>The SSL server and its associated VPN gateway belong to the same resource group. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the ID of the resource group to which the VPN gateway belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzs372yg****</p>

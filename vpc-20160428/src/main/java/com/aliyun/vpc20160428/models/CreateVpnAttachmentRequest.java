@@ -18,23 +18,24 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     public Boolean autoConfigRoute;
 
     /**
-     * <p>The Border Gateway Protocol (BGP) configurations:</p>
+     * <p>This parameter is supported when you create an IPsec-VPN connection in single-tunnel mode.</p>
+     * <p>BGP configuration:</p>
      * <ul>
-     * <li><p><strong>BgpConfig.EnableBgp</strong>: specifies whether to enable BGP. Valid values: <strong>true</strong> and <strong>false</strong>. Default value: false.</p>
+     * <li><p><strong>BgpConfig.EnableBgp</strong>: specifies whether to enable BGP. Valid values: <strong>true</strong> and <strong>false</strong> (default).</p>
      * </li>
      * <li><p><strong>BgpConfig.LocalAsn</strong>: the ASN on the Alibaba Cloud side. Valid values: <strong>1</strong> to <strong>4294967295</strong>. Default value: <strong>45104</strong>.</p>
-     * <p>You can enter the ASN in two segments. Separate the first 16 bits of the ASN from the remaining 16 bits with a period (.). Enter the number in each segment in decimal format.</p>
-     * <p>For example, if you enter 123.456, the ASN is: 123 × 65536 + 456 = 8061384.</p>
+     * <p>You can enter a value in two segments separated by a period (.). Each segment is 16 bits in length. Enter the number in each segment in decimal format.</p>
+     * <p>For example, if you enter 123.456, the ASN is 8061384. The ASN is calculated by using the following formula: 123 × 65536 + 456 = 8061384.</p>
      * </li>
-     * <li><p><strong>BgpConfig.TunnelCidr</strong>: the CIDR block of the IPsec tunnel. The CIDR block falls within 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.</p>
+     * <li><p><strong>BgpConfig.TunnelCidr</strong>: The CIDR block of the IPsec tunnel. The CIDR block must fall into 169.254.0.0/16 and the mask of the CIDR block must be 30 bits in length. The CIDR block cannot be 169.254.0.0/30, 169.254.1.0/30, 169.254.2.0/30, 169.254.3.0/30, 169.254.4.0/30, 169.254.5.0/30, 169.254.6.0/30, or 169.254.169.252/30.</p>
      * </li>
-     * <li><p><strong>LocalBgpIp:</strong> the BGP IP address on the Alibaba Cloud side. This IP address must fall within the CIDR block range of the IPsec tunnel.</p>
+     * <li><p><strong>LocalBgpIp</strong>: the BGP address on the Alibaba Cloud side. It must be an IP address that falls within the CIDR block of the IPsec tunnel.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>Before you configure BGP, we recommend that you learn about how BGP works and the limits. For more information, see <a href="https://help.aliyun.com/document_detail/170235.html">BGP dynamic routing </a>.</li>
-     * <li>We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. Refer to the relevant documentation for the private ASN range.</li>
+     * <li>Before you add BGP configurations, we recommend that you learn about how BGP works and the limits. For more information, see <a href="https://help.aliyun.com/document_detail/445767.html">Configure BGP dynamic routing</a>.</li>
+     * <li>We recommend that you use a private ASN to establish BGP connections to Alibaba Cloud. Refer to the relevant documentation for the private ASN range.</li>
      * </ul>
      * </blockquote>
      * 
@@ -59,6 +60,9 @@ public class CreateVpnAttachmentRequest extends TeaModel {
 
     /**
      * <p>The customer gateway ID.</p>
+     * <blockquote>
+     * <p> This parameter is required only when you create a single-tunnel IPsec-VPN connection.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cgw-p0w2jemrcj5u61un8****</p>
@@ -80,10 +84,11 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     public Boolean effectImmediately;
 
     /**
-     * <p>Specifies whether to enable the dead peer detection (DPD) feature. Valid values:</p>
+     * <p>This parameter is supported if you create an IPsec-VPN connection in single-tunnel mode.</p>
+     * <p>Specifies whether to enable DPD. Valid values: Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default) The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no response is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.</li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong> (default): enables DPD. The initiator of the IPsec-VPN connection sends DPD packets to check the existence and availability of the peer. If no feedback is received from the peer within the specified period of time, the connection fails. In this case, ISAKMP SA and IPsec SA are deleted along with the security tunnel.</li>
+     * <li><strong>false</strong>: disables DPD. The initiator of the IPsec-VPN connection does not send DPD packets.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,10 +98,11 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     public Boolean enableDpd;
 
     /**
+     * <p>This parameter is supported if you create an IPsec-VPN connection in single-tunnel mode.</p>
      * <p>Specifies whether to enable NAT traversal. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default) After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the VPN tunnel.</li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong> (default): enables NAT traversal. After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec-VPN tunnel.</li>
+     * <li><strong>false</strong>: disables NAT traversal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,17 +111,28 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     @NameInMap("EnableNatTraversal")
     public Boolean enableNatTraversal;
 
+    /**
+     * <p>This parameter is available if you create an IPsec-VPN connection in dual-tunnel mode.</p>
+     * <p>Specifies whether to enable the BGP feature for the tunnel. Valid values: <strong>true</strong> and <strong>false</strong>. Default value: false.</p>
+     * <blockquote>
+     * <p> Before you add BGP configurations, we recommend that you learn about how BGP works and the limits. For more information, see <a href="https://help.aliyun.com/document_detail/445767.html">Configure BGP dynamic routing</a></p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableTunnelsBgp")
     public Boolean enableTunnelsBgp;
 
     /**
-     * <p>The health check configuration:</p>
+     * <p>This parameter is supported if you create an IPsec-VPN connection in single-tunnel mode.</p>
+     * <p>The health check configurations:</p>
      * <ul>
-     * <li><p><strong>HealthCheckConfig.enable</strong>: specifies whether to enable health checks. Valid values: <strong>true</strong> and <strong>false</strong>. Default value: false.</p>
+     * <li><p><strong>HealthCheckConfig.enable</strong>: indicates whether the health check is enabled. Valid values: <strong>true</strong> and <strong>false</strong> (default).</p>
      * </li>
-     * <li><p><strong>HealthCheckConfig.dip</strong>: the destination IP address configured for health checks. Enter the IP address on the data center side that the VPC can communicate with through the IPsec-VPN connection.</p>
+     * <li><p><strong>HealthCheckConfig.dip</strong>: the destination IP address configured for health checks. Enter the IP address of the on-premises data center that the VPC can access through the IPsec connection.</p>
      * </li>
-     * <li><p><strong>HealthCheckConfig.sip</strong>: the source IP address configured for health checks. Enter the IP address on the VPC side that the data center can communicate with through the IPsec-VPN connection.</p>
+     * <li><p><strong>HealthCheckConfig.sip</strong>: the source IP address configured for health checks. Enter the IP address of the VPC that the on-premises data center can access through the IPsec connection.</p>
      * </li>
      * <li><p><strong>HealthCheckConfig.interval</strong>: the time interval of health check retries. Unit: seconds. Default value: <strong>3</strong>.</p>
      * </li>
@@ -136,11 +153,12 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     public String healthCheckConfig;
 
     /**
+     * <p>This parameter is supported if you create an IPsec-VPN connection in single-tunnel mode.</p>
      * <p>The configurations of Phase 1 negotiations:</p>
      * <ul>
      * <li><p><strong>IkeConfig.Psk</strong>: the pre-shared key that is used for identity authentication between the VPN gateway and the on-premises data center.</p>
      * <ul>
-     * <li>The key must be 1 to 100 characters in length and can contain digits, letters, and the following special characters: <code>~!`@#$%^&amp;*()_-+={}[]|;:\\&quot;,.&lt;&gt;/?</code></li>
+     * <li>The key cannot contain space characters. The key must be 1 to 100 characters in length, and can contain digits, letters, and the following special characters: <code>~!`@#$%^&amp;*()_-+={}[]|;:\\&quot;,.&lt;&gt;/?</code></li>
      * <li>If you do not specify a pre-shared key, the system randomly generates a 16-bit string as the pre-shared key. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to query the pre-shared key that is automatically generated by the system.</li>
      * </ul>
      * <blockquote>
@@ -159,9 +177,9 @@ public class CreateVpnAttachmentRequest extends TeaModel {
      * </li>
      * <li><p><strong>IkeConfig.IkeLifetime</strong>: the SA lifetime as a result of Phase 1 negotiations. Unit: seconds. Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</p>
      * </li>
-     * <li><p><strong>IkeConfig.LocalIdIPsec</strong>: the identifier on the Alibaba Cloud side. The identifier cannot exceed 100 characters in length. This parameter is left empty by default.</p>
+     * <li><p><strong>IkeConfig.LocalId</strong>: the identifier on the Alibaba Cloud side. The identifier cannot exceed 100 characters in length and cannot contain space characters. This parameter is empty by default.</p>
      * </li>
-     * <li><p><strong>IkeConfig.RemoteId</strong>: the identifier on the data center side. The identifier cannot exceed 100 characters in length. The default value is the IP address of the customer gateway.</p>
+     * <li><p><strong>IkeConfig.RemoteId</strong>: the identifier on the data center side. The identifier cannot exceed 100 characters in length and cannot contain space characters. The default value is the IP address of the customer gateway.</p>
      * </li>
      * </ul>
      * 
@@ -172,12 +190,13 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     public String ikeConfig;
 
     /**
+     * <p>This parameter is supported if you create an IPsec-VPN connection in single-tunnel mode.</p>
      * <p>The configurations of Phase 2 negotiations:</p>
      * <ul>
      * <li><strong>IpsecConfig.IpsecEncAlg</strong>: the encryption algorithm that is used in Phase 2 negotiations. Valid values: <strong>aes</strong>, <strong>aes192</strong>, <strong>aes256</strong>, <strong>des</strong>, and <strong>3des</strong>. Default value: <strong>aes</strong>.</li>
      * <li><strong>IpsecConfig. IpsecAuthAlg</strong>: the authentication algorithm that is used in Phase 2 negotiations. Valid values: <strong>md5</strong>, <strong>sha1</strong>, <strong>sha256</strong>, <strong>sha384</strong>, and <strong>sha512</strong>. Default value: <strong>md5</strong>.</li>
-     * <li><strong>IpsecConfig. IpsecPfs</strong>: the Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiations. Valid values: <strong>disabled</strong>, <strong>group1</strong>, <strong>group2</strong>, <strong>group5</strong>, and <strong>group14</strong>. Default value: <strong>group2</strong>.</li>
-     * <li><strong>IpsecConfig. IpsecLifetime</strong>: the SA lifetime that is determined by Phase 2 negotiations. Unit: seconds. Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</li>
+     * <li><strong>IpsecConfig. IpsecPfs</strong>: The Diffie-Hellman key exchange algorithm used in the second phase negotiation. Valid values: <strong>disabled</strong>, <strong>group1</strong>, <strong>group2</strong>, <strong>group5</strong>, and <strong>group14</strong>. Default value: <strong>group2</strong>.</li>
+     * <li><strong>IkeConfig.IkeLifetime</strong>: the SA lifetime determined by Phase 2 negotiations. Unit: seconds. Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -292,6 +311,12 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     public java.util.List<CreateVpnAttachmentRequestTags> tags;
 
     /**
+     * <p>The tunnel configurations.</p>
+     * <ul>
+     * <li>You can specify parameters in the <strong>TunnelOptionsSpecification</strong> array when you create an IPsec-VPN connection in dual tunnel mode.</li>
+     * <li>When you create a IPsec-VPN connection in dual-tunnel mode, you must add both tunnels to IPsec-VPN connection to ensure that the IPsec-VPN connection has connection redundancy. Each IPsec-VPN connection supports only two tunnels.</li>
+     * </ul>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -534,12 +559,36 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     }
 
     public static class CreateVpnAttachmentRequestTunnelOptionsSpecificationTunnelBgpConfig extends TeaModel {
+        /**
+         * <p>The ANS of the tunnel on the Alibaba Cloud side. Valid values: <strong>1</strong> to <strong>4294967295</strong>. Default value: <strong>45104</strong>.</p>
+         * <blockquote>
+         * <p> We recommend that you use a private ASN to establish BGP connections to Alibaba Cloud. Refer to the relevant documentation for the private ASN range.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>65530</p>
+         */
         @NameInMap("LocalAsn")
         public Long localAsn;
 
+        /**
+         * <p>The BGP IP address of the tunnel on the Alibaba Cloud side. The address is an IP address that falls within the BGP CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169.254.10.1</p>
+         */
         @NameInMap("LocalBgpIp")
         public String localBgpIp;
 
+        /**
+         * <p>The BGP CIDR block of the tunnel. The CIDR block must fall into 169.254.0.0/16 and the mask of the CIDR block must be 30 bits in length. The CIDR block cannot be 169.254.0.0/30, 169.254.1.0/30, 169.254.2.0/30, 169.254.3.0/30, 169.254.4.0/30, 169.254.5.0/30, 169.254.6.0/30, or 169.254.169.252/30.</p>
+         * <blockquote>
+         * <p> The two tunnels of an IPsec-VPN connection must use different CIDR blocks.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>169.254.10.0/30</p>
+         */
         @NameInMap("TunnelCidr")
         public String tunnelCidr;
 
@@ -575,30 +624,100 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     }
 
     public static class CreateVpnAttachmentRequestTunnelOptionsSpecificationTunnelIkeConfig extends TeaModel {
+        /**
+         * <p>The authentication algorithm that is used in Phase 1 negotiations. Valid values: <strong>md5</strong>, <strong>sha1</strong>, <strong>sha256</strong>, <strong>sha384</strong>, and <strong>sha512</strong>. Default value: <strong>sha1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha1</p>
+         */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
+        /**
+         * <p>The encryption algorithm that is used in Phase 1 negotiations. Valid values: <strong>aes</strong>, <strong>aes192</strong>, <strong>aes256</strong>, <strong>des</strong>, and <strong>3des</strong>. Default value: <strong>aes</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aes</p>
+         */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
+        /**
+         * <p>The SA lifetime as a result of Phase 1 negotiations. Unit: seconds.</p>
+         * <p>Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
+         */
         @NameInMap("IkeLifetime")
         public Long ikeLifetime;
 
+        /**
+         * <p>The negotiation mode of IKE. Valid values: <strong>main</strong> and <strong>aggressive</strong>. Default value: <strong>main</strong>.</p>
+         * <ul>
+         * <li><strong>main:</strong> This mode offers higher security during negotiations.</li>
+         * <li><strong>aggressive</strong>: This mode is faster with a higher success rate.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
+         */
         @NameInMap("IkeMode")
         public String ikeMode;
 
+        /**
+         * <p>The Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. Default value: <strong>group2</strong>.\
+         * Valid values: <strong>group1</strong>, <strong>group2</strong>, <strong>group5</strong>, and <strong>group14</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group2</p>
+         */
         @NameInMap("IkePfs")
         public String ikePfs;
 
+        /**
+         * <p>The version of the IKE protocol. Valid values: <strong>ikev1</strong> and <strong>ikev2</strong>. Default value: <strong>ikev2</strong>.</p>
+         * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for scenarios with multiple CIDR blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ikev2</p>
+         */
         @NameInMap("IkeVersion")
         public String ikeVersion;
 
+        /**
+         * <p>The identifier of the tunnel on the Alibaba Cloud side, which is used in Phase 1 negotiations. The identifier cannot exceed 100 characters in length and cannot contain spaces. The default value is the IP address of the tunnel.</p>
+         * <p><strong>LocalId</strong> supports fully qualified domain names (FQDNs). If you use an FQDN, we recommend that you set the negotiation mode to <strong>aggressive</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.XX.XX.1</p>
+         */
         @NameInMap("LocalId")
         public String localId;
 
+        /**
+         * <p>The pre-shared key that is used for identity authentication between the tunnel and the tunnel peer.</p>
+         * <ul>
+         * <li>The key cannot contain spaces. The key must be 1 to 100 characters in length, and can contain digits, letters, and the following special characters: <code>~!\\`@#$%^&amp;*()_-+={}[]|;:\\&quot;,.&lt;&gt;/?</code></li>
+         * <li>If you do not specify a pre-shared key, the system randomly generates a 16-bit string as the pre-shared key. You can call the <a href="https://help.aliyun.com/document_detail/2526939.html">DescribeVpnAttachments</a> operation to query the pre-shared key that is automatically generated by the system.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The tunnel and the tunnel peer must use the same pre-shared key. Otherwise, the tunnel cannot be established.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
+         */
         @NameInMap("Psk")
         public String psk;
 
+        /**
+         * <p>The identifier of the tunnel peer, which is used in Phase 1 negotiations. The identifier cannot exceed 100 characters in length and cannot contain spaces. The default value is the IP address of the customer gateway that is associated with the tunnel.</p>
+         * <p><strong>RemoteId</strong> supports FQDNs. If you use an FQDN, we recommend that you set the negotiation mode to <strong>aggressive</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.XX.XX.2</p>
+         */
         @NameInMap("RemoteId")
         public String remoteId;
 
@@ -682,15 +801,42 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     }
 
     public static class CreateVpnAttachmentRequestTunnelOptionsSpecificationTunnelIpsecConfig extends TeaModel {
+        /**
+         * <p>The authentication algorithm that is used in Phase 2 negotiations.</p>
+         * <p>Valid values: <strong>md5</strong>, <strong>sha1</strong>, <strong>sha256</strong>, <strong>sha384</strong>, and <strong>sha512</strong>. Default value: <strong>sha1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha1</p>
+         */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
+        /**
+         * <p>The encryption algorithm that is used in Phase 2 negotiations. Valid values: <strong>aes</strong>, <strong>aes192</strong>, <strong>aes256</strong>, <strong>des</strong>, and <strong>3des</strong>. Default value: <strong>aes</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aes</p>
+         */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
+        /**
+         * <p>The SA lifetime as a result of Phase 2 negotiations. Unit: seconds.</p>
+         * <p>Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
+         */
         @NameInMap("IpsecLifetime")
         public Long ipsecLifetime;
 
+        /**
+         * <p>The Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiations. Default value: <strong>group2</strong>.</p>
+         * <p>Valid values: <strong>disabled</strong>, <strong>group1</strong>, <strong>group2</strong>, <strong>group5</strong>, and <strong>group14</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group2</p>
+         */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
 
@@ -734,24 +880,75 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     }
 
     public static class CreateVpnAttachmentRequestTunnelOptionsSpecification extends TeaModel {
+        /**
+         * <p>The ID of the customer gateway that is associated with the tunnel.</p>
+         * <blockquote>
+         * <p> This parameter is required when you create a dual-tunnel IPsec-VPN connection.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cgw-p0w2jemrcj5u61un8****</p>
+         */
         @NameInMap("CustomerGatewayId")
         public String customerGatewayId;
 
+        /**
+         * <p>Specifies whether to enable the DPD feature for the tunnel. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): enables DPD. The initiator of the IPsec-VPN connection sends DPD packets to check the existence and availability of the peer. If no feedback is received from the peer within the specified period of time, the connection fails. In this case, ISAKMP SA and IPsec SA are deleted along with the security tunnel.</li>
+         * <li><strong>false</strong>: disables DPD. The initiator of the IPsec-VPN connection does not send DPD packets.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableDpd")
         public Boolean enableDpd;
 
+        /**
+         * <p>Specifies whether to enable NAT traversal for the tunnel. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): enables NAT traversal. After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec-VPN tunnel.</li>
+         * <li><strong>false</strong>: disables NAT traversal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableNatTraversal")
         public Boolean enableNatTraversal;
 
+        /**
+         * <p>The BGP configurations of the tunnel.</p>
+         * <blockquote>
+         * <p> If you enable BGP for an IPsec-VPN connection, you must set <strong>EnableTunnelsBgp</strong> parameter to <strong>true</strong>.</p>
+         * </blockquote>
+         */
         @NameInMap("TunnelBgpConfig")
         public CreateVpnAttachmentRequestTunnelOptionsSpecificationTunnelBgpConfig tunnelBgpConfig;
 
+        /**
+         * <p>The configurations of Phase 1 negotiations.</p>
+         */
         @NameInMap("TunnelIkeConfig")
         public CreateVpnAttachmentRequestTunnelOptionsSpecificationTunnelIkeConfig tunnelIkeConfig;
 
+        /**
+         * <p>The order in which the tunnel was created.</p>
+         * <ul>
+         * <li><strong>1</strong>: Tunnel 1.</li>
+         * <li><strong>2</strong>: Tunnel 2.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TunnelIndex")
         public Integer tunnelIndex;
 
+        /**
+         * <p>The configurations of Phase 2 negotiations.</p>
+         */
         @NameInMap("TunnelIpsecConfig")
         public CreateVpnAttachmentRequestTunnelOptionsSpecificationTunnelIpsecConfig tunnelIpsecConfig;
 

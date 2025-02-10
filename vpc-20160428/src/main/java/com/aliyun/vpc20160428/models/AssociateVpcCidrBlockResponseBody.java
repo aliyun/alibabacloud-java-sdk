@@ -4,6 +4,12 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AssociateVpcCidrBlockResponseBody extends TeaModel {
+    @NameInMap("CidrBlock")
+    public String cidrBlock;
+
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -16,6 +22,22 @@ public class AssociateVpcCidrBlockResponseBody extends TeaModel {
     public static AssociateVpcCidrBlockResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AssociateVpcCidrBlockResponseBody self = new AssociateVpcCidrBlockResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AssociateVpcCidrBlockResponseBody setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
+        return this;
+    }
+    public String getCidrBlock() {
+        return this.cidrBlock;
+    }
+
+    public AssociateVpcCidrBlockResponseBody setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
     public AssociateVpcCidrBlockResponseBody setRequestId(String requestId) {

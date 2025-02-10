@@ -31,8 +31,8 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The new description of the VPN gateway.</p>
-     * <p>The description must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The new description of the VPN connection.</p>
+     * <p>The description must be 1 to 100 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

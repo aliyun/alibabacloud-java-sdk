@@ -5,9 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateCustomerGatewayRequest extends TeaModel {
     /**
-     * <p>The autonomous system number (ASN) of the gateway device in the data center.</p>
-     * <p><strong>Asn</strong> is a 4-byte number. You can enter the number in two segments and separate the first 16 bits from the following 16 bits with a period (.). Enter the number in each segment in the decimal format.</p>
-     * <p>For example, if you enter 123.456, the ASN is: 123 × 65536 + 456 = 8061384.</p>
+     * <p>The autonomous system number (ASN) of the gateway device in your data center. This parameter is required If you want to use Border Gateway Protocol (BGP) for the IPsec-VPN connection. Valid values: 1 to 4294967295. 45104 is not supported.</p>
+     * <p><strong>Asn</strong> is a 4-byte number. You can enter it in two segments and separate the first 16 bits from the following 16 bits with a period (.). Enter the number in each segment in decimal format.</p>
+     * <p>For example, if you enter 123.456, the ASN is 8061384. The ASN is calculated by using the following formula: 123 × 65536 + 456 = 8061384.</p>
+     * <blockquote>
+     * <ul>
+     * <li>We recommend that you use a private ASN to establish BGP connections to Alibaba Cloud. For information about the range of private ASNs, see the relevant documentation.</li>
+     * <li>45104 is a unique identifier assigned by IANA to Alibaba Cloud. It is used to identify Alibaba Cloud during route selection and data transmission over the Internet.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>65530</p>
@@ -49,7 +55,19 @@ public class CreateCustomerGatewayRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The public IP address of the gateway device in the data center.</p>
+     * <p>The static IP address of the gateway device in the data center.</p>
+     * <ul>
+     * <li>If you want to create a public IPsec-VPN connection, enter a public IP address.</li>
+     * <li>If you want to create a private IPsec-VPN connection, enter a private IP address.</li>
+     * </ul>
+     * <p>You cannot use the following IP addresses. Otherwise, a IPsec-VPN connection cannot be established:</p>
+     * <ul>
+     * <li>100.64.0.0~100.127.255.255</li>
+     * <li>127.0.0.0~127.255.255.255</li>
+     * <li>169.254.0.0~169.254.255.255</li>
+     * <li>224.0.0.0~239.255.255.255</li>
+     * <li>255.0.0.0~255.255.255.255</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

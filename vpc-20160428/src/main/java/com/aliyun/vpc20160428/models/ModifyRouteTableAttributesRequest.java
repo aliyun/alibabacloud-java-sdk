@@ -38,6 +38,17 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Indicates whether to enable route propagation to receive dynamic routes. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong> (default): enables route propagation.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disables route propagation.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */

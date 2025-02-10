@@ -41,11 +41,17 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of routes.</p>
+     * <p>The list of route entries.</p>
      */
     @NameInMap("VcoRouteEntries")
     public java.util.List<DescribeVcoRouteEntriesResponseBodyVcoRouteEntries> vcoRouteEntries;
 
+    /**
+     * <p>The information on route entries of the dual-tunnel IPsec connection.</p>
+     * <blockquote>
+     * <p> This parameter is returned only for IPsec connections in dual-tunnel mode.</p>
+     * </blockquote>
+     */
     @NameInMap("VpnRouteCounts")
     public java.util.List<DescribeVcoRouteEntriesResponseBodyVpnRouteCounts> vpnRouteCounts;
 
@@ -140,6 +146,15 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         @NameInMap("NextHop")
         public String nextHop;
 
+        /**
+         * <p>The list of next hops.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is returned only by dual-tunnel IPsec connections.</li>
+         * <li>This parameter is returned only when the tunnel status is <strong>Phase 2 Negotiation Successful</strong>.</li>
+         * </ul>
+         * </blockquote>
+         */
         @NameInMap("NextHopTunnelIdList")
         public java.util.List<String> nextHopTunnelIdList;
 
@@ -201,11 +216,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         public String vpnConnectionId;
 
         /**
-         * <p>The weight of the destination-based route. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: a low priority</li>
-         * <li><strong>100</strong>: a high priority</li>
-         * </ul>
+         * <p>The weight of the destination-based route.</p>
+         * <blockquote>
+         * <p> The current parameter has no effect.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -309,12 +323,38 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeVcoRouteEntriesResponseBodyVpnRouteCounts extends TeaModel {
+        /**
+         * <p>The number of route entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("RouteCount")
         public Integer routeCount;
 
+        /**
+         * <p>The route type. Valid values:</p>
+         * <ul>
+         * <li><strong>custom</strong>: destination-based route.</li>
+         * <li><strong>bgp</strong>: BGP route.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>bgp</p>
+         */
         @NameInMap("RouteEntryType")
         public String routeEntryType;
 
+        /**
+         * <p>The source of the BGP route. Valid values:</p>
+         * <ul>
+         * <li><strong>CLOUD</strong>: The current BGP route is learned by the IPsec connection from the transit router.</li>
+         * <li><strong>VPN_BGP</strong>: The current BGP route is learned by the IPsec connection from the data center.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPN_BGP</p>
+         */
         @NameInMap("Source")
         public String source;
 

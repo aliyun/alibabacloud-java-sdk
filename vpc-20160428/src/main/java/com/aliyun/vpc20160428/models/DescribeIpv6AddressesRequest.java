@@ -4,6 +4,18 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpv6AddressesRequest extends TeaModel {
+    /**
+     * <p>The type of IP address. Valid values:</p>
+     * <ul>
+     * <li><p>IPv6Address (default): indicates an IPv6 instance used to query a single IPv6 address.</p>
+     * </li>
+     * <li><p>IPv6Prefix: indicates an IPv6 instance used to query prefix CIDR blocks.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv6Address</p>
+     */
     @NameInMap("AddressType")
     public String addressType;
 
@@ -71,7 +83,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
 
     /**
      * <p>The name of the IPv6 address that you want to query.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -99,7 +111,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -108,7 +120,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
