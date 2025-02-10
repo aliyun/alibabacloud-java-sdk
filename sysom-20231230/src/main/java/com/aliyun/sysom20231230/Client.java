@@ -1522,6 +1522,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("cluster_id", request.clusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.grayscaleConfig)) {
+            body.put("grayscale_config", request.grayscaleConfig);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
