@@ -40,6 +40,25 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeRegionsResponseBodyRegionsRegionServiceResourceTypes extends TeaModel {
+        @NameInMap("ServiceResourceType")
+        public java.util.List<String> serviceResourceType;
+
+        public static DescribeRegionsResponseBodyRegionsRegionServiceResourceTypes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRegionsResponseBodyRegionsRegionServiceResourceTypes self = new DescribeRegionsResponseBodyRegionsRegionServiceResourceTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegionServiceResourceTypes setServiceResourceType(java.util.List<String> serviceResourceType) {
+            this.serviceResourceType = serviceResourceType;
+            return this;
+        }
+        public java.util.List<String> getServiceResourceType() {
+            return this.serviceResourceType;
+        }
+
+    }
+
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
         /**
          * <p>The name of the region.</p>
@@ -68,6 +87,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ServiceResourceTypes")
+        public DescribeRegionsResponseBodyRegionsRegionServiceResourceTypes serviceResourceTypes;
+
         public static DescribeRegionsResponseBodyRegionsRegion build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsRegion self = new DescribeRegionsResponseBodyRegionsRegion();
             return TeaModel.build(map, self);
@@ -95,6 +117,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegion setServiceResourceTypes(DescribeRegionsResponseBodyRegionsRegionServiceResourceTypes serviceResourceTypes) {
+            this.serviceResourceTypes = serviceResourceTypes;
+            return this;
+        }
+        public DescribeRegionsResponseBodyRegionsRegionServiceResourceTypes getServiceResourceTypes() {
+            return this.serviceResourceTypes;
         }
 
     }

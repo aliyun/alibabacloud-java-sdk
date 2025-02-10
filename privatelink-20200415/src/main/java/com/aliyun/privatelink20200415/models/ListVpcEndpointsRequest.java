@@ -4,6 +4,9 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointsRequest extends TeaModel {
+    @NameInMap("AddressIpVersion")
+    public String addressIpVersion;
+
     /**
      * <p>The state of the endpoint connection. Valid values:</p>
      * <ul>
@@ -56,8 +59,11 @@ public class ListVpcEndpointsRequest extends TeaModel {
     public String endpointStatus;
 
     /**
-     * <p>The type of the endpoint.</p>
-     * <p>Set the value to <strong>Interface</strong>. Then, you can specify Application Load Balancer (ALB) and Classic Load Balancer (CLB) instances as service resources for the endpoint service.</p>
+     * <p>The type of the endpoint. Valid values:</p>
+     * <ul>
+     * <li><strong>Interface</strong>: interface endpoint</li>
+     * <li><strong>Reverse</strong>: reverse endpoint</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Interface</p>
@@ -134,6 +140,14 @@ public class ListVpcEndpointsRequest extends TeaModel {
     public static ListVpcEndpointsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVpcEndpointsRequest self = new ListVpcEndpointsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListVpcEndpointsRequest setAddressIpVersion(String addressIpVersion) {
+        this.addressIpVersion = addressIpVersion;
+        return this;
+    }
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     public ListVpcEndpointsRequest setConnectionStatus(String connectionStatus) {

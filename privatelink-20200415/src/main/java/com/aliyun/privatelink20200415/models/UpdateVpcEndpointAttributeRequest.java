@@ -4,6 +4,9 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class UpdateVpcEndpointAttributeRequest extends TeaModel {
+    @NameInMap("AddressIpVersion")
+    public String addressIpVersion;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
@@ -57,6 +60,30 @@ public class UpdateVpcEndpointAttributeRequest extends TeaModel {
     @NameInMap("EndpointName")
     public String endpointName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;Version&quot;: &quot;1&quot;,
+     *   &quot;Statement&quot;: [
+     *     {
+     *       &quot;Effect&quot;: &quot;Allow&quot;,
+     *       &quot;Action&quot;: [
+     *         &quot;oss:List*&quot;,
+     *         &quot;oss:PutObject&quot;,
+     *         &quot;oss:GetObject&quot;
+     *       ],
+     *       &quot;Resource&quot;: [
+     *         &quot;acs:oss:oss-<em>:</em>:pvl-policy-test/policy-test.txt&quot;
+     *       ],
+     *       &quot;Principal&quot;: {
+     *         &quot;RAM&quot;: [
+     *           &quot;acs:ram::14199xxxxxx:*&quot;
+     *         ]
+     *       }
+     *     }
+     *   ]
+     * }</p>
+     */
     @NameInMap("PolicyDocument")
     public String policyDocument;
 
@@ -73,6 +100,14 @@ public class UpdateVpcEndpointAttributeRequest extends TeaModel {
     public static UpdateVpcEndpointAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateVpcEndpointAttributeRequest self = new UpdateVpcEndpointAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateVpcEndpointAttributeRequest setAddressIpVersion(String addressIpVersion) {
+        this.addressIpVersion = addressIpVersion;
+        return this;
+    }
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     public UpdateVpcEndpointAttributeRequest setClientToken(String clientToken) {

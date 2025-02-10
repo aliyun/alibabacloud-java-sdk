@@ -138,6 +138,9 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointsResponseBodyEndpoints extends TeaModel {
+        @NameInMap("AddressIpVersion")
+        public String addressIpVersion;
+
         /**
          * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
          * 
@@ -239,8 +242,11 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         public String endpointStatus;
 
         /**
-         * <p>The type of the endpoint.</p>
-         * <p>Only <strong>Interface</strong> may be returned, which indicates an interface endpoint. You can specify Application Load Balancer (ALB) instances, Classic Load Balancer (CLB) instances, and Network Load Balancer (NLB) instances as service resources.</p>
+         * <p>The type of the endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>Interface</strong>: interface endpoint</li>
+         * <li><strong>Reverse</strong>: reverse endpoint</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Interface</p>
@@ -248,6 +254,12 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>The Resource Access Management (RAM) policy. For more information about policy definitions, see <a href="https://help.aliyun.com/document_detail/93738.html">Policy elements</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\n  \&quot;Version\&quot;: \&quot;1\&quot;,\n  \&quot;Statement\&quot;: [\n    {\n      \&quot;Effect\&quot;: \&quot;Allow\&quot;,\n      \&quot;Action\&quot;: \&quot;<em>\&quot;,\n      \&quot;Principal\&quot;: \&quot;</em>\&quot;,\n      \&quot;Resource\&quot;: \&quot;*\&quot;\n    }\n  ]\n}</p>
+         */
         @NameInMap("PolicyDocument")
         public String policyDocument;
 
@@ -331,6 +343,14 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         public static ListVpcEndpointsResponseBodyEndpoints build(java.util.Map<String, ?> map) throws Exception {
             ListVpcEndpointsResponseBodyEndpoints self = new ListVpcEndpointsResponseBodyEndpoints();
             return TeaModel.build(map, self);
+        }
+
+        public ListVpcEndpointsResponseBodyEndpoints setAddressIpVersion(String addressIpVersion) {
+            this.addressIpVersion = addressIpVersion;
+            return this;
+        }
+        public String getAddressIpVersion() {
+            return this.addressIpVersion;
         }
 
         public ListVpcEndpointsResponseBodyEndpoints setBandwidth(Long bandwidth) {

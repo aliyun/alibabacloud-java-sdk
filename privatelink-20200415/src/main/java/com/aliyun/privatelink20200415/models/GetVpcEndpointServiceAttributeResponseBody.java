@@ -4,6 +4,9 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
+    @NameInMap("AddressIpVersion")
+    public String addressIpVersion;
+
     /**
      * <p>Indicates whether endpoint connection requests are automatically accepted. Valid values:</p>
      * <ul>
@@ -94,10 +97,10 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The service state of the endpoint service. Valid values:</p>
+     * <p>The service status of the endpoint service. Valid values:</p>
      * <ul>
      * <li><strong>Normal</strong>: The endpoint service runs as expected.</li>
-     * <li><strong>FinacialLocked</strong>: The endpoint service is locked due to overdue payments.</li>
+     * <li><strong>FinancialLocked</strong>: The endpoint service is locked due to overdue payments.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -172,7 +175,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public String serviceStatus;
 
     /**
-     * <p>Indicates whether IPv6 is enabled for the endpoint service. Valid values:</p>
+     * <p>Specifies whether the endpoint service supports IPv6. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong> (default)</li>
@@ -182,6 +185,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("ServiceSupportIPv6")
+    @Deprecated
     public Boolean serviceSupportIPv6;
 
     /**
@@ -216,6 +220,14 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public static GetVpcEndpointServiceAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVpcEndpointServiceAttributeResponseBody self = new GetVpcEndpointServiceAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetVpcEndpointServiceAttributeResponseBody setAddressIpVersion(String addressIpVersion) {
+        this.addressIpVersion = addressIpVersion;
+        return this;
+    }
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     public GetVpcEndpointServiceAttributeResponseBody setAutoAcceptEnabled(Boolean autoAcceptEnabled) {
@@ -346,6 +358,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         return this.serviceStatus;
     }
 
+    @Deprecated
     public GetVpcEndpointServiceAttributeResponseBody setServiceSupportIPv6(Boolean serviceSupportIPv6) {
         this.serviceSupportIPv6 = serviceSupportIPv6;
         return this;

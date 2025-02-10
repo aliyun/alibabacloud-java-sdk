@@ -36,7 +36,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The endpoint services.</p>
+     * <p>The information about endpoint services.</p>
      */
     @NameInMap("Services")
     public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServices> services;
@@ -138,6 +138,9 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointServicesByEndUserResponseBodyServices extends TeaModel {
+        @NameInMap("AddressIpVersion")
+        public String addressIpVersion;
+
         /**
          * <p>The payer. Valid values:</p>
          * <ul>
@@ -239,6 +242,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         public static ListVpcEndpointServicesByEndUserResponseBodyServices build(java.util.Map<String, ?> map) throws Exception {
             ListVpcEndpointServicesByEndUserResponseBodyServices self = new ListVpcEndpointServicesByEndUserResponseBodyServices();
             return TeaModel.build(map, self);
+        }
+
+        public ListVpcEndpointServicesByEndUserResponseBodyServices setAddressIpVersion(String addressIpVersion) {
+            this.addressIpVersion = addressIpVersion;
+            return this;
+        }
+        public String getAddressIpVersion() {
+            return this.addressIpVersion;
         }
 
         public ListVpcEndpointServicesByEndUserResponseBodyServices setPayer(String payer) {

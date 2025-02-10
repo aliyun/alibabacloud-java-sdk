@@ -14,6 +14,9 @@ public class DescribeZonesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ServiceResourceType")
+    public String serviceResourceType;
+
     public static DescribeZonesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeZonesRequest self = new DescribeZonesRequest();
         return TeaModel.build(map, self);
@@ -25,6 +28,14 @@ public class DescribeZonesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeZonesRequest setServiceResourceType(String serviceResourceType) {
+        this.serviceResourceType = serviceResourceType;
+        return this;
+    }
+    public String getServiceResourceType() {
+        return this.serviceResourceType;
     }
 
 }
