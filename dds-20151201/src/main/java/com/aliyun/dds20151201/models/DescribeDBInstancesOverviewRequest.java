@@ -131,6 +131,9 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ShowTags")
+    public Boolean showTags;
+
     /**
      * <p>The ID of the vSwitch to which the instance is connected.</p>
      * 
@@ -265,6 +268,14 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeDBInstancesOverviewRequest setShowTags(Boolean showTags) {
+        this.showTags = showTags;
+        return this;
+    }
+    public Boolean getShowTags() {
+        return this.showTags;
     }
 
     public DescribeDBInstancesOverviewRequest setVSwitchId(String vSwitchId) {

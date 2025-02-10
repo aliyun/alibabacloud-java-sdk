@@ -39,6 +39,16 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The time when to perform the upgrade. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: immediately performs the upgrade.</li>
+     * <li><strong>1</strong>: performs the upgrade during the maintenance window.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SwitchMode")
     public Integer switchMode;
 

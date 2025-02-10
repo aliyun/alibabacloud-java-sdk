@@ -1861,6 +1861,12 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("TotalProductFee")
         public Double totalProductFee;
 
+        @NameInMap("priceType")
+        public String priceType;
+
+        @NameInMap("priceUnit")
+        public String priceUnit;
+
         public static DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance self = new DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance();
             return TeaModel.build(map, self);
@@ -1984,6 +1990,22 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public Double getTotalProductFee() {
             return this.totalProductFee;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance setPriceType(String priceType) {
+            this.priceType = priceType;
+            return this;
+        }
+        public String getPriceType() {
+            return this.priceType;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance setPriceUnit(String priceUnit) {
+            this.priceUnit = priceUnit;
+            return this;
+        }
+        public String getPriceUnit() {
+            return this.priceUnit;
         }
 
     }

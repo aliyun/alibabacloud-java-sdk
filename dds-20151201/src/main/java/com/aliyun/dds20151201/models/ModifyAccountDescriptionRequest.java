@@ -28,6 +28,9 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    @NameInMap("CharacterType")
+    public String characterType;
+
     /**
      * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
@@ -69,6 +72,14 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
+    }
+
+    public ModifyAccountDescriptionRequest setCharacterType(String characterType) {
+        this.characterType = characterType;
+        return this;
+    }
+    public String getCharacterType() {
+        return this.characterType;
     }
 
     public ModifyAccountDescriptionRequest setDBInstanceId(String DBInstanceId) {
