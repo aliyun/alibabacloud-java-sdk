@@ -10,12 +10,9 @@ public class ListTagValuesRequest extends TeaModel {
     /**
      * <p>The type of the query. Valid values:</p>
      * <ul>
-     * <li>EQUAL: exact match. This is the default value.</li>
-     * <li>PREFIX: prefix-based fuzzy match.</li>
+     * <li>EQUAL (default): exact match</li>
+     * <li>PREFIX: prefix-based fuzzy match</li>
      * </ul>
-     * <blockquote>
-     * <p> This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>EQUAL</p>
@@ -197,11 +194,8 @@ public class ListTagValuesRequest extends TeaModel {
 
     public static class ListTagValuesRequestTagFilter extends TeaModel {
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value for a fuzzy query.</p>
          * <p>This parameter is used together with the <code>FuzzyType</code> parameter.</p>
-         * <blockquote>
-         * <p> This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

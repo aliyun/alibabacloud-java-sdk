@@ -185,7 +185,7 @@ public class ListResourcesByTagRequest extends TeaModel {
 
         /**
          * <p>The tag value. This parameter specifies a filter condition for the query.</p>
-         * <p>The tag value can be a maximum of 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

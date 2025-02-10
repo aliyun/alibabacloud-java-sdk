@@ -27,12 +27,9 @@ public class ListTagKeysRequest extends TeaModel {
     /**
      * <p>The type of the query. Valid values:</p>
      * <ul>
-     * <li>EQUAL: exact match. This is the default value.</li>
-     * <li>PREFIX: prefix-based fuzzy match.</li>
+     * <li>EQUAL (default): exact match</li>
+     * <li>PREFIX: prefix-based fuzzy match</li>
      * </ul>
-     * <blockquote>
-     * <p> This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>EQUAL</p>
@@ -204,11 +201,8 @@ public class ListTagKeysRequest extends TeaModel {
 
     public static class ListTagKeysRequestTagFilter extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key for a fuzzy query.</p>
          * <p>This parameter is used together with the <code>FuzzyType</code> parameter.</p>
-         * <blockquote>
-         * <p> This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>team</p>

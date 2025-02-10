@@ -38,7 +38,8 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>A tag key.</p>
+     * <p>The key of tag N.</p>
+     * <p>Valid values of N: 1 to 10.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

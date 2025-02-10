@@ -8,50 +8,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._productId = "Tag";
-        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
-        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-qingdao", "tag.aliyuncs.com"),
-            new TeaPair("cn-beijing", "tag.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "tag.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "tag.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "tag.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "tag.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "tag.aliyuncs.com"),
-            new TeaPair("us-west-1", "tag.aliyuncs.com"),
-            new TeaPair("us-east-1", "tag.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "tag.aliyuncs.com"),
+            new TeaPair("us-west-1", "tag.us-east-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "tag.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "tag.aliyuncs.com"),
             new TeaPair("ap-northeast-2-pop", "tag.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-pop", "tag.aliyuncs.com"),
             new TeaPair("cn-beijing-gov-1", "tag.aliyuncs.com"),
-            new TeaPair("cn-beijing-nu16-b01", "tag.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "tag.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-edge-1", "tag.aliyuncs.com"),
-            new TeaPair("cn-fujian", "tag.aliyuncs.com"),
-            new TeaPair("cn-haidian-cm12-c01", "tag.aliyuncs.com"),
+            new TeaPair("cn-fujian", "tag.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "tag.cn-north-2-gov-1.aliyuncs.com"),
             new TeaPair("cn-hangzhou-bj-b01", "tag.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-prod-1", "tag.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-test-1", "tag.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-2", "tag.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-3", "tag.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-test-306", "tag.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "tag.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "tag.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "tag.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-hongkong-finance-pop", "tag.aliyuncs.com"),
-            new TeaPair("cn-huhehaote-nebula-1", "tag.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et15-b01", "tag.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "tag.cn-qingdao-nebula.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "tag.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-shanghai-et2-b01", "tag.aliyuncs.com"),
             new TeaPair("cn-shanghai-inner", "tag.aliyuncs.com"),
             new TeaPair("cn-shanghai-internal-test-1", "tag.aliyuncs.com"),
             new TeaPair("cn-shenzhen-inner", "tag.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-st4-d01", "tag.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "tag.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-shenzhen-su18-b01", "tag.aliyuncs.com"),
             new TeaPair("cn-wuhan", "tag.aliyuncs.com"),
             new TeaPair("cn-yushanfang", "tag.aliyuncs.com"),
             new TeaPair("cn-zhangbei", "tag.aliyuncs.com"),
-            new TeaPair("cn-zhangbei-na61-b01", "tag.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "tag.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou-na62-a01", "tag.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-nebula-1", "tag.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "tag.cn-qingdao-nebula.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "tag.cn-shenzhen-cloudstone.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "tag.aliyuncs.com")
         );
@@ -379,7 +368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to create a preset tag whose tag key is <code>Environment</code> to indicate the business environment.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates preset tags.</p>
+     * <p>Creates predefined tags.</p>
      * 
      * @param request CreateTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -437,7 +426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to create a preset tag whose tag key is <code>Environment</code> to indicate the business environment.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates preset tags.</p>
+     * <p>Creates predefined tags.</p>
      * 
      * @param request CreateTagsRequest
      * @return CreateTagsResponse
@@ -1085,6 +1074,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKeys)) {
+            query.put("TagKeys", request.tagKeys);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.targetId)) {
             query.put("TargetId", request.targetId);
         }
@@ -1650,7 +1643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Call examples</h3>
+     * <h3><a href="#"></a>Call example</h3>
      * <ul>
      * <li>Query a list of resource types supported by TagResources or UntagResources. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</li>
      * <li>Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D">Example</a>.</li>
@@ -1731,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Call examples</h3>
+     * <h3><a href="#"></a>Call example</h3>
      * <ul>
      * <li>Query a list of resource types supported by TagResources or UntagResources. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</li>
      * <li>Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D">Example</a>.</li>
