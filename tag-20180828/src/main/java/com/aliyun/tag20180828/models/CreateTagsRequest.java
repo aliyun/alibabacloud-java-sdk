@@ -91,7 +91,7 @@ public class CreateTagsRequest extends TeaModel {
 
         /**
          * <p>The value of tag N.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. </p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Valid values of N: 1 to 10.</p>
          * 
          * <strong>example:</strong>
@@ -135,8 +135,8 @@ public class CreateTagsRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The key of tag N.</p>
-         * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The value of tag N.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Valid values of N: 1 to 10.</p>
          * <p>This parameter is required.</p>
          * 
@@ -147,7 +147,7 @@ public class CreateTagsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The information about the tag value.</p>
+         * <p>The information about the tag values.</p>
          */
         @NameInMap("TagValueParamList")
         public java.util.List<CreateTagsRequestTagKeyValueParamListTagValueParamList> tagValueParamList;

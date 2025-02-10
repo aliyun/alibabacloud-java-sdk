@@ -122,6 +122,12 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
     }
 
     public static class ListSupportResourceTypesResponseBodySupportResourceTypes extends TeaModel {
+        /**
+         * <p>The resource ARN template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ecs:<em>:</em>:instance/${ResourceId}</p>
+         */
         @NameInMap("ArnTemplate")
         public String arnTemplate;
 

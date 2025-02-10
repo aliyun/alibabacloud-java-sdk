@@ -22,6 +22,9 @@ public class GetEffectivePolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    @NameInMap("TagKeys")
+    public java.util.List<String> tagKeys;
+
     /**
      * <p>The ID of the object.</p>
      * <blockquote>
@@ -87,6 +90,14 @@ public class GetEffectivePolicyRequest extends TeaModel {
     }
     public String getResourceOwnerAccount() {
         return this.resourceOwnerAccount;
+    }
+
+    public GetEffectivePolicyRequest setTagKeys(java.util.List<String> tagKeys) {
+        this.tagKeys = tagKeys;
+        return this;
+    }
+    public java.util.List<String> getTagKeys() {
+        return this.tagKeys;
     }
 
     public GetEffectivePolicyRequest setTargetId(String targetId) {
