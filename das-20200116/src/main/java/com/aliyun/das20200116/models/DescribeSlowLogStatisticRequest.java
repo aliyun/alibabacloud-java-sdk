@@ -12,6 +12,8 @@ public class DescribeSlowLogStatisticRequest extends TeaModel {
     public Boolean asc;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1608888296000</p>
      */
@@ -22,6 +24,8 @@ public class DescribeSlowLogStatisticRequest extends TeaModel {
     public java.util.List<DescribeSlowLogStatisticRequestFilters> filters;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-2ze1jdv45i7l6****</p>
      */
@@ -57,6 +61,8 @@ public class DescribeSlowLogStatisticRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1568269711000</p>
      */

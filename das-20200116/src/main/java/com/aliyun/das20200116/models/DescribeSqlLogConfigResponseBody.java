@@ -241,6 +241,12 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         @NameInMap("SqlLogEnable")
         public Boolean sqlLogEnable;
 
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("SqlLogSource")
         public String sqlLogSource;
 
@@ -267,6 +273,12 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         @NameInMap("SqlLogVisibleTime")
         public Long sqlLogVisibleTime;
 
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("SupportMigration")
         public Boolean supportMigration;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogHistogramAsyncRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1662518540764</p>
      */
@@ -15,6 +17,8 @@ public class DescribeSlowLogHistogramAsyncRequest extends TeaModel {
     public java.util.List<DescribeSlowLogHistogramAsyncRequestFilters> filters;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-2ze8g2am97624****</p>
      */
@@ -29,6 +33,8 @@ public class DescribeSlowLogHistogramAsyncRequest extends TeaModel {
     public String nodeId;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1596177993000</p>
      */
