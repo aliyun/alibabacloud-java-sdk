@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLakeStorageRequest extends TeaModel {
     /**
-     * <p>用于指定和挂载到特定ADB主实例的湖存储</p>
+     * <p>The ID of the AnalyticDB for MySQL cluster that is associated with the lake storage.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-*******</p>
@@ -14,7 +14,7 @@ public class UpdateLakeStorageRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>对湖存储的描述信息</p>
+     * <p>The description of the lake storage.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,7 +23,7 @@ public class UpdateLakeStorageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>用于识别特定湖存储的唯一标识符</p>
+     * <p>The unique identifier of the lake storage.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -34,7 +34,7 @@ public class UpdateLakeStorageRequest extends TeaModel {
     public String lakeStorageId;
 
     /**
-     * <p>设置湖存储的读/写权限和账户级别权限的数组</p>
+     * <p>The permissions on the lake storage.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -45,6 +45,8 @@ public class UpdateLakeStorageRequest extends TeaModel {
     public java.util.List<UpdateLakeStorageRequestPermissions> permissions;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
@@ -98,7 +100,7 @@ public class UpdateLakeStorageRequest extends TeaModel {
 
     public static class UpdateLakeStorageRequestPermissions extends TeaModel {
         /**
-         * <p>具有该权限的账户或RAM用户ID</p>
+         * <p>The account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -108,7 +110,7 @@ public class UpdateLakeStorageRequest extends TeaModel {
         public String account;
 
         /**
-         * <p>表示是否允许读取湖存储的权限</p>
+         * <p>The read permissions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +120,7 @@ public class UpdateLakeStorageRequest extends TeaModel {
         public Boolean read;
 
         /**
-         * <p>指定权限的账户类型</p>
+         * <p>The account type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,7 @@ public class UpdateLakeStorageRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>表示是否允许向湖存储写入数据的权限</p>
+         * <p>The write permissions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

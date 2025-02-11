@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The description of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -21,6 +24,7 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String datasourceDescription;
 
     /**
+     * <p>The data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public Long datasourceId;
 
     /**
+     * <p>The name of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>sls-******</p>
      */
@@ -50,7 +56,7 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String kafkaInfoShrink;
 
     /**
-     * <p>Lakehouse ID。</p>
+     * <p>The lakehouse ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -59,6 +65,8 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String lakehouseIdShrink;
 
     /**
+     * <p>The retired data source.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -68,6 +76,8 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String polarDBMysqlInfoShrink;
 
     /**
+     * <p>The retired data source.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -77,6 +87,7 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String rdsMysqlInfoShrink;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,6 +97,8 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The information about Simple Log Service (SLS).</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>

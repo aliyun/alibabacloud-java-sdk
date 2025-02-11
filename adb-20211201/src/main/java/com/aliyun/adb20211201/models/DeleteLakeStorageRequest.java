@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteLakeStorageRequest extends TeaModel {
     /**
+     * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-bp*********</p>
      */
@@ -12,6 +14,7 @@ public class DeleteLakeStorageRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the lake storage.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +26,8 @@ public class DeleteLakeStorageRequest extends TeaModel {
     public String lakeStorageId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

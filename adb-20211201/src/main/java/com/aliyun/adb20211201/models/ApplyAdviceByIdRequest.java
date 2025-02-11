@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApplyAdviceByIdRequest extends TeaModel {
     /**
+     * <p>The date on which you want to apply the suggestion. Format: yyyyMMdd.</p>
+     * 
      * <strong>example:</strong>
      * <p>20221101</p>
      */
@@ -12,6 +14,8 @@ public class ApplyAdviceByIdRequest extends TeaModel {
     public Long adviceDate;
 
     /**
+     * <p>The suggestion ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0baf1f52-53df-487f-8292-99a03716****</p>
      */
@@ -19,6 +23,7 @@ public class ApplyAdviceByIdRequest extends TeaModel {
     public String adviceId;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class ApplyAdviceByIdRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

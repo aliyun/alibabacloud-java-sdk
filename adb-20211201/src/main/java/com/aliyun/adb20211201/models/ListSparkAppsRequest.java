@@ -14,6 +14,9 @@ public class ListSparkAppsRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("Filters")
+    public String filters;
+
     /**
      * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
@@ -58,6 +61,14 @@ public class ListSparkAppsRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public ListSparkAppsRequest setFilters(String filters) {
+        this.filters = filters;
+        return this;
+    }
+    public String getFilters() {
+        return this.filters;
     }
 
     public ListSparkAppsRequest setPageNumber(Long pageNumber) {

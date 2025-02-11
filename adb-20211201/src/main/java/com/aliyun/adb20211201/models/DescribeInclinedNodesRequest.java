@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInclinedNodesRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class DescribeInclinedNodesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The language of file titles and error messages. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: simplified Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * <li><strong>ja</strong>: Japanese.</li>
+     * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -27,6 +36,10 @@ public class DescribeInclinedNodesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

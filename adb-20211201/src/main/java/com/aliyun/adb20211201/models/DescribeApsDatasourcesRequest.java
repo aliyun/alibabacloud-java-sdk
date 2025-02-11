@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApsDatasourcesRequest extends TeaModel {
     /**
+     * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-******</p>
      */
@@ -12,6 +14,8 @@ public class DescribeApsDatasourcesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,8 @@ public class DescribeApsDatasourcesRequest extends TeaModel {
     public String datasourceName;
 
     /**
+     * <p>The type of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>SLS</p>
      */
@@ -26,6 +32,8 @@ public class DescribeApsDatasourcesRequest extends TeaModel {
     public String datasourceType;
 
     /**
+     * <p>The end of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-30</p>
      */
@@ -33,6 +41,7 @@ public class DescribeApsDatasourcesRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +51,7 @@ public class DescribeApsDatasourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +61,8 @@ public class DescribeApsDatasourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -58,6 +70,8 @@ public class DescribeApsDatasourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The beginning of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeStorageResourceUsageRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

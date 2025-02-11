@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DownloadInstanceCACertificateRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class DownloadInstanceCACertificateRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The database engine of the cluster. Valid values:</p>
+     * <ul>
+     * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
+     * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Clickhouse</p>
      */
@@ -24,6 +31,11 @@ public class DownloadInstanceCACertificateRequest extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

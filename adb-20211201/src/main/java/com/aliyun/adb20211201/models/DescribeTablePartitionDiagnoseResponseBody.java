@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
     /**
+     * <p>The information about the request denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
@@ -20,19 +22,29 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-bp171g24yvbxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The queried detection items and detection results.</p>
+     */
     @NameInMap("DetectionItems")
     public java.util.List<DescribeTablePartitionDiagnoseResponseBodyDetectionItems> detectionItems;
 
+    /**
+     * <p>The queried partition diagnostic information.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeTablePartitionDiagnoseResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +52,8 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -47,6 +61,8 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -54,6 +70,8 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The recommended maximum number of rows in each partition.</p>
+     * 
      * <strong>example:</strong>
      * <p>640000000</p>
      */
@@ -61,6 +79,8 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
     public Long suggestMaxRecordsPerPartition;
 
     /**
+     * <p>The recommended minimum number of rows in each partition.</p>
+     * 
      * <strong>example:</strong>
      * <p>64000000</p>
      */
@@ -68,6 +88,8 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
     public Long suggestMinRecordsPerPartition;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>185</p>
      */
@@ -160,13 +182,26 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
     }
 
     public static class DescribeTablePartitionDiagnoseResponseBodyDetectionItems extends TeaModel {
+        /**
+         * <p>The detection result.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The name of the detection item.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The severity level of the detection result. Valid values:</p>
+         * <ul>
+         * <li>NORMAL</li>
+         * <li>WARNING</li>
+         * <li>CRITICAL</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>WARNING</p>
          */
@@ -206,6 +241,8 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
 
     public static class DescribeTablePartitionDiagnoseResponseBodyItems extends TeaModel {
         /**
+         * <p>The improper partitions.</p>
+         * 
          * <strong>example:</strong>
          * <p>[20210110, 20210113,20210123]</p>
          */
@@ -213,6 +250,8 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         public String partitionDetail;
 
         /**
+         * <p>The number of partitions.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -220,6 +259,8 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         public Integer partitionNumber;
 
         /**
+         * <p>The name of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_db</p>
          */
@@ -227,6 +268,11 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         public String schemaName;
 
         /**
+         * <p>The storage percentage of the table. Unit: %.</p>
+         * <blockquote>
+         * <p> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>66.23</p>
          */
@@ -234,6 +280,8 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         public Double spaceRatio;
 
         /**
+         * <p>The name of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
@@ -241,6 +289,8 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         public String tableName;
 
         /**
+         * <p>The total data size of the table. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>42949672960</p>
          */

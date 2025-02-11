@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApsMigrationWorkloadsRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-*******</p>
      */
@@ -12,6 +14,8 @@ public class DescribeApsMigrationWorkloadsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The end of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-07-20T16:00:00Z</p>
      */
@@ -19,6 +23,8 @@ public class DescribeApsMigrationWorkloadsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The Object Storage Service (OSS) URL.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://******</p>
      */
@@ -26,6 +32,7 @@ public class DescribeApsMigrationWorkloadsRequest extends TeaModel {
     public String ossLocation;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,7 @@ public class DescribeApsMigrationWorkloadsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,8 @@ public class DescribeApsMigrationWorkloadsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-06-20T16:00:00Z</p>
      */
@@ -51,6 +61,8 @@ public class DescribeApsMigrationWorkloadsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The name of the workload.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterVipRequest extends TeaModel {
     /**
      * <p>The endpoint of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amv-2ze8mbuai974s4y2500000169.ads.aliyuncs.com</p>
      */
     @NameInMap("ConnectString")
     public String connectString;

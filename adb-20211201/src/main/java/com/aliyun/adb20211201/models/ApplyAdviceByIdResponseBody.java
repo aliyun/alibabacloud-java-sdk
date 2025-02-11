@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApplyAdviceByIdResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5DC10091-348D-12B1-906D-AB49D658012E</p>
      */

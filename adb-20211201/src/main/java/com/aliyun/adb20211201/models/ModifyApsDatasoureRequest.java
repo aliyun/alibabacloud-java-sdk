@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApsDatasoureRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The description of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -21,6 +24,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public String datasourceDescription;
 
     /**
+     * <p>The data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public Long datasourceId;
 
     /**
+     * <p>The name of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>sls-******</p>
      */
@@ -50,7 +56,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public ModifyApsDatasoureRequestKafkaInfo kafkaInfo;
 
     /**
-     * <p>Lakehouse ID。</p>
+     * <p>The lakehouse ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -59,6 +65,8 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public ModifyApsDatasoureRequestLakehouseId lakehouseId;
 
     /**
+     * <p>The retired data source.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -68,6 +76,8 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public ModifyApsDatasoureRequestPolarDBMysqlInfo polarDBMysqlInfo;
 
     /**
+     * <p>The retired data source.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -77,6 +87,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public ModifyApsDatasoureRequestRdsMysqlInfo rdsMysqlInfo;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,6 +97,8 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The information about Simple Log Service (SLS).</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -181,6 +194,8 @@ public class ModifyApsDatasoureRequest extends TeaModel {
 
     public static class ModifyApsDatasoureRequestKafkaInfo extends TeaModel {
         /**
+         * <p>The ID of the Kafka instance.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -190,6 +205,8 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String kafkaClusterId;
 
         /**
+         * <p>The topic of the Kafka instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-topic</p>
          */
@@ -221,6 +238,8 @@ public class ModifyApsDatasoureRequest extends TeaModel {
 
     public static class ModifyApsDatasoureRequestLakehouseId extends TeaModel {
         /**
+         * <p>The name of the security group.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-******</p>
          */
@@ -228,7 +247,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String securityGroup;
 
         /**
-         * <p>vpc id。</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-******</p>
@@ -237,6 +256,8 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The name of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-******</p>
          */
@@ -460,6 +481,12 @@ public class ModifyApsDatasoureRequest extends TeaModel {
 
     public static class ModifyApsDatasoureRequestSlsInfo extends TeaModel {
         /**
+         * <p>Specifies whether to use a cross-account resource as the data source. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -467,6 +494,8 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public Boolean across;
 
         /**
+         * <p>The name of the cross-account role.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-role</p>
          */
@@ -474,6 +503,8 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String acrossRole;
 
         /**
+         * <p>The cross-account UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -481,6 +512,8 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String acrossUid;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */

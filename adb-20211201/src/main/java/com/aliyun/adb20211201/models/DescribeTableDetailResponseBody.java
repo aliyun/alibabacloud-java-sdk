@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTableDetailResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why the access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
@@ -20,16 +22,23 @@ public class DescribeTableDetailResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The average number of rows in a shard.</p>
+     * 
      * <strong>example:</strong>
      * <p>160</p>
      */
     @NameInMap("AvgSize")
     public String avgSize;
 
+    /**
+     * <p>The queried data distribution.</p>
+     */
     @NameInMap("Items")
     public DescribeTableDetailResponseBodyItems items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -37,6 +46,8 @@ public class DescribeTableDetailResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -44,6 +55,8 @@ public class DescribeTableDetailResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -51,6 +64,8 @@ public class DescribeTableDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */
@@ -120,6 +135,8 @@ public class DescribeTableDetailResponseBody extends TeaModel {
 
     public static class DescribeTableDetailResponseBodyItemsShard extends TeaModel {
         /**
+         * <p>The shard ID. Only the numeric part of the shard name is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -127,6 +144,8 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         public Integer id;
 
         /**
+         * <p>The number of rows in the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>9484858</p>
          */
@@ -157,6 +176,9 @@ public class DescribeTableDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeTableDetailResponseBodyItems extends TeaModel {
+        /**
+         * <p>The queried shards.</p>
+         */
         @NameInMap("Shard")
         public java.util.List<DescribeTableDetailResponseBodyItemsShard> shard;
 

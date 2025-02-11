@@ -4,21 +4,45 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class ModifyApsWorkloadNameResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>InvalidInput</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

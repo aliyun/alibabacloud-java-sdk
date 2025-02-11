@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApsOptimizationTasksRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListApsOptimizationTasksRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-09-30T00:15Z</p>
      */
@@ -21,6 +24,8 @@ public class ListApsOptimizationTasksRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,8 @@ public class ListApsOptimizationTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -35,6 +42,7 @@ public class ListApsOptimizationTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,8 @@ public class ListApsOptimizationTasksRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-01-23T02:18Z</p>
      */
@@ -51,6 +61,7 @@ public class ListApsOptimizationTasksRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The type of the lifecycle management policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

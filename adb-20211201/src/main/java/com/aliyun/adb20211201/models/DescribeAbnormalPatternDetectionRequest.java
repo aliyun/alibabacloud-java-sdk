@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAbnormalPatternDetectionRequest extends TeaModel {
     /**
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,11 @@ public class DescribeAbnormalPatternDetectionRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p> The end time must be later than the start time.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2024-11-17T02:16Z</p>
      */
@@ -21,6 +30,12 @@ public class DescribeAbnormalPatternDetectionRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): simplified Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -34,6 +49,10 @@ public class DescribeAbnormalPatternDetectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +68,8 @@ public class DescribeAbnormalPatternDetectionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-09-30T00:10Z</p>
      */

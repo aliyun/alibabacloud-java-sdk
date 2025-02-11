@@ -13,6 +13,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
     public DescribeApsDatasourceResponseBodyApsDatasource apsDatasource;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>******-<strong>D8-5</strong><em>-A</em>**-****587</p>
      */
@@ -42,6 +44,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasourceDatabricksInfo extends TeaModel {
         /**
+         * <p>The token that is used to access Databricks.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -49,6 +53,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String accessToken;
 
         /**
+         * <p>The URL of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -82,6 +88,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasourceHiveInfo extends TeaModel {
         /**
+         * <p>The ID of the E-MapReduce (EMR) cluster.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -91,7 +99,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String emrClusterId;
 
         /**
-         * <p>hive meta store url。</p>
+         * <p>The URL of the Hive Metastore.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -102,6 +110,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String metaStoreUri;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-******</p>
          */
@@ -109,6 +119,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String securityGroup;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-******</p>
          */
@@ -156,6 +168,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasourceKafkaInfo extends TeaModel {
         /**
+         * <p>The ID of the Kafka instance.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -165,7 +179,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String kafkaClusterId;
 
         /**
-         * <p>kafka topic</p>
+         * <p>The topic of the Kafka instance.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;value\&quot;: \&quot;hongxian_test\&quot;}]</p>
@@ -487,6 +501,12 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasourceSlsInfo extends TeaModel {
         /**
+         * <p>Indicates whether the data source is a cross-account resource. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -494,6 +514,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public Boolean across;
 
         /**
+         * <p>The name of the cross-account role.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -501,6 +523,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String acrossRole;
 
         /**
+         * <p>The cross-account UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -508,6 +532,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String acrossUid;
 
         /**
+         * <p>The name of the SLS project.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -515,6 +541,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String project;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -522,6 +550,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String sourceRegionId;
 
         /**
+         * <p>The name of the SLS Logstore.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -585,6 +615,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasource extends TeaModel {
         /**
+         * <p>The time when the data source was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-12T15:03:38Z</p>
          */
@@ -592,6 +624,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>amv-******</p>
          */
@@ -599,6 +633,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The information about Databricks.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -608,6 +644,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public DescribeApsDatasourceResponseBodyApsDatasourceDatabricksInfo databricksInfo;
 
         /**
+         * <p>The description of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -615,6 +653,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String datasourceDescription;
 
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>kafka-2024***</p>
          */
@@ -622,6 +662,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String datasourceName;
 
         /**
+         * <p>The type of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>KAFKA</p>
          */
@@ -629,6 +671,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String datasourceType;
 
         /**
+         * <p>The information about the Hive data source.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -638,6 +682,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public DescribeApsDatasourceResponseBodyApsDatasourceHiveInfo hiveInfo;
 
         /**
+         * <p>The information about the Kafka instance.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -647,6 +693,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public DescribeApsDatasourceResponseBodyApsDatasourceKafkaInfo kafkaInfo;
 
         /**
+         * <p>The parameter is no longer supported.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -656,6 +704,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public DescribeApsDatasourceResponseBodyApsDatasourcePolarDBMysqlInfo polarDBMysqlInfo;
 
         /**
+         * <p>The parameter is no longer supported.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -665,6 +715,8 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public DescribeApsDatasourceResponseBodyApsDatasourceRdsMysqlInfo rdsMysqlInfo;
 
         /**
+         * <p>The Simple Log Service (SLS) project.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>

@@ -176,7 +176,7 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
      * <li><strong>CREATE</strong></li>
      * </ul>
      * <blockquote>
-     * <p> You can query only a single type of SQL statements at a time. If you leave this parameter empty, the <strong>SELECT</strong> statements are queried.</p>
+     * <p> You can query only a single type of SQL statements at a time. If you leave this parameter empty, all types of SQL statements are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

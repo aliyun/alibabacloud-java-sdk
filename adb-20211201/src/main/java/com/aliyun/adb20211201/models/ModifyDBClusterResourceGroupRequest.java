@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterResourceGroupRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,10 @@ public class ModifyDBClusterResourceGroupRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the resource group to which you want to move the AnalyticDB for MySQL cluster.</p>
+     * <blockquote>
+     * <p> You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management within a single Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAdviceServiceEnabledRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeAdviceServiceEnabledRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

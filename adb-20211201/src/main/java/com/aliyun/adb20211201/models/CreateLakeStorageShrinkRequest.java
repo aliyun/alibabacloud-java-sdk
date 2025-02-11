@@ -16,7 +16,7 @@ public class CreateLakeStorageShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>用于指定和挂载到特定ADB主实例的湖存储</p>
+     * <p>The ID of the AnalyticDB for MySQL cluster with which you want to associate the lake storage.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-******</p>
@@ -25,7 +25,7 @@ public class CreateLakeStorageShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>对湖存储的描述信息</p>
+     * <p>The description of the lake storage.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -34,7 +34,7 @@ public class CreateLakeStorageShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>设置湖存储的读/写权限和账户级别权限的数组</p>
+     * <p>The permissions that you want to grant on the lake storage to the Alibaba Cloud account besides the permissions that are automatically granted to the Resource Access Management (RAM) user or the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -45,7 +45,7 @@ public class CreateLakeStorageShrinkRequest extends TeaModel {
     public String permissionsShrink;
 
     /**
-     * <p>RegionId</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

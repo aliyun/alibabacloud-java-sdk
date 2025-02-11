@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteApsDatasoureRequest extends TeaModel {
     /**
+     * <p>The ID of the AnalyticDB for MySQL cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteApsDatasoureRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteApsDatasoureRequest extends TeaModel {
     public Long datasourceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

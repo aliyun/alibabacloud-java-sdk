@@ -1,3 +1,13 @@
+2025-02-11 Version: 3.7.0
+- Support API CancelSparkWarehouseBatchSQL.
+- Support API DescribeSparkSQLDiagnosisAttribute.
+- Support API DescribeSparkSQLDiagnosisList.
+- Support API ExecuteSparkWarehouseBatchSQL.
+- Support API GetSparkWarehouseBatchSQL.
+- Support API ListSparkWarehouseBatchSQL.
+- Update API ListSparkApps: add param Filters.
+
+
 2024-12-30 Version: 3.6.0
 - Support API CreateApsCopyWorkload.
 - Support API CreateApsDatasoure.

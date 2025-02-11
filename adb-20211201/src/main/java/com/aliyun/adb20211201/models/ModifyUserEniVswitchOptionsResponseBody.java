@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyUserEniVswitchOptionsResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code or the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ModifyUserEniVswitchOptionsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,12 @@ public class ModifyUserEniVswitchOptionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a <strong>SUCCESS</strong> message is returned.</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -26,6 +36,8 @@ public class ModifyUserEniVswitchOptionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -33,6 +45,12 @@ public class ModifyUserEniVswitchOptionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

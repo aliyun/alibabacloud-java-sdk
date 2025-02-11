@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class KillProcessRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,11 @@ public class KillProcessRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The query ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143382.html">DescribeProcessList</a> operation to query the IDs of queries that are being executed.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>202011191048151921681492420315100****</p>
      */
@@ -21,6 +30,11 @@ public class KillProcessRequest extends TeaModel {
     public String processId;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeExecutorDetectionResponseBody extends TeaModel {
     /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>am-xxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The queried detection items and detection results.</p>
+     */
     @NameInMap("DetectionItems")
     public java.util.List<DescribeExecutorDetectionResponseBodyDetectionItems> detectionItems;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DFF5F54-162B-5860-80A5-411FF550B347</p>
      */
@@ -22,6 +29,8 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>566</p>
      */
@@ -67,6 +76,8 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
 
     public static class DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorAggSearchResults extends TeaModel {
         /**
+         * <p>The average value of the operator metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>234</p>
          */
@@ -74,6 +85,8 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         public Double avgValue;
 
         /**
+         * <p>The maximum value of the operator metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>2345</p>
          */
@@ -81,6 +94,8 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         public Long maxValue;
 
         /**
+         * <p>The number of occurrences of the operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -88,6 +103,8 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         public Long operatorCount;
 
         /**
+         * <p>The name of the operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>Window</p>
          */
@@ -95,6 +112,8 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         public String operatorName;
 
         /**
+         * <p>The cumulative value of the operator metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>345</p>
          */
@@ -150,12 +169,17 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
 
     public static class DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorAgg extends TeaModel {
         /**
+         * <p>The name of the detection metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>OperatorCost</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The detection result items of operator metric aggregation.</p>
+         */
         @NameInMap("SearchResults")
         public java.util.List<DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorAggSearchResults> searchResults;
 
@@ -184,6 +208,8 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
 
     public static class DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorDetailsSearchResults extends TeaModel {
         /**
+         * <p>The number of rows input by the operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -191,6 +217,8 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         public Long inputRows;
 
         /**
+         * <p>The amount of data input by the operator. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>345</p>
          */
@@ -198,16 +226,23 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         public Long inputSize;
 
         /**
+         * <p>The total CPU time consumed by all operators in the stage, which is equivalent to the total CPU time of the stage. You can use this parameter to determine which parts of the stage consume a large amount of computing resources. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
         @NameInMap("OperatorCost")
         public Double operatorCost;
 
+        /**
+         * <p>The property information about the operator.</p>
+         */
         @NameInMap("OperatorInfo")
         public String operatorInfo;
 
         /**
+         * <p>The name of the operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>Join</p>
          */
@@ -215,6 +250,8 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         public String operatorName;
 
         /**
+         * <p>The number of rows output by the operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>2345</p>
          */
@@ -222,6 +259,8 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         public Long outputRows;
 
         /**
+         * <p>The amount of data output by the operator. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>234</p>
          */
@@ -229,6 +268,8 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         public Long outputSize;
 
         /**
+         * <p>The peak memory. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>234</p>
          */
@@ -236,6 +277,8 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         public Long peakMemory;
 
         /**
+         * <p>The query ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024080110010002102500023803151627972</p>
          */
@@ -243,7 +286,7 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         public String processId;
 
         /**
-         * <p>StageID。</p>
+         * <p>The stage ID.</p>
          * 
          * <strong>example:</strong>
          * <p>Stage[3]</p>
@@ -340,12 +383,17 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
 
     public static class DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorDetails extends TeaModel {
         /**
+         * <p>The name of the detection metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>PeakMemory</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The detection result items of abnormal operators.</p>
+         */
         @NameInMap("SearchResults")
         public java.util.List<DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorDetailsSearchResults> searchResults;
 
@@ -373,9 +421,15 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
     }
 
     public static class DescribeExecutorDetectionResponseBodyDetectionItemsResults extends TeaModel {
+        /**
+         * <p>The detection result items of operator metric aggregation.</p>
+         */
         @NameInMap("OperatorAgg")
         public java.util.List<DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorAgg> operatorAgg;
 
+        /**
+         * <p>The detection result items of abnormal operators.</p>
+         */
         @NameInMap("OperatorDetails")
         public java.util.List<DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorDetails> operatorDetails;
 
@@ -403,16 +457,32 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
     }
 
     public static class DescribeExecutorDetectionResponseBodyDetectionItems extends TeaModel {
+        /**
+         * <p>The information about the detection result.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The name of the detection item.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The detection result items.</p>
+         */
         @NameInMap("Results")
         public DescribeExecutorDetectionResponseBodyDetectionItemsResults results;
 
         /**
+         * <p>The severity level of the detection result. Valid values:</p>
+         * <ul>
+         * <li>NORMAL</li>
+         * <li>WARNING</li>
+         * <li>CRITICAL</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>WARNING</p>
          */

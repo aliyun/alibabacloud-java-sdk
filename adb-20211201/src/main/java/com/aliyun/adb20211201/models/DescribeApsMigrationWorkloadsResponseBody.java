@@ -13,6 +13,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
     public java.util.List<DescribeApsMigrationWorkloadsResponseBodyMigrationWorkloads> migrationWorkloads;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -20,6 +22,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -27,6 +31,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>-3EEC-57F0-9F06-</strong></strong></strong></p>
      */
@@ -34,6 +40,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -87,6 +95,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
 
     public static class DescribeApsMigrationWorkloadsResponseBodyMigrationWorkloads extends TeaModel {
         /**
+         * <p>The number of AnalyticDB compute units (ACUs).</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -96,6 +106,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         public Integer acuCount;
 
         /**
+         * <p>The time when the job was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-06-21T02:15:16Z</p>
          */
@@ -103,6 +115,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -112,6 +126,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         public String failedMsg;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -119,6 +135,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The maximum response time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -126,6 +144,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         public String maxRT;
 
         /**
+         * <p>The time when the migration job was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-06-21T02:15:16Z</p>
          */
@@ -133,6 +153,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The name of the workload.</p>
+         * 
          * <strong>example:</strong>
          * <p>TEST-001</p>
          */
@@ -140,6 +162,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The OSS URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://******</p>
          */
@@ -147,6 +171,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         public String ossLocation;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
          */
@@ -154,6 +180,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The destination type.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -161,6 +189,8 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         public String targetType;
 
         /**
+         * <p>The sub-type of the workload.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

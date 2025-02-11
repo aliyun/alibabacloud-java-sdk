@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListApsOptimizationTasksResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code or the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidInput</p>
      */
@@ -12,6 +14,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The queried optimization jobs.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -28,6 +34,12 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
     public java.util.List<ListApsOptimizationTasksResponseBodyItems> items;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.****</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -35,6 +47,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +56,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -49,6 +65,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
      */
@@ -56,6 +74,12 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -63,6 +87,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -148,6 +174,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
 
     public static class ListApsOptimizationTasksResponseBodyItems extends TeaModel {
         /**
+         * <p>The computing resources used by the optimization job.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -155,6 +183,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
         public String computeUnit;
 
         /**
+         * <p>The time when the optimization job was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-23T02:18Z</p>
          */
@@ -162,6 +192,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>amv-*******</p>
          */
@@ -169,6 +201,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The time when the optimization job was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-09-30T00:15Z</p>
          */
@@ -176,6 +210,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The type of the lifecycle management policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>StrategyValue</p>
          */
@@ -183,6 +219,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
         public String strategyType;
 
         /**
+         * <p>The description of the optimization job.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -190,6 +228,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
         public String taskDesc;
 
         /**
+         * <p>The execution duration of the optimization job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -197,6 +237,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
         public Long taskDuration;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sj-hz******</p>
          */
@@ -204,6 +246,8 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -213,6 +257,15 @@ public class ListApsOptimizationTasksResponseBody extends TeaModel {
         public String taskMessage;
 
         /**
+         * <p>The execution status. Valid values:</p>
+         * <ol>
+         * <li>NEW</li>
+         * <li>RUNNING</li>
+         * <li>SUCCESS</li>
+         * <li>STOPPED</li>
+         * <li>FAILED</li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListApsLifecycleStrategyResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code or the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,16 +14,27 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The queried lifecycle management policies.</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListApsLifecycleStrategyResponseBodyItems> items;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.****</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +42,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +51,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +60,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
      */
@@ -50,6 +69,12 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +82,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -142,6 +169,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
 
     public static class ListApsLifecycleStrategyResponseBodyItemsOperationTables extends TeaModel {
         /**
+         * <p>The name of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -149,12 +178,17 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         public String databaseName;
 
         /**
+         * <p>Indicates whether all tables in the database are selected.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("ProcessAll")
         public String processAll;
 
+        /**
+         * <p>The names of the tables.</p>
+         */
         @NameInMap("TableNames")
         public java.util.List<String> tableNames;
 
@@ -191,6 +225,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
 
     public static class ListApsLifecycleStrategyResponseBodyItems extends TeaModel {
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>aps-******</p>
          */
@@ -198,6 +234,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         public String apsJobId;
 
         /**
+         * <p>The time when the policy was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-06-30T02:44:27Z</p>
          */
@@ -205,6 +243,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>amv-*******</p>
          */
@@ -212,6 +252,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The time when the policy was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-07-03T06:33:00Z</p>
          */
@@ -227,6 +269,12 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         public java.util.List<ListApsLifecycleStrategyResponseBodyItemsOperationTables> operationTables;
 
         /**
+         * <p>The status of the lifecycle management policy. Valid values:</p>
+         * <ol>
+         * <li>on: enables the current policy.</li>
+         * <li>off: disables the current policy.</li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -234,6 +282,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The number of databases that are managed during the lifecycle management.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -241,6 +291,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         public Long strategyDatabases;
 
         /**
+         * <p>The description of the lifecycle management policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -248,6 +300,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         public String strategyDesc;
 
         /**
+         * <p>The name of the lifecycle management policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -255,6 +309,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         public String strategyName;
 
         /**
+         * <p>The number of tables that are managed during the lifecycle management.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -262,6 +318,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         public Long strategyTables;
 
         /**
+         * <p>The type of the lifecycle management policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>KEEP_BY_TIME</p>
          */
@@ -269,6 +327,8 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         public String strategyType;
 
         /**
+         * <p>The value of the lifecycle management policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

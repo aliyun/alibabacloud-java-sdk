@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeControllerDetectionRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +20,11 @@ public class DescribeControllerDetectionRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mmZ</strong> format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p> The end time must be later than the start time. The maximum time range that can be specified is 30 days.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2024-06-23T02:21Z</p>
      */
@@ -21,6 +32,12 @@ public class DescribeControllerDetectionRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: simplified Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -34,6 +51,10 @@ public class DescribeControllerDetectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +70,8 @@ public class DescribeControllerDetectionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-03-10T23:56Z</p>
      */

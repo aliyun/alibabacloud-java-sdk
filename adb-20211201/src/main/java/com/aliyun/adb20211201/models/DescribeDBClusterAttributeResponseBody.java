@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     /**
-     * <p>The queried information about the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The queried cluster.</p>
      */
     @NameInMap("Items")
     public DescribeDBClusterAttributeResponseBodyItems items;
@@ -105,21 +105,45 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-10T10:28:34Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-10T09:28:34Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Prepare resources</p>
+         */
         @NameInMap("StepDesc")
         public String stepDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PrepareResources</p>
+         */
         @NameInMap("StepName")
         public String stepName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("StepProgress")
         public String stepProgress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("StepStatus")
         public String stepStatus;
 
@@ -198,12 +222,24 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ScaleUpDBCluster</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -632,12 +668,24 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("UserENIStatus")
         public Boolean userENIStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-rj9ixufmywqq98z******,vsw-rj95ij6wcz656v7******</p>
+         */
         @NameInMap("UserENIVSwitchOptions")
         public String userENIVSwitchOptions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-rj9hnedlfm645uj******</p>
+         */
         @NameInMap("UserENIVpcId")
         public String userENIVpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k,cn-hangzhou-h</p>
+         */
         @NameInMap("UserENIZoneOptions")
         public String userENIZoneOptions;
 

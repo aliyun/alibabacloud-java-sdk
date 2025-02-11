@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeAppliedAdvicesRequest extends TeaModel {
     /**
+     * <p>The type of the suggestion. Valid values:</p>
+     * <ul>
+     * <li><strong>INDEX</strong>: index optimization.</li>
+     * <li><strong>TIERING</strong>: hot and cold data optimization.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>INDEX</p>
      */
@@ -12,6 +18,7 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public String adviceType;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,8 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The end date of the time range to query. Specify the date in the yyyyMMdd format.</p>
+     * 
      * <strong>example:</strong>
      * <p>20220824</p>
      */
@@ -28,6 +37,8 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The keyword that is used to query information by table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>you_table_name</p>
      */
@@ -35,6 +46,14 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The display language of the suggestion. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): simplified Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * <li><strong>ja</strong>: Japanese.</li>
+     * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -42,6 +61,28 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The order by which to sort query results. Specify the parameter value in the JSON format. Example: <code>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>.</p>
+     * <ul>
+     * <li><p><code>Field</code> specifies the field by which to sort the query results. Valid values:</p>
+     * <ul>
+     * <li><code>SchemaName</code>: the name of the database.</li>
+     * <li><code>TableName</code>: the name of the table.</li>
+     * <li><code>JobStatus</code>: the status of the BUILD job that is triggered on the table.</li>
+     * <li><code>SubmitTime</code>: the time when the suggestion was submitted.</li>
+     * <li><code>Benefit</code>: the expected benefits of the applied optimization suggestion.</li>
+     * </ul>
+     * </li>
+     * <li><p><code>Type</code> specifies the sorting order. Valid values:</p>
+     * <ul>
+     * <li><code>Asc</code>: ascending order.</li>
+     * <li><code>Desc</code>: descending order.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter, optimization suggestions are sorted in descending order based on the submission time.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;Field\&quot;:\&quot;AdviceType\&quot;,\&quot;Type\&quot;:\&quot;Desc\&quot;}]</p>
      */
@@ -49,6 +90,8 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -56,6 +99,13 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><strong>30</strong>(Default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -63,6 +113,7 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,6 +123,8 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the table in the <strong>DatabaseName.TableName</strong> format.</p>
+     * 
      * <strong>example:</strong>
      * <p>tpch.lineitem</p>
      */
@@ -79,6 +132,8 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public String schemaTableName;
 
     /**
+     * <p>The start date of the time range to query. Specify the date in the yyyyMMdd format.</p>
+     * 
      * <strong>example:</strong>
      * <p>20220811</p>
      */

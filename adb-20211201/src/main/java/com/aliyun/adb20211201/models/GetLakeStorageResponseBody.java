@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLakeStorageResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code or the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetLakeStorageResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The queried lake storage.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -21,6 +25,8 @@ public class GetLakeStorageResponseBody extends TeaModel {
     public GetLakeStorageResponseBodyData data;
 
     /**
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -28,6 +34,12 @@ public class GetLakeStorageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.****</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -35,6 +47,8 @@ public class GetLakeStorageResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
      */
@@ -42,6 +56,12 @@ public class GetLakeStorageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -103,7 +123,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
 
     public static class GetLakeStorageResponseBodyDataPermissions extends TeaModel {
         /**
-         * <p>具有该权限的账户或RAM用户ID</p>
+         * <p>The account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -112,7 +132,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String account;
 
         /**
-         * <p>表示是否允许读取湖存储的权限</p>
+         * <p>The read permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -121,7 +141,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public Boolean read;
 
         /**
-         * <p>指定权限的账户类型</p>
+         * <p>The account type.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -132,7 +152,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>表示是否允许向湖存储写入数据的权限</p>
+         * <p>The write permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -181,7 +201,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
 
     public static class GetLakeStorageResponseBodyData extends TeaModel {
         /**
-         * <p>湖存储被创建的时间</p>
+         * <p>The time when the lake storage was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-15T07:24:58Z</p>
@@ -190,7 +210,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>创建湖存储的用户账号的唯一标识符</p>
+         * <p>The creator UID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -199,7 +219,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String creatorUid;
 
         /**
-         * <p>用于指定和挂载到特定ADB主实例的湖存储</p>
+         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-*******</p>
@@ -208,7 +228,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>对湖存储的描述信息</p>
+         * <p>The description of the lake storage.</p>
          * 
          * <strong>example:</strong>
          * <p>a test db</p>
@@ -217,7 +237,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>湖存储中数据的总存储量</p>
+         * <p>The total storage size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -226,7 +246,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String fileSize;
 
         /**
-         * <p>用于识别特定湖存储的唯一标识符</p>
+         * <p>The unique identifier of the lake storage.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -237,7 +257,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String lakeStorageId;
 
         /**
-         * <p>最后操作湖存储的用户账号的唯一标识符</p>
+         * <p>The operator UID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -246,7 +266,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String operatorUid;
 
         /**
-         * <p>拥有湖存储资源的用户账号的唯一标识符</p>
+         * <p>The owner UID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -255,6 +275,8 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String ownerUid;
 
         /**
+         * <p>The number of partitions.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -264,7 +286,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String partitionCount;
 
         /**
-         * <p>设置湖存储的读/写权限和账户级别权限的数组</p>
+         * <p>The permissions on the lake storage.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -275,7 +297,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public java.util.List<GetLakeStorageResponseBodyDataPermissions> permissions;
 
         /**
-         * <p>指定要操作的湖存储所在区域的ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -284,7 +306,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>湖存储中所有库表的总数据行数</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -295,7 +317,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public Long rowCount;
 
         /**
-         * <p>湖存储中库表的总数量</p>
+         * <p>The number of the tables.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -306,7 +328,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public Integer tableCount;
 
         /**
-         * <p>湖存储最后一次更新的时间</p>
+         * <p>The time when the lake storage was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T02:28:41Z</p>

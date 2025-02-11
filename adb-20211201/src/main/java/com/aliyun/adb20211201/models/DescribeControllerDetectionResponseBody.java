@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeControllerDetectionResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-xxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The queried detection items and detection results.</p>
+     */
     @NameInMap("DetectionItems")
     public java.util.List<DescribeControllerDetectionResponseBodyDetectionItems> detectionItems;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>257FAE29-ED5F-586C-94E4-43BD1392F238</p>
      */
@@ -22,6 +29,8 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -66,13 +75,26 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
     }
 
     public static class DescribeControllerDetectionResponseBodyDetectionItems extends TeaModel {
+        /**
+         * <p>The information about the detection result.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The name of the detection item.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The severity level of the detection result. Valid values:</p>
+         * <ul>
+         * <li>NORMAL</li>
+         * <li>WARNING</li>
+         * <li>CRITICAL</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL
          * WARNING

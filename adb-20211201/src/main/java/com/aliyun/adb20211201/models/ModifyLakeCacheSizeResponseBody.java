@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ModifyLakeCacheSizeResponseBody extends TeaModel {
     /**
+     * <p>The status code. The value 200 indicates that the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ModifyLakeCacheSizeResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>494486CE-6F49-574E-B304-29127EA12E36</p>
      */
@@ -52,6 +59,8 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
 
     public static class ModifyLakeCacheSizeResponseBodyData extends TeaModel {
         /**
+         * <p>The size of the lake cache space. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -59,12 +68,17 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
         public Long capacity;
 
         /**
+         * <p>The size of the data that occupies the lake cache space. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("DataSize")
         public Long dataSize;
 
+        /**
+         * <p>The clusters that share the lake cache space.</p>
+         */
         @NameInMap("Instances")
         public java.util.List<String> instances;
 

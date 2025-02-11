@@ -4,6 +4,10 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class CreateDBResourceGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5m</p>
+     */
     @NameInMap("AutoStopInterval")
     public String autoStopInterval;
 
@@ -48,9 +52,17 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     @NameInMap("EnableSpot")
     public Boolean enableSpot;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SparkWarehouse</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;spark.adb.version\&quot;:\&quot;3.5\&quot;}</p>
+     */
     @NameInMap("EngineParams")
     public java.util.Map<String, ?> engineParams;
 
