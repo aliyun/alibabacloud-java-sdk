@@ -95,6 +95,9 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         @NameInMap("created_at")
         public String createdAt;
 
+        @NameInMap("grayscale_config")
+        public String grayscaleConfig;
+
         /**
          * <strong>example:</strong>
          * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
@@ -135,6 +138,14 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         }
         public String getCreatedAt() {
             return this.createdAt;
+        }
+
+        public ListClusterAgentInstallRecordsResponseBodyData setGrayscaleConfig(String grayscaleConfig) {
+            this.grayscaleConfig = grayscaleConfig;
+            return this;
+        }
+        public String getGrayscaleConfig() {
+            return this.grayscaleConfig;
         }
 
         public ListClusterAgentInstallRecordsResponseBodyData setPluginId(String pluginId) {
