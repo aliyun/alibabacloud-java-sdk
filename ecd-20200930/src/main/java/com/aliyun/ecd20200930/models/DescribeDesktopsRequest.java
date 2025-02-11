@@ -158,6 +158,9 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    @NameInMap("MultiResource")
+    public Boolean multiResource;
+
     /**
      * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
      * 
@@ -423,6 +426,14 @@ public class DescribeDesktopsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public DescribeDesktopsRequest setMultiResource(Boolean multiResource) {
+        this.multiResource = multiResource;
+        return this;
+    }
+    public Boolean getMultiResource() {
+        return this.multiResource;
     }
 
     public DescribeDesktopsRequest setNextToken(String nextToken) {

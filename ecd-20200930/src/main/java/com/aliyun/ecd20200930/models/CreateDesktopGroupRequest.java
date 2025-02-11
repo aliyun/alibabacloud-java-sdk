@@ -76,7 +76,6 @@ public class CreateDesktopGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the desktop template.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>b-je9hani001wfn****</p>
@@ -139,6 +138,15 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("ConnectDuration")
     public Long connectDuration;
 
+    @NameInMap("DataDiskCategory")
+    public String dataDiskCategory;
+
+    @NameInMap("DataDiskPerLevel")
+    public String dataDiskPerLevel;
+
+    @NameInMap("DataDiskSize")
+    public Integer dataDiskSize;
+
     /**
      * <p>The default number of cloud desktops to create when you create the desktop group. Default value: 1.</p>
      * 
@@ -148,6 +156,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("DefaultInitDesktopCount")
     public Integer defaultInitDesktopCount;
 
+    @NameInMap("DefaultLanguage")
+    public String defaultLanguage;
+
     /**
      * <p>The name of the desktop group.</p>
      * 
@@ -156,6 +167,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
      */
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;
+
+    @NameInMap("DesktopType")
+    public String desktopType;
 
     /**
      * <p>The ID of the directory.</p>
@@ -172,6 +186,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
+    @NameInMap("ExclusiveType")
+    public String exclusiveType;
+
     /**
      * <p>The File Storage NAS (NAS) file system that is used after data roaming is enabled.</p>
      * 
@@ -180,6 +197,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
+
+    @NameInMap("GroupAmount")
+    public Integer groupAmount;
 
     /**
      * <p>The desktop group version.</p>
@@ -190,6 +210,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("GroupVersion")
     public Integer groupVersion;
 
+    @NameInMap("Hostname")
+    public String hostname;
+
     /**
      * <p>The maximum period of time for which a session remains idle. If an end user performs no operations on a cloud desktop by using keyboards or mouses during a session, the session becomes idle. When the specified maximum period of time is reached, the session automatically disconnects. Unit: milliseconds. This parameter is required only for cloud desktops in the same desktop group.</p>
      * 
@@ -198,6 +221,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
      */
     @NameInMap("IdleDisconnectDuration")
     public Long idleDisconnectDuration;
+
+    @NameInMap("ImageId")
+    public String imageId;
 
     /**
      * <p>The retention period of the cloud desktop after the end user disconnects from the cloud desktop. Unit: milliseconds.</p>
@@ -234,6 +260,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
      */
     @NameInMap("MinDesktopsCount")
     public Integer minDesktopsCount;
+
+    @NameInMap("MultiResource")
+    public Boolean multiResource;
 
     /**
      * <p>The ID of the workspace.</p>
@@ -353,6 +382,12 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("ScaleStrategyId")
     public String scaleStrategyId;
 
+    @NameInMap("SessionType")
+    public String sessionType;
+
+    @NameInMap("SnapshotPolicyId")
+    public String snapshotPolicyId;
+
     /**
      * <p>The period of time before the idle cloud desktop is stopped. When the specified period of time is reached, the idle cloud desktop automatically stops. If an end user connects to a stopped cloud desktop, the cloud desktop automatically starts. Unit: milliseconds.</p>
      * 
@@ -362,11 +397,23 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("StopDuration")
     public Long stopDuration;
 
+    @NameInMap("SystemDiskCategory")
+    public String systemDiskCategory;
+
+    @NameInMap("SystemDiskPerLevel")
+    public String systemDiskPerLevel;
+
+    @NameInMap("SystemDiskSize")
+    public Integer systemDiskSize;
+
     /**
      * <p>The tags that you want to attach to the cloud computer pool. You can specify 1 to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDesktopGroupRequestTag> tag;
+
+    @NameInMap("TimerGroupId")
+    public String timerGroupId;
 
     /**
      * <p>Specifies whether to enable disk encryption.</p>
@@ -504,6 +551,30 @@ public class CreateDesktopGroupRequest extends TeaModel {
         return this.connectDuration;
     }
 
+    public CreateDesktopGroupRequest setDataDiskCategory(String dataDiskCategory) {
+        this.dataDiskCategory = dataDiskCategory;
+        return this;
+    }
+    public String getDataDiskCategory() {
+        return this.dataDiskCategory;
+    }
+
+    public CreateDesktopGroupRequest setDataDiskPerLevel(String dataDiskPerLevel) {
+        this.dataDiskPerLevel = dataDiskPerLevel;
+        return this;
+    }
+    public String getDataDiskPerLevel() {
+        return this.dataDiskPerLevel;
+    }
+
+    public CreateDesktopGroupRequest setDataDiskSize(Integer dataDiskSize) {
+        this.dataDiskSize = dataDiskSize;
+        return this;
+    }
+    public Integer getDataDiskSize() {
+        return this.dataDiskSize;
+    }
+
     public CreateDesktopGroupRequest setDefaultInitDesktopCount(Integer defaultInitDesktopCount) {
         this.defaultInitDesktopCount = defaultInitDesktopCount;
         return this;
@@ -512,12 +583,28 @@ public class CreateDesktopGroupRequest extends TeaModel {
         return this.defaultInitDesktopCount;
     }
 
+    public CreateDesktopGroupRequest setDefaultLanguage(String defaultLanguage) {
+        this.defaultLanguage = defaultLanguage;
+        return this;
+    }
+    public String getDefaultLanguage() {
+        return this.defaultLanguage;
+    }
+
     public CreateDesktopGroupRequest setDesktopGroupName(String desktopGroupName) {
         this.desktopGroupName = desktopGroupName;
         return this;
     }
     public String getDesktopGroupName() {
         return this.desktopGroupName;
+    }
+
+    public CreateDesktopGroupRequest setDesktopType(String desktopType) {
+        this.desktopType = desktopType;
+        return this;
+    }
+    public String getDesktopType() {
+        return this.desktopType;
     }
 
     public CreateDesktopGroupRequest setDirectoryId(String directoryId) {
@@ -536,12 +623,28 @@ public class CreateDesktopGroupRequest extends TeaModel {
         return this.endUserIds;
     }
 
+    public CreateDesktopGroupRequest setExclusiveType(String exclusiveType) {
+        this.exclusiveType = exclusiveType;
+        return this;
+    }
+    public String getExclusiveType() {
+        return this.exclusiveType;
+    }
+
     public CreateDesktopGroupRequest setFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
     }
     public String getFileSystemId() {
         return this.fileSystemId;
+    }
+
+    public CreateDesktopGroupRequest setGroupAmount(Integer groupAmount) {
+        this.groupAmount = groupAmount;
+        return this;
+    }
+    public Integer getGroupAmount() {
+        return this.groupAmount;
     }
 
     public CreateDesktopGroupRequest setGroupVersion(Integer groupVersion) {
@@ -552,12 +655,28 @@ public class CreateDesktopGroupRequest extends TeaModel {
         return this.groupVersion;
     }
 
+    public CreateDesktopGroupRequest setHostname(String hostname) {
+        this.hostname = hostname;
+        return this;
+    }
+    public String getHostname() {
+        return this.hostname;
+    }
+
     public CreateDesktopGroupRequest setIdleDisconnectDuration(Long idleDisconnectDuration) {
         this.idleDisconnectDuration = idleDisconnectDuration;
         return this;
     }
     public Long getIdleDisconnectDuration() {
         return this.idleDisconnectDuration;
+    }
+
+    public CreateDesktopGroupRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
     }
 
     public CreateDesktopGroupRequest setKeepDuration(Long keepDuration) {
@@ -590,6 +709,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public Integer getMinDesktopsCount() {
         return this.minDesktopsCount;
+    }
+
+    public CreateDesktopGroupRequest setMultiResource(Boolean multiResource) {
+        this.multiResource = multiResource;
+        return this;
+    }
+    public Boolean getMultiResource() {
+        return this.multiResource;
     }
 
     public CreateDesktopGroupRequest setOfficeSiteId(String officeSiteId) {
@@ -680,6 +807,22 @@ public class CreateDesktopGroupRequest extends TeaModel {
         return this.scaleStrategyId;
     }
 
+    public CreateDesktopGroupRequest setSessionType(String sessionType) {
+        this.sessionType = sessionType;
+        return this;
+    }
+    public String getSessionType() {
+        return this.sessionType;
+    }
+
+    public CreateDesktopGroupRequest setSnapshotPolicyId(String snapshotPolicyId) {
+        this.snapshotPolicyId = snapshotPolicyId;
+        return this;
+    }
+    public String getSnapshotPolicyId() {
+        return this.snapshotPolicyId;
+    }
+
     public CreateDesktopGroupRequest setStopDuration(Long stopDuration) {
         this.stopDuration = stopDuration;
         return this;
@@ -688,12 +831,44 @@ public class CreateDesktopGroupRequest extends TeaModel {
         return this.stopDuration;
     }
 
+    public CreateDesktopGroupRequest setSystemDiskCategory(String systemDiskCategory) {
+        this.systemDiskCategory = systemDiskCategory;
+        return this;
+    }
+    public String getSystemDiskCategory() {
+        return this.systemDiskCategory;
+    }
+
+    public CreateDesktopGroupRequest setSystemDiskPerLevel(String systemDiskPerLevel) {
+        this.systemDiskPerLevel = systemDiskPerLevel;
+        return this;
+    }
+    public String getSystemDiskPerLevel() {
+        return this.systemDiskPerLevel;
+    }
+
+    public CreateDesktopGroupRequest setSystemDiskSize(Integer systemDiskSize) {
+        this.systemDiskSize = systemDiskSize;
+        return this;
+    }
+    public Integer getSystemDiskSize() {
+        return this.systemDiskSize;
+    }
+
     public CreateDesktopGroupRequest setTag(java.util.List<CreateDesktopGroupRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<CreateDesktopGroupRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateDesktopGroupRequest setTimerGroupId(String timerGroupId) {
+        this.timerGroupId = timerGroupId;
+        return this;
+    }
+    public String getTimerGroupId() {
+        return this.timerGroupId;
     }
 
     public CreateDesktopGroupRequest setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {

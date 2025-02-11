@@ -269,6 +269,9 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SavingPlanId")
+    public String savingPlanId;
+
     @NameInMap("SnapshotPolicyId")
     public String snapshotPolicyId;
 
@@ -543,6 +546,14 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateDesktopsShrinkRequest setSavingPlanId(String savingPlanId) {
+        this.savingPlanId = savingPlanId;
+        return this;
+    }
+    public String getSavingPlanId() {
+        return this.savingPlanId;
     }
 
     public CreateDesktopsShrinkRequest setSnapshotPolicyId(String snapshotPolicyId) {

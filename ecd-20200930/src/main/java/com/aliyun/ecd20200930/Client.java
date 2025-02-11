@@ -2577,12 +2577,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ConnectDuration", request.connectDuration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dataDiskCategory)) {
+            query.put("DataDiskCategory", request.dataDiskCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataDiskPerLevel)) {
+            query.put("DataDiskPerLevel", request.dataDiskPerLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataDiskSize)) {
+            query.put("DataDiskSize", request.dataDiskSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.defaultInitDesktopCount)) {
             query.put("DefaultInitDesktopCount", request.defaultInitDesktopCount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultLanguage)) {
+            query.put("DefaultLanguage", request.defaultLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desktopGroupName)) {
             query.put("DesktopGroupName", request.desktopGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopType)) {
+            query.put("DesktopType", request.desktopType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
@@ -2593,16 +2613,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndUserIds", request.endUserIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.exclusiveType)) {
+            query.put("ExclusiveType", request.exclusiveType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
             query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupAmount)) {
+            query.put("GroupAmount", request.groupAmount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupVersion)) {
             query.put("GroupVersion", request.groupVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hostname)) {
+            query.put("Hostname", request.hostname);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.idleDisconnectDuration)) {
             query.put("IdleDisconnectDuration", request.idleDisconnectDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.keepDuration)) {
@@ -2619,6 +2655,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.minDesktopsCount)) {
             query.put("MinDesktopsCount", request.minDesktopsCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiResource)) {
+            query.put("MultiResource", request.multiResource);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
@@ -2665,12 +2705,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScaleStrategyId", request.scaleStrategyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionType)) {
+            query.put("SessionType", request.sessionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotPolicyId)) {
+            query.put("SnapshotPolicyId", request.snapshotPolicyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.stopDuration)) {
             query.put("StopDuration", request.stopDuration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDiskCategory)) {
+            query.put("SystemDiskCategory", request.systemDiskCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDiskPerLevel)) {
+            query.put("SystemDiskPerLevel", request.systemDiskPerLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDiskSize)) {
+            query.put("SystemDiskSize", request.systemDiskSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timerGroupId)) {
+            query.put("TimerGroupId", request.timerGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.volumeEncryptionEnabled)) {
@@ -2955,6 +3019,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.savingPlanId)) {
+            query.put("SavingPlanId", request.savingPlanId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotPolicyId)) {
@@ -5893,6 +5961,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesktopGroupId", request.desktopGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopGroupIds)) {
+            query.put("DesktopGroupIds", request.desktopGroupIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desktopGroupName)) {
             query.put("DesktopGroupName", request.desktopGroupName);
         }
@@ -5911,6 +5983,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiResource)) {
+            query.put("MultiResource", request.multiResource);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
@@ -6408,6 +6484,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SortType", request.sortType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.supportMinSessionCount)) {
+            query.put("SupportMinSessionCount", request.supportMinSessionCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -6526,6 +6610,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiResource)) {
+            query.put("MultiResource", request.multiResource);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {

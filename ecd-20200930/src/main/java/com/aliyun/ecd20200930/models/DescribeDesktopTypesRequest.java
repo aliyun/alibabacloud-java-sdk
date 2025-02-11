@@ -309,6 +309,12 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("SortType")
     public String sortType;
 
+    @NameInMap("SupportMinSessionCount")
+    public Integer supportMinSessionCount;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
+
     public static DescribeDesktopTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopTypesRequest self = new DescribeDesktopTypesRequest();
         return TeaModel.build(map, self);
@@ -432,6 +438,22 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     }
     public String getSortType() {
         return this.sortType;
+    }
+
+    public DescribeDesktopTypesRequest setSupportMinSessionCount(Integer supportMinSessionCount) {
+        this.supportMinSessionCount = supportMinSessionCount;
+        return this;
+    }
+    public Integer getSupportMinSessionCount() {
+        return this.supportMinSessionCount;
+    }
+
+    public DescribeDesktopTypesRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

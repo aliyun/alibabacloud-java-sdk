@@ -13,6 +13,9 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    @NameInMap("DesktopGroupIds")
+    public java.util.List<String> desktopGroupIds;
+
     /**
      * <p>The IDs of the orders.</p>
      */
@@ -39,6 +42,14 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
     }
     public String getDesktopGroupId() {
         return this.desktopGroupId;
+    }
+
+    public CreateDesktopGroupResponseBody setDesktopGroupIds(java.util.List<String> desktopGroupIds) {
+        this.desktopGroupIds = desktopGroupIds;
+        return this;
+    }
+    public java.util.List<String> getDesktopGroupIds() {
+        return this.desktopGroupIds;
     }
 
     public CreateDesktopGroupResponseBody setOrderIds(java.util.List<String> orderIds) {

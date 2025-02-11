@@ -107,6 +107,9 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
+        @NameInMap("MaxSessionCount")
+        public Integer maxSessionCount;
+
         /**
          * <p>The memory size. Unit: MiB.</p>
          * 
@@ -198,6 +201,14 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         }
         public String getInstanceTypeFamily() {
             return this.instanceTypeFamily;
+        }
+
+        public DescribeDesktopTypesResponseBodyDesktopTypes setMaxSessionCount(Integer maxSessionCount) {
+            this.maxSessionCount = maxSessionCount;
+            return this;
+        }
+        public Integer getMaxSessionCount() {
+            return this.maxSessionCount;
         }
 
         public DescribeDesktopTypesResponseBodyDesktopTypes setMemorySize(String memorySize) {

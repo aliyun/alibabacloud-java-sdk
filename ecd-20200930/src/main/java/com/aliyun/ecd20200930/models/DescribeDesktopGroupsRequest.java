@@ -19,6 +19,9 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    @NameInMap("DesktopGroupIds")
+    public java.util.List<String> desktopGroupIds;
+
     /**
      * <p>The name of the cloud computer pool to query. Fuzzy search is supported.</p>
      * 
@@ -57,6 +60,9 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("MultiResource")
+    public Boolean multiResource;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
@@ -216,6 +222,14 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
         return this.desktopGroupId;
     }
 
+    public DescribeDesktopGroupsRequest setDesktopGroupIds(java.util.List<String> desktopGroupIds) {
+        this.desktopGroupIds = desktopGroupIds;
+        return this;
+    }
+    public java.util.List<String> getDesktopGroupIds() {
+        return this.desktopGroupIds;
+    }
+
     public DescribeDesktopGroupsRequest setDesktopGroupName(String desktopGroupName) {
         this.desktopGroupName = desktopGroupName;
         return this;
@@ -254,6 +268,14 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public DescribeDesktopGroupsRequest setMultiResource(Boolean multiResource) {
+        this.multiResource = multiResource;
+        return this;
+    }
+    public Boolean getMultiResource() {
+        return this.multiResource;
     }
 
     public DescribeDesktopGroupsRequest setNextToken(String nextToken) {
