@@ -81,10 +81,8 @@ public class DescribeMonitorDataRequest extends TeaModel {
     /**
      * <p>The interval at which the monitoring data is queried. Valid values: 60, 300, and 900. Unit: seconds.</p>
      * <blockquote>
-     * </blockquote>
      * <p>If MetricName is set to FLOW_USED, Period is set to 3600 (one hour). In other cases, set Period based on your business requirements.</p>
-     * <p>**</p>
-     * <hr>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,14 +105,14 @@ public class DescribeMonitorDataRequest extends TeaModel {
      * <p>The beginning of the time range to query. The following formats are supported:</p>
      * <ul>
      * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 January 1, 1970.</li>
-     * <li>Time format: YYYY-MM-DDThh:mm:ssZ.</li>
+     * <li>Time format: YYYY-MM-DDThh:mm:ssZ.<blockquote>
+     * <ul>
+     * <li>The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.</li>
+     * <li>The interval between the start time and the end time is less than or equal to 31 days.</li>
      * </ul>
-     * <blockquote>
-     * <p>The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.</p>
      * </blockquote>
-     * <p>The interval between the start time and the end time is less than or equal to 31 days.</p>
-     * <p>**</p>
-     * <hr>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

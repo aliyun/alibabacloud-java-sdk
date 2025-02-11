@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A collection of resource IDs and tags. The information includes the resource IDs, resource types, and key-value pairs.</p>
+     * <p>A collection of resources and the tags of the resources. The information includes the resource IDs, resource types, and key-value pairs of tags.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -68,7 +68,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>instance</li>
+         * <li>snapshot</li>
+         * <li>customimage</li>
+         * <li>command</li>
+         * <li>firewallrule</li>
+         * <li>disk</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::SWAS::INSTANCE</p>

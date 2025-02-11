@@ -23,7 +23,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The results.</p>
+     * <p>The request results.</p>
      */
     @NameInMap("Results")
     public java.util.List<AttachKeyPairResponseBodyResults> results;

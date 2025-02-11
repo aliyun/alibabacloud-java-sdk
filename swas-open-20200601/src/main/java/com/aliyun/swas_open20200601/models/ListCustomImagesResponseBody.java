@@ -249,6 +249,8 @@ public class ListCustomImagesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The size of the image data disk. Unit: GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -256,6 +258,8 @@ public class ListCustomImagesResponseBody extends TeaModel {
         public Integer requiredDataDiskSize;
 
         /**
+         * <p>The size of the image system disk. Unit: GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -272,6 +276,8 @@ public class ListCustomImagesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The name of the source image that is used to create the simple application server.</p>
+         * 
          * <strong>example:</strong>
          * <p>CentOS</p>
          */
@@ -279,6 +285,8 @@ public class ListCustomImagesResponseBody extends TeaModel {
         public String sourceImageName;
 
         /**
+         * <p>The version of the source image that is used to create the simple application server.</p>
+         * 
          * <strong>example:</strong>
          * <p>8.0</p>
          */

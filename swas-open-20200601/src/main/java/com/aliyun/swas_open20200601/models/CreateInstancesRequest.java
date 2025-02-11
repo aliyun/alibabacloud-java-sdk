@@ -29,7 +29,7 @@ public class CreateInstancesRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period. This parameter is required only when you set <code>AutoRenew</code> to true. Unit: months. Valid values: 1, 3, 6, 12, 24, and 36.</p>
+     * <p>The auto-renewal period. This parameter is required only when you set <code>AutoRenew</code> to true. Unit: month. Valid values: 1, 3, 6, 12, 24, and 36.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

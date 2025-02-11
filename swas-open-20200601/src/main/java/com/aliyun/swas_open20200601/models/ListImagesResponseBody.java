@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
     /**
-     * <p>The OS type of the image. Valid values:</p>
-     * <ul>
-     * <li>Linux</li>
-     * <li>Windows</li>
-     * </ul>
+     * <p>The information of the image.</p>
      */
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
@@ -47,6 +43,10 @@ public class ListImagesResponseBody extends TeaModel {
     public static class ListImagesResponseBodyImages extends TeaModel {
         /**
          * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apps ImageOS ImageCustom Images
+         * WordPress is a popular and powerful platform that allows you to build blogs and content management websites and implement custom features by using third-party templates and plug-ins. This WordPress image is built based on CentOS 7.9, PHP 7.4, MySQL 5.7, and Apache 2.4.</p>
          */
         @NameInMap("Description")
         public String description;

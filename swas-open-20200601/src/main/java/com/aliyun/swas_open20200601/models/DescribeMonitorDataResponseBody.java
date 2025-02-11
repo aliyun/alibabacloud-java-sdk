@@ -25,10 +25,8 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
     /**
      * <p>The interval at which the monitoring data is queried. Valid values: 60, 300, and 900. Unit: seconds.</p>
      * <blockquote>
+     * <p>If MetricName is set to FLOW_USED, Period is set to 3600 (one hour). In other cases, set Period based on your business requirements.</p>
      * </blockquote>
-     * <p>If MetricName is set to FLOW_USED, the value of Period is 3600 (one hour).</p>
-     * <p>**</p>
-     * <hr>
      * 
      * <strong>example:</strong>
      * <p>60</p>

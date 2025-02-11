@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPlansResponseBody extends TeaModel {
     /**
-     * <p>The operating system types supported by the plan.</p>
+     * <p>Details about the plans.</p>
      */
     @NameInMap("Plans")
     public java.util.List<ListPlansResponseBodyPlans> plans;

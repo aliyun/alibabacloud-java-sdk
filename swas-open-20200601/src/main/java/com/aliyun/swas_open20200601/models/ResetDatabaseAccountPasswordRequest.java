@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetDatabaseAccountPasswordRequest extends TeaModel {
     /**
-     * <p>The password of the database administrator account.</p>
+     * <p>The password of the administrator account of the Simple Database Service instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
