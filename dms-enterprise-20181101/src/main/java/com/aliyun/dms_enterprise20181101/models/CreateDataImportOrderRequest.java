@@ -188,6 +188,9 @@ public class CreateDataImportOrderRequest extends TeaModel {
         @NameInMap("DbItemList")
         public java.util.List<CreateDataImportOrderRequestParamDbItemList> dbItemList;
 
+        @NameInMap("ExecMode")
+        public String execMode;
+
         /**
          * <p>The encoding algorithm to be used by the destination database. Valid values:</p>
          * <ul>
@@ -344,6 +347,14 @@ public class CreateDataImportOrderRequest extends TeaModel {
         }
         public java.util.List<CreateDataImportOrderRequestParamDbItemList> getDbItemList() {
             return this.dbItemList;
+        }
+
+        public CreateDataImportOrderRequestParam setExecMode(String execMode) {
+            this.execMode = execMode;
+            return this;
+        }
+        public String getExecMode() {
+            return this.execMode;
         }
 
         public CreateDataImportOrderRequestParam setFileEncoding(String fileEncoding) {
