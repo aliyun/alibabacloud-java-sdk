@@ -73,6 +73,9 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("HealthCheckConfig")
     public CreateServerGroupRequestHealthCheckConfig healthCheckConfig;
 
+    @NameInMap("Ipv6Enabled")
+    public Boolean ipv6Enabled;
+
     /**
      * <p>The backend protocol. Valid values:</p>
      * <ul>
@@ -250,6 +253,14 @@ public class CreateServerGroupRequest extends TeaModel {
     }
     public CreateServerGroupRequestHealthCheckConfig getHealthCheckConfig() {
         return this.healthCheckConfig;
+    }
+
+    public CreateServerGroupRequest setIpv6Enabled(Boolean ipv6Enabled) {
+        this.ipv6Enabled = ipv6Enabled;
+        return this;
+    }
+    public Boolean getIpv6Enabled() {
+        return this.ipv6Enabled;
     }
 
     public CreateServerGroupRequest setProtocol(String protocol) {
