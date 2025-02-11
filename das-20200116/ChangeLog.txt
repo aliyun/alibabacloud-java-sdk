@@ -1,3 +1,14 @@
+2025-02-11 Version: 2.7.1
+- Update API DescribeSlowLogHistogramAsync: update param EndTime.
+- Update API DescribeSlowLogHistogramAsync: update param InstanceId.
+- Update API DescribeSlowLogHistogramAsync: update param StartTime.
+- Update API DescribeSlowLogHistogramAsync: update response param.
+- Update API DescribeSlowLogStatistic: update param EndTime.
+- Update API DescribeSlowLogStatistic: update param InstanceId.
+- Update API DescribeSlowLogStatistic: update param StartTime.
+- Update API DescribeSlowLogStatistic: update response param.
+
+
 2024-12-26 Version: 2.7.0
 - Support API DescribeSlowLogHistogramAsync.
 - Support API DescribeSlowLogStatistic.

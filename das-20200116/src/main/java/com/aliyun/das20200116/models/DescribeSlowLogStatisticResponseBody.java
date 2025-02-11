@@ -422,12 +422,18 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @NameInMap("AvgCPUTime")
         public Double avgCPUTime;
 
+        @NameInMap("AvgCPUTimeSeconds")
+        public Double avgCPUTimeSeconds;
+
         /**
          * <strong>example:</strong>
          * <p>10000</p>
          */
         @NameInMap("AvgDocExamined")
         public Double avgDocExamined;
+
+        @NameInMap("AvgFrows")
+        public Double avgFrows;
 
         /**
          * <strong>example:</strong>
@@ -503,6 +509,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @NameInMap("AvgReturnNum")
         public Double avgReturnNum;
 
+        @NameInMap("AvgRows")
+        public Double avgRows;
+
         /**
          * <strong>example:</strong>
          * <p>1000</p>
@@ -524,6 +533,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @NameInMap("AvgRowsSent")
         public Double avgRowsSent;
 
+        @NameInMap("AvgScnt")
+        public Double avgScnt;
+
         /**
          * <strong>example:</strong>
          * <ul>
@@ -532,6 +544,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
          */
         @NameInMap("CPUTime")
         public Double CPUTime;
+
+        @NameInMap("CPUTimeSeconds")
+        public Double CPUTimeSeconds;
 
         /**
          * <strong>example:</strong>
@@ -588,6 +603,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
          */
         @NameInMap("DocsExamined")
         public Long docsExamined;
+
+        @NameInMap("Frows")
+        public Long frows;
 
         @NameInMap("Histogram")
         public DescribeSlowLogStatisticResponseBodyDataDataLogsHistogram histogram;
@@ -673,12 +691,18 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @NameInMap("MaxCPUTime")
         public Double maxCPUTime;
 
+        @NameInMap("MaxCPUTimeSeconds")
+        public Double maxCPUTimeSeconds;
+
         /**
          * <strong>example:</strong>
          * <p>1000000</p>
          */
         @NameInMap("MaxDocExamined")
         public Long maxDocExamined;
+
+        @NameInMap("MaxFrows")
+        public Long maxFrows;
 
         /**
          * <strong>example:</strong>
@@ -754,6 +778,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @NameInMap("MaxReturnNum")
         public Long maxReturnNum;
 
+        @NameInMap("MaxRows")
+        public Long maxRows;
+
         /**
          * <strong>example:</strong>
          * <p>1000</p>
@@ -774,6 +801,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
          */
         @NameInMap("MaxRowsSent")
         public Long maxRowsSent;
+
+        @NameInMap("MaxScnt")
+        public Long maxScnt;
 
         /**
          * <strong>example:</strong>
@@ -862,6 +892,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @NameInMap("ReturnNum")
         public Long returnNum;
 
+        @NameInMap("Rows")
+        public Long rows;
+
         /**
          * <strong>example:</strong>
          * <p>1000</p>
@@ -896,6 +929,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
          */
         @NameInMap("Scheme")
         public String scheme;
+
+        @NameInMap("Scnt")
+        public Long scnt;
 
         /**
          * <p>SQL ID。</p>
@@ -975,12 +1011,28 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             return this.avgCPUTime;
         }
 
+        public DescribeSlowLogStatisticResponseBodyDataDataLogs setAvgCPUTimeSeconds(Double avgCPUTimeSeconds) {
+            this.avgCPUTimeSeconds = avgCPUTimeSeconds;
+            return this;
+        }
+        public Double getAvgCPUTimeSeconds() {
+            return this.avgCPUTimeSeconds;
+        }
+
         public DescribeSlowLogStatisticResponseBodyDataDataLogs setAvgDocExamined(Double avgDocExamined) {
             this.avgDocExamined = avgDocExamined;
             return this;
         }
         public Double getAvgDocExamined() {
             return this.avgDocExamined;
+        }
+
+        public DescribeSlowLogStatisticResponseBodyDataDataLogs setAvgFrows(Double avgFrows) {
+            this.avgFrows = avgFrows;
+            return this;
+        }
+        public Double getAvgFrows() {
+            return this.avgFrows;
         }
 
         public DescribeSlowLogStatisticResponseBodyDataDataLogs setAvgIOWrites(Double avgIOWrites) {
@@ -1063,6 +1115,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             return this.avgReturnNum;
         }
 
+        public DescribeSlowLogStatisticResponseBodyDataDataLogs setAvgRows(Double avgRows) {
+            this.avgRows = avgRows;
+            return this;
+        }
+        public Double getAvgRows() {
+            return this.avgRows;
+        }
+
         public DescribeSlowLogStatisticResponseBodyDataDataLogs setAvgRowsCountAffected(Double avgRowsCountAffected) {
             this.avgRowsCountAffected = avgRowsCountAffected;
             return this;
@@ -1087,12 +1147,28 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             return this.avgRowsSent;
         }
 
+        public DescribeSlowLogStatisticResponseBodyDataDataLogs setAvgScnt(Double avgScnt) {
+            this.avgScnt = avgScnt;
+            return this;
+        }
+        public Double getAvgScnt() {
+            return this.avgScnt;
+        }
+
         public DescribeSlowLogStatisticResponseBodyDataDataLogs setCPUTime(Double CPUTime) {
             this.CPUTime = CPUTime;
             return this;
         }
         public Double getCPUTime() {
             return this.CPUTime;
+        }
+
+        public DescribeSlowLogStatisticResponseBodyDataDataLogs setCPUTimeSeconds(Double CPUTimeSeconds) {
+            this.CPUTimeSeconds = CPUTimeSeconds;
+            return this;
+        }
+        public Double getCPUTimeSeconds() {
+            return this.CPUTimeSeconds;
         }
 
         public DescribeSlowLogStatisticResponseBodyDataDataLogs setCommand(String command) {
@@ -1157,6 +1233,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
         public Long getDocsExamined() {
             return this.docsExamined;
+        }
+
+        public DescribeSlowLogStatisticResponseBodyDataDataLogs setFrows(Long frows) {
+            this.frows = frows;
+            return this;
+        }
+        public Long getFrows() {
+            return this.frows;
         }
 
         public DescribeSlowLogStatisticResponseBodyDataDataLogs setHistogram(DescribeSlowLogStatisticResponseBodyDataDataLogsHistogram histogram) {
@@ -1255,12 +1339,28 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             return this.maxCPUTime;
         }
 
+        public DescribeSlowLogStatisticResponseBodyDataDataLogs setMaxCPUTimeSeconds(Double maxCPUTimeSeconds) {
+            this.maxCPUTimeSeconds = maxCPUTimeSeconds;
+            return this;
+        }
+        public Double getMaxCPUTimeSeconds() {
+            return this.maxCPUTimeSeconds;
+        }
+
         public DescribeSlowLogStatisticResponseBodyDataDataLogs setMaxDocExamined(Long maxDocExamined) {
             this.maxDocExamined = maxDocExamined;
             return this;
         }
         public Long getMaxDocExamined() {
             return this.maxDocExamined;
+        }
+
+        public DescribeSlowLogStatisticResponseBodyDataDataLogs setMaxFrows(Long maxFrows) {
+            this.maxFrows = maxFrows;
+            return this;
+        }
+        public Long getMaxFrows() {
+            return this.maxFrows;
         }
 
         public DescribeSlowLogStatisticResponseBodyDataDataLogs setMaxIOWrites(Long maxIOWrites) {
@@ -1343,6 +1443,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             return this.maxReturnNum;
         }
 
+        public DescribeSlowLogStatisticResponseBodyDataDataLogs setMaxRows(Long maxRows) {
+            this.maxRows = maxRows;
+            return this;
+        }
+        public Long getMaxRows() {
+            return this.maxRows;
+        }
+
         public DescribeSlowLogStatisticResponseBodyDataDataLogs setMaxRowsCountAffected(Long maxRowsCountAffected) {
             this.maxRowsCountAffected = maxRowsCountAffected;
             return this;
@@ -1365,6 +1473,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
         public Long getMaxRowsSent() {
             return this.maxRowsSent;
+        }
+
+        public DescribeSlowLogStatisticResponseBodyDataDataLogs setMaxScnt(Long maxScnt) {
+            this.maxScnt = maxScnt;
+            return this;
+        }
+        public Long getMaxScnt() {
+            return this.maxScnt;
         }
 
         public DescribeSlowLogStatisticResponseBodyDataDataLogs setNamespace(String namespace) {
@@ -1471,6 +1587,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             return this.returnNum;
         }
 
+        public DescribeSlowLogStatisticResponseBodyDataDataLogs setRows(Long rows) {
+            this.rows = rows;
+            return this;
+        }
+        public Long getRows() {
+            return this.rows;
+        }
+
         public DescribeSlowLogStatisticResponseBodyDataDataLogs setRowsCountAffected(Long rowsCountAffected) {
             this.rowsCountAffected = rowsCountAffected;
             return this;
@@ -1509,6 +1633,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
         public String getScheme() {
             return this.scheme;
+        }
+
+        public DescribeSlowLogStatisticResponseBodyDataDataLogs setScnt(Long scnt) {
+            this.scnt = scnt;
+            return this;
+        }
+        public Long getScnt() {
+            return this.scnt;
         }
 
         public DescribeSlowLogStatisticResponseBodyDataDataLogs setSqlId(String sqlId) {
