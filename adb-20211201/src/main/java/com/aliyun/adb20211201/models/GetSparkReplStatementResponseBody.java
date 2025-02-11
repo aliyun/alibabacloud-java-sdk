@@ -4,10 +4,15 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class GetSparkReplStatementResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetSparkReplStatementResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -37,6 +42,8 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
 
     public static class GetSparkReplStatementResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the Alibaba Cloud account that owns the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>144740799645****</p>
          */
@@ -44,6 +51,8 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
         public Long aliyunUid;
 
         /**
+         * <p>The code that is executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>print(1+1)</p>
          */
@@ -51,6 +60,14 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The code execution status. Valid values:</p>
+         * <ul>
+         * <li>CANCELLED</li>
+         * <li>RUNNING</li>
+         * <li>SUCCEEDED</li>
+         * <li>ERROR</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -58,16 +75,27 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
         public String codeState;
 
         /**
+         * <p>The code type. Valid values:</p>
+         * <ul>
+         * <li>PYTHON</li>
+         * <li>SCALA</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PYTHON</p>
          */
         @NameInMap("CodeType")
         public String codeType;
 
+        /**
+         * <p>The column names.</p>
+         */
         @NameInMap("Columns")
         public java.util.List<String> columns;
 
         /**
+         * <p>The end time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1730968194000</p>
          */
@@ -75,6 +103,8 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>stackoverflow error</p>
          */
@@ -82,6 +112,8 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
         public String error;
 
         /**
+         * <p>The code execution result, which is a JSON string.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;text/plain&quot;: 2}</p>
          */
@@ -89,6 +121,13 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
         public String output;
 
         /**
+         * <p>The execution result type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>TABLE</li>
+         * <li>TEXT</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TEXT</p>
          */
@@ -96,6 +135,8 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
         public String outputType;
 
         /**
+         * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1730968194000</p>
          */
@@ -103,6 +144,8 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The unique ID of the code block in the Spark job.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */

@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class CancelSparkReplStatementRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query Spark application IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>s202411071444hzdvk486d9d2001****</p>
      */
@@ -12,6 +17,8 @@ public class CancelSparkReplStatementRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>456</p>
      */
@@ -19,6 +26,8 @@ public class CancelSparkReplStatementRequest extends TeaModel {
     public Long sessionId;
 
     /**
+     * <p>The unique ID of the code block in the Spark job.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

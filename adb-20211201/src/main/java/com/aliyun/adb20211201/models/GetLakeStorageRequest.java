@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLakeStorageRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-*******</p>
      */
@@ -12,6 +14,8 @@ public class GetLakeStorageRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The lake storage ID.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -21,6 +25,8 @@ public class GetLakeStorageRequest extends TeaModel {
     public String lakeStorageId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

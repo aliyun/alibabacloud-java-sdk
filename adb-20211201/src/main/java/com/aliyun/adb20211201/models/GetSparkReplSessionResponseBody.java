@@ -4,10 +4,15 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class GetSparkReplSessionResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetSparkReplSessionResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4CE6DF97-AEA4-484F-906F-C407EE3770EB</p>
      */
@@ -37,6 +42,12 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
 
     public static class GetSparkReplSessionResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the session is active. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -44,6 +55,8 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
         public String active;
 
         /**
+         * <p>The ID of the Alibaba Cloud account that owns the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>178157466101****</p>
          */
@@ -51,6 +64,8 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
         public String aliyunUid;
 
         /**
+         * <p>The attempt ID of the Spark application.</p>
+         * 
          * <strong>example:</strong>
          * <p>s202301061000hz57d797b00002****</p>
          */
@@ -58,6 +73,8 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
         public String attemptId;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Session timed out</p>
          */
@@ -65,6 +82,8 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
         public String error;
 
         /**
+         * <p>The ID of the session that executes the code.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -72,6 +91,13 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
         public Long sessionId;
 
         /**
+         * <p>The status of the session. Valid values:</p>
+         * <ul>
+         * <li>IDLE</li>
+         * <li>BUSY</li>
+         * <li>DEAD</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>IDEL</p>
          */
@@ -79,6 +105,8 @@ public class GetSparkReplSessionResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The URL of the web UI for the Spark application.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=">https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=</a>****</p>
          */

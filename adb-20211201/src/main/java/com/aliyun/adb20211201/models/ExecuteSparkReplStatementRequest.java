@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ExecuteSparkReplStatementRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query Spark application IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>s202411071444hzdvk486d9d2001****</p>
      */
@@ -12,6 +17,7 @@ public class ExecuteSparkReplStatementRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The code that you want to execute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +27,11 @@ public class ExecuteSparkReplStatementRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>The language type of the code. Valid values:</p>
+     * <ul>
+     * <li>SCALA</li>
+     * <li>PYTHON</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +41,7 @@ public class ExecuteSparkReplStatementRequest extends TeaModel {
     public String codeType;
 
     /**
+     * <p>The ID of the session that you want to use to execute the code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

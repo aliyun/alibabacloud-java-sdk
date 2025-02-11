@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApsJobDetailResponseBody extends TeaModel {
     /**
+     * <p>The queried job.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -14,6 +16,8 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
     public DescribeApsJobDetailResponseBodyAPSJobDetail APSJobDetail;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>-E606-4A42-BF6D-</strong></strong></strong></p>
      */
@@ -43,6 +47,8 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
 
     public static class DescribeApsJobDetailResponseBodyAPSJobDetail extends TeaModel {
         /**
+         * <p>The objects that are synchronized.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -50,6 +56,8 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
         public String dbList;
 
         /**
+         * <p>The ID of the destination cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>amv-******</p>
          */
@@ -57,6 +65,8 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
         public String destinationEndpointInstanceID;
 
         /**
+         * <p>The region of the destination cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -64,6 +74,8 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
         public String destinationEndpointRegion;
 
         /**
+         * <p>The partitions.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -71,6 +83,8 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
         public String partitionList;
 
         /**
+         * <p>The ID of the source instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-*******</p>
          */
@@ -78,6 +92,8 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
         public String sourceEndpointInstanceID;
 
         /**
+         * <p>The region of the source instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -85,6 +101,8 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
         public String sourceEndpointRegion;
 
         /**
+         * <p>The status of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -92,6 +110,8 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The mode of the destination table.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

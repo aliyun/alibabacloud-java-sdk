@@ -18,6 +18,8 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
     public java.util.List<DescribeApsDatasourcesResponseBodyApsDatasources> apsDatasources;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -25,6 +27,8 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -32,6 +36,8 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>-5213-</strong></strong></strong>-B608-******</p>
      */
@@ -39,6 +45,8 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -92,6 +100,8 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourcesResponseBodyApsDatasources extends TeaModel {
         /**
+         * <p>The time when the data source was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-10 14:44:33</p>
          */
@@ -99,6 +109,8 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -106,6 +118,8 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         public String datasourceDescription;
 
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -113,6 +127,8 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         public Long datasourceId;
 
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -120,6 +136,8 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         public String datasourceName;
 
         /**
+         * <p>The type of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>SLS</p>
          */
@@ -127,6 +145,8 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         public String datasourceType;
 
         /**
+         * <p>Indicates whether a job is using the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

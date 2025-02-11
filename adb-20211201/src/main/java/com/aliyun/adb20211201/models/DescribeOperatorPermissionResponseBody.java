@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOperatorPermissionResponseBody extends TeaModel {
     /**
+     * <p>The time when the permissions take effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-02-25T03:35:02Z</p>
      */
@@ -12,6 +14,8 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
     public String createdTime;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-uf6wjk5xxxxxxxxxx</p>
      */
@@ -19,6 +23,8 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The time when the permissions expire.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-10T02:19:00Z</p>
      */
@@ -26,6 +32,8 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
     public String expiredTime;
 
     /**
+     * <p>The queried permissions.</p>
+     * 
      * <strong>example:</strong>
      * <p>Control,Data</p>
      */
@@ -33,6 +41,8 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
     public String privileges;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */

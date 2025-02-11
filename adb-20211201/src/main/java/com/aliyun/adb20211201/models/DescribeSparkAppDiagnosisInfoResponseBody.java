@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     /**
+     * <p>The information about the request denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
@@ -20,6 +22,11 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The application ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>s202404141952sz6a1391200****</p>
      */
@@ -27,16 +34,23 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public String appId;
 
     /**
+     * <p>The CPU utilization. Unit: %.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("CpuUtilization")
     public Double cpuUtilization;
 
+    /**
+     * <p>The queried diagnostic information.</p>
+     */
     @NameInMap("DiagnosisInfoList")
     public java.util.List<Adb4MysqlSparkDiagnosisInfo> diagnosisInfoList;
 
     /**
+     * <p>The execution duration of the application. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>281063</p>
      */
@@ -44,6 +58,8 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public Long durationInMillis;
 
     /**
+     * <p>The amount of time consumed by the Java virtual machine to perform garbage collection operations. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>81055</p>
      */
@@ -51,6 +67,8 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public Long JVMGcCostInMillis;
 
     /**
+     * <p>The peak memory usage. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>4096000</p>
      */
@@ -58,6 +76,8 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public Long peakMemoryInByte;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FB5AC339-91F6-5000-8E5A-F47065B01B87</p>
      */
@@ -65,6 +85,8 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The amount of data used for shuffle reads. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>4096000</p>
      */
@@ -72,6 +94,8 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public Long shuffleReadInByte;
 
     /**
+     * <p>The amount of data used for shuffle writes. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>4096000</p>
      */
@@ -79,6 +103,8 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public Long shuffleWriteInByte;
 
     /**
+     * <p>The amount of data spilled to disks when the memory is insufficient. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -86,6 +112,8 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public Long spillInByte;
 
     /**
+     * <p>The time when the application started to be executed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1718329831000</p>
      */
@@ -93,6 +121,13 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public Long startedTime;
 
     /**
+     * <p>The status of the asynchronous import or export job. Valid values:</p>
+     * <ul>
+     * <li><strong>RUNNING</strong></li>
+     * <li><strong>FINISHED</strong></li>
+     * <li><strong>FAILED</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FINISHED</p>
      */

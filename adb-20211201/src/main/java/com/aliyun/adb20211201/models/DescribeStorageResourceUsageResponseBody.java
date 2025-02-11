@@ -108,7 +108,7 @@ public class DescribeStorageResourceUsageResponseBody extends TeaModel {
         public java.util.List<DescribeStorageResourceUsageResponseBodyDataAcuInfo> acuInfo;
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-bp1bg858bo8c****</p>

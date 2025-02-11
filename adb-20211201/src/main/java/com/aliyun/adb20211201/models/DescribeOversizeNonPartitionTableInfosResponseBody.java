@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>am-bp16t5ci7r74s****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The queried detection items and detection results.</p>
+     */
     @NameInMap("DetectionItems")
     public java.util.List<DescribeOversizeNonPartitionTableInfosResponseBodyDetectionItems> detectionItems;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,13 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -29,16 +43,23 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried oversized non-partitioned tables.</p>
+     */
     @NameInMap("Tables")
     public java.util.List<DescribeOversizeNonPartitionTableInfosResponseBodyTables> tables;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -107,13 +128,21 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
     }
 
     public static class DescribeOversizeNonPartitionTableInfosResponseBodyDetectionItems extends TeaModel {
+        /**
+         * <p>The information about the detection result.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The name of the detection item.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The severity level of the detection result.</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL
          * WARNING
@@ -155,6 +184,8 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
 
     public static class DescribeOversizeNonPartitionTableInfosResponseBodyTables extends TeaModel {
         /**
+         * <p>The data size of the table. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2921132457984</p>
          */
@@ -162,6 +193,8 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         public Long dataSize;
 
         /**
+         * <p>The data size of regular indexes. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -169,6 +202,8 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         public Long indexSize;
 
         /**
+         * <p>The size of hot data. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1223</p>
          */
@@ -176,6 +211,8 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         public Long localDataSize;
 
         /**
+         * <p>The data size of the primary key index. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -183,6 +220,8 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         public Long primaryKeySize;
 
         /**
+         * <p>The size of cold data. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>122</p>
          */
@@ -190,6 +229,8 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         public Long remoteDataSize;
 
         /**
+         * <p>The number of rows in the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>1222</p>
          */
@@ -197,6 +238,8 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         public Long rowCount;
 
         /**
+         * <p>The name of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>adb_demo</p>
          */
@@ -204,6 +247,11 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         public String schemaName;
 
         /**
+         * <p>The percentage of the table size. Unit: %.</p>
+         * <blockquote>
+         * <p> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.3</p>
          */
@@ -211,6 +259,8 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         public Double spaceRatio;
 
         /**
+         * <p>The name of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

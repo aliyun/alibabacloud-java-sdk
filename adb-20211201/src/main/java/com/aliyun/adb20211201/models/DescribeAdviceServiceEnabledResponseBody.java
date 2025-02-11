@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a <strong>Success</strong> message is returned.</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +18,8 @@ public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E031AABF-BD56-5966-A063-4283EF18DB45</p>
      */
@@ -19,6 +27,12 @@ public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the suggestion feature is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>True</strong></li>
+     * <li><strong>False</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */

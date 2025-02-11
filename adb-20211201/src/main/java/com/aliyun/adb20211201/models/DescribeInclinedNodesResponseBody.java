@@ -4,10 +4,15 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeInclinedNodesResponseBody extends TeaModel {
+    /**
+     * <p>The queried storage nodes.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeInclinedNodesResponseBodyItems> items;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C0BF6685-0519-543E-90F8-DB8949E4D5F2</p>
      */
@@ -37,6 +42,8 @@ public class DescribeInclinedNodesResponseBody extends TeaModel {
 
     public static class DescribeInclinedNodesResponseBodyItems extends TeaModel {
         /**
+         * <p>The disk usage of the storage node.</p>
+         * 
          * <strong>example:</strong>
          * <p>90.5</p>
          */
@@ -44,6 +51,8 @@ public class DescribeInclinedNodesResponseBody extends TeaModel {
         public String diskUsageRatio;
 
         /**
+         * <p>The number of the storage node.</p>
+         * 
          * <strong>example:</strong>
          * <p>Node1</p>
          */

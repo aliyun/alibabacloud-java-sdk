@@ -18,7 +18,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBClusterDescription;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
      * <p>If you do not specify this parameter, the information about all clusters that reside in the region is returned.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +59,17 @@ public class DescribeDBClustersRequest extends TeaModel {
     @NameInMap("DBClusterStatus")
     public String DBClusterStatus;
 
+    /**
+     * <p>The database engine version of the cluster. Valid values:</p>
+     * <ul>
+     * <li>3.0: Data Warehouse Edition.</li>
+     * <li>5.0 (default): Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</li>
+     * <li>All: Data Warehouse Edition, Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>5.0</p>
+     */
     @NameInMap("DBClusterVersion")
     public String DBClusterVersion;
 
@@ -85,6 +96,17 @@ public class DescribeDBClustersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The edition of the cluster. Valid values:</p>
+     * <ul>
+     * <li>EnterpriseVersion: Enterprise Edition.</li>
+     * <li>BasicVersion: Basic Edition.</li>
+     * </ul>
+     * <p>If you leave this parameter empty, the information about clusters of all editions is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BasicVersion</p>
+     */
     @NameInMap("ProductVersion")
     public String productVersion;
 

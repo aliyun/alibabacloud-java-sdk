@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeLakeCacheSizeResponseBody extends TeaModel {
     /**
+     * <p>The status code. The value 200 indicates that the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeLakeCacheSizeResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -52,6 +59,8 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
 
     public static class DescribeLakeCacheSizeResponseBodyData extends TeaModel {
         /**
+         * <p>The size of the lake cache space. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -59,6 +68,8 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
         public Long capacity;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>amv-bp10b6646l07akdt</p>
          */
@@ -66,6 +77,8 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The size of the data that occupies the lake cache space. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -73,12 +86,17 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
         public Long dataSize;
 
         /**
+         * <p>Indicates whether the lake cache feature is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("EnableLakeCache")
         public Boolean enableLakeCache;
 
+        /**
+         * <p>The clusters that share the lake cache space.</p>
+         */
         @NameInMap("Instances")
         public java.util.List<String> instances;
 

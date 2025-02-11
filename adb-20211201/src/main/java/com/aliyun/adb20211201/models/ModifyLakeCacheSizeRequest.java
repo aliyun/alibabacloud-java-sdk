@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyLakeCacheSizeRequest extends TeaModel {
     /**
+     * <p>The lake cache size that you want to set. Unit: GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,10 @@ public class ModifyLakeCacheSizeRequest extends TeaModel {
     public Long capacity;
 
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +27,12 @@ public class ModifyLakeCacheSizeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>Specifies whether to enable the lake cache feature.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

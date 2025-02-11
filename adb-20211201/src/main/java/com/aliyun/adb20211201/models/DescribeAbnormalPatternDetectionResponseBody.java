@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-xxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The queried detection items and detection results.</p>
+     */
     @NameInMap("DetectionItems")
     public java.util.List<DescribeAbnormalPatternDetectionResponseBodyDetectionItems> detectionItems;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>19B824E0-690D-5A78-9992-5398C2F43694</p>
      */
@@ -22,6 +29,8 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -67,16 +76,23 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
 
     public static class DescribeAbnormalPatternDetectionResponseBodyDetectionItemsResults extends TeaModel {
         /**
+         * <p>The IP address of the SQL client that submits the SQL pattern.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.133.168</p>
          */
         @NameInMap("AccessIp")
         public String accessIp;
 
+        /**
+         * <p>The description of the detection result.</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
         /**
+         * <p>The number of failed SQL patterns within the time range.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -84,6 +100,8 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
         public Long failedCount;
 
         /**
+         * <p>The SQL pattern ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2803084667741875187</p>
          */
@@ -91,16 +109,23 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
         public String patternId;
 
         /**
+         * <p>The number of executed SQL patterns within the time range.</p>
+         * 
          * <strong>example:</strong>
          * <p>72</p>
          */
         @NameInMap("QueryCount")
         public Long queryCount;
 
+        /**
+         * <p>The metrics related to the SQL pattern.</p>
+         */
         @NameInMap("RelatedMetrics")
         public String relatedMetrics;
 
         /**
+         * <p>The SQL statement that represents the SQL pattern.</p>
+         * 
          * <strong>example:</strong>
          * <p>SELECT <code>tsid</code>nFROM <code>prod_ods_marketing_engine_material</code>nWHERE <code>tsid</code> = ?nLIMIT ?</p>
          */
@@ -108,6 +133,8 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
         public String SQLPattern;
 
         /**
+         * <p>The names of tables.</p>
+         * 
          * <strong>example:</strong>
          * <p>dw_student_exam.ods_school_queanal</p>
          */
@@ -115,6 +142,8 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
         public String tables;
 
         /**
+         * <p>The name of the database account that is used to submit the query.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -202,12 +231,17 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
 
     public static class DescribeAbnormalPatternDetectionResponseBodyDetectionItems extends TeaModel {
         /**
+         * <p>The name of the detection item.</p>
+         * 
          * <strong>example:</strong>
          * <p>Cost</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The detection result.</p>
+         */
         @NameInMap("Results")
         public java.util.List<DescribeAbnormalPatternDetectionResponseBodyDetectionItemsResults> results;
 

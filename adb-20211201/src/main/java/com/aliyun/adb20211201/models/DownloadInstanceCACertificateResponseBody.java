@@ -4,10 +4,15 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DownloadInstanceCACertificateResponseBody extends TeaModel {
+    /**
+     * <p>The OSS URL of the downloaded certificate.</p>
+     */
     @NameInMap("DownloadUrl")
     public String downloadUrl;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9CCFAAB4-97B7-5800-B9F2-685EB596E3EF</p>
      */

@@ -42,7 +42,7 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
 
     public static class ListSparkAppAttemptsResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the attempts. Fields in the response parameter:</p>
+         * <p>The queried attempts. Fields in the response parameter:</p>
          * <ul>
          * <li><p><strong>AttemptId</strong>: the attempt ID.</p>
          * </li>
@@ -63,15 +63,15 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
          * </li>
          * <li><p><strong>Message</strong>: the alert message that is returned. If no alert is generated, null is returned.</p>
          * </li>
-         * <li><p><strong>Data</strong>: the data of the Spark application template.</p>
+         * <li><p><strong>Data</strong> the data of the Spark application template.</p>
          * </li>
-         * <li><p><strong>EstimateExecutionCpuTimeInSeconds</strong>: the amount of time it takes to consume CPU resources for running the Spark application. Unit: milliseconds.</p>
+         * <li><p><strong>EstimateExecutionCpuTimeInSeconds</strong>: the amount of time that is required to consume CPU resources for running the Spark application. Unit: milliseconds.</p>
          * </li>
          * <li><p><strong>LogRootPath</strong>: the storage path of log files.</p>
          * </li>
          * <li><p><strong>LastAttemptId</strong>: the ID of the last attempt.</p>
          * </li>
-         * <li><p><strong>WebUiAddress</strong>: the web UI address.</p>
+         * <li><p><strong>WebUiAddress</strong>: the web UI URL.</p>
          * </li>
          * <li><p><strong>SubmittedTimeInMillis</strong>: the time when the Spark application was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * </li>
@@ -85,7 +85,7 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
          * </li>
          * <li><p><strong>ResourceGroupName</strong>: the name of the job resource group.</p>
          * </li>
-         * <li><p><strong>DurationInMillis</strong>: the amount of time it takes to run the Spark application. Unit: milliseconds.</p>
+         * <li><p><strong>DurationInMillis</strong>: the amount of time that is required to run the Spark application. Unit: milliseconds.</p>
          * </li>
          * </ul>
          */

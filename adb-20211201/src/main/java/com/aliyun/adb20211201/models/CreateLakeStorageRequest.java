@@ -16,7 +16,7 @@ public class CreateLakeStorageRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>用于指定和挂载到特定ADB主实例的湖存储</p>
+     * <p>The ID of the AnalyticDB for MySQL cluster with which you want to associate the lake storage.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-******</p>
@@ -25,7 +25,7 @@ public class CreateLakeStorageRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>对湖存储的描述信息</p>
+     * <p>The description of the lake storage.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -34,7 +34,7 @@ public class CreateLakeStorageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>设置湖存储的读/写权限和账户级别权限的数组</p>
+     * <p>The permissions that you want to grant on the lake storage to the Alibaba Cloud account besides the permissions that are automatically granted to the Resource Access Management (RAM) user or the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -45,7 +45,7 @@ public class CreateLakeStorageRequest extends TeaModel {
     public java.util.List<CreateLakeStorageRequestPermissions> permissions;
 
     /**
-     * <p>RegionId</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -100,7 +100,7 @@ public class CreateLakeStorageRequest extends TeaModel {
 
     public static class CreateLakeStorageRequestPermissions extends TeaModel {
         /**
-         * <p>具有该权限的账户或RAM用户ID</p>
+         * <p>The account ID.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -111,7 +111,7 @@ public class CreateLakeStorageRequest extends TeaModel {
         public String account;
 
         /**
-         * <p>表示是否允许读取湖存储的权限</p>
+         * <p>The read permissions.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -122,7 +122,7 @@ public class CreateLakeStorageRequest extends TeaModel {
         public Boolean read;
 
         /**
-         * <p>指定权限的账户类型</p>
+         * <p>The account type.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -133,7 +133,7 @@ public class CreateLakeStorageRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>表示是否允许向湖存储写入数据的权限</p>
+         * <p>The write permissions.</p>
          * 
          * <strong>example:</strong>
          * <ul>

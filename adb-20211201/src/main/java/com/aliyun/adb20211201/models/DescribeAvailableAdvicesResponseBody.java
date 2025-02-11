@@ -4,10 +4,15 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableAdvicesResponseBody extends TeaModel {
+    /**
+     * <p>The queried suggestions.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeAvailableAdvicesResponseBodyItems> items;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,13 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,16 +34,23 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>96A55627-28E9-5E47-B8F6-D786BE551349</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The name of the table in the DatabaseName.TableName format.</p>
+     */
     @NameInMap("SchemaTableNames")
     public java.util.List<String> schemaTableNames;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10192</p>
      */
@@ -93,6 +112,8 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
 
     public static class DescribeAvailableAdvicesResponseBodyItems extends TeaModel {
         /**
+         * <p>The date when the suggestion is generated.The date is in the yyyyMMdd format.</p>
+         * 
          * <strong>example:</strong>
          * <p>20221124</p>
          */
@@ -100,6 +121,8 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public String adviceDate;
 
         /**
+         * <p>The suggestion ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dcd04135-0925-4aed-a5a7-e7d92cb1****</p>
          */
@@ -107,16 +130,27 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public String adviceId;
 
         /**
+         * <p>The type of the suggestion. Valid values:</p>
+         * <ul>
+         * <li><strong>INDEX</strong>: index optimization.</li>
+         * <li><strong>TIERING</strong>: hot and cold data optimization.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>INDEX</p>
          */
         @NameInMap("AdviceType")
         public String adviceType;
 
+        /**
+         * <p>The benefit of the suggestion.</p>
+         */
         @NameInMap("Benefit")
         public String benefit;
 
         /**
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -124,16 +158,28 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The reason why the suggestion was generated.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         /**
+         * <p>The SQL statement that is used to apply the suggestion.</p>
+         * 
          * <strong>example:</strong>
          * <p>alter table <code>schema1</code>.<code>table1</code> drop key col1_1_idx</p>
          */
@@ -141,6 +187,8 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public String SQL;
 
         /**
+         * <p>The name of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>adb_demo</p>
          */
@@ -148,6 +196,8 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public String schemaName;
 
         /**
+         * <p>The name of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_table</p>
          */
@@ -155,6 +205,8 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public String tableName;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>10192</p>
          */

@@ -34,6 +34,16 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The type of the compute engine. Valid values:</p>
+     * <ul>
+     * <li>XIHE (<strong>default</strong>)</li>
+     * <li>SPARK</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>XIHE</p>
+     */
     @NameInMap("EngineType")
     public String engineType;
 

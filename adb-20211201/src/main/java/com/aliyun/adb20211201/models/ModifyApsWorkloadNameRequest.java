@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ModifyApsWorkloadNameRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amv-*******</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aps-******</p>
      */
     @NameInMap("WorkloadId")
     public String workloadId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sls-2024***93014</p>
      */
     @NameInMap("WorkloadName")
     public String workloadName;

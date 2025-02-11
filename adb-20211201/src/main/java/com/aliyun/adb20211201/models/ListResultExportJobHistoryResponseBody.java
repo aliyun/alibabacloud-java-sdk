@@ -23,7 +23,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The queried execution records.</p>
+     * <p>The queried result set export jobs.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListResultExportJobHistoryResponseBodyItems> items;
@@ -249,9 +249,24 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
         @NameInMap("ExportRows")
         public String exportRows;
 
+        /**
+         * <p>The type of the result set export job.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("ExportType")
         public String exportType;
 
+        /**
+         * <p>Indicates whether the result set export job has expired. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         */
         @NameInMap("IsExpired")
         public Boolean isExpired;
 
