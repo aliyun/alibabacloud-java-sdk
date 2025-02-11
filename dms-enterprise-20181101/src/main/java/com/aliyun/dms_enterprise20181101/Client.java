@@ -2381,6 +2381,275 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>workspaceOption</code> 参数指示是否新建工作空间，默认使用已有工作空间。</li>
+     * <li>如果选择新建工作空间 (<code>CreateNewInstance</code>)，则必须提供 <code>workspaceName</code> 和 <code>workspaceDescription</code>。</li>
+     * <li><code>vpcId</code>, <code>VSwitchID</code>, <code>zoneId</code>, <code>regionCode</code>, <code>ResourceQuota</code>, <code>Replicas</code>, <code>storageType</code>, <code>dbInstanceClass</code>, <code>dbEngineVersion</code>, <code>kvstoreEngineVersion</code> 是必填项。</li>
+     * <li>当 <code>storageType</code> 为 <code>oss</code> 时，需要指定 <code>ossBucketResourceId</code> 和 <code>ossPath</code>。</li>
+     * <li>如果需要新建数据库实例，则必须提供 <code>instanceAccount</code> 和 <code>instancePassword</code>。</li>
+     * <li>预付费模式下，<code>PayPeriodType</code> 和 <code>PayPeriod</code> 必须填写。</li>
+     * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建DIFY实例及相关资源，支持自定义配置。</p>
+     * 
+     * @param request CreateDifyInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDifyInstanceResponse
+     */
+    public CreateDifyInstanceResponse createDifyInstanceWithOptions(CreateDifyInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adbpgInstanceMode)) {
+            query.put("AdbpgInstanceMode", request.adbpgInstanceMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataRegion)) {
+            query.put("DataRegion", request.dataRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseOption)) {
+            query.put("DatabaseOption", request.databaseOption);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbEngineType)) {
+            query.put("DbEngineType", request.dbEngineType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbEngineVersion)) {
+            query.put("DbEngineVersion", request.dbEngineVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbInstanceAccount)) {
+            query.put("DbInstanceAccount", request.dbInstanceAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbInstanceCategory)) {
+            query.put("DbInstanceCategory", request.dbInstanceCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbInstanceClass)) {
+            query.put("DbInstanceClass", request.dbInstanceClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbInstancePassword)) {
+            query.put("DbInstancePassword", request.dbInstancePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbResourceId)) {
+            query.put("DbResourceId", request.dbResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbStorageSize)) {
+            query.put("DbStorageSize", request.dbStorageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbStorageType)) {
+            query.put("DbStorageType", request.dbStorageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kvStoreAccount)) {
+            query.put("KvStoreAccount", request.kvStoreAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kvStoreEngineVersion)) {
+            query.put("KvStoreEngineVersion", request.kvStoreEngineVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kvStoreInstanceClass)) {
+            query.put("KvStoreInstanceClass", request.kvStoreInstanceClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kvStoreNodeType)) {
+            query.put("KvStoreNodeType", request.kvStoreNodeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kvStoreOption)) {
+            query.put("KvStoreOption", request.kvStoreOption);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kvStorePassword)) {
+            query.put("KvStorePassword", request.kvStorePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kvStoreResourceId)) {
+            query.put("KvStoreResourceId", request.kvStoreResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kvStoreType)) {
+            query.put("KvStoreType", request.kvStoreType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossPath)) {
+            query.put("OssPath", request.ossPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossResourceId)) {
+            query.put("OssResourceId", request.ossResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payPeriod)) {
+            query.put("PayPeriod", request.payPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payPeriodType)) {
+            query.put("PayPeriodType", request.payPeriodType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
+            query.put("PayType", request.payType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replicas)) {
+            query.put("Replicas", request.replicas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceQuota)) {
+            query.put("ResourceQuota", request.resourceQuota);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            query.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.segDiskPerformanceLevel)) {
+            query.put("SegDiskPerformanceLevel", request.segDiskPerformanceLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.segNodeNum)) {
+            query.put("SegNodeNum", request.segNodeNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vectordbAccount)) {
+            query.put("VectordbAccount", request.vectordbAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vectordbCategory)) {
+            query.put("VectordbCategory", request.vectordbCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vectordbEngineVersion)) {
+            query.put("VectordbEngineVersion", request.vectordbEngineVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vectordbInstanceSpec)) {
+            query.put("VectordbInstanceSpec", request.vectordbInstanceSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vectordbOption)) {
+            query.put("VectordbOption", request.vectordbOption);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vectordbPassword)) {
+            query.put("VectordbPassword", request.vectordbPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vectordbResourceId)) {
+            query.put("VectordbResourceId", request.vectordbResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vectordbStorageSize)) {
+            query.put("VectordbStorageSize", request.vectordbStorageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vectordbStorageType)) {
+            query.put("VectordbStorageType", request.vectordbStorageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vectordbType)) {
+            query.put("VectordbType", request.vectordbType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceDescription)) {
+            query.put("WorkspaceDescription", request.workspaceDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
+            query.put("WorkspaceName", request.workspaceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceOption)) {
+            query.put("WorkspaceOption", request.workspaceOption);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDifyInstance"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDifyInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateDifyInstanceResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>workspaceOption</code> 参数指示是否新建工作空间，默认使用已有工作空间。</li>
+     * <li>如果选择新建工作空间 (<code>CreateNewInstance</code>)，则必须提供 <code>workspaceName</code> 和 <code>workspaceDescription</code>。</li>
+     * <li><code>vpcId</code>, <code>VSwitchID</code>, <code>zoneId</code>, <code>regionCode</code>, <code>ResourceQuota</code>, <code>Replicas</code>, <code>storageType</code>, <code>dbInstanceClass</code>, <code>dbEngineVersion</code>, <code>kvstoreEngineVersion</code> 是必填项。</li>
+     * <li>当 <code>storageType</code> 为 <code>oss</code> 时，需要指定 <code>ossBucketResourceId</code> 和 <code>ossPath</code>。</li>
+     * <li>如果需要新建数据库实例，则必须提供 <code>instanceAccount</code> 和 <code>instancePassword</code>。</li>
+     * <li>预付费模式下，<code>PayPeriodType</code> 和 <code>PayPeriod</code> 必须填写。</li>
+     * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建DIFY实例及相关资源，支持自定义配置。</p>
+     * 
+     * @param request CreateDifyInstanceRequest
+     * @return CreateDifyInstanceResponse
+     */
+    public CreateDifyInstanceResponse createDifyInstance(CreateDifyInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDifyInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>For more information about the lock-free change feature, see <a href="https://help.aliyun.com/document_detail/207847.html">Overview</a>.
      * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see <a href="https://help.aliyun.com/document_detail/96145.html">Change data without the need to lock tables</a> and <a href="https://help.aliyun.com/document_detail/98373.html">Change schemas without locking tables</a>.</p>
      * 
@@ -4684,6 +4953,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteUserResponse deleteUser(DeleteUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>workspaceOption</code> 参数指示是否新建工作空间，默认使用已有工作空间。</li>
+     * <li>如果选择新建工作空间 (<code>CreateNewInstance</code>)，则必须提供 <code>workspaceName</code> 和 <code>workspaceDescription</code>。</li>
+     * <li><code>vpcId</code>, <code>VSwitchID</code>, <code>zoneId</code>, <code>regionCode</code>, <code>ResourceQuota</code>, <code>Replicas</code>, <code>storageType</code>, <code>dbInstanceClass</code>, <code>dbEngineVersion</code>, <code>kvstoreEngineVersion</code> 是必填项。</li>
+     * <li>当 <code>storageType</code> 为 <code>oss</code> 时，需要指定 <code>ossBucketResourceId</code> 和 <code>ossPath</code>。</li>
+     * <li>如果需要新建数据库实例，则必须提供 <code>instanceAccount</code> 和 <code>instancePassword</code>。</li>
+     * <li>预付费模式下，<code>PayPeriodType</code> 和 <code>PayPeriod</code> 必须填写。</li>
+     * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建DIFY实例及相关资源，支持自定义配置。</p>
+     * 
+     * @param request DescribeDifyDefaultVpcRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDifyDefaultVpcResponse
+     */
+    public DescribeDifyDefaultVpcResponse describeDifyDefaultVpcWithOptions(DescribeDifyDefaultVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataRegion)) {
+            query.put("DataRegion", request.dataRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDifyDefaultVpc"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDifyDefaultVpcResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeDifyDefaultVpcResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>workspaceOption</code> 参数指示是否新建工作空间，默认使用已有工作空间。</li>
+     * <li>如果选择新建工作空间 (<code>CreateNewInstance</code>)，则必须提供 <code>workspaceName</code> 和 <code>workspaceDescription</code>。</li>
+     * <li><code>vpcId</code>, <code>VSwitchID</code>, <code>zoneId</code>, <code>regionCode</code>, <code>ResourceQuota</code>, <code>Replicas</code>, <code>storageType</code>, <code>dbInstanceClass</code>, <code>dbEngineVersion</code>, <code>kvstoreEngineVersion</code> 是必填项。</li>
+     * <li>当 <code>storageType</code> 为 <code>oss</code> 时，需要指定 <code>ossBucketResourceId</code> 和 <code>ossPath</code>。</li>
+     * <li>如果需要新建数据库实例，则必须提供 <code>instanceAccount</code> 和 <code>instancePassword</code>。</li>
+     * <li>预付费模式下，<code>PayPeriodType</code> 和 <code>PayPeriod</code> 必须填写。</li>
+     * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建DIFY实例及相关资源，支持自定义配置。</p>
+     * 
+     * @param request DescribeDifyDefaultVpcRequest
+     * @return DescribeDifyDefaultVpcResponse
+     */
+    public DescribeDifyDefaultVpcResponse describeDifyDefaultVpc(DescribeDifyDefaultVpcRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDifyDefaultVpcWithOptions(request, runtime);
     }
 
     /**
