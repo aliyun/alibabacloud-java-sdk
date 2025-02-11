@@ -1384,6 +1384,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取功能模块配置</p>
+     * 
+     * @param tmpReq GetServiceFuncStatusRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetServiceFuncStatusResponse
+     */
+    public GetServiceFuncStatusResponse getServiceFuncStatusWithOptions(GetServiceFuncStatusRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetServiceFuncStatusShrinkRequest request = new GetServiceFuncStatusShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.params)) {
+            request.paramsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.params, "params", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
+            query.put("channel", request.channel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramsShrink)) {
+            query.put("params", request.paramsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
+            query.put("service_name", request.serviceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetServiceFuncStatus"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/func-switch/get-service-func-status"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceFuncStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetServiceFuncStatusResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取功能模块配置</p>
+     * 
+     * @param request GetServiceFuncStatusRequest
+     * @return GetServiceFuncStatusResponse
+     */
+    public GetServiceFuncStatusResponse getServiceFuncStatus(GetServiceFuncStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getServiceFuncStatusWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>初始化SysOM，确保角色存在</p>
      * 
      * @param request InitialSysomRequest
@@ -2676,6 +2742,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateEventsAttentionWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取功能模块配置</p>
+     * 
+     * @param tmpReq UpdateFuncSwitchRecordRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFuncSwitchRecordResponse
+     */
+    public UpdateFuncSwitchRecordResponse updateFuncSwitchRecordWithOptions(UpdateFuncSwitchRecordRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateFuncSwitchRecordShrinkRequest request = new UpdateFuncSwitchRecordShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.params)) {
+            request.paramsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.params, "params", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
+            query.put("channel", request.channel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramsShrink)) {
+            query.put("params", request.paramsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
+            query.put("service_name", request.serviceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFuncSwitchRecord"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/func-switch/update-service-func-switch"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFuncSwitchRecordResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateFuncSwitchRecordResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取功能模块配置</p>
+     * 
+     * @param request UpdateFuncSwitchRecordRequest
+     * @return UpdateFuncSwitchRecordResponse
+     */
+    public UpdateFuncSwitchRecordResponse updateFuncSwitchRecord(UpdateFuncSwitchRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateFuncSwitchRecordWithOptions(request, headers, runtime);
     }
 
     /**
