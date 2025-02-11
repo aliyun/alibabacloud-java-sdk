@@ -8,9 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._productId = "Market";
-        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
-        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-hangzhou", "market.aliyuncs.com"),
@@ -458,6 +455,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDistributionProductsLinkResponse describeDistributionProductsLink(DescribeDistributionProductsLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDistributionProductsLinkWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>服务商侧查询镜像实例信息</p>
+     * 
+     * @param request DescribeImageInstanceForIsvRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeImageInstanceForIsvResponse
+     */
+    public DescribeImageInstanceForIsvResponse describeImageInstanceForIsvWithOptions(DescribeImageInstanceForIsvRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customerPk)) {
+            query.put("CustomerPk", request.customerPk);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecsInstanceId)) {
+            query.put("EcsInstanceId", request.ecsInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeImageInstanceForIsv"),
+            new TeaPair("version", "2015-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeImageInstanceForIsvResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeImageInstanceForIsvResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>服务商侧查询镜像实例信息</p>
+     * 
+     * @param request DescribeImageInstanceForIsvRequest
+     * @return DescribeImageInstanceForIsvResponse
+     */
+    public DescribeImageInstanceForIsvResponse describeImageInstanceForIsv(DescribeImageInstanceForIsvRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeImageInstanceForIsvWithOptions(request, runtime);
     }
 
     /**
