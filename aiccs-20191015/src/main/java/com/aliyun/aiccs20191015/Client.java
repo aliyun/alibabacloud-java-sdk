@@ -101,7 +101,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AddHotlineNumberResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AddHotlineNumberResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AddHotlineNumberResponse());
+        }
+
     }
 
     /**
@@ -138,7 +143,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AddOuterAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AddOuterAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AddOuterAccountResponse());
+        }
+
     }
 
     /**
@@ -172,7 +182,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AddSkillGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AddSkillGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AddSkillGroupResponse());
+        }
+
     }
 
     /**
@@ -334,7 +349,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AiccsSmartCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AiccsSmartCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AiccsSmartCallResponse());
+        }
+
     }
 
     /**
@@ -396,7 +416,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AiccsSmartCallOperateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AiccsSmartCallOperateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AiccsSmartCallOperateResponse());
+        }
+
     }
 
     /**
@@ -454,7 +479,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AnswerCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AnswerCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AnswerCallResponse());
+        }
+
     }
 
     /**
@@ -511,7 +541,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AttachTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AttachTaskResponse());
+        }
+
     }
 
     /**
@@ -576,7 +611,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCreateQualityProjectsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCreateQualityProjectsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new BatchCreateQualityProjectsResponse());
+        }
+
     }
 
     /**
@@ -629,7 +669,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CancelTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CancelTaskResponse());
+        }
+
     }
 
     /**
@@ -685,7 +730,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeChatAgentStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeChatAgentStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ChangeChatAgentStatusResponse());
+        }
+
     }
 
     /**
@@ -734,7 +784,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeQualityProjectStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeQualityProjectStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ChangeQualityProjectStatusResponse());
+        }
+
     }
 
     /**
@@ -797,7 +852,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgentResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgentResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateAgentResponse());
+        }
+
     }
 
     /**
@@ -888,7 +948,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAiOutboundTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAiOutboundTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateAiOutboundTaskResponse());
+        }
+
     }
 
     /**
@@ -936,7 +1001,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAiOutboundTaskBatchResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAiOutboundTaskBatchResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateAiOutboundTaskBatchResponse());
+        }
+
     }
 
     /**
@@ -984,7 +1054,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDepartmentResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDepartmentResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateDepartmentResponse());
+        }
+
     }
 
     /**
@@ -1089,7 +1164,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOutboundTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOutboundTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateOutboundTaskResponse());
+        }
+
     }
 
     /**
@@ -1167,7 +1247,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateQualityProjectResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateQualityProjectResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateQualityProjectResponse());
+        }
+
     }
 
     /**
@@ -1221,7 +1306,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateQualityRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateQualityRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateQualityRuleResponse());
+        }
+
     }
 
     /**
@@ -1283,7 +1373,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSkillGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSkillGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateSkillGroupResponse());
+        }
+
     }
 
     /**
@@ -1384,7 +1479,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateTaskResponse());
+        }
+
     }
 
     /**
@@ -1461,7 +1561,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateThirdSsoAgentResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateThirdSsoAgentResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateThirdSsoAgentResponse());
+        }
+
     }
 
     /**
@@ -1513,7 +1618,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgentResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgentResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAgentResponse());
+        }
+
     }
 
     /**
@@ -1561,7 +1671,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAiOutboundTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAiOutboundTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAiOutboundTaskResponse());
+        }
+
     }
 
     /**
@@ -1609,7 +1724,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDepartmentResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDepartmentResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteDepartmentResponse());
+        }
+
     }
 
     /**
@@ -1657,7 +1777,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteHotlineNumberResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteHotlineNumberResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteHotlineNumberResponse());
+        }
+
     }
 
     /**
@@ -1702,7 +1827,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOutboundTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOutboundTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteOutboundTaskResponse());
+        }
+
     }
 
     /**
@@ -1736,7 +1866,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOuterAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOuterAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteOuterAccountResponse());
+        }
+
     }
 
     /**
@@ -1778,7 +1913,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteQualityProjectResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteQualityProjectResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteQualityProjectResponse());
+        }
+
     }
 
     /**
@@ -1820,7 +1960,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteQualityRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteQualityRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteQualityRuleResponse());
+        }
+
     }
 
     /**
@@ -1854,7 +1999,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSkillGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSkillGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteSkillGroupResponse());
+        }
+
     }
 
     /**
@@ -1920,7 +2070,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRecordDataResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRecordDataResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeRecordDataResponse());
+        }
+
     }
 
     /**
@@ -2008,7 +2163,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new EditQualityProjectResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new EditQualityProjectResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new EditQualityProjectResponse());
+        }
+
     }
 
     /**
@@ -2066,7 +2226,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new EditQualityRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new EditQualityRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new EditQualityRuleResponse());
+        }
+
     }
 
     /**
@@ -2108,7 +2273,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new EditQualityRuleTagResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new EditQualityRuleTagResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new EditQualityRuleTagResponse());
+        }
+
     }
 
     /**
@@ -2145,7 +2315,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new EncryptPhoneNumResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new EncryptPhoneNumResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new EncryptPhoneNumResponse());
+        }
+
     }
 
     /**
@@ -2210,7 +2385,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new FetchCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new FetchCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new FetchCallResponse());
+        }
+
     }
 
     /**
@@ -2256,7 +2436,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new FinishHotlineServiceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new FinishHotlineServiceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new FinishHotlineServiceResponse());
+        }
+
     }
 
     /**
@@ -2302,7 +2487,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateWebSocketSignResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateWebSocketSignResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GenerateWebSocketSignResponse());
+        }
+
     }
 
     /**
@@ -2336,7 +2526,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAgentResponse());
+        }
+
     }
 
     /**
@@ -2383,7 +2578,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentBasisStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentBasisStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAgentBasisStatusResponse());
+        }
+
     }
 
     /**
@@ -2428,7 +2628,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentByIdResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentByIdResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAgentByIdResponse());
+        }
+
     }
 
     /**
@@ -2475,7 +2680,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentDetailReportResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentDetailReportResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAgentDetailReportResponse());
+        }
+
     }
 
     /**
@@ -2532,7 +2742,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentIndexRealTimeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentIndexRealTimeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAgentIndexRealTimeResponse());
+        }
+
     }
 
     /**
@@ -2579,7 +2794,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentServiceStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentServiceStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAgentServiceStatusResponse());
+        }
+
     }
 
     /**
@@ -2629,7 +2849,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentStatisticsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentStatisticsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAgentStatisticsResponse());
+        }
+
     }
 
     /**
@@ -2669,7 +2894,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiOutboundTaskBizDataResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiOutboundTaskBizDataResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAiOutboundTaskBizDataResponse());
+        }
+
     }
 
     /**
@@ -2709,7 +2939,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiOutboundTaskDetailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiOutboundTaskDetailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAiOutboundTaskDetailResponse());
+        }
+
     }
 
     /**
@@ -2749,7 +2984,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiOutboundTaskExecDetailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiOutboundTaskExecDetailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAiOutboundTaskExecDetailResponse());
+        }
+
     }
 
     /**
@@ -2789,7 +3029,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiOutboundTaskListResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiOutboundTaskListResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAiOutboundTaskListResponse());
+        }
+
     }
 
     /**
@@ -2829,7 +3074,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiOutboundTaskProgressResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiOutboundTaskProgressResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAiOutboundTaskProgressResponse());
+        }
+
     }
 
     /**
@@ -2869,7 +3119,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAllDepartmentResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAllDepartmentResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAllDepartmentResponse());
+        }
+
     }
 
     /**
@@ -2929,7 +3184,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCallSoundRecordResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetCallSoundRecordResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetCallSoundRecordResponse());
+        }
+
     }
 
     /**
@@ -2969,7 +3229,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetConfigNumListResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetConfigNumListResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetConfigNumListResponse());
+        }
+
     }
 
     /**
@@ -3009,7 +3274,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomerInfoResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomerInfoResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetCustomerInfoResponse());
+        }
+
     }
 
     /**
@@ -3049,7 +3319,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDepGroupTreeDataResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDepGroupTreeDataResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetDepGroupTreeDataResponse());
+        }
+
     }
 
     /**
@@ -3095,7 +3370,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDepartmentalLatitudeAgentStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDepartmentalLatitudeAgentStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetDepartmentalLatitudeAgentStatusResponse());
+        }
+
     }
 
     /**
@@ -3132,7 +3412,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineAgentDetailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineAgentDetailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetHotlineAgentDetailResponse());
+        }
+
     }
 
     /**
@@ -3194,7 +3479,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineAgentDetailReportResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineAgentDetailReportResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetHotlineAgentDetailReportResponse());
+        }
+
     }
 
     /**
@@ -3236,7 +3526,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineAgentStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineAgentStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetHotlineAgentStatusResponse());
+        }
+
     }
 
     /**
@@ -3301,7 +3596,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineCallActionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineCallActionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetHotlineCallActionResponse());
+        }
+
     }
 
     /**
@@ -3366,7 +3666,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineGroupDetailReportResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineGroupDetailReportResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetHotlineGroupDetailReportResponse());
+        }
+
     }
 
     /**
@@ -3403,7 +3708,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineMessageLogResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineMessageLogResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetHotlineMessageLogResponse());
+        }
+
     }
 
     /**
@@ -3443,7 +3753,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineRuntimeInfoResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineRuntimeInfoResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetHotlineRuntimeInfoResponse());
+        }
+
     }
 
     /**
@@ -3497,7 +3812,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineServiceStatisticsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineServiceStatisticsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetHotlineServiceStatisticsResponse());
+        }
+
     }
 
     /**
@@ -3534,7 +3854,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineWaitingNumberResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineWaitingNumberResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetHotlineWaitingNumberResponse());
+        }
+
     }
 
     /**
@@ -3580,7 +3905,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIndexCurrentValueResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetIndexCurrentValueResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetIndexCurrentValueResponse());
+        }
+
     }
 
     /**
@@ -3626,7 +3956,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceListResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceListResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetInstanceListResponse());
+        }
+
     }
 
     /**
@@ -3663,7 +3998,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMcuLvsIpResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetMcuLvsIpResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetMcuLvsIpResponse());
+        }
+
     }
 
     /**
@@ -3700,7 +4040,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNumLocationResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetNumLocationResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetNumLocationResponse());
+        }
+
     }
 
     /**
@@ -3747,7 +4092,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOnlineSeatInformationResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetOnlineSeatInformationResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetOnlineSeatInformationResponse());
+        }
+
     }
 
     /**
@@ -3801,7 +4151,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOnlineServiceVolumeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetOnlineServiceVolumeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetOnlineServiceVolumeResponse());
+        }
+
     }
 
     /**
@@ -3850,7 +4205,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOutbounNumListResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetOutbounNumListResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetOutbounNumListResponse());
+        }
+
     }
 
     /**
@@ -3892,7 +4252,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityProjectDetailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityProjectDetailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetQualityProjectDetailResponse());
+        }
+
     }
 
     /**
@@ -3954,7 +4319,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityProjectListResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityProjectListResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetQualityProjectListResponse());
+        }
+
     }
 
     /**
@@ -3996,7 +4366,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityProjectLogResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityProjectLogResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetQualityProjectLogResponse());
+        }
+
     }
 
     /**
@@ -4070,7 +4445,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityResultResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityResultResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetQualityResultResponse());
+        }
+
     }
 
     /**
@@ -4112,7 +4492,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityRuleDetailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityRuleDetailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetQualityRuleDetailResponse());
+        }
+
     }
 
     /**
@@ -4158,7 +4543,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityRuleListResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityRuleListResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetQualityRuleListResponse());
+        }
+
     }
 
     /**
@@ -4196,7 +4586,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityRuleTagListResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualityRuleTagListResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetQualityRuleTagListResponse());
+        }
+
     }
 
     /**
@@ -4243,7 +4638,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQueueInformationResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetQueueInformationResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetQueueInformationResponse());
+        }
+
     }
 
     /**
@@ -4288,7 +4688,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecordDataResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecordDataResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRecordDataResponse());
+        }
+
     }
 
     /**
@@ -4325,7 +4730,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecordUrlResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecordUrlResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRecordUrlResponse());
+        }
+
     }
 
     /**
@@ -4365,7 +4775,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRtcTokenResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRtcTokenResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRtcTokenResponse());
+        }
+
     }
 
     /**
@@ -4411,7 +4826,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSeatInformationResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetSeatInformationResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetSeatInformationResponse());
+        }
+
     }
 
     /**
@@ -4461,7 +4881,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillGroupAgentStatusDetailsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillGroupAgentStatusDetailsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetSkillGroupAgentStatusDetailsResponse());
+        }
+
     }
 
     /**
@@ -4511,7 +4936,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillGroupAndAgentStatusSummaryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillGroupAndAgentStatusSummaryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetSkillGroupAndAgentStatusSummaryResponse());
+        }
+
     }
 
     /**
@@ -4561,7 +4991,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillGroupLatitudeStateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillGroupLatitudeStateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetSkillGroupLatitudeStateResponse());
+        }
+
     }
 
     /**
@@ -4611,7 +5046,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillGroupServiceCapabilityResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillGroupServiceCapabilityResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetSkillGroupServiceCapabilityResponse());
+        }
+
     }
 
     /**
@@ -4665,7 +5105,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillGroupServiceStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillGroupServiceStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetSkillGroupServiceStatusResponse());
+        }
+
     }
 
     /**
@@ -4719,7 +5164,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillGroupStatusTotalResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillGroupStatusTotalResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetSkillGroupStatusTotalResponse());
+        }
+
     }
 
     /**
@@ -4767,7 +5217,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new HangUpDoubleCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new HangUpDoubleCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new HangUpDoubleCallResponse());
+        }
+
     }
 
     /**
@@ -4828,7 +5283,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new HangupCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new HangupCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new HangupCallResponse());
+        }
+
     }
 
     /**
@@ -4838,6 +5298,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public HangupCallResponse hangupCall(HangupCallRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.hangupCallWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通信智能引擎中主动挂断通话</p>
+     * 
+     * @param request HangupOperateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return HangupOperateResponse
+     */
+    public HangupOperateResponse hangupOperateWithOptions(HangupOperateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
+            query.put("CallId", request.callId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.immediateHangup)) {
+            query.put("ImmediateHangup", request.immediateHangup);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "HangupOperate"),
+            new TeaPair("version", "2019-10-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new HangupOperateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new HangupOperateResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通信智能引擎中主动挂断通话</p>
+     * 
+     * @param request HangupOperateRequest
+     * @return HangupOperateResponse
+     */
+    public HangupOperateResponse hangupOperate(HangupOperateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.hangupOperateWithOptions(request, runtime);
     }
 
     /**
@@ -4886,7 +5399,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new HangupThirdCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new HangupThirdCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new HangupThirdCallResponse());
+        }
+
     }
 
     /**
@@ -4944,7 +5462,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new HoldCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new HoldCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new HoldCallResponse());
+        }
+
     }
 
     /**
@@ -5086,7 +5609,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new HotlineSessionQueryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new HotlineSessionQueryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new HotlineSessionQueryResponse());
+        }
+
     }
 
     /**
@@ -5145,7 +5673,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new InsertAiOutboundPhoneNumsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new InsertAiOutboundPhoneNumsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new InsertAiOutboundPhoneNumsResponse());
+        }
+
     }
 
     /**
@@ -5194,7 +5727,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new InsertTaskDetailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new InsertTaskDetailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new InsertTaskDetailResponse());
+        }
+
     }
 
     /**
@@ -5256,7 +5794,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new JoinThirdCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new JoinThirdCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new JoinThirdCallResponse());
+        }
+
     }
 
     /**
@@ -5290,7 +5833,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgentBySkillGroupIdResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgentBySkillGroupIdResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListAgentBySkillGroupIdResponse());
+        }
+
     }
 
     /**
@@ -5343,7 +5891,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAiccsRobotResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListAiccsRobotResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListAiccsRobotResponse());
+        }
+
     }
 
     /**
@@ -5383,7 +5936,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListChatRecordDetailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListChatRecordDetailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListChatRecordDetailResponse());
+        }
+
     }
 
     /**
@@ -5443,7 +6001,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDialogResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListDialogResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListDialogResponse());
+        }
+
     }
 
     /**
@@ -5480,7 +6043,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHotlineRecordResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListHotlineRecordResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListHotlineRecordResponse());
+        }
+
     }
 
     /**
@@ -5517,7 +6085,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHotlineRecordDetailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListHotlineRecordDetailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListHotlineRecordDetailResponse());
+        }
+
     }
 
     /**
@@ -5554,7 +6127,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOutboundPhoneNumberResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListOutboundPhoneNumberResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListOutboundPhoneNumberResponse());
+        }
+
     }
 
     /**
@@ -5611,7 +6189,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRobotCallDialogResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRobotCallDialogResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRobotCallDialogResponse());
+        }
+
     }
 
     /**
@@ -5667,7 +6250,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRobotNodeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRobotNodeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRobotNodeResponse());
+        }
+
     }
 
     /**
@@ -5723,7 +6311,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRobotParamsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRobotParamsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRobotParamsResponse());
+        }
+
     }
 
     /**
@@ -5763,7 +6356,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRolesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRolesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRolesResponse());
+        }
+
     }
 
     /**
@@ -5800,7 +6398,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSkillGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListSkillGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListSkillGroupResponse());
+        }
+
     }
 
     /**
@@ -5873,7 +6476,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTaskResponse());
+        }
+
     }
 
     /**
@@ -5953,7 +6561,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaskDetailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaskDetailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTaskDetailResponse());
+        }
+
     }
 
     /**
@@ -6027,7 +6640,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new LlmSmartCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new LlmSmartCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new LlmSmartCallResponse());
+        }
+
     }
 
     /**
@@ -6088,7 +6706,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new MakeCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new MakeCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new MakeCallResponse());
+        }
+
     }
 
     /**
@@ -6149,7 +6772,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new MakeDoubleCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new MakeDoubleCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new MakeDoubleCallResponse());
+        }
+
     }
 
     /**
@@ -6186,7 +6814,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryHotlineInQueueResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryHotlineInQueueResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryHotlineInQueueResponse());
+        }
+
     }
 
     /**
@@ -6229,7 +6862,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryHotlineNumberResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryHotlineNumberResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryHotlineNumberResponse());
+        }
+
     }
 
     /**
@@ -6326,7 +6964,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryOutboundTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryOutboundTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryOutboundTaskResponse());
+        }
+
     }
 
     /**
@@ -6384,7 +7027,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySkillGroupsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySkillGroupsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QuerySkillGroupsResponse());
+        }
+
     }
 
     /**
@@ -6478,7 +7126,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTaskDetailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTaskDetailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryTaskDetailResponse());
+        }
+
     }
 
     /**
@@ -6570,7 +7223,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTicketsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTicketsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryTicketsResponse());
+        }
+
     }
 
     /**
@@ -6680,7 +7338,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTouchListResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTouchListResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryTouchListResponse());
+        }
+
     }
 
     /**
@@ -6735,7 +7398,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveAgentFromSkillGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveAgentFromSkillGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RemoveAgentFromSkillGroupResponse());
+        }
+
     }
 
     /**
@@ -6784,7 +7452,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveSkillGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveSkillGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RemoveSkillGroupResponse());
+        }
+
     }
 
     /**
@@ -6871,7 +7544,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetHotlineNumberResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ResetHotlineNumberResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ResetHotlineNumberResponse());
+        }
+
     }
 
     /**
@@ -6916,7 +7594,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RestartOutboundTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RestartOutboundTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RestartOutboundTaskResponse());
+        }
+
     }
 
     /**
@@ -6990,7 +7673,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RobotCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RobotCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RobotCallResponse());
+        }
+
     }
 
     /**
@@ -7152,7 +7840,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SendCcoSmartCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SendCcoSmartCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SendCcoSmartCallResponse());
+        }
+
     }
 
     /**
@@ -7214,7 +7907,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SendCcoSmartCallOperateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SendCcoSmartCallOperateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SendCcoSmartCallOperateResponse());
+        }
+
     }
 
     /**
@@ -7264,7 +7962,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SendHotlineHeartBeatResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SendHotlineHeartBeatResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SendHotlineHeartBeatResponse());
+        }
+
     }
 
     /**
@@ -7309,7 +8012,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartAiOutboundTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StartAiOutboundTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StartAiOutboundTaskResponse());
+        }
+
     }
 
     /**
@@ -7366,7 +8074,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartCallResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StartCallResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StartCallResponse());
+        }
+
     }
 
     /**
@@ -7424,7 +8137,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartCallV2Response());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StartCallV2Response());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StartCallV2Response());
+        }
+
     }
 
     /**
@@ -7469,7 +8187,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartChatWorkResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StartChatWorkResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StartChatWorkResponse());
+        }
+
     }
 
     /**
@@ -7518,7 +8241,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartHotlineServiceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StartHotlineServiceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StartHotlineServiceResponse());
+        }
+
     }
 
     /**
@@ -7596,7 +8324,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartMicroOutboundResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StartMicroOutboundResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StartMicroOutboundResponse());
+        }
+
     }
 
     /**
@@ -7653,7 +8386,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StartTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StartTaskResponse());
+        }
+
     }
 
     /**
@@ -7701,7 +8439,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StopAiOutboundTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StopAiOutboundTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StopAiOutboundTaskResponse());
+        }
+
     }
 
     /**
@@ -7757,7 +8500,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StopTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StopTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StopTaskResponse());
+        }
+
     }
 
     /**
@@ -7810,7 +8558,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SuspendHotlineServiceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SuspendHotlineServiceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SuspendHotlineServiceResponse());
+        }
+
     }
 
     /**
@@ -7852,7 +8605,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SuspendOutboundTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SuspendOutboundTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SuspendOutboundTaskResponse());
+        }
+
     }
 
     /**
@@ -7897,7 +8655,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TerminateAiOutboundTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new TerminateAiOutboundTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new TerminateAiOutboundTaskResponse());
+        }
+
     }
 
     /**
@@ -7974,7 +8737,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TransferCallToSkillGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new TransferCallToSkillGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new TransferCallToSkillGroupResponse());
+        }
+
     }
 
     /**
@@ -8032,7 +8800,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAgentResponse());
+        }
+
     }
 
     /**
@@ -8123,7 +8896,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAiOutboundTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAiOutboundTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAiOutboundTaskResponse());
+        }
+
     }
 
     /**
@@ -8175,7 +8953,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDepartmentResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDepartmentResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateDepartmentResponse());
+        }
+
     }
 
     /**
@@ -8212,7 +8995,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateOuterAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateOuterAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateOuterAccountResponse());
+        }
+
     }
 
     /**
@@ -8270,7 +9058,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSkillGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSkillGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateSkillGroupResponse());
+        }
+
     }
 
     /**
