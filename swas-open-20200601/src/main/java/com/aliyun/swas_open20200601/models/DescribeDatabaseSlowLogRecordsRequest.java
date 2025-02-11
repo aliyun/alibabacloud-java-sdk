@@ -41,6 +41,7 @@ public class DescribeDatabaseSlowLogRecordsRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page. Valid values: 30 to 100.</p>
+     * <p>Maximum value: 100.</p>
      * <p>Default value: 30.</p>
      * 
      * <strong>example:</strong>

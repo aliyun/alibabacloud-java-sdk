@@ -32,6 +32,9 @@ public class ResetSystemRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("LoginCredentials")
+    public ResetSystemRequestLoginCredentials loginCredentials;
+
     /**
      * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
@@ -71,12 +74,50 @@ public class ResetSystemRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public ResetSystemRequest setLoginCredentials(ResetSystemRequestLoginCredentials loginCredentials) {
+        this.loginCredentials = loginCredentials;
+        return this;
+    }
+    public ResetSystemRequestLoginCredentials getLoginCredentials() {
+        return this.loginCredentials;
+    }
+
     public ResetSystemRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public static class ResetSystemRequestLoginCredentials extends TeaModel {
+        @NameInMap("KeyPairName")
+        public String keyPairName;
+
+        @NameInMap("Password")
+        public String password;
+
+        public static ResetSystemRequestLoginCredentials build(java.util.Map<String, ?> map) throws Exception {
+            ResetSystemRequestLoginCredentials self = new ResetSystemRequestLoginCredentials();
+            return TeaModel.build(map, self);
+        }
+
+        public ResetSystemRequestLoginCredentials setKeyPairName(String keyPairName) {
+            this.keyPairName = keyPairName;
+            return this;
+        }
+        public String getKeyPairName() {
+            return this.keyPairName;
+        }
+
+        public ResetSystemRequestLoginCredentials setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
+        }
+
     }
 
 }

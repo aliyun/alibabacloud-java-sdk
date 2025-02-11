@@ -23,7 +23,7 @@ public class DescribeInstancePasswordsSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether a VNC connection password is set.</p>
+     * <p>Indicates whether a VNC connection password is set for the simple application server.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

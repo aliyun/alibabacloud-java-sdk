@@ -207,7 +207,7 @@ public class ListInstancesResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>System</p>
+         * <p>system</p>
          */
         @NameInMap("DiskType")
         public String diskType;
@@ -240,7 +240,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The disk size. Unit: GB.</p>
+         * <p>The disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -493,7 +493,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesResourceSpec extends TeaModel {
         /**
-         * <p>The bandwidth of the server.</p>
+         * <p>The bandwidth of the server. Unit: Mbps.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -525,7 +525,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String diskCategory;
 
         /**
-         * <p>The disk size.</p>
+         * <p>The disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -547,7 +547,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Double flow;
 
         /**
-         * <p>The memory size of the server.</p>
+         * <p>The memory size of the server. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

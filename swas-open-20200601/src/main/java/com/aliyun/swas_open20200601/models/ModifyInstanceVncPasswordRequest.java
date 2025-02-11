@@ -34,7 +34,7 @@ public class ModifyInstanceVncPasswordRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The existing VNC password.</p>
+     * <p>The VNC connection password.</p>
      * 
      * <strong>example:</strong>
      * <hr>
