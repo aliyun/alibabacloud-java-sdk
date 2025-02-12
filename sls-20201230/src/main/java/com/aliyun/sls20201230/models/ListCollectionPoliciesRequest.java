@@ -40,6 +40,8 @@ public class ListCollectionPoliciesRequest extends TeaModel {
     public String policyName;
 
     /**
+     * <p>The code of the service.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss</p>
      */

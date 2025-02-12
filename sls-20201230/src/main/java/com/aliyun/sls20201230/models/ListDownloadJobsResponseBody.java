@@ -11,6 +11,9 @@ public class ListDownloadJobsResponseBody extends TeaModel {
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The log download tasks.</p>
+     */
     @NameInMap("results")
     public java.util.List<ListDownloadJobsResponseBodyResults> results;
 
@@ -464,6 +467,8 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */

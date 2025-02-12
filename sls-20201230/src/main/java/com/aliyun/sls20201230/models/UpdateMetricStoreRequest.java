@@ -13,6 +13,12 @@ public class UpdateMetricStoreRequest extends TeaModel {
     @NameInMap("autoSplit")
     public Boolean autoSplit;
 
+    @NameInMap("hot_ttl")
+    public Integer hotTtl;
+
+    @NameInMap("infrequentAccessTTL")
+    public Integer infrequentAccessTTL;
+
     /**
      * <p>The maximum number of shards into which existing shards can be automatically split. This parameter is valid only when you set the autoSplit parameter to true.</p>
      * 
@@ -51,6 +57,22 @@ public class UpdateMetricStoreRequest extends TeaModel {
     }
     public Boolean getAutoSplit() {
         return this.autoSplit;
+    }
+
+    public UpdateMetricStoreRequest setHotTtl(Integer hotTtl) {
+        this.hotTtl = hotTtl;
+        return this;
+    }
+    public Integer getHotTtl() {
+        return this.hotTtl;
+    }
+
+    public UpdateMetricStoreRequest setInfrequentAccessTTL(Integer infrequentAccessTTL) {
+        this.infrequentAccessTTL = infrequentAccessTTL;
+        return this;
+    }
+    public Integer getInfrequentAccessTTL() {
+        return this.infrequentAccessTTL;
     }
 
     public UpdateMetricStoreRequest setMaxSplitShard(Integer maxSplitShard) {

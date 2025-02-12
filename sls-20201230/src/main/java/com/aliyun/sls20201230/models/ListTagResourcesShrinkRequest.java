@@ -16,8 +16,8 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
      * <li>project</li>
      * <li>logstore</li>
      * <li>dashboard</li>
-     * <li>MachineGroup</li>
-     * <li>LogtailConfig</li>
+     * <li>machinegroup</li>
+     * <li>logtailconfig</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

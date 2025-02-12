@@ -36,7 +36,7 @@ public class ListLogStoresRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>The number of entries per page. Maximum value: 500. Default value: 500.</p>
+     * <p>The number of entries per page. Maximum value: 500. Default value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

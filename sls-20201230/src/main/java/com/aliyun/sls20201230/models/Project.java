@@ -23,6 +23,9 @@ public class Project extends TeaModel {
     @NameInMap("lastModifyTime")
     public String lastModifyTime;
 
+    @NameInMap("location")
+    public String location;
+
     @NameInMap("owner")
     public String owner;
 
@@ -79,6 +82,14 @@ public class Project extends TeaModel {
     }
     public String getLastModifyTime() {
         return this.lastModifyTime;
+    }
+
+    public Project setLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    public String getLocation() {
+        return this.location;
     }
 
     public Project setOwner(String owner) {

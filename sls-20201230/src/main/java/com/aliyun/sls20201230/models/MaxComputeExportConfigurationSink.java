@@ -12,6 +12,13 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("filterInvalid")
+    public Boolean filterInvalid;
+
+    /**
+     * <strong>example:</strong>
      * <p>asdfghjk</p>
      */
     @NameInMap("odpsAccessKeyId")
@@ -108,6 +115,15 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
         return this.fields;
     }
 
+    public MaxComputeExportConfigurationSink setFilterInvalid(Boolean filterInvalid) {
+        this.filterInvalid = filterInvalid;
+        return this;
+    }
+    public Boolean getFilterInvalid() {
+        return this.filterInvalid;
+    }
+
+    @Deprecated
     public MaxComputeExportConfigurationSink setOdpsAccessKeyId(String odpsAccessKeyId) {
         this.odpsAccessKeyId = odpsAccessKeyId;
         return this;
@@ -116,6 +132,7 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
         return this.odpsAccessKeyId;
     }
 
+    @Deprecated
     public MaxComputeExportConfigurationSink setOdpsAccessSecret(String odpsAccessSecret) {
         this.odpsAccessSecret = odpsAccessSecret;
         return this;

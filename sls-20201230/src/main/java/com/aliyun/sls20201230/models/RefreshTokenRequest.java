@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class RefreshTokenRequest extends TeaModel {
     /**
+     * <ul>
+     * <li>The validity period of the access token. Unit: seconds. Default value: 86400, which specifies one day. Valid values: 0 to 86400.</li>
+     * <li>The validity period of the access token is the smaller value between accessTokenExpirationTime and expirationTime.</li>
+     * <li>If you use a Security Token Service (STS) token to call this operation, the validity period of the access token is the smallest value among accessTokenExpirationTime, expirationTime, and the validity period of the STS token.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>600</p>
      */

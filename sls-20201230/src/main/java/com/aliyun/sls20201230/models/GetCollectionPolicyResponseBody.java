@@ -89,9 +89,17 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
     }
 
     public static class GetCollectionPolicyResponseBodyCollectionPolicyDataConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("dataProject")
         public String dataProject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("dataRegion")
         public String dataRegion;
 
@@ -132,6 +140,10 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         @NameInMap("resourceMode")
         public String resourceMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;tag1&quot;:&quot;value1&quot;,&quot;tag2&quot;:&quot;value2&quot;}</p>
+         */
         @NameInMap("resourceTags")
         public java.util.Map<String, ?> resourceTags;
 
@@ -175,6 +187,10 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
     }
 
     public static class GetCollectionPolicyResponseBodyCollectionPolicyResourceDirectory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>all,custom</p>
+         */
         @NameInMap("accountGroupType")
         public String accountGroupType;
 
@@ -232,6 +248,10 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("internalPolicy")
         public Boolean internalPolicy;
 
@@ -245,6 +265,10 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         @NameInMap("policyName")
         public String policyName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>148***********50</p>
+         */
         @NameInMap("policyUid")
         public String policyUid;
 

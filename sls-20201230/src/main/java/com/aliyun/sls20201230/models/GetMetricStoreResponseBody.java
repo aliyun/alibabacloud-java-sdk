@@ -22,6 +22,12 @@ public class GetMetricStoreResponseBody extends TeaModel {
     @NameInMap("createTime")
     public Long createTime;
 
+    @NameInMap("hot_ttl")
+    public Integer hotTtl;
+
+    @NameInMap("infrequentAccessTTL")
+    public Integer infrequentAccessTTL;
+
     /**
      * <p>The last update time. The value is a UNIX timestamp.</p>
      * 
@@ -104,6 +110,22 @@ public class GetMetricStoreResponseBody extends TeaModel {
     }
     public Long getCreateTime() {
         return this.createTime;
+    }
+
+    public GetMetricStoreResponseBody setHotTtl(Integer hotTtl) {
+        this.hotTtl = hotTtl;
+        return this;
+    }
+    public Integer getHotTtl() {
+        return this.hotTtl;
+    }
+
+    public GetMetricStoreResponseBody setInfrequentAccessTTL(Integer infrequentAccessTTL) {
+        this.infrequentAccessTTL = infrequentAccessTTL;
+        return this;
+    }
+    public Integer getInfrequentAccessTTL() {
+        return this.infrequentAccessTTL;
     }
 
     public GetMetricStoreResponseBody setLastModifyTime(Long lastModifyTime) {
