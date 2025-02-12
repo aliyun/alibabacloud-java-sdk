@@ -54,6 +54,9 @@ public class ListControlPoliciesRequest extends TeaModel {
     @NameInMap("PolicyType")
     public String policyType;
 
+    @NameInMap("Tag")
+    public java.util.List<ListControlPoliciesRequestTag> tag;
+
     public static ListControlPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListControlPoliciesRequest self = new ListControlPoliciesRequest();
         return TeaModel.build(map, self);
@@ -89,6 +92,44 @@ public class ListControlPoliciesRequest extends TeaModel {
     }
     public String getPolicyType() {
         return this.policyType;
+    }
+
+    public ListControlPoliciesRequest setTag(java.util.List<ListControlPoliciesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListControlPoliciesRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListControlPoliciesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListControlPoliciesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListControlPoliciesRequestTag self = new ListControlPoliciesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListControlPoliciesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListControlPoliciesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

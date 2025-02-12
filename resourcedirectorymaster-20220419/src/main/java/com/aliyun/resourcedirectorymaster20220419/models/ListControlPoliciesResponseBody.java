@@ -91,6 +91,55 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag self = new ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListControlPoliciesResponseBodyControlPoliciesControlPolicyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag> tag;
+
+        public static ListControlPoliciesResponseBodyControlPoliciesControlPolicyTags build(java.util.Map<String, ?> map) throws Exception {
+            ListControlPoliciesResponseBodyControlPoliciesControlPolicyTags self = new ListControlPoliciesResponseBodyControlPoliciesControlPolicyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListControlPoliciesResponseBodyControlPoliciesControlPolicyTags setTag(java.util.List<ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class ListControlPoliciesResponseBodyControlPoliciesControlPolicy extends TeaModel {
         /**
          * <p>The number of times that the access control policy is referenced.</p>
@@ -163,6 +212,9 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         @NameInMap("PolicyType")
         public String policyType;
 
+        @NameInMap("Tags")
+        public ListControlPoliciesResponseBodyControlPoliciesControlPolicyTags tags;
+
         /**
          * <p>The time when the access control policy was updated.</p>
          * 
@@ -231,6 +283,14 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         }
         public String getPolicyType() {
             return this.policyType;
+        }
+
+        public ListControlPoliciesResponseBodyControlPoliciesControlPolicy setTags(ListControlPoliciesResponseBodyControlPoliciesControlPolicyTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public ListControlPoliciesResponseBodyControlPoliciesControlPolicyTags getTags() {
+            return this.tags;
         }
 
         public ListControlPoliciesResponseBodyControlPoliciesControlPolicy setUpdateDate(String updateDate) {
