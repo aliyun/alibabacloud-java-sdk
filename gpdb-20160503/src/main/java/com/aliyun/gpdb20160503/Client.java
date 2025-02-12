@@ -192,6 +192,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>取消创建索引任务</p>
+     * 
+     * @param request CancelCreateIndexJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelCreateIndexJobResponse
+     */
+    public CancelCreateIndexJobResponse cancelCreateIndexJobWithOptions(CancelCreateIndexJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collection)) {
+            query.put("Collection", request.collection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespacePassword)) {
+            query.put("NamespacePassword", request.namespacePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelCreateIndexJob"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CancelCreateIndexJobResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CancelCreateIndexJobResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消创建索引任务</p>
+     * 
+     * @param request CancelCreateIndexJobRequest
+     * @return CancelCreateIndexJobResponse
+     */
+    public CancelCreateIndexJobResponse cancelCreateIndexJob(CancelCreateIndexJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelCreateIndexJobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This operation is related to the UploadDocumentAsync operation. You can call this operation to cancel a document upload job.</p>
      * <blockquote>
@@ -995,6 +1072,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceSpec", request.instanceSpec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.masterAISpec)) {
+            query.put("MasterAISpec", request.masterAISpec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.masterCU)) {
             query.put("MasterCU", request.masterCU);
         }
@@ -1626,6 +1707,91 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateHadoopDataSourceResponse createHadoopDataSource(CreateHadoopDataSourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createHadoopDataSourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建索引</p>
+     * 
+     * @param request CreateIndexRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateIndexResponse
+     */
+    public CreateIndexResponse createIndexWithOptions(CreateIndexRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collection)) {
+            query.put("Collection", request.collection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexConfig)) {
+            query.put("IndexConfig", request.indexConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexField)) {
+            query.put("IndexField", request.indexField);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexName)) {
+            query.put("IndexName", request.indexName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespacePassword)) {
+            query.put("NamespacePassword", request.namespacePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateIndex"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIndexResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateIndexResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建索引</p>
+     * 
+     * @param request CreateIndexRequest
+     * @return CreateIndexResponse
+     */
+    public CreateIndexResponse createIndex(CreateIndexRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createIndexWithOptions(request, runtime);
     }
 
     /**
@@ -3228,6 +3394,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除索引</p>
+     * 
+     * @param request DeleteIndexRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteIndexResponse
+     */
+    public DeleteIndexResponse deleteIndexWithOptions(DeleteIndexRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collection)) {
+            query.put("Collection", request.collection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexName)) {
+            query.put("IndexName", request.indexName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespacePassword)) {
+            query.put("NamespacePassword", request.namespacePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteIndex"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIndexResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteIndexResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除索引</p>
+     * 
+     * @param request DeleteIndexRequest
+     * @return DeleteIndexResponse
+     */
+    public DeleteIndexResponse deleteIndex(DeleteIndexRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteIndexWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Delete JDBC data source</p>
      * 
      * @param request DeleteJDBCDataSourceRequest
@@ -4116,6 +4359,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCollectionResponse describeCollection(DescribeCollectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCollectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取创建索引任务</p>
+     * 
+     * @param request DescribeCreateIndexJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCreateIndexJobResponse
+     */
+    public DescribeCreateIndexJobResponse describeCreateIndexJobWithOptions(DescribeCreateIndexJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collection)) {
+            query.put("Collection", request.collection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespacePassword)) {
+            query.put("NamespacePassword", request.namespacePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCreateIndexJob"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCreateIndexJobResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeCreateIndexJobResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取创建索引任务</p>
+     * 
+     * @param request DescribeCreateIndexJobRequest
+     * @return DescribeCreateIndexJobResponse
+     */
+    public DescribeCreateIndexJobResponse describeCreateIndexJob(DescribeCreateIndexJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCreateIndexJobWithOptions(request, runtime);
     }
 
     /**
@@ -6515,6 +6835,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeIMVInfosResponse describeIMVInfos(DescribeIMVInfosRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeIMVInfosWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取索引详情</p>
+     * 
+     * @param request DescribeIndexRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeIndexResponse
+     */
+    public DescribeIndexResponse describeIndexWithOptions(DescribeIndexRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collection)) {
+            query.put("Collection", request.collection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexName)) {
+            query.put("IndexName", request.indexName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespacePassword)) {
+            query.put("NamespacePassword", request.namespacePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeIndex"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIndexResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeIndexResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取索引详情</p>
+     * 
+     * @param request DescribeIndexRequest
+     * @return DescribeIndexResponse
+     */
+    public DescribeIndexResponse describeIndex(DescribeIndexRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeIndexWithOptions(request, runtime);
     }
 
     /**
@@ -9502,6 +9899,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取索引列表</p>
+     * 
+     * @param request ListIndicesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIndicesResponse
+     */
+    public ListIndicesResponse listIndicesWithOptions(ListIndicesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collection)) {
+            query.put("Collection", request.collection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespacePassword)) {
+            query.put("NamespacePassword", request.namespacePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIndices"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListIndicesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListIndicesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取索引列表</p>
+     * 
+     * @param request ListIndicesRequest
+     * @return ListIndicesResponse
+     */
+    public ListIndicesResponse listIndices(ListIndicesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listIndicesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries a list of extensions.</p>
      * 
      * @param request ListInstanceExtensionsRequest
@@ -11230,6 +11700,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.masterAISpec)) {
+            query.put("MasterAISpec", request.masterAISpec);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.masterCU)) {

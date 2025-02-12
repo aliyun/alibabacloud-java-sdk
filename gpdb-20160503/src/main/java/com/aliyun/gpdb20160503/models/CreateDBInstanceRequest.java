@@ -249,6 +249,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
+    @NameInMap("MasterAISpec")
+    public String masterAISpec;
+
     /**
      * <p>Master resources, with the following values: </p>
      * <ul>
@@ -736,6 +739,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getInstanceSpec() {
         return this.instanceSpec;
+    }
+
+    public CreateDBInstanceRequest setMasterAISpec(String masterAISpec) {
+        this.masterAISpec = masterAISpec;
+        return this;
+    }
+    public String getMasterAISpec() {
+        return this.masterAISpec;
     }
 
     public CreateDBInstanceRequest setMasterCU(Integer masterCU) {

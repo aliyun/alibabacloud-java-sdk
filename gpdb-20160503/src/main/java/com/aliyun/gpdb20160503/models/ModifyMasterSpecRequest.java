@@ -26,6 +26,9 @@ public class ModifyMasterSpecRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("MasterAISpec")
+    public String masterAISpec;
+
     /**
      * <p>The specifications of coordinator node resources. Valid values:</p>
      * <ul>
@@ -74,6 +77,14 @@ public class ModifyMasterSpecRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyMasterSpecRequest setMasterAISpec(String masterAISpec) {
+        this.masterAISpec = masterAISpec;
+        return this;
+    }
+    public String getMasterAISpec() {
+        return this.masterAISpec;
     }
 
     public ModifyMasterSpecRequest setMasterCU(Integer masterCU) {

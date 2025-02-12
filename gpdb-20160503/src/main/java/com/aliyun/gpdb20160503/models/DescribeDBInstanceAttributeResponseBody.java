@@ -470,6 +470,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
 
+        @NameInMap("MasterAISpec")
+        public String masterAISpec;
+
         /**
          * <p>Master resources.</p>
          * 
@@ -641,6 +644,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("SegNodeNum")
         public Integer segNodeNum;
+
+        @NameInMap("SegmentAISpec")
+        public String segmentAISpec;
 
         /**
          * <p>Number of compute groups.</p>
@@ -1082,6 +1088,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.maintainStartTime;
         }
 
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setMasterAISpec(String masterAISpec) {
+            this.masterAISpec = masterAISpec;
+            return this;
+        }
+        public String getMasterAISpec() {
+            return this.masterAISpec;
+        }
+
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setMasterCU(Integer masterCU) {
             this.masterCU = masterCU;
             return this;
@@ -1216,6 +1230,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Integer getSegNodeNum() {
             return this.segNodeNum;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setSegmentAISpec(String segmentAISpec) {
+            this.segmentAISpec = segmentAISpec;
+            return this;
+        }
+        public String getSegmentAISpec() {
+            return this.segmentAISpec;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setSegmentCounts(Integer segmentCounts) {
