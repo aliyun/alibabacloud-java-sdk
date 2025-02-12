@@ -26,6 +26,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("JobScheduler")
     public String jobScheduler;
 
+    @NameInMap("SecurityPolicy")
+    public CreateJobRequestSecurityPolicy securityPolicy;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -67,6 +70,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getJobScheduler() {
         return this.jobScheduler;
+    }
+
+    public CreateJobRequest setSecurityPolicy(CreateJobRequestSecurityPolicy securityPolicy) {
+        this.securityPolicy = securityPolicy;
+        return this;
+    }
+    public CreateJobRequestSecurityPolicy getSecurityPolicy() {
+        return this.securityPolicy;
     }
 
     public CreateJobRequest setTasks(java.util.List<CreateJobRequestTasks> tasks) {
@@ -181,6 +192,44 @@ public class CreateJobRequest extends TeaModel {
         }
         public java.util.List<CreateJobRequestDeploymentPolicyTag> getTag() {
             return this.tag;
+        }
+
+    }
+
+    public static class CreateJobRequestSecurityPolicySecurityGroup extends TeaModel {
+        @NameInMap("SecurityGroupIds")
+        public java.util.List<String> securityGroupIds;
+
+        public static CreateJobRequestSecurityPolicySecurityGroup build(java.util.Map<String, ?> map) throws Exception {
+            CreateJobRequestSecurityPolicySecurityGroup self = new CreateJobRequestSecurityPolicySecurityGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestSecurityPolicySecurityGroup setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+    }
+
+    public static class CreateJobRequestSecurityPolicy extends TeaModel {
+        @NameInMap("SecurityGroup")
+        public CreateJobRequestSecurityPolicySecurityGroup securityGroup;
+
+        public static CreateJobRequestSecurityPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateJobRequestSecurityPolicy self = new CreateJobRequestSecurityPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestSecurityPolicy setSecurityGroup(CreateJobRequestSecurityPolicySecurityGroup securityGroup) {
+            this.securityGroup = securityGroup;
+            return this;
+        }
+        public CreateJobRequestSecurityPolicySecurityGroup getSecurityGroup() {
+            return this.securityGroup;
         }
 
     }
