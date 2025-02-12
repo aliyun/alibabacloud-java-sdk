@@ -67,6 +67,9 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         @NameInMap("MasterAccountName")
         public String masterAccountName;
 
+        @NameInMap("MemberAccountDisplayNameSyncStatus")
+        public String memberAccountDisplayNameSyncStatus;
+
         /**
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -131,6 +134,14 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         }
         public String getMasterAccountName() {
             return this.masterAccountName;
+        }
+
+        public GetResourceDirectoryResponseBodyResourceDirectory setMemberAccountDisplayNameSyncStatus(String memberAccountDisplayNameSyncStatus) {
+            this.memberAccountDisplayNameSyncStatus = memberAccountDisplayNameSyncStatus;
+            return this;
+        }
+        public String getMemberAccountDisplayNameSyncStatus() {
+            return this.memberAccountDisplayNameSyncStatus;
         }
 
         public GetResourceDirectoryResponseBodyResourceDirectory setMemberDeletionStatus(String memberDeletionStatus) {
