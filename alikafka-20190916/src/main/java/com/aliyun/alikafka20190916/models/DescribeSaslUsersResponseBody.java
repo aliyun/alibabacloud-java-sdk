@@ -95,7 +95,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         /**
          * <p>The encryption method.</p>
          * <blockquote>
-         * <p> This field is available only for serverless ApsaraMQ for Kafka V3 instances.</p>
+         * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -21,7 +21,7 @@ public class DeleteSaslUserRequest extends TeaModel {
      * <li>SCRAM-SHA-256</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

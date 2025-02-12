@@ -28,6 +28,9 @@ public class ConvertPostPayOrderRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("PaidType")
+    public Integer paidType;
+
     /**
      * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
@@ -57,6 +60,14 @@ public class ConvertPostPayOrderRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ConvertPostPayOrderRequest setPaidType(Integer paidType) {
+        this.paidType = paidType;
+        return this;
+    }
+    public Integer getPaidType() {
+        return this.paidType;
     }
 
     public ConvertPostPayOrderRequest setRegionId(String regionId) {

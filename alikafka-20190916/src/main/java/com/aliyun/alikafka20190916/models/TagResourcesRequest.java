@@ -52,7 +52,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags that you want to add.</p>
+     * <p>The tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -105,7 +105,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the resource tag.</p>
+         * <p>The tag key.</p>
          * <ul>
          * <li>You must specify this parameter.</li>
          * <li>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</li>
@@ -119,7 +119,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the resource tag.</p>
+         * <p>The tag value.</p>
          * <ul>
          * <li>You can leave this parameter empty.</li>
          * <li>The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.</li>

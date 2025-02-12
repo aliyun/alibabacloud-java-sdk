@@ -18,7 +18,7 @@ public class CreateTopicRequest extends TeaModel {
     public Boolean compactTopic;
 
     /**
-     * <p>The additional configurations.</p>
+     * <p>The additional configuration.</p>
      * <ul>
      * <li>The value must be in JSON format.</li>
      * <li>Set Key to <strong>replications</strong>. This value specifies the number of replicas of the topic. The value must be an integer that ranges from 1 to 3.</li>

@@ -230,9 +230,21 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @NameInMap("BrokerOffset")
         public Long brokerOffset;
 
+        /**
+         * <p>Client ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-id-KafkaConsumerDemo</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.11.3</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
@@ -254,6 +266,12 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
+        /**
+         * <p>Member ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-id-KafkaConsumerDemo-70b64883-a911-4882-8084-598b958848b4</p>
+         */
         @NameInMap("MemberId")
         public String memberId;
 

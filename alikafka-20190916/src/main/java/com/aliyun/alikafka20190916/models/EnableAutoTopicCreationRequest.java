@@ -21,7 +21,6 @@ public class EnableAutoTopicCreationRequest extends TeaModel {
      * <li>disable: disables the automatic topic creation feature.</li>
      * <li>updatePartition: changes the number of partitions in topics that are automatically created.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>enable</p>
@@ -48,6 +47,9 @@ public class EnableAutoTopicCreationRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("UpdatePartition")
+    public Boolean updatePartition;
 
     public static EnableAutoTopicCreationRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableAutoTopicCreationRequest self = new EnableAutoTopicCreationRequest();
@@ -84,6 +86,14 @@ public class EnableAutoTopicCreationRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public EnableAutoTopicCreationRequest setUpdatePartition(Boolean updatePartition) {
+        this.updatePartition = updatePartition;
+        return this;
+    }
+    public Boolean getUpdatePartition() {
+        return this.updatePartition;
     }
 
 }

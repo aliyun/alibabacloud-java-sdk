@@ -11,8 +11,8 @@ public class CreateAclRequest extends TeaModel {
      * <li><strong>Read</strong></li>
      * <li><strong>Describe</strong>: reads of transactional IDs.</li>
      * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
-     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
-     * <li><strong>DESCRIBE_CONFIGS</strong>: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
+     * <li><strong>DESCRIBE_CONFIGS</strong>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -30,11 +30,11 @@ public class CreateAclRequest extends TeaModel {
      * <li><strong>Read</strong></li>
      * <li><strong>Describe</strong>: reads of transactional IDs.</li>
      * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
-     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
-     * <li><strong>DESCRIBE_CONFIGS</strong>: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
+     * <li><strong>DESCRIBE_CONFIGS</strong>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class CreateAclRequest extends TeaModel {
      * <li><strong>ALLOW</strong></li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,13 +107,15 @@ public class CreateAclRequest extends TeaModel {
     public String aclResourceType;
 
     /**
-     * <p>The source IP address.</p>
+     * <p>The IP address of the source.</p>
      * <blockquote>
-     * <ul>
-     * <li>You can specify only a specific IP address or use the asterisk (\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</li>
-     * <li>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>You can specify a specific IP address or use the asterisk (\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</p>
+     * </li>
+     * <li><p>This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <ul>
