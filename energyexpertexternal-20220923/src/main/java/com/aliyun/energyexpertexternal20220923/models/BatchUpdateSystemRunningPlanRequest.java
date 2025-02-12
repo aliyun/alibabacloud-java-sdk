@@ -26,6 +26,8 @@ public class BatchUpdateSystemRunningPlanRequest extends TeaModel {
     public String earliestStartupTime;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-08-30</p>
      */
@@ -33,6 +35,8 @@ public class BatchUpdateSystemRunningPlanRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -75,6 +79,8 @@ public class BatchUpdateSystemRunningPlanRequest extends TeaModel {
     public Integer seasonMode;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-08-21</p>
      */
@@ -82,6 +88,8 @@ public class BatchUpdateSystemRunningPlanRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>system1</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class EditUnfavorableAreaDevicesRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
     @NameInMap("factoryId")
     public String factoryId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("hvacDeviceConfigVOList")
     public java.util.List<EditUnfavorableAreaDevicesRequestHvacDeviceConfigVOList> hvacDeviceConfigVOList;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>system1</p>
      */
@@ -73,6 +80,8 @@ public class EditUnfavorableAreaDevicesRequest extends TeaModel {
         public String deviceName;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -101,6 +110,8 @@ public class EditUnfavorableAreaDevicesRequest extends TeaModel {
         public Integer isForbidden;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchSaveInstructionStatusRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
