@@ -246,6 +246,7 @@ public class OSSExportConfiguration extends TeaModel {
             return this.contentType;
         }
 
+        @Deprecated
         public OSSExportConfigurationSink setDelaySec(Long delaySec) {
             this.delaySec = delaySec;
             return this;

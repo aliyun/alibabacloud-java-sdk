@@ -59,6 +59,7 @@ public class ETLConfigurationSink extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public ETLConfigurationSink setAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -67,6 +68,7 @@ public class ETLConfigurationSink extends TeaModel {
         return this.accessKeyId;
     }
 
+    @Deprecated
     public ETLConfigurationSink setAccessKeySecret(String accessKeySecret) {
         this.accessKeySecret = accessKeySecret;
         return this;

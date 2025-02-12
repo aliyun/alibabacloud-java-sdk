@@ -1,3 +1,15 @@
+2025-02-12 Version: 5.7.0
+- Support API DeleteIngestProcessor.
+- Support API GetIngestProcessor.
+- Support API ListIngestProcessors.
+- Support API PutIngestProcessor.
+- Support API UpdateLogStoreProcessor.
+- Support API UpdateMetricStoreProcessor.
+- Update API CreateMetricStore: update param body.
+- Update API GetMetricStore: update response param.
+- Update API UpdateMetricStore: update param body.
+
+
 2024-12-09 Version: 5.6.0
 - Support API CreateAgentInstanceConfig.
 - Support API DeleteAgentInstanceConfig.

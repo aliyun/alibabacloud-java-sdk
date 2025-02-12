@@ -21,6 +21,8 @@ public class ListScheduledSQLsRequest extends TeaModel {
     public Long offset;
 
     /**
+     * <p>The number of entries to return. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

@@ -53,7 +53,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>代表资源状态的资源属性字段</p>
+     * <p>The status of the log download task.</p>
      * 
      * <strong>example:</strong>
      * <p>running</p>

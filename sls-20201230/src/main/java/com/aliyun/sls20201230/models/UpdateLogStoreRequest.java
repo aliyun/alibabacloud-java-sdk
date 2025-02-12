@@ -216,6 +216,7 @@ public class UpdateLogStoreRequest extends TeaModel {
         return this.mode;
     }
 
+    @Deprecated
     public UpdateLogStoreRequest setShardCount(Integer shardCount) {
         this.shardCount = shardCount;
         return this;
@@ -224,6 +225,7 @@ public class UpdateLogStoreRequest extends TeaModel {
         return this.shardCount;
     }
 
+    @Deprecated
     public UpdateLogStoreRequest setTelemetryType(String telemetryType) {
         this.telemetryType = telemetryType;
         return this;

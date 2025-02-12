@@ -29,7 +29,7 @@ public class UpdateLogtailPipelineConfigRequest extends TeaModel {
     /**
      * <p>The output plug-ins.</p>
      * <blockquote>
-     * <p> You can use only one Simple Log Service output plug-in.</p>
+     * <p> You can configure only one output plug-in.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -38,8 +38,6 @@ public class UpdateLogtailPipelineConfigRequest extends TeaModel {
 
     /**
      * <p>The global settings.</p>
-     * <p>**</p>
-     * <hr>
      */
     @NameInMap("global")
     public java.util.Map<String, ?> global;
@@ -66,14 +64,14 @@ public class UpdateLogtailPipelineConfigRequest extends TeaModel {
     /**
      * <p>The processing plug-ins.</p>
      * <blockquote>
-     * <p> Logtail supports native plug-ins and extended plug-ins for data processing. For more information, see <a href="https://help.aliyun.com/document_detail/64957.html">Logtail plug-ins overview</a>.</p>
+     * <p> Logtail plug-ins for data processing are classified into native plug-ins and extended plug-ins. For more information, see <a href="https://help.aliyun.com/document_detail/64957.html">Overview of Logtail plug-ins for data processing</a>.</p>
      * </blockquote>
      * <blockquote>
      * </blockquote>
      * <ul>
      * <li><p>You can use native plug-ins only to collect text logs.</p>
      * </li>
-     * <li><p>You cannot add native plug-ins and extended plug-ins at the same time.</p>
+     * <li><p>You cannot add native plug-ins and extended plug-ins at a time.</p>
      * </li>
      * <li><p>When you add native plug-ins, take note of the following items:</p>
      * <ul>

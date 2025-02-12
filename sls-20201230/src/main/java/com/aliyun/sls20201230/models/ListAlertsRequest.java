@@ -19,6 +19,8 @@ public class ListAlertsRequest extends TeaModel {
     public Integer offset;
 
     /**
+     * <p>The number of entries per page. Maximum value: 200. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

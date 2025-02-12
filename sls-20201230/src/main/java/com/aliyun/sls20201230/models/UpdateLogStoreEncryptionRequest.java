@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLogStoreEncryptionRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the encryption feature. After you update the encryption configuration of the Logstore, you can modify only the enable parameter in subsequent update requests. You cannot modify the encryptType or userCmkInfo parameters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,17 @@ public class UpdateLogStoreEncryptionRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The encryption algorithm. Valid values: default, m4, sm4_ecb, sm4_cbc, sm4_gcm, aes_ecb, aes_cbc, aes_cfb, aes_ofb, and aes_gcm.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
     @NameInMap("encryptType")
     public String encryptType;
 
+    /**
+     * <p>Optional. If you use a BYOK key to encrypt logs, you must specify this parameter. If you use the service key of Simple Log Service to encrypt logs, you do not need to specify this parameter.</p>
+     */
     @NameInMap("userCmkInfo")
     public UpdateLogStoreEncryptionRequestUserCmkInfo userCmkInfo;
 
@@ -54,6 +60,8 @@ public class UpdateLogStoreEncryptionRequest extends TeaModel {
 
     public static class UpdateLogStoreEncryptionRequestUserCmkInfo extends TeaModel {
         /**
+         * <p>The ID of the CMK to which the BYOK key belongs. You can create a CMK in KMS. The CMK must be in the same region as the endpoint of Simple Log Service.</p>
+         * 
          * <strong>example:</strong>
          * <p>f5136b95-2420-ab31-xxxxxxxxx</p>
          */
@@ -61,6 +69,8 @@ public class UpdateLogStoreEncryptionRequest extends TeaModel {
         public String keyId;
 
         /**
+         * <p>The region ID. Example: cn-hangzhou.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -68,6 +78,8 @@ public class UpdateLogStoreEncryptionRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role.The value is in the acs:ram::12344\<em>\</em>\*:role/xxxxx format. To use a BYOK key to encrypt logs, you must create a RAM role and grant the AliyunKMSReadOnlyAccess and AliyunKMSCryptoUserAccess permissions to the RAM role. You must grant the API caller the PassRole permission on the RAM role.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:ram::12344***:role/xxxxx</p>
          */
