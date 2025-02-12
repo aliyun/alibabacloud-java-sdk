@@ -57,6 +57,9 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     @NameInMap("SiteId")
     public Long siteId;
 
+    @NameInMap("Zstd")
+    public String zstd;
+
     public static UpdateCompressionRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCompressionRuleRequest self = new UpdateCompressionRuleRequest();
         return TeaModel.build(map, self);
@@ -116,6 +119,14 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     }
     public Long getSiteId() {
         return this.siteId;
+    }
+
+    public UpdateCompressionRuleRequest setZstd(String zstd) {
+        this.zstd = zstd;
+        return this;
+    }
+    public String getZstd() {
+        return this.zstd;
     }
 
 }

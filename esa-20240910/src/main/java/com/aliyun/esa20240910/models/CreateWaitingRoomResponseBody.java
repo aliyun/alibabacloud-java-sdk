@@ -13,6 +13,9 @@ public class CreateWaitingRoomResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("WaitingRoomId")
+    public String waitingRoomId;
+
     public static CreateWaitingRoomResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateWaitingRoomResponseBody self = new CreateWaitingRoomResponseBody();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class CreateWaitingRoomResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateWaitingRoomResponseBody setWaitingRoomId(String waitingRoomId) {
+        this.waitingRoomId = waitingRoomId;
+        return this;
+    }
+    public String getWaitingRoomId() {
+        return this.waitingRoomId;
     }
 
 }

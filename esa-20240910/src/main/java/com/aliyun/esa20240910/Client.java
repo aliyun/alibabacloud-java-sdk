@@ -912,6 +912,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>检查实时日志slr角色是否已创建</p>
+     * 
+     * @param request CheckAssumeSlrRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckAssumeSlrRoleResponse
+     */
+    public CheckAssumeSlrRoleResponse checkAssumeSlrRoleWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckAssumeSlrRole"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CheckAssumeSlrRoleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CheckAssumeSlrRoleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查实时日志slr角色是否已创建</p>
+     * @return CheckAssumeSlrRoleResponse
+     */
+    public CheckAssumeSlrRoleResponse checkAssumeSlrRole() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkAssumeSlrRoleWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Checks whether a specified website name is available.</p>
      * 
      * @param request CheckSiteNameRequest
@@ -1347,6 +1386,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
             query.put("SiteVersion", request.siteVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zstd)) {
+            query.put("Zstd", request.zstd);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3545,6 +3588,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSiteDeliveryTaskResponse createSiteDeliveryTask(CreateSiteDeliveryTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSiteDeliveryTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一个实时日志slr角色</p>
+     * 
+     * @param request CreateSlrRoleForRealtimeLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSlrRoleForRealtimeLogResponse
+     */
+    public CreateSlrRoleForRealtimeLogResponse createSlrRoleForRealtimeLogWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSlrRoleForRealtimeLog"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSlrRoleForRealtimeLogResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateSlrRoleForRealtimeLogResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一个实时日志slr角色</p>
+     * @return CreateSlrRoleForRealtimeLogResponse
+     */
+    public CreateSlrRoleForRealtimeLogResponse createSlrRoleForRealtimeLog() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSlrRoleForRealtimeLogWithOptions(runtime);
     }
 
     /**
@@ -13520,6 +13602,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
             query.put("SiteId", request.siteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zstd)) {
+            query.put("Zstd", request.zstd);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
