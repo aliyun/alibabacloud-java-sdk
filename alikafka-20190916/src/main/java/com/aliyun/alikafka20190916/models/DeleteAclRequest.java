@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteAclRequest extends TeaModel {
     /**
-     * <p>The operation allowed by the access control list (ACL). Valid values:</p>
+     * <p>The type of the operation allowed by the access control list (ACL). Valid values:</p>
      * <ul>
-     * <li><strong>Write</strong></li>
-     * <li><strong>Read</strong></li>
-     * <li><strong>Describe</strong>: reads of transactional IDs</li>
-     * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters</li>
-     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
-     * <li><strong>DESCRIBE_CONFIGS</strong>: configuration queries. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+     * <li><strong>Write</strong>: data writes.</li>
+     * <li><strong>Read</strong>: data reads.</li>
+     * <li><strong>Describe</strong>: reads of transaction IDs.</li>
+     * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
+     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
+     * <li><strong>DESCRIBE_CONFIGS</strong>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,18 +23,18 @@ public class DeleteAclRequest extends TeaModel {
     public String aclOperationType;
 
     /**
-     * <p>The operations allowed by the ACL. Separate multiple operations with commas (,).</p>
+     * <p>The types of operations allowed by the ACL. Separate multiple operations with commas (,).</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>Write</strong>: data writes</li>
-     * <li><strong>Read</strong>: data reads</li>
-     * <li><strong>Describe</strong>: reads of transactional IDs</li>
-     * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters</li>
-     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
-     * <li><strong>DESCRIBE_CONFIGS</strong>: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+     * <li><strong>Write</strong>: data writes.</li>
+     * <li><strong>Read</strong>: data reads.</li>
+     * <li><strong>Describe</strong>: reads of transaction IDs.</li>
+     * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
+     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
+     * <li><strong>DESCRIBE_CONFIGS</strong>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DeleteAclRequest extends TeaModel {
      * <li>ALLOW</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -106,11 +106,13 @@ public class DeleteAclRequest extends TeaModel {
     /**
      * <p>The IP address of the source.</p>
      * <blockquote>
-     * <ul>
-     * <li>You can specify only a specific IP address or use the asterisk (\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</li>
-     * <li>This parameter is available only for serverless ApsaraMQ for Kafka V3 instances.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>You can specify only a specific IP address or use the asterisk (\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</p>
+     * </li>
+     * <li><p>This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <ul>

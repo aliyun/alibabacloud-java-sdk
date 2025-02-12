@@ -206,6 +206,9 @@ public class GetConsumerListResponseBody extends TeaModel {
     public static class GetConsumerListResponseBodyConsumerListConsumerVO extends TeaModel {
         /**
          * <p>Indicates that the consumer group was automatically created by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AutomaticallyCreatedGroup")
         public Boolean automaticallyCreatedGroup;
@@ -219,6 +222,12 @@ public class GetConsumerListResponseBody extends TeaModel {
         @NameInMap("ConsumerId")
         public String consumerId;
 
+        /**
+         * <p>The timestamp that indicates when the consumer group was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1729736584002</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 

@@ -21,10 +21,8 @@ public class CreateSaslUserRequest extends TeaModel {
      * <li>SCRAM-SHA-256</li>
      * </ul>
      * <blockquote>
+     * <p> This parameter is available only for ApsaraMQ for Kafka serverless instances.</p>
      * </blockquote>
-     * <ul>
-     * <li>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>SCRAM-SHA-256</p>

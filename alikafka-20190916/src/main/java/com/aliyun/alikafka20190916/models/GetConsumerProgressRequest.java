@@ -14,6 +14,20 @@ public class GetConsumerProgressRequest extends TeaModel {
     @NameInMap("ConsumerId")
     public String consumerId;
 
+    /**
+     * <p>Specifies whether to hide LastTimestamp. Default value: false. We recommend that you set this parameter to true.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If you set this parameter to true, -1 is returned for LastTimestamp. If you set this parameter to false, a specific value is returned for LastTimestamp. This parameter is supported only by topics that use cloud storage on reserved instances.</p>
+     * </li>
+     * <li><p>A large amount of data is processed by this operation, which causes performance loss. We recommend that you set this parameter to true to accelerate processing.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HideLastTimestamp")
     public Boolean hideLastTimestamp;
 

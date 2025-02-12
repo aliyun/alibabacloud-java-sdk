@@ -520,12 +520,30 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("AllConfig")
         public String allConfig;
 
+        /**
+         * <p>Indicates whether the flexible group creation feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoCreateGroupEnable")
         public Boolean autoCreateGroupEnable;
 
+        /**
+         * <p>Indicates whether the automatic topic creation feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoCreateTopicEnable")
         public Boolean autoCreateTopicEnable;
 
+        /**
+         * <p>The ID of the secondary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
+         */
         @NameInMap("BackupZoneId")
         public String backupZoneId;
 
@@ -544,6 +562,12 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The number of partitions in a topic that is automatically created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("DefaultPartitionNum")
         public Integer defaultPartitionNum;
 
@@ -768,6 +792,16 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("SaslDomainEndpoint")
         public String saslDomainEndpoint;
 
+        /**
+         * <p>The Simple Authentication and Security Layer (SASL) endpoint of the instance in IP address mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
+         * <ul>
+         * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
+         * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.3.XX:9094,172.16.3.XX:9094,172.16.3.XX:9094</p>
+         */
         @NameInMap("SaslEndPoint")
         public String saslEndPoint;
 
@@ -926,6 +960,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The vSwitch IDs.</p>
+         */
         @NameInMap("VSwitchIds")
         public GetInstanceListResponseBodyInstanceListInstanceVOVSwitchIds vSwitchIds;
 
@@ -966,9 +1003,29 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The SSL endpoint of the instance in domain name mode. You can use the endpoint to access the instance only in virtual private clouds (VPCs). ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
+         * <ul>
+         * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
+         * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka-post-cn-<strong><strong><strong>-1-vpc.alikafka.aliyuncs.com:9095,alikafka-post-cn-</strong></strong></strong>-2-vpc.alikafka.aliyuncs.com:9095,alikafka-post-cn-******-3-vpc.alikafka.aliyuncs.com:9095</p>
+         */
         @NameInMap("VpcSaslDomainEndpoint")
         public String vpcSaslDomainEndpoint;
 
+        /**
+         * <p>The Secure Sockets Layer (SSL) endpoint of the instance in IP address mode. You can use the endpoint to access the instance only in virtual private clouds (VPCs). ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
+         * <ul>
+         * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
+         * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.3.XX:9095,172.16.3.XX:9095,172.16.3.XX:9095</p>
+         */
         @NameInMap("VpcSaslEndPoint")
         public String vpcSaslEndPoint;
 

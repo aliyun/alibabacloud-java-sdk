@@ -22,7 +22,7 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
      * <p>The disk size.</p>
      * <p>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</p>
+     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,13 +32,13 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
     public Integer diskSize;
 
     /**
-     * <p>The disk type. Valid values:</p>
+     * <p>The disk type of the instance. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: ultra disk</li>
      * <li><strong>1</strong>: standard SSD</li>
      * </ul>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</p>
+     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,13 +48,13 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
     public String diskType;
 
     /**
-     * <p>The maximum Internet traffic in the instance.</p>
+     * <p>The Internet traffic.</p>
      * <ul>
      * <li>If you set <strong>DeployType</strong> to <strong>4</strong>, you must configure this parameter.</li>
      * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
      * </ul>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</p>
+     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
      * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
      * </ul>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</p>
+     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
      * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
      * </ul>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</p>
+     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -98,8 +98,8 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li>1: the pay-as-you-go billing method for ApsaraMQ for Kafka V2 instances.</li>
-     * <li>3: the pay-as-you-go billing method for serverless ApsaraMQ for Kafka V3 instances.</li>
+     * <li>1: pay-as-you-go (reserved capacity).</li>
+     * <li>3: pay-as-you-go (reserved capacity) + pay-as-you-go (on-demand capacity)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
      * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
      * </ul>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</p>
+     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The parameters configured for the serverless ApsaraMQ for Kafka V3 instance. When you create a Serverless ApsaraMQ for Kafka V3 serverless instance, you must configure these parameters.</p>
+     * <p>The parameters configured for the serverless ApsaraMQ for Kafka instance. These parameters are required only when you create a serverless instance.</p>
      */
     @NameInMap("ServerlessConfig")
     public String serverlessConfigShrink;
@@ -186,7 +186,7 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
      * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
      * </ul>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</p>
+     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

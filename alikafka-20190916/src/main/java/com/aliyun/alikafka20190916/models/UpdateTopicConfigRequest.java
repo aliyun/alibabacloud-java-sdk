@@ -7,10 +7,10 @@ public class UpdateTopicConfigRequest extends TeaModel {
     /**
      * <p>The key of the topic configuration.</p>
      * <ul>
-     * <li>ApsaraMQ for Kafka V2 instances allow you to modify configurations only for topics that use local storage.</li>
-     * <li>ApsaraMQ for Kafka V3 instances allow you to modify configurations for all topics.</li>
-     * <li>The following keys are supported by <code>local topic</code> of ApsaraMQ for Kafka V2 instances: retention.ms, retention.bytes, and replications.</li>
-     * <li>The following keys are supported by ApsaraMQ for Kafka V3 instances: retention.hours and max.message.bytes.</li>
+     * <li>For reserved instances, you can modify only the configurations of the topics that use local storage.</li>
+     * <li>For serverless instances, you can modify the configurations of all topics.</li>
+     * <li>Reserved instances whose topics use local storage support the following keys: retention.ms, max.message.bytes, replications, message.timestamp.type, and message.timestamp.difference.max.ms.``</li>
+     * <li>Serverless instances support the following keys: retention.hours, max.message.bytes, message.timestamp.type, message.timestamp.difference.max.ms.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -51,10 +51,25 @@ public class UpdateTopicConfigRequest extends TeaModel {
     public String topic;
 
     /**
-     * <p>The configuration item that you want to update for the topic. The following configuration items are supported by ApsaraMQ for Kafka V3 instances:</p>
+     * <p>The value of the topic configuration.</p>
      * <ul>
-     * <li><code>retention.hours</code> specifies the message retention period. Value type: string. Valid values: 24 to 8760.</li>
-     * <li><code>max.message.bytes</code> specifies the maximum size of a sent message. Value type: string. Valid values: 1048576 to 10485760.</li>
+     * <li><p>Serverless instances support the following values:</p>
+     * <ul>
+     * <li><code>retention.hours</code>: the message retention period. Value type: string. Valid values: 24 to 8760.</li>
+     * <li><code>max.message.bytes</code>: the maximum size of a sent message. Value type: string. Valid values: 1048576 to 10485760.</li>
+     * <li><code>message.timestamp.type</code>: the timestamp type of a message. Valid values: CreateTime and LogAppendTime. The value CreateTime specifies the timestamp that is specified by the producer when the message is sent. The value LogAppendTime specifies the time when the broker appends the message to its log. If you do not specify this parameter, the time when the message is created on the client is used.</li>
+     * <li><code>message.timestamp.difference.max.ms</code>: the maximum positive or negative difference allowed between the timestamp when the broker receives a message and the timestamp specified in the message. If you set message.timestamp.type to CreateTime, <strong>a message is rejected</strong> if the difference in timestamp exceeds the threshold. If you set message.timestamp.type to LogAppendTime, this configuration does not take effect.</li>
+     * </ul>
+     * </li>
+     * <li><p>Reserved instances support the following values:</p>
+     * <ul>
+     * <li><code>retention.ms</code>: the message retention period. Value type: string. Valid values: 3600000 to 31536000000.</li>
+     * <li><code>max.message.bytes</code>: the maximum size of a sent message. Value type: string. Valid values: 1048576 to 10485760.</li>
+     * <li><code>replications</code>: the number of replicas. Value type: string. Valid values: 1 to 3.</li>
+     * <li><code>message.timestamp.type</code>: the timestamp type of a message. Valid values: CreateTime and LogAppendTime. The value CreateTime specifies the timestamp that is specified by the producer when the message is sent. The value LogAppendTime specifies the time when the broker appends the message to its log. If you do not specify this parameter, the time when the message is created on the client is used.</li>
+     * <li><code>message.timestamp.difference.max.ms</code>: the maximum positive or negative difference allowed between the timestamp when the broker receives a message and the timestamp specified in the message. If you set message.timestamp.type to CreateTime, <strong>a message is rejected</strong> if the difference in timestamp exceeds the threshold. If you set message.timestamp.type to LogAppendTime, this configuration does not take effect.</li>
+     * </ul>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
