@@ -3,7 +3,7 @@ package com.aliyun.support_plan20210706.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody extends TeaModel {
+public class AddEnterpriseGroupMemberToTaskGroupResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>200</p>
@@ -13,14 +13,21 @@ public class DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody extends Tea
 
     /**
      * <strong>example:</strong>
-     * <p>Invalid data</p>
+     * <p>true</p>
+     */
+    @NameInMap("Data")
+    public String data;
+
+    /**
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>123</p>
+     * <p>43135C31-E47A-5AD7-A693-6DC635201CE4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -32,12 +39,12 @@ public class DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody extends Tea
     @NameInMap("Success")
     public Boolean success;
 
-    public static DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody self = new DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody();
+    public static AddEnterpriseGroupMemberToTaskGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AddEnterpriseGroupMemberToTaskGroupResponseBody self = new AddEnterpriseGroupMemberToTaskGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody setCode(String code) {
+    public AddEnterpriseGroupMemberToTaskGroupResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -45,7 +52,15 @@ public class DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody extends Tea
         return this.code;
     }
 
-    public DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody setMessage(String message) {
+    public AddEnterpriseGroupMemberToTaskGroupResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
+    public AddEnterpriseGroupMemberToTaskGroupResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -53,7 +68,7 @@ public class DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody extends Tea
         return this.message;
     }
 
-    public DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody setRequestId(String requestId) {
+    public AddEnterpriseGroupMemberToTaskGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -61,7 +76,7 @@ public class DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody extends Tea
         return this.requestId;
     }
 
-    public DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody setSuccess(Boolean success) {
+    public AddEnterpriseGroupMemberToTaskGroupResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
