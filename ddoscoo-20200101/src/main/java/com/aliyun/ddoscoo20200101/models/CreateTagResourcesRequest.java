@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTagResourcesRequest extends TeaModel {
     /**
-     * <p>The region ID of the instance. Set the value to <strong>cn-hangzhou</strong>, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.</p>
+     * <p>The region ID of the Anti-DDoS Proxy instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateTagResourcesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The IDs of the Anti-DDoS Proxy (Chinese Mainland) instances to which you want to add the tag.</p>
+     * <p>The IDs of the Anti-DDoS Proxy instances to which you want to add tags.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

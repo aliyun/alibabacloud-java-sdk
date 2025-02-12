@@ -4,10 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopRefererResponseBody extends TeaModel {
+    /**
+     * <p>The information about top referers.</p>
+     */
     @NameInMap("DomainTopReferer")
     public java.util.List<DescribeDomainTopRefererResponseBodyDomainTopReferer> domainTopReferer;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
      */
@@ -37,6 +42,8 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
 
     public static class DescribeDomainTopRefererResponseBodyDomainTopReferer extends TeaModel {
         /**
+         * <p>The domain name of the website.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.aliyundoc.com</p>
          */
@@ -44,6 +51,8 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The page views.</p>
+         * 
          * <strong>example:</strong>
          * <p>257031</p>
          */
@@ -51,6 +60,8 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
         public Long pv;
 
         /**
+         * <p>The Base64-encoded referer.</p>
+         * 
          * <strong>example:</strong>
          * <p>aHR0cHM6Ly9zZXJ2aWNld2VjaGF0LmNvbS93eGY3ZDc5YWY0YzU4ZDH3NTEvNC9wYWdlLWZyYW1lLmh0bWw=</p>
          */

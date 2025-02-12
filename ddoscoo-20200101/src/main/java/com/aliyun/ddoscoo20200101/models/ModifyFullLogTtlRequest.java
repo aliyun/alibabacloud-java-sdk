@@ -14,7 +14,7 @@ public class ModifyFullLogTtlRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The log storage duration of a website. Valid values: <strong>30</strong> to <strong>180</strong>. Unit: days.</p>
+     * <p>The log storage duration of a website. Valid values: <strong>7</strong> to <strong>180</strong>. Unit: days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -67,6 +67,12 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
     @NameInMap("Status405")
     public Long status405;
 
+    @NameInMap("Status410")
+    public Long status410;
+
+    @NameInMap("Status499")
+    public Long status499;
+
     /**
      * <p>The number of 4xx status codes within the specified period of time.</p>
      * 
@@ -180,6 +186,22 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
     }
     public Long getStatus405() {
         return this.status405;
+    }
+
+    public DescribeDomainStatusCodeCountResponseBody setStatus410(Long status410) {
+        this.status410 = status410;
+        return this;
+    }
+    public Long getStatus410() {
+        return this.status410;
+    }
+
+    public DescribeDomainStatusCodeCountResponseBody setStatus499(Long status499) {
+        this.status499 = status499;
+        return this;
+    }
+    public Long getStatus499() {
+        return this.status499;
     }
 
     public DescribeDomainStatusCodeCountResponseBody setStatus4XX(Long status4XX) {

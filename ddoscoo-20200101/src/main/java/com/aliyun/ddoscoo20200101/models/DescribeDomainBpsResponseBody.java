@@ -4,10 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsResponseBody extends TeaModel {
+    /**
+     * <p>The bandwidths.</p>
+     */
     @NameInMap("DomainBps")
     public java.util.List<DescribeDomainBpsResponseBodyDomainBps> domainBps;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
      */
@@ -37,6 +42,8 @@ public class DescribeDomainBpsResponseBody extends TeaModel {
 
     public static class DescribeDomainBpsResponseBodyDomainBps extends TeaModel {
         /**
+         * <p>The inbound bandwidth. Unit: bit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -44,6 +51,8 @@ public class DescribeDomainBpsResponseBody extends TeaModel {
         public Long inBps;
 
         /**
+         * <p>The index number of the returned data.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -51,6 +60,8 @@ public class DescribeDomainBpsResponseBody extends TeaModel {
         public Long index;
 
         /**
+         * <p>The outbound bandwidth. Unit: bit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

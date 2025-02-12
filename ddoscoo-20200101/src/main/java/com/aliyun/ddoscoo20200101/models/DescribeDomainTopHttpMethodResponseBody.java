@@ -4,10 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
+    /**
+     * <p>The information about top HTTP methods.</p>
+     */
     @NameInMap("DomainTopMethod")
     public java.util.List<DescribeDomainTopHttpMethodResponseBodyDomainTopMethod> domainTopMethod;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
      */
@@ -37,6 +42,8 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
 
     public static class DescribeDomainTopHttpMethodResponseBodyDomainTopMethod extends TeaModel {
         /**
+         * <p>The domain name of the website.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.aliyundoc.com</p>
          */
@@ -44,6 +51,8 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The HTTP method.</p>
+         * 
          * <strong>example:</strong>
          * <p>GET</p>
          */
@@ -51,6 +60,8 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
         public String httpMethod;
 
         /**
+         * <p>The page views.</p>
+         * 
          * <strong>example:</strong>
          * <p>22121</p>
          */

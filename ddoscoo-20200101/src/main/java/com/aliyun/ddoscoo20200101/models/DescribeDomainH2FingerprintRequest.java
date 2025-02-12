@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainH2FingerprintRequest extends TeaModel {
     /**
+     * <p>The domain name of the website.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query the domain names of all websites that are protected by Anti-DDoS Proxy.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
      */
@@ -12,6 +17,11 @@ public class DescribeDomainH2FingerprintRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <blockquote>
+     * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1726318200</p>
      */
@@ -19,6 +29,7 @@ public class DescribeDomainH2FingerprintRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The maximum number of entries to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +39,10 @@ public class DescribeDomainH2FingerprintRequest extends TeaModel {
     public Long limit;
 
     /**
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <blockquote>
+     * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
