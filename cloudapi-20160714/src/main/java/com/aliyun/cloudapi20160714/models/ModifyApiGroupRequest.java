@@ -113,6 +113,9 @@ public class ModifyApiGroupRequest extends TeaModel {
     @NameInMap("RpcPattern")
     public String rpcPattern;
 
+    @NameInMap("RpsLimitForServerless")
+    public String rpsLimitForServerless;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -245,6 +248,14 @@ public class ModifyApiGroupRequest extends TeaModel {
     }
     public String getRpcPattern() {
         return this.rpcPattern;
+    }
+
+    public ModifyApiGroupRequest setRpsLimitForServerless(String rpsLimitForServerless) {
+        this.rpsLimitForServerless = rpsLimitForServerless;
+        return this;
+    }
+    public String getRpsLimitForServerless() {
+        return this.rpsLimitForServerless;
     }
 
     public ModifyApiGroupRequest setSecurityToken(String securityToken) {
