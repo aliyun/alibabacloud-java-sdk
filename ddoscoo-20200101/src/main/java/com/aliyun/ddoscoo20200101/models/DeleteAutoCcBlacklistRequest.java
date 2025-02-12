@@ -30,6 +30,9 @@ public class DeleteAutoCcBlacklistRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("QueryType")
+    public String queryType;
+
     public static DeleteAutoCcBlacklistRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAutoCcBlacklistRequest self = new DeleteAutoCcBlacklistRequest();
         return TeaModel.build(map, self);
@@ -49,6 +52,14 @@ public class DeleteAutoCcBlacklistRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeleteAutoCcBlacklistRequest setQueryType(String queryType) {
+        this.queryType = queryType;
+        return this;
+    }
+    public String getQueryType() {
+        return this.queryType;
     }
 
 }

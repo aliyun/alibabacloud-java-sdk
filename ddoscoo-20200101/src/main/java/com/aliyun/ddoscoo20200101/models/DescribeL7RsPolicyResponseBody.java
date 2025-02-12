@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeL7RsPolicyResponseBody extends TeaModel {
     /**
-     * <p>The details about the parameters for back-to-origin processing.</p>
+     * <p>The details about the parameters for back-to-origin settings.</p>
      */
     @NameInMap("Attributes")
     public java.util.List<DescribeL7RsPolicyResponseBodyAttributes> attributes;
@@ -34,6 +34,8 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The timeout period for a read or write connection.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -158,7 +160,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         public Integer sendTimeout;
 
         /**
-         * <p>The weight of the origin server. This parameter takes effect only when <strong>ProxyMode</strong> is set to <strong>rr</strong>.</p>
+         * <p>The weight of the origin server. This parameter takes effect only if the value of <strong>ProxyMode</strong> is <strong>rr</strong> or <strong>ip_hash</strong>.****</p>
          * <p>Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>100</strong>. A server with a higher weight receives more requests.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +234,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
 
     public static class DescribeL7RsPolicyResponseBodyAttributes extends TeaModel {
         /**
-         * <p>The parameter for back-to-origin processing.</p>
+         * <p>The parameters for back-to-origin settings.</p>
          */
         @NameInMap("Attribute")
         public DescribeL7RsPolicyResponseBodyAttributesAttribute attribute;

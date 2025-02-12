@@ -4,10 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
+    /**
+     * <p>The information about the user agents.</p>
+     */
     @NameInMap("DomainTopUa")
     public java.util.List<DescribeDomainTopUserAgentResponseBodyDomainTopUa> domainTopUa;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
      */
@@ -37,6 +42,8 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
 
     public static class DescribeDomainTopUserAgentResponseBodyDomainTopUa extends TeaModel {
         /**
+         * <p>The domain name of the website.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
          */
@@ -44,6 +51,8 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The page views.</p>
+         * 
          * <strong>example:</strong>
          * <p>22121</p>
          */
@@ -51,6 +60,8 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
         public Long pv;
 
         /**
+         * <p>The Base64-encoded user agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>TW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvOTYuMC40NjY0LjExMCACYWZhcmkvNTM3LjM2</p>
          */

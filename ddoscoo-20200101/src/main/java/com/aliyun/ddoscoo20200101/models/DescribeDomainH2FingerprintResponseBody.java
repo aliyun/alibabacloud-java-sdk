@@ -4,10 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainH2FingerprintResponseBody extends TeaModel {
+    /**
+     * <p>The information about top N HTTP/2 fingerprints.</p>
+     */
     @NameInMap("DomainH2Fp")
     public java.util.List<DescribeDomainH2FingerprintResponseBodyDomainH2Fp> domainH2Fp;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>112777CC-2AD6-46FC-A263-00B931406FCD</p>
      */
@@ -37,6 +42,8 @@ public class DescribeDomainH2FingerprintResponseBody extends TeaModel {
 
     public static class DescribeDomainH2FingerprintResponseBodyDomainH2Fp extends TeaModel {
         /**
+         * <p>The domain name of the website.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.aliyundoc.com</p>
          */
@@ -44,6 +51,8 @@ public class DescribeDomainH2FingerprintResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The HTTP/2 fingerprint.</p>
+         * 
          * <strong>example:</strong>
          * <p>532501bc316d02c8b1a007db76f2c796</p>
          */
@@ -51,6 +60,8 @@ public class DescribeDomainH2FingerprintResponseBody extends TeaModel {
         public String h2Fingerprint;
 
         /**
+         * <p>The page views.</p>
+         * 
          * <strong>example:</strong>
          * <p>471755</p>
          */

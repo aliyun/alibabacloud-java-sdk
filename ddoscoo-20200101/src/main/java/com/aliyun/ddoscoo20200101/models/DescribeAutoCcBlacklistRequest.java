@@ -49,6 +49,9 @@ public class DescribeAutoCcBlacklistRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("QueryType")
+    public String queryType;
+
     public static DescribeAutoCcBlacklistRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoCcBlacklistRequest self = new DescribeAutoCcBlacklistRequest();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class DescribeAutoCcBlacklistRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeAutoCcBlacklistRequest setQueryType(String queryType) {
+        this.queryType = queryType;
+        return this;
+    }
+    public String getQueryType() {
+        return this.queryType;
     }
 
 }
