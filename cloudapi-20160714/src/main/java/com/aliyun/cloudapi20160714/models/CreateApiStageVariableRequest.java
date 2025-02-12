@@ -106,6 +106,7 @@ public class CreateApiStageVariableRequest extends TeaModel {
         return this.stageId;
     }
 
+    @Deprecated
     public CreateApiStageVariableRequest setStageRouteModel(String stageRouteModel) {
         this.stageRouteModel = stageRouteModel;
         return this;
