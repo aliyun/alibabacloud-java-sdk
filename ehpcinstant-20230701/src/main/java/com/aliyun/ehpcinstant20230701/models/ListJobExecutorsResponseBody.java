@@ -22,14 +22,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Integer pageNumber;
 
     /**
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     /**
      * <strong>example:</strong>
@@ -81,19 +81,19 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         return this.jobId;
     }
 
-    public ListJobExecutorsResponseBody setPageNumber(String pageNumber) {
+    public ListJobExecutorsResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public ListJobExecutorsResponseBody setPageSize(String pageSize) {
+    public ListJobExecutorsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -261,6 +261,9 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @NameInMap("ExecutorId")
         public String executorId;
 
+        @NameInMap("ExpirationTime")
+        public String expirationTime;
+
         @NameInMap("ExternalIpAddress")
         public java.util.List<String> externalIpAddress;
 
@@ -325,6 +328,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
         public String getExecutorId() {
             return this.executorId;
+        }
+
+        public ListJobExecutorsResponseBodyExecutors setExpirationTime(String expirationTime) {
+            this.expirationTime = expirationTime;
+            return this;
+        }
+        public String getExpirationTime() {
+            return this.expirationTime;
         }
 
         public ListJobExecutorsResponseBodyExecutors setExternalIpAddress(java.util.List<String> externalIpAddress) {

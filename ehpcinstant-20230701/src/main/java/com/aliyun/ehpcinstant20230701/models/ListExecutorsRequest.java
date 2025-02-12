@@ -12,14 +12,14 @@ public class ListExecutorsRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Integer pageNumber;
 
     /**
      * <strong>example:</strong>
      * <p>50</p>
      */
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     public static ListExecutorsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExecutorsRequest self = new ListExecutorsRequest();
@@ -34,19 +34,19 @@ public class ListExecutorsRequest extends TeaModel {
         return this.filter;
     }
 
-    public ListExecutorsRequest setPageNumber(String pageNumber) {
+    public ListExecutorsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public ListExecutorsRequest setPageSize(String pageSize) {
+    public ListExecutorsRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 

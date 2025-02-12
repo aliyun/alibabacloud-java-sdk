@@ -12,14 +12,14 @@ public class ListJobsShrinkRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Integer pageNumber;
 
     /**
      * <strong>example:</strong>
      * <p>50</p>
      */
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     @NameInMap("SortBy")
     public String sortByShrink;
@@ -37,19 +37,19 @@ public class ListJobsShrinkRequest extends TeaModel {
         return this.filterShrink;
     }
 
-    public ListJobsShrinkRequest setPageNumber(String pageNumber) {
+    public ListJobsShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public ListJobsShrinkRequest setPageSize(String pageSize) {
+    public ListJobsShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 

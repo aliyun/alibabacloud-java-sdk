@@ -26,6 +26,9 @@ public class CreateJobShrinkRequest extends TeaModel {
     @NameInMap("JobScheduler")
     public String jobScheduler;
 
+    @NameInMap("SecurityPolicy")
+    public String securityPolicyShrink;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -67,6 +70,14 @@ public class CreateJobShrinkRequest extends TeaModel {
     }
     public String getJobScheduler() {
         return this.jobScheduler;
+    }
+
+    public CreateJobShrinkRequest setSecurityPolicyShrink(String securityPolicyShrink) {
+        this.securityPolicyShrink = securityPolicyShrink;
+        return this;
+    }
+    public String getSecurityPolicyShrink() {
+        return this.securityPolicyShrink;
     }
 
     public CreateJobShrinkRequest setTasksShrink(String tasksShrink) {

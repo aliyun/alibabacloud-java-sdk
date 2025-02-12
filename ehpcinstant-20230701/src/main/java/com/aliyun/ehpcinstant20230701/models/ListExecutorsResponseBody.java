@@ -12,14 +12,14 @@ public class ListExecutorsResponseBody extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Integer pageNumber;
 
     /**
      * <strong>example:</strong>
      * <p>50</p>
      */
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     /**
      * <strong>example:</strong>
@@ -48,19 +48,19 @@ public class ListExecutorsResponseBody extends TeaModel {
         return this.executors;
     }
 
-    public ListExecutorsResponseBody setPageNumber(String pageNumber) {
+    public ListExecutorsResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public ListExecutorsResponseBody setPageSize(String pageSize) {
+    public ListExecutorsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -182,6 +182,9 @@ public class ListExecutorsResponseBody extends TeaModel {
     }
 
     public static class ListExecutorsResponseBodyExecutors extends TeaModel {
+        @NameInMap("AppName")
+        public String appName;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -209,6 +212,9 @@ public class ListExecutorsResponseBody extends TeaModel {
          */
         @NameInMap("ExecutorId")
         public String executorId;
+
+        @NameInMap("ExpirationTime")
+        public String expirationTime;
 
         @NameInMap("ExternalIpAddress")
         public java.util.List<String> externalIpAddress;
@@ -280,6 +286,14 @@ public class ListExecutorsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListExecutorsResponseBodyExecutors setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
+        }
+
         public ListExecutorsResponseBodyExecutors setArrayIndex(Integer arrayIndex) {
             this.arrayIndex = arrayIndex;
             return this;
@@ -310,6 +324,14 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
         public String getExecutorId() {
             return this.executorId;
+        }
+
+        public ListExecutorsResponseBodyExecutors setExpirationTime(String expirationTime) {
+            this.expirationTime = expirationTime;
+            return this;
+        }
+        public String getExpirationTime() {
+            return this.expirationTime;
         }
 
         public ListExecutorsResponseBodyExecutors setExternalIpAddress(java.util.List<String> externalIpAddress) {

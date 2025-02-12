@@ -111,6 +111,9 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyJobList extends TeaModel {
+        @NameInMap("AppName")
+        public String appName;
+
         /**
          * <strong>example:</strong>
          * <p>2024-01-25 12:29:21</p>
@@ -194,6 +197,14 @@ public class ListJobsResponseBody extends TeaModel {
         public static ListJobsResponseBodyJobList build(java.util.Map<String, ?> map) throws Exception {
             ListJobsResponseBodyJobList self = new ListJobsResponseBodyJobList();
             return TeaModel.build(map, self);
+        }
+
+        public ListJobsResponseBodyJobList setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
         }
 
         public ListJobsResponseBodyJobList setCreateTime(String createTime) {

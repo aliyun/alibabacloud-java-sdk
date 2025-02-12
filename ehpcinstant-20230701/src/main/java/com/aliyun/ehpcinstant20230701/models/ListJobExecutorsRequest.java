@@ -16,14 +16,14 @@ public class ListJobExecutorsRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Integer pageNumber;
 
     /**
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     /**
      * <strong>example:</strong>
@@ -45,19 +45,19 @@ public class ListJobExecutorsRequest extends TeaModel {
         return this.jobId;
     }
 
-    public ListJobExecutorsRequest setPageNumber(String pageNumber) {
+    public ListJobExecutorsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public ListJobExecutorsRequest setPageSize(String pageSize) {
+    public ListJobExecutorsRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
