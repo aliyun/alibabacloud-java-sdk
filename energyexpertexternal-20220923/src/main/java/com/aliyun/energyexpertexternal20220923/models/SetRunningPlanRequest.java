@@ -33,6 +33,8 @@ public class SetRunningPlanRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -96,6 +98,8 @@ public class SetRunningPlanRequest extends TeaModel {
     public String statisticsTime;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>system1</p>
      */
