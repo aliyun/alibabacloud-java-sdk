@@ -1,3 +1,16 @@
+2025-02-12 Version: 3.4.0
+- Support API CancelCreateIndexJob.
+- Support API CreateIndex.
+- Support API DeleteIndex.
+- Support API DescribeCreateIndexJob.
+- Support API DescribeIndex.
+- Support API ListIndices.
+- Update API CreateDBInstance: add param MasterAISpec.
+- Update API DescribeDBInstanceAttribute: update response param.
+- Update API ModifyMasterSpec: add param MasterAISpec.
+- Update API ModifyMasterSpec: update param MasterCU.
+
+
 2025-01-22 Version: 3.3.0
 - Support API CloneDBInstance.
 - Support API CreateBackup.
