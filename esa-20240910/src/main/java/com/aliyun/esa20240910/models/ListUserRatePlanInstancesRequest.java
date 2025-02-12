@@ -91,6 +91,9 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("SubscribeType")
+    public String subscribeType;
+
     public static ListUserRatePlanInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUserRatePlanInstancesRequest self = new ListUserRatePlanInstancesRequest();
         return TeaModel.build(map, self);
@@ -158,6 +161,14 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListUserRatePlanInstancesRequest setSubscribeType(String subscribeType) {
+        this.subscribeType = subscribeType;
+        return this;
+    }
+    public String getSubscribeType() {
+        return this.subscribeType;
     }
 
 }

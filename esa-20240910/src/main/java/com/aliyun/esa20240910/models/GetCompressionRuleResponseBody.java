@@ -74,6 +74,9 @@ public class GetCompressionRuleResponseBody extends TeaModel {
     @NameInMap("SiteVersion")
     public Integer siteVersion;
 
+    @NameInMap("Zstd")
+    public String zstd;
+
     public static GetCompressionRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCompressionRuleResponseBody self = new GetCompressionRuleResponseBody();
         return TeaModel.build(map, self);
@@ -157,6 +160,14 @@ public class GetCompressionRuleResponseBody extends TeaModel {
     }
     public Integer getSiteVersion() {
         return this.siteVersion;
+    }
+
+    public GetCompressionRuleResponseBody setZstd(String zstd) {
+        this.zstd = zstd;
+        return this;
+    }
+    public String getZstd() {
+        return this.zstd;
     }
 
 }
