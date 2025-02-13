@@ -92,13 +92,6 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>cn-hangzhou-i</p>
-     */
-    @NameInMap("ZoneId")
-    public String zoneId;
-
     public static QueryCreateInstancePriceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCreateInstancePriceShrinkRequest self = new QueryCreateInstancePriceShrinkRequest();
         return TeaModel.build(map, self);
@@ -230,14 +223,6 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
-    }
-
-    public QueryCreateInstancePriceShrinkRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
     }
 
 }
