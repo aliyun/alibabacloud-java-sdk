@@ -255,6 +255,9 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <strong>example:</strong>
          * <p>ipam-pool-lfnwi4jok1ss0g****</p>
@@ -427,6 +430,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListIpamPoolsResponseBodyIpamPools setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListIpamPoolsResponseBodyIpamPools setSourceIpamPoolId(String sourceIpamPoolId) {
