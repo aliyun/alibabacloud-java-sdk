@@ -14,6 +14,9 @@ public class ListIpamResourceDiscoveriesRequest extends TeaModel {
     @NameInMap("IpamResourceDiscoveryName")
     public String ipamResourceDiscoveryName;
 
+    @NameInMap("IsShared")
+    public Boolean isShared;
+
     /**
      * <strong>example:</strong>
      * <p>10</p>
@@ -85,6 +88,14 @@ public class ListIpamResourceDiscoveriesRequest extends TeaModel {
     }
     public String getIpamResourceDiscoveryName() {
         return this.ipamResourceDiscoveryName;
+    }
+
+    public ListIpamResourceDiscoveriesRequest setIsShared(Boolean isShared) {
+        this.isShared = isShared;
+        return this;
+    }
+    public Boolean getIsShared() {
+        return this.isShared;
     }
 
     public ListIpamResourceDiscoveriesRequest setMaxResults(Integer maxResults) {

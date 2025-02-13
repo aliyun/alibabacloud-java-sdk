@@ -200,6 +200,9 @@ public class ListIpamScopesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <strong>example:</strong>
          * <p>Created</p>
@@ -293,6 +296,14 @@ public class ListIpamScopesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListIpamScopesResponseBodyIpamScopes setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListIpamScopesResponseBodyIpamScopes setStatus(String status) {

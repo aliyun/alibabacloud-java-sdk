@@ -91,6 +91,47 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail extends TeaModel {
+        @NameInMap("OverlapResourceCidr")
+        public String overlapResourceCidr;
+
+        @NameInMap("OverlapResourceId")
+        public String overlapResourceId;
+
+        @NameInMap("OverlapResourceRegion")
+        public String overlapResourceRegion;
+
+        public static ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail build(java.util.Map<String, ?> map) throws Exception {
+            ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail self = new ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail setOverlapResourceCidr(String overlapResourceCidr) {
+            this.overlapResourceCidr = overlapResourceCidr;
+            return this;
+        }
+        public String getOverlapResourceCidr() {
+            return this.overlapResourceCidr;
+        }
+
+        public ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail setOverlapResourceId(String overlapResourceId) {
+            this.overlapResourceId = overlapResourceId;
+            return this;
+        }
+        public String getOverlapResourceId() {
+            return this.overlapResourceId;
+        }
+
+        public ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail setOverlapResourceRegion(String overlapResourceRegion) {
+            this.overlapResourceRegion = overlapResourceRegion;
+            return this;
+        }
+        public String getOverlapResourceRegion() {
+            return this.overlapResourceRegion;
+        }
+
+    }
+
     public static class ListIpamResourceCidrsResponseBodyIpamResourceCidrs extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -154,6 +195,9 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
          */
         @NameInMap("ManagementStatus")
         public String managementStatus;
+
+        @NameInMap("OverlapDetail")
+        public java.util.List<ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail> overlapDetail;
 
         /**
          * <strong>example:</strong>
@@ -282,6 +326,14 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         }
         public String getManagementStatus() {
             return this.managementStatus;
+        }
+
+        public ListIpamResourceCidrsResponseBodyIpamResourceCidrs setOverlapDetail(java.util.List<ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail> overlapDetail) {
+            this.overlapDetail = overlapDetail;
+            return this;
+        }
+        public java.util.List<ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail> getOverlapDetail() {
+            return this.overlapDetail;
         }
 
         public ListIpamResourceCidrsResponseBodyIpamResourceCidrs setOverlapStatus(String overlapStatus) {

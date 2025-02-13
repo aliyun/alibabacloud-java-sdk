@@ -193,6 +193,9 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("ShareType")
+        public String shareType;
+
         @NameInMap("Tags")
         public java.util.List<ListIpamResourceDiscoveriesResponseBodyIpamResourceDiscoveriesTags> tags;
 
@@ -278,6 +281,14 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public ListIpamResourceDiscoveriesResponseBodyIpamResourceDiscoveries setShareType(String shareType) {
+            this.shareType = shareType;
+            return this;
+        }
+        public String getShareType() {
+            return this.shareType;
         }
 
         public ListIpamResourceDiscoveriesResponseBodyIpamResourceDiscoveries setTags(java.util.List<ListIpamResourceDiscoveriesResponseBodyIpamResourceDiscoveriesTags> tags) {
