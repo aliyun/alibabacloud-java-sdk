@@ -16569,6 +16569,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DbName", request.dbName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
             query.put("Tid", request.tid);
         }
@@ -17906,6 +17910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
             query.put("Uid", request.uid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uidString)) {
+            query.put("UidString", request.uidString);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userNick)) {

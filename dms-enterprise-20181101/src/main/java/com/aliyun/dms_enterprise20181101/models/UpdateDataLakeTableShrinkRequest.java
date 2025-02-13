@@ -37,6 +37,9 @@ public class UpdateDataLakeTableShrinkRequest extends TeaModel {
     @NameInMap("TableInput")
     public String tableInputShrink;
 
+    @NameInMap("TableName")
+    public String tableName;
+
     /**
      * <strong>example:</strong>
      * <p>3***</p>
@@ -79,6 +82,14 @@ public class UpdateDataLakeTableShrinkRequest extends TeaModel {
     }
     public String getTableInputShrink() {
         return this.tableInputShrink;
+    }
+
+    public UpdateDataLakeTableShrinkRequest setTableName(String tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+    public String getTableName() {
+        return this.tableName;
     }
 
     public UpdateDataLakeTableShrinkRequest setTid(Long tid) {

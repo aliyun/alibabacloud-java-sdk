@@ -62,6 +62,9 @@ public class UpdateUserRequest extends TeaModel {
     @NameInMap("Uid")
     public Long uid;
 
+    @NameInMap("UidString")
+    public String uidString;
+
     /**
      * <p>The nickname of the user.</p>
      * 
@@ -122,6 +125,14 @@ public class UpdateUserRequest extends TeaModel {
     }
     public Long getUid() {
         return this.uid;
+    }
+
+    public UpdateUserRequest setUidString(String uidString) {
+        this.uidString = uidString;
+        return this;
+    }
+    public String getUidString() {
+        return this.uidString;
     }
 
     public UpdateUserRequest setUserNick(String userNick) {
