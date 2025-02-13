@@ -37,6 +37,9 @@ public class UpdateDataLakeTableRequest extends TeaModel {
     @NameInMap("TableInput")
     public OpenStructDLTableInput tableInput;
 
+    @NameInMap("TableName")
+    public String tableName;
+
     /**
      * <strong>example:</strong>
      * <p>3***</p>
@@ -79,6 +82,14 @@ public class UpdateDataLakeTableRequest extends TeaModel {
     }
     public OpenStructDLTableInput getTableInput() {
         return this.tableInput;
+    }
+
+    public UpdateDataLakeTableRequest setTableName(String tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+    public String getTableName() {
+        return this.tableName;
     }
 
     public UpdateDataLakeTableRequest setTid(Long tid) {
