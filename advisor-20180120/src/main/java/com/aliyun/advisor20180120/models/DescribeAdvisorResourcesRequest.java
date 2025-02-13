@@ -4,21 +4,45 @@ package com.aliyun.advisor20180120.models;
 import com.aliyun.tea.*;
 
 public class DescribeAdvisorResourcesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>abcd</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("Product")
     public String product;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 

@@ -31,6 +31,9 @@ public class DescribeCostCheckResultsShrinkRequest extends TeaModel {
     @NameInMap("TagKeys")
     public String tagKeysShrink;
 
+    @NameInMap("TagList")
+    public String tagListShrink;
+
     @NameInMap("TagValues")
     public String tagValuesShrink;
 
@@ -109,6 +112,14 @@ public class DescribeCostCheckResultsShrinkRequest extends TeaModel {
     }
     public String getTagKeysShrink() {
         return this.tagKeysShrink;
+    }
+
+    public DescribeCostCheckResultsShrinkRequest setTagListShrink(String tagListShrink) {
+        this.tagListShrink = tagListShrink;
+        return this;
+    }
+    public String getTagListShrink() {
+        return this.tagListShrink;
     }
 
     public DescribeCostCheckResultsShrinkRequest setTagValuesShrink(String tagValuesShrink) {

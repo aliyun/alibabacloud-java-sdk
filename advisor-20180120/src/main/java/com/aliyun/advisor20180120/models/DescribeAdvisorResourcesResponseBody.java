@@ -7,6 +7,10 @@ public class DescribeAdvisorResourcesResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeAdvisorResourcesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>566331F9-5AB3-550F-B745-A730331F97A9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,42 @@ public class DescribeAdvisorResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAdvisorResourcesResponseBodyDataResultResource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;resourceId&quot;: &quot;xxxxx&quot;,
+         *     &quot;deviceAvailable&quot;: true,
+         *     ...
+         * }</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs-20230701</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
@@ -114,15 +142,27 @@ public class DescribeAdvisorResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAdvisorResourcesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("Result")
         public DescribeAdvisorResourcesResponseBodyDataResult result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

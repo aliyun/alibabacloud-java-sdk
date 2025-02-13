@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetTaskStatusByIdRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95906135</p>
      */
     @NameInMap("TaskId")
     public String taskId;

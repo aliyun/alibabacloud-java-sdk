@@ -4,9 +4,17 @@ package com.aliyun.advisor20180120.models;
 import com.aliyun.tea.*;
 
 public class DescribeAdvisorChecksRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("Product")
     public String product;
 

@@ -3,13 +3,9 @@ package com.aliyun.advisor20180120.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeAdvicesRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>12345678</p>
-     */
-    @NameInMap("AdviceId")
-    public Long adviceId;
+public class RefreshAdvisorCheckShrinkRequest extends TeaModel {
+    @NameInMap("AssumeAliyunId")
+    public Long assumeAliyunId;
 
     /**
      * <strong>example:</strong>
@@ -20,13 +16,6 @@ public class DescribeAdvicesRequest extends TeaModel {
 
     @NameInMap("CheckPlanId")
     public Long checkPlanId;
-
-    /**
-     * <strong>example:</strong>
-     * <p>12345678</p>
-     */
-    @NameInMap("ExcludeAdviceId")
-    public Long excludeAdviceId;
 
     /**
      * <strong>example:</strong>
@@ -42,6 +31,9 @@ public class DescribeAdvicesRequest extends TeaModel {
     @NameInMap("Product")
     public String product;
 
+    @NameInMap("ResourceDimensionList")
+    public String resourceDimensionListShrink;
+
     /**
      * <strong>example:</strong>
      * <p>i-bp67acfmxazb4p****</p>
@@ -49,20 +41,20 @@ public class DescribeAdvicesRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
-    public static DescribeAdvicesRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeAdvicesRequest self = new DescribeAdvicesRequest();
+    public static RefreshAdvisorCheckShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        RefreshAdvisorCheckShrinkRequest self = new RefreshAdvisorCheckShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAdvicesRequest setAdviceId(Long adviceId) {
-        this.adviceId = adviceId;
+    public RefreshAdvisorCheckShrinkRequest setAssumeAliyunId(Long assumeAliyunId) {
+        this.assumeAliyunId = assumeAliyunId;
         return this;
     }
-    public Long getAdviceId() {
-        return this.adviceId;
+    public Long getAssumeAliyunId() {
+        return this.assumeAliyunId;
     }
 
-    public DescribeAdvicesRequest setCheckId(String checkId) {
+    public RefreshAdvisorCheckShrinkRequest setCheckId(String checkId) {
         this.checkId = checkId;
         return this;
     }
@@ -70,7 +62,7 @@ public class DescribeAdvicesRequest extends TeaModel {
         return this.checkId;
     }
 
-    public DescribeAdvicesRequest setCheckPlanId(Long checkPlanId) {
+    public RefreshAdvisorCheckShrinkRequest setCheckPlanId(Long checkPlanId) {
         this.checkPlanId = checkPlanId;
         return this;
     }
@@ -78,15 +70,7 @@ public class DescribeAdvicesRequest extends TeaModel {
         return this.checkPlanId;
     }
 
-    public DescribeAdvicesRequest setExcludeAdviceId(Long excludeAdviceId) {
-        this.excludeAdviceId = excludeAdviceId;
-        return this;
-    }
-    public Long getExcludeAdviceId() {
-        return this.excludeAdviceId;
-    }
-
-    public DescribeAdvicesRequest setLanguage(String language) {
+    public RefreshAdvisorCheckShrinkRequest setLanguage(String language) {
         this.language = language;
         return this;
     }
@@ -94,7 +78,7 @@ public class DescribeAdvicesRequest extends TeaModel {
         return this.language;
     }
 
-    public DescribeAdvicesRequest setProduct(String product) {
+    public RefreshAdvisorCheckShrinkRequest setProduct(String product) {
         this.product = product;
         return this;
     }
@@ -102,7 +86,15 @@ public class DescribeAdvicesRequest extends TeaModel {
         return this.product;
     }
 
-    public DescribeAdvicesRequest setResourceId(String resourceId) {
+    public RefreshAdvisorCheckShrinkRequest setResourceDimensionListShrink(String resourceDimensionListShrink) {
+        this.resourceDimensionListShrink = resourceDimensionListShrink;
+        return this;
+    }
+    public String getResourceDimensionListShrink() {
+        return this.resourceDimensionListShrink;
+    }
+
+    public RefreshAdvisorCheckShrinkRequest setResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
