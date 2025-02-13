@@ -6,36 +6,55 @@ import com.aliyun.tea.*;
 public class IncreaseListRequest extends TeaModel {
     /**
      * <p>The name of the Object Storage Service (OSS) bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bucketName</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
 
     /**
      * <p>The ID of the batch task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The name of the Image Search instance. The name can be up to 20 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demoinstance1</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of images to return on each page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The absolute path to the increment.meta file in the bucket. The path must start with a forward slash (/) and cannot end with a forward slash (/).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/xxx/xxx</p>
      */
     @NameInMap("Path")
     public String path;

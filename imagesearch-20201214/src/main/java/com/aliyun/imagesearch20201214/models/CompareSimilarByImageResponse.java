@@ -3,7 +3,7 @@ package com.aliyun.imagesearch20201214.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteImageResponse extends TeaModel {
+public class CompareSimilarByImageResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteImageResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteImageResponseBody body;
+    public CompareSimilarByImageResponseBody body;
 
-    public static DeleteImageResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteImageResponse self = new DeleteImageResponse();
+    public static CompareSimilarByImageResponse build(java.util.Map<String, ?> map) throws Exception {
+        CompareSimilarByImageResponse self = new CompareSimilarByImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteImageResponse setHeaders(java.util.Map<String, String> headers) {
+    public CompareSimilarByImageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteImageResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteImageResponse setStatusCode(Integer statusCode) {
+    public CompareSimilarByImageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteImageResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteImageResponse setBody(DeleteImageResponseBody body) {
+    public CompareSimilarByImageResponse setBody(CompareSimilarByImageResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteImageResponseBody getBody() {
+    public CompareSimilarByImageResponseBody getBody() {
         return this.body;
     }
 

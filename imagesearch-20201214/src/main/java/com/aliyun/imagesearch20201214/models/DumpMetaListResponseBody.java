@@ -12,6 +12,9 @@ public class DumpMetaListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B3137727-7D6E-488C-BA21-0E034C38A879</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,49 +43,72 @@ public class DumpMetaListResponseBody extends TeaModel {
     public static class DumpMetaListResponseBodyDataDumpMetaList extends TeaModel {
         /**
          * <p>The error code returned.</p>
-         * <br>
-         * <p>*   A value of 0 indicates that the operation is successful.</p>
-         * <p>*   Values other than 0 indicate errors.</p>
+         * <ul>
+         * <li>A value of 0 indicates that the operation is successful.</li>
+         * <li>Values other than 0 indicate errors.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The address where you can download the metadata. The address is valid for 2 hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://imagesearchname.oss-cn-shanghai.aliyuncs.com/xxx">https://imagesearchname.oss-cn-shanghai.aliyuncs.com/xxx</a></p>
          */
         @NameInMap("MetaUrl")
         public String metaUrl;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Msg")
         public String msg;
 
         /**
          * <p>The status of the export task.</p>
-         * <br>
-         * <p>*   PROCESSING: in progress</p>
-         * <p>*   FAIL: failed</p>
-         * <p>*   SUCCESS: successful</p>
+         * <ul>
+         * <li>PROCESSING: in progress</li>
+         * <li>FAIL: failed</li>
+         * <li>SUCCESS: successful</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the task was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1629095713000</p>
          */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
         /**
          * <p>The time when the task was updated. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1629095760000</p>
          */
         @NameInMap("UtcModified")
         public Long utcModified;
@@ -159,18 +185,27 @@ public class DumpMetaListResponseBody extends TeaModel {
 
         /**
          * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
