@@ -1167,6 +1167,29 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
     }
 
+    public static class UpdateCloudRecordRequestPanesWhiteboard extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("WhiteboardId")
+        public String whiteboardId;
+
+        public static UpdateCloudRecordRequestPanesWhiteboard build(java.util.Map<String, ?> map) throws Exception {
+            UpdateCloudRecordRequestPanesWhiteboard self = new UpdateCloudRecordRequestPanesWhiteboard();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateCloudRecordRequestPanesWhiteboard setWhiteboardId(String whiteboardId) {
+            this.whiteboardId = whiteboardId;
+            return this;
+        }
+        public String getWhiteboardId() {
+            return this.whiteboardId;
+        }
+
+    }
+
     public static class UpdateCloudRecordRequestPanes extends TeaModel {
         @NameInMap("Images")
         public java.util.List<UpdateCloudRecordRequestPanesImages> images;
@@ -1203,6 +1226,9 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
         @NameInMap("Texts")
         public java.util.List<UpdateCloudRecordRequestPanesTexts> texts;
+
+        @NameInMap("Whiteboard")
+        public UpdateCloudRecordRequestPanesWhiteboard whiteboard;
 
         public static UpdateCloudRecordRequestPanes build(java.util.Map<String, ?> map) throws Exception {
             UpdateCloudRecordRequestPanes self = new UpdateCloudRecordRequestPanes();
@@ -1255,6 +1281,14 @@ public class UpdateCloudRecordRequest extends TeaModel {
         }
         public java.util.List<UpdateCloudRecordRequestPanesTexts> getTexts() {
             return this.texts;
+        }
+
+        public UpdateCloudRecordRequestPanes setWhiteboard(UpdateCloudRecordRequestPanesWhiteboard whiteboard) {
+            this.whiteboard = whiteboard;
+            return this;
+        }
+        public UpdateCloudRecordRequestPanesWhiteboard getWhiteboard() {
+            return this.whiteboard;
         }
 
     }

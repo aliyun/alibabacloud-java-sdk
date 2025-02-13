@@ -1178,6 +1178,29 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
 
     }
 
+    public static class StartCloudRecordShrinkRequestPanesWhiteboard extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("WhiteboardId")
+        public String whiteboardId;
+
+        public static StartCloudRecordShrinkRequestPanesWhiteboard build(java.util.Map<String, ?> map) throws Exception {
+            StartCloudRecordShrinkRequestPanesWhiteboard self = new StartCloudRecordShrinkRequestPanesWhiteboard();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCloudRecordShrinkRequestPanesWhiteboard setWhiteboardId(String whiteboardId) {
+            this.whiteboardId = whiteboardId;
+            return this;
+        }
+        public String getWhiteboardId() {
+            return this.whiteboardId;
+        }
+
+    }
+
     public static class StartCloudRecordShrinkRequestPanes extends TeaModel {
         @NameInMap("Images")
         public java.util.List<StartCloudRecordShrinkRequestPanesImages> images;
@@ -1216,6 +1239,9 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
 
         @NameInMap("Texts")
         public java.util.List<StartCloudRecordShrinkRequestPanesTexts> texts;
+
+        @NameInMap("Whiteboard")
+        public StartCloudRecordShrinkRequestPanesWhiteboard whiteboard;
 
         public static StartCloudRecordShrinkRequestPanes build(java.util.Map<String, ?> map) throws Exception {
             StartCloudRecordShrinkRequestPanes self = new StartCloudRecordShrinkRequestPanes();
@@ -1268,6 +1294,14 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
         }
         public java.util.List<StartCloudRecordShrinkRequestPanesTexts> getTexts() {
             return this.texts;
+        }
+
+        public StartCloudRecordShrinkRequestPanes setWhiteboard(StartCloudRecordShrinkRequestPanesWhiteboard whiteboard) {
+            this.whiteboard = whiteboard;
+            return this;
+        }
+        public StartCloudRecordShrinkRequestPanesWhiteboard getWhiteboard() {
+            return this.whiteboard;
         }
 
     }

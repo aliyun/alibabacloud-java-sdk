@@ -1214,6 +1214,29 @@ public class StartCloudRecordRequest extends TeaModel {
 
     }
 
+    public static class StartCloudRecordRequestPanesWhiteboard extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("WhiteboardId")
+        public String whiteboardId;
+
+        public static StartCloudRecordRequestPanesWhiteboard build(java.util.Map<String, ?> map) throws Exception {
+            StartCloudRecordRequestPanesWhiteboard self = new StartCloudRecordRequestPanesWhiteboard();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCloudRecordRequestPanesWhiteboard setWhiteboardId(String whiteboardId) {
+            this.whiteboardId = whiteboardId;
+            return this;
+        }
+        public String getWhiteboardId() {
+            return this.whiteboardId;
+        }
+
+    }
+
     public static class StartCloudRecordRequestPanes extends TeaModel {
         @NameInMap("Images")
         public java.util.List<StartCloudRecordRequestPanesImages> images;
@@ -1252,6 +1275,9 @@ public class StartCloudRecordRequest extends TeaModel {
 
         @NameInMap("Texts")
         public java.util.List<StartCloudRecordRequestPanesTexts> texts;
+
+        @NameInMap("Whiteboard")
+        public StartCloudRecordRequestPanesWhiteboard whiteboard;
 
         public static StartCloudRecordRequestPanes build(java.util.Map<String, ?> map) throws Exception {
             StartCloudRecordRequestPanes self = new StartCloudRecordRequestPanes();
@@ -1304,6 +1330,14 @@ public class StartCloudRecordRequest extends TeaModel {
         }
         public java.util.List<StartCloudRecordRequestPanesTexts> getTexts() {
             return this.texts;
+        }
+
+        public StartCloudRecordRequestPanes setWhiteboard(StartCloudRecordRequestPanesWhiteboard whiteboard) {
+            this.whiteboard = whiteboard;
+            return this;
+        }
+        public StartCloudRecordRequestPanesWhiteboard getWhiteboard() {
+            return this.whiteboard;
         }
 
     }
