@@ -1131,6 +1131,29 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     }
 
+    public static class UpdateCloudRecordShrinkRequestPanesWhiteboard extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("WhiteboardId")
+        public String whiteboardId;
+
+        public static UpdateCloudRecordShrinkRequestPanesWhiteboard build(java.util.Map<String, ?> map) throws Exception {
+            UpdateCloudRecordShrinkRequestPanesWhiteboard self = new UpdateCloudRecordShrinkRequestPanesWhiteboard();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateCloudRecordShrinkRequestPanesWhiteboard setWhiteboardId(String whiteboardId) {
+            this.whiteboardId = whiteboardId;
+            return this;
+        }
+        public String getWhiteboardId() {
+            return this.whiteboardId;
+        }
+
+    }
+
     public static class UpdateCloudRecordShrinkRequestPanes extends TeaModel {
         @NameInMap("Images")
         public java.util.List<UpdateCloudRecordShrinkRequestPanesImages> images;
@@ -1167,6 +1190,9 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
         @NameInMap("Texts")
         public java.util.List<UpdateCloudRecordShrinkRequestPanesTexts> texts;
+
+        @NameInMap("Whiteboard")
+        public UpdateCloudRecordShrinkRequestPanesWhiteboard whiteboard;
 
         public static UpdateCloudRecordShrinkRequestPanes build(java.util.Map<String, ?> map) throws Exception {
             UpdateCloudRecordShrinkRequestPanes self = new UpdateCloudRecordShrinkRequestPanes();
@@ -1219,6 +1245,14 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         }
         public java.util.List<UpdateCloudRecordShrinkRequestPanesTexts> getTexts() {
             return this.texts;
+        }
+
+        public UpdateCloudRecordShrinkRequestPanes setWhiteboard(UpdateCloudRecordShrinkRequestPanesWhiteboard whiteboard) {
+            this.whiteboard = whiteboard;
+            return this;
+        }
+        public UpdateCloudRecordShrinkRequestPanesWhiteboard getWhiteboard() {
+            return this.whiteboard;
         }
 
     }

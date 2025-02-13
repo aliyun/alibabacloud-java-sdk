@@ -1167,6 +1167,29 @@ public class UpdateStreamingOutRequest extends TeaModel {
 
     }
 
+    public static class UpdateStreamingOutRequestPanesWhiteboard extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("WhiteboardId")
+        public String whiteboardId;
+
+        public static UpdateStreamingOutRequestPanesWhiteboard build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestPanesWhiteboard self = new UpdateStreamingOutRequestPanesWhiteboard();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStreamingOutRequestPanesWhiteboard setWhiteboardId(String whiteboardId) {
+            this.whiteboardId = whiteboardId;
+            return this;
+        }
+        public String getWhiteboardId() {
+            return this.whiteboardId;
+        }
+
+    }
+
     public static class UpdateStreamingOutRequestPanes extends TeaModel {
         @NameInMap("Images")
         public java.util.List<UpdateStreamingOutRequestPanesImages> images;
@@ -1201,6 +1224,9 @@ public class UpdateStreamingOutRequest extends TeaModel {
 
         @NameInMap("Texts")
         public java.util.List<UpdateStreamingOutRequestPanesTexts> texts;
+
+        @NameInMap("Whiteboard")
+        public UpdateStreamingOutRequestPanesWhiteboard whiteboard;
 
         public static UpdateStreamingOutRequestPanes build(java.util.Map<String, ?> map) throws Exception {
             UpdateStreamingOutRequestPanes self = new UpdateStreamingOutRequestPanes();
@@ -1253,6 +1279,14 @@ public class UpdateStreamingOutRequest extends TeaModel {
         }
         public java.util.List<UpdateStreamingOutRequestPanesTexts> getTexts() {
             return this.texts;
+        }
+
+        public UpdateStreamingOutRequestPanes setWhiteboard(UpdateStreamingOutRequestPanesWhiteboard whiteboard) {
+            this.whiteboard = whiteboard;
+            return this;
+        }
+        public UpdateStreamingOutRequestPanesWhiteboard getWhiteboard() {
+            return this.whiteboard;
         }
 
     }

@@ -1131,6 +1131,29 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     }
 
+    public static class UpdateStreamingOutShrinkRequestPanesWhiteboard extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("WhiteboardId")
+        public String whiteboardId;
+
+        public static UpdateStreamingOutShrinkRequestPanesWhiteboard build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestPanesWhiteboard self = new UpdateStreamingOutShrinkRequestPanesWhiteboard();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStreamingOutShrinkRequestPanesWhiteboard setWhiteboardId(String whiteboardId) {
+            this.whiteboardId = whiteboardId;
+            return this;
+        }
+        public String getWhiteboardId() {
+            return this.whiteboardId;
+        }
+
+    }
+
     public static class UpdateStreamingOutShrinkRequestPanes extends TeaModel {
         @NameInMap("Images")
         public java.util.List<UpdateStreamingOutShrinkRequestPanesImages> images;
@@ -1165,6 +1188,9 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
         @NameInMap("Texts")
         public java.util.List<UpdateStreamingOutShrinkRequestPanesTexts> texts;
+
+        @NameInMap("Whiteboard")
+        public UpdateStreamingOutShrinkRequestPanesWhiteboard whiteboard;
 
         public static UpdateStreamingOutShrinkRequestPanes build(java.util.Map<String, ?> map) throws Exception {
             UpdateStreamingOutShrinkRequestPanes self = new UpdateStreamingOutShrinkRequestPanes();
@@ -1217,6 +1243,14 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         }
         public java.util.List<UpdateStreamingOutShrinkRequestPanesTexts> getTexts() {
             return this.texts;
+        }
+
+        public UpdateStreamingOutShrinkRequestPanes setWhiteboard(UpdateStreamingOutShrinkRequestPanesWhiteboard whiteboard) {
+            this.whiteboard = whiteboard;
+            return this;
+        }
+        public UpdateStreamingOutShrinkRequestPanesWhiteboard getWhiteboard() {
+            return this.whiteboard;
         }
 
     }
