@@ -34,6 +34,9 @@ public class DescribeCostCheckAdvicesRequest extends TeaModel {
     @NameInMap("TagKeys")
     public java.util.List<String> tagKeys;
 
+    @NameInMap("TagList")
+    public java.util.List<DescribeCostCheckAdvicesRequestTagList> tagList;
+
     @NameInMap("TagValues")
     public java.util.List<String> tagValues;
 
@@ -122,12 +125,50 @@ public class DescribeCostCheckAdvicesRequest extends TeaModel {
         return this.tagKeys;
     }
 
+    public DescribeCostCheckAdvicesRequest setTagList(java.util.List<DescribeCostCheckAdvicesRequestTagList> tagList) {
+        this.tagList = tagList;
+        return this;
+    }
+    public java.util.List<DescribeCostCheckAdvicesRequestTagList> getTagList() {
+        return this.tagList;
+    }
+
     public DescribeCostCheckAdvicesRequest setTagValues(java.util.List<String> tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     public java.util.List<String> getTagValues() {
         return this.tagValues;
+    }
+
+    public static class DescribeCostCheckAdvicesRequestTagList extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public java.util.List<String> tagValue;
+
+        public static DescribeCostCheckAdvicesRequestTagList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCostCheckAdvicesRequestTagList self = new DescribeCostCheckAdvicesRequestTagList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCostCheckAdvicesRequestTagList setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeCostCheckAdvicesRequestTagList setTagValue(java.util.List<String> tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public java.util.List<String> getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
 }

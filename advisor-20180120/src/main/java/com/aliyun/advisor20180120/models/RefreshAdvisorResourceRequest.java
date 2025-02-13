@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class RefreshAdvisorResourceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("Product")
     public String product;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 

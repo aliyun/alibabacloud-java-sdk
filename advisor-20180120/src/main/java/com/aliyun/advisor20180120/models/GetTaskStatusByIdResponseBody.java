@@ -7,6 +7,10 @@ public class GetTaskStatusByIdResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetTaskStatusByIdResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>566331F9-5AB3-550F-B745-A730331F97A9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class GetTaskStatusByIdResponseBody extends TeaModel {
     }
 
     public static class GetTaskStatusByIdResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>95906135</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 

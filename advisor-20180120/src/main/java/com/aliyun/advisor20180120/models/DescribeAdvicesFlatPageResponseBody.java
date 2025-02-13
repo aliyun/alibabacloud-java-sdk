@@ -7,6 +7,10 @@ public class DescribeAdvicesFlatPageResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeAdvicesFlatPageResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>566331F9-5AB3-550F-B745-A730331F97A9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,42 +36,86 @@ public class DescribeAdvicesFlatPageResponseBody extends TeaModel {
     }
 
     public static class DescribeAdvicesFlatPageResponseBodyDataResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>192895059480****</p>
+         */
         @NameInMap("AliyunId")
         public Long aliyunId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EcsHighCpuUtilization</p>
+         */
         @NameInMap("CheckId")
         public String checkId;
 
         @NameInMap("CheckName")
         public String checkName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;, &quot;value&quot;:&quot;xxx&quot;}, {&quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;, &quot;value&quot;:&quot;xxx&quot;}, {&quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;, &quot;value&quot;:&quot;xxx&quot;}, ]</p>
+         */
         @NameInMap("Content")
         public String content;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-01 00:00:00</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-01 00:00:00</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40200899</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsExpired")
         public Boolean isExpired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;resourceId&quot;: &quot;i-2zecnwitr2s7aca6****&quot;,&quot;resourceName&quot;: &quot;ecs-20230701&quot;,&quot;regionId&quot;: &quot;cn-hangzhou&quot;,...}</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Severity")
         public Long severity;
 
@@ -183,15 +231,27 @@ public class DescribeAdvicesFlatPageResponseBody extends TeaModel {
     }
 
     public static class DescribeAdvicesFlatPageResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public Long pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
         @NameInMap("Result")
         public java.util.List<DescribeAdvicesFlatPageResponseBodyDataResult> result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Total")
         public Long total;
 

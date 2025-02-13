@@ -4,27 +4,59 @@ package com.aliyun.advisor20180120.models;
 import com.aliyun.tea.*;
 
 public class GetHistoryAdvicesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2023-07-01</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("Product")
     public String product;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Reverse")
     public Boolean reverse;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Severity")
     public String severity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-07-01</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
