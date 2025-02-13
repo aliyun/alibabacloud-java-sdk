@@ -22,13 +22,6 @@ public class QueryModifyInstancePriceShrinkRequest extends TeaModel {
     public String haVSwitchIdsShrink;
 
     /**
-     * <strong>if can be null:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("HaZoneId")
-    public String haZoneId;
-
-    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,14 +78,6 @@ public class QueryModifyInstancePriceShrinkRequest extends TeaModel {
     }
     public String getHaVSwitchIdsShrink() {
         return this.haVSwitchIdsShrink;
-    }
-
-    public QueryModifyInstancePriceShrinkRequest setHaZoneId(String haZoneId) {
-        this.haZoneId = haZoneId;
-        return this;
-    }
-    public String getHaZoneId() {
-        return this.haZoneId;
     }
 
     public QueryModifyInstancePriceShrinkRequest setInstanceId(String instanceId) {

@@ -55,13 +55,6 @@ public class CreateInstanceRequest extends TeaModel {
     public java.util.List<String> haVSwitchIds;
 
     /**
-     * <strong>if can be null:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("HaZoneId")
-    public String haZoneId;
-
-    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,15 +121,6 @@ public class CreateInstanceRequest extends TeaModel {
      */
     @NameInMap("VpcId")
     public String vpcId;
-
-    /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-beijing-g</p>
-     */
-    @NameInMap("ZoneId")
-    public String zoneId;
 
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceRequest self = new CreateInstanceRequest();
@@ -205,14 +189,6 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public java.util.List<String> getHaVSwitchIds() {
         return this.haVSwitchIds;
-    }
-
-    public CreateInstanceRequest setHaZoneId(String haZoneId) {
-        this.haZoneId = haZoneId;
-        return this;
-    }
-    public String getHaZoneId() {
-        return this.haZoneId;
     }
 
     public CreateInstanceRequest setInstanceName(String instanceName) {
@@ -309,14 +285,6 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
-    }
-
-    public CreateInstanceRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
     }
 
     public static class CreateInstanceRequestHaResourceSpec extends TeaModel {

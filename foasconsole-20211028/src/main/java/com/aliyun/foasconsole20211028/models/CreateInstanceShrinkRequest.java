@@ -55,13 +55,6 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     public String haVSwitchIdsShrink;
 
     /**
-     * <strong>if can be null:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("HaZoneId")
-    public String haZoneId;
-
-    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,15 +121,6 @@ public class CreateInstanceShrinkRequest extends TeaModel {
      */
     @NameInMap("VpcId")
     public String vpcId;
-
-    /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-beijing-g</p>
-     */
-    @NameInMap("ZoneId")
-    public String zoneId;
 
     public static CreateInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceShrinkRequest self = new CreateInstanceShrinkRequest();
@@ -205,14 +189,6 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     }
     public String getHaVSwitchIdsShrink() {
         return this.haVSwitchIdsShrink;
-    }
-
-    public CreateInstanceShrinkRequest setHaZoneId(String haZoneId) {
-        this.haZoneId = haZoneId;
-        return this;
-    }
-    public String getHaZoneId() {
-        return this.haZoneId;
     }
 
     public CreateInstanceShrinkRequest setInstanceName(String instanceName) {
@@ -309,14 +285,6 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
-    }
-
-    public CreateInstanceShrinkRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
     }
 
 }

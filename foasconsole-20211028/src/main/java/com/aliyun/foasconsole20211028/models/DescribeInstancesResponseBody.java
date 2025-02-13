@@ -411,16 +411,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Float elasticUsedCpu;
 
         @NameInMap("ElasticUsedMemory")
-        public String elasticUsedMemory;
+        public Float elasticUsedMemory;
 
         @NameInMap("ElasticUsedResource")
-        public String elasticUsedResource;
+        public Float elasticUsedResource;
 
         @NameInMap("GuaranteedUsedCpu")
         public Float guaranteedUsedCpu;
 
         @NameInMap("GuaranteedUsedMemory")
-        public String guaranteedUsedMemory;
+        public Float guaranteedUsedMemory;
 
         @NameInMap("GuaranteedUsedResource")
         public Float guaranteedUsedResource;
@@ -467,19 +467,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.elasticUsedCpu;
         }
 
-        public DescribeInstancesResponseBodyInstancesClusterUsedResources setElasticUsedMemory(String elasticUsedMemory) {
+        public DescribeInstancesResponseBodyInstancesClusterUsedResources setElasticUsedMemory(Float elasticUsedMemory) {
             this.elasticUsedMemory = elasticUsedMemory;
             return this;
         }
-        public String getElasticUsedMemory() {
+        public Float getElasticUsedMemory() {
             return this.elasticUsedMemory;
         }
 
-        public DescribeInstancesResponseBodyInstancesClusterUsedResources setElasticUsedResource(String elasticUsedResource) {
+        public DescribeInstancesResponseBodyInstancesClusterUsedResources setElasticUsedResource(Float elasticUsedResource) {
             this.elasticUsedResource = elasticUsedResource;
             return this;
         }
-        public String getElasticUsedResource() {
+        public Float getElasticUsedResource() {
             return this.elasticUsedResource;
         }
 
@@ -491,11 +491,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.guaranteedUsedCpu;
         }
 
-        public DescribeInstancesResponseBodyInstancesClusterUsedResources setGuaranteedUsedMemory(String guaranteedUsedMemory) {
+        public DescribeInstancesResponseBodyInstancesClusterUsedResources setGuaranteedUsedMemory(Float guaranteedUsedMemory) {
             this.guaranteedUsedMemory = guaranteedUsedMemory;
             return this;
         }
-        public String getGuaranteedUsedMemory() {
+        public Float getGuaranteedUsedMemory() {
             return this.guaranteedUsedMemory;
         }
 
@@ -1161,6 +1161,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstances extends TeaModel {
+        @NameInMap("Ansm")
+        public Boolean ansm;
+
         @NameInMap("ArchitectureType")
         public String architectureType;
 
@@ -1185,7 +1188,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String clusterStatus;
 
         @NameInMap("ClusterUsedResources")
-        public java.util.List<DescribeInstancesResponseBodyInstancesClusterUsedResources> clusterUsedResources;
+        public DescribeInstancesResponseBodyInstancesClusterUsedResources clusterUsedResources;
 
         @NameInMap("ClusterUsedStorage")
         public DescribeInstancesResponseBodyInstancesClusterUsedStorage clusterUsedStorage;
@@ -1322,6 +1325,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeInstancesResponseBodyInstances setAnsm(Boolean ansm) {
+            this.ansm = ansm;
+            return this;
+        }
+        public Boolean getAnsm() {
+            return this.ansm;
+        }
+
         public DescribeInstancesResponseBodyInstances setArchitectureType(String architectureType) {
             this.architectureType = architectureType;
             return this;
@@ -1362,11 +1373,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.clusterStatus;
         }
 
-        public DescribeInstancesResponseBodyInstances setClusterUsedResources(java.util.List<DescribeInstancesResponseBodyInstancesClusterUsedResources> clusterUsedResources) {
+        public DescribeInstancesResponseBodyInstances setClusterUsedResources(DescribeInstancesResponseBodyInstancesClusterUsedResources clusterUsedResources) {
             this.clusterUsedResources = clusterUsedResources;
             return this;
         }
-        public java.util.List<DescribeInstancesResponseBodyInstancesClusterUsedResources> getClusterUsedResources() {
+        public DescribeInstancesResponseBodyInstancesClusterUsedResources getClusterUsedResources() {
             return this.clusterUsedResources;
         }
 
