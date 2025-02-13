@@ -12,12 +12,18 @@ public class DetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36C43E96-8F68-44AA-B1AF-B1F7AB94A6C1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,50 +60,73 @@ public class DetailResponseBody extends TeaModel {
     public static class DetailResponseBodyInstance extends TeaModel {
         /**
          * <p>The capacity of the plan. Unit: × 10,000 images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Capacity")
         public Integer capacity;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imagesearchName</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The number of queries per second supported by the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Qps")
         public Integer qps;
 
         /**
          * <p>The information about the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The Image Search model.</p>
-         * <br>
          * <p>0: commodity search. 1: generic image search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ServiceType")
         public Integer serviceType;
 
         /**
          * <p>The number of images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10063</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
 
         /**
          * <p>The time when the instance was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620382716000</p>
          */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
         /**
          * <p>The time when the instance expires. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1623081600000</p>
          */
         @NameInMap("UtcExpireTime")
         public String utcExpireTime;

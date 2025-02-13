@@ -12,6 +12,9 @@ public class IncreaseListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B3137727-7D6E-488C-BA21-0E034C38A879</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,67 +43,99 @@ public class IncreaseListResponseBody extends TeaModel {
     public static class IncreaseListResponseBodyDataIncrementsInstance extends TeaModel {
         /**
          * <p>The name of the Object Storage Service (OSS) bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucketName</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
          * <p>The callback address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxxx">http://xxxxx</a></p>
          */
         @NameInMap("CallbackAddress")
         public String callbackAddress;
 
         /**
          * <p>The error code returned.</p>
-         * <br>
-         * <p>*   A value of 0 indicates that the operation is successful.</p>
-         * <p>*   Values other than 0 indicate errors.</p>
+         * <ul>
+         * <li>A value of 0 indicates that the operation is successful.</li>
+         * <li>Values other than 0 indicate errors.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The address where you can download the result. The address is valid for 2 hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://imagesearchname.oss-cn-shanghai.aliyuncs.com/xxx">https://imagesearchname.oss-cn-shanghai.aliyuncs.com/xxx</a></p>
          */
         @NameInMap("ErrorUrl")
         public String errorUrl;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sucess</p>
          */
         @NameInMap("Msg")
         public String msg;
 
         /**
          * <p>The absolute path to the increment.meta file in the bucket. The path must start with a forward slash (/) and cannot end with a forward slash (/).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/xx/xx</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The status of the batch task.</p>
-         * <br>
-         * <p>*   PROCESSING: in progress</p>
-         * <p>*   FAIL: failed</p>
-         * <p>*   SUCCESS: successful</p>
+         * <ul>
+         * <li>PROCESSING: in progress</li>
+         * <li>FAIL: failed</li>
+         * <li>SUCCESS: successful</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the task was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1629095713000</p>
          */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
         /**
          * <p>The time when the task was updated. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1629095760000</p>
          */
         @NameInMap("UtcModified")
         public Long utcModified;
@@ -220,18 +255,27 @@ public class IncreaseListResponseBody extends TeaModel {
 
         /**
          * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

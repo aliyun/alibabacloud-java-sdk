@@ -12,12 +12,18 @@ public class DumpMetaResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36C43E96-8F68-44AA-B1AF-B1F7AB94A6C1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,16 +60,23 @@ public class DumpMetaResponseBody extends TeaModel {
     public static class DumpMetaResponseBodyData extends TeaModel {
         /**
          * <p>The status of the export task.</p>
-         * <br>
-         * <p>*   PROCESSING: in progress</p>
-         * <p>*   FAIL: failed</p>
-         * <p>*   SUCCESS: successful</p>
+         * <ul>
+         * <li>PROCESSING: in progress</li>
+         * <li>FAIL: failed</li>
+         * <li>SUCCESS: successful</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROCESSING</p>
          */
         @NameInMap("DumpMetaStatus")
         public String dumpMetaStatus;
 
         /**
          * <p>The ID of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("Id")
         public String id;

@@ -6,17 +6,25 @@ import com.aliyun.tea.*;
 public class AddImageResponseBody extends TeaModel {
     /**
      * <p>The code returned.</p>
-     * <br>
-     * <p>*   A value of 0 indicates that the request was successful.</p>
-     * <p>*   Values other than 0 indicate that the request failed.</p>
+     * <ul>
+     * <li>A value of 0 indicates that the request was successful.</li>
+     * <li>Values other than 0 indicate that the request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The error message returned if the request failed.</p>
-     * <br>
-     * <p>> No value is returned if the request was successful, and an error message is returned if the request failed.</p>
+     * <blockquote>
+     * <p>No value is returned if the request was successful, and an error message is returned if the request failed.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -29,12 +37,18 @@ public class AddImageResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E0845DE6-52AF-4B50-9F15-51ED4044E6AB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,12 +101,18 @@ public class AddImageResponseBody extends TeaModel {
     public static class AddImageResponseBodyPicInfo extends TeaModel {
         /**
          * <p>The result of category prediction. If a category is specified in the request, the specified category prevails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88888888</p>
          */
         @NameInMap("CategoryId")
         public Integer categoryId;
 
         /**
-         * <p>The result of subject identification. The subject area of the image is in the format of `x1,x2,y1,y2`. `x1 and y1` represent the position in the upper-left corner, in pixels. `x2 and y2` represent the position in the lower-right corner, in pixels. If a subject area is specified in the request, the specified subject area prevails.</p>
+         * <p>The result of subject identification. The subject area of the image is in the format of <code>x1,x2,y1,y2</code>. <code>x1 and y1</code> represent the position in the upper-left corner, in pixels. <code>x2 and y2</code> represent the position in the lower-right corner, in pixels. If a subject area is specified in the request, the specified subject area prevails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94,691,206,650</p>
          */
         @NameInMap("Region")
         public String region;
