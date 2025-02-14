@@ -14,14 +14,29 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>A list of OSS objects.</p>
+     * <p>The OSS objects.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeOssObjectsResponseBodyItems> items;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
+    /**
+     * <p>The ID value from which the next page of results starts.</p>
+     * <blockquote>
+     * <p> This parameter is returned only when the <code>Truncated</code> parameter is set to <code>true</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1754786235714378752</p>
+     */
     @NameInMap("NextMarker")
     public String nextMarker;
 
@@ -52,6 +67,16 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Truncated")
     public Boolean truncated;
 
@@ -325,7 +350,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public Integer ruleCount;
 
         /**
-         * <p>A list of rules.</p>
+         * <p>The rules.</p>
          */
         @NameInMap("RuleList")
         public java.util.List<DescribeOssObjectsResponseBodyItemsRuleList> ruleList;

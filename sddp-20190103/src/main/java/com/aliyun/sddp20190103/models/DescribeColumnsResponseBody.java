@@ -14,7 +14,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>A list of columns.</p>
+     * <p>The columns.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeColumnsResponseBodyItems> items;
@@ -162,6 +162,9 @@ public class DescribeColumnsResponseBody extends TeaModel {
         @NameInMap("DataType")
         public String dataType;
 
+        @NameInMap("EngineType")
+        public String engineType;
+
         /**
          * <p>The ID of the column of the table.</p>
          * 
@@ -188,6 +191,9 @@ public class DescribeColumnsResponseBody extends TeaModel {
          */
         @NameInMap("InstanceName")
         public String instanceName;
+
+        @NameInMap("MaskingStatus")
+        public Integer maskingStatus;
 
         /**
          * <p>A list of tags for data that hits the recognition model.</p>
@@ -245,6 +251,15 @@ public class DescribeColumnsResponseBody extends TeaModel {
         @NameInMap("ProductCode")
         public String productCode;
 
+        @NameInMap("ProductId")
+        public Long productId;
+
+        /**
+         * <p>The region in which the asset resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-***</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -388,6 +403,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
             return this.dataType;
         }
 
+        public DescribeColumnsResponseBodyItems setEngineType(String engineType) {
+            this.engineType = engineType;
+            return this;
+        }
+        public String getEngineType() {
+            return this.engineType;
+        }
+
         public DescribeColumnsResponseBodyItems setId(String id) {
             this.id = id;
             return this;
@@ -410,6 +433,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
         public String getInstanceName() {
             return this.instanceName;
+        }
+
+        public DescribeColumnsResponseBodyItems setMaskingStatus(Integer maskingStatus) {
+            this.maskingStatus = maskingStatus;
+            return this;
+        }
+        public Integer getMaskingStatus() {
+            return this.maskingStatus;
         }
 
         public DescribeColumnsResponseBodyItems setModelTags(java.util.List<DescribeColumnsResponseBodyItemsModelTags> modelTags) {
@@ -450,6 +481,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
         public String getProductCode() {
             return this.productCode;
+        }
+
+        public DescribeColumnsResponseBodyItems setProductId(Long productId) {
+            this.productId = productId;
+            return this;
+        }
+        public Long getProductId() {
+            return this.productId;
         }
 
         public DescribeColumnsResponseBodyItems setRegionId(String regionId) {

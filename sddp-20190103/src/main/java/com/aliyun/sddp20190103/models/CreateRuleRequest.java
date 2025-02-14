@@ -71,6 +71,12 @@ public class CreateRuleRequest extends TeaModel {
     @NameInMap("MatchType")
     public Integer matchType;
 
+    /**
+     * <p>The IDs of the models for sensitive data audit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1452</p>
+     */
     @NameInMap("ModelRuleIds")
     public String modelRuleIds;
 
@@ -190,6 +196,12 @@ public class CreateRuleRequest extends TeaModel {
     @NameInMap("Target")
     public String target;
 
+    /**
+     * <p>The IDs of the templates that are used to audit sensitive data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TemplateRuleIds")
     public String templateRuleIds;
 

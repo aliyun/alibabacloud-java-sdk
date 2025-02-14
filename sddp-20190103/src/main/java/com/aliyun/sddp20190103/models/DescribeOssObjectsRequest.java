@@ -65,6 +65,12 @@ public class DescribeOssObjectsRequest extends TeaModel {
     @NameInMap("LastScanTimeStart")
     public Long lastScanTimeStart;
 
+    /**
+     * <p>When you query data by page, use the <code>Marker</code> parameter to query the data that follows the <code>Marker</code> value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1754786235714378752</p>
+     */
     @NameInMap("Marker")
     public Long marker;
 

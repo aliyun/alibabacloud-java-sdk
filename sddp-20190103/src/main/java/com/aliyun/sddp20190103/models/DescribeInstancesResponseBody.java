@@ -14,7 +14,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array that consists of the data assets.</p>
+     * <p>The data assets.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeInstancesResponseBodyItems> items;
@@ -202,6 +202,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("LastFinishTime")
         public Long lastFinishTime;
 
+        /**
+         * <p>If the management account has opened multiple accounts and the asset belongs to other member accounts, this field displays the UID of the member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12567890126</p>
+         */
         @NameInMap("MemberAliUid")
         public String memberAliUid;
 

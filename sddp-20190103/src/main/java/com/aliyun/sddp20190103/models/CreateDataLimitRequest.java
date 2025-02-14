@@ -97,6 +97,16 @@ public class CreateDataLimitRequest extends TeaModel {
     @NameInMap("FeatureType")
     public Integer featureType;
 
+    /**
+     * <p>Specifies whether to immediately scan the authorized asset. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong></li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("InstantlyScan")
     public Boolean instantlyScan;
 
@@ -142,7 +152,7 @@ public class CreateDataLimitRequest extends TeaModel {
     public Integer ocrStatus;
 
     /**
-     * <p>The name of the data asset.</p>
+     * <p>The name of the asset. The value is a connection string. It consists of an instance ID and a database name, which are separated by a comma (,). This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test-11**</p>

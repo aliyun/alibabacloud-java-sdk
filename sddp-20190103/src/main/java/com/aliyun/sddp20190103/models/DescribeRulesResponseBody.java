@@ -14,7 +14,7 @@ public class DescribeRulesResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array that consists of the sensitive data detection rules.</p>
+     * <p>The sensitive data detection rules.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeRulesResponseBodyItems> items;
@@ -242,6 +242,12 @@ public class DescribeRulesResponseBody extends TeaModel {
         @NameInMap("MatchType")
         public Integer matchType;
 
+        /**
+         * <p>The IDs of the models for sensitive data audit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1452</p>
+         */
         @NameInMap("ModelRuleIds")
         public String modelRuleIds;
 
@@ -349,6 +355,12 @@ public class DescribeRulesResponseBody extends TeaModel {
         @NameInMap("Target")
         public String target;
 
+        /**
+         * <p>The IDs of the templates that are used to audit sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TemplateRuleIds")
         public String templateRuleIds;
 
