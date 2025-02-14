@@ -4,28 +4,8 @@ package com.aliyun.iqs20240712.models;
 import com.aliyun.tea.*;
 
 public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
-    @NameInMap("code")
-    public String code;
-
     @NameInMap("data")
     public ElectrobikeDirectionNovaResponseBodyData data;
-
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
-    @NameInMap("errorCode")
-    public Integer errorCode;
-
-    /**
-     * <strong>example:</strong>
-     * <title>502 Bad Gateway</title>
-     */
-    @NameInMap("errorMessage")
-    public String errorMessage;
-
-    @NameInMap("message")
-    public String message;
 
     @NameInMap("requestId")
     public String requestId;
@@ -42,44 +22,12 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ElectrobikeDirectionNovaResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ElectrobikeDirectionNovaResponseBody setData(ElectrobikeDirectionNovaResponseBodyData data) {
         this.data = data;
         return this;
     }
     public ElectrobikeDirectionNovaResponseBodyData getData() {
         return this.data;
-    }
-
-    public ElectrobikeDirectionNovaResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ElectrobikeDirectionNovaResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ElectrobikeDirectionNovaResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public ElectrobikeDirectionNovaResponseBody setRequestId(String requestId) {
