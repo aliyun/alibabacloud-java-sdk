@@ -73,6 +73,9 @@ public class AIAgentTemplateConfig extends TeaModel {
     }
 
     public static class AIAgentTemplateConfigAvatarChat3D extends TeaModel {
+        @NameInMap("AsrLanguageId")
+        public String asrLanguageId;
+
         @NameInMap("AsrMaxSilence")
         public Integer asrMaxSilence;
 
@@ -136,6 +139,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         public static AIAgentTemplateConfigAvatarChat3D build(java.util.Map<String, ?> map) throws Exception {
             AIAgentTemplateConfigAvatarChat3D self = new AIAgentTemplateConfigAvatarChat3D();
             return TeaModel.build(map, self);
+        }
+
+        public AIAgentTemplateConfigAvatarChat3D setAsrLanguageId(String asrLanguageId) {
+            this.asrLanguageId = asrLanguageId;
+            return this;
+        }
+        public String getAsrLanguageId() {
+            return this.asrLanguageId;
         }
 
         public AIAgentTemplateConfigAvatarChat3D setAsrMaxSilence(Integer asrMaxSilence) {
@@ -331,6 +342,9 @@ public class AIAgentTemplateConfig extends TeaModel {
     }
 
     public static class AIAgentTemplateConfigVisionChat extends TeaModel {
+        @NameInMap("AsrLanguageId")
+        public String asrLanguageId;
+
         @NameInMap("AsrMaxSilence")
         public Integer asrMaxSilence;
 
@@ -391,6 +405,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         public static AIAgentTemplateConfigVisionChat build(java.util.Map<String, ?> map) throws Exception {
             AIAgentTemplateConfigVisionChat self = new AIAgentTemplateConfigVisionChat();
             return TeaModel.build(map, self);
+        }
+
+        public AIAgentTemplateConfigVisionChat setAsrLanguageId(String asrLanguageId) {
+            this.asrLanguageId = asrLanguageId;
+            return this;
+        }
+        public String getAsrLanguageId() {
+            return this.asrLanguageId;
         }
 
         public AIAgentTemplateConfigVisionChat setAsrMaxSilence(Integer asrMaxSilence) {
@@ -578,6 +600,9 @@ public class AIAgentTemplateConfig extends TeaModel {
     }
 
     public static class AIAgentTemplateConfigVoiceChat extends TeaModel {
+        @NameInMap("AsrLanguageId")
+        public String asrLanguageId;
+
         @NameInMap("AsrMaxSilence")
         public Integer asrMaxSilence;
 
@@ -644,6 +669,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         public static AIAgentTemplateConfigVoiceChat build(java.util.Map<String, ?> map) throws Exception {
             AIAgentTemplateConfigVoiceChat self = new AIAgentTemplateConfigVoiceChat();
             return TeaModel.build(map, self);
+        }
+
+        public AIAgentTemplateConfigVoiceChat setAsrLanguageId(String asrLanguageId) {
+            this.asrLanguageId = asrLanguageId;
+            return this;
+        }
+        public String getAsrLanguageId() {
+            return this.asrLanguageId;
         }
 
         public AIAgentTemplateConfigVoiceChat setAsrMaxSilence(Integer asrMaxSilence) {

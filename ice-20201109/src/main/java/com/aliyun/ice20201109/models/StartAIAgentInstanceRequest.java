@@ -19,6 +19,9 @@ public class StartAIAgentInstanceRequest extends TeaModel {
     @NameInMap("RuntimeConfig")
     public AIAgentRuntimeConfig runtimeConfig;
 
+    @NameInMap("SessionId")
+    public String sessionId;
+
     @NameInMap("TemplateConfig")
     public AIAgentTemplateConfig templateConfig;
 
@@ -48,6 +51,14 @@ public class StartAIAgentInstanceRequest extends TeaModel {
     }
     public AIAgentRuntimeConfig getRuntimeConfig() {
         return this.runtimeConfig;
+    }
+
+    public StartAIAgentInstanceRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public StartAIAgentInstanceRequest setTemplateConfig(AIAgentTemplateConfig templateConfig) {

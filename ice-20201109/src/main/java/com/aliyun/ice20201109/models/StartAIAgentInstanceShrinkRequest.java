@@ -19,6 +19,9 @@ public class StartAIAgentInstanceShrinkRequest extends TeaModel {
     @NameInMap("RuntimeConfig")
     public String runtimeConfigShrink;
 
+    @NameInMap("SessionId")
+    public String sessionId;
+
     @NameInMap("TemplateConfig")
     public String templateConfigShrink;
 
@@ -48,6 +51,14 @@ public class StartAIAgentInstanceShrinkRequest extends TeaModel {
     }
     public String getRuntimeConfigShrink() {
         return this.runtimeConfigShrink;
+    }
+
+    public StartAIAgentInstanceShrinkRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public StartAIAgentInstanceShrinkRequest setTemplateConfigShrink(String templateConfigShrink) {

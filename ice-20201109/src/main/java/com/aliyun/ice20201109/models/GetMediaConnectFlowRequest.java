@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetMediaConnectFlowRequest extends TeaModel {
     /**
+     * <p>Flow instance ID</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
      */

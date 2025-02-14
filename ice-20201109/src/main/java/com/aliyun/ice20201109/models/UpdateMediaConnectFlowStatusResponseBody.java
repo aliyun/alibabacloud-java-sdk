@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMediaConnectFlowStatusResponseBody extends TeaModel {
     /**
+     * <p>Response body</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -12,6 +14,8 @@ public class UpdateMediaConnectFlowStatusResponseBody extends TeaModel {
     public String content;
 
     /**
+     * <p>Description of the API call</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -19,6 +23,8 @@ public class UpdateMediaConnectFlowStatusResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>20B3A1B6-4BD2-5DE6-BCBC-098C9B4F4E91</p>
      */
@@ -26,11 +32,13 @@ public class UpdateMediaConnectFlowStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>返回的错误码，0表示成功</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("RetCode")
-    public String retCode;
+    public Integer retCode;
 
     public static UpdateMediaConnectFlowStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateMediaConnectFlowStatusResponseBody self = new UpdateMediaConnectFlowStatusResponseBody();
@@ -61,11 +69,11 @@ public class UpdateMediaConnectFlowStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateMediaConnectFlowStatusResponseBody setRetCode(String retCode) {
+    public UpdateMediaConnectFlowStatusResponseBody setRetCode(Integer retCode) {
         this.retCode = retCode;
         return this;
     }
-    public String getRetCode() {
+    public Integer getRetCode() {
         return this.retCode;
     }
 

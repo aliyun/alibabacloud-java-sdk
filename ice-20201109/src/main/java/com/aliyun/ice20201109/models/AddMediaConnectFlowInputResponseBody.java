@@ -4,17 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AddMediaConnectFlowInputResponseBody extends TeaModel {
+    /**
+     * <p>Response body</p>
+     */
     @NameInMap("Content")
     public AddMediaConnectFlowInputResponseBodyContent content;
 
     /**
+     * <p>Description of the API call</p>
+     * 
      * <strong>example:</strong>
-     * <p>ok</p>
+     * <p>OK</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>请求ID</p>
+     * 
      * <strong>example:</strong>
      * <p>11357BE8-4C54-58EA-890A-5AB646EDE4B2</p>
      */
@@ -22,6 +29,8 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Returned error code, 0 indicates success</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -67,6 +76,8 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
 
     public static class AddMediaConnectFlowInputResponseBodyContent extends TeaModel {
         /**
+         * <p>Input URL</p>
+         * 
          * <strong>example:</strong>
          * <p>rtmp://1.2.3.4:1935/live/AliTestInput_8666ec062190f00e263012666319a5be</p>
          */

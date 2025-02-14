@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteMediaConnectFlowResponseBody extends TeaModel {
     /**
+     * <p>Response body</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -12,13 +14,17 @@ public class DeleteMediaConnectFlowResponseBody extends TeaModel {
     public String content;
 
     /**
+     * <p>Description of the API call</p>
+     * 
      * <strong>example:</strong>
-     * <p>ok</p>
+     * <p>OK</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>5AEC17BD-D80B-5F78-BE1B-F07DFA0C8622</p>
      */
@@ -26,6 +32,8 @@ public class DeleteMediaConnectFlowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Returned error code, where <code>0</code> indicates success</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

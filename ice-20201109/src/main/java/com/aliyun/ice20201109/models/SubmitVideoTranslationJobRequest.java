@@ -57,6 +57,21 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     @NameInMap("OutputConfig")
     public String outputConfig;
 
+    @NameInMap("Signature")
+    public String signature;
+
+    @NameInMap("SignatureMehtod")
+    public String signatureMehtod;
+
+    @NameInMap("SignatureNonce")
+    public String signatureNonce;
+
+    @NameInMap("SignatureType")
+    public String signatureType;
+
+    @NameInMap("SignatureVersion")
+    public String signatureVersion;
+
     /**
      * <ul>
      * <li>The job title.</li>
@@ -120,6 +135,46 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     }
     public String getOutputConfig() {
         return this.outputConfig;
+    }
+
+    public SubmitVideoTranslationJobRequest setSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    public String getSignature() {
+        return this.signature;
+    }
+
+    public SubmitVideoTranslationJobRequest setSignatureMehtod(String signatureMehtod) {
+        this.signatureMehtod = signatureMehtod;
+        return this;
+    }
+    public String getSignatureMehtod() {
+        return this.signatureMehtod;
+    }
+
+    public SubmitVideoTranslationJobRequest setSignatureNonce(String signatureNonce) {
+        this.signatureNonce = signatureNonce;
+        return this;
+    }
+    public String getSignatureNonce() {
+        return this.signatureNonce;
+    }
+
+    public SubmitVideoTranslationJobRequest setSignatureType(String signatureType) {
+        this.signatureType = signatureType;
+        return this;
+    }
+    public String getSignatureType() {
+        return this.signatureType;
+    }
+
+    public SubmitVideoTranslationJobRequest setSignatureVersion(String signatureVersion) {
+        this.signatureVersion = signatureVersion;
+        return this;
+    }
+    public String getSignatureVersion() {
+        return this.signatureVersion;
     }
 
     public SubmitVideoTranslationJobRequest setTitle(String title) {

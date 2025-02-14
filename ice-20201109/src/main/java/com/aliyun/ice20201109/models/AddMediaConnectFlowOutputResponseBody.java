@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
+    /**
+     * <p>Response body</p>
+     */
     @NameInMap("Content")
     public AddMediaConnectFlowOutputResponseBodyContent content;
 
     /**
+     * <p>Description of the API call</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -15,6 +20,8 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>请求ID</p>
+     * 
      * <strong>example:</strong>
      * <p>11AA9E73-FBA0-58DC-97BA-D606D847BCB6</p>
      */
@@ -22,11 +29,13 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Returned error code, 0 indicates success</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("RetCode")
-    public String retCode;
+    public Integer retCode;
 
     public static AddMediaConnectFlowOutputResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddMediaConnectFlowOutputResponseBody self = new AddMediaConnectFlowOutputResponseBody();
@@ -57,16 +66,18 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddMediaConnectFlowOutputResponseBody setRetCode(String retCode) {
+    public AddMediaConnectFlowOutputResponseBody setRetCode(Integer retCode) {
         this.retCode = retCode;
         return this;
     }
-    public String getRetCode() {
+    public Integer getRetCode() {
         return this.retCode;
     }
 
     public static class AddMediaConnectFlowOutputResponseBodyContent extends TeaModel {
         /**
+         * <p>Output address</p>
+         * 
          * <strong>example:</strong>
          * <p>srt://1.2.3.4:1025</p>
          */
