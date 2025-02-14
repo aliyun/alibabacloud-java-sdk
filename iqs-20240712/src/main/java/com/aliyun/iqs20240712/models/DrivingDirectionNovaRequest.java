@@ -38,6 +38,9 @@ public class DrivingDirectionNovaRequest extends TeaModel {
     @NameInMap("plate")
     public String plate;
 
+    @NameInMap("showPolyline")
+    public Boolean showPolyline;
+
     public static DrivingDirectionNovaRequest build(java.util.Map<String, ?> map) throws Exception {
         DrivingDirectionNovaRequest self = new DrivingDirectionNovaRequest();
         return TeaModel.build(map, self);
@@ -89,6 +92,14 @@ public class DrivingDirectionNovaRequest extends TeaModel {
     }
     public String getPlate() {
         return this.plate;
+    }
+
+    public DrivingDirectionNovaRequest setShowPolyline(Boolean showPolyline) {
+        this.showPolyline = showPolyline;
+        return this;
+    }
+    public Boolean getShowPolyline() {
+        return this.showPolyline;
     }
 
 }

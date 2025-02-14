@@ -32,6 +32,9 @@ public class ElectrobikeDirectionNovaRequest extends TeaModel {
     @NameInMap("originLongitude")
     public String originLongitude;
 
+    @NameInMap("showPolyline")
+    public Boolean showPolyline;
+
     public static ElectrobikeDirectionNovaRequest build(java.util.Map<String, ?> map) throws Exception {
         ElectrobikeDirectionNovaRequest self = new ElectrobikeDirectionNovaRequest();
         return TeaModel.build(map, self);
@@ -67,6 +70,14 @@ public class ElectrobikeDirectionNovaRequest extends TeaModel {
     }
     public String getOriginLongitude() {
         return this.originLongitude;
+    }
+
+    public ElectrobikeDirectionNovaRequest setShowPolyline(Boolean showPolyline) {
+        this.showPolyline = showPolyline;
+        return this;
+    }
+    public Boolean getShowPolyline() {
+        return this.showPolyline;
     }
 
 }
