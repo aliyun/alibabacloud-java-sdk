@@ -1,3 +1,16 @@
+2025-02-14 Version: 1.10.0
+- Support API GetInstanceLicense.
+- Update API CreateIdentityProvider: update param LarkConfig.
+- Update API GetApplication: update response param.
+- Update API GetIdentityProvider: update response param.
+- Update API ListApplications: add param M2MClientStatus.
+- Update API ListApplications: add param ResourceServerStatus.
+- Update API ListApplications: add param SsoType.
+- Update API ListApplications: update response param.
+- Update API ListIdentityProviders: update response param.
+- Update API UpdateIdentityProvider: update param LarkConfig.
+
+
 2025-01-09 Version: 1.9.0
 - Support API GetInstanceLicense.
 

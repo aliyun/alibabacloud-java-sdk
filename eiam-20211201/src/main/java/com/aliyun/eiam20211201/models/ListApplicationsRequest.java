@@ -46,6 +46,13 @@ public class ListApplicationsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <strong>example:</strong>
+     * <p>enabled</p>
+     */
+    @NameInMap("M2MClientStatus")
+    public String m2MClientStatus;
+
+    /**
      * <p>The number of the page to return.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +69,20 @@ public class ListApplicationsRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Long pageSize;
+
+    /**
+     * <strong>example:</strong>
+     * <p>enabled</p>
+     */
+    @NameInMap("ResourceServerStatus")
+    public String resourceServerStatus;
+
+    /**
+     * <strong>example:</strong>
+     * <p>oauth2/m2m</p>
+     */
+    @NameInMap("SsoType")
+    public String ssoType;
 
     /**
      * <p>The status of the application. Valid values:</p>
@@ -113,6 +134,14 @@ public class ListApplicationsRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public ListApplicationsRequest setM2MClientStatus(String m2MClientStatus) {
+        this.m2MClientStatus = m2MClientStatus;
+        return this;
+    }
+    public String getM2MClientStatus() {
+        return this.m2MClientStatus;
+    }
+
     public ListApplicationsRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -127,6 +156,22 @@ public class ListApplicationsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListApplicationsRequest setResourceServerStatus(String resourceServerStatus) {
+        this.resourceServerStatus = resourceServerStatus;
+        return this;
+    }
+    public String getResourceServerStatus() {
+        return this.resourceServerStatus;
+    }
+
+    public ListApplicationsRequest setSsoType(String ssoType) {
+        this.ssoType = ssoType;
+        return this;
+    }
+    public String getSsoType() {
+        return this.ssoType;
     }
 
     public ListApplicationsRequest setStatus(String status) {

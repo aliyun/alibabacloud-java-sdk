@@ -284,6 +284,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         @NameInMap("AppSecret")
         public String appSecret;
 
+        @NameInMap("EncryptKey")
+        public String encryptKey;
+
         /**
          * <p>IDaaS EIAM 飞书企业编码</p>
          * 
@@ -292,6 +295,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
          */
         @NameInMap("EnterpriseNumber")
         public String enterpriseNumber;
+
+        @NameInMap("VerificationToken")
+        public String verificationToken;
 
         public static GetIdentityProviderResponseBodyIdentityProviderDetailLarkConfig build(java.util.Map<String, ?> map) throws Exception {
             GetIdentityProviderResponseBodyIdentityProviderDetailLarkConfig self = new GetIdentityProviderResponseBodyIdentityProviderDetailLarkConfig();
@@ -314,12 +320,28 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             return this.appSecret;
         }
 
+        public GetIdentityProviderResponseBodyIdentityProviderDetailLarkConfig setEncryptKey(String encryptKey) {
+            this.encryptKey = encryptKey;
+            return this;
+        }
+        public String getEncryptKey() {
+            return this.encryptKey;
+        }
+
         public GetIdentityProviderResponseBodyIdentityProviderDetailLarkConfig setEnterpriseNumber(String enterpriseNumber) {
             this.enterpriseNumber = enterpriseNumber;
             return this;
         }
         public String getEnterpriseNumber() {
             return this.enterpriseNumber;
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailLarkConfig setVerificationToken(String verificationToken) {
+            this.verificationToken = verificationToken;
+            return this;
+        }
+        public String getVerificationToken() {
+            return this.verificationToken;
         }
 
     }

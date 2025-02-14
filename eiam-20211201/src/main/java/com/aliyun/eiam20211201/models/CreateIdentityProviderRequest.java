@@ -572,12 +572,18 @@ public class CreateIdentityProviderRequest extends TeaModel {
         @NameInMap("AppSecret")
         public String appSecret;
 
+        @NameInMap("EncryptKey")
+        public String encryptKey;
+
         /**
          * <strong>example:</strong>
          * <p>FSX123111xxx</p>
          */
         @NameInMap("EnterpriseNumber")
         public String enterpriseNumber;
+
+        @NameInMap("VerificationToken")
+        public String verificationToken;
 
         public static CreateIdentityProviderRequestLarkConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateIdentityProviderRequestLarkConfig self = new CreateIdentityProviderRequestLarkConfig();
@@ -600,12 +606,28 @@ public class CreateIdentityProviderRequest extends TeaModel {
             return this.appSecret;
         }
 
+        public CreateIdentityProviderRequestLarkConfig setEncryptKey(String encryptKey) {
+            this.encryptKey = encryptKey;
+            return this;
+        }
+        public String getEncryptKey() {
+            return this.encryptKey;
+        }
+
         public CreateIdentityProviderRequestLarkConfig setEnterpriseNumber(String enterpriseNumber) {
             this.enterpriseNumber = enterpriseNumber;
             return this;
         }
         public String getEnterpriseNumber() {
             return this.enterpriseNumber;
+        }
+
+        public CreateIdentityProviderRequestLarkConfig setVerificationToken(String verificationToken) {
+            this.verificationToken = verificationToken;
+            return this;
+        }
+        public String getVerificationToken() {
+            return this.verificationToken;
         }
 
     }
