@@ -4,17 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetMediaConnectFlowResponseBody extends TeaModel {
+    /**
+     * <p>Response body</p>
+     */
     @NameInMap("Content")
     public GetMediaConnectFlowResponseBodyContent content;
 
     /**
+     * <p>Interface call description information</p>
+     * 
      * <strong>example:</strong>
-     * <p>ok</p>
+     * <p>OK</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>请求ID</p>
+     * 
      * <strong>example:</strong>
      * <p>FB503AEF-118E-1516-89E2-7B227EA1AC20</p>
      */
@@ -22,6 +29,8 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Return status code, 0 indicates success</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -67,6 +76,8 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
 
     public static class GetMediaConnectFlowResponseBodyContent extends TeaModel {
         /**
+         * <p>Flow creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-18T01:29:24Z</p>
          */
@@ -74,6 +85,8 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Flow instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
          */
@@ -81,22 +94,28 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         public String flowId;
 
         /**
+         * <p>Flow instance name</p>
+         * 
          * <strong>example:</strong>
-         * <p>WorkTypeAfterRefresh</p>
+         * <p>AliTestFlow</p>
          */
         @NameInMap("FlowName")
         public String flowName;
 
         /**
+         * <p>Flow status</p>
+         * 
          * <strong>example:</strong>
-         * <p>Enabled</p>
+         * <p>online</p>
          */
         @NameInMap("FlowStatus")
         public String flowStatus;
 
         /**
+         * <p>Flow start time</p>
+         * 
          * <strong>example:</strong>
-         * <p>2020-05-11T02:40Z</p>
+         * <p>2024-07-18T01:39:24Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;

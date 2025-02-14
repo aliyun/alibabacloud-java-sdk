@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteMediaConnectFlowRequest extends TeaModel {
     /**
+     * <p>Flow instance ID</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>0381f478-7d53-4076-9d5f-27680a6f73e7</p>
      */

@@ -20,6 +20,9 @@ public class GenerateAIAgentCallRequest extends TeaModel {
     @NameInMap("Expire")
     public Long expire;
 
+    @NameInMap("SessionId")
+    public String sessionId;
+
     @NameInMap("TemplateConfig")
     public AIAgentTemplateConfig templateConfig;
 
@@ -52,6 +55,14 @@ public class GenerateAIAgentCallRequest extends TeaModel {
     }
     public Long getExpire() {
         return this.expire;
+    }
+
+    public GenerateAIAgentCallRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public GenerateAIAgentCallRequest setTemplateConfig(AIAgentTemplateConfig templateConfig) {

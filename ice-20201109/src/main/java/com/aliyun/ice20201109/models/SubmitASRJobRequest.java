@@ -22,6 +22,9 @@ public class SubmitASRJobRequest extends TeaModel {
     @NameInMap("Duration")
     public String duration;
 
+    @NameInMap("EditingConfig")
+    public String editingConfig;
+
     /**
      * <p>The input file. You can specify an Object Storage Service (OSS) URL or the ID of a media asset in the media asset library.</p>
      * 
@@ -80,6 +83,14 @@ public class SubmitASRJobRequest extends TeaModel {
     }
     public String getDuration() {
         return this.duration;
+    }
+
+    public SubmitASRJobRequest setEditingConfig(String editingConfig) {
+        this.editingConfig = editingConfig;
+        return this;
+    }
+    public String getEditingConfig() {
+        return this.editingConfig;
     }
 
     public SubmitASRJobRequest setInputFile(String inputFile) {

@@ -20,6 +20,9 @@ public class GenerateAIAgentCallShrinkRequest extends TeaModel {
     @NameInMap("Expire")
     public Long expire;
 
+    @NameInMap("SessionId")
+    public String sessionId;
+
     @NameInMap("TemplateConfig")
     public String templateConfigShrink;
 
@@ -52,6 +55,14 @@ public class GenerateAIAgentCallShrinkRequest extends TeaModel {
     }
     public Long getExpire() {
         return this.expire;
+    }
+
+    public GenerateAIAgentCallShrinkRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public GenerateAIAgentCallShrinkRequest setTemplateConfigShrink(String templateConfigShrink) {

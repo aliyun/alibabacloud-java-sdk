@@ -4,9 +4,23 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreateMediaConnectFlowRequest extends TeaModel {
+    /**
+     * <p>Flow instance name</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliTestFlow</p>
+     */
     @NameInMap("FlowName")
     public String flowName;
 
+    /**
+     * <p>Region to which the Flow instance belongs</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ap-southeast-1</p>
+     */
     @NameInMap("FlowRegion")
     public String flowRegion;
 

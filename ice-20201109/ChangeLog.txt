@@ -1,3 +1,61 @@
+2025-02-14 Version: 4.0.0
+- Support API AddAdInsertion.
+- Support API BatchCreateVodPackagingAsset.
+- Support API CreateVodPackagingAsset.
+- Support API CreateVodPackagingConfiguration.
+- Support API CreateVodPackagingGroup.
+- Support API DeleteAIAgentDialogue.
+- Support API DeleteAdInsertion.
+- Support API DeleteMediaConnectFlowInput.
+- Support API DeleteMediaConnectFlowOutput.
+- Support API DeleteVodPackagingAsset.
+- Support API DeleteVodPackagingConfiguration.
+- Support API DeleteVodPackagingGroup.
+- Support API GenerateMessageChatToken.
+- Support API GetAdInsertion.
+- Support API GetMediaConnectFlowInput.
+- Support API GetMediaConnectFlowOutput.
+- Support API GetVodPackagingAsset.
+- Support API GetVodPackagingConfiguration.
+- Support API GetVodPackagingGroup.
+- Support API ListAIAgentDialogues.
+- Support API ListAdInsertions.
+- Support API ListVodPackagingAssets.
+- Support API ListVodPackagingConfigurations.
+- Support API ListVodPackagingGroups.
+- Support API SendAIAgentText.
+- Support API SubmitHighlightExtractionJob.
+- Support API UpdateAdInsertion.
+- Support API UpdateMediaConnectFlowInput.
+- Support API UpdateMediaConnectFlowOutput.
+- Update API AddMediaConnectFlowInput: delete param SrtPbkeylen.
+- Update API AddMediaConnectFlowInput: delete param SrtPbkeyssen.
+- Update API AddMediaConnectFlowInput: update param FlowId.
+- Update API AddMediaConnectFlowInput: update param InputName.
+- Update API AddMediaConnectFlowInput: update param InputProtocol.
+- Update API AddMediaConnectFlowOutput: delete param PairChannelId.
+- Update API AddMediaConnectFlowOutput: update param FlowId.
+- Update API AddMediaConnectFlowOutput: update param OutputName.
+- Update API AddMediaConnectFlowOutput: update param OutputProtocol.
+- Update API AddMediaConnectFlowOutput: update response param.
+- Update API CreateMediaConnectFlow: update param FlowName.
+- Update API CreateMediaConnectFlow: update param FlowRegion.
+- Update API DeleteMediaConnectFlow: update param FlowId.
+- Update API DescribeAIAgentInstance: update response param.
+- Update API GenerateAIAgentCall: add param SessionId.
+- Update API GetMediaConnectFlow: update param FlowId.
+- Update API StartAIAgentInstance: add param SessionId.
+- Update API SubmitASRJob: add param EditingConfig.
+- Update API SubmitVideoTranslationJob: add param Signature.
+- Update API SubmitVideoTranslationJob: add param SignatureMehtod.
+- Update API SubmitVideoTranslationJob: add param SignatureNonce.
+- Update API SubmitVideoTranslationJob: add param SignatureType.
+- Update API SubmitVideoTranslationJob: add param SignatureVersion.
+- Update API UpdateMediaConnectFlowStatus: update param FlowId.
+- Update API UpdateMediaConnectFlowStatus: update param Status.
+- Update API UpdateMediaConnectFlowStatus: update response param.
+
+
 2025-01-22 Version: 3.13.0
 - Support API AddMediaConnectFlowInput.
 - Support API AddMediaConnectFlowOutput.

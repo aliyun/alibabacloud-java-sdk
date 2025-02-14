@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddMediaConnectFlowInputRequest extends TeaModel {
     /**
+     * <p>IP whitelist, in CIDR format, separated by commas if multiple IP ranges are specified</p>
+     * 
      * <strong>example:</strong>
      * <p>19.168.1.1/32,18.168.1.1/16</p>
      */
@@ -12,6 +14,9 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String cidrs;
 
     /**
+     * <p>Flow instance ID</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
      */
@@ -19,6 +24,8 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String flowId;
 
     /**
+     * <p>Input URL, required when the input type is RTMP-PULL/SRT-Listener</p>
+     * 
      * <strong>example:</strong>
      * <p>rtmp://pull.test.alivecdn.com/live/alitest</p>
      */
@@ -26,6 +33,9 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String inputFromUrl;
 
     /**
+     * <p>Input name</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliTestInput</p>
      */
@@ -33,6 +43,9 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String inputName;
 
     /**
+     * <p>Input type</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>RTMP-PUSH</p>
      */
@@ -40,6 +53,8 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String inputProtocol;
 
     /**
+     * <p>Input bitrate, in bps</p>
+     * 
      * <strong>example:</strong>
      * <p>2000000</p>
      */
@@ -47,6 +62,8 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public Integer maxBitrate;
 
     /**
+     * <p>Paired Flow ID, required when the input type is Flow</p>
+     * 
      * <strong>example:</strong>
      * <p>805fbdd0-575e-4146-b35d-ec7f63937b20</p>
      */
@@ -54,6 +71,8 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String pairFlowId;
 
     /**
+     * <p>Output name of the paired Flow, required when the input type is Flow</p>
+     * 
      * <strong>example:</strong>
      * <p>AliTestOutput</p>
      */
@@ -61,6 +80,8 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String pairOutputName;
 
     /**
+     * <p>SRT latency, required when the input type is SRT-Listener/SRT-Caller</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -68,6 +89,8 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public Integer srtLatency;
 
     /**
+     * <p>SRT encryption key, required when the input type is SRT-Listener/SRT-Caller</p>
+     * 
      * <strong>example:</strong>
      * <p>BETTERG08S01</p>
      */
@@ -75,25 +98,13 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String srtPassphrase;
 
     /**
+     * <p>SRT encryption length, required when the input type is SRT-Listener/SRT-Caller</p>
+     * 
      * <strong>example:</strong>
      * <p>32</p>
      */
     @NameInMap("SrtPbkeyLen")
     public String srtPbkeyLen;
-
-    /**
-     * <strong>example:</strong>
-     * <p>32</p>
-     */
-    @NameInMap("SrtPbkeylen")
-    public String srtPbkeylen;
-
-    /**
-     * <strong>example:</strong>
-     * <p>BETTERG08S01</p>
-     */
-    @NameInMap("SrtPbkeyssen")
-    public String srtPbkeyssen;
 
     public static AddMediaConnectFlowInputRequest build(java.util.Map<String, ?> map) throws Exception {
         AddMediaConnectFlowInputRequest self = new AddMediaConnectFlowInputRequest();
@@ -186,22 +197,6 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     }
     public String getSrtPbkeyLen() {
         return this.srtPbkeyLen;
-    }
-
-    public AddMediaConnectFlowInputRequest setSrtPbkeylen(String srtPbkeylen) {
-        this.srtPbkeylen = srtPbkeylen;
-        return this;
-    }
-    public String getSrtPbkeylen() {
-        return this.srtPbkeylen;
-    }
-
-    public AddMediaConnectFlowInputRequest setSrtPbkeyssen(String srtPbkeyssen) {
-        this.srtPbkeyssen = srtPbkeyssen;
-        return this;
-    }
-    public String getSrtPbkeyssen() {
-        return this.srtPbkeyssen;
     }
 
 }

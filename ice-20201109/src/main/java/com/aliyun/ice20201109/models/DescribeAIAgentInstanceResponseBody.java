@@ -50,6 +50,9 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         @NameInMap("RuntimeConfig")
         public AIAgentRuntimeConfig runtimeConfig;
 
+        @NameInMap("SessionId")
+        public String sessionId;
+
         /**
          * <strong>example:</strong>
          * <p>Finished</p>
@@ -90,6 +93,14 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         }
         public AIAgentRuntimeConfig getRuntimeConfig() {
             return this.runtimeConfig;
+        }
+
+        public DescribeAIAgentInstanceResponseBodyInstance setSessionId(String sessionId) {
+            this.sessionId = sessionId;
+            return this;
+        }
+        public String getSessionId() {
+            return this.sessionId;
         }
 
         public DescribeAIAgentInstanceResponseBodyInstance setStatus(String status) {

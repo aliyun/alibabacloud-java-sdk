@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateMediaConnectFlowStatusRequest extends TeaModel {
     /**
+     * <p>Flow instance ID</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
      */
@@ -12,6 +15,13 @@ public class UpdateMediaConnectFlowStatusRequest extends TeaModel {
     public String flowId;
 
     /**
+     * <p>Flow status:</p>
+     * <ul>
+     * <li>online: Start Flow</li>
+     * <li>offline: Stop Flow</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>online</p>
      */
