@@ -154,6 +154,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("LogoUrl")
         public String logoUrl;
 
+        @NameInMap("M2MClientStatus")
+        public String m2MClientStatus;
+
         /**
          * <p>The service code of the cloud service that manages the application template.</p>
          * 
@@ -162,6 +165,12 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         @NameInMap("ManagedServiceCode")
         public String managedServiceCode;
+
+        @NameInMap("ResourceServerIdentifier")
+        public String resourceServerIdentifier;
+
+        @NameInMap("ResourceServerStatus")
+        public String resourceServerStatus;
 
         /**
          * <p>Indicates whether the application template is managed by a cloud service.</p>
@@ -292,12 +301,36 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.logoUrl;
         }
 
+        public ListApplicationsResponseBodyApplications setM2MClientStatus(String m2MClientStatus) {
+            this.m2MClientStatus = m2MClientStatus;
+            return this;
+        }
+        public String getM2MClientStatus() {
+            return this.m2MClientStatus;
+        }
+
         public ListApplicationsResponseBodyApplications setManagedServiceCode(String managedServiceCode) {
             this.managedServiceCode = managedServiceCode;
             return this;
         }
         public String getManagedServiceCode() {
             return this.managedServiceCode;
+        }
+
+        public ListApplicationsResponseBodyApplications setResourceServerIdentifier(String resourceServerIdentifier) {
+            this.resourceServerIdentifier = resourceServerIdentifier;
+            return this;
+        }
+        public String getResourceServerIdentifier() {
+            return this.resourceServerIdentifier;
+        }
+
+        public ListApplicationsResponseBodyApplications setResourceServerStatus(String resourceServerStatus) {
+            this.resourceServerStatus = resourceServerStatus;
+            return this;
+        }
+        public String getResourceServerStatus() {
+            return this.resourceServerStatus;
         }
 
         public ListApplicationsResponseBodyApplications setServiceManaged(Boolean serviceManaged) {

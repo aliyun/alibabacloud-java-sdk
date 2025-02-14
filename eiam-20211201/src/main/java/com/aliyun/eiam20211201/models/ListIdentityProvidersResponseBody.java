@@ -167,8 +167,19 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://cdn-cn-hangzhou.aliyunidaas.com/xx/logos/xx">https://cdn-cn-hangzhou.aliyunidaas.com/xx/logos/xx</a></p>
+         */
         @NameInMap("LogoUrl")
         public String logoUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>disabled</p>
+         */
+        @NameInMap("PeriodicSyncStatus")
+        public String periodicSyncStatus;
 
         /**
          * <p>IDaaS EIAM 是否支持UD同步</p>
@@ -327,6 +338,14 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
         public String getLogoUrl() {
             return this.logoUrl;
+        }
+
+        public ListIdentityProvidersResponseBodyIdentityProviders setPeriodicSyncStatus(String periodicSyncStatus) {
+            this.periodicSyncStatus = periodicSyncStatus;
+            return this;
+        }
+        public String getPeriodicSyncStatus() {
+            return this.periodicSyncStatus;
         }
 
         public ListIdentityProvidersResponseBodyIdentityProviders setUdPullStatus(String udPullStatus) {

@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceLicenseResponseBody extends TeaModel {
+    /**
+     * <p>Returned result.</p>
+     */
     @NameInMap("License")
     public GetInstanceLicenseResponseBodyLicense license;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
 
     public static class GetInstanceLicenseResponseBodyLicense extends TeaModel {
         /**
-         * <p>License 的版本型号,free-免费版，trail-试用版，enterprise-企业版</p>
+         * <p>Edition of the License</p>
          * 
          * <strong>example:</strong>
          * <p>free</p>
@@ -46,7 +51,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String edition;
 
         /**
-         * <p>License 的有效期终止日期</p>
+         * <p>End date of the validity period of the License, timestamp</p>
          * 
          * <strong>example:</strong>
          * <p>1723996800000</p>
@@ -55,7 +60,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>License 的付费类型，prepay-预付费，postpay-后付费</p>
+         * <p>Payment type of the License</p>
          * 
          * <strong>example:</strong>
          * <p>prepay</p>
@@ -64,7 +69,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String licenseChargeType;
 
         /**
-         * <p>License 详细配置JSON</p>
+         * <p>Detailed configuration JSON string of the License</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;modules&quot;:[{&quot;features&quot;:[{&quot;name&quot;:&quot;urn:alibaba:idaas:license:module:ud:customField&quot;,&quot;status&quot;:&quot;enabled&quot;}]……{&quot;name&quot;:&quot;urn:alibaba:idaas:license:tag:enterprise&quot;,&quot;status&quot;:&quot;enabled&quot;}],&quot;version&quot;:&quot;1.0&quot;}</p>
@@ -73,7 +78,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String licenseConfigJson;
 
         /**
-         * <p>License 的创建时间</p>
+         * <p>Creation time of the License, timestamp</p>
          * 
          * <strong>example:</strong>
          * <p>1720509699000</p>
@@ -82,7 +87,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public Long licenseCreateTime;
 
         /**
-         * <p>License 的唯一标识</p>
+         * <p>Unique identifier of the License</p>
          * 
          * <strong>example:</strong>
          * <p>license_1234xxxx</p>
@@ -91,7 +96,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String licenseId;
 
         /**
-         * <p>License 的状态，valid-有效，expired-已过期，released-已释放</p>
+         * <p>Status of the License</p>
          * 
          * <strong>example:</strong>
          * <p>valid</p>
@@ -100,7 +105,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String licenseStatus;
 
         /**
-         * <p>License 的购买渠道</p>
+         * <p>Purchase channel of the License</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud</p>
@@ -109,7 +114,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String purchaseChannel;
 
         /**
-         * <p>License 对应的外部商品唯一标识</p>
+         * <p>Unique external product identifier corresponding to the License</p>
          * 
          * <strong>example:</strong>
          * <p>eiam-cn-xxxxx</p>
@@ -118,7 +123,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String purchaseInstanceId;
 
         /**
-         * <p>License 的有效期开始日期</p>
+         * <p>Start date of the validity period of the License, timestamp</p>
          * 
          * <strong>example:</strong>
          * <p>1720509699000</p>
@@ -127,7 +132,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>License 的用户配额</p>
+         * <p>User quota of the License</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

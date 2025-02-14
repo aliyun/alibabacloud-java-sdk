@@ -219,6 +219,12 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         @NameInMap("AppSecret")
         public String appSecret;
 
+        @NameInMap("EncryptKey")
+        public String encryptKey;
+
+        @NameInMap("VerificationToken")
+        public String verificationToken;
+
         public static UpdateIdentityProviderRequestLarkConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateIdentityProviderRequestLarkConfig self = new UpdateIdentityProviderRequestLarkConfig();
             return TeaModel.build(map, self);
@@ -238,6 +244,22 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         }
         public String getAppSecret() {
             return this.appSecret;
+        }
+
+        public UpdateIdentityProviderRequestLarkConfig setEncryptKey(String encryptKey) {
+            this.encryptKey = encryptKey;
+            return this;
+        }
+        public String getEncryptKey() {
+            return this.encryptKey;
+        }
+
+        public UpdateIdentityProviderRequestLarkConfig setVerificationToken(String verificationToken) {
+            this.verificationToken = verificationToken;
+            return this;
+        }
+        public String getVerificationToken() {
+            return this.verificationToken;
         }
 
     }
