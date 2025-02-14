@@ -65,6 +65,36 @@ public class QueryDeviceListResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class QueryDeviceListResponseBodyDeviceListDeviceUnionIds extends TeaModel {
+        @NameInMap("OrganizationId")
+        public String organizationId;
+
+        @NameInMap("UnionId")
+        public String unionId;
+
+        public static QueryDeviceListResponseBodyDeviceListDeviceUnionIds build(java.util.Map<String, ?> map) throws Exception {
+            QueryDeviceListResponseBodyDeviceListDeviceUnionIds self = new QueryDeviceListResponseBodyDeviceListDeviceUnionIds();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDeviceListResponseBodyDeviceListDeviceUnionIds setOrganizationId(String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+        public String getOrganizationId() {
+            return this.organizationId;
+        }
+
+        public QueryDeviceListResponseBodyDeviceListDeviceUnionIds setUnionId(String unionId) {
+            this.unionId = unionId;
+            return this;
+        }
+        public String getUnionId() {
+            return this.unionId;
+        }
+
+    }
+
     public static class QueryDeviceListResponseBodyDeviceList extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -82,6 +112,9 @@ public class QueryDeviceListResponseBody extends TeaModel {
          */
         @NameInMap("DeviceOpenId")
         public String deviceOpenId;
+
+        @NameInMap("DeviceUnionIds")
+        public java.util.List<QueryDeviceListResponseBodyDeviceListDeviceUnionIds> deviceUnionIds;
 
         /**
          * <strong>example:</strong>
@@ -117,6 +150,14 @@ public class QueryDeviceListResponseBody extends TeaModel {
         }
         public String getDeviceOpenId() {
             return this.deviceOpenId;
+        }
+
+        public QueryDeviceListResponseBodyDeviceList setDeviceUnionIds(java.util.List<QueryDeviceListResponseBodyDeviceListDeviceUnionIds> deviceUnionIds) {
+            this.deviceUnionIds = deviceUnionIds;
+            return this;
+        }
+        public java.util.List<QueryDeviceListResponseBodyDeviceListDeviceUnionIds> getDeviceUnionIds() {
+            return this.deviceUnionIds;
         }
 
         public QueryDeviceListResponseBodyDeviceList setOnline(String online) {
