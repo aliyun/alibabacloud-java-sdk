@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class SubmitTenantCheckResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public SubmitTenantCheckResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1162D670-E633-5676-AE87-8359B066****</p>
      */
@@ -37,6 +42,8 @@ public class SubmitTenantCheckResponseBody extends TeaModel {
 
     public static class SubmitTenantCheckResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the scan task.</p>
+         * 
          * <strong>example:</strong>
          * <p>fc98d58eb56f699d49bf7ebbd6d7****</p>
          */

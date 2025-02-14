@@ -74,6 +74,16 @@ public class DescribeImageEventOperationPageRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The source of the alert handling rule. Valid values:</p>
+     * <ul>
+     * <li><strong>image</strong>: image.</li>
+     * <li><strong>agentless</strong>: agentless detection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>agentless</p>
+     */
     @NameInMap("Source")
     public String source;
 

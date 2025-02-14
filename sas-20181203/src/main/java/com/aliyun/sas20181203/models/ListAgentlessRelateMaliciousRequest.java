@@ -23,6 +23,16 @@ public class ListAgentlessRelateMaliciousRequest extends TeaModel {
     @NameInMap("EventId")
     public Long eventId;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
@@ -36,6 +46,16 @@ public class ListAgentlessRelateMaliciousRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The scenarios of batch handling. Valid values:</p>
+     * <ul>
+     * <li>same_file_md5: the same MD5 hash value.</li>
+     * <li>default: the same alert type. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("Scenario")
     public String scenario;
 

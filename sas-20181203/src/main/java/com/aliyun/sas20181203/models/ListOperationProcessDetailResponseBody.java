@@ -4,13 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListOperationProcessDetailResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListOperationProcessDetailResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The information about the operation subtasks.</p>
+     */
     @NameInMap("ProcessDetails")
     public java.util.List<ListOperationProcessDetailResponseBodyProcessDetails> processDetails;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CE500770-42D3-442E-9DDD-156E0F9F3***</p>
      */
@@ -48,6 +56,8 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
 
     public static class ListOperationProcessDetailResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The number of entries returned on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -55,6 +65,8 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -62,6 +74,8 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -69,6 +83,8 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>19</p>
          */
@@ -116,12 +132,20 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
 
     public static class ListOperationProcessDetailResponseBodyProcessDetailsChecks extends TeaModel {
         /**
+         * <p>The ID of the check item associated with the operation subtask.</p>
+         * 
          * <strong>example:</strong>
          * <p>133</p>
          */
         @NameInMap("CheckId")
         public Long checkId;
 
+        /**
+         * <p>The name of the check item associated with the operation subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Check for Security Center Agent Status</p>
+         */
         @NameInMap("CheckShowName")
         public String checkShowName;
 
@@ -150,6 +174,8 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
 
     public static class ListOperationProcessDetailResponseBodyProcessDetails extends TeaModel {
         /**
+         * <p>The subtype of the asset associated with the operation subtask.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -157,6 +183,8 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         public Integer assetSubType;
 
         /**
+         * <p>The type of the asset associated with the operation subtask.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -164,16 +192,23 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         public Integer assetType;
 
         /**
+         * <p>The vendor of the asset associated with the operation subtask.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("AssetVendor")
         public Integer assetVendor;
 
+        /**
+         * <p>The check items associated with the operation subtask.</p>
+         */
         @NameInMap("Checks")
         public java.util.List<ListOperationProcessDetailResponseBodyProcessDetailsChecks> checks;
 
         /**
+         * <p>The timestamp when the task was created. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1706544199000</p>
          */
@@ -181,6 +216,8 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the operation subtask.</p>
+         * 
          * <strong>example:</strong>
          * <p>fb4bcd41-a916-46bc-ab1a-65fd383be***</p>
          */
@@ -188,6 +225,8 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         public String detailTaskId;
 
         /**
+         * <p>The end timestamp of the operation subtask. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1706544199000</p>
          */
@@ -195,6 +234,8 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The start timestamp of the operation subtask. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1730335622000</p>
          */
@@ -202,6 +243,15 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The subtask status code. Enumerated values:</p>
+         * <ul>
+         * <li>0: not started.</li>
+         * <li>1: running.</li>
+         * <li>2: successful.</li>
+         * <li>3: times out.</li>
+         * <li>4: failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -209,6 +259,8 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         public Integer statusCode;
 
         /**
+         * <p>The ID of the operation subtask.</p>
+         * 
          * <strong>example:</strong>
          * <p>v34578b8-e567-47ec-2345-3e5b077ca***</p>
          */

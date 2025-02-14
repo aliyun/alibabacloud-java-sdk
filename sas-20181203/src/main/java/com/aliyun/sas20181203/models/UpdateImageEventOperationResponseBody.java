@@ -14,7 +14,7 @@ public class UpdateImageEventOperationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public UpdateImageEventOperationResponseBodyData data;
@@ -97,7 +97,7 @@ public class UpdateImageEventOperationResponseBody extends TeaModel {
 
     public static class UpdateImageEventOperationResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the alert handling rule.</p>
+         * <p>The ID of the alert handling rule, which is the same as the value of the Id request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>67429</p>

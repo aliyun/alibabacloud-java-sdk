@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListOperationProcessDetailRequest extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListOperationProcessDetailRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1731555850000</p>
      */
@@ -19,6 +23,12 @@ public class ListOperationProcessDetailRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -26,6 +36,8 @@ public class ListOperationProcessDetailRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,15 +45,23 @@ public class ListOperationProcessDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1731469330000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The subtask status codes.</p>
+     */
     @NameInMap("StatusCodes")
     public java.util.List<Integer> statusCodes;
 
+    /**
+     * <p>The IDs of operation tasks.</p>
+     */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 

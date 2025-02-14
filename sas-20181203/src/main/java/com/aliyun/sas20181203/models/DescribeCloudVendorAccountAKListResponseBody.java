@@ -308,6 +308,12 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
         @NameInMap("Vendor")
         public String vendor;
 
+        /**
+         * <p>The name of the AccessKey pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("VendorAuthAlias")
         public String vendorAuthAlias;
 

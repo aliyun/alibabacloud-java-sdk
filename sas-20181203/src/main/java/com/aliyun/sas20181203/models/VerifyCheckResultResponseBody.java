@@ -54,6 +54,12 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         @NameInMap("OperateCode")
         public String operateCode;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8eded533-5348-468c-aa1d-0aa2934a7***</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
