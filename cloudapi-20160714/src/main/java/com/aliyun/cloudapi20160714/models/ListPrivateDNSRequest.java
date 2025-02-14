@@ -13,6 +13,12 @@ public class ListPrivateDNSRequest extends TeaModel {
     @NameInMap("IntranetDomain")
     public String intranetDomain;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -40,6 +46,22 @@ public class ListPrivateDNSRequest extends TeaModel {
     }
     public String getIntranetDomain() {
         return this.intranetDomain;
+    }
+
+    public ListPrivateDNSRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListPrivateDNSRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListPrivateDNSRequest setSecurityToken(String securityToken) {
