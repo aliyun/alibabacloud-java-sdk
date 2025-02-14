@@ -143,12 +143,21 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
         @NameInMap("DataType")
         public String dataType;
 
+        @NameInMap("EngineType")
+        public String engineType;
+
         /**
          * <strong>example:</strong>
          * <p>1392973973691383808</p>
          */
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("MaskingStatus")
+        public Integer maskingStatus;
 
         @NameInMap("ModelTags")
         public java.util.List<DescribeDataObjectColumnDetailV2ResponseBodyItemsModelTags> modelTags;
@@ -159,6 +168,12 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
          */
         @NameInMap("PrimaryKey")
         public Boolean primaryKey;
+
+        @NameInMap("ProductId")
+        public Long productId;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         /**
          * <strong>example:</strong>
@@ -187,6 +202,9 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
          */
         @NameInMap("RuleName")
         public String ruleName;
+
+        @NameInMap("TableName")
+        public String tableName;
 
         public static DescribeDataObjectColumnDetailV2ResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataObjectColumnDetailV2ResponseBodyItems self = new DescribeDataObjectColumnDetailV2ResponseBodyItems();
@@ -225,12 +243,36 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
             return this.dataType;
         }
 
+        public DescribeDataObjectColumnDetailV2ResponseBodyItems setEngineType(String engineType) {
+            this.engineType = engineType;
+            return this;
+        }
+        public String getEngineType() {
+            return this.engineType;
+        }
+
         public DescribeDataObjectColumnDetailV2ResponseBodyItems setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeDataObjectColumnDetailV2ResponseBodyItems setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeDataObjectColumnDetailV2ResponseBodyItems setMaskingStatus(Integer maskingStatus) {
+            this.maskingStatus = maskingStatus;
+            return this;
+        }
+        public Integer getMaskingStatus() {
+            return this.maskingStatus;
         }
 
         public DescribeDataObjectColumnDetailV2ResponseBodyItems setModelTags(java.util.List<DescribeDataObjectColumnDetailV2ResponseBodyItemsModelTags> modelTags) {
@@ -247,6 +289,22 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
         }
         public Boolean getPrimaryKey() {
             return this.primaryKey;
+        }
+
+        public DescribeDataObjectColumnDetailV2ResponseBodyItems setProductId(Long productId) {
+            this.productId = productId;
+            return this;
+        }
+        public Long getProductId() {
+            return this.productId;
+        }
+
+        public DescribeDataObjectColumnDetailV2ResponseBodyItems setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeDataObjectColumnDetailV2ResponseBodyItems setRiskLevelId(Long riskLevelId) {
@@ -279,6 +337,14 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
         }
         public String getRuleName() {
             return this.ruleName;
+        }
+
+        public DescribeDataObjectColumnDetailV2ResponseBodyItems setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
     }

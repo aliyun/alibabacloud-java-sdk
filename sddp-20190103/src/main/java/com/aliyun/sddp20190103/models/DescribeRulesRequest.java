@@ -26,6 +26,16 @@ public class DescribeRulesRequest extends TeaModel {
     @NameInMap("ContentCategory")
     public Integer contentCategory;
 
+    /**
+     * <p>The external cooperation channel. Valid values:</p>
+     * <ul>
+     * <li>DAS</li>
+     * <li>YAOCHI</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DAS</p>
+     */
     @NameInMap("CooperationChannel")
     public String cooperationChannel;
 
@@ -178,6 +188,16 @@ public class DescribeRulesRequest extends TeaModel {
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <p>Specifies whether to query a simplified rule. The simplified rule contains only the rule name. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Simplify")
     public Boolean simplify;
 

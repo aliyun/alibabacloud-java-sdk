@@ -162,6 +162,9 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         @NameInMap("DataType")
         public String dataType;
 
+        @NameInMap("EngineType")
+        public String engineType;
+
         /**
          * <p>The ID of the column of the table.</p>
          * 
@@ -188,6 +191,9 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
          */
         @NameInMap("InstanceName")
         public String instanceName;
+
+        @NameInMap("MaskingStatus")
+        public Integer maskingStatus;
 
         /**
          * <p>A list of data tags.</p>
@@ -247,6 +253,12 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
          */
         @NameInMap("ProductCode")
         public String productCode;
+
+        @NameInMap("ProductId")
+        public Long productId;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         /**
          * <p>The ID of the revision record.</p>
@@ -391,6 +403,14 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
             return this.dataType;
         }
 
+        public DescribeColumnsV2ResponseBodyItems setEngineType(String engineType) {
+            this.engineType = engineType;
+            return this;
+        }
+        public String getEngineType() {
+            return this.engineType;
+        }
+
         public DescribeColumnsV2ResponseBodyItems setId(String id) {
             this.id = id;
             return this;
@@ -413,6 +433,14 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         }
         public String getInstanceName() {
             return this.instanceName;
+        }
+
+        public DescribeColumnsV2ResponseBodyItems setMaskingStatus(Integer maskingStatus) {
+            this.maskingStatus = maskingStatus;
+            return this;
+        }
+        public Integer getMaskingStatus() {
+            return this.maskingStatus;
         }
 
         public DescribeColumnsV2ResponseBodyItems setModelTags(java.util.List<DescribeColumnsV2ResponseBodyItemsModelTags> modelTags) {
@@ -453,6 +481,22 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         }
         public String getProductCode() {
             return this.productCode;
+        }
+
+        public DescribeColumnsV2ResponseBodyItems setProductId(Long productId) {
+            this.productId = productId;
+            return this;
+        }
+        public Long getProductId() {
+            return this.productId;
+        }
+
+        public DescribeColumnsV2ResponseBodyItems setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeColumnsV2ResponseBodyItems setRevisionId(Long revisionId) {

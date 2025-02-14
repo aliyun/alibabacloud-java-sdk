@@ -13,6 +13,9 @@ public class DescribeColumnsV2Request extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("EngineType")
+    public String engineType;
+
     /**
      * <p>The ID of the instance to which data in the column of the table belongs.</p>
      * <blockquote>
@@ -160,6 +163,14 @@ public class DescribeColumnsV2Request extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeColumnsV2Request setEngineType(String engineType) {
+        this.engineType = engineType;
+        return this;
+    }
+    public String getEngineType() {
+        return this.engineType;
     }
 
     public DescribeColumnsV2Request setInstanceId(Long instanceId) {

@@ -14,7 +14,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>A list of data assets.</p>
+     * <p>The data assets.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDataLimitsResponseBodyItems> items;
@@ -267,6 +267,12 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         @NameInMap("LastFinishedTime")
         public Long lastFinishedTime;
 
+        /**
+         * <p>The last scan start time of data assets, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145600000</p>
+         */
         @NameInMap("LastStartTime")
         public Long lastStartTime;
 
