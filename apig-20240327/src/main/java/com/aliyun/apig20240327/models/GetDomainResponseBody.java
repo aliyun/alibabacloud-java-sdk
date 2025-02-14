@@ -114,23 +114,11 @@ public class GetDomainResponseBody extends TeaModel {
         @NameInMap("algorithm")
         public String algorithm;
 
-        /**
-         * <p>Cloud Shield CA certificate identity.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>223576-cn-hangzhou</p>
-         */
-        @NameInMap("caCertIndentifier")
-        public String caCertIndentifier;
+        @NameInMap("caCertIdentifier")
+        public String caCertIdentifier;
 
-        /**
-         * <p>Cloud Shield certificate identity.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123576-cn-hangzhou</p>
-         */
-        @NameInMap("certIndentifier")
-        public String certIndentifier;
+        @NameInMap("certIdentifier")
+        public String certIdentifier;
 
         /**
          * <p>Certificate name</p>
@@ -302,20 +290,20 @@ public class GetDomainResponseBody extends TeaModel {
             return this.algorithm;
         }
 
-        public GetDomainResponseBodyData setCaCertIndentifier(String caCertIndentifier) {
-            this.caCertIndentifier = caCertIndentifier;
+        public GetDomainResponseBodyData setCaCertIdentifier(String caCertIdentifier) {
+            this.caCertIdentifier = caCertIdentifier;
             return this;
         }
-        public String getCaCertIndentifier() {
-            return this.caCertIndentifier;
+        public String getCaCertIdentifier() {
+            return this.caCertIdentifier;
         }
 
-        public GetDomainResponseBodyData setCertIndentifier(String certIndentifier) {
-            this.certIndentifier = certIndentifier;
+        public GetDomainResponseBodyData setCertIdentifier(String certIdentifier) {
+            this.certIdentifier = certIdentifier;
             return this;
         }
-        public String getCertIndentifier() {
-            return this.certIndentifier;
+        public String getCertIdentifier() {
+            return this.certIdentifier;
         }
 
         public GetDomainResponseBodyData setCertName(String certName) {

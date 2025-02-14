@@ -1,3 +1,16 @@
+2025-02-14 Version: 4.0.0
+- Support API CreatePolicy.
+- Support API CreatePolicyAttachment.
+- Support API DeletePolicy.
+- Support API DeletePolicyAttachment.
+- Support API DeployHttpApi.
+- Support API GetPolicy.
+- Support API GetPolicyAttachment.
+- Support API UpdatePolicy.
+- Update API GetDomain: update response param.
+- Update API ListGateways: update response param.
+
+
 2025-01-02 Version: 3.0.0
 - Support API ChangeResourceGroup.
 - Support API CreateHttpApiRoute.
