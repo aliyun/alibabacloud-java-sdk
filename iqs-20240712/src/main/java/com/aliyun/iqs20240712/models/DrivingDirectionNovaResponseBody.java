@@ -4,28 +4,8 @@ package com.aliyun.iqs20240712.models;
 import com.aliyun.tea.*;
 
 public class DrivingDirectionNovaResponseBody extends TeaModel {
-    @NameInMap("code")
-    public String code;
-
     @NameInMap("data")
     public DrivingDirectionNovaResponseBodyData data;
-
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
-    @NameInMap("errorCode")
-    public Integer errorCode;
-
-    /**
-     * <strong>example:</strong>
-     * <p>Access was denied, message: No such namespace namespaces/general-perf-cn-shenzhen-e-default.</p>
-     */
-    @NameInMap("errorMessage")
-    public String errorMessage;
-
-    @NameInMap("message")
-    public String message;
 
     @NameInMap("requestId")
     public String requestId;
@@ -42,44 +22,12 @@ public class DrivingDirectionNovaResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DrivingDirectionNovaResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DrivingDirectionNovaResponseBody setData(DrivingDirectionNovaResponseBodyData data) {
         this.data = data;
         return this;
     }
     public DrivingDirectionNovaResponseBodyData getData() {
         return this.data;
-    }
-
-    public DrivingDirectionNovaResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
-    }
-
-    public DrivingDirectionNovaResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public DrivingDirectionNovaResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public DrivingDirectionNovaResponseBody setRequestId(String requestId) {

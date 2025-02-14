@@ -4,28 +4,8 @@ package com.aliyun.iqs20240712.models;
 import com.aliyun.tea.*;
 
 public class TransitIntegratedDirectionResponseBody extends TeaModel {
-    @NameInMap("code")
-    public String code;
-
     @NameInMap("data")
     public TransitIntegratedDirectionResponseBodyData data;
-
-    /**
-     * <strong>example:</strong>
-     * <p>400</p>
-     */
-    @NameInMap("errorCode")
-    public Integer errorCode;
-
-    /**
-     * <strong>example:</strong>
-     * <title>502 Bad Gateway</title>
-     */
-    @NameInMap("errorMessage")
-    public String errorMessage;
-
-    @NameInMap("message")
-    public String message;
 
     @NameInMap("requestId")
     public String requestId;
@@ -42,44 +22,12 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public TransitIntegratedDirectionResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public TransitIntegratedDirectionResponseBody setData(TransitIntegratedDirectionResponseBodyData data) {
         this.data = data;
         return this;
     }
     public TransitIntegratedDirectionResponseBodyData getData() {
         return this.data;
-    }
-
-    public TransitIntegratedDirectionResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
-    }
-
-    public TransitIntegratedDirectionResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public TransitIntegratedDirectionResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public TransitIntegratedDirectionResponseBody setRequestId(String requestId) {

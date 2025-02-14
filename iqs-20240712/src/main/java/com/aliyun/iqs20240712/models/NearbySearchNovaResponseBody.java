@@ -4,28 +4,8 @@ package com.aliyun.iqs20240712.models;
 import com.aliyun.tea.*;
 
 public class NearbySearchNovaResponseBody extends TeaModel {
-    @NameInMap("code")
-    public String code;
-
     @NameInMap("data")
     public java.util.List<NearbySearchNovaResponseBodyData> data;
-
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
-    @NameInMap("errorCode")
-    public Integer errorCode;
-
-    /**
-     * <strong>example:</strong>
-     * <title>502 Bad Gateway</title>
-     */
-    @NameInMap("errorMessage")
-    public String errorMessage;
-
-    @NameInMap("message")
-    public String message;
 
     @NameInMap("requestId")
     public String requestId;
@@ -42,44 +22,12 @@ public class NearbySearchNovaResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public NearbySearchNovaResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public NearbySearchNovaResponseBody setData(java.util.List<NearbySearchNovaResponseBodyData> data) {
         this.data = data;
         return this;
     }
     public java.util.List<NearbySearchNovaResponseBodyData> getData() {
         return this.data;
-    }
-
-    public NearbySearchNovaResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
-    }
-
-    public NearbySearchNovaResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public NearbySearchNovaResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public NearbySearchNovaResponseBody setRequestId(String requestId) {

@@ -4,24 +4,8 @@ package com.aliyun.iqs20240712.models;
 import com.aliyun.tea.*;
 
 public class RgeoCodeResponseBody extends TeaModel {
-    @NameInMap("code")
-    public String code;
-
     @NameInMap("data")
     public RgeoCodeResponseBodyData data;
-
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
-    @NameInMap("errorCode")
-    public Integer errorCode;
-
-    @NameInMap("errorMessage")
-    public String errorMessage;
-
-    @NameInMap("message")
-    public String message;
 
     @NameInMap("requestId")
     public String requestId;
@@ -38,44 +22,12 @@ public class RgeoCodeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RgeoCodeResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public RgeoCodeResponseBody setData(RgeoCodeResponseBodyData data) {
         this.data = data;
         return this;
     }
     public RgeoCodeResponseBodyData getData() {
         return this.data;
-    }
-
-    public RgeoCodeResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
-    }
-
-    public RgeoCodeResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public RgeoCodeResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public RgeoCodeResponseBody setRequestId(String requestId) {
