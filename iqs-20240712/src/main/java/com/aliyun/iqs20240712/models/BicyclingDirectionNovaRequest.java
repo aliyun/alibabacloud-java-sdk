@@ -32,6 +32,9 @@ public class BicyclingDirectionNovaRequest extends TeaModel {
     @NameInMap("originLongitude")
     public String originLongitude;
 
+    @NameInMap("showPolyline")
+    public Boolean showPolyline;
+
     public static BicyclingDirectionNovaRequest build(java.util.Map<String, ?> map) throws Exception {
         BicyclingDirectionNovaRequest self = new BicyclingDirectionNovaRequest();
         return TeaModel.build(map, self);
@@ -67,6 +70,14 @@ public class BicyclingDirectionNovaRequest extends TeaModel {
     }
     public String getOriginLongitude() {
         return this.originLongitude;
+    }
+
+    public BicyclingDirectionNovaRequest setShowPolyline(Boolean showPolyline) {
+        this.showPolyline = showPolyline;
+        return this;
+    }
+    public Boolean getShowPolyline() {
+        return this.showPolyline;
     }
 
 }

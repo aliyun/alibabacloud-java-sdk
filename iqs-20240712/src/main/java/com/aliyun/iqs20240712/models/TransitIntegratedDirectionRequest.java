@@ -38,6 +38,9 @@ public class TransitIntegratedDirectionRequest extends TeaModel {
     @NameInMap("originLongitude")
     public String originLongitude;
 
+    @NameInMap("showPolyline")
+    public Boolean showPolyline;
+
     public static TransitIntegratedDirectionRequest build(java.util.Map<String, ?> map) throws Exception {
         TransitIntegratedDirectionRequest self = new TransitIntegratedDirectionRequest();
         return TeaModel.build(map, self);
@@ -89,6 +92,14 @@ public class TransitIntegratedDirectionRequest extends TeaModel {
     }
     public String getOriginLongitude() {
         return this.originLongitude;
+    }
+
+    public TransitIntegratedDirectionRequest setShowPolyline(Boolean showPolyline) {
+        this.showPolyline = showPolyline;
+        return this;
+    }
+    public Boolean getShowPolyline() {
+        return this.showPolyline;
     }
 
 }
