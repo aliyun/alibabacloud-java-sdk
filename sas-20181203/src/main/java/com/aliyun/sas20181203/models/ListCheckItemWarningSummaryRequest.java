@@ -37,11 +37,11 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     public String checkType;
 
     /**
-     * <p>The risk status. Default value: null, which indicates that check items in all states are queried.Valid values:</p>
+     * <p>The risk status. Default value is null, meaning check items in all states are queried. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: failed</li>
      * <li><strong>3</strong>: passed</li>
-     * <li><strong>6</strong>: Added to Whitelist</li>
+     * <li><strong>6</strong>: whitelisted</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,6 +50,9 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     @NameInMap("CheckWarningStatus")
     public Integer checkWarningStatus;
 
+    /**
+     * <p>The list of risk levels. If the CheckWarningStatus parameter is specified, only it takes effect.</p>
+     */
     @NameInMap("CheckWarningStatusList")
     public java.util.List<Integer> checkWarningStatusList;
 
@@ -139,6 +142,12 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>Start of time range for filtering alerts, effective only for querying historically handled alerts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1732793158366</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

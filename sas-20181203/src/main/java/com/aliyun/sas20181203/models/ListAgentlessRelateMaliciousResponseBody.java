@@ -55,15 +55,39 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
     }
 
     public static class ListAgentlessRelateMaliciousResponseBodyListDetails extends TeaModel {
+        /**
+         * <p>The name of the detailed item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MD5</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The name key of the detailed item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${suspicious.mp.db.maliciousfilemd5}</p>
+         */
         @NameInMap("NameKey")
         public String nameKey;
 
+        /**
+         * <p>The type of the detailed item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value of the detailed item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1f2e13a7c51ee89316ae50066515****</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -107,9 +131,18 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
     }
 
     public static class ListAgentlessRelateMaliciousResponseBodyList extends TeaModel {
+        /**
+         * <p>The details of the alert events.</p>
+         */
         @NameInMap("Details")
         public java.util.List<ListAgentlessRelateMaliciousResponseBodyListDetails> details;
 
+        /**
+         * <p>The URL to download the malicious image sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/">https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/</a>***</p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
@@ -131,9 +164,21 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         @NameInMap("FirstScanTimestamp")
         public Long firstScanTimestamp;
 
+        /**
+         * <p>The highlighted JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;highlight\&quot;:{\&quot;ruleVersion\&quot;:\&quot;20230223\&quot;,\&quot;ruleId\&quot;:600139,\&quot;events\&quot;:[[207,284]]}}</p>
+         */
         @NameInMap("HighLight")
         public String highLight;
 
+        /**
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8012</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -173,33 +218,102 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         @NameInMap("LatestScanTimestamp")
         public Long latestScanTimestamp;
 
+        /**
+         * <p>The severity of the malicious file. Valid values:</p>
+         * <ul>
+         * <li>serious</li>
+         * <li>suspicious</li>
+         * <li>remind</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>serious</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The MD5 hash value of the malicious file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1f2e13a7c51ee89316ae50066515****</p>
+         */
         @NameInMap("MaliciousMd5")
         public String maliciousMd5;
 
+        /**
+         * <p>The name of the malicious file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebShell</p>
+         */
         @NameInMap("MaliciousName")
         public String maliciousName;
 
+        /**
+         * <p>The type of the virus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebShell</p>
+         */
         @NameInMap("MaliciousType")
         public String maliciousType;
 
+        /**
+         * <p>The handling result of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>addWhitelist.USER.Success</p>
+         */
         @NameInMap("OperateResult")
         public String operateResult;
 
+        /**
+         * <p>The timestamp when the alert is handled. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168257753****</p>
+         */
         @NameInMap("OperateTimestamp")
         public String operateTimestamp;
 
+        /**
+         * <p>The partition of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/dev/xvda1</p>
+         */
         @NameInMap("Partition")
         public String partition;
 
+        /**
+         * <p>The ID of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-****</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image_***</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The type of the task object. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: snapshot.</li>
+         * <li><strong>2</strong>: image.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 

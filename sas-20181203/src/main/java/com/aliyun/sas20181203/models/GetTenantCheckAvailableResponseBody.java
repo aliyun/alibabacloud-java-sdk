@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetTenantCheckAvailableResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public GetTenantCheckAvailableResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>69BFFCDE-37D6-5A49-A8BC-BB03AC83****</p>
      */
@@ -37,6 +42,8 @@ public class GetTenantCheckAvailableResponseBody extends TeaModel {
 
     public static class GetTenantCheckAvailableResponseBodyData extends TeaModel {
         /**
+         * <p>The timestamp when you can submit a quick scan task.</p>
+         * 
          * <strong>example:</strong>
          * <p>1725530005357</p>
          */
@@ -44,6 +51,13 @@ public class GetTenantCheckAvailableResponseBody extends TeaModel {
         public Long nextScanTime;
 
         /**
+         * <p>The status of the quick scan task. Enumerated values:</p>
+         * <ul>
+         * <li>0: You can submit a quick scan task.</li>
+         * <li>1: The current task is not complete. You cannot submit a quick scan task.</li>
+         * <li>2: The free quota for this week is exhausted. You must wait for the next free scan period.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

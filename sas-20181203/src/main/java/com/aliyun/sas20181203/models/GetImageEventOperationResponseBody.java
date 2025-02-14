@@ -150,6 +150,15 @@ public class GetImageEventOperationResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No warning.</p>
+         */
+        @NameInMap("Note")
+        public String note;
+
+        /**
          * <p>The operation code. Valid values:</p>
          * <ul>
          * <li><strong>whitelist</strong>: added to the whitelist.</li>
@@ -173,6 +182,19 @@ public class GetImageEventOperationResponseBody extends TeaModel {
          */
         @NameInMap("Scenarios")
         public String scenarios;
+
+        /**
+         * <p>The source of the whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>image</strong>: image</li>
+         * <li><strong>agentless</strong>: agentless detection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agentless</p>
+         */
+        @NameInMap("Source")
+        public String source;
 
         public static GetImageEventOperationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetImageEventOperationResponseBodyData self = new GetImageEventOperationResponseBodyData();
@@ -219,6 +241,14 @@ public class GetImageEventOperationResponseBody extends TeaModel {
             return this.id;
         }
 
+        public GetImageEventOperationResponseBodyData setNote(String note) {
+            this.note = note;
+            return this;
+        }
+        public String getNote() {
+            return this.note;
+        }
+
         public GetImageEventOperationResponseBodyData setOperationCode(String operationCode) {
             this.operationCode = operationCode;
             return this;
@@ -233,6 +263,14 @@ public class GetImageEventOperationResponseBody extends TeaModel {
         }
         public String getScenarios() {
             return this.scenarios;
+        }
+
+        public GetImageEventOperationResponseBodyData setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
     }

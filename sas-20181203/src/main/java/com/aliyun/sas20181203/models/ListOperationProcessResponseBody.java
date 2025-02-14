@@ -4,13 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListOperationProcessResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListOperationProcessResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The information about the operation tasks.</p>
+     */
     @NameInMap("Processes")
     public java.util.List<ListOperationProcessResponseBodyProcesses> processes;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
      */
@@ -48,6 +56,8 @@ public class ListOperationProcessResponseBody extends TeaModel {
 
     public static class ListOperationProcessResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The number of entries returned on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -55,6 +65,8 @@ public class ListOperationProcessResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -62,6 +74,8 @@ public class ListOperationProcessResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -69,6 +83,8 @@ public class ListOperationProcessResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>263</p>
          */
@@ -116,6 +132,8 @@ public class ListOperationProcessResponseBody extends TeaModel {
 
     public static class ListOperationProcessResponseBodyProcesses extends TeaModel {
         /**
+         * <p>The time when the task was created. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1674388824000</p>
          */
@@ -123,6 +141,8 @@ public class ListOperationProcessResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The end time of the task. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1705467559000</p>
          */
@@ -130,6 +150,8 @@ public class ListOperationProcessResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The number of tasks that are complete.</p>
+         * 
          * <strong>example:</strong>
          * <p>197</p>
          */
@@ -137,6 +159,8 @@ public class ListOperationProcessResponseBody extends TeaModel {
         public Integer finishCount;
 
         /**
+         * <p>The start time of the task. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1705457102000</p>
          */
@@ -144,6 +168,14 @@ public class ListOperationProcessResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The task status code. Valid values:</p>
+         * <ul>
+         * <li>0: not started.</li>
+         * <li>1: running.</li>
+         * <li>2: complete.</li>
+         * <li>3: times out.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -151,6 +183,8 @@ public class ListOperationProcessResponseBody extends TeaModel {
         public Integer statusCode;
 
         /**
+         * <p>The ID of the operation task.</p>
+         * 
          * <strong>example:</strong>
          * <p>3d7a1b68-599f-4e16-9b45-e920a183b***</p>
          */
@@ -158,6 +192,15 @@ public class ListOperationProcessResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li>CHECK_ALL: full check.</li>
+         * <li>CHECK_POLICY: policy-based check for which check items are configured.</li>
+         * <li>CHECK_SCHEDULE: scheduled check.</li>
+         * <li>CHECK_ITEM: specific check item-based check.</li>
+         * <li>CHECK_INSTANCE: specific check item-based check on specific instances.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CHECK_POLICY</p>
          */
@@ -165,6 +208,8 @@ public class ListOperationProcessResponseBody extends TeaModel {
         public String taskType;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>337</p>
          */

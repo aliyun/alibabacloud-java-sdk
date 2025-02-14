@@ -152,6 +152,12 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
     }
 
     public static class DescribeAgentlessSensitiveFileByKeyResponseBodySensitiveFileList extends TeaModel {
+        /**
+         * <p>The path to the sensitive file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/lib/abc.txt</p>
+         */
         @NameInMap("FilePath")
         public String filePath;
 
@@ -164,6 +170,12 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         @NameInMap("FirstScanTime")
         public Long firstScanTime;
 
+        /**
+         * <p>The ID of the alert for the sensitive file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>423505573</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -203,9 +215,21 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
+        /**
+         * <p>The MD5 hash value of the sensitive file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b484b0dff093f358897486b58266****</p>
+         */
         @NameInMap("Md5")
         public String md5;
 
+        /**
+         * <p>The content of the sensitive file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql -u -p****</p>
+         */
         @NameInMap("Prompt")
         public String prompt;
 

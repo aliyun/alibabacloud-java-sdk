@@ -14,7 +14,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Data")
     public GetSensitiveDefineRuleConfigResponseBodyData data;
@@ -215,6 +215,16 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
     }
 
     public static class GetSensitiveDefineRuleConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the new rule is enabled for automatic check only on agentless detection. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("EnableNewRule")
         public Integer enableNewRule;
 

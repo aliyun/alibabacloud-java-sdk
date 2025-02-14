@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
     /**
-     * <p>The details of the sub-task.</p>
+     * <p>The details of tasks.</p>
      */
     @NameInMap("OnceTasks")
     public java.util.List<DescribeOnceTaskLeafRecordPageResponseBodyOnceTasks> onceTasks;
@@ -166,6 +166,18 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The type of the image repository. Valid values:</p>
+         * <ul>
+         * <li><strong>acr</strong></li>
+         * <li><strong>harbor</strong></li>
+         * <li><strong>quay</strong></li>
+         * <li><strong>CI/CD</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acr</p>
+         */
         @NameInMap("RegistryType")
         public String registryType;
 

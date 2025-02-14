@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details about the assets.</p>
+     * <p>The details about the assets.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeCloudCenterInstancesResponseBodyInstances> instances;
@@ -210,6 +210,19 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("ClientStatus")
         public String clientStatus;
 
+        /**
+         * <p>The sub-status of the Security Center agent installed on the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong>: The Security Center agent is <strong>enabled</strong>.</li>
+         * <li><strong>offline</strong>: The Security Center agent is <strong>disabled</strong>.</li>
+         * <li><strong>pause</strong>: The Security Center agent is <strong>suspended</strong>.</li>
+         * <li><strong>uninstalled</strong>: The Security Center agent is <strong>uninstalled</strong>.</li>
+         * <li><strong>stopped</strong>: The Security Center agent is <strong>stopped</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
+         */
         @NameInMap("ClientSubStatus")
         public String clientSubStatus;
 
@@ -610,6 +623,12 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("TagId")
         public String tagId;
 
+        /**
+         * <p>The custom tag added to the Lingjun node. This parameter is returned only for LINGJUN GPU-accelerated instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app:test,type:lingjun</p>
+         */
         @NameInMap("TagResources")
         public String tagResources;
 

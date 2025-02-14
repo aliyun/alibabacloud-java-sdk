@@ -37,9 +37,9 @@ public class SubmitOperationTaskRequest extends TeaModel {
     public java.util.List<SubmitOperationTaskRequestOperationTaskInstances> operationTaskInstances;
 
     /**
-     * <p>提交操作关联的跨页选择关联Key。</p>
+     * <p>The key linked to cross-page selections during task submission.</p>
      * <blockquote>
-     * <p>您可调用<a href="~~CreateAssetSelectionConfig~~">CreateAssetSelectionConfig</a>接口BusinessType字段获取关联Key。</p>
+     * <p> You can call the <a href="~~CreateAssetSelectionConfig~~">CreateAssetSelectionConfig</a> operation to query the associated key from the BusinessType field.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

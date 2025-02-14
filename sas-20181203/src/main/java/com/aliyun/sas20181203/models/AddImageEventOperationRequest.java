@@ -48,6 +48,12 @@ public class AddImageEventOperationRequest extends TeaModel {
     @NameInMap("EventType")
     public String eventType;
 
+    /**
+     * <p>The remarks that you want to add.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Note")
     public String note;
 
@@ -76,6 +82,16 @@ public class AddImageEventOperationRequest extends TeaModel {
     @NameInMap("Scenarios")
     public String scenarios;
 
+    /**
+     * <p>The source of the whitelist. Valid values:</p>
+     * <ul>
+     * <li><strong>image</strong>: image.</li>
+     * <li><strong>agentless</strong>: agentless detection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>agentless</p>
+     */
     @NameInMap("Source")
     public String source;
 

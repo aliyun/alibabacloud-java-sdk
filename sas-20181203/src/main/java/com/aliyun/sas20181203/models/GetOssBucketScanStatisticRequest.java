@@ -11,10 +11,10 @@ public class GetOssBucketScanStatisticRequest extends TeaModel {
     public java.util.List<String> bucketNameList;
 
     /**
-     * <p>The source of the data. Valid values:</p>
+     * <p>The data source. Valid values:</p>
      * <ul>
-     * <li><strong>API</strong></li>
-     * <li><strong>OSS</strong></li>
+     * <li><strong>API</strong>: API operations.</li>
+     * <li><strong>OSS</strong>: Object Storage Service (OSS) file check.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -429,6 +429,16 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         @NameInMap("SensitiveFileName")
         public String sensitiveFileName;
 
+        /**
+         * <p>The status of the sensitive file. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: unhandled.</li>
+         * <li><strong>1</strong>: handled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

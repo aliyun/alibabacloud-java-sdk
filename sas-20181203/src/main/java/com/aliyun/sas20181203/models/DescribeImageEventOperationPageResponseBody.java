@@ -14,7 +14,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public DescribeImageEventOperationPageResponseBodyData data;
@@ -149,6 +149,12 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Note")
         public String note;
 
@@ -176,6 +182,19 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
          */
         @NameInMap("Scenarios")
         public String scenarios;
+
+        /**
+         * <p>The source of the whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>image</strong>: image.</li>
+         * <li><strong>agentless</strong>: agentless detection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agentless</p>
+         */
+        @NameInMap("Source")
+        public String source;
 
         public static DescribeImageEventOperationPageResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageEventOperationPageResponseBodyDataList self = new DescribeImageEventOperationPageResponseBodyDataList();
@@ -244,6 +263,14 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
         public String getScenarios() {
             return this.scenarios;
+        }
+
+        public DescribeImageEventOperationPageResponseBodyDataList setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
     }

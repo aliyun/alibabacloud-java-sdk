@@ -255,6 +255,15 @@ public class ModifyCloudVendorAccountAKResponseBody extends TeaModel {
         @NameInMap("Vendor")
         public String vendor;
 
+        /**
+         * <p>The name of the AccessKey pair.</p>
+         * <blockquote>
+         * <p> The account information of the third-party cloud servers.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("VendorAuthAlias")
         public String vendorAuthAlias;
 

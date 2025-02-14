@@ -459,6 +459,15 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         @NameInMap("Uuid")
         public String uuid;
 
+        /**
+         * <p>The account to which the AccessKey pair belongs.</p>
+         * <blockquote>
+         * <p> This parameter is returned only by third-party cloud servers. If the parameter value is empty, it will not be returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("VendorAuthAlias")
         public String vendorAuthAlias;
 

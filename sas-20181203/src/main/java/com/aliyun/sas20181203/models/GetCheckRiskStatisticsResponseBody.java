@@ -28,6 +28,9 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Historical check item statistics.</p>
+     */
     @NameInMap("Summary")
     public GetCheckRiskStatisticsResponseBodySummary summary;
 
@@ -320,21 +323,57 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetCheckRiskStatisticsResponseBodySummary extends TeaModel {
+        /**
+         * <p>Check items handled today.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("HandledCheckToday")
         public Integer handledCheckToday;
 
+        /**
+         * <p>A risk item exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("HandledCheckTotal")
         public Integer handledCheckTotal;
 
+        /**
+         * <p>Total days since check items were handled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
+         */
         @NameInMap("HandledDays")
         public Integer handledDays;
 
+        /**
+         * <p>Check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RiskCheckCnt")
         public Integer riskCheckCnt;
 
+        /**
+         * <p>Days since check items failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("RiskDays")
         public Integer riskDays;
 
+        /**
+         * <p>Risks to be handled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("RiskWarningCnt")
         public Integer riskWarningCnt;
 

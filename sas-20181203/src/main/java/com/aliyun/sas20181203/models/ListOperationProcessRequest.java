@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListOperationProcessRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListOperationProcessRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1635575219000</p>
      */
@@ -19,6 +23,8 @@ public class ListOperationProcessRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,18 +32,36 @@ public class ListOperationProcessRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1680919232000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The task status codes.</p>
+     */
     @NameInMap("StatusCodes")
     public java.util.List<Integer> statusCodes;
 
+    /**
+     * <p>The task IDs.</p>
+     */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 
+    /**
+     * <p>The task types. Valid values:</p>
+     * <ul>
+     * <li>CHECK_ALL: full check.</li>
+     * <li>CHECK_POLICY: policy-based check for which check items are configured.</li>
+     * <li>CHECK_SCHEDULE: scheduled check.</li>
+     * <li>CHECK_ITEM: specific check item-based check.</li>
+     * <li>CHECK_INSTANCE: specific check item-based check on specific instances.</li>
+     * </ul>
+     */
     @NameInMap("TaskTypes")
     public java.util.List<String> taskTypes;
 

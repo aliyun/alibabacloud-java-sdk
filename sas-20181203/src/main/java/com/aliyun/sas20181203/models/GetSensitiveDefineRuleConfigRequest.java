@@ -17,6 +17,16 @@ public class GetSensitiveDefineRuleConfigRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The source of the check rules. Valid values:</p>
+     * <ul>
+     * <li><strong>image</strong>: image.</li>
+     * <li><strong>agentless</strong>: agentless detection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>image</p>
+     */
     @NameInMap("Source")
     public String source;
 

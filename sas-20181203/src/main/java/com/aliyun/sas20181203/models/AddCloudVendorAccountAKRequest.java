@@ -38,7 +38,7 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the content in the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -52,6 +52,9 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
 
     /**
      * <p>The regions that are examined during AccessKey pair authentication. This parameter takes effect only when Vendor is set to AWS.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to query regions.</p>
+     * </blockquote>
      */
     @NameInMap("Regions")
     public java.util.List<String> regions;
@@ -135,6 +138,15 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
     @NameInMap("Vendor")
     public String vendor;
 
+    /**
+     * <p>The name of the AccessKey pair.</p>
+     * <blockquote>
+     * <p> The account information of the third-party cloud servers.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("VendorAuthAlias")
     public String vendorAuthAlias;
 
