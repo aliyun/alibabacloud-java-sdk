@@ -602,6 +602,9 @@ public class ListGatewaysResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
+        @NameInMap("subDomainInfos")
+        public java.util.List<SubDomainInfo> subDomainInfos;
+
         /**
          * <p>Array of tags.</p>
          */
@@ -752,6 +755,14 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListGatewaysResponseBodyDataItems setSubDomainInfos(java.util.List<SubDomainInfo> subDomainInfos) {
+            this.subDomainInfos = subDomainInfos;
+            return this;
+        }
+        public java.util.List<SubDomainInfo> getSubDomainInfos() {
+            return this.subDomainInfos;
         }
 
         public ListGatewaysResponseBodyDataItems setTags(java.util.List<ListGatewaysResponseBodyDataItemsTags> tags) {
