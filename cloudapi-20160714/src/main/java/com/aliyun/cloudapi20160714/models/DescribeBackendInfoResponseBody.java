@@ -606,6 +606,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The name of the trigger.</p>
+         * <p>You can specify the TriggerName or TriggerUrl parameter. The TriggerName parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
         @NameInMap("TriggerName")
         public String triggerName;
 

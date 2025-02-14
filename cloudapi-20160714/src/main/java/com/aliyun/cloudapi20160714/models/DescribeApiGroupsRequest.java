@@ -4,6 +4,12 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiGroupsRequest extends TeaModel {
+    /**
+     * <p>The root path of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/edmdgp/service20250116management01/v1</p>
+     */
     @NameInMap("BasePath")
     public String basePath;
 
