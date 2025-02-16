@@ -13,6 +13,9 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Enabled")
+    public Boolean enabled;
+
     /**
      * <strong>example:</strong>
      * <p>96228666776****</p>
@@ -70,9 +73,6 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
      */
     @NameInMap("SessionAffinity")
     public String sessionAffinity;
-
-    @NameInMap("SessionAffinityAttributes")
-    public String sessionAffinityAttributesShrink;
 
     /**
      * <p>This parameter is required.</p>
@@ -133,6 +133,14 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
         return this.description;
     }
 
+    public UpdateLoadBalancerShrinkRequest setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
     public UpdateLoadBalancerShrinkRequest setFallbackPool(Long fallbackPool) {
         this.fallbackPool = fallbackPool;
         return this;
@@ -187,14 +195,6 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     }
     public String getSessionAffinity() {
         return this.sessionAffinity;
-    }
-
-    public UpdateLoadBalancerShrinkRequest setSessionAffinityAttributesShrink(String sessionAffinityAttributesShrink) {
-        this.sessionAffinityAttributesShrink = sessionAffinityAttributesShrink;
-        return this;
-    }
-    public String getSessionAffinityAttributesShrink() {
-        return this.sessionAffinityAttributesShrink;
     }
 
     public UpdateLoadBalancerShrinkRequest setSiteId(Long siteId) {

@@ -23,6 +23,9 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Enabled")
+    public Boolean enabled;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -78,9 +81,6 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     @NameInMap("SessionAffinity")
     public String sessionAffinity;
 
-    @NameInMap("SessionAffinityAttributes")
-    public String sessionAffinityAttributesShrink;
-
     /**
      * <p>This parameter is required.</p>
      */
@@ -129,6 +129,14 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateLoadBalancerShrinkRequest setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
     public CreateLoadBalancerShrinkRequest setFallbackPool(Long fallbackPool) {
@@ -185,14 +193,6 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     }
     public String getSessionAffinity() {
         return this.sessionAffinity;
-    }
-
-    public CreateLoadBalancerShrinkRequest setSessionAffinityAttributesShrink(String sessionAffinityAttributesShrink) {
-        this.sessionAffinityAttributesShrink = sessionAffinityAttributesShrink;
-        return this;
-    }
-    public String getSessionAffinityAttributesShrink() {
-        return this.sessionAffinityAttributesShrink;
     }
 
     public CreateLoadBalancerShrinkRequest setSiteId(Long siteId) {
