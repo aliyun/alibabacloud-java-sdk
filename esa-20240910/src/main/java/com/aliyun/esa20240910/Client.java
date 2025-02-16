@@ -2293,10 +2293,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.rulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rules, "Rules", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sessionAffinityAttributes)) {
-            request.sessionAffinityAttributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sessionAffinityAttributes, "SessionAffinityAttributes", "json");
-        }
-
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.adaptiveRoutingShrink)) {
             query.put("AdaptiveRouting", request.adaptiveRoutingShrink);
@@ -2308,6 +2304,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fallbackPool)) {
@@ -2336,10 +2336,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionAffinity)) {
             query.put("SessionAffinity", request.sessionAffinity);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sessionAffinityAttributesShrink)) {
-            query.put("SessionAffinityAttributes", request.sessionAffinityAttributesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
@@ -6573,6 +6569,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePurgeTasksResponse describePurgeTasks(DescribePurgeTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePurgeTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询套餐实例状态</p>
+     * 
+     * @param request DescribeRatePlanInstanceStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRatePlanInstanceStatusResponse
+     */
+    public DescribeRatePlanInstanceStatusResponse describeRatePlanInstanceStatusWithOptions(DescribeRatePlanInstanceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRatePlanInstanceStatus"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRatePlanInstanceStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeRatePlanInstanceStatusResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询套餐实例状态</p>
+     * 
+     * @param request DescribeRatePlanInstanceStatusRequest
+     * @return DescribeRatePlanInstanceStatusResponse
+     */
+    public DescribeRatePlanInstanceStatusResponse describeRatePlanInstanceStatus(DescribeRatePlanInstanceStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRatePlanInstanceStatusWithOptions(request, runtime);
     }
 
     /**
@@ -12319,6 +12364,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>新购套餐</p>
+     * 
+     * @param request PurchaseRatePlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PurchaseRatePlanResponse
+     */
+    public PurchaseRatePlanResponse purchaseRatePlanWithOptions(PurchaseRatePlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.coverage)) {
+            query.put("Coverage", request.coverage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planCode)) {
+            query.put("PlanCode", request.planCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planName)) {
+            query.put("PlanName", request.planName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteName)) {
+            query.put("SiteName", request.siteName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PurchaseRatePlan"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new PurchaseRatePlanResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new PurchaseRatePlanResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新购套餐</p>
+     * 
+     * @param request PurchaseRatePlanRequest
+     * @return PurchaseRatePlanResponse
+     */
+    public PurchaseRatePlanResponse purchaseRatePlan(PurchaseRatePlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.purchaseRatePlanWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Purges resources cached on points of presence (POPs). You can purge the cache by file URL, directory, cache tag, hostname, or URL with specified parameters ignored, or purge all the cache.</p>
      * 
      * @param tmpReq PurgeCachesRequest
@@ -12919,10 +13045,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             body.put("Type", request.type);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.update)) {
-            body.put("Update", request.update);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -14248,59 +14370,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name of a namespace in Edge KV.</p>
-     * 
-     * @param request UpdateKvNamespaceRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UpdateKvNamespaceResponse
-     */
-    public UpdateKvNamespaceResponse updateKvNamespaceWithOptions(UpdateKvNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
-            query.put("Namespace", request.namespace);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
-            query.put("Title", request.title);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateKvNamespace"),
-            new TeaPair("version", "2024-09-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKvNamespaceResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateKvNamespaceResponse());
-        }
-
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Updates the name of a namespace in Edge KV.</p>
-     * 
-     * @param request UpdateKvNamespaceRequest
-     * @return UpdateKvNamespaceResponse
-     */
-    public UpdateKvNamespaceResponse updateKvNamespace(UpdateKvNamespaceRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateKvNamespaceWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Updates a custom list.</p>
      * 
      * @param tmpReq UpdateListRequest
@@ -14398,10 +14467,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.rulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rules, "Rules", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sessionAffinityAttributes)) {
-            request.sessionAffinityAttributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sessionAffinityAttributes, "SessionAffinityAttributes", "json");
-        }
-
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.adaptiveRoutingShrink)) {
             query.put("AdaptiveRouting", request.adaptiveRoutingShrink);
@@ -14413,6 +14478,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fallbackPool)) {
@@ -14441,10 +14510,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionAffinity)) {
             query.put("SessionAffinity", request.sessionAffinity);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sessionAffinityAttributesShrink)) {
-            query.put("SessionAffinityAttributes", request.sessionAffinityAttributesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
@@ -14968,6 +15033,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdatePageResponse updatePage(UpdatePageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>套餐变配</p>
+     * 
+     * @param request UpdateRatePlanSpecRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRatePlanSpecResponse
+     */
+    public UpdateRatePlanSpecResponse updateRatePlanSpecWithOptions(UpdateRatePlanSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetPlanCode)) {
+            query.put("TargetPlanCode", request.targetPlanCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetPlanName)) {
+            query.put("TargetPlanName", request.targetPlanName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRatePlanSpec"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRatePlanSpecResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateRatePlanSpecResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>套餐变配</p>
+     * 
+     * @param request UpdateRatePlanSpecRequest
+     * @return UpdateRatePlanSpecResponse
+     */
+    public UpdateRatePlanSpecResponse updateRatePlanSpec(UpdateRatePlanSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRatePlanSpecWithOptions(request, runtime);
     }
 
     /**

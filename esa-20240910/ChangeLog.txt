@@ -1,3 +1,101 @@
+2025-02-16 Version: 2.18.0
+- Support API ActivateVersionManagement.
+- Support API CheckAssumeSlrRole.
+- Support API CreateCacheRule.
+- Support API CreateCompressionRule.
+- Support API CreateHttpRequestHeaderModificationRule.
+- Support API CreateHttpResponseHeaderModificationRule.
+- Support API CreateHttpsApplicationConfiguration.
+- Support API CreateHttpsBasicConfiguration.
+- Support API CreateImageTransform.
+- Support API CreateLoadBalancer.
+- Support API CreateNetworkOptimization.
+- Support API CreateOriginRule.
+- Support API CreateRedirectRule.
+- Support API CreateRewriteUrlRule.
+- Support API CreateSlrRoleForRealtimeLog.
+- Support API DeactivateVersionManagement.
+- Support API DeleteCacheRule.
+- Support API DeleteCompressionRule.
+- Support API DeleteHttpRequestHeaderModificationRule.
+- Support API DeleteHttpResponseHeaderModificationRule.
+- Support API DeleteHttpsApplicationConfiguration.
+- Support API DeleteHttpsBasicConfiguration.
+- Support API DeleteImageTransform.
+- Support API DeleteLoadBalancer.
+- Support API DeleteNetworkOptimization.
+- Support API DeleteOriginRule.
+- Support API DeleteRedirectRule.
+- Support API DeleteRewriteUrlRule.
+- Support API DescribeRatePlanInstanceStatus.
+- Support API GetCacheRule.
+- Support API GetCacheTag.
+- Support API GetCnameFlattening.
+- Support API GetCompressionRule.
+- Support API GetDevelopmentMode.
+- Support API GetHttpRequestHeaderModificationRule.
+- Support API GetHttpResponseHeaderModificationRule.
+- Support API GetHttpsApplicationConfiguration.
+- Support API GetHttpsBasicConfiguration.
+- Support API GetIPv6.
+- Support API GetImageTransform.
+- Support API GetLoadBalancer.
+- Support API GetManagedTransform.
+- Support API GetNetworkOptimization.
+- Support API GetOriginRule.
+- Support API GetRedirectRule.
+- Support API GetRewriteUrlRule.
+- Support API GetSeoBypass.
+- Support API GetSiteNameExclusive.
+- Support API GetSitePause.
+- Support API GetTieredCache.
+- Support API ListCacheRules.
+- Support API ListCompressionRules.
+- Support API ListHttpRequestHeaderModificationRules.
+- Support API ListHttpResponseHeaderModificationRules.
+- Support API ListHttpsApplicationConfigurations.
+- Support API ListHttpsBasicConfigurations.
+- Support API ListImageTransforms.
+- Support API ListLoadBalancerOriginStatus.
+- Support API ListLoadBalancers.
+- Support API ListNetworkOptimizations.
+- Support API ListOriginRules.
+- Support API ListRedirectRules.
+- Support API ListRewriteUrlRules.
+- Support API PurchaseRatePlan.
+- Support API UpdateCacheRule.
+- Support API UpdateCacheTag.
+- Support API UpdateCnameFlattening.
+- Support API UpdateCompressionRule.
+- Support API UpdateDevelopmentMode.
+- Support API UpdateHttpRequestHeaderModificationRule.
+- Support API UpdateHttpResponseHeaderModificationRule.
+- Support API UpdateHttpsApplicationConfiguration.
+- Support API UpdateHttpsBasicConfiguration.
+- Support API UpdateIPv6.
+- Support API UpdateImageTransform.
+- Support API UpdateList.
+- Support API UpdateLoadBalancer.
+- Support API UpdateManagedTransform.
+- Support API UpdateNetworkOptimization.
+- Support API UpdateOriginRule.
+- Support API UpdateRatePlanSpec.
+- Support API UpdateRedirectRule.
+- Support API UpdateRewriteUrlRule.
+- Support API UpdateSeoBypass.
+- Support API UpdateSiteNameExclusive.
+- Support API UpdateSitePause.
+- Support API UpdateTieredCache.
+- Update API CreateWaitingRoom: update response param.
+- Update API CreateWaitingRoomEvent: update response param.
+- Update API CreateWaitingRoomRule: update response param.
+- Update API DescribePurgeTasks: update param Type.
+- Update API GetPurgeQuota: update param Type.
+- Update API ListUserRatePlanInstances: add param SubscribeType.
+- Update API ListUserRatePlanInstances: update response param.
+- Update API PurgeCaches: update param Content.
+
+
 2025-02-12 Version: 2.17.0
 - Support API ActivateVersionManagement.
 - Support API CheckAssumeSlrRole.

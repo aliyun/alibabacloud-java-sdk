@@ -3,7 +3,7 @@ package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateKvNamespaceResponse extends TeaModel {
+public class UpdateRatePlanSpecResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class UpdateKvNamespaceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public UpdateKvNamespaceResponseBody body;
+    public UpdateRatePlanSpecResponseBody body;
 
-    public static UpdateKvNamespaceResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateKvNamespaceResponse self = new UpdateKvNamespaceResponse();
+    public static UpdateRatePlanSpecResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateRatePlanSpecResponse self = new UpdateRatePlanSpecResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateKvNamespaceResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateRatePlanSpecResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class UpdateKvNamespaceResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateKvNamespaceResponse setStatusCode(Integer statusCode) {
+    public UpdateRatePlanSpecResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class UpdateKvNamespaceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateKvNamespaceResponse setBody(UpdateKvNamespaceResponseBody body) {
+    public UpdateRatePlanSpecResponse setBody(UpdateRatePlanSpecResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateKvNamespaceResponseBody getBody() {
+    public UpdateRatePlanSpecResponseBody getBody() {
         return this.body;
     }
 

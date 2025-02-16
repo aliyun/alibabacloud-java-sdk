@@ -88,15 +88,6 @@ public class SetCertificateRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    /**
-     * <p>Specifies whether to update the certificate.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("Update")
-    public Boolean update;
-
     public static SetCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         SetCertificateRequest self = new SetCertificateRequest();
         return TeaModel.build(map, self);
@@ -180,14 +171,6 @@ public class SetCertificateRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public SetCertificateRequest setUpdate(Boolean update) {
-        this.update = update;
-        return this;
-    }
-    public Boolean getUpdate() {
-        return this.update;
     }
 
 }

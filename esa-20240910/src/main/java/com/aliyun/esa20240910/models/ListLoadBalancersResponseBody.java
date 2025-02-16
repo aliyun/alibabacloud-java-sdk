@@ -559,59 +559,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     }
 
-    public static class ListLoadBalancersResponseBodyLoadBalancersSessionAffinityAttributes extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>Lax</p>
-         */
-        @NameInMap("SameSite")
-        public String sameSite;
-
-        /**
-         * <strong>example:</strong>
-         * <p>Always</p>
-         */
-        @NameInMap("Secure")
-        public String secure;
-
-        /**
-         * <strong>example:</strong>
-         * <p>sticky</p>
-         */
-        @NameInMap("ZeroDowntimeFailover")
-        public String zeroDowntimeFailover;
-
-        public static ListLoadBalancersResponseBodyLoadBalancersSessionAffinityAttributes build(java.util.Map<String, ?> map) throws Exception {
-            ListLoadBalancersResponseBodyLoadBalancersSessionAffinityAttributes self = new ListLoadBalancersResponseBodyLoadBalancersSessionAffinityAttributes();
-            return TeaModel.build(map, self);
-        }
-
-        public ListLoadBalancersResponseBodyLoadBalancersSessionAffinityAttributes setSameSite(String sameSite) {
-            this.sameSite = sameSite;
-            return this;
-        }
-        public String getSameSite() {
-            return this.sameSite;
-        }
-
-        public ListLoadBalancersResponseBodyLoadBalancersSessionAffinityAttributes setSecure(String secure) {
-            this.secure = secure;
-            return this;
-        }
-        public String getSecure() {
-            return this.secure;
-        }
-
-        public ListLoadBalancersResponseBodyLoadBalancersSessionAffinityAttributes setZeroDowntimeFailover(String zeroDowntimeFailover) {
-            this.zeroDowntimeFailover = zeroDowntimeFailover;
-            return this;
-        }
-        public String getZeroDowntimeFailover() {
-            return this.zeroDowntimeFailover;
-        }
-
-    }
-
     public static class ListLoadBalancersResponseBodyLoadBalancers extends TeaModel {
         @NameInMap("AdaptiveRouting")
         public ListLoadBalancersResponseBodyLoadBalancersAdaptiveRouting adaptiveRouting;
@@ -691,9 +638,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
          */
         @NameInMap("SessionAffinity")
         public String sessionAffinity;
-
-        @NameInMap("SessionAffinityAttributes")
-        public ListLoadBalancersResponseBodyLoadBalancersSessionAffinityAttributes sessionAffinityAttributes;
 
         /**
          * <strong>example:</strong>
@@ -829,14 +773,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
         public String getSessionAffinity() {
             return this.sessionAffinity;
-        }
-
-        public ListLoadBalancersResponseBodyLoadBalancers setSessionAffinityAttributes(ListLoadBalancersResponseBodyLoadBalancersSessionAffinityAttributes sessionAffinityAttributes) {
-            this.sessionAffinityAttributes = sessionAffinityAttributes;
-            return this;
-        }
-        public ListLoadBalancersResponseBodyLoadBalancersSessionAffinityAttributes getSessionAffinityAttributes() {
-            return this.sessionAffinityAttributes;
         }
 
         public ListLoadBalancersResponseBodyLoadBalancers setSiteId(Long siteId) {

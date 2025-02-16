@@ -13,6 +13,9 @@ public class UpdateLoadBalancerRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Enabled")
+    public Boolean enabled;
+
     /**
      * <strong>example:</strong>
      * <p>96228666776****</p>
@@ -70,9 +73,6 @@ public class UpdateLoadBalancerRequest extends TeaModel {
      */
     @NameInMap("SessionAffinity")
     public String sessionAffinity;
-
-    @NameInMap("SessionAffinityAttributes")
-    public UpdateLoadBalancerRequestSessionAffinityAttributes sessionAffinityAttributes;
 
     /**
      * <p>This parameter is required.</p>
@@ -133,6 +133,14 @@ public class UpdateLoadBalancerRequest extends TeaModel {
         return this.description;
     }
 
+    public UpdateLoadBalancerRequest setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
     public UpdateLoadBalancerRequest setFallbackPool(Long fallbackPool) {
         this.fallbackPool = fallbackPool;
         return this;
@@ -187,14 +195,6 @@ public class UpdateLoadBalancerRequest extends TeaModel {
     }
     public String getSessionAffinity() {
         return this.sessionAffinity;
-    }
-
-    public UpdateLoadBalancerRequest setSessionAffinityAttributes(UpdateLoadBalancerRequestSessionAffinityAttributes sessionAffinityAttributes) {
-        this.sessionAffinityAttributes = sessionAffinityAttributes;
-        return this;
-    }
-    public UpdateLoadBalancerRequestSessionAffinityAttributes getSessionAffinityAttributes() {
-        return this.sessionAffinityAttributes;
     }
 
     public UpdateLoadBalancerRequest setSiteId(Long siteId) {
@@ -678,59 +678,6 @@ public class UpdateLoadBalancerRequest extends TeaModel {
         }
         public Boolean getTerminates() {
             return this.terminates;
-        }
-
-    }
-
-    public static class UpdateLoadBalancerRequestSessionAffinityAttributes extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>Lax</p>
-         */
-        @NameInMap("SameSite")
-        public String sameSite;
-
-        /**
-         * <strong>example:</strong>
-         * <p>Always</p>
-         */
-        @NameInMap("Secure")
-        public String secure;
-
-        /**
-         * <strong>example:</strong>
-         * <p>sticky</p>
-         */
-        @NameInMap("ZeroDowntimeFailover")
-        public String zeroDowntimeFailover;
-
-        public static UpdateLoadBalancerRequestSessionAffinityAttributes build(java.util.Map<String, ?> map) throws Exception {
-            UpdateLoadBalancerRequestSessionAffinityAttributes self = new UpdateLoadBalancerRequestSessionAffinityAttributes();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateLoadBalancerRequestSessionAffinityAttributes setSameSite(String sameSite) {
-            this.sameSite = sameSite;
-            return this;
-        }
-        public String getSameSite() {
-            return this.sameSite;
-        }
-
-        public UpdateLoadBalancerRequestSessionAffinityAttributes setSecure(String secure) {
-            this.secure = secure;
-            return this;
-        }
-        public String getSecure() {
-            return this.secure;
-        }
-
-        public UpdateLoadBalancerRequestSessionAffinityAttributes setZeroDowntimeFailover(String zeroDowntimeFailover) {
-            this.zeroDowntimeFailover = zeroDowntimeFailover;
-            return this;
-        }
-        public String getZeroDowntimeFailover() {
-            return this.zeroDowntimeFailover;
         }
 
     }
