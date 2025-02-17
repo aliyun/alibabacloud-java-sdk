@@ -81,13 +81,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The state of SCUs. You can specify 1 to 4 types of state. Valid values:</p>
-     * <ul>
-     * <li>Creating: The SCUs are being created.</li>
-     * <li>Active: The SCUs are in effect.</li>
-     * <li>Expired: The SCUs have expired.</li>
-     * <li>Pending: The SCUs have not taken effect.</li>
-     * </ul>
+     * <p>The states of SCUs. The array is 1 to 4 in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -96,7 +90,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public java.util.List<String> status;
 
     /**
-     * <p>One or multiple SCU IDs. You can specify 1 to 100 SCU IDs.</p>
+     * <p>The IDs of the SCUs. You can specify 1 to 100 SCU IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>scu-bp67acfmxazb4p****</p>
@@ -105,7 +99,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public java.util.List<String> storageCapacityUnitId;
 
     /**
-     * <p>The tags of the SCUs.</p>
+     * <p>The tags to add to the SCU. You can add up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeStorageCapacityUnitsRequestTag> tag;
@@ -221,7 +215,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
 
     public static class DescribeStorageCapacityUnitsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N to be added to the SCU.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -230,7 +224,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. The value of N must coincide with <code>Tag.N.Key</code>. Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N to be added to the SCU.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

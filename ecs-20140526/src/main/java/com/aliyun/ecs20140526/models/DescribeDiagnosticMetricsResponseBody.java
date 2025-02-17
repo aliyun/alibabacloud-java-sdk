@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the diagnostic metric.</p>
+     * <p>The diagnostic metrics.</p>
      */
     @NameInMap("Metrics")
     public java.util.List<DescribeDiagnosticMetricsResponseBodyMetrics> metrics;
 
     /**
-     * <p>The list of diagnostic metrics.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -20,7 +20,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The query token returned in this call.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
@@ -59,21 +59,16 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
 
     public static class DescribeDiagnosticMetricsResponseBodyMetrics extends TeaModel {
         /**
-         * <p>CPU diagnostic</p>
+         * <p>The description of the diagnostic metric.</p>
          * 
          * <strong>example:</strong>
-         * <p>The resource type supported by the diagnostic metric.</p>
+         * <p>CPU diagnostic</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The operating system type supported by the diagnostic metric. Valid values:</p>
-         * <ul>
-         * <li>Windows</li>
-         * <li>Linux</li>
-         * <li>All: both Windows and Linux</li>
-         * </ul>
+         * <p>Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -82,7 +77,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         public Boolean guestMetric;
 
         /**
-         * <p>The description of the diagnostic metric.</p>
+         * <p>The category of the diagnostic metric.</p>
          * 
          * <strong>example:</strong>
          * <p>CPU</p>
@@ -91,7 +86,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         public String metricCategory;
 
         /**
-         * <p>The name of the diagnostic metric.</p>
+         * <p>The ID of the diagnostic metric.</p>
          * 
          * <strong>example:</strong>
          * <p>GuestOS.WinFirewall</p>
@@ -100,16 +95,16 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         public String metricId;
 
         /**
-         * <p>CPU diagnostic</p>
+         * <p>The name of the diagnostic metric.</p>
          * 
          * <strong>example:</strong>
-         * <p>The category of the diagnostic metric.</p>
+         * <p>CPU diagnostic</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
-         * <p>Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.</p>
+         * <p>The resource type supported by the diagnostic metric.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -118,6 +113,13 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The operating system type supported by the diagnostic metric. Valid values:</p>
+         * <ul>
+         * <li>Windows</li>
+         * <li>Linux</li>
+         * <li>All: Windows and Linux</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ALL</p>
          */

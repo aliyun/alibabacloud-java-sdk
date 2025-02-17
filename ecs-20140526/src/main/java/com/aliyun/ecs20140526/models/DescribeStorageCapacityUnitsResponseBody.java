@@ -230,7 +230,13 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The state of the SCU.</p>
+         * <p>The status of the SCU. Valid values:</p>
+         * <ul>
+         * <li>Creating: The SCUs are being created.</li>
+         * <li>Active: The SCUs are in effect.</li>
+         * <li>Expired: The SCUs have expired.</li>
+         * <li>Pending: The SCUs have not taken effect.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

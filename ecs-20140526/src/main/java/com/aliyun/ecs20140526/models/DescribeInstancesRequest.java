@@ -8,7 +8,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public java.util.List<DescribeInstancesRequestFilter> filter;
 
     /**
-     * <p>Additional instance attributes.</p>
+     * <p>The additional instance attributes.</p>
      * 
      * <strong>example:</strong>
      * <p>META_OPTIONS</p>

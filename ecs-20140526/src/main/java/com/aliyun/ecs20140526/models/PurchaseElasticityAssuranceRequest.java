@@ -28,7 +28,7 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
      * <li>When the PeriodUnit parameter is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
      * <li>When the PeriodUnit parameter is set to Year, valid values are 1, 2, 3, 4, and 5.</li>
      * </ul>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region in which to purchase the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

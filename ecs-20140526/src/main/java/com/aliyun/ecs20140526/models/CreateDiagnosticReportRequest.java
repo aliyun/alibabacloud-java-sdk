@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDiagnosticReportRequest extends TeaModel {
     /**
-     * <p>The end of the reporting period. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</p>
+     * <p>The end time. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T14:00:00Z</p>
@@ -23,7 +23,7 @@ public class CreateDiagnosticReportRequest extends TeaModel {
     public String metricSetId;
 
     /**
-     * <p>The ID of the region in which to create a diagnostic report. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class CreateDiagnosticReportRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The ID of resource N.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class CreateDiagnosticReportRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The beginning of the reporting period. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</p>
+     * <p>The start time. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T12:00:00Z</p>

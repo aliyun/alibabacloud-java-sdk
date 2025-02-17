@@ -41,8 +41,9 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
     /**
      * <p>The Cloud Assistant feature. Valid values:</p>
      * <ul>
-     * <li>SessionManagerDelivery: the Session Record Delivery feature</li>
-     * <li>InvocationDelivery: the Operation Content and Result Delivery feature</li>
+     * <li>SessionManagerDelivery: the Session Record Delivery configurations.</li>
+     * <li>InvocationDelivery: the Operation Content and Result Delivery configurations.</li>
+     * <li>AgentUpgradeConfig: the Cloud Assistant Agent Upgrade configurations.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

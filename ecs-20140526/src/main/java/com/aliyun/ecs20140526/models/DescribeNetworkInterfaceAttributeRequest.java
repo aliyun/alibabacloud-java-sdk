@@ -5,11 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     /**
-     * <p>The attribute of the ENI. Valid value:</p>
-     * <p>attachment: attachment information about the ENI</p>
-     * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
-     * </blockquote>
+     * <p>The attribute of the ENI. Valid values:</p>
+     * <p>attachment: member ENI attachment information of the trunk ENI. This value is in invitational preview and is not publicly available.</p>
+     * <p>connectionTrackingConfiguration: connection tracking configuration.</p>
+     * <p>Default value:</p>
      * 
      * <strong>example:</strong>
      * <p>attachment</p>

@@ -33,7 +33,7 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
      * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * <p>Default value: false.</p>
@@ -59,7 +59,7 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public Boolean includeDataDisks;
 
     /**
-     * <p>The new billing method. Valid values:</p>
+     * <p>The new billing method of the instance. Valid values:</p>
      * <ul>
      * <li>PrePaid: subscription</li>
      * <li>PostPaid: pay-as-you-go</li>

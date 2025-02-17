@@ -81,7 +81,7 @@ public class CreateActivationRequest extends TeaModel {
     public java.util.List<CreateActivationRequestTag> tag;
 
     /**
-     * <p>The validity period of the activation code. After the validity period ends, you can no longer use the activation code to register managed instances. Unit: hours. Valid values: 1 to 876576. 876576 hours is equal to 100 years.</p>
+     * <p>The validity period of the activation code. After the validity period ends, you can no longer use the activation code to register managed instances. Unit: hours.</p>
      * <p>Default value: 4.</p>
      * 
      * <strong>example:</strong>

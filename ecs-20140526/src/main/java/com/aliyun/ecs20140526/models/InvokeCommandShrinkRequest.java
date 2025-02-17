@@ -158,19 +158,20 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The mode in which you want to run the command. Valid values:</p>
+     * <p>Specifies how to run the command. Valid values:</p>
      * <ul>
-     * <li>Once: runs the command immediately.</li>
+     * <li>Once: immediately runs the command.</li>
      * <li>Period: runs the command based on a schedule. If you set this parameter to <code>Period</code>, you must also configure the <code>Frequency</code> parameter.</li>
      * <li>NextRebootOnly: runs the command the next time the instance is started.</li>
-     * <li>EveryReboot: runs the command every time the instance is started.</li>
+     * <li>EveryReboot: The command is run every time the instances start.</li>
+     * <li>DryRun: Specifies whether to perform only a dry run, without performing the actual request. The command does not take effect. The system checks the request, including the request parameters, instance execution environment, and Cloud Assistant Agent running status.</li>
      * </ul>
-     * <p>Default values:</p>
+     * <p>Default value:</p>
      * <ul>
      * <li>If you do not specify <code>Frequency</code>, the default value is <code>Once</code>.</li>
-     * <li>If you specify <code>Frequency</code>, <code>Period</code> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</li>
+     * <li>If you specify the <code>Frequency</code> parameter, <code>Period</code> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</li>
      * </ul>
-     * <p>Take note of the following items:</p>
+     * <p>Take note of the following items when you specify this property:</p>
      * <ul>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> operation to stop the pending or scheduled executions of the command.</li>
      * <li>If you set this parameter to <code>Period</code> or <code>EveryReboot</code>, you can call the <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with <code>IncludeHistory</code> set to true to query the results of historical scheduled executions.</li>

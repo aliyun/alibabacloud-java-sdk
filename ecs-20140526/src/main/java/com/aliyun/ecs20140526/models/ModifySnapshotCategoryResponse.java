@@ -3,7 +3,7 @@ package com.aliyun.ecs20140526.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyAutoSnapshotPolicyResponse extends TeaModel {
+public class ModifySnapshotCategoryResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ModifyAutoSnapshotPolicyResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ModifyAutoSnapshotPolicyResponseBody body;
+    public ModifySnapshotCategoryResponseBody body;
 
-    public static ModifyAutoSnapshotPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
-        ModifyAutoSnapshotPolicyResponse self = new ModifyAutoSnapshotPolicyResponse();
+    public static ModifySnapshotCategoryResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifySnapshotCategoryResponse self = new ModifySnapshotCategoryResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyAutoSnapshotPolicyResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifySnapshotCategoryResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ModifyAutoSnapshotPolicyResponse extends TeaModel {
         return this.headers;
     }
 
-    public ModifyAutoSnapshotPolicyResponse setStatusCode(Integer statusCode) {
+    public ModifySnapshotCategoryResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ModifyAutoSnapshotPolicyResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ModifyAutoSnapshotPolicyResponse setBody(ModifyAutoSnapshotPolicyResponseBody body) {
+    public ModifySnapshotCategoryResponse setBody(ModifySnapshotCategoryResponseBody body) {
         this.body = body;
         return this;
     }
-    public ModifyAutoSnapshotPolicyResponseBody getBody() {
+    public ModifySnapshotCategoryResponseBody getBody() {
         return this.body;
     }
 

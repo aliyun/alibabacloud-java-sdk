@@ -111,6 +111,19 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions extends TeaModel {
+        /**
+         * <p>Indicates whether to retain Cloud Assistant. During the image building process, the system automatically installs Cloud Assistant in the intermediate instance to run commands. You can choose whether to retain Cloud Assistant in the new image created based on the image template. Valid values:</p>
+         * <ul>
+         * <li>true: retains Cloud Assistant.</li>
+         * <li>false: does not retain Cloud Assistant.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter does not affect Cloud Assistant that comes with your image.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("RetainCloudAssistant")
         public Boolean retainCloudAssistant;
 
@@ -130,15 +143,50 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
+        /**
+         * <p>The size of disk N in the custom image after the image is imported.</p>
+         * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the source image file. Unit: GiB. Valid values:</p>
+         * <ul>
+         * <li>When N is set to 1, this parameter indicates the size of the system disk in the custom image. Valid values: 1 to 2048.</li>
+         * <li>When N is set to an integer in the range of 2 to 17, this parameter indicates the size of a data disk in the custom image. Valid values: 1 to 2048.</li>
+         * </ul>
+         * <p>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("DiskImageSize")
         public Integer diskImageSize;
 
+        /**
+         * <p>The format of the image. Valid values:</p>
+         * <ul>
+         * <li>RAW</li>
+         * <li>VHD</li>
+         * <li>QCOW2</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RAW</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <p>The Object Storage Service (OSS) bucket where the image file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecsimageos</p>
+         */
         @NameInMap("OSSBucket")
         public String OSSBucket;
 
+        /**
+         * <p>The name (key) of the object that the image file is stored as in the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_5.4_32.raw</p>
+         */
         @NameInMap("OSSObject")
         public String OSSObject;
 
@@ -201,6 +249,16 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures extends TeaModel {
+        /**
+         * <p>Indicates whether the image supports the NVMe protocol. Valid values:</p>
+         * <ul>
+         * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
+         * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>supported</p>
+         */
         @NameInMap("NvmeSupport")
         public String nvmeSupport;
 
@@ -220,27 +278,123 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions extends TeaModel {
+        /**
+         * <p>The operating system architecture. Valid values:</p>
+         * <ul>
+         * <li>x86_64</li>
+         * <li>arm64</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>x86_64</p>
+         */
         @NameInMap("Architecture")
         public String architecture;
 
+        /**
+         * <p>The boot mode of the image. Valid values:</p>
+         * <ul>
+         * <li>BIOS: BIOS mode</li>
+         * <li>UEFI: Unified Extensible Firmware Interface (UEFI) mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BIOS</p>
+         */
         @NameInMap("BootMode")
         public String bootMode;
 
+        /**
+         * <p>The information of disk N from which a custom image is created.</p>
+         * <ul>
+         * <li>When N is set to 1, a custom image is created from the system disk.</li>
+         * <li>When N is set to an integer in the range of 2 to 17, a custom image is created from a data disk.</li>
+         * </ul>
+         */
         @NameInMap("DiskDeviceMappings")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings diskDeviceMappings;
 
+        /**
+         * <p>The attributes of the custom image.</p>
+         */
         @NameInMap("Features")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures features;
 
+        /**
+         * <p>The type of the license to use to activate the operating system after the image is imported. Valid values:</p>
+         * <ul>
+         * <li>Auto: ECS detects the operating system of the image and allocates a license to the operating system In this mode, the system first checks whether a license allocated by an official Alibaba Cloud channel is specified in the <code>Platform</code>. If a license allocated by an official Alibaba Cloud channel is specified, the system allocates the license to the imported image. If no such license is specified, the Bring Your Own License (BYOL) mode is used.</li>
+         * <li>Aliyun: The license allocated through an official Alibaba Cloud channel is used for the operating system distribution specified by <code>Platform</code>.</li>
+         * <li>BYOL: The license that comes with the source operating system is used. When you use the BYOL license, make sure that your license key is supported by Alibaba Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Auto</p>
+         */
         @NameInMap("LicenseType")
         public String licenseType;
 
+        /**
+         * <p>The operating system type. Valid values:</p>
+         * <ul>
+         * <li>windows: Windows operating systems</li>
+         * <li>linux: Linux operating systems</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
+         */
         @NameInMap("OSType")
         public String OSType;
 
+        /**
+         * <p>The version of the operating system. Valid values:</p>
+         * <ul>
+         * <li>Aliyun</li>
+         * <li>Anolis</li>
+         * <li>CentOS</li>
+         * <li>Ubuntu</li>
+         * <li>CoreOS</li>
+         * <li>SUSE</li>
+         * <li>Debian</li>
+         * <li>OpenSUSE</li>
+         * <li>FreeBSD</li>
+         * <li>RedHat</li>
+         * <li>Kylin</li>
+         * <li>UOS</li>
+         * <li>Fedora</li>
+         * <li>Fedora CoreOS</li>
+         * <li>CentOS Stream</li>
+         * <li>AlmaLinux</li>
+         * <li>Rocky Linux</li>
+         * <li>Gentoo</li>
+         * <li>Customized Linux</li>
+         * <li>Others Linux</li>
+         * <li>Windows Server 2022</li>
+         * <li>Windows Server 2019</li>
+         * <li>Windows Server 2016</li>
+         * <li>Windows Server 2012</li>
+         * <li>Windows Server 2008</li>
+         * <li>Windows Server 2003</li>
+         * <li>Other Windows</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <p>Indicates whether to retain the imported image. After the image is imported, the system automatically deletes the source image to prevent unnecessary storage costs. You can also choose whether to retain it. Valid values:</p>
+         * <ul>
+         * <li>true: retains the image. After the image is imported, the source image is not deleted even if the image building task is canceled or fails.</li>
+         * <li>false: does not retain the image.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("RetainImportedImage")
         public Boolean retainImportedImage;
 
@@ -402,6 +556,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("AddAccounts")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts addAccounts;
 
+        /**
+         * <p>The advanced settings.</p>
+         */
         @NameInMap("AdvancedOptions")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions advancedOptions;
 
@@ -494,6 +651,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("ImagePipelineId")
         public String imagePipelineId;
 
+        /**
+         * <p>The properties and settings of the image template that you import.</p>
+         */
         @NameInMap("ImportImageOptions")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions importImageOptions;
 
@@ -524,6 +684,17 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the image created based on the image template supports Non-Volatile Memory Express (NVMe). Valid values:</p>
+         * <ul>
+         * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
+         * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
+         * <li>auto: The system automatically checks whether the image supports the NVMe protocol. The system automatically checks whether the NVMe driver is installed on your image before the image is built. If you install or uninstall the NVMe driver during the image building task, the check result may be incorrect. We recommend that you set the value to supported or unsupported based on the image building content.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
+         */
         @NameInMap("NvmeSupport")
         public String nvmeSupport;
 

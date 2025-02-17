@@ -42,6 +42,8 @@ public class DisableActivationResponseBody extends TeaModel {
 
     public static class DisableActivationResponseBodyActivation extends TeaModel {
         /**
+         * <p>The ID of the activation code.</p>
+         * 
          * <strong>example:</strong>
          * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
          */
