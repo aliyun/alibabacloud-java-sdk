@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户取消服务使用请求</p>
+     * <p>Cancels the application for using a service.</p>
      * 
      * @param request CancelServiceUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -63,12 +63,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelServiceUsageResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CancelServiceUsageResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CancelServiceUsageResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>用户取消服务使用请求</p>
+     * <p>Cancels the application for using a service.</p>
      * 
      * @param request CancelServiceUsageRequest
      * @return CancelServiceUsageResponse
@@ -119,7 +124,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ChangeResourceGroupResponse());
+        }
+
     }
 
     /**
@@ -183,7 +193,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckServiceDeployableResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CheckServiceDeployableResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CheckServiceDeployableResponse());
+        }
+
     }
 
     /**
@@ -250,7 +265,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ContinueDeployServiceInstanceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ContinueDeployServiceInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ContinueDeployServiceInstanceResponse());
+        }
+
     }
 
     /**
@@ -375,7 +395,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceInstanceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateServiceInstanceResponse());
+        }
+
     }
 
     /**
@@ -392,7 +417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户创建服务使用请求</p>
+     * <p>Creates an application for using a service.</p>
      * 
      * @param tmpReq CreateServiceUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -433,12 +458,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceUsageResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceUsageResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateServiceUsageResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>用户创建服务使用请求</p>
+     * <p>Creates an application for using a service.</p>
      * 
      * @param request CreateServiceUsageRequest
      * @return CreateServiceUsageResponse
@@ -485,7 +515,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceInstancesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceInstancesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteServiceInstancesResponse());
+        }
+
     }
 
     /**
@@ -498,6 +533,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteServiceInstancesResponse deleteServiceInstances(DeleteServiceInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteServiceInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deploy service instance in Created status.</p>
+     * 
+     * @param request DeployServiceInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeployServiceInstanceResponse
+     */
+    public DeployServiceInstanceResponse deployServiceInstanceWithOptions(DeployServiceInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInstanceId)) {
+            query.put("ServiceInstanceId", request.serviceInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeployServiceInstance"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeployServiceInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeployServiceInstanceResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deploy service instance in Created status.</p>
+     * 
+     * @param request DeployServiceInstanceRequest
+     * @return DeployServiceInstanceResponse
+     */
+    public DeployServiceInstanceResponse deployServiceInstance(DeployServiceInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deployServiceInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>List available regions.</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionsResponse
+     */
+    public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRegions"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeRegionsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>List available regions.</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
+    public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRegionsWithOptions(request, runtime);
     }
 
     /**
@@ -549,7 +690,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateServicePolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateServicePolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GenerateServicePolicyResponse());
+        }
+
     }
 
     /**
@@ -613,7 +759,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetServiceResponse());
+        }
+
     }
 
     /**
@@ -630,7 +781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计算巢服务部署询价</p>
+     * <p>Queries the estimated price for creating a service instance.</p>
      * 
      * @param tmpReq GetServiceEstimateCostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -707,12 +858,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceEstimateCostResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceEstimateCostResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetServiceEstimateCostResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>计算巢服务部署询价</p>
+     * <p>Queries the estimated price for creating a service instance.</p>
      * 
      * @param request GetServiceEstimateCostRequest
      * @return GetServiceEstimateCostResponse
@@ -759,7 +915,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceInstanceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetServiceInstanceResponse());
+        }
+
     }
 
     /**
@@ -772,6 +933,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetServiceInstanceResponse getServiceInstance(GetServiceInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getServiceInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query renewal prices for prepaid resources of private deployment service instance. You can query renewal prices for all prepaid resources included in a service instance, or query renewal prices for specified resources. Only one of the two methods can be used.</p>
+     * 
+     * @param request GetServiceInstanceSubscriptionEstimateCostRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetServiceInstanceSubscriptionEstimateCostResponse
+     */
+    public GetServiceInstanceSubscriptionEstimateCostResponse getServiceInstanceSubscriptionEstimateCostWithOptions(GetServiceInstanceSubscriptionEstimateCostRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourcePeriod)) {
+            query.put("ResourcePeriod", request.resourcePeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInstanceId)) {
+            query.put("ServiceInstanceId", request.serviceInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetServiceInstanceSubscriptionEstimateCost"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceInstanceSubscriptionEstimateCostResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetServiceInstanceSubscriptionEstimateCostResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query renewal prices for prepaid resources of private deployment service instance. You can query renewal prices for all prepaid resources included in a service instance, or query renewal prices for specified resources. Only one of the two methods can be used.</p>
+     * 
+     * @param request GetServiceInstanceSubscriptionEstimateCostRequest
+     * @return GetServiceInstanceSubscriptionEstimateCostResponse
+     */
+    public GetServiceInstanceSubscriptionEstimateCostResponse getServiceInstanceSubscriptionEstimateCost(GetServiceInstanceSubscriptionEstimateCostRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getServiceInstanceSubscriptionEstimateCostWithOptions(request, runtime);
     }
 
     /**
@@ -829,7 +1063,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceProvisionsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceProvisionsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetServiceProvisionsResponse());
+        }
+
     }
 
     /**
@@ -913,7 +1152,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceTemplateParameterConstraintsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceTemplateParameterConstraintsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetServiceTemplateParameterConstraintsResponse());
+        }
+
     }
 
     /**
@@ -930,10 +1174,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <ul>
-     * <li>@param request GetUserInformationRequest</li>
-     * </ul>
+     * <p>Queries the information about a customer.</p>
      * 
+     * @param request GetUserInformationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserInformationResponse
      */
@@ -958,14 +1201,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserInformationResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserInformationResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetUserInformationResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <ul>
-     * <li>@param request GetUserInformationRequest</li>
-     * </ul>
+     * <p>Queries the information about a customer.</p>
+     * 
+     * @param request GetUserInformationRequest
      * @return GetUserInformationResponse
      */
     public GetUserInformationResponse getUserInformation(GetUserInformationRequest request) throws Exception {
@@ -994,7 +1242,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceCategoriesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceCategoriesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListServiceCategoriesResponse());
+        }
+
     }
 
     /**
@@ -1046,6 +1299,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServiceInstanceId", request.serviceInstanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1060,7 +1317,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceInstanceLogsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceInstanceLogsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListServiceInstanceLogsResponse());
+        }
+
     }
 
     /**
@@ -1144,7 +1406,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceInstanceResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceInstanceResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListServiceInstanceResourcesResponse());
+        }
+
     }
 
     /**
@@ -1161,7 +1428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看服务实例升级历史</p>
+     * <p>Queries the upgrade history of a service instance.</p>
      * 
      * @param request ListServiceInstanceUpgradeHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1200,12 +1467,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceInstanceUpgradeHistoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceInstanceUpgradeHistoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListServiceInstanceUpgradeHistoryResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>查看服务实例升级历史</p>
+     * <p>Queries the upgrade history of a service instance.</p>
      * 
      * @param request ListServiceInstanceUpgradeHistoryRequest
      * @return ListServiceInstanceUpgradeHistoryResponse
@@ -1264,7 +1536,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceInstancesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceInstancesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListServiceInstancesResponse());
+        }
+
     }
 
     /**
@@ -1281,7 +1558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户查询服务使用申请接口</p>
+     * <p>Queries the applications for using a service.</p>
      * 
      * @param request ListServiceUsagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1316,12 +1593,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceUsagesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceUsagesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListServiceUsagesResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>用户查询服务使用申请接口</p>
+     * <p>Queries the applications for using a service.</p>
      * 
      * @param request ListServiceUsagesRequest
      * @return ListServiceUsagesResponse
@@ -1392,7 +1674,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServicesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListServicesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListServicesResponse());
+        }
+
     }
 
     /**
@@ -1408,6 +1695,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询标签键列表</p>
+     * 
      * @param request ListTagKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagKeysResponse
@@ -1441,10 +1731,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagKeysResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagKeysResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagKeysResponse());
+        }
+
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询标签键列表</p>
+     * 
      * @param request ListTagKeysRequest
      * @return ListTagKeysResponse
      */
@@ -1454,6 +1752,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询标签资源列表</p>
+     * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagResourcesResponse
@@ -1495,10 +1796,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagResourcesResponse());
+        }
+
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询标签资源列表</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -1508,6 +1817,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询标签值列表</p>
+     * 
      * @param request ListTagValuesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagValuesResponse
@@ -1545,16 +1857,93 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagValuesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagValuesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagValuesResponse());
+        }
+
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询标签值列表</p>
+     * 
      * @param request ListTagValuesRequest
      * @return ListTagValuesResponse
      */
     public ListTagValuesResponse listTagValues(ListTagValuesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagValuesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Renew the prepaid resources included in the private deployment service instance. You can renew all prepaid resources under the specified service instance ID, or you can renew the specified resources. Only one of the two renewal methods can be used.</p>
+     * 
+     * @param request RenewServiceInstanceResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenewServiceInstanceResourcesResponse
+     */
+    public RenewServiceInstanceResourcesResponse renewServiceInstanceResourcesWithOptions(RenewServiceInstanceResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourcePeriod)) {
+            query.put("ResourcePeriod", request.resourcePeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInstanceId)) {
+            query.put("ServiceInstanceId", request.serviceInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RenewServiceInstanceResources"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RenewServiceInstanceResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RenewServiceInstanceResourcesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Renew the prepaid resources included in the private deployment service instance. You can renew all prepaid resources under the specified service instance ID, or you can renew the specified resources. Only one of the two renewal methods can be used.</p>
+     * 
+     * @param request RenewServiceInstanceResourcesRequest
+     * @return RenewServiceInstanceResourcesResponse
+     */
+    public RenewServiceInstanceResourcesResponse renewServiceInstanceResources(RenewServiceInstanceResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.renewServiceInstanceResourcesWithOptions(request, runtime);
     }
 
     /**
@@ -1594,7 +1983,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RestartServiceInstanceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RestartServiceInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RestartServiceInstanceResponse());
+        }
+
     }
 
     /**
@@ -1611,7 +2005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>回滚服务实例</p>
+     * <p>Rolls back an upgraded service instance to the previous version.</p>
      * 
      * @param request RollbackServiceInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1646,12 +2040,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RollbackServiceInstanceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RollbackServiceInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RollbackServiceInstanceResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>回滚服务实例</p>
+     * <p>Rolls back an upgraded service instance to the previous version.</p>
      * 
      * @param request RollbackServiceInstanceRequest
      * @return RollbackServiceInstanceResponse
@@ -1698,7 +2097,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartServiceInstanceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StartServiceInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StartServiceInstanceResponse());
+        }
+
     }
 
     /**
@@ -1750,7 +2154,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StopServiceInstanceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StopServiceInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StopServiceInstanceResponse());
+        }
+
     }
 
     /**
@@ -1766,6 +2175,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>给资源打标签</p>
+     * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TagResourcesResponse
@@ -1803,10 +2215,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new TagResourcesResponse());
+        }
+
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>给资源打标签</p>
+     * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -1816,6 +2236,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>给资源解除标签</p>
+     * 
      * @param request UnTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnTagResourcesResponse
@@ -1857,10 +2280,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UnTagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UnTagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UnTagResourcesResponse());
+        }
+
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>给资源解除标签</p>
+     * 
      * @param request UnTagResourcesRequest
      * @return UnTagResourcesResponse
      */
@@ -1871,7 +2302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新服务实例属性</p>
+     * <p>Updates the attributes of a service instance.</p>
      * 
      * @param request UpdateServiceInstanceAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1906,12 +2337,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceInstanceAttributesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceInstanceAttributesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateServiceInstanceAttributesResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>更新服务实例属性</p>
+     * <p>Updates the attributes of a service instance.</p>
      * 
      * @param request UpdateServiceInstanceAttributesRequest
      * @return UpdateServiceInstanceAttributesResponse
@@ -1922,6 +2358,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Configuration change is enabled and the related parameters are configured for the service by the service provider.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the configurations of a service instance.</p>
+     * 
      * @param tmpReq UpdateServiceInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateServiceInstanceSpecResponse
@@ -1981,10 +2424,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceInstanceSpecResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceInstanceSpecResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateServiceInstanceSpecResponse());
+        }
+
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Configuration change is enabled and the related parameters are configured for the service by the service provider.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the configurations of a service instance.</p>
+     * 
      * @param request UpdateServiceInstanceSpecRequest
      * @return UpdateServiceInstanceSpecResponse
      */
@@ -1995,7 +2450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户更新服务使用请求</p>
+     * <p>Updates the application for using a service.</p>
      * 
      * @param tmpReq UpdateServiceUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2036,12 +2491,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceUsageResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceUsageResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateServiceUsageResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>用户更新服务使用请求</p>
+     * <p>Updates the application for using a service.</p>
      * 
      * @param request UpdateServiceUsageRequest
      * @return UpdateServiceUsageResponse
@@ -2053,7 +2513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新用户全局信息</p>
+     * <p>Updates the information about a customer.</p>
      * 
      * @param request UpdateUserInformationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2084,12 +2544,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUserInformationResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUserInformationResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateUserInformationResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>更新用户全局信息</p>
+     * <p>Updates the information about a customer.</p>
      * 
      * @param request UpdateUserInformationRequest
      * @return UpdateUserInformationResponse
@@ -2101,7 +2566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级服务实例</p>
+     * <p>Upgrades the version of a service instance.</p>
      * 
      * @param tmpReq UpgradeServiceInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2154,12 +2619,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeServiceInstanceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeServiceInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpgradeServiceInstanceResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>升级服务实例</p>
+     * <p>Upgrades the version of a service instance.</p>
      * 
      * @param request UpgradeServiceInstanceRequest
      * @return UpgradeServiceInstanceResponse

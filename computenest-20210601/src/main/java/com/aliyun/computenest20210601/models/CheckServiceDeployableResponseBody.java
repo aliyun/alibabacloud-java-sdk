@@ -4,6 +4,9 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class CheckServiceDeployableResponseBody extends TeaModel {
+    /**
+     * <p>Inspection result.</p>
+     */
     @NameInMap("CheckResults")
     public java.util.List<CheckServiceDeployableResponseBodyCheckResults> checkResults;
 
@@ -39,6 +42,8 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
 
     public static class CheckServiceDeployableResponseBodyCheckResults extends TeaModel {
         /**
+         * <p>Returns a hint message for the result.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -46,6 +51,14 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Check type, invalid values:</p>
+         * <ul>
+         * <li><p>Balance ：Account balance.</p>
+         * </li>
+         * <li><p>Quota:  Account quota.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Balance</p>
          */
@@ -53,6 +66,8 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Inspection result.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

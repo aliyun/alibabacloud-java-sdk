@@ -14,25 +14,22 @@ public class GetServiceEstimateCostRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The commodity details.</p>
+     * <p>The information about the subscription duration.</p>
      */
     @NameInMap("Commodity")
     public GetServiceEstimateCostRequestCommodity commodity;
 
     /**
-     * <p>The name of the configuration update operation.</p>
+     * <p>The name of the configuration change operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>修改游戏参数</p>
+     * <p>Parameter change</p>
      */
     @NameInMap("OperationName")
     public String operationName;
 
     /**
-     * <p>The parameters that are specified for service instance deployment.</p>
-     * <blockquote>
-     * <p> If you want to specify the region in which the service instance is deployed, you must specify the information in Parameters.</p>
-     * </blockquote>
+     * <p>The parameters that are specified to deploy the service instance.</p>
      * 
      * <strong>example:</strong>
      * <p>{ \&quot;RegionId\&quot;: \&quot;cn-hangzhou\&quot;, \&quot;InstanceType\&quot;: \&quot;ecs.g5.large\&quot;}</p>
@@ -78,25 +75,19 @@ public class GetServiceEstimateCostRequest extends TeaModel {
     public String serviceVersion;
 
     /**
-     * <p>The package name.</p>
+     * <p>The name of the package specification.</p>
      * 
      * <strong>example:</strong>
-     * <p>自定义套餐</p>
+     * <p>Package 1</p>
      */
     @NameInMap("SpecificationName")
     public String specificationName;
 
     /**
-     * <p>The name of the template. This parameter is returned only if you specify TemplateId.</p>
-     * <blockquote>
-     * <ul>
-     * <li>If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.</li>
-     * <li>If you not specify TemplateVersion, the name of the template whose version is the default version is returned.</li>
-     * </ul>
-     * </blockquote>
+     * <p>The template name.</p>
      * 
      * <strong>example:</strong>
-     * <p>模板1</p>
+     * <p>Template 1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
@@ -208,6 +199,12 @@ public class GetServiceEstimateCostRequest extends TeaModel {
     }
 
     public static class GetServiceEstimateCostRequestCommodity extends TeaModel {
+        /**
+         * <p>优惠券ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>302070970220</p>
+         */
         @NameInMap("CouponId")
         public String couponId;
 

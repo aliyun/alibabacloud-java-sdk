@@ -4,6 +4,9 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class CommodityValue extends TeaModel {
+    /**
+     * <p>Result模型。</p>
+     */
     @NameInMap("Result")
     public CommodityValueResult result;
 
@@ -21,15 +24,39 @@ public class CommodityValue extends TeaModel {
     }
 
     public static class CommodityValueResultOrder extends TeaModel {
+        /**
+         * <p>货币代码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>优惠后。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9.99</p>
+         */
         @NameInMap("TradeAmount")
         public String tradeAmount;
 
+        /**
+         * <p>抵扣金额。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.99</p>
+         */
         @NameInMap("DiscountAmount")
         public String discountAmount;
 
+        /**
+         * <p>优惠前。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.98</p>
+         */
         @NameInMap("OriginalAmount")
         public String originalAmount;
 
@@ -73,18 +100,54 @@ public class CommodityValue extends TeaModel {
     }
 
     public static class CommodityValueResultSubOrdersSubOrderModuleInstanceModuleAttrs extends TeaModel {
+        /**
+         * <p>属性类型，可选值：</p>
+         * <ol>
+         * <li>1：商品属性 </li>
+         * <li>2：规格属性 </li>
+         * <li>3：模块属性 </li>
+         * <li>4：外部参数（备用）</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Type")
         public Long type;
 
+        /**
+         * <p>Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20GB</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Module attr code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_storage</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>Unit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
@@ -136,36 +199,99 @@ public class CommodityValue extends TeaModel {
     }
 
     public static class CommodityValueResultSubOrdersSubOrderModuleInstance extends TeaModel {
+        /**
+         * <p>模块ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("ModuleId")
         public Long moduleId;
 
+        /**
+         * <p>模块名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rds</p>
+         */
         @NameInMap("ModuleName")
         public String moduleName;
 
+        /**
+         * <p>模块代码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_dbtype</p>
+         */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
+        /**
+         * <p>产品原价（元）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.00</p>
+         */
         @NameInMap("TotalProductFee")
         public Double totalProductFee;
 
+        /**
+         * <p>折扣费用（元）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.99</p>
+         */
         @NameInMap("DiscountFee")
         public Double discountFee;
 
+        /**
+         * <p>实付金额（元）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.01</p>
+         */
         @NameInMap("PayFee")
         public Double payFee;
 
+        /**
+         * <p>价格单位。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>元/GB/小时</p>
+         */
         @NameInMap("PriceUnit")
         public String priceUnit;
 
+        /**
+         * <p>是否计价项。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsPricingModule")
         public Boolean isPricingModule;
 
+        /**
+         * <p>在订单中是否需要支付。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NeedOrderPay")
         public Boolean needOrderPay;
 
+        /**
+         * <p>定价类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hourPrice</p>
+         */
         @NameInMap("PriceType")
         public String priceType;
 
+        /**
+         * <p>模块属性。</p>
+         */
         @NameInMap("ModuleAttrs")
         public java.util.List<CommodityValueResultSubOrdersSubOrderModuleInstanceModuleAttrs> moduleAttrs;
 
@@ -265,6 +391,9 @@ public class CommodityValue extends TeaModel {
     }
 
     public static class CommodityValueResultSubOrdersSubOrder extends TeaModel {
+        /**
+         * <p>模块（实例）信息。</p>
+         */
         @NameInMap("ModuleInstance")
         public java.util.List<CommodityValueResultSubOrdersSubOrderModuleInstance> moduleInstance;
 
@@ -284,6 +413,9 @@ public class CommodityValue extends TeaModel {
     }
 
     public static class CommodityValueResultSubOrders extends TeaModel {
+        /**
+         * <p>订单子项。</p>
+         */
         @NameInMap("SubOrder")
         public java.util.List<CommodityValueResultSubOrdersSubOrder> subOrder;
 
@@ -303,18 +435,48 @@ public class CommodityValue extends TeaModel {
     }
 
     public static class CommodityValueResultCoupons extends TeaModel {
+        /**
+         * <p>可支付金额。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9.99</p>
+         */
         @NameInMap("CanPromFee")
         public Double canPromFee;
 
+        /**
+         * <p>Coupon Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10元优惠券（有效期至2024年9月8日）</p>
+         */
         @NameInMap("CouponDesc")
         public String couponDesc;
 
+        /**
+         * <p>Coupon Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10元优惠券</p>
+         */
         @NameInMap("CouponName")
         public String couponName;
 
+        /**
+         * <p>Coupon OptionNo</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50008800000xxxx</p>
+         */
         @NameInMap("CouponOptionNo")
         public String couponOptionNo;
 
+        /**
+         * <p>是否选中。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Selected")
         public Boolean selected;
 
@@ -366,15 +528,34 @@ public class CommodityValue extends TeaModel {
     }
 
     public static class CommodityValueResult extends TeaModel {
+        /**
+         * <p>订单信息。</p>
+         */
         @NameInMap("Order")
         public CommodityValueResultOrder order;
 
+        /**
+         * <p>询价类型，可选值：</p>
+         * <ol>
+         * <li>Buy：新购询价。</li>
+         * <li>ModificationBuy：变配询价。</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>Buy</p>
+         */
         @NameInMap("InquiryType")
         public String inquiryType;
 
+        /**
+         * <p>订单子项。</p>
+         */
         @NameInMap("SubOrders")
         public CommodityValueResultSubOrders subOrders;
 
+        /**
+         * <p>优惠券。</p>
+         */
         @NameInMap("Coupons")
         public java.util.List<CommodityValueResultCoupons> coupons;
 

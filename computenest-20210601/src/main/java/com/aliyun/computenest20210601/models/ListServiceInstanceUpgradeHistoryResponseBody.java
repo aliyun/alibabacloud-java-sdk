@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAfu+XtuBE55iRLHEYYuojI41</p>
      */
@@ -19,6 +23,8 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE3EDF4E-B3B1-19B6-BD01-30D4D00F6E5D</p>
      */
@@ -26,12 +32,17 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The upgrade history.</p>
+     */
     @NameInMap("UpgradeHistory")
     public java.util.List<ListServiceInstanceUpgradeHistoryResponseBodyUpgradeHistory> upgradeHistory;
 
@@ -82,6 +93,8 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
 
     public static class ListServiceInstanceUpgradeHistoryResponseBodyUpgradeHistory extends TeaModel {
         /**
+         * <p>The time when the update ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-04-26T09:09:51Z</p>
          */
@@ -89,6 +102,8 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The version before the upgrade.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -96,6 +111,8 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         public String fromVersion;
 
         /**
+         * <p>The upgrade result.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;PreUpgradeExecutionId\&quot;:\&quot;exec-123\&quot;}</p>
          */
@@ -103,6 +120,8 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         public String results;
 
         /**
+         * <p>The time when the update started.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-04-26T08:09:51Z</p>
          */
@@ -110,6 +129,13 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The state of the update. Valid values:</p>
+         * <ul>
+         * <li>upgrading: The service instance is being upgraded.</li>
+         * <li>UpgradeSuccessful: The service instance is upgraded.</li>
+         * <li>UpgradeFailed: The service instance failed to be upgraded.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>UpgradeFailed</p>
          */
@@ -117,6 +143,8 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The version after the upgrade.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -124,6 +152,8 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         public String toVersion;
 
         /**
+         * <p>The update type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Upgrade</p>
          */
@@ -131,6 +161,8 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The ID of the upgrade record.</p>
+         * 
          * <strong>example:</strong>
          * <p>exec-123</p>
          */

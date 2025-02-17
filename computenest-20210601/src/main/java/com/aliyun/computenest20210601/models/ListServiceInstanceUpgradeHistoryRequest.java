@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListServiceInstanceUpgradeHistoryRequest extends TeaModel {
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListServiceInstanceUpgradeHistoryRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
      */
@@ -19,6 +23,7 @@ public class ListServiceInstanceUpgradeHistoryRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class ListServiceInstanceUpgradeHistoryRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the service instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

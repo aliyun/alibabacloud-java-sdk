@@ -75,6 +75,22 @@ public class ListServiceInstanceLogsRequest extends TeaModel {
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
+    /**
+     * <p>Sort Order. Possible values:</p>
+     * <ul>
+     * <li><p>Ascending: Ascending order</p>
+     * </li>
+     * <li><p>Descending (default value): Descending order</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Ascending: Ascending order</p>
+     * <p>Descending (default value): Descending order</p>
+     */
+    @NameInMap("SortOrder")
+    public String sortOrder;
+
     public static ListServiceInstanceLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServiceInstanceLogsRequest self = new ListServiceInstanceLogsRequest();
         return TeaModel.build(map, self);
@@ -134,6 +150,14 @@ public class ListServiceInstanceLogsRequest extends TeaModel {
     }
     public String getServiceInstanceId() {
         return this.serviceInstanceId;
+    }
+
+    public ListServiceInstanceLogsRequest setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    public String getSortOrder() {
+        return this.sortOrder;
     }
 
     public static class ListServiceInstanceLogsRequestFilter extends TeaModel {

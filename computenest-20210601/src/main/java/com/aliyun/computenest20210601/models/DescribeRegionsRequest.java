@@ -3,10 +3,9 @@ package com.aliyun.computenest20210601.models;
 
 import com.aliyun.tea.*;
 
-public class GetUserInformationRequest extends TeaModel {
+public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -14,12 +13,12 @@ public class GetUserInformationRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static GetUserInformationRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetUserInformationRequest self = new GetUserInformationRequest();
+    public static DescribeRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeRegionsRequest self = new DescribeRegionsRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetUserInformationRequest setRegionId(String regionId) {
+    public DescribeRegionsRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
