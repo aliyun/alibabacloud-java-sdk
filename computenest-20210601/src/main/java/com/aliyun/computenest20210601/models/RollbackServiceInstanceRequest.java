@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RollbackServiceInstanceRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -12,6 +14,8 @@ public class RollbackServiceInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +23,8 @@ public class RollbackServiceInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>si-d6ab3a63ccbb4bxxxxxx</p>
      */

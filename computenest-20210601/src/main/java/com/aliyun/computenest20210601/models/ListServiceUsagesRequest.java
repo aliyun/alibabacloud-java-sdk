@@ -4,10 +4,15 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class ListServiceUsagesRequest extends TeaModel {
+    /**
+     * <p>The filters.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<ListServiceUsagesRequestFilter> filter;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListServiceUsagesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
      */
@@ -52,12 +59,23 @@ public class ListServiceUsagesRequest extends TeaModel {
 
     public static class ListServiceUsagesRequestFilter extends TeaModel {
         /**
+         * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>
+         * <ul>
+         * <li>ServiceId: the ID of the service.</li>
+         * <li>ServiceName: the service name.</li>
+         * <li>Status: the state of the service.</li>
+         * <li>SupplierName: the name of the service provider.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ServiceId</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The parameter values of the filter.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

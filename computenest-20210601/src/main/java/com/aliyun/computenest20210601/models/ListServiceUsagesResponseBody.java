@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListServiceUsagesResponseBody extends TeaModel {
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListServiceUsagesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAYChudnQUoBH+mGWFpb6oP0=</p>
      */
@@ -19,14 +23,22 @@ public class ListServiceUsagesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>18AD0960-A9FE-1AC8-ADF8-22131Fxxxxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The service applications.</p>
+     */
     @NameInMap("ServiceUsages")
     public java.util.List<ListServiceUsagesResponseBodyServiceUsages> serviceUsages;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListServiceUsagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListServiceUsagesResponseBody self = new ListServiceUsagesResponseBody();
@@ -65,11 +77,27 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         return this.serviceUsages;
     }
 
+    public ListServiceUsagesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListServiceUsagesResponseBodyServiceUsages extends TeaModel {
+        /**
+         * <p>The review comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Approved</p>
+         */
         @NameInMap("Comments")
         public String comments;
 
         /**
+         * <p>The time when the application was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-25T02:02:02Z</p>
          */
@@ -77,26 +105,50 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>service-c9f36ec6d19b4exxxxxx</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
+        /**
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LobeChat社区版</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
+         * <p>The state of the service application. Valid values:</p>
+         * <ul>
+         * <li>Submitted: The application is submitted for review.</li>
+         * <li>Approved: The application is approved.</li>
+         * <li>Rejected: The application is rejected.</li>
+         * <li>Canceled: The application is canceled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Submitted</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The name of the service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestSupplier</p>
+         */
         @NameInMap("SupplierName")
         public String supplierName;
 
         /**
+         * <p>The time when the application was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-25T02:02:02Z</p>
          */
@@ -104,12 +156,17 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>127383705958xxxx</p>
          */
         @NameInMap("UserAliUid")
         public Long userAliUid;
 
+        /**
+         * <p>The information about the applicant.</p>
+         */
         @NameInMap("UserInformation")
         public java.util.Map<String, String> userInformation;
 

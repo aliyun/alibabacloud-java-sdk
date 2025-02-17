@@ -4,10 +4,14 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserInformationRequest extends TeaModel {
+    /**
+     * <p>The modified delivery settings.</p>
+     */
     @NameInMap("DeliverySettings")
     public UpdateUserInformationRequestDeliverySettings deliverySettings;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +43,12 @@ public class UpdateUserInformationRequest extends TeaModel {
 
     public static class UpdateUserInformationRequestDeliverySettings extends TeaModel {
         /**
+         * <p>Specifies whether to enable screencast delivery to OSS. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -46,6 +56,8 @@ public class UpdateUserInformationRequest extends TeaModel {
         public Boolean actiontrailDeliveryToOssEnabled;
 
         /**
+         * <p>The name of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;mybucket&quot;</p>
          */
@@ -53,6 +65,12 @@ public class UpdateUserInformationRequest extends TeaModel {
         public String ossBucketName;
 
         /**
+         * <p>Specifies whether to enable screencast delivery to Object Storage Service (OSS). Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -60,6 +78,8 @@ public class UpdateUserInformationRequest extends TeaModel {
         public Boolean ossEnabled;
 
         /**
+         * <p>The number of days for which the screencasts are saved.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -67,6 +87,8 @@ public class UpdateUserInformationRequest extends TeaModel {
         public Long ossExpirationDays;
 
         /**
+         * <p>The OSS path.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;path1/path2/&quot;</p>
          */

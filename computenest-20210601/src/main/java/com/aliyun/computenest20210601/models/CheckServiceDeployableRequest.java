@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckServiceDeployableRequest extends TeaModel {
     /**
+     * <p>Total amount of postpaid.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.29</p>
      */
@@ -12,6 +14,8 @@ public class CheckServiceDeployableRequest extends TeaModel {
     public String postPaidAmount;
 
     /**
+     * <p>Total amount of prepayment.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0</p>
      */
@@ -19,6 +23,8 @@ public class CheckServiceDeployableRequest extends TeaModel {
     public String prePaidAmount;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -26,6 +32,7 @@ public class CheckServiceDeployableRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class CheckServiceDeployableRequest extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The service version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +51,12 @@ public class CheckServiceDeployableRequest extends TeaModel {
     public String serviceVersion;
 
     /**
+     * <p>The trial type of the service instance. Valid values:</p>
+     * <ul>
+     * <li><strong>Trial</strong>: Trials are supported.</li>
+     * <li><strong>NotTrial</strong>: Trials are not supported.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NotTrial</p>
      */
