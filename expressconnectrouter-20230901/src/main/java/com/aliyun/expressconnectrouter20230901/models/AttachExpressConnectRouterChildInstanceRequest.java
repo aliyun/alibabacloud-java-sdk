@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     /**
+     * <p>The VBR ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String childInstanceId;
 
     /**
+     * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+     * <blockquote>
+     * <p> If you want to connect to a network instance that belongs to a different account, this parameter is required.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>190550144868****</p>
      */
@@ -21,6 +27,7 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     public Long childInstanceOwnerId;
 
     /**
+     * <p>The region ID of the VBR.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +37,7 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String childInstanceRegionId;
 
     /**
+     * <p>The type of the network instance. Set the value to <strong>VBR</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,13 +47,28 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String childInstanceType;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-00****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -53,6 +76,7 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>The ECR ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -104,6 +128,14 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AttachExpressConnectRouterChildInstanceRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public AttachExpressConnectRouterChildInstanceRequest setDryRun(Boolean dryRun) {

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>Authentication is failed for ****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public String accessDeniedDetail;
 
     /**
+     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public String code;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>IllegalParamFormat.Name</p>
      */
@@ -26,16 +32,26 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public String dynamicCode;
 
     /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+     * <blockquote>
+     * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>The param format of Name **** is illegal.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The network instances whose permissions are granted to the ECR.</p>
+     */
     @NameInMap("EcrGrantedInstanceList")
     public java.util.List<DescribeInstanceGrantedToExpressConnectRouterResponseBodyEcrGrantedInstanceList> ecrGrantedInstanceList;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +59,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public Integer httpStatusCode;
 
     /**
+     * <p>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -50,6 +68,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public Integer maxResults;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -57,6 +77,12 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public String message;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFlMqGuJ10uN3l+FX/cBrGDNXUOUifNeOuAJlT4dc3vsWD6DsNSFAC2FtpeH5QOSG2WFdyRoun7gSLCm5o69YnAQ==</p>
      */
@@ -64,6 +90,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
      */
@@ -71,6 +99,12 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -78,6 +112,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public Boolean success;
 
     /**
+     * <p>The total number of network instances whose permissions are granted to the ECR.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -187,13 +223,20 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
 
     public static class DescribeInstanceGrantedToExpressConnectRouterResponseBodyEcrGrantedInstanceList extends TeaModel {
         /**
+         * <p>The ECR ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecr-mezk2idmsd0vx2****</p>
          */
         @NameInMap("EcrId")
         public String ecrId;
 
+        @NameInMap("EcrOwnerAliUid")
+        public String ecrOwnerAliUid;
+
         /**
+         * <p>The time when the network instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1669023139000</p>
          */
@@ -201,6 +244,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public String gmtCreate;
 
         /**
+         * <p>The time when the network instance was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1669023139000</p>
          */
@@ -208,6 +253,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public String gmtModified;
 
         /**
+         * <p>The authorization ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gr-8gdelo13mi99g1****</p>
          */
@@ -215,6 +262,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public String grantId;
 
         /**
+         * <p>The ID of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vbr-j6cwxhgg0s5nuephp****</p>
          */
@@ -222,6 +271,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public String nodeId;
 
         /**
+         * <p>The ID of the Alibaba Cloud enterprise account that owns the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>26842</p>
          */
@@ -229,6 +280,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public String nodeOwnerBid;
 
         /**
+         * <p>The ID of the Alibaba Cloud account that owns the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>129845258050****</p>
          */
@@ -236,6 +289,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public Long nodeOwnerUid;
 
         /**
+         * <p>The region ID of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -243,6 +298,12 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public String nodeRegionId;
 
         /**
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VBR</strong></li>
+         * <li><strong>VPC</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>VBR</p>
          */
@@ -250,6 +311,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public String nodeType;
 
         /**
+         * <p>The state of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -267,6 +330,14 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         }
         public String getEcrId() {
             return this.ecrId;
+        }
+
+        public DescribeInstanceGrantedToExpressConnectRouterResponseBodyEcrGrantedInstanceList setEcrOwnerAliUid(String ecrOwnerAliUid) {
+            this.ecrOwnerAliUid = ecrOwnerAliUid;
+            return this;
+        }
+        public String getEcrOwnerAliUid() {
+            return this.ecrOwnerAliUid;
         }
 
         public DescribeInstanceGrantedToExpressConnectRouterResponseBodyEcrGrantedInstanceList setGmtCreate(String gmtCreate) {
