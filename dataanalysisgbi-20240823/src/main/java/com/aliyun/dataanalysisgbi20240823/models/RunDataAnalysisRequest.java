@@ -35,7 +35,7 @@ public class RunDataAnalysisRequest extends TeaModel {
     public String specificationType;
 
     @NameInMap("userParams")
-    public java.util.Map<String, ?> userParams;
+    public Object userParams;
 
     public static RunDataAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         RunDataAnalysisRequest self = new RunDataAnalysisRequest();
@@ -82,11 +82,11 @@ public class RunDataAnalysisRequest extends TeaModel {
         return this.specificationType;
     }
 
-    public RunDataAnalysisRequest setUserParams(java.util.Map<String, ?> userParams) {
+    public RunDataAnalysisRequest setUserParams(Object userParams) {
         this.userParams = userParams;
         return this;
     }
-    public java.util.Map<String, ?> getUserParams() {
+    public Object getUserParams() {
         return this.userParams;
     }
 
