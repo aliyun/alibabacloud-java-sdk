@@ -11,7 +11,7 @@ public class DescribePrefixListAttributesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The time when the prefix list was created.</p>
+     * <p>The ID of the prefix list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribePrefixListAttributesRequest extends TeaModel {
     public String prefixListId;
 
     /**
-     * <p>The ID of the prefix list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

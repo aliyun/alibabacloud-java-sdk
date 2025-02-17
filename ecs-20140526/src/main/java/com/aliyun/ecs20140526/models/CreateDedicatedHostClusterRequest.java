@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDedicatedHostClusterRequest extends TeaModel {
     /**
-     * <p>The name of the dedicated host cluster. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the host group. It must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <p>This parameter is left empty by default.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     public String dedicatedHostClusterName;
 
     /**
-     * <p>The description of the dedicated host cluster. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the host group. It must be 2 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * <p>This parameter is left empty by default.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region in which to create the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which to assign the dedicated host cluster.</p>
+     * <p>The resource group ID of the host group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -70,13 +70,13 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags to add to the dedicated host cluster.</p>
+     * <p>The tags of the host group.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDedicatedHostClusterRequestTag> tag;
 
     /**
-     * <p>The ID of the zone in which to create the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>The zone ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
 
     public static class CreateDedicatedHostClusterRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the dedicated host cluster. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be no more than 64 characters in length, and can neither contain <code>http://</code> or <code>https://</code> nor start with <code>acs:</code> or <code>aliyun</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -189,7 +189,7 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be no more than 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

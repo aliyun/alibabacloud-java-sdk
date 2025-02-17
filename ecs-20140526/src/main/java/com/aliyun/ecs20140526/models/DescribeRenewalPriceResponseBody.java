@@ -40,7 +40,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule extends TeaModel {
+    public static class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule extends TeaModel {
         /**
          * <p>The description of the pricing rule.</p>
          * 
@@ -59,12 +59,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         @NameInMap("RuleId")
         public Long ruleId;
 
-        public static DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule self = new DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule();
+        public static DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule self = new DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule setDescription(String description) {
+        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -72,7 +72,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule setRuleId(Long ruleId) {
+        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule setRuleId(Long ruleId) {
             this.ruleId = ruleId;
             return this;
         }
@@ -82,26 +82,26 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules extends TeaModel {
+    public static class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules extends TeaModel {
         @NameInMap("Rule")
-        public java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule> rule;
+        public java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule> rule;
 
-        public static DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules self = new DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules();
+        public static DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules self = new DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules setRule(java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule> rule) {
+        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules setRule(java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule> rule) {
             this.rule = rule;
             return this;
         }
-        public java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule> getRule() {
+        public java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule> getRule() {
             return this.rule;
         }
 
     }
 
-    public static class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel extends TeaModel {
+    public static class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo extends TeaModel {
         /**
          * <p>The discount.</p>
          * 
@@ -133,7 +133,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
          * <p>The pricing rules.</p>
          */
         @NameInMap("SubRules")
-        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules subRules;
+        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules subRules;
 
         /**
          * <p>The transaction price.</p>
@@ -144,12 +144,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         @NameInMap("TradePrice")
         public Float tradePrice;
 
-        public static DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel self = new DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel();
+        public static DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo self = new DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel setDiscountPrice(Float discountPrice) {
+        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setDiscountPrice(Float discountPrice) {
             this.discountPrice = discountPrice;
             return this;
         }
@@ -157,7 +157,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             return this.discountPrice;
         }
 
-        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel setOriginalPrice(Float originalPrice) {
+        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setOriginalPrice(Float originalPrice) {
             this.originalPrice = originalPrice;
             return this;
         }
@@ -165,7 +165,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             return this.originalPrice;
         }
 
-        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel setResource(String resource) {
+        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setResource(String resource) {
             this.resource = resource;
             return this;
         }
@@ -173,15 +173,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             return this.resource;
         }
 
-        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel setSubRules(DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules subRules) {
+        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setSubRules(DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules subRules) {
             this.subRules = subRules;
             return this;
         }
-        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules getSubRules() {
+        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules getSubRules() {
             return this.subRules;
         }
 
-        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel setTradePrice(Float tradePrice) {
+        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setTradePrice(Float tradePrice) {
             this.tradePrice = tradePrice;
             return this;
         }
@@ -192,20 +192,20 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos extends TeaModel {
-        @NameInMap("ResourcePriceModel")
-        public java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel> resourcePriceModel;
+        @NameInMap("DetailInfo")
+        public java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo> detailInfo;
 
         public static DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos self = new DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos setResourcePriceModel(java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel> resourcePriceModel) {
-            this.resourcePriceModel = resourcePriceModel;
+        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos setDetailInfo(java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo> detailInfo) {
+            this.detailInfo = detailInfo;
             return this;
         }
-        public java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel> getResourcePriceModel() {
-            return this.resourcePriceModel;
+        public java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo> getDetailInfo() {
+            return this.detailInfo;
         }
 
     }

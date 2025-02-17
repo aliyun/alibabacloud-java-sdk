@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * <p>Default value:</p>
      * <ul>
      * <li>If this parameter is left empty, the default value is 10.</li>
-     * <li>If this parameter is set to a value greater than 100, the default value is 100.</li>
+     * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the <code>NextToken</code> value returned in the last call to the DescribeDiagnosticReports operation. Leave this parameter empty the first time you call this operation.</p>
+     * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -28,7 +28,7 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID of the diagnostic report. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of diagnostic reports. You can specify up to 100 report IDs.</p>
+     * <p>The IDs of diagnostic reports.</p>
      */
     @NameInMap("ReportIds")
     public java.util.List<String> reportIds;
@@ -52,7 +52,7 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     /**
      * <p>The severity level of the diagnostic report. Valid values:</p>
      * <ul>
-     * <li>Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</li>
+     * <li>Unknown: The diagnostic does not start, fails to run, or unexpectedly exits without a diagnosis.</li>
      * <li>Normal: No exceptions are detected.</li>
      * <li>Info: Diagnostic information is recorded and may be related to exceptions.</li>
      * <li>Warn: Diagnostic information is recorded and may indicate exceptions.</li>
@@ -66,11 +66,11 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     public String severity;
 
     /**
-     * <p>The state of the diagnostic report. Valid values:</p>
+     * <p>The status of the diagnostic report. Valid values:</p>
      * <ul>
-     * <li>InProgress: The diagnostic is in progress.</li>
-     * <li>Failed: The diagnostic failed.</li>
-     * <li>Finished: The diagnostic is complete.</li>
+     * <li>InProgress</li>
+     * <li>Failed</li>
+     * <li>Finished</li>
      * </ul>
      * 
      * <strong>example:</strong>

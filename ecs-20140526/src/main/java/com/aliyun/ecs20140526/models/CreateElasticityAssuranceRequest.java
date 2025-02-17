@@ -17,6 +17,12 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     @NameInMap("AssuranceTimes")
     public String assuranceTimes;
 
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
+    @NameInMap("AutoRenewPeriod")
+    public Integer autoRenewPeriod;
+
     /**
      * <p>The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
@@ -170,6 +176,22 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     }
     public String getAssuranceTimes() {
         return this.assuranceTimes;
+    }
+
+    public CreateElasticityAssuranceRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public CreateElasticityAssuranceRequest setAutoRenewPeriod(Integer autoRenewPeriod) {
+        this.autoRenewPeriod = autoRenewPeriod;
+        return this;
+    }
+    public Integer getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     public CreateElasticityAssuranceRequest setClientToken(String clientToken) {

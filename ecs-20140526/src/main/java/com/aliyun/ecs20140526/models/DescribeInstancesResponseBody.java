@@ -772,8 +772,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean primary;
 
         /**
+         * <p>The private domain name of the instance.</p>
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p> This parameter has a value in a specific format only if <code>HostnameType</code> is set to <code>IpBased</code> or <code>InstanceIdBased</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1066,9 +1067,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions extends TeaModel {
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>Indicates whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv6 Address (AAAA Record) is enabled. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1077,9 +1081,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean enableInstanceIdDnsAAAARecord;
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>Indicates whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1088,9 +1095,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean enableInstanceIdDnsARecord;
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>Indicates whether DNS Resolution from the IP Address-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1099,9 +1109,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean enableIpDnsARecord;
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>Indicates whether Reverse DNS Resolution from the Instance Primary Private IPv4 Address to the IP Address-based Hostname (PTR Record) is enabled. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1110,9 +1123,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean enableIpDnsPtrRecord;
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>The type of hostname. Valid values:</p>
+         * <ul>
+         * <li>Custom: custom hostname</li>
+         * <li>IpBased: IP address-based hostname</li>
+         * <li>InstanceIdBased: instance ID-based hostname</li>
+         * </ul>
+         * <p>Default value: Custom.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -1800,9 +1817,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public DescribeInstancesResponseBodyInstancesInstanceOperationLocks operationLocks;
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>The private domain name options of the instance.</p>
+         * <p>For information about the resolution of ECS private domain names, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private DNS resolution</a>.</p>
          */
         @NameInMap("PrivateDnsNameOptions")
         public DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions privateDnsNameOptions;

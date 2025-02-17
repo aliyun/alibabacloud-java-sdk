@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     /**
-     * <p>Details about the dedicated host clusters.</p>
+     * <p>An array consisting of host group information.</p>
      */
     @NameInMap("DedicatedHostClusters")
     public DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters dedicatedHostClusters;
@@ -239,7 +239,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity extends TeaModel {
         /**
-         * <p>The available capacity of the Elastic Compute Service (ECS) instance types in the dedicated host cluster.</p>
+         * <p>The available capacity of ECS instances in the host group.</p>
          */
         @NameInMap("AvailableInstanceTypes")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypes availableInstanceTypes;
@@ -362,7 +362,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the dedicated host cluster.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -371,7 +371,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the dedicated host cluster.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -423,13 +423,13 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster extends TeaModel {
         /**
-         * <p>The capacity of the dedicated host cluster.</p>
+         * <p>The capacity of the host group.</p>
          */
         @NameInMap("DedicatedHostClusterCapacity")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity dedicatedHostClusterCapacity;
 
         /**
-         * <p>The ID of the dedicated host cluster.</p>
+         * <p>The ID of the host group.</p>
          * 
          * <strong>example:</strong>
          * <p>dc-bp12wlf6am0vz9v2****</p>
@@ -438,7 +438,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         public String dedicatedHostClusterId;
 
         /**
-         * <p>The name of the dedicated host cluster.</p>
+         * <p>The name of the host group.</p>
          * 
          * <strong>example:</strong>
          * <p>myDDHCluster</p>
@@ -447,13 +447,13 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         public String dedicatedHostClusterName;
 
         /**
-         * <p>The IDs of dedicated hosts in the dedicated host cluster.</p>
+         * <p>The IDs of dedicated hosts in the host group.</p>
          */
         @NameInMap("DedicatedHostIds")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds dedicatedHostIds;
 
         /**
-         * <p>The description of the dedicated host cluster.</p>
+         * <p>The description of the host group.</p>
          * 
          * <strong>example:</strong>
          * <p>This-is-my-DDHCluster</p>
@@ -462,7 +462,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The region ID of the dedicated host cluster.</p>
+         * <p>The region ID of the host group.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -471,7 +471,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the dedicated host cluster belongs.</p>
+         * <p>The resource group ID of the host group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -480,13 +480,13 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The tags of the dedicated host cluster.</p>
+         * <p>The tags of the host group.</p>
          */
         @NameInMap("Tags")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTags tags;
 
         /**
-         * <p>The zone ID of the dedicated host cluster.</p>
+         * <p>The zone ID of the host group.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-f</p>

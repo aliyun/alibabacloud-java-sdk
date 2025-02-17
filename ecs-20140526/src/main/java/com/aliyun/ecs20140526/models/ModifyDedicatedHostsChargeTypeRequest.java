@@ -7,12 +7,12 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <ul>
-     * <li>true: The payment is automatically completed. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and will be canceled.</li>
+     * <li>true: The payment is automatically completed. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled.</li>
      * <li>false: An order is generated but no payment is made.</li>
      * </ul>
      * <p>Default value: true.</p>
      * <blockquote>
-     * <p>If you do not have sufficient balance in your account, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can pay for the order.</p>
+     * <p> If you do not have sufficient balance in your account, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can pay for the order.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The new billing method of the dedicated hosts. Valid values:</p>
+     * <p>The new billing method for the dedicated host. Valid values:</p>
      * <ul>
      * <li>PrePaid: changes the billing method from pay-as-you-go to subscription.</li>
      * <li>PostPaid: changes the billing method from subscription to pay-as-you-go.</li>
@@ -67,7 +67,7 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
      * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * <p>Default value: false.</p>

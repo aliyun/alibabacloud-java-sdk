@@ -45,6 +45,9 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<StartImagePipelineExecutionRequestTag> tag;
 
@@ -137,6 +140,8 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
 
     public static class StartImagePipelineExecutionRequestTag extends TeaModel {
         /**
+         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -144,6 +149,8 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. The tag value cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

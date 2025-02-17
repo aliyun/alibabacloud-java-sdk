@@ -119,7 +119,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>需求单对应的私有池ID。</p>
+         * <p>The ID of the private pool that corresponds to the demand.</p>
          * 
          * <strong>example:</strong>
          * <p>crp-bp1fv8sbhelbzjwx****</p>

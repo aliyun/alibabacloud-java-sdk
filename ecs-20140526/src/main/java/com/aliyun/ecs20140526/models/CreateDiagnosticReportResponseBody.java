@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDiagnosticReportResponseBody extends TeaModel {
     /**
-     * <p>The ID of the diagnostic report, which is the unique identifier of the report.</p>
+     * <p>The unique ID of the diagnostic report.</p>
      * 
      * <strong>example:</strong>
      * <p>dr-uf6i0tv2refv8wz*****</p>
@@ -14,7 +14,7 @@ public class CreateDiagnosticReportResponseBody extends TeaModel {
     public String reportId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>

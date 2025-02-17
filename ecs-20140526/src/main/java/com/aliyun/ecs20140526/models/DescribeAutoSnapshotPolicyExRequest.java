@@ -31,7 +31,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     /**
      * <p>The page number.</p>
      * <p>Pages start from page 1.</p>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +42,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <p>Valid values: 1 to 100.</p>
-     * <p>Default value: 10</p>
+     * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

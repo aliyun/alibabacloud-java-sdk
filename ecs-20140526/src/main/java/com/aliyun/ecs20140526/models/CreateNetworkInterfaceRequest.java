@@ -25,9 +25,8 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <blockquote>
-     * <p> This parameter is not publicly available.</p>
-     * </blockquote>
+     * <p>The connection tracking configurations of the ENI.</p>
+     * <p>Before you use this parameter, learn about how to manage connection timeout periods. For more information, see <a href="https://help.aliyun.com/document_detail/2865958.html">Manage connection timeout periods</a>.</p>
      */
     @NameInMap("ConnectionTrackingConfiguration")
     public CreateNetworkInterfaceRequestConnectionTrackingConfiguration connectionTrackingConfiguration;
@@ -57,7 +56,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is unavailable.</p>
+     * <p> This parameter is not publicly available.</p>
      * </blockquote>
      */
     @NameInMap("EnhancedNetwork")
@@ -649,8 +648,10 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     public static class CreateNetworkInterfaceRequestConnectionTrackingConfiguration extends TeaModel {
         /**
+         * <p>The timeout period for TCP connections in the TIME_WAIT or CLOSE_WAIT state. Unit: seconds. Valid values: integers from 3 to 15.</p>
+         * <p>Default value: 3.</p>
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p> If the associated Elastic Compute Service (ECS) instance is used with a Network Load Balancer (NLB) or Classic Load Balancer (CLB) instance, the default timeout period for TCP connections in the <code>TIME_WAIT</code> state is 15 seconds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -660,9 +661,8 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         public Integer tcpClosedAndTimeWaitTimeout;
 
         /**
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The timeout period for TCP connections in the ESTABLISHED state. Unit: seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</p>
+         * <p>Default value: 910.</p>
          * 
          * <strong>example:</strong>
          * <p>910</p>
@@ -671,8 +671,10 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         public Integer tcpEstablishedTimeout;
 
         /**
+         * <p>The timeout period for UDP flows. Unit: seconds. Valid values: 10, 20, 30, 60, 80, and 100.</p>
+         * <p>Default value: 30.</p>
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p> If the associated ECS instance is used with an NLB or CLB instance, the default timeout period for UDP flows is 100 seconds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -713,6 +715,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceRequestEnhancedNetwork extends TeaModel {
+        /**
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableRss")
         public Boolean enableRss;
 

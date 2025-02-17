@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     /**
-     * <p>A collection of diagnostic metrics.</p>
+     * <p>The diagnostic metric sets.</p>
      */
     @NameInMap("MetricSets")
     public java.util.List<DescribeDiagnosticMetricSetsResponseBodyMetricSets> metricSets;
 
     /**
-     * <p>The query token returned in this call.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -20,7 +20,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>

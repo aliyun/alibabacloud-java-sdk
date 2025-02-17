@@ -2521,7 +2521,7 @@ public class RunInstancesRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The type of ENI N. The value of the first N in this parameter cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</p>
+         * <p>The type of ENI N. The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>Primary</li>
@@ -2567,7 +2567,7 @@ public class RunInstancesRequest extends TeaModel {
          * <ul>
          * <li>You can specify network card indexes only for instances of specific instance types.</li>
          * <li>If you set NetworkInterface.N.InstanceType to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</li>
-         * <li>If you set NetworkInterface.N.InstanceType to Secondary or leave the parameter empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+         * <li>If you set NetworkInterface.N.InstanceType to Secondary or leave NetworkInterface.N.InstanceType empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2664,7 +2664,11 @@ public class RunInstancesRequest extends TeaModel {
         public Integer queueNumber;
 
         /**
-         * <p>The number of queues supported by the ERI.</p>
+         * <p>The number of queue pairs (QPs) supported by the ERI.</p>
+         * <p>If you want to attach multiple ERIs to a created instance, we recommend that you specify QueuePairNumber for each ERI based on the value of <code>QueuePairNumber</code> supported by the instance type and the number of ERIs that you want to use. Make sure that the total number of QPs of all ERIs does not exceed the maximum number of QPs supported by the instance type. For information about the maximum number of QPs supported by an instance type, see <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>.</p>
+         * <blockquote>
+         * <p> If you do not specify QueuePairNumber for an ERI, the maximum number of QPs supported by the instance type is used as the number of QPs supported by the ERI. In this case, you cannot attach an additional ERI to the instance. However, you can attach other types of ENIs to the instance.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2719,6 +2723,14 @@ public class RunInstancesRequest extends TeaModel {
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SourceDestCheck")
         public Boolean sourceDestCheck;
 

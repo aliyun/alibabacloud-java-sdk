@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrefixListsRequest extends TeaModel {
     /**
-     * <p>The IP address family of the prefix list. Valid values:</p>
+     * <p>The IP address family. Valid values:</p>
      * <ul>
      * <li>IPv4</li>
      * <li>IPv6</li>
@@ -19,8 +19,8 @@ public class DescribePrefixListsRequest extends TeaModel {
     public String addressFamily;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Maximum value: 100.</p>
+     * <p>The number of entries per page.</p>
+     * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class DescribePrefixListsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the <code>NextToken</code> value returned in the previous call to the DescribePrefixLists operation. Leave this parameter empty the first time you call this operation.</p>
+     * <p>The pagination token that is used in the request to retrieve a new page of results. Set the value to the <code>NextToken</code> value returned in the last call to this operation. Leave this parameter empty the first time you call this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -45,7 +45,7 @@ public class DescribePrefixListsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The IDs of prefix list.</p>
+     * <p>The IDs of prefix lists. Valid values of N: 0 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-x1j1k5ykzqlixdcy****</p>

@@ -246,11 +246,26 @@ public class RunCommandShrinkRequest extends TeaModel {
      * <p>Specifies how to run the command. Valid values:</p>
      * <ul>
      * <li>Once: immediately runs the command.</li>
-     * <li>Period: runs the command on a schedule. If you set this parameter to <code>Period</code>, you must specify <code>Frequency</code>.</li>
-     * <li>NextRebootOnly: runs the command the next time the instance is started.</li>
-     * <li>EveryReboot: runs the command every time the instance is started.</li>
+     * <li>Period: runs the command on a schedule. If you set this parameter to <code>Period</code>, you must also configure the <code>Frequency</code> parameter.</li>
+     * <li>NextRebootOnly: runs the command the next time the instances start.</li>
+     * <li>EveryReboot: runs the command every time the instances start. Specifies how to run the command. Valid values:</li>
+     * <li>Once: immediately runs the command.</li>
+     * <li>Period: runs the command on a schedule. If you set this parameter to <code>Period</code>, you must also configure the <code>Frequency</code> parameter.</li>
+     * <li>NextRebootOnly: runs the command the next time the instances start.</li>
+     * <li>EveryReboot: runs the command every time the instances start.</li>
+     * <li>DryRun: performs only a dry run, without running the actual command. The system checks the request parameters, the execution environments on the instances, and the status of Cloud Assistant Agent.</li>
      * </ul>
-     * <p>Default values:</p>
+     * <p>Default value:</p>
+     * <ul>
+     * <li>If you do not specify the <code>Frequency</code> parameter, the default value is <code>Once</code>.</li>
+     * <li>If you specify the <code>Frequency</code> parameter, <code>Period</code> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</li>
+     * </ul>
+     * <p>Take note of the following items:</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> operation to stop the pending or scheduled executions of the command.</li>
+     * <li>If you set this parameter to <code>Period</code> or <code>EveryReboot</code>, you can call the <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with <code>IncludeHistory</code> set to true to query the results of historical scheduled executions.</li>
+     * </ul>
+     * <p>Default value:</p>
      * <ul>
      * <li>If you do not specify the <code>Frequency</code> parameter, the default value is <code>Once</code>.</li>
      * <li>If you specify the <code>Frequency</code> parameter, <code>Period</code> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</li>

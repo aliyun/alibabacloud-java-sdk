@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDiagnosticMetricSetRequest extends TeaModel {
     /**
-     * <p>testDescription</p>
+     * <p>The description of the diagnostic metric set.</p>
      * 
      * <strong>example:</strong>
      * <p>The ID of the request.</p>
@@ -14,14 +14,14 @@ public class CreateDiagnosticMetricSetRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of diagnostic metric.</p>
+     * <p>The IDs of diagnostic metrics. You can specify up to 100 diagnostic metric IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MetricIds")
     public java.util.List<String> metricIds;
 
     /**
-     * <p>my_dms</p>
+     * <p>The name of the diagnostic metric set.</p>
      * 
      * <strong>example:</strong>
      * <p>The IDs of diagnostic metrics. You can specify up to 100 diagnostic metric IDs.</p>
@@ -30,8 +30,7 @@ public class CreateDiagnosticMetricSetRequest extends TeaModel {
     public String metricSetName;
 
     /**
-     * <p>The type of the resource.</p>
-     * <p>Default value: instance.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +40,8 @@ public class CreateDiagnosticMetricSetRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the diagnostic metric set.</p>
+     * <p>The type of the resource.</p>
+     * <p>Default value: instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

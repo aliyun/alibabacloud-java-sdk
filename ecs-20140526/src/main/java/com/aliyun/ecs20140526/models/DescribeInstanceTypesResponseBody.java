@@ -77,12 +77,30 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions extends TeaModel {
+        /**
+         * <p>CPU core.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Core")
         public Integer core;
 
+        /**
+         * <p>CPU core factor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CoreFactor")
         public Integer coreFactor;
 
+        /**
+         * <p>Indicates whether Hyper-Threading is adjustable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HyperThreadingAdjustable")
         public Boolean hyperThreadingAdjustable;
 
@@ -92,6 +110,15 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("SupportedTopologyTypes")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes supportedTopologyTypes;
 
+        /**
+         * <p>CPU threads per core.</p>
+         * <blockquote>
+         * <p><code>CpuOptions.ThreadsPerCore=1</code> indicates the shutdown of CPU Hyper-Threading.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ThreadsPerCore")
         public Integer threadsPerCore;
 
@@ -143,6 +170,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork extends TeaModel {
+        /**
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("RssSupport")
         public Boolean rssSupport;
 
@@ -529,6 +564,12 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
 
+        /**
+         * <p>Indicates whether jumbo frames are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("JumboFrameSupport")
         public Boolean jumboFrameSupport;
 

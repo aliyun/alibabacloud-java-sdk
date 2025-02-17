@@ -174,6 +174,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     @NameInMap("PayAsYouGoTargetCapacity")
     public String payAsYouGoTargetCapacity;
 
+    @NameInMap("PrePaidOptions")
+    public CreateAutoProvisioningGroupRequestPrePaidOptions prePaidOptions;
+
     /**
      * <p>The ID of the region in which to create the auto provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
@@ -477,6 +480,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
     public String getPayAsYouGoTargetCapacity() {
         return this.payAsYouGoTargetCapacity;
+    }
+
+    public CreateAutoProvisioningGroupRequest setPrePaidOptions(CreateAutoProvisioningGroupRequestPrePaidOptions prePaidOptions) {
+        this.prePaidOptions = prePaidOptions;
+        return this;
+    }
+    public CreateAutoProvisioningGroupRequestPrePaidOptions getPrePaidOptions() {
+        return this.prePaidOptions;
     }
 
     public CreateAutoProvisioningGroupRequest setRegionId(String regionId) {
@@ -1483,6 +1494,18 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("UserData")
         public String userData;
 
+        @NameInMap("AutoRenew")
+        public Boolean autoRenew;
+
+        @NameInMap("AutoRenewPeriod")
+        public Integer autoRenewPeriod;
+
+        @NameInMap("Period")
+        public Integer period;
+
+        @NameInMap("PeriodUnit")
+        public String periodUnit;
+
         public static CreateAutoProvisioningGroupRequestLaunchConfiguration build(java.util.Map<String, ?> map) throws Exception {
             CreateAutoProvisioningGroupRequestLaunchConfiguration self = new CreateAutoProvisioningGroupRequestLaunchConfiguration();
             return TeaModel.build(map, self);
@@ -1734,6 +1757,38 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public String getUserData() {
             return this.userData;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setAutoRenew(Boolean autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setAutoRenewPeriod(Integer autoRenewPeriod) {
+            this.autoRenewPeriod = autoRenewPeriod;
+            return this;
+        }
+        public Integer getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setPeriod(Integer period) {
+            this.period = period;
+            return this;
+        }
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setPeriodUnit(String periodUnit) {
+            this.periodUnit = periodUnit;
+            return this;
+        }
+        public String getPeriodUnit() {
+            return this.periodUnit;
         }
 
     }
@@ -2001,6 +2056,55 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public Double getWeightedCapacity() {
             return this.weightedCapacity;
+        }
+
+    }
+
+    public static class CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution extends TeaModel {
+        @NameInMap("InstanceTypes")
+        public java.util.List<String> instanceTypes;
+
+        @NameInMap("MinTargetCapacity")
+        public Integer minTargetCapacity;
+
+        public static CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution self = new CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution setInstanceTypes(java.util.List<String> instanceTypes) {
+            this.instanceTypes = instanceTypes;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypes() {
+            return this.instanceTypes;
+        }
+
+        public CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution setMinTargetCapacity(Integer minTargetCapacity) {
+            this.minTargetCapacity = minTargetCapacity;
+            return this;
+        }
+        public Integer getMinTargetCapacity() {
+            return this.minTargetCapacity;
+        }
+
+    }
+
+    public static class CreateAutoProvisioningGroupRequestPrePaidOptions extends TeaModel {
+        @NameInMap("SpecifyCapacityDistribution")
+        public java.util.List<CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution> specifyCapacityDistribution;
+
+        public static CreateAutoProvisioningGroupRequestPrePaidOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestPrePaidOptions self = new CreateAutoProvisioningGroupRequestPrePaidOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestPrePaidOptions setSpecifyCapacityDistribution(java.util.List<CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution> specifyCapacityDistribution) {
+            this.specifyCapacityDistribution = specifyCapacityDistribution;
+            return this;
+        }
+        public java.util.List<CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution> getSpecifyCapacityDistribution() {
+            return this.specifyCapacityDistribution;
         }
 
     }

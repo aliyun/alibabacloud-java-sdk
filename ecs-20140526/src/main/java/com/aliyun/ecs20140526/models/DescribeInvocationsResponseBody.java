@@ -724,6 +724,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
          * <li>Period: The command is run on a schedule.</li>
          * <li>NextRebootOnly: The command is run the next time the instances start.</li>
          * <li>EveryReboot: The command is run every time the instances start.</li>
+         * <li>DryRun: The system performs only a dry run, without running the actual command. The system checks the request parameters, the execution environments on the instances, and the status of Cloud Assistant Agent.</li>
          * </ul>
          * 
          * <strong>example:</strong>

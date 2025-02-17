@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostClusterAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the dedicated host cluster.</p>
+     * <p>The ID of the host group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyDedicatedHostClusterAttributeRequest extends TeaModel {
     public String dedicatedHostClusterId;
 
     /**
-     * <p>The new name of the dedicated host cluster. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter. The name cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the host group. It must be 2 to 128 characters in length and start with a letter. It can contain letters, digits, periods (.), underscores (_), and hyphens (-), and cannot contain <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>newClusterName</p>
@@ -24,7 +24,7 @@ public class ModifyDedicatedHostClusterAttributeRequest extends TeaModel {
     public String dedicatedHostClusterName;
 
     /**
-     * <p>The description of the dedicated host cluster. It must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the host group. It must be 2 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>newClusterDescription</p>
@@ -39,7 +39,7 @@ public class ModifyDedicatedHostClusterAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

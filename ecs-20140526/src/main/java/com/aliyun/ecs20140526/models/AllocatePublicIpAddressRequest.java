@@ -15,7 +15,10 @@ public class AllocatePublicIpAddressRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the instance.</p>
+     * <p>The static public IP address that you want to assign to the instance. This parameter is empty by default, which indicates that a static public IP address is randomly assigned by the system.</p>
+     * <blockquote>
+     * <p> Only users in the whitelist can specify this parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p><code>112.124.**.**</code></p>

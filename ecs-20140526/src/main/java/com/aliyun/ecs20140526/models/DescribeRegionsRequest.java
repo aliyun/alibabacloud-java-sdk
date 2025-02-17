@@ -5,13 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:</p>
-     * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US: English</li>
-     * <li>ja: Japanese</li>
-     * </ul>
-     * <p>Default value: zh-CN.</p>
+     * <p>The endpoint of the region.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -20,14 +14,7 @@ public class DescribeRegionsRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
-     * <ul>
-     * <li>PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.</li>
-     * <li>PostPaid: pay-as-you-go.</li>
-     * <li>SpotWithPriceLimit: preemptible instance for which a maximum hourly price is specified.</li>
-     * <li>SpotAsPriceGo: preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
-     * </ul>
-     * <p>Default value: PostPaid.</p>
+     * <p>The information of the regions.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -48,14 +35,11 @@ public class DescribeRegionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of resource. Valid values:</p>
+     * <p>Indicates whether clusters are sold out. Valid values:</p>
      * <ul>
-     * <li>instance: Elastic Compute Service (ECS) instance</li>
-     * <li>disk: disk</li>
-     * <li>reservedinstance: reserved instance</li>
-     * <li>scu: storage capacity unit (SCU)</li>
+     * <li>available</li>
+     * <li>soldOut</li>
      * </ul>
-     * <p>Default value: instance.</p>
      * 
      * <strong>example:</strong>
      * <p>instance</p>

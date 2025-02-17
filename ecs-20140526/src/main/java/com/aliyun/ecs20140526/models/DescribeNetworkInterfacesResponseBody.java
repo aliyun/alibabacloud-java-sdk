@@ -444,8 +444,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public Boolean primary;
 
         /**
+         * <p>The private domain name of the ECS instance.</p>
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p> A private domain name can be returned in a specific format only when <code>HostnameType</code> is set to <code>IP</code> or <code>InstanceId</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

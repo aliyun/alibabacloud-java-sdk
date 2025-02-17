@@ -174,6 +174,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     @NameInMap("PayAsYouGoTargetCapacity")
     public String payAsYouGoTargetCapacity;
 
+    @NameInMap("PrePaidOptions")
+    public CreateAutoProvisioningGroupShrinkRequestPrePaidOptions prePaidOptions;
+
     /**
      * <p>The ID of the region in which to create the auto provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
@@ -477,6 +480,14 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     }
     public String getPayAsYouGoTargetCapacity() {
         return this.payAsYouGoTargetCapacity;
+    }
+
+    public CreateAutoProvisioningGroupShrinkRequest setPrePaidOptions(CreateAutoProvisioningGroupShrinkRequestPrePaidOptions prePaidOptions) {
+        this.prePaidOptions = prePaidOptions;
+        return this;
+    }
+    public CreateAutoProvisioningGroupShrinkRequestPrePaidOptions getPrePaidOptions() {
+        return this.prePaidOptions;
     }
 
     public CreateAutoProvisioningGroupShrinkRequest setRegionId(String regionId) {
@@ -1483,6 +1494,18 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         @NameInMap("UserData")
         public String userData;
 
+        @NameInMap("AutoRenew")
+        public Boolean autoRenew;
+
+        @NameInMap("AutoRenewPeriod")
+        public Integer autoRenewPeriod;
+
+        @NameInMap("Period")
+        public Integer period;
+
+        @NameInMap("PeriodUnit")
+        public String periodUnit;
+
         public static CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration build(java.util.Map<String, ?> map) throws Exception {
             CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration self = new CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration();
             return TeaModel.build(map, self);
@@ -1734,6 +1757,38 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         }
         public String getUserData() {
             return this.userData;
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setAutoRenew(Boolean autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setAutoRenewPeriod(Integer autoRenewPeriod) {
+            this.autoRenewPeriod = autoRenewPeriod;
+            return this;
+        }
+        public Integer getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setPeriod(Integer period) {
+            this.period = period;
+            return this;
+        }
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setPeriodUnit(String periodUnit) {
+            this.periodUnit = periodUnit;
+            return this;
+        }
+        public String getPeriodUnit() {
+            return this.periodUnit;
         }
 
     }
@@ -2001,6 +2056,55 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         }
         public Double getWeightedCapacity() {
             return this.weightedCapacity;
+        }
+
+    }
+
+    public static class CreateAutoProvisioningGroupShrinkRequestPrePaidOptionsSpecifyCapacityDistribution extends TeaModel {
+        @NameInMap("InstanceTypes")
+        public java.util.List<String> instanceTypes;
+
+        @NameInMap("MinTargetCapacity")
+        public Integer minTargetCapacity;
+
+        public static CreateAutoProvisioningGroupShrinkRequestPrePaidOptionsSpecifyCapacityDistribution build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestPrePaidOptionsSpecifyCapacityDistribution self = new CreateAutoProvisioningGroupShrinkRequestPrePaidOptionsSpecifyCapacityDistribution();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestPrePaidOptionsSpecifyCapacityDistribution setInstanceTypes(java.util.List<String> instanceTypes) {
+            this.instanceTypes = instanceTypes;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypes() {
+            return this.instanceTypes;
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestPrePaidOptionsSpecifyCapacityDistribution setMinTargetCapacity(Integer minTargetCapacity) {
+            this.minTargetCapacity = minTargetCapacity;
+            return this;
+        }
+        public Integer getMinTargetCapacity() {
+            return this.minTargetCapacity;
+        }
+
+    }
+
+    public static class CreateAutoProvisioningGroupShrinkRequestPrePaidOptions extends TeaModel {
+        @NameInMap("SpecifyCapacityDistribution")
+        public java.util.List<CreateAutoProvisioningGroupShrinkRequestPrePaidOptionsSpecifyCapacityDistribution> specifyCapacityDistribution;
+
+        public static CreateAutoProvisioningGroupShrinkRequestPrePaidOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestPrePaidOptions self = new CreateAutoProvisioningGroupShrinkRequestPrePaidOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestPrePaidOptions setSpecifyCapacityDistribution(java.util.List<CreateAutoProvisioningGroupShrinkRequestPrePaidOptionsSpecifyCapacityDistribution> specifyCapacityDistribution) {
+            this.specifyCapacityDistribution = specifyCapacityDistribution;
+            return this;
+        }
+        public java.util.List<CreateAutoProvisioningGroupShrinkRequestPrePaidOptionsSpecifyCapacityDistribution> getSpecifyCapacityDistribution() {
+            return this.specifyCapacityDistribution;
         }
 
     }

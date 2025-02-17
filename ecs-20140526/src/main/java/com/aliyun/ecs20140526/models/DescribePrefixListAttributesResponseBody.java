@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribePrefixListAttributesResponseBody extends TeaModel {
     /**
-     * <p>The name of the prefix list.</p>
+     * <p>The IP address family of the prefix list. Valid values:</p>
+     * <ul>
+     * <li>IPv4</li>
+     * <li>IPv6</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>IPv4</p>
@@ -14,7 +18,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     public String addressFamily;
 
     /**
-     * <p>The maximum number of entries that the prefix list can contain.</p>
+     * <p>The time when the prefix list was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-02-20T07:11Z</p>
@@ -23,11 +27,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The IP address family of the prefix list. Valid values:</p>
-     * <ul>
-     * <li>IPv4</li>
-     * <li>IPv6</li>
-     * </ul>
+     * <p>The description of the prefix list.</p>
      * 
      * <strong>example:</strong>
      * <p>This is description.</p>
@@ -36,13 +36,13 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The description of the entry in the prefix list.</p>
+     * <p>Details about the entries in the prefix list.</p>
      */
     @NameInMap("Entries")
     public DescribePrefixListAttributesResponseBodyEntries entries;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The maximum number of entries in the prefix list.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,7 +51,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     public Integer maxEntries;
 
     /**
-     * <p>Details about the entries in the prefix list.</p>
+     * <p>The ID of the prefix list.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-x1j1k5ykzqlixdcy****</p>
@@ -60,7 +60,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     public String prefixListId;
 
     /**
-     * <p>The ID of the prefix list.</p>
+     * <p>The name of the prefix list.</p>
      * 
      * <strong>example:</strong>
      * <p>PrefixListNameSample</p>
@@ -69,7 +69,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     public String prefixListName;
 
     /**
-     * <p>The description of the prefix list.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>38793DB8-A4B2-4AEC-BFD3-111234E9188D</p>
@@ -148,6 +148,8 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
 
     public static class DescribePrefixListAttributesResponseBodyEntriesEntry extends TeaModel {
         /**
+         * <p>The CIDR block in entry N.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24</p>
          */
@@ -155,7 +157,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         public String cidr;
 
         /**
-         * <p>The CIDR block in the entry in the prefix list.</p>
+         * <p>The description in entry N.</p>
          * 
          * <strong>example:</strong>
          * <p>Description Sample 01</p>

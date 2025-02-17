@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     /**
-     * <p>The query token returned in this call.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -14,13 +14,13 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of reports.</p>
+     * <p>The diagnostic reports.</p>
      */
     @NameInMap("Reports")
     public DescribeDiagnosticReportsResponseBodyReports reports;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
@@ -59,7 +59,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
 
     public static class DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue extends TeaModel {
         /**
-         * <p>The unique ID of the diagnosed issue.</p>
+         * <p>The ID of the diagnosed issue, which is the unique identifier of the issue.</p>
          * 
          * <strong>example:</strong>
          * <p>GuestOS.CPU.HighUtiliz*****</p>
@@ -168,7 +168,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
+         * <p>The end of the time range during which data was queried. The value is the EndTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-11T14:00:00Z</p>
@@ -186,7 +186,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         public String finishedTime;
 
         /**
-         * <p>The list of issues.</p>
+         * <p>The diagnosed issues.</p>
          */
         @NameInMap("Issues")
         public DescribeDiagnosticReportsResponseBodyReportsReportIssues issues;
@@ -230,7 +230,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         /**
          * <p>The severity level of the diagnostic report. Valid values:</p>
          * <ul>
-         * <li>Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</li>
+         * <li>Unknown: The diagnostic did not start, failed to run, or unexpectedly exited without a diagnosis.</li>
          * <li>Normal: No exceptions were detected.</li>
          * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
          * <li>Warn: Diagnostic information was recorded and may indicate exceptions.</li>
@@ -244,7 +244,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         public String severity;
 
         /**
-         * <p>The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
+         * <p>The beginning of the time range during which data was queried. The value is the StartTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-11T12:00:00Z</p>
@@ -253,7 +253,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The state of the diagnostic report.</p>
+         * <p>The status of the diagnostic report.</p>
          * 
          * <strong>example:</strong>
          * <p>Finished</p>

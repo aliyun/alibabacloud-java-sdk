@@ -42,6 +42,8 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
 
     public static class ModifyManagedInstanceResponseBodyInstance extends TeaModel {
         /**
+         * <p>The managed instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mi-hz01nmcf****</p>
          */

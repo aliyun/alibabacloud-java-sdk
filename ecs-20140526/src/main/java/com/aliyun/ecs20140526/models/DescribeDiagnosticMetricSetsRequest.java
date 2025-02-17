@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticMetricSetsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * <p>Default value:</p>
      * <ul>
      * <li>If this parameter is left empty, the default value is 10.</li>
-     * <li>If this parameter is set to a value greater than 100, the default value is 100.</li>
+     * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,13 +19,13 @@ public class DescribeDiagnosticMetricSetsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The ID of diagnostic metric set N.</p>
+     * <p>The IDs of diagnostic metric sets.</p>
      */
     @NameInMap("MetricSetIds")
     public java.util.List<String> metricSetIds;
 
     /**
-     * <p>The query token. Set the value to the <code>NextToken</code> value returned in the last call to the DescribeDiagnosticMetricSets operation. Leave this parameter empty the first time you call this operation.</p>
+     * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -58,7 +58,7 @@ public class DescribeDiagnosticMetricSetsRequest extends TeaModel {
      * <li>User: user-defined diagnostic metric set</li>
      * <li>Common: common diagnostic metric set</li>
      * </ul>
-     * <p>Default value: user.</p>
+     * <p>Default value: User.</p>
      * 
      * <strong>example:</strong>
      * <p>User</p>
