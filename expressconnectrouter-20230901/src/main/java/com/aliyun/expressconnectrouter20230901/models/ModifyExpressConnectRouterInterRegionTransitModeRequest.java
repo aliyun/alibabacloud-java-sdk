@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>FF9nMec/RZ6H9oqFn1pvyir/SLRlxCCyHJonbGzqL01hiM6Jb3wJowdHvjCfog7ww1b9rSHMRFJnrUBfVba68TJg==</p>
      */
@@ -12,6 +18,12 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Tea
     public String clientToken;
 
     /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +31,7 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Tea
     public Boolean dryRun;
 
     /**
+     * <p>The ECR ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +40,9 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Tea
     @NameInMap("EcrId")
     public String ecrId;
 
+    /**
+     * <p>The cross-region forwarding modes.</p>
+     */
     @NameInMap("TransitModeList")
     public java.util.List<ModifyExpressConnectRouterInterRegionTransitModeRequestTransitModeList> transitModeList;
 
@@ -69,6 +85,12 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Tea
 
     public static class ModifyExpressConnectRouterInterRegionTransitModeRequestTransitModeList extends TeaModel {
         /**
+         * <p>The cross-domain forwarding mode of the ECR. Valid values:</p>
+         * <ul>
+         * <li><strong>ECMP</strong>: the load balancing mode.</li>
+         * <li><strong>NearBy</strong>: the nearby forwarding mode.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ECMP</p>
          */
@@ -76,6 +98,8 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Tea
         public String mode;
 
         /**
+         * <p>The region ID of the ECR.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */

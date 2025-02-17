@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>Authentication is failed for ****</p>
      */
@@ -12,6 +14,12 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether the ECR is used to establish connections between regions in the Chinese mainland and regions outside China. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +27,12 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public Boolean anyCrossBorderLink;
 
     /**
+     * <p>Indicates whether the ECR is used to establish connections between regions in the Chinese mainland. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +40,8 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public Boolean anyInterRegionLink;
 
     /**
+     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +49,8 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>IllegalParamFormat.EcrId</p>
      */
@@ -40,6 +58,11 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+     * <blockquote>
+     * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsInstanceId</strong>, the request parameter <strong>DtsInstanceId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>The param format of EcrId **** is illegal.</p>
      */
@@ -47,6 +70,8 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -54,6 +79,12 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Indicates whether the cross-border CDT service is activated for the account to which the ECR belongs. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -61,6 +92,12 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public Boolean isCdtCrossBorderEnabled;
 
     /**
+     * <p>Indicates whether the CDT service is activated for the account to which the ECR belongs. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -68,6 +105,12 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public Boolean isCdtInterRegionEnabled;
 
     /**
+     * <p>Indicates whether the account to which the ECR belongs can create cross-border connections. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -75,6 +118,8 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public Boolean isUserAllowedToCreateCrossBorderLink;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -82,6 +127,8 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
      */
@@ -89,6 +136,12 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

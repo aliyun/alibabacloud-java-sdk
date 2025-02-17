@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>Authentication is failed for ****</p>
      */
@@ -12,16 +14,23 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public String accessDeniedDetail;
 
     /**
+     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The routes that are queried.</p>
+     */
     @NameInMap("DisabledRouteEntryList")
     public java.util.List<DescribeDisabledExpressConnectRouterRouteEntriesResponseBodyDisabledRouteEntryList> disabledRouteEntryList;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>IllegalParamFormat.EcrId</p>
      */
@@ -29,6 +38,11 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public String dynamicCode;
 
     /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+     * <blockquote>
+     * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsInstanceId</strong>, the request parameter <strong>DtsInstanceId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>The param format of EcrId **** is illegal.</p>
      */
@@ -36,6 +50,8 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +59,8 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public Integer httpStatusCode;
 
     /**
+     * <p>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -50,6 +68,8 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public Integer maxResults;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -57,6 +77,12 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public String message;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If NextToken is empty, no next page exists.</li>
+     * <li>If a value of NextToken is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>gAAAAABkDTaRFnmxUoMLVOn8YTIgYFeL2ch8j0sJs8VCIU8SS5438m3D9X1VqspCcaUEHRN9I_AfVwMhZHAhcNivifK_OtQxJQ==</p>
      */
@@ -64,6 +90,8 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
      */
@@ -71,6 +99,12 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public String requestId;
 
     /**
+     * <p>Indicates whether routes are disabled by the ECR. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -78,6 +112,8 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public Boolean success;
 
     /**
+     * <p>The total number of routes.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -187,6 +223,8 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
 
     public static class DescribeDisabledExpressConnectRouterRouteEntriesResponseBodyDisabledRouteEntryList extends TeaModel {
         /**
+         * <p>The destination CIDR block of the route.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.100.110/32</p>
          */
@@ -194,6 +232,8 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
         public String destinationCidrBlock;
 
         /**
+         * <p>The ECR ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecr-mezk2idmsd0vx2****</p>
          */
@@ -201,6 +241,8 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
         public String ecrId;
 
         /**
+         * <p>The time when the route entry was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1682317345</p>
          */
@@ -208,6 +250,8 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
         public String gmtCreate;
 
         /**
+         * <p>The ID of the next-hop instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>br-hp3u4u5f03tfuljis****</p>
          */
@@ -215,6 +259,8 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
         public String nexthopInstanceId;
 
         /**
+         * <p>The region ID of the next-hop instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
