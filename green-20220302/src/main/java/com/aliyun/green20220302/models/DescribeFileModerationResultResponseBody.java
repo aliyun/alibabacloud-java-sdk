@@ -306,6 +306,9 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Descriptions")
+        public String descriptions;
+
         /**
          * <p>The details of the labels.</p>
          * 
@@ -380,6 +383,14 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResult setDescriptions(String descriptions) {
+            this.descriptions = descriptions;
+            return this;
+        }
+        public String getDescriptions() {
+            return this.descriptions;
         }
 
         public DescribeFileModerationResultResponseBodyDataPageResultTextResult setLabels(String labels) {
@@ -626,6 +637,9 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The details of the labels.</p>
          * 
@@ -647,6 +661,14 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public static DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels build(java.util.Map<String, ?> map) throws Exception {
             DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels self = new DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels setLabel(String label) {
