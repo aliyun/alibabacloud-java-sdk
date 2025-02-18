@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApproveOtaTaskResponseBody extends TeaModel {
     /**
+     * <p>The execution result. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>OtaTask.Running</p>
      */
@@ -12,6 +14,8 @@ public class ApproveOtaTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message. If the value of <code>Code</code> is <code>success</code>, this parameter is not returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>The task is running and cannot be sumitted.</p>
      */
@@ -19,6 +23,8 @@ public class ApproveOtaTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */

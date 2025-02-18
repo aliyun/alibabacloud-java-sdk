@@ -72,7 +72,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AccessPageSetAclResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AccessPageSetAclResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AccessPageSetAclResponse());
+        }
+
     }
 
     /**
@@ -89,7 +94,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>同意Ota升级</p>
+     * <p>Sets the execution time of an over-the-air (OTA) update task.</p>
      * 
      * @param request ApproveOtaTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -132,12 +137,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ApproveOtaTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ApproveOtaTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ApproveOtaTaskResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>同意Ota升级</p>
+     * <p>Sets the execution time of an over-the-air (OTA) update task.</p>
      * 
      * @param request ApproveOtaTaskRequest
      * @return ApproveOtaTaskResponse
@@ -204,7 +214,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AskSessionPackagePriceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AskSessionPackagePriceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AskSessionPackagePriceResponse());
+        }
+
     }
 
     /**
@@ -275,7 +290,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AuthorizeInstanceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AuthorizeInstanceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AuthorizeInstanceGroupResponse());
+        }
+
     }
 
     /**
@@ -359,7 +379,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new BuySessionPackageResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new BuySessionPackageResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new BuySessionPackageResponse());
+        }
+
     }
 
     /**
@@ -423,7 +448,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAccessPageResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAccessPageResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateAccessPageResponse());
+        }
+
     }
 
     /**
@@ -591,7 +621,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppInstanceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppInstanceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateAppInstanceGroupResponse());
+        }
+
     }
 
     /**
@@ -608,7 +643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>CreateImageFromAppInstanceGroup</p>
+     * <p>Creates a new image by debugging the delivery group.</p>
      * 
      * @param request CreateImageFromAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -643,12 +678,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateImageFromAppInstanceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateImageFromAppInstanceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateImageFromAppInstanceGroupResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>CreateImageFromAppInstanceGroup</p>
+     * <p>Creates a new image by debugging the delivery group.</p>
      * 
      * @param request CreateImageFromAppInstanceGroupRequest
      * @return CreateImageFromAppInstanceGroupResponse
@@ -687,7 +727,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAccessPageResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAccessPageResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAccessPageResponse());
+        }
+
     }
 
     /**
@@ -703,8 +748,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot call this operation to delete a subscription delivery group.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>实例组释放接口</p>
+     * <p>Deletes a delivery group that uses the By Resource - Pay-as-you-go billing method.</p>
      * 
      * @param request DeleteAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -735,12 +785,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAppInstanceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAppInstanceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAppInstanceGroupResponse());
+        }
+
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot call this operation to delete a subscription delivery group.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>实例组释放接口</p>
+     * <p>Deletes a delivery group that uses the By Resource - Pay-as-you-go billing method.</p>
      * 
      * @param request DeleteAppInstanceGroupRequest
      * @return DeleteAppInstanceGroupResponse
@@ -751,8 +811,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only application instances that are in the Initializing or Idle state can be deleted. The operation can be called only by specific customers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除实例</p>
+     * <p>Deletes an application instance.</p>
      * 
      * @param request DeleteAppInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -787,12 +850,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAppInstancesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAppInstancesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAppInstancesResponse());
+        }
+
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only application instances that are in the Initializing or Idle state can be deleted. The operation can be called only by specific customers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除实例</p>
+     * <p>Deletes an application instance.</p>
      * 
      * @param request DeleteAppInstancesRequest
      * @return DeleteAppInstancesResponse
@@ -839,7 +910,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccessPageSessionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccessPageSessionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAccessPageSessionResponse());
+        }
+
     }
 
     /**
@@ -887,7 +963,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAppInstanceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAppInstanceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAppInstanceGroupResponse());
+        }
+
     }
 
     /**
@@ -903,8 +984,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must call this operation at least twice to obtain a connection credential.
+     * The first time you call this operation, the system assigns an application instance to the specified convenience account and then starts the application. In this case, the ID of the started task, which is indicated by <code>TaskID</code>, is returned.
+     * In subsequent calls, you must configure <code>TaskID</code> to query whether the task is completed. If the value of <code>TaskStatus</code> in the response is <code>Finished</code>, the connection credential, which is indicated by <code>Ticket</code>, is returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取连接ticket，Open API</p>
+     * <p>Queries the credential that is used to connect to App Streaming.</p>
      * 
      * @param request GetConnectionTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -967,12 +1053,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetConnectionTicketResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetConnectionTicketResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetConnectionTicketResponse());
+        }
+
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must call this operation at least twice to obtain a connection credential.
+     * The first time you call this operation, the system assigns an application instance to the specified convenience account and then starts the application. In this case, the ID of the started task, which is indicated by <code>TaskID</code>, is returned.
+     * In subsequent calls, you must configure <code>TaskID</code> to query whether the task is completed. If the value of <code>TaskStatus</code> in the response is <code>Finished</code>, the connection credential, which is indicated by <code>Ticket</code>, is returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取连接ticket，Open API</p>
+     * <p>Queries the credential that is used to connect to App Streaming.</p>
      * 
      * @param request GetConnectionTicketRequest
      * @return GetConnectionTicketResponse
@@ -984,7 +1080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetDebugAppInstance</p>
+     * <p>Queries information that is used to debug an application instance.</p>
      * 
      * @param request GetDebugAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1015,12 +1111,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDebugAppInstanceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDebugAppInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetDebugAppInstanceResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>GetDebugAppInstance</p>
+     * <p>Queries information that is used to debug an application instance.</p>
      * 
      * @param request GetDebugAppInstanceRequest
      * @return GetDebugAppInstanceResponse
@@ -1032,7 +1133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取ota任务明细</p>
+     * <p>Queries the details of an over-the-air (OTA) update task, including the available versions and version description.</p>
      * 
      * @param request GetOtaTaskByTaskIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1059,12 +1160,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOtaTaskByTaskIdResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetOtaTaskByTaskIdResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetOtaTaskByTaskIdResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>获取ota任务明细</p>
+     * <p>Queries the details of an over-the-air (OTA) update task, including the available versions and version description.</p>
      * 
      * @param request GetOtaTaskByTaskIdRequest
      * @return GetOtaTaskByTaskIdResponse
@@ -1076,7 +1182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>云应用资源询价接口</p>
+     * <p>Queries resource prices.</p>
      * 
      * @param request GetResourcePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1131,12 +1237,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourcePriceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourcePriceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetResourcePriceResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>云应用资源询价接口</p>
+     * <p>Queries resource prices.</p>
      * 
      * @param request GetResourcePriceRequest
      * @return GetResourcePriceResponse
@@ -1148,7 +1259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>云应用资源询价接口</p>
+     * <p>Queries the renewal prices of App Streaming resources.</p>
      * 
      * @param request GetResourceRenewPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1187,12 +1298,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceRenewPriceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceRenewPriceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetResourceRenewPriceResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>云应用资源询价接口</p>
+     * <p>Queries the renewal prices of App Streaming resources.</p>
      * 
      * @param request GetResourceRenewPriceRequest
      * @return GetResourceRenewPriceResponse
@@ -1251,7 +1367,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccessPagesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccessPagesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListAccessPagesResponse());
+        }
+
     }
 
     /**
@@ -1337,7 +1458,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAppInstanceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListAppInstanceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListAppInstanceGroupResponse());
+        }
+
     }
 
     /**
@@ -1354,7 +1480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询交付组内实例列表</p>
+     * <p>Queries the details of application instances in a delivery group, including the IDs, status, creation time, update time, session status, and public IP addresses associated with the primary NICs of the instances.</p>
      * 
      * @param request ListAppInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1407,12 +1533,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAppInstancesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListAppInstancesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListAppInstancesResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>查询交付组内实例列表</p>
+     * <p>Queries the details of application instances in a delivery group, including the IDs, status, creation time, update time, session status, and public IP addresses associated with the primary NICs of the instances.</p>
      * 
      * @param request ListAppInstancesRequest
      * @return ListAppInstancesResponse
@@ -1475,7 +1606,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBindInfoResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListBindInfoResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListBindInfoResponse());
+        }
+
     }
 
     /**
@@ -1492,7 +1628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源规格</p>
+     * <p>Queries the resource types that are available for purchase when you create a delivery group.</p>
      * 
      * @param request ListNodeInstanceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1571,12 +1707,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNodeInstanceTypeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListNodeInstanceTypeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListNodeInstanceTypeResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源规格</p>
+     * <p>Queries the resource types that are available for purchase when you create a delivery group.</p>
      * 
      * @param request ListNodeInstanceTypeRequest
      * @return ListNodeInstanceTypeResponse
@@ -1588,7 +1729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级历史记录</p>
+     * <p>Queries the information about over-the-air (OTA) update tasks.</p>
      * 
      * @param request ListOtaTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1627,12 +1768,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOtaTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListOtaTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListOtaTaskResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>升级历史记录</p>
+     * <p>Queries the information about over-the-air (OTA) update tasks.</p>
      * 
      * @param request ListOtaTaskRequest
      * @return ListOtaTaskResponse
@@ -1675,7 +1821,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRegionsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRegionsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRegionsResponse());
+        }
+
     }
 
     /**
@@ -1743,7 +1894,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSessionPackagesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListSessionPackagesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListSessionPackagesResponse());
+        }
+
     }
 
     /**
@@ -1759,6 +1915,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the configurations of the administrator account, such as whether the resource expiration reminder feature is enabled.</p>
+     * 
      * @param request ListTenantConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTenantConfigResponse
@@ -1776,10 +1935,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTenantConfigResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTenantConfigResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTenantConfigResponse());
+        }
+
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the configurations of the administrator account, such as whether the resource expiration reminder feature is enabled.</p>
      * @return ListTenantConfigResponse
      */
     public ListTenantConfigResponse listTenantConfig() throws Exception {
@@ -1788,8 +1954,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation can be called only if you use a pay-as-you-go delivery group for which a scheduled scaling policy is used and if you call the operation at a time other than the scheduled time.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>注销交付下所有会话</p>
+     * <p>Closes all sessions in a pay-as-you-go delivery group for which a scheduled scaling policy is used.</p>
      * 
      * @param request LogOffAllSessionsInAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1820,12 +1991,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new LogOffAllSessionsInAppInstanceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new LogOffAllSessionsInAppInstanceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new LogOffAllSessionsInAppInstanceGroupResponse());
+        }
+
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation can be called only if you use a pay-as-you-go delivery group for which a scheduled scaling policy is used and if you call the operation at a time other than the scheduled time.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>注销交付下所有会话</p>
+     * <p>Closes all sessions in a pay-as-you-go delivery group for which a scheduled scaling policy is used.</p>
      * 
      * @param request LogOffAllSessionsInAppInstanceGroupRequest
      * @return LogOffAllSessionsInAppInstanceGroupResponse
@@ -1837,7 +2018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改云应用交付组</p>
+     * <p>Modifies the general policies of a delivery group, including the number of concurrent sessions and the retention period of disconnected sessions.</p>
      * 
      * @param tmpReq ModifyAppInstanceGroupAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1924,12 +2105,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAppInstanceGroupAttributeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAppInstanceGroupAttributeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyAppInstanceGroupAttributeResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>修改云应用交付组</p>
+     * <p>Modifies the general policies of a delivery group, including the number of concurrent sessions and the retention period of disconnected sessions.</p>
      * 
      * @param request ModifyAppInstanceGroupAttributeRequest
      * @return ModifyAppInstanceGroupAttributeResponse
@@ -1982,7 +2168,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAppPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAppPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyAppPolicyResponse());
+        }
+
     }
 
     /**
@@ -2045,7 +2236,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyNodePoolAttributeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyNodePoolAttributeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyNodePoolAttributeResponse());
+        }
+
     }
 
     /**
@@ -2058,6 +2254,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of the administrator account, such as whether to enable the resource expiration reminder feature.</p>
+     * 
      * @param request ModifyTenantConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyTenantConfigResponse
@@ -2083,10 +2282,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyTenantConfigResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyTenantConfigResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyTenantConfigResponse());
+        }
+
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of the administrator account, such as whether to enable the resource expiration reminder feature.</p>
+     * 
      * @param request ModifyTenantConfigRequest
      * @return ModifyTenantConfigResponse
      */
@@ -2097,7 +2304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取授权用户列表</p>
+     * <p>Queries the assigned users that are added to a delivery group by page.</p>
      * 
      * @param request PageListAppInstanceGroupUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2136,12 +2343,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new PageListAppInstanceGroupUserResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new PageListAppInstanceGroupUserResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new PageListAppInstanceGroupUserResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>获取授权用户列表</p>
+     * <p>Queries the assigned users that are added to a delivery group by page.</p>
      * 
      * @param request PageListAppInstanceGroupUserRequest
      * @return PageListAppInstanceGroupUserResponse
@@ -2152,8 +2364,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</p>
+     * 
      * <b>summary</b> : 
-     * <p>资源续费接口</p>
+     * <p>Renews a delivery group.</p>
      * 
      * @param request RenewAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2200,12 +2415,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RenewAppInstanceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RenewAppInstanceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RenewAppInstanceGroupResponse());
+        }
+
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</p>
+     * 
      * <b>summary</b> : 
-     * <p>资源续费接口</p>
+     * <p>Renews a delivery group.</p>
      * 
      * @param request RenewAppInstanceGroupRequest
      * @return RenewAppInstanceGroupResponse
@@ -2217,7 +2440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解除用户绑定</p>
+     * <p>Unbinds a user and a session.</p>
      * 
      * @param request UnbindRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2260,12 +2483,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UnbindResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>解除用户绑定</p>
+     * <p>Unbinds a user and a session.</p>
      * 
      * @param request UnbindRequest
      * @return UnbindResponse
@@ -2276,8 +2504,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Warning</strong> After the image is updated, the end user session accessing the cloud application will be disconnected. Exercise caution to avoid end user data loss.<blockquote>
+     * <p> After the image of the delivery group is updated, the change takes effect on the terminal in approximately 2 minutes.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新镜像</p>
+     * <p>Updates the image of a delivery group.</p>
      * 
      * @param request UpdateAppInstanceGroupImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2316,12 +2552,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAppInstanceGroupImageResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAppInstanceGroupImageResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAppInstanceGroupImageResponse());
+        }
+
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Warning</strong> After the image is updated, the end user session accessing the cloud application will be disconnected. Exercise caution to avoid end user data loss.<blockquote>
+     * <p> After the image of the delivery group is updated, the change takes effect on the terminal in approximately 2 minutes.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新镜像</p>
+     * <p>Updates the image of a delivery group.</p>
      * 
      * @param request UpdateAppInstanceGroupImageRequest
      * @return UpdateAppInstanceGroupImageResponse

@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListNodeInstanceTypeResponseBody extends TeaModel {
+    /**
+     * <p>The resource types.</p>
+     */
     @NameInMap("NodeInstanceTypeModels")
     public java.util.List<ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels> nodeInstanceTypeModels;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,16 +20,26 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -78,6 +93,8 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
 
     public static class ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels extends TeaModel {
         /**
+         * <p>The number of vCPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -85,6 +102,8 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public String cpu;
 
         /**
+         * <p>The number of GPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -92,7 +111,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public String gpu;
 
         /**
-         * <p>显卡内存大小，单位为MB。</p>
+         * <p>The GPU size. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -101,13 +120,13 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public Long gpuMemory;
 
         /**
-         * <p>最大并发会话数，即单个资源可同时连接的会话数。如果同时连接的会话数过多，可能导致应用的使用体验下降。取值范围因资源规格不同而不同。各资源规格对应的取值范围分别是：</p>
+         * <p>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</p>
          * <ul>
-         * <li>appstreaming.general.4c8g：1\~2；</li>
-         * <li>appstreaming.general.8c16g：1\~4；</li>
-         * <li>appstreaming.vgpu.8c16g.4g：1\~4；</li>
-         * <li>appstreaming.vgpu.8c31g.16g：1\~4；</li>
-         * <li>appstreaming.vgpu.14c93g.12g：1\~6；</li>
+         * <li>appstreaming.general.4c8g: 1 to 2</li>
+         * <li>appstreaming.general.8c16g: 1 to 4</li>
+         * <li>appstreaming.vgpu.8c16g.4g: 1 to 4</li>
+         * <li>appstreaming.vgpu.8c31g.16g: 1 to 4</li>
+         * <li>appstreaming.vgpu.14c93g.12g: 1 to 6</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,6 +136,8 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public Integer maxCapacity;
 
         /**
+         * <p>The memory size. Unit: MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>8192</p>
          */
@@ -124,6 +145,8 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public Long memory;
 
         /**
+         * <p>The ID of the resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>appstreaming.vgpu.4c8g.2g</p>
          */
@@ -131,6 +154,13 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public String nodeInstanceType;
 
         /**
+         * <p>The resource type family.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>appstreaming.general: WUYING - General</li>
+         * <li>appstreaming.vgpu: WUYING - Graphics</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>appstreaming.vgpu</p>
          */
@@ -138,10 +168,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public String nodeInstanceTypeFamily;
 
         /**
-         * <p>资源规格名称。</p>
+         * <p>The name of the resource type.</p>
          * 
          * <strong>example:</strong>
-         * <p>无影-通用型_4核8G</p>
+         * <p>WUYING - General - 4 vCPUs 8 GB Memory</p>
          */
         @NameInMap("NodeTypeName")
         public String nodeTypeName;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListOtaTaskResponseBody extends TeaModel {
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListOtaTaskResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,16 +23,23 @@ public class ListOtaTaskResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The OTA update tasks.</p>
+     */
     @NameInMap("TaskList")
     public java.util.List<ListOtaTaskResponseBodyTaskList> taskList;
 
     /**
+     * <p>The total number of OTA update tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -82,6 +93,8 @@ public class ListOtaTaskResponseBody extends TeaModel {
 
     public static class ListOtaTaskResponseBodyTaskList extends TeaModel {
         /**
+         * <p>The OTA version.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0.1-R-20220708.110604</p>
          */
@@ -89,6 +102,17 @@ public class ListOtaTaskResponseBody extends TeaModel {
         public String otaVersion;
 
         /**
+         * <p>The task status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>FAILED</li>
+         * <li>RUNNING</li>
+         * <li>TERMINATED</li>
+         * <li>PART_FINISHED</li>
+         * <li>STANDBY</li>
+         * <li>FINISHED</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -96,6 +120,8 @@ public class ListOtaTaskResponseBody extends TeaModel {
         public String taskDisplayStatus;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ota-be7jzm29wrrz5****</p>
          */
@@ -103,6 +129,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The start time of the OTA update task. The time follows the ISO 8601 standard.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>

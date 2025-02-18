@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageFromAppInstanceGroupRequest extends TeaModel {
     /**
+     * <p>The image name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateImageFromAppInstanceGroupRequest extends TeaModel {
     public String appCenterImageName;
 
     /**
+     * <p>The ID of the delivery group. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,11 @@ public class CreateImageFromAppInstanceGroupRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
+     * <p>The product type.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>CloudApp: App Streaming</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

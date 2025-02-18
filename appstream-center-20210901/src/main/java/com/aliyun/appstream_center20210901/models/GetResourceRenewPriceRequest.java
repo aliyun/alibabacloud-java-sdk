@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceRenewPriceRequest extends TeaModel {
     /**
+     * <p>The ID of the delivery group. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetResourceRenewPriceRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
+     * <p>The subscription duration of resources. This parameter must be configured together with <code>PeriodUnit</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,20 @@ public class GetResourceRenewPriceRequest extends TeaModel {
     public Long period;
 
     /**
+     * <p>The unit of the subscription duration. This parameter must be configured together with <code>Period</code>. The following items describe valid values for the combinations of <code>Period</code> and <code>PeriodUnit</code>:</p>
+     * <ul>
+     * <li>1 Week</li>
+     * <li>1 Month</li>
+     * <li>2 Month</li>
+     * <li>3 Month</li>
+     * <li>6 Month</li>
+     * <li>1 Year</li>
+     * <li>2 Year</li>
+     * <li>3 Year</li>
+     * </ul>
+     * <blockquote>
+     * <p> The value of this parameter is case-insensitive. For example, <code>Week</code> is valid and <code>week</code> is invalid. If you specify a value combination other than the preceding combinations, such as <code>2 Week</code>, the operation can still be called. However, an error occurs when you place the order.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +48,11 @@ public class GetResourceRenewPriceRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The product type.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>CloudApp: App Streaming</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
