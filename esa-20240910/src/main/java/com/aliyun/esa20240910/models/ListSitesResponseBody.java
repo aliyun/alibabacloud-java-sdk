@@ -155,6 +155,9 @@ public class ListSitesResponseBody extends TeaModel {
         @NameInMap("NameServerList")
         public String nameServerList;
 
+        @NameInMap("OfflineReason")
+        public String offlineReason;
+
         /**
          * <p>The plan name.</p>
          * 
@@ -302,6 +305,14 @@ public class ListSitesResponseBody extends TeaModel {
         }
         public String getNameServerList() {
             return this.nameServerList;
+        }
+
+        public ListSitesResponseBodySites setOfflineReason(String offlineReason) {
+            this.offlineReason = offlineReason;
+            return this;
+        }
+        public String getOfflineReason() {
+            return this.offlineReason;
         }
 
         public ListSitesResponseBodySites setPlanName(String planName) {
