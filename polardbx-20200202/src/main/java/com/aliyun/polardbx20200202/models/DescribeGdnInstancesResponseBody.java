@@ -179,6 +179,9 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TaskStatus")
+        public String taskStatus;
+
         /**
          * <strong>example:</strong>
          * <p>cn-zhangjiakou-a</p>
@@ -324,6 +327,14 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList setTaskStatus(String taskStatus) {
+            this.taskStatus = taskStatus;
+            return this;
+        }
+        public String getTaskStatus() {
+            return this.taskStatus;
         }
 
         public DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList setTertiaryZone(String tertiaryZone) {
