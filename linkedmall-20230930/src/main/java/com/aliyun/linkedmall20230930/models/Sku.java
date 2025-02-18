@@ -18,6 +18,9 @@ public class Sku extends TeaModel {
     @NameInMap("canSell")
     public Boolean canSell;
 
+    @NameInMap("discountRetailPrice")
+    public Long discountRetailPrice;
+
     /**
      * <strong>example:</strong>
      * <p>110000</p>
@@ -141,6 +144,14 @@ public class Sku extends TeaModel {
     }
     public Boolean getCanSell() {
         return this.canSell;
+    }
+
+    public Sku setDiscountRetailPrice(Long discountRetailPrice) {
+        this.discountRetailPrice = discountRetailPrice;
+        return this;
+    }
+    public Long getDiscountRetailPrice() {
+        return this.discountRetailPrice;
     }
 
     public Sku setDivisionCode(String divisionCode) {
