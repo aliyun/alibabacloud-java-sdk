@@ -35,7 +35,161 @@ public class ListMmsJobsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListMmsJobsResponseBodyDataObjectListConfig extends TeaModel {
+        @NameInMap("columnMapping")
+        public java.util.Map<String, String> columnMapping;
+
+        @NameInMap("enableVerification")
+        public Boolean enableVerification;
+
+        @NameInMap("increment")
+        public Boolean increment;
+
+        @NameInMap("others")
+        public java.util.Map<String, ?> others;
+
+        @NameInMap("partitionFilters")
+        public java.util.Map<String, String> partitionFilters;
+
+        @NameInMap("partitions")
+        public java.util.List<Long> partitions;
+
+        @NameInMap("schemaOnly")
+        public Boolean schemaOnly;
+
+        @NameInMap("tableBlackList")
+        public java.util.List<String> tableBlackList;
+
+        @NameInMap("tableMapping")
+        public java.util.Map<String, String> tableMapping;
+
+        @NameInMap("tableWhiteList")
+        public java.util.List<String> tableWhiteList;
+
+        @NameInMap("tables")
+        public java.util.List<String> tables;
+
+        @NameInMap("taskType")
+        public String taskType;
+
+        @NameInMap("tunnelQuota")
+        public String tunnelQuota;
+
+        public static ListMmsJobsResponseBodyDataObjectListConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListMmsJobsResponseBodyDataObjectListConfig self = new ListMmsJobsResponseBodyDataObjectListConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMmsJobsResponseBodyDataObjectListConfig setColumnMapping(java.util.Map<String, String> columnMapping) {
+            this.columnMapping = columnMapping;
+            return this;
+        }
+        public java.util.Map<String, String> getColumnMapping() {
+            return this.columnMapping;
+        }
+
+        public ListMmsJobsResponseBodyDataObjectListConfig setEnableVerification(Boolean enableVerification) {
+            this.enableVerification = enableVerification;
+            return this;
+        }
+        public Boolean getEnableVerification() {
+            return this.enableVerification;
+        }
+
+        public ListMmsJobsResponseBodyDataObjectListConfig setIncrement(Boolean increment) {
+            this.increment = increment;
+            return this;
+        }
+        public Boolean getIncrement() {
+            return this.increment;
+        }
+
+        public ListMmsJobsResponseBodyDataObjectListConfig setOthers(java.util.Map<String, ?> others) {
+            this.others = others;
+            return this;
+        }
+        public java.util.Map<String, ?> getOthers() {
+            return this.others;
+        }
+
+        public ListMmsJobsResponseBodyDataObjectListConfig setPartitionFilters(java.util.Map<String, String> partitionFilters) {
+            this.partitionFilters = partitionFilters;
+            return this;
+        }
+        public java.util.Map<String, String> getPartitionFilters() {
+            return this.partitionFilters;
+        }
+
+        public ListMmsJobsResponseBodyDataObjectListConfig setPartitions(java.util.List<Long> partitions) {
+            this.partitions = partitions;
+            return this;
+        }
+        public java.util.List<Long> getPartitions() {
+            return this.partitions;
+        }
+
+        public ListMmsJobsResponseBodyDataObjectListConfig setSchemaOnly(Boolean schemaOnly) {
+            this.schemaOnly = schemaOnly;
+            return this;
+        }
+        public Boolean getSchemaOnly() {
+            return this.schemaOnly;
+        }
+
+        public ListMmsJobsResponseBodyDataObjectListConfig setTableBlackList(java.util.List<String> tableBlackList) {
+            this.tableBlackList = tableBlackList;
+            return this;
+        }
+        public java.util.List<String> getTableBlackList() {
+            return this.tableBlackList;
+        }
+
+        public ListMmsJobsResponseBodyDataObjectListConfig setTableMapping(java.util.Map<String, String> tableMapping) {
+            this.tableMapping = tableMapping;
+            return this;
+        }
+        public java.util.Map<String, String> getTableMapping() {
+            return this.tableMapping;
+        }
+
+        public ListMmsJobsResponseBodyDataObjectListConfig setTableWhiteList(java.util.List<String> tableWhiteList) {
+            this.tableWhiteList = tableWhiteList;
+            return this;
+        }
+        public java.util.List<String> getTableWhiteList() {
+            return this.tableWhiteList;
+        }
+
+        public ListMmsJobsResponseBodyDataObjectListConfig setTables(java.util.List<String> tables) {
+            this.tables = tables;
+            return this;
+        }
+        public java.util.List<String> getTables() {
+            return this.tables;
+        }
+
+        public ListMmsJobsResponseBodyDataObjectListConfig setTaskType(String taskType) {
+            this.taskType = taskType;
+            return this;
+        }
+        public String getTaskType() {
+            return this.taskType;
+        }
+
+        public ListMmsJobsResponseBodyDataObjectListConfig setTunnelQuota(String tunnelQuota) {
+            this.tunnelQuota = tunnelQuota;
+            return this;
+        }
+        public String getTunnelQuota() {
+            return this.tunnelQuota;
+        }
+
+    }
+
     public static class ListMmsJobsResponseBodyDataObjectList extends TeaModel {
+        @NameInMap("config")
+        public ListMmsJobsResponseBodyDataObjectListConfig config;
+
         /**
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:17</p>
@@ -63,6 +217,9 @@ public class ListMmsJobsResponseBody extends TeaModel {
          */
         @NameInMap("dstSchemaName")
         public String dstSchemaName;
+
+        @NameInMap("eta")
+        public String eta;
 
         /**
          * <strong>example:</strong>
@@ -146,6 +303,14 @@ public class ListMmsJobsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListMmsJobsResponseBodyDataObjectList setConfig(ListMmsJobsResponseBodyDataObjectListConfig config) {
+            this.config = config;
+            return this;
+        }
+        public ListMmsJobsResponseBodyDataObjectListConfig getConfig() {
+            return this.config;
+        }
+
         public ListMmsJobsResponseBodyDataObjectList setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -176,6 +341,14 @@ public class ListMmsJobsResponseBody extends TeaModel {
         }
         public String getDstSchemaName() {
             return this.dstSchemaName;
+        }
+
+        public ListMmsJobsResponseBodyDataObjectList setEta(String eta) {
+            this.eta = eta;
+            return this;
+        }
+        public String getEta() {
+            return this.eta;
         }
 
         public ListMmsJobsResponseBodyDataObjectList setId(Long id) {

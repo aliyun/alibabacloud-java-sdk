@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to sort data in ascending order.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,7 @@ public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     public Boolean ascOrder;
 
     /**
+     * <p>The date on which the statistics are collected, in days. Set this parameter to a value in the YYYYMMdd format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     public String date;
 
     /**
+     * <p>The sorting column.</p>
+     * 
      * <strong>example:</strong>
      * <p>totalFrequency</p>
      */
@@ -28,6 +33,8 @@ public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     public String orderColumn;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +42,8 @@ public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +51,8 @@ public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The name of the partition that you want to use for fuzzy match.</p>
+     * 
      * <strong>example:</strong>
      * <p>20241201</p>
      */
@@ -49,6 +60,8 @@ public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     public String partitionPrefix;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -56,6 +69,8 @@ public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The name of the schema.</p>
+     * 
      * <strong>example:</strong>
      * <p>schema</p>
      */
@@ -63,12 +78,17 @@ public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     public String schema;
 
     /**
+     * <p>The ID of the tenant. You can log on to the MaxCompute console, and choose <strong>Tenants</strong> &gt; <strong>Tenant Property</strong> from the left-side navigation pane to view the tenant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40713753659****</p>
      */
     @NameInMap("tenantId")
     public String tenantId;
 
+    /**
+     * <p>The storage types.</p>
+     */
     @NameInMap("types")
     public String typesShrink;
 

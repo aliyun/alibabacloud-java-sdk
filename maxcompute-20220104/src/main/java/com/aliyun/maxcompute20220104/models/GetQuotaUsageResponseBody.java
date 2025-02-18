@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaUsageResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public GetQuotaUsageResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OBJECT_NOT_EXIST</p>
      */
@@ -15,6 +20,8 @@ public class GetQuotaUsageResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>This object does not exist.</p>
      */
@@ -22,6 +29,15 @@ public class GetQuotaUsageResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li>1xx: informational response. The request is received and is being processed.</li>
+     * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
+     * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
+     * <li>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</li>
+     * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +45,8 @@ public class GetQuotaUsageResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0b87b7a416652014358483492eea0b</p>
      */
@@ -81,16 +99,27 @@ public class GetQuotaUsageResponseBody extends TeaModel {
     }
 
     public static class GetQuotaUsageResponseBodyDataPlot extends TeaModel {
+        /**
+         * <p>The title of the chart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request</p>
+         */
         @NameInMap("title")
         public String title;
 
         /**
+         * <p>The type of the chart.</p>
+         * 
          * <strong>example:</strong>
          * <p>request</p>
          */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The data metric field.</p>
+         */
         @NameInMap("yAxis")
         public java.util.List<String> yAxis;
 
@@ -126,9 +155,15 @@ public class GetQuotaUsageResponseBody extends TeaModel {
     }
 
     public static class GetQuotaUsageResponseBodyData extends TeaModel {
+        /**
+         * <p>The metric results.</p>
+         */
         @NameInMap("metrics")
         public java.util.Map<String, ?> metrics;
 
+        /**
+         * <p>The information about the chart.</p>
+         */
         @NameInMap("plot")
         public java.util.List<GetQuotaUsageResponseBodyDataPlot> plot;
 

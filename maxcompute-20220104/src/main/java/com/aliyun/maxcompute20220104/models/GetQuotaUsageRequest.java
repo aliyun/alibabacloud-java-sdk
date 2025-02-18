@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetQuotaUsageRequest extends TeaModel {
     /**
+     * <p>The aggregation algorithm. For a better page experience, up to 60 points can be displayed for each metric. If you select a time range longer than 1 hour, the chart uses the average value within the range (minutes of the selected time range/60) to aggregate data by default. You can change the aggregation algorithm based on your business requirements.</p>
+     * 
      * <strong>example:</strong>
      * <p>max</p>
      */
@@ -12,6 +14,11 @@ public class GetQuotaUsageRequest extends TeaModel {
     public String aggMethod;
 
     /**
+     * <p>The time when the query starts. The value is the log time that is specified when log data is written.</p>
+     * <ul>
+     * <li>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the <strong>from</strong> parameter, but does not include the end time specified by the <strong>to</strong> parameter. If you set the <strong>from</strong> and <strong>to</strong> parameters to the same value, the time range is invalid and an error message is returned.</li>
+     * <li>This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +27,19 @@ public class GetQuotaUsageRequest extends TeaModel {
     @NameInMap("from")
     public Long from;
 
+    /**
+     * <p>The types of the charts.</p>
+     */
     @NameInMap("plotTypes")
     public java.util.List<String> plotTypes;
 
     /**
+     * <p>The quota type. Default value: ODPS.</p>
+     * <ul>
+     * <li>ODPS: computing quota</li>
+     * <li>TUNNEL: Tunnel quota</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ODPS</p>
      */
@@ -31,6 +47,8 @@ public class GetQuotaUsageRequest extends TeaModel {
     public String productId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-chengdu</p>
      */
@@ -38,6 +56,8 @@ public class GetQuotaUsageRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The alias of the level-2 quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>ot_tunnel_quota</p>
      */
@@ -45,6 +65,8 @@ public class GetQuotaUsageRequest extends TeaModel {
     public String subQuotaNickname;
 
     /**
+     * <p>The ID of the tenant. You can log on to the MaxCompute console, and choose Tenants &gt; Tenant Property from the left-side navigation pane to view the tenant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>478403690625249</p>
      */
@@ -52,6 +74,11 @@ public class GetQuotaUsageRequest extends TeaModel {
     public String tenantId;
 
     /**
+     * <p>The time when the query ends. The value is the log time that is specified when log data is written.</p>
+     * <ul>
+     * <li>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the <strong>from</strong> parameter, but does not include the end time specified by the <strong>to</strong> parameter. If you set the <strong>from</strong> and <strong>to</strong> parameters to the same value, the time range is invalid and an error message is returned.</li>
+     * <li>This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +87,9 @@ public class GetQuotaUsageRequest extends TeaModel {
     @NameInMap("to")
     public Long to;
 
+    /**
+     * <p>The data metric fields.</p>
+     */
     @NameInMap("yAxisTypes")
     public java.util.List<String> yAxisTypes;
 
