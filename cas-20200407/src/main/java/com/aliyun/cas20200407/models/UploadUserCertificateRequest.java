@@ -47,7 +47,7 @@ public class UploadUserCertificateRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The name of the certificate. The name can contain up to 128 characters in length. The name can contain all types of characters, such as letters, digits, and underscores (_).</p>
+     * <p>The name of the certificate. The name can be up to 64 characters in length, and can contain all types of characters, such as letters, digits, and underscores (_).</p>
      * <blockquote>
      * <p> The name must be unique within an Alibaba Cloud account.</p>
      * </blockquote>
@@ -89,6 +89,9 @@ public class UploadUserCertificateRequest extends TeaModel {
     @NameInMap("SignPrivateKey")
     public String signPrivateKey;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<UploadUserCertificateRequestTags> tags;
 
@@ -170,9 +173,21 @@ public class UploadUserCertificateRequest extends TeaModel {
     }
 
     public static class UploadUserCertificateRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Value")
         public String value;
 

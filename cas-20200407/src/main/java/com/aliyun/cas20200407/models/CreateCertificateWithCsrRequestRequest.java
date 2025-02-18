@@ -57,6 +57,9 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateCertificateWithCsrRequestRequestTags> tags;
 
@@ -147,9 +150,21 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
     }
 
     public static class CreateCertificateWithCsrRequestRequestTags extends TeaModel {
+        /**
+         * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Value")
         public String value;
 

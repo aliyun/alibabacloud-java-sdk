@@ -22,6 +22,15 @@ public class UploadUserCertificateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cas-upload-j2ofdb</p>
+     */
+    @NameInMap("ResourceId")
+    public String resourceId;
+
     public static UploadUserCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UploadUserCertificateResponseBody self = new UploadUserCertificateResponseBody();
         return TeaModel.build(map, self);
@@ -41,6 +50,14 @@ public class UploadUserCertificateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UploadUserCertificateResponseBody setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
 }

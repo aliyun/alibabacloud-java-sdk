@@ -42,7 +42,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public java.util.List<GetUserCertificateDetailResponseBodyCertChain> certChain;
 
     /**
-     * <p>The unique identifier of the certificate. The value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</p>
+     * <p>The certificate identifier. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</p>
      * 
      * <strong>example:</strong>
      * <p>10741304-cn-hangzhou</p>
@@ -174,6 +174,24 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>The end of the validity period of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17322613180000</p>
+     */
+    @NameInMap("NotAfter")
+    public Long notAfter;
+
+    /**
+     * <p>The beginning of the validity period of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17312613180000</p>
+     */
+    @NameInMap("NotBefore")
+    public Long notBefore;
 
     /**
      * <p>The order ID.</p>
@@ -427,6 +445,22 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         return this.name;
     }
 
+    public GetUserCertificateDetailResponseBody setNotAfter(Long notAfter) {
+        this.notAfter = notAfter;
+        return this;
+    }
+    public Long getNotAfter() {
+        return this.notAfter;
+    }
+
+    public GetUserCertificateDetailResponseBody setNotBefore(Long notBefore) {
+        this.notBefore = notBefore;
+        return this;
+    }
+    public Long getNotBefore() {
+        return this.notBefore;
+    }
+
     public GetUserCertificateDetailResponseBody setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
@@ -547,7 +581,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
          * <p>The beginning of the validity period of the certificate.</p>
          * 
          * <strong>example:</strong>
-         * <p>17322633180000</p>
+         * <p>17302633180000</p>
          */
         @NameInMap("NotBefore")
         public Long notBefore;

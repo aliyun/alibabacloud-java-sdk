@@ -93,6 +93,9 @@ public class CreateCertificateForPackageRequestRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateCertificateForPackageRequestRequestTags> tags;
 
@@ -198,9 +201,21 @@ public class CreateCertificateForPackageRequestRequest extends TeaModel {
     }
 
     public static class CreateCertificateForPackageRequestRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>runtime</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Value")
         public String value;
 

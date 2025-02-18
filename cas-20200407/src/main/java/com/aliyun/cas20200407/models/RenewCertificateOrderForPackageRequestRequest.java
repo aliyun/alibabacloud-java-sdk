@@ -31,6 +31,9 @@ public class RenewCertificateOrderForPackageRequestRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<RenewCertificateOrderForPackageRequestRequestTags> tags;
 
@@ -64,9 +67,23 @@ public class RenewCertificateOrderForPackageRequestRequest extends TeaModel {
     }
 
     public static class RenewCertificateOrderForPackageRequestRequestTags extends TeaModel {
+        /**
+         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.</p>
+         * <p>A maximum of 128 characters are supported, it cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and it cannot contain \&quot;http://\&quot; or \&quot;https://\&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 

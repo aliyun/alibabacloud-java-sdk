@@ -55,6 +55,9 @@ public class CreateCertificateRequestRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateCertificateRequestRequestTags> tags;
 
@@ -145,9 +148,26 @@ public class CreateCertificateRequestRequest extends TeaModel {
     }
 
     public static class CreateCertificateRequestRequestTags extends TeaModel {
+        /**
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. You cannot specify empty strings as tag keys.</p>
+         * <p>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <blockquote>
+         * <p> You must specify at least one of <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:rm:rgId</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 
