@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListHttpResponseHeaderModificationRulesRequest extends TeaModel {
     /**
+     * <p>The configuration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35281609698****</p>
      */
@@ -12,6 +14,13 @@ public class ListHttpResponseHeaderModificationRulesRequest extends TeaModel {
     public Long configId;
 
     /**
+     * <p>The configuration type to query. Valid values:</p>
+     * <ul>
+     * <li>global: global configurations.</li>
+     * <li>rule: queries rule configurations.</li>
+     * </ul>
+     * <p>If this parameter is left empty, all configuration types are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule</p>
      */
@@ -19,6 +28,8 @@ public class ListHttpResponseHeaderModificationRulesRequest extends TeaModel {
     public String configType;
 
     /**
+     * <p>The page number. Pages start from page 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +37,8 @@ public class ListHttpResponseHeaderModificationRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned on each page. Default value: 500. Valid values: 1 to 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +46,8 @@ public class ListHttpResponseHeaderModificationRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -40,6 +55,7 @@ public class ListHttpResponseHeaderModificationRulesRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +65,8 @@ public class ListHttpResponseHeaderModificationRulesRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The version number of the website configurations.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

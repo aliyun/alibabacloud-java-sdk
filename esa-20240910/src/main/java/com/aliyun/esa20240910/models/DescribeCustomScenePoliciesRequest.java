@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomScenePoliciesRequest extends TeaModel {
     /**
-     * <p>The page number. Valid values: 1 to 100000.</p>
+     * <p>The number of the page to return. Valid values: <strong>1 to 100000</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeCustomScenePoliciesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Valid values: 5, 10, and 20.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>5</strong>, <strong>10</strong>, or <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -24,7 +24,7 @@ public class DescribeCustomScenePoliciesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the policy, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850233.html">ListWafRulesets</a> operation.</p>
+     * <p>The rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234****</p>

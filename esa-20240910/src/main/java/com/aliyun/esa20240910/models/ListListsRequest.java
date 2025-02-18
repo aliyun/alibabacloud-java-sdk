@@ -98,6 +98,8 @@ public class ListListsRequest extends TeaModel {
         public String itemLike;
 
         /**
+         * <p>The type of the custom list.</p>
+         * 
          * <strong>example:</strong>
          * <p>ip</p>
          */

@@ -6346,6 +6346,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>将天眼提供给XCDN边缘容器的监控OpenAPI适配成青蓝的OpenAPI</p>
+     * 
+     * @param request DescribeEdgeContainerAppStatsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeEdgeContainerAppStatsResponse
+     */
+    public DescribeEdgeContainerAppStatsResponse describeEdgeContainerAppStatsWithOptions(DescribeEdgeContainerAppStatsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeEdgeContainerAppStats"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEdgeContainerAppStatsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeEdgeContainerAppStatsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将天眼提供给XCDN边缘容器的监控OpenAPI适配成青蓝的OpenAPI</p>
+     * 
+     * @param request DescribeEdgeContainerAppStatsRequest
+     * @return DescribeEdgeContainerAppStatsResponse
+     */
+    public DescribeEdgeContainerAppStatsResponse describeEdgeContainerAppStats(DescribeEdgeContainerAppStatsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeEdgeContainerAppStatsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the configuration of smart HTTP DDoS protection for a website.</p>
      * 
      * @param request DescribeHttpDDoSAttackIntelligentProtectionRequest
@@ -7364,6 +7409,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetEdgeContainerAppResponse getEdgeContainerApp(GetEdgeContainerAppRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getEdgeContainerAppWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用日志采集配置</p>
+     * 
+     * @param request GetEdgeContainerAppLogRiverRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEdgeContainerAppLogRiverResponse
+     */
+    public GetEdgeContainerAppLogRiverResponse getEdgeContainerAppLogRiverWithOptions(GetEdgeContainerAppLogRiverRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEdgeContainerAppLogRiver"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeContainerAppLogRiverResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetEdgeContainerAppLogRiverResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用日志采集配置</p>
+     * 
+     * @param request GetEdgeContainerAppLogRiverRequest
+     * @return GetEdgeContainerAppLogRiverResponse
+     */
+    public GetEdgeContainerAppLogRiverResponse getEdgeContainerAppLogRiver(GetEdgeContainerAppLogRiverRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEdgeContainerAppLogRiverWithOptions(request, runtime);
     }
 
     /**
@@ -10339,7 +10429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP响应头规则列表</p>
+     * <p>Queries the configuration details of an HTTP response header modification rule for a website.</p>
      * 
      * @param request ListHttpResponseHeaderModificationRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10372,7 +10462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP响应头规则列表</p>
+     * <p>Queries the configuration details of an HTTP response header modification rule for a website.</p>
      * 
      * @param request ListHttpResponseHeaderModificationRulesRequest
      * @return ListHttpResponseHeaderModificationRulesResponse
@@ -10474,7 +10564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多条站点图片转换配置</p>
+     * <p>Queries the details of image conversion configurations for multiple websites.</p>
      * 
      * @param request ListImageTransformsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10507,7 +10597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多条站点图片转换配置</p>
+     * <p>Queries the details of image conversion configurations for multiple websites.</p>
      * 
      * @param request ListImageTransformsRequest
      * @return ListImageTransformsResponse
@@ -11160,7 +11250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询重定向规则列表</p>
+     * <p>Queries the configuration details of a URL redirect rule for a website.</p>
      * 
      * @param request ListRedirectRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11193,7 +11283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询重定向规则列表</p>
+     * <p>Queries the configuration details of a URL redirect rule for a website.</p>
      * 
      * @param request ListRedirectRulesRequest
      * @return ListRedirectRulesResponse
@@ -11205,7 +11295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询重写Url规则列表</p>
+     * <p>Queries the details of rewrite URL configurations.</p>
      * 
      * @param request ListRewriteUrlRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11238,7 +11328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询重写Url规则列表</p>
+     * <p>Queries the details of rewrite URL configurations.</p>
      * 
      * @param request ListRewriteUrlRulesRequest
      * @return ListRewriteUrlRulesResponse
@@ -13884,6 +13974,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDevelopmentModeResponse updateDevelopmentMode(UpdateDevelopmentModeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDevelopmentModeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新边缘容器应用日志采集配置</p>
+     * 
+     * @param request UpdateEdgeContainerAppLogRiverRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEdgeContainerAppLogRiverResponse
+     */
+    public UpdateEdgeContainerAppLogRiverResponse updateEdgeContainerAppLogRiverWithOptions(UpdateEdgeContainerAppLogRiverRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stdout)) {
+            query.put("Stdout", request.stdout);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateEdgeContainerAppLogRiver"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEdgeContainerAppLogRiverResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateEdgeContainerAppLogRiverResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新边缘容器应用日志采集配置</p>
+     * 
+     * @param request UpdateEdgeContainerAppLogRiverRequest
+     * @return UpdateEdgeContainerAppLogRiverResponse
+     */
+    public UpdateEdgeContainerAppLogRiverResponse updateEdgeContainerAppLogRiver(UpdateEdgeContainerAppLogRiverRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateEdgeContainerAppLogRiverWithOptions(request, runtime);
     }
 
     /**
