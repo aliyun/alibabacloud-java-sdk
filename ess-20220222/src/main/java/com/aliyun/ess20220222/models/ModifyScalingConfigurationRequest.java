@@ -53,13 +53,13 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     public String creditSpecification;
 
     /**
-     * <p>The priority of the custom ECS instance type + vSwitch combination.</p>
+     * <p>The priority of the custom &quot;ECS instance type + vSwitch&quot; combination.</p>
      * <blockquote>
      * <p> This setting is valid only if the scaling policy of the scaling group is a priority policy.</p>
      * </blockquote>
-     * <p>If Auto Scaling cannot create ECS instances by using the custom ECS instance type + vSwitch combination of the highest priority, Auto Scaling creates ECS instances by using the custom ECS instance type + vSwitch combination of the next highest priority.</p>
+     * <p>If Auto Scaling cannot create ECS instances by using the custom &quot;ECS instance type + vSwitch&quot; combination of the highest priority, Auto Scaling creates ECS instances by using the custom &quot;ECS instance type + vSwitch&quot; combination of the next highest priority.</p>
      * <blockquote>
-     * <p> If you specify the priorities of only a part of custom ECS instance type + vSwitch combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have the specified priorities. If the custom combinations that have the specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have the specified priorities based on the specified orders of vSwitches and instance types.</p>
+     * <p> If you specify the priorities of only a part of custom &quot;ECS instance type + vSwitch&quot; combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have the specified priorities. If the custom combinations that have the specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have the specified priorities based on the specified orders of vSwitches and instance types.</p>
      * </blockquote>
      * <ul>
      * <li>Example: The specified order of vSwitches for your scaling group is vsw1 and vsw2, and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify [&quot;vsw2+type2&quot;, &quot;vsw1+type2&quot;]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.</li>
@@ -1245,13 +1245,22 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
         /**
          * <p>The size of the system disk. Unit: GiB. Valid values:</p>
          * <ul>
-         * <li>If you set SystemDisk.Category to cloud: 20 to 500.</li>
-         * <li>If you set SystemDisk.Category to cloud_efficiency: 20 to 500.</li>
-         * <li>If you set SystemDisk.Category to cloud_ssd: 20 to 500.</li>
-         * <li>If you set SystemDisk.Category to cloud_essd: 20 to 500.</li>
-         * <li>If you set SystemDisk.Category to ephemeral_ssd: 20 to 500.</li>
+         * <li><p>Basic disk: 20 to 500.</p>
+         * </li>
+         * <li><p>ESSD: Valid values vary based on the performance level of the ESSD.</p>
+         * <ul>
+         * <li>PL0 ESSD: 1 to 2048.</li>
+         * <li>PL1 ESSD: 20 to 2048.</li>
+         * <li>PL2 ESSD: 461 to 2048.</li>
+         * <li>PL3 ESSD: 1261 to 2048.</li>
          * </ul>
-         * <p>The value of SystemDisk.Size must be greater than or equal to max{20, ImageSize}.</p>
+         * </li>
+         * <li><p>ESSD AutoPL disk: 1 to 2048.</p>
+         * </li>
+         * <li><p>Other disk categories: 20 to 2048.</p>
+         * </li>
+         * </ul>
+         * <p>The value of this parameter must be at least 1 and greater than or equal to the image size.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

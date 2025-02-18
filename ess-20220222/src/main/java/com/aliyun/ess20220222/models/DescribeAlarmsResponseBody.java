@@ -302,9 +302,21 @@ public class DescribeAlarmsResponseBody extends TeaModel {
     }
 
     public static class DescribeAlarmsResponseBodyAlarmListHybridMetricsDimensions extends TeaModel {
+        /**
+         * <p>The key of the metric dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>queue</p>
+         */
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
+        /**
+         * <p>The key of the metric dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testQueue</p>
+         */
         @NameInMap("DimensionValue")
         public String dimensionValue;
 
@@ -332,18 +344,51 @@ public class DescribeAlarmsResponseBody extends TeaModel {
     }
 
     public static class DescribeAlarmsResponseBodyAlarmListHybridMetrics extends TeaModel {
+        /**
+         * <p>The metric dimensions. This parameter is used to specify the monitored resources.</p>
+         */
         @NameInMap("Dimensions")
         public java.util.List<DescribeAlarmsResponseBodyAlarmListHybridMetricsDimensions> dimensions;
 
+        /**
+         * <p>The metric expression that consists of multiple Hybrid Cloud Monitoring metrics. It calculates a result used to trigger scaling events.</p>
+         * <p>The expression is written in Reverse Polish Notation (RPN) format and supports only the following operators: <code>+, -, *, /</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(a+b)/2</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <p>The reference ID of the metric in the metric expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the Hybrid Cloud Monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunSmq_NumberOfMessagesVisible</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The statistical method of the metric value. Valid values:</p>
+         * <ul>
+         * <li>Average: The average value of all metric values within a specified interval is calculated.</li>
+         * <li>Minimum: The minimum value of all metric values within a specified interval is calculated.</li>
+         * <li>Maximum: The maximum value of all metric values within a specified interval is calculated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
+         */
         @NameInMap("Statistic")
         public String statistic;
 
@@ -492,9 +537,19 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         @NameInMap("ExpressionsLogicOperator")
         public String expressionsLogicOperator;
 
+        /**
+         * <p>The Hybrid Cloud Monitoring metrics.</p>
+         */
         @NameInMap("HybridMetrics")
         public java.util.List<DescribeAlarmsResponseBodyAlarmListHybridMetrics> hybridMetrics;
 
+        /**
+         * <p>The ID of the Hybrid Cloud Monitoring namespace.</p>
+         * <p>For information about how to manage Hybrid Cloud Monitoring namespaces, see <a href="https://help.aliyun.com/document_detail/217606.html">Manage namespaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-test</p>
+         */
         @NameInMap("HybridMonitorNamespace")
         public String hybridMonitorNamespace;
 
@@ -536,10 +591,11 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The metric type. Valid values:</p>
+         * <p>The type of the metric. Valid values:</p>
          * <ul>
          * <li>system: system metrics of CloudMonitor</li>
          * <li>custom: custom metrics that are reported to CloudMonitor.</li>
+         * <li>hybrid: metrics of Hybrid Cloud Monitoring.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -576,6 +632,12 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         @NameInMap("Period")
         public Integer period;
 
+        /**
+         * <p>The PromQL statement of Hybrid Cloud Monitoring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(avg(last_over_time(AliyunMnsnew_ActiveMessages{region=\&quot;cn-hangzhou\&quot;,userId=\&quot;123456****\&quot;,queue=\&quot;testQueue\&quot;}[900s])) by (userId))/(avg(last_over_time(AliyunEss_RunningInstanceCount{instanceId=\&quot;asg-bp1****\&quot;}[900s])) by (userId) != 0)</p>
+         */
         @NameInMap("PromQL")
         public String promQL;
 

@@ -91,6 +91,79 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages extends TeaModel {
+        /**
+         * <p>The error code that is returned when the scaling activity failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OperationDenied.NoStock</p>
+         */
+        @NameInMap("Code")
+        public String code;
+
+        /**
+         * <p>The description of the scaling activity exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Fail to create instances into scaling group.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The IDs of the instances included in the failed scaling activities.</p>
+         */
+        @NameInMap("FailedInstanceIds")
+        public java.util.List<String> failedInstanceIds;
+
+        /**
+         * <p>The error message that is returned when the scaling activity failed or is partially successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The resource is out of stock in the specified zone. Please try other types, or choose other regions and zones.</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        public static DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages self = new DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages setFailedInstanceIds(java.util.List<String> failedInstanceIds) {
+            this.failedInstanceIds = failedInstanceIds;
+            return this;
+        }
+        public java.util.List<String> getFailedInstanceIds() {
+            return this.failedInstanceIds;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+    }
+
     public static class DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext extends TeaModel {
         /**
          * <p>Indicates whether all lifecycle hooks are disabled when the scaling activity is triggered. Valid values:</p>
@@ -245,6 +318,12 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
+
+        /**
+         * <p>The error messages that are returned when the scaling activities failed or are partially successful.</p>
+         */
+        @NameInMap("ErrorMessages")
+        public java.util.List<DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages> errorMessages;
 
         /**
          * <p>The ID of the instance refresh task.</p>
@@ -508,6 +587,14 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         }
         public String getErrorMessage() {
             return this.errorMessage;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivities setErrorMessages(java.util.List<DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages> errorMessages) {
+            this.errorMessages = errorMessages;
+            return this;
+        }
+        public java.util.List<DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages> getErrorMessages() {
+            return this.errorMessages;
         }
 
         public DescribeScalingActivitiesResponseBodyScalingActivities setInstanceRefreshTaskId(String instanceRefreshTaskId) {
