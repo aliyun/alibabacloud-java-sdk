@@ -127,6 +127,9 @@ public class ListTaskInstancesRequest extends TeaModel {
 
     /**
      * <p>The name of the task. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SQL node</p>
      */
     @NameInMap("TaskName")
     public String taskName;
@@ -155,7 +158,7 @@ public class ListTaskInstancesRequest extends TeaModel {
     public String triggerRecurrence;
 
     /**
-     * <p>The trigger type. Valid values:</p>
+     * <p>The trigger type.</p>
      * <ul>
      * <li>Scheduler: scheduling cycle-based trigger</li>
      * <li>Manual: manual trigger</li>

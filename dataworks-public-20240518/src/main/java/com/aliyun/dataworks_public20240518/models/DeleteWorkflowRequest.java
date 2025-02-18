@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkflowRequest extends TeaModel {
     /**
+     * <p>The unique code of the client. This parameter is used to create a workflow asynchronously and implement the idempotence of the workflow. If you do not specify this parameter when you create the workflow, the system automatically generates a unique code. The unique code is uniquely associated with the workflow ID. If you specify this parameter when you update or delete the workflow, the value of this parameter must be the unique code that is used to create the workflow.</p>
+     * 
      * <strong>example:</strong>
      * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
      */
@@ -12,6 +14,12 @@ public class DeleteWorkflowRequest extends TeaModel {
     public String clientUniqueCode;
 
     /**
+     * <p>The environment of the workspace. Valid values:</p>
+     * <ul>
+     * <li>Prod: production environment</li>
+     * <li>Dev: development environment</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */
@@ -19,6 +27,7 @@ public class DeleteWorkflowRequest extends TeaModel {
     public String envType;
 
     /**
+     * <p>The workflow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

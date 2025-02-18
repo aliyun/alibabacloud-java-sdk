@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRouteRequest extends TeaModel {
     /**
+     * <p>The route ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

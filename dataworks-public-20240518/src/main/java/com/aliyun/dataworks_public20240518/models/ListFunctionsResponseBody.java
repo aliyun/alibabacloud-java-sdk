@@ -144,6 +144,9 @@ public class ListFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The script path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXX/OpenAPI/function/function_name</p>
          */
         @NameInMap("Path")
         public String path;
@@ -239,6 +242,9 @@ public class ListFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The overall description of the UDF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -285,6 +291,10 @@ public class ListFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the example.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Example description &gt;&gt;&gt; select tsetUdf(xx,yy);
+         * abc</p>
          */
         @NameInMap("ExampleDescription")
         public String exampleDescription;
@@ -318,6 +328,9 @@ public class ListFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the UDF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Function name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -333,6 +346,10 @@ public class ListFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx: parameter information XXX
+         * yy: parameter information YYY</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
@@ -348,6 +365,9 @@ public class ListFunctionsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The return value is a string.</p>
          */
         @NameInMap("ReturnValueDescription")
         public String returnValueDescription;

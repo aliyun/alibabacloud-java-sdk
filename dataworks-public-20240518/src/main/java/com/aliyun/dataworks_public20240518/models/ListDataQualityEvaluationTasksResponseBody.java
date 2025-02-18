@@ -402,6 +402,9 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
         /**
          * <p>The name of the data quality monitoring task. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data quality verification task</p>
          */
         @NameInMap("Name")
         public String name;

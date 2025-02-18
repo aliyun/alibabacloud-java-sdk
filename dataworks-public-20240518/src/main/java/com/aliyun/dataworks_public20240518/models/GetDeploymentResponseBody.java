@@ -52,6 +52,9 @@ public class GetDeploymentResponseBody extends TeaModel {
 
         /**
          * <p>The description of the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Phase description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -64,12 +67,18 @@ public class GetDeploymentResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned for the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exception information XXX</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The name of the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Publish package build</p>
          */
         @NameInMap("Name")
         public String name;
@@ -219,6 +228,9 @@ public class GetDeploymentResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned when the process fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Error message</p>
          */
         @NameInMap("Message")
         public String message;

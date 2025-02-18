@@ -100,6 +100,9 @@ public class ListProjectsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Financial analysis group project data development</p>
          */
         @NameInMap("Description")
         public String description;
@@ -132,6 +135,9 @@ public class ListProjectsResponseBody extends TeaModel {
 
         /**
          * <p>The display name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sora financial analysis</p>
          */
         @NameInMap("DisplayName")
         public String displayName;

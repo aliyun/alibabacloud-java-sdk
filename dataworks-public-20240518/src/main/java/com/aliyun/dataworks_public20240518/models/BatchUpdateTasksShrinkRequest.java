@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchUpdateTasksShrinkRequest extends TeaModel {
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
      */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The tasks.</p>
+     */
     @NameInMap("Tasks")
     public String tasksShrink;
 

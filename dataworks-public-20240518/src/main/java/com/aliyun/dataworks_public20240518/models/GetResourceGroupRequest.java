@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupRequest extends TeaModel {
     /**
+     * <p>Unique identifier of a common resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

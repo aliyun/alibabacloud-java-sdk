@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateDeploymentRequest extends TeaModel {
     /**
      * <p>The description of the process.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a OdpsSQL-node publishing process. The function is XXXX.</p>
      */
     @NameInMap("Description")
     public String description;

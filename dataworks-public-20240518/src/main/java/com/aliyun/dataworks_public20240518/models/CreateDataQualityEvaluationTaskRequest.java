@@ -21,6 +21,9 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     /**
      * <p>The description of the monitor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OpenAPI create a data quality monitoring test</p>
      */
     @NameInMap("Description")
     public String description;
@@ -34,6 +37,9 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
     /**
      * <p>The name of the monitor.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OpenAPI create a data quality monitoring test</p>
      */
     @NameInMap("Name")
     public String name;
@@ -171,6 +177,19 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
     }
 
     public static class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical extends TeaModel {
+        /**
+         * <p>阈值表达式。</p>
+         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+         * <ul>
+         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
+         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
+         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+         * </ul>
+         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$checkValue &gt; 0.01</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
@@ -233,6 +252,19 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
     }
 
     public static class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected extends TeaModel {
+        /**
+         * <p>阈值表达式。</p>
+         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+         * <ul>
+         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
+         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
+         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+         * </ul>
+         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$checkValue &gt; 0.01</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
@@ -294,6 +326,19 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
     }
 
     public static class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned extends TeaModel {
+        /**
+         * <p>阈值表达式。</p>
+         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+         * <ul>
+         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
+         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
+         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+         * </ul>
+         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$checkValue &gt; 0.01</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
@@ -425,8 +470,8 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
          * <p>The threshold calculation method. Valid values:</p>
          * <ul>
          * <li>Fixed</li>
-         * <li>Fluctuation</li>
-         * <li>FluctuationDiscreate</li>
+         * <li>Fluctation</li>
+         * <li>FluctationDiscreate</li>
          * <li>Auto</li>
          * <li>Average</li>
          * </ul>
@@ -615,6 +660,9 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
         /**
          * <p>The description of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAPI test rules</p>
          */
         @NameInMap("Description")
         public String description;
@@ -629,7 +677,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The operations that you can perform after the rule-based check.</p>
+         * <p>The operations that you can perform after the rule-based check fails.</p>
          */
         @NameInMap("ErrorHandlers")
         public java.util.List<CreateDataQualityEvaluationTaskRequestDataQualityRulesErrorHandlers> errorHandlers;
@@ -645,6 +693,9 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
         /**
          * <p>The name of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAPI test rules</p>
          */
         @NameInMap("Name")
         public String name;
@@ -807,7 +858,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestNotificationsNotificationsNotificationChannels extends TeaModel {
         /**
-         * <p>The alert notification method.</p>
+         * <p>The alert notification methods.</p>
          */
         @NameInMap("Channels")
         public java.util.List<String> channels;
@@ -841,8 +892,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public String extension;
 
         /**
-         * <p>The type of the alert recipient.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the alert recipient. Valid values:</p>
          * <ul>
          * <li>WebhookUrl</li>
          * <li>FeishuUrl</li>
@@ -896,7 +946,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestNotificationsNotifications extends TeaModel {
         /**
-         * <p>The alert notification method.</p>
+         * <p>The alert notification methods.</p>
          */
         @NameInMap("NotificationChannels")
         public java.util.List<CreateDataQualityEvaluationTaskRequestNotificationsNotificationsNotificationChannels> notificationChannels;
@@ -972,7 +1022,16 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestTarget extends TeaModel {
         /**
-         * <p>The type of the database to which the table belongs.</p>
+         * <p>The type of the database to which the table belongs. Valid values:</p>
+         * <ul>
+         * <li>maxcompute</li>
+         * <li>hologres</li>
+         * <li>cdh</li>
+         * <li>analyticdb_for_mysql</li>
+         * <li>starrocks</li>
+         * <li>emr</li>
+         * <li>analyticdb_for_postgresql</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>maxcompute</p>
@@ -981,7 +1040,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
         public String databaseType;
 
         /**
-         * <p>The partition configuration of the partitioned table.</p>
+         * <p>The configuration of the partitioned table.</p>
          * 
          * <strong>example:</strong>
          * <p>pt=$[yyyymmdd-1]</p>

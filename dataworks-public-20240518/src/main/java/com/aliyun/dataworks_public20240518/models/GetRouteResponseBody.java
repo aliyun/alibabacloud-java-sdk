@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRouteResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
@@ -57,6 +59,8 @@ public class GetRouteResponseBody extends TeaModel {
 
     public static class GetRouteResponseBodyRoute extends TeaModel {
         /**
+         * <p>The time when the route was created. The value is a 64-bit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1727055811000</p>
          */
@@ -64,6 +68,8 @@ public class GetRouteResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The CIDR block of the destination-based route.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
          */
@@ -71,6 +77,8 @@ public class GetRouteResponseBody extends TeaModel {
         public String destinationCidr;
 
         /**
+         * <p>The route ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -87,6 +95,8 @@ public class GetRouteResponseBody extends TeaModel {
         public Long networkId;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
          */
@@ -94,6 +104,8 @@ public class GetRouteResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The network resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ns-679XXXXX</p>
          */

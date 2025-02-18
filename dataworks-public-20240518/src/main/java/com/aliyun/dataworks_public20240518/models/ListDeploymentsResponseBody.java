@@ -52,6 +52,9 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Check before going online to development</p>
          */
         @NameInMap("Description")
         public String description;
@@ -64,12 +67,18 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned during the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Error message</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The name of the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Check before going online to development</p>
          */
         @NameInMap("Name")
         public String name;
@@ -219,6 +228,9 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned if the process fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Error message</p>
          */
         @NameInMap("Message")
         public String message;
@@ -338,7 +350,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
     public static class ListDeploymentsResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The deployment processes.</p>
+         * <p>The processes.</p>
          */
         @NameInMap("Deployments")
         public java.util.List<ListDeploymentsResponseBodyPagingInfoDeployments> deployments;

@@ -27,6 +27,34 @@ public class UpdateResourceRequest extends TeaModel {
     /**
      * <p>The FlowSpec field information about the file resource. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;version&quot;: &quot;1.1.0&quot;,
+     *     &quot;kind&quot;: &quot;Resource&quot;,
+     *     &quot;spec&quot;: {
+     *         &quot;fileResources&quot;: [
+     *             {
+     *                 &quot;name&quot;: &quot;OpenAPI_Test_Resource.py&quot;,
+     *                 &quot;script&quot;: {
+     *                     &quot;content&quot;: &quot;&quot;,
+     *                     &quot;path&quot;: &quot;XX/OpenAPI_Test/Resources_Test/OpenAPI_Test_Resource.py&quot;,
+     *                     &quot;runtime&quot;: {
+     *                         &quot;command&quot;: &quot;ODPS_PYTHON&quot;
+     *                     }
+     *                 },
+     *                 &quot;type&quot;: &quot;python&quot;,
+     *                 &quot;file&quot;: {
+     *                     &quot;storage&quot;: {}
+     *                 },
+     *                 &quot;datasource&quot;: {
+     *                     &quot;name&quot;: &quot;odps_first&quot;,
+     *                     &quot;type&quot;: &quot;odps&quot;
+     *                 }
+     *             }
+     *         ]
+     *     }
+     * }</p>
      */
     @NameInMap("Spec")
     public String spec;

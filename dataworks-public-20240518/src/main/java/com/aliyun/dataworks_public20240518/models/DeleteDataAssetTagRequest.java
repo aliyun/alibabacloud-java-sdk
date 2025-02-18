@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDataAssetTagRequest extends TeaModel {
     /**
+     * <p>The tag key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class DeleteDataAssetTagRequest extends TeaModel {
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The tag values.</p>
+     */
     @NameInMap("Values")
     public java.util.List<String> values;
 

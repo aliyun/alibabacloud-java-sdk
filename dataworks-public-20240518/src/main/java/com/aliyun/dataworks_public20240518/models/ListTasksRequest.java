@@ -4,11 +4,17 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
 
     /**
      * <p>The name of the task. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SQL node</p>
      */
     @NameInMap("Name")
     public String name;

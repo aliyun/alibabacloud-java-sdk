@@ -37,6 +37,9 @@ public class CreateDataQualityRuleRequest extends TeaModel {
     /**
      * <p>The name of the rule.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The table cannot be empty.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -58,7 +61,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
     public CreateDataQualityRuleRequestSamplingConfig samplingConfig;
 
     /**
-     * <p>The strength of the rule.</p>
+     * <p>The strength of the monitoring rule. Valid values:</p>
      * <ul>
      * <li>Normal</li>
      * <li>High</li>
@@ -172,6 +175,15 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestCheckingConfigThresholdsCritical extends TeaModel {
         /**
+         * <p>The threshold expression.</p>
+         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Example:</p>
+         * <ul>
+         * <li>$checkValue &gt; 0.01</li>
+         * <li>$checkValue &lt; -0.01</li>
+         * <li>abs($checkValue) &gt; 0.01</li>
+         * </ul>
+         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.05</p>
          */
@@ -238,6 +250,15 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestCheckingConfigThresholdsExpected extends TeaModel {
         /**
+         * <p>The threshold expression.</p>
+         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Example:</p>
+         * <ul>
+         * <li>$checkValue &gt; 0.01</li>
+         * <li>$checkValue &lt; -0.01</li>
+         * <li>abs($checkValue) &gt; 0.01</li>
+         * </ul>
+         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>$checkValue &lt;= 0.01</p>
          */
@@ -304,6 +325,15 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestCheckingConfigThresholdsWarned extends TeaModel {
         /**
+         * <p>The threshold expression.</p>
+         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Example:</p>
+         * <ul>
+         * <li>$checkValue &gt; 0.01</li>
+         * <li>$checkValue &lt; -0.01</li>
+         * <li>abs($checkValue) &gt; 0.01</li>
+         * </ul>
+         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
          */
@@ -420,7 +450,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestCheckingConfig extends TeaModel {
         /**
-         * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference values. In this example, an expression is used to specify the query method of referenced samples.</p>
+         * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference samples and perform aggregate operations on the reference values. In this example, an expression is used to specify the query method of referenced samples.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -484,7 +514,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestErrorHandlers extends TeaModel {
         /**
-         * <p>The SQL statement that is used to filter failed tasks. If the rule is defined by custom SQL statements, you must specify an SQL statement to filter failed tasks.</p>
+         * <p>The SQL statement that is used to filter failed tasks. If you define the rule by using custom SQL statements, you must specify an SQL statement to filter failed tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
@@ -529,7 +559,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestSamplingConfig extends TeaModel {
         /**
-         * <p>The metrics used for sampling. Valid values:</p>
+         * <p>The metrics used for sampling. You can leave this parameter empty if you use a rule template. Valid values:</p>
          * <ul>
          * <li>Count: the number of rows in the table.</li>
          * <li>Min: the minimum value of the field.</li>
@@ -545,7 +575,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
          * <li>GroupCount: the field value and the number of rows for each field value.</li>
          * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
          * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
-         * <li>UserDefinedSql: indicates that data is sampled by executing custom SQL statements.</li>
+         * <li>UserDefinedSql: specifies that data is sampled by executing custom SQL statements.</li>
          * </ul>
          * 
          * <strong>example:</strong>

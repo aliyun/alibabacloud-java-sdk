@@ -17,6 +17,9 @@ public class RenameFunctionRequest extends TeaModel {
     /**
      * <p>The new name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Rename</p>
      */
     @NameInMap("Name")
     public String name;

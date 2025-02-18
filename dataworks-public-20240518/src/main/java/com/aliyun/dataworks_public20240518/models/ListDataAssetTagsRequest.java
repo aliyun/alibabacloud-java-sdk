@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataAssetTagsRequest extends TeaModel {
     /**
+     * <p>The type of the tag.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Normal</li>
+     * <li>System</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
@@ -12,6 +19,8 @@ public class ListDataAssetTagsRequest extends TeaModel {
     public String category;
 
     /**
+     * <p>The tag key.</p>
+     * 
      * <strong>example:</strong>
      * <p>key1</p>
      */
@@ -19,6 +28,8 @@ public class ListDataAssetTagsRequest extends TeaModel {
     public String key;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +37,8 @@ public class ListDataAssetTagsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

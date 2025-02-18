@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     /**
+     * <p>The default value is true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,16 +14,27 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public Boolean autoStartEnabled;
 
     /**
+     * <p>The reason for the creation.</p>
+     * 
      * <strong>example:</strong>
      * <p>create for test</p>
      */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>Runtime configuration.</p>
+     */
     @NameInMap("DefaultRunProperties")
     public String defaultRunPropertiesShrink;
 
     /**
+     * <p>The project environment.</p>
+     * <ul>
+     * <li>Prod (production)</li>
+     * <li>Dev</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */
@@ -29,6 +42,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String envType;
 
     /**
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,10 +51,14 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Make up the data cycle settings.</p>
+     */
     @NameInMap("Periods")
     public String periodsShrink;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +68,8 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>Task parameters. Set parameters for a specific task. In JSON format, the key is the Task ID. For more information about the value format, see Task Script parameters (Task.Script. GetTask of the Parameter interface).</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;1001&quot;: &quot;key1=val2 key2=val2&quot;, 
@@ -60,6 +80,11 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String taskParameters;
 
     /**
+     * <p>The type of the workflow instance.</p>
+     * <ul>
+     * <li>SupplementData: Retroactive data</li>
+     * <li>ManualWorkflow: manual workflow</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,6 +94,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The ID of the workflow to which the workflow belongs. The default value of WorkflowId for retroactive data is 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,6 +104,8 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public Long workflowId;
 
     /**
+     * <p>Workflow parameters. The priority is higher than the task parameters. JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{ 
      *   &quot;key1&quot;: &quot;value1&quot;, 

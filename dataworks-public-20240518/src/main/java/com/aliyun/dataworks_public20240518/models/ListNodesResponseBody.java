@@ -192,8 +192,7 @@ public class ListNodesResponseBody extends TeaModel {
         public ListNodesResponseBodyPagingInfoNodesInputsVariablesNode node;
 
         /**
-         * <p>The scope of the variable.</p>
-         * <p>Valid values:</p>
+         * <p>The scope of the variable. Valid values:</p>
          * <ul>
          * <li>WorkSpace</li>
          * <li>NodeParameter</li>
@@ -208,8 +207,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The type of the variable.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the variable. Valid values:</p>
          * <ul>
          * <li>NoKvVariableExpression</li>
          * <li>Constant</li>
@@ -456,8 +454,7 @@ public class ListNodesResponseBody extends TeaModel {
         public ListNodesResponseBodyPagingInfoNodesOutputsVariablesNode node;
 
         /**
-         * <p>The scope of the variable.</p>
-         * <p>Valid values:</p>
+         * <p>The scope of the variable. Valid value:</p>
          * <ul>
          * <li>NodeParameter</li>
          * <li>NodeContext</li>
@@ -472,8 +469,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The type of the variable.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the variable. Valid value:</p>
          * <ul>
          * <li>NoKvVariableExpression</li>
          * <li>Constant</li>
@@ -718,7 +714,11 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodesStrategy extends TeaModel {
         /**
-         * <p>The instance generation mode.</p>
+         * <p>The instance generation mode. Valid values:</p>
+         * <ul>
+         * <li>T+1</li>
+         * <li>Immediately</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>T+1</p>
@@ -736,7 +736,12 @@ public class ListNodesResponseBody extends TeaModel {
         public Integer rerunInterval;
 
         /**
-         * <p>The rerun mode.</p>
+         * <p>The rerun mode. Valid values:</p>
+         * <ul>
+         * <li>Allowed</li>
+         * <li>Denied</li>
+         * <li>FailureAllowed</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Allowed</p>
@@ -905,13 +910,6 @@ public class ListNodesResponseBody extends TeaModel {
          * <li>Manual</li>
          * <li>Steaming</li>
          * </ul>
-         * <!---->
-         * 
-         * <ul>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
@@ -992,6 +990,9 @@ public class ListNodesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node description</p>
          */
         @NameInMap("Description")
         public String description;

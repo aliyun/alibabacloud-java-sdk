@@ -14,7 +14,7 @@ public class CreateFunctionResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE49C88D-5BEE-5ADD-8B8C-C4BBC0D7XXXX</p>

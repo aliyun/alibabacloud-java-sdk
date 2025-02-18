@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProjectRoleRequest extends TeaModel {
     /**
-     * <p>The code of the role in the DataWorks workspace.</p>
-     * <p>Valid values:</p>
+     * <p>The code of the role in the DataWorks workspace. Valid values:</p>
      * <ul>
      * <li>role_project_admin: workspace administrator</li>
      * <li>role_project_dev: developer</li>

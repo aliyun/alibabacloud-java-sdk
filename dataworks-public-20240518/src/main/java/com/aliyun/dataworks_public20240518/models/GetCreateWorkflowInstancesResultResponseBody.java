@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of asynchronously creating a workflow instance.</p>
+     */
     @NameInMap("Result")
     public GetCreateWorkflowInstancesResultResponseBodyResult result;
 
@@ -37,6 +42,8 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
 
     public static class GetCreateWorkflowInstancesResultResponseBodyResult extends TeaModel {
         /**
+         * <p>The error message. This parameter is returned only if the creation fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>Invalid Param xxx</p>
          */
@@ -44,12 +51,22 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         public String failureMessage;
 
         /**
+         * <p>The creation status. Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>Created</li>
+         * <li>CreateFailure</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Created</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The workflow instance IDs. This parameter is returned only if the creation is successful.</p>
+         */
         @NameInMap("WorkflowInstanceIds")
         public java.util.List<Long> workflowInstanceIds;
 

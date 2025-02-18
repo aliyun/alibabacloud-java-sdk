@@ -15,6 +15,11 @@ public class CreateDataSourceSharedRuleRequest extends TeaModel {
     public Long dataSourceId;
 
     /**
+     * <p>Share data sources to the target project environment, including</p>
+     * <ul>
+     * <li>Dev (Development Environment)</li>
+     * <li>Prod (production environment)</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

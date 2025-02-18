@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNetworkRequest extends TeaModel {
     /**
+     * <p>The network ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

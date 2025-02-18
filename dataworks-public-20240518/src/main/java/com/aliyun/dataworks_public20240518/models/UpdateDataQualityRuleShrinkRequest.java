@@ -46,6 +46,9 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the rule. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The table cannot be empty.</p>
      */
     @NameInMap("Name")
     public String name;

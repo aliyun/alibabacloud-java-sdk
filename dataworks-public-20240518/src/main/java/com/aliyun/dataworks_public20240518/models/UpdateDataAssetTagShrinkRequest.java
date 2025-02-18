@@ -4,10 +4,17 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class UpdateDataAssetTagShrinkRequest extends TeaModel {
+    /**
+     * <p>The description of the tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The tag key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,9 +23,15 @@ public class UpdateDataAssetTagShrinkRequest extends TeaModel {
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The tag administrators.</p>
+     */
     @NameInMap("Managers")
     public String managersShrink;
 
+    /**
+     * <p>The tag values.</p>
+     */
     @NameInMap("Values")
     public String valuesShrink;
 

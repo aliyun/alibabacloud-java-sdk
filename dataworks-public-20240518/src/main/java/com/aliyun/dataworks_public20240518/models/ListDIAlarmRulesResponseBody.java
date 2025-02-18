@@ -128,7 +128,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
 
     public static class ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesNotificationSettings extends TeaModel {
         /**
-         * <p>The duration of the alert suppression interval. Unit: minutes.</p>
+         * <p>This parameter is deprecated and replaced by the MuteInterval parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -200,7 +200,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
 
     public static class ListDIAlarmRulesResponseBodyPagingInfoDIJobAlarmRulesTriggerConditions extends TeaModel {
         /**
-         * <p>The types of DDL operations for which the alert rule takes effect. This parameter is returned only if the MetricType parameter is set to DdlReport.</p>
+         * <p>This parameter is deprecated and replaced by the DdlTypes parameter.</p>
          */
         @NameInMap("DdlReportTags")
         @Deprecated

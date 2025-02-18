@@ -51,7 +51,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The name of the role in the DataWorks workspace.</p>
+         * <p>The name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Visitors</p>
          */
         @NameInMap("Name")
         public String name;

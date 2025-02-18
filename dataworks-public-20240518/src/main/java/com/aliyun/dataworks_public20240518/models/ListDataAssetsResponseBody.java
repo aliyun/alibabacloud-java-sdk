@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDataAssetsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListDataAssetsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc1ec92159376</p>
@@ -38,10 +41,18 @@ public class ListDataAssetsResponseBody extends TeaModel {
     }
 
     public static class ListDataAssetsResponseBodyPagingInfoDataAssetsDataAssetTagMappings extends TeaModel {
+        /**
+         * <p>Indicates whether the lineage-based automatic backtrack feature is enabled for the mapping.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AutoTraceEnabled")
         public Boolean autoTraceEnabled;
 
         /**
+         * <p>The creator of the mapping between the data asset and the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -49,6 +60,8 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The data asset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7259557313</p>
          */
@@ -56,6 +69,8 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public String dataAssetId;
 
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>key</p>
          */
@@ -63,6 +78,12 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The way in which the mapping between the data asset and the tag is created. Valid values:</p>
+         * <ul>
+         * <li>System</li>
+         * <li>UserDefined</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>UserDefined</p>
          */
@@ -70,6 +91,8 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public String tagSource;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */
@@ -132,10 +155,19 @@ public class ListDataAssetsResponseBody extends TeaModel {
     }
 
     public static class ListDataAssetsResponseBodyPagingInfoDataAssets extends TeaModel {
+        /**
+         * <p>The mappings between data assets and tags.</p>
+         */
         @NameInMap("DataAssetTagMappings")
         public java.util.List<ListDataAssetsResponseBodyPagingInfoDataAssetsDataAssetTagMappings> dataAssetTagMappings;
 
         /**
+         * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
+         * <ul>
+         * <li>Dev: development environment</li>
+         * <li>Prod: production environment</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Prod</p>
          */
@@ -143,6 +175,8 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public String envType;
 
         /**
+         * <p>The data asset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7259557313</p>
          */
@@ -150,6 +184,8 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The name of the data asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>ali_cn_es_gfn</p>
          */
@@ -157,6 +193,8 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The DataWorks workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>54275</p>
          */
@@ -164,6 +202,12 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The type of the data asset. Valid values:</p>
+         * <ul>
+         * <li>ACS::DataWorks::Table</li>
+         * <li>ACS::DataWorks::Task</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ACS::DataWorks::Task</p>
          */
@@ -226,10 +270,15 @@ public class ListDataAssetsResponseBody extends TeaModel {
     }
 
     public static class ListDataAssetsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The data assets.</p>
+         */
         @NameInMap("DataAssets")
         public java.util.List<ListDataAssetsResponseBodyPagingInfoDataAssets> dataAssets;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -237,6 +286,8 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -244,6 +295,8 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

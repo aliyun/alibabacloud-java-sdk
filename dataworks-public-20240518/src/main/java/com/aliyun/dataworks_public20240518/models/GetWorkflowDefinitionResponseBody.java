@@ -70,6 +70,9 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
 
         /**
          * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAPI test workflow Demo</p>
          */
         @NameInMap("Name")
         public String name;
@@ -94,9 +97,92 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
 
         /**
          * <p>The FlowSpec field information about the workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;metadata&quot;: {
+         *         &quot;tenantId&quot;: &quot;52425742456XXXX&quot;,
+         *         &quot;projectId&quot;: &quot;307XXXX&quot;,
+         *         &quot;uuid&quot;: &quot;463497880880954XXXX&quot;
+         *     },
+         *     &quot;kind&quot;: &quot;CycleWorkflow&quot;,
+         *     &quot;version&quot;: &quot;1.1.0&quot;,
+         *     &quot;spec&quot;: {
+         *         &quot;name&quot;: &quot;OpenAPI_Test_Workflow_Demo&quot;,
+         *         &quot;id&quot;: &quot;463497880880954XXXX&quot;,
+         *         &quot;type&quot;: &quot;CycleWorkflow&quot;,
+         *         &quot;owner&quot;: &quot;110755000425XXXX&quot;,
+         *         &quot;workflows&quot;: [
+         *             {
+         *                 &quot;script&quot;: {
+         *                     &quot;path&quot;: &quot;XX/OpenAPI_Test/Workflow_Test/OpenAPI_Test_Workflow_Demo&quot;,
+         *                     &quot;runtime&quot;: {
+         *                         &quot;command&quot;: &quot;WORKFLOW&quot;
+         *                     },
+         *                     &quot;id&quot;: &quot;698002781368644XXXX&quot;
+         *                 },
+         *                 &quot;id&quot;: &quot;463497880880954XXXX&quot;,
+         *                 &quot;trigger&quot;: {
+         *                     &quot;type&quot;: &quot;Scheduler&quot;,
+         *                     &quot;id&quot;: &quot;652567824470354XXXX&quot;,
+         *                     &quot;cron&quot;: &quot;00 02 00 * * ?&quot;,
+         *                     &quot;startTime&quot;: &quot;1970-01-01 00:00:00&quot;,
+         *                     &quot;endTime&quot;: &quot;9999-01-01 00:00:00&quot;,
+         *                     &quot;timezone&quot;: &quot;Asia/Shanghai&quot;,
+         *                     &quot;delaySeconds&quot;: 0
+         *                 },
+         *                 &quot;strategy&quot;: {
+         *                     &quot;timeout&quot;: 0,
+         *                     &quot;instanceMode&quot;: &quot;T+1&quot;,
+         *                     &quot;rerunMode&quot;: &quot;Allowed&quot;,
+         *                     &quot;rerunTimes&quot;: 3,
+         *                     &quot;rerunInterval&quot;: 180000,
+         *                     &quot;failureStrategy&quot;: &quot;Break&quot;
+         *                 },
+         *                 &quot;name&quot;: &quot;OpenAPI_Test_Workflow_Demo&quot;,
+         *                 &quot;owner&quot;: &quot;110755000425XXXX&quot;,
+         *                 &quot;metadata&quot;: {
+         *                     &quot;owner&quot;: &quot;110755000425XXXX&quot;,
+         *                     &quot;ownerName&quot;: &quot;<a href="mailto:XXXX@test.XXXX.com">XXXX@test.XXXX.com</a>&quot;,
+         *                     &quot;tenantId&quot;: &quot;52425742456XXXX&quot;,
+         *                     &quot;project&quot;: {
+         *                         &quot;mode&quot;: &quot;STANDARD&quot;,
+         *                         &quot;projectId&quot;: &quot;307303&quot;,
+         *                         &quot;projectIdentifier&quot;: &quot;lwttest_standard&quot;,
+         *                         &quot;projectName&quot;: &quot;XXXX&quot;,
+         *                         &quot;projectOwnerId&quot;: &quot;110755000425XXXX&quot;,
+         *                         &quot;simple&quot;: false,
+         *                         &quot;tenantId&quot;: &quot;52425742456XXXX&quot;
+         *                     },
+         *                     &quot;projectId&quot;: &quot;307XXXX&quot;
+         *                 },
+         *                 &quot;inputs&quot;: {},
+         *                 &quot;outputs&quot;: {
+         *                     &quot;nodeOutputs&quot;: [
+         *                         {
+         *                             &quot;data&quot;: &quot;463497880880954XXXX&quot;,
+         *                             &quot;artifactType&quot;: &quot;NodeOutput&quot;,
+         *                             &quot;refTableName&quot;: &quot;OpenAPI_Test_Workflow_Demo&quot;,
+         *                             &quot;isDefault&quot;: true
+         *                         }
+         *                     ]
+         *                 },
+         *                 &quot;nodes&quot;: [],
+         *                 &quot;dependencies&quot;: []
+         *             }
+         *         ]
+         *     }
+         * }</p>
          */
         @NameInMap("Spec")
         public String spec;
+
+        /**
+         * <strong>example:</strong>
+         * <p>700006657495</p>
+         */
+        @NameInMap("WorkflowId")
+        public Long workflowId;
 
         public static GetWorkflowDefinitionResponseBodyWorkflowDefinition build(java.util.Map<String, ?> map) throws Exception {
             GetWorkflowDefinitionResponseBodyWorkflowDefinition self = new GetWorkflowDefinitionResponseBodyWorkflowDefinition();
@@ -157,6 +243,14 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         }
         public String getSpec() {
             return this.spec;
+        }
+
+        public GetWorkflowDefinitionResponseBodyWorkflowDefinition setWorkflowId(Long workflowId) {
+            this.workflowId = workflowId;
+            return this;
+        }
+        public Long getWorkflowId() {
+            return this.workflowId;
         }
 
     }

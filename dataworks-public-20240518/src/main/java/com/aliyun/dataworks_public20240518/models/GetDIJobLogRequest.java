@@ -41,6 +41,12 @@ public class GetDIJobLogRequest extends TeaModel {
     @NameInMap("InstanceId")
     public Long instanceId;
 
+    @NameInMap("NodeType")
+    public String nodeType;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     public static GetDIJobLogRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDIJobLogRequest self = new GetDIJobLogRequest();
         return TeaModel.build(map, self);
@@ -77,6 +83,22 @@ public class GetDIJobLogRequest extends TeaModel {
     }
     public Long getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetDIJobLogRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
+    public GetDIJobLogRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
 }

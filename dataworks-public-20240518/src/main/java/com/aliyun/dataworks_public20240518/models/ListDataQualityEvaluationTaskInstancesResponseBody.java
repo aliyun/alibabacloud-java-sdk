@@ -401,8 +401,11 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public Long id;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The name of the monitor.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Quality verification task</p>
          */
         @NameInMap("Name")
         public String name;

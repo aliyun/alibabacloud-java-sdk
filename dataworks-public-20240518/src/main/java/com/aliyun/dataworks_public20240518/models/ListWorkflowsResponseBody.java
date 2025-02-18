@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListWorkflowsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListWorkflowsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
      */
@@ -37,6 +42,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
 
     public static class ListWorkflowsResponseBodyPagingInfoWorkflowsTrigger extends TeaModel {
         /**
+         * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
          */
@@ -44,6 +51,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String cron;
 
         /**
+         * <p>The end time of the time range during which the workflow is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>9999-01-01 00:00:00</p>
          */
@@ -51,6 +60,13 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The running mode of the workflow after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
+         * <ul>
+         * <li>Pause</li>
+         * <li>Skip</li>
+         * <li>Normal</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -58,6 +74,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String recurrence;
 
         /**
+         * <p>The start time of the time range during which the workflow is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>
          */
@@ -65,6 +83,12 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The trigger type. Valid values:</p>
+         * <ul>
+         * <li>Scheduler: scheduling cycle-based trigger</li>
+         * <li>Manual: manual trigger</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
          */
@@ -120,6 +144,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
 
     public static class ListWorkflowsResponseBodyPagingInfoWorkflows extends TeaModel {
         /**
+         * <p>The unique code of the client. This parameter is used to create a workflow asynchronously and implement the idempotence of the workflow. If you do not specify this parameter when you create the workflow, the system automatically generates a unique code. The unique code is uniquely associated with the workflow ID. If you specify this parameter when you update or delete the workflow, the value of this parameter must be the unique code that is used to create the workflow.</p>
+         * 
          * <strong>example:</strong>
          * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
          */
@@ -127,6 +153,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String clientUniqueCode;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -134,6 +162,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The account ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -141,6 +171,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -148,6 +180,12 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The environment of the workspace. Valid values:</p>
+         * <ul>
+         * <li>Prod</li>
+         * <li>Dev</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Prod</p>
          */
@@ -155,6 +193,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String envType;
 
         /**
+         * <p>The workflow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -162,6 +202,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -169,6 +211,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The account ID of the modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -176,6 +220,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Workflow1</p>
          */
@@ -183,6 +229,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The account ID of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -190,6 +238,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>para1=$bizdate para2=$[yyyymmdd]</p>
          */
@@ -197,12 +247,17 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String parameters;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The trigger method.</p>
+         */
         @NameInMap("Trigger")
         public ListWorkflowsResponseBodyPagingInfoWorkflowsTrigger trigger;
 
@@ -319,6 +374,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
 
     public static class ListWorkflowsResponseBodyPagingInfo extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -326,6 +383,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -333,12 +392,17 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The workflows.</p>
+         */
         @NameInMap("Workflows")
         public java.util.List<ListWorkflowsResponseBodyPagingInfoWorkflows> workflows;
 

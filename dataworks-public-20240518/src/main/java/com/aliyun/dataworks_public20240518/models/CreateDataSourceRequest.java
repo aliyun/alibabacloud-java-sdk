@@ -61,6 +61,8 @@ public class CreateDataSourceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>This parameter is used to determine the DataWorks workspaces used for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

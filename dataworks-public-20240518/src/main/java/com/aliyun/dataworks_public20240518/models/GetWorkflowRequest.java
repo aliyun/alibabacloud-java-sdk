@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetWorkflowRequest extends TeaModel {
     /**
+     * <p>The environment of the workspace. Valid values:</p>
+     * <ul>
+     * <li>Prod: production environment</li>
+     * <li>Dev: development environment</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */
@@ -12,6 +18,7 @@ public class GetWorkflowRequest extends TeaModel {
     public String envType;
 
     /**
+     * <p>The workflow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

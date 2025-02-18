@@ -15,8 +15,7 @@ public class GetTaskRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The environment of the workspace.</p>
-     * <p>Valid values:</p>
+     * <p>The environment of the workspace. Valid values:</p>
      * <ul>
      * <li>Prod: production environment</li>
      * <li>Dev: development environment</li>

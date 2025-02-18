@@ -77,6 +77,9 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
 
         /**
          * <p>The script path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XX/OpenAPI_test/workflow_test/OpenAPI_test_workflow_Demo</p>
          */
         @NameInMap("Path")
         public String path;
@@ -130,6 +133,9 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Workflow description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -154,6 +160,9 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAPI test workflow Demo</p>
          */
         @NameInMap("Name")
         public String name;

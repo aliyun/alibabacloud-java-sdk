@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListDataQualityEvaluationTasksRequest extends TeaModel {
     /**
      * <p>The name of the data quality monitoring task. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
      */
     @NameInMap("Name")
     public String name;

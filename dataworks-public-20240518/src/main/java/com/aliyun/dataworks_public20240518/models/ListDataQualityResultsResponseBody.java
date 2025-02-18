@@ -42,6 +42,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsDetails extends TeaModel {
         /**
+         * <p>The value used to compare with the threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -49,6 +51,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String checkedValue;
 
         /**
+         * <p>Use the referenced sample to participate in the CheckedValue calculation of the benchmark value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0</p>
          */
@@ -103,6 +107,15 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsCritical extends TeaModel {
         /**
+         * <p>The threshold expression.</p>
+         * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+         * <ul>
+         * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
+         * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
+         * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+         * </ul>
+         * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+         * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
          */
@@ -127,6 +140,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String operator;
 
         /**
+         * <p>The threshold value.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -166,6 +181,15 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsExpected extends TeaModel {
         /**
+         * <p>The threshold expression.</p>
+         * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+         * <ul>
+         * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
+         * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
+         * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+         * </ul>
+         * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+         * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
          */
@@ -190,6 +214,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String operator;
 
         /**
+         * <p>The threshold value.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -229,6 +255,15 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsWarned extends TeaModel {
         /**
+         * <p>The threshold expression.</p>
+         * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+         * <ul>
+         * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
+         * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
+         * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+         * </ul>
+         * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+         * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
          */
@@ -253,6 +288,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String operator;
 
         /**
+         * <p>The threshold value.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -342,6 +379,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfig extends TeaModel {
         /**
+         * <p>Some types of thresholds need to query some reference samples, and then summarize the values of the reference samples to obtain the threshold for comparison. Here, an expression is used to represent the query method of the reference samples.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
          */
@@ -404,6 +443,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleErrorHandlers extends TeaModel {
         /**
+         * <p>For custom SQL rules, you must specify SQL to filter problem data.</p>
+         * 
          * <strong>example:</strong>
          * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
          */
@@ -473,6 +514,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String metric;
 
         /**
+         * <p>Parameters required for sample collection.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ &quot;columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] }</p>
          */
@@ -480,6 +523,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String metricParameters;
 
         /**
+         * <p>The condition for secondary filtering of data that is not concerned during sampling, which can be up to 16777215 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>id IS NULL</p>
          */
@@ -487,6 +532,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String samplingFilter;
 
         /**
+         * <p>Before executing the sample statement, insert some runtime parameter setting statements, which can be up to 1000 characters in length. Currently, only MaxCompute is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>SET odps.sql.udf.timeout=600s;</p>
          */
@@ -552,6 +599,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String databaseType;
 
         /**
+         * <p>The unique ID of the table in the data map.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps.unit_test.tb_unit_test</p>
          */
@@ -609,6 +658,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfig checkingConfig;
 
         /**
+         * <p>The description of the rule. It can be up to 500 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>this is a odps _sql task</p>
          */
@@ -616,6 +667,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Whether the rule is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -629,16 +682,26 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public java.util.List<ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleErrorHandlers> errorHandlers;
 
         /**
+         * <p>The ID of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>100001</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The rule name, a combination of numbers, English letters, Chinese characters, and half-width punctuation marks, can be up to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The table cannot be empty.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>DataWorks the ID of the project.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -776,6 +839,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResults extends TeaModel {
         /**
+         * <p>The time when the verification result was generated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1708284916414</p>
          */
@@ -789,6 +854,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public java.util.List<ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsDetails> details;
 
         /**
+         * <p>The ID of the verification result.</p>
+         * 
          * <strong>example:</strong>
          * <p>16033</p>
          */
@@ -802,6 +869,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRule rule;
 
         /**
+         * <p>The sample value used for this verification.</p>
+         * 
          * <strong>example:</strong>
          * <p>[
          *   {
@@ -833,6 +902,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the verification task instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>200001</p>
          */
@@ -910,6 +981,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public java.util.List<ListDataQualityResultsResponseBodyPagingInfoDataQualityResults> dataQualityResults;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -917,6 +990,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -924,6 +999,8 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>219</p>
          */

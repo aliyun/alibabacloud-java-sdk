@@ -218,6 +218,16 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The environment of the workspace. Valid values:</p>
+         * <ul>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
@@ -267,6 +277,8 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The sequence number of the period. Indicates which cycle of the day the task instance is in.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -337,7 +349,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public ListUpstreamTaskInstancesResponseBodyPagingInfoTaskInstancesRuntime runtime;
 
         /**
-         * <p>The information about the resource group with which the instance is associated.</p>
+         * <p>The configurations of the runtime environment, such as the resource group information.</p>
          */
         @NameInMap("RuntimeResource")
         public ListUpstreamTaskInstancesResponseBodyPagingInfoTaskInstancesRuntimeResource runtimeResource;
@@ -372,7 +384,14 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The dependency type.</p>
+         * <p>The scheduling dependency type. Valid values:</p>
+         * <ul>
+         * <li>Normal: same-cycle scheduling dependency</li>
+         * <li>CrossCycle: cross-cycle scheduling dependency</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("StepType")
         public String stepType;
@@ -388,6 +407,9 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the task for which the instance is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL node</p>
          */
         @NameInMap("TaskName")
         public String taskName;
@@ -486,6 +508,9 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the workflow to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test workflow</p>
          */
         @NameInMap("WorkflowName")
         public String workflowName;
@@ -771,6 +796,12 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
     }
 
     public static class ListUpstreamTaskInstancesResponseBodyPagingInfoUpstreamTaskInstancesTaskInstanceDataSource extends TeaModel {
+        /**
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql_test</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -790,9 +821,21 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
     }
 
     public static class ListUpstreamTaskInstancesResponseBodyPagingInfoUpstreamTaskInstancesTaskInstanceRuntime extends TeaModel {
+        /**
+         * <p>The host for running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai.1.2</p>
+         */
         @NameInMap("Gateway")
         public String gateway;
 
+        /**
+         * <p>The instance run ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T3_123</p>
+         */
         @NameInMap("ProcessId")
         public String processId;
 
@@ -820,12 +863,30 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
     }
 
     public static class ListUpstreamTaskInstancesResponseBodyPagingInfoUpstreamTaskInstancesTaskInstanceRuntimeResource extends TeaModel {
+        /**
+         * <p>The default number of compute units (CUs) configured for task running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.25</p>
+         */
         @NameInMap("Cu")
         public String cu;
 
+        /**
+         * <p>The ID of the image configured for task running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-xxxxxx</p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <p>The ID of the resource group for scheduling configured for task running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -861,108 +922,314 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
     }
 
     public static class ListUpstreamTaskInstancesResponseBodyPagingInfoUpstreamTaskInstancesTaskInstance extends TeaModel {
+        /**
+         * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("BaselineId")
         public Long baselineId;
 
+        /**
+         * <p>The data timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
+         */
         @NameInMap("Bizdate")
         public Long bizdate;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The account ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>The information about the associated data source.</p>
+         */
         @NameInMap("DataSource")
         public ListUpstreamTaskInstancesResponseBodyPagingInfoUpstreamTaskInstancesTaskInstanceDataSource dataSource;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The environment in which the data source is used. Valid values:</p>
+         * <ul>
+         * <li>Dev</li>
+         * <li>Prod</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
+        /**
+         * <p>The time when the instance finished running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
+         */
         @NameInMap("FinishedTime")
         public Long finishedTime;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>The account ID of the modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
+        /**
+         * <p>The account ID of the task owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The sequence number of the cycle. This parameter indicates the cycle of the task instance on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PeriodNumber")
         public Integer periodNumber;
 
+        /**
+         * <p>The priority of the task. Minimum value: 1. Maximum value: 8. A larger value indicates a higher priority. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
          * <p>The rerun mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AllAllowed</p>
          */
         @NameInMap("RerunMode")
         public String rerunMode;
 
+        /**
+         * <p>The number of times the instance is run. By default, the value starts from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RunNumber")
         public Integer runNumber;
 
+        /**
+         * <p>The runtime information about the instance.</p>
+         */
         @NameInMap("Runtime")
         public ListUpstreamTaskInstancesResponseBodyPagingInfoUpstreamTaskInstancesTaskInstanceRuntime runtime;
 
+        /**
+         * <p>The configurations of the runtime environment, such as the resource group information.</p>
+         */
         @NameInMap("RuntimeResource")
         public ListUpstreamTaskInstancesResponseBodyPagingInfoUpstreamTaskInstancesTaskInstanceRuntimeResource runtimeResource;
 
+        /**
+         * <p>The time when the instance started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
+         */
         @NameInMap("StartedTime")
         public Long startedTime;
 
         /**
-         * <p>The status of the instance.</p>
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li>NotRun: The instance is not run.</li>
+         * <li>Running: The instance is running.</li>
+         * <li>WaitTime: The instance is waiting for the scheduling time to arrive.</li>
+         * <li>CheckingCondition: Branch conditions are being checked for the instance.</li>
+         * <li>WaitResource: The instance is waiting for resources.</li>
+         * <li>Failure: The instance fails to be run.</li>
+         * <li>Success: The instance is successfully run.</li>
+         * <li>Checking: Data quality is being checked for the instance.</li>
+         * <li>WaitTrigger: The instance is waiting to be triggered by external scheduling systems.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the task for which the instance is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
+        /**
+         * <p>The name of the task for which the instance is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL node</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
-         * <p>The task type.</p>
+         * <p>The type of the task for which the instance is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>The timeout period of task running. Unit: seconds.</p>
+         * <p>Note: The value of this parameter is rounded up by hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
+         */
         @NameInMap("Timeout")
         public Integer timeout;
 
+        /**
+         * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</p>
+         * <ul>
+         * <li>Pause</li>
+         * <li>Skip</li>
+         * <li>Normal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("TriggerRecurrence")
         public String triggerRecurrence;
 
+        /**
+         * <p>The scheduling time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
+         */
         @NameInMap("TriggerTime")
         public Long triggerTime;
 
+        /**
+         * <p>The trigger type. Valid values:</p>
+         * <ul>
+         * <li>Scheduler: scheduling cycle-based trigger</li>
+         * <li>Manual: manual trigger</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduler</p>
+         */
         @NameInMap("TriggerType")
         public String triggerType;
 
+        /**
+         * <p>The ID of the workflow to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("WorkflowId")
         public Long workflowId;
 
+        /**
+         * <p>The workflow instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("WorkflowInstanceId")
         public Long workflowInstanceId;
 
+        /**
+         * <p>The type of the workflow instance. Valid values:</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>Manual</li>
+         * <li>SmokeTest</li>
+         * <li>SupplementData</li>
+         * <li>ManualWorkflow</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("WorkflowInstanceType")
         public String workflowInstanceType;
 
+        /**
+         * <p>The name of the workflow to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test workflow</p>
+         */
         @NameInMap("WorkflowName")
         public String workflowName;
 
@@ -1231,7 +1498,14 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
     public static class ListUpstreamTaskInstancesResponseBodyPagingInfoUpstreamTaskInstances extends TeaModel {
         /**
-         * <p>The dependency type.</p>
+         * <p>The scheduling dependency type. Valid values:</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>CrossCycle</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("DependencyType")
         public String dependencyType;
@@ -1285,7 +1559,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The instances.</p>
+         * <p>The instances. This parameter is deprecated and replaced by the UpstreamTaskInstances parameter.</p>
          */
         @NameInMap("TaskInstances")
         public java.util.List<ListUpstreamTaskInstancesResponseBodyPagingInfoTaskInstances> taskInstances;
@@ -1299,6 +1573,9 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The ancestor instances.</p>
+         */
         @NameInMap("UpstreamTaskInstances")
         public java.util.List<ListUpstreamTaskInstancesResponseBodyPagingInfoUpstreamTaskInstances> upstreamTaskInstances;
 

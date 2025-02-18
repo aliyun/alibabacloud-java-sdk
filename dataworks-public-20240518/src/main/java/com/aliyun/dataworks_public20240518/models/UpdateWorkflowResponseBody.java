@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+     * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
      */
@@ -12,6 +14,8 @@ public class UpdateWorkflowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

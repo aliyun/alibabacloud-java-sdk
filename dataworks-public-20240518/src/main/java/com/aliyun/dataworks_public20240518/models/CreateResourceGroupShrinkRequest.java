@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class CreateResourceGroupShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2kqofrgXXXXX</p>
      */
     @NameInMap("AliyunResourceGroupId")
     public String aliyunResourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("AliyunResourceTags")
     public String aliyunResourceTagsShrink;
 
+    /**
+     * <p>Specifies whether to enable auto-renewal.</p>
+     */
     @NameInMap("AutoRenewEnabled")
     public Boolean autoRenewEnabled;
 
     /**
+     * <p>The idempotent identifier of the client is used to ensure idempotent operation of creating a common resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +36,7 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The name of a common resource group. It must start with a letter and can contain letters, numbers, and underscores (_). It can be up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +46,8 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The duration of the payment.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +55,8 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public Integer paymentDuration;
 
     /**
+     * <p>The unit of the subscription duration. Valid values: Month and Year.</p>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -50,6 +64,7 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public String paymentDurationUnit;
 
     /**
+     * <p>The billing method of the serverless resource group. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,8 +74,10 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>Note for creating a common resource group, which can contain letters, Chinese characters, numbers, underscores (_), and a maximum of 128 characters.</p>
+     * 
      * <strong>example:</strong>
-     * <p>创建用于普通任务的通用资源组</p>
+     * <p>Create a serverless resource group for common tasks</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -75,6 +92,7 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public Integer spec;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC) with which the serverless resource group is associated by default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,6 +102,7 @@ public class CreateResourceGroupShrinkRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The ID of the vSwitch with which the serverless resource group is associated by default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

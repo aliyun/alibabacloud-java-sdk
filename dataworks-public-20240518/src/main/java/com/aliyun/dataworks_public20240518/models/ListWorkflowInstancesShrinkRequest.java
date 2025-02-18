@@ -5,15 +5,24 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     /**
+     * <p>业务日期。</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1710239005403</p>
      */
     @NameInMap("BizDate")
     public Long bizDate;
 
+    /**
+     * <p>The IDs of the workflow instances. You can query multiple instances at a time by instance ID.</p>
+     */
     @NameInMap("Ids")
     public String idsShrink;
 
     /**
+     * <p>The instance name. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>WorkflowInstance1</p>
      */
@@ -21,6 +30,8 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The account ID of the workflow instance owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -28,6 +39,8 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +48,8 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +57,7 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,16 +67,41 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+     * <ul>
+     * <li>TriggerTime (Desc/Asc)</li>
+     * <li>StartedTime (Desc/Asc)</li>
+     * <li>FinishedTime (Desc/Asc)</li>
+     * <li>CreateTime (Desc/Asc)</li>
+     * <li>Id (Desc/Asc)</li>
+     * </ul>
+     * <p>Default value: Id Desc.</p>
+     * 
      * <strong>example:</strong>
      * <p>Id Desc</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>工作流实例的类型。</p>
+     * <ul>
+     * <li>Normal：周期调度</li>
+     * <li>Manual：手动任务</li>
+     * <li>SmokeTest：测试</li>
+     * <li>SupplementData：补数据</li>
+     * <li>ManualWorkflow：手动工作流</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("Type")
     public String type;
 
     /**
+     * <p>The ID of the workflow to which the instance belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */

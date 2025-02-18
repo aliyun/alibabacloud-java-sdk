@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListRoutesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListRoutesResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
@@ -54,6 +59,8 @@ public class ListRoutesResponseBody extends TeaModel {
 
     public static class ListRoutesResponseBodyPagingInfoRouteList extends TeaModel {
         /**
+         * <p>The creation time, which is a 64-bit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1727055811000</p>
          */
@@ -61,6 +68,8 @@ public class ListRoutesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Route destination CIDR</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
          */
@@ -68,6 +77,8 @@ public class ListRoutesResponseBody extends TeaModel {
         public String destinationCidr;
 
         /**
+         * <p>Route ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -75,6 +86,8 @@ public class ListRoutesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Network Resource ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -82,13 +95,17 @@ public class ListRoutesResponseBody extends TeaModel {
         public Long networkId;
 
         /**
+         * <p>Unique identifier of the resource group to which it belongs</p>
+         * 
          * <strong>example:</strong>
-         * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
+         * <p>Serverless_res_group_524257424564736_6831777003****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
+         * <p>Unique identifier of network resource</p>
+         * 
          * <strong>example:</strong>
          * <p>ns-679XXXXXX</p>
          */
@@ -152,6 +169,8 @@ public class ListRoutesResponseBody extends TeaModel {
 
     public static class ListRoutesResponseBodyPagingInfo extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -159,16 +178,23 @@ public class ListRoutesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The list of network resource routing information obtained.</p>
+         */
         @NameInMap("RouteList")
         public java.util.List<ListRoutesResponseBodyPagingInfoRouteList> routeList;
 
         /**
+         * <p>All data entries</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
