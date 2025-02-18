@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListTenantConfigResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The user configurations.</p>
+     */
     @NameInMap("TenantConfigModel")
     public ListTenantConfigResponseBodyTenantConfigModel tenantConfigModel;
 
@@ -37,6 +42,13 @@ public class ListTenantConfigResponseBody extends TeaModel {
 
     public static class ListTenantConfigResponseBodyTenantConfigModel extends TeaModel {
         /**
+         * <p>Indicates whether the resource expiration reminder feature is enabled.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

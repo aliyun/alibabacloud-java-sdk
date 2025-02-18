@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewAppInstanceGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
+     * <p>Specifies whether to enable automatic payment.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false: manual payment. This is the default value.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -21,6 +29,7 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
+     * <p>The subscription duration of resources. This parameter must be configured together with <code>PeriodUnit</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,12 +39,34 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The unit of the subscription duration. This parameter must be configured together with <code>Period</code>. The following items describe valid values for the combinations of <code>Period</code> and <code>PeriodUnit</code>:</p>
+     * <ul>
+     * <li>1 Week</li>
+     * <li>1 Month</li>
+     * <li>2 Month</li>
+     * <li>3 Month</li>
+     * <li>6 Month</li>
+     * <li>1 Year</li>
+     * <li>2 Year</li>
+     * <li>3 Year</li>
+     * </ul>
+     * <blockquote>
+     * <p> The value of this parameter is case-insensitive. For example, <code>Week</code> is valid and <code>week</code> is invalid. If you specify a value combination other than the preceding combinations, such as <code>2 Week</code>, the operation can still be called. However, an error occurs when you place the order.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Week</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
+     * <p>The product type.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>CloudApp: App Streaming</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +76,8 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
     public String productType;
 
     /**
+     * <p>The promotion ID. You can call the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation to obtain the ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>17440009****</p>
      */

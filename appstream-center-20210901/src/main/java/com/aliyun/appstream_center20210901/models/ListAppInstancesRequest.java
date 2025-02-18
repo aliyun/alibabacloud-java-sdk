@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppInstancesRequest extends TeaModel {
     /**
+     * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
+     * <p>The ID of the application instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ai-azn3kmwruh1vl****</p>
      */
@@ -21,6 +24,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public String appInstanceId;
 
     /**
+     * <p>The IDs of the application instances. Up to 100 IDs can be specified.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
@@ -28,6 +33,13 @@ public class ListAppInstancesRequest extends TeaModel {
     public java.util.List<String> appInstanceIdList;
 
     /**
+     * <p>Specifies whether to query the information about deleted application instances. If you set this parameter to true, you must configure AppInstanceIdList. Otherwise, a parameter error is reported.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -35,6 +47,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public Boolean includeDeleted;
 
     /**
+     * <p>The number of the page to return. Default value: <code>1</code>. We recommend that you configure this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +56,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. The value cannot be greater than <code>100</code>. Default value: <code>20</code>. We recommend that you configure this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -49,6 +65,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The status of the application instances.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */

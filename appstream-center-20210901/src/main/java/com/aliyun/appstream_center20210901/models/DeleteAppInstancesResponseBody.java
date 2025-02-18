@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class DeleteAppInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("DeleteAppInstanceModels")
     public java.util.List<DeleteAppInstancesResponseBodyDeleteAppInstanceModels> deleteAppInstanceModels;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,6 +42,8 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
 
     public static class DeleteAppInstancesResponseBodyDeleteAppInstanceModels extends TeaModel {
         /**
+         * <p>The ID of the application instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ai-gbuea*****</p>
          */
@@ -44,6 +51,8 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
         public String appInstanceId;
 
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>InvalidParameter.ProductType</p>
          */
@@ -51,6 +60,8 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>The parameter ProductType is invalid.</p>
          */
@@ -58,6 +69,13 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Specifies whether the application instance is deleted.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

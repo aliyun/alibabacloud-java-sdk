@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PageListAppInstanceGroupUserRequest extends TeaModel {
     /**
+     * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class PageListAppInstanceGroupUserRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
+     * <p>The number of the page to return. We recommend that you configure this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class PageListAppInstanceGroupUserRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to be return on each page. The value cannot be greater than <code>100</code>. We recommend that you configure this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -28,6 +33,11 @@ public class PageListAppInstanceGroupUserRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The product type.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>CloudApp: App Streaming</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

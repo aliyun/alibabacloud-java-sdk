@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     /**
+     * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,25 +14,59 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
+    /**
+     * <p>The name of the delivery group.</p>
+     */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
+    /**
+     * <p>The network settings.</p>
+     * <blockquote>
+     * <p> If you want to use this parameter, submit a ticket.</p>
+     * </blockquote>
+     */
     @NameInMap("Network")
     public ModifyAppInstanceGroupAttributeRequestNetwork network;
 
+    /**
+     * <p>The information about the resource group.</p>
+     */
     @NameInMap("NodePool")
     public ModifyAppInstanceGroupAttributeRequestNodePool nodePool;
 
     @NameInMap("PerSessionPerApp")
     public Boolean perSessionPerApp;
 
+    /**
+     * <p>The application ID of the pre-open application. If you set <code>PreOpenMode</code> to <code>SINGLE_APP</code>, you cannot leave this parameter empty.``</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-b2ronxxd****</p>
+     */
     @NameInMap("PreOpenAppId")
     public String preOpenAppId;
 
+    /**
+     * <p>The pre-open mode.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>SINGLE_APP: enables the pre-open mode for a single application.</li>
+     * <li>OFF: disables the pre-open mode. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OFF</p>
+     */
     @NameInMap("PreOpenMode")
     public String preOpenMode;
 
     /**
+     * <p>The product type.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>CloudApp: App Streaming</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,16 +75,24 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The security policy.</p>
+     */
     @NameInMap("SecurityPolicy")
     public ModifyAppInstanceGroupAttributeRequestSecurityPolicy securityPolicy;
 
     /**
+     * <p>The duration for which sessions are retained after disconnection. Unit: minutes. After an end user disconnects from a session, the session is closed only after the specified duration elapses. If you want to permanently retain sessions, set this parameter to <code>-1</code>. Valid values:-1 and 3 to 300. Default value: <code>15</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
     @NameInMap("SessionTimeout")
     public Integer sessionTimeout;
 
+    /**
+     * <p>The storage policy.</p>
+     */
     @NameInMap("StoragePolicy")
     public ModifyAppInstanceGroupAttributeRequestStoragePolicy storagePolicy;
 
@@ -147,9 +190,26 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     }
 
     public static class ModifyAppInstanceGroupAttributeRequestNetworkDomainRules extends TeaModel {
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The policy used for the domain name.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>allow</li>
+         * <li>block</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>block</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
@@ -177,6 +237,9 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     }
 
     public static class ModifyAppInstanceGroupAttributeRequestNetwork extends TeaModel {
+        /**
+         * <p>The domain name rules.</p>
+         */
         @NameInMap("DomainRules")
         public java.util.List<ModifyAppInstanceGroupAttributeRequestNetworkDomainRules> domainRules;
 
@@ -197,6 +260,15 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
 
     public static class ModifyAppInstanceGroupAttributeRequestNodePool extends TeaModel {
         /**
+         * <p>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</p>
+         * <ul>
+         * <li>appstreaming.general.4c8g: 1 to 2</li>
+         * <li>appstreaming.general.8c16g: 1 to 4</li>
+         * <li>appstreaming.vgpu.8c16g.4g: 1 to 4</li>
+         * <li>appstreaming.vgpu.8c31g.16g: 1 to 4</li>
+         * <li>appstreaming.vgpu.14c93g.12g: 1 to 6</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -204,6 +276,8 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
         public Integer nodeCapacity;
 
         /**
+         * <p>The ID of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-ew7va2g1wl3vm****</p>
          */
@@ -235,6 +309,13 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
 
     public static class ModifyAppInstanceGroupAttributeRequestSecurityPolicy extends TeaModel {
         /**
+         * <p>Specifies whether to reset after unbinding from a delivery group.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -242,6 +323,13 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
         public Boolean resetAfterUnbind;
 
         /**
+         * <p>Specifies whether to skip user permission verification.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false: This is the default value.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -267,6 +355,36 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
         }
         public Boolean getSkipUserAuthCheck() {
             return this.skipUserAuthCheck;
+        }
+
+    }
+
+    public static class ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile extends TeaModel {
+        @NameInMap("FileSystemId")
+        public String fileSystemId;
+
+        @NameInMap("UserProfileSwitch")
+        public Boolean userProfileSwitch;
+
+        public static ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile build(java.util.Map<String, ?> map) throws Exception {
+            ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile self = new ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile setFileSystemId(String fileSystemId) {
+            this.fileSystemId = fileSystemId;
+            return this;
+        }
+        public String getFileSystemId() {
+            return this.fileSystemId;
+        }
+
+        public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile setUserProfileSwitch(Boolean userProfileSwitch) {
+            this.userProfileSwitch = userProfileSwitch;
+            return this;
+        }
+        public Boolean getUserProfileSwitch() {
+            return this.userProfileSwitch;
         }
 
     }
@@ -302,8 +420,14 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     }
 
     public static class ModifyAppInstanceGroupAttributeRequestStoragePolicy extends TeaModel {
+        /**
+         * <p>The storage types.</p>
+         */
         @NameInMap("StorageTypeList")
         public java.util.List<String> storageTypeList;
+
+        @NameInMap("UserProfile")
+        public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile userProfile;
 
         @NameInMap("UserProfileFollow")
         public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow userProfileFollow;
@@ -319,6 +443,14 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
         }
         public java.util.List<String> getStorageTypeList() {
             return this.storageTypeList;
+        }
+
+        public ModifyAppInstanceGroupAttributeRequestStoragePolicy setUserProfile(ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile userProfile) {
+            this.userProfile = userProfile;
+            return this;
+        }
+        public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile getUserProfile() {
+            return this.userProfile;
         }
 
         public ModifyAppInstanceGroupAttributeRequestStoragePolicy setUserProfileFollow(ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow userProfileFollow) {

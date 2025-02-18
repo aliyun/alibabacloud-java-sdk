@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateImageFromAppInstanceGroupResponseBody extends TeaModel {
     /**
+     * <p>The image ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>img-bp13mu****</p>
      */
@@ -12,6 +14,8 @@ public class CreateImageFromAppInstanceGroupResponseBody extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */

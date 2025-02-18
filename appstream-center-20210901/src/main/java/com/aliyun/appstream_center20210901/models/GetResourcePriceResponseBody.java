@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetResourcePriceResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParameter.ProductType</p>
      */
@@ -12,19 +14,31 @@ public class GetResourcePriceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The parameter ProductType is invalid.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The price objects.</p>
+     * <p>This parameter is returned only if a value is specified for AppInstanceType.</p>
+     */
     @NameInMap("PriceList")
     public java.util.List<GetResourcePriceResponseBodyPriceList> priceList;
 
+    /**
+     * <p>The price object.</p>
+     * <p>This parameter is returned only if a value is specified for NodeInstanceType.</p>
+     */
     @NameInMap("PriceModel")
     public GetResourcePriceResponseBodyPriceModel priceModel;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -78,26 +92,43 @@ public class GetResourcePriceResponseBody extends TeaModel {
 
     public static class GetResourcePriceResponseBodyPriceListPricePromotions extends TeaModel {
         /**
+         * <p>The coupon code.</p>
+         * 
          * <strong>example:</strong>
          * <p>coupon****</p>
          */
         @NameInMap("OptionCode")
         public String optionCode;
 
+        /**
+         * <p>The coupon description.</p>
+         */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
+         * <p>The coupon ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1847709****</p>
          */
         @NameInMap("PromotionId")
         public String promotionId;
 
+        /**
+         * <p>The coupon name.</p>
+         */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
+         * <p>Indicates whether the coupon was used.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -153,6 +184,8 @@ public class GetResourcePriceResponseBody extends TeaModel {
 
     public static class GetResourcePriceResponseBodyPriceListPrice extends TeaModel {
         /**
+         * <p>The currency type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -160,6 +193,8 @@ public class GetResourcePriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The discount. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>999.0</p>
          */
@@ -167,16 +202,23 @@ public class GetResourcePriceResponseBody extends TeaModel {
         public String discountPrice;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>6700</p>
          */
         @NameInMap("OriginalPrice")
         public String originalPrice;
 
+        /**
+         * <p>The coupon metadata.</p>
+         */
         @NameInMap("Promotions")
         public java.util.List<GetResourcePriceResponseBodyPriceListPricePromotions> promotions;
 
         /**
+         * <p>The actual price. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>5278.0</p>
          */
@@ -231,10 +273,15 @@ public class GetResourcePriceResponseBody extends TeaModel {
     }
 
     public static class GetResourcePriceResponseBodyPriceListRules extends TeaModel {
+        /**
+         * <p>The description of the price calculation rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The ID of the price calculation rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>260904273633****</p>
          */
@@ -265,16 +312,29 @@ public class GetResourcePriceResponseBody extends TeaModel {
     }
 
     public static class GetResourcePriceResponseBodyPriceList extends TeaModel {
+        /**
+         * <p>The price details.</p>
+         */
         @NameInMap("Price")
         public GetResourcePriceResponseBodyPriceListPrice price;
 
         /**
+         * <p>The price type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Connected: in use</li>
+         * <li>Standby: pending for use.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Standby</p>
          */
         @NameInMap("PriceType")
         public String priceType;
 
+        /**
+         * <p>The price calculation rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<GetResourcePriceResponseBodyPriceListRules> rules;
 
@@ -311,26 +371,43 @@ public class GetResourcePriceResponseBody extends TeaModel {
 
     public static class GetResourcePriceResponseBodyPriceModelPricePromotions extends TeaModel {
         /**
+         * <p>The coupon code.</p>
+         * 
          * <strong>example:</strong>
          * <p>coupon****</p>
          */
         @NameInMap("OptionCode")
         public String optionCode;
 
+        /**
+         * <p>The coupon description.</p>
+         */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
+         * <p>The coupon ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>17440009****</p>
          */
         @NameInMap("PromotionId")
         public String promotionId;
 
+        /**
+         * <p>The coupon name.</p>
+         */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
+         * <p>Indicates whether the coupon was used.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -386,6 +463,8 @@ public class GetResourcePriceResponseBody extends TeaModel {
 
     public static class GetResourcePriceResponseBodyPriceModelPrice extends TeaModel {
         /**
+         * <p>The currency type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -393,6 +472,8 @@ public class GetResourcePriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The discount. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.00</p>
          */
@@ -400,16 +481,23 @@ public class GetResourcePriceResponseBody extends TeaModel {
         public String discountPrice;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>11.00</p>
          */
         @NameInMap("OriginalPrice")
         public String originalPrice;
 
+        /**
+         * <p>The coupon metadata.</p>
+         */
         @NameInMap("Promotions")
         public java.util.List<GetResourcePriceResponseBodyPriceModelPricePromotions> promotions;
 
         /**
+         * <p>The actual price. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.00</p>
          */
@@ -464,10 +552,15 @@ public class GetResourcePriceResponseBody extends TeaModel {
     }
 
     public static class GetResourcePriceResponseBodyPriceModelRules extends TeaModel {
+        /**
+         * <p>The description of the price calculation rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The ID of the price calculation rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>102002100393****</p>
          */
@@ -498,9 +591,15 @@ public class GetResourcePriceResponseBody extends TeaModel {
     }
 
     public static class GetResourcePriceResponseBodyPriceModel extends TeaModel {
+        /**
+         * <p>The price details.</p>
+         */
         @NameInMap("Price")
         public GetResourcePriceResponseBodyPriceModelPrice price;
 
+        /**
+         * <p>The price calculation rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<GetResourcePriceResponseBodyPriceModelRules> rules;
 

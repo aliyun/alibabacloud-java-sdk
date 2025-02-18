@@ -4,10 +4,18 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class GetDebugAppInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>__DEBUG_APP</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
     /**
+     * <p>The ID of the delivery group.</p>
+     * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
      */
@@ -15,6 +23,8 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
     public String appInstanceGroupId;
 
     /**
+     * <p>The ID of the application instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ai-7ybdeiyoeh5e****</p>
      */
@@ -22,6 +32,8 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
     public String appInstanceId;
 
     /**
+     * <p>The ID of the application version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1</p>
      */
@@ -29,6 +41,8 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
     public String appVersion;
 
     /**
+     * <p>The authorization code. This authorization code is valid for 3 minutes and can be used only once, regardless of whether the authentication succeeds. If multiple authentication codes are generated for a user, only the latest authentication code takes effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>e4e169bea1cc48e8afac53**********</p>
      */
@@ -36,12 +50,20 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
     public String authCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong>debug</strong></p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class PageListAppInstanceGroupUserResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The users.</p>
+     */
     @NameInMap("Users")
     public java.util.List<String> users;
 

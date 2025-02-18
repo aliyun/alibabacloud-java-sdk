@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOtaTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class ListOtaTaskRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
+     * <p>The type of the OTA update task.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Fota: update of the system components of Alibaba Cloud Workspace</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,7 @@ public class ListOtaTaskRequest extends TeaModel {
     public String otaType;
 
     /**
+     * <p>The page number of the page to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +39,7 @@ public class ListOtaTaskRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

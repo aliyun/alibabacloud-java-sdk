@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListAppInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the application instances.</p>
+     */
     @NameInMap("AppInstanceModels")
     public java.util.List<ListAppInstancesResponseBodyAppInstanceModels> appInstanceModels;
 
     /**
+     * <p>The page number of the returned page. We recommend that you configure this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned on each page. The value cannot be greater than <code>100</code>. We recommend that you configure this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -29,6 +38,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>18</p>
      */
@@ -82,6 +93,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
 
     public static class ListAppInstancesResponseBodyAppInstanceModelsBindInfo extends TeaModel {
         /**
+         * <p>The ID of the end user that is bound to the application instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>app.test</p>
          */
@@ -89,6 +102,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String endUserId;
 
         /**
+         * <p>The use duration of the application instance. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -120,6 +135,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
 
     public static class ListAppInstancesResponseBodyAppInstanceModels extends TeaModel {
         /**
+         * <p>The ID of the delivery group.</p>
+         * 
          * <strong>example:</strong>
          * <p>aig-dk8p95irqfst9****</p>
          */
@@ -127,16 +144,26 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
+         * <p>The ID of the application instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ai-8dl7dzchklmka****</p>
          */
         @NameInMap("AppInstanceId")
         public String appInstanceId;
 
+        /**
+         * <p>The information about the binding between the application instance and end users.</p>
+         */
         @NameInMap("BindInfo")
         public ListAppInstancesResponseBodyAppInstanceModelsBindInfo bindInfo;
 
+        @NameInMap("ChargeType")
+        public String chargeType;
+
         /**
+         * <p>The time when the application instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-07T20:29:19.000+08:00</p>
          */
@@ -144,6 +171,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the application instance was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-07T20:29:19.000+08:00</p>
          */
@@ -151,13 +180,25 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The public IP address associated with the primary NIC. This value is returned only if <code>StrategyType</code> is set to <code>Mixed</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.13.13.211</p>
          */
         @NameInMap("MainEthPublicIp")
         public String mainEthPublicIp;
 
+        @NameInMap("NodeId")
+        public String nodeId;
+
         /**
+         * <p>The session status. This parameter is returned only if the application instance is in the <code>RUNNING</code> state.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>disconnect: disconnected</li>
+         * <li>connect: connected</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>connect</p>
          */
@@ -165,6 +206,8 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String sessionStatus;
 
         /**
+         * <p>The status of the application instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>BOUND</p>
          */
@@ -200,6 +243,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
             return this.bindInfo;
         }
 
+        public ListAppInstancesResponseBodyAppInstanceModels setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
         public ListAppInstancesResponseBodyAppInstanceModels setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -222,6 +273,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
         public String getMainEthPublicIp() {
             return this.mainEthPublicIp;
+        }
+
+        public ListAppInstancesResponseBodyAppInstanceModels setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
         }
 
         public ListAppInstancesResponseBodyAppInstanceModels setSessionStatus(String sessionStatus) {

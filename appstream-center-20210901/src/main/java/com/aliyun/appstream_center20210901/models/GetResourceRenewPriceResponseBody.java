@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class GetResourceRenewPriceResponseBody extends TeaModel {
+    /**
+     * <p>The price object.</p>
+     */
     @NameInMap("Data")
     public GetResourceRenewPriceResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,26 +42,43 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
 
     public static class GetResourceRenewPriceResponseBodyDataPricePromotions extends TeaModel {
         /**
+         * <p>The coupon code.</p>
+         * 
          * <strong>example:</strong>
          * <p>coupon****</p>
          */
         @NameInMap("OptionCode")
         public String optionCode;
 
+        /**
+         * <p>The coupon description.</p>
+         */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
+         * <p>The coupon ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>139965*****</p>
          */
         @NameInMap("PromotionId")
         public String promotionId;
 
+        /**
+         * <p>The coupon name.</p>
+         */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
+         * <p>Indicates whether the coupon was used.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -112,6 +134,8 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
 
     public static class GetResourceRenewPriceResponseBodyDataPrice extends TeaModel {
         /**
+         * <p>The currency type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -119,6 +143,8 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The discount. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -126,16 +152,23 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         public String discountPrice;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
         @NameInMap("OriginalPrice")
         public String originalPrice;
 
+        /**
+         * <p>The coupon description.</p>
+         */
         @NameInMap("Promotions")
         public java.util.List<GetResourceRenewPriceResponseBodyDataPricePromotions> promotions;
 
         /**
+         * <p>The actual price. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -190,10 +223,15 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
     }
 
     public static class GetResourceRenewPriceResponseBodyDataRules extends TeaModel {
+        /**
+         * <p>The description of the price calculation rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The ID of the price calculation rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>20002****</p>
          */
@@ -224,9 +262,15 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
     }
 
     public static class GetResourceRenewPriceResponseBodyData extends TeaModel {
+        /**
+         * <p>The price details.</p>
+         */
         @NameInMap("Price")
         public GetResourceRenewPriceResponseBodyDataPrice price;
 
+        /**
+         * <p>The price calculation rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<GetResourceRenewPriceResponseBodyDataRules> rules;
 

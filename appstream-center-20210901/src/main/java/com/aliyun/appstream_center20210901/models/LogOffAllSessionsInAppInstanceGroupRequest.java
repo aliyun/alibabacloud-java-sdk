@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class LogOffAllSessionsInAppInstanceGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class LogOffAllSessionsInAppInstanceGroupRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
+     * <p>The product type.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>CloudApp: App Streaming</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

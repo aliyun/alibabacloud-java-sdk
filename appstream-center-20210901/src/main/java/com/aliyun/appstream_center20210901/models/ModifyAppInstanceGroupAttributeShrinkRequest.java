@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,25 +14,59 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
+    /**
+     * <p>The name of the delivery group.</p>
+     */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
+    /**
+     * <p>The network settings.</p>
+     * <blockquote>
+     * <p> If you want to use this parameter, submit a ticket.</p>
+     * </blockquote>
+     */
     @NameInMap("Network")
     public String networkShrink;
 
+    /**
+     * <p>The information about the resource group.</p>
+     */
     @NameInMap("NodePool")
     public String nodePoolShrink;
 
     @NameInMap("PerSessionPerApp")
     public Boolean perSessionPerApp;
 
+    /**
+     * <p>The application ID of the pre-open application. If you set <code>PreOpenMode</code> to <code>SINGLE_APP</code>, you cannot leave this parameter empty.``</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-b2ronxxd****</p>
+     */
     @NameInMap("PreOpenAppId")
     public String preOpenAppId;
 
+    /**
+     * <p>The pre-open mode.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>SINGLE_APP: enables the pre-open mode for a single application.</li>
+     * <li>OFF: disables the pre-open mode. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OFF</p>
+     */
     @NameInMap("PreOpenMode")
     public String preOpenMode;
 
     /**
+     * <p>The product type.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>CloudApp: App Streaming</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,16 +75,24 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The security policy.</p>
+     */
     @NameInMap("SecurityPolicy")
     public String securityPolicyShrink;
 
     /**
+     * <p>The duration for which sessions are retained after disconnection. Unit: minutes. After an end user disconnects from a session, the session is closed only after the specified duration elapses. If you want to permanently retain sessions, set this parameter to <code>-1</code>. Valid values:-1 and 3 to 300. Default value: <code>15</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
     @NameInMap("SessionTimeout")
     public Integer sessionTimeout;
 
+    /**
+     * <p>The storage policy.</p>
+     */
     @NameInMap("StoragePolicy")
     public String storagePolicyShrink;
 
