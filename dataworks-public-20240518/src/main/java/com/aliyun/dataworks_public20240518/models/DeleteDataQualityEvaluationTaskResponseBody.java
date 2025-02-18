@@ -14,6 +14,12 @@ public class DeleteDataQualityEvaluationTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the deletion is successful.</p>
+     * <ul>
+     * <li>true: Successful</li>
+     * <li>false: Failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

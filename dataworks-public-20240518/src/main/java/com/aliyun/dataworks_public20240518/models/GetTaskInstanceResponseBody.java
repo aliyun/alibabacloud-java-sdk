@@ -698,6 +698,9 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The name of the task for which the instance is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL node</p>
          */
         @NameInMap("TaskName")
         public String taskName;
@@ -794,6 +797,9 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The name of the workflow to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test workflow</p>
          */
         @NameInMap("WorkflowName")
         public String workflowName;

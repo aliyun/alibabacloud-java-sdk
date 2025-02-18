@@ -52,6 +52,9 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
 
         /**
          * <p>The operation content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Freeze tasks</p>
          */
         @NameInMap("OperationContent")
         public String operationContent;

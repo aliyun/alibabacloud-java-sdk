@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRoutesRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
+     * <p>The network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -14,6 +14,8 @@ public class ListRoutesRequest extends TeaModel {
     public Long networkId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +23,8 @@ public class ListRoutesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -28,6 +32,24 @@ public class ListRoutesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+     * <ul>
+     * <li>Id (Desc/Asc): the route ID</li>
+     * <li>DestinationCidr (Desc/Asc): the destination CIDR block of the route</li>
+     * <li>CreateTime (Desc/Asc): the time when the route is created</li>
+     * </ul>
+     * <p>Default value: CreateTime Asc.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime Asc</p>
      */
@@ -61,6 +83,14 @@ public class ListRoutesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListRoutesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListRoutesRequest setSortBy(String sortBy) {

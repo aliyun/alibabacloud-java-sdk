@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
     /**
+     * <p>The ID of the data quality monitoring instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>22130</p>
      */

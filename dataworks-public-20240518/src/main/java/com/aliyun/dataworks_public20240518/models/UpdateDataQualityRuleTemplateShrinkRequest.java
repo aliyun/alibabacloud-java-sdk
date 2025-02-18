@@ -22,12 +22,18 @@ public class UpdateDataQualityRuleTemplateShrinkRequest extends TeaModel {
 
     /**
      * <p>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/ods/order_data</p>
      */
     @NameInMap("DirectoryPath")
     public String directoryPath;
 
     /**
      * <p>The name of the template. The name can be up to 512 characters in length and can contain digits, letters, and punctuation marks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Table row Count Verification</p>
      */
     @NameInMap("Name")
     public String name;

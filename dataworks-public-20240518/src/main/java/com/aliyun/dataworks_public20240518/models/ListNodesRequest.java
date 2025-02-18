@@ -42,6 +42,14 @@ public class ListNodesRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The scheduling type. This parameter specifies a filter condition.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Normal: Nodes are scheduled as expected.</li>
+     * <li>Pause: Nodes are paused, and the running of their descendant nodes is blocked.</li>
+     * <li>Skip: Nodes are dry run. The system does not actually run the nodes but directly prompts that the nodes are successfully run. The running duration of the nodes is 0 seconds. In addition, the nodes do not occupy resources or block the running of their descendant nodes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
@@ -63,12 +71,12 @@ public class ListNodesRequest extends TeaModel {
     public String rerunMode;
 
     /**
-     * <p>The scene of nodes. This parameter specifies a filter condition.</p>
+     * <p>The scene of the node. This parameter determines the location of the node.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>DATAWORKS_PROJECT</li>
-     * <li>MANUAL_WORKFLOW</li>
-     * <li>MANUAL_NODE</li>
+     * <li>DataworksProject</li>
+     * <li>DataworksManualWorkflow</li>
+     * <li>DataworksManualTask</li>
      * </ul>
      * 
      * <strong>example:</strong>

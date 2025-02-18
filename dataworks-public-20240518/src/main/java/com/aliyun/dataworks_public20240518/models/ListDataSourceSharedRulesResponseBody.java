@@ -69,6 +69,12 @@ public class ListDataSourceSharedRulesResponseBody extends TeaModel {
         public Long dataSourceId;
 
         /**
+         * <p>The environment to which the target data source belongs. The values are as follows:</p>
+         * <ul>
+         * <li>Dev: the development environment.</li>
+         * <li>Prod: the production environment.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Dev</p>
          */

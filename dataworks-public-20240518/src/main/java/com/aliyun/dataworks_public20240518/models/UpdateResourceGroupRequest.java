@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the new Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2kqofrgXXXXX</p>
@@ -36,7 +36,7 @@ public class UpdateResourceGroupRequest extends TeaModel {
      * <p>The new remarks that you want to modify for the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>创建用于普通任务的通用资源组</p>
+     * <p>Create a common resource group for common tasks</p>
      */
     @NameInMap("Remark")
     public String remark;

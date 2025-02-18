@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupsRequest extends TeaModel {
     /**
+     * <p>Alibaba Cloud Resource Group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2kqofrgXXXXX</p>
      */
     @NameInMap("AliyunResourceGroupId")
     public String aliyunResourceGroupId;
 
+    /**
+     * <p>Alibaba Cloud tag list</p>
+     */
     @NameInMap("AliyunResourceTags")
     public java.util.List<ListResourceGroupsRequestAliyunResourceTags> aliyunResourceTags;
 
@@ -70,16 +75,16 @@ public class ListResourceGroupsRequest extends TeaModel {
     public java.util.List<String> resourceGroupTypes;
 
     /**
-     * <p>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+     * <p>The list of fields used for sorting. Fields such as TriggerTime and StartedTime are supported. You must configure this parameter in the Sorting field + Sort by (Desc/Asc). By default, results are sorted in ascending order. Valid values:</p>
      * <ul>
-     * <li>Id (Desc/Asc): the resource group ID</li>
-     * <li>Name (Desc/Asc): the name of the resource group</li>
-     * <li>Remark (Desc/Asc): the remarks of the resource group</li>
-     * <li>Type (Desc/Asc): the type of the resource group</li>
-     * <li>Status (Desc/Asc): the status of the resource group</li>
-     * <li>Spec (Desc/Asc): the specifications of the resource group</li>
-     * <li>CreateUser (Desc/Asc): the creator of the resource group</li>
-     * <li>CreateTime (Desc/Asc): the time when the route is created</li>
+     * <li>Id (Desc/Asc): resource group ID</li>
+     * <li>Name (Desc/Asc): resource group name</li>
+     * <li>Remark (Desc/Asc): resource group remarks</li>
+     * <li>Type (Desc/Asc): resource group type</li>
+     * <li>Status (Desc/Asc): status of resources in a resource group</li>
+     * <li>Spec (Desc/Asc): resource group specifications</li>
+     * <li>CreateUser (Desc/Asc): creator</li>
+     * <li>CreateTime (Desc/Asc): creation time</li>
      * </ul>
      * <p>Default value: CreateTime Asc</p>
      * 
@@ -182,6 +187,8 @@ public class ListResourceGroupsRequest extends TeaModel {
 
     public static class ListResourceGroupsRequestAliyunResourceTags extends TeaModel {
         /**
+         * <p>Tag Key</p>
+         * 
          * <strong>example:</strong>
          * <p>key</p>
          */
@@ -189,6 +196,8 @@ public class ListResourceGroupsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>Tag Value</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */

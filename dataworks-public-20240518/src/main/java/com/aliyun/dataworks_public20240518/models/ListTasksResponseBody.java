@@ -281,6 +281,12 @@ public class ListTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The instance generation mode. Valid values:</p>
+         * <ul>
+         * <li>T+1</li>
+         * <li>Immediately</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>T+1</p>
          */
@@ -307,6 +313,9 @@ public class ListTasksResponseBody extends TeaModel {
 
         /**
          * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL node</p>
          */
         @NameInMap("Name")
         public String name;
@@ -392,6 +401,8 @@ public class ListTasksResponseBody extends TeaModel {
         public ListTasksResponseBodyPagingInfoTasksRuntimeResource runtimeResource;
 
         /**
+         * <p>The list of script parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>para1=$bizdate para2=$[yyyymmdd]</p>
          */

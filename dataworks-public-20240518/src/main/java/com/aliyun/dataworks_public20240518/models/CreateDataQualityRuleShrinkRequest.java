@@ -37,6 +37,9 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     /**
      * <p>The name of the rule.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The table cannot be empty.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -58,7 +61,7 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     public String samplingConfigShrink;
 
     /**
-     * <p>The strength of the rule.</p>
+     * <p>The strength of the monitoring rule. Valid values:</p>
      * <ul>
      * <li>Normal</li>
      * <li>High</li>

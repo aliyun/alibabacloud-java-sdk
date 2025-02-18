@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDataSourceResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B56432E0-2112-5C97-88D0-AA0AE5C75C74</p>
@@ -14,6 +14,12 @@ public class DeleteDataSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call is successful.</p>
+     * <ul>
+     * <li>true: Successful</li>
+     * <li>false: Failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,15 +5,33 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityRuleTemplatesRequest extends TeaModel {
     /**
+     * <p>The source of the rule template. Required.</p>
+     * <ul>
+     * <li>System: System Template</li>
+     * <li>UserDefined: user-defined Template</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>System</p>
      */
     @NameInMap("CreationSource")
     public String creationSource;
 
+    /**
+     * <p>The category directory where the custom template is stored, slash/divider level. Each level name can be up to 1024 characters in length and cannot contain white space characters or backslashes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/ods/order_data</p>
+     */
     @NameInMap("DirectoryPath")
     public String directoryPath;
 
+    /**
+     * <p>Fuzzy matching of template rule names. If it is a system template, the internationalized name of the system template will be fuzzy matching based on the language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Table rows</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -36,6 +54,7 @@ public class ListDataQualityRuleTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

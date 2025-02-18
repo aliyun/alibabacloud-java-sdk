@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityEvaluationTaskInstanceShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the data quality monitoring task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class CreateDataQualityEvaluationTaskInstanceShrinkRequest extends TeaMod
     public Long dataQualityEvaluationTaskId;
 
     /**
+     * <p>Data quality verification execution parameters in JSON format. The available keys are as follows:</p>
+     * <ul>
+     * <li>triggerTime: the millisecond timestamp of the trigger time. The baseline time of the $[yyyymmdd] expression in the data range of data quality monitoring. Required.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,8 @@ public class CreateDataQualityEvaluationTaskInstanceShrinkRequest extends TeaMod
     public String parameters;
 
     /**
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>This parameter is used to determine the DataWorks workspaces used for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +38,9 @@ public class CreateDataQualityEvaluationTaskInstanceShrinkRequest extends TeaMod
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>Resource Group information, which must be filled in when running non-MaxCompute data quality verification.</p>
+     */
     @NameInMap("RuntimeResource")
     public String runtimeResourceShrink;
 

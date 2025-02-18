@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListNetworksResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListNetworksResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
@@ -15,6 +20,8 @@ public class ListNetworksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request is successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class ListNetworksResponseBody extends TeaModel {
 
     public static class ListNetworksResponseBodyPagingInfoNetworkList extends TeaModel {
         /**
+         * <p>The time when the network resource was created. The value is a 64-bit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1727055811000</p>
          */
@@ -59,6 +68,8 @@ public class ListNetworksResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the user who creates the network resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>11075500042XXXXX</p>
          */
@@ -66,6 +77,8 @@ public class ListNetworksResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The network ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -73,6 +86,8 @@ public class ListNetworksResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The ID of the serverless resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
          */
@@ -80,6 +95,8 @@ public class ListNetworksResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-2ze13vamugr7jenXXXXX</p>
          */
@@ -87,6 +104,8 @@ public class ListNetworksResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The status of the network resource. Valid values: Pending, Creating, Running, Deleting, and Deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -94,6 +113,8 @@ public class ListNetworksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-m2et4f3oc8msfbccXXXXX</p>
          */
@@ -101,6 +122,8 @@ public class ListNetworksResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The VSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-uf8usrhs7hjd9amsXXXXX</p>
          */
@@ -179,10 +202,15 @@ public class ListNetworksResponseBody extends TeaModel {
     }
 
     public static class ListNetworksResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The network resources of the serverless resource group.</p>
+         */
         @NameInMap("NetworkList")
         public java.util.List<ListNetworksResponseBodyPagingInfoNetworkList> networkList;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -190,6 +218,8 @@ public class ListNetworksResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -197,6 +227,8 @@ public class ListNetworksResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

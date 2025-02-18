@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class SuspendTaskInstancesRequest extends TeaModel {
     /**
+     * <p>Remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
      */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The ID list of the task instance.</p>
+     */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
 

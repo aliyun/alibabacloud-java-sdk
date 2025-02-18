@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class SuccessInfoValue extends TeaModel {
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The task does not exist.</p>
+     */
     @NameInMap("Message")
     public String message;
 

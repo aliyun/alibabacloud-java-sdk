@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowRequest extends TeaModel {
     /**
+     * <p>The client-side unique code of the workflow for asynchronous and idempotent implementation. If not specified during creation, the system will automatically generate the code, which will be uniquely bound to the resource ID. If you specify this parameter when updating and deleting resources, it should be consistent with the client unique code when creating resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
      */
     @NameInMap("ClientUniqueCode")
     public String clientUniqueCode;
 
+    /**
+     * <p>Dependency information.</p>
+     */
     @NameInMap("Dependencies")
     public java.util.List<UpdateWorkflowRequestDependencies> dependencies;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -22,6 +29,12 @@ public class UpdateWorkflowRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The project environment.</p>
+     * <ul>
+     * <li>Prod: Production</li>
+     * <li>Dev: Development</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */
@@ -29,6 +42,7 @@ public class UpdateWorkflowRequest extends TeaModel {
     public String envType;
 
     /**
+     * <p>The ID of the workflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,15 +52,23 @@ public class UpdateWorkflowRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>My Workflow</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The output information.</p>
+     */
     @NameInMap("Outputs")
     public UpdateWorkflowRequestOutputs outputs;
 
     /**
+     * <p>The account ID of the owner.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,19 +78,28 @@ public class UpdateWorkflowRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The list of parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>para1=$bizdate para2=$[yyyymmdd]</p>
      */
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <p>The list of workflow tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<UpdateWorkflowRequestTags> tags;
 
+    /**
+     * <p>The list of tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<UpdateWorkflowRequestTasks> tasks;
 
     /**
+     * <p>The trigger method.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Trigger")
@@ -177,6 +208,13 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestDependencies extends TeaModel {
         /**
+         * <p>The type of the dependency.</p>
+         * <ul>
+         * <li>CrossCycleDependsOnChildren: cross-cycle dependency level-1 child nodes</li>
+         * <li>CrossCycleDependsOnSelf: cross-cycle dependency</li>
+         * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</li>
+         * <li>Normal: same-cycle dependency</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +224,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The output identifier of the upstream task. (This field is returned when <code>same cycle dependence</code> and input content is set)</p>
+         * 
          * <strong>example:</strong>
          * <p>pre.odps_sql_demo_0</p>
          */
@@ -193,6 +233,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String upstreamOutput;
 
         /**
+         * <p>The Id of the upstream task. (This field is returned when the input content is not set for <code>cross-cycle dependency other nodes</code> and <code>same-cycle dependency </code>, otherwise it is not returned)</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -232,6 +274,8 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestOutputsTaskOutputs extends TeaModel {
         /**
+         * <p>The output identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>pre.odps_sql_demo_0</p>
          */
@@ -254,6 +298,9 @@ public class UpdateWorkflowRequest extends TeaModel {
     }
 
     public static class UpdateWorkflowRequestOutputs extends TeaModel {
+        /**
+         * <p>The list of workflow task output definitions.</p>
+         */
         @NameInMap("TaskOutputs")
         public java.util.List<UpdateWorkflowRequestOutputsTaskOutputs> taskOutputs;
 
@@ -274,6 +321,7 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,6 +331,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -314,6 +364,8 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestTasksDataSource extends TeaModel {
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps_test</p>
          */
@@ -337,6 +389,13 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestTasksDependencies extends TeaModel {
         /**
+         * <p>The type of the dependency.</p>
+         * <ul>
+         * <li>CrossCycleDependsOnChildren: cross-cycle dependency level-1 child nodes</li>
+         * <li>CrossCycleDependsOnSelf: cross-cycle dependency</li>
+         * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</li>
+         * <li>Normal: same-cycle dependency</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -346,6 +405,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The output identifier of the upstream task. (This field is returned when the input content is set depending on the same cycle)</p>
+         * 
          * <strong>example:</strong>
          * <p>pre.odps_sql_demo_0</p>
          */
@@ -353,6 +414,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String upstreamOutput;
 
         /**
+         * <p>The Id of the upstream task. (This field is returned when the input content is not set for cross-cycle dependencies on other nodes and same-cycle dependencies.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -392,6 +455,8 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestTasksInputsVariables extends TeaModel {
         /**
+         * <p>The name of the variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -399,6 +464,13 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Type.</p>
+         * <ul>
+         * <li>Constant: Constant</li>
+         * <li>PassThrough: parameter node output</li>
+         * <li>System: variable</li>
+         * <li>NodeOutput: script output</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -408,6 +480,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The value of the variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -446,6 +520,9 @@ public class UpdateWorkflowRequest extends TeaModel {
     }
 
     public static class UpdateWorkflowRequestTasksInputs extends TeaModel {
+        /**
+         * <p>The list of variable definitions.</p>
+         */
         @NameInMap("Variables")
         public java.util.List<UpdateWorkflowRequestTasksInputsVariables> variables;
 
@@ -466,6 +543,8 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestTasksOutputsTaskOutputs extends TeaModel {
         /**
+         * <p>The output identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>pre.odps_sql_demo_0</p>
          */
@@ -489,6 +568,8 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestTasksOutputsVariables extends TeaModel {
         /**
+         * <p>The name of the variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -496,6 +577,13 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Type.</p>
+         * <ul>
+         * <li>Constant: Constant</li>
+         * <li>PassThrough: parameter node output</li>
+         * <li>System: variable</li>
+         * <li>NodeOutput: script output</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -505,6 +593,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The value of the variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -543,9 +633,15 @@ public class UpdateWorkflowRequest extends TeaModel {
     }
 
     public static class UpdateWorkflowRequestTasksOutputs extends TeaModel {
+        /**
+         * <p>The list of task output definitions.</p>
+         */
         @NameInMap("TaskOutputs")
         public java.util.List<UpdateWorkflowRequestTasksOutputsTaskOutputs> taskOutputs;
 
+        /**
+         * <p>The list of variable definitions.</p>
+         */
         @NameInMap("Variables")
         public java.util.List<UpdateWorkflowRequestTasksOutputsVariables> variables;
 
@@ -574,6 +670,8 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestTasksRuntimeResource extends TeaModel {
         /**
+         * <p>Configure CU consumption for task running.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -581,6 +679,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String cu;
 
         /**
+         * <p>The ID of the image configured for the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
          */
@@ -588,6 +688,7 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String image;
 
         /**
+         * <p>The identifier of the scheduling resource group configured for running the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -629,6 +730,8 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestTasksScript extends TeaModel {
         /**
+         * <p>The script content.</p>
+         * 
          * <strong>example:</strong>
          * <p>echo &quot;helloWorld&quot;</p>
          */
@@ -636,6 +739,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>The list of script parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>para1=$bizdate</p>
          */
@@ -667,6 +772,7 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestTasksTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -676,6 +782,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -707,6 +815,12 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestTasksTrigger extends TeaModel {
         /**
+         * <p>The operation mode when the trigger is triggered. It takes effect when type = Scheduler.</p>
+         * <ul>
+         * <li>Pause: Pause</li>
+         * <li>Skip: empty run</li>
+         * <li>Normal: Normal operation</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -716,6 +830,12 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String recurrence;
 
         /**
+         * <p>The type of the trigger method.</p>
+         * <ul>
+         * <li>Scheduler: the scheduling cycle is triggered.</li>
+         * <li>Manual: manually triggered</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
          */
@@ -747,6 +867,8 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestTasks extends TeaModel {
         /**
+         * <p>The baseline ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -754,19 +876,29 @@ public class UpdateWorkflowRequest extends TeaModel {
         public Long baseLineId;
 
         /**
+         * <p>The client-side unique code of the task, which is used to implement asynchronous and idempotent functions. If not specified during creation, the system will automatically generate the code, which will be uniquely bound to the resource ID. If you specify this parameter when updating and deleting resources, it should be consistent with the client unique code when creating resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>Task_0bc5213917368545132902xxxxxxxx</p>
          */
         @NameInMap("ClientUniqueCode")
         public String clientUniqueCode;
 
+        /**
+         * <p>The associated data source information.</p>
+         */
         @NameInMap("DataSource")
         public UpdateWorkflowRequestTasksDataSource dataSource;
 
+        /**
+         * <p>Dependency information.</p>
+         */
         @NameInMap("Dependencies")
         public java.util.List<UpdateWorkflowRequestTasksDependencies> dependencies;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test</p>
          */
@@ -774,6 +906,12 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The project environment.</p>
+         * <ul>
+         * <li>Prod: Production</li>
+         * <li>Dev: Development</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Prod</p>
          */
@@ -781,6 +919,7 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String envType;
 
         /**
+         * <p>The ID of the task. If you enter this field, a full update is performed on the corresponding task. If you do not enter this field, a new task is created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -789,19 +928,30 @@ public class UpdateWorkflowRequest extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Enter information.</p>
+         */
         @NameInMap("Inputs")
         public UpdateWorkflowRequestTasksInputs inputs;
 
         /**
+         * <p>The name of the task.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL node</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The output information.</p>
+         */
         @NameInMap("Outputs")
         public UpdateWorkflowRequestTasksOutputs outputs;
 
         /**
+         * <p>The account ID of the owner.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -811,6 +961,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String owner;
 
         /**
+         * <p>The retry interval, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -818,6 +970,12 @@ public class UpdateWorkflowRequest extends TeaModel {
         public Integer rerunInterval;
 
         /**
+         * <p>The configuration of whether the task is allowed to rerun.</p>
+         * <ul>
+         * <li>AllDenied (failure or success cannot be rerun)</li>
+         * <li>FailureAllowed (only failures can be rerun)</li>
+         * <li>AllAllowed (run again if failed or successful)</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -827,6 +985,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String rerunMode;
 
         /**
+         * <p>The number of retries that take effect when the task is set to rerun.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -834,18 +994,27 @@ public class UpdateWorkflowRequest extends TeaModel {
         public Integer rerunTimes;
 
         /**
+         * <p>Configuration of the runtime environment, such as resource group information.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RuntimeResource")
         public UpdateWorkflowRequestTasksRuntimeResource runtimeResource;
 
+        /**
+         * <p>Run the script information.</p>
+         */
         @NameInMap("Script")
         public UpdateWorkflowRequestTasksScript script;
 
+        /**
+         * <p>The list of task tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<UpdateWorkflowRequestTasksTags> tags;
 
         /**
+         * <p>The timeout period of the task execution, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */
@@ -853,12 +1022,14 @@ public class UpdateWorkflowRequest extends TeaModel {
         public Integer timeout;
 
         /**
+         * <p>The trigger method of the task.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Trigger")
         public UpdateWorkflowRequestTasksTrigger trigger;
 
         /**
+         * <p>The type of the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1036,6 +1207,8 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     public static class UpdateWorkflowRequestTrigger extends TeaModel {
         /**
+         * <p>Cron expression, which takes effect when type = Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
          */
@@ -1043,6 +1216,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String cron;
 
         /**
+         * <p>The expiration time of the periodic trigger, which takes effect when type = Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>9999-01-01 00:00:00</p>
          */
@@ -1050,6 +1225,8 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The time when the cycle trigger takes effect. It takes effect when type = Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>
          */
@@ -1057,6 +1234,11 @@ public class UpdateWorkflowRequest extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The type of the trigger method.</p>
+         * <ul>
+         * <li>Scheduler: the scheduling cycle is triggered.</li>
+         * <li>Manual: manually triggered</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

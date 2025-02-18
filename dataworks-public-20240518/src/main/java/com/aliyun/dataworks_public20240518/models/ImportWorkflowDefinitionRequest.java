@@ -18,6 +18,138 @@ public class ImportWorkflowDefinitionRequest extends TeaModel {
     /**
      * <p>The FlowSpec field information about the workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;version&quot;: &quot;1.1.0&quot;,
+     *     &quot;kind&quot;: &quot;CycleWorkflow&quot;,
+     *     &quot;spec&quot;: {
+     *         &quot;name&quot;: &quot;Asynchronous_Workflow_Creation_Test&quot;,
+     *         &quot;id&quot;: &quot;632647691239009XXXX&quot;,
+     *         &quot;type&quot;: &quot;CycleWorkflow&quot;,
+     *         &quot;workflows&quot;: [
+     *             {
+     *                 &quot;script&quot;: {
+     *                     &quot;path&quot;: &quot;XX/OpenAPI_Test/Workflow_Test/Asynchronous_Workflow_Creation_Test&quot;,
+     *                     &quot;runtime&quot;: {
+     *                         &quot;command&quot;: &quot;WORKFLOW&quot;
+     *                     }
+     *                 },
+     *                 &quot;id&quot;: &quot;632647691239009XXXX&quot;,
+     *                 &quot;trigger&quot;: {
+     *                     &quot;type&quot;: &quot;Scheduler&quot;,
+     *                     &quot;cron&quot;: &quot;00 03 00 * * ?&quot;,
+     *                     &quot;startTime&quot;: &quot;1970-01-01 00:00:00&quot;,
+     *                     &quot;endTime&quot;: &quot;9999-01-01 00:00:00&quot;,
+     *                     &quot;timezone&quot;: &quot;Asia/Shanghai&quot;,
+     *                     &quot;delaySeconds&quot;: 0
+     *                 },
+     *                 &quot;strategy&quot;: {
+     *                     &quot;timeout&quot;: 0,
+     *                     &quot;instanceMode&quot;: &quot;T+1&quot;,
+     *                     &quot;rerunMode&quot;: &quot;Allowed&quot;,
+     *                     &quot;rerunTimes&quot;: 3,
+     *                     &quot;rerunInterval&quot;: 180000,
+     *                     &quot;failureStrategy&quot;: &quot;Break&quot;
+     *                 },
+     *                 &quot;name&quot;: &quot;Asynchronous_Workflow_Creation_Test&quot;,
+     *                 &quot;inputs&quot;: {},
+     *                 &quot;outputs&quot;: {
+     *                     &quot;nodeOutputs&quot;: [
+     *                         {
+     *                             &quot;data&quot;: &quot;632647691239009XXXX&quot;,
+     *                             &quot;artifactType&quot;: &quot;NodeOutput&quot;,
+     *                             &quot;refTableName&quot;: &quot;Asynchronous_Workflow_Creation_Test&quot;
+     *                         }
+     *                     ]
+     *                 },
+     *                 &quot;nodes&quot;: [
+     *                     {
+     *                         &quot;recurrence&quot;: &quot;Normal&quot;,
+     *                         &quot;id&quot;: &quot;742981001612325XXXX&quot;,
+     *                         &quot;timeout&quot;: 0,
+     *                         &quot;instanceMode&quot;: &quot;T+1&quot;,
+     *                         &quot;rerunMode&quot;: &quot;Allowed&quot;,
+     *                         &quot;rerunTimes&quot;: 3,
+     *                         &quot;rerunInterval&quot;: 180000,
+     *                         &quot;script&quot;: {
+     *                             &quot;path&quot;: &quot;XX/OpenAPI_Test/Workflow_Test/Asynchronous_Workflow_Creation_Test/111&quot;,
+     *                             &quot;runtime&quot;: {
+     *                                 &quot;command&quot;: &quot;ODPS_SQL&quot;
+     *                             },
+     *                             &quot;content&quot;: &quot;select now();\n&quot;
+     *                         },
+     *                         &quot;trigger&quot;: {
+     *                             &quot;type&quot;: &quot;Scheduler&quot;,
+     *                             &quot;cron&quot;: &quot;00 24 00 * * ?&quot;,
+     *                             &quot;startTime&quot;: &quot;1970-01-01 00:00:00&quot;,
+     *                             &quot;endTime&quot;: &quot;9999-01-01 00:00:00&quot;,
+     *                             &quot;timezone&quot;: &quot;Asia/Shanghai&quot;,
+     *                             &quot;delaySeconds&quot;: 0
+     *                         },
+     *                         &quot;name&quot;: &quot;111&quot;,
+     *                         &quot;inputs&quot;: {},
+     *                         &quot;outputs&quot;: {
+     *                             &quot;nodeOutputs&quot;: [
+     *                                 {
+     *                                     &quot;data&quot;: &quot;742981001612325XXXX&quot;,
+     *                                     &quot;artifactType&quot;: &quot;NodeOutput&quot;,
+     *                                     &quot;refTableName&quot;: &quot;111&quot;
+     *                                 }
+     *                             ]
+     *                         }
+     *                     },
+     *                     {
+     *                         &quot;recurrence&quot;: &quot;Normal&quot;,
+     *                         &quot;id&quot;: &quot;595182137303408XXXX&quot;,
+     *                         &quot;timeout&quot;: 0,
+     *                         &quot;instanceMode&quot;: &quot;T+1&quot;,
+     *                         &quot;rerunMode&quot;: &quot;Allowed&quot;,
+     *                         &quot;rerunTimes&quot;: 3,
+     *                         &quot;rerunInterval&quot;: 180000,
+     *                         &quot;script&quot;: {
+     *                             &quot;path&quot;: &quot;XX/OpenAPI_Test/Workflow_Test/Asynchronous_Workflow_Creation_Test/222&quot;,
+     *                             &quot;runtime&quot;: {
+     *                                 &quot;command&quot;: &quot;ODPS_SQL&quot;
+     *                             },
+     *                             &quot;content&quot;: &quot;select now();\n select 1;&quot;
+     *                         },
+     *                         &quot;trigger&quot;: {
+     *                             &quot;type&quot;: &quot;Scheduler&quot;,
+     *                             &quot;cron&quot;: &quot;00 00 00 * * ?&quot;,
+     *                             &quot;startTime&quot;: &quot;1970-01-01 00:00:00&quot;,
+     *                             &quot;endTime&quot;: &quot;9999-01-01 00:00:00&quot;,
+     *                             &quot;timezone&quot;: &quot;Asia/Shanghai&quot;,
+     *                             &quot;delaySeconds&quot;: 0
+     *                         },
+     *                         &quot;name&quot;: &quot;222&quot;,
+     *                         &quot;inputs&quot;: {},
+     *                         &quot;outputs&quot;: {
+     *                             &quot;nodeOutputs&quot;: [
+     *                                 {
+     *                                     &quot;data&quot;: &quot;595182137303408XXXX&quot;,
+     *                                     &quot;artifactType&quot;: &quot;NodeOutput&quot;,
+     *                                     &quot;refTableName&quot;: &quot;222&quot;<br>                                }
+     *                             ]
+     *                         }
+     *                     }
+     *                 ],
+     *                 &quot;dependencies&quot;: [
+     *                     {
+     *                         &quot;nodeId&quot;: &quot;595182137303408XXXX&quot;,
+     *                         &quot;depends&quot;: [
+     *                             {
+     *                                 &quot;type&quot;: &quot;Normal&quot;,
+     *                                 &quot;output&quot;: &quot;742981001612325XXXX&quot;,
+     *                                 &quot;refTableName&quot;: &quot;111&quot;
+     *                             }
+     *                         ]
+     *                     }
+     *                 ]
+     *             }
+     *         ]
+     *     }
+     * }</p>
      */
     @NameInMap("Spec")
     public String spec;

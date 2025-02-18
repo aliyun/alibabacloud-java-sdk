@@ -41,6 +41,19 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
     }
 
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsCritical extends TeaModel {
+        /**
+         * <p>The threshold expression.</p>
+         * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+         * <ul>
+         * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
+         * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
+         * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+         * </ul>
+         * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$checkValue &gt; 0.01</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
@@ -103,6 +116,19 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
     }
 
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsExpected extends TeaModel {
+        /**
+         * <p>The threshold expression.</p>
+         * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+         * <ul>
+         * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
+         * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
+         * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+         * </ul>
+         * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$checkValue &gt; 0.01</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
@@ -165,6 +191,19 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
     }
 
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsWarned extends TeaModel {
+        /**
+         * <p>The threshold expression.</p>
+         * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+         * <ul>
+         * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
+         * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
+         * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+         * </ul>
+         * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$checkValue &gt; 0.01</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
@@ -592,6 +631,9 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
         /**
          * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The table cannot be empty.</p>
          */
         @NameInMap("Name")
         public String name;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteAdhocWorkflowInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
      */
@@ -12,6 +14,8 @@ public class ExecuteAdhocWorkflowInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The workflow instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */

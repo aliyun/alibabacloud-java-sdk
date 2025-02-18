@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityRuleTemplateResponseBody extends TeaModel {
     /**
+     * <p>The Code of the rule template.</p>
+     * 
      * <strong>example:</strong>
      * <p>UserDefined:3001</p>
      */

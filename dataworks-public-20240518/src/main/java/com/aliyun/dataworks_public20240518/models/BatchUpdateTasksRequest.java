@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchUpdateTasksRequest extends TeaModel {
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
      */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<BatchUpdateTasksRequestTasks> tasks;
 
@@ -37,6 +42,8 @@ public class BatchUpdateTasksRequest extends TeaModel {
 
     public static class BatchUpdateTasksRequestTasksDataSource extends TeaModel {
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps_test</p>
          */
@@ -60,6 +67,8 @@ public class BatchUpdateTasksRequest extends TeaModel {
 
     public static class BatchUpdateTasksRequestTasksRuntimeResource extends TeaModel {
         /**
+         * <p>The default number of compute units (CUs) configured for task running.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -67,6 +76,8 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public String cu;
 
         /**
+         * <p>The ID of the image configured for task running.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
          */
@@ -74,6 +85,8 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public String image;
 
         /**
+         * <p>The ID of the resource group for scheduling configured for task running.</p>
+         * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
          */
@@ -113,6 +126,7 @@ public class BatchUpdateTasksRequest extends TeaModel {
 
     public static class BatchUpdateTasksRequestTasksTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,6 +136,8 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -153,6 +169,8 @@ public class BatchUpdateTasksRequest extends TeaModel {
 
     public static class BatchUpdateTasksRequestTasksTrigger extends TeaModel {
         /**
+         * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
          */
@@ -160,6 +178,8 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public String cron;
 
         /**
+         * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>9999-01-01 00:00:00</p>
          */
@@ -167,6 +187,13 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
+         * <ul>
+         * <li>Pause</li>
+         * <li>Skip</li>
+         * <li>Normal</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -174,6 +201,8 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public String recurrence;
 
         /**
+         * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>
          */
@@ -181,6 +210,12 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The trigger type. Valid values:</p>
+         * <ul>
+         * <li>Scheduler: periodic scheduling</li>
+         * <li>Manual: manual scheduling</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
          */
@@ -235,10 +270,15 @@ public class BatchUpdateTasksRequest extends TeaModel {
     }
 
     public static class BatchUpdateTasksRequestTasks extends TeaModel {
+        /**
+         * <p>The information about the associated data source.</p>
+         */
         @NameInMap("DataSource")
         public BatchUpdateTasksRequestTasksDataSource dataSource;
 
         /**
+         * <p>The description of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -246,6 +286,12 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The environment of the workspace. Valid values:</p>
+         * <ul>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Prod</p>
          */
@@ -253,6 +299,7 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public String envType;
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,10 +308,18 @@ public class BatchUpdateTasksRequest extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL node</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The account ID of the task owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -272,6 +327,8 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public String owner;
 
         /**
+         * <p>The rerun interval. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -279,6 +336,13 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public Integer rerunInterval;
 
         /**
+         * <p>The rerun mode. Valid values:</p>
+         * <ul>
+         * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
+         * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
+         * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AllAllowed</p>
          */
@@ -286,25 +350,38 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public String rerunMode;
 
         /**
+         * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("RerunTimes")
         public Integer rerunTimes;
 
+        /**
+         * <p>The configurations of the runtime environment, such as the resource group information.</p>
+         */
         @NameInMap("RuntimeResource")
         public BatchUpdateTasksRequestTasksRuntimeResource runtimeResource;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<BatchUpdateTasksRequestTasksTags> tags;
 
         /**
+         * <p>The timeout period of task running. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */
         @NameInMap("Timeout")
         public Integer timeout;
 
+        /**
+         * <p>The trigger method.</p>
+         */
         @NameInMap("Trigger")
         public BatchUpdateTasksRequestTasksTrigger trigger;
 

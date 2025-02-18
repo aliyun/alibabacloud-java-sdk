@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
@@ -18,6 +20,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public GetResourceGroupResponseBodyResourceGroup resourceGroup;
 
     /**
+     * <p>Whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -55,6 +59,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
     public static class GetResourceGroupResponseBodyResourceGroupAliyunResourceTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>key</p>
          */
@@ -62,6 +68,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */
@@ -102,6 +110,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public Integer amount;
 
         /**
+         * <p>Specification details.</p>
+         * 
          * <strong>example:</strong>
          * <p>2CU</p>
          */
@@ -133,16 +143,23 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
     public static class GetResourceGroupResponseBodyResourceGroup extends TeaModel {
         /**
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aek2kqofrgXXXXX</p>
          */
         @NameInMap("AliyunResourceGroupId")
         public String aliyunResourceGroupId;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("AliyunResourceTags")
         public java.util.List<GetResourceGroupResponseBodyResourceGroupAliyunResourceTags> aliyunResourceTags;
 
         /**
+         * <p>The creation time, which is a 64-bit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1727055811000</p>
          */
@@ -150,6 +167,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the user who created the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>11075500042XXXXX</p>
          */
@@ -157,6 +176,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The default VPC ID bound to the common resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-m2et4f3oc8msfbccXXXXX</p>
          */
@@ -164,6 +185,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String defaultVpcId;
 
         /**
+         * <p>The default switch ID bound to the common resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-uf8usrhs7hjd9amsXXXXX</p>
          */
@@ -171,6 +194,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String defaultVswitchId;
 
         /**
+         * <p>The unique identifier of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
          */
@@ -178,6 +203,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The name of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>common_resource_group</p>
          */
@@ -185,6 +212,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the order instance of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>c442b330-3b10-4584-959e-736e4edXXXXX</p>
          */
@@ -192,6 +221,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String orderInstanceId;
 
         /**
+         * <p>The billing method of the resource group. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</p>
+         * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
          */
@@ -199,14 +230,16 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String paymentType;
 
         /**
+         * <p>The description of the resource group.</p>
+         * 
          * <strong>example:</strong>
-         * <p>创建用于普通任务的通用资源组</p>
+         * <p>Create a common resource group for common tasks</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The type the resource group. Valid values:</p>
+         * <p>The type of the resource group. Valid values:</p>
          * <ul>
          * <li>CommonV2: serverless resource group</li>
          * <li>ExclusiveDataIntegration: exclusive resource group for Data Integration</li>
@@ -232,13 +265,15 @@ public class GetResourceGroupResponseBody extends TeaModel {
          * <li>Normal: The resource group is running or in use.</li>
          * <li>Stop: The resource group is expired.</li>
          * <li>Deleted: The resource group is released or destroyed.</li>
-         * <li>Creating: The resource group is being started.</li>
-         * <li>CreateFailed: The resource group fails to be started.</li>
+         * <li>Creating: The resource group is being created.</li>
+         * <li>CreateFailed: The resource group fails to be created.</li>
          * <li>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</li>
          * <li>UpdateFailed: The resource group fails to be scaled out or upgraded.</li>
          * <li>Deleting: The resource group is being released or destroyed.</li>
          * <li>DeleteFailed: The resource group fails to be released or destroyed.</li>
          * <li>Timeout: The operations that are performed on the resource group time out.</li>
+         * <li>Freezed: The resource group is frozen.</li>
+         * <li>Starting: The resource group is being started.</li>
          * </ul>
          * 
          * <strong>example:</strong>

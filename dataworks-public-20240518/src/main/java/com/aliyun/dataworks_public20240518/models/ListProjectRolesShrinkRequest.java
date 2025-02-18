@@ -46,8 +46,7 @@ public class ListProjectRolesShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The type of the role in the DataWorks workspace.</p>
-     * <p>Valid values:</p>
+     * <p>The type of the role. Valid values:</p>
      * <ul>
      * <li>UserCustom: user-defined role</li>
      * <li>System: system role</li>

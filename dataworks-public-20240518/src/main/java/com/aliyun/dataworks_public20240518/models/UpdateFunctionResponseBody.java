@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFunctionResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. You can troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12123960-CB2C-5086-868E-C6C1D024XXXX</p>

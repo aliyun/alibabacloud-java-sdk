@@ -5,12 +5,18 @@ import com.aliyun.tea.*;
 
 public class UnTagDataAssetsShrinkRequest extends TeaModel {
     /**
+     * <p>The data asset IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DataAssetIds")
     public String dataAssetIdsShrink;
 
     /**
+     * <p>The type of the data asset. Valid values:</p>
+     * <ul>
+     * <li>ACS::DataWorks::Table</li>
+     * <li>ACS::DataWorks::Task</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +26,12 @@ public class UnTagDataAssetsShrinkRequest extends TeaModel {
     public String dataAssetType;
 
     /**
+     * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
+     * <ul>
+     * <li>Dev: development environment</li>
+     * <li>Prod: production environment</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */
@@ -27,6 +39,8 @@ public class UnTagDataAssetsShrinkRequest extends TeaModel {
     public String envType;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -34,6 +48,7 @@ public class UnTagDataAssetsShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The tags that you want to remove.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")

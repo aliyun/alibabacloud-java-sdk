@@ -52,6 +52,9 @@ public class ListProjectMembersResponseBody extends TeaModel {
 
         /**
          * <p>The name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Visitors</p>
          */
         @NameInMap("Name")
         public String name;

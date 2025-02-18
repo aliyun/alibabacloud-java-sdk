@@ -105,6 +105,12 @@ public class ListAlertRulesResponseBody extends TeaModel {
     }
 
     public static class ListAlertRulesResponseBodyPagingInfoAlertRulesTriggerConditionExtensionError extends TeaModel {
+        /**
+         * <p>Indicates whether an alert is triggered if a batch synchronization task is automatically rerun upon a failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AutoRerunAlertEnabled")
         public Boolean autoRerunAlertEnabled;
 
@@ -408,7 +414,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
          * <ul>
          * <li>Task: node</li>
          * <li>Baseline: baseline</li>
-         * <li>Projec: workspace</li>
+         * <li>Project: workspace</li>
          * <li>BizProcess: workflow</li>
          * </ul>
          * 

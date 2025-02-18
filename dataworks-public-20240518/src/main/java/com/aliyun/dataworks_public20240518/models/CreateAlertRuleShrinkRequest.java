@@ -31,7 +31,7 @@ public class CreateAlertRuleShrinkRequest extends TeaModel {
     public String notificationShrink;
 
     /**
-     * <p>The ID of the Alibaba Cloud account used by the creator of the rule.</p>
+     * <p>The ID of the Alibaba Cloud account used by the owner of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

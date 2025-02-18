@@ -14,6 +14,12 @@ public class DetachDataQualityRulesFromEvaluationTaskResponseBody extends TeaMod
     public String requestId;
 
     /**
+     * <p>Whether the call is successful. The values are as follows:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: the call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

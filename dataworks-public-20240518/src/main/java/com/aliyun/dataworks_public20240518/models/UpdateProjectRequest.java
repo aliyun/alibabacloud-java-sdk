@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateProjectRequest extends TeaModel {
     /**
      * <p>The description of the workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Financial analysis group project data development</p>
      */
     @NameInMap("Description")
     public String description;
@@ -39,11 +42,16 @@ public class UpdateProjectRequest extends TeaModel {
 
     /**
      * <p>The display name of the workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sora financial analysis Space</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>This parameter is used to determine the DataWorks workspaces used for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

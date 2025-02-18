@@ -192,8 +192,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariablesNode node;
 
         /**
-         * <p>The scope of the variable.</p>
-         * <p>Valid values:</p>
+         * <p>The scope of the variable. Valid values:</p>
          * <ul>
          * <li>NodeParameter</li>
          * <li>NodeContext</li>
@@ -208,8 +207,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The type of the variable.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the variable. Valid values:</p>
          * <ul>
          * <li>NoKvVariableExpression</li>
          * <li>Constant</li>
@@ -456,8 +454,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariablesNode node;
 
         /**
-         * <p>The scope of the variable.</p>
-         * <p>Valid values:</p>
+         * <p>The scope of the variable. Valid values:</p>
          * <ul>
          * <li>NodeParameter</li>
          * <li>NodeContext</li>
@@ -472,8 +469,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The type of the variable.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the variable. Valid values:</p>
          * <ul>
          * <li>NoKvVariableExpression</li>
          * <li>Constant</li>
@@ -718,7 +714,11 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesStrategy extends TeaModel {
         /**
-         * <p>The instance generation mode.</p>
+         * <p>The instance generation mode. Valid values:</p>
+         * <ul>
+         * <li>T+1</li>
+         * <li>Immediately</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>T+1</p>
@@ -736,7 +736,12 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public Integer rerunInterval;
 
         /**
-         * <p>The rerun mode.</p>
+         * <p>The rerun mode. Valid values:</p>
+         * <ul>
+         * <li>Allowed</li>
+         * <li>Denied</li>
+         * <li>FailureAllowed</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Allowed</p>
@@ -820,7 +825,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -985,6 +990,9 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -1015,6 +1023,9 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -1047,9 +1058,9 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
          * <p>The scheduling type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Normal: The node is scheduled as expected.</li>
-         * <li>Pause: The node is paused, and the running of its descendant nodes is blocked.</li>
-         * <li>Skip: The node is dry run. The system does not actually run the node but directly prompts that the node is successfully run. The running duration of the node is 0 seconds. In addition, the node does not occupy resources or block the running of its descendant nodes.</li>
+         * <li>Normal: Nodes are scheduled as expected.</li>
+         * <li>Pause: Nodes are paused, and the running of their descendant nodes is blocked.</li>
+         * <li>Skip: Nodes are dry run. The system does not actually run the nodes but directly prompts that the nodes are successfully run. The running duration of the nodes is 0 seconds. In addition, the nodes do not occupy resources or block the running of their descendant nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>

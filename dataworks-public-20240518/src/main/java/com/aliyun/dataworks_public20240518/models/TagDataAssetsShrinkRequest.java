@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TagDataAssetsShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable lineage-based automatic backtracking.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,12 +14,18 @@ public class TagDataAssetsShrinkRequest extends TeaModel {
     public Boolean autoTraceEnabled;
 
     /**
+     * <p>The data asset IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DataAssetIds")
     public String dataAssetIdsShrink;
 
     /**
+     * <p>The type of the data asset. Valid values:</p>
+     * <ul>
+     * <li>ACS::DataWorks::Table</li>
+     * <li>ACS::DataWorks::Task</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +35,12 @@ public class TagDataAssetsShrinkRequest extends TeaModel {
     public String dataAssetType;
 
     /**
+     * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
+     * <ul>
+     * <li>Dev: development environment</li>
+     * <li>Prod: production environment</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */
@@ -34,6 +48,8 @@ public class TagDataAssetsShrinkRequest extends TeaModel {
     public String envType;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
@@ -41,6 +57,7 @@ public class TagDataAssetsShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The tags that you want to add to data assets.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")

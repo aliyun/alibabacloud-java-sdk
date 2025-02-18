@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRouteRequest extends TeaModel {
     /**
+     * <p>The CIDR blocks of the destination-based route.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateRouteRequest extends TeaModel {
     public String destinationCidr;
 
     /**
+     * <p>The network ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

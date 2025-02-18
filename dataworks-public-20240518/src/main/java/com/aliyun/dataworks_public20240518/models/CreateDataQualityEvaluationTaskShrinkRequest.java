@@ -21,6 +21,9 @@ public class CreateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the monitor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OpenAPI create a data quality monitoring test</p>
      */
     @NameInMap("Description")
     public String description;
@@ -34,6 +37,9 @@ public class CreateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     /**
      * <p>The name of the monitor.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OpenAPI create a data quality monitoring test</p>
      */
     @NameInMap("Name")
     public String name;

@@ -23,6 +23,8 @@ public class ListDataQualityResultsRequest extends TeaModel {
     public String bizdateTo;
 
     /**
+     * <p>The earliest time when data quality verification results are generated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
      */
@@ -30,6 +32,8 @@ public class ListDataQualityResultsRequest extends TeaModel {
     public Long createTimeFrom;
 
     /**
+     * <p>The latest generation time of data quality verification results.</p>
+     * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
      */
@@ -37,6 +41,8 @@ public class ListDataQualityResultsRequest extends TeaModel {
     public Long createTimeTo;
 
     /**
+     * <p>The ID of the data quality verification task.</p>
+     * 
      * <strong>example:</strong>
      * <p>200001</p>
      */
@@ -44,6 +50,8 @@ public class ListDataQualityResultsRequest extends TeaModel {
     public Long dataQualityEvaluationTaskId;
 
     /**
+     * <p>The ID of the data quality verification task instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>10001</p>
      */
@@ -51,6 +59,8 @@ public class ListDataQualityResultsRequest extends TeaModel {
     public Long dataQualityEvaluationTaskInstanceId;
 
     /**
+     * <p>The ID of the data quality rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>100001</p>
      */

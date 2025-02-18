@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateResourceGroupResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The order information for creating a serverless resource group.</p>
+     */
     @NameInMap("ResourceGroupOrder")
     public CreateResourceGroupResponseBodyResourceGroupOrder resourceGroupOrder;
 
     /**
+     * <p>Whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class CreateResourceGroupResponseBody extends TeaModel {
 
     public static class CreateResourceGroupResponseBodyResourceGroupOrder extends TeaModel {
         /**
+         * <p>The unique identifier of the serverless resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
          */
@@ -59,6 +68,8 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The ID of the order to create a serverless resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>2391982058XXXXX</p>
          */
@@ -66,6 +77,8 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         public Long orderId;
 
         /**
+         * <p>The ID of the order instance that created the serverless resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>c442b330-3b10-4584-959e-736e4edXXXXX</p>
          */

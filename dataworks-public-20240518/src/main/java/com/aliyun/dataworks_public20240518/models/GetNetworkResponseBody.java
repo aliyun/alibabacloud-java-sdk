@@ -11,6 +11,8 @@ public class GetNetworkResponseBody extends TeaModel {
     public GetNetworkResponseBodyNetwork network;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
@@ -57,6 +59,8 @@ public class GetNetworkResponseBody extends TeaModel {
 
     public static class GetNetworkResponseBodyNetwork extends TeaModel {
         /**
+         * <p>The time when the network resource was created. The value is a 64-bit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1727055811000</p>
          */
@@ -64,6 +68,8 @@ public class GetNetworkResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the user who creates the network resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>11075500042XXXXX</p>
          */
@@ -71,6 +77,8 @@ public class GetNetworkResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The network ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -78,6 +86,8 @@ public class GetNetworkResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The ID of the serverless resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
          */
@@ -85,6 +95,8 @@ public class GetNetworkResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-2ze13vamugr7jenXXXXX</p>
          */
@@ -108,6 +120,8 @@ public class GetNetworkResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-m2et4f3oc8msfbccXXXXX</p>
          */
@@ -115,6 +129,8 @@ public class GetNetworkResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The VSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-uf8usrhs7hjd9amsXXXXX</p>
          */

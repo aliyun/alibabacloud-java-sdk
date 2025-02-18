@@ -17,6 +17,33 @@ public class CreateFunctionRequest extends TeaModel {
     /**
      * <p>The FlowSpec field information about the UDF. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;version&quot;: &quot;1.1.0&quot;,
+     *   &quot;kind&quot;: &quot;Function&quot;,
+     *   &quot;spec&quot;: {
+     *     &quot;functions&quot;: [
+     *       {
+     *         &quot;name&quot;: &quot;function name&quot;,
+     *         &quot;script&quot;: {
+     *           &quot;content&quot;: &quot;{\&quot;name\&quot;: \&quot;function name\&quot;, \&quot;datasource\&quot;: {\&quot;type\&quot;: \&quot;ODPS\&quot;, \&quot;name\&quot;: \&quot;ODPS_first\&quot;}, \&quot;runtimeResource\&quot;: {\&quot;resourceGroup\&quot;: \&quot;s_res_group_xx_xxxx\&quot;}}&quot;,
+     *           &quot;path&quot;: &quot;XXX/OpenAPI/function/function name&quot;,
+     *           &quot;runtime&quot;: {
+     *             &quot;command&quot;: &quot;ODPS_FUNCTION&quot;
+     *           }
+     *         },
+     *         &quot;datasource&quot;: {
+     *           &quot;name&quot;: &quot;ODPS_first&quot;,
+     *           &quot;type&quot;: &quot;ODPS&quot;
+     *         },
+     *         &quot;runtimeResource&quot;: {
+     *           &quot;resourceGroup&quot;: &quot;S_res_group_XXXX_XXXX&quot;
+     *         }
+     *       }
+     *     ]
+     *   }
+     * }</p>
      */
     @NameInMap("Spec")
     public String spec;

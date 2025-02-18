@@ -14,6 +14,12 @@ public class AttachDataQualityRulesToEvaluationTaskResponseBody extends TeaModel
     public String requestId;
 
     /**
+     * <p>The value of the association is as follows:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: the call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
