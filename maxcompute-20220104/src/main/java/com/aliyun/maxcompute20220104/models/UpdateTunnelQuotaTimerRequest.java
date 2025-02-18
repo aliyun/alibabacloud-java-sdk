@@ -4,8 +4,14 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class UpdateTunnelQuotaTimerRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public java.util.List<UpdateTunnelQuotaTimerRequestBody> body;
+
+    @NameInMap("timezone")
+    public String timezone;
 
     public static UpdateTunnelQuotaTimerRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTunnelQuotaTimerRequest self = new UpdateTunnelQuotaTimerRequest();
@@ -20,8 +26,18 @@ public class UpdateTunnelQuotaTimerRequest extends TeaModel {
         return this.body;
     }
 
+    public UpdateTunnelQuotaTimerRequest setTimezone(String timezone) {
+        this.timezone = timezone;
+        return this;
+    }
+    public String getTimezone() {
+        return this.timezone;
+    }
+
     public static class UpdateTunnelQuotaTimerRequestBodyTunnelQuotaParameter extends TeaModel {
         /**
+         * <p>The number of elastically reserved slots.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -29,6 +45,8 @@ public class UpdateTunnelQuotaTimerRequest extends TeaModel {
         public Long elasticReservedSlotNum;
 
         /**
+         * <p>The number of reserved slots.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -60,6 +78,8 @@ public class UpdateTunnelQuotaTimerRequest extends TeaModel {
 
     public static class UpdateTunnelQuotaTimerRequestBody extends TeaModel {
         /**
+         * <p>The start time of the time-specific configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00</p>
          */
@@ -67,6 +87,8 @@ public class UpdateTunnelQuotaTimerRequest extends TeaModel {
         public String beginTime;
 
         /**
+         * <p>The end time of the time-specific configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>08:00</p>
          */
@@ -74,12 +96,8 @@ public class UpdateTunnelQuotaTimerRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <strong>example:</strong>
-         * <p>Asia/Shanghai</p>
+         * <p>The parameters for the time-specific configuration.</p>
          */
-        @NameInMap("timezone")
-        public String timezone;
-
         @NameInMap("tunnelQuotaParameter")
         public UpdateTunnelQuotaTimerRequestBodyTunnelQuotaParameter tunnelQuotaParameter;
 
@@ -102,14 +120,6 @@ public class UpdateTunnelQuotaTimerRequest extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
-        }
-
-        public UpdateTunnelQuotaTimerRequestBody setTimezone(String timezone) {
-            this.timezone = timezone;
-            return this;
-        }
-        public String getTimezone() {
-            return this.timezone;
         }
 
         public UpdateTunnelQuotaTimerRequestBody setTunnelQuotaParameter(UpdateTunnelQuotaTimerRequestBodyTunnelQuotaParameter tunnelQuotaParameter) {

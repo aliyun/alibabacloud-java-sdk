@@ -3,7 +3,7 @@ package com.aliyun.maxcompute20220104.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateTunnelQuotaTimerResponseBody extends TeaModel {
+public class UpdateComputeQuotaPlanResponseBody extends TeaModel {
     /**
      * <p>The data returned.</p>
      * 
@@ -17,7 +17,7 @@ public class UpdateTunnelQuotaTimerResponseBody extends TeaModel {
      * <p>The error code.</p>
      * 
      * <strong>example:</strong>
-     * <p>OBJECT_NOT_EXIST</p>
+     * <p>QUOTA_PLAN_NOT_FOUND</p>
      */
     @NameInMap("errorCode")
     public String errorCode;
@@ -26,7 +26,7 @@ public class UpdateTunnelQuotaTimerResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>This object does not exist.</p>
+     * <p>plan \&quot;***\&quot; does not exist</p>
      */
     @NameInMap("errorMsg")
     public String errorMsg;
@@ -51,17 +51,17 @@ public class UpdateTunnelQuotaTimerResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>0bc12e4316675560945192024e1044</p>
+     * <p>0be3e0aa16667684362147582e038f</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
-    public static UpdateTunnelQuotaTimerResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateTunnelQuotaTimerResponseBody self = new UpdateTunnelQuotaTimerResponseBody();
+    public static UpdateComputeQuotaPlanResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateComputeQuotaPlanResponseBody self = new UpdateComputeQuotaPlanResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateTunnelQuotaTimerResponseBody setData(String data) {
+    public UpdateComputeQuotaPlanResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -69,7 +69,7 @@ public class UpdateTunnelQuotaTimerResponseBody extends TeaModel {
         return this.data;
     }
 
-    public UpdateTunnelQuotaTimerResponseBody setErrorCode(String errorCode) {
+    public UpdateComputeQuotaPlanResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -77,7 +77,7 @@ public class UpdateTunnelQuotaTimerResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public UpdateTunnelQuotaTimerResponseBody setErrorMsg(String errorMsg) {
+    public UpdateComputeQuotaPlanResponseBody setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
         return this;
     }
@@ -85,7 +85,7 @@ public class UpdateTunnelQuotaTimerResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public UpdateTunnelQuotaTimerResponseBody setHttpCode(Integer httpCode) {
+    public UpdateComputeQuotaPlanResponseBody setHttpCode(Integer httpCode) {
         this.httpCode = httpCode;
         return this;
     }
@@ -93,7 +93,7 @@ public class UpdateTunnelQuotaTimerResponseBody extends TeaModel {
         return this.httpCode;
     }
 
-    public UpdateTunnelQuotaTimerResponseBody setRequestId(String requestId) {
+    public UpdateComputeQuotaPlanResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

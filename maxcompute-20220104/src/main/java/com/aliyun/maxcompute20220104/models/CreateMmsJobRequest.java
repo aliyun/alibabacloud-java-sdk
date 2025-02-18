@@ -16,6 +16,9 @@ public class CreateMmsJobRequest extends TeaModel {
     @NameInMap("enableVerification")
     public Boolean enableVerification;
 
+    @NameInMap("eta")
+    public String eta;
+
     @NameInMap("increment")
     public Boolean increment;
 
@@ -99,6 +102,14 @@ public class CreateMmsJobRequest extends TeaModel {
     }
     public Boolean getEnableVerification() {
         return this.enableVerification;
+    }
+
+    public CreateMmsJobRequest setEta(String eta) {
+        this.eta = eta;
+        return this;
+    }
+    public String getEta() {
+        return this.eta;
     }
 
     public CreateMmsJobRequest setIncrement(Boolean increment) {

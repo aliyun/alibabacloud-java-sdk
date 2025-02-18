@@ -4,10 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListStoragePartitionsInfoResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public ListStoragePartitionsInfoResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OBJECT_NOT_EXIST</p>
      */
@@ -15,6 +20,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>This object does not exist.</p>
      */
@@ -22,6 +29,15 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li>1xx: informational response. The request is received and is being processed.</li>
+     * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
+     * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
+     * <li>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</li>
+     * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +45,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0be3e0bd16661643917136451ebf55</p>
      */
@@ -82,6 +100,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
 
     public static class ListStoragePartitionsInfoResponseBodyDataStoragePartitionInfoList extends TeaModel {
         /**
+         * <p>The number of files.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -89,6 +109,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public Long fileCount;
 
         /**
+         * <p>The storage size.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -96,6 +118,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public Double fileSize;
 
         /**
+         * <p>The unit of the storage size.</p>
+         * 
          * <strong>example:</strong>
          * <p>GB</p>
          */
@@ -103,6 +127,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public String fileSizeUnit;
 
         /**
+         * <p>Indicates whether the table is a partitioned table. This operation returns the partition information. You do not need to take note of this parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -110,6 +136,11 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public Boolean isPartitioned;
 
         /**
+         * <p>The time when the partition data was last accessed.</p>
+         * <blockquote>
+         * <p> The data collection method is upgraded from July 2023. If the data is not accessed after the upgrade or is accessed by using ALGO jobs or the direct read method of Hologres, the last access time cannot be collected.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1694589365</p>
          */
@@ -117,6 +148,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public Long lastAccessTime;
 
         /**
+         * <p>The partition name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20241201</p>
          */
@@ -124,6 +157,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public String partition;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps_project</p>
          */
@@ -131,6 +166,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The change rate of the total storage usage compared with that of the recent {$recentDays} days. No value is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>1%</p>
          */
@@ -138,6 +175,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public Double rate;
 
         /**
+         * <p>The schema name.</p>
+         * 
          * <strong>example:</strong>
          * <p>schema</p>
          */
@@ -145,6 +184,13 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public String schemaName;
 
         /**
+         * <p>The storage type.</p>
+         * <ul>
+         * <li>standard</li>
+         * <li>lowfrequency</li>
+         * <li>longterm</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>standard</p>
          */
@@ -152,6 +198,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public String storageType;
 
         /**
+         * <p>The table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>bank_data</p>
          */
@@ -159,6 +207,22 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public String tableName;
 
         /**
+         * <p>The access frequency.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Access behaviors include:</p>
+         * </li>
+         * <li><p>The table is used as the input table of an SQL task.</p>
+         * </li>
+         * <li><p>The table is downloaded by Tunnel.</p>
+         * </li>
+         * <li><p>The table is read by calling the Storage API. The partition granularity of the partitioned table is not available. Each time an access operation is performed, the access frequency is incremented by 1.</p>
+         * </li>
+         * <li><p>The data collection method is upgraded from July 2023. If the data is not accessed after the upgrade or is accessed by using ALGO jobs or the direct read method of Hologres, the access frequency cannot be collected.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -166,6 +230,11 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public Long totalFrequency;
 
         /**
+         * <p>The total amount of accessed data.</p>
+         * <blockquote>
+         * <p> The amount of data that is read by all access behaviors.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -173,6 +242,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public Double totalInputAmount;
 
         /**
+         * <p>The unit of the total amount of accessed data.</p>
+         * 
          * <strong>example:</strong>
          * <p>GB</p>
          */
@@ -180,6 +251,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public String totalInputAmountUnit;
 
         /**
+         * <p>The type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PARTITION</p>
          */
@@ -315,6 +388,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
 
     public static class ListStoragePartitionsInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The date on which the statistics are collected.</p>
+         * 
          * <strong>example:</strong>
          * <p>20241205</p>
          */
@@ -322,6 +397,8 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public String date;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -329,16 +406,23 @@ public class ListStoragePartitionsInfoResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("pageSize")
         public Long pageSize;
 
+        /**
+         * <p>The partition storage information.</p>
+         */
         @NameInMap("storagePartitionInfoList")
         public java.util.List<ListStoragePartitionsInfoResponseBodyDataStoragePartitionInfoList> storagePartitionInfoList;
 
         /**
+         * <p>The total number of returned entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>57</p>
          */
