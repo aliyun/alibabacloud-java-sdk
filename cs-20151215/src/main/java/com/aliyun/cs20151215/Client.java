@@ -6223,7 +6223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can add labels in key-value pairs to clusters. This allows cluster developers or O\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</p>
+     * <p>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</p>
      * 
      * @param request ModifyClusterTagsRequest
      * @param headers map
@@ -6257,7 +6257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can add labels in key-value pairs to clusters. This allows cluster developers or O\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</p>
+     * <p>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</p>
      * 
      * @param request ModifyClusterTagsRequest
      * @return ModifyClusterTagsResponse
@@ -6285,6 +6285,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyNodePoolNodeConfigResponse modifyNodePoolNodeConfigWithOptions(String ClusterId, String NodepoolId, ModifyNodePoolNodeConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.containerdConfig)) {
+            body.put("containerd_config", request.containerdConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.kubeletConfig)) {
             body.put("kubelet_config", request.kubeletConfig);
         }
@@ -7463,6 +7467,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>启用告警</p>
+     * 
      * @param request StartAlertRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7503,6 +7510,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>启用告警</p>
+     * 
      * @param request StartAlertRequest
      * @return StartAlertResponse
      */

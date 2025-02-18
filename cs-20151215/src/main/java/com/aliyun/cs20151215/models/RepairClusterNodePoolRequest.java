@@ -11,6 +11,7 @@ public class RepairClusterNodePoolRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("auto_restart")
+    @Deprecated
     public Boolean autoRestart;
 
     /**
@@ -30,6 +31,7 @@ public class RepairClusterNodePoolRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public RepairClusterNodePoolRequest setAutoRestart(Boolean autoRestart) {
         this.autoRestart = autoRestart;
         return this;

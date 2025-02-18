@@ -4,8 +4,11 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyNodePoolNodeConfigRequest extends TeaModel {
+    @NameInMap("containerd_config")
+    public ContainerdConfig containerdConfig;
+
     /**
-     * <p>The kubelet configuration.</p>
+     * <p>The parameters of the kubelet.</p>
      */
     @NameInMap("kubelet_config")
     public KubeletConfig kubeletConfig;
@@ -17,7 +20,7 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     public ModifyNodePoolNodeConfigRequestOsConfig osConfig;
 
     /**
-     * <p>The rotation configuration.</p>
+     * <p>The rolling policy configuration.</p>
      */
     @NameInMap("rolling_policy")
     public ModifyNodePoolNodeConfigRequestRollingPolicy rollingPolicy;
@@ -25,6 +28,14 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     public static ModifyNodePoolNodeConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNodePoolNodeConfigRequest self = new ModifyNodePoolNodeConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyNodePoolNodeConfigRequest setContainerdConfig(ContainerdConfig containerdConfig) {
+        this.containerdConfig = containerdConfig;
+        return this;
+    }
+    public ContainerdConfig getContainerdConfig() {
+        return this.containerdConfig;
     }
 
     public ModifyNodePoolNodeConfigRequest setKubeletConfig(KubeletConfig kubeletConfig) {
