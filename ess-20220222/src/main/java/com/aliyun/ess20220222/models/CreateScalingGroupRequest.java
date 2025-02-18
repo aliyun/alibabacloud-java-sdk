@@ -986,6 +986,9 @@ public class CreateScalingGroupRequest extends TeaModel {
         @NameInMap("OnDemandPercentageAboveBaseCapacity")
         public Integer onDemandPercentageAboveBaseCapacity;
 
+        @NameInMap("PriceComparisonMode")
+        public String priceComparisonMode;
+
         /**
          * <p>Specifies whether to replace pay-as-you-go instances with preemptible instances. If you specify <code>CompensateWithOnDemand</code>, it may result in a higher percentage of pay-as-you-go instances compared to the value of <code>OnDemandPercentageAboveBaseCapacity</code>. In this scenario, Auto Scaling will try to deploy preemptible instances to replace the surplus pay-as-you-go instances. When <code>CompensateWithOnDemand</code> is specified, Auto Scaling creates pay-as-you-go instances if there are not enough preemptible instance types. To avoid keeping these pay-as-you-go ECS instances for long periods, Auto Scaling tries to replace them with preemptible instances as soon as enough of preemptible instance types become available. Valid values:</p>
          * <ul>
@@ -1027,6 +1030,14 @@ public class CreateScalingGroupRequest extends TeaModel {
         }
         public Integer getOnDemandPercentageAboveBaseCapacity() {
             return this.onDemandPercentageAboveBaseCapacity;
+        }
+
+        public CreateScalingGroupRequestCapacityOptions setPriceComparisonMode(String priceComparisonMode) {
+            this.priceComparisonMode = priceComparisonMode;
+            return this;
+        }
+        public String getPriceComparisonMode() {
+            return this.priceComparisonMode;
         }
 
         public CreateScalingGroupRequestCapacityOptions setSpotAutoReplaceOnDemand(Boolean spotAutoReplaceOnDemand) {

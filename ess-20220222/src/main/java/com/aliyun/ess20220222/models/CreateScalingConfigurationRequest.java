@@ -1277,14 +1277,23 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         /**
          * <p>The size of the system disk. Unit: GiB.</p>
          * <ul>
-         * <li>If you set SystemDisk.Category cloud: 20 to 500.</li>
-         * <li>If you set SystemDisk.Category to cloud_efficiency: 20 to 500.</li>
-         * <li>If you set SystemDisk.Category to cloud_ssd: 20 to 500.</li>
-         * <li>If you set SystemDisk.Category to cloud_essd: 20 to 500.</li>
-         * <li>If you set SystemDisk.Category to cloud_essd: 20 to 500.</li>
+         * <li><p>Basic disk: 20 to 500.</p>
+         * </li>
+         * <li><p>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.</p>
+         * <ul>
+         * <li>PL0 ESSD: 1 to 2048.</li>
+         * <li>PL1 ESSD: 20 to 2048.</li>
+         * <li>PL2 ESSD: 461 to 2048.</li>
+         * <li>PL3 ESSD: 1261 to 2048.</li>
          * </ul>
-         * <p>The value of SystemDisk.Size must be greater than or equal to the value of max{20, ImageSize}.</p>
-         * <p>Default value: 40 or the size of the image, whichever is greater.</p>
+         * </li>
+         * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 2048.</p>
+         * </li>
+         * <li><p>Other disk categories: 20 to 2048.</p>
+         * </li>
+         * </ul>
+         * <p>The value of this parameter must be at least 1 and greater than or equal to the image size.</p>
+         * <p>Default value: 40 or the size of the image, whichever is larger.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

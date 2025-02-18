@@ -72,9 +72,19 @@ public class CreateScalingRuleRequest extends TeaModel {
     @NameInMap("EstimatedInstanceWarmup")
     public Integer estimatedInstanceWarmup;
 
+    /**
+     * <p>The Hybrid Cloud Monitoring metrics.</p>
+     */
     @NameInMap("HybridMetrics")
     public java.util.List<CreateScalingRuleRequestHybridMetrics> hybridMetrics;
 
+    /**
+     * <p>The ID of the Hybrid Cloud Monitoring namespace.</p>
+     * <p>For information about how to manage Hybrid Cloud Monitoring namespaces, see <a href="https://help.aliyun.com/document_detail/217606.html">Manage namespaces</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun-test</p>
+     */
     @NameInMap("HybridMonitorNamespace")
     public String hybridMonitorNamespace;
 
@@ -115,6 +125,17 @@ public class CreateScalingRuleRequest extends TeaModel {
     @NameInMap("MetricName")
     public String metricName;
 
+    /**
+     * <p>The metric type. Valid values:</p>
+     * <ul>
+     * <li>system: system metrics of CloudMonitor.</li>
+     * <li>custom: custom metrics that are reported to CloudMonitor.</li>
+     * <li>hybrid: metrics of Hybrid Cloud Monitoring.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>system</p>
+     */
     @NameInMap("MetricType")
     public String metricType;
 
@@ -530,9 +551,21 @@ public class CreateScalingRuleRequest extends TeaModel {
     }
 
     public static class CreateScalingRuleRequestHybridMetricsDimensions extends TeaModel {
+        /**
+         * <p>The key of the metric dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>queue</p>
+         */
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
+        /**
+         * <p>The value of the metric dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testQueue</p>
+         */
         @NameInMap("DimensionValue")
         public String dimensionValue;
 
@@ -560,18 +593,51 @@ public class CreateScalingRuleRequest extends TeaModel {
     }
 
     public static class CreateScalingRuleRequestHybridMetrics extends TeaModel {
+        /**
+         * <p>The metric dimensions. You can use this parameter to specify the monitored resources.</p>
+         */
         @NameInMap("Dimensions")
         public java.util.List<CreateScalingRuleRequestHybridMetricsDimensions> dimensions;
 
+        /**
+         * <p>The metric expression that consists of multiple Hybrid Cloud Monitoring metrics. It calculates a result used to trigger scaling events.</p>
+         * <p>The expression must be written in Reverse Polish Notation (RPN) format and supports only the following operators: <code>+, -, *, /</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(a+b)/2</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <p>The reference ID of the metric in the metric expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the Hybrid Cloud Monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunSmq_NumberOfMessagesVisible</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The statistical method of the metric value. Valid values:</p>
+         * <ul>
+         * <li>Average: calculates the average value of all metric values within a specified interval.</li>
+         * <li>Minimum: calculates the minimum value of all metric values within a specified interval.</li>
+         * <li>Maximum: calculates the maximum value of all metric values within a specified interval.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
+         */
         @NameInMap("Statistic")
         public String statistic;
 

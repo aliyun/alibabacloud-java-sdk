@@ -212,6 +212,20 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
+        /**
+         * <p>Indicates whether instances that match the desired scaling configuration are skipped.</p>
+         * <blockquote>
+         * <p> The system determines the match based on the ID of the desired scaling configuration rather than individual configuration items.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: Instances that match the desired scaling configuration are skipped. When you initiate an instance refresh task, the system checks the configurations of all instances. The refresh operation is skipped for instances created based on the desired scaling configuration.</li>
+         * <li>false: Instances that match the desired scaling configuration are not skipped. When an instance refresh task is initiated, all instances in the scaling group at the time of initiation are refreshed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SkipMatching")
         public Boolean skipMatching;
 
