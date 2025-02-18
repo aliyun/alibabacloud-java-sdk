@@ -75,6 +75,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataAudioResultAudioSummarys extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The voice label.</p>
          * 
@@ -98,6 +101,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public VideoModerationResultResponseBodyDataAudioResultAudioSummarys setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public VideoModerationResultResponseBodyDataAudioResultAudioSummarys setLabel(String label) {
             this.label = label;
             return this;
@@ -117,6 +128,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataAudioResultSliceDetails extends TeaModel {
+        @NameInMap("Descriptions")
+        public String descriptions;
+
         /**
          * <p>The end time of the text after voice-to-text conversion. Unit: seconds.</p>
          * 
@@ -228,6 +242,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public static VideoModerationResultResponseBodyDataAudioResultSliceDetails build(java.util.Map<String, ?> map) throws Exception {
             VideoModerationResultResponseBodyDataAudioResultSliceDetails self = new VideoModerationResultResponseBodyDataAudioResultSliceDetails();
             return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetails setDescriptions(String descriptions) {
+            this.descriptions = descriptions;
+            return this;
+        }
+        public String getDescriptions() {
+            return this.descriptions;
         }
 
         public VideoModerationResultResponseBodyDataAudioResultSliceDetails setEndTime(Long endTime) {

@@ -75,6 +75,9 @@ public class VoiceModerationResultResponseBody extends TeaModel {
     }
 
     public static class VoiceModerationResultResponseBodyDataSliceDetails extends TeaModel {
+        @NameInMap("Descriptions")
+        public String descriptions;
+
         /**
          * <p>The end time of the audio segment in seconds.</p>
          * 
@@ -195,6 +198,14 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         public static VoiceModerationResultResponseBodyDataSliceDetails build(java.util.Map<String, ?> map) throws Exception {
             VoiceModerationResultResponseBodyDataSliceDetails self = new VoiceModerationResultResponseBodyDataSliceDetails();
             return TeaModel.build(map, self);
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetails setDescriptions(String descriptions) {
+            this.descriptions = descriptions;
+            return this;
+        }
+        public String getDescriptions() {
+            return this.descriptions;
         }
 
         public VoiceModerationResultResponseBodyDataSliceDetails setEndTime(Long endTime) {
