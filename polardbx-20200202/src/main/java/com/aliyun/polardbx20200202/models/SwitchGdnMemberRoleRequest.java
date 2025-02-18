@@ -28,6 +28,9 @@ public class SwitchGdnMemberRoleRequest extends TeaModel {
     @NameInMap("SwitchMode")
     public String switchMode;
 
+    @NameInMap("TaskTimeout")
+    public Long taskTimeout;
+
     public static SwitchGdnMemberRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         SwitchGdnMemberRoleRequest self = new SwitchGdnMemberRoleRequest();
         return TeaModel.build(map, self);
@@ -55,6 +58,14 @@ public class SwitchGdnMemberRoleRequest extends TeaModel {
     }
     public String getSwitchMode() {
         return this.switchMode;
+    }
+
+    public SwitchGdnMemberRoleRequest setTaskTimeout(Long taskTimeout) {
+        this.taskTimeout = taskTimeout;
+        return this;
+    }
+    public Long getTaskTimeout() {
+        return this.taskTimeout;
     }
 
 }
