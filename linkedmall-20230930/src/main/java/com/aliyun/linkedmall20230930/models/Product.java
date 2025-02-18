@@ -55,6 +55,9 @@ public class Product extends TeaModel {
     @NameInMap("images")
     public java.util.List<String> images;
 
+    @NameInMap("inGroup")
+    public Boolean inGroup;
+
     @NameInMap("limitRules")
     public java.util.List<LimitRule> limitRules;
 
@@ -226,6 +229,14 @@ public class Product extends TeaModel {
     }
     public java.util.List<String> getImages() {
         return this.images;
+    }
+
+    public Product setInGroup(Boolean inGroup) {
+        this.inGroup = inGroup;
+        return this;
+    }
+    public Boolean getInGroup() {
+        return this.inGroup;
     }
 
     public Product setLimitRules(java.util.List<LimitRule> limitRules) {
