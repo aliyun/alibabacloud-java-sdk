@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class StartAlertRequest extends TeaModel {
     /**
      * <p>The name of the alert rule set to be enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sample</p>
      */
     @NameInMap("alert_rule_group_name")
     public String alertRuleGroupName;
 
     /**
      * <p>The name of the alert rule to be enabled. If you do not specify an alert rule name, the alert rule set is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sample</p>
      */
     @NameInMap("alert_rule_name")
     public String alertRuleName;
