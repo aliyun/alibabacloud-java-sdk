@@ -41,7 +41,6 @@ public class ModifyMasterSpecRequest extends TeaModel {
      * <blockquote>
      * <p> You are charged for coordinator node resources of more than 8 compute units (CUs).</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>8 CU</p>
