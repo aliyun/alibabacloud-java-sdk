@@ -4,29 +4,45 @@ package com.aliyun.umeng_apm20220214.models;
 import com.aliyun.tea.*;
 
 public class GetNativePageTrendRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1.0.2</p>
+     */
     @NameInMap("appVersion")
     public String appVersion;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5fb6001a73749c24fd9cb356</p>
      */
     @NameInMap("dataSourceId")
     public String dataSourceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-05-03</p>
      */
     @NameInMap("endDate")
     public String endDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-05-01</p>
      */
     @NameInMap("startDate")
     public String startDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>day</p>
      */
     @NameInMap("timeUnit")
     public String timeUnit;

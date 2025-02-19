@@ -4,15 +4,27 @@ package com.aliyun.umeng_apm20220214.models;
 import com.aliyun.tea.*;
 
 public class GetStatTrendResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public Long code;
 
     @NameInMap("data")
     public java.util.List<GetStatTrendResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>succeed in handling request</p>
+     */
     @NameInMap("msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -54,18 +66,38 @@ public class GetStatTrendResponseBody extends TeaModel {
     }
 
     public static class GetStatTrendResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>52</p>
+         */
         @NameInMap("affectedUserCount")
         public Long affectedUserCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.3</p>
+         */
         @NameInMap("affectedUserRate")
         public Double affectedUserRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("errorCount")
         public Long errorCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25.6</p>
+         */
         @NameInMap("errorRate")
         public Double errorRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-06-01</p>
+         */
         @NameInMap("timePoint")
         public String timePoint;
 

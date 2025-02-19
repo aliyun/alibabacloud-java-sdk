@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateAlertPlanRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5fb6001a73749c24fd9cb356</p>
      */
     @NameInMap("dataSourceId")
     public String dataSourceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18288</p>
      */
     @NameInMap("planId")
     public Long planId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;1.1.0,1.2.0,1.3.0&quot;</p>
      */
     @NameInMap("versions")
     public String versions;

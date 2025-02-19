@@ -12,12 +12,18 @@ public class DeleteSymRecordsRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5fb6001a73749c24fd9cb356</p>
      */
     @NameInMap("dataSourceId")
     public String dataSourceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("fileType")
     public Integer fileType;

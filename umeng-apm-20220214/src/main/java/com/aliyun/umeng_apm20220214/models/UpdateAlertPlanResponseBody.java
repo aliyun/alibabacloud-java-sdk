@@ -4,12 +4,24 @@ package com.aliyun.umeng_apm20220214.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertPlanResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
