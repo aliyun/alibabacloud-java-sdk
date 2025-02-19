@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除符号表记录
-     *
+     * <b>summary</b> : 
+     * <p>删除符号表记录</p>
+     * 
      * @param tmpReq DeleteSymRecordsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -70,12 +71,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSymRecordsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSymRecordsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteSymRecordsResponse());
+        }
+
     }
 
     /**
-     * @summary 删除符号表记录
-     *
+     * <b>summary</b> : 
+     * <p>删除符号表记录</p>
+     * 
      * @param request DeleteSymRecordsRequest
      * @return DeleteSymRecordsResponse
      */
@@ -86,8 +93,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取H5页面性能统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取H5页面性能统计数据</p>
+     * 
      * @param request GetH5PageTrendRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -131,12 +139,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetH5PageTrendResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetH5PageTrendResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetH5PageTrendResponse());
+        }
+
     }
 
     /**
-     * @summary 获取H5页面性能统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取H5页面性能统计数据</p>
+     * 
      * @param request GetH5PageTrendRequest
      * @return GetH5PageTrendResponse
      */
@@ -147,8 +161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取启动性能统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取启动性能统计数据</p>
+     * 
      * @param request GetLaunchTrendRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -192,12 +207,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLaunchTrendResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetLaunchTrendResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetLaunchTrendResponse());
+        }
+
     }
 
     /**
-     * @summary 获取启动性能统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取启动性能统计数据</p>
+     * 
      * @param request GetLaunchTrendRequest
      * @return GetLaunchTrendResponse
      */
@@ -208,8 +229,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取原生页面性能统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取原生页面性能统计数据</p>
+     * 
      * @param request GetNativePageTrendRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -253,12 +275,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNativePageTrendResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetNativePageTrendResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetNativePageTrendResponse());
+        }
+
     }
 
     /**
-     * @summary 获取原生页面性能统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取原生页面性能统计数据</p>
+     * 
      * @param request GetNativePageTrendRequest
      * @return GetNativePageTrendResponse
      */
@@ -269,8 +297,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取网络性能统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取网络性能统计数据</p>
+     * 
      * @param request GetNetworkTrendRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -314,12 +343,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNetworkTrendResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetNetworkTrendResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetNetworkTrendResponse());
+        }
+
     }
 
     /**
-     * @summary 获取网络性能统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取网络性能统计数据</p>
+     * 
      * @param request GetNetworkTrendRequest
      * @return GetNetworkTrendResponse
      */
@@ -330,8 +365,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取离线统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取离线统计数据</p>
+     * 
      * @param request GetStatTrendRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -375,12 +411,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetStatTrendResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetStatTrendResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetStatTrendResponse());
+        }
+
     }
 
     /**
-     * @summary 获取离线统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取离线统计数据</p>
+     * 
      * @param request GetStatTrendRequest
      * @return GetStatTrendResponse
      */
@@ -391,8 +433,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取符号表文件上传参数
-     *
+     * <b>summary</b> : 
+     * <p>获取符号表文件上传参数</p>
+     * 
      * @param request GetSymUploadParamRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -436,12 +479,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSymUploadParamResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetSymUploadParamResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetSymUploadParamResponse());
+        }
+
     }
 
     /**
-     * @summary 获取符号表文件上传参数
-     *
+     * <b>summary</b> : 
+     * <p>获取符号表文件上传参数</p>
+     * 
      * @param request GetSymUploadParamRequest
      * @return GetSymUploadParamResponse
      */
@@ -452,8 +501,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取今日实时统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取今日实时统计数据</p>
+     * 
      * @param request GetTodayStatTrendRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -489,12 +539,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTodayStatTrendResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetTodayStatTrendResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetTodayStatTrendResponse());
+        }
+
     }
 
     /**
-     * @summary 获取今日实时统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取今日实时统计数据</p>
+     * 
      * @param request GetTodayStatTrendRequest
      * @return GetTodayStatTrendResponse
      */
@@ -505,8 +561,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新监控告警计划
-     *
+     * <b>summary</b> : 
+     * <p>更新监控告警计划</p>
+     * 
      * @param request UpdateAlertPlanRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -542,12 +599,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAlertPlanResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAlertPlanResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAlertPlanResponse());
+        }
+
     }
 
     /**
-     * @summary 更新监控告警计划
-     *
+     * <b>summary</b> : 
+     * <p>更新监控告警计划</p>
+     * 
      * @param request UpdateAlertPlanRequest
      * @return UpdateAlertPlanResponse
      */
@@ -558,8 +621,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 上传符号表文件
-     *
+     * <b>summary</b> : 
+     * <p>上传符号表文件</p>
+     * 
      * @param request UploadSymbolFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -607,12 +671,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadSymbolFileResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UploadSymbolFileResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UploadSymbolFileResponse());
+        }
+
     }
 
     /**
-     * @summary 上传符号表文件
-     *
+     * <b>summary</b> : 
+     * <p>上传符号表文件</p>
+     * 
      * @param request UploadSymbolFileRequest
      * @return UploadSymbolFileResponse
      */

@@ -4,15 +4,27 @@ package com.aliyun.umeng_apm20220214.models;
 import com.aliyun.tea.*;
 
 public class GetLaunchTrendResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public Long code;
 
     @NameInMap("data")
     public java.util.List<GetLaunchTrendResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>succeed in handling request</p>
+     */
     @NameInMap("msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -54,24 +66,52 @@ public class GetLaunchTrendResponseBody extends TeaModel {
     }
 
     public static class GetLaunchTrendResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2495</p>
+         */
         @NameInMap("coldLaunchCount")
         public Long coldLaunchCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3784.5</p>
+         */
         @NameInMap("coldLaunchDuration")
         public Double coldLaunchDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2495</p>
+         */
         @NameInMap("firstLaunchCount")
         public Long firstLaunchCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3740.5</p>
+         */
         @NameInMap("firstLaunchDuration")
         public Double firstLaunchDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2495</p>
+         */
         @NameInMap("hotLaunchCount")
         public Long hotLaunchCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1400.5</p>
+         */
         @NameInMap("hotLaunchDuration")
         public Double hotLaunchDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-20</p>
+         */
         @NameInMap("timePoint")
         public String timePoint;
 

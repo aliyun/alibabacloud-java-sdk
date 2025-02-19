@@ -6,28 +6,44 @@ import com.aliyun.tea.*;
 public class GetSymUploadParamRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.3</p>
      */
     @NameInMap("appVersion")
     public String appVersion;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5fb6001a73749c24fd9cb356</p>
      */
     @NameInMap("dataSourceId")
     public String dataSourceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>symbol.zip</p>
      */
     @NameInMap("fileName")
     public String fileName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("fileType")
     public Integer fileType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-flutter-app</p>
+     */
     @NameInMap("flutterName")
     public String flutterName;
 

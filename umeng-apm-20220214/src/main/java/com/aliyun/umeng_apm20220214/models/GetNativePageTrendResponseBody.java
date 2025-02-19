@@ -4,15 +4,27 @@ package com.aliyun.umeng_apm20220214.models;
 import com.aliyun.tea.*;
 
 public class GetNativePageTrendResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public Long code;
 
     @NameInMap("data")
     public java.util.List<GetNativePageTrendResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>succeed in handling request</p>
+     */
     @NameInMap("msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -54,18 +66,38 @@ public class GetNativePageTrendResponseBody extends TeaModel {
     }
 
     public static class GetNativePageTrendResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>75.9</p>
+         */
         @NameInMap("avgLoadDuration")
         public Double avgLoadDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>37.317</p>
+         */
         @NameInMap("crashRate")
         public Double crashRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2460</p>
+         */
         @NameInMap("loadCnt")
         public Long loadCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>99.837</p>
+         */
         @NameInMap("slowLoadRate")
         public Double slowLoadRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-20</p>
+         */
         @NameInMap("timePoint")
         public String timePoint;
 

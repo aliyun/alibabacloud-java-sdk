@@ -4,15 +4,27 @@ package com.aliyun.umeng_apm20220214.models;
 import com.aliyun.tea.*;
 
 public class GetH5PageTrendResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public Long code;
 
     @NameInMap("data")
     public java.util.List<GetH5PageTrendResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>succeed in handling request</p>
+     */
     @NameInMap("msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -54,69 +66,157 @@ public class GetH5PageTrendResponseBody extends TeaModel {
     }
 
     public static class GetH5PageTrendResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>504.89</p>
+         */
         @NameInMap("analyzeDOM")
         public Double analyzeDOM;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49.48</p>
+         */
         @NameInMap("appCache")
         public Double appCache;
 
+        /**
+         * <strong>example:</strong>
+         * <p>979.83</p>
+         */
         @NameInMap("contentTrans")
         public Double contentTrans;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50.16</p>
+         */
         @NameInMap("dns")
         public Double dns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1881.96</p>
+         */
         @NameInMap("domReady")
         public Double domReady;
 
+        /**
+         * <strong>example:</strong>
+         * <p>190.69</p>
+         */
         @NameInMap("fcp")
         public Double fcp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>472.57</p>
+         */
         @NameInMap("firstByte")
         public Double firstByte;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44.67</p>
+         */
         @NameInMap("fiveSecondRate")
         public Double fiveSecondRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50.25</p>
+         */
         @NameInMap("fp")
         public Double fp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>492.86</p>
+         */
         @NameInMap("loadEvent")
         public Double loadEvent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4741.44</p>
+         */
         @NameInMap("loadFinish")
         public Double loadFinish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2549.46</p>
+         */
         @NameInMap("loadResource")
         public Double loadResource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2062</p>
+         */
         @NameInMap("logCnt")
         public Long logCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.19</p>
+         */
         @NameInMap("oneSecondRate")
         public Double oneSecondRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.93</p>
+         */
         @NameInMap("redirect")
         public Double redirect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>71.02</p>
+         */
         @NameInMap("ssl")
         public Double ssl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>150.18</p>
+         */
         @NameInMap("tcp")
         public Double tcp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-20</p>
+         */
         @NameInMap("timePoint")
         public String timePoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>249.55</p>
+         */
         @NameInMap("ttfb")
         public Double ttfb;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2126.61</p>
+         */
         @NameInMap("tti")
         public Double tti;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4.9</p>
+         */
         @NameInMap("twoSecondRate")
         public Double twoSecondRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>98.26</p>
+         */
         @NameInMap("unload")
         public Double unload;
 

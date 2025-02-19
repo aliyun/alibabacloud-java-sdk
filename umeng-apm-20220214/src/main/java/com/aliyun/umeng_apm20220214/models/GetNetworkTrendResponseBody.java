@@ -4,15 +4,27 @@ package com.aliyun.umeng_apm20220214.models;
 import com.aliyun.tea.*;
 
 public class GetNetworkTrendResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public Long code;
 
     @NameInMap("data")
     public java.util.List<GetNetworkTrendResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>succeed in handling request</p>
+     */
     @NameInMap("msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -54,18 +66,38 @@ public class GetNetworkTrendResponseBody extends TeaModel {
     }
 
     public static class GetNetworkTrendResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4402.8</p>
+         */
         @NameInMap("avgCost")
         public Double avgCost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1654.51</p>
+         */
         @NameInMap("avgResponseTime")
         public Double avgResponseTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3299.43</p>
+         */
         @NameInMap("avgTransformBytes")
         public Double avgTransformBytes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.61</p>
+         */
         @NameInMap("requestPerMinute")
         public Double requestPerMinute;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-20</p>
+         */
         @NameInMap("timePoint")
         public String timePoint;
 

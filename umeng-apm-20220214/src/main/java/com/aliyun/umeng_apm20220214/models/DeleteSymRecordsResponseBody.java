@@ -6,21 +6,39 @@ import com.aliyun.tea.*;
 public class DeleteSymRecordsResponseBody extends TeaModel {
     /**
      * <p>code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>succeed in handling request</p>
+     */
     @NameInMap("msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("num")
     public Integer num;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210f07c516457690916816858d94ea</p>
      */
     @NameInMap("traceId")
     public String traceId;
