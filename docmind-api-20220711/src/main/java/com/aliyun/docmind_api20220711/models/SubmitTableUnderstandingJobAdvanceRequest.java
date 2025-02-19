@@ -21,6 +21,12 @@ public class SubmitTableUnderstandingJobAdvanceRequest extends TeaModel {
     @NameInMap("FileUrl")
     public java.io.InputStream fileUrlObject;
 
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
     public static SubmitTableUnderstandingJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitTableUnderstandingJobAdvanceRequest self = new SubmitTableUnderstandingJobAdvanceRequest();
         return TeaModel.build(map, self);
@@ -48,6 +54,22 @@ public class SubmitTableUnderstandingJobAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getFileUrlObject() {
         return this.fileUrlObject;
+    }
+
+    public SubmitTableUnderstandingJobAdvanceRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public SubmitTableUnderstandingJobAdvanceRequest setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
     }
 
 }

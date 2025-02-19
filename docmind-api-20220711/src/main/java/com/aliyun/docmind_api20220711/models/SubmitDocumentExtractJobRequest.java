@@ -21,6 +21,12 @@ public class SubmitDocumentExtractJobRequest extends TeaModel {
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
     public static SubmitDocumentExtractJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDocumentExtractJobRequest self = new SubmitDocumentExtractJobRequest();
         return TeaModel.build(map, self);
@@ -48,6 +54,22 @@ public class SubmitDocumentExtractJobRequest extends TeaModel {
     }
     public String getFileUrl() {
         return this.fileUrl;
+    }
+
+    public SubmitDocumentExtractJobRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public SubmitDocumentExtractJobRequest setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
     }
 
 }

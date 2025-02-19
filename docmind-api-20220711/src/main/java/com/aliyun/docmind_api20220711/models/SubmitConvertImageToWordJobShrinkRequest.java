@@ -17,6 +17,12 @@ public class SubmitConvertImageToWordJobShrinkRequest extends TeaModel {
     @NameInMap("ImageUrls")
     public String imageUrlsShrink;
 
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
     public static SubmitConvertImageToWordJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertImageToWordJobShrinkRequest self = new SubmitConvertImageToWordJobShrinkRequest();
         return TeaModel.build(map, self);
@@ -44,6 +50,22 @@ public class SubmitConvertImageToWordJobShrinkRequest extends TeaModel {
     }
     public String getImageUrlsShrink() {
         return this.imageUrlsShrink;
+    }
+
+    public SubmitConvertImageToWordJobShrinkRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public SubmitConvertImageToWordJobShrinkRequest setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
     }
 
 }

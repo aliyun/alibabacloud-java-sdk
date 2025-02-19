@@ -24,6 +24,12 @@ public class SubmitConvertPdfToExcelJobAdvanceRequest extends TeaModel {
     @NameInMap("ForceMergeExcel")
     public Boolean forceMergeExcel;
 
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
     public static SubmitConvertPdfToExcelJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertPdfToExcelJobAdvanceRequest self = new SubmitConvertPdfToExcelJobAdvanceRequest();
         return TeaModel.build(map, self);
@@ -59,6 +65,22 @@ public class SubmitConvertPdfToExcelJobAdvanceRequest extends TeaModel {
     }
     public Boolean getForceMergeExcel() {
         return this.forceMergeExcel;
+    }
+
+    public SubmitConvertPdfToExcelJobAdvanceRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public SubmitConvertPdfToExcelJobAdvanceRequest setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
     }
 
 }

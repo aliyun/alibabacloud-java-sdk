@@ -21,6 +21,12 @@ public class SubmitConvertPdfToWordJobAdvanceRequest extends TeaModel {
     @NameInMap("ForceExportInnerImage")
     public Boolean forceExportInnerImage;
 
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
     public static SubmitConvertPdfToWordJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertPdfToWordJobAdvanceRequest self = new SubmitConvertPdfToWordJobAdvanceRequest();
         return TeaModel.build(map, self);
@@ -48,6 +54,22 @@ public class SubmitConvertPdfToWordJobAdvanceRequest extends TeaModel {
     }
     public Boolean getForceExportInnerImage() {
         return this.forceExportInnerImage;
+    }
+
+    public SubmitConvertPdfToWordJobAdvanceRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public SubmitConvertPdfToWordJobAdvanceRequest setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
     }
 
 }
