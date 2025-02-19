@@ -24,6 +24,9 @@ public class AddDisasterRecoveryItemRequest extends TeaModel {
         @NameInMap("consumerGroupId")
         public String consumerGroupId;
 
+        @NameInMap("deliveryOrderType")
+        public String deliveryOrderType;
+
         @NameInMap("instanceId")
         public String instanceId;
 
@@ -57,6 +60,14 @@ public class AddDisasterRecoveryItemRequest extends TeaModel {
         }
         public String getConsumerGroupId() {
             return this.consumerGroupId;
+        }
+
+        public AddDisasterRecoveryItemRequestTopics setDeliveryOrderType(String deliveryOrderType) {
+            this.deliveryOrderType = deliveryOrderType;
+            return this;
+        }
+        public String getDeliveryOrderType() {
+            return this.deliveryOrderType;
         }
 
         public AddDisasterRecoveryItemRequestTopics setInstanceId(String instanceId) {

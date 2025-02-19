@@ -290,6 +290,9 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         @NameInMap("instanceId")
         public String instanceId;
 
+        @NameInMap("maxReceiveTps")
+        public Long maxReceiveTps;
+
         /**
          * <p>The ID of the region in which the instance resides.</p>
          * 
@@ -394,6 +397,14 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetConsumerGroupResponseBodyData setMaxReceiveTps(Long maxReceiveTps) {
+            this.maxReceiveTps = maxReceiveTps;
+            return this;
+        }
+        public Long getMaxReceiveTps() {
+            return this.maxReceiveTps;
         }
 
         public GetConsumerGroupResponseBodyData setRegionId(String regionId) {

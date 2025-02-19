@@ -33,7 +33,6 @@ public class ListInstanceAccountRequest extends TeaModel {
 
     /**
      * <p>The page number. Default value: 1.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +42,6 @@ public class ListInstanceAccountRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

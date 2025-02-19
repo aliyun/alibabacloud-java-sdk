@@ -183,6 +183,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("subSeriesCode")
     public String subSeriesCode;
 
+    @NameInMap("tags")
+    public java.util.List<CreateInstanceRequestTags> tags;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value of this parameter, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
@@ -309,6 +312,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.subSeriesCode;
     }
 
+    public CreateInstanceRequest setTags(java.util.List<CreateInstanceRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateInstanceRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateInstanceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -401,6 +412,7 @@ public class CreateInstanceRequest extends TeaModel {
             return this.internetSpec;
         }
 
+        @Deprecated
         public CreateInstanceRequestNetworkInfoInternetInfo setIpWhitelist(java.util.List<String> ipWhitelist) {
             this.ipWhitelist = ipWhitelist;
             return this;
@@ -500,6 +512,7 @@ public class CreateInstanceRequest extends TeaModel {
             return this.securityGroupIds;
         }
 
+        @Deprecated
         public CreateInstanceRequestNetworkInfoVpcInfo setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
@@ -584,29 +597,6 @@ public class CreateInstanceRequest extends TeaModel {
         public Boolean autoScaling;
 
         /**
-         * <p>The billing method.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>provisioned</li>
-         * <li>ondemand</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>provisioned</p>
-         */
-        @NameInMap("chargeType")
-        public String chargeType;
-
-        /**
-         * <p>This parameter is no longer used. You do not need to configure this parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxxx</p>
-         */
-        @NameInMap("intranetSpec")
-        public String intranetSpec;
-
-        /**
          * <p>The retention period of messages. Unit: hours.</p>
          * <p>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section of the <a href="https://help.aliyun.com/document_detail/440347.html">Limits</a> topic.</p>
          * <p>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fees</a>.</p>
@@ -669,22 +659,6 @@ public class CreateInstanceRequest extends TeaModel {
             return this.autoScaling;
         }
 
-        public CreateInstanceRequestProductInfo setChargeType(String chargeType) {
-            this.chargeType = chargeType;
-            return this;
-        }
-        public String getChargeType() {
-            return this.chargeType;
-        }
-
-        public CreateInstanceRequestProductInfo setIntranetSpec(String intranetSpec) {
-            this.intranetSpec = intranetSpec;
-            return this;
-        }
-        public String getIntranetSpec() {
-            return this.intranetSpec;
-        }
-
         public CreateInstanceRequestProductInfo setMessageRetentionTime(Integer messageRetentionTime) {
             this.messageRetentionTime = messageRetentionTime;
             return this;
@@ -723,6 +697,36 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getStorageSecretKey() {
             return this.storageSecretKey;
+        }
+
+    }
+
+    public static class CreateInstanceRequestTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static CreateInstanceRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestTags self = new CreateInstanceRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateInstanceRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

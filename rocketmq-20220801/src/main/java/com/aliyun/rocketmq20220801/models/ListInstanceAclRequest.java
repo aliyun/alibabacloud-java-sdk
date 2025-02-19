@@ -15,7 +15,6 @@ public class ListInstanceAclRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -25,7 +24,6 @@ public class ListInstanceAclRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

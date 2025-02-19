@@ -71,7 +71,7 @@ public class DeleteInstanceAclResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>7358418D-83BD-507A-8079-611C63E05674</p>
+     * <p>7358418D-83BD-507A-8079-*****</p>
      */
     @NameInMap("requestId")
     public String requestId;

@@ -221,6 +221,7 @@ public class GetInstanceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public GetInstanceResponseBodyDataAclInfo setAclType(String aclType) {
             this.aclType = aclType;
             return this;
@@ -768,6 +769,7 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.securityGroupIds;
         }
 
+        @Deprecated
         public GetInstanceResponseBodyDataNetworkInfoVpcInfo setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
@@ -1425,6 +1427,7 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.expireTime;
         }
 
+        @Deprecated
         public GetInstanceResponseBodyData setExtConfig(GetInstanceResponseBodyDataExtConfig extConfig) {
             this.extConfig = extConfig;
             return this;

@@ -23,7 +23,7 @@ public class CreateInstanceAclRequest extends TeaModel {
      * <p>Pub</p>
      */
     @NameInMap("actions")
-    public String actions;
+    public java.util.List<String> actions;
 
     /**
      * <p>The decision result of the authorization.</p>
@@ -76,11 +76,11 @@ public class CreateInstanceAclRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateInstanceAclRequest setActions(String actions) {
+    public CreateInstanceAclRequest setActions(java.util.List<String> actions) {
         this.actions = actions;
         return this;
     }
-    public String getActions() {
+    public java.util.List<String> getActions() {
         return this.actions;
     }
 
