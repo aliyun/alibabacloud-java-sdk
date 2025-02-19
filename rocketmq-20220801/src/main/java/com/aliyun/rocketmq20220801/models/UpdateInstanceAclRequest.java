@@ -21,7 +21,7 @@ public class UpdateInstanceAclRequest extends TeaModel {
      * <p>Pub</p>
      */
     @NameInMap("actions")
-    public String actions;
+    public java.util.List<String> actions;
 
     /**
      * <p>The decision result of the authorization.</p>
@@ -73,11 +73,11 @@ public class UpdateInstanceAclRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateInstanceAclRequest setActions(String actions) {
+    public UpdateInstanceAclRequest setActions(java.util.List<String> actions) {
         this.actions = actions;
         return this;
     }
-    public String getActions() {
+    public java.util.List<String> getActions() {
         return this.actions;
     }
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial. This parameter is returned only if the access is denied due to the reason that the Resource Access Management (RAM) user does not have the required permissions.</p>
+     * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -71,7 +71,7 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>723CDA5C-E25C-5EAF-9601-08C286DF8A4D</p>
+     * <p>723CDA5C-E25C-5EAF-9601-******</p>
      */
     @NameInMap("requestId")
     public String requestId;

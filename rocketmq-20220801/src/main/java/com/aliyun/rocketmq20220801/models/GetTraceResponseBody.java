@@ -209,6 +209,9 @@ public class GetTraceResponseBody extends TeaModel {
         @NameInMap("presetDelayTime")
         public String presetDelayTime;
 
+        @NameInMap("recallResult")
+        public String recallResult;
+
         public static GetTraceResponseBodyDataBrokerInfo build(java.util.Map<String, ?> map) throws Exception {
             GetTraceResponseBodyDataBrokerInfo self = new GetTraceResponseBodyDataBrokerInfo();
             return TeaModel.build(map, self);
@@ -236,6 +239,14 @@ public class GetTraceResponseBody extends TeaModel {
         }
         public String getPresetDelayTime() {
             return this.presetDelayTime;
+        }
+
+        public GetTraceResponseBodyDataBrokerInfo setRecallResult(String recallResult) {
+            this.recallResult = recallResult;
+            return this;
+        }
+        public String getRecallResult() {
+            return this.recallResult;
         }
 
     }
@@ -899,6 +910,9 @@ public class GetTraceResponseBody extends TeaModel {
         @NameInMap("produceTime")
         public String produceTime;
 
+        @NameInMap("recallTime")
+        public String recallTime;
+
         /**
          * <p>Producer name.</p>
          * 
@@ -975,6 +989,14 @@ public class GetTraceResponseBody extends TeaModel {
         }
         public String getProduceTime() {
             return this.produceTime;
+        }
+
+        public GetTraceResponseBodyDataProducerInfoRecords setRecallTime(String recallTime) {
+            this.recallTime = recallTime;
+            return this;
+        }
+        public String getRecallTime() {
+            return this.recallTime;
         }
 
         public GetTraceResponseBodyDataProducerInfoRecords setUserName(String userName) {

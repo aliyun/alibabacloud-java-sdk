@@ -143,6 +143,9 @@ public class GetInstanceAccountResponseBody extends TeaModel {
     }
 
     public static class GetInstanceAccountResponseBodyData extends TeaModel {
+        @NameInMap("accountStatus")
+        public String accountStatus;
+
         /**
          * <p>The password of the account.</p>
          * 
@@ -164,6 +167,14 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         public static GetInstanceAccountResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceAccountResponseBodyData self = new GetInstanceAccountResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetInstanceAccountResponseBodyData setAccountStatus(String accountStatus) {
+            this.accountStatus = accountStatus;
+            return this;
+        }
+        public String getAccountStatus() {
+            return this.accountStatus;
         }
 
         public GetInstanceAccountResponseBodyData setPassword(String password) {
