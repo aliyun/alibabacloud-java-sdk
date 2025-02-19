@@ -1004,6 +1004,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDBInstanceResponse createDBInstanceWithOptions(CreateDBInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AINodeSpecInfos)) {
+            query.put("AINodeSpecInfos", request.AINodeSpecInfos);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.backupId)) {
             query.put("BackupId", request.backupId);
         }

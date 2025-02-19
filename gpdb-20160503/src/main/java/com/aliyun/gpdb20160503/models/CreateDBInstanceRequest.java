@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
+    @NameInMap("AINodeSpecInfos")
+    public java.util.List<CreateDBInstanceRequestAINodeSpecInfos> AINodeSpecInfos;
+
     /**
      * <p>Backup set ID.</p>
      * <blockquote>
@@ -605,6 +608,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateDBInstanceRequest setAINodeSpecInfos(java.util.List<CreateDBInstanceRequestAINodeSpecInfos> AINodeSpecInfos) {
+        this.AINodeSpecInfos = AINodeSpecInfos;
+        return this;
+    }
+    public java.util.List<CreateDBInstanceRequestAINodeSpecInfos> getAINodeSpecInfos() {
+        return this.AINodeSpecInfos;
+    }
+
     public CreateDBInstanceRequest setBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -955,6 +966,36 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateDBInstanceRequestAINodeSpecInfos extends TeaModel {
+        @NameInMap("AINodeNum")
+        public String AINodeNum;
+
+        @NameInMap("AINodeSpec")
+        public String AINodeSpec;
+
+        public static CreateDBInstanceRequestAINodeSpecInfos build(java.util.Map<String, ?> map) throws Exception {
+            CreateDBInstanceRequestAINodeSpecInfos self = new CreateDBInstanceRequestAINodeSpecInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDBInstanceRequestAINodeSpecInfos setAINodeNum(String AINodeNum) {
+            this.AINodeNum = AINodeNum;
+            return this;
+        }
+        public String getAINodeNum() {
+            return this.AINodeNum;
+        }
+
+        public CreateDBInstanceRequestAINodeSpecInfos setAINodeSpec(String AINodeSpec) {
+            this.AINodeSpec = AINodeSpec;
+            return this;
+        }
+        public String getAINodeSpec() {
+            return this.AINodeSpec;
+        }
+
     }
 
     public static class CreateDBInstanceRequestTag extends TeaModel {
