@@ -20,6 +20,12 @@ public class SubmitConvertImageToExcelJobShrinkRequest extends TeaModel {
     @NameInMap("ImageUrls")
     public String imageUrlsShrink;
 
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
     public static SubmitConvertImageToExcelJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertImageToExcelJobShrinkRequest self = new SubmitConvertImageToExcelJobShrinkRequest();
         return TeaModel.build(map, self);
@@ -55,6 +61,22 @@ public class SubmitConvertImageToExcelJobShrinkRequest extends TeaModel {
     }
     public String getImageUrlsShrink() {
         return this.imageUrlsShrink;
+    }
+
+    public SubmitConvertImageToExcelJobShrinkRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public SubmitConvertImageToExcelJobShrinkRequest setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
     }
 
 }

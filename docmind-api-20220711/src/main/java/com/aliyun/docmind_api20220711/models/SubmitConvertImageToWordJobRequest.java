@@ -17,6 +17,12 @@ public class SubmitConvertImageToWordJobRequest extends TeaModel {
     @NameInMap("ImageUrls")
     public java.util.List<String> imageUrls;
 
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
     public static SubmitConvertImageToWordJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertImageToWordJobRequest self = new SubmitConvertImageToWordJobRequest();
         return TeaModel.build(map, self);
@@ -44,6 +50,22 @@ public class SubmitConvertImageToWordJobRequest extends TeaModel {
     }
     public java.util.List<String> getImageUrls() {
         return this.imageUrls;
+    }
+
+    public SubmitConvertImageToWordJobRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public SubmitConvertImageToWordJobRequest setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
     }
 
 }

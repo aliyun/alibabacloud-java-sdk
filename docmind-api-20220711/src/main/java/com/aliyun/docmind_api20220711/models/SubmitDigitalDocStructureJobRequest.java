@@ -28,6 +28,12 @@ public class SubmitDigitalDocStructureJobRequest extends TeaModel {
     @NameInMap("ImageStrategy")
     public String imageStrategy;
 
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
     @NameInMap("RevealMarkdown")
     public Boolean revealMarkdown;
 
@@ -69,6 +75,22 @@ public class SubmitDigitalDocStructureJobRequest extends TeaModel {
     }
     public String getImageStrategy() {
         return this.imageStrategy;
+    }
+
+    public SubmitDigitalDocStructureJobRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public SubmitDigitalDocStructureJobRequest setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
     }
 
     public SubmitDigitalDocStructureJobRequest setRevealMarkdown(Boolean revealMarkdown) {

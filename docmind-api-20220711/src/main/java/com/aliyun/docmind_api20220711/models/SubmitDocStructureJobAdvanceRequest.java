@@ -31,6 +31,12 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
     @NameInMap("FormulaEnhancement")
     public Boolean formulaEnhancement;
 
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
     @NameInMap("StructureType")
     public String structureType;
 
@@ -77,6 +83,22 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
     }
     public Boolean getFormulaEnhancement() {
         return this.formulaEnhancement;
+    }
+
+    public SubmitDocStructureJobAdvanceRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public SubmitDocStructureJobAdvanceRequest setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
     }
 
     public SubmitDocStructureJobAdvanceRequest setStructureType(String structureType) {

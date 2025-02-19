@@ -18,6 +18,12 @@ public class SubmitConvertPdfToMarkdownJobRequest extends TeaModel {
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
     public static SubmitConvertPdfToMarkdownJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertPdfToMarkdownJobRequest self = new SubmitConvertPdfToMarkdownJobRequest();
         return TeaModel.build(map, self);
@@ -37,6 +43,22 @@ public class SubmitConvertPdfToMarkdownJobRequest extends TeaModel {
     }
     public String getFileUrl() {
         return this.fileUrl;
+    }
+
+    public SubmitConvertPdfToMarkdownJobRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public SubmitConvertPdfToMarkdownJobRequest setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
     }
 
 }

@@ -17,6 +17,12 @@ public class SubmitConvertImageToPdfJobShrinkRequest extends TeaModel {
     @NameInMap("ImageUrls")
     public String imageUrlsShrink;
 
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
     public static SubmitConvertImageToPdfJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertImageToPdfJobShrinkRequest self = new SubmitConvertImageToPdfJobShrinkRequest();
         return TeaModel.build(map, self);
@@ -44,6 +50,22 @@ public class SubmitConvertImageToPdfJobShrinkRequest extends TeaModel {
     }
     public String getImageUrlsShrink() {
         return this.imageUrlsShrink;
+    }
+
+    public SubmitConvertImageToPdfJobShrinkRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public SubmitConvertImageToPdfJobShrinkRequest setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
     }
 
 }
