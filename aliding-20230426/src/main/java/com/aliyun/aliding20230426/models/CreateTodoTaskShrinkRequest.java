@@ -7,6 +7,9 @@ public class CreateTodoTaskShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    @NameInMap("actionList")
+    public String actionListShrink;
+
     @NameInMap("contentFieldList")
     public String contentFieldListShrink;
 
@@ -91,6 +94,14 @@ public class CreateTodoTaskShrinkRequest extends TeaModel {
     }
     public String getTenantContextShrink() {
         return this.tenantContextShrink;
+    }
+
+    public CreateTodoTaskShrinkRequest setActionListShrink(String actionListShrink) {
+        this.actionListShrink = actionListShrink;
+        return this;
+    }
+    public String getActionListShrink() {
+        return this.actionListShrink;
     }
 
     public CreateTodoTaskShrinkRequest setContentFieldListShrink(String contentFieldListShrink) {

@@ -3954,6 +3954,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.actionList)) {
+            request.actionListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.actionList, "actionList", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.contentFieldList)) {
             request.contentFieldListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.contentFieldList, "contentFieldList", "json");
         }
@@ -3982,6 +3986,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
             body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.actionListShrink)) {
+            body.put("actionList", request.actionListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.contentFieldListShrink)) {
@@ -17994,6 +18002,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>订阅文件变更事件</p>
+     * 
+     * @param tmpReq SubscribeEventRequest
+     * @param tmpHeader SubscribeEventHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubscribeEventResponse
+     */
+    public SubscribeEventResponse subscribeEventWithOptions(SubscribeEventRequest tmpReq, SubscribeEventHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubscribeEventShrinkRequest request = new SubscribeEventShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        SubscribeEventShrinkHeaders headers = new SubscribeEventShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            body.put("Scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeId)) {
+            body.put("ScopeId", request.scopeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubscribeEvent"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/documents/subscribeEvent"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SubscribeEventResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SubscribeEventResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>订阅文件变更事件</p>
+     * 
+     * @param request SubscribeEventRequest
+     * @return SubscribeEventResponse
+     */
+    public SubscribeEventResponse subscribeEvent(SubscribeEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        SubscribeEventHeaders headers = new SubscribeEventHeaders();
+        return this.subscribeEventWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>同步钉钉账号类型</p>
      * 
      * @param tmpReq SyncDingTypeRequest
@@ -18330,6 +18419,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         UnsubscribeCalendarHeaders headers = new UnsubscribeCalendarHeaders();
         return this.unsubscribeCalendarWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消订阅文件变更事件</p>
+     * 
+     * @param tmpReq UnsubscribeEventRequest
+     * @param tmpHeader UnsubscribeEventHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnsubscribeEventResponse
+     */
+    public UnsubscribeEventResponse unsubscribeEventWithOptions(UnsubscribeEventRequest tmpReq, UnsubscribeEventHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UnsubscribeEventShrinkRequest request = new UnsubscribeEventShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        UnsubscribeEventShrinkHeaders headers = new UnsubscribeEventShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            body.put("Scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeId)) {
+            body.put("ScopeId", request.scopeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnsubscribeEvent"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/documents/unsubscribeEvent"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UnsubscribeEventResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UnsubscribeEventResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消订阅文件变更事件</p>
+     * 
+     * @param request UnsubscribeEventRequest
+     * @return UnsubscribeEventResponse
+     */
+    public UnsubscribeEventResponse unsubscribeEvent(UnsubscribeEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UnsubscribeEventHeaders headers = new UnsubscribeEventHeaders();
+        return this.unsubscribeEventWithOptions(request, headers, runtime);
     }
 
     /**

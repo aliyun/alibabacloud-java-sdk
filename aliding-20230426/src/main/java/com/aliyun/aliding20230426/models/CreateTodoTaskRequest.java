@@ -7,6 +7,9 @@ public class CreateTodoTaskRequest extends TeaModel {
     @NameInMap("TenantContext")
     public CreateTodoTaskRequestTenantContext tenantContext;
 
+    @NameInMap("actionList")
+    public java.util.List<CreateTodoTaskRequestActionList> actionList;
+
     @NameInMap("contentFieldList")
     public java.util.List<CreateTodoTaskRequestContentFieldList> contentFieldList;
 
@@ -91,6 +94,14 @@ public class CreateTodoTaskRequest extends TeaModel {
     }
     public CreateTodoTaskRequestTenantContext getTenantContext() {
         return this.tenantContext;
+    }
+
+    public CreateTodoTaskRequest setActionList(java.util.List<CreateTodoTaskRequestActionList> actionList) {
+        this.actionList = actionList;
+        return this;
+    }
+    public java.util.List<CreateTodoTaskRequestActionList> getActionList() {
+        return this.actionList;
     }
 
     public CreateTodoTaskRequest setContentFieldList(java.util.List<CreateTodoTaskRequestContentFieldList> contentFieldList) {
@@ -216,6 +227,121 @@ public class CreateTodoTaskRequest extends TeaModel {
         }
         public String getTenantId() {
             return this.tenantId;
+        }
+
+    }
+
+    public static class CreateTodoTaskRequestActionListParam extends TeaModel {
+        @NameInMap("body")
+        public String body;
+
+        @NameInMap("header")
+        public java.util.Map<String, String> header;
+
+        public static CreateTodoTaskRequestActionListParam build(java.util.Map<String, ?> map) throws Exception {
+            CreateTodoTaskRequestActionListParam self = new CreateTodoTaskRequestActionListParam();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTodoTaskRequestActionListParam setBody(String body) {
+            this.body = body;
+            return this;
+        }
+        public String getBody() {
+            return this.body;
+        }
+
+        public CreateTodoTaskRequestActionListParam setHeader(java.util.Map<String, String> header) {
+            this.header = header;
+            return this;
+        }
+        public java.util.Map<String, String> getHeader() {
+            return this.header;
+        }
+
+    }
+
+    public static class CreateTodoTaskRequestActionList extends TeaModel {
+        @NameInMap("actionKey")
+        public String actionKey;
+
+        @NameInMap("actionType")
+        public Integer actionType;
+
+        @NameInMap("buttonStyleType")
+        public Integer buttonStyleType;
+
+        @NameInMap("param")
+        public CreateTodoTaskRequestActionListParam param;
+
+        @NameInMap("pcUrl")
+        public String pcUrl;
+
+        @NameInMap("title")
+        public String title;
+
+        @NameInMap("url")
+        public String url;
+
+        public static CreateTodoTaskRequestActionList build(java.util.Map<String, ?> map) throws Exception {
+            CreateTodoTaskRequestActionList self = new CreateTodoTaskRequestActionList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTodoTaskRequestActionList setActionKey(String actionKey) {
+            this.actionKey = actionKey;
+            return this;
+        }
+        public String getActionKey() {
+            return this.actionKey;
+        }
+
+        public CreateTodoTaskRequestActionList setActionType(Integer actionType) {
+            this.actionType = actionType;
+            return this;
+        }
+        public Integer getActionType() {
+            return this.actionType;
+        }
+
+        public CreateTodoTaskRequestActionList setButtonStyleType(Integer buttonStyleType) {
+            this.buttonStyleType = buttonStyleType;
+            return this;
+        }
+        public Integer getButtonStyleType() {
+            return this.buttonStyleType;
+        }
+
+        public CreateTodoTaskRequestActionList setParam(CreateTodoTaskRequestActionListParam param) {
+            this.param = param;
+            return this;
+        }
+        public CreateTodoTaskRequestActionListParam getParam() {
+            return this.param;
+        }
+
+        public CreateTodoTaskRequestActionList setPcUrl(String pcUrl) {
+            this.pcUrl = pcUrl;
+            return this;
+        }
+        public String getPcUrl() {
+            return this.pcUrl;
+        }
+
+        public CreateTodoTaskRequestActionList setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public CreateTodoTaskRequestActionList setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }
