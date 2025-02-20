@@ -13,9 +13,10 @@ public class PushWelcomeTextAndMusicShrinkRequest extends TeaModel {
     @NameInMap("HotelId")
     public String hotelId;
 
+    @NameInMap("RoomName")
+    public String roomName;
+
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>1211</p>
      */
@@ -36,6 +37,14 @@ public class PushWelcomeTextAndMusicShrinkRequest extends TeaModel {
     }
     public String getHotelId() {
         return this.hotelId;
+    }
+
+    public PushWelcomeTextAndMusicShrinkRequest setRoomName(String roomName) {
+        this.roomName = roomName;
+        return this;
+    }
+    public String getRoomName() {
+        return this.roomName;
     }
 
     public PushWelcomeTextAndMusicShrinkRequest setRoomNo(String roomNo) {

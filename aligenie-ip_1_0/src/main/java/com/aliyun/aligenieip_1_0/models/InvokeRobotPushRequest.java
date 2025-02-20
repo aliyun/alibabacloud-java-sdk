@@ -22,9 +22,10 @@ public class InvokeRobotPushRequest extends TeaModel {
     @NameInMap("PushType")
     public String pushType;
 
+    @NameInMap("RoomName")
+    public String roomName;
+
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>1211</p>
      */
@@ -50,6 +51,14 @@ public class InvokeRobotPushRequest extends TeaModel {
     }
     public String getPushType() {
         return this.pushType;
+    }
+
+    public InvokeRobotPushRequest setRoomName(String roomName) {
+        this.roomName = roomName;
+        return this;
+    }
+    public String getRoomName() {
+        return this.roomName;
     }
 
     public InvokeRobotPushRequest setRoomNo(String roomNo) {
